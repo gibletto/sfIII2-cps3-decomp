@@ -1,0 +1,8 @@
+# ROM contents and anything derived from them stay private
+/rom/
+/scratch/
+*.bin
+*.zip
+__pycache__/
+# generated Ghidra project (tools/ghidra-import.sh); only scripts and tables are tracked
+/ghidra/project/
