@@ -1,4 +1,5 @@
 # address	name	type	class	sf3_addr	sf3_name	sf3_src	note   (docs/PROVENANCE.md)
+02000000	frt_tick_count		3s-exact	02000000	frt_tick_count	src/work.c:14	ram refs 2 conflicts 0 (the link); sf2i link: frt_tick_count at 02000000 in the byte-identical build (sf2i/sf2i.map); referenced by intr:2
 02000004	Coin_Mode		3s-exact	02000004	Coin_Mode	src/work.c:15	ram refs 1 conflicts 0 (1 literal-pool slot)
 02000005	Monitor_Flip		3s-exact	02000005	Monitor_Flip	src/work.c:16	ram refs 1 conflicts 0 (1 literal-pool slot)
 02000006	Continue_Flag		3s-exact	02000006	Continue_Flag	src/work.c:17	ram refs 1 conflicts 0 (1 literal-pool slot)
@@ -11,6 +12,10 @@
 0200000E	Win_Point_Com		3s-exact	0200000E	Win_Point_Com	src/work.c:31	ram refs 1 conflicts 0 (1 literal-pool slot)
 0200000F	Win_Point_Human		3s-exact	0200000F	Win_Point_Human	src/work.c:32	ram refs 1 conflicts 0 (1 literal-pool slot)
 02000010	Voice_Type		3s-exact	02000010	Voice_Type	src/work.c:33	ram refs 1 conflicts 0 (1 literal-pool slot)
+02000011	Win_Point_Com_Max		3s-exact	02000011	Win_Point_Com_Max	src/work.c:34	ram refs 1 conflicts 0 (the link); sf2i link: Win_Point_Com_Max at 02000011 in the byte-identical build (sf2i/sf2i.map); referenced by sys_config:1
+02000012	Win_Point_Human_Max		3s-exact	02000012	Win_Point_Human_Max	src/work.c:35	ram refs 1 conflicts 0 (the link); sf2i link: Win_Point_Human_Max at 02000012 in the byte-identical build (sf2i/sf2i.map); referenced by sys_config:1
+02000013	Win_Point_Com_Min		3s-exact	02000013	Win_Point_Com_Min	src/work.c:36	ram refs 1 conflicts 0 (the link); sf2i link: Win_Point_Com_Min at 02000013 in the byte-identical build (sf2i/sf2i.map); referenced by sys_config:1
+02000014	Win_Point_Human_Min		3s-exact	02000014	Win_Point_Human_Min	src/work.c:37	ram refs 1 conflicts 0 (the link); sf2i link: Win_Point_Human_Min at 02000014 in the byte-identical build (sf2i/sf2i.map); referenced by sys_config:1
 02000016	Cabinet_Type		3s-exact	02000016	Cabinet_Type	src/work.c:39	ram refs 2 conflicts 0 (2 literal-pool slots)
 02000017	Area_Type		3s-exact	02000017	Area_Type	src/work.c:40	ram refs 5 conflicts 0 (5 literal-pool slots)
 02000018	Area_Alt_Flag		3s-exact	02000018	Area_Alt_Flag	src/work.c:41	ram refs 3 conflicts 0 (3 literal-pool slots)
@@ -19,9 +24,11 @@
 0200001D	Cd_Error_Flag		3s-exact	0200001D	Cd_Error_Flag	src/work.c:51	ram refs 1 conflicts 0 (1 literal-pool slot)
 0200001E	Config_No_0		3s-exact	0200001E	Config_No_0	src/work.c:52	ram refs 2 conflicts 0 (2 literal-pool slots)
 02000022	Config_No_2		3s-exact	02000022	Config_No_2	src/work.c:54	ram refs 1 conflicts 0 (1 literal-pool slot)
+02000024	reg_name_tbl		3s-exact	02000024	reg_name_tbl	data/Entry_tbl.c:874	ram refs 2 conflicts 0 (the link); sf2i link: reg_name_tbl at 02000024 in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:2
 02000070	task_stack_num		3s-exact	02000070	task_stack_num	src/Entry.c:209	ram refs 1 conflicts 0 (1 literal-pool slot)
 02000080	isp_unused		3s-exact	02000080	isp_unused	src/Entry.c:215	ram refs 3 conflicts 0 (3 literal-pool slots)
 02000088	isp_exception		3s-exact	02000088	isp_exception	src/Entry.c:219	ram refs 1 conflicts 0 (1 literal-pool slot)
+02000090	isp_frt_overflow		3s-exact	02000090	isp_frt_overflow	src/Entry.c:221	ram refs 1 conflicts 0 (the link); moved from 020030B0 (lead-approved correction 2026-10-18): the byte-identical sf2i link (sf2i/sf2i.map) puts isp_frt_overflow at 02000090; the earlier placement rested on 1 literal-pool slot
 02000094	test_flag		3s-exact	02000094	test_flag	src/Entry.c:222	ram refs 2 conflicts 0 (2 literal-pool slots)
 02000098	build_date		3s-exact	02000098	build_date	src/Entry_dbg.c:69	ram refs 1 conflicts 0 (1 literal-pool slot)
 020000B0	insert_coin_mes		3s-exact	020000B0	insert_coin_mes	src/entry_2.c:78	ram refs 23 conflicts 0 (23 literal-pool slots)
@@ -32,11 +39,9 @@
 02000FC8	dbg_obj_info_str		3s-reloc	02000A28	dbg_obj_info_str	src/CMD_MAIN.c:7770	ram refs 1 conflicts 0 (1 literal-pool slot)
 02001040	dbg_obj_rel_str		3s-reloc	02000AA0	dbg_obj_rel_str	src/CMD_MAIN.c:7783	ram refs 1 conflicts 0 (1 literal-pool slot)
 02001CDC	dbg_act_kind_str		3s-exact	02001CDC	dbg_act_kind_str	src/CMD_MAIN.c:8289	ram refs 2 conflicts 0 (2 literal-pool slots)
-020030B0	isp_frt_overflow		3s-reloc	02000090	isp_frt_overflow	src/Entry.c:221	ram refs 1 conflicts 0 (1 literal-pool slot)
 02006400	chk_move_jp		3s-reloc	02004FB4	chk_move_jp	src/cmd_main_2.c:64	ram refs 1 conflicts 0 (1 literal-pool slot)
 02007270	pl_CMD		3s-reloc	02006284	pl_CMD	data/cmd_data.c:1368	ram refs 1 conflicts 0 (1 literal-pool slot)
 02007D7C	eff66_jp_tbl		3s-reloc	02006D78	eff66_jp_tbl	src/eff66.c:28	ram refs 1 conflicts 0 (1 literal-pool slot)
-02007F90	boot_stack		3s-exact	02007F90	boot_stack	src/Entry.c:38	ram refs 1 conflicts 0 (1 literal-pool slot)
 020084D8	iotest_in_no		3s-reloc	02007C90	iotest_in_no	src/sys_test_2.c:26	ram refs 1 conflicts 0 (1 literal-pool slot)
 020084E0	soundtest_rep_timer		3s-reloc	02007C98	soundtest_rep_timer	src/soundtest.c:26	ram refs 2 conflicts 0 (2 literal-pool slots)
 020084E2	soundtest_code		3s-reloc	02007C9A	soundtest_code	src/soundtest.c:27	ram refs 1 conflicts 0 (1 literal-pool slot)
@@ -81,6 +86,7 @@
 02008770	game_config_work		3s-reloc	02007F20	game_config_work	src/Entry.c:35	ram refs 1 conflicts 0 (1 literal-pool slot)
 02008780	exception_regs		3s-reloc	02007F30	exception_regs	src/Entry.c:36	ram refs 2 conflicts 0 (2 literal-pool slots)
 020087DC	exception_code		3s-reloc	02007F8C	exception_code	src/Entry.c:37	ram refs 5 conflicts 0 (5 literal-pool slots)
+020087E0	boot_stack		3s-reloc	02007F90	boot_stack	src/Entry.c:38	ram refs 1 conflicts 0 (the link); moved from 02007F90 (lead-approved correction 2026-10-18): the byte-identical sf2i link (sf2i/sf2i.map) puts boot_stack at 020087E0; the earlier placement rested on 1 literal-pool slot
 020097E4	task_stack		3s-reloc	02008F94	task_stack	src/Entry.c:39	ram refs 2 conflicts 0 (1 literal-pool slot and 1 table word)
 0200DFE4	task_tbl		3s-reloc	0200D794	task_tbl	src/Entry.c:40	ram refs 5 conflicts 0 (5 literal-pool slots)
 0200E204	task_req_queue		3s-reloc	0200D9B4	task_req_queue	src/boot_task.c:110	ram refs 1 conflicts 0 (1 literal-pool slot)
@@ -102,6 +108,9 @@
 0201016E	request_message		3s-reloc	0201137E	request_message	src/workuser.c:17	ram refs 1 conflicts 0 (1 literal-pool slot)
 02010177	My_char		3s-reloc	02011387	My_char	src/workuser.c:22	ram refs 1 conflicts 0 (1 literal-pool slot)
 0201017B	Super_Arts		3s-reloc	0201138B	Super_Arts	src/workuser.c:25	ram refs 1 conflicts 0 (1 literal-pool slot)
+0201017D	Fade_Flag		3s-reloc	0201138D	Fade_Flag	src/workuser.c:26	ram refs 2 conflicts 0 (the link); sf2i link: Fade_Flag at 0201017D in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1 effa8:1
+02010186	Fade_Number		3s-reloc	02011396	Fade_Number	src/workuser.c:31	ram refs 1 conflicts 0 (the link); sf2i link: Fade_Number at 02010186 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+02010188	Fade_Mode		3s-reloc	02011398	Fade_Mode	src/workuser.c:32	ram refs 1 conflicts 0 (the link); sf2i link: Fade_Mode at 02010188 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
 020101C8	message_index		3s-reloc	020113D6	message_index	src/workuser.c:46	ram refs 2 conflicts 0 (2 literal-pool slots)
 020101CD	Champion		3s-reloc	020113DB	Champion	src/workuser.c:49	ram refs 1 conflicts 0 (1 literal-pool slot)
 020101D2	DE_X		3s-reloc	020113E0	DE_X	src/workuser.c:53	ram refs 3 conflicts 0 (3 literal-pool slots)
@@ -169,25 +178,34 @@
 0202390A	chase_y		3s-reloc	02028050	chase_y	data/bg_data.c:55	ram refs 1 conflicts 0 (1 literal-pool slot)
 0202390C	chase_time_x		3s-reloc	02028052	chase_time_x	data/bg_data.c:56	ram refs 1 conflicts 0 (1 literal-pool slot)
 0202390E	chase_time_y		3s-reloc	02028054	chase_time_y	data/bg_data.c:57	ram refs 1 conflicts 0 (1 literal-pool slot)
+02023914	akebono_flag		3s-reloc	02028056	akebono_flag	data/bg_data.c:58	ram refs 1 conflicts 0 (the link); sf2i link: akebono_flag at 02023914 in the byte-identical build (sf2i/sf2i.map); referenced by EFFF4:1
 0202391A	bg_vbl_trans_flag		3s-reloc	0202805C	bg_vbl_trans_flag	data/bg_data.c:64	ram refs 2 conflicts 0 (2 literal-pool slots)
 02023AB8	end_w		3s-reloc	02028240	end_w	src/end_data.c:12	ram refs 1 conflicts 0 (1 literal-pool slot)
+02023AC9	end_no_cut		3s-reloc	02028251	end_no_cut	src/end_data.c:17	ram refs 1 conflicts 0 (the link); sf2i link: end_no_cut at 02023AC9 in the byte-identical build (sf2i/sf2i.map); referenced by effa8:1
 02023C20	sc_trans_dst		3s-reloc	020283A0	sc_trans_dst	src/sc_trans.c:40	ram refs 3 conflicts 0 (3 literal-pool slots)
 02023C24	sc_bak_ptr		3s-reloc	020283A4	sc_bak_ptr	src/sc_trans.c:41	ram refs 2 conflicts 0 (2 literal-pool slots)
 02023C28	sc_trans_src		3s-reloc	020283A8	sc_trans_src	src/sc_trans.c:42	ram refs 3 conflicts 0 (3 literal-pool slots)
 02023FC8	dbg_edit_hosei		3s-exact	02023FC8	dbg_edit_hosei	src/CMD_MAIN.c:1209	ram refs 2 conflicts 0 (2 literal-pool slots)
 02024120	cmb_all_stock		3s-reloc	020288A4	cmb_all_stock	src/cmb_cont.c:50	ram refs 1 conflicts 0 (1 literal-pool slot)
 02024124	cmb_calc_now		3s-reloc	020288A8	cmb_calc_now	src/cmb_cont.c:53	ram refs 2 conflicts 0 (2 literal-pool slots)
+02024210	frw		3s-reloc	02028990	frw	src/EFFECT.c:26	ram refs 4 conflicts 0 (the link); sf2i link: frw at 02024210 in the byte-identical build (sf2i/sf2i.map); referenced by eff56:1 eff65:1 EFF84:1 effa8:1
 02064214	frwque		3s-reloc	02068994	frwque	src/EFFECT.c:28	ram refs 1 conflicts 0 (1 literal-pool slot)
 02064314	frwctr		3s-reloc	02068A94	frwctr	src/EFFECT.c:29	ram refs 1 conflicts 0 (1 literal-pool slot)
 02064316	head_ix		3s-reloc	02068A96	head_ix	src/EFFECT.c:30	ram refs 1 conflicts 0 (1 literal-pool slot)
 02064326	tail_ix		3s-reloc	02068AA6	tail_ix	src/EFFECT.c:31	ram refs 1 conflicts 0 (1 literal-pool slot)
 02064336	exec_tm		3s-reloc	02068AB6	exec_tm	src/EFFECT.c:32	ram refs 1 conflicts 0 (1 literal-pool slot)
 020644E0	bcdext		3s-reloc	0206A080	bcdext	src/meta_col_bcd.c:18	ram refs 2 conflicts 0 (2 literal-pool slots)
+02064506	screen_base_x		3s-reloc	0200DCC6	screen_base_x	src/scrn_work.c:11	ram refs 1 conflicts 0 (the link); sf2i link: screen_base_x at 02064506 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test:1
+02064508	screen_base_y		3s-reloc	0200DCC8	screen_base_y	src/scrn_work.c:12	ram refs 1 conflicts 0 (the link); sf2i link: screen_base_y at 02064508 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test:1
 0206450C	screen_mode		3s-reloc	0200DCCC	screen_mode	src/scrn_work.c:13	ram refs 13 conflicts 0 (13 literal-pool slots)
 02064512	zoom_adj_x		3s-reloc	0200DCD2	zoom_adj_x	src/scrn_work.c:16	ram refs 1 conflicts 0 (1 literal-pool slot)
 02064514	zoom_adj_y		3s-reloc	0200DCD4	zoom_adj_y	src/scrn_work.c:17	ram refs 1 conflicts 0 (1 literal-pool slot)
 02064516	flip_obj_ofs_x		3s-reloc	0200DCD6	flip_obj_ofs_x	src/scrn_work.c:18	ram refs 1 conflicts 0 (1 literal-pool slot)
 02064518	flip_obj_ofs_y		3s-reloc	0200DCD8	flip_obj_ofs_y	src/scrn_work.c:19	ram refs 1 conflicts 0 (1 literal-pool slot)
+0206451A	flip_crt_ofs_x		3s-reloc	0200DCDA	flip_crt_ofs_x	src/scrn_work.c:20	ram refs 1 conflicts 0 (the link); sf2i link: flip_crt_ofs_x at 0206451A in the byte-identical build (sf2i/sf2i.map); referenced by sys_test:1
+0206451C	flip_crt_ofs_y		3s-reloc	0200DCDC	flip_crt_ofs_y	src/scrn_work.c:21	ram refs 1 conflicts 0 (the link); sf2i link: flip_crt_ofs_y at 0206451C in the byte-identical build (sf2i/sf2i.map); referenced by sys_test:1
+0206451E	flip_scr_ofs_x		3s-reloc	0200DCDE	flip_scr_ofs_x	src/scrn_work.c:22	ram refs 1 conflicts 0 (the link); sf2i link: flip_scr_ofs_x at 0206451E in the byte-identical build (sf2i/sf2i.map); referenced by sys_test:1
+02064520	flip_scr_ofs_y		3s-reloc	0200DCE0	flip_scr_ofs_y	src/scrn_work.c:23	ram refs 1 conflicts 0 (the link); sf2i link: flip_scr_ofs_y at 02064520 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test:1
 02064528	fm_pos		3s-reloc	0206A084	fm_pos	src/family.c:16	ram refs 8 conflicts 0 (8 literal-pool slots)
 020645A8	scrn_pos		3s-reloc	0206A104	scrn_pos	src/sys_test.c:37	ram refs 4 conflicts 0 (4 literal-pool slots)
 020645F8	scrn_reg_w		3s-reloc	0206A154	scrn_reg_w	src/sys_test.c:38	ram refs 6 conflicts 0 (6 literal-pool slots)
@@ -294,12 +312,36 @@
 02073188	palette_base		3s-reloc	02078CE4	palette_base	src/textsound.c:23	ram refs 1 conflicts 0 (1 literal-pool slot)
 020731B0	errno		3s-reloc	02079C90	errno	src/textsound_3.c:18	ram refs 5 conflicts 0 (5 literal-pool slots)
 020731B4	cram_bank_old		3s-reloc	02079C94	cram_bank_old	src/cram_bank.c:20	ram refs 3 conflicts 0 (3 literal-pool slots)
-02079C96	cram_bank_now		3s-exact	02079C96	cram_bank_now	src/cram_bank.c:21	ram refs 152 conflicts 9 (6 literal-pool slots and 137 table words)
+020731B6	cram_bank_now		3s-reloc	02079C96	cram_bank_now	src/cram_bank.c:21	ram refs 1 conflicts 0 (the link); moved from 02079C96 (lead-approved correction 2026-10-18): the byte-identical sf2i link (sf2i/sf2i.map) puts cram_bank_now at 020731B6; the earlier placement rested on 6 literal-pool slots and 137 table words
 06000000	vector_table		inferred	06000000	vector_table	data/vectors.c:21	the 2i words that match the references to sf3 06000000 point here; contents differ (127 of 256 words equal, rom size 1024); refs 1 conflicts 0 (1 literal-pool slot)
 060FC500	quick_strcpy_1		3s-exact	0613BD34	quick_strcpy_1		rom size 100; refs 1 conflicts 0 (1 literal-pool slot)
+060FC564	vbl_frame_mask_tbl		3s-exact	0613BD98	vbl_frame_mask_tbl	data/intr_tbl.c:11	size 32; sf2i link: vbl_frame_mask_tbl at 060FC564 in the byte-identical build (sf2i/sf2i.map); referenced by intr:1
+060FC584	D_ROM		3s-reloc	0613BDB8	D_ROM	data/sections.src:17	reloc 1, size 4; sf2i link: D_ROM at 060FC584 in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1
+060FC588	D_BGN		3s-exact	0613BDBC	D_BGN	data/sections.src:18	size 4; sf2i link: D_BGN at 060FC588 in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1
+060FC58C	D_END		3s-reloc	0613BDC0	D_END	data/sections.src:19	reloc 1, size 4; sf2i link: D_END at 060FC58C in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1
+060FC590	B_BGN		3s-reloc	0613BDC4	B_BGN	data/sections.src:20	reloc 1, size 4; sf2i link: B_BGN at 060FC590 in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1
+060FC594	B_END		3s-reloc	0613BDC8	B_END	data/sections.src:21	reloc 1, size 4; sf2i link: B_END at 060FC594 in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1
+060FC598	boot_setting_defaults		inferred	0613BDCC	boot_setting_defaults	data/tasksw_tbl.c:11	the bytes differ from sf3 boot_setting_defaults (under half the words equal); named by sf2i link: boot_setting_defaults at 060FC598 in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1
+060FC59C	region_area_tbl		3s-exact	0613BDD0	region_area_tbl	data/tasksw_tbl.c:15	size 32; sf2i link: region_area_tbl at 060FC59C in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1
 060FC5BC	monitor_msg_tbl		3s-reloc	0613BDF0	monitor_msg_tbl	data/Entry_tbl.c:169	reloc 14, rom size 168; refs 1 conflicts 0 (1 literal-pool slot)
 060FC664	dbg_dump_title		3s-reloc	0613BE98	dbg_dump_title	data/Entry_tbl.c:178	reloc 1, rom size 12; refs 1 conflicts 0 (1 literal-pool slot)
+060FC670	dbg_disasm_title		3s-reloc	0613BEA4	dbg_disasm_title	data/Entry_tbl.c:182	reloc 1, size 12; sf2i link: dbg_disasm_title at 060FC670 in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FC67C	sh_op_none_tbl		3s-reloc	0613BEB0	sh_op_none_tbl	data/Entry_tbl.c:186	reloc 8, size 72; sf2i link: sh_op_none_tbl at 060FC67C in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FC6C4	sh_op_ldm_tbl		3s-reloc	0613BEF8	sh_op_ldm_tbl	data/Entry_tbl.c:198	reloc 12, size 104; sf2i link: sh_op_ldm_tbl at 060FC6C4 in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FC72C	sh_op_n_tbl		3s-reloc	0613BF60	sh_op_n_tbl	data/Entry_tbl.c:214	reloc 35, size 288; sf2i link: sh_op_n_tbl at 060FC72C in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FC84C	sh_op_nm_tbl		3s-reloc	0613C080	sh_op_nm_tbl	data/Entry_tbl.c:253	reloc 53, size 432; sf2i link: sh_op_nm_tbl at 060FC84C in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FC9FC	sh_op_disp_m_tbl		3s-reloc	0613C230	sh_op_disp_m_tbl	data/Entry_tbl.c:310	reloc 2, size 24; sf2i link: sh_op_disp_m_tbl at 060FC9FC in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FCA14	sh_op_disp_n_tbl		3s-reloc	0613C248	sh_op_disp_n_tbl	data/Entry_tbl.c:316	reloc 2, size 24; sf2i link: sh_op_disp_n_tbl at 060FCA14 in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FCA2C	sh_op_d8_tbl		3s-reloc	0613C260	sh_op_d8_tbl	data/Entry_tbl.c:322	reloc 11, size 96; sf2i link: sh_op_d8_tbl at 060FCA2C in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FCA8C	sh_op_imm_tbl		3s-reloc	0613C2C0	sh_op_imm_tbl	data/Entry_tbl.c:337	reloc 10, size 88; sf2i link: sh_op_imm_tbl at 060FCA8C in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FCAE4	sh_op_disp4_tbl		3s-reloc	0613C318	sh_op_disp4_tbl	data/Entry_tbl.c:351	reloc 2, size 24; sf2i link: sh_op_disp4_tbl at 060FCAE4 in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FCAFC	sh_op_d12_tbl		3s-reloc	0613C330	sh_op_d12_tbl	data/Entry_tbl.c:357	reloc 2, size 24; sf2i link: sh_op_d12_tbl at 060FCAFC in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FCB14	sh_op_pcrel_tbl		3s-reloc	0613C348	sh_op_pcrel_tbl	data/Entry_tbl.c:363	reloc 2, size 24; sf2i link: sh_op_pcrel_tbl at 060FCB14 in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
+060FCB2C	sh_op_imm_n_tbl		3s-reloc	0613C360	sh_op_imm_n_tbl	data/Entry_tbl.c:369	reloc 2, size 24; sf2i link: sh_op_imm_n_tbl at 060FCB2C in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
 060FCB44	sh_str_break		3s-near	0613C378	sh_str_break	data/Entry_tbl.c:376	sim 50% of 2 words equal, rom size 8; contents changed; refs 1 conflicts 0 (1 literal-pool slot)
+060FCB4C	sh_str_rm		inferred	0613C380	sh_str_rm	data/Entry_tbl.c:378	the bytes differ from sf3 sh_str_rm (under half the words equal); named by sf2i link: sh_str_rm at 060FCB4C in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:2
+060FCB50	sh_str_rn		inferred	0613C384	sh_str_rn	data/Entry_tbl.c:380	the bytes differ from sf3 sh_str_rn (under half the words equal); named by sf2i link: sh_str_rn at 060FCB50 in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:2
+060FCB54	sh_str_undef		3s-exact	0613C388	sh_str_undef	data/Entry_tbl.c:382	size 4; sf2i link: sh_str_undef at 060FCB54 in the byte-identical build (sf2i/sf2i.map); referenced by Entry_dbg:1
 060FCB58	sh_str_monitor_entry		3s-near	0613C38C	sh_str_monitor_entry	data/Entry_tbl.c:385	sim 75% of 4 words equal, rom size 16; contents changed; refs 1 conflicts 0 (1 table word)
 060FCB68	sh_str_illegal_inst		3s-near	0613C39C	sh_str_illegal_inst	data/Entry_tbl.c:388	sim 85% of 7 words equal, rom size 28; contents changed; refs 1 conflicts 0 (1 table word)
 060FCB84	sh_str_slot_illegal_inst		3s-near	0613C3B8	sh_str_slot_illegal_inst	data/Entry_tbl.c:391	sim 85% of 7 words equal, rom size 28; contents changed; refs 1 conflicts 0 (1 table word)
@@ -320,6 +362,8 @@
 0614C0B8	Pattern07_Tbl		3s-reloc	06185F64	Pattern07_Tbl	data/active07_tbl.c:87	reloc 76, rom size 304; refs 1 conflicts 0 (1 literal-pool slot)
 0614C8B4	Pattern14_Tbl		3s-reloc	06186860	Pattern14_Tbl	data/active09_tbl.c:864	reloc 151, rom size 604; refs 1 conflicts 0 (1 literal-pool slot)
 0614CB08	Pattern15_Tbl		3s-reloc	06186ABC	Pattern15_Tbl	data/active09_tbl.c:905	reloc 149, rom size 596; refs 1 conflicts 0 (1 literal-pool slot)
+0614D17C	Follow01_Tbl		3s-reloc	06187798	Follow01_Tbl	data/FOLLOW02_tbl.c:208	reloc 4, size 16; sf2i link: Follow01_Tbl at 0614D17C in the byte-identical build (sf2i/sf2i.map); referenced by FOLLOW01:1
+0614D18C	Follow02_Tbl		3s-reloc	061877A8	Follow02_Tbl	data/FOLLOW02_tbl.c:215	reloc 4, size 16; sf2i link: Follow02_Tbl at 0614D18C in the byte-identical build (sf2i/sf2i.map); referenced by FOLLOW02:1
 0614D8A4	Passive02_Tbl		3s-reloc	0614608C	Passive02_Tbl	data/PASS02_tbl.c:144	reloc 133, rom size 532; refs 1 conflicts 0 (1 literal-pool slot)
 0614DC8C	Passive04_Tbl		3s-reloc	061464C0	Passive04_Tbl	data/PASS04_tbl.c:153	reloc 142, rom size 568; refs 1 conflicts 0 (1 literal-pool slot)
 0614E8F8	Passive09_Tbl		3s-reloc	0614718C	Passive09_Tbl	data/PASS09_tbl.c:143	reloc 132, rom size 528; refs 1 conflicts 0 (1 literal-pool slot)
@@ -362,6 +406,42 @@
 061729FA	sc_cells_5		inferred	061B6108	sc_cells_5	data/sc_trans_tbl.c:117	the 2i words that match the references to sf3 061B6108 point here; contents differ (0 of 4 words equal, rom size 18); refs 1 conflicts 0 (1 table word)
 06173B20	sc_chr_slot_tbl		3s-reloc	061B71B0	sc_chr_slot_tbl	data/sc_trans_tbl.c:517	reloc 5, rom size 20; refs 1 conflicts 0 (1 literal-pool slot)
 06173B28	sc_ram_vram_tbl		inferred	061B71C4	sc_ram_vram_tbl	data/sc_data.c:65	the 2i words that match the references to sf3 061B71C4 point here; contents differ (0 of 90 words equal, rom size 360); refs 1 conflicts 0 (1 literal-pool slot)
+061742F8	fade_adrs_tbl_17		3s-exact	061B7928	fade_adrs_tbl_17	data/spgauge_tbl.c:69	size 4; sf2i link: fade_adrs_tbl_17 at 061742F8 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174304	fade_adrs_tbl_18		3s-exact	061B792C	fade_adrs_tbl_18	data/spgauge_tbl.c:73	size 8; sf2i link: fade_adrs_tbl_18 at 06174304 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+0617430C	fade_adrs_tbl_19		3s-exact	061B7934	fade_adrs_tbl_19	data/spgauge_tbl.c:77	size 4; sf2i link: fade_adrs_tbl_19 at 0617430C in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174310	fade_adrs_tbl_20		3s-exact	061B7938	fade_adrs_tbl_20	data/spgauge_tbl.c:81	size 4; sf2i link: fade_adrs_tbl_20 at 06174310 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174314	fade_adrs_tbl_21		3s-exact	061B793C	fade_adrs_tbl_21	data/spgauge_tbl.c:85	size 4; sf2i link: fade_adrs_tbl_21 at 06174314 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174318	fade_adrs_tbl_22		inferred	061B7944	fade_adrs_tbl_22	data/spgauge_tbl.c:93	the bytes differ from sf3 fade_adrs_tbl_22 (under half the words equal); named by sf2i link: fade_adrs_tbl_22 at 06174318 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:2
+0617431C	fade_adrs_tbl_25		inferred	061B7948	fade_adrs_tbl_25	data/spgauge_tbl.c:97	the bytes differ from sf3 fade_adrs_tbl_25 (under half the words equal); named by sf2i link: fade_adrs_tbl_25 at 0617431C in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174320	fade_adrs_tbl_26		inferred	061B795C	fade_adrs_tbl_26	data/spgauge_tbl.c:117	the bytes differ from sf3 fade_adrs_tbl_26 (under half the words equal); named by sf2i link: fade_adrs_tbl_26 at 06174320 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174324	fade_adrs_tbl_28		inferred	061B7988	fade_adrs_tbl_28	data/spgauge_tbl.c:161	the bytes differ from sf3 fade_adrs_tbl_28 (under half the words equal); named by sf2i link: fade_adrs_tbl_28 at 06174324 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174328	fade_adrs_tbl_29		3s-exact	061B7998	fade_adrs_tbl_29	data/spgauge_tbl.c:177	size 4; sf2i link: fade_adrs_tbl_29 at 06174328 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+0617432C	fade_adrs_tbl_27		3s-exact	061B799C	fade_adrs_tbl_27	data/spgauge_tbl.c:181	size 4; sf2i link: fade_adrs_tbl_27 at 0617432C in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174330	fade_adrs_tbl_23		3s-exact	061B79A0	fade_adrs_tbl_23	data/spgauge_tbl.c:185	size 4; sf2i link: fade_adrs_tbl_23 at 06174330 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174334	fade_adrs_tbl_30		3s-exact	061B79A4	fade_adrs_tbl_30	data/spgauge_tbl.c:189	size 4; sf2i link: fade_adrs_tbl_30 at 06174334 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174338	fade_adrs_tbl_0		inferred	061B7980	fade_adrs_tbl_0	data/spgauge_tbl.c:153	the bytes differ from sf3 fade_adrs_tbl_0 (under half the words equal); named by sf2i link: fade_adrs_tbl_0 at 06174338 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174340	fade_adrs_tbl_1		inferred	061B796C	fade_adrs_tbl_1	data/spgauge_tbl.c:133	the bytes differ from sf3 fade_adrs_tbl_1 (under half the words equal); named by sf2i link: fade_adrs_tbl_1 at 06174340 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174348	fade_adrs_tbl_2		inferred	061B7960	fade_adrs_tbl_2	data/spgauge_tbl.c:121	the bytes differ from sf3 fade_adrs_tbl_2 (under half the words equal); named by sf2i link: fade_adrs_tbl_2 at 06174348 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174354	fade_adrs_tbl_3		inferred	061B797C	fade_adrs_tbl_3	data/spgauge_tbl.c:149	the bytes differ from sf3 fade_adrs_tbl_3 (under half the words equal); named by sf2i link: fade_adrs_tbl_3 at 06174354 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174360	fade_adrs_tbl_4		inferred	061B7978	fade_adrs_tbl_4	data/spgauge_tbl.c:145	the bytes differ from sf3 fade_adrs_tbl_4 (under half the words equal); named by sf2i link: fade_adrs_tbl_4 at 06174360 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+0617436C	fade_adrs_tbl_5		inferred	061B7994	fade_adrs_tbl_5	data/spgauge_tbl.c:173	the bytes differ from sf3 fade_adrs_tbl_5 (under half the words equal); named by sf2i link: fade_adrs_tbl_5 at 0617436C in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174378	fade_adrs_tbl_6		inferred	061B7968	fade_adrs_tbl_6	data/spgauge_tbl.c:129	the bytes differ from sf3 fade_adrs_tbl_6 (under half the words equal); named by sf2i link: fade_adrs_tbl_6 at 06174378 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174384	fade_adrs_tbl_7		inferred	061B7970	fade_adrs_tbl_7	data/spgauge_tbl.c:137	the bytes differ from sf3 fade_adrs_tbl_7 (under half the words equal); named by sf2i link: fade_adrs_tbl_7 at 06174384 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+0617438C	fade_adrs_tbl_8		inferred	061B7984	fade_adrs_tbl_8	data/spgauge_tbl.c:157	the bytes differ from sf3 fade_adrs_tbl_8 (under half the words equal); named by sf2i link: fade_adrs_tbl_8 at 0617438C in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174398	fade_adrs_tbl_9		inferred	061B7964	fade_adrs_tbl_9	data/spgauge_tbl.c:125	the bytes differ from sf3 fade_adrs_tbl_9 (under half the words equal); named by sf2i link: fade_adrs_tbl_9 at 06174398 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+061743A4	fade_adrs_tbl_10		inferred	061B7958	fade_adrs_tbl_10	data/spgauge_tbl.c:113	the bytes differ from sf3 fade_adrs_tbl_10 (under half the words equal); named by sf2i link: fade_adrs_tbl_10 at 061743A4 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+061743B0	fade_adrs_tbl_11		inferred	061B7974	fade_adrs_tbl_11	data/spgauge_tbl.c:141	the bytes differ from sf3 fade_adrs_tbl_11 (under half the words equal); named by sf2i link: fade_adrs_tbl_11 at 061743B0 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+061743BC	fade_adrs_tbl_12		inferred	061B798C	fade_adrs_tbl_12	data/spgauge_tbl.c:165	the bytes differ from sf3 fade_adrs_tbl_12 (under half the words equal); named by sf2i link: fade_adrs_tbl_12 at 061743BC in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+061743C4	fade_adrs_tbl_13		inferred	061B7940	fade_adrs_tbl_13	data/spgauge_tbl.c:89	the bytes differ from sf3 fade_adrs_tbl_13 (under half the words equal); named by sf2i link: fade_adrs_tbl_13 at 061743C4 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+061743CC	fade_adrs_tbl_14		inferred	061B7950	fade_adrs_tbl_14	data/spgauge_tbl.c:105	the bytes differ from sf3 fade_adrs_tbl_14 (under half the words equal); named by sf2i link: fade_adrs_tbl_14 at 061743CC in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+061743D4	fade_adrs_tbl_15		inferred	061B7990	fade_adrs_tbl_15	data/spgauge_tbl.c:169	the bytes differ from sf3 fade_adrs_tbl_15 (under half the words equal); named by sf2i link: fade_adrs_tbl_15 at 061743D4 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+061743DC	fade_param_tbl		3s-near	061B7A70	fade_param_tbl	data/spgauge_tbl.c:219	sim 86% of 126 words equal, size 504; sf2i link: fade_param_tbl at 061743DC in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174598	fade_data_tbl		3s-near	061B7C68	fade_data_tbl	data/sc_data3.c:11	sim 52% of 633 words equal, size 2532; sf2i link: fade_data_tbl at 06174598 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174B9C	fade_adrs_tbl_31		inferred	061B79A8	fade_adrs_tbl_31	data/spgauge_tbl.c:193	the bytes differ from sf3 fade_adrs_tbl_31 (under half the words equal); named by sf2i link: fade_adrs_tbl_31 at 06174B9C in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174BAE	fade_adrs_tbl_32		inferred	061B79B4	fade_adrs_tbl_32	data/spgauge_tbl.c:197	the bytes differ from sf3 fade_adrs_tbl_32 (under half the words equal); named by sf2i link: fade_adrs_tbl_32 at 06174BAE in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174BC0	fade_adrs_tbl_33		inferred	061B79BC	fade_adrs_tbl_33	data/spgauge_tbl.c:201	the bytes differ from sf3 fade_adrs_tbl_33 (under half the words equal); named by sf2i link: fade_adrs_tbl_33 at 06174BC0 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174BD6	fade_adrs_tbl_34		inferred	061B794C	fade_adrs_tbl_34	data/spgauge_tbl.c:101	the bytes differ from sf3 fade_adrs_tbl_34 (under half the words equal); named by sf2i link: fade_adrs_tbl_34 at 06174BD6 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
+06174BEC	fade_adrs_tbl_35		inferred	061B79C4	fade_adrs_tbl_35	data/spgauge_tbl.c:205	the bytes differ from sf3 fade_adrs_tbl_35 (under half the words equal); named by sf2i link: fade_adrs_tbl_35 at 06174BEC in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
 06174DA4	effmovejptbl		inferred	061B883C	effmovejptbl	data/EFFECT_tbl.c:296	the 2i words that match the references to sf3 061B883C point here; contents differ (0 of 229 words equal, rom size 916); refs 1 conflicts 0 (1 literal-pool slot)
 061768EC	eff09_data2		3s-near	061BAA40	eff09_data2	data/EFF09_tbl.c:17	sim 56% of 172 words equal, rom size 688; contents changed; refs 1 conflicts 0 (1 literal-pool slot)
 06179664	eff56_color_tbl		3s-exact	061BF35C	eff56_color_tbl	data/EFF58_tbl.c:11	rom size 16; refs 1 conflicts 0 (1 literal-pool slot)
@@ -381,6 +461,11 @@
 062F2120	plef_char_table		inferred	0634F028	plef_char_table	data/effect_char.c:483	the 2i words that match the references to sf3 0634F028 point here; contents differ (0 of 176 words equal, rom size 704); refs 1 conflicts 0 (1 literal-pool slot)
 063FFCC0	necro_body_box		inferred	063FFCC0	necro_body_box	data/necro_hitbox.c:358	the 2i words that match the references to sf3 063FFCC0 point here; contents differ (48 of 1824 words equal, rom size 7296); refs 1 conflicts 0 (1 table word)
 0641A83C	sc_chr_data		3s-near	065627D4	sc_chr_data	data/chr_data.c:3567	sim 52% of 256 words equal, rom size 1024; contents changed; refs 3 conflicts 0 (3 literal-pool slots)
+0642883C	wipe_mask_chr		inferred	065707D4	wipe_mask_chr	data/chr_data.c:10683	the bytes differ from sf3 wipe_mask_chr (under half the words equal); named by sf2i link: wipe_mask_chr at 0642883C in the byte-identical build (sf2i/sf2i.map); referenced by se_2:1
+065271B0	snd_sample_rom_tbl		inferred	0678C000	snd_sample_rom_tbl	data/snd_seq.c:17	the bytes differ from sf3 snd_sample_rom_tbl (under half the words equal); named by sf2i link: snd_sample_rom_tbl at 065271B0 in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1 sys_config:3
+065294B0	snd_bank_rom_tbl		3s-reloc	06788000	snd_bank_rom_tbl	data/snd_bank.c:17	reloc 16, size 64; sf2i link: snd_bank_rom_tbl at 065294B0 in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1 sys_config:3
+0652C294	snd_seq_rom_data		inferred	0678F000	snd_seq_rom_data	data/snd_seq.c:789	the bytes differ from sf3 snd_seq_rom_data (under half the words equal); named by sf2i link: snd_seq_rom_data at 0652C294 in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1 sys_config:3
+0656DED0	bcd_weight_end		3s-exact	0660551C	bcd_weight_end	data/meta_col_tbl.c:1261	size 44; sf2i link: bcd_weight_end at 0656DED0 in the byte-identical build (sf2i/sf2i.map); referenced by meta_col_bcd:1
 0656E080	scroll_enable_bit_tbl		3s-exact	06605548	scroll_enable_bit_tbl	data/sys_test_tbl.c:103	rom size 12; refs 2 conflicts 0 (2 literal-pool slots)
 0656E08C	iotest_input_scr		3s-reloc	06605554	iotest_input_scr	data/sys_test_tbl.c:109	reloc 9, rom size 108; refs 1 conflicts 0 (1 literal-pool slot)
 0656E0F8	iotest_1p_sw_x		3s-exact	066055C0	iotest_1p_sw_x	data/sys_test_tbl.c:121	rom size 2; refs 1 conflicts 0 (1 literal-pool slot)
@@ -407,10 +492,20 @@
 0656E210	iotest_lever_label_str		3s-near	066056D8	iotest_lever_label_str	data/sys_test_tbl.c:201	sim 50% of 2 words equal, rom size 8; contents changed; refs 1 conflicts 0 (1 table word)
 0656E218	iotest_shot_label_str		3s-near	066056E0	iotest_shot_label_str	data/sys_test_tbl.c:204	sim 50% of 2 words equal, rom size 8; contents changed; refs 1 conflicts 0 (1 table word)
 0656E220	iotest_input_exit_str		3s-exact	066056E8	iotest_input_exit_str	data/sys_test_tbl.c:207	rom size 24; refs 1 conflicts 0 (1 table word)
+0656E238	iotest_output_scr		3s-reloc	06605700	iotest_output_scr	data/sys_test_tbl.c:209	reloc 5, size 60; sf2i link: iotest_output_scr at 0656E238 in the byte-identical build (sf2i/sf2i.map); referenced by iotest_out:1
+0656E274	iotest_dispenser_str		3s-reloc	0660573C	iotest_dispenser_str	data/sys_test_tbl.c:217	reloc 1, size 12; sf2i link: iotest_dispenser_str at 0656E274 in the byte-identical build (sf2i/sf2i.map); referenced by iotest_out:1
 0656E334	soundtest_menu_scr		3s-reloc	066057FC	soundtest_menu_scr	data/sys_test_tbl.c:239	reloc 9, rom size 108; refs 1 conflicts 0 (1 literal-pool slot)
+0656E3A0	soundtest_monitor_scr		3s-reloc	06605868	soundtest_monitor_scr	data/sys_test_tbl.c:251	reloc 21, size 252; sf2i link: soundtest_monitor_scr at 0656E3A0 in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:1
+0656E49C	snd_stat_stop_str		3s-near	06605964	snd_stat_stop_str	data/sys_test_tbl.c:275	sim 50% of 2 words equal, size 8; sf2i link: snd_stat_stop_str at 0656E49C in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:1
+0656E4A4	snd_stat_play_str		3s-near	0660596C	snd_stat_play_str	data/sys_test_tbl.c:277	sim 50% of 2 words equal, size 8; sf2i link: snd_stat_play_str at 0656E4A4 in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:1
+0656E4AC	snd_stat_pause_str		3s-near	06605974	snd_stat_pause_str	data/sys_test_tbl.c:279	sim 50% of 2 words equal, size 8; sf2i link: snd_stat_pause_str at 0656E4AC in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:1
+0656E4B4	snd_stat_blank_str		3s-near	0660597C	snd_stat_blank_str	data/sys_test_tbl.c:281	sim 66% of 3 words equal, size 12; sf2i link: snd_stat_blank_str at 0656E4B4 in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:1
+0656E4C0	snd_stat_fadein_str		3s-near	06605988	snd_stat_fadein_str	data/sys_test_tbl.c:283	sim 66% of 3 words equal, size 12; sf2i link: snd_stat_fadein_str at 0656E4C0 in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:1
+0656E4CC	snd_stat_fadeout_str		3s-near	06605994	snd_stat_fadeout_str	data/sys_test_tbl.c:285	sim 66% of 3 words equal, size 12; sf2i link: snd_stat_fadeout_str at 0656E4CC in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:1
 0656E4D8	pan_bar_str		3s-near	066059A0	pan_bar_str	data/sys_test_tbl.c:287	sim 80% of 5 words equal, rom size 20; contents changed; refs 1 conflicts 0 (1 literal-pool slot)
 0656E4EC	delta_same_str		3s-exact	066059B4	delta_same_str	data/sys_test_tbl.c:289	rom size 4; refs 1 conflicts 0 (1 literal-pool slot)
 0656E4F0	delta_up_str		3s-exact	066059B8	delta_up_str	data/sys_test_tbl.c:291	rom size 4; refs 1 conflicts 0 (1 literal-pool slot)
+0656E4F4	delta_down_str		3s-exact	066059BC	delta_down_str	data/sys_test_tbl.c:293	size 4; sf2i link: delta_down_str at 0656E4F4 in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:1
 0656E4F8	soundtest_title_str		3s-near	066059C0	soundtest_title_str	data/sys_test_tbl.c:296	sim 90% of 11 words equal, rom size 44; contents changed; refs 1 conflicts 0 (1 table word)
 0656E524	soundtest_code_label_str		3s-near	066059EC	soundtest_code_label_str	data/sys_test_tbl.c:299	sim 75% of 4 words equal, rom size 16; contents changed; refs 1 conflicts 0 (1 table word)
 0656E534	soundtest_help_up_str		3s-near	066059FC	soundtest_help_up_str	data/sys_test_tbl.c:302	sim 80% of 5 words equal, rom size 20; contents changed; refs 1 conflicts 0 (1 table word)
@@ -420,15 +515,24 @@
 0656E588	soundtest_help_request_str		3s-near	06605A50	soundtest_help_request_str	data/sys_test_tbl.c:314	sim 83% of 6 words equal, rom size 24; contents changed; refs 1 conflicts 0 (1 table word)
 0656E5A0	soundtest_help_stop_str		3s-near	06605A68	soundtest_help_stop_str	data/sys_test_tbl.c:317	sim 83% of 6 words equal, rom size 24; contents changed; refs 1 conflicts 0 (1 table word)
 0656E5B8	soundtest_exit_str		3s-exact	06605A80	soundtest_exit_str	data/sys_test_tbl.c:320	rom size 24; refs 1 conflicts 0 (1 table word)
+0656E66C	colortest_scr		3s-reloc	06605B34	colortest_scr	data/sys_test_tbl.c:379	reloc 7, size 84; sf2i link: colortest_scr at 0656E66C in the byte-identical build (sf2i/sf2i.map); referenced by colortest:1
+0656E6C0	colortest_palette		3s-near	06605B88	colortest_palette	data/sys_test_tbl.c:389	sim 98% of 67 words equal, size 268; sf2i link: colortest_palette at 0656E6C0 in the byte-identical build (sf2i/sf2i.map); referenced by colortest:1
 0656E840	crosshatch_scr		3s-reloc	06605D08	crosshatch_scr	data/sys_test_tbl.c:430	reloc 2, rom size 24; refs 1 conflicts 0 (1 literal-pool slot)
 0656E858	crosshatch_title_str		3s-near	06605D20	crosshatch_title_str	data/sys_test_tbl.c:436	sim 88% of 9 words equal, rom size 36; contents changed; refs 1 conflicts 0 (1 table word)
 0656E87C	crosshatch_exit_str		3s-exact	06605D44	crosshatch_exit_str	data/sys_test_tbl.c:439	rom size 24; refs 1 conflicts 0 (1 table word)
+0656E894	gamedata_scr		3s-reloc	06605D5C	gamedata_scr	data/sys_test_tbl.c:441	reloc 4, size 48; sf2i link: gamedata_scr at 0656E894 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_2b:1
+0656E8C4	gamedata_freeplay_str		3s-reloc	06605D8C	gamedata_freeplay_str	data/sys_test_tbl.c:448	reloc 1, size 12; sf2i link: gamedata_freeplay_str at 0656E8C4 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_2b:1
 0656E8D0	gamedata_card_str		3s-reloc	06605D98	gamedata_card_str	data/sys_test_tbl.c:452	reloc 1, rom size 12; refs 1 conflicts 0 (1 literal-pool slot)
 0656E948	gamedata_card_counter_str		3s-near	06605E10	gamedata_card_counter_str	data/sys_test_tbl.c:472	sim 80% of 5 words equal, rom size 20; contents changed; refs 1 conflicts 0 (1 table word)
 0656E95C	memtest_menu_scr		3s-reloc	06605E24	memtest_menu_scr	data/sys_test_tbl.c:474	reloc 6, rom size 72; refs 1 conflicts 0 (1 literal-pool slot)
+0656E9A4	memtest_ram_scr		3s-reloc	06605E6C	memtest_ram_scr	data/sys_test_tbl.c:483	reloc 15, size 180; sf2i link: memtest_ram_scr at 0656E9A4 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
 0656EA58	memtest_simm_scr		3s-reloc	06605F20	memtest_simm_scr	data/sys_test_tbl.c:501	reloc 8, rom size 96; refs 1 conflicts 0 (1 literal-pool slot)
+0656EAB8	simm_sum_offset_tbl		3s-exact	06605F80	simm_sum_offset_tbl	data/sys_test_tbl.c:512	size 64; sf2i link: simm_sum_offset_tbl at 0656EAB8 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:4
 0656EAF8	cdb_test_unit_ready		3s-exact	06605FC0	cdb_test_unit_ready	data/sys_test_tbl.c:517	rom size 6; refs 1 conflicts 0 (1 literal-pool slot)
+0656EAFE	cdb_read_capacity		3s-exact	06605FC6	cdb_read_capacity	data/sys_test_tbl.c:521	size 10; sf2i link: cdb_read_capacity at 0656EAFE in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
 0656EB08	cdb_inquiry		3s-exact	06605FD0	cdb_inquiry	data/sys_test_tbl.c:523	rom size 6; refs 1 conflicts 0 (1 literal-pool slot)
+0656EB0E	cdb_request_sense		3s-exact	06605FD6	cdb_request_sense	data/sys_test_tbl.c:527	size 6; sf2i link: cdb_request_sense at 0656EB0E in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
+0656EB14	cdb_read_toc		3s-near	06605FDC	cdb_read_toc	data/sys_test_tbl.c:531	sim 66% of 3 words equal, size 12; sf2i link: cdb_read_toc at 0656EB14 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
 0656EB20	memtest_checking_str		3s-exact	06605FE8	memtest_checking_str	data/sys_test_tbl.c:536	rom size 12; refs 5 conflicts 0 (5 literal-pool slots)
 0656EB2C	memtest_ng_str		3s-exact	06605FF4	memtest_ng_str	data/sys_test_tbl.c:538	rom size 12; refs 5 conflicts 0 (5 literal-pool slots)
 0656EB38	memtest_ok_str		3s-exact	06606000	memtest_ok_str	data/sys_test_tbl.c:540	rom size 12; refs 5 conflicts 0 (5 literal-pool slots)
@@ -447,12 +551,25 @@
 0656EC9C	memtest_simm6_str		3s-near	06606164	memtest_simm6_str	data/sys_test_tbl.c:602	sim 75% of 4 words equal, rom size 16; contents changed; refs 1 conflicts 0 (1 table word)
 0656ECAC	memtest_simm7_str		3s-exact	06606174	memtest_simm7_str	data/sys_test_tbl.c:605	rom size 12; refs 1 conflicts 0 (1 table word)
 0656ECB8	memtest_simm_title_and_names		3s-near	06606180	memtest_simm_title_and_names	data/sys_test_tbl.c:608	sim 87% of 8 words equal, rom size 32; contents changed; refs 1 conflicts 0 (1 table word)
+0656ECD8	str_ONBOARD		3s-exact	066061A0	str_ONBOARD	data/sys_test_tbl.c:609	size 12; sf2i link: str_ONBOARD at 0656ECD8 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
+0656ECE4	str_SIMM1		3s-exact	066061AC	str_SIMM1	data/sys_test_tbl.c:610	size 12; sf2i link: str_SIMM1 at 0656ECE4 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
+0656ECF0	str_SIMM2		3s-exact	066061B8	str_SIMM2	data/sys_test_tbl.c:611	size 12; sf2i link: str_SIMM2 at 0656ECF0 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
+0656ECFC	str_SIMM3		3s-exact	066061C4	str_SIMM3	data/sys_test_tbl.c:612	size 12; sf2i link: str_SIMM3 at 0656ECFC in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
+0656ED08	str_SIMM4		3s-exact	066061D0	str_SIMM4	data/sys_test_tbl.c:613	size 12; sf2i link: str_SIMM4 at 0656ED08 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
+0656ED14	str_SIMM5		3s-exact	066061DC	str_SIMM5	data/sys_test_tbl.c:614	size 12; sf2i link: str_SIMM5 at 0656ED14 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
+0656ED20	str_SIMM6		3s-exact	066061E8	str_SIMM6	data/sys_test_tbl.c:615	size 12; sf2i link: str_SIMM6 at 0656ED20 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
+0656ED2C	str_SIMM7		3s-exact	066061F4	str_SIMM7	data/sys_test_tbl.c:616	size 12; sf2i link: str_SIMM7 at 0656ED2C in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_3:1
+0656ED38	rewrite_menu_scr		3s-reloc	06606200	rewrite_menu_scr	data/sys_test_tbl.c:618	reloc 7, size 84; sf2i link: rewrite_menu_scr at 0656ED38 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_4:1
 0656ED8C	rewrite_guide_scr		3s-reloc	06606254	rewrite_guide_scr	data/sys_test_tbl.c:628	reloc 2, rom size 24; refs 1 conflicts 0 (1 literal-pool slot)
+0656EDA4	rewrite_exit_guide_scr		3s-reloc	0660626C	rewrite_exit_guide_scr	data/sys_test_tbl.c:633	reloc 3, size 36; sf2i link: rewrite_exit_guide_scr at 0656EDA4 in the byte-identical build (sf2i/sf2i.map); referenced by sys_test_4:1
 0656EDC8	rewrite_not_ready_str		3s-reloc	06606290	rewrite_not_ready_str	data/sys_test_tbl.c:639	reloc 1, rom size 12; refs 1 conflicts 0 (1 literal-pool slot)
 0656EE94	rewrite_select_help_str		3s-exact	0660635C	rewrite_select_help_str	data/sys_test_tbl.c:665	rom size 24; refs 1 conflicts 0 (1 table word)
 0656EEAC	rewrite_start_help_str		3s-near	06606374	rewrite_start_help_str	data/sys_test_tbl.c:668	sim 85% of 7 words equal, rom size 28; contents changed; refs 1 conflicts 0 (1 table word)
 0656EF00	rewrite_cd_not_ready_str		3s-near	066063C8	rewrite_cd_not_ready_str	data/sys_test_tbl.c:677	sim 80% of 5 words equal, rom size 20; contents changed; refs 1 conflicts 0 (1 table word)
 0656EF14	sys_font_cg		3s-exact	066063DC	sys_font_cg	data/sys_test_tbl.c:679	rom size 8192; refs 1 conflicts 0 (1 literal-pool slot)
+06574C14	coin_counter_bit_tbl		inferred	0660C0DC	coin_counter_bit_tbl	data/sys_test_tbl.c:3121	the bytes differ from sf3 coin_counter_bit_tbl (under half the words equal); named by sf2i link: coin_counter_bit_tbl at 06574C14 in the byte-identical build (sf2i/sf2i.map); referenced by coin_sw:2
+06574C18	eeprom_error_str		3s-near	0660C0E0	eeprom_error_str	data/eeprom_tbl.c:11	sim 75% of 4 words equal, size 16; sf2i link: eeprom_error_str at 06574C18 in the byte-identical build (sf2i/sf2i.map); referenced by eeprom:1
+06574C28	coin_rate_tbl		3s-near	0660C0F0	coin_rate_tbl	data/sys_config_tbl.c:92	sim 90% of 10 words equal, size 40; sf2i link: coin_rate_tbl at 06574C28 in the byte-identical build (sf2i/sf2i.map); referenced by sys_config:2
 06574E30	cursor_blank_str		inferred	0660C2F8	cursor_blank_str	data/sys_config_tbl.c:258	the 2i words that match the references to sf3 0660C2F8 point here; contents differ (0 of 1 words equal, rom size 4); refs 1 conflicts 0 (1 literal-pool slot)
 06574E34	cursor_mark_str		inferred	0660C2FC	cursor_mark_str	data/sys_config_tbl.c:262	the 2i words that match the references to sf3 0660C2FC point here; contents differ (0 of 1 words equal, rom size 4); refs 1 conflicts 0 (1 literal-pool slot)
 06800000	cg_data_tbl		inferred	06800000	cg_data_tbl	data/cg_0000.c:438	the 2i words that match the references to sf3 06800000 point here; contents differ (266 of 8192 words equal, rom size 32768); refs 5 conflicts 0 (5 table words)

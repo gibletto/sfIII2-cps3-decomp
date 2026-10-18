@@ -11,7 +11,8 @@ Every name in the 2nd Impact decompilation (function, global, type, enum, local)
   `tools/ghidra-export.sh` opens it read-only and applies the tables (`ghidra/scripts/ApplyTables.java`) in every
   session before it exports, so deleting the project and running both scripts again reproduces every name.
 - **One name, one row.** A name is defined by exactly one row, together with its evidence. Renaming is editing that
-  row; the next export shows the new name everywhere. `tools/check-tables.py` rejects duplicate names, duplicate
+  row; the next export shows the new name everywhere. An address has one primary name; a genuine second name of
+  the same address is an `aliases.tsv` row. `tools/check-tables.py` rejects duplicate names, duplicate
   addresses, unknown classes and rows missing the evidence their class requires.
 - **Seeding never overwrites.** `tools/seed-tables.py` adds rows for addresses that have none and reports
   disagreements with existing rows; it does not change a row that is already there. Once a row has been edited by
@@ -78,6 +79,7 @@ All are tab-separated; `#` lines and blank lines are skipped. Columns beyond the
 | `types.h` | C struct/union definitions. `// @size NAME 0xNN` is checked against the parsed size; `// @prov NAME class sf3_src [note]` is the type's provenance (one per struct/union, checked by `check-tables.py`) |
 | `enums.tsv` | enum, size, member, value, class, sf3_src. Class and source on an enum's first row, empty on the rest |
 | `locals.tsv` | function, old name, new name, type, first use, storage, class, note |
+| `aliases.tsv` | address, name, note: a second name of an address that has a `functions.tsv` or `globals.tsv` row, applied as a secondary label (never a rename). For genuine second names, not competing claims: the SHC run-time library's `_x`/`__x` entry pairs (the row holds `_x`, from the `__x` label; C code calls `x`), two table symbols the link puts at one address. The note cites the link and why both names exist; `check-tables.py` requires the primary row and rejects a name that collides with any other |
 
 Signatures, types, widths and the C-safety rules (no locals named like types, keywords or globals) follow the
 compiler's `ghidra/names/README.md`.

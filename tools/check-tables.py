@@ -6,7 +6,8 @@
 Checks: column counts; addresses are 8 hex digits; names are C identifiers, not C keywords and unique across
 functions and globals; each address appears once per table; the class is one of the five; the evidence a class
 needs (sf3_addr/sf3_name for 3s-*, "reloc N" for 3s-reloc, "sim NN%" for 3s-near, a note for inferred); every
-struct/union in types.h has an @prov line; an enum's first row has a class. Prints each problem; exit 1 if any.
+struct/union in types.h has an @prov line; an enum's first row has a class; an alias (aliases.tsv) names an address
+that has a functions or globals row, collides with no other name and has a note. Prints each problem; exit 1 if any.
 """
 import re, sys
 from pathlib import Path
@@ -72,6 +73,21 @@ for table in ('functions.tsv', 'globals.tsv'):
         names[name] = f'{table}:{n}'
         evidence(table, n, cls, sf3_addr, sf3_name, note)
 
+primary_addrs = set()
+for table in ('functions.tsv', 'globals.tsv'):
+    primary_addrs |= {r[0].lower() for _, r in rows(table, 8)}
+aliases = {}
+for n, r in rows('aliases.tsv', 3):
+    if not re.fullmatch(r'[0-9A-Fa-f]{8}', r[0]) or r[0].lower() not in primary_addrs:
+        bad('aliases.tsv', n, f'{r[0]} has no functions.tsv or globals.tsv row')
+    if not IDENT.match(r[1]) or r[1] in KEYWORDS:
+        bad('aliases.tsv', n, f'name {r[1]!r} is not a C identifier')
+    if r[1] in names or r[1] in aliases:
+        bad('aliases.tsv', n, f'name {r[1]} also at {names.get(r[1]) or aliases[r[1]]}')
+    if not r[2]:
+        bad('aliases.tsv', n, 'an alias needs a note (why both names exist)')
+    aliases[r[1]] = f'aliases.tsv:{n}'
+
 for n, r in rows('entries.tsv', 2):
     if not re.fullmatch(r'[0-9A-Fa-f]{8}', r[0]):
         bad('entries.tsv', n, f'address {r[0]!r}')
@@ -84,7 +100,7 @@ for n, r in rows('enums.tsv', 6):
             bad('enums.tsv', n, f'first row of {r[0]} needs a class, has {r[4]!r}')
 
 for n, r in rows('locals.tsv', 8):
-    if not IDENT.match(r[2]) or r[2] in KEYWORDS or r[2] in names:
+    if not IDENT.match(r[2]) or r[2] in KEYWORDS or r[2] in names or r[2] in aliases:
         bad('locals.tsv', n, f'local {r[2]!r} is not a C identifier or is a global/function name')
     if r[6] and r[6] not in CLASSES:
         bad('locals.tsv', n, f'class {r[6]!r}')
@@ -104,5 +120,5 @@ if th.is_file():
 
 for p in problems:
     print(p)
-print(f'check-tables: {len(names)} names, {len(problems)} problems')
+print(f'check-tables: {len(names)} names, {len(aliases)} aliases, {len(problems)} problems')
 sys.exit(1 if problems else 0)

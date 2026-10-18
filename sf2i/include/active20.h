@@ -1,0 +1,87 @@
+#ifndef ACTIVE20_H
+#define ACTIVE20_H
+
+#include "structs.h"
+
+void Computer20(PLW* wk);
+void Pattern20_0000(PLW* wk);
+void Pattern20_0001(PLW* wk);
+void Pattern20_0002(PLW* wk);
+void Pattern20_0003(PLW* wk);
+void Pattern20_0004(PLW* wk);
+void Pattern20_0005(PLW* wk);
+void Pattern20_0006(PLW* wk);
+void Pattern20_0007(PLW* wk);
+void Pattern20_0008(PLW* wk);
+void Pattern20_0009(PLW* wk);
+void Pattern20_0010(PLW* wk);
+void Pattern20_0011(PLW* wk);
+void Pattern20_0012(PLW* wk);
+void Pattern20_0013(PLW* wk);
+void Pattern20_0014(PLW* wk);
+void Pattern20_0015(PLW* wk);
+void Pattern20_0016(PLW* wk);
+void Pattern20_0017(PLW* wk);
+void Pattern20_0018(PLW* wk);
+void Pattern20_0019(PLW* wk);
+void Pattern20_0020(PLW* wk);
+void Pattern20_0021(PLW* wk);
+void Pattern20_0022(PLW* wk);
+void Pattern20_0023(PLW* wk);
+void Pattern20_0024(PLW* wk);
+void Pattern20_0025(PLW* wk);
+void Pattern20_0026(PLW* wk);
+void Pattern20_0027(PLW* wk);
+void Pattern20_0028(PLW* wk);
+void Pattern20_0029(PLW* wk);
+void Pattern20_0030(PLW* wk);
+void Pattern20_0031(PLW* wk);
+void Pattern20_0032(PLW* wk);
+void Pattern20_0033(PLW* wk);
+void Pattern20_0034(PLW* wk);
+void Pattern20_0035(PLW* wk);
+void Pattern20_0036(PLW* wk);
+void Pattern20_0037(PLW* wk);
+void Pattern20_0038(PLW* wk);
+void Pattern20_0039(PLW* wk);
+void Pattern20_0040(PLW* wk);
+void Pattern20_0041(PLW* wk);
+void Pattern20_0042(PLW* wk);
+void Pattern20_0043(PLW* wk);
+void Pattern20_0044(PLW* wk);
+void Pattern20_0045(PLW* wk);
+void Pattern20_0046(PLW* wk);
+void Pattern20_0047(PLW* wk);
+void Pattern20_0048(PLW* wk);
+void Pattern20_0049(PLW* wk);
+void Pattern20_0050(PLW* wk);
+void Pattern20_0051(PLW* wk);
+void Pattern20_0052(PLW* wk);
+void Pattern20_0053(PLW* wk);
+void Pattern20_0054(PLW* wk);
+void Pattern20_0055(PLW* wk);
+void Pattern20_0056(PLW* wk);
+void Pattern20_0057(PLW* wk);
+void Pattern20_0058(PLW* wk);
+void Pattern20_0059(PLW* wk);
+void Pattern20_0060(PLW* wk);
+void Pattern20_0061(PLW* wk);
+void Pattern20_0062(PLW* wk);
+void Pattern20_0063(PLW* wk);
+void Pattern20_0064(PLW* wk);
+void Pattern20_0065(PLW* wk);
+void Pattern20_0066(PLW* wk);
+void Pattern20_0067(PLW* wk);
+void Pattern20_0068(PLW* wk);
+void Pattern20_0069(PLW* wk);
+void Pattern20_0070(PLW* wk);
+void Pattern20_0071(PLW* wk);
+void Pattern20_0072(PLW* wk);
+void Pattern20_0073(PLW* wk);
+void Pattern20_0074(PLW* wk);
+void Pattern20_0075(PLW* wk);
+void Pattern20_0076(PLW* wk);
+void Pattern20_0077(PLW* wk);
+void Pattern20_0078(PLW* wk);
+
+#endif

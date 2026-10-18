@@ -15,6 +15,9 @@
 //   functions.tsv  address, name, signature, class, sf3_addr, sf3_name, sf3_src, note   a row asserts a function
 //                  entry: made a function first if the analysis has none there
 //   globals.tsv    address, name, type, class, sf3_addr, sf3_name, sf3_src, note
+//   aliases.tsv    address, name, note                            a second name of an address that has a functions
+//                  or globals row (an SHC run-time _x/__x entry pair, two table symbols at one address): added
+//                  as a secondary label, never a rename
 //   locals.tsv     function, old name, new name, type, first use, storage, class, note
 // A function or global row's provenance is also set as the plate comment at its address ("prov: ..."), so the
 // listing and the export (ExportFullDecomp.java writes it into each function's header) show where the name came
@@ -297,6 +300,29 @@ public class ApplyTables extends GhidraScript {
 		return at.isEmpty() ? syms.get(r[1]) : null;
 	}
 
+	/** second names of an address that has a functions.tsv or globals.tsv row: added as secondary labels, never
+	    renaming the primary one */
+	private void applyAliases(File f) throws Exception {
+		SymbolTable st = currentProgram.getSymbolTable();
+		int n = 0;
+		for (String[] r : rows(f, 2)) {
+			Address a = toAddr(r[0]);
+			Symbol primary = st.getPrimarySymbol(a);
+			if (primary == null || primary.getSource() == SourceType.DEFAULT) {
+				error("aliases.tsv: " + r[0] + " " + r[1] + ": the address has no named primary symbol");
+				continue;
+			}
+			if (st.getSymbol(r[1], a, null) == null && createLabel(a, r[1], false, SourceType.USER_DEFINED) == null) {
+				error("aliases.tsv: cannot add label " + r[1] + " at " + r[0]);
+				continue;
+			}
+			if (!st.getPrimarySymbol(a).getName().equals(primary.getName()))
+				error("aliases.tsv: " + r[1] + " at " + r[0] + " displaced the primary name " + primary.getName());
+			n++;
+		}
+		println("ApplyTables: " + n + " aliases");
+	}
+
 	private void applyLocals(File f) throws Exception {
 		List<String[]> rs = rows(f, 3);
 		if (rs.isEmpty()) return;
@@ -362,6 +388,7 @@ public class ApplyTables extends GhidraScript {
 		applyTypes(new File(dir, "types.h"));
 		applyFunctions(new File(dir, "functions.tsv"));
 		applyGlobals(new File(dir, "globals.tsv"));
+		applyAliases(new File(dir, "aliases.tsv"));
 		applyLocals(new File(dir, "locals.tsv"));
 		if (errors > 0) throw new Exception("ApplyTables: " + errors + " errors");
 		println("ApplyTables: done");

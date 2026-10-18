@@ -22,7 +22,8 @@ SECTION_MARK = re.compile(r"^(\S+)\s+(?:[0-9A-F]{8}(?:\s|$)|; File\b)")
 LINE = re.compile(r"^\s+([0-9A-F]{8})\s+([0-9A-F]{4}|<[0-9A-F]{8}>|[0-9A-F]{8})\s+(\S+)\s*(\S*)")
 
 
-def parse(text):
+def parse(text, res_word=0):
+    """res_word: the value listed for a reserved (.RES) halfword, which the link leaves to the image's fill"""
     out, cur, in_p = {}, None, False
     for l in text.splitlines():
         if l.startswith('******** STATISTICS'):
@@ -46,7 +47,7 @@ def parse(text):
         words, pool, syms = cur[1], cur[2], cur[3]
         if mn.startswith('.RES'):
             n = int(v, 16) // 2
-            words += [0] * n; pool += [True] * n
+            words += [res_word] * n; pool += [True] * n
             continue
         isp = mn.startswith('.DATA')
         if not (isp or mn[:1].isalpha()):

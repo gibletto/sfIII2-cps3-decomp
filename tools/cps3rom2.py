@@ -10,9 +10,15 @@
         plain, so neither view alone is the program: code words come from prog_op.bin, data words from
         prog_data.bin. (3rd Strike encrypts both; there one decrypted image is the program.)
 
+    python tools/cps3rom2.py pack <prog.bin> <hmap.bin> <sfiii2n.zip> <out dir>
+        The reverse, for a built program: encrypt the instruction halfwords (hmap.bin, tools/si2map.py: classes
+        code, deadcode and pad, 06000000 up to the code end; everything else is stored plain), split the image
+        into the two program SIMMs' chips, compare each chip with the ROM set's and write <out dir>/sfiii2n.zip:
+        the ROM set with the program SIMMs replaced. Exit status 0 when every chip equals the original.
+
 A program SIMM is four 2 MB chips, one byte lane each (the same layout as 3rd Strike's).
 """
-import sys, zipfile
+import hashlib, sys, zipfile
 from pathlib import Path
 
 CHIP = 0x200000
@@ -50,8 +56,46 @@ def read_simm(z, n, base, keys):
     return out
 
 
+ENCRYPTED = (1, 4, 5)        # tools/si2map.py CLS: code, deadcode, pad
+
+
+def pack(image, hmap, rom, outdir):
+    prog = Path(image).read_bytes()
+    cls = Path(hmap).read_bytes()
+    if len(prog) != 2 * SIMM:
+        sys.exit(f"{image}: expected {2 * SIMM:#x} bytes")
+    stored = bytearray(prog)
+    for h, c in enumerate(cls):
+        if c in ENCRYPTED:
+            o = 2 * h
+            m = mask(0x06000000 + (o & ~3), 0, 0) & 0xFFFF
+            v = (prog[o] << 8 | prog[o + 1]) ^ m
+            stored[o], stored[o + 1] = v >> 8, v & 0xFF
+    new = {}
+    for n in (1, 2):
+        flat = stored[(n - 1) * SIMM:n * SIMM]
+        for c in range(4):
+            new[f"sfiii2-simm{n}.{c}"] = bytes(flat[c::4])
+    out = Path(outdir); out.mkdir(parents=True, exist_ok=True)
+    same = True
+    with zipfile.ZipFile(rom) as src, zipfile.ZipFile(out / "sfiii2n.zip", "w", zipfile.ZIP_DEFLATED) as dst:
+        for info in src.infolist():
+            old = src.read(info.filename)
+            data = new.get(info.filename, old)
+            if info.filename in new:
+                eq = data == old
+                same &= eq
+                print(f"{info.filename}: {'identical' if eq else 'DIFFERS'} sha1 {hashlib.sha1(data).hexdigest()}")
+            dst.writestr(info, data)
+    print(f"{out / 'sfiii2n.zip'} written; program SIMMs " + ("identical to" if same else "differ from")
+          + f" {rom}")
+    return same
+
+
 def main():
     a = sys.argv[1:]
+    if len(a) == 5 and a[0] == "pack":
+        sys.exit(0 if pack(*a[1:]) else 1)
     if len(a) < 3 or a[0] != "extract":
         sys.exit(__doc__)
     out = Path(a[2]); out.mkdir(parents=True, exist_ok=True)

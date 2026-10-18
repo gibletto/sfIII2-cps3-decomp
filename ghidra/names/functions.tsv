@@ -9,6 +9,7 @@
 0600071E	irq_spare_ack_intr		3s-exact	0600071E	irq_spare_ack_intr	src/intr.src:495	size 32
 0600073E	frt_compare_intr		3s-exact	0600073E	frt_compare_intr	src/intr.src:512	size 88
 06000796	frt_overflow_intr		3s-reloc	06000796	frt_overflow_intr	src/intr.src:558	reloc 3, size 166 (si2map census: addresses, displacements or pool offsets differ); placed by si2map table pins
+0600083C	vblank_user_hook		3s-exact	0600083C	vblank_user_hook	src/Entry.c:45	size 4; sf2i link: vblank_user_hook at 0600083C in the byte-identical build (sf2i/sf2i.map), defined by module Entry
 06000840	Game_Task		3s-reloc	06000840	Game_Task	src/Entry.c:60	reloc 14, size 268 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Game_Task by 1 literal-pool slot of matched routines and tables: refs 1 conflicts 0
 0600094C	task_sleep_tick		3s-exact	0600094C	task_sleep_tick	src/Entry.c:128	size 140
 060009D8	init_task_stacks		3s-exact	060009D8	init_task_stacks	src/Entry.c:226	size 74
@@ -24,6 +25,7 @@
 06000D28	task_sleep		3s-reloc	06000D28	task_sleep	src/tasksw.src:111	reloc 1, size 100
 06000D8C	task_wait		3s-reloc	06000D8C	task_wait	src/tasksw.src:164	reloc 1, size 100
 06000DF0	task_yield		3s-reloc	06000DF0	task_yield	src/tasksw.src:216	reloc 1, size 64
+06000E00	task_exit_to_system		3s-exact	06000E00	task_exit_to_system	src/tasksw.src:226	size 4; sf2i link: task_exit_to_system at 06000E00 in the byte-identical build (sf2i/sf2i.map), defined by module tasksw
 06000E30	vector_restart		3s-exact	06000E30	vector_restart	src/tasksw.src:252	size 56
 06000E68	bios_vector_restart		3s-exact	06000E68	bios_vector_restart	src/tasksw.src:282	size 56
 06000EA0	reset_entry		3s-reloc	06000EA0	reset_entry	src/tasksw.src:312	reloc 28, size 448 (si2map census: addresses, displacements or pool offsets differ); placed by si2map table pins
@@ -412,7 +414,6 @@
 06015684	pl08_extra_attack		3s-exact	061297DC	pl08_extra_attack	src/PLPAT08.c:31	size 22
 0601569A	Att_PL08_HEALING		3s-near	061297F2	Att_PL08_HEALING	src/PLPAT08.c:37	sim 94%: 7 instructions differ, 2i size 270 vs 3s 270 (si2map census)
 060157A8	Att_PL08_TOKUSHUKOUDOU		3s-near	06129900	Att_PL08_TOKUSHUKOUDOU	src/PLPAT08.c:79	sim 72%: 0 instructions differ, 2i size 164 vs 3s 188 (si2map census)
-06015862	effect_K9_move		inferred	06111564	effect_K9_move	src/EFFK9.c:24	si2map census: the effect_K9_move slot of a routine-pointer table matched with the 3s one (pinned); the routine is rewritten (sim 10%)
 06015D98	pl04_extra_attack		3s-exact	06128B10	pl04_extra_attack	src/PLPAT04.c:23	size 22
 06015DAE	Att_PL10_TOKUSHUKOUDOU		3s-near	0612A28E	Att_PL10_TOKUSHUKOUDOU	src/plpat10.c:35	sim 60%: 0 instructions differ, 2i size 182 vs 3s 178 (si2map census)
 06015F2E	Att_PL12_TOKUSHUKOUDOU		3s-near	0612A72E	Att_PL12_TOKUSHUKOUDOU	src/PLPAT12.c:35	sim 72%: 0 instructions differ, 2i size 332 vs 3s 386 (si2map census)
@@ -971,7 +972,6 @@
 06028CE6	Passive06_0022		3s-near	06027252	Passive06_0022	src/PASS06.c:340	sim 96%: 0 instructions differ, 2i size 50 vs 3s 66 (si2map census); reconcile 2026-10-18 (si2map fix pass): moved from 0604C432 by the new census (near-moved, sim 0.96, via )
 06028DE2	Pattern06_0054		3s-near	0606BD4C	Pattern06_0054	src/active06.c:812	sim 93%: 2 instructions differ, 2i size 56 vs 3s 56 (si2map census)
 06028E1A	Pattern20_0005		3s-near	06082C40	Pattern20_0005	src/active20.c:100	sim 56%: 0 instructions differ, 2i size 58 vs 3s 70 (si2map census)
-06028ECC	Pattern06_0063		inferred	0606BFD6	Pattern06_0063	src/active06.c:950	pointed to as sf3 Pattern06_0063 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 38%)
 06028F74	Computer07		3s-exact	0606C024	Computer07	src/active07.c:20	size 24
 06028F8C	Pattern07_0000		3s-exact	0606C03C	Pattern07_0000	src/active07.c:26	size 40
 06028FB4	Pattern07_0001		3s-exact	0606C064	Pattern07_0001	src/active07.c:42	size 70
@@ -1825,7 +1825,6 @@
 0603CD04	VS_ELENA_C		3s-reloc	06016780	VS_ELENA_C	src/Ck_Pass.c:2552	reloc 3, size 120 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 VS_ELENA_C by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 0603CD88	VS_ORO_C		3s-reloc	060167F8	VS_ORO_C	src/Ck_Pass.c:2568	reloc 1, size 54 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 VS_ORO_C by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 0603CDBE	VS_KEN_C		3s-reloc	0601682E	VS_KEN_C	src/Ck_Pass.c:2578	reloc 2, size 88 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 VS_KEN_C by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
-0603CE16	VS_SEAN_C		3s-near	06016886	VS_SEAN_C	src/Ck_Pass.c:2591	sim 54%: 0 instructions differ, 2i size 122 vs 3s 158 (si2map census); pointed to as sf3 VS_SEAN_C by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 0603CF28	VS_GOUKI_C		3s-near	060169BC	VS_GOUKI_C	src/Ck_Pass.c:2629	sim 95%: 0 instructions differ, 2i size 128 vs 3s 132 (si2map census)
 0603CFDE	VS_MAKOTO_C		3s-near	06016ADA	VS_MAKOTO_C	src/Ck_Pass.c:2664	sim 65%: 0 instructions differ, 2i size 38 vs 3s 54 (si2map census)
 0603D05C	VS_ELENA_DS		3s-reloc	06016C64	VS_ELENA_DS	src/Ck_Pass.c:2767	reloc 1, size 52 (si2map census: addresses, displacements or pool offsets differ)
@@ -1984,7 +1983,6 @@
 06041354	Passive01_0068		3s-reloc	0601B208	Passive01_0068	src/PASS01.c:1154	reloc 3, size 66 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive01_0068 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 06041396	Passive01_0069		3s-reloc	0601B24A	Passive01_0069	src/PASS01.c:1167	reloc 3, size 94 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive01_0069 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 060413C8	Passive01_0070		3s-reloc	0601B2A8	Passive01_0070	src/PASS01.c:1180	reloc 4, size 46 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive01_0070 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
-060413F6	Passive01_0071		inferred	0601B2D6	Passive01_0071	src/PASS01.c:1196	pointed to as sf3 Passive01_0071 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 48%)
 0604144C	Passive01_0072		3s-reloc	0601B31C	Passive01_0072	src/PASS01.c:1212	reloc 6, size 132 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive01_0072 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 060414AC	Passive01_0073		3s-reloc	0601B3A0	Passive01_0073	src/PASS01.c:1234	reloc 5, size 80 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive01_0073 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 060414FC	Passive01_0074		3s-reloc	0601B3F0	Passive01_0074	src/PASS01.c:1253	reloc 5, size 86 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive01_0074 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
@@ -2031,7 +2029,6 @@
 06042354	Passive17_0001		3s-reloc	060566BC	Passive17_0001	src/pass17.c:40	reloc 4, size 40 (si2map census: addresses, displacements or pool offsets differ); replaces sf3 Passive01_0117, which only pointers put here (pointed to as sf3 Passive01_0117 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0)
 060423A6	Passive01_0118		3s-reloc	0601C2DE	Passive01_0118	src/PASS01.c:2017	reloc 3, size 32 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive01_0118 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 060423C6	Passive01_0119		3s-reloc	0601C2FE	Passive01_0119	src/PASS01.c:2030	reloc 6, size 114 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive01_0119 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
-06042438	Passive01_0120		3s-reloc	0601C370	Passive01_0120	src/PASS01.c:2052	reloc 3, size 112 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive01_0120 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 0604247A	Passive16_0121		3s-reloc	06055A1E	Passive16_0121	src/pass16.c:2053	reloc 3, size 66 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive16_0121 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 060424EC	Passive16_0122		3s-reloc	06055A60	Passive16_0122	src/pass16.c:2066	reloc 3, size 66 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive16_0122 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 0604252E	Passive16_0123		3s-reloc	06055AA2	Passive16_0123	src/pass16.c:2079	reloc 3, size 66 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive16_0123 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
@@ -2095,28 +2092,28 @@
 06043718	Passive02_0029		3s-reloc	0601DBD8	Passive02_0029	src/PASS02.c:491	reloc 3, size 56 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive02_0029 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043750	Passive02_0030		3s-reloc	0601DC10	Passive02_0030	src/PASS02.c:510	reloc 3, size 32 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive02_0030 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043770	Passive02_0031		3s-reloc	0601DC30	Passive02_0031	src/PASS02.c:523	reloc 3, size 34 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive02_0031 by 1 table word of matched routines and tables: refs 1 conflicts 0
-06043792	Passive02_0032		3s-near	0601DC52	Passive02_0032	src/PASS02.c:536	sim 88%: 0 instructions differ, 2i size 34 vs 3s 62 (si2map census); pointed to as sf3 Passive02_0032 by 1 table word of matched routines and tables: refs 1 conflicts 0
-060437B4	Passive02_0033		3s-near	0601DC90	Passive02_0033	src/PASS02.c:549	sim 88%: 0 instructions differ, 2i size 60 vs 3s 34 (si2map census); pointed to as sf3 Passive02_0033 by 1 table word of matched routines and tables: refs 1 conflicts 0
+06043792	Passive02_0032		inferred	0601DC52	Passive02_0032	src/PASS02.c:536	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 88%: 0 instructions differ, 2i size 34 vs 3s 62 (si2map ); kept by pointer evidence: pointed to as sf3 Passive02_0032 by 1 table word of matched routines and tables: refs 1 conflicts 0
+060437B4	Passive02_0033		inferred	0601DC90	Passive02_0033	src/PASS02.c:549	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 88%: 0 instructions differ, 2i size 60 vs 3s 34 (si2map ); kept by pointer evidence: pointed to as sf3 Passive02_0033 by 1 table word of matched routines and tables: refs 1 conflicts 0
 060437F0	Passive02_0034		3s-near	0601DCB2	Passive02_0034	src/PASS02.c:562	sim 88%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map census); pointed to as sf3 Passive02_0034 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043810	Passive02_0035		3s-near	0601DCD2	Passive02_0035	src/PASS02.c:575	sim 94%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map census); pointed to as sf3 Passive02_0035 by 1 table word of matched routines and tables: refs 1 conflicts 0
-06043830	Passive02_0036		3s-near	0601DCF2	Passive02_0036	src/PASS02.c:588	sim 93%: 0 instructions differ, 2i size 30 vs 3s 30 (si2map census); pointed to as sf3 Passive02_0036 by 1 table word of matched routines and tables: refs 1 conflicts 0
+06043830	Passive02_0036		inferred	0601DCF2	Passive02_0036	src/PASS02.c:588	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 93%: 0 instructions differ, 2i size 30 vs 3s 30 (si2map ); kept by pointer evidence: pointed to as sf3 Passive02_0036 by 1 table word of matched routines and tables: refs 1 conflicts 0
 0604384E	Passive02_0037		3s-near	0601DD10	Passive02_0037	src/PASS02.c:601	sim 83%: 0 instructions differ, 2i size 70 vs 3s 108 (si2map census); pointed to as sf3 Passive02_0037 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043894	Passive02_0038		3s-near	0601DD7C	Passive02_0038	src/PASS02.c:617	sim 94%: 0 instructions differ, 2i size 108 vs 3s 70 (si2map census); pointed to as sf3 Passive02_0038 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043900	Passive02_0039		3s-near	0601DDC2	Passive02_0039	src/PASS02.c:633	sim 92%: 0 instructions differ, 2i size 78 vs 3s 78 (si2map census); pointed to as sf3 Passive02_0039 by 1 table word of matched routines and tables: refs 1 conflicts 0
 0604394E	Passive02_0040		3s-near	0601DE10	Passive02_0040	src/PASS02.c:649	sim 87%: 0 instructions differ, 2i size 78 vs 3s 124 (si2map census); pointed to as sf3 Passive02_0040 by 1 table word of matched routines and tables: refs 1 conflicts 0
 0604399C	Passive02_0041		3s-reloc	0601DE8C	Passive02_0041	src/PASS02.c:668	reloc 5, size 90 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive02_0041 by 1 table word of matched routines and tables: refs 1 conflicts 0
-06043A18	Passive02_0042		3s-near	0601DEE6	Passive02_0042	src/PASS02.c:687	sim 95%: 0 instructions differ, 2i size 40 vs 3s 40 (si2map census); pointed to as sf3 Passive02_0042 by 1 table word of matched routines and tables: refs 1 conflicts 0
+06043A18	Passive02_0042		inferred	0601DEE6	Passive02_0042	src/PASS02.c:687	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 95%: 0 instructions differ, 2i size 40 vs 3s 40 (si2map ); kept by pointer evidence: pointed to as sf3 Passive02_0042 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043A40	Passive02_0043		3s-near	0601DF0E	Passive02_0043	src/PASS02.c:703	sim 84%: 0 instructions differ, 2i size 90 vs 3s 90 (si2map census); pointed to as sf3 Passive02_0043 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043A9A	Passive02_0044		3s-near	0601DF68	Passive02_0044	src/PASS02.c:722	sim 83%: 0 instructions differ, 2i size 84 vs 3s 128 (si2map census); pointed to as sf3 Passive02_0044 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043AEE	Passive02_0045		3s-near	0601DFE8	Passive02_0045	src/PASS02.c:741	sim 86%: 0 instructions differ, 2i size 44 vs 3s 44 (si2map census); pointed to as sf3 Passive02_0045 by 1 table word of matched routines and tables: refs 1 conflicts 0
-06043B1A	Passive02_0046		3s-near	0601E014	Passive02_0046	src/PASS02.c:757	sim 88%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map census); pointed to as sf3 Passive02_0046 by 1 table word of matched routines and tables: refs 1 conflicts 0
+06043B1A	Passive02_0046		inferred	0601E014	Passive02_0046	src/PASS02.c:757	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 88%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map ); kept by pointer evidence: pointed to as sf3 Passive02_0046 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043B3A	Passive02_0047		3s-near	0601E034	Passive02_0047	src/PASS02.c:770	sim 97%: 0 instructions differ, 2i size 118 vs 3s 64 (si2map census); pointed to as sf3 Passive02_0047 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043BB0	Passive02_0048		3s-reloc	0601E074	Passive02_0048	src/PASS02.c:786	reloc 3, size 42 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive02_0048 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043BDA	Passive02_0049		3s-near	0601E09E	Passive02_0049	src/PASS02.c:802	sim 88%: 0 instructions differ, 2i size 68 vs 3s 106 (si2map census); pointed to as sf3 Passive02_0049 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043C1E	Passive02_0050		3s-near	0601E108	Passive02_0050	src/PASS02.c:818	sim 85%: 0 instructions differ, 2i size 68 vs 3s 68 (si2map census); pointed to as sf3 Passive02_0050 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043C62	Passive02_0051		3s-near	0601E14C	Passive02_0051	src/PASS02.c:834	sim 89%: 0 instructions differ, 2i size 72 vs 3s 36 (si2map census); pointed to as sf3 Passive02_0051 by 1 table word of matched routines and tables: refs 1 conflicts 0
-06043CAA	Passive02_0052		3s-near	0601E170	Passive02_0052	src/PASS02.c:850	sim 94%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map census); pointed to as sf3 Passive02_0052 by 1 table word of matched routines and tables: refs 1 conflicts 0
-06043CCA	Passive02_0053		3s-near	0601E190	Passive02_0053	src/PASS02.c:863	sim 88%: 0 instructions differ, 2i size 50 vs 3s 50 (si2map census); pointed to as sf3 Passive02_0053 by 1 table word of matched routines and tables: refs 1 conflicts 0
+06043CAA	Passive02_0052		inferred	0601E170	Passive02_0052	src/PASS02.c:850	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 94%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map ); kept by pointer evidence: pointed to as sf3 Passive02_0052 by 1 table word of matched routines and tables: refs 1 conflicts 0
+06043CCA	Passive02_0053		inferred	0601E190	Passive02_0053	src/PASS02.c:863	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 88%: 0 instructions differ, 2i size 50 vs 3s 50 (si2map ); kept by pointer evidence: pointed to as sf3 Passive02_0053 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043CFC	Passive02_0054		3s-near	0601E1C2	Passive02_0054	src/PASS02.c:876	sim 96%: 0 instructions differ, 2i size 50 vs 3s 84 (si2map census); pointed to as sf3 Passive02_0054 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06043D2E	Passive02_0055		3s-reloc	0601E216	Passive02_0055	src/PASS02.c:889	reloc 3, size 50 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive02_0055 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
 06043D60	Passive02_0056		3s-reloc	0601E248	Passive02_0056	src/PASS02.c:902	reloc 3, size 66 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive02_0056 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
@@ -2183,7 +2180,7 @@
 06045374	Passive03_0001		3s-exact	0601FE08	Passive03_0001	src/PASS03.c:40	size 40 (si2map census); replaces sf3 Passive02_0116, which only pointers put here (pointed to as sf3 Passive02_0116 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0)
 0604539C	Passive03_0002		3s-exact	0601FE30	Passive03_0002	src/PASS03.c:56	size 106 (si2map census); replaces sf3 Passive02_0117, which only pointers put here (pointed to as sf3 Passive02_0117 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0)
 06045406	Passive03_0003		3s-reloc	0601FE9A	Passive03_0003	src/PASS03.c:78	reloc 3, size 86 (si2map census: addresses, displacements or pool offsets differ); replaces sf3 Passive02_0118, which only pointers put here (pointed to as sf3 Passive02_0118 by 1 table word of matched routines and tables: refs 1 conflicts 0)
-0604545C	Passive02_0119		3s-near	0601F8F8	Passive02_0119	src/PASS02.c:2027	sim 56%: 0 instructions differ, 2i size 66 vs 3s 78 (si2map census); pointed to as sf3 Passive02_0119 by 1 table word of matched routines and tables: refs 1 conflicts 0
+0604545C	Passive02_0119		inferred	0601F8F8	Passive02_0119	src/PASS02.c:2027	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 56%: 0 instructions differ, 2i size 66 vs 3s 78 (si2map ); kept by pointer evidence: pointed to as sf3 Passive02_0119 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
 0604549E	Passive03_0005		3s-exact	0601FF32	Passive03_0005	src/PASS03.c:107	size 30 (si2map census); replaces sf3 Passive02_0120, which only pointers put here (pointed to as sf3 Passive02_0120 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 060454BC	Passive03_0006		3s-exact	0601FF50	Passive03_0006	src/PASS03.c:120	size 68
 06045500	Passive03_0007		3s-reloc	0601FF94	Passive03_0007	src/PASS03.c:136	reloc 7, size 96
@@ -2351,7 +2348,7 @@
 060487AA	Passive04_0033		3s-near	06023256	Passive04_0033	src/PASS04.c:567	sim 93%: 0 instructions differ, 2i size 46 vs 3s 44 (si2map census); pointed to as sf3 Passive04_0033 by 1 table word of matched routines and tables: refs 1 conflicts 0
 060487D8	Passive04_0034		3s-near	06023282	Passive04_0034	src/PASS04.c:583	sim 88%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map census); pointed to as sf3 Passive04_0034 by 1 table word of matched routines and tables: refs 1 conflicts 0
 060487F8	Passive04_0035		3s-near	060232A2	Passive04_0035	src/PASS04.c:596	sim 94%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map census); pointed to as sf3 Passive04_0035 by 1 table word of matched routines and tables: refs 1 conflicts 0
-06048818	Passive04_0036		3s-near	060232C2	Passive04_0036	src/PASS04.c:609	sim 93%: 0 instructions differ, 2i size 68 vs 3s 70 (si2map census); pointed to as sf3 Passive04_0036 by 1 table word of matched routines and tables: refs 1 conflicts 0
+06048818	Passive04_0036		inferred	060232C2	Passive04_0036	src/PASS04.c:609	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 93%: 0 instructions differ, 2i size 68 vs 3s 70 (si2map ); kept by pointer evidence: pointed to as sf3 Passive04_0036 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
 0604885C	Passive04_0037		3s-near	06023308	Passive04_0037	src/PASS04.c:622	sim 95%: 0 instructions differ, 2i size 84 vs 3s 84 (si2map census); pointed to as sf3 Passive04_0037 by 1 table word of matched routines and tables: refs 1 conflicts 0
 060488B0	Passive04_0038		3s-near	0602335C	Passive04_0038	src/PASS04.c:641	sim 94%: 0 instructions differ, 2i size 84 vs 3s 82 (si2map census); pointed to as sf3 Passive04_0038 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06048904	Passive04_0039		3s-near	060233AE	Passive04_0039	src/PASS04.c:660	sim 92%: 0 instructions differ, 2i size 94 vs 3s 128 (si2map census); pointed to as sf3 Passive04_0039 by 1 table word of matched routines and tables: refs 1 conflicts 0
@@ -2376,7 +2373,7 @@
 06048DA0	Passive04_0058		3s-near	06023862	Passive04_0058	src/PASS04.c:961	sim 94%: 0 instructions differ, 2i size 70 vs 3s 32 (si2map census); pointed to as sf3 Passive04_0058 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06048DE6	Passive04_0059		3s-reloc	06023882	Passive04_0059	src/PASS04.c:974	reloc 3, size 50 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive04_0059 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06048E18	Passive04_0060		3s-reloc	060238B4	Passive04_0060	src/PASS04.c:987	reloc 3, size 72 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Passive04_0060 by 1 table word of matched routines and tables: refs 1 conflicts 0
-06048E36	Passive04_0061		3s-near	060238FC	Passive04_0061	src/PASS04.c:1000	sim 88%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map census); pointed to as sf3 Passive04_0061 by 1 table word of matched routines and tables: refs 1 conflicts 0
+06048E36	Passive04_0061		inferred	060238FC	Passive04_0061	src/PASS04.c:1000	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 88%: 0 instructions differ, 2i size 32 vs 3s 32 (si2map ); kept by pointer evidence: pointed to as sf3 Passive04_0061 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06048E56	Passive04_0062		3s-near	0602391C	Passive04_0062	src/PASS04.c:1013	sim 91%: 0 instructions differ, 2i size 64 vs 3s 64 (si2map census); pointed to as sf3 Passive04_0062 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
 06048E96	Passive04_0063		3s-near	0602395C	Passive04_0063	src/PASS04.c:1029	sim 59%: 0 instructions differ, 2i size 90 vs 3s 86 (si2map census); pointed to as sf3 Passive04_0063 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
 06048EF0	Passive04_0064		3s-near	060239B2	Passive04_0064	src/PASS04.c:1048	sim 92%: 0 instructions differ, 2i size 78 vs 3s 112 (si2map census); pointed to as sf3 Passive04_0064 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
@@ -3203,15 +3200,15 @@
 0605A12C	Passive10_0000		3s-exact	06035AC0	Passive10_0000	src/pass10.c:27	size 52 (si2map census); replaces sf3 Passive09_0112, which only pointers put here (pointed to as sf3 Passive09_0112 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 0605A160	Passive10_0001		3s-exact	06035AF4	Passive10_0001	src/pass10.c:40	size 40 (si2map census); replaces sf3 Passive09_0113, which only pointers put here (pointed to as sf3 Passive09_0113 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 0605A188	Passive10_0002		3s-exact	06035B1C	Passive10_0002	src/pass10.c:56	size 106 (si2map census); replaces sf3 Passive09_0114, which only pointers put here (pointed to as sf3 Passive09_0114 by 1 table word of matched routines and tables: refs 1 conflicts 0)
-0605A1F2	Passive09_0115		3s-near	06035578	Passive09_0115	src/PASS09.c:1963	sim 50%: 0 instructions differ, 2i size 86 vs 3s 98 (si2map census); pointed to as sf3 Passive09_0115 by 1 table word of matched routines and tables: refs 1 conflicts 0
-0605A248	Passive09_0116		3s-near	060355DA	Passive09_0116	src/PASS09.c:1976	sim 51%: 0 instructions differ, 2i size 66 vs 3s 74 (si2map census); pointed to as sf3 Passive09_0116 by 1 table word of matched routines and tables: refs 1 conflicts 0
+0605A1F2	Passive09_0115		inferred	06035578	Passive09_0115	src/PASS09.c:1963	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 50%: 0 instructions differ, 2i size 86 vs 3s 98 (si2map ); kept by pointer evidence: pointed to as sf3 Passive09_0115 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
+0605A248	Passive09_0116		inferred	060355DA	Passive09_0116	src/PASS09.c:1976	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 51%: 0 instructions differ, 2i size 66 vs 3s 74 (si2map ); kept by pointer evidence: pointed to as sf3 Passive09_0116 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
 0605A28A	Passive10_0005		3s-exact	06035C1E	Passive10_0005	src/pass10.c:107	size 30 (si2map census); replaces sf3 Passive09_0117, which only pointers put here (pointed to as sf3 Passive09_0117 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 0605A2A8	Passive10_0006		3s-exact	06035C3C	Passive10_0006	src/pass10.c:120	size 68
 0605A2EC	Passive09_0119		3s-near	060356D8	Passive09_0119	src/PASS09.c:2015	sim 52%: 0 instructions differ, 2i size 96 vs 3s 74 (si2map census); pointed to as sf3 Passive09_0119 by 1 table word of matched routines and tables: refs 1 conflicts 0
 0605A34C	Passive09_0120		inferred	06035722	Passive09_0120	src/PASS09.c:2028	pointed to as sf3 Passive09_0120 by 1 table word of matched routines and tables: refs 1 conflicts 0
-0605A39E	Passive09_0121		3s-near	0603575A	Passive09_0121	src/PASS09.c:2041	sim 63%: 0 instructions differ, 2i size 78 vs 3s 74 (si2map census); pointed to as sf3 Passive09_0121 by 1 table word of matched routines and tables: refs 1 conflicts 0
-0605A3EC	Passive09_0122		3s-near	060357A4	Passive09_0122	src/PASS09.c:2054	sim 57%: 0 instructions differ, 2i size 80 vs 3s 100 (si2map census); pointed to as sf3 Passive09_0122 by 1 table word of matched routines and tables: refs 1 conflicts 0
-0605A43C	Passive09_0123		3s-near	06035808	Passive09_0123	src/PASS09.c:2067	sim 68%: 0 instructions differ, 2i size 66 vs 3s 58 (si2map census); pointed to as sf3 Passive09_0123 by 1 table word of matched routines and tables: refs 1 conflicts 0
+0605A39E	Passive09_0121		inferred	0603575A	Passive09_0121	src/PASS09.c:2041	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 63%: 0 instructions differ, 2i size 78 vs 3s 74 (si2map ); kept by pointer evidence: pointed to as sf3 Passive09_0121 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
+0605A3EC	Passive09_0122		inferred	060357A4	Passive09_0122	src/PASS09.c:2054	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 57%: 0 instructions differ, 2i size 80 vs 3s 100 (si2map); kept by pointer evidence: pointed to as sf3 Passive09_0122 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
+0605A43C	Passive09_0123		inferred	06035808	Passive09_0123	src/PASS09.c:2067	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 68%: 0 instructions differ, 2i size 66 vs 3s 58 (si2map ); kept by pointer evidence: pointed to as sf3 Passive09_0123 by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
 0605A47E	Passive10_0012		3s-exact	06035E12	Passive10_0012	src/pass10.c:216	size 74 (si2map census); replaces sf3 Passive09_0124, which only pointers put here (pointed to as sf3 Passive09_0124 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 0605A4C8	Passive10_0013		3s-reloc	06035E5C	Passive10_0013	src/pass10.c:232	reloc 11, size 222
 0605A5A6	Passive09_0126		3s-near	060358BC	Passive09_0126	src/PASS09.c:2106	sim 54%: 0 instructions differ, 2i size 68 vs 3s 50 (si2map census); pointed to as sf3 Passive09_0126 by 1 table word of matched routines and tables: refs 1 conflicts 0
@@ -3559,7 +3556,7 @@
 06062228	Passive12_0000		3s-reloc	0603E0E8	Passive12_0000	src/PASS12.c:27	reloc 4, size 52 (si2map census: addresses, displacements or pool offsets differ); replaces sf3 Passive11_0237, which only pointers put here (pointed to as sf3 Passive11_0237 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 0606225C	Passive12_0001		3s-reloc	0603E11C	Passive12_0001	src/PASS12.c:40	reloc 4, size 40 (si2map census: addresses, displacements or pool offsets differ); replaces sf3 Passive11_0238, which only pointers put here (pointed to as sf3 Passive11_0238 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 06062284	Passive11_0239		3s-near	0603DCCA	Passive11_0239	src/PASS11.c:4229	sim 50%: 0 instructions differ, 2i size 72 vs 3s 56 (si2map census); pointed to as sf3 Passive11_0239 by 1 table word of matched routines and tables: refs 1 conflicts 0
-060622CC	Passive11_0240		3s-near	0603DD02	Passive11_0240	src/PASS11.c:4242	sim 51%: 0 instructions differ, 2i size 76 vs 3s 42 (si2map census); pointed to as sf3 Passive11_0240 by 1 table word of matched routines and tables: refs 1 conflicts 0
+060622CC	Passive11_0240		inferred	0603DD02	Passive11_0240	src/PASS11.c:4242	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 51%: 0 instructions differ, 2i size 76 vs 3s 42 (si2map ); kept by pointer evidence: pointed to as sf3 Passive11_0240 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06062318	Passive12_0004		3s-reloc	0603E200	Passive12_0004	src/PASS12.c:88	reloc 5, size 98 (si2map census: addresses, displacements or pool offsets differ); replaces sf3 Passive11_0241, which only pointers put here (pointed to as sf3 Passive11_0241 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 0606237A	Passive11_0242		inferred	0603DD94	Passive11_0242	src/PASS11.c:4271	pointed to as sf3 Passive11_0242 by 1 table word of matched routines and tables: refs 1 conflicts 0
 060623D4	Passive11_0243		inferred	0603DDD0	Passive11_0243	src/PASS11.c:4284	pointed to as sf3 Passive11_0243 by 1 table word of matched routines and tables: refs 1 conflicts 0
@@ -3569,10 +3566,10 @@
 06062584	Passive11_0247		inferred	0603DE68	Passive11_0247	src/PASS11.c:4336	pointed to as sf3 Passive11_0247 by 1 table word of matched routines and tables: refs 1 conflicts 0
 060625F2	Passive11_0248		inferred	0603DEC0	Passive11_0248	src/PASS11.c:4349	pointed to as sf3 Passive11_0248 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06062610	Passive11_0249		inferred	0603DF0E	Passive11_0249	src/PASS11.c:4365	pointed to as sf3 Passive11_0249 by 1 table word of matched routines and tables: refs 1 conflicts 0
-0606263C	Passive11_0250		3s-near	0603DF66	Passive11_0250	src/PASS11.c:4384	sim 74%: 0 instructions differ, 2i size 80 vs 3s 92 (si2map census); pointed to as sf3 Passive11_0250 by 1 table word of matched routines and tables: refs 1 conflicts 0
+0606263C	Passive11_0250		inferred	0603DF66	Passive11_0250	src/PASS11.c:4384	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 74%: 0 instructions differ, 2i size 80 vs 3s 92 (si2map ); kept by pointer evidence: pointed to as sf3 Passive11_0250 by 1 table word of matched routines and tables: refs 1 conflicts 0
 0606268C	Passive12_0014		3s-reloc	0603E550	Passive12_0014	src/PASS12.c:266	reloc 4, size 44 (si2map census: addresses, displacements or pool offsets differ); replaces sf3 Passive11_0251, which only pointers put here (pointed to as sf3 Passive11_0251 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 060626B8	Passive12_0015		3s-reloc	0603E57C	Passive12_0015	src/PASS12.c:282	reloc 4, size 44 (si2map census: addresses, displacements or pool offsets differ); replaces sf3 Passive11_0252, which only pointers put here (pointed to as sf3 Passive11_0252 by 1 table word of matched routines and tables: refs 1 conflicts 0)
-060626E4	Passive11_0253		3s-near	0603E038	Passive11_0253	src/PASS11.c:4429	sim 79%: 0 instructions differ, 2i size 44 vs 3s 32 (si2map census); pointed to as sf3 Passive11_0253 by 1 table word of matched routines and tables: refs 1 conflicts 0
+060626E4	Passive11_0253		inferred	0603E038	Passive11_0253	src/PASS11.c:4429	reconcile 2026-10-18 (lead decision): the census no longer places it (was sim 79%: 0 instructions differ, 2i size 44 vs 3s 32 (si2map ); kept by pointer evidence: pointed to as sf3 Passive11_0253 by 1 table word of matched routines and tables: refs 1 conflicts 0
 06062710	Passive12_0017		3s-reloc	0603E5D4	Passive12_0017	src/PASS12.c:314	reloc 4, size 68 (si2map census: addresses, displacements or pool offsets differ); replaces sf3 Passive11_0254, which only pointers put here (pointed to as sf3 Passive11_0254 by 1 table word of matched routines and tables: refs 1 conflicts 0)
 0606273C	Passive12_0018		3s-near	0603E618	Passive12_0018	src/PASS12.c:330	sim 97%: 0 instructions differ, 2i size 102 vs 3s 68 (si2map census)
 060627A2	Passive12_0019		3s-near	0603E65C	Passive12_0019	src/PASS12.c:346	sim 88%: 0 instructions differ, 2i size 64 vs 3s 64 (si2map census)
@@ -4632,7 +4629,6 @@
 0607EC02	comm_rljmp		3s-reloc	0608B7E2	comm_rljmp	src/CHARMOVE.c:2120	reloc 1, size 32 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 comm_rljmp by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 0607EC22	comm_ifs2		3s-near	0608B802	comm_ifs2	src/CHARMOVE.c:2129	sim 92%: 0 instructions differ, 2i size 82 vs 3s 92 (si2map census); pointed to as sf3 comm_ifs2 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 0607EC7E	comm_abbak		3s-reloc	0608B85E	comm_abbak	src/CHARMOVE.c:2147	reloc 1, size 38 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 comm_abbak by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
-0607ECA4	comm_sse		inferred	0608B884	comm_sse	src/CHARMOVE.c:2154	pointed to as sf3 comm_sse by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 25%)
 0607ED1C	comm_s_chg		3s-near	0608B908	comm_s_chg	src/CHARMOVE.c:2167	sim 92%: 0 instructions differ, 2i size 82 vs 3s 92 (si2map census); pointed to as sf3 comm_s_chg by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 0607ED78	comm_ifs3		3s-near	0608BAB2	comm_ifs3	src/CHARMOVE.c:2255	sim 85%: 0 instructions differ, 2i size 92 vs 3s 92 (si2map census); pointed to as sf3 comm_ifs3 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 0607EE32	get_comm_if_lever		3s-near	0608BBA4	get_comm_if_lever	src/CHARMOVE.c:2297	sim 95%: 1 instructions differ, 2i size 62 vs 3s 42 (si2map census)
@@ -4810,7 +4806,6 @@
 06085E74	Game04		3s-near	06095F5A	Game04	src/Game_Main.c:878	sim 50%: 0 instructions differ, 2i size 190 vs 3s 176 (si2map census)
 06085F32	Game11		inferred	06095830	Game11	src/Game_Main.c:595	pointed to as sf3 Game11 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 06086284	Bonus_Sub		3s-near	0609638C	Bonus_Sub	src/Game_Main.c:1021	sim 66%: 0 instructions differ, 2i size 96 vs 3s 124 (si2map census)
-060862E4	Game10		inferred	06096408	Game10	src/Game_Main.c:1048	pointed to as sf3 Game10 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 24%)
 06086870	Check_Disp_Rank_Request		3s-near	06096B2C	Check_Disp_Rank_Request	src/Game_Main.c:1306	sim 96%: 1 instructions differ, 2i size 152 vs 3s 46 (si2map census)
 06086908	Request_Break_Sub		3s-near	06096B5A	Request_Break_Sub	src/Game_Main.c:1318	sim 80%: 0 instructions differ, 2i size 58 vs 3s 62 (si2map census)
 06086942	Disp_Ranking		3s-near	06096B98	Disp_Ranking	src/Game_Main.c:1331	sim 79%: 0 instructions differ, 2i size 286 vs 3s 284 (si2map census)
@@ -4818,6 +4813,7 @@
 06086D68	draw_operator_info		3s-near	06096EBC	draw_operator_info	src/Game_Main.c:1452	sim 94%: 7 instructions differ, 2i size 300 vs 3s 300 (si2map census)
 06086E94	tilemap_print_string_origin		3s-exact	06096FE8	tilemap_print_string_origin	src/Game_Main_2.c:99	size 18
 06086EA6	Set_Mode_Pos_copy		3s-exact	06096FFA	Set_Mode_Pos_copy	src/Game_Main_2.c:108	size 20
+06086EBA	Set_Mode_Pos		3s-exact	0609700E	Set_Mode_Pos	src/Game_Main_2.c:118	size 4; sf2i link: Set_Mode_Pos at 06086EBA in the byte-identical build (sf2i/sf2i.map), defined by module Game_Main_2
 06086EDC	CAPCOM_Logo		3s-reloc	06097030	CAPCOM_Logo	src/demo00.c:59	reloc 4, size 54 (si2map census: addresses, displacements or pool offsets differ)
 06086F12	Logo_Capcom		3s-near	06097066	Logo_Capcom	src/demo00.c:69	sim 73%: 0 instructions differ, 2i size 194 vs 3s 334 (si2map census)
 06086FD4	Logo_Warning		3s-near	060971B4	Logo_Warning	src/demo00.c:128	sim 98%: 2 instructions differ, 2i size 184 vs 3s 242 (si2map census)
@@ -4877,7 +4873,6 @@
 06089848	Game_Manage_7_7		3s-reloc	0609A430	Game_Manage_7_7	src/manage_2.c:742	reloc 3, size 32 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Game_Manage_7_7 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 06089868	Game_Manage_7_8		3s-reloc	0609A450	Game_Manage_7_8	src/manage_2.c:751	reloc 4, size 30 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Game_Manage_7_8 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 06089886	Game_Manage_7_9		3s-reloc	0609A46E	Game_Manage_7_9	src/manage_2.c:761	reloc 2, size 24 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 Game_Manage_7_9 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
-06089998	Game_Manage_8_0		inferred	0609A4E0	Game_Manage_8_0	src/manage_2.c:776	pointed to as sf3 Game_Manage_8_0 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 46%)
 06089A58	Game_Manage_7th		3s-reloc	0609A13C	Game_Manage_7th	src/manage_2.c:623	reloc 2, size 70 (si2map census: addresses, displacements or pool offsets differ); replaces sf3 Game_Manage_8_2, which only pointers put here (pointed to as sf3 Game_Manage_8_2 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0)
 0608A75C	Game_Manage_8th		inferred	0609A486	Game_Manage_8th	src/manage_2.c:769	pointed to as sf3 Game_Manage_8th by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 6%)
 0608A96C	Game_Manage_9th		inferred	0609AAD0	Game_Manage_9th	src/manage_2.c:1002	pointed to as sf3 Game_Manage_9th by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 26%)
@@ -5312,10 +5307,7 @@
 060B3E70	Cut_Cut_Cut_t		3s-near	060CA8FC	Cut_Cut_Cut_t	src/end_main.c:3108	sim 96%: 1 instructions differ, 2i size 56 vs 3s 56 (si2map census)
 060B3F38	end_01000		3s-near	060CA9C0	end_01000	src/end_1.c:44	sim 65%: 0 instructions differ, 2i size 202 vs 3s 208 (si2map census)
 060B4002	end_100_move		3s-near	060CAA90	end_100_move	src/end_1.c:85	sim 74%: 0 instructions differ, 2i size 134 vs 3s 124 (si2map census)
-060B4088	end_500_0006		inferred	060CCAD4	end_500_0006	src/end_5.c:201	pointed to as sf3 end_500_0006 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 21%)
 060B4208	end_100_0001		3s-near	060CAC94	end_100_0001	src/end_1.c:151	sim 63%: 0 instructions differ, 2i size 208 vs 3s 136 (si2map census)
-060B431E	end_202_4000		inferred	060CB5F4	end_202_4000	src/end_2.c:348	pointed to as sf3 end_202_4000 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 40%)
-060B437A	end_202_3000		inferred	060CB57A	end_202_3000	src/end_2.c:324	pointed to as sf3 end_202_3000 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 39%)
 060B4A6C	Game_Manage_8_1		3s-reloc	0609A58C	Game_Manage_8_1	src/manage_2.c:803	reloc 2, size 108 (si2map census: addresses, displacements or pool offsets differ); reconcile 2026-10-18 (si2map fix pass, withdrawn pins): moved from 06089A34 by the new census (reloc, sim 1.00, via )
 060B51BC	end_C00_1000		inferred	060CFC58	end_C00_1000	src/end_12.c:141	pointed to as sf3 end_C00_1000 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 060B52D2	end_C00_0000		inferred	060CFB28	end_C00_0000	src/end_12.c:94	pointed to as sf3 end_C00_0000 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 30%)
@@ -5350,7 +5342,6 @@
 060B7F94	end_d00_3000		3s-near	060D0372	end_d00_3000	src/end_13.c:146	sim 53%: 0 instructions differ, 2i size 300 vs 3s 132 (si2map census)
 060B80C0	end_2001_0003		3s-near	060D36E6	end_2001_0003	src/end_20.c:288	sim 50%: 0 instructions differ, 2i size 360 vs 3s 294 (si2map census)
 060B8228	end_1600_1000		3s-near	060D1BBC	end_1600_1000	src/end_16.c:126	sim 57%: 0 instructions differ, 2i size 158 vs 3s 188 (si2map census)
-060B85D0	end_301_0003		inferred	060CBC92	end_301_0003	src/end_3.c:270	pointed to as sf3 end_301_0003 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 15%)
 060B862C	end_1900_cell_set		3s-near	060D2F7E	end_1900_cell_set	src/end_19.c:170	sim 58%: 0 instructions differ, 2i size 168 vs 3s 146 (si2map census)
 060B86D4	end_13000		3s-near	060D00CC	end_13000	src/end_13.c:41	sim 80%: 0 instructions differ, 2i size 202 vs 3s 300 (si2map census)
 060B879E	end_800_move		3s-reloc	060CE3D6	end_800_move	src/end_8.c:82	reloc 4, size 52 (si2map census: addresses, displacements or pool offsets differ)
@@ -5375,6 +5366,7 @@
 060B9E5A	load_any_color		3s-reloc	060D4DF2	load_any_color	src/color3rd.c:81	reloc 2, size 50 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 load_any_color by 2 literal-pool slots of matched routines and tables: refs 2 conflicts 0
 060B9E8C	load_bg_color_fade		3s-near	060D4E56	load_bg_color_fade	src/color3rd.c:101	sim 69%: 0 instructions differ, 2i size 72 vs 3s 72 (si2map census)
 060B9ED4	load_any_color_attr		3s-near	060D4EE6	load_any_color_attr	src/color3rd.c:125	sim 74%: 0 instructions differ, 2i size 68 vs 3s 102 (si2map census)
+060B9F18	load_any_color_req		3s-exact	060D4F4C	load_any_color_req	src/color3rd.c:133	size 4; sf2i link: load_any_color_req at 060B9F18 in the byte-identical build (sf2i/sf2i.map); referenced by sc_sub_2:1
 060B9F60	color_dma_error_disp		3s-near	060D4F94	color_dma_error_disp	src/color3rd.c:153	sim 93%: 1 instructions differ, 2i size 80 vs 3s 28 (si2map census)
 060B9FB0	load_player_color		3s-near	060D4FB0	load_player_color	src/color3rd.c:164	sim 60%: 0 instructions differ, 2i size 118 vs 3s 278 (si2map census)
 060BA026	color_trans_dummy		3s-near	060D4F90	color_trans_dummy	src/color3rd.c:147	sim 50%: 1 instructions differ, 2i size 4 vs 3s 4 (si2map census)
@@ -5516,7 +5508,6 @@
 060C0EF0	setup_dmv_use_flag		3s-near	060DBE00	setup_dmv_use_flag	src/EFFECT.c:539	sim 67%: 0 instructions differ, 2i size 6 vs 3s 6 (si2map census); pointed to as sf3 setup_dmv_use_flag by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
 060C0EF6	setup_disp_flag		3s-exact	060DBE06	setup_disp_flag	src/EFFECT.c:544	size 6 (si2map census)
 060C0EFC	setup_command_number		3s-near	060DBE0C	setup_command_number	src/EFFECT.c:549	sim 75%: 1 instructions differ, 2i size 40 vs 3s 24 (si2map census)
-060C0F24	effect_00_move		inferred	060DBE24	effect_00_move	src/EFF00.c:19	si2map census: the effect_00_move slot of a routine-pointer table matched with the 3s one (pinned); the routine is rewritten (sim 46%)
 060C10AC	renewal_table_address		3s-near	060DBFAA	renewal_table_address	src/EFF00.c:82	sim 73%: 0 instructions differ, 2i size 368 vs 3s 290 (si2map census)
 060C145C	effect_00_init		3s-near	060DC390	effect_00_init	src/EFF00.c:166	sim 90%: 5 instructions differ, 2i size 136 vs 3s 136 (si2map census)
 060C14E4	effect_01_move		3s-near	060DC418	effect_01_move	src/EFF01_code.c:19	sim 68%: 0 instructions differ, 2i size 752 vs 3s 706 (si2map census); placed by si2map table pins
@@ -5680,7 +5671,6 @@
 060CF04C	effect_52_move		inferred	060ECF3C	effect_52_move	src/Eff52.c:27	pointed to as sf3 effect_52_move by 1 table word of matched routines and tables: refs 1 conflicts 0; si2map census: the routine matched callers call in its place (sim 46%)
 060CF170	effect_53_move		inferred	060ED49C	effect_53_move	src/EFF53.c:23	pointed to as sf3 effect_53_move by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0; si2map census: the routine matched callers call in its place (sim 11%)
 060CF6E0	effect_54_move		inferred	060ED5E8	effect_54_move	src/EFF54.c:63	pointed to as sf3 effect_54_move by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0; si2map census: the routine matched callers call in its place (sim 16%)
-060CF8C8	effect_J8_move		inferred	0610D728	effect_J8_move	src/EFFJ8.c:36	si2map census: the effect_J8_move slot of a routine-pointer table matched with the 3s one (pinned); the routine is rewritten (sim 8%)
 060CF998	effect_55_move		inferred	060ED70C	effect_55_move	src/EFF54.c:113	pointed to as sf3 effect_55_move by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0; si2map census: the routine matched callers call in its place (sim 21%)
 060CFCD6	effect_55_init		3s-near	060ED862	effect_55_init	src/EFF54.c:170	sim 90%: 6 instructions differ, 2i size 170 vs 3s 166 (si2map census)
 060CFD80	effect_56_init		3s-exact	060ED908	effect_56_init	src/eff56.c:59	size 78
@@ -5708,6 +5698,7 @@
 060D1866	eff64_goal_check		3s-near	060EF5FC	eff64_goal_check	src/eff64.c:253	sim 92%: 0 instructions differ, 2i size 50 vs 3s 50 (si2map census)
 060D1898	effect_64_init		3s-near	060EF62E	effect_64_init	src/eff64.c:266	sim 93%: 4 instructions differ, 2i size 164 vs 3s 162 (si2map census)
 060D193C	effect_65_move		3s-exact	060EF6D0	effect_65_move	src/eff65.c:27	size 4 (si2map census); pointed to as sf3 effect_65_move by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
+060D1940	effect_65_init		3s-exact	060EF6D4	effect_65_init	src/eff65.c:32	size 4; sf2i link: effect_65_init at 060D1940 in the byte-identical build (sf2i/sf2i.map), defined by module eff65
 060D197C	effect_66_move		3s-exact	060EF710	effect_66_move	src/eff66.c:36	size 182
 060D1A32	eff66_00		3s-reloc	060EF7C6	eff66_00	src/eff66.c:71	reloc 15, size 216
 060D1B0A	eff66_01		3s-exact	060EF89E	eff66_01	src/eff66.c:100	size 4 (si2map census); pointed to as sf3 eff66_01 by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
@@ -5745,6 +5736,7 @@
 060D5434	effect_83_move		3s-near	060F4E20	effect_83_move	src/EFF83.c:34	sim 90%: 0 instructions differ, 2i size 442 vs 3s 426 (si2map census); pointed to as sf3 effect_83_move by 1 table word of matched routines and tables: refs 1 conflicts 0
 060D5730	effect_84_move		3s-reloc	060F5104	effect_84_move	src/EFF84.c:33	reloc 10, size 476
 060D590C	eff84_message_clear		3s-reloc	060F52E0	eff84_message_clear	src/EFF84.c:105	reloc 6, size 140
+060D5998	effect_84_init		3s-exact	060F536C	effect_84_init	src/EFF84.c:127	size 4; sf2i link: effect_84_init at 060D5998 in the byte-identical build (sf2i/sf2i.map), defined by module EFF84
 060D59D4	effect_85_move		3s-reloc	060F53A8	effect_85_move	src/EFF85.c:28	reloc 1, size 54 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 effect_85_move by 1 table word of matched routines and tables: refs 1 conflicts 0
 060D5B10	eff85_0200		3s-near	060F58B2	eff85_0200	src/EFF85.c:244	sim 82%: 0 instructions differ, 2i size 22 vs 3s 22 (si2map census)
 060D5B26	effect_85_init		3s-near	060F58C8	effect_85_init	src/EFF85.c:252	sim 70%: 0 instructions differ, 2i size 166 vs 3s 172 (si2map census)
@@ -5914,7 +5906,6 @@
 060E4E12	effect_F0_init		3s-near	061054CA	effect_F0_init	src/efff0.c:219	sim 82%: 0 instructions differ, 2i size 146 vs 3s 118 (si2map census)
 060E4EA4	effect_F1_move		3s-near	06105540	effect_F1_move	src/EFFF1.c:27	sim 94%: 0 instructions differ, 2i size 426 vs 3s 426 (si2map census); pointed to as sf3 effect_F1_move by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
 060E504E	effF1_data_set		3s-near	061056EA	effF1_data_set	src/EFFF1.c:97	sim 96%: 0 instructions differ, 2i size 102 vs 3s 106 (si2map census)
-060E50B8	effect_L4_move		inferred	061135B4	effect_L4_move	src/EFFL4.c:32	si2map census: the effect_L4_move slot of a routine-pointer table matched with the 3s one (pinned); the routine is rewritten (sim 15%)
 060E5140	effect_F2_move		inferred	06105770	effect_F2_move	src/EFFF2_code.c:25	pointed to as sf3 effect_F2_move by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0; si2map census: the routine matched callers call in its place (sim 15%)
 060E5332	effect_F2_init		3s-near	061058E4	effect_F2_init	src/EFFF2_code.c:79	sim 50%: 0 instructions differ, 2i size 254 vs 3s 248 (si2map census)
 060E5430	effect_F3_move		3s-near	061059DC	effect_F3_move	src/EFFF3.c:29	sim 94%: 0 instructions differ, 2i size 214 vs 3s 214 (si2map census); pointed to as sf3 effect_F3_move by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
@@ -5922,6 +5913,7 @@
 060E55AA	effF3_pos_set		3s-near	06105B56	effF3_pos_set	src/EFFF3.c:87	sim 98%: 1 instructions differ, 2i size 146 vs 3s 146 (si2map census)
 060E563C	effect_F4_move		3s-reloc	06105BE8	effect_F4_move	src/EFFF4.c:28	reloc 13, size 370 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 effect_F4_move by 1 si2map table pin and 1 table word of matched routines and tables: refs 2 conflicts 0
 060E57AE	effect_F4_init		3s-exact	06105D5A	effect_F4_init	src/EFFF4.c:78	size 4 (si2map census); pointed to as sf3 effect_F4_init by 1 si2map table pin of matched routines and tables: refs 1 conflicts 0
+060E57B2	effect_F4_dummy		3s-exact	06105D5E	effect_F4_dummy	src/EFFF4.c:82	size 4; sf2i link: effect_F4_dummy at 060E57B2 in the byte-identical build (sf2i/sf2i.map), defined by module EFFF4
 060E57D0	effect_F5_move		3s-exact	06105D7C	effect_F5_move	src/efff5.c:25	size 90
 060E582A	efff5_0000		3s-exact	06105DD6	efff5_0000	src/efff5.c:32	size 142
 060E58B8	efff5_0001		3s-near	06105E64	efff5_0001	src/efff5.c:60	sim 97%: 1 instructions differ, 2i size 112 vs 3s 112 (si2map census)
@@ -6039,6 +6031,9 @@
 060ED946	fifo_get		3s-reloc	0612DC72	fifo_get	src/fifo.c:49	reloc 0, size 50 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 fifo_get by 1 literal-pool slot of matched routines and tables: refs 1 conflicts 0
 060ED978	screen_flip_offsets_set		inferred	06005AFC	screen_flip_offsets_set	src/scrn_ctrl.c:121	pointed to as sf3 screen_flip_offsets_set by 2 literal-pool slots of matched routines and tables: refs 2 conflicts 0; si2map census: the routine matched callers call in its place (sim 15%)
 060EDA7C	set_screen_mode		inferred	06005B68	set_screen_mode	src/scrn_ctrl.c:149	pointed to as sf3 set_screen_mode by 2 literal-pool slots of matched routines and tables: refs 2 conflicts 0; si2map census: the routine matched callers call in its place (sim 9%)
+060EDC00	screen_window_regs_update		inferred	06005C00	screen_window_regs_update	src/scrn_ctrl.c:182	the bytes differ from sf3 screen_window_regs_update (under half the words equal); named by sf2i link: screen_window_regs_update at 060EDC00 in the byte-identical build (sf2i/sf2i.map); referenced by intr:1
+060EDE48	Zoomf_Init		inferred	06005DA8	Zoomf_Init	src/scrn_ctrl.c:242	the bytes differ from sf3 Zoomf_Init (under half the words equal); named by sf2i link: Zoomf_Init at 060EDE48 in the byte-identical build (sf2i/sf2i.map); referenced by tasksw:1
+060EE184	zoom_regs_update		inferred	06005FB8	zoom_regs_update	src/scrn_ctrl.c:376	the bytes differ from sf3 zoom_regs_update (under half the words equal); named by sf2i link: zoom_regs_update at 060EE184 in the byte-identical build (sf2i/sf2i.map); referenced by intr:1
 060EE218	Family_Init		3s-exact	0612DCA4	Family_Init	src/family.c:20	size 78
 060EE266	Family_Set_R		3s-reloc	0612DCF2	Family_Set_R	src/family.c:34	reloc 4, size 86
 060EE2BC	Family_Set_W		3s-exact	0612DD48	Family_Set_W	src/family.c:47	size 44
@@ -6054,6 +6049,7 @@
 060EE6C0	Scrn_Renew		3s-reloc	0612E14C	Scrn_Renew	src/sys_test.c:141	reloc 6, size 192
 060EE780	scrn_line_set_now		3s-reloc	0612E20C	scrn_line_set_now	src/sys_test.c:165	reloc 2, size 76 (si2map census: addresses, displacements or pool offsets differ)
 060EE7CC	scrn_line_set		3s-exact	0612E258	scrn_line_set	src/sys_test.c:176	size 34
+060EE7EE	simmram_large_page_addr		3s-exact	0612E27A	simmram_large_page_addr	src/sys_test.c:183	size 4; sf2i link: simmram_large_page_addr at 060EE7EE in the byte-identical build (sf2i/sf2i.map), defined by module sys_test
 060EE838	simmram_small_page_addr		3s-exact	0612E2C4	simmram_small_page_addr	src/sys_test.c:196	size 58
 060EE872	scrn_map_set_now		3s-reloc	0612E2FE	scrn_map_set_now	src/sys_test.c:209	reloc 2, size 66 (si2map census: addresses, displacements or pool offsets differ)
 060EE8B4	scrn_map_set		3s-exact	0612E340	scrn_map_set	src/sys_test.c:217	size 30
@@ -6091,9 +6087,11 @@
 060F02A4	gamedata_clear_card_counter		3s-exact	0612FD30	gamedata_clear_card_counter	src/sys_test_2b.c:93	size 78
 060F02F2	gamedata_page		3s-reloc	0612FD7E	gamedata_page	src/sys_test_2b.c:106	reloc 7, size 146
 060F0384	config_menu_page		3s-reloc	0612FE10	config_menu_page	src/sys_test_2c.c:33	reloc 2, size 92
+060F03E0	memtest_pattern_word		3s-exact	0612FE6C	memtest_pattern_word	src/sys_test_3.c:69	size 4; sf2i link: memtest_pattern_word at 060F03E0 in the byte-identical build (sf2i/sf2i.map), defined by module sys_test_3
 060F0478	memtest_pattern_byte_lane		3s-reloc	0612FF04	memtest_pattern_byte_lane	src/sys_test_3.c:106	reloc 0, size 178 (si2map census: addresses, displacements or pool offsets differ)
 060F052A	memtest_pattern_masked_word		3s-reloc	0612FFB6	memtest_pattern_masked_word	src/sys_test_3.c:151	reloc 0, size 186 (si2map census: addresses, displacements or pool offsets differ)
 060F05E4	memtest_pattern_stride_8		3s-exact	06130070	memtest_pattern_stride_8	src/sys_test_3.c:198	size 150
+060F067A	memtest_work_ram		3s-near	06130106	memtest_work_ram	src/sys_test_3.c:237	sim 82% of 47 words equal, size 190; sf2i link: memtest_work_ram at 060F067A in the byte-identical build (sf2i/sf2i.map), defined by module sys_test_3
 060F0738	memtest_sprite_ram		3s-exact	061301C4	memtest_sprite_ram	src/sys_test_3.c:261	size 150
 060F07CE	memtest_color_ram		3s-reloc	0613025A	memtest_color_ram	src/sys_test_3.c:285	reloc 7, size 188
 060F088A	memtest_character_ram		3s-reloc	06130316	memtest_character_ram	src/sys_test_3.c:309	reloc 9, size 232 (si2map census: addresses, displacements or pool offsets differ)
@@ -6119,6 +6117,7 @@
 060F1AA0	scsi_test_unit_ready		3s-exact	0613152C	scsi_test_unit_ready	src/sys_test_3.c:983	size 38
 060F1AC6	scsi_inquiry		3s-reloc	06131552	scsi_inquiry	src/sys_test_3.c:991	reloc 2, size 50
 060F1AF8	scsi_read_capacity		3s-exact	06131584	scsi_read_capacity	src/sys_test_3.c:999	size 40
+060F1B20	scsi_request_sense		3s-exact	061315AC	scsi_request_sense	src/sys_test_3.c:1007	size 4; sf2i link: scsi_request_sense at 060F1B20 in the byte-identical build (sf2i/sf2i.map), defined by module sys_test_3
 060F1B54	scsi_start_stop_unit		3s-reloc	061315E0	scsi_start_stop_unit	src/sys_test_3.c:1015	reloc 1, size 88
 060F1BAC	scsi_prevent_allow_medium_removal		3s-exact	06131638	scsi_prevent_allow_medium_removal	src/sys_test_3.c:1033	size 66
 060F1BEE	scsi_read_10		3s-reloc	0613167A	scsi_read_10	src/sys_test_3.c:1048	reloc 1, size 150
@@ -6256,6 +6255,7 @@
 060F9880	tilemap_print_script_seq		3s-exact	06139004	tilemap_print_script_seq	src/textsound.c:403	size 512
 060F9A80	tilemap_print_string		3s-reloc	06139204	tilemap_print_string	src/textsound.c:495	reloc 0, size 176 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 tilemap_print_string by 10 literal-pool slots of matched routines and tables: refs 10 conflicts 0
 060F9B30	tilemap_fill_column0		3s-reloc	061392B4	tilemap_fill_column0	src/textsound.c:532	reloc 1, size 72
+060F9B78	sound_driver_version		3s-near	0613930A	sound_driver_version	src/textsound_2.c:64	sim 67% (si2map census); sf2i link: sound_driver_version at 060F9B78 in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:1
 060F9B7E	sound_sample_bank_set		3s-reloc	06139310	sound_sample_bank_set	src/textsound_2.c:70	reloc 1, size 6 (si2map census: addresses, displacements or pool offsets differ)
 060F9B84	sound_init		3s-near	06139316	sound_init	src/textsound_2.c:78	sim 67%: 0 instructions differ, 2i size 404 vs 3s 442 (si2map census)
 060F9D18	sound_request		3s-exact	061394D0	sound_request	src/textsound_2.c:144	size 4 (si2map census); pointed to as sf3 sound_request by 1 literal-pool slot of matched routines and tables: refs 1 conflicts 0
@@ -6268,11 +6268,14 @@
 060FAB04	bgm_fade_out		3s-reloc	0613A300	bgm_fade_out	src/textsound_2.c:640	reloc 2, size 36 (si2map census: addresses, displacements or pool offsets differ)
 060FAB28	sound_reg_level_set		3s-reloc	0613A324	sound_reg_level_set	src/textsound_2.c:653	reloc 2, size 10 (si2map census: addresses, displacements or pool offsets differ)
 060FAB32	sound_status_read		3s-reloc	0613A32E	sound_status_read	src/textsound_2.c:661	reloc 1, size 6 (si2map census: addresses, displacements or pool offsets differ)
+060FAB60	sound_driver_init		inferred	0613A334	sound_driver_init	src/textsound_2.c:668	the bytes differ from sf3 sound_driver_init (under half the words equal); named by sf2i link: sound_driver_init at 060FAB60 in the byte-identical build (sf2i/sf2i.map); referenced by soundtest:3
 060FABE4	sound_driver_tick		3s-near	0613A408	sound_driver_tick	src/textsound_2.c:702	sim 89%: 0 instructions differ, 2i size 684 vs 3s 672 (si2map census)
 060FAE90	_slow_mvn		3s-exact	0613A6A8	_slow_mvn		size 56; SHC runtime library routine
 060FAEC8	_slow_strcpy		3s-reloc	0613A6E0	_slow_strcpy		reloc 1, size 112; SHC runtime library routine
 060FAF38	_sftrl		3s-reloc	0613A750	_sftrl		reloc 2, size 380 (si2map census: addresses, displacements or pool offsets differ); pointed to as sf3 _sftrl by 2 literal-pool slots of matched routines and tables: refs 2 conflicts 0
+060FAF44	sftrl_in_range		3s-exact	0613A75C	sftrl_in_range		size 4; sf2i link: sftrl_in_range at 060FAF44 in the byte-identical build (sf2i/sf2i.map), defined by module slow_mvn
 060FB0B4	_sta_sftra21		3s-exact	0613A8CC	_sta_sftra21		size 22; SHC runtime library routine
+060FB0CA	_sta_sftra12		3s-exact	0613A8E2	_sta_sftra12		size 4; sf2i link: _sta_sftra12 at 060FB0CA in the byte-identical build (sf2i/sf2i.map), defined by module sta_sftra
 060FB0CC	_sta_sftra11		3s-exact	0613A8E4	_sta_sftra11		size 2 (si2map census); pointed to as sf3 _sta_sftra11 by 1 literal-pool slot of matched routines and tables: refs 1 conflicts 0
 060FB0CE	_sta_sftra10		3s-exact	0613A8E6	_sta_sftra10		size 2 (si2map census); pointed to as sf3 _sta_sftra10 by 1 literal-pool slot of matched routines and tables: refs 1 conflicts 0
 060FB0D0	_sta_sftra9		3s-exact	0613A8E8	_sta_sftra9		size 2 (si2map census); pointed to as sf3 _sta_sftra9 by 1 literal-pool slot of matched routines and tables: refs 1 conflicts 0
@@ -6284,6 +6287,7 @@
 060FB178	rotate_right_n		3s-exact	0613A990	rotate_right_n	src/sh2_sub.src:28	size 16
 060FB188	rotate_left_n		3s-exact	0613A9A0	rotate_left_n	src/sh2_sub.src:37	size 16
 060FB198	delay_cycles		3s-exact	0613A9B0	delay_cycles	src/sh2_sub.src:46	size 12
+060FB1A4	jump_to		3s-exact	0613A9BC	jump_to	src/sh2_sub.src:53	size 4; sf2i link: jump_to at 060FB1A4 in the byte-identical build (sf2i/sf2i.map), defined by module sh2_sub
 060FB1A8	dma0_transfer_wait		3s-exact	0613A9C0	dma0_transfer_wait	src/sh2_sub.src:56	size 136
 060FB230	cram_bank_init		3s-exact	0613AA48	cram_bank_init	src/cram_bank.c:25	size 22
 060FB246	cram_bank_set		3s-reloc	0613AA5E	cram_bank_set	src/cram_bank.c:34	reloc 2, size 82
