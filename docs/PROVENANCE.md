@@ -118,3 +118,11 @@ python tools/seed-entries.py $M/funcs.tsv scratch/si2ghidra/export/boundaries.ts
 tools/ghidra-import.sh scratch/rom/prog.bin && tools/ghidra-export.sh    # again, with the entries; full export
 python tools/compare-boundaries.py scratch/si2ghidra/export/boundaries.tsv $M
 ```
+
+After the first hand edit the tables are add-only. A newer census is reconciled, not regenerated:
+
+```sh
+python tools/census-diff.py $M/census.tsv <old census.tsv>    # every row the new census contradicts, both sides
+python tools/reconcile-census.py $M/census.tsv <old census.tsv> $M/pins.tsv "<label>"   # plainly stronger only
+python tools/seed-tables.py ... --pins $M/pins.tsv --census $M/census.tsv              # adds rows, changes none
+```
