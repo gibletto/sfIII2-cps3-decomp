@@ -1,0 +1,88 @@
+/*
+ * EFFH9_TBL.C  tables read by effects H9 and I0
+ */
+
+#include "types.h"
+#include "structs.h"
+
+#pragma section TBL
+
+extern const u8 effH7_wait_tbl[];
+extern const u8 effH7_wait2_tbl[];
+extern const s16 effH7_char_tbl[][4];
+extern const s16 effH7_pos_tbl[][4][3];
+extern const u8 effH7_bound_tbl[];
+extern const u8 effH8_wait_tbl[];
+extern const s16 effH8_char_tbl[][4];
+extern const s16 effH8_char2_tbl[][4];
+extern const s16 effH8_pos_tbl[][4][3];
+extern const CONN bbbs_ball[][3];
+
+const u8 effH7_wait_tbl[4] = {
+    0, 0xF, 0x1E, 0x2D,
+};
+
+const u8 effH7_wait2_tbl[4] = {
+    0, 0, 0, 0,
+};
+
+const s16 effH7_char_tbl[2][4] = {
+    { 77, 76, 75, 74 },
+    { 74, 75, 76, 77 },
+};
+
+const s16 effH7_pos_tbl[2][4][3] = {
+    { { -32, -6, -2 }, { -4, 4, 2 }, { 24, -6, -2 }, { 48, 4, 2 } },
+    { { -32, -6, -2 }, { -8, 4, 2 }, { 20, -6, -2 }, { 48, 4, 2 } },
+};
+
+/* provisional name */
+const u8 effH7_bound_tbl[328] = {
+    0, 4, 0, 3, 0, 3, 0, 3, 0, 2, 0, 2, 0, 1, 0, 1,
+    0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0xFF, 0xFF, 0, 0,
+    0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFC,
+    0xFF, 0xFC, 0xFF, 0xFC, 0, 3, 0, 3, 0, 2, 0, 2, 0, 1, 0, 1,
+    0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0xFF, 0xFF, 0, 0, 0xFF, 0xFF,
+    0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFD, 0xFF, 0xFD, 0, 2, 0, 2, 0, 1,
+    0, 1, 0, 1, 0, 0, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE,
+    0, 0x63, 0, 2, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0,
+    0, 0, 0, 0, 0xFF, 0xFF, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE,
+    0, 0x63, 0, 3, 0, 2, 0, 2, 0, 1, 0, 1, 0, 1, 0, 0,
+    0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0xFF, 0xFF, 0, 0,
+    0xFF, 0xFF, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFD,
+    0, 0x63, 0, 4, 0, 3, 0, 3, 0, 3, 0, 2, 0, 2, 0, 2,
+    0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+    0xFF, 0xFF, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFE,
+    0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFC, 0, 0x63, 0, 5, 0, 5, 0, 4,
+    0, 4, 0, 4, 0, 3, 0, 3, 0, 3, 0, 2, 0, 2, 0, 2,
+    0, 2, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0,
+    0, 0, 0xFF, 0xFF, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE,
+    0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFC, 0xFF, 0xFC, 0xFF, 0xFC,
+    0xFF, 0xFB, 0xFF, 0xFB, 0, 0x63, 0xFF, 0xFF,
+};
+
+const u8 effH8_wait_tbl[4] = {
+    0, 0xF, 0x1E, 0x2D,
+};
+
+const s16 effH8_char_tbl[2][4] = {
+    { 162, 161, 160, 159 },
+    { 159, 160, 161, 162 },
+};
+
+const s16 effH8_char2_tbl[2][4] = {
+    { 43, 41, 39, 37 },
+    { 37, 39, 41, 43 },
+};
+
+const s16 effH8_pos_tbl[2][4][3] = {
+    { { -32, -4, -2 }, { -12, -4, -2 }, { 12, -4, -2 }, { 36, -4, -2 } },
+    { { -32, -4, -2 }, { -8, -4, -2 }, { 16, -4, -2 }, { 36, -4, -2 } },
+};
+
+const CONN bbbs_ball[4][3] = {
+    { { 176, 0, 0, 0xB2C3 }, { 164, 0, 0, 0xB2C3 }, { 144, 8, 0, 0xB2F1 } },
+    { { -210, 0, 0, 0xB2C3 }, { -222, 0, 0, 0xB2C3 }, { -192, 8, 0, 0xB2F1 } },
+    { { 224, 0, 0, 0xB2C3 }, { 212, 0, 0, 0xB2C3 }, { 192, 8, 0, 0xB2F1 } },
+    { { -218, 0, 0, 0xB2C3 }, { -230, 0, 0, 0xB2C3 }, { -200, 8, 0, 0xB2F1 } },
+};

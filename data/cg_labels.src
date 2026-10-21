@@ -1,0 +1,838 @@
+; CCG_06800000: 2nd Impact CCG 06800000-06DA767C, the graphics: only their labels here, the bytes come from the ROM at build time
+          .CPU        SH2
+          .SECTION    CCG,DATA,ALIGN=4
+          .EXPORT     _cg_data_tbl
+          .EXPORT     _dat_06800006
+          .EXPORT     _dat_06800007
+          .EXPORT     _dat_0680000B
+          .EXPORT     _dat_06800014
+          .EXPORT     _dat_0680001B
+          .EXPORT     _dat_06800807
+          .EXPORT     _dat_06820000
+          .EXPORT     _dat_06820006
+          .EXPORT     _dat_06820007
+          .EXPORT     _dat_0682000B
+          .EXPORT     _dat_06820014
+          .EXPORT     _dat_0682001B
+          .EXPORT     _dat_06820807
+          .EXPORT     _dat_06840000
+          .EXPORT     _dat_06840006
+          .EXPORT     _dat_06840007
+          .EXPORT     _dat_0684000B
+          .EXPORT     _dat_06840014
+          .EXPORT     _dat_0684001B
+          .EXPORT     _dat_06840807
+          .EXPORT     _dat_06860000
+          .EXPORT     _dat_06860001
+          .EXPORT     _dat_06860006
+          .EXPORT     _dat_06860007
+          .EXPORT     _dat_0686000B
+          .EXPORT     _dat_0686001B
+          .EXPORT     _dat_06860807
+          .EXPORT     _dat_06880000
+          .EXPORT     _dat_06880001
+          .EXPORT     _dat_06880006
+          .EXPORT     _dat_06880007
+          .EXPORT     _dat_0688000B
+          .EXPORT     _dat_0688001B
+          .EXPORT     _dat_06880807
+          .EXPORT     _dat_068A0000
+          .EXPORT     _dat_068A0001
+          .EXPORT     _dat_068A0006
+          .EXPORT     _dat_068A0007
+          .EXPORT     _dat_068A000B
+          .EXPORT     _dat_068A001B
+          .EXPORT     _dat_068A0807
+          .EXPORT     _dat_068C0000
+          .EXPORT     _dat_068C0001
+          .EXPORT     _dat_068C0006
+          .EXPORT     _dat_068C0007
+          .EXPORT     _dat_068C000B
+          .EXPORT     _dat_068C001B
+          .EXPORT     _dat_068C0807
+          .EXPORT     _dat_068E0000
+          .EXPORT     _dat_068E0001
+          .EXPORT     _dat_068E0007
+          .EXPORT     _dat_068E000B
+          .EXPORT     _dat_068E001B
+          .EXPORT     _dat_068E0807
+          .EXPORT     _dat_06900000
+          .EXPORT     _dat_06900007
+          .EXPORT     _dat_0690000B
+          .EXPORT     _dat_06900014
+          .EXPORT     _dat_0690001B
+          .EXPORT     _dat_06900807
+          .EXPORT     _dat_06920000
+          .EXPORT     _dat_06920007
+          .EXPORT     _dat_0692000B
+          .EXPORT     _dat_06920014
+          .EXPORT     _dat_0692001B
+          .EXPORT     _dat_06920807
+          .EXPORT     _dat_06940000
+          .EXPORT     _dat_06940007
+          .EXPORT     _dat_0694000B
+          .EXPORT     _dat_06940014
+          .EXPORT     _dat_0694001B
+          .EXPORT     _dat_06940807
+          .EXPORT     _dat_06960000
+          .EXPORT     _dat_06960007
+          .EXPORT     _dat_0696000B
+          .EXPORT     _dat_06960014
+          .EXPORT     _dat_0696001B
+          .EXPORT     _dat_06960807
+          .EXPORT     _dat_06980000
+          .EXPORT     _dat_06980001
+          .EXPORT     _dat_06980006
+          .EXPORT     _dat_06980007
+          .EXPORT     _dat_0698000B
+          .EXPORT     _dat_0698001B
+          .EXPORT     _dat_069A0000
+          .EXPORT     _dat_069A0001
+          .EXPORT     _dat_069A0006
+          .EXPORT     _dat_069A0007
+          .EXPORT     _dat_069A000B
+          .EXPORT     _dat_069A001B
+          .EXPORT     _dat_069C0000
+          .EXPORT     _dat_069C0001
+          .EXPORT     _dat_069C0006
+          .EXPORT     _dat_069C0007
+          .EXPORT     _dat_069C000B
+          .EXPORT     _dat_069C001B
+          .EXPORT     _dat_069E0000
+          .EXPORT     _dat_069E0001
+          .EXPORT     _dat_069E0006
+          .EXPORT     _dat_069E0007
+          .EXPORT     _dat_069E000B
+          .EXPORT     _dat_069E001B
+          .EXPORT     _dat_06A00000
+          .EXPORT     _dat_06A00001
+          .EXPORT     _dat_06A00006
+          .EXPORT     _dat_06A00007
+          .EXPORT     _dat_06A0000B
+          .EXPORT     _dat_06A00014
+          .EXPORT     _dat_06A0001B
+          .EXPORT     _dat_06A20000
+          .EXPORT     _dat_06A20006
+          .EXPORT     _dat_06A20007
+          .EXPORT     _dat_06A2000B
+          .EXPORT     _dat_06A20014
+          .EXPORT     _dat_06A2001B
+          .EXPORT     _dat_06A40000
+          .EXPORT     _dat_06A40006
+          .EXPORT     _dat_06A40007
+          .EXPORT     _dat_06A4000B
+          .EXPORT     _dat_06A40014
+          .EXPORT     _dat_06A4001B
+          .EXPORT     _dat_06A60000
+          .EXPORT     _dat_06A60006
+          .EXPORT     _dat_06A60007
+          .EXPORT     _dat_06A6000B
+          .EXPORT     _dat_06A60014
+          .EXPORT     _dat_06A6001B
+          .EXPORT     _dat_06A80000
+          .EXPORT     _dat_06A80006
+          .EXPORT     _dat_06A80007
+          .EXPORT     _dat_06A8000B
+          .EXPORT     _dat_06A80014
+          .EXPORT     _dat_06A8001B
+          .EXPORT     _dat_06AA0000
+          .EXPORT     _dat_06AA0006
+          .EXPORT     _dat_06AA0007
+          .EXPORT     _dat_06AA000B
+          .EXPORT     _dat_06AA0014
+          .EXPORT     _dat_06AA001B
+          .EXPORT     _dat_06AC0000
+          .EXPORT     _dat_06AC0001
+          .EXPORT     _dat_06AC0006
+          .EXPORT     _dat_06AC0007
+          .EXPORT     _dat_06AC000B
+          .EXPORT     _dat_06AC001B
+          .EXPORT     _dat_06AE0000
+          .EXPORT     _dat_06AE0001
+          .EXPORT     _dat_06AE0007
+          .EXPORT     _dat_06AE000B
+          .EXPORT     _dat_06AE001B
+          .EXPORT     _dat_06B00000
+          .EXPORT     _dat_06B00007
+          .EXPORT     _dat_06B0000B
+          .EXPORT     _dat_06B00014
+          .EXPORT     _dat_06B0001B
+          .EXPORT     _dat_06B20000
+          .EXPORT     _dat_06B20001
+          .EXPORT     _dat_06B20007
+          .EXPORT     _dat_06B2000B
+          .EXPORT     _dat_06B20015
+          .EXPORT     _dat_06B2001B
+          .EXPORT     _dat_06B40000
+          .EXPORT     _dat_06B40001
+          .EXPORT     _dat_06B40007
+          .EXPORT     _dat_06B4000B
+          .EXPORT     _dat_06B40015
+          .EXPORT     _dat_06B4001C
+          .EXPORT     _dat_06B60000
+          .EXPORT     _dat_06B60001
+          .EXPORT     _dat_06B60007
+          .EXPORT     _dat_06B6000B
+          .EXPORT     _dat_06B60015
+          .EXPORT     _dat_06B6001C
+          .EXPORT     _dat_06B80000
+          .EXPORT     _dat_06B80001
+          .EXPORT     _dat_06B80006
+          .EXPORT     _dat_06B80007
+          .EXPORT     _dat_06B8000B
+          .EXPORT     _dat_06B80015
+          .EXPORT     _dat_06B8001C
+          .EXPORT     _dat_06BA0000
+          .EXPORT     _dat_06BA0006
+          .EXPORT     _dat_06BA0007
+          .EXPORT     _dat_06BA000B
+          .EXPORT     _dat_06BA0014
+          .EXPORT     _dat_06BA001C
+          .EXPORT     _dat_06BC0000
+          .EXPORT     _dat_06BC0006
+          .EXPORT     _dat_06BC0007
+          .EXPORT     _dat_06BC000B
+          .EXPORT     _dat_06BC0014
+          .EXPORT     _dat_06BC001C
+          .EXPORT     _dat_06BE0000
+          .EXPORT     _dat_06BE0001
+          .EXPORT     _dat_06BE0003
+          .EXPORT     _dat_06BE0006
+          .EXPORT     _dat_06BE0007
+          .EXPORT     _dat_06BE000B
+          .EXPORT     _dat_06BE001C
+          .EXPORT     _dat_06C00000
+          .EXPORT     _dat_06C00003
+          .EXPORT     _dat_06C00006
+          .EXPORT     _dat_06C00007
+          .EXPORT     _dat_06C0000B
+          .EXPORT     _dat_06C00014
+          .EXPORT     _dat_06C0001C
+          .EXPORT     _cg_3A94
+          .EXPORT     _dat_06C20000
+          .EXPORT     _dat_06C20006
+          .EXPORT     _dat_06C20007
+          .EXPORT     _dat_06C2000B
+          .EXPORT     _dat_06C20015
+          .EXPORT     _dat_06C2001C
+          .EXPORT     _dat_06C40000
+          .EXPORT     _dat_06C40004
+          .EXPORT     _dat_06C40007
+          .EXPORT     _dat_06C4000B
+          .EXPORT     _dat_06C40015
+          .EXPORT     _dat_06C4001C
+          .EXPORT     _dat_06C60000
+          .EXPORT     _dat_06C60001
+          .EXPORT     _dat_06C60006
+          .EXPORT     _dat_06C60007
+          .EXPORT     _dat_06C6000B
+          .EXPORT     _dat_06C6001C
+          .EXPORT     _dat_06C80000
+          .EXPORT     _dat_06C80001
+          .EXPORT     _dat_06C80006
+          .EXPORT     _dat_06C80007
+          .EXPORT     _dat_06C8000B
+          .EXPORT     _dat_06C8001C
+          .EXPORT     _dat_06CA0000
+          .EXPORT     _dat_06CA0001
+          .EXPORT     _dat_06CA0006
+          .EXPORT     _dat_06CA0007
+          .EXPORT     _dat_06CA000B
+          .EXPORT     _dat_06CA001C
+          .EXPORT     _dat_06CC0000
+          .EXPORT     _dat_06CC0001
+          .EXPORT     _dat_06CC0006
+          .EXPORT     _dat_06CC0007
+          .EXPORT     _dat_06CC000B
+          .EXPORT     _dat_06CC001C
+          .EXPORT     _dat_06CE0000
+          .EXPORT     _dat_06CE0001
+          .EXPORT     _dat_06CE0007
+          .EXPORT     _dat_06CE000B
+          .EXPORT     _dat_06CE001C
+          .EXPORT     _dat_06D00000
+          .EXPORT     _dat_06D00001
+          .EXPORT     _dat_06D00007
+          .EXPORT     _dat_06D0000B
+          .EXPORT     _dat_06D00014
+          .EXPORT     _dat_06D0001C
+          .EXPORT     _dat_06D20000
+          .EXPORT     _dat_06D20007
+          .EXPORT     _dat_06D2000B
+          .EXPORT     _dat_06D2001C
+          .EXPORT     _dat_06D40000
+          .EXPORT     _dat_06D40007
+          .EXPORT     _dat_06D4000B
+          .EXPORT     _dat_06D4001C
+          .EXPORT     _dat_06D60000
+          .EXPORT     _dat_06D60007
+          .EXPORT     _dat_06D6000B
+          .EXPORT     _dat_06D6001C
+          .EXPORT     _dat_06D80000
+          .EXPORT     _dat_06D80006
+          .EXPORT     _dat_06D80007
+          .EXPORT     _dat_06D8000B
+          .EXPORT     _dat_06D8001C
+          .EXPORT     _dat_06DA0000
+          .EXPORT     _dat_06DA0003
+          .EXPORT     _dat_06DA0006
+          .EXPORT     _dat_06DA0007
+          .EXPORT     _dat_06DA000B
+          .EXPORT     _dat_06DA001C
+_cg_data_tbl:
+          .RES.B      6
+_dat_06800006:
+          .RES.B      1
+_dat_06800007:
+          .RES.B      4
+_dat_0680000B:
+          .RES.B      9
+_dat_06800014:
+          .RES.B      7
+_dat_0680001B:
+          .RES.B      2028
+_dat_06800807:
+          .RES.B      129017
+_dat_06820000:
+          .RES.B      6
+_dat_06820006:
+          .RES.B      1
+_dat_06820007:
+          .RES.B      4
+_dat_0682000B:
+          .RES.B      9
+_dat_06820014:
+          .RES.B      7
+_dat_0682001B:
+          .RES.B      2028
+_dat_06820807:
+          .RES.B      129017
+_dat_06840000:
+          .RES.B      6
+_dat_06840006:
+          .RES.B      1
+_dat_06840007:
+          .RES.B      4
+_dat_0684000B:
+          .RES.B      9
+_dat_06840014:
+          .RES.B      7
+_dat_0684001B:
+          .RES.B      2028
+_dat_06840807:
+          .RES.B      129017
+_dat_06860000:
+          .RES.B      1
+_dat_06860001:
+          .RES.B      5
+_dat_06860006:
+          .RES.B      1
+_dat_06860007:
+          .RES.B      4
+_dat_0686000B:
+          .RES.B      16
+_dat_0686001B:
+          .RES.B      2028
+_dat_06860807:
+          .RES.B      129017
+_dat_06880000:
+          .RES.B      1
+_dat_06880001:
+          .RES.B      5
+_dat_06880006:
+          .RES.B      1
+_dat_06880007:
+          .RES.B      4
+_dat_0688000B:
+          .RES.B      16
+_dat_0688001B:
+          .RES.B      2028
+_dat_06880807:
+          .RES.B      129017
+_dat_068A0000:
+          .RES.B      1
+_dat_068A0001:
+          .RES.B      5
+_dat_068A0006:
+          .RES.B      1
+_dat_068A0007:
+          .RES.B      4
+_dat_068A000B:
+          .RES.B      16
+_dat_068A001B:
+          .RES.B      2028
+_dat_068A0807:
+          .RES.B      129017
+_dat_068C0000:
+          .RES.B      1
+_dat_068C0001:
+          .RES.B      5
+_dat_068C0006:
+          .RES.B      1
+_dat_068C0007:
+          .RES.B      4
+_dat_068C000B:
+          .RES.B      16
+_dat_068C001B:
+          .RES.B      2028
+_dat_068C0807:
+          .RES.B      129017
+_dat_068E0000:
+          .RES.B      1
+_dat_068E0001:
+          .RES.B      6
+_dat_068E0007:
+          .RES.B      4
+_dat_068E000B:
+          .RES.B      16
+_dat_068E001B:
+          .RES.B      2028
+_dat_068E0807:
+          .RES.B      129017
+_dat_06900000:
+          .RES.B      7
+_dat_06900007:
+          .RES.B      4
+_dat_0690000B:
+          .RES.B      9
+_dat_06900014:
+          .RES.B      7
+_dat_0690001B:
+          .RES.B      2028
+_dat_06900807:
+          .RES.B      129017
+_dat_06920000:
+          .RES.B      7
+_dat_06920007:
+          .RES.B      4
+_dat_0692000B:
+          .RES.B      9
+_dat_06920014:
+          .RES.B      7
+_dat_0692001B:
+          .RES.B      2028
+_dat_06920807:
+          .RES.B      129017
+_dat_06940000:
+          .RES.B      7
+_dat_06940007:
+          .RES.B      4
+_dat_0694000B:
+          .RES.B      9
+_dat_06940014:
+          .RES.B      7
+_dat_0694001B:
+          .RES.B      2028
+_dat_06940807:
+          .RES.B      129017
+_dat_06960000:
+          .RES.B      7
+_dat_06960007:
+          .RES.B      4
+_dat_0696000B:
+          .RES.B      9
+_dat_06960014:
+          .RES.B      7
+_dat_0696001B:
+          .RES.B      2028
+_dat_06960807:
+          .RES.B      129017
+_dat_06980000:
+          .RES.B      1
+_dat_06980001:
+          .RES.B      5
+_dat_06980006:
+          .RES.B      1
+_dat_06980007:
+          .RES.B      4
+_dat_0698000B:
+          .RES.B      16
+_dat_0698001B:
+          .RES.B      131045
+_dat_069A0000:
+          .RES.B      1
+_dat_069A0001:
+          .RES.B      5
+_dat_069A0006:
+          .RES.B      1
+_dat_069A0007:
+          .RES.B      4
+_dat_069A000B:
+          .RES.B      16
+_dat_069A001B:
+          .RES.B      131045
+_dat_069C0000:
+          .RES.B      1
+_dat_069C0001:
+          .RES.B      5
+_dat_069C0006:
+          .RES.B      1
+_dat_069C0007:
+          .RES.B      4
+_dat_069C000B:
+          .RES.B      16
+_dat_069C001B:
+          .RES.B      131045
+_dat_069E0000:
+          .RES.B      1
+_dat_069E0001:
+          .RES.B      5
+_dat_069E0006:
+          .RES.B      1
+_dat_069E0007:
+          .RES.B      4
+_dat_069E000B:
+          .RES.B      16
+_dat_069E001B:
+          .RES.B      131045
+_dat_06A00000:
+          .RES.B      1
+_dat_06A00001:
+          .RES.B      5
+_dat_06A00006:
+          .RES.B      1
+_dat_06A00007:
+          .RES.B      4
+_dat_06A0000B:
+          .RES.B      9
+_dat_06A00014:
+          .RES.B      7
+_dat_06A0001B:
+          .RES.B      131045
+_dat_06A20000:
+          .RES.B      6
+_dat_06A20006:
+          .RES.B      1
+_dat_06A20007:
+          .RES.B      4
+_dat_06A2000B:
+          .RES.B      9
+_dat_06A20014:
+          .RES.B      7
+_dat_06A2001B:
+          .RES.B      131045
+_dat_06A40000:
+          .RES.B      6
+_dat_06A40006:
+          .RES.B      1
+_dat_06A40007:
+          .RES.B      4
+_dat_06A4000B:
+          .RES.B      9
+_dat_06A40014:
+          .RES.B      7
+_dat_06A4001B:
+          .RES.B      131045
+_dat_06A60000:
+          .RES.B      6
+_dat_06A60006:
+          .RES.B      1
+_dat_06A60007:
+          .RES.B      4
+_dat_06A6000B:
+          .RES.B      9
+_dat_06A60014:
+          .RES.B      7
+_dat_06A6001B:
+          .RES.B      131045
+_dat_06A80000:
+          .RES.B      6
+_dat_06A80006:
+          .RES.B      1
+_dat_06A80007:
+          .RES.B      4
+_dat_06A8000B:
+          .RES.B      9
+_dat_06A80014:
+          .RES.B      7
+_dat_06A8001B:
+          .RES.B      131045
+_dat_06AA0000:
+          .RES.B      6
+_dat_06AA0006:
+          .RES.B      1
+_dat_06AA0007:
+          .RES.B      4
+_dat_06AA000B:
+          .RES.B      9
+_dat_06AA0014:
+          .RES.B      7
+_dat_06AA001B:
+          .RES.B      131045
+_dat_06AC0000:
+          .RES.B      1
+_dat_06AC0001:
+          .RES.B      5
+_dat_06AC0006:
+          .RES.B      1
+_dat_06AC0007:
+          .RES.B      4
+_dat_06AC000B:
+          .RES.B      16
+_dat_06AC001B:
+          .RES.B      131045
+_dat_06AE0000:
+          .RES.B      1
+_dat_06AE0001:
+          .RES.B      6
+_dat_06AE0007:
+          .RES.B      4
+_dat_06AE000B:
+          .RES.B      16
+_dat_06AE001B:
+          .RES.B      131045
+_dat_06B00000:
+          .RES.B      7
+_dat_06B00007:
+          .RES.B      4
+_dat_06B0000B:
+          .RES.B      9
+_dat_06B00014:
+          .RES.B      7
+_dat_06B0001B:
+          .RES.B      131045
+_dat_06B20000:
+          .RES.B      1
+_dat_06B20001:
+          .RES.B      6
+_dat_06B20007:
+          .RES.B      4
+_dat_06B2000B:
+          .RES.B      10
+_dat_06B20015:
+          .RES.B      6
+_dat_06B2001B:
+          .RES.B      131045
+_dat_06B40000:
+          .RES.B      1
+_dat_06B40001:
+          .RES.B      6
+_dat_06B40007:
+          .RES.B      4
+_dat_06B4000B:
+          .RES.B      10
+_dat_06B40015:
+          .RES.B      7
+_dat_06B4001C:
+          .RES.B      131044
+_dat_06B60000:
+          .RES.B      1
+_dat_06B60001:
+          .RES.B      6
+_dat_06B60007:
+          .RES.B      4
+_dat_06B6000B:
+          .RES.B      10
+_dat_06B60015:
+          .RES.B      7
+_dat_06B6001C:
+          .RES.B      131044
+_dat_06B80000:
+          .RES.B      1
+_dat_06B80001:
+          .RES.B      5
+_dat_06B80006:
+          .RES.B      1
+_dat_06B80007:
+          .RES.B      4
+_dat_06B8000B:
+          .RES.B      10
+_dat_06B80015:
+          .RES.B      7
+_dat_06B8001C:
+          .RES.B      131044
+_dat_06BA0000:
+          .RES.B      6
+_dat_06BA0006:
+          .RES.B      1
+_dat_06BA0007:
+          .RES.B      4
+_dat_06BA000B:
+          .RES.B      9
+_dat_06BA0014:
+          .RES.B      8
+_dat_06BA001C:
+          .RES.B      131044
+_dat_06BC0000:
+          .RES.B      6
+_dat_06BC0006:
+          .RES.B      1
+_dat_06BC0007:
+          .RES.B      4
+_dat_06BC000B:
+          .RES.B      9
+_dat_06BC0014:
+          .RES.B      8
+_dat_06BC001C:
+          .RES.B      131044
+_dat_06BE0000:
+          .RES.B      1
+_dat_06BE0001:
+          .RES.B      2
+_dat_06BE0003:
+          .RES.B      3
+_dat_06BE0006:
+          .RES.B      1
+_dat_06BE0007:
+          .RES.B      4
+_dat_06BE000B:
+          .RES.B      17
+_dat_06BE001C:
+          .RES.B      131044
+_dat_06C00000:
+          .RES.B      3
+_dat_06C00003:
+          .RES.B      3
+_dat_06C00006:
+          .RES.B      1
+_dat_06C00007:
+          .RES.B      4
+_dat_06C0000B:
+          .RES.B      9
+_dat_06C00014:
+          .RES.B      8
+_dat_06C0001C:
+          .RES.B      1428
+_cg_3A94:
+          .RES.B      129616
+_dat_06C20000:
+          .RES.B      6
+_dat_06C20006:
+          .RES.B      1
+_dat_06C20007:
+          .RES.B      4
+_dat_06C2000B:
+          .RES.B      10
+_dat_06C20015:
+          .RES.B      7
+_dat_06C2001C:
+          .RES.B      131044
+_dat_06C40000:
+          .RES.B      4
+_dat_06C40004:
+          .RES.B      3
+_dat_06C40007:
+          .RES.B      4
+_dat_06C4000B:
+          .RES.B      10
+_dat_06C40015:
+          .RES.B      7
+_dat_06C4001C:
+          .RES.B      131044
+_dat_06C60000:
+          .RES.B      1
+_dat_06C60001:
+          .RES.B      5
+_dat_06C60006:
+          .RES.B      1
+_dat_06C60007:
+          .RES.B      4
+_dat_06C6000B:
+          .RES.B      17
+_dat_06C6001C:
+          .RES.B      131044
+_dat_06C80000:
+          .RES.B      1
+_dat_06C80001:
+          .RES.B      5
+_dat_06C80006:
+          .RES.B      1
+_dat_06C80007:
+          .RES.B      4
+_dat_06C8000B:
+          .RES.B      17
+_dat_06C8001C:
+          .RES.B      131044
+_dat_06CA0000:
+          .RES.B      1
+_dat_06CA0001:
+          .RES.B      5
+_dat_06CA0006:
+          .RES.B      1
+_dat_06CA0007:
+          .RES.B      4
+_dat_06CA000B:
+          .RES.B      17
+_dat_06CA001C:
+          .RES.B      131044
+_dat_06CC0000:
+          .RES.B      1
+_dat_06CC0001:
+          .RES.B      5
+_dat_06CC0006:
+          .RES.B      1
+_dat_06CC0007:
+          .RES.B      4
+_dat_06CC000B:
+          .RES.B      17
+_dat_06CC001C:
+          .RES.B      131044
+_dat_06CE0000:
+          .RES.B      1
+_dat_06CE0001:
+          .RES.B      6
+_dat_06CE0007:
+          .RES.B      4
+_dat_06CE000B:
+          .RES.B      17
+_dat_06CE001C:
+          .RES.B      131044
+_dat_06D00000:
+          .RES.B      1
+_dat_06D00001:
+          .RES.B      6
+_dat_06D00007:
+          .RES.B      4
+_dat_06D0000B:
+          .RES.B      9
+_dat_06D00014:
+          .RES.B      8
+_dat_06D0001C:
+          .RES.B      131044
+_dat_06D20000:
+          .RES.B      7
+_dat_06D20007:
+          .RES.B      4
+_dat_06D2000B:
+          .RES.B      17
+_dat_06D2001C:
+          .RES.B      131044
+_dat_06D40000:
+          .RES.B      7
+_dat_06D40007:
+          .RES.B      4
+_dat_06D4000B:
+          .RES.B      17
+_dat_06D4001C:
+          .RES.B      131044
+_dat_06D60000:
+          .RES.B      7
+_dat_06D60007:
+          .RES.B      4
+_dat_06D6000B:
+          .RES.B      17
+_dat_06D6001C:
+          .RES.B      131044
+_dat_06D80000:
+          .RES.B      6
+_dat_06D80006:
+          .RES.B      1
+_dat_06D80007:
+          .RES.B      4
+_dat_06D8000B:
+          .RES.B      17
+_dat_06D8001C:
+          .RES.B      131044
+_dat_06DA0000:
+          .RES.B      3
+_dat_06DA0003:
+          .RES.B      3
+_dat_06DA0006:
+          .RES.B      1
+_dat_06DA0007:
+          .RES.B      4
+_dat_06DA000B:
+          .RES.B      17
+_dat_06DA001C:
+          .RES.B      30304
+          .END

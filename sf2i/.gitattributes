@@ -1,9 +1,0 @@
-# a DOS-era source tree, as the 3rd Strike one: stored LF, checked out CRLF; the compiler's files stay byte-exact
-*.c       text eol=crlf
-*.h       text eol=crlf
-*.src     text eol=crlf
-*.sub     text eol=crlf
-*.txt     text eol=crlf
-*.tsv     text eol=lf
-bin/**    -text
-*.TXT     text eol=crlf

@@ -1,17 +1,17 @@
 # Street Fighter III 2nd Impact - CPS3 program source
 
-**AI Disclosure**: this project uses Claude, as the 3rd Strike decomp did.
+**AI Disclosure**:
+Yes, this used Claude, as the 3rd Strike decomp did. 2nd Impact has no debug symbols of its own: the finished
+[3rd Strike decomp](https://github.com/gibletto/sfIII3-cps3-decomp) was the reference for its layout and names, and
+the names of the files here follow Capcom's 3rd Strike file names.
 
 C and SH-2 assembler source for the CPS3 program ROM of *Street Fighter III 2nd Impact: Giant Attack* (sfiii2n),
-built with the original Hitachi toolchain (SHC 5.0, asmsh, lnk 6.0, rof2bin). It is the earlier game on the engine of
-[Street Fighter III 3rd Strike](https://github.com/gibletto/sfIII3-cps3-decomp), and the finished 3rd Strike decomp
-was its oracle: no debug symbols exist for 2nd Impact, so names and types come from 3rd Strike, with the evidence for
-each one recorded (`docs/PROVENANCE.md`, `docs/STRUCTS.md`).
+built with the original Hitachi toolchain (SHC 5.0, asmsh, lnk 6.0, rof2bin). 2nd Impact is the game before
+3rd Strike on the same engine; where the two differ the comments say so.
 
-The build is a byte-for-byte copy of the arcade program: every routine (7,902 C routines, 37 assembler, 66 from the
-compiler's library) compiles from this source to the arcade's exact bytes. `build/prog.bin` has the arcade program's
-SHA-1, 234c5afdefb008d0feba0b7b9b448082e71499b6, and the eight program SIMM chips written into `build/sfiii2n.zip`
-are the original ROM's:
+The build is a byte-for-byte copy of the arcade program: every routine compiles from this C and assembler source
+to the arcade's exact bytes. `build/prog.bin` has the arcade program's SHA-1, 234c5afdefb008d0feba0b7b9b448082e71499b6,
+and the eight program SIMM chips written into `build/sfiii2n.zip` are the original ROM's:
 
     sfiii2-simm1.0  crc 2d666f0b  sha1 68de034b3a3aeaf4b26122a84ad48b0b763e4122
     sfiii2-simm1.1  crc 2a3a8ef6  sha1 31fb58fd1360ed8c951e2c4ac898a5a7104528d6
@@ -24,62 +24,62 @@ are the original ROM's:
 
 ## Building
 
-Needs Windows (the tools in `sf2i/bin/` are Win32 programs) and Python 3.
+Needs Windows (the tools in `bin/` are Win32 programs) and Python 3.
 
 1. Put your `sfiii2n.zip` in `rom/`.
-2. Run `build.bat` (or `python tools/build_all.py`).
+2. Run `build.bat` (or `make`).
 
-The build reads the program SIMMs of your ROM set, compiles and links the program, and writes:
+The build reads the graphics pattern tables from the ROM (they are not in this source), compiles and links the
+program, and writes:
 
 - `build/prog.bin` - the program image, 06000000-06FFFFFF
-- `build/sfiii2n.zip` - your ROM set with the two program SIMMs rebuilt
+- `build/sfiii2n.zip` - your ROM set with the two program SIMMs replaced
 
-It prints whether `build/prog.bin` has the SHA-1 in `tools/prog.sha1` and whether the rebuilt SIMMs equal yours.
+`build/prog.bin` should match the SHA-1 in `tools/prog.sha1`, the arcade program's; the build prints whether it does,
+and whether each rebuilt program chip equals yours. 2nd Impact stores its instructions encrypted and its data plain,
+chosen per halfword; `tools/prog_enc.tsv` lists the encrypted stretches the packing writes back.
 
-No ROM bytes are in this repository. The data tables are described in `sf2i/data.tsv` (every object's address, name,
-type and provenance) and written as C from your ROM at build time (`tools/emit2i_data.py`); the graphics, the
-vector table and a few initialised RAM blocks are copied from it the same way.
-
-When running a new build in MAME, use an empty `-nvram_directory`: MAME keeps the program SIMMs' flash in nvram and
-loads it over the ROM files.
+When running a new build in MAME, use an empty `-nvram_directory`: MAME keeps the program SIMMs' flash in nvram
+and loads it over the ROM files.
 
 ## Layout
 
-    sf2i/src/        game code (C, and SH-2 assembler in .src files)
-    sf2i/include/    headers; sf2i/include/structs.h has 2nd Impact's own structure layouts
-    sf2i/lib/        the compiler's run-time routines, as linked into the program
-    sf2i/bin/        the Hitachi SHC toolchain with the rebuilt compiler stages
-    sf2i/data.tsv    the data tables (generated as C from your ROM)
-    sf2i/sf2i.sub    link order and section addresses; sf2i/layout.tsv every piece of the image
-    sf2i/functions.tsv  every routine of the arcade program: address, size, name, file
-    tools/           the build (build_all.py, build2i.py), the ROM reader (cps3rom2.py: 2nd Impact keeps its
-                     instructions encrypted and its data plain, per halfword; si2map.py tells them apart),
-                     status, and the tools that mapped 2nd Impact against 3rd Strike
-    ghidra/          Ghidra scripts and the naming tables (every name with its provenance)
-    docs/            PROVENANCE.md, STRUCTS.md
+    src/      game code (C, and SH-2 assembler in .src files), and the work RAM the modules share (*_work.c)
+    data/     game tables, the vector table, the CD volume identifiers, and the graphics' labels
+              (cg_labels.src: names and sizes only; the bytes come from the ROM)
+    include/  headers
+    lib/      the compiler's run-time routines, as linked into the program
+    bin/      Hitachi SHC toolchain (four stages rebuilt, see below; the originals are in bin/original)
+    sf2i.sub  link order and section addresses
+    functions.tsv  every routine of the arcade program: arcade address, size, name, file
+    tools/    cps3rom2.py: reads the ROM set, writes the new one
 
 ## Compiler
 
-2nd Impact was built with the same arcade compiler as 3rd Strike: [SHC 5.0 Release 26 rebuilt in
-C](https://github.com/gibletto/shc-5r26-decomp-sf3), with its rules for the arcade's code generation. It was a
-slightly different revision, so `tools/build2i.py` turns on sixteen further settings of the rebuilt stages
-(`REVISION` there, plus one per-module option); with all of them off the stages are the 3rd Strike compiler. As with
-3rd Strike, none tests for a function's name or address, but several have been seen in only one routine so far and
-rest on that single example. The 2nd Impact settings are in the published compiler source, each with the routine
-that shows it (`SF3.md` there, "Another compiler revision").
+2nd Impact was built with the same arcade compiler as 3rd Strike, [SHC 5.0 Release 26, decompiled and rebuilt in
+C](https://github.com/gibletto/shc-5r26-decomp-sf3), in a slightly different revision. The rebuilt stages in `bin/`
+carry the rules found for 3rd Strike, and `build.bat` and the `Makefile` set sixteen further settings at the top
+(and `GEN_NARROW_CONST=0` for the `-optimize=0` modules) for the revision that built 2nd Impact; the compiler
+project's [SF3.md](https://github.com/gibletto/shc-5r26-decomp-sf3/blob/main/SF3.md) lists each with the routine
+that shows it. None of them tests for a function's name or address, but several have been seen in only one routine
+so far and rest on that single example. As for 3rd Strike, a source form found later could make some of them
+unnecessary.
+
+With them, all 7,902 C routines (and the 37 assembler and 66 run-time routines) compile to the arcade's exact bytes,
+and the linked `build/prog.bin` has the arcade program's SHA-1.
 
 ## Contributing
-
-This is an exact byte match, so contributions should keep the match while improving or explaining the code, or
-replace a compiler setting with source that produces the same bytes. Matching forms that look like levers rather
-than 1996 source (dead reads, `if (0)` blocks, odd spellings) are the first candidates for that.
+As this is an exact byte-match, contributions should maintain the match while improving or explaining the code, or
+replace a compiler setting with source that produces the same bytes (with a PR to the compiler decomp project too).
+Matching forms that look like workarounds rather than original source (dead reads, `if (0)` blocks, odd spellings)
+are the first candidates.
 
 ## Thanks
 
-To the 3sx Team and Artem for the 3s-decomp, and to DrewDos for his matching work, both of which reach this tree
-through the 3rd Strike decomp.
+Thanks to the 3sx Team and Artem for the 3s-decomp, which helped recover a large amount of the 3rd Strike code style
+this tree builds on, and to DrewDos for his matching work and help.
 
 ## License
 
-GNU Affero General Public License v3.0 (`LICENSE`), as the 3rd Strike decomp. `NOTICE.md` lists what the license
-does not cover.
+GNU Affero General Public License v3.0 (`LICENSE`): parts of the source come from the 3rd Strike decomp and through it
+from the 3s-decomp, which is AGPL-3.0. `NOTICE.md` lists what the license does not cover.

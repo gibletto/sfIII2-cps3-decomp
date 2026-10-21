@@ -1,9 +1,0 @@
-# build products (tools/build2i.py, tools/layout2i.py, tools/status2i.py); build/blob holds ROM bytes
-/obj/
-/build/
-/sf2i.abs
-/sf2i.map
-/prog.bin
-/link.log
-/rof2bin.log
-/compile_errors.txt
