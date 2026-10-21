@@ -1,9 +1,9 @@
 /*
- * END_MAIN.C  Opening demo, ending plane positions and the combo demo players (2nd Impact)
+ * END_MAIN.C  Opening demo, ending plane positions and the combo demo players
  *
  * opening_demo_tick runs the opening each frame through opening_init2 (scroll graphics, BG work and planes),
- * opening_move (fifteen scenes, the first ones also moving the combo demo players) and opening_title_00 (3rd Strike
- * opening_title_00 and opening_title_01 in one). The scenes keep their BG plane positions on screen through
+ * opening_move (fifteen scenes, the first ones also moving the combo demo players) and opening_title_00 (the
+ * title in one routine). The scenes keep their BG plane positions on screen through
  * opening_bgw_commit_pos (called with bsr from the scenes in range).
  *
  * update_all_disp_pos_ending copies the scroll positions of BG planes 0-3 and 5 to their display positions and

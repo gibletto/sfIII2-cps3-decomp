@@ -1,7 +1,7 @@
 /*
  * EFF42.C  Effect 42 (select timer digits)
  *
- * In 2nd Impact effect 42 is the select-screen timer: one work per digit (effect_42_init's Type picks
+ * Effect 42 is the select-screen timer: one work per digit (effect_42_init's Type picks
  * the tens or the units). It waits dir_timer frames, restarts Time_Stop, zooms in from 63,
  * then follows Select_Timer, flipping its zoom through 0 when the digit changes at 32 and
  * Setup_Char_Index picks the new digit. When Time_Stop goes negative it zooms out and

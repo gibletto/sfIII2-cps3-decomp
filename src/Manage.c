@@ -2,7 +2,7 @@
  * MANAGE.C  FBI warning screen
  *
  * FBI_Warning, FBI_Warning_1st and FBI_Warning_2nd run the FBI warning screen (FBI_Warning_2nd is
- * empty in 2nd Impact). attract_menu_str holds the attract titles and start prompts.
+ * empty). attract_menu_str holds the attract titles and start prompts.
  */
 
 #include "structs.h"

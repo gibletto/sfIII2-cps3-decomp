@@ -1,9 +1,8 @@
 /*
- * BGST130.C  Stage 13 background (2nd Impact only)
+ * BGST130.C  Stage 13 background
  *
- * BG130 runs stage 13's two layers with 3rd Strike bg120.c's bg1202 / bg1201 routines (named bg130_layer1 /
- * bg130_layer0 here, since another copy of bg1202 already has that name): layer 1 (the chasing base layer: stage
- * graphics, effects 05, 06, 18 and 44) and layer 0, then the zoom check, position correction and family set.
+ * BG130 runs stage 13's two layers: layer 1 (bg130_layer1, the chasing base layer: stage graphics, effects 05, 06,
+ * 18 and 44) and layer 0 (bg130_layer0), then the zoom check, position correction and family set.
  */
 #include "structs.h"
 #include "work.h"
@@ -37,7 +36,6 @@ static void bg_move_common(void);
 #pragma inline(bg130_layer1, bg130_layer0)
 
 
-/* (2nd Impact: layers 1 and 0 only) */
 void BG130(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg130_layer1();
@@ -73,7 +71,7 @@ void bg130_layer1_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -100,7 +98,7 @@ void bg130_layer0_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();

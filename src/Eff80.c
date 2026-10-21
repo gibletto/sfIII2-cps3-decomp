@@ -1,5 +1,5 @@
 /*
- * EFF80.C  Effect 80: a select-screen mark that follows its parent (2nd Impact)
+ * EFF80.C  Effect 80: a select-screen mark that follows its parent
  *
  * effect_80_init creates the mark under its parent work, its pattern by character (My_char), the
  * player slot and the Country; Kind is kept in routine_no[7]. effect_80_move keeps it on the parent,

@@ -1,5 +1,5 @@
 /*
- * ENDBG06.C  Ending background 06 (2nd Impact only)
+ * ENDBG06.C  Ending background 06
  *
  * end_BG060 (entry 6) runs layer 1 (no move step) and layer 0 (palette and graphics), then the zoom
  * check, position correction and family set.

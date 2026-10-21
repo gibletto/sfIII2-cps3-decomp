@@ -1,5 +1,5 @@
 /*
- * BGST090.C  Stage 09 background (2nd Impact only)
+ * BGST090.C  Stage 09 background
  *
  * BG090 runs stage 09's three layers: layer 1 (bg090_layer1, the chasing base layer; in area 1 it starts
  * effect C3 and draws its own map into eff_bg_adrs[0], then waits for bg_land_flag to switch back to its
@@ -51,7 +51,6 @@ static void bg_base_move_common(void);
 #pragma inline(bg090_layer0, bg090_layer1)
 
 
-/* (2nd Impact: layer 2 not inlined, Bg_Family_Set_2) */
 void BG090(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg090_layer1();
@@ -74,7 +73,7 @@ void bg090_layer0(void) {
 
 
 
-/* (2nd Impact: layer 0, clears r_no_1, effects 14/05/12) */
+/* layer 0: clears r_no_1, starts effects 14, 05 and 12 */
 void bg1502_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->r_no_1 = 0;
@@ -103,7 +102,7 @@ void bg090_layer0_color(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -164,7 +163,7 @@ void bg090_layer1_init(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -173,7 +172,6 @@ static void bg_base_move_common(void) {
 
 
 
-/* (2nd Impact: zuubun cleared, speeds 0xC000) */
 void bg0603(void) {
     switch (bgw_ptr->r_no_0) {
     case 0:

@@ -19,7 +19,6 @@
 
 
 
-/* done_rl is a WORK field in 2nd Impact */
 void effect_J0_move(WORK_Other* ewk) {
     WORK_Other* mwk = (WORK_Other*)ewk->my_master;
     WORK_Other* cwk = (WORK_Other*)ewk->wu.target_adrs;
@@ -72,7 +71,6 @@ void effect_J0_move(WORK_Other* ewk) {
 
 
 
-/* done_rl is a WORK field in 2nd Impact */
 s32 effect_J0_init(WORK_Other* ek, WORK_Other* mk, s16 data) {
     WORK_Other* ewk;
     s16 ix;

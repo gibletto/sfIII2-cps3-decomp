@@ -1,10 +1,9 @@
 /*
- * BGST070.C  Stage 07 background (2nd Impact only)
+ * BGST070.C  Stage 07 background
  *
  * BG070 runs stage 07's four layers: layer 1 (bg1802, the base layer that chases the players),
  * layer 0 (bg1801), layer 2 (bg1803) and layer 4 (bg180_sync_common, a synced layer), then the
- * zoom check, position correction and family set. In 3rd Strike these are bg090.c's BG180 routines; 2nd Impact
- * gives layer 2 its own plain scroll and adds the synced layer 4.
+ * zoom check, position correction and family set. Layer 2 is a plain scroll.
  */
 #include "structs.h"
 #include "work.h"
@@ -42,7 +41,6 @@ void bg180_sync_move(void);
 #pragma inline(bg1801, bg1802, bg1803, bg180_sync_common)
 
 
-/* (2nd Impact: layer 2 a plain scroll, synced layer 4 added) */
 void BG070(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg1802();
@@ -89,7 +87,7 @@ void bg1802(void) {
 
 
 
-/* (2nd Impact: no gfx load, effect 14 x3 only) */
+/* starts effect 14 three times */
 void bg1802_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -141,7 +139,6 @@ void bg1803(void) {
 
 
 /* provisional name */
-/* (the same code as 3rd Strike bns12_init00) */
 void bg1803_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -159,7 +156,7 @@ void bg1803_move(void) {
 
 
 
-/* (2nd Impact: runs layer 4) */
+/* runs layer 4 */
 void bg180_sync_common(void) {
     void (*bg080_sync_jmp[2])() = { bg180_sync_init, bg180_sync_move };
     bg080_sync_jmp[bgw_ptr->r_no_0]();
@@ -167,7 +164,6 @@ void bg180_sync_common(void) {
 
 
 
-/* (2nd Impact: family 4, y limits 160, speed_y 0x10000) */
 void bg180_sync_init(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -184,7 +180,6 @@ void bg180_sync_init(void) {
 
 
 
-/* (2nd Impact: family 4) */
 void bg180_sync_move(void) {
     bg_x_move_check();
     bg_y_move_check();

@@ -16,7 +16,7 @@
  * passed in (called by effect 59). break_into_banner_trans is called from the effect A2 main
  * routine while the new challenger banner is shown: kind 0 clears the banner characters and
  * redraws the text layer; any other kind copies the kind-th three-cell column of the banner
- * graphics from sc_chr_data into character RAM. 3rd Strike's debug_scrfont_view is gone in 2nd Impact.
+ * graphics from sc_chr_data into character RAM.
  */
 
 #include "structs.h"

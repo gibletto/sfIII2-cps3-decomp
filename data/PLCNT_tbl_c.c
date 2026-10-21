@@ -21,7 +21,6 @@ extern const s16 PLCNT_tbl_061000F8[];
 extern const s16 super_arts_nage_00[];
 extern const s16 super_arts_nage_01[];
 extern const s16 super_arts_nage_02[];
-extern const s16 PLCNT_tbl_06100200[];
 extern const s16 bsmr_range_table[][2][2][2];
 
 const s32 pl_nr_piyo_tbl[16] = {
@@ -102,14 +101,9 @@ const s16 super_arts_nage_01[16] = {
     190, 190, 190, 190, 150, 150, 150, 150,
 };
 
-const s16 super_arts_nage_02[4] = {
-    270, 270, 270, 270,
-};
-
-/* provisional name */
-const s16 PLCNT_tbl_06100200[12] = {
-    270, 270, 230, 230, 230, 230, 230, 190,
-    190, 190, 150, 150,
+const s16 super_arts_nage_02[16] = {
+    270, 270, 270, 270, 270, 270, 230, 230,
+    230, 230, 230, 190, 190, 190, 150, 150,
 };
 
 const s16 bsmr_range_table[4][2][2][2] = {

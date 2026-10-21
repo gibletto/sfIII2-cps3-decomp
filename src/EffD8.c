@@ -1,5 +1,5 @@
 /*
- * EffD8.C  Effect D8: the player's face cursor on the character select screen (2nd Impact version)
+ * EffD8.C  Effect D8: the player's face cursor on the character select screen
  *
  * effect_D8_entry (from the select screen, one per player) makes the cursor unless the player
  * already stands on face 14 (effD8_face_check). effect_D8_move waits for Appear_Cursor, follows
@@ -7,7 +7,7 @@
  * Face_Pos_Data), and when Sel_PL_Complete is set plays the chosen pattern, then marks the choice
  * done and starts the select timer. effD8_char_set picks the pattern for the face under the cursor,
  * effD8_same_face shows the second player's alternate pattern when both stand on the same face, and
- * effD8_colour_step (no caller in 2nd Impact) steps the cursor colour through old_rno[0..3].
+ * effD8_colour_step (no caller) steps the cursor colour through old_rno[0..3].
  */
 
 #include "structs.h"
@@ -87,7 +87,6 @@ void effect_D8_move(WORK_Other* ewk) {
 
 
 
-/* 2nd Impact's entry (one argument) */
 /* provisional name */
 s32 effect_D8_entry(s16 PL_id) {
     s16 ix;
@@ -182,7 +181,7 @@ void effect_D8_init(WORK_Other* ewk) {
 
 
 
-/* (no caller in 2nd Impact): steps the cursor colour */
+/* (no caller): steps the cursor colour */
 /* provisional name */
 void effD8_colour_step(WORK_Other* ewk, s16 num, s16 time) {
     if (--ewk->wu.vitality == 0) {

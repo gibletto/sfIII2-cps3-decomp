@@ -4,8 +4,8 @@
  * effect_D7_init (called from PLPAT12.c, one ball per player; my_ball_live_check) creates the
  * ball. effect_D7_move starts it at the screen edge on the player's side and lobs it to the
  * player with cal_speeds_to_me. effD7_main_process bounces it on the floor with shrinking bounce
- * heights and a bounce sound (2nd Impact: no random bounce offset and no splash check), and drops it once it
- * leaves the screen (screen_range_check_effD7; 2nd Impact: 48 below the bottom). The player can catch it in a set attack frame
+ * heights and a bounce sound, and drops it once it leaves the screen (screen_range_check_effD7: 48 below the
+ * bottom). The player can catch it in a set attack frame
  * (effD7_hit_box) and then send it at the opponent (cal_speeds_to_em). As a hit object it is
  * knocked away, reflected or broken by hits from players and other effects. cal_speeds_effD7,
  * ball_init_position_effD7 and screen_range_check_effD7 are shared with effect I8.

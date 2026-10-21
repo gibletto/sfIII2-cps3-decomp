@@ -14,8 +14,7 @@
  * counters, copies the two header words of the script, resets the script work registers and
  * move-origin record and sets the attack kind for attacking works. It then runs the first frame
  * with char_move. This is the standard way every object starts a new animation.
- * 2nd Impact: char_move is expanded inline (no K5 flags), decord_if_jump has only the relative and
- * table jumps, and the grade, metamorphose, bonus-stage-2 and hsja (comm_rhsja/uhsja) paths are absent.
+ * char_move is expanded inline, and decord_if_jump has only the relative and table jumps.
  */
 
 #include "structs.h"

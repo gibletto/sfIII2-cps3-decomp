@@ -1,7 +1,7 @@
 /*
- * EFFI4MV.C  Effect I4 (184): the stage 00 crowd (2nd Impact version)
+ * EFFI4MV.C  Effect I4 (184): the stage 00 crowd
  *
- * 2nd Impact's own effect 184. effect_I4_init makes four objects from effi4_data_tbl (x, y, priority,
+ * effect_I4_init makes four objects from effi4_data_tbl (x, y, priority,
  * pattern); old_rno[0] is the object's type. Each one plays its pattern until the match is
  * decided (Round_num or the winner's PL_Wins against Game_setting.set4), then cheers when the winner
  * is player number 0 or stops. Type 1 also turns towards a player (effi4_turn).

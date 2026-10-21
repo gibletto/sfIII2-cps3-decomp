@@ -1,5 +1,5 @@
 /*
- * BGST040.C  Stage 04 background (2nd Impact only)
+ * BGST040.C  Stage 04 background
  *
  * BG040 runs stage 04's two layers: layer 1 (bg0402, the chasing base layer, one frame's wait after
  * its init) and layer 0 (bg0401: the stage graphics and effects, then the stage palette, faded when
@@ -49,7 +49,6 @@ static void bg_base_move_common(void);
 #pragma inline(bg0401, bg0402)
 
 
-/* (2nd Impact: layers 1 and 0) */
 void BG040(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg0402();
@@ -62,7 +61,6 @@ void BG040(void) {
 
 
 
-/* (2nd Impact: three steps) */
 void bg0401(void) {
     void (*bg0401_jmp[3])() = { bg0401_init00, bg0401_color, bg_move_common };
     bg0401_jmp[bgw_ptr->r_no_0]();
@@ -100,7 +98,7 @@ void bg0401_color(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -108,7 +106,6 @@ static void bg_move_common(void) {
 
 
 
-/* (2nd Impact: three steps) */
 void bg0402(void) {
     void (*bg0402_jmp[3])() = { bg0402_init00, bg0402_wait, bg_base_move_common };
     bg0402_jmp[bgw_ptr->r_no_0]();
@@ -132,7 +129,7 @@ void bg0402_wait(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();

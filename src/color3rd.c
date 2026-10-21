@@ -3,8 +3,7 @@
  *
  * The colour transfer routines (load_any_color, load_player_color, fade variants, side and effect
  * colours) send palette blocks from ROM tables to colour RAM through the transfer queue.
- * 2nd Impact has no load_bg_color / load_bg_color_fade / metamor_color_restore; the player, effect
- * and side colour loads (3rd Strike end_sub_8.c) are in this object, with 2nd Impact's colour RAM offsets.
+ * The player, effect and side colour loads are in this object too.
  */
 
 #include "structs.h"

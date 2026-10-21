@@ -3,8 +3,7 @@
  *
  * TATE00 is the per-frame stage BG entry used during fights (and by the debug fight setups):
  * ta0_init00 sets a random compel_flag and runs bg_initialize; ta0_move then calls the stage's
- * own handler (2nd Impact: a local table of the 17 stage handlers, no ta0_init01/ta0_init02 and no global
- * ta_move_tbl) every frame and counts down the screen quake timers. The file ends with debug
+ * own handler (from a local table of the 17 stage handlers) every frame and counts down the screen quake timers. The file ends with debug
  * helpers that step through the stages, scroll the layers and switch them off, and free the
  * stage work blocks.
  */
@@ -68,7 +67,7 @@ void ta0_init00(void) {
 
 
 
-/* (2nd Impact: the handler table is local; the BGnn0 names are the table slots, the stage numbers) */
+/* the handler table is local; the BGnn0 names are the table slots (the stage numbers) */
 void ta0_move(void) {
     void (*move_tbl[17])() = {
         BG000,
@@ -149,7 +148,7 @@ void bg_free_work_blocks(void) {
 
 
 /* provisional name */
-/* (2nd Impact: layers 0-5, then bg_pos_hosei2 and Bg_Family_Set once) */
+/* layers 0-5, then bg_pos_hosei2 and Bg_Family_Set once */
 void bg_debug_scroll_layers(void) {
     BGW* bgw;
     s32 dx;

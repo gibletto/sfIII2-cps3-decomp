@@ -1,7 +1,7 @@
 /*
  * EFF44.C  Effect 44 (animated stage objects)
  *
- * 2nd Impact: effect 43 is a file of its own (EFF43.C). Effect 44 creates the animated objects of scr_obj_data44 for a stage and animates them
+ * Effect 44 creates the animated objects of scr_obj_data44 for a stage and animates them
  * until killed; it is used by the stage 02-06, 10, 11, 13 and 16 backgrounds.
  */
 
@@ -25,7 +25,6 @@
 
 
 
-/* (3rd Strike: [10]) */
 const s16* scr_obj_data44[9] = {
     (const s16*)&scr_obj_num44[9],
     (const s16*)&scr_obj_num44[57],

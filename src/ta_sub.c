@@ -10,7 +10,7 @@
  * eff_hit_data and count contacts in eff_hit_flag. Small state checks used by stage objects:
  * complete_victory_check, either_pl_hissatsu_check (a player is doing a special move),
  * compel_dead_check, pl_shot_on_check (a button is down) and range_abs_check.
- * 2nd Impact: range_x_check allows 272 pixels each side, eff_hit_check skips type 5 objects, and
+ * range_x_check allows 272 pixels each side, eff_hit_check skips type 5 objects, and
  * the add_*_sub movers apply the acceleration before the speed.
  */
 

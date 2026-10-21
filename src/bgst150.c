@@ -1,9 +1,9 @@
 /*
- * BGST150.C  Stage 15 background (2nd Impact only)
+ * BGST150.C  Stage 15 background
  *
  * BG150 runs stage 15's two layers: layer 1 (the chasing base layer, effect 14 x3) and layer 0. In the
  * first area both start raised (speed_y << 8) and, once bg1403_wait has run out, come down to pos_y_work
- * (bg1403, unreferenced in 3rd Strike); then the zoom check, position correction and family set.
+ * (bg1403); then the zoom check, position correction and family set.
  */
 #include "structs.h"
 #include "work.h"
@@ -81,7 +81,7 @@ void bg150_layer1_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -114,7 +114,7 @@ void bg150_layer0_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();

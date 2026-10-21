@@ -5,8 +5,7 @@
  * PLPCU.c) with the attacker's work and records the hit-mark number (hm_dm_side). On its first
  * frame effect_A7_move reads the hmdt entry: it requests the hit sound, sets the mark's colour
  * (hcct or the target's palette), offsets it by the explem / explem2 tables, jitters it at random,
- * chooses a directional pattern from hit_mark_dir_table (3rd Strike; 2nd Impact uses the hit pattern as is) and
- * arms a screen quake (gqdt).
+ * uses the hit pattern as is and arms a screen quake (gqdt).
  * The mark then animates in the list-8 sort queue and stops while Pause_Hit_Marks is set.
  */
 
@@ -32,7 +31,7 @@
 
 
 
-/* no directional pattern, explem2 rows of 16 */
+/* the hit pattern as is; explem2 rows of 16 */
 void effect_A7_move(WORK_Other* ewk) {
     const HMDT* tad;
     const EXPLEM* edt;

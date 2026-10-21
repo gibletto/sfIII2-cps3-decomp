@@ -6,8 +6,8 @@
  * effect_E8_move follows its slot of the trail (effe8_zanzou_process), copying the player's
  * sprite or the recorded frame, with depth and colour from after_image_color by slot. When the
  * controller stops, each image walks back along the trail, rl_waza steps per frame, and frees
- * itself at the head. effE8_trans draws it (3rd Strike: except during a super-art freeze); images flagged
- * as attacking get a hit box through get_attdata_of_illusion. 2nd Impact has no metamorphose colour swap.
+ * itself at the head. effE8_trans draws it (during a super-art freeze too); images flagged
+ * as attacking get a hit box through get_attdata_of_illusion.
  */
 
 #include "structs.h"
@@ -77,7 +77,6 @@ void effect_E8_move(WORK_Other* ewk) {
 
 
 
-/* done_rl in WORK, no metamorphose colour swap */
 void effe8_zanzou_process(WORK_Other* ewk, PLW* mwk) {
     if (ewk->wu.old_rno[5]) {
         if (ewk->wu.type == 0) {
@@ -122,7 +121,7 @@ void effe8_zanzou_process(WORK_Other* ewk, PLW* mwk) {
 
 
 
-/* no sa_stop_flag test */
+/* drawn during a super-art freeze too */
 void effE8_trans(ewk, mwk)
 WORK_Other* ewk;
 PLW* mwk;

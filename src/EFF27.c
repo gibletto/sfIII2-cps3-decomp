@@ -34,7 +34,7 @@ extern const s16 scr_obj_data27_4[];
 extern const s16 scr_obj_data27_5[];
 extern const s16 scr_obj_data27_6[];
 
-/* seven object types (3rd Strike: two) */
+/* seven object types */
 const s16* scr_obj_data27[7] = {
     scr_obj_data27_0,
     scr_obj_data27_1,

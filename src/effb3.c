@@ -1,7 +1,7 @@
 /*
  * EFFB3.C  Effect B3: round / FIGHT display
  *
- * Effect B3 is the display child of the round-call effect B2 (EFFB2.C). In 2nd Impact it is one work
+ * Effect B3 is the display child of the round-call effect B2 (EFFB2.C). It is one work
  * per letter: effect_B3_init makes the ROUND letters (6 works, then effect B9 for the round
  * number) or the FINAL ROUND letters (10 works), each with its own start and goal position.
  * effect_B3_move follows the parent's state each frame:

@@ -1,7 +1,7 @@
 /*
- * EFF39.C  Effect 39: the player's name plate on the character select screen (2nd Impact version)
+ * EFF39.C  Effect 39: the player's name plate on the character select screen
  *
- * 2nd Impact's own effect 39, EFF38's partner. effect_39_init places the plate off screen on the
+ * Effect 39 is EFF38's partner. effect_39_init places the plate off screen on the
  * player's side; effect_39_move waits for the timer, slides it in, follows the cursor until
  * Order[0] is 2, then slides it out. eff39_pattern shows face 16 for faces 14 and 15 outside
  * Japan. A plate made with Kind 2 is dropped when Suicide is set.
@@ -93,7 +93,7 @@ void effect_39_move(WORK_Other* ewk) {
 
 
 
-/* (no caller in 2nd Impact): the player's (or else the partner's) super art choice flag */
+/* (no caller): the player's (or else the partner's) super art choice flag */
 /* provisional name */
 s32 eff39_arts_flag(WORK_Other* ewk) {
     if (Sel_Arts_Complete[ewk->master_id] != -1) {

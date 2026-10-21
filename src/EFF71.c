@@ -1,8 +1,7 @@
 /*
- * EFF71.C  Effect 71: a stage object that watches the fighters (2nd Impact version)
+ * EFF71.C  Effect 71: a stage object that watches the fighters
  *
- * 3rd Strike: effect 71 waits a random time and sends out two effect 72s. 2nd Impact's effect 71 is a different
- * routine: effect_71_init places it by the two characters (eff71_char_tbl) and gives it type 0
+ * effect_71_init places it by the two characters (eff71_char_tbl) and gives it type 0
  * or 1. Type 0 (eff71_0000) shows pattern 28 at step 1, 3 or 5 by the stage scroll or the x of
  * the fighter it watches (eff71_pattern_get); a super art sends it to pattern 29 and that fighter
  * coming within 32 dots to pattern 30 (eff71_check, eff71_near_check). Type 1 (eff71_1000) plays

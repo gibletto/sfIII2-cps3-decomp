@@ -1,10 +1,7 @@
 /*
- * EFF78.C  Effect 78: empty in 2nd Impact (3rd Strike: crows)
+ * EFF78.C  Effect 78: an empty effect
  *
- * 3rd Strike: effect_78_entry creates the two crows on BG2. effect_78_move animates them; when the
- * screen quakes (crow_fuss_check) they take off away from the players and fly to a new perch
- * (crow_fuss_move) before returning to their idle animation.
- * 2nd Impact has no crows: effect_78_move is empty and effect_78_entry only claims a work with id 78.
+ * effect_78_move is empty and effect_78_entry only claims a work with id 78.
  */
 
 #include "structs.h"

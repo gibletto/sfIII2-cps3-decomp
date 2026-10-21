@@ -1,5 +1,5 @@
 /*
- * END_MAIN_TBL_B.C  tables read by end_main_c.c: ending main control and the helpers the endings share (2nd Impact)
+ * END_MAIN_TBL_B.C  tables read by end_main_c.c: ending main control and the helpers the endings share
  */
 
 #include "types.h"

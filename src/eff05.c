@@ -2,8 +2,8 @@
  * EFF05.C  Stage scenery objects, set 05 (line-scroll synchronised)
  *
  * Places the fixed decorative sprites that belong to the current stage background.
- * effect_05_init reads the per-stage object list scr_obj_num/scr_obj_data (2nd Impact: by bg_w.stage
- * and bg_w.area; 3rd Strike: by bg_w.bg_index) and creates one effect work per entry with its family, colour, position,
+ * effect_05_init reads the per-stage object list scr_obj_num/scr_obj_data (by bg_w.stage
+ * and bg_w.area) and creates one effect work per entry with its family, colour, position,
  * priority, animation index and line-scroll sync value.
  * effect_05_move starts the animation, draws it through disp_pos_trans_entry_s until the
  * object is retired by compel_dead_check, then frees its graphics and work.
@@ -47,7 +47,7 @@ extern const u32 stg12_char_table[];   /* provisional name */
 extern const u32 stg14_char_table[];   /* provisional name */
 
 
-/* (3rd Strike: [23] by bg_index) */
+/* by stage and area */
 u32* char_add[17][3] = {
     { stg00_char_table, stg00_char_table, stg00_char_table },
     { stg01_char_table, stg01_char_table, stg01_char_table },

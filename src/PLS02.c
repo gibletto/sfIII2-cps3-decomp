@@ -1,16 +1,16 @@
 /*
- * PLS02.C  Movement data, body push, vitality and super art gauge rules (2nd Impact version)
+ * PLS02.C  Movement data, body push, vitality and super art gauge rules
  *
- * 2nd Impact keeps 3rd Strike's PLS02 and PLSGAUGE in one object. The movement half: setup_mvxy_data,
- * add_to_mvxy_data, cal_mvxy_speed and the add_mvxy_speed family load and apply the per-move x/y
+ * The movement half: setup_mvxy_data, add_to_mvxy_data, cal_mvxy_speed and the add_mvxy_speed family load and
+ * apply the per-move x/y
  * speed and acceleration data; setup_butt_own_data sets up blow-away movement; remake_mvxy_PoSB,
- * setup_air_paring_mvxy and remake_mvxy_PoGR rescale the speeds after a hit (2nd Impact's own forms).
+ * setup_air_paring_mvxy and remake_mvxy_PoGR rescale the speeds after a hit.
  * check_body_touch and meri_case_switch push the two bodies apart; set_field_hosei_flag and
  * check_work_position clamp a player to the screen. Then the CPU random helpers and the guard and
  * attack direction calculations.
  * The gauge half: setup_vitality and cal_dm_vital_gauge_hosei (vitality and damage), the
- * add_sp_arts_gauge_* rules and add_super_arts_gauge (no metamorphose test in 2nd Impact),
- * get_buttobi_attlv (2nd Impact: the blow-away level by flight time), the blow-away type and lever
+ * add_sp_arts_gauge_* rules and add_super_arts_gauge, get_buttobi_attlv (the blow-away level by flight time),
+ * the blow-away type and lever
  * direction helpers and the KO voice requests.
  */
 
@@ -182,12 +182,12 @@ void reset_mvxy_data(WORK* wk) {
 
 
 
-/* provisional name: 2nd Impact only: an empty routine Player_attack calls on a hit */
+/* provisional name: an empty routine Player_attack calls on a hit */
 void attack_hit_dummy(PLW* wk) {}
 
 
 
-/* 2nd Impact form: scale the y speed (x1.1 when positive, else x0.2) and the x speed (x1.2 when
+/* scale the y speed (x1.1 when positive, else x0.2) and the x speed (x1.2 when
    negative; otherwise x0.6, at least 2, then reversed with d[0] cleared) */
 void remake_mvxy_PoSB(WORK* wk) {
     switch (((wk->mvxy.a[0].sp < 0) * 2) + (wk->mvxy.a[0].sp > 0)) {
@@ -225,7 +225,7 @@ void remake_mvxy_PoSB(WORK* wk) {
 
 
 
-/* 2nd Impact form: for an air parry, scale the y speed (x1.2 when positive, otherwise x0.4 and
+/* for an air parry, scale the y speed (x1.2 when positive, otherwise x0.4 and
    reversed, at most 12) and the x speed (x1.25) */
 void setup_air_paring_mvxy(WORK* wk) {
     switch (((wk->mvxy.a[1].sp < 0) * 2) + (wk->mvxy.a[1].sp > 0)) {
@@ -822,7 +822,7 @@ s32 add_super_arts_gauge(wk, ix, asag)
 
 
 
-/* provisional name: 2nd Impact only: the blow-away level whose flight time still lands */
+/* provisional name: the blow-away level whose flight time still lands */
 s32 get_buttobi_attlv(PLW* wk) {
     s16 lv;
     s16 tm;
@@ -838,7 +838,7 @@ s32 get_buttobi_attlv(PLW* wk) {
 
 
 
-/* provisional name: 2nd Impact only: as get_buttobi_attlv by cal_move_quantity_dummy; nothing calls it */
+/* provisional name: as get_buttobi_attlv by cal_move_quantity_dummy; nothing calls it */
 s32 get_buttobi_attlv2(PLW* wk) {
     s16 lv;
     s16 tm;
@@ -888,7 +888,6 @@ void dead_voice_request(void) {
 
 
 
-/* no metamorphose offset */
 void dead_voice_request2(PLW* wk) {
     s16 secd1;
     s16 secd2;
@@ -903,7 +902,7 @@ void dead_voice_request2(PLW* wk) {
 
 
 
-/* provisional name: 2nd Impact only: a player voice by kind with a 1 in 64 variant; nothing calls it */
+/* provisional name: a player voice by kind with a 1 in 64 variant; nothing calls it */
 void pl_voice_request(s8 pl, u8 kind) {
     s16 code;
     if (kind > 9) {

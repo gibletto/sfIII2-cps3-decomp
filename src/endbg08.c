@@ -1,5 +1,5 @@
 /*
- * ENDBG08.C  Ending background 08 (2nd Impact only)
+ * ENDBG08.C  Ending background 08
  *
  * end_BG080 (entry 8) runs layer 1 (clears bg_land_flag, no move step), layer 0 (palette and graphics;
  * end_bg080_layer0_color is unreferenced) and a synced layer 2, then the zoom check, position correction

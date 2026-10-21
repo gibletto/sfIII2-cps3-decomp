@@ -8,16 +8,10 @@
 #pragma section TBL
 
 extern const s16 effF1_rl_type_tbl[];
-extern const s16 EFFF1_tbl_0617C5A0[];
 extern const s16 effF1_data_tbl[];
 
-const s16 effF1_rl_type_tbl[2] = {
-    0, 1,
-};
-
-/* provisional name */
-const s16 EFFF1_tbl_0617C5A0[3] = {
-    3, 2, 4,
+const s16 effF1_rl_type_tbl[5] = {
+    0, 1, 3, 2, 4,
 };
 
 const s16 effF1_data_tbl[265] = {

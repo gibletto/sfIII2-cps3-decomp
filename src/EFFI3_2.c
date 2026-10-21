@@ -1,5 +1,5 @@
 /*
- * EFFI3_2.C  Effect I3: stop the background for a while (2nd Impact)
+ * EFFI3_2.C  Effect I3: stop the background for a while
  *
  * effect_I3_init(wk, tm) starts a work that holds bg_stop for tm frames, or until the work is
  * killed or a Suicide request comes; then it clears bg_stop and frees itself.

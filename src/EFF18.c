@@ -29,7 +29,7 @@
 
 
 
-/* eleven object lists, named by their order in the ROM (provisional names; 3rd Strike has one, scr_obj_data18_0) */
+/* eleven object lists, named by their order in the ROM (provisional names) */
 extern const s16 scr_obj_data18_0[];
 extern const s16 scr_obj_data18_1[];
 extern const s16 scr_obj_data18_2[];
@@ -42,7 +42,6 @@ extern const s16 scr_obj_data18_8[];
 extern const s16 scr_obj_data18_9[];
 extern const s16 scr_obj_data18_10[];
 
-/* (3rd Strike: one row) */
 const s16* scr_obj_data18[8][4] = {
     { scr_obj_data18_0, scr_obj_data18_0, scr_obj_data18_0, scr_obj_data18_0 },
     { scr_obj_data18_1, scr_obj_data18_1, scr_obj_data18_1, scr_obj_data18_1 },

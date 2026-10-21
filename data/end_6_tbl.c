@@ -1,5 +1,5 @@
 /*
- * END_6_TBL.C  tables read by end_6.c: ending 6 (end_06000), 2nd Impact version
+ * END_6_TBL.C  tables read by end_6.c: ending 6 (end_06000)
  */
 
 #include "types.h"

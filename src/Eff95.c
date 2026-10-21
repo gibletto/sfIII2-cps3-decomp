@@ -1,8 +1,8 @@
 /*
- * EFF95.C  Effect 95: the win and ranking screen characters (2nd Impact version)
+ * EFF95.C  Effect 95: the win and ranking screen characters
  *
- * 3rd Strike effect 95 is the continue screen character. 2nd Impact rewrote it: effect_95_init (called from Win_2nd
- * with kind 16 for the winner and 0 for the loser) puts the player's character on BG1 through
+ * effect_95_init (called from Win_2nd with kind 16 for the winner and 0 for the loser) puts the player's
+ * character on BG1 through
  * eff95_set_obj, adding the extra parts some characters have (types 1, -1, 16, 0x80, 32, 48: by My_char
  * and, for one pair, Country); eff95_set_position and eff95_set_speed place it by WINNER and
  * Game_setting.mode and give it its slide speed, eff95_rl_check its facing. effect_95_rank_init
@@ -29,7 +29,7 @@
 #include "charmove_2.h"
 #include "Eff95.h"
 
-/* 2nd Impact tables (0617A12C / 0617A13C / 0617A14C), provisional names */
+/* provisional names (0617A12C / 0617A13C / 0617A14C) */
 extern const s8 eff95_col_tbl_win[16];
 extern const s8 eff95_col_tbl_lose[16];
 extern const s16 eff95_ofs_tbl[16][2];

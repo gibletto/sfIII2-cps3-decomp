@@ -1,13 +1,9 @@
 /*
  * EFF50.C  Effect 50: super art selection plate part
  *
- * Effect 50 is created by effect_50_init from sel_pl as part of the super art selection display.
- * effect_50_move appears when the art selection opens, animates in step with the plate held in
- * Synchro_Address, and when Moving_Plate selects its plate steps to the next animation and shifts
- * its offset; it follows Plate_X / Plate_Y for the player and hides and releases itself when
- * Sel_Arts_Complete is set.
- * 2nd Impact: no plate synchronisation; the part shows once Select_Arts clears, animates until
- * Sel_Arts_Complete and holds 5 frames; effect_50_init places it at fixed positions.
+ * Effect 50 is created by effect_50_init from sel_pl as part of the super art selection display, at a
+ * fixed position. effect_50_move shows the part once Select_Arts clears and animates it until
+ * Sel_Arts_Complete is set; it holds 5 more frames, then hides and releases itself.
  */
 
 #include "structs.h"

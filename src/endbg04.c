@@ -1,5 +1,5 @@
 /*
- * ENDBG04.C  Ending background 04 (2nd Impact only)
+ * ENDBG04.C  Ending background 04
  *
  * end_BG040 (entry 4) runs layer 1 (no move step) and layer 0 (palette), then the zoom check, position
  * correction and family set.

@@ -57,7 +57,7 @@
 
 
 
-/* palettes 130, 2 and 1 (3rd Strike 39 and 2) */
+/* palettes 130, 2 and 1 */
 s32 Title(void) {
     switch (D_No1) {
     case 0:

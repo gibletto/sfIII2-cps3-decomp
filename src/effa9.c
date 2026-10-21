@@ -1,10 +1,7 @@
 /*
  * EFFA9.C  Effect A9: select-screen plate marker
  *
- * 3rd Strike: effect A9 places sel_pl_char_table objects on BG3 from Position_Data_A9 for the win screen
- * (Win.c) and next-opponent screen (next_cpu.c); Setup_A9 sets per-object options and can
- * add an effect 59 companion.
- * 2nd Impact: effect A9 is the select-screen plate marker: effect_A9_init ties it to a player and slot
+ * Effect A9 is the select-screen plate marker: effect_A9_init ties it to a player and slot
  * (master_id, master_player); effect_A9_move builds its cells with effB8_conn_set for the
  * player's character and follows Plate_X / Plate_Y until sel_plate_state reads 52.
  */

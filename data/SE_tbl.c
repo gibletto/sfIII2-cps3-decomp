@@ -17,7 +17,6 @@ extern const s16 stage_bgm_tbl[];
 extern const s8 init_fade_voice_tbl[];
 extern const s16 SE_Shock_Data[];
 extern const s16 Finish_SE_Data[][7];
-extern const u16 SE_tbl_06154232[];
 extern const u8 wipe_clear_bitmap_0[];
 extern const u8 wipe_clear_bitmap_1[];
 extern const u8 wipe_clear_bitmap_2[];
@@ -85,9 +84,4 @@ const s16 SE_Shock_Data[7] = {
 const s16 Finish_SE_Data[2][7] = {
     { 305, 306, 285, 286, 287, 288, 272 },
     { 292, 293, 290, 291, 287, 288, 272 },
-};
-
-/* provisional name */
-const u16 SE_tbl_06154232[1] = {
-    0xFFFF,
 };

@@ -1,8 +1,7 @@
 /*
- * EFFJ1.C  Effect J1 (2nd Impact)
+ * EFFJ1.C  Effect J1: an ending object
  *
- * In 3rd Strike effect J1 is an empty routine. In 2nd Impact it is an ending object: effect_J1_init places
- * pattern 55 of etc2_char_table and draws three polygon quads; effect_J1_move waits for
+ * effect_J1_init places pattern 55 of etc2_char_table and draws three polygon quads; effect_J1_move waits for
  * end_obj_sync, then moves BG layer 5 to 768 and sets its family, waits 180 frames and cycles
  * its extra colour through effj1_col_tbl (timer, colour) for ever.
  */

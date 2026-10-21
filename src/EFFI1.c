@@ -1,7 +1,7 @@
 /*
- * EFFI1.C  Effect I1 (181): the select-screen side banner (2nd Impact)
+ * EFFI1.C  Effect I1 (181): the select-screen side banner
  *
- * 2nd Impact's own effect: it waits dir_timer frames, starts the side's effect (effect_67_init for the
+ * Effect I1 waits dir_timer frames, starts the side's effect (effect_67_init for the
  * current player, effect_A6_init for the other), slides in to hit_quake, waits for Next_Step to
  * reach 8 and slides out, setting Next_Step when direction asks for it.
  */

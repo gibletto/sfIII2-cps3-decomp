@@ -1,5 +1,5 @@
 /*
- * ENDBG07.C  Ending background 07 (2nd Impact only)
+ * ENDBG07.C  Ending background 07
  *
  * end_BG070 (entry 7) runs layer 1 (no move step), layers 0 and 2 and the synced layer 4 (as stage 07's
  * bg180_sync_*), then the zoom check, position correction and family set.

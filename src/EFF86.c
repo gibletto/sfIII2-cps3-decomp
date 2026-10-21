@@ -1,11 +1,7 @@
 /*
  * EFF86.C  Effect 86: effect 85's partner object
  *
- * 3rd Strike: effect_86_init takes a type and reads its parameters from eff86_adrs_tbl (sub-state, family,
- * colour code, position, priority, character index; etc_char_table). It is spawned by appear.c
- * when the player 1 entrance lands. effect_86_move places the object midway between the two
- * players' x positions, plays its pattern once, then releases its graphics and frees the work.
- * 2nd Impact: effect_86_init places one object (eff86_char_table pattern 13) at 549, 92 for its master;
+ * effect_86_init places one object (eff86_char_table pattern 13) at 549, 92 for its master;
  * eff86_0000 animates it while the master's routine_no[1] is not 2-4 and resets it at 4.
  */
 

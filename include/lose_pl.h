@@ -8,8 +8,8 @@ void Lose_20000(PLW* wk);
 void Lose_30000(PLW* wk);
 void Normal_normal_Loser(PLW* wk);
 void Judge_normal_loser(PLW* wk);
-void lose_stage8_action(PLW* wk);   /* provisional name; 2nd Impact only */
-void lose_time_over(PLW* wk);       /* provisional name; 2nd Impact only */
+void lose_stage8_action(PLW* wk);   /* provisional name */
+void lose_time_over(PLW* wk);       /* provisional name */
 void lose_player(PLW* wk);
 void Lose_00000(PLW* wk);
 void opning_init_00000(void);

@@ -3,13 +3,13 @@
  *
  * Player_normal runs a player who is not attacking, damaged or throwing: standing, walking,
  * crouching, jumping, dashing, turning and the like. It clears the per-frame guard, throw, parry
- * and cancel flags itself (2nd Impact has no setup_normal_process_flags), the combo power counters are
- * checked, a parry state (31 - 35) entered while dm_fushin is set becomes its routine 42 - 46
+ * and cancel flags itself, the combo power counters are checked, a parry state (31 - 35) entered while
+ * dm_fushin is set becomes its routine 42 - 46
  * counterpart, and the routine for routine_no[2] is dispatched through the normal routine table;
  * the draw priority is then set relative to the opponent when the animation asks for it.
  * Normal_00000 is the entry routine that runs appear_player for the round introduction;
- * Normal_01000 is the standing routine (pcon_dp_flag holds it in pose 9/60); Normal_02000, the
- * first of 3rd Strike PLNORMAL.C, is part of this module in 2nd Impact.
+ * Normal_01000 is the standing routine (pcon_dp_flag holds it in pose 9/60); Normal_02000 is part of
+ * this module too.
  * Called from the player main routine (PLMAIN/PLMAIN2).
  */
 

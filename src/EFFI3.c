@@ -1,8 +1,8 @@
 /*
- * EFFI3.C  Effect I2 (182): stage colour cycling (as in 3rd Strike)
+ * EFFI3.C  Effect I2 (182): stage colour cycling
  *
  * effect_I2_init starts the work; effect_I2_move steps through effI2_col_tbl, holding each colour
- * for its effI2_timer_tbl entry. In 3rd Strike this file also held the I1 stubs; 2nd Impact's real I1 is EFFI1.c.
+ * for its effI2_timer_tbl entry.
  */
 
 #include "structs.h"

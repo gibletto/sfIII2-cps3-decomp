@@ -1,5 +1,5 @@
 /*
- * END_12_TBL.C  tables read by end_12.c: ending 12, 2nd Impact version
+ * END_12_TBL.C  tables read by end_12.c: ending 12
  */
 
 #include "types.h"

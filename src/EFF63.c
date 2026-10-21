@@ -1,8 +1,8 @@
 /*
- * EFF63.C  Effect 63: breakable stage object (2nd Impact version)
+ * EFF63.C  Effect 63: breakable stage object
  *
- * 2nd Impact's effect 63 is not 3rd Strike's pair of idle objects: effect_63_init makes one object at
- * (0x330, 52) of type 7. effect_63_move starts it by eff_hit_flag[type] (pattern 31, 33, or
+ * effect_63_init makes one object at (0x330, 52) of type 7. effect_63_move starts it by eff_hit_flag[type]
+ * (pattern 31, 33, or
  * broken at once with pattern 30), takes a hit (pattern 32), waits for its pattern to end, takes
  * hits until eff_hit_flag[7] is 2 (pattern 34), sets off effect 27 (type 6) at the pattern's
  * signal 2 and stays broken after signal 1.
@@ -25,7 +25,6 @@ extern const u32 stg06_char_table[];    /* provisional name (06353034, eff05.c) 
 
 
 
-/* (2nd Impact's own effect 63) */
 void effect_63_move(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;
@@ -111,7 +110,7 @@ void effect_63_move(WORK_Other* ewk) {
 
 
 
-/* 2nd Impact's effect_63_init (one object) */
+/* one object */
 s32 effect_63_init(void) {
     WORK_Other* ewk;
     s16 ix;

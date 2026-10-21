@@ -1,14 +1,7 @@
 /*
  * EFF08.C  Effect 08: animated object under effect 07
  *
- * 3rd Strike: animates the BG1 scroll layer by flipping its character page between the layer's own
- * map and a second copy built in a SIMM RAM slot, and by moving its Y scroll per frame.
- * effect_08_init records the two page addresses (the second allocated with
- * simmram_big_page_alloc_40); effect_08_build_tile_grid writes the 2x16 cell grid into it.
- * effect_08_move steps through eff08_anm_tbl, and at the end of each 8-frame cycle picks a
- * random number of extra loops through eff08_anm2_tbl; the slot is freed on exit.
- * Started from the BG030 base-layer init (bg0301_init00).
- * 2nd Impact: effect 08 is an object that effect_07_init starts with the effect 07 object as its
+ * Effect 08 is an object that effect_07_init starts with the effect 07 object as its
  * master: it animates while the master shows pattern 2 and restarts when the master does.
  */
 
@@ -39,7 +32,7 @@ extern const u32 eff08_char_table[];   /* provisional name */
 
 
 
-/* follows its master (3rd Strike: the animated BG1 layer) */
+/* follows its master */
 void effect_08_move(WORK_Other* ewk) {
     WORK_Other* oya;
     if (obr_no_disp_check()) {

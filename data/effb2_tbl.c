@@ -1,6 +1,5 @@
 /*
- * EFFB2_TBL.C  fight_col_move_tbl, the colour steps of 3rd Strike's FIGHT flash: nothing in 2nd Impact reads it,
- * kept for the layout
+ * EFFB2_TBL.C  fight_col_move_tbl, colour steps for the FIGHT flash: nothing reads it, kept for the layout
  */
 
 #include "types.h"

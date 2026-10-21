@@ -9,8 +9,7 @@
  * jump level, launches the balls through bbbs_ball_set, and ends when the table runs out.
  * It also creates the score display (effect 16) and the bonus-stage level objects.
  * bbbs_com_initialize clears Bonus_Stage_RNO.
- * 2nd Impact: five levels (0-4) and one table set (3rd Strike: bbbs_type picks one of two sets of five); the
- * level is chosen here (3rd Strike: makeup_bonus_game_level, called from Game_Main).
+ * There are five levels (0-4) and one table set.
  */
 
 #include "structs.h"
@@ -214,7 +213,7 @@ PLW* pl;
 
 
 
-/* provisional name; 2nd Impact only: 1 when player emid has just pressed exactly the combination 0x252 */
+/* provisional name: 1 when player emid has just pressed exactly the combination 0x252 */
 s32 bonus_level_max_check(s16 emid) {
     WORK_CP* cp = plw[emid].cp;
     if (cp->sw_new != 0x252) {

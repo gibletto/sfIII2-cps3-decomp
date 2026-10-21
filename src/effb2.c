@@ -8,8 +8,6 @@
  * rf_b2_flag counts (more than 9 in the final round, else 4) and timers, checks Break_Into after each
  * of its first five states (b3_Break_Into_check aborts the sequence) and then sets Next_Step so the
  * round can begin.
- * 3rd Strike's version also picks a call voice, starts effects I6 and L5 with zooms, runs a colour
- * flash and resets the BG3 scroll and families.
  */
 
 #include "structs.h"

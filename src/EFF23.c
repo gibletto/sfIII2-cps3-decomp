@@ -1,10 +1,10 @@
 /*
- * EFF23.C  Effect 23: breakable stage object (2nd Impact version)
+ * EFF23.C  Effect 23: breakable stage object
  *
- * 2nd Impact's effect 23 is not 3rd Strike's animated screen cells: effect_23_init makes the object at
- * (0x2A0, 48) and its parts (effects 21, 22 and 24) as its children. effect_23_move waits on
+ * effect_23_init makes the object at (0x2A0, 48) and its parts (effects 21, 22 and 24) as its children.
+ * effect_23_move waits on
  * pattern 7 until eff_hit_check says it was hit, plays pattern 12, and stays broken (pattern 34
- * if eff_hit_flag[type] was already set). effect_23_parts_init (no caller in 2nd Impact) makes three
+ * if eff_hit_flag[type] was already set). effect_23_parts_init (no caller) makes three
  * broken pieces from eff23_data_tbl that fly off with add_x_sub/add_y_sub.
  */
 
@@ -28,7 +28,6 @@ extern const u32 stg03_char_table[];    /* provisional name (0634EBDC, eff05.c) 
 
 
 
-/* (2nd Impact's own effect 23) */
 void effect_23_move(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;
@@ -87,7 +86,7 @@ void effect_23_move(WORK_Other* ewk) {
 
 
 
-/* 2nd Impact's effect_23_init (the object and its parts) */
+/* the object and its parts */
 s32 effect_23_init(void) {
     WORK_Other* ewk;
     s16 ix;
@@ -117,7 +116,7 @@ s32 effect_23_init(void) {
 
 
 
-/* (no caller in 2nd Impact): three broken pieces of effect 23 */
+/* (no caller): three broken pieces of effect 23 */
 /* provisional name */
 s32 effect_23_parts_init(void) {
     WORK_Other* ewk;

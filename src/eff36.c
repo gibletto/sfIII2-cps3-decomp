@@ -1,7 +1,7 @@
 /*
- * EFF36.C  Effect 36: zooming pictures (2nd Impact version)
+ * EFF36.C  Effect 36: zooming pictures
  *
- * 2nd Impact's own effect 36. effect_36_init(typenum) makes eff36_data_num[typenum] objects from the
+ * effect_36_init(typenum) makes eff36_data_num[typenum] objects from the
  * rows of eff36_data_adrs[typenum] (x, y, pattern, old_rno[0]); each object zooms in by its
  * type and stays until op_obj_disp is cleared (eff36_op_check), then removes itself.
  */
@@ -161,7 +161,7 @@ s32 eff36_op_check(WORK_Other* ewk) {
 
 
 
-/* (no caller in 2nd Impact) */
+/* (no caller) */
 s32 effect_36_init(s16 typenum) {
     WORK_Other* ewk;
     s16 ix;

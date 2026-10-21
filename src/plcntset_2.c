@@ -17,8 +17,6 @@
  * time-over finish and set Next_Step. check_damage_hosei passes the push-back left over by one
  * player on to the other. check_sa_resurrection / check_sa_type_rebirth handle rebirth-type super
  * arts. set_quake and add_next_position are shared with the bonus control and effects.
- * 2nd Impact has no grade calls, no pli_3000 extra graphics, no settle_type_70000 and no
- * check_work_position / set_rl_waza / set_scrrrl step in the player moves.
  */
 
 #include "structs.h"
@@ -694,7 +692,7 @@ s16 scr_l;
 
 
 
-/* 2nd Impact push-back rules (3rd Strike check_damage_hosei_nage / _dageki are not in 2nd Impact) */
+/* passes the push-back left over by one player on to the other */
 void check_damage_hosei(void) {
     plw[0].muriyari_ugoku = plw[0].hosei_amari;
     plw[1].muriyari_ugoku = plw[1].hosei_amari;

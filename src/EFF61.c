@@ -1,11 +1,9 @@
 /*
- * EFF61.C  Effect 61: a part of the alternate background (2nd Impact only)
+ * EFF61.C  Effect 61: a part of the alternate background
  *
  * Effect 61 is a part of the alternate background (another_bg): hidden normally, it slides
- * into view vertically or horizontally while the another-BG mode is active. 2nd Impact has it in a file
- * of its own, and a real
- * effect_61_init that makes 44 parts for a parent from eff61_data_tbl, where 3rd Strike keeps an empty
- * effect_61_dummy in EFF62.C.
+ * into view vertically or horizontally while the another-BG mode is active. effect_61_init makes 44
+ * parts for a parent from eff61_data_tbl.
  */
 
 #include "structs.h"
@@ -105,7 +103,7 @@ void effect_61_move(WORK_Other_CONN* ewk) {
 
 
 /* provisional name */
-/* 2nd Impact's effect_61_init (3rd Strike keeps an empty effect_61_dummy): 44 works for its master */
+/* 44 works for its master */
 s32 effect_61_init(WORK_Other* oya) {
     WORK_Other* ewk;
     s16 ix;

@@ -3,7 +3,6 @@
 ; reset_entry (tasksw.src) copies D_END - D_BGN bytes from D_ROM to D_BGN and clears B_BGN-B_END. The
 ; image is section D, kept in ROM after the game tables by the linker's ROM (D,R) option; the variables run
 ; in work RAM from D_BGN (section R, 02000000, frt_tick_count first). B is placed right after R.
-; The 3rd Strike tree's data/sections.src, unchanged.
 
           .EXPORT     _D_ROM
           .EXPORT     _D_BGN

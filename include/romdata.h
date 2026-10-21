@@ -257,7 +257,7 @@ extern const s8 Service_msg[];
 extern const s8 Card_msg[];
 extern const s8 Demo_PL_Play_Data[][2];
 extern const u8 Arts_Rnd_Demo_Data[8];
-extern const s8 Demo_Stage_Play_Data[];   /* one stage per demo (3rd Strike: [4][2], picked at random) */
+extern const s8 Demo_Stage_Play_Data[];   /* one stage per demo */
 extern const s8 Demo_PL_Data[4];
 extern const RANK_DATA Rank_Default_Data[12];
 extern const s8 Wins_Pos_X_Data[4];
@@ -358,7 +358,7 @@ extern const s16 dbg_obj_color_tbl[];
 extern const u16 bcp_group_no_tbl[];
 extern const s16 dbg_col_no_tbl[];
 extern const s16 dbg_col_code_tbl[];
-extern const u8 dbg_bg_select_tbl[25][2];
+extern const u8 dbg_bg_select_tbl[18][2];
 extern const GRID_ROW hit_grid5_pos_tbl[];
 extern const GRID9_ROW hit_grid9_pos_tbl[];
 extern const HIT_KIND hit_kind_tbl[];
@@ -563,8 +563,8 @@ extern const s16 hit_mark_dir_table[16];
 extern const PLEF plef_data[165];
 extern const s16 plef_kage_data[1][4];
 extern const s16 eff04_col_tbl[6];
-extern const s16 scr_obj_num[17][3];   /* by stage and area (3rd Strike: one list by bg_index) */
-extern const s16 scr_obj_num6[17][3];   /* by stage and area (3rd Strike: one list by bg_index) */
+extern const s16 scr_obj_num[17][3];   /* by stage and area */
+extern const s16 scr_obj_num6[17][3];   /* by stage and area */
 extern const s16 eff07_data_tbl[2][3];
 extern const GRID_CELL eff08_cell_tbl[2][16];
 extern const EFF08_FRAME eff08_anm_tbl[8];
@@ -619,7 +619,7 @@ extern const s16 scr_obj_num27[7];   /* seven types */
 extern const s16 scr_obj_num28[];
 extern const s16 eff29_vanish_time[8];
 extern const s16 WinLoseID[2][2];
-extern const s16 eff35_data_tbl[5][7];   /* 5 rows (3rd Strike: 12) */
+extern const s16 eff35_data_tbl[5][7];
 extern const s16 eff35_03_b[4];
 extern const s16 eff35_03_s[4];
 extern const s16 eff36_04_tbl[4];
@@ -634,7 +634,7 @@ extern const EFF45_CELL_REQ eff45_cell_tbl[2][16];
 extern const EFF45_FRAME eff45_anm_tbl[4];
 extern const s32 eff47_sp_tbl[4][4];
 extern const s16 eff47_data_tbl[12];
-extern const s16 eff48_num_tbl[6];   /* six types (3rd Strike 22 scenes) */
+extern const s16 eff48_num_tbl[6];   /* six types */
 extern void (*const EFF52_Jmp_Tbl[5])();
 extern const s16 eff53_vanish_time[8];
 extern const u8 eff56_color_tbl[2][8];
@@ -688,7 +688,7 @@ extern const s16 effB6_num_tbl[2];
 extern const B6_SRC effB6_pos_tbl_0[18];
 extern const B6_SRC effB6_pos_tbl_1[24];
 extern const s16 hok_table_ef[8];
-extern const s16 plhos_data[16][3];   /* 16 characters (3rd Strike: 24) */
+extern const s16 plhos_data[16][3];   /* 16 characters */
 extern const s16 dm_copy_to_master[8];
 extern const s16 ix_exchange[8];
 extern const s16 sel_dm_quake[4][8];
@@ -728,7 +728,7 @@ extern const s16 freeze_set_pos_B[24][4][4];
 extern const s16 thunder_set_pos_SKB[24][4];
 extern const s16 effE3_data[5][3];
 extern const s16 effe6_data_tbl[98][8];
-extern const s16 effE9_data[4][3];   /* 3 values per object (3rd Strike: 4) */
+extern const s16 effE9_data[4][3];   /* 3 values per object */
 extern const s16 effF1_rl_type_tbl[];
 extern const s16 effF1_data_tbl[][5];
 extern const s16 efff2_data_tbl1[10][4];
@@ -751,7 +751,7 @@ extern const s16 effg6_data[230][8];
 extern const s32 effg8_sp_tbl[][4];
 extern const s16 g9_pos_hos[16];
 extern const CONN bbbs_nando_small[2][2];
-extern const s16 effh1_data_tbl[4][4];   /* char index, x, y, priority (3rd Strike [8][5] with wait timers) */
+extern const s16 effh1_data_tbl[4][4];   /* char index, x, y, priority */
 extern const s32 effh1_speed_tbl[4][4];
 extern const s16 panel_guide[8][2];
 extern const s16 effH3_data_tbl[5][3];
@@ -779,7 +779,7 @@ extern const s16 effI5_fade_tbl[16];
 extern const s16 ex_sign_data[69][4];
 extern const s16 effI8_hit_box[2][4];
 extern const s16 bbbs_emtall[];
-extern const CONN bbbs_nando_large[6];   /* six cells (3rd Strike two) */
+extern const CONN bbbs_nando_large[6];   /* six cells */
 extern const s16 effJ4_data_tbl[][4];
 extern const s16 effJ4_piece_range[][2];
 extern const J5_ENTRY effJ5_cell_tbl[2][16];
@@ -941,11 +941,11 @@ extern const s16 nagenuke_apagt_table[];
 extern const s16 dir32_skydm[32];
 extern const u8 convert_saishin_lvdir[2][16];
 extern const s16 dead_voice_table[16][2];
-extern const s16 voice_select_table[16][4];   /* provisional name; 2nd Impact only (06100EBC, PLS02 pl_voice_request) */
-extern const s16 catch_kos_table[8];   /* provisional name; 2nd Impact only (06100FA0, PLS03 get_catch_kos) */
+extern const s16 voice_select_table[16][4];   /* provisional name (06100EBC, PLS02 pl_voice_request) */
+extern const s16 catch_kos_table[8];   /* provisional name (06100FA0, PLS03 get_catch_kos) */
 extern const s16 gauge_rank_table[6][2];
 extern const u8 jump_pat_status_data[2][4];
-extern const s16 defense_cg_ix_table[16][3];   /* provisional name; 2nd Impact only: PLS00 nm_27_cg_type_check, by player_number and guard kind */
+extern const s16 defense_cg_ix_table[16][3];   /* provisional name: PLS00 nm_27_cg_type_check, by player_number and guard kind */
 extern const u8 nml_catch_h2_ok[2][24];
 extern const s16 shot_refresh[6];
 extern const s16 rc_shot_conv[16];
@@ -995,7 +995,7 @@ extern const s16 glap_table2[];
 extern void (*const pl13_exatt_table[18])(PLW*);
 extern const s16 pl14_HYAKKI_dat[24];
 extern void (*const pl14_exatt_table[18])(PLW*);
-extern void (*const pl15_exatt_table[15])(PLW*);   /* 2nd Impact only (061027B8) */
+extern void (*const pl15_exatt_table[15])(PLW*);
 extern void (*const pl16_exatt_table[18])(PLW*);
 extern void (*const pl17_exatt_table[18])(PLW*);
 extern void (*const pl18_exatt_table[18])(PLW*);
@@ -1166,17 +1166,17 @@ extern const s16 damage_pause_table[][4];
 extern const s16 eff78_data_tbl[][2];
 extern const u16 exdm_ix_data[][16][5];
 extern const EXPLEM explem[];
-extern const EXPLEM explem2[][16];   /* 16 per row (3rd Strike: 24) */
+extern const EXPLEM explem2[][16];
 extern const s16 gqdt[][2];
 extern const u8 guard_kind[12];
 extern const s16 hcct[];
 extern const s16 hit_mark_hosei_table[108][2];
 extern const HMDT hmdt[];
 extern const I3_Data i3_data[];
-extern const s16 paring_mark_data[][16][2];   /* 16 characters (3rd Strike: 24) */
+extern const s16 paring_mark_data[][16][2];   /* 16 characters */
 extern const s16 pbs_table[8][8];
 extern void (*const pl05_exatt_table[18])(PLW*);
-extern const s16 sa_sign_data[][4];   /* 4 per row (3rd Strike: 5) */
+extern const s16 sa_sign_data[][4];
 extern const u8 select_hit_dsd[64][8];
 extern void (*sound_effect_request[])();
 
@@ -1250,7 +1250,7 @@ extern const s16 dd_convert[][4];
 extern const u8 tenguiwa_stand_by[8][8];
 extern const s16 tenguiwa_pos_hosei[4][6];
 extern const s16 tenguiwa_pos_hosei2[8][6];
-extern const u8 tenguiwa_type_flag[];   /* provisional name; 2nd Impact only: 1 for the rock shell types 24-35 */
+extern const u8 tenguiwa_type_flag[];   /* provisional name: 1 for the rock shell types 24-35 */
 extern const s16 pl09_tk_table[14];
 extern const s16 homing_kop[2][4];
 extern const s16 guard_pause_table[][4];
@@ -1283,7 +1283,7 @@ extern const s8 effect_19_s_tbl[16];
 extern const s8 effect_19_m_tbl[16];
 extern const s8 effect_19_l_tbl[16];
 extern const s16 illusion_setup_table[13][2];
-extern const s16 paring_b_mark_data[][16][2];   /* 16 characters (3rd Strike: 24) */
+extern const s16 paring_b_mark_data[][16][2];   /* 16 characters */
 extern const u8 Victory_Color_Data[21];
 extern const s16 EFF89_Step_Data[172];
 extern const s32 Score_Data[21];

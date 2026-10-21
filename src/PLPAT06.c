@@ -4,9 +4,7 @@
  * Character-specific attack routines for player number 6. pl06_extra_attack dispatches attack
  * routine numbers 16 and up through pl06_exatt_table.
  * Att_PL06_TOKUSHUKOUDOU is the personal action: super gauge, then throw power (capped 8) on
- * cg_type 20 and strike power plus guts (tk_konjyou, capped 6/8) on cg_type 30. 2nd Impact has
- * neither the running command throw (3rd Strike's Att_PL06_HASHIRI_NAGE), the landing fix-up
- * (hoken_muriyari_chakuchi) nor the grade report.
+ * cg_type 20 and strike power plus guts (tk_konjyou, capped 6/8) on cg_type 30.
  */
 
 #include "structs.h"

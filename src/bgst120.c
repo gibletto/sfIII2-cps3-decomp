@@ -1,5 +1,5 @@
 /*
- * BGST120.C  Stage 12 background (2nd Impact only)
+ * BGST120.C  Stage 12 background
  *
  * BG120 runs stage 12's two layers: layer 1 (the chasing base layer, which loads the stage graphics and
  * starts effect 05) and layer 0, then the zoom check, position correction and family set.
@@ -67,7 +67,7 @@ void bg120_layer1_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -94,7 +94,7 @@ void bg120_layer0_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();

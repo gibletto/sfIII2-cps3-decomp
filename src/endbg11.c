@@ -1,5 +1,5 @@
 /*
- * ENDBG11.C  Ending background 11 (2nd Impact only)
+ * ENDBG11.C  Ending background 11
  *
  * end_BG110 (entry 11) runs layer 1 (palette, no move step) and layer 0, both placed against
  * bg_w.pos_offset, then the zoom check, position correction and family set.

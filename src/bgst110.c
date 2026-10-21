@@ -1,5 +1,5 @@
 /*
- * BGST110.C  Stage 11 background (2nd Impact only)
+ * BGST110.C  Stage 11 background
  *
  * BG110 runs stage 11's two layers (1 and 0) with the same drop-in as stage 03 (bg110_demo), keyed
  * on character 10 instead of 3; the dispatchers have two one-frame steps that pick the drop-in or
@@ -47,7 +47,7 @@ static void bg_base_move_common(void);
 #pragma inline(bg1101, bg1102)
 
 
-/* (2nd Impact: layers 1 and 0 with the drop-in step) */
+/* layers 1 and 0, with the drop-in step */
 void BG110(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg1102();
@@ -60,7 +60,6 @@ void BG110(void) {
 
 
 
-/* (2nd Impact: five steps) */
 void bg1101(void) {
     void (*bg1101_jmp[5])() = { bg1101_init00, bg1101_next4, bg1101_next3, bg110_demo, bg_move_common };
     bg1101_jmp[bgw_ptr->r_no_0]();
@@ -102,7 +101,7 @@ void bg1101_next3(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -179,7 +178,7 @@ void bg1102_color3(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();

@@ -9,7 +9,6 @@
 
 extern const s16 panel_guide[][2];
 extern const s16 effH3_data_tbl[][3];
-extern const s16 EFFH2_tbl_0617E176[];
 
 const s16 panel_guide[8][2] = {
     { 0, 6 },
@@ -28,9 +27,4 @@ const s16 effH3_data_tbl[5][3] = {
     { 768, 136, 2 },
     { 256, 280, 2 },
     { 768, 280, 2 },
-};
-
-/* provisional name */
-const s16 EFFH2_tbl_0617E176[1] = {
-    -1,
 };

@@ -1,7 +1,7 @@
 /*
- * EFF79.C  Effect 79: super art selection plates (2nd Impact version)
+ * EFF79.C  Effect 79: super art selection plates
  *
- * 2nd Impact rewrote the 3rd Strike plates. effect_79_init (Setup_ID, Basic_Sub_Ex, Check_Auto_Cut) makes one plate per
+ * effect_79_init (Setup_ID, Basic_Sub_Ex, Check_Auto_Cut) makes one plate per
  * player and art; Setup_Pos_79 slides it in from the screen edge (routine 1) to its slot in
  * eff79_plate_pos, and routine_no[7] keeps the state it takes after the delay. When Moving_Plate
  * asks, Setup_Move_79 sends the plates to their new slots (Move_79 with EFF79_Move_X / EFF79_Move_Y,
@@ -28,7 +28,7 @@ s32 effect_81_init(WORK_Other* oya, s16 PL_id, s16 Master_Player, s16 Priority, 
 
 extern s16 Flash_Complete[2];
 
-/* 2nd Impact table (CTBL 06179EA4): x, y of each plate slot by player; provisional name */
+/* x, y of each plate slot by player; provisional name */
 extern const s16 eff79_plate_pos[2][6];
 
 

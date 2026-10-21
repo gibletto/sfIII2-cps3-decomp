@@ -1,15 +1,15 @@
 /*
  * CMD_MAIN.C  Debug menu and command input
  *
- * One object in 2nd Impact (06091CB0-0609C0AC): the debug_* screens (BG select, OBJECT LOOK/EDIT, the
+ * One object (06091CB0-0609C0AC): the debug_* screens (BG select, OBJECT LOOK/EDIT, the
  * all-character edit, HIT and CATCH JUDGMENT box editors, the character preview, PARTS), the move recorder
  * and player snapshots, the on-screen dumps of player state and cg data, the debug BG maps and the screen
  * work clear. debug_pattern_preview_restart runs straight on into debug_pattern_preview_step.
  *
- * 2nd Impact against 3rd Strike: 7 debug tools (no HIT -A- JUDGEMENT grid), 13 hit boxes per pattern (2 hand, 2 attack and 2
- * extra "eat" attack boxes, plus "dumm" boxes), slot selection up to 0x90 (3rd Strike 0xD8), 18 BG stages, an older
- * character preview with the rgb editor inlined, one CG group table (dbg_cg_group_top_tbl) for all banks.
- * Strings that 2nd Impact pads to 4 bytes with FF fill are string literals at their first use, not named arrays.
+ * 7 debug tools, 13 hit boxes per pattern (2 hand, 2 attack and 2 extra "eat" attack boxes, plus "dumm" boxes),
+ * slot selection up to 0x90, 18 BG stages, a character preview with the rgb editor inlined, and one CG group table
+ * (dbg_cg_group_top_tbl) for all banks.
+ * Strings padded to 4 bytes with FF fill are string literals at their first use, not named arrays.
  */
 
 #include "structs.h"
@@ -3522,7 +3522,7 @@ void debug_set_body_box(s16 n) {
 
 
 /* provisional name */
-/* provisional name: 2nd Impact extra (dumm) boxes */
+/* the extra (dumm) boxes */
 void debug_set_dumm_box(s16 n) {
     dbg_look_buf.adrs5 = dbg_look_buf.adrs4 + n * 16;
     dbg_edit_buf.adrs5 = dbg_edit_buf.adrs4 + n * 16;
@@ -3563,7 +3563,7 @@ void debug_set_attack_box(s16 n) {
 
 
 /* provisional name */
-/* provisional name: 2nd Impact extra (eat) attack boxes */
+/* the extra (eat) attack boxes */
 void debug_set_eat_box(s16 n) {
     dbg_look_buf.adrs13 = dbg_look_buf.adrs11 + n * 16;
     dbg_edit_buf.adrs13 = dbg_edit_buf.adrs11 + n * 16;
@@ -5523,7 +5523,6 @@ void debug_char_init(void) {
 
 
 /* provisional name */
-/* no 3rd Strike counterpart */
 void debug_char_color_load(PLW* pl) {
     polygon2d_submit_quad(dbg_char_color_tbl[pl->player_number], 0, 0x80, 0, 0, 0);
 }

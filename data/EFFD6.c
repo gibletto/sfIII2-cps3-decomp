@@ -13,7 +13,6 @@ extern const s16 hana_speed_hosei[][6];
 extern const s16 hana_delta_hosei[][6];
 extern const s16 effD7_hit_box[][4];
 extern const u8 effD8_char_tbl[][2];
-extern const s16 effD8_tbl_0617AEF6[];
 
 const s16 num_of_hana[4] = {
     3, 4, 5, 6,
@@ -50,9 +49,4 @@ const u8 effD8_char_tbl[3][2] = {
     { 0x40, 0x3F },
     { 0x42, 0x41 },
     { 0x44, 0x43 },
-};
-
-/* provisional name */
-const s16 effD8_tbl_0617AEF6[1] = {
-    -1,
 };

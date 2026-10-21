@@ -2,9 +2,8 @@
  * EFFA5.C  Effect A5: select timer
  *
  * Effect A5 (effect_A5_entry, started by sel_pl.c and next_cpu.c) is the select-screen timer:
- * it counts Select_Timer down in BCD every 50 frames, holds while Time_Stop or Break_Into is set,
- * and sets Time_Over 30 frames after the timer reaches zero.
- * 2nd Impact: no Break_Into hold; the timer ends while Exit_No is set (no Check_Sleep_A5 routine).
+ * it counts Select_Timer down in BCD every 50 frames, holds while Time_Stop is set,
+ * and sets Time_Over 30 frames after the timer reaches zero. The timer ends while Exit_No is set.
  */
 
 #include "structs.h"
@@ -32,7 +31,7 @@ extern s16 Exit_No;
 
 
 
-/* no Break_Into hold; the timer ends while Exit_No is set (3rd Strike's Check_Sleep_A5 has no code of its own in 2nd Impact) */
+/* the timer ends while Exit_No is set */
 void effect_A5_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case 0:

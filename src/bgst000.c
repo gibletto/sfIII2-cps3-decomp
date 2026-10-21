@@ -1,5 +1,5 @@
 /*
- * BGST000.C  Stage 00 background (2nd Impact only)
+ * BGST000.C  Stage 00 background
  *
  * BG000 runs stage 00's four layers: layer 1 (bg0001_ctrl, the chasing base layer: stage graphics,
  * effects 05 and I4), layer 0 (bg0000) and two synced layers (2 and 6, bg000_layer with the family number;
@@ -43,7 +43,6 @@ void bg000_layer(s16 n);
 #pragma inline(bg0001_ctrl, bg0000)
 
 
-/* (2nd Impact: two synced layers added) */
 void BG000(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg0001_ctrl();
@@ -92,7 +91,7 @@ void bg0001_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -128,7 +127,7 @@ void bg0000_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -136,7 +135,7 @@ static void bg_move_common(void) {
 
 
 
-/* (2nd Impact: the stage rises into view at the start (faster while a shot button is held), then settles) */
+/* the stage rises into view at the start (faster while a shot button is held), then settles */
 void bg0000_demo(void) {
     if (EXE_flag || Game_pause) {
         return;

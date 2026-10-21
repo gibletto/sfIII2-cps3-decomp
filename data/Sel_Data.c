@@ -9,7 +9,6 @@
 
 extern const s8 Sel_Data_0615A814[];
 extern const s8 Face_Cursor_Data[][13];
-extern const u8 Sel_Data_0615A83B[];
 
 /* provisional name */
 const s8 Sel_Data_0615A814[13] = {
@@ -19,9 +18,4 @@ const s8 Sel_Data_0615A814[13] = {
 const s8 Face_Cursor_Data[2][13] = {
     { 2, 1, 3, 5, 7, 6, 12, 13, 8, 9, 10, 4, 11 },
     { 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14 },
-};
-
-/* provisional name */
-const u8 Sel_Data_0615A83B[1] = {
-    0xFF,
 };

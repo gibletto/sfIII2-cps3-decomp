@@ -14,7 +14,6 @@ extern const s16 app_pos_hosei[][3];
 extern const s16 judge_gals_kage_tbl[][4];
 extern const s16 judge_gals_kage_tbl_tail[];
 extern const u8 ag_sel_table[][4][4];
-extern const u16 EFFC9_tbl_0617A96A[];
 
 const s32 efy_data[6] = {
     40, -368, -851968, 32768,
@@ -69,9 +68,4 @@ const u8 ag_sel_table[16][4][4] = {
     { { 0, 7, 5, 0 }, { 6, 3, 0, 0 }, { 6, 3, 1, 0 }, { 3, 7, 2, 0 } },
     { { 0, 2, 1, 0 }, { 3, 7, 6, 0 }, { 5, 2, 0, 0 }, { 0, 4, 1, 0 } },
     { { 5, 0, 1, 0 }, { 6, 5, 1, 0 }, { 4, 2, 3, 0 }, { 7, 7, 7, 0 } },
-};
-
-/* provisional name */
-const u16 EFFC9_tbl_0617A96A[1] = {
-    0xFFFF,
 };

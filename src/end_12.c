@@ -1,5 +1,5 @@
 /*
- * END_12.C  Ending 12, 2nd Impact version
+ * END_12.C  Ending 12
  */
 
 #include "structs.h"

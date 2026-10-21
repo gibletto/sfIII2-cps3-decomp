@@ -1,8 +1,8 @@
 /*
- * EFF28.C  Effect 28: stage object that follows its master (2nd Impact version)
+ * EFF28.C  Effect 28: stage object that follows its master
  *
- * 2nd Impact rewrote effect 28 (3rd Strike: static stage objects from scr_obj_data28). effect_26_init creates
- * it with the stage object as master; it plays patterns 0 and 1 (5 when eff_hit_flag[1] is
+ * effect_26_init creates it with the stage object as master; it plays patterns 0 and 1 (5 when eff_hit_flag[1]
+ * is
  * set), and eff28_master_check switches it to pattern 4 once the master has gone past
  * routine 1.
  */

@@ -5,8 +5,8 @@
  * over it. Which boxes are shown is chosen by the extra DIP switches or judge_disp_all; in
  * the debug editors it shows the edited or looked-up box set instead. effect_00_init is
  * called from the debug screens in CMD_MAIN.
- * 2nd Impact: 13 box rows (two hand rows, h_dumm and h_eat added, one catch, one caught), the DIP
- * bit chosen by master_id, and an explicit clear when no box set is shown.
+ * There are 13 box rows (two hand rows, h_dumm, h_eat, one catch, one caught); the DIP bit is chosen by
+ * master_id, and the boxes are cleared when no box set is shown.
  */
 
 #include "structs.h"

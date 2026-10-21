@@ -1,5 +1,5 @@
 /*
- * END_12_TBL_B.C  tables read by end_12.c: ending 12, 2nd Impact version
+ * END_12_TBL_B.C  tables read by end_12.c: ending 12
  */
 
 #include "types.h"
@@ -9,7 +9,6 @@
 
 extern const PANEL end_1200_panel1[];
 extern const s16 timer_12_tbl[];
-extern const u16 end_12_tbl_06165C56[];
 extern const u16 end_12_pos[];
 
 const PANEL end_1200_panel1[8] = {
@@ -23,13 +22,8 @@ const PANEL end_1200_panel1[8] = {
     { 12480, 0 },
 };
 
-const s16 timer_12_tbl[3] = {
-    600, 420, 900,
-};
-
-/* provisional name */
-const u16 end_12_tbl_06165C56[1] = {
-    0x3FC,
+const s16 timer_12_tbl[4] = {
+    600, 420, 900, 1020,
 };
 
 /* provisional name */

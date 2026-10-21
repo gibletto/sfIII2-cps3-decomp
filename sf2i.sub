@@ -129,6 +129,7 @@ INPUT obj\SHELL14_tbl.obj
 INPUT obj\aboutspr_tbl_b.obj
 INPUT obj\effb2_tbl.obj
 INPUT obj\aboutspr_tbl.obj
+INPUT obj\aboutspr_tbl_c.obj
 INPUT obj\Eff95_tbl.obj
 INPUT obj\CHARSET_tbl.obj
 INPUT obj\CHARID_tbl.obj
@@ -442,6 +443,7 @@ INPUT obj\EFF67.obj
 INPUT obj\EFF68.obj
 INPUT obj\EFF58_tbl.obj
 INPUT obj\Eff59_tbl.obj
+INPUT obj\Eff59_tbl_b.obj
 INPUT obj\EFF61_tbl.obj
 INPUT obj\EFF62_tbl.obj
 INPUT obj\EFF67_tbl.obj
@@ -464,6 +466,7 @@ INPUT obj\EFF82.obj
 INPUT obj\EFF83.obj
 INPUT obj\EFF84.obj
 INPUT obj\EFF75_tbl.obj
+INPUT obj\Eff79_tbl.obj
 INPUT obj\EFF85.obj
 INPUT obj\EFF86.obj
 INPUT obj\eff87.obj
@@ -599,6 +602,7 @@ INPUT obj\EFFI3_2.obj
 INPUT obj\EFFH6.obj
 INPUT obj\EFFH9_tbl.obj
 INPUT obj\EFFI0_tbl.obj
+INPUT obj\EFFI3_tbl.obj
 INPUT obj\EFFI4MV.obj
 INPUT obj\EFFI5.obj
 INPUT obj\effi6.obj

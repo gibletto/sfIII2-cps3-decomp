@@ -1,9 +1,9 @@
 /*
- * PLS03.C  Special move, super art and normal attack command checks (2nd Impact version)
+ * PLS03.C  Special move, super art and normal attack command checks
  *
- * 2nd Impact keeps 3rd Strike's PLS03 and PLS03ATT in one object. check_full_gauge_attack, check_super_arts_attack
- * and execute_super_arts test the super art commands against the gauge; check_special_attack the
- * special move commands (the EX version only with the EX gauge); check_leap_attack 2nd Impact's command
+ * check_full_gauge_attack, check_super_arts_attack and execute_super_arts test the super art commands against
+ * the gauge; check_special_attack the
+ * special move commands (the EX version only with the EX gauge); check_leap_attack the command
  * leap attacks; hissatsu_setup_union sets up the chosen move. Then the normal attack checks:
  * check_nm_attack picks the attack by the jump/crouch status (a jump status change re-picks it),
  * the parry, taunt, throw escape and lever-up checks, waza_select and decode_wst_data for the
@@ -42,7 +42,7 @@ void hissatsu_setup_union(PLW* wk, s16 rno) {
 
 
 
-/* (2nd Impact: the 0x100 test before the ground/air split, no Version_Type) */
+/* the 0x100 test comes before the ground/air split */
 s32 check_full_gauge_attack(PLW* wk, s8 always) {
     u16* conpane;
     s16 j;
@@ -136,7 +136,6 @@ s32 check_full_gauge_attack(PLW* wk, s8 always) {
 
 
 
-/* (2nd Impact: no Version_Type) */
 s32 check_super_arts_attack(PLW* wk) {
     u16* conpane;
     s16 j;
@@ -227,7 +226,6 @@ s32 check_super_arts_attack(PLW* wk) {
 
 
 
-/* no Version_Type */
 s32 execute_super_arts(PLW* wk) {
     if (wk->cancel_timer == 0) {
         wk->permited_koa |= 1;
@@ -392,7 +390,7 @@ air:
 
 
 
-/* 2nd Impact's check_leap_attack, waza 14/15 by command (one button test) */
+/* waza 14/15 by command (one button test) */
 s32 check_leap_attack(PLW* wk) {
     s16 i;
     s16 j;
@@ -807,7 +805,7 @@ s16 cmd_ex;
 
 
 
-/* 2nd Impact's get_em_body_range, the nearest of two body boxes and the push box */
+/* the nearest of two body boxes and the push box */
 s32 get_em_body_range(WORK* wk) {
     WORK* em = (WORK*)wk->target_adrs;
     s16 r1;
@@ -898,7 +896,7 @@ s16 shot_data_refresh(s16 sw) {
 
 
 
-/* provisional name: 2nd Impact only: the throw button strength from ca14/ca25/ca36; nothing calls it */
+/* provisional name: the throw button strength from ca14/ca25/ca36; nothing calls it */
 s32 get_catch_kos(PLW* wk) {
     s16 kos;
     if (wk->cp->calf == 0) {

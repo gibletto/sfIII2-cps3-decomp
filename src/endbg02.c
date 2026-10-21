@@ -1,5 +1,5 @@
 /*
- * ENDBG02.C  Ending background 02 (2nd Impact only)
+ * ENDBG02.C  Ending background 02
  *
  * end_BG020 (entry 2) runs layer 1 (palette and graphics, no move step), layer 0 and layer 2, then the
  * zoom check, position correction and family set.

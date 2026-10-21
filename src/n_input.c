@@ -53,7 +53,7 @@ SC_NAME_WK sc_name_wk[2][4];  /* 0202812C */
 SC_NAME_WK * nsc_ptr;  /* 0202817C */
 RANK_NAME_W rank_name_w[2];  /* 02028180 */
 s16 Name_Input_f;  /* 02028188 */
-s16 naming_cnt;  /* one counter (3rd Strike: one per player) */
+s16 naming_cnt;  /* one counter for both players */
 s16 n_disp_flag;  /* 0202818E */
 
 

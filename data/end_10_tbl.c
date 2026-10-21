@@ -11,8 +11,15 @@ extern const PANEL end_10_panel_tbl_0[];
 extern const PANEL end_10_panel_tbl_1[];
 extern const u16 timer_10_tbl[];
 extern const u16 end_10_pos[];
-extern const u16 end_10_tbl_06165A38[];
 extern const u16 end_10_anm_tbl[];
+extern const s32 end_1100_cell0[];
+extern const s32 end_1100_cell1[];
+extern const s32 end_1100_cell2[];
+extern const s32 end_1100_cell3[];
+extern const s32 end_1100_cell4[];
+extern const s32 end_1100_cell5[];
+extern const s32 end_1100_cell6[];
+extern const s32 end_1100_cell7[];
 
 /* provisional name */
 const PANEL end_10_panel_tbl_0[16] = {
@@ -60,25 +67,52 @@ const u16 timer_10_tbl[7] = {
 };
 
 /* provisional name */
-const u16 end_10_pos[1] = {
-    0x100,
+const u16 end_10_pos[14] = {
+    0x100, 0x300, 0x300, 0x300, 0x100, 0x200, 0x2D0, 0x200,
+    0x100, 0x100, 0x2D0, 0x100, 0x300, 0,
 };
 
 /* provisional name */
-const u16 end_10_tbl_06165A38[13] = {
-    0x300, 0x300, 0x300, 0x100, 0x200, 0x2D0, 0x200, 0x100,
-    0x100, 0x2D0, 0x100, 0x300, 0,
+const u16 end_10_anm_tbl[5] = {
+    2, 3, 4, 5, 0xFFFF,
 };
 
 /* provisional name */
-const u16 end_10_anm_tbl[69] = {
-    2, 3, 4, 5, 0xFFFF, 0, 0x3040, 0,
-    5, 0, 0x3080, 0, 6, 0, 0x3040, 0,
-    0xD, 0, 0x3080, 0, 0xE, 0, 0x3040, 0,
-    0xB, 0, 0x3080, 0, 0xC, 0, 0x3040, 0,
-    7, 0, 0x3080, 0, 8, 0, 0x3040, 0,
-    1, 0, 0x3080, 0, 2, 0, 0x3040, 0,
-    9, 0, 0x3080, 0, 0xA, 0, 0x3040, 0,
-    5, 0, 0x3080, 0, 6, 0, 0x3040, 0,
-    1, 0, 0x3080, 0, 2,
+const s32 end_1100_cell0[4] = {
+    12352, 5, 12416, 6,
+};
+
+/* provisional name */
+const s32 end_1100_cell1[4] = {
+    12352, 13, 12416, 14,
+};
+
+/* provisional name */
+const s32 end_1100_cell2[4] = {
+    12352, 11, 12416, 12,
+};
+
+/* provisional name */
+const s32 end_1100_cell3[4] = {
+    12352, 7, 12416, 8,
+};
+
+/* provisional name */
+const s32 end_1100_cell4[4] = {
+    12352, 1, 12416, 2,
+};
+
+/* provisional name */
+const s32 end_1100_cell5[4] = {
+    12352, 9, 12416, 10,
+};
+
+/* provisional name */
+const s32 end_1100_cell6[4] = {
+    12352, 5, 12416, 6,
+};
+
+/* provisional name */
+const s32 end_1100_cell7[4] = {
+    12352, 1, 12416, 2,
 };

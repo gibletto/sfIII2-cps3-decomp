@@ -4,8 +4,7 @@
  * Character-specific attack routines for player number 11, dispatched by pl11_extra_attack
  * through pl11_exatt_table.
  * Att_PL11_TOKUSHUKOUDOU is the personal action: super gauge on cg_type 40 and a strike power
- * boost of 10 (capped 10) on cg_type 20. 2nd Impact has neither the landing fix-up
- * (hoken_muriyari_chakuchi) nor the grade report of 3rd Strike.
+ * boost of 10 (capped 10) on cg_type 20.
  */
 
 #include "structs.h"

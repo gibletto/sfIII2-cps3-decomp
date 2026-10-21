@@ -3,8 +3,7 @@
  *
  * effect_62_init creates 24 parts for a parent from eff62_data_tbl. While the alternate
  * background is active (seraph_flag, another_bg) each part scrolls up or down at its own
- * speed; they are removed when that mode ends. (3rd Strike has effect 61 in this file too; 2nd Impact has it
- * in EFF61.C.)
+ * speed; they are removed when that mode ends.
  */
 
 #include "structs.h"

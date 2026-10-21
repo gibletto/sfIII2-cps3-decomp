@@ -6,8 +6,8 @@
  * position history (effe7_get_zanzou_data, zanzou_table), or follows the player directly, copies
  * the player's sprite, flip and graphics fields, and lives for a fixed number of frames while its
  * depth and colour step through after_image_color. Images flagged as attacking are given a hit
- * box through get_attdata_of_illusion. 2nd Impact: no transformed colour set, drawn during a super-art
- * freeze too, and done_rl is a WORK field (3rd Strike: spr.done_rl).
+ * box through get_attdata_of_illusion. The images are drawn during a super-art freeze too, and done_rl
+ * is a WORK field.
  */
 
 #include "structs.h"

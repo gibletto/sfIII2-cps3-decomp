@@ -1741,7 +1741,7 @@ s32 Check_Start_Hi_Jump(PLW* wk) {
 
 
 
-/* provisional name: 2nd Impact only: the air guard lever while the jump lasts */
+/* provisional name: the air guard lever while the jump lasts */
 s32 Air_Guard_Lever(PLW* wk) {
     switch (Air_Guard_Type[wk->wu.id]) {
     case 0:
@@ -1769,7 +1769,7 @@ s32 Air_Guard_Lever(PLW* wk) {
 
 
 
-/* 2nd Impact form of Check_Air_Guard: decides the air guard when the jump starts */
+/* decides the air guard when the jump starts */
 s32 Check_Air_Guard(PLW* wk) {
     Free_Lever[wk->wu.id] = 0;
     if (Lever_LR) {
@@ -2447,7 +2447,7 @@ s16 Ex_Shot;
 
 
 
-/* (2nd Impact tests Ryu and Ken directly, no Hadou_Check_Data) */
+/* (tests Ryu and Ken directly) */
 s32 Hadou_Check(wk, Tech_Number)
 PLW* wk;
 u16 Tech_Number;
@@ -4024,7 +4024,7 @@ s32 Check_Passive(PLW* wk) {
 
 
 
-/* provisional name: 2nd Impact only: the passive term check by screen area */
+/* provisional name: the passive term check by screen area */
 s32 Ck_Guard_Passive_Term(PLW* wk) {
     switch (Area_Number[wk->wu.id]) {
     case 0:
@@ -4931,6 +4931,6 @@ void Setup_Com_Max_Range(void) {
 
 
 
-/* provisional name: 2nd Impact only: an empty routine nothing calls */
+/* provisional name: an empty routine nothing calls */
 void Com_Sub_Dummy(void) {
 }

@@ -4,7 +4,7 @@
  * Effect F3 (effect_F3_init with step, delay, y and entry side) shows sel_pl_char_table pattern
  * 39 after its delay and slides it in from the left or right edge of BG0 (effF3_pos_set) with a
  * decelerating speed until it stops at DE_X[14] + 32 relative to BG0.
- * 2nd Impact keeps the stop position in hit_quake and the step in vital_new, where 3rd Strike uses dir_old and dir_step.
+ * The stop position is kept in hit_quake and the step in vital_new.
  */
 
 #include "structs.h"

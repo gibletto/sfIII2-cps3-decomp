@@ -14,56 +14,69 @@ extern const u16 picture_chr_tbl[];
 extern const u16 picture_set_tbl[];
 extern const u16 picture_attr_tbl[];
 extern const NAME_PLATE nwdata_tbl[];
-extern const u8 sc_cells_1[];
-extern const u8 sc_cells_50[];
-extern const u8 sc_cells_6[];
-extern const u8 sc_trans_tbl_061728D0[];
-extern const u8 sc_trans_tbl_06172974[];
-extern const u8 sc_trans_tbl_06172A0C[];
-extern const u8 sc_trans_tbl_06172AF8[];
-extern const u8 sc_trans_tbl_06172E10[];
-extern const u8 sc_trans_tbl_06173578[];
-extern const u8 sc_trans_tbl_061735D4[];
-extern const u8 sc_vram_01_attr[];
-extern const u8 sc_vram_01_pos[];
-extern const u8 sc_vram_02_attr[];
-extern const u8 sc_vram_02_code[];
-extern const u8 sc_vram_02_pos[];
-extern const u8 sc_vram_03_attr[];
-extern const u8 sc_vram_03_code[];
-extern const u8 sc_vram_03_pos[];
-extern const u8 sc_vram_04_attr[];
-extern const u8 sc_vram_04_code[];
-extern const u8 sc_vram_04_pos[];
-extern const u8 sc_vram_05_pos[];
-extern const u8 sc_vram_06_attr[];
-extern const u8 sc_vram_06_code[];
-extern const u8 sc_vram_06_pos[];
-extern const u8 sc_vram_07_attr[];
-extern const u8 sc_vram_07_pos[];
-extern const u8 sc_vram_08_attr[];
-extern const u8 sc_vram_09_attr[];
-extern const u8 sc_vram_10_attr[];
-extern const u8 sc_vram_16_code[];
-extern const u8 sc_vram_16_pos[];
-extern const u8 sc_vram_18_code[];
-extern const u8 sc_vram_18_pos[];
-extern const u8 sc_vram_19_code[];
-extern const u8 sc_vram_19_pos[];
-extern const u8 sc_vram_20_code[];
-extern const u8 sc_vram_21_code[];
-extern const u8 sc_vram_24_code[];
-extern const u8 sc_vram_24_pos[];
-extern const u8 sc_vram_25_code[];
-extern const u8 sc_vram_25_pos[];
-extern const u8 sc_vram_26_code[];
-extern const u8 sc_vram_26_pos[];
-extern const u8 sc_vram_28_code[];
-extern const u8 sc_vram_28_pos[];
+extern const u16 sc_cells_1[];
+extern const u16 sc_cells_50[];
+extern const u16 sc_cells_6[];
+extern const u16 sc_vram_01_attr[];
+extern const u16 sc_vram_01_pos[];
+extern const u16 sc_vram_02_attr[];
+extern const u16 sc_vram_02_code[];
+extern const u16 sc_vram_02_pos[];
+extern const u16 sc_vram_03_attr[];
+extern const u16 sc_vram_03_code[];
+extern const u16 sc_vram_03_pos[];
+extern const u16 sc_vram_04_attr[];
+extern const u16 sc_vram_04_code[];
+extern const u16 sc_vram_04_pos[];
+extern const u16 sc_vram_05_pos[];
+extern const u16 sc_vram_06_attr[];
+extern const u16 sc_vram_06_code[];
+extern const u16 sc_vram_06_pos[];
+extern const u16 sc_vram_07_attr[];
+extern const u16 sc_vram_07_pos[];
+extern const u16 sc_vram_08_attr[];
+extern const u16 sc_vram_09_attr[];
+extern const u16 sc_vram_10_attr[];
+extern const u16 sc_vram_16_code[];
+extern const u16 sc_vram_16_pos[];
+extern const u16 sc_vram_18_code[];
+extern const u16 sc_vram_18_pos[];
+extern const u16 sc_vram_19_code[];
+extern const u16 sc_vram_19_pos[];
+extern const u16 sc_vram_20_code[];
+extern const u16 sc_vram_21_code[];
+extern const u16 sc_vram_24_code[];
+extern const u16 sc_vram_24_pos[];
+extern const u16 sc_vram_25_code[];
+extern const u16 sc_vram_25_pos[];
+extern const u16 sc_vram_26_code[];
+extern const u16 sc_vram_26_pos[];
+extern const u16 sc_vram_28_code[];
+extern const u16 sc_vram_28_pos[];
+extern const u16 sc_vram_01_code[];
+extern const u16 sc_vram_11_attr[];
+extern const u16 sc_vram_12_attr[];
+extern const u16 sc_vram_12_code[];
+extern const u16 sc_vram_12_pos[];
+extern const u16 sc_vram_13_pos[];
+extern const u16 sc_vram_14_attr[];
+extern const u16 sc_vram_14_code[];
+extern const u16 sc_vram_14_pos[];
+extern const u16 sc_vram_15_attr[];
+extern const u16 sc_vram_15_code[];
+extern const u16 sc_vram_15_pos[];
+extern const u16 sc_vram_20_pos[];
+extern const u16 sc_vram_21_pos[];
+extern const u16 sc_vram_22_code[];
+extern const u16 sc_vram_22_pos[];
+extern const u16 sc_vram_23_code[];
+extern const u16 sc_vram_23_pos[];
+extern const u16 sc_vram_27_code[];
+extern const u16 sc_vram_27_pos[];
 
 const CELL_SET sc_ram_vram_tbl[29] = {
     { (void *)sc_cells_1, (void *)sc_cells_6, (void *)sc_cells_50 },
-    { (void *)sc_vram_01_pos, (void *)((const u8 *)sc_trans_tbl_06172A0C + 26), (void *)sc_vram_01_attr },
+    { (void *)sc_vram_01_pos, (void *)sc_vram_01_code, (void *)sc_vram_01_attr },
     { (void *)sc_vram_02_pos, (void *)sc_vram_02_code, (void *)sc_vram_02_attr },
     { (void *)sc_vram_03_pos, (void *)sc_vram_03_code, (void *)sc_vram_03_attr },
     { (void *)sc_vram_04_pos, (void *)sc_vram_04_code, (void *)sc_vram_04_attr },
@@ -73,23 +86,23 @@ const CELL_SET sc_ram_vram_tbl[29] = {
     { (void *)sc_vram_06_pos, (void *)sc_vram_06_code, (void *)sc_vram_08_attr },
     { (void *)sc_vram_07_pos, (void *)sc_vram_06_code, (void *)sc_vram_09_attr },
     { (void *)sc_vram_06_pos, (void *)sc_vram_06_code, (void *)sc_vram_10_attr },
-    { (void *)sc_vram_07_pos, (void *)sc_vram_06_code, (void *)sc_trans_tbl_06172E10 },
-    { (void *)((const u8 *)sc_trans_tbl_06172E10 + 144), (void *)((const u8 *)sc_trans_tbl_06172E10 + 46), (void *)((const u8 *)sc_trans_tbl_06172E10 + 96) },
-    { (void *)((const u8 *)sc_trans_tbl_06172E10 + 192), (void *)((const u8 *)sc_trans_tbl_06172E10 + 46), (void *)((const u8 *)sc_trans_tbl_06172E10 + 96) },
-    { (void *)((const u8 *)sc_trans_tbl_06172974 + 66), (void *)sc_trans_tbl_061728D0, (void *)((const u8 *)sc_cells_1 + 46) },
-    { (void *)((const u8 *)sc_trans_tbl_06172AF8 + 68), (void *)((const u8 *)sc_trans_tbl_06172A0C + 74), (void *)sc_trans_tbl_06172AF8 },
+    { (void *)sc_vram_07_pos, (void *)sc_vram_06_code, (void *)sc_vram_11_attr },
+    { (void *)sc_vram_12_pos, (void *)sc_vram_12_code, (void *)sc_vram_12_attr },
+    { (void *)sc_vram_13_pos, (void *)sc_vram_12_code, (void *)sc_vram_12_attr },
+    { (void *)sc_vram_14_pos, (void *)sc_vram_14_code, (void *)sc_vram_14_attr },
+    { (void *)sc_vram_15_pos, (void *)sc_vram_15_code, (void *)sc_vram_15_attr },
     { (void *)sc_vram_16_pos, (void *)sc_vram_16_code, (void *)sc_cells_50 },
     { (void *)sc_vram_16_pos, (void *)sc_vram_16_code, (void *)sc_cells_50 },
     { (void *)sc_vram_18_pos, (void *)sc_vram_18_code, (void *)sc_cells_50 },
     { (void *)sc_vram_19_pos, (void *)sc_vram_19_code, (void *)sc_cells_50 },
-    { (void *)sc_trans_tbl_06173578, (void *)sc_vram_20_code, (void *)sc_cells_50 },
-    { (void *)sc_trans_tbl_061735D4, (void *)sc_vram_21_code, (void *)sc_cells_50 },
-    { (void *)((const u8 *)sc_trans_tbl_061735D4 + 128), (void *)((const u8 *)sc_trans_tbl_061735D4 + 42), (void *)sc_cells_50 },
-    { (void *)((const u8 *)sc_trans_tbl_061735D4 + 286), (void *)((const u8 *)sc_trans_tbl_061735D4 + 212), (void *)sc_cells_50 },
+    { (void *)sc_vram_20_pos, (void *)sc_vram_20_code, (void *)sc_cells_50 },
+    { (void *)sc_vram_21_pos, (void *)sc_vram_21_code, (void *)sc_cells_50 },
+    { (void *)sc_vram_22_pos, (void *)sc_vram_22_code, (void *)sc_cells_50 },
+    { (void *)sc_vram_23_pos, (void *)sc_vram_23_code, (void *)sc_cells_50 },
     { (void *)sc_vram_24_pos, (void *)sc_vram_24_code, (void *)sc_cells_50 },
     { (void *)sc_vram_25_pos, (void *)sc_vram_25_code, (void *)sc_cells_50 },
     { (void *)sc_vram_26_pos, (void *)sc_vram_26_code, (void *)sc_cells_50 },
-    { (void *)((const u8 *)sc_trans_tbl_061735D4 + 414), (void *)((const u8 *)sc_trans_tbl_061735D4 + 358), (void *)sc_cells_50 },
+    { (void *)sc_vram_27_pos, (void *)sc_vram_27_code, (void *)sc_cells_50 },
     { (void *)sc_vram_28_pos, (void *)sc_vram_28_code, (void *)sc_cells_50 },
 };
 

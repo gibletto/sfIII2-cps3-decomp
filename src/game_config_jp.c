@@ -94,8 +94,8 @@ s8 Config_Org_jp;  /* 02015A05 */
 s16 Config_Attr_jp;  /* 02015A06 */
 s16 Config_Rep_Timer_jp[4];  /* 02015A08 */
 s8 Config_Rep_Count_jp[4];  /* 02015A10 */
-s16* Config_Code_Ptr_jp;  /* 02015A14, 2nd Impact: provisional name */
-s16 Config_Code_No_jp;  /* 02015A18, 2nd Impact: provisional name */
+s16* Config_Code_Ptr_jp;  /* 02015A14, provisional name */
+s16 Config_Code_No_jp;  /* 02015A18, provisional name */
 
 
 /* 020007EC */
@@ -569,7 +569,7 @@ void game_config_print_cursor_jp(const TMSCRIPT* script) {
 
 
 
-/* 2nd Impact (provisional name): the menu button code; each press must match the next (item, button) step of
+/* provisional name: the menu button code; each press must match the next (item, button) step of
    gcfg_code_list_jp, and the 13th step sets bit 1 of the bonus setting */
 void game_config_code_check_jp(void) {
     register s16 sw;

@@ -1,7 +1,7 @@
 /*
- * EFFG7.C  Effect G7: ten ending objects that drift across the screen (2nd Impact version)
+ * EFFG7.C  Effect G7: ten ending objects that drift across the screen
  *
- * 2nd Impact rewrote effect G7 (3rd Strike: one object playing pattern 51). effect_G7_init (ending 9)
+ * effect_G7_init (ending 9)
  * makes ten objects from effg7_data_tbl, two to each speed of effg7_speed_tbl; they drift
  * left and wrap at x 0x330 until end_w.r_no_2 passes 2, then fall off the screen.
  */

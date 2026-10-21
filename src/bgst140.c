@@ -1,5 +1,5 @@
 /*
- * BGST140.C  Stage 14 background (2nd Impact only)
+ * BGST140.C  Stage 14 background
  *
  * BG140 runs stage 14's three layers: layer 1 (bg140_layer1, the chasing base layer: stage graphics and effect
  * 05), layer 0 (bg140_layer0) and layer 2 (sync_bg14_common, a synced layer), then the zoom check, position
@@ -70,7 +70,7 @@ void bg140_layer1_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -97,7 +97,7 @@ void bg140_layer0_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -105,7 +105,6 @@ static void bg_move_common(void) {
 
 
 
-/* (2nd Impact: y limits 208, speed_x 0xC000) */
 void sync_bg14_common(void) {
     switch (bgw_ptr->r_no_0) {
     case 0:

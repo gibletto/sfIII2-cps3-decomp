@@ -1,5 +1,5 @@
 /*
- * BGST080.C  Stage 08 background (2nd Impact only)
+ * BGST080.C  Stage 08 background
  *
  * BG080 runs stage 08's three layers: layer 1 (the chasing base layer), layer 0 (the stage graphics,
  * effects and palette, faded when Shin Gouki is next) and layer 2 (a synced layer), then the zoom check,
@@ -134,7 +134,7 @@ void bg080_layer0_color(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();

@@ -21,7 +21,6 @@ extern const s8 str_SELECT_PLAYER_2[];
 extern const s8 str_INSERT_COIN_2[];
 extern const s8 str_blank_3[];
 extern const s8 str_PUSH_1_OR_2_START_BUTTON[];
-extern const s8 Manage_tbl_b_0615A24D[];
 
 const s8 FBI_msg[4] = {
     70, 66, 73, 0,
@@ -79,9 +78,4 @@ const s8 str_blank_3[12] = {
 const s8 str_PUSH_1_OR_2_START_BUTTON[25] = {
     80, 85, 83, 72, 32, 49, 32, 79, 82, 32, 50, 32, 83, 84, 65, 82,
     84, 32, 66, 85, 84, 84, 79, 78, 0,
-};
-
-/* provisional name */
-const s8 Manage_tbl_b_0615A24D[3] = {
-    -1, -1, -1,
 };

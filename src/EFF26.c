@@ -38,7 +38,6 @@ void (*eff26_jp_tbl[6])(WORK_Other*) = {
     eff26_04,
     eff26_05,
 };
-/* (3rd Strike: one entry) */
 const s16* scr_obj_data26[2] = {
     (const s16*)&eff26_num[2],
     (const s16*)&eff26_num[19],

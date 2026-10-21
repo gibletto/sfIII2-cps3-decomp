@@ -6,7 +6,7 @@
  * effF1_rl_type_tbl when the player faces left), sets another_bg[] for the player and clears it
  * again when a condition is met: the timer runs out, the player's or opponent's state or move
  * changes, the super art ends, dramatic-battle mode is on, or the player's shell is gone.
- * In 3rd Strike effect_F1_init is an empty stub; in 2nd Impact it creates the effect for the player wk.
+ * effect_F1_init creates the effect for the player wk.
  */
 
 #include "structs.h"
@@ -110,7 +110,7 @@ void effF1_data_set(WORK_Other* ewk, PLW* mwk) {
     }
 }
 
-/* creates the effect (3rd Strike: an empty stub) */
+/* creates the effect */
 u32 effect_F1_init(wk, type)
 WORK* wk;
 u8 type;

@@ -7,10 +7,9 @@
  * limit and recovery; clear_kizetsu_point and clear_super_arts_point reset the stun and super-art
  * values. reset_piyori_and_fight, reset_fight_status, reset_round_and_screen and erase_extra_plef_work
  * reset the round. check_combo_end is used by the combo counter (cmb_cont). debug_player_change
- * (unused in 2nd Impact: nothing calls it) steps a player's character, super art or colour from the debug
+ * (nothing calls it) steps a player's character, super art or colour from the debug
  * switches and resets the fight.
- * 2nd Impact has no Gill clone check, J7/K5 effects, metamorphosis reload or exs2 arts; its debug character
- * step wraps at 16.
+ * The debug character step wraps at 16.
  */
 
 #include "structs.h"

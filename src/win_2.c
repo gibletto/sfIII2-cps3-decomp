@@ -75,7 +75,7 @@ s32 effect_95_init();
 s32 effect_B8_init();
 
 
-s16 WIN_X;  /* here, s16 (3rd Strike: u8, workuser.c) */
+s16 WIN_X;
 
 
 

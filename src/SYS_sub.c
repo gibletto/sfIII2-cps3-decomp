@@ -10,8 +10,8 @@
  * here, with scene-cut helpers (Button_Cut_Hold, Button_Cut_EX, Cut_Cut_Cut and friends) that let a
  * player's button shorten a scene. Disp_Digit8x16/16x24 draw score digits, Disp_Win_Type the round
  * win marks, and Disp_Capcom_Rights the copyright lines chosen by Country.
- * 2nd Impact keeps two rankings of six (score, then consecutive wins) in 12-byte records, has no panel
- * wipe and no Cut_Cut_Loser, adds the vertical Ck_Range_Out_Y, and tests buttons 0x7F0.
+ * There are two rankings of six (score, then consecutive wins) in 12-byte records; Ck_Range_Out_Y is the
+ * vertical range check, and the button tests use 0x7F0.
  */
 
 #include "structs.h"
@@ -395,7 +395,7 @@ s16 PL_id;
 
 
 
-/* provisional name: 2nd Impact only; one ranking's insertion (ofs 0: score, 6: the second ranking) */
+/* provisional name: one ranking's insertion (ofs 0: score, 6: the second ranking) */
 s32 Check_Sort_Ranking(ofs, PL_id)
 s16 ofs;
 s16 PL_id;
@@ -576,7 +576,7 @@ void commit_name_entry_row_both_players(pos_y)
 }
 
 
-/* provisional name: 2nd Impact only; the vertical range check */
+/* provisional name: the vertical range check */
 s32 Ck_Range_Out_Y(WORK_Other* ewk, s16 BG_No, s16 R) {
     u16 y;
     y = ewk->wu.xyz[1].disp.pos;

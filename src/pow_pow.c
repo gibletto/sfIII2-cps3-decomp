@@ -1,10 +1,10 @@
 /*
- * POW_POW.C  Damage and score (2nd Impact version)
+ * POW_POW.C  Damage and score
  *
  * cal_damage_vitality and cal_damage_vitality_eff turn an attack's power into damage using the
- * round-level rate tables (2nd Impact: no attack/defence multipliers); Additinal_Score_DM, Disp_Player_Score
- * and Score_Sub add to and display the players' scores (2nd Impact: six digits, capped at 9999900).
- * Disp_Player_Score_Debug (2nd Impact only, unreferenced) shows Score[id][1] on row 18 while exsw_3 bit 6 is set.
+ * round-level rate tables; Additinal_Score_DM, Disp_Player_Score
+ * and Score_Sub add to and display the players' scores (six digits, capped at 9999900).
+ * Disp_Player_Score_Debug (unreferenced) shows Score[id][1] on row 18 while exsw_3 bit 6 is set.
  */
 
 #include "structs.h"
@@ -70,7 +70,6 @@
 
 
 
-/* (2nd Impact: no att_plus/def_plus) */
 void cal_damage_vitality(PLW* as, PLW* ds) {
     u16 xx = as->wu.att.pow;
     s16 yy;
@@ -85,7 +84,6 @@ void cal_damage_vitality(PLW* as, PLW* ds) {
 
 
 
-/* (2nd Impact: no att_plus/def_plus) */
 void cal_damage_vitality_eff(WORK_Other* as, PLW* ds) {
     u16 xx = as->wu.att.pow;
     s16 yy;
@@ -98,7 +96,7 @@ void cal_damage_vitality_eff(WORK_Other* as, PLW* ds) {
     ds->wu.dm_vital = power * yy / 100;
 }
 
-/* (2nd Impact: cap 9999900, stage 16 test) */
+/* capped at 9999900; the stage 16 test */
 void Additinal_Score_DM(wk, ix)
 WORK_Other* wk;
 u16 ix;
@@ -131,7 +129,7 @@ u16 ix;
 
 
 /* provisional name */
-/* (2nd Impact: six digits) */
+/* six digits */
 void Disp_Player_Score(id)
 s16 id;
 {

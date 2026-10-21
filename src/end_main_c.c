@@ -1,5 +1,5 @@
 /*
- * END_MAIN_C.C  Ending main control and the helpers the endings share (2nd Impact)
+ * END_MAIN_C.C  Ending main control and the helpers the endings share
  *
  * Ending_main runs one of three ending scripts each frame: gill_ending for character 15, gouki_ending when
  * End_Gouki_Flag is set, normal_ending otherwise. Each clears the system, lets the character's ending script

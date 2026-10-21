@@ -8,7 +8,6 @@
 #pragma section TBL
 
 extern const u8 coin_rate_tbl[][2];
-extern const u8 sys_config_tbl_06574C2C[][2];
 extern const TM_STRING coin_setting_str_tbl_0[];
 extern const TM_STRING coin_setting_str_tbl_1[];
 extern const TM_STRING coin_setting_str_tbl_2[];
@@ -93,13 +92,9 @@ extern const char str_cfg_normal[];
 extern const char str_cfg_flip[];
 extern const char sys_config_tbl_06575250[];
 
-const u8 coin_rate_tbl[2][2] = {
+const u8 coin_rate_tbl[20][2] = {
     { 1, 1 },
     { 1, 2 },
-};
-
-/* provisional name */
-const u8 sys_config_tbl_06574C2C[18][2] = {
     { 1, 3 },
     { 1, 4 },
     { 1, 5 },

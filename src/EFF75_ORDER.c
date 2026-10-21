@@ -1,7 +1,7 @@
 /*
  * EFF75_ORDER.C  Effect 75: move routine, order-driven states and init
  *
- * In 2nd Impact effect 75 is a select-screen object: effect_75_init places pattern ID + 27 of
+ * Effect 75 is a select-screen object: effect_75_init places pattern ID + 27 of
  * sel_pl_char_table high above the screen; effect_75_move waits dir_timer frames, drops it to
  * height 155, waits for Explosion and then flies it off with the speeds of its current
  * pattern (eff75_speed_tbl). Suicide hides it at once.

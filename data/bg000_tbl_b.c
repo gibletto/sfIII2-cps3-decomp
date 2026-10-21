@@ -25,7 +25,6 @@ extern const u16 etc_bg_attr_tbl[];
 extern const u16 bg_cell_cnt_tbl[];
 extern const u16 etc_bg_cell_cnt_tbl[];
 extern const u32 bg_cg_src_tbl[];
-extern const u32 bg_cg_src_tbl_06162698[];
 extern const u32 etc_bg_cg_src_tbl[];
 extern const u8 bg_scrn_data_11[];
 extern const u8 bg_scrn_data_07[];
@@ -285,17 +284,10 @@ const u16 etc_bg_cell_cnt_tbl[20] = {
 };
 
 /* provisional name */
-const u32 bg_cg_src_tbl[6] = {
-    (u32)debug_scene_scrn_data, (u32)bg_scrn_data_01, (u32)bg_scrn_data_02, (u32)bg_scrn_data_03,
-    (u32)bg_scrn_data_04, (u32)bg_scrn_data_05,
-};
-
-/* provisional name: bg_cg_src_tbl's entries for bg_index 6-19, read through bg_cg_src_tbl */
-const u32 bg_cg_src_tbl_06162698[14] = {
-    (u32)eff23_scrn_data, (u32)bg_scrn_data_07, (u32)bg_scrn_data_08, (u32)eff08_scrn_data,
-    (u32)bg_scrn_data_10, (u32)bg_scrn_data_11, (u32)bg_scrn_data_12, (u32)effJ5_scrn_data,
-    (u32)eff45_scrn_data, (u32)bg_scrn_data_15, (u32)eff23_scrn_data, (u32)effb0_scrn_data,
-    (u32)effb0_scrn_data, (u32)effb0_scrn_data,
+const u32 bg_cg_src_tbl[20] = {
+    (u32)debug_scene_scrn_data, (u32)bg_scrn_data_01, (u32)bg_scrn_data_02, (u32)bg_scrn_data_03, (u32)bg_scrn_data_04, (u32)bg_scrn_data_05, (u32)eff23_scrn_data, (u32)bg_scrn_data_07,
+    (u32)bg_scrn_data_08, (u32)eff08_scrn_data, (u32)bg_scrn_data_10, (u32)bg_scrn_data_11, (u32)bg_scrn_data_12, (u32)effJ5_scrn_data, (u32)eff45_scrn_data, (u32)bg_scrn_data_15,
+    (u32)eff23_scrn_data, (u32)effb0_scrn_data, (u32)effb0_scrn_data, (u32)effb0_scrn_data,
 };
 
 const u32 etc_bg_cg_src_tbl[5] = {

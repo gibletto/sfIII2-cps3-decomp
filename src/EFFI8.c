@@ -8,8 +8,7 @@
  * per character from bbbs_emtall), counting down Bonus_Game_Work. effI8_main_process bounces it
  * with a bounce sound and handles hits: a parry adds to Bonus_Game_result with bonus score, a
  * normal hit or guard knocks it away, and a ball that hits the player scores and adds to
- * Bonus_Game_ex_result. 2nd Impact: no random bounce offset, no splash check (3rd Strike check_ball_mizushibuki is
- * not in 2nd Impact), bounce step 32, parry scores 6 and 5.
+ * Bonus_Game_ex_result. The bounce step is 32; a parry scores 6 and 5.
  */
 
 #include "structs.h"

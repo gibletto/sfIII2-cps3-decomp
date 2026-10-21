@@ -1,8 +1,7 @@
 /*
- * TA_SUB2.C  Stage background speed helpers (2nd Impact version)
+ * TA_SUB2.C  Stage background speed helpers
  *
- * win_lose_work_clear clears the win/lose pose routine numbers (3rd Strike has it at the end of ta_sub.c; 2nd Impact
- * has it here, as a loop over both players).
+ * win_lose_work_clear clears the win/lose pose routine numbers of both players.
  * cal_bg_speed_data, cal_bg_speed_data_x and cal_bg_speed_data_y compute the speed and deceleration
  * that bring a BG plane's chase position to the target (chase_x / chase_y) in a given number of
  * frames, spreading the remainder so the plane arrives exactly. pl_shot_trg_check reports whether an
@@ -17,7 +16,7 @@
 #include "PLS02.h"
 #include "ta_sub2.h"
 
-/* (2nd Impact: a loop over the players) */
+/* a loop over the players */
 void win_lose_work_clear(void) {
     s16 i;
     a_rno = 0;

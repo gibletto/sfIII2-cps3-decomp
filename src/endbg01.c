@@ -1,8 +1,8 @@
 /*
- * ENDBG01.C  Ending background 01 (2nd Impact only)
+ * ENDBG01.C  Ending background 01
  *
- * end_BG010 (entry 1) runs layer 1 (graphics, no move step), layer 0 and a synced layer 2 (3rd Strike
- * sync_bg14_common at X 0x200), then the zoom check, position correction and family set.
+ * end_BG010 (entry 1) runs layer 1 (graphics, no move step), layer 0 and a synced layer 2 (at X 0x200),
+ * then the zoom check, position correction and family set.
  */
 #include "structs.h"
 #include "work.h"

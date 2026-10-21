@@ -1,5 +1,5 @@
 /*
- * ENDBG10.C  Ending background 10 (2nd Impact only)
+ * ENDBG10.C  Ending background 10
  *
  * end_BG100 (entry 10) runs layer 1 (palette and graphics, no move step), layer 0 and layer 2, then the
  * zoom check, position correction and family set.

@@ -116,7 +116,7 @@
 s16 Next_VS_Index(void);
 extern const u16 bg_color3_tbl[];  /* provisional name */
 extern s16 Exit_No;
-extern u8 Straight_Lose_Count;  /* provisional name (manage_2.c); 3rd Strike clears aiuchi_flag here */
+extern u8 Straight_Lose_Count;  /* provisional name (manage_2.c) */
 extern u8 Special_Enemy[2];   /* the special opponent met (14 or 15), which sets the ranking name mark */
 
 
@@ -851,7 +851,7 @@ void Game03(void)
 
 
 
-/* the bonus stage check is here (3rd Strike next_cpu.c); a clear or the test switch marks the player */
+/* the bonus stage check; a clear or the test switch marks the player */
 s32 Check_Bonus_Stage(void) {
     s16 xx;
     Setup_ID();
@@ -1341,7 +1341,7 @@ void Game_Dummy(void) {
 
 
 
-/* provisional name: 2nd Impact only; with exsw_3 bit 0, G_No0-2 and E_No0-2 are shown in hex */
+/* provisional name: with exsw_3 bit 0, G_No0-2 and E_No0-2 are shown in hex */
 void Disp_Game_No(void) {
     if (exsw_3 & 1) {
         tilemap_print_hex_block(20, 1, 40, G_No0, 1, 1);

@@ -1,5 +1,5 @@
 /*
- * EFF52.C  Effect 52: a select-screen object (2nd Impact)
+ * EFF52.C  Effect 52: a select-screen object
  *
  * effect_52_init places sel_pl_char_table pattern 15 at DE_X[10] + 0x2BF, height 200; effect_52_move
  * shows it until a Suicide request removes it.

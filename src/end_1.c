@@ -1,5 +1,5 @@
 /*
- * END_1.C  Ending 1 (end_01000), 2nd Impact version
+ * END_1.C  Ending 1 (end_01000)
  *
  * end_01000(pl_num) is the ending script: it runs the common ending inits, loads the ending graphics,
  * writes the first BG cells (end_100_cell_set) and issues sound 20; then it counts down timer_1_tbl through

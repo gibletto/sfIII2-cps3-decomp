@@ -1,5 +1,5 @@
 /*
- * END_4_TBL.C  tables read by end_4.c: ending 4, 2nd Impact version
+ * END_4_TBL.C  tables read by end_4.c: ending 4
  */
 
 #include "types.h"
@@ -7,33 +7,42 @@
 
 #pragma section TBL
 
-extern const u16 end_4_panel_data[];
+extern const PANEL end_400_panel0[];
+extern const PANEL end_400_panel1[];
 extern const u16 timer_4_tbl[];
-extern const u16 end_4_tbl_06165488[];
 extern const u16 end_4_pos[];
 
-/* provisional name: the two panels of end_4_panel_p (op_end_work.c) */
-const u16 end_4_panel_data[80] = {
-    0, 0, 0, 0x52, 0, 0x40, 0, 0x53,
-    0, 0x80, 0, 0x54, 0, 0xC0, 0, 0x55,
-    0, 0x1000, 0, 0x50, 0, 0x1040, 0, 0x51,
-    0, 0x1080, 0, 0, 0, 0x10C0, 0, 0,
-    0, 0x2000, 0, 0x4E, 0, 0x2040, 0, 0x4F,
-    0, 0, 0, 0x4C, 0, 0x40, 0, 0x4D,
-    0, 0x80, 0, 0x34, 0, 0xC0, 0, 0x35,
-    0, 0x1000, 0, 0x34, 0, 0x1040, 0, 0x35,
-    0, 0x1080, 0, 0, 0, 0x10C0, 0, 0,
-    0, 0x2000, 0, 0, 0, 0x2040, 0, 0,
+/* provisional name */
+const PANEL end_400_panel0[10] = {
+    { 0, 82 },
+    { 64, 83 },
+    { 128, 84 },
+    { 192, 85 },
+    { 4096, 80 },
+    { 4160, 81 },
+    { 4224, 0 },
+    { 4288, 0 },
+    { 8192, 78 },
+    { 8256, 79 },
 };
 
 /* provisional name */
-const u16 timer_4_tbl[2] = {
-    0x21C, 0x168,
+const PANEL end_400_panel1[10] = {
+    { 0, 76 },
+    { 64, 77 },
+    { 128, 52 },
+    { 192, 53 },
+    { 4096, 52 },
+    { 4160, 53 },
+    { 4224, 0 },
+    { 4288, 0 },
+    { 8192, 0 },
+    { 8256, 0 },
 };
 
 /* provisional name */
-const u16 end_4_tbl_06165488[3] = {
-    0xB4, 0x258, 0x1E0,
+const u16 timer_4_tbl[5] = {
+    0x21C, 0x168, 0xB4, 0x258, 0x1E0,
 };
 
 /* provisional name */

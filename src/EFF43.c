@@ -1,9 +1,9 @@
 /*
- * EFF43.C  Effect 43: an object that slides in on the VS screen (2nd Impact only)
+ * EFF43.C  Effect 43: an object that slides in on the VS screen
  *
  * effect_43_init(Side, Time) places it off-screen on the left or right after Time frames;
  * effect_43_move slides it in with a decelerating speed to its stop point (hit_quake, from DE_X),
- * plays its pattern and sets Next_Step. In 3rd Strike effect 43 shared EFF44.C; in 2nd Impact it is its own file.
+ * plays its pattern and sets Next_Step.
  */
 
 #include "structs.h"

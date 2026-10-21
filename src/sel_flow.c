@@ -1,10 +1,10 @@
 /*
- * SEL_FLOW.C  Select flow scene (2nd Impact only)
+ * SEL_FLOW.C  Select flow scene
  *
- * A 2nd Impact scene in the style of win_2.c's Winner_Scene / Loser_Scene, run step by step through Scene_Tbl[M_No0]
+ * A scene in the style of win_2.c's Winner_Scene / Loser_Scene, run step by step through Scene_Tbl[M_No0]
  * and returning Select_Flow_X (its own WIN_X): clear the screen and set up the background and colours, switch the screen in (BGM 1),
  * drop the loser's character, wait or cut (Check_Scene_Cut(WINNER)), switch to a second screen (effect G0),
- * and end once neither E_Number[0][0] nor E_Number[1][0] is 2. Nothing in the 2nd Impact image calls it.
+ * and end once neither E_Number[0][0] nor E_Number[1][0] is 2. Nothing calls it.
  */
 
 #include "structs.h"
@@ -26,7 +26,7 @@
 #include "EFF38.h"
 #include "EffG0.h"
 
-/* 2nd Impact calls the empty EFFE5 stub with four arguments, so no prototype here */
+/* the empty EFFE5 stub is called with four arguments, so no prototype here */
 s32 effect_E4_dummy();
 
 s32 Select_Flow_Scene(void);

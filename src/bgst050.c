@@ -1,5 +1,5 @@
 /*
- * BGST050.C  Stage 05 background (2nd Impact only)
+ * BGST050.C  Stage 05 background
  *
  * BG050 runs stage 05's three layers: layer 1 (bg0502, the chasing base layer), layer 0 (bg0501: the stage
  * graphics and effects; bg050_check picks the start position and bg050_demo scrolls it to 0x200) and layer 2

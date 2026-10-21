@@ -56,6 +56,7 @@ extern const s16 p3_cmd_22[];
 extern const s16 p3_cmd_28[];
 extern const s16 p3_cmd_29[];
 extern const s16 p3_cmd_30[];
+extern const s16 p3_cmd_31[];
 extern const s16 p3_cmd_32[];
 extern const s16 p4_cmd_20[];
 extern const s16 p4_cmd_21[];
@@ -78,7 +79,8 @@ extern const s16 p6_cmd_20[];
 extern const s16 p6_cmd_21[];
 extern const s16 p6_cmd_22[];
 extern const s16 p6_cmd_28[];
-extern const s16 cmd_data_06160000[];
+extern const s16 p6_cmd_29[];
+extern const s16 p6_cmd_30[];
 extern const s16 p6_cmd_32[];
 extern const s16 p6_cmd_33[];
 extern const s16 p7_cmd_20[];
@@ -88,6 +90,7 @@ extern const s16 p7_cmd_28[];
 extern const s16 p7_cmd_29[];
 extern const s16 p7_cmd_30[];
 extern const s16 p7_cmd_31[];
+extern const s16 p7_cmd_32[];
 extern const s16 p7_cmd_46[];
 extern const s16 p8_cmd_20[];
 extern const s16 p8_cmd_21[];
@@ -153,7 +156,16 @@ extern const s16 pE_cmd_46[];
 extern const s16 pE_cmd_47[];
 extern const s16 cmd_data_06160FF8[];
 extern const s16 ukemi_time_tbl[];
-extern const s16 player_cmd_line_text[];
+extern const char player_cmd_line_str0[];
+extern const char player_cmd_line_str1[];
+extern const char player_cmd_line_str2[];
+extern const char player_cmd_line_str3[];
+extern const char player_cmd_line_str4[];
+extern const char player_cmd_line_str5[];
+extern const char player_cmd_line_str6[];
+extern const char lvr_chk_line_str0[];
+extern const char lvr_chk_line_str1[];
+extern const char lvr_chk_line_str2[];
 
 const s16 lever_gacha_tbl[16] = {
     0, 1, 1, 2, 1, 2, 2, 3,
@@ -490,15 +502,20 @@ const s16 p3_cmd_29[25] = {
     28,
 };
 
-/* provisional name: player 3's command slots 30 and 31 (pl_CMD, the second at +50) */
-const s16 p3_cmd_30[50] = {
+/* provisional name */
+const s16 p3_cmd_30[25] = {
     12, 1, 0, 16, 16, 16, 16, 517,
     0, 1, 2, 19, 1, 0, 0, -32766,
     1, 10, 0, -32758, 1, 10, 0, -32760,
-    28, 12, 1, 0, 17, 17, 17, 17,
-    1029, 4, 5, 6, 23, 1, 0, 0,
-    -32766, 1, 10, 0, -32762, 1, 10, 0,
-    -32764, 28,
+    28,
+};
+
+/* provisional name */
+const s16 p3_cmd_31[25] = {
+    12, 1, 0, 17, 17, 17, 17, 1029,
+    4, 5, 6, 23, 1, 0, 0, -32766,
+    1, 10, 0, -32762, 1, 10, 0, -32764,
+    28,
 };
 
 const s16 p3_cmd_32[25] = {
@@ -656,20 +673,26 @@ const s16 p6_cmd_22[33] = {
     28,
 };
 
-const s16 p6_cmd_28[5] = {
-    12, 0, 0, 17, 17,
+const s16 p6_cmd_28[17] = {
+    12, 0, 0, 17, 17, 17, 17, 5,
+    0, 1, 2, 19, 7, 32, 32, 0,
+    28,
 };
 
 /* provisional name */
-const s16 cmd_data_06160000[62] = {
-    17, 17, 5, 0, 1, 2, 19, 7,
-    32, 32, 0, 28, 12, 1, 0, 20,
-    20, 20, 20, 5, 4, 5, 6, 23,
-    27, 1, 0, -32764, 1, 5, 0, -32766,
-    1, 10, 0, -32762, 28, 12, 1, 0,
-    16, 16, 16, 16, 1029, 0, 1, 2,
-    19, 1, 0, 0, -32766, 1, 10, 0,
-    -32758, 1, 10, 0, -32760, 28,
+const s16 p6_cmd_29[25] = {
+    12, 1, 0, 20, 20, 20, 20, 5,
+    4, 5, 6, 23, 27, 1, 0, -32764,
+    1, 5, 0, -32766, 1, 10, 0, -32762,
+    28,
+};
+
+/* provisional name */
+const s16 p6_cmd_30[25] = {
+    12, 1, 0, 16, 16, 16, 16, 1029,
+    0, 1, 2, 19, 1, 0, 0, -32766,
+    1, 10, 0, -32758, 1, 10, 0, -32760,
+    28,
 };
 
 const s16 p6_cmd_32[25] = {
@@ -731,15 +754,20 @@ const s16 p7_cmd_30[25] = {
     28,
 };
 
-/* provisional name: player 7's command slots 31 and 32 (pl_CMD, the second at +50) */
-const s16 p7_cmd_31[50] = {
+/* provisional name */
+const s16 p7_cmd_31[25] = {
     12, 1, 0, 17, 17, 17, 17, 1029,
     4, 5, 6, 23, 1, 0, 0, -32766,
     1, 10, 0, -32762, 1, 10, 0, -32764,
-    28, 12, 1, 0, 20, 20, 20, 20,
-    1029, 4, 5, 6, 23, 1, 0, 0,
-    -32766, 1, 10, 0, -32758, 1, 10, 0,
-    -32760, 28,
+    28,
+};
+
+/* provisional name */
+const s16 p7_cmd_32[25] = {
+    12, 1, 0, 20, 20, 20, 20, 1029,
+    4, 5, 6, 23, 1, 0, 0, -32766,
+    1, 10, 0, -32758, 1, 10, 0, -32760,
+    28,
 };
 
 const s16 p7_cmd_46[25] = {
@@ -1206,15 +1234,40 @@ const s16 ukemi_time_tbl[18] = {
     7, -1,
 };
 
-/* provisional name: the text of player_cmd_lines and lvr_chk_lines (cmd_work.c) */
-const s16 player_cmd_line_text[66] = {
-    21840, 8224, 8224, 15648, 8224, 8275, 18511, 21553,
-    8253, 2560, 17487, 22350, 8224, 15648, 8224, 8275,
-    18511, 21554, 8253, 2560, 19525, 18004, 8224, 15648,
-    8224, 8275, 18511, 21555, 8253, 2560, 21065, 18248,
-    21536, 15648, 8224, 8275, 18511, 21556, 8253, 2560,
-    17481, 21024, 8224, 8224, 8224, 8275, 18511, 21557,
-    8253, 2560, 21320, 20308, 13856, 15626, 255, -1,
-    21320, 20308, 13856, 15616, 21280, 255, 19744, 255,
-    19488, 255,
+/* provisional name */
+const char player_cmd_line_str0[20] = "UP    =    SHOT1 =\n";
+
+/* provisional name */
+const char player_cmd_line_str1[20] = "DOWN  =    SHOT2 =\n";
+
+/* provisional name */
+const char player_cmd_line_str2[20] = "LEFT  =    SHOT3 =\n";
+
+/* provisional name */
+const char player_cmd_line_str3[20] = "RIGHT =    SHOT4 =\n";
+
+/* provisional name */
+const char player_cmd_line_str4[20] = "DIR        SHOT5 =\n";
+
+/* provisional name */
+const char player_cmd_line_str5[12] = {
+    0x53, 0x48, 0x4F, 0x54, 0x36, 0x20, 0x3D, 0xA, 0, 0xFF, 0xFF, 0xFF,
+};
+
+/* provisional name */
+const char player_cmd_line_str6[8] = "SHOT6 =";
+
+/* provisional name */
+const char lvr_chk_line_str0[4] = {
+    0x53, 0x20, 0, 0xFF,
+};
+
+/* provisional name */
+const char lvr_chk_line_str1[4] = {
+    0x4D, 0x20, 0, 0xFF,
+};
+
+/* provisional name */
+const char lvr_chk_line_str2[4] = {
+    0x4C, 0x20, 0, 0xFF,
 };

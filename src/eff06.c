@@ -3,8 +3,8 @@
  *
  * Second set of per-stage decorative sprites, identical in structure to EFF05 but driven
  * from the scr_obj_num6/scr_obj_data6 tables and drawn with disp_pos_trans_entry_rs.
- * effect_06_init creates one object per table entry for the current bg_w.bg_index (2nd Impact: by
- * bg_w.stage and bg_w.area);
+ * effect_06_init creates one object per table entry for the current stage and area (bg_w.stage and
+ * bg_w.area);
  * effect_06_move animates it until compel_dead_check retires it, then frees it.
  * Called from every stage BG init routine alongside effect_05_init.
  */
@@ -27,7 +27,7 @@
 
 
 
-/* (3rd Strike: [23] by bg_index) */
+/* by stage and area */
 const s16* scr_obj_data6[17][3] = {
     { (const s16*)scr_obj_num6 + 51, (const s16*)scr_obj_num6 + 51, (const s16*)scr_obj_num6 + 51 },
     { (const s16*)scr_obj_num6 + 52, (const s16*)scr_obj_num6 + 52, (const s16*)scr_obj_num6 + 52 },

@@ -1,8 +1,7 @@
 /*
- * EFF74.C  Effect 74: birds on the stage (2nd Impact version)
+ * EFF74.C  Effect 74: birds on the stage
  *
- * 3rd Strike: effect 74 animates a BG layer with random cell patterns. 2nd Impact's effect 74 is a different
- * routine: effect_74_init places four birds from eff74_data_tbl (brz_char_table). Each runs the
+ * effect_74_init places four birds from eff74_data_tbl (brz_char_table). Each runs the
  * routine of its type (eff74_0000 .. eff74_3000): a bird perches (eff74_perch), waits until a
  * player comes within 224 dots, then flies off along one of the eight paths of eff74_move_tbl
  * (eff74_fly_set, eff74_fly) and lands back on its perch when it is off screen or done.

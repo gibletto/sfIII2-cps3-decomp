@@ -1,7 +1,7 @@
 /*
  * EFF69.C  Effect 69: select-screen object driven by the scene orders
  *
- * 2nd Impact's version. effect_69_init (from sel_pl) places the object at its height from
+ * effect_69_init (from sel_pl) places the object at its height from
  * Pos_Data_69. Order[] then picks a state: EFF69_WAIT waits for an order, EFF69_RISE_IN and
  * EFF69_RISE_OUT move it vertically, EFF69_SLIDE_IN brings it in from the side given by
  * Order_Dir, EFF69_SLIDE_OUT takes it out again and EFF69_KILL releases it.

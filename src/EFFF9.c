@@ -43,13 +43,13 @@ u16 * efff9_txt_scene_adrs;
 s16 efff9_PL_NO;  
 s16 efff9_txt_point;  
 s16 efff9_message;  
-s16 keep_mes_no;  /* in 2nd Impact the frames left on the current line (3rd Strike old_rno[3]) */
-s16 efff9_mes_no;  /* provisional name: the ending message number (3rd Strike keep_mes_no) */
-s16 efff9_mes_len;  /* provisional name: the line's cell count (3rd Strike old_rno[4]) */
-s16 efff9_mes_show;  /* provisional name: cells shown so far (3rd Strike old_rno[5]) */
-s16 efff9_mes_wait;  /* provisional name: frames to the next cell (3rd Strike old_rno[6]) */
+s16 keep_mes_no;  /* the frames left on the current line */
+s16 efff9_mes_no;  /* provisional name: the ending message number */
+s16 efff9_mes_len;  /* provisional name: the line's cell count */
+s16 efff9_mes_show;  /* provisional name: cells shown so far */
+s16 efff9_mes_wait;  /* provisional name: frames to the next cell */
 
-/* the message tables are initialised work RAM in 2nd Impact, defined in efff9_mes.c */
+/* the message tables are initialised work RAM, defined in efff9_mes.c */
 extern const EFFF9_MESSAGE* effF9_mes_jp[];
 extern const EFFF9_MESSAGE* effF9_mes_en[];
 extern const EFFF9_MESSAGE* effF9_mes_es[];

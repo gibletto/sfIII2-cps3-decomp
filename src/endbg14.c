@@ -1,5 +1,5 @@
 /*
- * ENDBG14.C  Ending background 14 (2nd Impact only)
+ * ENDBG14.C  Ending background 14
  *
  * end_BG140 (entry 14) runs layer 1 (graphics, no move step), layer 0 and a synced layer 2 (as stage
  * 14's sync_bg14_common), then the zoom check, position correction and family set.

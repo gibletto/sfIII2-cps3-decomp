@@ -1,5 +1,5 @@
 /*
- * POW_DATA.C  tables read by pow_pow.c: damage and score (2nd Impact version)
+ * POW_DATA.C  tables read by pow_pow.c: damage and score
  */
 
 #include "types.h"

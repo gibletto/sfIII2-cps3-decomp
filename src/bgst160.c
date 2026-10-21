@@ -1,5 +1,5 @@
 /*
- * BGST160.C  Stage 16 background (2nd Impact only)
+ * BGST160.C  Stage 16 background
  *
  * BG160 runs stage 16's two still layers (no move step): layer 1 and layer 0, which loads the palettes
  * and graphics and starts the stage effects with bg_w.compel_flag 2 and bg_w.area set to 2 for them;

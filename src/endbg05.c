@@ -1,5 +1,5 @@
 /*
- * ENDBG05.C  Ending background 05 (2nd Impact only)
+ * ENDBG05.C  Ending background 05
  *
  * end_BG050 (entry 5) runs layer 1 (placed every frame, no move step), layer 0 and layer 2 (palette),
  * then the zoom check, position correction and Bg_Family_Set_3.

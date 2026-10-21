@@ -227,7 +227,7 @@ extern const u16 * spgauge_postbl[4];
 extern u32 fade_adrs_tbl[];
 extern const u16 * stngauge_puttbl[2];
 extern const u16 * stngauge_postbl[4];
-extern const s16 * scr_obj_data[17][3];   /* per stage and area (3rd Strike: [23] by bg_index) */
+extern const s16 * scr_obj_data[17][3];   /* per stage and area */
 extern const s16 * scr_obj_data6[17][3];   /* by stage and area */
 extern void (*eff09_tbl[19])(WORK_Other*);   /* eff09_0000-18000 */
 extern const s16 * scr_obj_data10[];
@@ -237,7 +237,7 @@ extern void (*eff18_jp_tbl[])(WORK_Other*);
 extern const s16 * scr_obj_data25[9];
 extern void (*eff25_jp_tbl[8])(WORK_Other* ewk);
 extern void (*eff26_jp_tbl[6])(WORK_Other*);
-extern const s16 * scr_obj_data26[2];   /* two types (3rd Strike: one) */
+extern const s16 * scr_obj_data26[2];   /* two types */
 extern const s16 * scr_obj_data27[7];   /* seven types */
 extern void (*eff27_jp_tbl[11])(WORK_Other*);
 extern const s16 * scr_obj_data28[];
@@ -439,7 +439,7 @@ extern s16 D_No1;
 extern s16 D_No2;
 extern s16 D_No3;
 extern u8 Present_Rank[2];
-extern s8 Rank_In[2][2];   /* two rankings (3rd Strike: 4) */
+extern s8 Rank_In[2][2];   /* two rankings */
 extern s8 Request_Disp_Rank[2][2];
 extern s8 Rank_Demo_Loop;
 extern s8 Rank_Type;
@@ -643,7 +643,7 @@ extern s16 Entry_Mes_Wide[2];
 extern s8 Disp_Win_Name;
 extern u32 Complete_Bonus;
 extern s8 Break_Into_CPU;
-extern s8 ID_of_Face[3][13];   /* 13 per row (3rd Strike: 7) */
+extern s8 ID_of_Face[3][13];
 extern s8 Cursor_Move[2];
 extern s8 ID2;
 extern s16 Exit_Timer;
@@ -736,7 +736,7 @@ extern u8 kakushi_op;
 extern u8 RO_backup[2];
 extern u8 PT_backup;
 extern u8 dm17_to_nm23_flag;
-extern RANK_DATA Ranking_Data[12];   /* two rankings of 6 (3rd Strike: four of 5) */
+extern RANK_DATA Ranking_Data[12];   /* two rankings of 6 */
 extern RANK_DATA Present_Data[2];
 extern u8 Debug_w[4];
 extern s8 MANAGE_X;
@@ -845,7 +845,7 @@ extern HITA_BOX dbg_look_hand[];
 extern u8 dbg_look_catch[];
 extern u8 dbg_look_caught[];
 extern HITA_BOX dbg_look_attack[];
-extern u8 dbg_look_eat[];  /* provisional name: 2nd Impact extra (eat) attack boxes */
+extern u8 dbg_look_eat[];  /* provisional name: the extra (eat) attack boxes */
 extern u8 dbg_look_hosei[];
 extern u8 dbg_edit_judge[];
 extern u8 dbg_edit_body[];
@@ -884,7 +884,7 @@ extern PLW * cmd_pl;
 extern s16 eff_hit_flag[11];
 extern AKE_SCRL ake_scrl_w[5];
 extern BG bg_w;
-extern s16 stage8_base_y;          /* provisional name; 2nd Impact only */
+extern s16 stage8_base_y;          /* provisional name */
 extern s16 scr_cg_c_no;
 extern s16 ake_cg_c_no;
 extern BGW * bgw_ptr;
@@ -1283,7 +1283,7 @@ extern u8 Allow_a_battle_f;
 extern s8 Win_Record[2];
 extern u8 Continue_Cut[2];
 extern s16 DE_X[19];
-extern u8 EM_Candidate[2][8];      /* one list of 8 stages per player (3rd Strike [2][2][10]) */
+extern u8 EM_Candidate[2][8];      /* one list of 8 stages per player */
 extern s8 Gouki_Select_Open;          /* Gouki can be picked: the select-screen code was entered, or the setting allows him (provisional name) */
 extern u8 Sel_Command_Step[2];      /* per player, the command being matched (provisional name) */
 extern u8 Sel_Command_Key[2];       /* per player, the next input of it (provisional name) */
@@ -1307,7 +1307,7 @@ extern const u16 chain_hidou_nm_air_table[8];
 extern const u16 chain_hidou_nm_ground_table[8];
 extern const u16 chain_normal_air_table[8];
 extern const u16 chain_normal_ground_table[8];
-extern u32 * char_add[17][3];   /* per stage and area (3rd Strike: [23] by bg_index) */
+extern u32 * char_add[17][3];   /* per stage and area */
 extern ConstShortArray eff48_adrs_tbl[22];
 extern const u8 plpat_rno_filter[16];
 

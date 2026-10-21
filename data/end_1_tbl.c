@@ -1,5 +1,5 @@
 /*
- * END_1_TBL.C  tables read by end_1.c: ending 1 (end_01000), 2nd Impact version
+ * END_1_TBL.C  tables read by end_1.c: ending 1 (end_01000)
  */
 
 #include "types.h"
@@ -10,10 +10,7 @@
 extern const PANEL end_100_panel0[];
 extern const PANEL end_100_panel1[];
 extern const u16 timer_1_tbl[];
-extern const u16 end_1_tbl_06165250[];
-extern const u16 end_1_tbl_0616525A[];
 extern const u16 end_1_pos[];
-extern const u16 end_1_tbl_06165278[];
 
 const PANEL end_100_panel0[8] = {
     { 8192, 1 },
@@ -34,27 +31,13 @@ const PANEL end_100_panel1[4] = {
 };
 
 /* provisional name */
-const u16 timer_1_tbl[2] = {
-    0x474, 0xF0,
+const u16 timer_1_tbl[8] = {
+    0x474, 0xF0, 0xF0, 0xF0, 0xF0, 0x1E0, 0x1E0, 0x258,
 };
 
 /* provisional name */
-const u16 end_1_tbl_06165250[5] = {
-    0xF0, 0xF0, 0xF0, 0x1E0, 0x1E0,
-};
-
-/* provisional name */
-const u16 end_1_tbl_0616525A[1] = {
-    0x258,
-};
-
-/* provisional name */
-const u16 end_1_pos[14] = {
+const u16 end_1_pos[16] = {
     0x100, 0x100, 0x150, 0x100, 0x100, 0x100, 0x300, 0x100,
-    0x300, 0x100, 0x300, 0x100, 0x100, 0,
+    0x300, 0x100, 0x300, 0x100, 0x100, 0, 0x300, 0,
 };
 
-/* provisional name */
-const u16 end_1_tbl_06165278[2] = {
-    0x300, 0,
-};

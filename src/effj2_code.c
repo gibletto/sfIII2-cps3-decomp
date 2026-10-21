@@ -4,7 +4,7 @@
  * Effect J2 is the bonus-stage level plate: effect_J2_init (from Game_Main.c) builds a six-part
  * connected sprite (id 192) from bbbs_nando_large; after its delay it shows its connected sprites
  * with the digit for Bonus_Stage_Level fixed to the BG1 screen position (effJ2_trans) for 60
- * frames. 2nd Impact: six cells (3rd Strike two), the digit cell is set rather than added to, no break-in check.
+ * frames. The digit cell's pattern is set directly.
  */
 
 #include "structs.h"

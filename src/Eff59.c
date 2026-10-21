@@ -1,11 +1,11 @@
 /*
- * EFF59.C  Effect 59: country name letters; effect 60: flashing stage object (2nd Impact version)
+ * EFF59.C  Effect 59: country name letters; effect 60: flashing stage object
  *
- * 2nd Impact rewrote effect 59 (3rd Strike: parts attached to a select-screen master). effect_59_init lays out
- * the letters of the Battle_Country name from eff59_name_tbl, one effect 59 per letter, each
+ * effect_59_init lays out the letters of the Battle_Country name from eff59_name_tbl, one effect 59 per letter,
+ * each
  * starting after its own delay; effect_59_move waits that delay (or a cut), opens the letter
  * with a shrinking window, waits, and on the last letter starts effect 58 type 7 and then
- * Next_Step. Effect 60 is the 3rd Strike flashing stage object, now blinking through disp_flag 2.
+ * Next_Step. Effect 60 is a flashing stage object that blinks through disp_flag 2.
  */
 
 #include "structs.h"
@@ -127,7 +127,7 @@ static void effect_59_open_end(WORK_Other* ewk) {
 
 
 
-/* one letter per name character (3rd Strike: one part per master) */
+/* one letter per name character */
 s32 effect_59_init(s16 timer) {
     WORK_Other* ewk;
     s16 ix;

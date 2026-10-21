@@ -1,5 +1,5 @@
 /*
- * ENDBG00.C  Ending background 00 (2nd Impact only)
+ * ENDBG00.C  Ending background 00
  *
  * end_BG000 (the ending table's entry 0) runs layer 1 (graphics, no move step), layer 0 and two synced
  * layers (2 and 6, end_bg000_sync with the family number; speed_x from bg_sync_speed_tbl), then the zoom

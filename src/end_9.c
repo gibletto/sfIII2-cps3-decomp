@@ -1,5 +1,5 @@
 /*
- * END_9.C  Ending 9 (end_09000), 2nd Impact version
+ * END_9.C  Ending 9 (end_09000)
  */
 
 #include "structs.h"

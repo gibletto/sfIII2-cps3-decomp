@@ -1,5 +1,5 @@
 /*
- * BGST060.C  Stage 06 background (2nd Impact only)
+ * BGST060.C  Stage 06 background
  *
  * BG060 runs stage 06's two layers (1 and 0). In the first area both rise from below
  * (bg060_demo); layer 1 also runs bg060_anime, which plays a 16-frame cell animation on
@@ -80,7 +80,6 @@ const s32 bg060_cell_tbl[16][4] = {
 };
 
 
-/* (2nd Impact: layers 1 and 0, layer 1 not inlined) */
 void BG060(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg060_layer1();
@@ -150,7 +149,7 @@ void bg060_layer0_color(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -198,7 +197,7 @@ void bg060_layer1_wait(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();

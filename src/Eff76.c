@@ -1,5 +1,5 @@
 /*
- * EFF76.C  Effect 76: a select-screen plate that slides in (2nd Impact)
+ * EFF76.C  Effect 76: a select-screen plate that slides in
  *
  * effect_76_init(Side, Time, Rl, Char_Ix) places sel_pl_char_table pattern 79 + Char_Ix off screen on
  * the side given by Side; after Time frames it slides in until it reaches hit_quake. A Suicide

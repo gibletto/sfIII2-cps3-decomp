@@ -11,7 +11,6 @@ extern const s8 Game_Data_msg[];
 extern const s8 Income_msg[];
 extern const s8 Service_msg[];
 extern const s8 Card_msg[];
-extern const s8 DEMO_tbl_06159FE1[];
 
 const s8 Game_Data_msg[12] = {
     71, 65, 77, 69, 32, 68, 65, 84, 65, 0, -1, -1,
@@ -27,9 +26,4 @@ const s8 Service_msg[8] = {
 
 const s8 Card_msg[5] = {
     67, 65, 82, 68, 0,
-};
-
-/* provisional name */
-const s8 DEMO_tbl_06159FE1[3] = {
-    -1, -1, -1,
 };

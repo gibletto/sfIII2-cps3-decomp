@@ -1,5 +1,5 @@
 /*
- * EFFI0_TBL.C  tables read by effects I0 and I3
+ * EFFI0_TBL.C  tables read by effect I0
  */
 
 #include "types.h"
@@ -13,9 +13,6 @@ extern const s16 koishi_area_hosei[];
 extern const s16 koishi_app_area[][16];
 extern const s16 koishi_speed_x[][8];
 extern const s16 koishi_speed_y[][8];
-extern const s16 EFFI0_tbl_0617E71A[];
-extern const u8 effI2_col_tbl[];
-extern const u8 effI2_timer_tbl[];
 
 const s16 char_of_koishi[8] = {
     85, 86, 87, 85, 86, 87, 85, 86,
@@ -54,17 +51,4 @@ const s16 koishi_speed_y[5][8] = {
     { 576, 640, 704, 768, 832, 896, 1152, 1408 },
     { 512, 576, 640, 704, 768, 896, 1024, 1152 },
     { 512, 448, 512, 576, 640, 704, 896, 1024 },
-};
-
-/* provisional name */
-const s16 EFFI0_tbl_0617E71A[1] = {
-    -1,
-};
-
-const u8 effI2_col_tbl[10] = {
-    8, 0xD, 0xE, 0xF, 0x10, 0x11, 0x10, 0xF, 0xE, 0xD,
-};
-
-const u8 effI2_timer_tbl[10] = {
-    9, 8, 7, 6, 5, 4, 5, 6, 7, 8,
 };

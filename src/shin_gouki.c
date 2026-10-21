@@ -1,7 +1,7 @@
 /*
- * shin_gouki.c  Shin Gouki: the challenger checks (2nd Impact only; provisional name)
+ * shin_gouki.c  Shin Gouki: the challenger checks (provisional name)
  *
- * 2nd Impact's character 15 (Shin Gouki, a copy of Gouki's attack routines: plpat15) can be the
+ * Character 15 (Shin Gouki, a copy of Gouki's attack routines: plpat15) can be the
  * next opponent. Check_Shin_Gouki_Next says whether the player's next candidate is him (never in
  * a versus game), Get_Stage_Shin_Gouki gives the stage to load (his own, 15, when the computer
  * plays him) and Init_Sel_Command clears the select-screen command input that calls him, which

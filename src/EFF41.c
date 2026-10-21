@@ -4,8 +4,7 @@
  * effect_41_init creates the super art sign for a player (not in test mode).
  * Effect 41 is the sign shown when a super art or EX move is used: it plays the sa_sign_data
  * animation beside the player, flashes the super-art gauge, and on cue marks the super art or
- * EX gauge as used. 2nd Impact: an older version without the process table, effect D9, grade points or
- * the screen-centred placement; sa_sign_data rows are 4 entries.
+ * EX gauge as used. sa_sign_data rows are 4 entries.
  */
 
 #include "structs.h"

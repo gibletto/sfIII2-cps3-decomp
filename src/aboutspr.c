@@ -1339,7 +1339,7 @@ s16 v;
 
 
 
-/* provisional name: 45 cg 0x9B90 patterns made once into sprite lists (2nd Impact only) */
+/* provisional name: 45 cg 0x9B90 patterns made once into sprite lists */
 void setup_mark_cells(void) {
     WORK* ewk;
     s16* handles;

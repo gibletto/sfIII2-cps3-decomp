@@ -1,5 +1,5 @@
 /*
- * EFF70.C  Effect 70: select-screen face plate (2nd Impact)
+ * EFF70.C  Effect 70: select-screen face plate
  *
  * effect_70_init places plate id at its Face_Pos_Data spot (from DE_X[10]); effect_70_init2 places
  * the plate for slot 16. Both use Setup_Eff70. effect_70_move waits until eff70_ready allows it,

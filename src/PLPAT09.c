@@ -5,7 +5,7 @@
  * through pl09_exatt_table.
  * set_tenguiwa (an effect-init routine) summons three rocks from the stage's set for the round
  * and places them from tenguiwa_pos_hosei; Att_JINNCHUUWATARI_EX is the jumping special, with
- * mvxy_table_reader stepping the move data. 2nd Impact has none of 3rd Strike Att_SP_YAGYOUDAMA or the EX moves.
+ * mvxy_table_reader stepping the move data.
  * Att_PL09_TOKUSHUKOUDOU is the personal action: each repeat builds tk_success (up to 13) and
  * cuts the stun gauge timer by the rate in pl09_tk_table.
  */

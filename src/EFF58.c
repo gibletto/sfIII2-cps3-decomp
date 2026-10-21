@@ -1,13 +1,11 @@
 /*
  * EFF58.C  Effect 58: timed screen commands
  *
- * Effect 58 is a timer: after time0 frames it performs one screen command - stop a scroll,
- * screen switch or fill, the title logo, sound and BGM requests, set Next_Step, slide a BG
- * layer to its target, set a Suicide flag or move a virtual BG. Used by the game flow,
+ * Effect 58 is a timer: after time0 frames it performs one of 13 screen commands - stop a scroll,
+ * screen switch or fill, scroll BG 0 for 180 frames (EFF58_Type_04), the title logo, sound and BGM
+ * requests, set Next_Step, or set bit 7 of Special_Settle. Used by the game flow,
  * select, continue and ranking screens (Game_Main, Manage, Win, sel_pl, next_cpu, ...).
- * EFF58_Type_05 is the type routine for a marker that follows the player. In 2nd Impact the move takes
- * 13 commands (case 4 scrolls BG 0 for 180 frames, EFF58_Type_04; case 12 sets bit 7 of
- * Special_Settle); the 3rd Strike BG slide, Suicide and virtual BG commands are gone.
+ * EFF58_Type_05 is the type routine for a marker that follows the player.
  */
 
 #include "structs.h"

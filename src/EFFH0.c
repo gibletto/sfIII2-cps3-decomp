@@ -3,8 +3,8 @@
  *
  * effect_H0_init is called by the bonus-stage controller (BBBSCOM.c) and creates a six-cell
  * connected display from effh0_nando_tbl, the row chosen by the screen mode and the player's
- * facing (2nd Impact; 3rd Strike used bbbs_nando_small, two cells by the facing). effect_H0_move sets the
- * digit sprite from Bonus_Stage_Level, waits 60 frames, then shows the display fixed to the BG1
+ * facing. effect_H0_move sets the digit sprite from Bonus_Stage_Level, waits 60 frames, then shows the display
+ * fixed to the BG1
  * screen position (effH0_trans, queued with sort_push_request3) until the work is killed.
  */
 

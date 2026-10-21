@@ -1,5 +1,5 @@
 /*
- * WIN_TBL.C  tables read by pow_pow.c: damage and score (2nd Impact version)
+ * WIN_TBL.C  tables read by pow_pow.c: damage and score
  */
 
 #include "types.h"

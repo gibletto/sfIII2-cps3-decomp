@@ -1,8 +1,8 @@
 /*
- * EFFD2.C  Effect D2: four panels of the ending scene changes (effect B0; 2nd Impact version)
+ * EFFD2.C  Effect D2: four panels of the ending scene changes (effect B0)
  *
- * 2nd Impact rewrote effect D2 (3rd Strike: the wipe panels). effect_D2_init makes types 0 and 1,
- * effect_D2_init2 types 2 and 3 (patterns 18 + type); each plays its pattern once and
+ * effect_D2_init makes types 0 and 1, effect_D2_init2 types 2 and 3 (patterns 18 + type); each plays its
+ * pattern once and
  * hides, and all of them leave when the master reaches routine 3.
  */
 

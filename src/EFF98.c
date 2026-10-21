@@ -1,7 +1,7 @@
 /*
- * EFF98.C  Effect 98: the super art plate on the select screen (2nd Impact version)
+ * EFF98.C  Effect 98: the super art plate on the select screen
  *
- * 2nd Impact's own effect 98. effect_98_init places one plate per player and art; effect_98_move
+ * effect_98_init places one plate per player and art; effect_98_move
  * waits until Stop_Cursor clears, then eff98_arts_check compares the player's choice
  * (Super_Arts) with this plate: the chosen one shows its pattern for 20 frames and then
  * closes the art selection (Select_Timer restarts unless Sel_Sub_No[0] is 3), the others slide out. Every frame the plate follows

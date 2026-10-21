@@ -8,32 +8,44 @@
 #pragma section TBL
 
 extern const u16 end_7_anm_tbl[];
+extern const PANEL end_800_panel0[];
+extern const PANEL end_800_panel1[];
 extern const u16 timer_8_tbl[];
-extern const u16 end_8_tbl_06165896[];
 extern const u16 end_8_pos[];
 extern const u32 end_900_bg0_cell_tbl[];
 
 /* provisional name */
-const u16 end_7_anm_tbl[72] = {
+const u16 end_7_anm_tbl[8] = {
     0x4A, 0x4B, 0x4C, 0x4D, 0x4E, 0x4F, 0x50, 0x51,
-    0, 0x1000, 0, 0x56, 0, 0x1040, 0, 0x57,
-    0, 0x2000, 0, 0x5C, 0, 0x2040, 0, 0x5D,
-    0, 0x2080, 0, 0x60, 0, 0x20C0, 0, 0x61,
-    0, 0x3080, 0, 0x1E, 0, 0x30C0, 0, 0x1F,
-    0, 0x1000, 0, 0x5E, 0, 0x1040, 0, 0x5F,
-    0, 0x2000, 0, 0x5A, 0, 0x2040, 0, 0x5B,
-    0, 0x2080, 0, 0x5E, 0, 0x20C0, 0, 0x5F,
-    0, 0x3080, 0, 0x62, 0, 0x30C0, 0, 0x63,
 };
 
 /* provisional name */
-const u16 timer_8_tbl[3] = {
-    0x30C, 0x12C, 0x1E0,
+const PANEL end_800_panel0[8] = {
+    { 4096, 86 },
+    { 4160, 87 },
+    { 8192, 92 },
+    { 8256, 93 },
+    { 8320, 96 },
+    { 8384, 97 },
+    { 12416, 30 },
+    { 12480, 31 },
 };
 
 /* provisional name */
-const u16 end_8_tbl_06165896[1] = {
-    0x1E0,
+const PANEL end_800_panel1[8] = {
+    { 4096, 94 },
+    { 4160, 95 },
+    { 8192, 90 },
+    { 8256, 91 },
+    { 8320, 94 },
+    { 8384, 95 },
+    { 12416, 98 },
+    { 12480, 99 },
+};
+
+/* provisional name */
+const u16 timer_8_tbl[4] = {
+    0x30C, 0x12C, 0x1E0, 0x1E0,
 };
 
 /* provisional name */

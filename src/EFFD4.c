@@ -148,7 +148,6 @@ s32 distance2speed(WORK_Other* ewk, WORK* wk, s32 dir) {
 
 
 
-/* no Bonus_Game_Flag check */
 s32 effect_D4_init(WORK* wk, u8 data) {
     WORK_Other* ewk;
     s16 ix;

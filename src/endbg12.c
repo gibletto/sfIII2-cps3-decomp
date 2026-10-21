@@ -1,5 +1,5 @@
 /*
- * ENDBG12.C  Ending background 12 (2nd Impact only)
+ * ENDBG12.C  Ending background 12
  *
  * end_BG120 (entry 12) runs layer 1 (graphics, no move step) and layer 0, then the zoom check, position
  * correction and family set.

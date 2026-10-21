@@ -1,5 +1,5 @@
 /*
- * EFF67.C  Effect 67: the message balloon beside a player (2nd Impact only)
+ * EFF67.C  Effect 67: the message balloon beside a player
  *
  * effect_67_init (master) puts the balloon of the player's character (My_char) beside the master.
  * The page comes from Break_Into_CPU: 1 gives page 0, or 6, 2 or 4 when the player is character 6
@@ -34,71 +34,135 @@ typedef struct {
 } EFF67_MSG;
 
 extern s16 mes_already;
-extern const u32 eff67_mes_0650AF20[];
-extern const u32 eff67_mes_0650B484[];
-extern const u32 eff67_mes_0650B960[];
-extern const u32 eff67_mes_0650BE5C[];
-extern const u32 eff67_mes_0650C3C4[];
-extern const u32 eff67_mes_0650C930[];
-extern const u32 eff67_mes_0650D200[];
-extern const u32 eff67_mes_0650D698[];
-extern const u32 eff67_mes_0650DB54[];
-extern const u32 eff67_mes_0650E098[];
-extern const u32 eff67_mes_0650E51C[];
-extern const u32 eff67_mes_0650EA04[];
-extern const u32 eff67_mes_0650EEA8[];
-extern const u32 eff67_mes_0650F350[];
-extern const u32 eff67_mes_0650F6CC[];
-extern const u32 eff67_mes_0650FF70[];
-extern const u32 eff67_mes_06510774[];
-extern const u32 eff67_mes_06510F88[];
-extern const u32 eff67_mes_065117EC[];
-extern const u32 eff67_mes_06512038[];
-extern const u32 eff67_mes_06512FE0[];
-extern const u32 eff67_mes_06513804[];
-extern const u32 eff67_mes_06513FD8[];
-extern const u32 eff67_mes_06514834[];
-extern const u32 eff67_mes_065150A0[];
-extern const u32 eff67_mes_06515874[];
-extern const u32 eff67_mes_06516118[];
-extern const u32 eff67_mes_06516894[];
-extern const u32 eff67_mes_06516FE0[];
-extern const u32 eff67_mes_065178D0[];
-extern const u32 eff67_mes_065180DC[];
-extern const u32 eff67_mes_06518910[];
-extern const u32 eff67_mes_065191A8[];
-extern const u32 eff67_mes_065199E0[];
-extern const u32 eff67_mes_0651AA40[];
-extern const u32 eff67_mes_0651B230[];
-extern const u32 eff67_mes_0651B9FC[];
-extern const u32 eff67_mes_0651C28C[];
-extern const u32 eff67_mes_0651CAF4[];
-extern const u32 eff67_mes_0651D2DC[];
-extern const u32 eff67_mes_0651DBA4[];
-extern const u32 eff67_mes_0651E318[];
-extern const u32 eff67_mes_0651EA9C[];
-extern const u32 eff67_mes_0651F2D4[];
-extern const u32 eff67_mes_0651FAE8[];
-extern const u32 eff67_mes_06520280[];
-extern const u32 eff67_mes_06520A3C[];
-extern const u32 eff67_mes_06521284[];
-extern const u32 eff67_mes_065222B8[];
-extern const u32 eff67_mes_06522A70[];
-extern const u32 eff67_mes_06523240[];
-extern const u32 eff67_mes_06523A18[];
-extern const u32 eff67_mes_06524248[];
-extern const u32 eff67_mes_06524A00[];
-extern const u32 eff67_mes_06525288[];
-extern const u32 eff67_mes_06525A40[];
+extern const EFFA6_MESSAGE effA6_mes_en_0[];
+extern const EFFA6_MESSAGE effA6_mes_en_10[];
+extern const EFFA6_MESSAGE effA6_mes_en_11[];
+extern const EFFA6_MESSAGE effA6_mes_en_12[];
+extern const EFFA6_MESSAGE effA6_mes_en_13[];
+extern const EFFA6_MESSAGE effA6_mes_en_14[];
+extern const EFFA6_MESSAGE effA6_mes_en_2[];
+extern const EFFA6_MESSAGE effA6_mes_en_3[];
+extern const EFFA6_MESSAGE effA6_mes_en_4[];
+extern const EFFA6_MESSAGE effA6_mes_en_5[];
+extern const EFFA6_MESSAGE effA6_mes_en_6[];
+extern const EFFA6_MESSAGE effA6_mes_en_7[];
+extern const EFFA6_MESSAGE effA6_mes_en_8[];
+extern const EFFA6_MESSAGE effA6_mes_en_9[];
+extern const EFFA6_MESSAGE effA6_mes_es_0[];
+extern const EFFA6_MESSAGE effA6_mes_es_10[];
+extern const EFFA6_MESSAGE effA6_mes_es_11[];
+extern const EFFA6_MESSAGE effA6_mes_es_12[];
+extern const EFFA6_MESSAGE effA6_mes_es_13[];
+extern const EFFA6_MESSAGE effA6_mes_es_14[];
+extern const EFFA6_MESSAGE effA6_mes_es_2[];
+extern const EFFA6_MESSAGE effA6_mes_es_3[];
+extern const EFFA6_MESSAGE effA6_mes_es_4[];
+extern const EFFA6_MESSAGE effA6_mes_es_5[];
+extern const EFFA6_MESSAGE effA6_mes_es_6[];
+extern const EFFA6_MESSAGE effA6_mes_es_7[];
+extern const EFFA6_MESSAGE effA6_mes_es_8[];
+extern const EFFA6_MESSAGE effA6_mes_es_9[];
+extern const EFFA6_MESSAGE effA6_mes_jp_0[];
+extern const EFFA6_MESSAGE effA6_mes_jp_10[];
+extern const EFFA6_MESSAGE effA6_mes_jp_11[];
+extern const EFFA6_MESSAGE effA6_mes_jp_12[];
+extern const EFFA6_MESSAGE effA6_mes_jp_13[];
+extern const EFFA6_MESSAGE effA6_mes_jp_14[];
+extern const EFFA6_MESSAGE effA6_mes_jp_2[];
+extern const EFFA6_MESSAGE effA6_mes_jp_3[];
+extern const EFFA6_MESSAGE effA6_mes_jp_4[];
+extern const EFFA6_MESSAGE effA6_mes_jp_5[];
+extern const EFFA6_MESSAGE effA6_mes_jp_6[];
+extern const EFFA6_MESSAGE effA6_mes_jp_7[];
+extern const EFFA6_MESSAGE effA6_mes_jp_8[];
+extern const EFFA6_MESSAGE effA6_mes_jp_9[];
+extern const EFFA6_MESSAGE effA6_mes_pt_0[];
+extern const EFFA6_MESSAGE effA6_mes_pt_10[];
+extern const EFFA6_MESSAGE effA6_mes_pt_11[];
+extern const EFFA6_MESSAGE effA6_mes_pt_12[];
+extern const EFFA6_MESSAGE effA6_mes_pt_13[];
+extern const EFFA6_MESSAGE effA6_mes_pt_14[];
+extern const EFFA6_MESSAGE effA6_mes_pt_2[];
+extern const EFFA6_MESSAGE effA6_mes_pt_3[];
+extern const EFFA6_MESSAGE effA6_mes_pt_4[];
+extern const EFFA6_MESSAGE effA6_mes_pt_5[];
+extern const EFFA6_MESSAGE effA6_mes_pt_6[];
+extern const EFFA6_MESSAGE effA6_mes_pt_7[];
+extern const EFFA6_MESSAGE effA6_mes_pt_8[];
+extern const EFFA6_MESSAGE effA6_mes_pt_9[];
 
 s16 eff67_cnt0;  
 s16 eff67_cnt1;  
 s16 eff67_flag;  
 
-EFF67_MSG* eff67_msg_a[15] = { (EFF67_MSG*)eff67_mes_0650AF20, (EFF67_MSG*)eff67_mes_0650AF20, (EFF67_MSG*)eff67_mes_0650B484, (EFF67_MSG*)eff67_mes_0650B960, (EFF67_MSG*)eff67_mes_0650BE5C, (EFF67_MSG*)eff67_mes_0650C3C4, (EFF67_MSG*)eff67_mes_0650C930, (EFF67_MSG*)eff67_mes_0650D200, (EFF67_MSG*)eff67_mes_0650D698, (EFF67_MSG*)eff67_mes_0650DB54, (EFF67_MSG*)eff67_mes_0650E098, (EFF67_MSG*)eff67_mes_0650E51C, (EFF67_MSG*)eff67_mes_0650EA04, (EFF67_MSG*)eff67_mes_0650EEA8, (EFF67_MSG*)eff67_mes_0650F350 };
-EFF67_MSG* eff67_msg_b[15] = { (EFF67_MSG*)eff67_mes_0650F6CC, (EFF67_MSG*)eff67_mes_0650F6CC, (EFF67_MSG*)eff67_mes_0650FF70, (EFF67_MSG*)eff67_mes_06510774, (EFF67_MSG*)eff67_mes_06510F88, (EFF67_MSG*)eff67_mes_065117EC, (EFF67_MSG*)eff67_mes_06512038, (EFF67_MSG*)eff67_mes_06512FE0, (EFF67_MSG*)eff67_mes_06513804, (EFF67_MSG*)eff67_mes_06513FD8, (EFF67_MSG*)eff67_mes_06514834, (EFF67_MSG*)eff67_mes_065150A0, (EFF67_MSG*)eff67_mes_06515874, (EFF67_MSG*)eff67_mes_06516118, (EFF67_MSG*)eff67_mes_06516894 };
-EFF67_MSG* eff67_msg_c[15] = { (EFF67_MSG*)eff67_mes_06516FE0, (EFF67_MSG*)eff67_mes_06516FE0, (EFF67_MSG*)eff67_mes_065178D0, (EFF67_MSG*)eff67_mes_065180DC, (EFF67_MSG*)eff67_mes_06518910, (EFF67_MSG*)eff67_mes_065191A8, (EFF67_MSG*)eff67_mes_065199E0, (EFF67_MSG*)eff67_mes_0651AA40, (EFF67_MSG*)eff67_mes_0651B230, (EFF67_MSG*)eff67_mes_0651B9FC, (EFF67_MSG*)eff67_mes_0651C28C, (EFF67_MSG*)eff67_mes_0651CAF4, (EFF67_MSG*)eff67_mes_0651D2DC, (EFF67_MSG*)eff67_mes_0651DBA4, (EFF67_MSG*)eff67_mes_0651E318 };
-EFF67_MSG* eff67_msg_d[15] = { (EFF67_MSG*)eff67_mes_0651EA9C, (EFF67_MSG*)eff67_mes_0651EA9C, (EFF67_MSG*)eff67_mes_0651F2D4, (EFF67_MSG*)eff67_mes_0651FAE8, (EFF67_MSG*)eff67_mes_06520280, (EFF67_MSG*)eff67_mes_06520A3C, (EFF67_MSG*)eff67_mes_06521284, (EFF67_MSG*)eff67_mes_065222B8, (EFF67_MSG*)eff67_mes_06522A70, (EFF67_MSG*)eff67_mes_06523240, (EFF67_MSG*)eff67_mes_06523A18, (EFF67_MSG*)eff67_mes_06524248, (EFF67_MSG*)eff67_mes_06524A00, (EFF67_MSG*)eff67_mes_06525288, (EFF67_MSG*)eff67_mes_06525A40 };
+EFF67_MSG* eff67_msg_a[15] = {
+    (EFF67_MSG*)effA6_mes_jp_0,
+    (EFF67_MSG*)effA6_mes_jp_0,
+    (EFF67_MSG*)effA6_mes_jp_2,
+    (EFF67_MSG*)effA6_mes_jp_3,
+    (EFF67_MSG*)effA6_mes_jp_4,
+    (EFF67_MSG*)effA6_mes_jp_5,
+    (EFF67_MSG*)effA6_mes_jp_6,
+    (EFF67_MSG*)effA6_mes_jp_7,
+    (EFF67_MSG*)effA6_mes_jp_8,
+    (EFF67_MSG*)effA6_mes_jp_9,
+    (EFF67_MSG*)effA6_mes_jp_10,
+    (EFF67_MSG*)effA6_mes_jp_11,
+    (EFF67_MSG*)effA6_mes_jp_12,
+    (EFF67_MSG*)effA6_mes_jp_13,
+    (EFF67_MSG*)effA6_mes_jp_14,
+};
+EFF67_MSG* eff67_msg_b[15] = {
+    (EFF67_MSG*)effA6_mes_en_0,
+    (EFF67_MSG*)effA6_mes_en_0,
+    (EFF67_MSG*)effA6_mes_en_2,
+    (EFF67_MSG*)effA6_mes_en_3,
+    (EFF67_MSG*)effA6_mes_en_4,
+    (EFF67_MSG*)effA6_mes_en_5,
+    (EFF67_MSG*)effA6_mes_en_6,
+    (EFF67_MSG*)effA6_mes_en_7,
+    (EFF67_MSG*)effA6_mes_en_8,
+    (EFF67_MSG*)effA6_mes_en_9,
+    (EFF67_MSG*)effA6_mes_en_10,
+    (EFF67_MSG*)effA6_mes_en_11,
+    (EFF67_MSG*)effA6_mes_en_12,
+    (EFF67_MSG*)effA6_mes_en_13,
+    (EFF67_MSG*)effA6_mes_en_14,
+};
+EFF67_MSG* eff67_msg_c[15] = {
+    (EFF67_MSG*)effA6_mes_es_0,
+    (EFF67_MSG*)effA6_mes_es_0,
+    (EFF67_MSG*)effA6_mes_es_2,
+    (EFF67_MSG*)effA6_mes_es_3,
+    (EFF67_MSG*)effA6_mes_es_4,
+    (EFF67_MSG*)effA6_mes_es_5,
+    (EFF67_MSG*)effA6_mes_es_6,
+    (EFF67_MSG*)effA6_mes_es_7,
+    (EFF67_MSG*)effA6_mes_es_8,
+    (EFF67_MSG*)effA6_mes_es_9,
+    (EFF67_MSG*)effA6_mes_es_10,
+    (EFF67_MSG*)effA6_mes_es_11,
+    (EFF67_MSG*)effA6_mes_es_12,
+    (EFF67_MSG*)effA6_mes_es_13,
+    (EFF67_MSG*)effA6_mes_es_14,
+};
+EFF67_MSG* eff67_msg_d[15] = {
+    (EFF67_MSG*)effA6_mes_pt_0,
+    (EFF67_MSG*)effA6_mes_pt_0,
+    (EFF67_MSG*)effA6_mes_pt_2,
+    (EFF67_MSG*)effA6_mes_pt_3,
+    (EFF67_MSG*)effA6_mes_pt_4,
+    (EFF67_MSG*)effA6_mes_pt_5,
+    (EFF67_MSG*)effA6_mes_pt_6,
+    (EFF67_MSG*)effA6_mes_pt_7,
+    (EFF67_MSG*)effA6_mes_pt_8,
+    (EFF67_MSG*)effA6_mes_pt_9,
+    (EFF67_MSG*)effA6_mes_pt_10,
+    (EFF67_MSG*)effA6_mes_pt_11,
+    (EFF67_MSG*)effA6_mes_pt_12,
+    (EFF67_MSG*)effA6_mes_pt_13,
+    (EFF67_MSG*)effA6_mes_pt_14,
+};
 
 void effect_67_move(WORK_Other_CONN* ewk) {
     EFF67_MSG* msg;

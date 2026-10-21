@@ -1,5 +1,5 @@
 /*
- * META_COL_TBL.C  tables read by meta_col_bcd.c, scrn_ctrl.c and sys_test.c
+ * META_COL_TBL.C  tables read by meta_col_bcd.c and scrn_ctrl.c
  */
 
 #include "types.h"
@@ -14,8 +14,6 @@ extern const s16 screen_window_flip_tbl[];
 extern const s16 screen_origin_tbl[][8][2];
 extern const s16 screen_disp_reg_tbl[][8][4];
 extern const s16 screen_flip_ofs_tbl[][8][8];
-extern const u8 meta_col_tbl_0656E07E[];
-extern const u8 scroll_enable_bit_tbl[];
 
 const u8 bcd_weight[64] = {
     0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 4, 0, 0, 0, 8,
@@ -49,13 +47,4 @@ const s16 screen_disp_reg_tbl[1][8][4] = {
 
 const s16 screen_flip_ofs_tbl[1][8][8] = {
     { { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 261, 128, 288, 0, 265, 128, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 262, 22, 288, 0, 265, 0, 0 } },
-};
-
-/* provisional name */
-const u8 meta_col_tbl_0656E07E[2] = {
-    0xFF, 0xFF,
-};
-
-const u8 scroll_enable_bit_tbl[12] = {
-    0, 1, 0x80, 0, 0, 0x10, 0x40, 0, 1, 0, 0x20, 0,
 };

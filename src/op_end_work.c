@@ -11,12 +11,23 @@
 
 typedef struct { PANEL panel[16]; } OP_PANEL;
 
-extern const u16 end_10_anm_tbl[];
-extern const u16 end_4_panel_data[];
-extern const u16 end_7_anm_tbl[];
+extern const PANEL end_400_panel0[];
+extern const PANEL end_400_panel1[];
+extern const PANEL end_800_panel0[];
+extern const PANEL end_800_panel1[];
+extern const PANEL op_panel0[];
+extern const PANEL op_panel1[];
+extern const PANEL op_panel2[];
+extern const s32 end_1100_cell0[];
+extern const s32 end_1100_cell1[];
+extern const s32 end_1100_cell2[];
+extern const s32 end_1100_cell3[];
+extern const s32 end_1100_cell4[];
+extern const s32 end_1100_cell5[];
+extern const s32 end_1100_cell6[];
+extern const s32 end_1100_cell7[];
 extern const PANEL end_10_panel_tbl_0[];
 extern const PANEL end_10_panel_tbl_1[];
-extern const u8 op_panel_data[];
 extern void end_00000();
 extern void end_01000();
 extern void end_02000();
@@ -41,10 +52,10 @@ extern void end_13000();
 
 /* 02007724 */
 const OP_PANEL* op_panel_p[4] = {
-    (const OP_PANEL *)op_panel_data,
-    (const OP_PANEL *)op_panel_data,
-    (const OP_PANEL *)((const u8*)op_panel_data + 128),
-    (const OP_PANEL *)((const u8*)op_panel_data + 256),
+    (const OP_PANEL *)op_panel0,
+    (const OP_PANEL *)op_panel0,
+    (const OP_PANEL *)op_panel1,
+    (const OP_PANEL *)op_panel2,
 };
 /* the code declares end_main_jp[24]; end_map_tbl starts after its first 16 entries */
 /* 02007734 */
@@ -60,13 +71,13 @@ u32 end_map_tbl[4] = {
 };
 /* 02007784 */
 const PANEL* end_4_panel_p[2] = {
-    (const PANEL *)end_4_panel_data,
-    (const PANEL *)((const u8*)end_4_panel_data + 80),
+    end_400_panel0,
+    end_400_panel1,
 };
 /* 0200778C */
 const PANEL* end_8_panel_p[2] = {
-    (const PANEL *)((const u8*)end_7_anm_tbl + 16),
-    (const PANEL *)((const u8*)end_7_anm_tbl + 80),
+    end_800_panel0,
+    end_800_panel1,
 };
 /* 02007794 */
 const PANEL* end_10_panel_p[2] = {
@@ -78,27 +89,27 @@ void (*end_10_jp[7])() = {
 };
 /* 020077B8 */
 const s32* end_11_cell_ptr0[9] = {
-    (const s32 *)((const u8*)end_10_anm_tbl + 10),
-    (const s32 *)((const u8*)end_10_anm_tbl + 26),
-    (const s32 *)((const u8*)end_10_anm_tbl + 42),
-    (const s32 *)((const u8*)end_10_anm_tbl + 58),
-    (const s32 *)((const u8*)end_10_anm_tbl + 58),
-    (const s32 *)((const u8*)end_10_anm_tbl + 74),
-    (const s32 *)((const u8*)end_10_anm_tbl + 58),
-    (const s32 *)((const u8*)end_10_anm_tbl + 90),
-    (const s32 *)((const u8*)end_10_anm_tbl + 10),
+    end_1100_cell0,
+    end_1100_cell1,
+    end_1100_cell2,
+    end_1100_cell3,
+    end_1100_cell3,
+    end_1100_cell4,
+    end_1100_cell3,
+    end_1100_cell5,
+    end_1100_cell0,
 };
 /* 020077DC */
 const s32* end_11_cell_ptr1[9] = {
-    (const s32 *)((const u8*)end_10_anm_tbl + 106),
-    (const s32 *)((const u8*)end_10_anm_tbl + 122),
-    (const s32 *)((const u8*)end_10_anm_tbl + 122),
-    (const s32 *)((const u8*)end_10_anm_tbl + 122),
-    (const s32 *)((const u8*)end_10_anm_tbl + 106),
-    (const s32 *)((const u8*)end_10_anm_tbl + 106),
-    (const s32 *)((const u8*)end_10_anm_tbl + 122),
-    (const s32 *)((const u8*)end_10_anm_tbl + 106),
-    (const s32 *)((const u8*)end_10_anm_tbl + 106),
+    end_1100_cell6,
+    end_1100_cell7,
+    end_1100_cell7,
+    end_1100_cell7,
+    end_1100_cell6,
+    end_1100_cell6,
+    end_1100_cell7,
+    end_1100_cell6,
+    end_1100_cell6,
 };
 /* 02007800 */
 /* Stored after end_11_cell_ptr1. Nothing in the program refers to it by name or address; if it is read,

@@ -1,5 +1,5 @@
 /*
- * END_5_TBL_B.C  tables read by end_5.c: ending 5 (end_05000), 2nd Impact version
+ * END_5_TBL_B.C  tables read by end_5.c: ending 5 (end_05000)
  */
 
 #include "types.h"
@@ -11,7 +11,6 @@ extern const PANEL end_2000_bg0_cell_tbl[];
 extern const PANEL end_2000_ake_cell_tbl[];
 extern const u32 end_500_bg1_cell_tbl[];
 extern const u16 timer_5_tbl[];
-extern const u16 end_5_tbl_06165574[];
 extern const u16 end_5_pos[];
 
 const PANEL end_2000_bg0_cell_tbl[4] = {
@@ -37,13 +36,8 @@ const u32 end_500_bg1_cell_tbl[16] = {
 };
 
 /* provisional name */
-const u16 timer_5_tbl[4] = {
-    0x12C, 0x258, 0x168, 0x30C,
-};
-
-/* provisional name */
-const u16 end_5_tbl_06165574[2] = {
-    0x96, 0x3FC,
+const u16 timer_5_tbl[6] = {
+    0x12C, 0x258, 0x168, 0x30C, 0x96, 0x3FC,
 };
 
 /* provisional name */

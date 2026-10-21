@@ -14,7 +14,6 @@ extern const s16 ake_pos_tbl[][2];
 extern const s8 sel_suikomi_tbl[][5];
 extern const s8 swallow_areas_x[][32];
 extern const s8 swallow_areas_y[][32];
-extern const u16 EFFD0_tbl_0617ADB6[];
 
 const s32 effd0_data_tbl[9][4] = {
     { 16384, -2048, -24576, -1024 },
@@ -85,9 +84,4 @@ const s8 swallow_areas_y[12][32] = {
     { 0, 0, 7, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-};
-
-/* provisional name */
-const u16 EFFD0_tbl_0617ADB6[1] = {
-    0xFFFF,
 };

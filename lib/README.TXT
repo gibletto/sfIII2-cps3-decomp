@@ -13,6 +13,5 @@ single instruction for.
 
 They come from the compiler's library, not from the game's sources, but the link puts them between game
 modules (see sf2i.sub), so they are kept as objects in that order rather than taken from a .lib at the end.
-They are the routines as the ROM has them. 2nd Impact links no __sftra (the variable arithmetic right shift
-3rd Strike has), and __quick_mvn's jump table points into its move run as it should (in 3rd Strike it points
-where the routine sat in an earlier link).
+They are the routines as the ROM has them. The link has no __sftra (the library's variable arithmetic right
+shift), and __quick_mvn's jump table points into its move run.

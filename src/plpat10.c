@@ -7,8 +7,7 @@
  * data, effects and gauge changes.
  * This character has only one: Att_PL10_TOKUSHUKOUDOU, the personal action (taunt). Its animation
  * markers add to the super art gauge and raise the personal-action strike and throw bonuses
- * (tk_dageki, tk_nage, capped at 10 and 2). 2nd Impact has neither the landing fix-up
- * (hoken_muriyari_chakuchi) nor the grading marker of 3rd Strike, and none of its slide specials.
+ * (tk_dageki, tk_nage, capped at 10 and 2).
  */
 
 #include "structs.h"

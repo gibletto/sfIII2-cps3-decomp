@@ -200,7 +200,7 @@ sftrl_in_range_3:
           .DATA.W     H'C901
           .DATA.W     H'000B
           .DATA.W     H'62F6
-          .RES.W      1         ; fill (FFFF here; 0000 in 3rd Strike)
+          .RES.W      1         ; fill (FFFF)
           .DATA.W     H'000B
           .DATA.W     H'0009
           .DATA.W     H'4008

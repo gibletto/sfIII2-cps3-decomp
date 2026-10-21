@@ -1,5 +1,5 @@
 /*
- * EFF45.C  Effect 45: stage objects at random places (2nd Impact)
+ * EFF45.C  Effect 45: stage objects at random places
  *
  * effect_45_init creates three pairs of objects. Each takes a random number: its X position comes
  * from eff45_pos_x_tbl by that number, its Y position from eff45_pos_y_tbl (first pair) or

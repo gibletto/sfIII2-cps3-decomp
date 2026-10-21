@@ -1,10 +1,9 @@
 /*
- * EFF54.C  Effect 54: a stage object that flies a fixed course (2nd Impact version)
+ * EFF54.C  Effect 54: a stage object that flies a fixed course
  *
- * 3rd Strike: effect 54 is two parts of the blinking stage object, and the file also holds effect 55. 2nd Impact's
- * effect 54 is a different routine: effect_54_init places one object above its parent's x;
+ * effect_54_init places one object above its parent's x;
  * effect_54_move flies it through the timer and speed rows of eff54_move_tbl, rests, and frees it
- * once it has gone off the top. Effect 55 is a file of its own in 2nd Impact (EFF55.C).
+ * once it has gone off the top.
  */
 
 #include "structs.h"

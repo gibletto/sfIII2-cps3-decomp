@@ -98,7 +98,7 @@ void Se_Dummy(WORK_Other* ewk, u16 Code) {
 
 
 
-/* no Check_Bonus_SE, voice banks 0x200 per player */
+/* voice banks 0x200 per player */
 void Se_Shock(WORK_Other* ewk, u16 se) {
     s16 pos;
     PLW* em;
@@ -175,7 +175,6 @@ void Se_Myself_Die(WORK_Other* ewk, u16 se) {
 
 
 
-/* no Check_Bonus_SE */
 void Se_Let(WORK_Other* ewk, u16 Code) {
     s32 se;
     s32 uid;

@@ -13,8 +13,7 @@
  * scrolling: bgw_xy_add, bgw_wxy_add, Bg_mv_tw, Bg_mv_tw_appoint, x_right_check, x_left_check, the
  * scr_1x_2x routines and the chase moves (bg_chase_move); bg_base_x_move_check / bg_base_y_move_check
  * and bg_x_move_check / bg_y_move_check are the standard main-layer and follower-layer moves.
- * capcom_logo_anim steps the CAPCOM logo colours. 3rd Strike keeps the layer scrolling routines in
- * a file of their own (BG_SUB_2.C).
+ * capcom_logo_anim steps the CAPCOM logo colours.
  */
 
 #include "structs.h"
@@ -235,7 +234,7 @@ void Bg_Family_Set_2(void) {
 
 
 /* provisional name */
-/* Bg_Family_Set_2 without the 12-dot drop (2nd Impact only) */
+/* Bg_Family_Set_2 without the 12-dot drop */
 void Bg_Family_Set_3(void) {
     s32 i;
     s32 a, b, x, y;
@@ -567,7 +566,7 @@ s32 get_height_position(void) {
 
 
 /* provisional name */
-/* an empty routine (2nd Impact only, unreferenced) */
+/* an empty routine (unreferenced) */
 void bg_position_dummy(void) {}
 
 
@@ -782,7 +781,7 @@ void suzi_line_calc_fill(s16 bg_num) {
 
 
 /* provisional name */
-/* fixed line scroll for layer 0 (2nd Impact only, unreferenced) */
+/* fixed line scroll for layer 0 (unreferenced) */
 void suzi_line_fix_set(void) {
     s32* line;
     u16* dst;
@@ -826,7 +825,7 @@ void suzi_line_fix_set(void) {
 
 
 /* provisional name */
-/* fixed line scroll for layer 0, second page when suzi_base_flag is set (2nd Impact only; the endings call it) */
+/* fixed line scroll for layer 0, second page when suzi_base_flag is set (the endings call it) */
 void suzi_line_fix_set2(void) {
     s32* line;
     u16* dst;
@@ -963,7 +962,7 @@ void bg_cell_write_xyflip(s16 bg, s32 ofs, s32 cell, u32 src, s16 u5, s16 attr) 
 
 
 
-/* the eight base cells of a layer (3rd Strike: the routine bg_cell_fill) */
+/* the eight base cells of a layer */
 #define BG_CELL_FILL(bg, attr)                                                  \
     bg_cell_write(bg, 0, 0, bg_cg_src_tbl[bg_w.bg_index], 0, attr);             \
     bg_cell_write(bg, 0x40, 0, bg_cg_src_tbl[bg_w.bg_index], 0, attr);          \
@@ -1916,7 +1915,7 @@ ake_scrl_set:;
 
 
 /* provisional name */
-/* bg_initialize for the endings (2nd Impact only: palettes faded to 15, layers start 48 dots up, no CAPCOM-logo layer of its own) */
+/* bg_initialize for the endings (palettes faded to 15, layers start 48 dots up, no CAPCOM-logo layer of its own) */
 void bg_end_initialize(void) {
     const s16* ptr;
     const BG_GFX* gfx;
@@ -2207,7 +2206,7 @@ s16 prio;
 
 
 /* provisional name */
-/* the CAPCOM logo colour steps (2nd Impact: one routine on layer 0, the 3rd Strike pair capcom_logo_color_step/capcom_logo_anim folded together) */
+/* the CAPCOM logo colour steps (one routine, on layer 0) */
 s16 capcom_logo_anim(void) {
     s16 ret = 0;
     switch (bg_w.bgw[0].r_no_1) {

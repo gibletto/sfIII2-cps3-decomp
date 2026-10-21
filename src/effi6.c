@@ -1,10 +1,7 @@
 /*
- * EFFI6.C  Effect I6: stage objects (3rd Strike: the round-call line)
+ * EFFI6.C  Effect I6: stage objects
  *
- * 3rd Strike: Effect I6 is a child of the round-call effect (effect_I6_init, called from effb2.c) placed at
- * screen centre on BG4. It follows its parent's state: it starts pattern 3 at zero size
- * (effi6_line_move), copies the parent's zoom, hides with it and is freed with it.
- * 2nd Impact: effect I6 (id 0xBA) is a stage object set: effect_I6_init creates the objects listed for
+ * Effect I6 (id 0xBA) is a stage object set: effect_I6_init creates the objects listed for
  * the stage (scr_obj_numI6 / scr_obj_dataI6 by bg_index) and effect_I6_move animates them.
  */
 
@@ -57,7 +54,7 @@ const s16* scr_obj_dataI6[18] = {
 
 
 
-/* a stage object (3rd Strike: the round-call line) */
+/* a stage object */
 void effect_I6_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case 0:

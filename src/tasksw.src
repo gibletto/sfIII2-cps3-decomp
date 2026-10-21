@@ -331,7 +331,7 @@ clear_b_test:
           MOV.L       p_D_END,R6
           BRA         copy_d_test
           MOV.L       @R3,R5
-          .RES.W      1         ; fill (FFFF here; 0000 in 3rd Strike)
+          .RES.W      1         ; fill (FFFF)
           .ALIGN      4
 p_B_BGN:
           .DATA.L     _B_BGN

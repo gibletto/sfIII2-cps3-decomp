@@ -6,7 +6,7 @@
  * routine_no[3] that starts the animation and then follows its cg_type markers to apply motion
  * data, effects and gauge changes.
  * Att_PL14_AT1 and AT2 are moves driven by step-by-step motion data (setup_mvxy_data at each
- * marker), and Att_PL14_TOKUSHUKOUDOU is the personal action. 2nd Impact has no Att_PL14_AT3 (Hyakki).
+ * marker), and Att_PL14_TOKUSHUKOUDOU is the personal action.
  */
 
 #include "structs.h"

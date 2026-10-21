@@ -1,5 +1,5 @@
 /*
- * ENDBG09.C  Ending background 09 (2nd Impact only)
+ * ENDBG09.C  Ending background 09
  *
  * end_BG090 (entry 9) runs layer 1 (no move step), layer 0 (graphics and palette) and a synced layer 2
  * (as stage 09's bg0603), then the zoom check, position correction and Bg_Family_Set_2.

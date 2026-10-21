@@ -216,7 +216,7 @@ s32 effect_C9_init(PLW* arg0, u8 data) {
 
 
 
-/* 2nd Impact compares the round scores (Score[x][2], gap above 10000) instead of the grades */
+/* compares the round scores (Score[x][2], gap above 10000) */
 void setup_EJG_index(void) {
     s16 i;
     u32 gra;

@@ -1,7 +1,7 @@
 /*
  * EFF46.C  Effect 46: a small object beside the winner
  *
- * In 2nd Impact effect 46 is a small object beside a winner (effect_46_init takes the owner's colour,
+ * Effect 46 is a small object beside a winner (effect_46_init takes the owner's colour,
  * pose side and position): it picks one of eight patterns at random, runs its animation (twice
  * as fast while pl_shot_on_check is set for its master), switches to the chosen pattern at
  * cg_type 1, then at cg_type 9 sets win_rno[1] and frees itself.

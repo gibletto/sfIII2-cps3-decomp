@@ -1,8 +1,8 @@
 /*
  * plpat15.c  Character 15 (Shin Gouki) special attack routines
  *
- * 2nd Impact only: 3rd Strike has no character 15 module. The routines are plpat14's (Gouki) with
- * their own table (pl15_exatt_table); only the personal action differs: it adds 16 to tk_dageki
+ * The routines are plpat14's (Gouki) with their own table (pl15_exatt_table); only the personal action differs:
+ * it adds 16 to tk_dageki
  * and caps it at 16 where Gouki's adds and caps 14.
  */
 

@@ -1,9 +1,7 @@
 /*
  * EFF72.C  Effect 72: a stage object that reacts to super arts
  *
- * 3rd Strike: effect_72_init creates one of the two parts (hkg_char_table) for an effect 71 controller,
- * at two different priorities, and effect_72_move plays the animation once and ends.
- * 2nd Impact: effect_72_init (no arguments, from the stage code) places one brz_char_table object at
+ * effect_72_init (no arguments, from the stage code) places one brz_char_table object at
  * (0x19B, 80) and its effect 73 partner; effect_72_move runs two phases through a table while the game
  * runs (not during an OB roll) and draws with disp_pos_trans_entry_rs: eff72_00 shows animation
  * 13 until either player starts a super art, then eff72_01 plays animation 51 once and goes back.
@@ -90,7 +88,7 @@ void eff72_01(WORK_Other* ewk) {
 
 
 
-/* 2nd Impact: no arguments, a brz_char_table object that sets up its effect 73 partner */
+/* no arguments: a brz_char_table object that sets up its effect 73 partner */
 s32 effect_72_init(void) {
     WORK_Other* ewk;
     s16 ix;

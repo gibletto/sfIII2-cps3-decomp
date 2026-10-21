@@ -1,7 +1,7 @@
 /*
  * HITPLPL.C  Player attack against player
  *
- * player_at_vs_player_dm is called from HITCHECK for a hit between the two players. In 2nd Impact it
+ * player_at_vs_player_dm is called from HITCHECK for a hit between the two players. It
  * sets the damage point and guard direction, then the damage facing (setup_dm_rl), the hit mark
  * position and damage and stun (set_damage_and_piyo), and resolves the hit (plef_at_vs_player_damage_union).
  */

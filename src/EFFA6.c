@@ -3,7 +3,7 @@
 /*
  * EFFA6.C  Effect A6: VS-screen speech line
  *
- * In 2nd Impact effect A6 is one speech line beside a portrait: effect_A6_init (called with the parent
+ * Effect A6 is one speech line beside a portrait: effect_A6_init (called with the parent
  * plate) records the speaking character (My_char of Player_id), places the line by side and
  * Game_setting.mode and picks the message (mmes_already) from Break_Into_CPU and, for character
  * 6, from the opponent. effect_A6_move loads the line once, choosing the message table by

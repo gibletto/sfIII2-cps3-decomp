@@ -1,8 +1,8 @@
 /*
- * ENDBG03.C  Ending background 03 (2nd Impact only)
+ * ENDBG03.C  Ending background 03
  *
  * end_BG030 (entry 3) runs layer 1 (palette, no move step), layer 0 and layer 2, each placed against
- * bg_w.pos_offset as 3rd Strike bg0601_init00 does, then the zoom check, position correction and family set.
+ * bg_w.pos_offset, then the zoom check, position correction and family set.
  */
 #include "structs.h"
 #include "work.h"

@@ -8,7 +8,21 @@
 #include "types.h"
 #include "structs.h"
 
-extern const u16 bg_rewrite_cells[];
+extern const HUD_CELL bg_rewrite_cells0[];
+extern const HUD_CELL bg_rewrite_cells1[];
+extern const HUD_CELL bg_rewrite_cells2[];
+extern const HUD_CELL bg_rewrite_cells3[];
+extern const HUD_CELL bg_rewrite_cells4[];
+extern const HUD_CELL bg_rewrite_cells5[];
+extern const HUD_CELL bg_rewrite_cells6[];
+extern const HUD_CELL bg_rewrite_cells7[];
+extern const HUD_CELL bg_rewrite_cells8[];
+extern const HUD_CELL bg_rewrite_cells9[];
+extern const TILEREQ bg_etc_cells0[];
+extern const TILEREQ bg_etc_cells1[];
+extern const TILEREQ bg_etc_cells2[];
+extern const TILEREQ bg_etc_cells3[];
+extern const TILEREQ bg_etc_cells4[];
 extern const u8 end_1100_bg0_cell_tbl[];
 
 /* 020074D4 */
@@ -42,19 +56,19 @@ u32 bg_map_tbl2[5][4] = {
 };
 /* 02007644 */
 HUD_CELL* bg_rewrite_cell_tbl[5][4] = {
-    { (HUD_CELL *)end_1100_bg0_cell_tbl, (HUD_CELL *)bg_rewrite_cells, (HUD_CELL *)((const u8*)bg_rewrite_cells + 128), (HUD_CELL *)((const u8*)bg_rewrite_cells + 192) },
-    { (HUD_CELL *)((const u8*)bg_rewrite_cells + 256), (HUD_CELL *)((const u8*)bg_rewrite_cells + 320), (HUD_CELL *)((const u8*)bg_rewrite_cells + 384), (HUD_CELL *)((const u8*)bg_rewrite_cells + 448) },
-    { (HUD_CELL *)((const u8*)bg_rewrite_cells + 640), (HUD_CELL *)((const u8*)bg_rewrite_cells + 320), (HUD_CELL *)((const u8*)bg_rewrite_cells + 384), (HUD_CELL *)((const u8*)bg_rewrite_cells + 448) },
-    { (HUD_CELL *)((const u8*)bg_rewrite_cells + 512), 0, 0, 0 },
-    { (HUD_CELL *)end_1100_bg0_cell_tbl, (HUD_CELL *)((const u8*)bg_rewrite_cells + 64), (HUD_CELL *)((const u8*)bg_rewrite_cells + 128), (HUD_CELL *)((const u8*)bg_rewrite_cells + 192) },
+    { (HUD_CELL *)end_1100_bg0_cell_tbl, (HUD_CELL *)bg_rewrite_cells0, (HUD_CELL *)bg_rewrite_cells2, (HUD_CELL *)bg_rewrite_cells3 },
+    { (HUD_CELL *)bg_rewrite_cells4, (HUD_CELL *)bg_rewrite_cells5, (HUD_CELL *)bg_rewrite_cells6, (HUD_CELL *)bg_rewrite_cells7 },
+    { (HUD_CELL *)bg_rewrite_cells9, (HUD_CELL *)bg_rewrite_cells5, (HUD_CELL *)bg_rewrite_cells6, (HUD_CELL *)bg_rewrite_cells7 },
+    { (HUD_CELL *)bg_rewrite_cells8, 0, 0, 0 },
+    { (HUD_CELL *)end_1100_bg0_cell_tbl, (HUD_CELL *)bg_rewrite_cells1, (HUD_CELL *)bg_rewrite_cells2, (HUD_CELL *)bg_rewrite_cells3 },
 };
 /* 02007694 */
 TILEREQ* bg_etc_cell_tbl[5][4] = {
-    { (TILEREQ *)((const u8*)bg_rewrite_cells + 784), 0, 0, 0 },
-    { (TILEREQ *)((const u8*)bg_rewrite_cells + 808), 0, 0, 0 },
-    { (TILEREQ *)((const u8*)bg_rewrite_cells + 832), 0, 0, 0 },
-    { (TILEREQ *)((const u8*)bg_rewrite_cells + 856), 0, 0, 0 },
-    { (TILEREQ *)((const u8*)bg_rewrite_cells + 880), 0, 0, 0 },
+    { (TILEREQ *)bg_etc_cells0, 0, 0, 0 },
+    { (TILEREQ *)bg_etc_cells1, 0, 0, 0 },
+    { (TILEREQ *)bg_etc_cells2, 0, 0, 0 },
+    { (TILEREQ *)bg_etc_cells3, 0, 0, 0 },
+    { (TILEREQ *)bg_etc_cells4, 0, 0, 0 },
 };
 
 s16 stage8_base_y;  /* 020225A8, provisional name */

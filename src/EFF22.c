@@ -1,7 +1,7 @@
 /*
- * EFF22.C  Effect 22 (2nd Impact version)
+ * EFF22.C  Effect 22: part of the breakable stage object
  *
- * 2nd Impact's effect 22 is not 3rd Strike's falling snow: effect_22_init makes one work for its master at
+ * effect_22_init makes one work for its master (effect 23) at
  * (0x2C8, 56). It waits on pattern 0 until eff_hit_flag[8] is set, plays pattern 1, then walks
  * pattern by pattern with add_pos_dir_032 (the pattern's direction byte) until the pattern says
  * 99, plays pattern 2 and settles at (0x2DC, 54). If eff_hit_flag[8] is already set when it
@@ -22,7 +22,6 @@
 
 
 
-/* (2nd Impact's own effect 22) */
 void effect_22_move(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;
@@ -90,7 +89,7 @@ void effect_22_move(WORK_Other* ewk) {
 
 
 
-/* 2nd Impact's effect_22_init (one work, for its master) */
+/* one work, for its master */
 s32 effect_22_init(WORK_Other* oya) {
     WORK_Other* ewk;
     s16 ix;

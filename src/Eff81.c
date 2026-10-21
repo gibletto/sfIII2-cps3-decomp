@@ -1,5 +1,5 @@
 /*
- * EFF81.C  Effect 81: a select-screen mark that follows its parent (2nd Impact)
+ * EFF81.C  Effect 81: a select-screen mark that follows its parent
  *
  * effect_81_init creates the mark for a player's selection under its parent work; its pattern
  * depends on the character (My_char), the side and the Country. effect_81_move keeps it on the

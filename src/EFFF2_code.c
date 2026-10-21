@@ -1,7 +1,7 @@
 /*
  * EFFF2_CODE.C  Effect F2: ending falling objects
  *
- * In 2nd Impact effect F2 (effect_F2_init(no), from end_8.c) creates four ending objects from
+ * Effect F2 (effect_F2_init(no), from end_8.c) creates four ending objects from
  * efff2_data_tbl[no] (priority, pattern, delay). Each flies in three stages, taking new speeds from
  * efff2_speed_tbl[stage][object] as it passes x 0x1E0 and 0x240, and starts again from
  * efff2_pos_tbl past 0x2C0; the second stage of the first object starts the next four.

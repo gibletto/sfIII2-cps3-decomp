@@ -5,8 +5,8 @@
  * places it off-screen on the player's side (distance by Game_setting), aims it at a stop point
  * 60 frames away and spawns its C6 child. effect_C5_move drives in with the engine sound,
  * brakes (with a demo sound), raises demo_car_flag while its door pattern plays, then drives
- * away over 48 frames and frees itself. 2nd Impact: runs during pause/EXE too, no Appear_car_stop, the
- * side is the player's id (no reverse flag), voices at player * 0x200.
+ * away over 48 frames and frees itself. It runs during pause/EXE too; the side is the player's id, and
+ * voices are at player * 0x200.
  */
 
 #include "structs.h"
@@ -110,7 +110,7 @@ void effect_C5_move(WORK_Other* ewk) {
 
 
 
-/* the car for player pl (2nd Impact: by player number, no reverse flag) */
+/* the car for player pl */
 /* provisional name */
 s32 effC5_init_sub(s16 pl) {
     WORK_Other* ewk;
@@ -167,7 +167,7 @@ s32 effC5_init_sub(s16 pl) {
 
 
 
-/* 2nd Impact: the player's car */
+/* the player's car */
 s32 effect_C5_init(PLW* oya) {
     s16 pl = oya->wu.id ? 1 : 0;
     return effC5_init_sub(pl);

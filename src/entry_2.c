@@ -6,8 +6,8 @@
  * (Entry_Continue_Sub countdown), in-game and ranking entry steps, letting a second player join or
  * break in (Break_Into_xx, Pay_Start_Credit, Credit_Sub / Credit_Continue). Title messages
  * (Disp_Start_Message, credit_display_render, Disp_More_Coins) and game-over handling (In_Game_Sub,
- * Setup_Next_Step) are also here. In 2nd Impact the unit ends with coin_in_sound_request and
- * Redisp_Continue_Count (3rd Strike coin_cont.c).
+ * Setup_Next_Step) are also here. The unit ends with coin_in_sound_request and
+ * Redisp_Continue_Count.
  */
 
 #include "structs.h"

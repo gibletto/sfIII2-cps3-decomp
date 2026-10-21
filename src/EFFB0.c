@@ -1,8 +1,8 @@
 /*
- * EFFB0.C  Effect B0: scene changes of an ending (2nd Impact version)
+ * EFFB0.C  Effect B0: scene changes of an ending
  *
- * 2nd Impact's effect B0 is not 3rd Strike's random flicker object: effect_B0_init clears BG0 and BG3, puts
- * their cells (end_ake_cell_put) and starts effect B1. effect_B0_move runs three scenes in turn
+ * effect_B0_init clears BG0 and BG3, puts their cells (end_ake_cell_put) and starts effect B1. effect_B0_move
+ * runs three scenes in turn
  * (effB0_0000, effB0_1000, effB0_2000), each fading out (Request_Fade 43) and back in, starting
  * the effect D2 wipes and B1, and checks every frame whether the player cut the scene short
  * (Cut_Cut_Cut in dir_timer); then it fades the BGM and sets END_OF_B0 to 2.
@@ -41,7 +41,6 @@ void end_ake_cell_put(s16 map, s32 ofs, s32 cell, u32 src);
 
 
 
-/* (2nd Impact's own effect B0) */
 void effect_B0_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case 0:
@@ -97,7 +96,7 @@ void effB0_check(WORK_Other* ewk) {
 
 
 
-/* (no caller in 2nd Impact) */
+/* (no caller) */
 /* provisional name */
 void effB0_cut_check(WORK_Other* ewk) {
     ewk->wu.dir_timer = Cut_Cut_Cut();
@@ -238,7 +237,6 @@ s32 effB0_2000(WORK_Other* ewk) {
 
 
 
-/* (2nd Impact's own effect B0) */
 s32 effect_B0_init(void) {
     WORK_Other* ewk;
     s16 ix;
@@ -309,7 +307,7 @@ s32 effect_B0_init(void) {
 
 
 
-/* 2nd Impact: into a BG's map, with the scroll character base */
+/* into a BG's map, with the scroll character base */
 void end_ake_cell_put(s16 map, s32 ofs, s32 cell, u32 src) {
     register u16* s;
     s32 x;

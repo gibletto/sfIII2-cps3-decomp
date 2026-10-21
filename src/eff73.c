@@ -1,5 +1,5 @@
 /*
- * EFF73.C  Effect 73: a stage object that follows its parent's state (2nd Impact)
+ * EFF73.C  Effect 73: a stage object that follows its parent's state
  *
  * effect_73_init (bg stage code) places one brz_char_table object at (0x1ED, 81) under the work that
  * creates it. effect_73_move follows the parent's routine_no[0]: state 0 shows pattern 17, state 1

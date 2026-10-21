@@ -1,10 +1,7 @@
 /*
- * EFF19.C  Effect 19: stage object reacting to quakes (bg130)
+ * EFF19.C  Effect 19: a scaled stage object
  *
- * effect_19_move animates the object and, according to bg_w.quake_y_index, picks a random
- * reaction from small tables: wait, jump up and fall, or play an animation and vanish while a
- * player is in range, then reappear. effect_19_init is called from bg130.
- * 2nd Impact has no quake reactions: effect_19_init creates one object (with a shadow) at 288, 24, and
+ * effect_19_init (no caller) creates one object (with a shadow) at 288, 24, and
  * effect_19_move plays the animation of its char_index, scaled (my_mr 58 x 58), until
  * compel_dead_check ends it.
  */

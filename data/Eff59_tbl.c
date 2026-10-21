@@ -10,9 +10,6 @@
 extern const u8 eff59_country_tbl[][2];
 extern const s16 eff59_name_x_tbl[];
 extern const u8 eff59_name_tbl[][39];
-extern const s16 eff59_tbl_061798E2[];
-extern const s16 flash_obj_data61_0[];
-extern const s16 flash_obj_data61_1[];
 
 /* provisional name */
 const u8 eff59_country_tbl[16][2] = {
@@ -56,19 +53,4 @@ const u8 eff59_name_tbl[14][39] = {
     { 0xF, 8, 0x12, 8, 0xFF, 8, 0x1E, 8, 0x21, 8, 0x13, 8, 0xFF, 8, 0x1D, 8, 8, 8, 0x17, 8, 0x14, 8, 0x13, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF },
     { 0xF, 8, 0x12, 8, 0xFF, 8, 0x1B, 8, 0xD, 8, 0x19, 8, 0x20, 8, 0x16, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF },
     { 0xF, 8, 0x12, 8, 0xFF, 8, 4, 8, 0x22, 0xC, 0x1C, 8, 0x17, 8, 0x1F, 6, 0xF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF, 8, 0xFF },
-};
-
-/* provisional name */
-const s16 eff59_tbl_061798E2[1] = {
-    -1,
-};
-
-const s16 flash_obj_data61_0[9] = {
-    1, 2, 8256, 272, 96, 86, 61, 1,
-    0,
-};
-
-const s16 flash_obj_data61_1[9] = {
-    1, 2, 8256, 304, 48, 76, 32, 1,
-    0,
 };

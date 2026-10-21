@@ -7,8 +7,8 @@
  * effect_09_move dispatches through eff09_tbl to the behaviour routines eff09_0000 to
  * eff09_18000: plain animations, props thrown and caught, and sean_ball_move, a ball that
  * bounces under gravity and is hit-checked against the players (creating effect B4).
- * 2nd Impact: no eff09_19000-27000 (3rd Strike's later characters), no jijii_win_tama_sub, voices at player * 0x200,
- * a stage 8 Y for the eff09_1000 prop, and effect_09_init2 colours only types 18/19 specially.
+ * Voices are at player * 0x200, the eff09_1000 prop has a stage 8 Y, and effect_09_init2 colours only types
+ * 18/19 specially.
  */
 
 #include "structs.h"

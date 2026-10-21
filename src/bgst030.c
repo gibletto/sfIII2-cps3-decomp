@@ -1,5 +1,5 @@
 /*
- * BGST030.C  Stage 03 background (2nd Impact only)
+ * BGST030.C  Stage 03 background
  *
  * BG030 runs stage 03's three layers (1, 0, 2). Unless bg030_appear_check says the stage starts in
  * place (a later area, or neither player is character 3), each layer first drops in from above
@@ -47,7 +47,7 @@ static void bg_base_move_common(void);
 #pragma inline(bg030_layer0, bg030_layer1, bg030_layer2)
 
 
-/* (2nd Impact: layers 1, 0, 2, each with the drop-in step) */
+/* layers 1, 0 and 2, each with the drop-in step */
 void BG030(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg030_layer1();
@@ -91,7 +91,7 @@ void bg030_layer0_init(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -144,7 +144,7 @@ void bg030_layer1_init(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();

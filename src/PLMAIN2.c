@@ -161,7 +161,7 @@ void player_mvbs_1000(PLW* wk) {
         break;
     }
     if (!wk->wu.operator) {
-        /* no computer-side start position in 2nd Impact */
+        /* no computer-side start position */
     }
     Player_normal(wk);
 }

@@ -2,7 +2,7 @@
  * EFFA2_MAIN.C  Effect A2: break-in banner tilemap wipe
  *
  * effect_A2_init (called from Entry.c when a new challenger breaks in) creates the effect for a
- * tilemap row (3rd Strike also switches the effect 76 priorities there; 2nd Impact does not).
+ * tilemap row.
  * effect_A2_move clears Disp_PERFECT and the banner area of the text layer on its first frame,
  * then each frame draws two more columns of the break-in banner with break_into_banner_trans,
  * and frees itself after 48 columns.
@@ -43,7 +43,6 @@ void effect_A2_move(WORK_Other* ewk) {
 
 
 
-/* no Switch_Priority_76 call */
 s32 effect_A2_init(timer)
 s16 timer;
 {

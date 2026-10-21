@@ -76,8 +76,8 @@ s8 Config_Org_en;  /* 02015A21 */
 s16 Config_Attr_en;  /* 02015A22 */
 s16 Config_Rep_Timer_en[4];  /* 02015A24 */
 s8 Config_Rep_Count_en[4];  /* 02015A2C */
-s16* Config_Code_Ptr_en;  /* 02015A30, 2nd Impact: provisional name */
-s16 Config_Code_No_en;  /* 02015A34, 2nd Impact: provisional name */
+s16* Config_Code_Ptr_en;  /* 02015A30, provisional name */
+s16 Config_Code_No_en;  /* 02015A34, provisional name */
 
 
 /* 020008AC */
@@ -460,7 +460,7 @@ void game_config_print_value_en(s16 attr, const TM_STRING* str) {
 }
 
 
-/* 2nd Impact (provisional name): the menu button code, as game_config_code_check_jp */
+/* provisional name: the menu button code, as game_config_code_check_jp */
 void game_config_code_check_en(void) {
     register s16 sw;
     if (game_config_work.bonus & 2) {

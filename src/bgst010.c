@@ -1,10 +1,9 @@
 /*
- * BGST010.C  Stage 01 background (2nd Impact only)
+ * BGST010.C  Stage 01 background
  *
  * BG010 runs stage 01's three scroll layers: layer 1 (bg0102, the base layer that chases the
  * players), layer 0 (bg0101) and layer 2 (bg0103, a synced layer), then the zoom check, position
- * correction and family set. In 3rd Strike these routines sit at the end of bg000.c; 2nd Impact gives the stage its
- * own file with its own copies of bg_move_common and bg_base_move_common.
+ * correction and family set. The file has its own copies of bg_move_common and bg_base_move_common.
  */
 
 #include "structs.h"
@@ -53,7 +52,7 @@ void bg0101(void) {
 
 
 
-/* (2nd Impact: effect 05 and effect 66, no gfx load) */
+/* starts effects 05 and 66 */
 void bg0101_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -65,7 +64,7 @@ void bg0101_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -80,7 +79,7 @@ void bg0102(void) {
 
 
 
-/* (2nd Impact: loads the stage graphics) */
+/* loads the stage graphics */
 void bg0102_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -91,7 +90,7 @@ void bg0102_init00(void) {
 
 
 
-/* (2nd Impact: a copy per stage file, no Bonus_Game_Flag or chase start check: the base layer moves and chases) */
+/* each stage file has its own copy: the base layer moves and chases */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -100,7 +99,6 @@ static void bg_base_move_common(void) {
 
 
 
-/* (2nd Impact: speed_x 0xD000) */
 void bg0103(void) {
     switch (bgw_ptr->r_no_0) {
     case 0:

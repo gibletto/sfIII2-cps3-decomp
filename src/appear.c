@@ -8,8 +8,8 @@
  * match-ups have their own checks. Appear_flag, Appear_free and Appear_end signal the stage and the game
  * flow; appear_work_clear resets them.
  *
- * 2nd Impact is an older version than 3rd Strike: fewer entrance types, bg_stop in place of bg_app_stop, bg130 helpers for
- * the Yun/Yang stage, and sean_appear_check called K&R before its definition.
+ * The entrances stop the stage with bg_stop, the Yun/Yang stage uses the bg130 helpers, and sean_appear_check is
+ * called (K&R) before its definition.
  */
 
 #include "structs.h"
@@ -317,7 +317,7 @@ s32 yun_yang_appear_check(PLW* wk) {
 
 
 
-/* provisional name: Appear_04000's mvxy rows (2nd Impact 06164A1C) */
+/* provisional name: Appear_04000's mvxy rows */
 static const s32 app04_mvxy_tbl[7][4] = {
     { 0, 0, 0, 0 },
     { 0, 0x1000, -0x380, 0x2000 },

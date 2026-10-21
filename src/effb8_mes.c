@@ -8,168 +8,168 @@
 #include "types.h"
 #include "structs.h"
 
-extern const u16 chr_data_06446B3E[];
-extern const u16 chr_data_06446DFA[];
-extern const u16 chr_data_064470FA[];
-extern const u16 chr_data_0644756A[];
-extern const u16 chr_data_06447DD2[];
-extern const u16 chr_data_064481A2[];
-extern const u16 chr_data_06470562[];
-extern const u16 chr_data_064753C6[];
-extern const u16 chr_data_06477A2E[];
-extern const u16 chr_data_06478DEE[];
-extern const u16 chr_data_06479EDA[];
-extern const u16 chr_data_0647C562[];
-extern const u16 chr_data_0647D962[];
-extern const u16 chr_data_0647EC0E[];
-extern const u16 chr_data_0647FDD2[];
-extern const u16 chr_data_0648533A[];
-extern const u16 chr_data_0648BD3A[];
-extern const u16 chr_data_06491C7A[];
-extern const u16 chr_data_06494DC2[];
-extern const u16 chr_data_06497482[];
-extern const u16 chr_data_06499DFA[];
-extern const u16 chr_data_0649CCAA[];
-extern const u16 chr_data_064A8362[];
-extern const u16 chr_data_064AB112[];
-extern const u16 chr_data_064ADA2E[];
-extern const u16 chr_data_064B189E[];
-extern const u16 chr_data_064B4E2A[];
-extern const u16 chr_data_064BB67A[];
-extern const u16 chr_data_064C1FF2[];
-extern const u16 chr_data_064C47EE[];
-extern const u16 chr_data_064CA836[];
-extern const u16 chr_data_064CE10E[];
-extern const u16 chr_data_064D45E2[];
-extern const u16 chr_data_064DCF16[];
-extern const u16 chr_data_064E78DA[];
-extern const u16 chr_data_064EA7EE[];
-extern const u16 chr_data_064F62FE[];
-extern const u16 chr_data_064F94E2[];
-extern const u16 chr_data_064FCB3A[];
-extern const u16 chr_data_064FFE46[];
-extern const u16 chr_data_06502E52[];
-extern const u16 chr_data_065052A2[];
-extern const u32 chr_data_0644693C[];
-extern const u32 chr_data_06447290[];
-extern const u32 chr_data_064477F4[];
-extern const u32 chr_data_06447A00[];
-extern const u32 chr_data_06447BC0[];
-extern const u32 chr_data_06447F6C[];
-extern const u32 chr_data_06471ACC[];
-extern const u32 chr_data_06472EA8[];
-extern const u32 chr_data_0647408C[];
-extern const u32 chr_data_064767C4[];
-extern const u32 chr_data_0647B23C[];
-extern const u32 chr_data_064812DC[];
-extern const u32 chr_data_06482234[];
-extern const u32 chr_data_06488674[];
-extern const u32 chr_data_0648EA30[];
-extern const u32 chr_data_064A00AC[];
-extern const u32 chr_data_064A3470[];
-extern const u32 chr_data_064A6118[];
-extern const u32 chr_data_064B8764[];
-extern const u32 chr_data_064BEC40[];
-extern const u32 chr_data_064C7570[];
-extern const u32 chr_data_064D16B0[];
-extern const u32 chr_data_064D6D44[];
-extern const u32 chr_data_064D9E8C[];
-extern const u32 chr_data_064E0E00[];
-extern const u32 chr_data_064E410C[];
-extern const u32 chr_data_064EDAB0[];
-extern const u32 chr_data_064F0E7C[];
-extern const u32 chr_data_064F36E4[];
-extern const u32 chr_data_06508238[];
+extern const EFFB8_MESSAGE effB8_conn_0[];
+extern const EFFB8_MESSAGE effB8_conn_10[];
+extern const EFFB8_MESSAGE effB8_conn_11[];
+extern const EFFB8_MESSAGE effB8_conn_12[];
+extern const EFFB8_MESSAGE effB8_conn_1[];
+extern const EFFB8_MESSAGE effB8_conn_2[];
+extern const EFFB8_MESSAGE effB8_conn_3[];
+extern const EFFB8_MESSAGE effB8_conn_4[];
+extern const EFFB8_MESSAGE effB8_conn_5[];
+extern const EFFB8_MESSAGE effB8_conn_7[];
+extern const EFFB8_MESSAGE effB8_conn_8[];
+extern const EFFB8_MESSAGE effB8_conn_9[];
+extern const EFFB8_MESSAGE effB8_mes_en_0[];
+extern const EFFB8_MESSAGE effB8_mes_en_10[];
+extern const EFFB8_MESSAGE effB8_mes_en_11[];
+extern const EFFB8_MESSAGE effB8_mes_en_12[];
+extern const EFFB8_MESSAGE effB8_mes_en_13[];
+extern const EFFB8_MESSAGE effB8_mes_en_14[];
+extern const EFFB8_MESSAGE effB8_mes_en_1[];
+extern const EFFB8_MESSAGE effB8_mes_en_2[];
+extern const EFFB8_MESSAGE effB8_mes_en_3[];
+extern const EFFB8_MESSAGE effB8_mes_en_4[];
+extern const EFFB8_MESSAGE effB8_mes_en_5[];
+extern const EFFB8_MESSAGE effB8_mes_en_6[];
+extern const EFFB8_MESSAGE effB8_mes_en_7[];
+extern const EFFB8_MESSAGE effB8_mes_en_8[];
+extern const EFFB8_MESSAGE effB8_mes_en_9[];
+extern const EFFB8_MESSAGE effB8_mes_es_0[];
+extern const EFFB8_MESSAGE effB8_mes_es_10[];
+extern const EFFB8_MESSAGE effB8_mes_es_11[];
+extern const EFFB8_MESSAGE effB8_mes_es_12[];
+extern const EFFB8_MESSAGE effB8_mes_es_13[];
+extern const EFFB8_MESSAGE effB8_mes_es_14[];
+extern const EFFB8_MESSAGE effB8_mes_es_1[];
+extern const EFFB8_MESSAGE effB8_mes_es_2[];
+extern const EFFB8_MESSAGE effB8_mes_es_3[];
+extern const EFFB8_MESSAGE effB8_mes_es_4[];
+extern const EFFB8_MESSAGE effB8_mes_es_5[];
+extern const EFFB8_MESSAGE effB8_mes_es_6[];
+extern const EFFB8_MESSAGE effB8_mes_es_7[];
+extern const EFFB8_MESSAGE effB8_mes_es_8[];
+extern const EFFB8_MESSAGE effB8_mes_es_9[];
+extern const EFFB8_MESSAGE effB8_mes_jp_0[];
+extern const EFFB8_MESSAGE effB8_mes_jp_10[];
+extern const EFFB8_MESSAGE effB8_mes_jp_11[];
+extern const EFFB8_MESSAGE effB8_mes_jp_12[];
+extern const EFFB8_MESSAGE effB8_mes_jp_13[];
+extern const EFFB8_MESSAGE effB8_mes_jp_14[];
+extern const EFFB8_MESSAGE effB8_mes_jp_1[];
+extern const EFFB8_MESSAGE effB8_mes_jp_2[];
+extern const EFFB8_MESSAGE effB8_mes_jp_3[];
+extern const EFFB8_MESSAGE effB8_mes_jp_4[];
+extern const EFFB8_MESSAGE effB8_mes_jp_5[];
+extern const EFFB8_MESSAGE effB8_mes_jp_6[];
+extern const EFFB8_MESSAGE effB8_mes_jp_7[];
+extern const EFFB8_MESSAGE effB8_mes_jp_8[];
+extern const EFFB8_MESSAGE effB8_mes_jp_9[];
+extern const EFFB8_MESSAGE effB8_mes_pt_0[];
+extern const EFFB8_MESSAGE effB8_mes_pt_10[];
+extern const EFFB8_MESSAGE effB8_mes_pt_11[];
+extern const EFFB8_MESSAGE effB8_mes_pt_12[];
+extern const EFFB8_MESSAGE effB8_mes_pt_13[];
+extern const EFFB8_MESSAGE effB8_mes_pt_14[];
+extern const EFFB8_MESSAGE effB8_mes_pt_1[];
+extern const EFFB8_MESSAGE effB8_mes_pt_2[];
+extern const EFFB8_MESSAGE effB8_mes_pt_3[];
+extern const EFFB8_MESSAGE effB8_mes_pt_4[];
+extern const EFFB8_MESSAGE effB8_mes_pt_5[];
+extern const EFFB8_MESSAGE effB8_mes_pt_6[];
+extern const EFFB8_MESSAGE effB8_mes_pt_7[];
+extern const EFFB8_MESSAGE effB8_mes_pt_8[];
+extern const EFFB8_MESSAGE effB8_mes_pt_9[];
 
 /* 02007FE4 */
 const EFFB8_MESSAGE* effB8_mes_jp[16] = {
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06470562 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06471ACC + 12),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06472EA8 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0647408C + 12),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064753C6 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064767C4 + 12),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06477A2E + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06478DEE + 14),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06479EDA + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0647B23C + 12),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0647C562 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0647D962 + 14),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0647EC0E + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0647FDD2 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064812DC + 20),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064812DC + 20),
+    effB8_mes_jp_0,
+    effB8_mes_jp_1,
+    effB8_mes_jp_2,
+    effB8_mes_jp_3,
+    effB8_mes_jp_4,
+    effB8_mes_jp_5,
+    effB8_mes_jp_6,
+    effB8_mes_jp_7,
+    effB8_mes_jp_8,
+    effB8_mes_jp_9,
+    effB8_mes_jp_10,
+    effB8_mes_jp_11,
+    effB8_mes_jp_12,
+    effB8_mes_jp_13,
+    effB8_mes_jp_14,
+    effB8_mes_jp_14,
 };
 /* 02008024 */
 const EFFB8_MESSAGE* effB8_mes_en[16] = {
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06482234 + 12),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0648533A + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06488674 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0648BD3A + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0648EA30 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06491C7A + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06494DC2 + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06497482 + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06499DFA + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0649CCAA + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064A00AC + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064A3470 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064A6118 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064A8362 + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064AB112 + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064AB112 + 6),
+    effB8_mes_en_0,
+    effB8_mes_en_1,
+    effB8_mes_en_2,
+    effB8_mes_en_3,
+    effB8_mes_en_4,
+    effB8_mes_en_5,
+    effB8_mes_en_6,
+    effB8_mes_en_7,
+    effB8_mes_en_8,
+    effB8_mes_en_9,
+    effB8_mes_en_10,
+    effB8_mes_en_11,
+    effB8_mes_en_12,
+    effB8_mes_en_13,
+    effB8_mes_en_14,
+    effB8_mes_en_14,
 };
 /* 02008064 */
 const EFFB8_MESSAGE* effB8_mes_es[16] = {
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064DCF16 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064E0E00 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064E410C + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064E78DA + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064EA7EE + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064EDAB0 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064F0E7C + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064F36E4 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064F62FE + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064F94E2 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064FCB3A + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064FFE46 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06502E52 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_065052A2 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06508238 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06508238 + 8),
+    effB8_mes_es_0,
+    effB8_mes_es_1,
+    effB8_mes_es_2,
+    effB8_mes_es_3,
+    effB8_mes_es_4,
+    effB8_mes_es_5,
+    effB8_mes_es_6,
+    effB8_mes_es_7,
+    effB8_mes_es_8,
+    effB8_mes_es_9,
+    effB8_mes_es_10,
+    effB8_mes_es_11,
+    effB8_mes_es_12,
+    effB8_mes_es_13,
+    effB8_mes_es_14,
+    effB8_mes_es_14,
 };
 /* 020080A4 */
 const EFFB8_MESSAGE* effB8_mes_pt[16] = {
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064ADA2E + 6),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064B189E + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064B4E2A + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064B8764 + 12),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064BB67A + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064BEC40 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064C1FF2 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064C47EE + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064C7570 + 12),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064CA836 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064CE10E + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064D16B0 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064D45E2 + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064D6D44 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064D9E8C + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064D9E8C + 8),
+    effB8_mes_pt_0,
+    effB8_mes_pt_1,
+    effB8_mes_pt_2,
+    effB8_mes_pt_3,
+    effB8_mes_pt_4,
+    effB8_mes_pt_5,
+    effB8_mes_pt_6,
+    effB8_mes_pt_7,
+    effB8_mes_pt_8,
+    effB8_mes_pt_9,
+    effB8_mes_pt_10,
+    effB8_mes_pt_11,
+    effB8_mes_pt_12,
+    effB8_mes_pt_13,
+    effB8_mes_pt_14,
+    effB8_mes_pt_14,
 };
 /* 020080E4 */
 const EFFB8_MESSAGE* effB8_conn_tbl[13] = {
-    (const EFFB8_MESSAGE *)chr_data_0644693C,
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06446B3E + 14),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06446DFA + 14),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064470FA + 10),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06447290 + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_0644756A + 18),
-    (const EFFB8_MESSAGE *)chr_data_0644693C,
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064477F4 + 16),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06447A00 + 12),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06447BC0 + 12),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06447DD2 + 14),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_06447F6C + 8),
-    (const EFFB8_MESSAGE *)((const u8*)chr_data_064481A2 + 14),
+    effB8_conn_0,
+    effB8_conn_1,
+    effB8_conn_2,
+    effB8_conn_3,
+    effB8_conn_4,
+    effB8_conn_5,
+    effB8_conn_0,
+    effB8_conn_7,
+    effB8_conn_8,
+    effB8_conn_9,
+    effB8_conn_10,
+    effB8_conn_11,
+    effB8_conn_12,
 };

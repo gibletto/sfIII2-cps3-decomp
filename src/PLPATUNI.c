@@ -8,10 +8,9 @@
  * leaping and homing jumps (Att_JINNCHUUWATARI, Att_HOMING_JUMP, Att_SLIDE_and_JUMP) and
  * Att_CHOUCHUURENGEKI. Each steps its animation and mvxy movement data by cg_type marks.
  * Att_NM_OKIAGARI is a get-up; Att_DUMMY fills unused slots. att_ahj_table_reader reads the
- * target-relative jump data used by the leaping moves (ahj_empos_hos, 16 characters in 2nd Impact).
+ * target-relative jump data used by the leaping moves (ahj_empos_hos, 16 characters).
  *
- * 2nd Impact has no metamorphose routines (Att_METAMOR_WAIT/REBIRTH) and no hoken_muriyari_chakuchi (the
- * landing reset is a plain store). cal_initial_speed_y is declared here without a prototype.
+ * The landing reset is a plain store. cal_initial_speed_y is declared here without a prototype.
  */
 
 #include "structs.h"

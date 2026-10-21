@@ -1,10 +1,8 @@
 /*
- * EFF07.C  Effect 07: stage background objects (bg000)
+ * EFF07.C  Effect 07: a stage 05 background object
  *
- * 3rd Strike: effect_07_init creates two animated objects from eff07_data_tbl using usa_char_table and
- * places them in the scene; effect_07_move animates them and draws them through
- * disp_pos_trans_entry_r. Created by the bg000 stage routines.
- * 2nd Impact: effect_07_init creates one object at 463, 77 and starts effect 08 with it as its master;
+ * effect_07_init (from the stage 05 background, bg0501_init01) creates one object at 463, 77 and starts
+ * effect 08 with it as its master;
  * effect_07_move cycles its animation through the 16 entries of eff07_char_index_tbl and draws
  * with sort_push_request4.
  */

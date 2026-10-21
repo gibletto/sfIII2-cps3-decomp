@@ -1,8 +1,7 @@
 /*
- * EFF55.C  Effect 55: a bird that lands, flies off and comes back (2nd Impact only)
+ * EFF55.C  Effect 55: a bird that lands, flies off and comes back
  *
- * 3rd Strike has effect 55 in EFF54.C, a bg120 object that slides up and down. 2nd Impact's is a different
- * routine in a file of its own: effect_55_init places a bird at (672, 114); effect_55_move runs
+ * effect_55_init places a bird at (672, 114); effect_55_move runs
  * the routine of its state (eff55_0000/1000/2000). eff55_1000 takes off and flies off to the
  * right (eff55_1000_0000/1000), waits, sometimes crosses back from right to left (2000/3000),
  * then glides in from the left to its perch (4000/5000); eff55_2000 lands it again.

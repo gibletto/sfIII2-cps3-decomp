@@ -6,9 +6,8 @@
  * effect_14_init(id) allocates the work; effect_14_move loads the script, pattern mask and
  * target offset for that id from eff14_data_tbl/eff14_ofs_tbl, follows the scroll page
  * when it changes, and on each script step calls effect_14_write to patch the cell
- * attributes (pattern 1 = recolour, anything else leaves the cell; 2nd Impact has no 3rd Strike end-of-row
- * code). Scripts loop when they reach a -1 timer. Started from the bgst070, bgst080, bgst090
- * and bgst150 stage init routines.
+ * attributes (pattern 1 = recolour, anything else leaves the cell). Scripts loop when they reach a -1 timer.
+ * Started from the bgst070, bgst080, bgst090 and bgst150 stage init routines.
  */
 
 #include "structs.h"

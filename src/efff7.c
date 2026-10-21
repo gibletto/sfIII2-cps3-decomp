@@ -1,8 +1,8 @@
 /*
- * EFFF7.C  Effect F7: the six sprites of the 2nd Impact opening (2nd Impact version)
+ * EFFF7.C  Effect F7: the six sprites of the opening
  *
- * 2nd Impact rewrote effect F7 (3rd Strike: an object viewer). effect_F6_init makes the counter of effect F6 and
- * effect_F7_init makes six sprites with it as the master, old_rno[0] = 0-5. effect_F7_move runs
+ * effect_F6_init makes the counter of effect F6 and effect_F7_init makes six sprites with it as the master,
+ * old_rno[0] = 0-5. effect_F7_move runs
  * each sprite's routine from the local effF7_jp table: sprites 0 and 1 have their own scenes,
  * 2-3 and 4-5 share one. Each step of the master's routine_no[0] restarts the sprite
  * (routine_no[1] = 0) and moves it from its effF7_pos_tbl position for that step to the next one
@@ -23,7 +23,7 @@
 #include "effect_2.h"
 #include "efff7.h"
 
-/* x, y of each sprite at each step of the master (2nd Impact only, 0617CAC0) */
+/* x, y of each sprite at each step of the master (0617CAC0) */
 extern const s16 effF7_pos_tbl[23][6][2];
 
 

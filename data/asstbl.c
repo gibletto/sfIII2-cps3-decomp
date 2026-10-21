@@ -1,5 +1,5 @@
 /*
- * ASSTBL.C  tables read by PLS03.c: special move, super art and normal attack command checks (2nd Impact version)
+ * ASSTBL.C  tables read by PLS03.c: special move, super art and normal attack command checks
  */
 
 #include "types.h"
@@ -13,7 +13,6 @@ extern const AS_ROW asstbl_06102A34[][8];
 extern const AS_ROW asstbl_lv_B010[][6];
 extern const AS_ROW asstbl_lv_A010[][6];
 extern const AS_ROW8 asstbl_lever_up_att[][6];
-extern const AS_ROW8 asstbl_06103644[][6];
 extern const AS_ROW8 asstbl_paring_att[][6];
 extern const AS_ROW8 asstbl_dm_att[][6];
 extern const AS_ROW asstbl_lv_D010[][8];
@@ -126,7 +125,7 @@ const AS_ROW asstbl_lv_A010[24][6] = {
     { { { 0, 144, 0 }, 1 }, { { 0, 145, 0 }, 1 }, { { 0, 146, 0 }, 1 }, { { 0, 147, 0 }, 1 }, { { 0, 148, 0 }, 1 }, { { 0, 149, 0 }, 1 } },
 };
 
-const AS_ROW8 asstbl_lever_up_att[15][6] = {
+const AS_ROW8 asstbl_lever_up_att[16][6] = {
     { { { 6, 18, 0 }, 1 }, { { 6, 19, 0 }, 1 }, { { 6, 20, 0 }, 1 }, { { 6, 21, 0 }, 1 }, { { 6, 22, 0 }, 1 }, { { 6, 23, 0 }, 1 } },
     { { { 6, 18, 0 }, 1 }, { { 6, 19, 0 }, 1 }, { { 6, 20, 0 }, 1 }, { { 6, 21, 0 }, 1 }, { { 6, 22, 0 }, 1 }, { { 6, 23, 0 }, 1 } },
     { { { 9, 18, 64 }, 1 }, { { 9, 19, 64 }, 1 }, { { 9, 20, 64 }, 1 }, { { 9, 21, 64 }, 1 }, { { 9, 22, 64 }, 1 }, { { 9, 23, 64 }, 1 } },
@@ -142,10 +141,6 @@ const AS_ROW8 asstbl_lever_up_att[15][6] = {
     { { { 9, 18, 101 }, 1 }, { { 9, 19, 101 }, 1 }, { { 9, 20, 101 }, 1 }, { { 9, 21, 101 }, 1 }, { { 9, 22, 101 }, 1 }, { { 9, 23, 101 }, 1 } },
     { { { 6, 18, 0 }, 1 }, { { 6, 19, 0 }, 1 }, { { 6, 20, 0 }, 1 }, { { 6, 21, 0 }, 1 }, { { 6, 22, 0 }, 1 }, { { 6, 23, 0 }, 1 } },
     { { { 6, 18, 0 }, 1 }, { { 6, 19, 0 }, 1 }, { { 6, 20, 0 }, 1 }, { { 6, 21, 0 }, 1 }, { { 6, 22, 0 }, 1 }, { { 6, 23, 0 }, 1 } },
-};
-
-/* provisional name */
-const AS_ROW8 asstbl_06103644[1][6] = {
     { { { 6, 18, 0 }, 1 }, { { 6, 19, 0 }, 1 }, { { 6, 20, 0 }, 1 }, { { 6, 21, 0 }, 1 }, { { 6, 22, 0 }, 1 }, { { 6, 23, 0 }, 1 } },
 };
 

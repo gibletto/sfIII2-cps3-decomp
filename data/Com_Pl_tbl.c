@@ -90,9 +90,7 @@ extern const u8 sys_cfg_default_2_6[];
 extern const u8 sys_cfg_default_2_7[];
 extern const u8 sys_cfg_default_2_8[];
 extern const u8 game_cfg_default_tbl_row0[];
-extern const u16 Com_Pl_tbl_060FEA76[];
 extern const u8 game_cfg_default_tbl_row1[];
-extern const u8 Com_Pl_tbl_060FEA7B[];
 extern const u8 game_cfg_default_tbl_row2[];
 extern const u8 game_cfg_default_tbl_row3[];
 extern const u8 game_cfg_default_tbl_row4[];
@@ -494,22 +492,12 @@ const u8 sys_cfg_default_2_8[32] = {
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 };
 
-const u8 game_cfg_default_tbl_row0[12] = {
-    0, 2, 1, 1, 1, 0, 0, 1, 0x97, 9, 0x25, 0,
+const u8 game_cfg_default_tbl_row0[16] = {
+    0, 2, 1, 1, 1, 0, 0, 1, 0x97, 9, 0x25, 0, 0x33, 0x47, 0x41, 0x20,
 };
 
-/* provisional name */
-const u16 Com_Pl_tbl_060FEA76[2] = {
-    0x3347, 0x4120,
-};
-
-const u8 game_cfg_default_tbl_row1[1] = {
-    0,
-};
-
-/* provisional name */
-const u8 Com_Pl_tbl_060FEA7B[15] = {
-    2, 1, 1, 1, 0, 0, 1, 0x97, 9, 0x25, 3, 0x33, 0x47, 0x41, 0x20,
+const u8 game_cfg_default_tbl_row1[16] = {
+    0, 2, 1, 1, 1, 0, 0, 1, 0x97, 9, 0x25, 3, 0x33, 0x47, 0x41, 0x20,
 };
 
 const u8 game_cfg_default_tbl_row2[16] = {

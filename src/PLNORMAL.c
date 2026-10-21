@@ -1,13 +1,12 @@
 /*
  * PLNORMAL.C  Player normal-state routines
  *
- * The Normal_XXXXX routines are the entries of the player normal table (plpnm_lv_00, 51 slots in
- * 2nd Impact): crouching and turning (Normal_03000, 04000; Normal_02000 is in PLPNM in 2nd Impact), walking and
+ * The Normal_XXXXX routines are the entries of the player normal table (plpnm_lv_00, 51 slots):
+ * crouching and turning (Normal_03000, 04000; Normal_02000 is in PLPNM), walking and
  * jump starts (Normal_05000, 06000 through normal_05/normal_06), dashes, jumps (Normal_16000 -
  * 18000), parry (Normal_31000, 35000, Normal_air_paring), guard and throw escapes (Normal_42000,
  * Normal_47000, Normal_48000) and the other special movement states.
  * Each sets up its animation and speed data and lands through the jumping process when airborne.
- * 2nd Impact has none of 3rd Strike Normal_51000 - 58000 (extra jumps, wall jump, character select moves).
  */
 
 #include "structs.h"

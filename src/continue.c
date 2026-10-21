@@ -70,7 +70,7 @@
 
 
 
-/* effect_49_init takes two arguments (one in 3rd Strike) */
+/* effect_49_init takes two arguments */
 s32 effect_49_init();
 
 

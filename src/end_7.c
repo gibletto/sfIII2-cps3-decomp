@@ -1,5 +1,5 @@
 /*
- * END_7.C  Ending 7 (end_07000), 2nd Impact version
+ * END_7.C  Ending 7 (end_07000)
  */
 
 #include "structs.h"

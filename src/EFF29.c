@@ -1,8 +1,7 @@
 /*
- * EFF29.C  Effect 29: two stage objects that walk their own routes (2nd Impact version)
+ * EFF29.C  Effect 29: two stage objects that walk their own routes
  *
- * 2nd Impact rewrote effect 29 (3rd Strike: an object that vanishes for a random time). effect_29_init
- * creates two objects from eff29_pos_tbl; type 0 walks left and right on the x axis
+ * effect_29_init creates two objects from eff29_pos_tbl; type 0 walks left and right on the x axis
  * (eff29_type0), type 1 runs a ten-step route on both axes (eff29_type1).
  */
 

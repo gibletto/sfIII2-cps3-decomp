@@ -3,9 +3,8 @@
  *
  * Player routines for the end of a round: lose_player dispatches the loser through
  * Lose_00000..Lose_30000 by the character's lose type (normal loser, judged-loss loser and special
- * cases). 2nd Impact: the time-over outcomes (pcon_rno 2/5 and 2/6) run lose_time_over, a loss on
- * stage 8 area 0 runs lose_stage8_action, Lose_20000 counts the rounds from Game_setting, and there
- * is no metamorphose pause and no push-back from the screen edges.
+ * cases). The time-over outcomes (pcon_rno 2/5 and 2/6) run lose_time_over, a loss on
+ * stage 8 area 0 runs lose_stage8_action, and Lose_20000 counts the rounds from Game_setting.
  */
 
 #include "structs.h"
@@ -228,7 +227,7 @@ void Judge_normal_loser(PLW* wk) {
 
 
 
-/* provisional name: 2nd Impact only, the loser on stage 8 area 0 */
+/* provisional name: the loser on stage 8 area 0 */
 void lose_stage8_action(PLW* wk) {
     if (wk->wu.routine_no[3] == 0) {
         wk->wu.routine_no[3]++;
@@ -299,7 +298,7 @@ void lose_stage8_action(PLW* wk) {
 
 
 
-/* provisional name: 2nd Impact only, the loser at time over (pcon_rno 2/5 and 2/6) */
+/* provisional name: the loser at time over (pcon_rno 2/5 and 2/6) */
 void lose_time_over(PLW* wk) {
     s16 id_w;
 

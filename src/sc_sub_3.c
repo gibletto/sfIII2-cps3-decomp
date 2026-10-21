@@ -89,7 +89,6 @@ void stngauge_cont_init(void) {
 
 
 
-/* no gauge_stop_flag */
 void stngauge_cont_main(void) {
     if (!EXE_flag) {
         stngauge_control(0);

@@ -10,9 +10,8 @@
  * dramatic-battle mode on some stages; check_new_after_image lets a higher-priority set replace
  * the current one. effect_e7_e8_init_union and get_attdata_of_illusion set up E7 / E8
  * images, including a weakened copy of the player's attack for images that can hit.
- * effect_E4_move is an empty routine. 2nd Impact: an after-image set whose ninth word is 0 is dropped,
- * no ninth parameter (olc_work_ix[2]), no Q-specific index swap, and the hitting images clear
- * dipsw/at_free4 (3rd Strike: dipsw 1, kezuri_pow and at_attribute 0).
+ * effect_E4_move is an empty routine. An after-image set whose ninth word is 0 is dropped, and the
+ * hitting images clear dipsw/at_free4.
  */
 
 #include "structs.h"

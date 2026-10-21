@@ -1,5 +1,5 @@
 /*
- * EFFB8.C  Effect B8: the winner's message banner (2nd Impact version)
+ * EFFB8.C  Effect B8: the winner's message banner
  *
  * Effect B8 is the win message shown after a match. effect_B8_init (called from Win_3rd) takes
  * the winner and chooses the message: sometimes the loser's line, otherwise a Super Art line or
@@ -8,7 +8,7 @@
  * graphics and connected sprites and holds the banner until Suicide; on death it purges the
  * line's graphics. With extra switch 2 bit 2 on, player 1's buttons cycle characters and
  * messages through effB8_mes_change_init.
- * 2nd Impact: effB8_conn_set and effB8_conn_purge load and free the connected cells of a character's
+ * effB8_conn_set and effB8_conn_purge load and free the connected cells of a character's
  * entry in effB8_conn_tbl (effect A9's select-screen plates).
  */
 
@@ -31,7 +31,7 @@ s16 old_mes_no2;
 s16 old_mes_no3;  
 s16 old_mes_no_pl;  
 
-/* the message tables are initialised work RAM in 2nd Impact, defined in effb8_mes.c */
+/* the message tables are initialised work RAM, defined in effb8_mes.c */
 extern const EFFB8_MESSAGE* effB8_conn_tbl[];
 
 extern s16 Max_vitality;
@@ -349,7 +349,7 @@ s32 effect_B8_init(s8 WIN_PL_NO) {
 
 
 
-/* provisional name; nothing in 2nd Impact calls it */
+/* provisional name; nothing calls it */
 s32 effB8_vital_rank(s16 vital) {
     if (vital < Max_vitality / 5) {
         return 8;
@@ -434,7 +434,7 @@ void effB8_conn_set(ewk, pl, mes_no)
 
 
 
-/* provisional name; nothing in 2nd Impact calls it */
+/* provisional name; nothing calls it */
 void effB8_conn_purge(ewk, pl, mes_no)
     WORK_Other_CONN* ewk;
     s8 pl;

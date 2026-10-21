@@ -3,9 +3,9 @@
  *
  * A single sprite created by the Shun Goku Satsu finish screen (syungoku_finish in EFFD3).
  * effect_20_init places it at BG1's X position + 8, using the etc2 character table with
- * animation 49 (2nd Impact: not flipped like the winner, colour 0x20, Y 72); effect_20_move plays the
+ * animation 49 (not flipped like the winner, colour 0x20, Y 72); effect_20_move plays the
  * animation once, keeps it locked to BG1's X position, and clears its parent's old_rno[0] while
- * running and sets it again when the animation ends so the parent can continue. 2nd Impact: its hit
+ * running and sets it again when the animation ends so the parent can continue. Its hit
  * box grows from 47 to 90, and it first flies for (90 - 47) / 3 frames by cal_all_speed_data.
  */
 

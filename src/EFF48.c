@@ -1,8 +1,7 @@
 /*
- * EFF48.C  Effect 48: opening scene objects (2nd Impact version)
+ * EFF48.C  Effect 48: opening scene objects
  *
- * 2nd Impact rewrote effect 48 (3rd Strike: objects that appear as op_obj_disp advances). effect_48_init
- * creates the objects of eff48_data_tbl for a type; each waits its start time, plays its
+ * effect_48_init creates the objects of eff48_data_tbl for a type; each waits its start time, plays its
  * pattern while op_w.r_no_1 is still its scene (eff48_0000, eff48_2000 shrink a window,
  * eff48_1000 clears op_obj_disp after its time) and then removes itself.
  */

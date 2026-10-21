@@ -1,5 +1,5 @@
 /*
- * BGST020.C  Stage 02 background (2nd Impact only)
+ * BGST020.C  Stage 02 background
  *
  * BG020 runs stage 02's three scroll layers: layer 1 (bg0202: the line-scroll base layer, with the
  * stage's effects and its palette, faded when Shin Gouki is next), layer 0 (bg0201) and layer 2
@@ -47,7 +47,6 @@ static void bg_move_common(void);
 #pragma inline(bg0201, bg0202, bg0203)
 
 
-/* (2nd Impact: layers 1, 0, 2; no sync layer) */
 void BG020(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg0202();
@@ -62,7 +61,6 @@ void BG020(void) {
 
 
 
-/* (2nd Impact: three steps) */
 void bg0201(void) {
     void (*bg0201_jmp[3])() = { bg0201_init00, bg0201_wait, bg_move_common };
     bg0201_jmp[bgw_ptr->r_no_0]();
@@ -87,7 +85,7 @@ void bg0201_wait(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -95,7 +93,6 @@ static void bg_move_common(void) {
 
 
 
-/* (2nd Impact: three steps) */
 void bg0202(void) {
     void (*bg0202_jmp[3])() = { bg0202_init00, bg0202_color, bg0202_move };
     bg0202_jmp[bgw_ptr->r_no_0]();
@@ -103,7 +100,7 @@ void bg0202(void) {
 
 
 
-/* (2nd Impact: a line-scroll layer as 3rd Strike bg0701_init00, then the stage effects) */
+/* a line-scroll layer, then the stage effects */
 void bg0202_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0;

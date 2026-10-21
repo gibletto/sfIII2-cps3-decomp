@@ -1,5 +1,5 @@
 /*
- * END_2.C  Ending 2 (end_02000), 2nd Impact version
+ * END_2.C  Ending 2 (end_02000)
  *
  * end_02000(pl_num) is the ending script: it runs the common ending inits, loads the ending graphics,
  * writes the first BG0 and BG1 cells, starts three effect H5 objects and issues sound 25; then it counts

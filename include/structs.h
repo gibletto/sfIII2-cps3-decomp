@@ -49,7 +49,7 @@ typedef struct {
 } HOSEI_BOX;
 
 typedef struct {
-    u16 reaction;       /* a halfword (3rd Strike: u8 reaction, u8 level) */
+    u16 reaction;
     u8 mkh_ix;
     u8 dipsw;
     u8 at_free4;        /* provisional name */
@@ -143,9 +143,9 @@ typedef struct {
 
 typedef struct {
     s16 spr_free0;  /* provisional name */
-    s16 cg_ofs_x;  /* pattern origin x: cg_data_list[cg_number].x (2nd Impact: here, inside spr) */
+    s16 cg_ofs_x;  /* pattern origin x: cg_data_list[cg_number].x */
     u16 cg_ofs_y;  /* pattern origin y, negated: -cg_data_list[cg_number].y */
-    u16 sprite_flip;  /* flip the list is drawn with: done_rl ^ done_flip (2nd Impact: a halfword) */
+    u16 sprite_flip;  /* flip the list is drawn with: done_rl ^ done_flip */
     u16 gfx_ofs;  /* sprite code of the list's block in sprite RAM */
     s16 gfx_cells;  /* sprites in the list; effect 13 carries its master's colour code here until its first frame */
     s16 gfx_blk10[4];  /* graphics blocks: [0] current, [1] and [2] still used by the last two frames */
@@ -252,7 +252,7 @@ typedef struct {
     CHAR_CMD cmbk;
     CHAR_CMD cmb2;
     CHAR_CMD cmb3;
-    CHAR_CMD cmr0;      /* provisional name: 2nd Impact has one CHAR_CMD here (3rd Strike: cmhs, cmr0-cmr3), unreferenced */
+    CHAR_CMD cmr0;      /* provisional name: one CHAR_CMD, unreferenced */
     s16 cmwk[16];
     s16 my_bright_type;
     u32* char_table[12];
@@ -298,7 +298,7 @@ typedef struct {
     u8 cg_prio;
     u8 cg_flip;
     u16 old_cgnum;
-    u8 done_flip;  /* cg_flip the sprite list was built for (2nd Impact: here, before spr) */
+    u8 done_flip;  /* cg_flip the sprite list was built for */
     s8 done_rl;  /* rl_flag the sprite list was built for (last facing it was mirrored to) */
     CHAR_SPR_WORK spr;
     s16 my_col_mode;
@@ -315,7 +315,7 @@ typedef struct {
             s16 y;
         } size;
     } my_mr;
-    s16 waku_work_index;    /* also the shell reflect flag (3rd Strike shell_vs_refrect; EFF13, HITEFEF) */
+    s16 waku_work_index;    /* also the shell reflect flag (EFF13, HITEFEF) */
     s16 olc_work_ix[4];
     u8 pad1[0x2];
     HIT_IX* hit_ix_table;
@@ -383,7 +383,7 @@ typedef struct {
     u16 dm_koa;
     s16 dm_work_id;
     u16 dm_arts_point;
-    s16 dm_jump_att_flag;   /* a halfword (PLPDM Damage_12000 tests it as > 0); 3rd Strike u8 + dm_free */
+    s16 dm_jump_att_flag;   /* a halfword (PLPDM Damage_12000 tests it as > 0) */
     s16 dm_count_up;
     s8 dm_nodeathattack;
     u8 dm_exdm_ix;
@@ -400,13 +400,13 @@ typedef struct {
     u8 hit_work_id;
     u8 dmg_work_id;
     u8 kow;
-    u8 wrd_free[41];    /* provisional name: 2nd Impact's 41 bytes after kow (3rd Strike has K5, E3/E4 and free work there) */
+    u8 wrd_free[41];    /* provisional name: the 41 bytes after kow */
 } WORK;
 
 typedef struct {
     s16 kind_of_arts;
     u8 nmsa_g_ix;
-    u8 exsa_g_ix;       /* as 3rd Strike without the exs2_* entries (set_super_arts_status stores data[0..3] here) */
+    u8 exsa_g_ix;       /* set_super_arts_status stores data[0..3] here */
     u8 nmsa_a_ix;
     u8 exsa_a_ix;
     s8 gauge_type;
@@ -522,7 +522,7 @@ typedef struct {
     s16 image_setup_flag;
     s16 image_data_index;
     u8 caution_flag;
-    u8 permited_koa;    /* a byte here (3rd Strike: u16 after waku_ram_index) */
+    u8 permited_koa;
     u8 pad3[0x2];
     ComboType* rp;
     s16 bullet_hcnt;
@@ -555,7 +555,7 @@ typedef struct {
     s16 total_att_hit_ok;
     u8 sa_healing;
     u8 auto_guard;
-    u8 pt_free[24];     /* provisional name: 2nd Impact's 24 bytes after auto_guard (3rd Strike: hsjp_ok ... pt_free) */
+    u8 pt_free[24];     /* provisional name: the 24 bytes after auto_guard */
 } PLW;
 
 typedef struct {
@@ -825,7 +825,7 @@ typedef struct {
 
 typedef s32 (*Term_Tbl_t)(PLW* wk, WORK* em);
 
-/* 12 bytes (3rd Strike 20); the second ranking keeps its key in score as well */
+/* 12 bytes; the second ranking keeps its key in score as well */
 typedef struct {
     u8 name[3];
     u8 mark;            /* a letter shown after the initials */
@@ -1182,7 +1182,7 @@ typedef struct {
     s8 look_up_flag;    /* show the looked-up box set instead of the master's */
     s8 curr_ja;         /* box selected in the editor, drawn highlighted */
     u16 ja_disp_bit;    /* one bit per box to draw; 0x4000 the push box, 0x8000 the origin and floor marks */
-    s16 ja[54][2];      /* screen corners, 4 per box (2nd Impact: 13 boxes), then the origin [52] and floor [53] marks */
+    s16 ja[54][2];      /* screen corners, 4 per box (13 boxes), then the origin [52] and floor [53] marks */
     s16 jx[13][4];      /* box rectangles from the master's hit tables: x, w, y, h */
     union {
         s32 l;
@@ -2301,9 +2301,9 @@ typedef struct {
     s16 rank_in;        /* 0E place reached in the best ranking */
     s16 rank_status;    /* 10 rank_stage_tbl entry for that ranking */
     s16 rank;           /* 12 place reached, -1 = not ranked */
-    s16 rank_sub;       /* 14 2nd Impact: place in the second ranking, -1 = not ranked */
+    s16 rank_sub;       /* 14 place in the second ranking, -1 = not ranked */
     s16 status;         /* 16 copy of rank_status */
-    s16 status_sub;     /* 18 2nd Impact: rank_stage status of the second ranking (with rank_sub) */
+    s16 status_sub;     /* 18 rank_stage status of the second ranking (with rank_sub) */
     s16 index;          /* 1A cursor slot 0-3 */
     s16 timer;          /* 1C entry time left (1200, +420 per letter) */
     s16 code[4];        /* 1E letter codes 0-43; 44 space, 45 back, 46 end, 47 blank */
@@ -2449,7 +2449,7 @@ typedef struct {
 } CharGfxSet;
 
 typedef struct {
-    s16 cge_free0;      /* provisional name: 2nd Impact only, copied to spr.spr_free0 */
+    s16 cge_free0;      /* provisional name: copied to spr.spr_free0 */
     s16 x;
     s16 y;
     s16 cge_free;       /* provisional name */

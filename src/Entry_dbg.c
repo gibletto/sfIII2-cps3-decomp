@@ -66,8 +66,8 @@ extern void (*const vector_table[])();
 /* 02000098 */
 /* the date and time the program was built (__DATE__, __TIME__); nothing in the program reads them
    (provisional names) */
-char build_date[] = "Sep 30 1997";     /* 3rd Strike: "May 12 1999" */
-char build_time[] = "02:48:52";        /* 3rd Strike: "06:29:04" */
+char build_date[] = "Sep 30 1997";
+char build_time[] = "02:48:52";
 
 
 void vector_restart();

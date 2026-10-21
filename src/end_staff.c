@@ -1,5 +1,5 @@
 /*
- * END_STAFF.C  Staff roll scene, 2nd Impact version
+ * END_STAFF.C  Staff roll scene
  *
  * end_staff_main runs the staff roll (staff_roll_main) while BG layer 1 scrolls toward Gill's position, then
  * starts the end object (end_obj_sync), zooms in on the centre that end_staff_scrn_set computes and ends the

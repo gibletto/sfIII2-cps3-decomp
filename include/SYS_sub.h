@@ -6,7 +6,7 @@
 s32 Button_Cut_EX(s16* Timer, s16 Limit_Time);
 s32 Check_Fade_Complete_SP(void);
 s32 Ck_Range_Out_S(WORK_Other* ewk, s16 BG_No, s16 R);
-s32 Ck_Range_Out_Y(WORK_Other* ewk, s16 BG_No, s16 R);  /* provisional name; 2nd Impact only */
+s32 Ck_Range_Out_Y(WORK_Other* ewk, s16 BG_No, s16 R);  /* provisional name */
 s32 Cut_Cut_C_Timer(void);
 s32 Cut_Cut_Cut(void);
 s8 Cut_Cut_Loser(void);
@@ -33,7 +33,7 @@ void scrn_pos_clear(void);
 void challenger_banner_clear(void);
 void commit_name_entry_row_both_players();
 void Clear_Flash_No(void);
-s32 Check_Sort_Ranking();       /* provisional name; 2nd Impact only */
+s32 Check_Sort_Ranking();       /* provisional name */
 s32 cut_button_side(void);
 u32 Check_Ranking();
 void Check_Partners_Rank();

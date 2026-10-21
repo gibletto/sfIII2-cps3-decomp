@@ -6,7 +6,7 @@
 ; and unsigned remainders. __quick_mvn is the fast block move for structure copies.
 ; __sftl is the variable-count left shift: counts of 32 or more give 0, other counts jump through
 ; a byte offset table into an unrolled run of shift instructions. _abs is the C library's abs().
-; 2nd Impact links no __sftra (3rd Strike's arithmetic-right shift and its offset table), so the module ends after
+; __sftra (the library's arithmetic-right shift and its offset table) is not linked, so the module ends after
 ; the shift run, and abs follows.
 
           .CPU        SH2
@@ -492,8 +492,7 @@ quick_mvn_rts:
           .DATA.W     H'000B
           .DATA.W     H'63F6
           .DATA.W     H'0009
-; Jump table for copies of 64 bytes or less: entry n/4 enters the move run above n bytes before its RTS
-; (in 3rd Strike this table is stale; here it points into the run).
+; Jump table for copies of 64 bytes or less: entry n/4 enters the move run above n bytes before its RTS.
 quick_mvn_1:
           .DATA.L     quick_mvn_rts
           .DATA.L     quick_mvn_rts-4
@@ -632,7 +631,7 @@ sftl_3:
           .DATA.W     H'4005
           .DATA.W     H'000B
           .DATA.W     H'62F6
-          .RES.W      1         ; fill (FFFF here; 0000 in 3rd Strike)
+          .RES.W      1         ; fill (FFFF)
 _abs:
           CMP/PL      R4
           BF          abs_1

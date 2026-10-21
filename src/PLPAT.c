@@ -5,8 +5,7 @@
  * routine_no[2] to the common attack routines (Attack_00000 - 10000: normal, jump and command attacks)
  * or, above 15, to the character's own table of special moves (the PLPATxx modules), sets the draw
  * priority and checks the jump guard type. get_cancel_timer sets the cancel window.
- * 2nd Impact has no Attack_14000/15000, get_cjdR or hoken_muriyari_chakuchi: the landing reset is
- * xyz[1].cal = 0 inline.
+ * The landing reset is xyz[1].cal = 0 inline.
  */
 
 #include "structs.h"
@@ -25,7 +24,7 @@
 #include "PLSGAUGE.h"
 #include "PLPAT.h"
 
-void attack_hit_dummy(PLW* wk);   /* provisional name; 2nd Impact only (0600BABE, PLS02): empty */
+void attack_hit_dummy(PLW* wk);   /* provisional name (0600BABE, PLS02): empty */
 
 
 void Player_attack(PLW* wk) {

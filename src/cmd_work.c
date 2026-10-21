@@ -10,9 +10,21 @@
 #include "structs.h"
 
 extern const s16 p3_cmd_30[];
-extern const s16 cmd_data_06160000[];
+extern const char lvr_chk_line_str0[];
+extern const char lvr_chk_line_str1[];
+extern const char lvr_chk_line_str2[];
+extern const char player_cmd_line_str0[];
+extern const char player_cmd_line_str1[];
+extern const char player_cmd_line_str2[];
+extern const char player_cmd_line_str3[];
+extern const char player_cmd_line_str4[];
+extern const char player_cmd_line_str5[];
+extern const char player_cmd_line_str6[];
+extern const s16 p3_cmd_31[];
+extern const s16 p6_cmd_29[];
+extern const s16 p6_cmd_30[];
+extern const s16 p7_cmd_32[];
 extern const s16 p7_cmd_31[];
-extern const s16 player_cmd_line_text[];
 extern const s16 dm_cmd_xx[];
 extern const s16 p0_cmd_20[];
 extern const s16 p0_cmd_21[];
@@ -164,11 +176,11 @@ const s16* pl_cmd_list[16][56] = {
     { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p0_cmd_20, p0_cmd_21, p0_cmd_22, dm_cmd_xx, p0_cmd_24, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p0_cmd_28, p0_cmd_29, p0_cmd_30, p0_cmd_31, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
     { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p1_cmd_20, p1_cmd_21, p1_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p1_cmd_28, p1_cmd_29, p1_cmd_30, p1_cmd_31, p1_cmd_32, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
     { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p2_cmd_20, p2_cmd_21, p2_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p2_cmd_28, p2_cmd_29, p2_cmd_30, p2_cmd_31, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p2_cmd_46, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
-    { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p3_cmd_20, p3_cmd_21, p3_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p3_cmd_28, p3_cmd_29, p3_cmd_30, (const s16 *)((const u8*)p3_cmd_30 + 50), p3_cmd_32, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
+    { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p3_cmd_20, p3_cmd_21, p3_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p3_cmd_28, p3_cmd_29, p3_cmd_30, p3_cmd_31, p3_cmd_32, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
     { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p4_cmd_20, p4_cmd_21, p4_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p4_cmd_28, p4_cmd_29, p4_cmd_30, p4_cmd_31, p4_cmd_32, p4_cmd_33, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
     { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p5_cmd_20, p5_cmd_21, p5_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p5_cmd_28, p5_cmd_29, p5_cmd_30, p5_cmd_31, p5_cmd_32, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
-    { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p6_cmd_20, p6_cmd_21, p6_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p6_cmd_28, (const s16 *)((const u8*)cmd_data_06160000 + 24), (const s16 *)((const u8*)cmd_data_06160000 + 74), p6_cmd_32, p6_cmd_33, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
-    { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p7_cmd_20, p7_cmd_21, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p7_cmd_28, p7_cmd_29, p7_cmd_30, p7_cmd_31, (const s16 *)((const u8*)p7_cmd_31 + 50), dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p7_cmd_38, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p7_cmd_46, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
+    { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p6_cmd_20, p6_cmd_21, p6_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p6_cmd_28, p6_cmd_29, p6_cmd_30, p6_cmd_32, p6_cmd_33, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
+    { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p7_cmd_20, p7_cmd_21, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p7_cmd_28, p7_cmd_29, p7_cmd_30, p7_cmd_31, p7_cmd_32, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p7_cmd_38, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p7_cmd_46, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
     { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p8_cmd_20, p8_cmd_21, p8_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p8_cmd_28, p8_cmd_29, p8_cmd_30, p8_cmd_32, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
     { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p9_cmd_20, p9_cmd_22, p9_cmd_24, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p9_cmd_28, p9_cmd_29, p9_cmd_30, p9_cmd_31, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, p9_cmd_46, p9_cmd_47, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
     { pc_cmd_00, pc_cmd_01, pc_cmd_02, pc_cmd_03, pc_cmd_04, pc_cmd_05, pc_cmd_06, pc_cmd_07, pc_cmd_08, pc_cmd_09, pc_cmd_10, pc_cmd_11, pc_cmd_12, pc_cmd_13, pc_cmd_14, pc_cmd_15, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, pA_cmd_20, pA_cmd_21, pA_cmd_22, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, pA_cmd_28, pA_cmd_32, pA_cmd_31, pA_cmd_30, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx, dm_cmd_xx },
@@ -221,18 +233,18 @@ const_s16_arr* player_cmd[16] = {
    them. */
 /* 020072F0 */
 TMLINE player_cmd_lines[12] = {
-    { 1, 0xC, 0xE, 0, (u8 *)player_cmd_line_text },
-    { 1, 0xD, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 20) },
-    { 1, 0xE, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 40) },
-    { 1, 0xF, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 60) },
-    { 1, 0x10, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 80) },
-    { 0xC, 0x11, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 100) },
-    { 0x17, 0xC, 0xE, 0, (u8 *)player_cmd_line_text },
-    { 0x17, 0xD, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 20) },
-    { 0x17, 0xE, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 40) },
-    { 0x17, 0xF, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 60) },
-    { 0x17, 0x10, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 80) },
-    { 0x22, 0x11, 0xE, 0, (u8 *)((const u8*)player_cmd_line_text + 112) },
+    { 1, 0xC, 0xE, 0, (u8 *)player_cmd_line_str0 },
+    { 1, 0xD, 0xE, 0, (u8 *)player_cmd_line_str1 },
+    { 1, 0xE, 0xE, 0, (u8 *)player_cmd_line_str2 },
+    { 1, 0xF, 0xE, 0, (u8 *)player_cmd_line_str3 },
+    { 1, 0x10, 0xE, 0, (u8 *)player_cmd_line_str4 },
+    { 0xC, 0x11, 0xE, 0, (u8 *)player_cmd_line_str5 },
+    { 0x17, 0xC, 0xE, 0, (u8 *)player_cmd_line_str0 },
+    { 0x17, 0xD, 0xE, 0, (u8 *)player_cmd_line_str1 },
+    { 0x17, 0xE, 0xE, 0, (u8 *)player_cmd_line_str2 },
+    { 0x17, 0xF, 0xE, 0, (u8 *)player_cmd_line_str3 },
+    { 0x17, 0x10, 0xE, 0, (u8 *)player_cmd_line_str4 },
+    { 0x22, 0x11, 0xE, 0, (u8 *)player_cmd_line_str6 },
 };
 /* provisional name */
 /* Stored after player_cmd_lines: (x, y) cell positions. Nothing in the program refers to it. */
@@ -251,12 +263,12 @@ s16 lvr_chk_tbl[2][4] = {
 /* Text lines of the lever-check display, stored after lvr_chk_tbl. Nothing in the program refers to them. */
 /* 02007400 */
 TMLINE lvr_chk_lines[6] = {
-    { 6, 0x13, 6, 0, (u8 *)((const u8*)player_cmd_line_text + 120) },
-    { 6, 0x13, 6, 0, (u8 *)((const u8*)player_cmd_line_text + 124) },
-    { 6, 0x13, 6, 0, (u8 *)((const u8*)player_cmd_line_text + 128) },
-    { 0x1D, 0x13, 6, 0, (u8 *)((const u8*)player_cmd_line_text + 120) },
-    { 0x1D, 0x13, 6, 0, (u8 *)((const u8*)player_cmd_line_text + 124) },
-    { 0x1D, 0x13, 6, 0, (u8 *)((const u8*)player_cmd_line_text + 128) },
+    { 6, 0x13, 6, 0, (u8 *)lvr_chk_line_str0 },
+    { 6, 0x13, 6, 0, (u8 *)lvr_chk_line_str1 },
+    { 6, 0x13, 6, 0, (u8 *)lvr_chk_line_str2 },
+    { 0x1D, 0x13, 6, 0, (u8 *)lvr_chk_line_str0 },
+    { 0x1D, 0x13, 6, 0, (u8 *)lvr_chk_line_str1 },
+    { 0x1D, 0x13, 6, 0, (u8 *)lvr_chk_line_str2 },
 };
 
 T_PL_LVR t_pl_lvr[2];  /* 02020BF0 */

@@ -42,8 +42,8 @@
 #include "EFFG3.h"
 #include "PLMAIN.h"
 
-void combo_demo_set_position(s16 id);   /* provisional name; 2nd Impact only */
-void combo_demo_load(s16 n);           /* provisional name; 2nd Impact only */
+void combo_demo_set_position(s16 id);   /* provisional name */
+void combo_demo_load(s16 n);           /* provisional name */
 #include "fighter.h"
 #include "Manage.h"
 #include "manage_2.h"

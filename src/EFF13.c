@@ -10,9 +10,7 @@
  *               caldir_pos_256, rate_256_table) and trails effect I9 after-images
  *   kotp_07000  shell whose flight changes on frame type 20, turned toward the opponent
  *   kotp_08000 / kotp_09000  shells that fly until the timer, screen edge or floor
- * 2nd Impact: no kotp_10000-16000 or tama15_screen_check (3rd Strike's later characters), no slow-motion hit stop
- * (add_mvxy_speed_exp), no metamorphose floor flag, no grade_add_att_renew for the tengu stones,
- * and TAMA records are 26 bytes.
+ * TAMA records are 26 bytes.
  * Hits reduce the shell's vitality: a light hit spawns an effect 96 flash, enough damage plays
  * the defeat / hit / explode pattern (erdf / erht / erex); some shells change owner when
  * reflected. Helper routines check screen ranges, aim at the target and relaunch shells.

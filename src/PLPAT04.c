@@ -4,8 +4,7 @@
  * Character-specific attack routines for player number 4. pl04_extra_attack dispatches attack
  * routine numbers 16 and up through pl04_exatt_table.
  * Att_PL04_TOKUSHUKOUDOU is the personal action: super gauge on cg_type 40 and a strike power
- * boost of 8 (capped 8) on cg_type 20. 2nd Impact has neither the landing fix-up
- * (hoken_muriyari_chakuchi) nor the grade report of 3rd Strike.
+ * boost of 8 (capped 8) on cg_type 20.
  */
 
 #include "structs.h"

@@ -8,7 +8,6 @@
  * need) and waits until both are ready and the battle is allowed. The static move_player_work_bonus
  * and move_Px_move_Py_bonus run Player_move_bonus for both players in the right order;
  * setup_bs_scrrrl_bs sets their scroll limits from bsmr_range_table by Game_setting.mode.
- * 2nd Impact has no PLCNT3 (second bonus stage): this is its only bonus-stage control.
  */
 
 #include "structs.h"

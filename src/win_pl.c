@@ -6,7 +6,7 @@
  * win_type_tbl. Each win routine chooses a victory animation, often at random (win_select), with
  * a different set for the final round and some stage-specific poses; the jijii_* routines fly up
  * or jump for the old man's poses. Normal_normal_Winner is the default pose and
- * Judge_normal_winner is used for a judged round. 2nd Impact: win_special_check sends a judged
+ * Judge_normal_winner is used for a judged round. win_special_check sends a judged
  * round to Judge_normal_winner and a win on stage 8 area 0 to win_stage8_action, both players
  * are pushed back from the screen edges, and the rounds come from Game_setting.
  */
@@ -404,7 +404,7 @@ void Judge_normal_winner(PLW* wk) {
 
 
 
-/* provisional name: 2nd Impact only; 1 when it has run the judged-round or stage 8 pose */
+/* provisional name: 1 when it has run the judged-round or stage 8 pose */
 s32 win_special_check(PLW* wk) {
     if (pcon_rno[0] == 2 && pcon_rno[1] == 3) {
         Judge_normal_winner(wk);
@@ -657,7 +657,7 @@ void Win_09000(PLW* wk) {
 
 
 
-/* provisional name: 2nd Impact only, the winner on stage 8 area 0 */
+/* provisional name: the winner on stage 8 area 0 */
 void win_stage8_action(PLW* wk) {
     bg_stop = 1;
     switch (wk->wu.routine_no[3]) {

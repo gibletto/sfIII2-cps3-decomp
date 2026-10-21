@@ -1,10 +1,9 @@
 /*
- * EFFH6_CODE.C  Effect H6: staff-roll text (2nd Impact version)
+ * EFFH6_CODE.C  Effect H6: staff-roll text
  *
  * Effect H6 is one staff-roll line. effect_H6_init builds its character sprites from the string
  * through code_tab ('#' lines are one picture) and entry type 0-5 sets how it slides in, holds
- * and leaves at roll_rate; 2nd Impact has six entry types and one character bank (3rd Strike: ten, with
- * punctuation pictures). end_cut_check reports whether the winner is holding an attack button
+ * and leaves at roll_rate; there is one character bank. end_cut_check reports whether the winner is holding an attack button
  * to speed the roll up, unless end_no_cut is set.
  */
 

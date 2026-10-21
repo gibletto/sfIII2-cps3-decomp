@@ -1,5 +1,5 @@
 /*
- * EFFC2.C  Effect C2: stage objects that drop on the landing (2nd Impact)
+ * EFFC2.C  Effect C2: stage objects that drop on the landing
  *
  * effect_C2_init creates four eff45_char_table objects from effc2_data_tbl (x, y, priority,
  * pattern). Each plays its pattern once bg_land_flag is set, clears bg_etc_flag when the pattern

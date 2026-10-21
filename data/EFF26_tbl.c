@@ -8,7 +8,6 @@
 #pragma section TBL
 
 extern const s16 eff26_num[];
-extern const s16 EFF26_tbl_06178830[];
 extern const s16 scr_obj_num27[];
 extern const s16 scr_obj_data27_0[];
 extern const s16 scr_obj_data27_1[];
@@ -19,17 +18,12 @@ extern const s16 scr_obj_data27_5[];
 extern const s16 scr_obj_data27_6[];
 extern const s16 eff29_pos_tbl[][3];
 
-const s16 eff26_num[2] = {
-    1, 1,
-};
-
-/* provisional name */
-const s16 EFF26_tbl_06178830[34] = {
-    0, 5, 2, 8256, 672, 96, 96, 4,
-    0, 0, -1, 10, 11, 32, 75, 0,
-    5, 1, 6, 2, 8280, -304, 55, 78,
-    18, 0, 1, -1, 19, 4, 19, 19,
-    0, -1,
+const s16 eff26_num[36] = {
+    1, 1, 0, 5, 2, 8256, 672, 96,
+    96, 4, 0, 0, -1, 10, 11, 32,
+    75, 0, 5, 1, 6, 2, 8280, -304,
+    55, 78, 18, 0, 1, -1, 19, 4,
+    19, 19, 0, -1,
 };
 
 const s16 scr_obj_num27[7] = {

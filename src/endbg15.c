@@ -1,5 +1,5 @@
 /*
- * ENDBG15.C  Ending background 15 (2nd Impact only)
+ * ENDBG15.C  Ending background 15
  *
  * end_BG150 (entries 15 and 16) runs layer 1 (clears bg_app, no move step) and layer 0, then the zoom
  * check, position correction and family set.

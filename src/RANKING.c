@@ -6,7 +6,7 @@
  * when finished. The steps clear the text layer, load the ranking background and effects,
  * change the BGM, flash the entries in, count down the display time and wipe out; Ranking_01
  * also sets up the next demo when needed.
- * In 2nd Impact the ranking is two tables of six (score and wins). Setup_grade (the rank number),
+ * The ranking is two tables of six (score and wins). Setup_grade (the rank number),
  * Setup_Name, Setup_Face (portrait and mark letter), Setup_Score_Small and Setup_Wins put each
  * entry's cells up through effect 51, each cell flashing in at its Rank_Flash_Timer_Data frame;
  * Setup_Ranking_Obj and Setup_Score_Obj put up the headings (effect 57).
@@ -60,7 +60,7 @@
 
 
 
-/* provisional name: 2nd Impact's second effect 95 initializer */
+/* provisional name: the second effect 95 initializer */
 s32 effect_95_rank_init();
 void load_side_color();
 s32 effect_51_init();

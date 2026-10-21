@@ -1,11 +1,10 @@
 /*
- * BGST100.C  Stage 10 background (2nd Impact only)
+ * BGST100.C  Stage 10 background
  *
- * BG100 runs stage 10's three layers through 3rd Strike bg090.c's BG090 routines (Oro's stage): layer 1 (bg0902,
+ * BG100 runs stage 10's three layers (Oro's stage): layer 1 (bg0902,
  * the chasing base layer: gfx, palette and the effects for bg_w.compel_flag), layer 0 (bg0901) and layer 2
- * (bg0903, 2nd Impact's table form of bg_fam0900), then the zoom check, position correction and family set. The
- * entrance demo (bg090_demo_check, demo90_base) and Oro's win scene (jijii_win_bg / jijii_win_bg2) are
- * 3rd Strike's with 2nd Impact's steps (3 for the plain move) and heights.
+ * (bg0903, a table form of bg_fam0900), then the zoom check, position correction and family set. The file also
+ * holds the entrance demo (bg090_demo_check, demo90_base) and Oro's win scene (jijii_win_bg / jijii_win_bg2).
  */
 #include "structs.h"
 #include "work.h"
@@ -58,7 +57,6 @@ static void bg_move_common(void);
 static void bg_base_move_common(void);
 
 
-/* (2nd Impact: three layers, none inlined) */
 void BG100(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg0902();
@@ -73,7 +71,6 @@ void BG100(void) {
 
 
 
-/* (2nd Impact: four steps) */
 void bg0901(void) {
     void (*bg0901_jmp[4])() = { bg0901_init00, bg0901_wait, demo90_base, bg_move_common };
     if (win_sp_flag) {
@@ -85,7 +82,7 @@ void bg0901(void) {
 
 
 
-/* (2nd Impact: the demo check first) */
+/* the demo check first */
 void bg0901_init00(void) {
     bg090_demo_check();
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -102,7 +99,7 @@ void bg0901_wait(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -110,7 +107,6 @@ static void bg_move_common(void) {
 
 
 
-/* (2nd Impact: four steps) */
 void bg0902(void) {
     void (*bg0902_jmp[4])() = { bg0902_init00, bg0902_color, demo90_base, bg_base_move_common };
     if (win_sp_flag) {
@@ -122,7 +118,7 @@ void bg0902(void) {
 
 
 
-/* (2nd Impact: palette, effects by compel_flag) */
+/* the palette, and the effects by compel_flag */
 void bg0902_init00(void) {
     u8 lv;
     bg090_demo_check();
@@ -177,7 +173,7 @@ void bg0902_color(void) {
 
 
 
-/* (2nd Impact: a copy per stage file) */
+/* each stage file has its own copy */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -223,7 +219,7 @@ void bg0903_move(void) {
 
 
 
-/* (2nd Impact: step 3, height speed_y * 200) */
+/* the entrance demo (step 1, raised by speed_y * 200) only with Oro playing in the first area, else step 3 */
 void bg090_demo_check(void) {
     if ((plw->player_number != PL_ORO) && (plw[1].player_number != PL_ORO)) {
         bgw_ptr->r_no_0 = 3;
@@ -279,7 +275,7 @@ void demo90_base(void) {
 
 
 
-/* (2nd Impact: up to 0xC0) */
+/* up to 0xC0 */
 void jijii_win_bg(void) {
     if ((EXE_flag || Game_pause)) {
         return;
