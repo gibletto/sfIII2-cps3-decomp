@@ -1,8 +1,8 @@
 /*
- * MANAGE.C  Round and match management
+ * MANAGE.C  FBI warning screen
  *
- * Other routines: stage BGM selection (Check_Stage_BGM), win records (Disp_Win_Record),
- * request_center_message for the centre-screen messages and the FBI warning screen (FBI_Warning).
+ * FBI_Warning, FBI_Warning_1st and FBI_Warning_2nd run the FBI warning screen (FBI_Warning_2nd is
+ * empty in 2nd Impact). attract_menu_str holds the attract titles and start prompts.
  */
 
 #include "structs.h"

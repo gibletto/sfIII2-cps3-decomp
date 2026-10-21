@@ -1,7 +1,7 @@
 /*
- * EFF08.C  Animated background layer (effect 08)
+ * EFF08.C  Effect 08: animated object under effect 07
  *
- * Animates the BG1 scroll layer by flipping its character page between the layer's own
+ * 3rd Strike: animates the BG1 scroll layer by flipping its character page between the layer's own
  * map and a second copy built in a SIMM RAM slot, and by moving its Y scroll per frame.
  * effect_08_init records the two page addresses (the second allocated with
  * simmram_big_page_alloc_40); effect_08_build_tile_grid writes the 2x16 cell grid into it.
@@ -74,7 +74,7 @@ void effect_08_move(WORK_Other* ewk) {
 
 
 
-/* (effect_08_init row) 2nd Impact: one object for the master */
+/* one object for the master */
 s32 effect_08_init(WORK_Other* oya) {
     WORK_Other* ewk;
     s16 ix;

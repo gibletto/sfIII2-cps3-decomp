@@ -1,5 +1,5 @@
 /*
- * EFF72.C  Effect 72: occasional stage animation parts
+ * EFF72.C  Effect 72: a stage object that reacts to super arts
  *
  * 3rd Strike: effect_72_init creates one of the two parts (hkg_char_table) for an effect 71 controller,
  * at two different priorities, and effect_72_move plays the animation once and ends.

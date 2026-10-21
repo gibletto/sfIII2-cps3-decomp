@@ -5,10 +5,9 @@
  * marks the player as holding (tsukami_f), dispatches the catch routine by routine_no[2] and
  * then checks for a throw escape with check_nagenuke, sending both players to the throw-break
  * routines when the victim inputs a tech inside the thrower's cat_break_ok_timer window.
- * Catch_00000 to Catch_08000 are the kinds of throw: each plays the throw animation, moves by
+ * Catch_00000 to Catch_06000 and Catch_09000 are the kinds of throw: each plays the throw animation, moves by
  * mvxy data and reacts to cg_type marks through catch_cg_type_check (damage, release, landing).
- * subtract_cu_vital applies throw damage to the victim; cat07_running_check handles a running
- * throw reaching the stage edge. Player_catch is called from the player main routine (PLMAIN).
+ * subtract_cu_vital applies throw damage to the victim. Player_catch is called from the player main routine (PLMAIN).
  */
 
 #include "structs.h"

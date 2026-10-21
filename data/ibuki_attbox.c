@@ -25,15 +25,15 @@ const ATTACK_BOX ibuki_att_box[122] = {
     { { {  -85,  12,  63,  16 },  {  -73,  52,  64,  10 } } },  /* 2: S PUNCH B; attack 2 */
     { { {  -87,  23,  41,  24 },  {  -64,  41,  53,  11 } } },  /* 3: M KICK C, follow-up of M KICK B; attack 3, 174 */
     { { {  -62,  18,  14,  16 },  {  -46,  15,  26,  15 } } },  /* 4: M KICK C, follow-up of M KICK B; attack 4, 174 */
-    { { {  -95,  38,   0,   7 },  {  -58,  47,   0,  15 } } },  /* 5: KAGAMI K A, follow-up of M PUNCH C, L PUNCH A, UP P GUARD K S; attack 5, 126 */
+    { { {  -95,  38,   0,   7 },  {  -58,  47,   0,  15 } } },  /* 5: KAGAMI K A, follow-up of M PUNCH C / L PUNCH A, UP P GUARD K S; attack 5, 126 */
     { { {  -60,  23,  86,  28 },  {  -46,  18,  70,  23 } } },  /* 6: V JUMP K L A, F JUMP K L A; attack 6 */
     { { {  -82,  35,  41,  22 },  {  -47,  31,  44,  16 } } },  /* 7: V JUMP K L A, F JUMP K L A; attack 7 */
     { { {  -62,  24,   9,  22 },  {  -43,  20,  23,  24 } } },  /* 8: not used by a script */
     { { { -106,  28,  44,  25 },  {  -77,  55,  56,  15 } } },  /* 9: L KICK C; attack 9 */
     { { {  -46,  19,  24,  17 },  {  -33,  19,  40,  16 } } },  /* 10: F JUMP K S A; attack 10 */
     { { {  -39,  19,  32,  15 },  {    0,   0,   0,   0 } } },  /* 11: F JUMP K S A */
-    { { {  -88,  33,  40,  20 },  {  -55,  68,  42,  13 } } },  /* 12: F JUMP K M A, follow-up of V JUMP P L A, F JUMP K S A, FUSHIN P S; attack 11, 127 */
-    { { {  -76,  30,  40,  20 },  {  -46,  61,  45,  12 } } },  /* 13: F JUMP K M A, follow-up of V JUMP P L A, F JUMP K S A, FUSHIN P S; attack 12, 128 */
+    { { {  -88,  33,  40,  20 },  {  -55,  68,  42,  13 } } },  /* 12: F JUMP K M A, follow-up of V JUMP P L A / F JUMP K S A, FUSHIN P S; attack 11, 127 */
+    { { {  -76,  30,  40,  20 },  {  -46,  61,  45,  12 } } },  /* 13: F JUMP K M A, follow-up of V JUMP P L A / F JUMP K S A, FUSHIN P S; attack 12, 128 */
     { { {  -48,  22,  67,  15 },  {  -38,  14,  54,  13 } } },  /* 14: M PUNCH C, follow-up of S PUNCH A; attack 13 */
     { { {  -62,  25,  90,  21 },  {  -48,  21,  74,  23 } } },  /* 15: M PUNCH C, follow-up of S PUNCH A; attack 14 */
     { { {  -50,  14,  88,  16 },  {    0,   0,   0,   0 } } },  /* 16: M PUNCH C, follow-up of S PUNCH A; attack 15 */
@@ -76,8 +76,8 @@ const ATTACK_BOX ibuki_att_box[122] = {
     { { {  -35,  17,  74,  46 },  {  -55,  20,  63,  50 } } },  /* 53: ATTACK 1 S: 623+K light (routine Att_SHOURYUUKEN), ATTACK 6 S: not started by a command, ATTACK 1 M: 623+K medium (routine Att_SHOURYUUKEN); attack 61, 64, 68, 97 */
     { { {  -60,  18,  34,  48 },  {    0,   0,   0,   0 } } },  /* 54: ATTACK 1 S: 623+K light (routine Att_SHOURYUUKEN), ATTACK 1 M: 623+K medium (routine Att_SHOURYUUKEN), ATTACK 1 L: 623+K heavy (routine Att_SHOURYUUKEN) +1; attack 62, 65, 68, 153 */
     { { {    0,   0,   0,  16 },  {    0,   0,   0,   0 } } },  /* 55: M PUNCH A, M PUNCH C, L PUNCH A +2; attack 70 */
-    { { { -100,  34,  70,  28 },  {  -67,  53,  61,  11 } } },  /* 56: L KICK B, follow-up of M KICK A, follow-up of follow-up of M PUNCH C, L PUNCH A +1; attack 72, 141, 177 */
-    { { {  -72,  23,  73,  20 },  {  -52,  36,  62,  13 } } },  /* 57: L KICK B, follow-up of M KICK A, follow-up of follow-up of M PUNCH C, L PUNCH A +1; attack 72, 141 */
+    { { { -100,  34,  70,  28 },  {  -67,  53,  61,  11 } } },  /* 56: L KICK B, follow-up of M KICK A, follow-up of follow-up of M PUNCH C / L PUNCH A +1; attack 72, 141, 177 */
+    { { {  -72,  23,  73,  20 },  {  -52,  36,  62,  13 } } },  /* 57: L KICK B, follow-up of M KICK A, follow-up of follow-up of M PUNCH C / L PUNCH A +1; attack 72, 141 */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 58: no box */
     { { {  -84,  13,  69,  16 },  {  -75,  31,  58,  11 } } },  /* 59: L PUNCH B; attack 75 */
     { { {  -83,  23,  55,  40 },  {  -60,  50,  65,  14 } } },  /* 60: not used by a script */

@@ -1,5 +1,5 @@
 /*
- * TASKSW_TBL.C  game tables
+ * TASKSW_TBL.C  tables read by tasksw.src (boot_setting_defaults, region_area_tbl)
  */
 
 #include "types.h"

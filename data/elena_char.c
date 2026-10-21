@@ -56,11 +56,11 @@ const u32 elena_nmca[48] = {
     (u32)elena_nmca_030,  /* 30 GUARD UP */
     (u32)elena_nmca_031,  /* 31 GUARD DOWN */
     (u32)elena_nmca_032,  /* 32 GUARD AIR */
-    (u32)elena_nmca_033,  /* 33 follow-up of S PUNCH A, S PUNCH C +8 */
-    (u32)elena_nmca_034,  /* 34 follow-up of KAGAMI P A, KAGAMI K A +2 */
+    (u32)elena_nmca_033,  /* 33 follow-up of S PUNCH A / S PUNCH C +8 */
+    (u32)elena_nmca_034,  /* 34 follow-up of KAGAMI P A / KAGAMI K A +2 */
     (u32)elena_nmca_035,  /* 35 no name */
-    (u32)elena_nmca_036,  /* 36 follow-up of HURIMUKI, DASH HUMIKOMI +70 */
-    (u32)elena_nmca_037,  /* 37 follow-up of KAGAMI P A, KAGAMI K A +4 */
+    (u32)elena_nmca_036,  /* 36 follow-up of HURIMUKI / DASH HUMIKOMI +70 */
+    (u32)elena_nmca_037,  /* 37 follow-up of KAGAMI P A / KAGAMI K A +4 */
     (u32)elena_nmca_038,  /* 38 P BREAK ZUJOU */
     (u32)elena_nmca_038,  /* 39 P BREAK UP */
     (u32)elena_nmca_040,  /* 40 P BREAK DOWN */
@@ -484,7 +484,7 @@ const u16 elena_nmca_032[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 33 follow-up of S PUNCH A, S PUNCH C +8 */
+/* script: 33 follow-up of S PUNCH A / S PUNCH C +8 */
 const u16 elena_nmca_033_head[4] = { HEAD(6, 0, 0, 0, 0, 0, 0) };
 const u16 elena_nmca_033[1060] = {
     L6(3, 0, 0, 0, 0, 0, 0, 0xAAA8, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -578,7 +578,7 @@ const u16 elena_nmca_033[1060] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 34 follow-up of KAGAMI P A, KAGAMI K A +2 */
+/* script: 34 follow-up of KAGAMI P A / KAGAMI K A +2 */
 const u16 elena_nmca_034_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 elena_nmca_034[108] = {
     L4(12, 0, 0, 0, 0, 0, 0, 0x33FA, 0, 3, 0, 0, 0, 0, 0),
@@ -677,7 +677,7 @@ const u16 elena_nmca_035[300] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 36 follow-up of HURIMUKI, DASH HUMIKOMI +70 */
+/* script: 36 follow-up of HURIMUKI / DASH HUMIKOMI +70 */
 const u16 elena_nmca_036_head[4] = { HEAD(6, 0, 0, 0, 0, 0, 0) };
 const u16 elena_nmca_036[712] = {
     L6(3, 0, 0, 0, 0, 0, 0, 0x3000, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -742,7 +742,7 @@ const u16 elena_nmca_036[712] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 37 follow-up of KAGAMI P A, KAGAMI K A +4 */
+/* script: 37 follow-up of KAGAMI P A / KAGAMI K A +4 */
 const u16 elena_nmca_037_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 elena_nmca_037[76] = {
     L4(12, 0, 0, 0, 0, 0, 0, 0x33F6, 0, 3, 0, 0, 0, 0, 0),
@@ -3879,8 +3879,8 @@ const u32 elena_atca[159] = {
     (u32)elena_atca_150,  /* 153 TUKAMI AIR D */
     (u32)elena_atca_150,  /* 154 TUKAMI AIR E */
     (u32)elena_atca_150,  /* 155 TUKAMI AIR F */
-    (u32)elena_atca_156,  /* 156 follow-up of V JUMP P S A, F JUMP P S A */
-    (u32)elena_atca_157,  /* 157 follow-up of V JUMP P M A, F JUMP P M A */
+    (u32)elena_atca_156,  /* 156 follow-up of V JUMP P S A / F JUMP P S A */
+    (u32)elena_atca_157,  /* 157 follow-up of V JUMP P M A / F JUMP P M A */
     0
 };
 
@@ -4886,7 +4886,7 @@ const u16 elena_atca_150[8] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 156 follow-up of V JUMP P S A, F JUMP P S A */
+/* script: 156 follow-up of V JUMP P S A / F JUMP P S A */
 const u16 elena_atca_156_head[4] = { HEAD(6, 20, 3, 14, 0, 1, 0) };
 const u16 elena_atca_156[196] = {
     CMD(CM_JSR, 8, 3, 1), 0, 0, 0, 0, 0, 0, 0, 0,
@@ -4908,7 +4908,7 @@ const u16 elena_atca_156[196] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 157 follow-up of V JUMP P M A, F JUMP P M A */
+/* script: 157 follow-up of V JUMP P M A / F JUMP P M A */
 const u16 elena_atca_157_head[4] = { HEAD(6, 22, 4, 13, 0, 1, 0) };
 const u16 elena_atca_157[184] = {
     CMD(CM_JSR, 8, 3, 1), 0, 0, 0, 0, 0, 0, 0, 0,
@@ -5301,7 +5301,7 @@ extern const u16 elena_exca_000[], elena_exca_001[], elena_exca_002[], elena_exc
 /* exca scripts (debug viewer: UNION): 67 entries */
 const u32 elena_exca[68] = {
     (u32)elena_exca_000,  /* 0 follow-up of APPEAR JUNBI 2 */
-    (u32)elena_exca_001,  /* 1 follow-up of GUARD AIR, APPEAR JUNBI 2 */
+    (u32)elena_exca_001,  /* 1 follow-up of GUARD AIR / APPEAR JUNBI 2 */
     (u32)elena_exca_002,  /* 2 follow-up of APPEAR JUNBI 5 */
     (u32)elena_exca_003,  /* 3 follow-up of APPEAR JUNBI 5 */
     (u32)elena_exca_004,  /* 4 follow-up of APPEAR JUNBI 4 */
@@ -5311,15 +5311,15 @@ const u32 elena_exca[68] = {
     (u32)elena_exca_008,  /* 8 follow-up of SP WIN 1 */
     (u32)elena_exca_009,  /* 9 follow-up of SP WIN 1 */
     (u32)elena_exca_010,  /* 10 follow-up of GUARD AIR */
-    (u32)elena_exca_011,  /* 11 follow-up of ALEX BODY S, ALEX BACK D +8 */
+    (u32)elena_exca_011,  /* 11 follow-up of ALEX BODY S / ALEX BACK D +8 */
     (u32)elena_exca_010,  /* 12 no name */
     (u32)elena_exca_010,  /* 13 no name */
     (u32)elena_exca_014,  /* 14 follow-up of ASHIBARAI A */
-    (u32)elena_exca_015,  /* 15 follow-up of TUNNOMERI A, HUMI ASIB A */
-    (u32)elena_exca_016,  /* 16 follow-up of IBUKI KUBIORI, YUN HIZAGERI +8 */
-    (u32)elena_exca_017,  /* 17 follow-up of IBUKI, DADLEY L B +18 */
-    (u32)elena_exca_018,  /* 18 follow-up of TATAKI S, TATAKI V. S +4 */
-    (u32)elena_exca_019,  /* 19 follow-up of AIR S, AIR M +2 */
+    (u32)elena_exca_015,  /* 15 follow-up of TUNNOMERI A / HUMI ASIB A */
+    (u32)elena_exca_016,  /* 16 follow-up of IBUKI KUBIORI / YUN HIZAGERI +8 */
+    (u32)elena_exca_017,  /* 17 follow-up of IBUKI / DADLEY L B +18 */
+    (u32)elena_exca_018,  /* 18 follow-up of TATAKI S / TATAKI V. S +4 */
+    (u32)elena_exca_019,  /* 19 follow-up of AIR S / AIR M +2 */
     (u32)elena_exca_020,  /* 20 follow-up of APPEAR JUNBI 6 */
     (u32)elena_exca_020,  /* 21 follow-up of APPEAR JUNBI 6 */
     (u32)elena_exca_010,  /* 22 no name */
@@ -5384,7 +5384,7 @@ const u16 elena_exca_000[68] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 1 follow-up of GUARD AIR, APPEAR JUNBI 2 */
+/* script: 1 follow-up of GUARD AIR / APPEAR JUNBI 2 */
 const u16 elena_exca_001_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 elena_exca_001[84] = {
     L4(2, 2, 273, 0, 0, 0, 0, 0x309A, 0, 3, 0, 0, 0, 0, 0),
@@ -5535,7 +5535,7 @@ const u16 elena_exca_010[8] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 11 follow-up of ALEX BODY S, ALEX BACK D +8 */
+/* script: 11 follow-up of ALEX BODY S / ALEX BACK D +8 */
 const u16 elena_exca_011_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 elena_exca_011[116] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x3285, 0, 149, 0, 0, 0, 0, 0),
@@ -5575,7 +5575,7 @@ const u16 elena_exca_014[116] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 15 follow-up of TUNNOMERI A, HUMI ASIB A */
+/* script: 15 follow-up of TUNNOMERI A / HUMI ASIB A */
 const u16 elena_exca_015_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 elena_exca_015[116] = {
     L4(2, 2, 0, 0, 1, 0, 0, 0x3296, 0, 149, 0, 0, 0, 24, 0),
@@ -5595,7 +5595,7 @@ const u16 elena_exca_015[116] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 16 follow-up of IBUKI KUBIORI, YUN HIZAGERI +8 */
+/* script: 16 follow-up of IBUKI KUBIORI / YUN HIZAGERI +8 */
 const u16 elena_exca_016_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 elena_exca_016[116] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x3285, 0, 149, 0, 0, 0, 0, 0),
@@ -5615,7 +5615,7 @@ const u16 elena_exca_016[116] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 17 follow-up of IBUKI, DADLEY L B +18 */
+/* script: 17 follow-up of IBUKI / DADLEY L B +18 */
 const u16 elena_exca_017_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 elena_exca_017[116] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x3285, 0, 149, 0, 0, 0, 0, 0),
@@ -5635,7 +5635,7 @@ const u16 elena_exca_017[116] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 18 follow-up of TATAKI S, TATAKI V. S +4 */
+/* script: 18 follow-up of TATAKI S / TATAKI V. S +4 */
 const u16 elena_exca_018_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 elena_exca_018[116] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x3285, 0, 149, 0, 0, 0, 0, 0),
@@ -5655,7 +5655,7 @@ const u16 elena_exca_018[116] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 19 follow-up of AIR S, AIR M +2 */
+/* script: 19 follow-up of AIR S / AIR M +2 */
 const u16 elena_exca_019_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 elena_exca_019[92] = {
     L4(2, 0, 0, 0, 0, 0, 0, 0x32A7, 0, 60, 0, 0, 0, 0, 0),

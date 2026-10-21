@@ -135,7 +135,7 @@ void fall_data_restore(WORK_Other* ewk) {
 
 
 
-/* falls off the end (3rd Strike source returned its r0, 0x303) */
+/* no final return: it is called only through effinitjptbl, which ignores the result */
 s32 effect_D1_init(WORK_Other* oya, s32 _p1) {
     WORK_Other* ewk;
     s16 ix;

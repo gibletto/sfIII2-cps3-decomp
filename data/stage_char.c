@@ -1,8 +1,10 @@
 /*
  * STAGE_CHAR.C  Stage background character scripts
  *
- * Scripts for the characters in the stage backgrounds (brz_char_table) and for effects 09 (the end of
- * eff09_char_table, whose index and first scripts are stored before this file's) and 90.
+ * Scripts for the characters in the stage backgrounds: the stgNN_char_table of each stage (provisional
+ * names; 3rd Strike names these tables after the stage's characters, as in usa_char_table),
+ * brz_char_table, stage_char_06356D60, and the tables of the stage effects 07, 08, 09, 19, 21, 22, 28, 29,
+ * 45, 54, 86 and 90.
  * Each *_char_table is an index of animation scripts ending in 0; set_char_move_init starts script
  * char_table[kind][index], whose HEAD sits just before the address the index holds. See charscr.h for
  * the line layouts.

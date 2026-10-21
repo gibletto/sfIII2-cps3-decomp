@@ -1,5 +1,5 @@
 /*
- * EFF74.C  Effect 74: birds on the stage (2nd Impact only)
+ * EFF74.C  Effect 74: birds on the stage (2nd Impact version)
  *
  * 3rd Strike: effect 74 animates a BG layer with random cell patterns. 2nd Impact's effect 74 is a different
  * routine: effect_74_init places four birds from eff74_data_tbl (brz_char_table). Each runs the

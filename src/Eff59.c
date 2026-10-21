@@ -1,5 +1,5 @@
 /*
- * EFF59.C  Effect 59: country name letters; effect 60: flashing stage object (2nd Impact only)
+ * EFF59.C  Effect 59: country name letters; effect 60: flashing stage object (2nd Impact version)
  *
  * 2nd Impact rewrote effect 59 (3rd Strike: parts attached to a select-screen master). effect_59_init lays out
  * the letters of the Battle_Country name from eff59_name_tbl, one effect 59 per letter, each

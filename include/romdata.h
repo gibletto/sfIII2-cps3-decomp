@@ -671,7 +671,7 @@ extern const Eff93_Jmp_Tbl_t Eff93_Jmp_Tbl[2];
 extern const s16 eff94_data_tbl[5][10];
 extern const s16 eff94_2000_tbl[8];
 extern const s16 eff94_3000_tbl[4][3];
-extern const s16 eff95_data_tbl[10][4];
+extern const s16 eff95_data_tbl[1][4];
 extern void (*const EFF98_Jmp_Tbl[5])();
 extern const s8 effA0_swap_tbl[7];
 extern const s16 effA6_pl2_data_tbl[20][64];
@@ -839,9 +839,9 @@ extern const u32 ef13_char_table[];
 extern const u32 ag_face_panel_table[];
 extern const u32 effD4_char_table[];
 extern const u32 effH3_char_table[];   /* effect H3/H4 patterns (0635E79C) */
-extern const u32 eff90_char_table[];   /* provisional name: */
-extern const s16 eff90_pos_y_tbl[];   /* provisional name: */
-extern const u32 eff22_char_table[];   /* provisional name: */
+extern const u32 eff90_char_table[];   /* provisional name: effect 90 patterns */
+extern const s16 eff90_pos_y_tbl[];   /* provisional name: effect 90 y positions */
+extern const u32 eff22_char_table[];   /* provisional name: effect 22 patterns */
 extern const s32 eff61_speed_tbl[];   /* provisional name: effect 61 rise speeds */
 extern const HIT_IX ef13_hit_ix_table[];
 extern const BODY_BOX ef13_body_box[];
@@ -941,8 +941,8 @@ extern const s16 nagenuke_apagt_table[];
 extern const s16 dir32_skydm[32];
 extern const u8 convert_saishin_lvdir[2][16];
 extern const s16 dead_voice_table[16][2];
-extern const s16 voice_select_table[16][4];
-extern const s16 catch_kos_table[8];   /* provisional name; 2nd Impact only (06100FA0, PLS03 get_catch_kos) */   /* provisional name; 2nd Impact only (06100EBC, PLS02 pl_voice_request) */
+extern const s16 voice_select_table[16][4];   /* provisional name; 2nd Impact only (06100EBC, PLS02 pl_voice_request) */
+extern const s16 catch_kos_table[8];   /* provisional name; 2nd Impact only (06100FA0, PLS03 get_catch_kos) */
 extern const s16 gauge_rank_table[6][2];
 extern const u8 jump_pat_status_data[2][4];
 extern const s16 defense_cg_ix_table[16][3];   /* provisional name; 2nd Impact only: PLS00 nm_27_cg_type_check, by player_number and guard kind */

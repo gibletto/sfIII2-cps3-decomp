@@ -60,27 +60,27 @@ extern const u16 sc_vram_28_code[];
 extern const u16 sc_vram_28_pos[];
 extern const PAL_BYTE_LIST sc_chr_list_tbl[];
 extern const u16 *const sc_chr_slot_tbl[];
-extern const u8 end_sub_tbl_c_06171488[];
+extern const u8 sc_celllist_data2[];
 extern const u8 sc_celllist_data[];
 
 const CELL_ENTRY *const sc_celllist_tbl[17] = {
     (const CELL_ENTRY *)sc_celllist_data,
     (const CELL_ENTRY *)sc_celllist_data,
-    (const CELL_ENTRY *)end_sub_tbl_c_06171488,
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 504),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 608),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 688),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 768),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 3864),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 4064),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 4264),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 4512),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 1544),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 2576),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 4856),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 4944),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 168),
-    (const CELL_ENTRY *)((const u8 *)end_sub_tbl_c_06171488 + 336),
+    (const CELL_ENTRY *)sc_celllist_data2,
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 504),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 608),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 688),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 768),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 3864),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 4064),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 4264),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 4512),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 1544),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 2576),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 4856),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 4944),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 168),
+    (const CELL_ENTRY *)((const u8 *)sc_celllist_data2 + 336),
 };
 
 const u16 sc_cells_0[22] = {

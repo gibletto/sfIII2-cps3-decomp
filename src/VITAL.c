@@ -5,8 +5,7 @@
  * vital_cont_main and vital_control update them each frame and vital_parts_allwrite redraws all 20
  * cells from the yellow and red levels. count_cont_init/reset/main, counter_control and
  * counter_flash run the 99-count round timer, with a tick rate from the game-speed setting and
- * flashing below 30 and 10. bcount_cont_* and bcounter_* run the 50-second bonus-stage timer and
- * count it down for the result tally.
+ * flashing below 30 and 10.
  */
 
 #include "structs.h"
@@ -110,7 +109,7 @@ s32 vital_control(s8 pl) {
         vit_bar[pl].cred = plw[pl].wu.vital_new;
     }
     vit_bar[pl].cyerw = plw[pl].wu.vital_new;
-    ((WORK*)0)->id;
+    (void)((WORK*)0)->id;
     if (plw[pl].wu.vital_new < 0) {
         vit_bar[pl].cyerw = 0;
     }

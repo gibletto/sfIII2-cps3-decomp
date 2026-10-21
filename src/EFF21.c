@@ -1,5 +1,5 @@
 /*
- * EFF21.C  Effect 21: breakable stage parts (2nd Impact only)
+ * EFF21.C  Effect 21: breakable stage parts (2nd Impact version)
  *
  * 2nd Impact's effect 21 is not 3rd Strike's scroll-synchronised object list: effect_21_init makes three works
  * for its master (effect 23) from eff21_data_adrs_0 (pattern, X, Y, priority, flip) and
@@ -86,7 +86,7 @@ void effect_21_move(WORK_Other* ewk) {
 
 
 
-/* : 2nd Impact's effect_21_init (three works, for its master) */
+/* 2nd Impact's effect_21_init (three works, for its master) */
 s32 effect_21_init(WORK_Other* oya) {
     WORK_Other* ewk;
     s16 ix;

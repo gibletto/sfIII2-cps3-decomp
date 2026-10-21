@@ -2,7 +2,7 @@
  * PLMAIN2.C  Player move routine for the bonus stage
  *
  * Player_move_bonus (called from PLCNT2) is the bonus-stage version of Player_move: it takes the
- * operator's input, or runs the bonus-stage CPU (bbbs_com_execute / bbbs_com_execute2) for a
+ * operator's input, or runs the bonus-stage CPU (bbbs_com_execute) for a
  * computer player, and dispatches on routine_no[0] to player_mvbs_0000 - 4000, which initialise
  * the player, place him at the start position (plmv_b_1020, facing the screen centre) and
  * then run the game routines with hit stop and timers.

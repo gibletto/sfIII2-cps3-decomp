@@ -1,5 +1,5 @@
 /*
- * INTR_TBL.C  game tables
+ * INTR_TBL.C  tables read by intr.src (vbl_frame_mask_tbl, for the vblank handler)
  */
 
 #include "types.h"

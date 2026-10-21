@@ -43,7 +43,7 @@ void Select_Flow_10th(void);
 s32 Check_Select_Flow_Entry(void);
 
 
-s8 flag_0202420C;   /* provisional name: (effG0_names_move tests it) */
+s8 flag_0202420C;   /* provisional name: a flag effG0_names_move tests */
 s16 Select_Flow_X;   /* provisional name: this scene's WIN_X */
 
 
@@ -160,7 +160,7 @@ void Select_Flow_7th(void) {
         bg_w.bgw[0].xy[1].cal = 0;
         bg_w.bgw[1].wxy[0].cal = bg_w.bgw[1].xy[0].cal = 0x2000000;
         bg_w.bgw[1].xy[1].cal = 0;
-        ((WORK*)0x2000000)->id;     /* no code: HANDOVER review (const chain read that settles the r5/r6 pick) */
+        (void)((WORK*)0x2000000)->id;
         Bg_Off_R(191);
         effect_G0_init(0, 7);
         load_any_color(4);

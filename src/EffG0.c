@@ -30,8 +30,8 @@
 #include "EffG0.h"
 
 extern s8 flag_0202420C;   /* provisional name, the byte before frw (effG0_names_move tests it) */
-extern s16 effg0_judge_count;   /* provisional name: (D) */
-extern u32* effg0_char_tbl[];   /* provisional name: (D) */
+extern s16 effg0_judge_count;   /* provisional name: initialised work RAM (effg0_work.c) */
+extern u32* effg0_char_tbl[];   /* provisional name: initialised work RAM (effg0_work.c) */
 extern const s16 effg0_col_tbl[7];
 extern const s16 effg0_pos_tbl[7][3];
 extern const s16 effg0_flash_tbl[7][4];

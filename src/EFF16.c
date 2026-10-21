@@ -5,7 +5,7 @@
  * total is split into digits with bunkai_table / bunkai_numobj
  * (score_bunkai_eff16), the digits appear one at a time every 3 frames and are
  * then redrawn every frame in front of the background (eff16_trans).
- * effect_16_init is called from BBBSCOM and BBBSCOM2.
+ * effect_16_init is called from BBBSCOM.
  */
 
 #include "structs.h"

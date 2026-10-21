@@ -1,5 +1,5 @@
 /*
- * EFF53.C  Effect 53: the stage 08 bird (2nd Impact only)
+ * EFF53.C  Effect 53: the stage 08 bird (2nd Impact version)
  *
  * 2nd Impact's own effect 53, made by the stage 08 background (bgst080). It waits 120 frames, walks
  * on screen, then sits until complete_victory_check: it then starts a zoomed take-off from

@@ -1,5 +1,5 @@
 /*
- * EFF23.C  Effect 23: breakable stage object (2nd Impact only)
+ * EFF23.C  Effect 23: breakable stage object (2nd Impact version)
  *
  * 2nd Impact's effect 23 is not 3rd Strike's animated screen cells: effect_23_init makes the object at
  * (0x2A0, 48) and its parts (effects 21, 22 and 24) as its children. effect_23_move waits on

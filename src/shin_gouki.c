@@ -45,9 +45,9 @@ s32 Get_Stage_Shin_Gouki(void) {
 /* provisional name */
 void Init_Sel_Command(void) {
     if (Game_setting.bonus & 2) {
-        Sel_Command_Off = 1;
+        Gouki_Select_Open = 1;
     } else {
-        Sel_Command_Off = 0;
+        Gouki_Select_Open = 0;
     }
     Sel_Command_Step[0] = 0;
     Sel_Command_Step[1] = 0;

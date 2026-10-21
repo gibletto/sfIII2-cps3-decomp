@@ -1,5 +1,5 @@
 /*
- * EFF22.C  Effect 22 (2nd Impact only)
+ * EFF22.C  Effect 22 (2nd Impact version)
  *
  * 2nd Impact's effect 22 is not 3rd Strike's falling snow: effect_22_init makes one work for its master at
  * (0x2C8, 56). It waits on pattern 0 until eff_hit_flag[8] is set, plays pattern 1, then walks

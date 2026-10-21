@@ -7437,16 +7437,16 @@ extern const u16 alex_exca_000[], alex_exca_001[], alex_exca_002[], alex_exca_00
 
 /* exca scripts (debug viewer: UNION): 50 entries */
 const u32 alex_exca[51] = {
-    (u32)alex_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
+    (u32)alex_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
     (u32)alex_exca_001,  /* 1 follow-up of APPEAR JUNBI 2 */
     (u32)alex_exca_002,  /* 2 follow-up of APPEAR JUNBI 3 */
-    (u32)alex_exca_003,  /* 3 follow-up of ASHIBARAI A, ASHIBARAI B +2 */
+    (u32)alex_exca_003,  /* 3 follow-up of ASHIBARAI A / ASHIBARAI B +2 */
     (u32)alex_exca_004,  /* 4 follow-up of APPEAR JUNBI 4 */
-    (u32)alex_exca_005,  /* 5 follow-up of TATAKI S, TATAKI M +21 */
-    (u32)alex_exca_006,  /* 6 follow-up of DADLEY L B, NECRO S T +24 */
-    (u32)alex_exca_007,  /* 7 follow-up of DUDDLEY D S, KUNOJI A */
-    (u32)alex_exca_008,  /* 8 follow-up of TATAKI V. S, TATAKI V. M +12 */
-    (u32)alex_exca_009,  /* 9 follow-up of IBUKI KUBIORI, KIRIMOMI A +1 */
+    (u32)alex_exca_005,  /* 5 follow-up of TATAKI S / TATAKI M +21 */
+    (u32)alex_exca_006,  /* 6 follow-up of DADLEY L B / NECRO S T +24 */
+    (u32)alex_exca_007,  /* 7 follow-up of DUDDLEY D S / KUNOJI A */
+    (u32)alex_exca_008,  /* 8 follow-up of TATAKI V. S / TATAKI V. M +12 */
+    (u32)alex_exca_009,  /* 9 follow-up of IBUKI KUBIORI / KIRIMOMI A +1 */
     (u32)alex_exca_010,  /* 10 follow-up of APPEAR JUNBI 2 */
     (u32)alex_exca_011,  /* 11 follow-up of APPEAR JUNBI 3 */
     (u32)alex_exca_012,  /* 12 follow-up of APPEAR JUNBI 4 */
@@ -7470,7 +7470,7 @@ const u32 alex_exca[51] = {
     (u32)alex_exca_030,  /* 30 follow-up of APPEAR 1 */
     (u32)alex_exca_031,  /* 31 follow-up of APPEAR 3 */
     (u32)alex_exca_032,  /* 32 follow-up of APPEAR 3 */
-    (u32)alex_exca_033,  /* 33 follow-up of TUNNOMERI A, TUNNOMERI B +2 */
+    (u32)alex_exca_033,  /* 33 follow-up of TUNNOMERI A / TUNNOMERI B +2 */
     (u32)alex_exca_034,  /* 34 follow-up of APPEAR 4 */
     (u32)alex_exca_035,  /* 35 follow-up of APPEAR 4 */
     (u32)alex_exca_036,  /* 36 follow-up of GILL IMPACT C */
@@ -7490,7 +7490,7 @@ const u32 alex_exca[51] = {
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 alex_exca_000_head[4] = { HEAD(4, 24, 0, 0, 0, 0, 0) };
 const u16 alex_exca_000[116] = {
     L4(2, 0, 0, 0, 0, 0, 0, 0x08F0, 0, 7, 0, 0, 0, 0, 0),
@@ -7539,7 +7539,7 @@ const u16 alex_exca_002[52] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, ASHIBARAI B +2 */
+/* script: 3 follow-up of ASHIBARAI A / ASHIBARAI B +2 */
 const u16 alex_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 alex_exca_003[68] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x08D3, 0, 60, 0, 0, 0, 0, 0),
@@ -7571,7 +7571,7 @@ const u16 alex_exca_004[100] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of TATAKI S, TATAKI M +21 */
+/* script: 5 follow-up of TATAKI S / TATAKI M +21 */
 const u16 alex_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 alex_exca_005[132] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x06CB, 0, 60, 0, 0, 0, 0, 0),
@@ -7593,7 +7593,7 @@ const u16 alex_exca_005[132] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of DADLEY L B, NECRO S T +24 */
+/* script: 6 follow-up of DADLEY L B / NECRO S T +24 */
 const u16 alex_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 alex_exca_006[140] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x06CA, 0, 60, 0, 0, 0, 0, 0),
@@ -7616,7 +7616,7 @@ const u16 alex_exca_006[140] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 7 follow-up of DUDDLEY D S, KUNOJI A */
+/* script: 7 follow-up of DUDDLEY D S / KUNOJI A */
 const u16 alex_exca_007_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 alex_exca_007[28] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x06DF, 0, 60, 0, 0, 0, 0, 0),
@@ -7625,7 +7625,7 @@ const u16 alex_exca_007[28] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of TATAKI V. S, TATAKI V. M +12 */
+/* script: 8 follow-up of TATAKI V. S / TATAKI V. M +12 */
 const u16 alex_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 alex_exca_008[68] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x06D3, 0, 60, 0, 0, 0, 0, 0),
@@ -7639,7 +7639,7 @@ const u16 alex_exca_008[68] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of IBUKI KUBIORI, KIRIMOMI A +1 */
+/* script: 9 follow-up of IBUKI KUBIORI / KIRIMOMI A +1 */
 const u16 alex_exca_009_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 alex_exca_009[68] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x06D3, 0, 60, 0, 0, 0, 0, 0),
@@ -7870,7 +7870,7 @@ const u16 alex_exca_032[52] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 33 follow-up of TUNNOMERI A, TUNNOMERI B +2 */
+/* script: 33 follow-up of TUNNOMERI A / TUNNOMERI B +2 */
 const u16 alex_exca_033_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 alex_exca_033[124] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x06CA, 0, 60, 0, 0, 0, 0, 0),

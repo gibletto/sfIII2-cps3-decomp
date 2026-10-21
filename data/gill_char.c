@@ -6000,18 +6000,18 @@ extern const u16 gill_exca_000[], gill_exca_001[], gill_exca_002[], gill_exca_00
 
 /* exca scripts (debug viewer: UNION): 57 entries */
 const u32 gill_exca[58] = {
-    (u32)gill_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
+    (u32)gill_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
     (u32)gill_exca_001,  /* 1 follow-up of APPEAR JUNBI 2 */
-    (u32)gill_exca_002,  /* 2 follow-up of APPEAR JUNBI 3, APPEAR JUNBI 7 */
-    (u32)gill_exca_003,  /* 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+    (u32)gill_exca_002,  /* 2 follow-up of APPEAR JUNBI 3 / APPEAR JUNBI 7 */
+    (u32)gill_exca_003,  /* 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
     (u32)gill_exca_004,  /* 4 follow-up of APPEAR JUNBI 4 */
-    (u32)gill_exca_005,  /* 5 follow-up of TATAKI S, TATAKI M +25 */
-    (u32)gill_exca_006,  /* 6 follow-up of DADLEY L B, YUN HIZAGERI +22 */
-    (u32)gill_exca_007,  /* 7 follow-up of IBUKI, NECRO S T +3 */
-    (u32)gill_exca_008,  /* 8 follow-up of TATAKI V. S, TATAKI V. M +6 */
-    (u32)gill_exca_009,  /* 9 follow-up of IBUKI KUBIORI, GILL IMPACT C +1 */
+    (u32)gill_exca_005,  /* 5 follow-up of TATAKI S / TATAKI M +25 */
+    (u32)gill_exca_006,  /* 6 follow-up of DADLEY L B / YUN HIZAGERI +22 */
+    (u32)gill_exca_007,  /* 7 follow-up of IBUKI / NECRO S T +3 */
+    (u32)gill_exca_008,  /* 8 follow-up of TATAKI V. S / TATAKI V. M +6 */
+    (u32)gill_exca_009,  /* 9 follow-up of IBUKI KUBIORI / GILL IMPACT C +1 */
     (u32)gill_exca_010,  /* 10 follow-up of APPEAR JUNBI 2 */
-    (u32)gill_exca_011,  /* 11 follow-up of APPEAR JUNBI 3, APPEAR JUNBI 7 */
+    (u32)gill_exca_011,  /* 11 follow-up of APPEAR JUNBI 3 / APPEAR JUNBI 7 */
     (u32)gill_exca_012,  /* 12 follow-up of APPEAR JUNBI 4 */
     (u32)gill_exca_013,  /* 13 follow-up of APPEAR JUNBI 6 */
     (u32)gill_exca_014,  /* 14 no name */
@@ -6060,7 +6060,7 @@ const u32 gill_exca[58] = {
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 gill_exca_000_head[4] = { HEAD(4, 24, 0, 0, 0, 0, 0) };
 const u16 gill_exca_000[140] = {
     L4(2, 0, 0, 0, 0, 0, 0, 0x0115, 0, 83, 0, 0, 0, 0, 0),
@@ -6097,7 +6097,7 @@ const u16 gill_exca_001[68] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 2 follow-up of APPEAR JUNBI 3, APPEAR JUNBI 7 */
+/* script: 2 follow-up of APPEAR JUNBI 3 / APPEAR JUNBI 7 */
 const u16 gill_exca_002_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 gill_exca_002[36] = {
     L4(1, 2, 273, 0, 0, 0, 0, 0x0007, 0, 1, 0, 0, 0, 0, 0),
@@ -6107,7 +6107,7 @@ const u16 gill_exca_002[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+/* script: 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
 const u16 gill_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gill_exca_003[52] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x014A, 0, 82, 0, 0, 0, 0, 0),
@@ -6129,7 +6129,7 @@ const u16 gill_exca_004[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of TATAKI S, TATAKI M +25 */
+/* script: 5 follow-up of TATAKI S / TATAKI M +25 */
 const u16 gill_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gill_exca_005[68] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x014A, 0, 82, 0, 0, 0, 32, 93),
@@ -6143,7 +6143,7 @@ const u16 gill_exca_005[68] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of DADLEY L B, YUN HIZAGERI +22 */
+/* script: 6 follow-up of DADLEY L B / YUN HIZAGERI +22 */
 const u16 gill_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gill_exca_006[124] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x0143, 0, 82, 0, 0, 0, 0, 0),
@@ -6164,14 +6164,14 @@ const u16 gill_exca_006[124] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 7 follow-up of IBUKI, NECRO S T +3 */
+/* script: 7 follow-up of IBUKI / NECRO S T +3 */
 const u16 gill_exca_007_head[4] = { HEAD(2, 38, 0, 0, 0, 0, 0) };
 const u16 gill_exca_007[8] = {
     CMD(CM_JMP, 7, 6, 1),
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of TATAKI V. S, TATAKI V. M +6 */
+/* script: 8 follow-up of TATAKI V. S / TATAKI V. M +6 */
 const u16 gill_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gill_exca_008[68] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x014A, 0, 82, 0, 0, 0, 32, 93),
@@ -6185,7 +6185,7 @@ const u16 gill_exca_008[68] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of IBUKI KUBIORI, GILL IMPACT C +1 */
+/* script: 9 follow-up of IBUKI KUBIORI / GILL IMPACT C +1 */
 const u16 gill_exca_009_head[4] = { HEAD(2, 38, 0, 0, 0, 0, 0) };
 const u16 gill_exca_009[8] = {
     CMD(CM_JMP, 7, 6, 1),
@@ -6205,7 +6205,7 @@ const u16 gill_exca_010[60] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 11 follow-up of APPEAR JUNBI 3, APPEAR JUNBI 7 */
+/* script: 11 follow-up of APPEAR JUNBI 3 / APPEAR JUNBI 7 */
 const u16 gill_exca_011_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 gill_exca_011[60] = {
     L4(1, 2, 273, 0, 0, 0, 0, 0x0007, 0, 2, 0, 0, 0, 0, 0),

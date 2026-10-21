@@ -1,5 +1,5 @@
 /*
- * EFF95.C  Effect 95: the win and ranking screen characters (2nd Impact only)
+ * EFF95.C  Effect 95: the win and ranking screen characters (2nd Impact version)
  *
  * 3rd Strike effect 95 is the continue screen character. 2nd Impact rewrote it: effect_95_init (called from Win_2nd
  * with kind 16 for the winner and 0 for the loser) puts the player's character on BG1 through
@@ -8,7 +8,7 @@
  * Game_setting.mode and give it its slide speed, eff95_rl_check its facing. effect_95_rank_init
  * (Ranking_Sub) makes the ranking screen's character on BG0.
  * effect_95_move shows the object and moves it in x by mvxy.a[0], which is zeroed unless
- * stop_flag_02014400 (a 2nd Impact word after Demo_Time_Stop) is set.
+ * win_slide_flag (set while the win screen slides) is set.
  */
 
 #include "structs.h"
@@ -29,7 +29,7 @@
 #include "charmove_2.h"
 #include "Eff95.h"
 
-/* 2nd Impact tables (CTBL 0617A12C / 0617A13C / 0617A14C), provisional names */
+/* 2nd Impact tables (0617A12C / 0617A13C / 0617A14C), provisional names */
 extern const s8 eff95_col_tbl_win[16];
 extern const s8 eff95_col_tbl_lose[16];
 extern const s16 eff95_ofs_tbl[16][2];
@@ -38,7 +38,7 @@ extern const s16 eff95_ofs_tbl[16][2];
 
 
 
-/* an object drifting in x (speed held only while stop_flag_02014400) */
+/* an object drifting in x (speed held only while win_slide_flag) */
 void effect_95_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case 0:
@@ -47,7 +47,7 @@ void effect_95_move(WORK_Other* ewk) {
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_timer + 1, 0);
         break;
     default:
-        if (stop_flag_02014400 == 0) {
+        if (win_slide_flag == 0) {
             ewk->wu.mvxy.a[0].sp = 0;
         }
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;

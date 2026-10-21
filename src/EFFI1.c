@@ -3,8 +3,7 @@
  *
  * 2nd Impact's own effect: it waits dir_timer frames, starts the side's effect (effect_67_init for the
  * current player, effect_A6_init for the other), slides in to hit_quake, waits for Next_Step to
- * reach 8 and slides out, setting Next_Step when direction asks for it. An object of its own
- * (060EB0E4-060EB3B0): its literal pool closes the unit before EFFI3's effect_I2_init.
+ * reach 8 and slides out, setting Next_Step when direction asks for it.
  */
 
 #include "structs.h"
@@ -22,7 +21,7 @@
 #include "EFFI3.h"
 
 void set_char_move_init2();
-s32 effect_67_init();                   /* 060D20A0, in EFF67 */
+s32 effect_67_init();                   /* in EFF67.c */
 
 
 

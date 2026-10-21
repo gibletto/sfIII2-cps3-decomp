@@ -1,5 +1,5 @@
 /*
- * EFFH6_CODE.C  Effect H6: staff-roll text (2nd Impact only)
+ * EFFH6_CODE.C  Effect H6: staff-roll text (2nd Impact version)
  *
  * Effect H6 is one staff-roll line. effect_H6_init builds its character sprites from the string
  * through code_tab ('#' lines are one picture) and entry type 0-5 sets how it slides in, holds

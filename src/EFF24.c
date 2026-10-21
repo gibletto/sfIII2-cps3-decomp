@@ -1,5 +1,5 @@
 /*
- * EFF24.C  Effect 24: part of the breakable stage object (2nd Impact only)
+ * EFF24.C  Effect 24: part of the breakable stage object (2nd Impact version)
  *
  * 2nd Impact's effect 24 is not 3rd Strike's quake-shaken stage objects: effect_24_init makes one work for its
  * master (effect 23) at (0x2D8, 48). effect_24_move shows pattern 23 until eff_hit_flag[8] is

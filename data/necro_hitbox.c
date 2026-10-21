@@ -52,9 +52,9 @@ const HIT_IX necro_hit_ix_table[195] = {
     {   14,   14,    0,    0,    1,    0,    0,    9 },  /* 16: nmca 33, S PUNCH C */
     {   15,   15,    0,    2,    1,    2,    0,    1 },  /* 17: S PUNCH A */
     {   15,   15,    0,    0,    1,    0,    0,    1 },  /* 18: S PUNCH A */
-    {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 19: M PUNCH A, follow-up of S KICK A, S KICK C, UP P GUARD P S +1 */
-    {   17,   17,    0,    3,    1,    3,    0,    1 },  /* 20: M PUNCH A, follow-up of S KICK A, S KICK C, UP P GUARD P S +1 */
-    {   97,   97,    0,    0,    1,    0,    0,    1 },  /* 21: M PUNCH A, follow-up of S KICK A, S KICK C, UP P GUARD P S +1 */
+    {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 19: M PUNCH A, follow-up of S KICK A / S KICK C, UP P GUARD P S +1 */
+    {   17,   17,    0,    3,    1,    3,    0,    1 },  /* 20: M PUNCH A, follow-up of S KICK A / S KICK C, UP P GUARD P S +1 */
+    {   97,   97,    0,    0,    1,    0,    0,    1 },  /* 21: M PUNCH A, follow-up of S KICK A / S KICK C, UP P GUARD P S +1 */
     {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 22: KAGAMI P C */
     {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 23: KAGAMI P C */
     {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 24: KAGAMI P C */
@@ -63,12 +63,12 @@ const HIT_IX necro_hit_ix_table[195] = {
     {   22,   22,    0,    0,    1,    0,    0,    1 },  /* 27: KAGAMI P C */
     {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 28: KAGAMI P C */
     {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 29: KAGAMI P C */
-    {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 30: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
-    {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 31: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
-    {   27,    0,    0,    0,    1,    0,    0,    1 },  /* 32: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
-    {   28,   28,    0,    0,    1,    0,    0,    1 },  /* 33: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
-    {   29,   29,    0,    5,    1,    5,    0,    1 },  /* 34: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
-    {   29,   29,    0,    0,    1,    0,    0,    1 },  /* 35: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
+    {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 30: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
+    {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 31: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
+    {   27,    0,    0,    0,    1,    0,    0,    1 },  /* 32: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
+    {   28,   28,    0,    0,    1,    0,    0,    1 },  /* 33: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
+    {   29,   29,    0,    5,    1,    5,    0,    1 },  /* 34: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
+    {   29,   29,    0,    0,    1,    0,    0,    1 },  /* 35: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
     {    1,   30,    0,    0,    1,    6,    0,    1 },  /* 36: S KICK C */
     {    1,   30,    0,    0,    1,    0,    0,    1 },  /* 37: S KICK C */
     {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 38: S KICK A */
@@ -198,7 +198,7 @@ const HIT_IX necro_hit_ix_table[195] = {
     {  117,  117,    0,   48,    3,   48,    0,    3 },  /* 162: ATTACK 8 L: not started by a command */
     {  118,  118,    0,    0,   15,    0,    0,    1 },  /* 163: ATTACK 2 S: not started by a command, ATTACK 2 M: not started by a command, ATTACK 2 L: not started by a command +2 */
     {  119,  119,    0,    0,    1,    0,    0,    2 },  /* 164: PIYO */
-    {   17,   17,    0,    0,    1,    0,    0,    1 },  /* 165: M PUNCH A, follow-up of S KICK A, S KICK C */
+    {   17,   17,    0,    0,    1,    0,    0,    1 },  /* 165: M PUNCH A, follow-up of S KICK A / S KICK C */
     {   90,   90,    0,   49,    2,   49,    0,    2 },  /* 166: not used by a script */
     {   90,   90,    0,   50,    2,   50,    0,    2 },  /* 167: not used by a script */
     {    0,    0,    0,    0,    0,    0,    0,   24 },  /* 168: NEKOROBI S, dmca 96 */
@@ -249,7 +249,7 @@ const BODY_BOX necro_body_box[128] = {
     { { {  -16,  24,  76,  18 },  {  -30,  58,  60,  26 },  {  -20,  44,  40,  24 },  {  -20,  54,   0,  38 } } },  /* 14: nmca 33, S PUNCH C */
     { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -30,  65,   0,  38 } } },  /* 15: S PUNCH A */
     { { {  -31,  25,  71,  17 },  {  -21,  48,  65,  18 },  {  -19,  46,  41,  24 },  {  -19,  44,   0,  39 } } },  /* 16: not used by a script */
-    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -30,  65,   0,  38 } } },  /* 17: M PUNCH A, follow-up of S KICK A, S KICK C, UP P GUARD P S +1 */
+    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -30,  65,   0,  38 } } },  /* 17: M PUNCH A, follow-up of S KICK A / S KICK C, UP P GUARD P S +1 */
     { { {    2,  25,  76,  17 },  {   -2,  48,  67,  18 },  {    6,  46,  41,  24 },  {  -19,  44,   0,  39 } } },  /* 18: not used by a script */
     { { {   16,  25,  48,  17 },  {  -20,  48,  43,  18 },  {  -39,  46,  24,  24 },  {  -38,  44,   0,  23 } } },  /* 19: not used by a script */
     { { {   -6,  25,  60,  17 },  {  -20,  48,  43,  18 },  {  -39,  46,  24,  24 },  {  -38,  44,   0,  23 } } },  /* 20: not used by a script */
@@ -259,9 +259,9 @@ const BODY_BOX necro_body_box[128] = {
     { { {  -21,  25,  81,  17 },  {  -24,  48,  70,  18 },  {  -22,  46,  33,  38 },  {  -24,  44,   0,  45 } } },  /* 24: not used by a script */
     { { {  -29,  61,  93,  25 },  { -121, 155,  77,  24 },  {  -47,  79,  60,  22 },  {    0,   0,   0,   0 } } },  /* 25: V JUMP K M A */
     { { {   25,  41,  66,  38 },  {  -18,  69,  55,  41 },  {  -61,  60,  40,  49 },  {  -85,  46,  33,  42 } } },  /* 26: V JUMP K S B */
-    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -43,  82,   0,  40 } } },  /* 27: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
-    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -45,  84,   0,  40 } } },  /* 28: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
-    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -45,  84,   0,  40 } } },  /* 29: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
+    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -43,  82,   0,  40 } } },  /* 27: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
+    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -45,  84,   0,  40 } } },  /* 28: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
+    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -45,  84,   0,  40 } } },  /* 29: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
     { { {  -31,  25,  71,  17 },  {  -21,  48,  65,  18 },  {  -19,  46,  41,  24 },  {  -51,  75,   0,  39 } } },  /* 30: not used by a script */
     { { {    1,  25,  71,  17 },  {   10,  48,  65,  18 },  {  -19,  46,  41,  24 },  {  -19,  44,   0,  39 } } },  /* 31: not used by a script */
     { { {    0,   0,   0,   0 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -30,  65,   0,  38 } } },  /* 32: S KICK A */
@@ -329,7 +329,7 @@ const BODY_BOX necro_body_box[128] = {
     { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -30,  65,   0,  38 } } },  /* 94: not used by a script */
     { { {  -64,  44,  58,  20 },  {  -30,  58,  60,  26 },  {  -20,  44,  40,  24 },  {  -20,  54,   0,  38 } } },  /* 95: M PUNCH C */
     { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -30,  65,   0,  38 } } },  /* 96: S PUNCH A, ATTACK 7 S: not started by a command */
-    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -30,  65,   0,  38 } } },  /* 97: M PUNCH A, follow-up of S KICK A, S KICK C, UP P GUARD P S +1 */
+    { { {  -16,  24,  76,  18 },  {  -35,  72,  60,  29 },  {  -29,  64,  40,  24 },  {  -30,  65,   0,  38 } } },  /* 97: M PUNCH A, follow-up of S KICK A / S KICK C, UP P GUARD P S +1 */
     { { {  -16,  25,  55,  17 },  {  -14,  52,  44,  22 },  {  -24,  60,  24,  20 },  {  -28,  67,   0,  28 } } },  /* 98: KAGAMI P A */
     { { {  -41,  28,  42,  24 },  {  -13,  52,  44,  27 },  {  -67, 106,  24,  26 },  {  -84, 112,   0,  28 } } },  /* 99: KAGAMI K A */
     { { {  -17,  21, 103,  16 },  {  -29,  61,  91,  27 },  {  -26,  52,  53,  36 },  {    0,   0,   0,   0 } } },  /* 100: V JUMP K L A */
@@ -381,7 +381,7 @@ const HAND_BOX necro_hand_box[122] = {
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 14: no box */
     { { { -128, 102,  57,  29 },  {    0,   0,   0,   0 } } },  /* 15: S PUNCH A */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 16: no box */
-    { { { -102,  79,  73,  23 },  {    0,   0,   0,   0 } } },  /* 17: M PUNCH A, follow-up of S KICK A, S KICK C, UP P GUARD P S +1 */
+    { { { -102,  79,  73,  23 },  {    0,   0,   0,   0 } } },  /* 17: M PUNCH A, follow-up of S KICK A / S KICK C, UP P GUARD P S +1 */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 18: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 19: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 20: no box */
@@ -392,8 +392,8 @@ const HAND_BOX necro_hand_box[122] = {
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 25: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 26: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 27: no box */
-    { { {  -99,  72,  50,  34 },  {    0,   0,   0,   0 } } },  /* 28: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
-    { { { -148, 128,  50,  31 },  {    0,   0,   0,   0 } } },  /* 29: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C */
+    { { {  -99,  72,  50,  34 },  {    0,   0,   0,   0 } } },  /* 28: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
+    { { { -148, 128,  50,  31 },  {    0,   0,   0,   0 } } },  /* 29: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C */
     { { {  -63,  31,  20,  38 },  {    0,   0,   0,   0 } } },  /* 30: S KICK C */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 31: no box */
     { { {  -92,  71,  33,  35 },  {    0,   0,   0,   0 } } },  /* 32: S KICK A */
@@ -461,7 +461,7 @@ const HAND_BOX necro_hand_box[122] = {
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 94: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 95: no box */
     { { {  -86,  64,  60,  24 },  {    0,   0,   0,   0 } } },  /* 96: S PUNCH A, ATTACK 7 S: not started by a command */
-    { { {  -68,  48,  73,  16 },  {    0,   0,   0,   0 } } },  /* 97: M PUNCH A, follow-up of S KICK A, S KICK C, UP P GUARD P S +1 */
+    { { {  -68,  48,  73,  16 },  {    0,   0,   0,   0 } } },  /* 97: M PUNCH A, follow-up of S KICK A / S KICK C, UP P GUARD P S +1 */
     { { {  -72,  48,  28,  16 },  {    0,   0,   0,   0 } } },  /* 98: KAGAMI P A */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 99: no box */
     { { { -118,  93,  56,  33 },  {    0,   0,   0,   0 } } },  /* 100: V JUMP K L A */

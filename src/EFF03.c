@@ -5,7 +5,7 @@
  * plef_data entry: display flag, facing, offset from the master, priority, colour, optional
  * shadow and whether it follows the master (eff03_disp_pos) or stays where it was placed.
  * It animates with plef_char_table until its script ends or it is killed.
- * effect_03_init is called from effects C9, D7, H9 and I8.
+ * effect_03_init is called from effect C9 and effects H7/H8 (EFFH9.C).
  */
 
 #include "structs.h"

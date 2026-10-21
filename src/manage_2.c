@@ -6,7 +6,7 @@
  * (Judge_Winner, Check_Perfect, win marks via effect_92_init), winner display and win poses, score
  * pooling and bonuses (Pool_Score, Additional_Bonus), match end, continue and break-in handling
  * (Loser_Sub, Be_Continue, Quick_Entry, Check_Break_Into_CPU), and the bonus stage result tallies
- * (Game_Manage_12_x). It also runs BGM_Fade_Sub and BGM_Control each frame.
+ * (Game_Manage_12_x). It also runs BGM_Fade_Sub.
  */
 
 #include "structs.h"
@@ -121,10 +121,10 @@ void Game_Manage_14_2(void);
 void Disp_Win_Record_Sub();
 void Erase_Win_Record();
 s16 Next_VS_Index(void);
-extern s16 End_Time_Stock;  /* provisional name */
+extern s16 End_Course;  /* provisional name */
 extern s8 End_Gouki_Flag;  /* provisional name */
 extern s8 Stock_Battle_Country[2];  /* provisional name */
-extern const s8 Com_Data_0611A9E8[];
+extern const s8 rival_char_tbl[];
 
 
 
@@ -771,7 +771,7 @@ void Game_Manage_7_9(void) {
 void Stock_Loser_Char(void) {
     if (PL_Wins[WINNER] >= Game_setting.set4 + 1) {
         if (Round_Operator[LOSER] != 0) {
-            Continue_Count[LOSER] = 0;
+            Win_Record[LOSER] = 0;
             Stock_My_char[LOSER] = My_char[LOSER];
             Stock_Player_Color[LOSER] = Player_Color[LOSER];
         }
@@ -1249,7 +1249,7 @@ void Game_Manage_9th(void) {
                     C_No0 = 10;
                 }
             } else {
-                Continue_Count[LOSER] = 0;
+                Win_Record[LOSER] = 0;
                 Straight_Counter[LOSER] = 0;
                 Stock_My_char[LOSER] = My_char[LOSER];
                 Stock_Player_Color[LOSER] = Player_Color[LOSER];
@@ -1896,7 +1896,7 @@ void Game_Manage_14_2(void) {
             My_char[COM_id] = 15;
             Break_Into_CPU = 15;
             Player_Color[COM_id] = COM_id;
-            EM_History[Player_id][0] = 15;
+            EM_Candidate[Player_id][7] = 15;
             Clear_1Stage_Work();
             Stock_Battle_Country[Player_id] = Battle_Country;
             Cover_Timer = 5;
@@ -1924,11 +1924,11 @@ void Ck_Win_Record(void) {
                 w = 1;
                 l = 0;
             }
-            if (++Continue_Count[w] <= 99) {
+            if (++Win_Record[w] <= 99) {
                 Disp_Win_Record_Sub(w);
                 Erase_Win_Record(l);
             } else {
-                Continue_Count[w] = 99;
+                Win_Record[w] = 99;
             }
         }
     }
@@ -1947,7 +1947,7 @@ s16 PL_id;
     } else {
         zz = 5;
     }
-    switch (Continue_Count[PL_id]) {
+    switch (Win_Record[PL_id]) {
     case 1:
         tilemap_print_string_attr(zz, Text_Page_Y, 40, "WIN");
         break;
@@ -1955,11 +1955,11 @@ s16 PL_id;
         tilemap_print_string_attr(zz, Text_Page_Y, 40, "WINS");
         break;
     }
-    xx = Continue_Count[PL_id] / 10;
+    xx = Win_Record[PL_id] / 10;
     if (xx > 0) {
         tilemap_print_hex_block(zz - 3, Text_Page_Y, 40, (s8)xx, 1, 1);
     }
-    Wins_Buff = Continue_Count[PL_id] % 10;
+    Wins_Buff = Win_Record[PL_id] % 10;
     tilemap_print_hex_block(zz - 2, Text_Page_Y, 40, (s8)Wins_Buff, 1, 1);
 }
 
@@ -1973,10 +1973,10 @@ void Disp_Win_Record(void) {
     if (Play_Type != 1) {
         return;
     }
-    if (Continue_Count[0] == 0 && Continue_Count[1] == 0) {
+    if (Win_Record[0] == 0 && Win_Record[1] == 0) {
         return;
     }
-    if (Continue_Count[0]) {
+    if (Win_Record[0]) {
         pl = 0;
     } else {
         pl = 1;
@@ -1986,16 +1986,16 @@ void Disp_Win_Record(void) {
     } else {
         x = 5;
     }
-    if (Continue_Count[Winner_id] > 1) {
+    if (Win_Record[Winner_id] > 1) {
         tilemap_print_string_attr(x, 0, 40, "WINS");
     } else {
         tilemap_print_string_attr(x, 0, 40, "WIN");
     }
-    digit = Continue_Count[pl] / 10;
+    digit = Win_Record[pl] / 10;
     if (digit > 0) {
         tilemap_print_hex_block(x - 3, 0, 40, (s8)digit, 1, 1);
     }
-    num = Continue_Count[pl] % 10;
+    num = Win_Record[pl] % 10;
     tilemap_print_hex_block(x - 2, 0, 40, (s8)num, 1, 1);
 }
 
@@ -2005,14 +2005,14 @@ void Erase_Win_Record(PL_id)
 s16 PL_id;
 {
     s16 x;
-    if (Continue_Count[PL_id] != 0) {
+    if (Win_Record[PL_id] != 0) {
         if (PL_id) {
             x = DE_X[12] + 39;
         } else {
             x = 2;
         }
         tilemap_print_string_attr(x, Text_Page_Y, 40, "       ");
-        Continue_Count[PL_id] = 0;
+        Win_Record[PL_id] = 0;
     }
 }
 
@@ -2142,7 +2142,7 @@ s32 Check_Ending(void) {
         plw[WINNER].wu.operator = 0;
         Operator_Status[WINNER] = 0;
         sound_reg_level_set(0, 0);
-        End_Time_Stock = Result_Timer[WINNER];
+        End_Course = EM_Course[WINNER];
         End_Gouki_Flag = Break_Com[WINNER][14];
         Control_Time = 481;
         Ending_init();
@@ -2167,7 +2167,7 @@ s32 Check_Ending_Special(void) {
         G_No1 = 8;
         G_No2 = 0;
         E_No0 = 10;
-        End_Time_Stock = Result_Timer[WINNER];
+        End_Course = EM_Course[WINNER];
         End_Gouki_Flag = Break_Com[WINNER][14];
         if (My_char[COM_id] == 15) {
             End_PL = 15;
@@ -2263,7 +2263,7 @@ void Loser_Sub(void) {
 
 void Be_Continue(void) {
     if (Continue_Flag != 0 && Game_setting.set5 == 0) {
-        Continue_Count_Down[LOSER] = 9;
+        Continue_Count[LOSER] = 9;
         E_Number[LOSER][0] = 5;
         E_Number[LOSER][1] = 0;
         E_Number[LOSER][2] = 0;
@@ -2301,7 +2301,7 @@ void Update_VS_Data(void) {
         ROW_ELEM(Break_Com[Winner_id], EM_id) = 1;
         return;
     }
-    if (My_char[COM_id] != Com_Data_0611A9E8[My_char[Player_id]] && My_char[COM_id] != 14 && My_char[COM_id] != 15) {
+    if (My_char[COM_id] != rival_char_tbl[My_char[Player_id]] && My_char[COM_id] != 14 && My_char[COM_id] != 15) {
         VS_Index[Player_id]++;
         ROW_ELEM(Break_Com[Winner_id], EM_id) = 1;
     }
@@ -2427,7 +2427,7 @@ s32 Check_Break_Into_CPU(s16 PL_id) {
     if (Perfect_Finish[Player_id] < Break_Into_Perfect_Data[Game_setting.set4]) {
         return 0;
     }
-    return EM_History[Player_id][0] = 14;
+    return EM_Candidate[Player_id][7] = 14;
 }
 
 
@@ -2443,7 +2443,7 @@ s32 Check_Break_Into(s16 PL_id) {
     if ((ix = VS_Index[PL_id]) < 4 || ix >= 7) {
         return Break_Into_CPU = 0;
     }
-    if (Straight_Flag[PL_id]) {
+    if (Introduce_Break_Into[PL_id]) {
         return Break_Into_CPU = 0;
     }
     if (Super_Arts_Finish[PL_id] < Break_Into_SA_Data[Game_setting.set4]) {

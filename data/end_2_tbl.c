@@ -1,5 +1,5 @@
 /*
- * END_2_TBL.C  game tables
+ * END_2_TBL.C  tables read by end_2.c: ending 2 (end_02000), 2nd Impact version
  */
 
 #include "types.h"
@@ -7,12 +7,17 @@
 
 #pragma section TBL
 
-extern const PANEL end_200_panel0_061655F0[];
+extern const u32 end_200_panel0[];
+extern const s16 timer_2_tbl[];
 
 /* provisional name */
-const PANEL end_200_panel0_061655F0[4] = {
-    { 12288, 1 },
-    { 12352, 2 },
-    { 12416, 3 },
-    { 12480, 4 },
+const u32 end_200_panel0[16] = {
+    0, 3, 0x40, 4,
+    0x80, 5, 0xC0, 6,
+    0x1000, 7, 0x1040, 8,
+    0x1080, 0xA, 0x10C0, 0xB,
+};
+
+const s16 timer_2_tbl[4] = {
+    420, 360, 180, 1200,
 };

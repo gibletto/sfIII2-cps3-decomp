@@ -1,7 +1,7 @@
 ; FIXED_ADDR.SRC  addresses the program does not place: the BIOS and the sound chip
 ;
-; Everything else has its address from the link: code and tables (P, CTBL), the initialised work RAM (work.c,
-; section R at 02000000) and the work RAM cleared at boot (work_b.c, section B after it).
+; Everything else has its address from the link: code and tables (P, CTBL), the initialised work RAM (section R at
+; 02000000, copied from D) and the work RAM cleared at boot (section B after it: the uninitialised variables).
 
           .CPU        SH2
           .EXPORT     _bios_region_code

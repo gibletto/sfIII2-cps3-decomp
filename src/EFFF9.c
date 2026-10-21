@@ -49,8 +49,7 @@ s16 efff9_mes_len;  /* provisional name: the line's cell count (3rd Strike old_r
 s16 efff9_mes_show;  /* provisional name: cells shown so far (3rd Strike old_rno[5]) */
 s16 efff9_mes_wait;  /* provisional name: frames to the next cell (3rd Strike old_rno[6]) */
 
-/* the message tables are initialised RAM in 2nd Impact, still in the D blob (02008138 / 0200817C / 020081C0 / 02008204;
-   txt_no_tbl at 020083E8) */
+/* the message tables are initialised work RAM in 2nd Impact, defined in efff9_mes.c */
 extern const EFFF9_MESSAGE* effF9_mes_jp[];
 extern const EFFF9_MESSAGE* effF9_mes_en[];
 extern const EFFF9_MESSAGE* effF9_mes_es[];

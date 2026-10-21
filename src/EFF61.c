@@ -3,7 +3,7 @@
  *
  * Effect 61 is a part of the alternate background (another_bg): hidden normally, it slides
  * into view vertically or horizontally while the another-BG mode is active. 2nd Impact has it in a file
- * of its own (its literal pool closes at 060D0F1C, before effect_62_move), and a real
+ * of its own, and a real
  * effect_61_init that makes 44 parts for a parent from eff61_data_tbl, where 3rd Strike keeps an empty
  * effect_61_dummy in EFF62.C.
  */

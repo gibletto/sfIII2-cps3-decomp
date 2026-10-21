@@ -1,5 +1,5 @@
 /*
- * EFF54.C  Effect 54: a stage object that flies a fixed course (2nd Impact only)
+ * EFF54.C  Effect 54: a stage object that flies a fixed course (2nd Impact version)
  *
  * 3rd Strike: effect 54 is two parts of the blinking stage object, and the file also holds effect 55. 2nd Impact's
  * effect 54 is a different routine: effect_54_init places one object above its parent's x;
@@ -97,7 +97,7 @@ void effect_54_move(WORK_Other* ewk) {
 
 
 
-/* (init table entry; stores effect 54's id) 2nd Impact: one object over the parent's x */
+/* one object over the parent's x */
 s32 effect_54_init(WORK_Other* oya) {
     WORK_Other* ewk;
     s16 ix;

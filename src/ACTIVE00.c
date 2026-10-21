@@ -1,11 +1,9 @@
 /*
- * ACTIVE00.C  Computer player patterns: end of Passive20 and the Pattern00 active set
+ * ACTIVE00.C  Computer player patterns: the Pattern00 active set
  *
  * Step-by-step CPU pattern routines. Each pattern is a switch on CP_Index[id][0]; every case
  * calls one Com_Sub step (Walk, Normal_Attack, Jump_Attack_Term, Command_Attack, Look, ...)
  * and the last case calls End_Pattern.
- * Passive20_0123..0175 are the tail of character 20's passive (reaction) patterns, reached
- * through Passive20_Tbl.
  * Computer00 is character 0's entry in the Char_Jmp_Tbl of Com_Pl; it runs the pattern
  * selected by Pattern_Index[id] from Pattern00_Tbl (Pattern00_0000..0067).
  */

@@ -6,7 +6,6 @@
  * through Pattern09_Tbl. Each Pattern09_nnnn routine is a short script stepped by
  * CP_Index: walks and approaches, waits, range and area checks, normal, lever, command and jump
  * attacks, random branches to other patterns, and End_Pattern to finish.
- * ORO_JA_Term is used for this character's jump attacks.
  */
 
 #include "structs.h"

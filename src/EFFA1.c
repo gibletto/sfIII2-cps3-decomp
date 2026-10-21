@@ -1,7 +1,7 @@
 /*
  * EFFA1.C  Effect A1: after-image copies of the Akuma entrance object
  *
- * effect_A1_init is called twice by effect_A0_init (EFF99.C) with n = 1 and 2. Each copy takes
+ * effect_A1_init is called twice by effect_A0_init (EFFA0.C) with n = 1 and 2. Each copy takes
  * its master's position, target x, facing, character table and pattern, uses palette 50 + n
  * and sits n priority steps behind, and waits n * 2 frames before starting.
  * effect_A1_move then runs the copy toward the same target over 40 frames with a shadow, so the

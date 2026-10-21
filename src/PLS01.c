@@ -2,11 +2,10 @@
  * PLS01.C  Player movement and state check subroutines
  *
  * Subroutines used by the player state checks. They test and start jumps (air, triangle and
- * 360 jumps, high jumps), forward/back dashes, walks and steps, turning round (check_hurimuki),
+ * 360 jumps, high jumps), forward/back dashes, walks and steps, turning round (check_turn_to_back),
  * standing up, and guard (check_defense_lever, check_defense_kind, check_attbox_dir).
- * The car-bonus-stage versions of the facing checks (saishin_bs2_*) are here too.
  * jumping_union_process and jumping_process_ix move a work through the air under its speeds
- * and animation and land it; check_floor/check_ashimoto test the ground under the player.
+ * and animation and land it.
  * Also: super art stop (sa_stop_check), combo power counter resets and the recovery-roll check.
  */
 

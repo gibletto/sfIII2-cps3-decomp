@@ -3995,9 +3995,9 @@ const u32 dudley_atca[172] = {
     (u32)dudley_atca_048,  /* 153 TUKAMI AIR D */
     (u32)dudley_atca_048,  /* 154 TUKAMI AIR E */
     (u32)dudley_atca_048,  /* 155 TUKAMI AIR F */
-    (u32)dudley_atca_156,  /* 156 follow-up of L KICK C, KAGAMI K A +1 */
-    (u32)dudley_atca_157,  /* 157 follow-up of M PUNCH A, M KICK C */
-    (u32)dudley_atca_158,  /* 158 follow-up of follow-up of M PUNCH A, M KICK C */
+    (u32)dudley_atca_156,  /* 156 follow-up of L KICK C / KAGAMI K A +1 */
+    (u32)dudley_atca_157,  /* 157 follow-up of M PUNCH A / M KICK C */
+    (u32)dudley_atca_158,  /* 158 follow-up of follow-up of M PUNCH A / M KICK C */
     (u32)dudley_atca_159,  /* 159 follow-up of S KICK A */
     (u32)dudley_atca_160,  /* 160 follow-up of follow-up of S KICK A */
     (u32)dudley_atca_161,  /* 161 no name */
@@ -4005,7 +4005,7 @@ const u32 dudley_atca[172] = {
     (u32)dudley_atca_163,  /* 163 follow-up of S PUNCH A */
     (u32)dudley_atca_164,  /* 164 follow-up of follow-up of S PUNCH A */
     (u32)dudley_atca_165,  /* 165 follow-up of M KICK A */
-    (u32)dudley_atca_166,  /* 166 follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A */
+    (u32)dudley_atca_166,  /* 166 follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A */
     (u32)dudley_atca_167,  /* 167 follow-up of S PUNCH C */
     (u32)dudley_atca_168,  /* 168 no name */
     (u32)dudley_atca_169,  /* 169 follow-up of JUDGMENT WAIT */
@@ -4922,7 +4922,7 @@ const u16 dudley_atca_146[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 156 follow-up of L KICK C, KAGAMI K A +1 */
+/* script: 156 follow-up of L KICK C / KAGAMI K A +1 */
 const u16 dudley_atca_156_head[4] = { HEAD(6, 0, 3, 10, 0, 1, 0) };
 const u16 dudley_atca_156[232] = {
     L6(1, 0, 0, 0, 0, 0, 0, 0x194F, 0, 19, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0),
@@ -4947,7 +4947,7 @@ const u16 dudley_atca_156[232] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 157 follow-up of M PUNCH A, M KICK C */
+/* script: 157 follow-up of M PUNCH A / M KICK C */
 const u16 dudley_atca_157_head[4] = { HEAD(6, 0, 3, 10, 0, 1, 0) };
 const u16 dudley_atca_157[244] = {
     CMD(CM_RMJA, 4, 158, 1), 0, 0, 0, 0, 0, 0, 0, 0,
@@ -4973,7 +4973,7 @@ const u16 dudley_atca_157[244] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 158 follow-up of follow-up of M PUNCH A, M KICK C */
+/* script: 158 follow-up of follow-up of M PUNCH A / M KICK C */
 const u16 dudley_atca_158_head[4] = { HEAD(6, 0, 4, 15, 0, 1, 0) };
 const u16 dudley_atca_158[232] = {
     L6(1, 0, 0, 0, 0, 0, 0, 0x197A, 0, 26, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0),
@@ -5164,7 +5164,7 @@ const u16 dudley_atca_165[256] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 166 follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A */
+/* script: 166 follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A */
 const u16 dudley_atca_166_head[4] = { HEAD(6, 32, 4, 11, 0, 2, 0) };
 const u16 dudley_atca_166[232] = {
     L6(1, 0, 470, 0, 0, 0, 0, 0x19A8, 0, 39, 0, 0, 0, 0, 0, 0, 0, 38, 0, 0),
@@ -5640,17 +5640,17 @@ extern const u16 dudley_exca_000[], dudley_exca_001[], dudley_exca_002[], dudley
 
 /* exca scripts (debug viewer: UNION): 46 entries */
 const u32 dudley_exca[47] = {
-    (u32)dudley_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
-    (u32)dudley_exca_001,  /* 1 follow-up of APPEAR JUNBI 2, APPEAR JUNBI 4 */
+    (u32)dudley_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
+    (u32)dudley_exca_001,  /* 1 follow-up of APPEAR JUNBI 2 / APPEAR JUNBI 4 */
     (u32)dudley_exca_002,  /* 2 follow-up of APPEAR JUNBI 3 */
-    (u32)dudley_exca_003,  /* 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+    (u32)dudley_exca_003,  /* 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
     (u32)dudley_exca_004,  /* 4 follow-up of APPEAR JUNBI 5 */
-    (u32)dudley_exca_005,  /* 5 follow-up of ALEX BACK D, ALEX POWER B +31 */
-    (u32)dudley_exca_006,  /* 6 follow-up of DUDDLEY D S, KUNOJI A +1 */
-    (u32)dudley_exca_007,  /* 7 follow-up of TATAKI S, KGM TATAKI S +7 */
-    (u32)dudley_exca_008,  /* 8 follow-up of IBUKI KUBIORI, KIRIMOMI A +3 */
-    (u32)dudley_exca_009,  /* 9 follow-up of DADLEY L B, UPPER A +3 */
-    (u32)dudley_exca_010,  /* 10 follow-up of APPEAR JUNBI 2, APPEAR JUNBI 4 */
+    (u32)dudley_exca_005,  /* 5 follow-up of ALEX BACK D / ALEX POWER B +31 */
+    (u32)dudley_exca_006,  /* 6 follow-up of DUDDLEY D S / KUNOJI A +1 */
+    (u32)dudley_exca_007,  /* 7 follow-up of TATAKI S / KGM TATAKI S +7 */
+    (u32)dudley_exca_008,  /* 8 follow-up of IBUKI KUBIORI / KIRIMOMI A +3 */
+    (u32)dudley_exca_009,  /* 9 follow-up of DADLEY L B / UPPER A +3 */
+    (u32)dudley_exca_010,  /* 10 follow-up of APPEAR JUNBI 2 / APPEAR JUNBI 4 */
     (u32)dudley_exca_011,  /* 11 follow-up of APPEAR JUNBI 3 */
     (u32)dudley_exca_012,  /* 12 follow-up of APPEAR JUNBI 5 */
     (u32)dudley_exca_013,  /* 13 no name */
@@ -5663,8 +5663,8 @@ const u32 dudley_exca[47] = {
     (u32)dudley_exca_020,  /* 20 no name */
     (u32)dudley_exca_021,  /* 21 no name */
     (u32)dudley_exca_022,  /* 22 no name */
-    (u32)dudley_exca_023,  /* 23 follow-up of APPEAR JUNBI 7, APPEAR JUNBI 8 +2 */
-    (u32)dudley_exca_024,  /* 24 follow-up of APPEAR JUNBI 7, APPEAR JUNBI 8 +2 */
+    (u32)dudley_exca_023,  /* 23 follow-up of APPEAR JUNBI 7 / APPEAR JUNBI 8 +2 */
+    (u32)dudley_exca_024,  /* 24 follow-up of APPEAR JUNBI 7 / APPEAR JUNBI 8 +2 */
     (u32)dudley_exca_025,  /* 25 follow-up of APPEAR 3 */
     (u32)dudley_exca_025,  /* 26 follow-up of APPEAR 3 */
     (u32)dudley_exca_027,  /* 27 no name */
@@ -5689,7 +5689,7 @@ const u32 dudley_exca[47] = {
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 dudley_exca_000_head[4] = { HEAD(4, 24, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_000[116] = {
     L4(2, 0, 0, 0, 0, 0, 0, 0x19FF, 0, 10, 0, 0, 0, 0, 0),
@@ -5709,7 +5709,7 @@ const u16 dudley_exca_000[116] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 1 follow-up of APPEAR JUNBI 2, APPEAR JUNBI 4 */
+/* script: 1 follow-up of APPEAR JUNBI 2 / APPEAR JUNBI 4 */
 const u16 dudley_exca_001_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_001[60] = {
     L4(2, 2, 273, 0, 0, 0, 0, 0x1831, 0, 1, 0, 0, 0, 0, 0),
@@ -5732,7 +5732,7 @@ const u16 dudley_exca_002[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+/* script: 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
 const u16 dudley_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_003[100] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x18F6, 0, 69, 0, 0, 0, 0, 0),
@@ -5764,7 +5764,7 @@ const u16 dudley_exca_004[68] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of ALEX BACK D, ALEX POWER B +31 */
+/* script: 5 follow-up of ALEX BACK D / ALEX POWER B +31 */
 const u16 dudley_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_005[108] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x18DF, 0, 69, 0, 0, 0, 0, 0),
@@ -5783,7 +5783,7 @@ const u16 dudley_exca_005[108] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of DUDDLEY D S, KUNOJI A +1 */
+/* script: 6 follow-up of DUDDLEY D S / KUNOJI A +1 */
 const u16 dudley_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_006[116] = {
     L4(4, 1, 0, 0, 0, 0, 0, 0x18EE, 0, 69, 0, 0, 0, 0, 0),
@@ -5803,7 +5803,7 @@ const u16 dudley_exca_006[116] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 7 follow-up of TATAKI S, KGM TATAKI S +7 */
+/* script: 7 follow-up of TATAKI S / KGM TATAKI S +7 */
 const u16 dudley_exca_007_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_007[92] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x18B9, 0, 69, 0, 0, 0, 0, 0),
@@ -5820,7 +5820,7 @@ const u16 dudley_exca_007[92] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of IBUKI KUBIORI, KIRIMOMI A +3 */
+/* script: 8 follow-up of IBUKI KUBIORI / KIRIMOMI A +3 */
 const u16 dudley_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_008[76] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x1915, 0, 69, 0, 0, 0, 0, 0),
@@ -5835,7 +5835,7 @@ const u16 dudley_exca_008[76] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of DADLEY L B, UPPER A +3 */
+/* script: 9 follow-up of DADLEY L B / UPPER A +3 */
 const u16 dudley_exca_009_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_009[108] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x18DF, 0, 69, 0, 0, 0, 0, 0),
@@ -5854,7 +5854,7 @@ const u16 dudley_exca_009[108] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 10 follow-up of APPEAR JUNBI 2, APPEAR JUNBI 4 */
+/* script: 10 follow-up of APPEAR JUNBI 2 / APPEAR JUNBI 4 */
 const u16 dudley_exca_010_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_010[44] = {
     L4(2, 2, 273, 0, 0, 0, 0, 0x1832, 0, 9, 0, 0, 0, 0, 0),
@@ -6020,7 +6020,7 @@ const u16 dudley_exca_022[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 23 follow-up of APPEAR JUNBI 7, APPEAR JUNBI 8 +2 */
+/* script: 23 follow-up of APPEAR JUNBI 7 / APPEAR JUNBI 8 +2 */
 const u16 dudley_exca_023_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_023[84] = {
     L4(3, 0, 274, 0, 0, 0, 0, 0x183B, 0, 1, 0, 0, 0, 0, 0),
@@ -6036,7 +6036,7 @@ const u16 dudley_exca_023[84] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 24 follow-up of APPEAR JUNBI 7, APPEAR JUNBI 8 +2 */
+/* script: 24 follow-up of APPEAR JUNBI 7 / APPEAR JUNBI 8 +2 */
 const u16 dudley_exca_024_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 dudley_exca_024[36] = {
     L4(3, 0, 0, 0, 0, 0, 0, 0x1833, 0, 9, 0, 0, 0, 0, 0),

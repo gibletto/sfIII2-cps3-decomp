@@ -3,7 +3,7 @@
  *
  * The building blocks used by every CPU pattern. Pattern steps: End_Pattern, Lever_On/Off,
  * Walk, Approach_Walk, Keep_Away, Wait, Look, Forced_Guard, Normal_Attack, Lever_Attack,
- * Jump_Attack, Hi_Jump_Attack, Command_Attack, Rapid_Command_Attack, SA_Term and the other
+ * Jump_Attack, Hi_Jump_Attack, Command_Attack, SA_Term and the other
  * *_Term steps that attack when range and state conditions are met.
  * Checks and helpers: Ck_Distance, Ck_Area and the Check_* tests on the opponent, combo
  * speed and reaction time selection, Select_Active / Select_Passive / Decide_Follow_Menu
@@ -1769,7 +1769,7 @@ s32 Air_Guard_Lever(PLW* wk) {
 
 
 
-/* 2nd Impact form of sf3 Check_Air_Guard: decides the air guard when the jump starts */
+/* 2nd Impact form of Check_Air_Guard: decides the air guard when the jump starts */
 s32 Check_Air_Guard(PLW* wk) {
     Free_Lever[wk->wu.id] = 0;
     if (Lever_LR) {
@@ -4024,7 +4024,7 @@ s32 Check_Passive(PLW* wk) {
 
 
 
-/* provisional name: 2nd Impact only the passive term check by screen area */
+/* provisional name: 2nd Impact only: the passive term check by screen area */
 s32 Ck_Guard_Passive_Term(PLW* wk) {
     switch (Area_Number[wk->wu.id]) {
     case 0:

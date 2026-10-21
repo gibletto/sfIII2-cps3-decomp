@@ -1,5 +1,5 @@
 /*
- * EFF95_TBL.C  game tables
+ * EFF95_TBL.C  tables nothing reads, kept for the layout
  */
 
 #include "types.h"

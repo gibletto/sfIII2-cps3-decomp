@@ -1,5 +1,9 @@
 /*
- * CHR_DATA_B.C  tables read by EFF67.c, game_config_jp.c and 2 other modules
+ * CHR_DATA_B.C  the fix-layer font (sc_chr_data) and the screen and message cells read by EFF67.c, effa6_mes.c,
+ * effb8_mes.c, efff9_mes.c, game_config_jp.c, sc_trans.c, se_2.c and scrn_data.c
+ *
+ * The part of 3rd Strike's chr_data.c that 2nd Impact links at the end of the tables (the test menu screens are
+ * chr_data.c).
  */
 
 #include "types.h"

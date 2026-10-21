@@ -9,7 +9,7 @@
  * the draw priority is then set relative to the opponent when the animation asks for it.
  * Normal_00000 is the entry routine that runs appear_player for the round introduction;
  * Normal_01000 is the standing routine (pcon_dp_flag holds it in pose 9/60); Normal_02000, the
- * first of 3rd Strike PLNORMAL.C, is part of this module in 2nd Impact (one literal pool with Normal_01000).
+ * first of 3rd Strike PLNORMAL.C, is part of this module in 2nd Impact.
  * Called from the player main routine (PLMAIN/PLMAIN2).
  */
 

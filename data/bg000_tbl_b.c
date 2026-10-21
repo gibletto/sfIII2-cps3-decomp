@@ -27,27 +27,27 @@ extern const u16 etc_bg_cell_cnt_tbl[];
 extern const u32 bg_cg_src_tbl[];
 extern const u32 bg_cg_src_tbl_06162698[];
 extern const u32 etc_bg_cg_src_tbl[];
-extern const u8 dat_0637083C[];
-extern const u8 dat_0639283C[];
-extern const u8 dat_0639943C[];
-extern const u8 dat_063A103C[];
-extern const u8 dat_063A743C[];
-extern const u8 dat_063B403C[];
-extern const u8 dat_063B903C[];
-extern const u8 dat_063BA43C[];
+extern const u8 bg_scrn_data_11[];
+extern const u8 bg_scrn_data_07[];
+extern const u8 bg_scrn_data_08[];
+extern const u8 bg_scrn_data_10[];
+extern const u8 bg_scrn_data_12[];
+extern const u8 bg_scrn_data_15[];
+extern const u8 etc_bg_scrn_data_0[];
+extern const u8 etc_bg_scrn_data_3[];
 extern const u8 debug_scene_scrn_data[];
 extern const u8 eff08_scrn_data[];
 extern const u8 eff23_scrn_data[];
 extern const u8 eff45_scrn_data[];
 extern const u8 effJ5_scrn_data[];
 extern const u8 effb0_scrn_data[];
-extern const u8 scene_char_06363C3C[];
-extern const u8 scene_char_0636803C[];
-extern const u8 scene_char_0636C43C[];
-extern const u8 scene_char_06374C3C[];
-extern const u8 scene_char_0637903C[];
+extern const u8 bg_scrn_data_01[];
+extern const u8 bg_scrn_data_02[];
+extern const u8 bg_scrn_data_03[];
+extern const u8 bg_scrn_data_04[];
+extern const u8 bg_scrn_data_05[];
 
-/* provisional name */
+/* provisional name: the 12 halfwords before bg_scno_tbl; nothing refers to them by this name */
 const s16 bg_scno_tbl_06161C34[12] = {
     2, 0, 2, 0, 2, 0, 2, 0,
     2, 0, 2, 0,
@@ -59,7 +59,7 @@ const u16 bg_scno_tbl[11] = {
     2, 2, 3,
 };
 
-/* provisional name */
+/* provisional name: the 7 halfwords before etc_bg_scno_tbl; nothing refers to them by this name */
 const s16 etc_bg_scno_tbl_06161C62[7] = {
     2, 2, 2, 2, 2, 2, 1,
 };
@@ -286,19 +286,19 @@ const u16 etc_bg_cell_cnt_tbl[20] = {
 
 /* provisional name */
 const u32 bg_cg_src_tbl[6] = {
-    (u32)debug_scene_scrn_data, (u32)scene_char_06363C3C, (u32)scene_char_0636803C, (u32)scene_char_0636C43C,
-    (u32)scene_char_06374C3C, (u32)scene_char_0637903C,
+    (u32)debug_scene_scrn_data, (u32)bg_scrn_data_01, (u32)bg_scrn_data_02, (u32)bg_scrn_data_03,
+    (u32)bg_scrn_data_04, (u32)bg_scrn_data_05,
 };
 
-/* provisional name */
+/* provisional name: bg_cg_src_tbl's entries for bg_index 6-19, read through bg_cg_src_tbl */
 const u32 bg_cg_src_tbl_06162698[14] = {
-    (u32)eff23_scrn_data, (u32)dat_0639283C, (u32)dat_0639943C, (u32)eff08_scrn_data,
-    (u32)dat_063A103C, (u32)dat_0637083C, (u32)dat_063A743C, (u32)effJ5_scrn_data,
-    (u32)eff45_scrn_data, (u32)dat_063B403C, (u32)eff23_scrn_data, (u32)effb0_scrn_data,
+    (u32)eff23_scrn_data, (u32)bg_scrn_data_07, (u32)bg_scrn_data_08, (u32)eff08_scrn_data,
+    (u32)bg_scrn_data_10, (u32)bg_scrn_data_11, (u32)bg_scrn_data_12, (u32)effJ5_scrn_data,
+    (u32)eff45_scrn_data, (u32)bg_scrn_data_15, (u32)eff23_scrn_data, (u32)effb0_scrn_data,
     (u32)effb0_scrn_data, (u32)effb0_scrn_data,
 };
 
 const u32 etc_bg_cg_src_tbl[5] = {
-    (u32)dat_063B903C, (u32)dat_063B903C, (u32)dat_063B903C, (u32)dat_063BA43C,
-    (u32)dat_063BA43C,
+    (u32)etc_bg_scrn_data_0, (u32)etc_bg_scrn_data_0, (u32)etc_bg_scrn_data_0, (u32)etc_bg_scrn_data_3,
+    (u32)etc_bg_scrn_data_3,
 };

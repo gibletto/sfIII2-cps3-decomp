@@ -24,7 +24,7 @@
 #include "eff05.h"
 #include "EFF11.h"
 
-/* trial declarations */
+/* declarations the headers do not give */
 /* provisional name */
 extern s8 bg_demo_cnt;
 void zoom_ud_check(void);

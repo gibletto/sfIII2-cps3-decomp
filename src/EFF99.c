@@ -1,10 +1,9 @@
 /*
- * EFF99.C  Effect 98 die state and init, effect 99
+ * EFF99.C  Effect 99: PERFECT mark
  *
- * EFF98_KILL counts down the order timer, hides the super-art plate and frees it.
- * effect_98_init (called from next_cpu.c) creates the plate for a player, order slot and BG.
- * Effect 99 shows a select-screen sprite (sel_pl_char_table) after a delay, drawn relative to
- * BG1, and frees it when Disp_PERFECT is cleared.
+ * effect_99_init (from Disp_Perfect_Mark in manage_2.c: index 77, then 78 with the winner's perfect
+ * count) shows a select-screen sprite (sel_pl_char_table) after a delay, drawn relative to BG1;
+ * effect_99_move frees it when Disp_PERFECT is cleared.
  */
 
 #include "structs.h"
@@ -60,7 +59,6 @@ void effect_99_move(WORK_Other* ewk) {
 
 
 
-/* my_col_code 0x2039, index 77 */
 s32 effect_99_init(s16 index, s16 timer, s16 ip) {
     WORK_Other* ewk;
     s16 ix;

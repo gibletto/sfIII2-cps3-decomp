@@ -1,12 +1,9 @@
 /*
- * END_SUB.C  Ending support: prize cards, CD checks, staff roll, debug fights and colour loads
+ * END_SUB.C  Ending support: prize cards
  *
  * Card dispenser bookkeeping for the regions that give out cards: card_win_check counts wins per
  * player and requests a card when the required wins are reached; card_msg_disp blinks the "card won"
- * and "no cards" messages. cd_keep_spinning_tick keeps the CD drive spinning and cd_error_fatal_hang
- * shows the no-drive / no-disc message and stops the machine. staff_roll_main scrolls the staff
- * credits after an ending, with a button skip check. debug_play07..13 are debug-menu fight setups
- * that initialise a match with fixed characters and stage and run the battle loop.
+ * and "no cards" messages. card_work_clear / card_pl_work_clear reset the card work.
  */
 
 #include "structs.h"

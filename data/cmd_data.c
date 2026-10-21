@@ -55,7 +55,7 @@ extern const s16 p3_cmd_21[];
 extern const s16 p3_cmd_22[];
 extern const s16 p3_cmd_28[];
 extern const s16 p3_cmd_29[];
-extern const s16 cmd_data_0615FAE0[];
+extern const s16 p3_cmd_30[];
 extern const s16 p3_cmd_32[];
 extern const s16 p4_cmd_20[];
 extern const s16 p4_cmd_21[];
@@ -87,7 +87,7 @@ extern const s16 p7_cmd_38[];
 extern const s16 p7_cmd_28[];
 extern const s16 p7_cmd_29[];
 extern const s16 p7_cmd_30[];
-extern const s16 cmd_data_0616023C[];
+extern const s16 p7_cmd_31[];
 extern const s16 p7_cmd_46[];
 extern const s16 p8_cmd_20[];
 extern const s16 p8_cmd_21[];
@@ -153,7 +153,7 @@ extern const s16 pE_cmd_46[];
 extern const s16 pE_cmd_47[];
 extern const s16 cmd_data_06160FF8[];
 extern const s16 ukemi_time_tbl[];
-extern const s16 cmd_data_06161020[];
+extern const s16 player_cmd_line_text[];
 
 const s16 lever_gacha_tbl[16] = {
     0, 1, 1, 2, 1, 2, 2, 3,
@@ -490,8 +490,8 @@ const s16 p3_cmd_29[25] = {
     28,
 };
 
-/* provisional name */
-const s16 cmd_data_0615FAE0[50] = {
+/* provisional name: player 3's command slots 30 and 31 (pl_CMD, the second at +50) */
+const s16 p3_cmd_30[50] = {
     12, 1, 0, 16, 16, 16, 16, 517,
     0, 1, 2, 19, 1, 0, 0, -32766,
     1, 10, 0, -32758, 1, 10, 0, -32760,
@@ -731,8 +731,8 @@ const s16 p7_cmd_30[25] = {
     28,
 };
 
-/* provisional name */
-const s16 cmd_data_0616023C[50] = {
+/* provisional name: player 7's command slots 31 and 32 (pl_CMD, the second at +50) */
+const s16 p7_cmd_31[50] = {
     12, 1, 0, 17, 17, 17, 17, 1029,
     4, 5, 6, 23, 1, 0, 0, -32766,
     1, 10, 0, -32762, 1, 10, 0, -32764,
@@ -1206,8 +1206,8 @@ const s16 ukemi_time_tbl[18] = {
     7, -1,
 };
 
-/* provisional name */
-const s16 cmd_data_06161020[66] = {
+/* provisional name: the text of player_cmd_lines and lvr_chk_lines (cmd_work.c) */
+const s16 player_cmd_line_text[66] = {
     21840, 8224, 8224, 15648, 8224, 8275, 18511, 21553,
     8253, 2560, 17487, 22350, 8224, 15648, 8224, 8275,
     18511, 21554, 8253, 2560, 19525, 18004, 8224, 15648,

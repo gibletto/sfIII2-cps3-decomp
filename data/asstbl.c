@@ -1,5 +1,5 @@
 /*
- * ASSTBL.C  tables read by PLS03.c: special move, super art and normal attack command checks (2nd Impact only)
+ * ASSTBL.C  tables read by PLS03.c: special move, super art and normal attack command checks (2nd Impact version)
  */
 
 #include "types.h"

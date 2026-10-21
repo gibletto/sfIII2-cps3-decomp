@@ -214,7 +214,7 @@ PLW* pl;
 
 
 
-/* provisional name: 2nd Impact only player emid holds exactly the combination 0x252 */
+/* provisional name; 2nd Impact only: 1 when player emid has just pressed exactly the combination 0x252 */
 s32 bonus_level_max_check(s16 emid) {
     WORK_CP* cp = plw[emid].cp;
     if (cp->sw_new != 0x252) {

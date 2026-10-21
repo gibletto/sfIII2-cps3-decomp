@@ -19,7 +19,7 @@
 #include "aboutspr.h"
 #include "color3rd.h"
 
-/* trial declarations */
+/* declarations the headers do not give */
 void zoom_ud_check(void);
 void bg_x_move_check(void);
 void bg_y_move_check(void);

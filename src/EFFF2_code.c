@@ -133,5 +133,5 @@ s32 effect_F2_init(s16 no) {
         }
         ewk->wu.old_rno[3] = *data_ptr++;
     }
-    end_w.r_no_2;
+    (void)end_w.r_no_2;
 }

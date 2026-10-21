@@ -30,7 +30,7 @@ const ATTACK_BOX yang_att_box[104] = {
     { { {  -64,  40,  51,  15 },  {    0,   0,   0,   0 } } },  /* 7: M PUNCH B, atca 204; attack 7, 101 */
     { { {  -53,  35,  57,  23 },  {    0,   0,   0,   0 } } },  /* 8: M PUNCH A, follow-up of ZANNEN 4; attack 8, 100 */
     { { {  -60,  48,  45,  24 },  {    0,   0,   0,   0 } } },  /* 9: L PUNCH A, follow-up of JUDGMENT WAIT; attack 9, 102 */
-    { { {  -83,  68,  57,  13 },  {  -60,  32,  50,  12 } } },  /* 10: follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6; attack 11, 104 */
+    { { {  -83,  68,  57,  13 },  {  -60,  32,  50,  12 } } },  /* 10: follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6; attack 11, 104 */
     { { {  -86,  32,  66,  12 },  {  -60,  32,  60,  12 } } },  /* 11: L PUNCH B; attack 10 */
     { { {  -84,  40,  18,  12 },  {  -60,  40,  30,  12 } } },  /* 12: not used by a script */
     { { {  -76,  36,  20,  12 },  {    0,   0,   0,   0 } } },  /* 13: not used by a script */
@@ -46,7 +46,7 @@ const ATTACK_BOX yang_att_box[104] = {
     { { {  -83,  38,  53,  14 },  {  -49,  35,  56,  14 } } },  /* 23: not used by a script */
     { { {  -68,  46,  58,  11 },  {  -50,  40,  44,  14 } } },  /* 24: ATTACK 12 M: not started by a command; attack 98 */
     { { {  -76,  49,  68,  10 },  {  -24,  16,  41,  29 } } },  /* 25: ATTACK 12 M: not started by a command; attack 97 */
-    { { {  -64,  53,  46,  32 },  {    0,   0,   0,   0 } } },  /* 26: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command, follow-up of follow-up of M PUNCH A, M PUNCH B; attack 22, 76, 80 */
+    { { {  -64,  53,  46,  32 },  {    0,   0,   0,   0 } } },  /* 26: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command, follow-up of follow-up of M PUNCH A / M PUNCH B; attack 22, 76, 80 */
     { { {  -71,  25,  53,  17 },  {    0,   0,   0,   0 } } },  /* 27: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command; attack 22, 23, 80 */
     { { {  -36,  24,  34,  34 },  {    0,   0,   0,   0 } } },  /* 28: follow-up of S KICK A; attack 77 */
     { { {  -96,  73,  52,  28 },  {  -57,  39,  42,  21 } } },  /* 29: follow-up of follow-up of SEAN BALL HIT, ATTACK 5 S: not started by a command; attack 25, 129, 130 */
@@ -64,7 +64,7 @@ const ATTACK_BOX yang_att_box[104] = {
     { { {  -56,  24,  51,  14 },  {    0,   0,   0,   0 } } },  /* 41: M PUNCH B, atca 204 */
     { { {  -62,  41,  91,  16 },  {  -47,  27,  60,  31 } } },  /* 42: L PUNCH A, follow-up of JUDGMENT WAIT; attack 41, 103 */
     { { {  -57,  21,  85,  16 },  {  -47,  39,  66,  19 } } },  /* 43: L PUNCH A, follow-up of JUDGMENT WAIT; attack 9 */
-    { { {  -75,  59,  56,  13 },  {    0,   0,   0,   0 } } },  /* 44: follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
+    { { {  -75,  59,  56,  13 },  {    0,   0,   0,   0 } } },  /* 44: follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
     { { {  -78,  32,  64,  12 },  {    0,   0,   0,   0 } } },  /* 45: L PUNCH B */
     { { {  -68,  14,  16,  20 },  {  -52,  33,   0,  42 } } },  /* 46: S KICK A, follow-up of ZANNEN 7; attack 12, 105 */
     { { {  -52,  33,   8,  28 },  {    0,   0,   0,   0 } } },  /* 47: S KICK A, follow-up of ZANNEN 7; attack 12 */

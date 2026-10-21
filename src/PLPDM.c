@@ -2,9 +2,9 @@
  * PLPDM.C  Player damage process
  *
  * Runs a player who has been hit or is guarding. Player_damage dispatches Damage_00000 to
- * Damage_31000 by damage routine: standing and crouching hit and guard staggers, air hits and
+ * Damage_30000 by damage routine: standing and crouching hit and guard staggers, air hits and
  * air guard, knock-downs, blow-aways (buttobi), bounces, crumples and KO.
- * Helpers choose the damage animation from posture (set_dm_char_by_pat_status), run the first
+ * Helpers choose the damage animation from posture, run the first
  * flight and landing (first_flight_union, buttobi_chakuchi_cg_type_check), slide with
  * dm_step_tbl and dust (setup_smoke_type), and set screen-edge correction (set_dm_hos_flag_*).
  * subtract_dm_vital applies the damage to vitality, awarding score and super gauge and handling

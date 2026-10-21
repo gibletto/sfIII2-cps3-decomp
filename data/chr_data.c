@@ -1,5 +1,8 @@
 /*
  * CHR_DATA.C  tables read by test_menu_scr.c: test menu screens
+ *
+ * 3rd Strike has these screens at the end of its chr_data.c, after the font; 2nd Impact links them at the
+ * start of the tables and the rest of chr_data.c at the end (chr_data_b.c).
  */
 
 #include "types.h"

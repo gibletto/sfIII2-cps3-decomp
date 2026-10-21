@@ -1,12 +1,10 @@
 /*
  * CMD_MAIN.C  Debug menu and command input
  *
- * 2nd Impact's CMD_MAIN.c, 06091CB0-0609C0AC, one object as 2nd Impact built it: the debug_* screens (BG select, OBJECT
- * LOOK/EDIT, the all-character edit, HIT and CATCH JUDGMENT box editors, the character preview, PARTS), the
- * move recorder and player snapshots, the on-screen dumps of player state and cg data, the debug BG maps and
- * the screen work clear. It is one unit because shcgen carries its register choice state from one routine to
- * the next, debug_pattern_preview_restart ends in a direct branch into debug_pattern_preview_step, and calls
- * between routines defined in the same file do not cache the callee's address in a register.
+ * One object in 2nd Impact (06091CB0-0609C0AC): the debug_* screens (BG select, OBJECT LOOK/EDIT, the
+ * all-character edit, HIT and CATCH JUDGMENT box editors, the character preview, PARTS), the move recorder
+ * and player snapshots, the on-screen dumps of player state and cg data, the debug BG maps and the screen
+ * work clear. debug_pattern_preview_restart runs straight on into debug_pattern_preview_step.
  *
  * 2nd Impact against 3rd Strike: 7 debug tools (no HIT -A- JUDGEMENT grid), 13 hit boxes per pattern (2 hand, 2 attack and 2
  * extra "eat" attack boxes, plus "dumm" boxes), slot selection up to 0x90 (3rd Strike 0xD8), 18 BG stages, an older

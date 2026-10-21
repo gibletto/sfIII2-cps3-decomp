@@ -1,5 +1,5 @@
 /*
- * EFF85.C  Effect 85: a stage object with a partner (2nd Impact only)
+ * EFF85.C  Effect 85: a stage object with a partner (2nd Impact version)
  *
  * 2nd Impact's effect 85 is not 3rd Strike's swallow: effect_85_init (stage code) makes one object at (0x25C, 94)
  * with the eff86_char_table patterns and its effect 86 partner. effect_85_move dispatches through a

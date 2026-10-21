@@ -1,5 +1,5 @@
 /*
- * EFFC3.C  Effect C3 (123): a stage 8 background object (2nd Impact only)
+ * EFFC3.C  Effect C3 (123): a stage 8 background object (2nd Impact version)
  *
  * 2nd Impact's own effect 123, made by effect_C3_init(type) for the stage 8 backgrounds. Type 0 rides on
  * background layer 1: it waits for bg_w.bgw[1].r_no_1 to reach 1, then rises with the layer and

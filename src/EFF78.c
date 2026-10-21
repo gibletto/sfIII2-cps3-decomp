@@ -1,5 +1,5 @@
 /*
- * EFF78.C  Effect 78: crows (bg000)
+ * EFF78.C  Effect 78: empty in 2nd Impact (3rd Strike: crows)
  *
  * 3rd Strike: effect_78_entry creates the two crows on BG2. effect_78_move animates them; when the
  * screen quakes (crow_fuss_check) they take off away from the players and fly to a new perch

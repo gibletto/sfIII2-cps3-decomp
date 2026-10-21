@@ -1,19 +1,15 @@
 /*
  * EFFB2.C  Round-start FIGHT call sequence (effect B2)
  *
- * Controls the start-of-round call. effect_B2_move steps through timed states: it picks a
- * call voice from effb2_sound_tbl, starts effect I6 and opens it with a vertical zoom,
- * waits, starts effect L5 and zooms it in, waits for the rf_b2_flag handshakes, runs
- * fight_col_chg_sub (a colour flash through fight_col_move_tbl) and finally sets Next_Step
- * so the round can begin. b3_Break_Into_check aborts the sequence when Break_Into is set.
- * effect_B2_init is called by the game manager (Manage.c) at the start of each round. It loads
- * the round-call graphics, resets the BG3 scroll to the screen origin, sets the BG families
- * (ake_Family_Set) and decides from Battle_Round and Round_num whether this is the final round
- * (type 1) or a normal round (type 0). It then spawns effect B3, the display child that shows
- * the round number and FIGHT (EFFB4.C).
- * 2nd Impact: effect_B2_move waits on rf_b2_flag counts (more than 9 in the final round, else 4) and timers,
- * checks Break_Into after each of its first five states, and sets Next_Step; effect_B2_init loads
- * colour 3 and char gfx 0x9130, leaves BG3 alone and reads the rounds from Game_setting.set4.
+ * Controls the start-of-round call. effect_B2_init is called by the round manager (manage_2.c) at the
+ * start of each round: it loads colour 3 and char gfx 0x9130, decides from Game_setting.set4 and
+ * Round_num whether this is the final round (type 1) or a normal round (type 0) and spawns effect B3,
+ * the display child that shows the round number and FIGHT (EFFB3.C). effect_B2_move waits on
+ * rf_b2_flag counts (more than 9 in the final round, else 4) and timers, checks Break_Into after each
+ * of its first five states (b3_Break_Into_check aborts the sequence) and then sets Next_Step so the
+ * round can begin.
+ * 3rd Strike's version also picks a call voice, starts effects I6 and L5 with zooms, runs a colour
+ * flash and resets the BG3 scroll and families.
  */
 
 #include "structs.h"

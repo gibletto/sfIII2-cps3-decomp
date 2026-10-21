@@ -18,7 +18,7 @@ extern const s16 Lv10_Time_Data[][1][9];
 extern const s16 Lv18_Time_Data[][9][17];
 extern const u8 Wait_Time_Data[][8];
 extern const u8 LOOK_POSITION_Data[][32];
-extern const u16 Com_Data_0611A9E8[];
+extern const u8 rival_char_tbl[];
 extern const u8 Exit_Throw_Data[][18];
 extern const u8 Flip_Data[][8];
 extern const u8 Flip_Chance_Data[][8];
@@ -187,9 +187,9 @@ const u8 LOOK_POSITION_Data[8][32] = {
     { 0xA, 0xA, 0xA, 0xA, 0xA, 0xA, 0xA, 0xA, 0x14, 0x14, 0x14, 0x14, 0x14, 0x1E, 0x1E, 0x1E, 0x1E, 0x1E, 0x1E, 0x1E, 0x28, 0x28, 0x28, 0x28, 0x28, 0x28, 0x32, 0x32, 0x32, 0x32, 0x32, 0x3C },
 };
 
-/* provisional name */
-const u16 Com_Data_0611A9E8[8] = {
-    0xB, 0xC0D, 0x607, 0x308, 0x205, 0x904, 0xA01, 0xC00,
+/* provisional name: the character who breaks in against each character (Break_Into_CPU 2) */
+const u8 rival_char_tbl[16] = {
+    0, 0xB, 0xC, 0xD, 6, 7, 3, 8, 2, 5, 9, 4, 0xA, 1, 0xC, 0,
 };
 
 const u8 Exit_Throw_Data[17][18] = {

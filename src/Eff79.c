@@ -1,5 +1,5 @@
 /*
- * EFF79.C  Effect 79: super art selection plates (2nd Impact only)
+ * EFF79.C  Effect 79: super art selection plates (2nd Impact version)
  *
  * 2nd Impact rewrote the 3rd Strike plates. effect_79_init (Setup_ID, Basic_Sub_Ex, Check_Auto_Cut) makes one plate per
  * player and art; Setup_Pos_79 slides it in from the screen edge (routine 1) to its slot in
@@ -348,7 +348,7 @@ s32 effect_79_init(s16 pl_id, s16 plate_id, s16 pos_id, s16 time, s16 type) {
     ewk->wu.my_col_mode = 0x4200;
     ewk->wu.my_col_code = 0x2040;
     ewk->wu.my_family = 3;
-    ((WORK*)3)->id;
+    (void)((WORK*)3)->id;
     ewk->wu.dir_timer = time;
     *ewk->wu.char_table = sel_pl_char_table;
     ewk->master_id = pl_id;

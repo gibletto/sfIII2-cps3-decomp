@@ -1,14 +1,14 @@
 /*
- * EFFF6.C  Opening demo moving sprites (effect F6)
+ * EFFF6.C  Effect F6: opening step counter
  *
- * Sprites of the attract-mode opening that slide into place. Like EFF36, each object is
+ * 3rd Strike: sprites of the attract-mode opening that slide into place. Like EFF36, each object is
  * active between a start and an end value of the opening timeline op_w.index.
  * effect_F6_init(typenum) reads colour, position, priority, animation and timing from
  * efff6_data_tbl00 and direction, target point, zoom and speeds from efff6_etc_data.
  * efff6_move_common moves the sprite along X, Y or a diagonal until it reaches its target;
  * efff6_move01 adds a short colour ramp (type 0x1B). Created from end_main.c and LOSE_PL.
  * 2nd Impact: a counter, not sprites: effect_F6_init starts effect F7 with it as the master, and
- * effect_F6_move counts routine_no[0] up every old_rno[1] frames, setting effF6_end_flag at 23.
+ * effect_F6_move counts routine_no[0] up every old_rno[1] frames, setting op_w.free_work at 23.
  */
 
 #include "structs.h"
@@ -23,8 +23,6 @@
 #include "charmove_2.h"
 #include "efff6.h"
 #include "efff7.h"
-
-extern s16 effF6_end_flag;   /* provisional name */
 
 
 
@@ -41,7 +39,7 @@ void effect_F6_move(WORK_Other* ewk) {
             ewk->wu.routine_no[0]++;
             ewk->wu.old_rno[2] = ewk->wu.old_rno[1];
             if (ewk->wu.routine_no[0] == 23) {
-                effF6_end_flag = 1;
+                op_w.free_work = 1;
                 ewk->wu.routine_no[1]++;
                 ewk->wu.old_rno[3] = 1;
             }

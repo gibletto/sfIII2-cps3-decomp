@@ -2,9 +2,9 @@
  * GAME_MAIN.C  Game phase dispatcher: title, select, fight, bonus, continue, ending
  *
  * game_phase_dispatch runs the current game phase from G_No1: Game00 (title / attract entry),
- * Game01 (player select and fight HUD setup via Game01_Sub), Game02 (the fight), Game04 (loser
- * scene), Game05 (next CPU selection), Game06 (game over), Game07 (continue), Game08 (ending and
- * final grade), Game09 (bonus stage), Game10 (after-bonus screen) and Game11 (handicap setting).
+ * Game01 (player select and fight HUD setup via Game01_Sub), Game02 (the fight), Game03 (winner
+ * scene), Game04 (loser scene), Game05 (next CPU selection), Game06 (game over), Game07 (continue),
+ * Game08 (ending) and Game09 (bonus stage).
  * Game2_1 is the fight frame: round timer (Time_Control), player control
  * (Player_control), vital and combo displays, Game_Management, the seven effect lists and
  * hit_check_main_process. Bonus_Sub does the same for a bonus stage.
@@ -115,9 +115,9 @@
 
 s16 Next_VS_Index(void);
 extern const u16 bg_color3_tbl[];  /* provisional name */
-extern s16 sel_timer_stop;   /* provisional name */
+extern s16 Exit_No;
 extern u8 Straight_Lose_Count;  /* provisional name (manage_2.c); 3rd Strike clears aiuchi_flag here */
-extern u8 Special_Enemy[2];   /* here: the character the ranking name mark reads */
+extern u8 Special_Enemy[2];   /* the special opponent met (14 or 15), which sets the ranking name mark */
 
 
 
@@ -589,11 +589,11 @@ void Game05(void) {
         switch (Break_Into_CPU) {
         case 2:
             S_No = 4;
-            sel_timer_stop = 0;
+            Exit_No = 0;
             break;
         case 14:
             S_No = 4;
-            sel_timer_stop = 0;
+            Exit_No = 0;
             break;
         }
         break;
@@ -1341,7 +1341,7 @@ void Game_Dummy(void) {
 
 
 
-/* provisional name: 2nd Impact only; with exsw_3 bit 0 the game, entry and D numbers are shown in hex */
+/* provisional name: 2nd Impact only; with exsw_3 bit 0, G_No0-2 and E_No0-2 are shown in hex */
 void Disp_Game_No(void) {
     if (exsw_3 & 1) {
         tilemap_print_hex_block(20, 1, 40, G_No0, 1, 1);

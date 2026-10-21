@@ -647,7 +647,7 @@ extern s8 ID_of_Face[3][13];   /* 13 per row (3rd Strike: 7) */
 extern s8 Cursor_Move[2];
 extern s8 ID2;
 extern s16 Exit_Timer;
-extern s8 Introduce_Break_Into[2];
+extern s8 Introduce_Boss[2];
 extern u32 Stage_Stock_Score[2];
 extern s16 Max_vitality;
 extern s8 gouki_wins;
@@ -697,7 +697,6 @@ extern s16 bs2_current_damage;
 extern s8 Complete_Face;
 extern u8 Plate_Disposal_No[2][3];
 extern u8 SO_No[2];
-extern u16 Win_Record[2];
 extern u16 Stock_Win_Record[2];
 extern u8 Disp_Command_Name[2][3];
 extern u32 * Synchro_Address[2][2];
@@ -709,14 +708,12 @@ extern s16 BGM_No;
 extern u16 BGM_Timer;
 extern u16 WGJ_Win;
 extern u32 WGJ_Score;
-extern u8 EM_History[2][8];
 extern u8 Aborigine;
-extern s8 Continue_Count_Down[2];
+extern s8 Continue_Count[2];
 extern u8 WGJ_Target;
 extern u8 Final_Result_id;
 extern u8 Battle_Round[];
 extern u8 Q_Country;
-extern u8 Introduce_Boss[2][2];
 extern u8 Stage_Intro_Flag;
 extern u8 Appear_Q;
 extern u32 Bonus_Score_Plus;
@@ -725,12 +722,12 @@ extern u32 Perfect_Bonus[2];
 extern s8 OK_Moving_SA_Plate[2];
 extern u8 Final_Play_Type[2];
 extern s8 Cursor_Timer[2];
-extern u16 Result_Timer[2];
+extern u16 EM_Course[2];  /* the CPU course chosen on the select screen; provisional name */
 extern u8 Reset_Timer[2];
 extern s16 scrl;
 extern s16 scrr;
 extern const BBBSTable * bbbs_table[5];
-extern s8 Straight_Flag[2];
+extern s8 Introduce_Break_Into[2];
 extern s16 Last_VS_Index[2];
 extern u8 Special_Enemy[2];
 extern u8 kakushi_on;
@@ -1263,7 +1260,7 @@ extern s16 M_No1;
 extern s16 M_No2;
 extern s16 M_No3;
 extern s8 Demo_Time_Stop;
-extern s8 stop_flag_02014400;   /* provisional name, the word after Demo_Time_Stop (Eff95) */
+extern s8 win_slide_flag;   /* provisional name: set while the win screen slides (win_2.c, EFF58.c) */
 extern s8 judge_disp_all;
 extern s8 PB_Music_Off;
 extern u16 pcon_timer;
@@ -1283,11 +1280,11 @@ extern s8 bg_vbl_trans_flag;
 extern BG_ADRS eff_bg_adrs[3];
 extern s16 bg1403_wait;
 extern u8 Allow_a_battle_f;
-extern s8 Continue_Count[2];
+extern s8 Win_Record[2];
 extern u8 Continue_Cut[2];
 extern s16 DE_X[19];
 extern u8 EM_Candidate[2][8];      /* one list of 8 stages per player (3rd Strike [2][2][10]) */
-extern s8 Sel_Command_Off;          /* the select-screen Shin Gouki command is off/done (provisional name) */
+extern s8 Gouki_Select_Open;          /* Gouki can be picked: the select-screen code was entered, or the setting allows him (provisional name) */
 extern u8 Sel_Command_Step[2];      /* per player, the command being matched (provisional name) */
 extern u8 Sel_Command_Key[2];       /* per player, the next input of it (provisional name) */
 extern u8 EM_List[2][2];

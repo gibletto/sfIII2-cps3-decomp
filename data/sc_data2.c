@@ -1,5 +1,5 @@
 /*
- * SC_DATA2.C  game tables
+ * SC_DATA2.C  a table nothing reads, kept for the layout
  */
 
 #include "types.h"

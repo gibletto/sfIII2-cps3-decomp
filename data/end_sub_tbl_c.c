@@ -1,5 +1,5 @@
 /*
- * END_SUB_TBL_C.C  game tables
+ * END_SUB_TBL_C.C  cell lists referred to only by sc_trans_tbl.c's pointer table
  */
 
 #include "types.h"
@@ -8,7 +8,7 @@
 #pragma section TBL
 
 extern const u32 sc_celllist_data[];
-extern const u32 end_sub_tbl_c_06171488[];
+extern const u32 sc_celllist_data2[];
 
 const u32 sc_celllist_data[42] = {
     0x10002, 0x2008F, 0x20002, 0x2008F,
@@ -24,8 +24,8 @@ const u32 sc_celllist_data[42] = {
     0x640000, 0,
 };
 
-/* provisional name */
-const u32 end_sub_tbl_c_06171488[1258] = {
+/* provisional name: the cell lists of sc_celllist_tbl entries 2 on (sc_trans_tbl.c) */
+const u32 sc_celllist_data2[1258] = {
     0x1B0002, 0x2008F, 0x1C0002, 0x2008F,
     0x1D0002, 0x2008F, 0x1E0002, 0x2008F,
     0x1F0002, 0x2008F, 0x200002, 0x2008F,

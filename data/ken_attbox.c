@@ -34,10 +34,10 @@ const ATTACK_BOX ken_att_box[84] = {
     { { {  -76,  54,  10,  18 },  {    0,   0,   0,   0 } } },  /* 11: S KICK A; attack 10 */
     { { {  -77,  40,  49,  23 },  {    0,   0,   0,   0 } } },  /* 12: F JUMP P L A; attack 34 */
     { { {  -80,  35,  57,  15 },  {  -74,  28,  45,  10 } } },  /* 13: ATTACK 6 S: not started by a command */
-    { { {  -45,  22,  68,  34 },  {    0,   0,   0,   0 } } },  /* 14: M KICK C, follow-up of M KICK A, UP P GUARD K M; attack 50 */
-    { { {  -79,  59,  49,  21 },  {  -69,  30,  69,  17 } } },  /* 15: M KICK C, follow-up of M KICK A, UP P GUARD K M; attack 50 */
-    { { {  -96,  25,  33,  16 },  {  -81,  47,  41,  20 } } },  /* 16: M KICK C, follow-up of M KICK A, UP P GUARD K M; attack 51 */
-    { { {  -60,  23,   6,  13 },  {  -81,  40,  21,  14 } } },  /* 17: M KICK C, follow-up of M KICK A, UP P GUARD K M */
+    { { {  -45,  22,  68,  34 },  {    0,   0,   0,   0 } } },  /* 14: M KICK C, follow-up of M KICK A / UP P GUARD K M; attack 50 */
+    { { {  -79,  59,  49,  21 },  {  -69,  30,  69,  17 } } },  /* 15: M KICK C, follow-up of M KICK A / UP P GUARD K M; attack 50 */
+    { { {  -96,  25,  33,  16 },  {  -81,  47,  41,  20 } } },  /* 16: M KICK C, follow-up of M KICK A / UP P GUARD K M; attack 51 */
+    { { {  -60,  23,   6,  13 },  {  -81,  40,  21,  14 } } },  /* 17: M KICK C, follow-up of M KICK A / UP P GUARD K M */
     { { {  -80,  33,  73,  17 },  {  -72,  45,  30,  29 } } },  /* 18: not used by a script */
     { { {  -89,  15,  41,  12 },  {  -83,  59,  46,  12 } } },  /* 19: L KICK A, UP P GUARD K L; attack 17 */
     { { {  -48,   1,  83,   9 },  {    0,   0,   0,   0 } } },  /* 20: ATTACK 10 M: not started by a command; attack 96 */

@@ -31,7 +31,7 @@
 #include "EFF53.h"
 #include "EFFC2.h"
 
-/* trial declarations */
+/* declarations the headers do not give */
 void zoom_ud_check(void);
 void bg_x_move_check(void);
 void bg_y_move_check(void);

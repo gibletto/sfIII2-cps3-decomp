@@ -35,8 +35,8 @@ u16 Fade_Number;  /* 02010186 */
 u8 Fade_Mode;  /* 02010188 */
 u32 Score[2][3];  /* 0201018C */
 s16 Play_Type;  /* 020101A4 */
-s8 Continue_Count[2];  /* 020101A6 */
-s8 Continue_Count_Down[2];  /* 020101A8 */
+s8 Win_Record[2];  /* 020101A6 */
+s8 Continue_Count[2];  /* 020101A8 */
 s8 Personal_Continue_Flag[2];  /* 020101AA */
 s8 Personal_Disp_Flag;  /* 020101AC */
 u8 Personal_Disp_Flag_tail[1];  /* after Personal_Disp_Flag; nothing refers to it by name or address */
@@ -163,8 +163,8 @@ s16 Face_No[2];  /* 02014340 */
 s16 Sel_Sub_No[2];  /* 02014344 */
 s16 Arts_Cursor_No[2];  /* 02014348 */
 s16 Arts_Cursor_Timer[2];  /* 0201434C */
-s16 sel_timer_stop;  /* 02014350, provisional name */
-u8 sel_timer_stop_tail[4];  /* after sel_timer_stop; nothing refers to it by name or address */
+s16 Exit_No;  /* 02014350 */
+u8 Exit_No_tail[4];  /* after Exit_No; nothing refers to it by name or address */
 s16 Select_Arts[2];  /* 02014356 */
 u8 Select_Arts_tail[4];  /* after Select_Arts; nothing refers to it by name or address */
 /* the code declares Order[100]; sel_plate_state starts after its first 6 entries */
@@ -197,7 +197,7 @@ s16 M_No2;  /* 020143FA */
 s16 M_No3;  /* 020143FC */
 s8 Demo_Time_Stop;  /* 020143FE */
 u8 Demo_Time_Stop_tail[1];  /* after Demo_Time_Stop; nothing refers to it by name or address */
-s8 stop_flag_02014400;  /* 02014400, provisional name */
+s8 win_slide_flag;  /* 02014400, provisional name */
 s16 VS_Tech[2];  /* 02014402 */
 s8 Exec_Wipe;  /* 02014406 */
 s16 Guard_Type[2];  /* 02014408 */
@@ -311,7 +311,7 @@ volatile s8 BGM_Fade_Level;  /* 020145E9 */
 u8 Decided_My_char[2];  /* 020145EA */
 s8 Break_Com[2][16];  /* 020145EC */
 s8 Sel_Exit_Flag;  /* 0201460C */
-u16 Result_Timer[2];  /* 0201460E */
+u16 EM_Course[2];  /* 0201460E: the CPU course each player picks on the select screen (0-3, FFFF none yet); provisional name */
 u16 Lever_Store[2][3];  /* 02014612 */
 s16 Return_CP_No[2];  /* 0201461E */
 s16 Return_CP_Index[2];  /* 02014622 */
@@ -357,8 +357,8 @@ s8 Disp_Win_Name;  /* 0201553A */
 u8 Perfect_Counter[2];  /* 0201553B */
 u8 Straight_Counter[2];  /* 0201553D */
 u32 Complete_Bonus;  /* 02015540 */
-s8 Introduce_Break_Into[2];  /* 02015544 */
-u8 Introduce_Break_Into_tail[8];  /* after Introduce_Break_Into; nothing refers to it by name or address */
+s8 Introduce_Boss[2];  /* 02015544 */
+u8 Introduce_Boss_tail[8];  /* after Introduce_Boss; nothing refers to it by name or address */
 s8 Break_Into_CPU;  /* 0201554E */
 /* the code declares ID_of_Face[3][13]; Cursor_Move starts after its first 2 entries */
 s8 ID_of_Face[2][13];  /* 0201554F */
@@ -370,12 +370,12 @@ s8 Auto_Timer[2];  /* 02015571 */
 s8 ID2;  /* 02015573 */
 s8 Explosion;  /* 02015574 */
 s16 Exit_Wait;  /* 02015576 */
-s8 Straight_Flag[2];  /* 02015578 */
+s8 Introduce_Break_Into[2];  /* 02015578 */
 u32 Stage_Stock_Score[2];  /* 0201557C */
 s16 Max_vitality;  /* 02015584 */
 s8 gouki_wins;  /* 02015586 */
 s8 EM_Rank;  /* 02015587 */
-s8 Sel_Command_Off;  /* 02015588, provisional name */
+s8 Gouki_Select_Open;  /* 02015588, provisional name */
 s8 Disp_PERFECT;  /* 02015589 */
 s8 Escape_SS;  /* 0201558A */
 s8 Deley_Shot_No[2];  /* 0201558B */
@@ -408,10 +408,8 @@ u8 Stage_Continue[2];  /* 020155CC */
 u8 Pause_Hit_Marks;  /* 020155CE */
 u8 Special_Settle;  /* 020155CF */
 u8 Extra_Break;  /* 020155D0 */
-/* the code declares it u8 EM_Candidate[2][8] (16 bytes); EM_History and the names after it lie inside it */
-u8 EM_Candidate[7];  /* 020155D1 */
-/* the code declares it u8 EM_History[2][8] (16 bytes); Shin_Gouki_BGM and the names after it lie inside it */
-u8 EM_History[9];  /* 020155D8 */
+/* the code declares it u8 EM_Candidate[2][8] */
+u8 EM_Candidate[16];  /* 020155D1 */
 u8 Shin_Gouki_BGM;  /* 020155E1 */
 s8 Stage_Lost_Round[2];  /* 020155E2 */
 s8 Stage_Perfect_Finish[2];  /* 020155E4 */
@@ -421,7 +419,7 @@ u8 End_PL;  /* 020155E9 */
 s8 Stage_Judge_Finish[2];  /* 020155EA */
 u8 Special_Enemy[2];  /* 020155EC */
 s8 End_Gouki_Flag;  /* 020155EE, provisional name */
-u16 End_Time_Stock;  /* 020155F0, provisional name */
+u16 End_Course;  /* 020155F0: the winner's CPU course, which picks the ending's messages; provisional name */
 u8 PB_Status;  /* 020155F2 */
 u8 Sel_Command_Step[2];  /* 020155F3, provisional name */
 u8 Sel_Command_Key[2];  /* 020155F5, provisional name */

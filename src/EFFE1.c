@@ -1,5 +1,5 @@
 /*
- * EFFE1.C  Effect E1: opening scene windows (2nd Impact only)
+ * EFFE1.C  Effect E1: opening scene windows (2nd Impact version)
  *
  * 2nd Impact rewrote effect E1 (3rd Strike: one window object). effect_E1_init makes a window of kind id
  * (0-2) that either flies to its place or, with the third argument set, starts there.

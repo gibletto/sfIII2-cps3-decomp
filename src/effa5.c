@@ -4,7 +4,7 @@
  * Effect A5 (effect_A5_entry, started by sel_pl.c and next_cpu.c) is the select-screen timer:
  * it counts Select_Timer down in BCD every 50 frames, holds while Time_Stop or Break_Into is set,
  * and sets Time_Over 30 frames after the timer reaches zero.
- * 2nd Impact: no Break_Into hold; the timer ends while sel_timer_stop is set (no Check_Sleep_A5 routine).
+ * 2nd Impact: no Break_Into hold; the timer ends while Exit_No is set (no Check_Sleep_A5 routine).
  */
 
 #include "structs.h"
@@ -28,15 +28,15 @@
 #include "sc_trans.h"
 #include "effa5.h"
 
-extern s16 sel_timer_stop;   /* provisional name */
+extern s16 Exit_No;
 
 
 
-/* no Break_Into hold; the timer ends while sel_timer_stop is set (3rd Strike's Check_Sleep_A5 has no code of its own in 2nd Impact) */
+/* no Break_Into hold; the timer ends while Exit_No is set (3rd Strike's Check_Sleep_A5 has no code of its own in 2nd Impact) */
 void effect_A5_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case 0:
-        if (sel_timer_stop) {
+        if (Exit_No) {
             ewk->wu.routine_no[0] = 4;
             Time_Stop = -1;
             break;
@@ -46,7 +46,7 @@ void effect_A5_move(WORK_Other* ewk) {
         }
         break;
     case 1:
-        if (sel_timer_stop) {
+        if (Exit_No) {
             ewk->wu.routine_no[0] = 4;
             Time_Stop = -1;
             break;
@@ -62,7 +62,7 @@ void effect_A5_move(WORK_Other* ewk) {
         }
         break;
     case 2:
-        if (sel_timer_stop) {
+        if (Exit_No) {
             ewk->wu.routine_no[0] = 4;
             Time_Stop = -1;
             break;
@@ -77,7 +77,7 @@ void effect_A5_move(WORK_Other* ewk) {
         break;
     case 3:
         Time_Over = 1;
-        if (sel_timer_stop) {
+        if (Exit_No) {
             ewk->wu.routine_no[0] = 4;
             Time_Stop = -1;
             break;

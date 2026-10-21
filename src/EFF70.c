@@ -128,5 +128,5 @@ s32 eff70_ready(WORK_Other* ewk) {
     if (ewk->wu.dir_timer != 14) {
         return 1;
     }
-    return Sel_Command_Off;
+    return Gouki_Select_Open;
 }

@@ -1,9 +1,7 @@
 /*
- * EFFJ4.C  Effects J3 and J4: background pieces
+ * EFFJ4.C  Effect J3: one-shot animation with a polygon quad
  *
  * effect_J3 plays a one-shot animation at its owner's position and submits a 2D polygon quad.
- * effect_J4 places background pieces from effJ4_data_tbl that scroll with BG1, either for a
- * limited life or permanently (effJ4_piece_set / effJ4_piece_set_stay, effect_J4_init2).
  */
 
 #include "structs.h"

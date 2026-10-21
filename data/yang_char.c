@@ -4094,8 +4094,8 @@ const u32 yang_atca[263] = {
     (u32)yang_atca_048,  /* 155 TUKAMI AIR F */
     (u32)yang_atca_156,  /* 156 follow-up of F JUMP K M A */
     (u32)yang_atca_157,  /* 157 follow-up of KAGAMI K A */
-    (u32)yang_atca_158,  /* 158 follow-up of M PUNCH A, M PUNCH B */
-    (u32)yang_atca_159,  /* 159 follow-up of follow-up of M PUNCH A, M PUNCH B */
+    (u32)yang_atca_158,  /* 158 follow-up of M PUNCH A / M PUNCH B */
+    (u32)yang_atca_159,  /* 159 follow-up of follow-up of M PUNCH A / M PUNCH B */
     (u32)yang_atca_160,  /* 160 follow-up of S KICK A */
     (u32)yang_atca_161,  /* 161 follow-up of follow-up of S KICK A */
     (u32)yang_atca_162,  /* 162 follow-up of follow-up of KAGAMI K A */
@@ -5180,7 +5180,7 @@ const u16 yang_atca_157[160] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 158 follow-up of M PUNCH A, M PUNCH B */
+/* script: 158 follow-up of M PUNCH A / M PUNCH B */
 const u16 yang_atca_158_head[4] = { HEAD(6, 0, 4, 12, 0, 2, 0) };
 const u16 yang_atca_158[244] = {
     CMD(CM_RMJA, 4, 159, 1), 0, 0, 0, 0, 0, 0, 0, 0,
@@ -5206,7 +5206,7 @@ const u16 yang_atca_158[244] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 159 follow-up of follow-up of M PUNCH A, M PUNCH B, 163 no name, 164 no name, 165 no name ... */
+/* script: 159 follow-up of follow-up of M PUNCH A / M PUNCH B, 163 no name, 164 no name, 165 no name ... */
 const u16 yang_atca_159_head[4] = { HEAD(6, 0, 8, 9, 0, 1, 0) };
 const u16 yang_atca_159[280] = {
     CMD(CM_DUMMY, 0, 0, 0), 0, 0, 0, 0, 0, 0, 0, 0,
@@ -7173,16 +7173,16 @@ extern const u16 yang_exca_000[], yang_exca_001[], yang_exca_002[], yang_exca_00
 
 /* exca scripts (debug viewer: UNION): 96 entries */
 const u32 yang_exca[97] = {
-    (u32)yang_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
+    (u32)yang_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
     (u32)yang_exca_001,  /* 1 follow-up of GUARD AIR */
     (u32)yang_exca_002,  /* 2 no name */
-    (u32)yang_exca_003,  /* 3 follow-up of ASHIBARAI A, ASHIBARAI B +2 */
+    (u32)yang_exca_003,  /* 3 follow-up of ASHIBARAI A / ASHIBARAI B +2 */
     (u32)yang_exca_004,  /* 4 no name */
-    (u32)yang_exca_005,  /* 5 follow-up of TATAKI S, KGM TATAKI S +23 */
-    (u32)yang_exca_006,  /* 6 follow-up of ASIBRI MAKE A, ASIBRI MAKE B +7 */
-    (u32)yang_exca_006,  /* 7 follow-up of DADLEY L B, DUDDLEY D S +5 */
-    (u32)yang_exca_006,  /* 8 follow-up of TTKI V. AIR A, TTKI V. AIR B +2 */
-    (u32)yang_exca_009,  /* 9 follow-up of ALEX BODY S, IBUKI KUBIORI +3 */
+    (u32)yang_exca_005,  /* 5 follow-up of TATAKI S / KGM TATAKI S +23 */
+    (u32)yang_exca_006,  /* 6 follow-up of ASIBRI MAKE A / ASIBRI MAKE B +7 */
+    (u32)yang_exca_006,  /* 7 follow-up of DADLEY L B / DUDDLEY D S +5 */
+    (u32)yang_exca_006,  /* 8 follow-up of TTKI V. AIR A / TTKI V. AIR B +2 */
+    (u32)yang_exca_009,  /* 9 follow-up of ALEX BODY S / IBUKI KUBIORI +3 */
     (u32)yang_exca_010,  /* 10 follow-up of GUARD AIR */
     (u32)yang_exca_011,  /* 11 no name */
     (u32)yang_exca_012,  /* 12 follow-up of ATTACK 5 S: not started by a command */
@@ -7198,9 +7198,9 @@ const u32 yang_exca[97] = {
     (u32)yang_exca_022,  /* 22 no name */
     (u32)yang_exca_022,  /* 23 no name */
     (u32)yang_exca_024,  /* 24 follow-up of ATTACK 5 S: not started by a command */
-    (u32)yang_exca_025,  /* 25 follow-up of ALEX BACK D, YUN MONKEY F +1 */
+    (u32)yang_exca_025,  /* 25 follow-up of ALEX BACK D / YUN MONKEY F +1 */
     (u32)yang_exca_026,  /* 26 no name */
-    (u32)yang_exca_027,  /* 27 follow-up of HANASARE, APPEAR JUNBI 2 */
+    (u32)yang_exca_027,  /* 27 follow-up of HANASARE / APPEAR JUNBI 2 */
     (u32)yang_exca_028,  /* 28 follow-up of SP APPEAR 2 */
     (u32)yang_exca_029,  /* 29 follow-up of APPEAR JUNBI 5 */
     (u32)yang_exca_030,  /* 30 no name */
@@ -7212,7 +7212,7 @@ const u32 yang_exca[97] = {
     (u32)yang_exca_036,  /* 36 no name */
     (u32)yang_exca_037,  /* 37 follow-up of APPEAR JUNBI 7 */
     (u32)yang_exca_038,  /* 38 no name */
-    (u32)yang_exca_039,  /* 39 follow-up of HANASARE, APPEAR JUNBI 2 */
+    (u32)yang_exca_039,  /* 39 follow-up of HANASARE / APPEAR JUNBI 2 */
     (u32)yang_exca_040,  /* 40 follow-up of SP APPEAR 2 */
     (u32)yang_exca_041,  /* 41 follow-up of APPEAR JUNBI 5 */
     (u32)yang_exca_042,  /* 42 no name */
@@ -7236,8 +7236,8 @@ const u32 yang_exca[97] = {
     (u32)yang_exca_022,  /* 60 no name */
     (u32)yang_exca_061,  /* 61 follow-up of SP APPEAR 1 */
     (u32)yang_exca_062,  /* 62 follow-up of SP APPEAR 1 */
-    (u32)yang_exca_063,  /* 63 follow-up of SP APPEAR 3, JUDGMENT WIN */
-    (u32)yang_exca_064,  /* 64 follow-up of SP APPEAR 3, JUDGMENT WIN */
+    (u32)yang_exca_063,  /* 63 follow-up of SP APPEAR 3 / JUDGMENT WIN */
+    (u32)yang_exca_064,  /* 64 follow-up of SP APPEAR 3 / JUDGMENT WIN */
     (u32)yang_exca_065,  /* 65 follow-up of SP APPEAR 4 */
     (u32)yang_exca_066,  /* 66 follow-up of SP APPEAR 4 */
     (u32)yang_exca_022,  /* 67 no name */
@@ -7272,7 +7272,7 @@ const u32 yang_exca[97] = {
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 yang_exca_000_head[4] = { HEAD(4, 24, 0, 0, 0, 0, 0) };
 const u16 yang_exca_000[156] = {
     L4(1, 0, 0, 0, 0, 0, 0, 0x3F9D, 0, 192, 0, 0, 0, 0, 0),
@@ -7319,7 +7319,7 @@ const u16 yang_exca_002[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, ASHIBARAI B +2 */
+/* script: 3 follow-up of ASHIBARAI A / ASHIBARAI B +2 */
 const u16 yang_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 yang_exca_003[100] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x3D29, 0, 91, 0, 0, 0, 0, 0),
@@ -7353,7 +7353,7 @@ const u16 yang_exca_004[124] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of TATAKI S, KGM TATAKI S +23 */
+/* script: 5 follow-up of TATAKI S / KGM TATAKI S +23 */
 const u16 yang_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 yang_exca_005[100] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x3D28, 0, 91, 0, 0, 0, 0, 0),
@@ -7371,7 +7371,7 @@ const u16 yang_exca_005[100] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of ASIBRI MAKE A, ASIBRI MAKE B +7, 7 follow-up of DADLEY L B, DUDDLEY D S +5, 8 follow-up of TTKI V. AIR A, TTKI V. AIR B +2 */
+/* script: 6 follow-up of ASIBRI MAKE A / ASIBRI MAKE B +7, 7 follow-up of DADLEY L B / DUDDLEY D S +5, 8 follow-up of TTKI V. AIR A / TTKI V. AIR B +2 */
 const u16 yang_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 yang_exca_006[100] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x3D28, 0, 91, 0, 0, 0, 0, 0),
@@ -7389,7 +7389,7 @@ const u16 yang_exca_006[100] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of ALEX BODY S, IBUKI KUBIORI +3 */
+/* script: 9 follow-up of ALEX BODY S / IBUKI KUBIORI +3 */
 const u16 yang_exca_009_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 yang_exca_009[52] = {
     L4(3, 5, 0, 0, 0, 0, 0, 0x3D2E, 0, 91, 0, 0, 0, 0, 0),
@@ -7582,7 +7582,7 @@ const u16 yang_exca_024[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 25 follow-up of ALEX BACK D, YUN MONKEY F +1 */
+/* script: 25 follow-up of ALEX BACK D / YUN MONKEY F +1 */
 const u16 yang_exca_025_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 yang_exca_025[108] = {
     L4(4, 2, 0, 0, 0, 0, 0, 0x3D2A, 0, 91, 0, 0, 0, 0, 0),
@@ -7613,7 +7613,7 @@ const u16 yang_exca_026[52] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 27 follow-up of HANASARE, APPEAR JUNBI 2 */
+/* script: 27 follow-up of HANASARE / APPEAR JUNBI 2 */
 const u16 yang_exca_027_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 yang_exca_027[60] = {
     L4(1, 0, 273, 0, 0, 0, 0, 0x3C7D, 0, 97, 0, 0, 0, 0, 0),
@@ -7737,7 +7737,7 @@ const u16 yang_exca_038[52] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 39 follow-up of HANASARE, APPEAR JUNBI 2 */
+/* script: 39 follow-up of HANASARE / APPEAR JUNBI 2 */
 const u16 yang_exca_039_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 yang_exca_039[84] = {
     L4(1, 0, 273, 0, 0, 0, 0, 0x3C7D, 0, 97, 0, 0, 0, 0, 0),
@@ -7992,7 +7992,7 @@ const u16 yang_exca_062[60] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 63 follow-up of SP APPEAR 3, JUDGMENT WIN */
+/* script: 63 follow-up of SP APPEAR 3 / JUDGMENT WIN */
 const u16 yang_exca_063_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 yang_exca_063[76] = {
     L4(1, 0, 273, 0, 0, 0, 0, 0x3C6C, 0, 154, 0, 0, 0, 21, 0),
@@ -8007,7 +8007,7 @@ const u16 yang_exca_063[76] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 64 follow-up of SP APPEAR 3, JUDGMENT WIN */
+/* script: 64 follow-up of SP APPEAR 3 / JUDGMENT WIN */
 const u16 yang_exca_064_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 yang_exca_064[84] = {
     L4(1, 0, 273, 0, 0, 0, 0, 0x3E6B, 0, 154, 0, 0, 0, 21, 0),
@@ -9962,17 +9962,17 @@ const u32 yang_cbca[90] = {
     (u32)yang_cbca_073,  /* 73 no name */
     (u32)yang_cbca_074,  /* 74 no name */
     (u32)yang_cbca_075,  /* 75 no name */
-    (u32)yang_cbca_075,  /* 76 follow-up of P BREAK ZUJOU, P BREAK DOWN +1 */
+    (u32)yang_cbca_075,  /* 76 follow-up of P BREAK ZUJOU / P BREAK DOWN +1 */
     (u32)yang_cbca_077,  /* 77 no name */
     (u32)yang_cbca_078,  /* 78 follow-up of FUSHIN P S */
-    (u32)yang_cbca_079,  /* 79 follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +1 */
-    (u32)yang_cbca_080,  /* 80 follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +1 */
+    (u32)yang_cbca_079,  /* 79 follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +1 */
+    (u32)yang_cbca_080,  /* 80 follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +1 */
     (u32)yang_cbca_081,  /* 81 follow-up of not started by a command */
     (u32)yang_cbca_082,  /* 82 follow-up of not started by a command */
-    (u32)yang_cbca_083,  /* 83 follow-up of ATTACK 4 SP: not started by a command, not started by a command */
-    (u32)yang_cbca_084,  /* 84 follow-up of ATTACK 4 SP: not started by a command, not started by a command */
-    (u32)yang_cbca_085,  /* 85 follow-up of ATTACK 4 SP: not started by a command, not started by a command */
-    (u32)yang_cbca_086,  /* 86 follow-up of ATTACK 4 SP: not started by a command, not started by a command */
+    (u32)yang_cbca_083,  /* 83 follow-up of ATTACK 4 SP: not started by a command / not started by a command */
+    (u32)yang_cbca_084,  /* 84 follow-up of ATTACK 4 SP: not started by a command / not started by a command */
+    (u32)yang_cbca_085,  /* 85 follow-up of ATTACK 4 SP: not started by a command / not started by a command */
+    (u32)yang_cbca_086,  /* 86 follow-up of ATTACK 4 SP: not started by a command / not started by a command */
     (u32)yang_cbca_087,  /* 87 follow-up of ATTACK 4 SP: not started by a command */
     (u32)yang_cbca_088,  /* 88 follow-up of ATTACK 3 SP: not started by a command */
     0
@@ -10629,7 +10629,7 @@ const u16 yang_cbca_074[16] = {
     CMD(CM_RET, 0, 0, 0),
 };
 
-/* script: 75 no name, 76 follow-up of P BREAK ZUJOU, P BREAK DOWN +1 */
+/* script: 75 no name, 76 follow-up of P BREAK ZUJOU / P BREAK DOWN +1 */
 const u16 yang_cbca_075_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
 const u16 yang_cbca_075[16] = {
     CMD(CM_RJA, 8, 0, 1),
@@ -10656,7 +10656,7 @@ const u16 yang_cbca_078[16] = {
     CMD(CM_RET, 0, 0, 0),
 };
 
-/* script: 79 follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +1 */
+/* script: 79 follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +1 */
 const u16 yang_cbca_079_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
 const u16 yang_cbca_079[36] = {
     CMD(CM_CHKWF, 31, 0, 14),
@@ -10670,7 +10670,7 @@ const u16 yang_cbca_079[36] = {
     CMD(CM_RETMJ, 0, 0, 0),
 };
 
-/* script: 80 follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +1 */
+/* script: 80 follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +1 */
 const u16 yang_cbca_080_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
 const u16 yang_cbca_080[36] = {
     CMD(CM_CHKWF, 31, 0, 14),
@@ -10706,28 +10706,28 @@ const u16 yang_cbca_082[24] = {
     CMD(CM_JMP, 5, 37, 35),
 };
 
-/* script: 83 follow-up of ATTACK 4 SP: not started by a command, not started by a command */
+/* script: 83 follow-up of ATTACK 4 SP: not started by a command / not started by a command */
 const u16 yang_cbca_083_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
 const u16 yang_cbca_083[8] = {
     CMD(CM_CHKWF, 31, 0, 14),
     CMD(CM_JMP, 5, 39, 16),
 };
 
-/* script: 84 follow-up of ATTACK 4 SP: not started by a command, not started by a command */
+/* script: 84 follow-up of ATTACK 4 SP: not started by a command / not started by a command */
 const u16 yang_cbca_084_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
 const u16 yang_cbca_084[8] = {
     CMD(CM_CHKWF, 31, 0, 14),
     CMD(CM_JMP, 5, 39, 28),
 };
 
-/* script: 85 follow-up of ATTACK 4 SP: not started by a command, not started by a command */
+/* script: 85 follow-up of ATTACK 4 SP: not started by a command / not started by a command */
 const u16 yang_cbca_085_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
 const u16 yang_cbca_085[8] = {
     CMD(CM_CHKWF, 31, 0, 14),
     CMD(CM_JMP, 5, 39, 41),
 };
 
-/* script: 86 follow-up of ATTACK 4 SP: not started by a command, not started by a command */
+/* script: 86 follow-up of ATTACK 4 SP: not started by a command / not started by a command */
 const u16 yang_cbca_086_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
 const u16 yang_cbca_086[8] = {
     CMD(CM_CHKWF, 31, 0, 14),

@@ -6278,20 +6278,20 @@ extern const u16 oro_exca_000[], oro_exca_001[], oro_exca_002[], oro_exca_003[],
 
 /* exca scripts (debug viewer: UNION): 48 entries */
 const u32 oro_exca[49] = {
-    (u32)oro_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
-    (u32)oro_exca_001,  /* 1 follow-up of APPEAR JUNBI 2, APPEAR JUNBI 8 */
+    (u32)oro_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
+    (u32)oro_exca_001,  /* 1 follow-up of APPEAR JUNBI 2 / APPEAR JUNBI 8 */
     (u32)oro_exca_002,  /* 2 follow-up of APPEAR JUNBI 3 */
-    (u32)oro_exca_003,  /* 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
-    (u32)oro_exca_004,  /* 4 follow-up of APPEAR JUNBI 5, ZANNEN 5 +1 */
-    (u32)oro_exca_005,  /* 5 follow-up of ALEX BACK D, NECRO G S +10 */
-    (u32)oro_exca_006,  /* 6 follow-up of NECRO S T, YUN HIZAGERI +21 */
-    (u32)oro_exca_007,  /* 7 follow-up of DUDDLEY D S, KUNOJI A */
-    (u32)oro_exca_008,  /* 8 follow-up of TATAKI S, KGM TATAKI S +4 */
-    (u32)oro_exca_009,  /* 9 follow-up of ALEX BODY S, DADLEY L B +6 */
+    (u32)oro_exca_003,  /* 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
+    (u32)oro_exca_004,  /* 4 follow-up of APPEAR JUNBI 5 / ZANNEN 5 +1 */
+    (u32)oro_exca_005,  /* 5 follow-up of ALEX BACK D / NECRO G S +10 */
+    (u32)oro_exca_006,  /* 6 follow-up of NECRO S T / YUN HIZAGERI +21 */
+    (u32)oro_exca_007,  /* 7 follow-up of DUDDLEY D S / KUNOJI A */
+    (u32)oro_exca_008,  /* 8 follow-up of TATAKI S / KGM TATAKI S +4 */
+    (u32)oro_exca_009,  /* 9 follow-up of ALEX BODY S / DADLEY L B +6 */
     (u32)oro_exca_010,  /* 10 follow-up of APPEAR JUNBI 4 */
-    (u32)oro_exca_011,  /* 11 follow-up of APPEAR JUNBI 2, APPEAR JUNBI 8 */
-    (u32)oro_exca_012,  /* 12 follow-up of APPEAR JUNBI 3, APPEAR JUNBI 4 */
-    (u32)oro_exca_013,  /* 13 follow-up of APPEAR JUNBI 5, ZANNEN 5 +1 */
+    (u32)oro_exca_011,  /* 11 follow-up of APPEAR JUNBI 2 / APPEAR JUNBI 8 */
+    (u32)oro_exca_012,  /* 12 follow-up of APPEAR JUNBI 3 / APPEAR JUNBI 4 */
+    (u32)oro_exca_013,  /* 13 follow-up of APPEAR JUNBI 5 / ZANNEN 5 +1 */
     (u32)oro_exca_014,  /* 14 follow-up of HUMI ASIB A */
     (u32)oro_exca_015,  /* 15 follow-up of APPEAR JUNBI 6 */
     (u32)oro_exca_016,  /* 16 follow-up of APPEAR JUNBI 6 */
@@ -6329,7 +6329,7 @@ const u32 oro_exca[49] = {
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 oro_exca_000_head[4] = { HEAD(4, 24, 0, 0, 0, 0, 0) };
 const u16 oro_exca_000[148] = {
     L4(1, 0, 0, 0, 1, 0, 0, 0x3922, 0, 160, 0, 0, 0, 0, 0),
@@ -6353,7 +6353,7 @@ const u16 oro_exca_000[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 1 follow-up of APPEAR JUNBI 2, APPEAR JUNBI 8 */
+/* script: 1 follow-up of APPEAR JUNBI 2 / APPEAR JUNBI 8 */
 const u16 oro_exca_001_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 oro_exca_001[100] = {
     L4(2, 2, 273, 0, 0, 0, 0, 0x3631, 0, 1, 0, 0, 0, 0, 0),
@@ -6381,7 +6381,7 @@ const u16 oro_exca_002[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+/* script: 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
 const u16 oro_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 oro_exca_003[132] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x36AA, 0, 114, 0, 0, 0, 0, 0),
@@ -6403,7 +6403,7 @@ const u16 oro_exca_003[132] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 4 follow-up of APPEAR JUNBI 5, ZANNEN 5 +1 */
+/* script: 4 follow-up of APPEAR JUNBI 5 / ZANNEN 5 +1 */
 const u16 oro_exca_004_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 oro_exca_004[116] = {
     L4(1, 0, 273, 0, 0, 0, 0, 0x3631, 0, 1, 0, 0, 0, 21, 0),
@@ -6423,7 +6423,7 @@ const u16 oro_exca_004[116] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of ALEX BACK D, NECRO G S +10 */
+/* script: 5 follow-up of ALEX BACK D / NECRO G S +10 */
 const u16 oro_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 oro_exca_005[124] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x36AA, 0, 114, 0, 0, 0, 0, 0),
@@ -6444,7 +6444,7 @@ const u16 oro_exca_005[124] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of NECRO S T, YUN HIZAGERI +21 */
+/* script: 6 follow-up of NECRO S T / YUN HIZAGERI +21 */
 const u16 oro_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 oro_exca_006[116] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x36AA, 0, 114, 0, 0, 0, 0, 0),
@@ -6464,7 +6464,7 @@ const u16 oro_exca_006[116] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 7 follow-up of DUDDLEY D S, KUNOJI A */
+/* script: 7 follow-up of DUDDLEY D S / KUNOJI A */
 const u16 oro_exca_007_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 oro_exca_007[92] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x36E2, 0, 114, 0, 0, 0, 0, 0),
@@ -6481,7 +6481,7 @@ const u16 oro_exca_007[92] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of TATAKI S, KGM TATAKI S +4 */
+/* script: 8 follow-up of TATAKI S / KGM TATAKI S +4 */
 const u16 oro_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 oro_exca_008[76] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x36F8, 0, 114, 0, 0, 0, 0, 0),
@@ -6496,7 +6496,7 @@ const u16 oro_exca_008[76] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of ALEX BODY S, DADLEY L B +6 */
+/* script: 9 follow-up of ALEX BODY S / DADLEY L B +6 */
 const u16 oro_exca_009_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 oro_exca_009[68] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x370D, 0, 114, 0, 0, 0, 0, 0),
@@ -6528,7 +6528,7 @@ const u16 oro_exca_010[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 11 follow-up of APPEAR JUNBI 2, APPEAR JUNBI 8 */
+/* script: 11 follow-up of APPEAR JUNBI 2 / APPEAR JUNBI 8 */
 const u16 oro_exca_011_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 oro_exca_011[52] = {
     L4(2, 2, 273, 0, 0, 0, 0, 0x3631, 0, 10, 0, 0, 0, 0, 0),
@@ -6540,7 +6540,7 @@ const u16 oro_exca_011[52] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 12 follow-up of APPEAR JUNBI 3, APPEAR JUNBI 4 */
+/* script: 12 follow-up of APPEAR JUNBI 3 / APPEAR JUNBI 4 */
 const u16 oro_exca_012_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 oro_exca_012[36] = {
     L4(1, 2, 273, 0, 0, 0, 0, 0x3631, 0, 10, 0, 0, 0, 0, 0),
@@ -6550,7 +6550,7 @@ const u16 oro_exca_012[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 13 follow-up of APPEAR JUNBI 5, ZANNEN 5 +1 */
+/* script: 13 follow-up of APPEAR JUNBI 5 / ZANNEN 5 +1 */
 const u16 oro_exca_013_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 oro_exca_013[68] = {
     L4(1, 0, 273, 0, 0, 0, 0, 0x3631, 0, 10, 0, 0, 0, 21, 0),

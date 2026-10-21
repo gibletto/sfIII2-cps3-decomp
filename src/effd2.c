@@ -1,5 +1,5 @@
 /*
- * EFFD2.C  Effect D2: four panels of the effect at 060D9D50 (2nd Impact only)
+ * EFFD2.C  Effect D2: four panels of the ending scene changes (effect B0; 2nd Impact version)
  *
  * 2nd Impact rewrote effect D2 (3rd Strike: the wipe panels). effect_D2_init makes types 0 and 1,
  * effect_D2_init2 types 2 and 3 (patterns 18 + type); each plays its pattern once and
@@ -72,7 +72,7 @@ s32 effect_D2_init(WORK_Other* oya) {
         ewk->wu.my_priority = ewk->wu.position_z = 80;
         ewk->wu.char_index = i + 18;
     }
-    ((WORK*)etc_char_table)->id;
+    (void)((WORK*)etc_char_table)->id;
 }
 
 
@@ -101,5 +101,5 @@ s32 effect_D2_init2(WORK_Other* oya) {
         ewk->wu.my_priority = ewk->wu.position_z = 80;
         ewk->wu.char_index = i + 18;
     }
-    ((WORK*)etc_char_table)->id;
+    (void)((WORK*)etc_char_table)->id;
 }

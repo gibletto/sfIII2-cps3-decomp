@@ -28,9 +28,9 @@ const ATTACK_BOX elena_att_box[79] = {
     { { {  -98,  78,  28,  14 },  {    0,   0,   0,   0 } } },  /* 5: KAGAMI K A; attack 17 */
     { { {  -41,  22,  53,  14 },  {    0,   0,   0,   0 } } },  /* 6: V JUMP P S A, F JUMP P S A; attack 19 */
     { { {  -75,  56,  74,  16 },  {  -97,  22,  78,  16 } } },  /* 7: V JUMP P M A, F JUMP P M A; attack 20 */
-    { { {  -88,  23,  45,  16 },  {  -80,  57,  54,  12 } } },  /* 8: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A, F JUMP P M A; attack 21, 98 */
+    { { {  -88,  23,  45,  16 },  {  -80,  57,  54,  12 } } },  /* 8: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A / F JUMP P M A; attack 21, 98 */
     { { {  -56,  26,  55,  11 },  {  -87,  35,  50,  10 } } },  /* 9: V JUMP K S A, F JUMP K S A; attack 22 */
-    { { {  -91,  32,  51,  11 },  {  -59,  72,  54,  13 } } },  /* 10: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A, F JUMP P S A; attack 23, 72 */
+    { { {  -91,  32,  51,  11 },  {  -59,  72,  54,  13 } } },  /* 10: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A / F JUMP P S A; attack 23, 72 */
     { { {  -83,  15,  42,  22 },  {  -72,  54,  53,  18 } } },  /* 11: V JUMP K L A, F JUMP K L A; attack 25 */
     { { {  -88,  67,  12,  19 },  {  -94,  30,   0,  30 } } },  /* 12: KAGAMI K A, ATTACK 6 S: after SA II 23623+K (routine Att_SHOURYUUREPPA); attack 18, 45 */
     { { {  -32,  18,  64,  28 },  {  -20,  20,  40,  48 } } },  /* 13: OKIAGARI P S; attack 12 */

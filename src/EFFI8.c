@@ -2,7 +2,7 @@
  * EFFI8.C  Effect I8: the balls of the blocking bonus stage
  *
  * Effect I8 is a ball in the bonus stage where balls are thrown at the player to be parried; it
- * is created by effect_I8_init in BBBSBALL.c with timing and aim data. effect_I8_move lobs it in
+ * is created through effect_I8_init by bbbs_ball_set (below, called from BBBSCOM.c) with timing and aim data. effect_I8_move lobs it in
  * from the screen edge to the thrower (cal_speeds_to_me_effI8), who catches it in a set attack
  * frame (effI8_hit_box) and throws it at the player (cal_speeds_to_em_effI8, aimed at a height
  * per character from bbbs_emtall), counting down Bonus_Game_Work. effI8_main_process bounces it

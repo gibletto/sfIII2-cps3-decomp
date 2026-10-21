@@ -7,7 +7,7 @@
  * break in (Break_Into_xx, Pay_Start_Credit, Credit_Sub / Credit_Continue). Title messages
  * (Disp_Start_Message, credit_display_render, Disp_More_Coins) and game-over handling (In_Game_Sub,
  * Setup_Next_Step) are also here. In 2nd Impact the unit ends with coin_in_sound_request and
- * Redisp_Continue_Count (3rd Strike coin_cont.c), which share its literal pool.
+ * Redisp_Continue_Count (3rd Strike coin_cont.c).
  */
 
 #include "structs.h"
@@ -1174,17 +1174,17 @@ s16 PL_id;
         Personal_Disp_Flag = 1;
         Personal_Timer[PL_id] = 70;
         tilemap_print_string_attr(DE_X[Entry_Mes_Wide[PL_id]] + Entry_Mes_X[PL_id], Text_Page_Y, 40, msg_continue_cnt);
-        Disp_Personal_Count(PL_id, Continue_Count_Down[PL_id]);
+        Disp_Personal_Count(PL_id, Continue_Count[PL_id]);
         break;
     case 1:
         if (Personal_Disp_Flag == 0) {
             Personal_Disp_Flag = 1;
             Personal_Timer[PL_id] = 70;
             tilemap_print_string_attr(DE_X[Entry_Mes_Wide[PL_id]] + Entry_Mes_X[PL_id], Text_Page_Y, 40, msg_continue_cnt);
-            Disp_Personal_Count(PL_id, Continue_Count_Down[PL_id]);
+            Disp_Personal_Count(PL_id, Continue_Count[PL_id]);
         }
         if (Check_Coin_In(PL_id) != 0) {
-            Continue_Count_Down[PL_id] = 10;
+            Continue_Count[PL_id] = 10;
             Personal_Timer[PL_id] = 1;
         }
         if (Check_Count_Cut(PL_id, 8) == 0) {
@@ -1192,9 +1192,9 @@ s16 PL_id;
                 break;
             }
         }
-        if (--Continue_Count_Down[PL_id] >= 0) {
+        if (--Continue_Count[PL_id] >= 0) {
             Personal_Timer[PL_id] = 70;
-            Disp_Personal_Count(PL_id, Continue_Count_Down[PL_id]);
+            Disp_Personal_Count(PL_id, Continue_Count[PL_id]);
             break;
         }
         Setup_Next_Step(PL_id);
@@ -1324,11 +1324,11 @@ s16 PL_id;
 {
     s16 *timer;
     if (E_No0 == 6 || E_No0 == 8 || E_No0 == 7) {
-        tilemap_print_string_attr;
-        msg_blank;
-        Text_Page_Y;
-        Entry_Mes_X[PL_id];
-        F_Timer[PL_id];
+        (void)tilemap_print_string_attr;
+        (void)msg_blank;
+        (void)Text_Page_Y;
+        (void)Entry_Mes_X[PL_id];
+        (void)F_Timer[PL_id];
         tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
                                   msg_blank);
         return 0;
@@ -1381,7 +1381,7 @@ s16 PL_id;
 u16 x;
 {
     s16 *timer;
-    F_No1[PL_id];
+    (void)F_No1[PL_id];
     switch (timer = &F_Timer[PL_id], F_No1[PL_id]) {
     case 0:
         F_No1[PL_id] += 1;
@@ -1473,9 +1473,9 @@ s8 coins;
         F_No2[PL_id] += 1;
         F_No0[PL_id] = F_No1[PL_id] = 0;
         F_Timer[PL_id] = 1;
-        tilemap_print_string_attr;
-        Text_Page_Y;
-        Entry_Mes_X[PL_id];
+        (void)tilemap_print_string_attr;
+        (void)Text_Page_Y;
+        (void)Entry_Mes_X[PL_id];
         tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
                                   msg_blank);
         if (E_No0 == 6 && PL_id == LOSER) {
@@ -1993,7 +1993,7 @@ s16 PL_id;
         Break_Into = -1;
         E_No1++;
         E_No2 = 0;
-        if (Continue_Count_Down[PL_id ^ 1] >= 0) {
+        if (Continue_Count[PL_id ^ 1] >= 0) {
             E_Timer = 60;
             effect_58_init(6, 1, 116);
         } else {
@@ -2081,6 +2081,6 @@ void coin_in_sound_request(void) {
 void Redisp_Continue_Count(s16 pl_id) {
     if (E_Number[pl_id][0] == 1) {
         tilemap_print_string_attr(DE_X[Entry_Mes_Wide[pl_id]] + Entry_Mes_X[pl_id], Text_Page_Y, 40, msg_continue);
-        Disp_Personal_Count(pl_id, Continue_Count_Down[pl_id]);
+        Disp_Personal_Count(pl_id, Continue_Count[pl_id]);
     }
 }

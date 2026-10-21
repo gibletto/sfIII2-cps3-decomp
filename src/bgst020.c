@@ -103,7 +103,7 @@ void bg0202(void) {
 
 
 
-/* (2nd Impact: a line-scroll layer as sf3 bg0701_init00, then the stage effects) */
+/* (2nd Impact: a line-scroll layer as 3rd Strike bg0701_init00, then the stage effects) */
 void bg0202_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0;

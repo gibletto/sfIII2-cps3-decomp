@@ -4233,8 +4233,8 @@ const u32 necro_atca[159] = {
     (u32)necro_atca_048,  /* 153 TUKAMI AIR D */
     (u32)necro_atca_048,  /* 154 TUKAMI AIR E */
     (u32)necro_atca_048,  /* 155 TUKAMI AIR F */
-    (u32)necro_atca_156,  /* 156 follow-up of S KICK A, S KICK C */
-    (u32)necro_atca_157,  /* 157 follow-up of follow-up of S KICK A, S KICK C */
+    (u32)necro_atca_156,  /* 156 follow-up of S KICK A / S KICK C */
+    (u32)necro_atca_157,  /* 157 follow-up of follow-up of S KICK A / S KICK C */
     0
 };
 
@@ -5330,7 +5330,7 @@ const u16 necro_atca_145[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 156 follow-up of S KICK A, S KICK C */
+/* script: 156 follow-up of S KICK A / S KICK C */
 const u16 necro_atca_156_head[4] = { HEAD(6, 0, 2, 14, 0, 1, 0) };
 const u16 necro_atca_156[208] = {
     CMD(CM_RMJA, 4, 157, 1), 0, 0, 0, 0, 0, 0, 0, 0,
@@ -5353,7 +5353,7 @@ const u16 necro_atca_156[208] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 157 follow-up of follow-up of S KICK A, S KICK C */
+/* script: 157 follow-up of follow-up of S KICK A / S KICK C */
 const u16 necro_atca_157_head[4] = { HEAD(6, 0, 4, 20, 0, 13, 0) };
 const u16 necro_atca_157[220] = {
     L6(1, 0, 0, 0, 0, 0, 0, 0x1E9A, 0, 31, 0, 0, 96, 0, 0, 0, 0, 62, 0, 0),
@@ -6534,16 +6534,16 @@ extern const u16 necro_exca_000[], necro_exca_001[], necro_exca_002[], necro_exc
 
 /* exca scripts (debug viewer: UNION): 42 entries */
 const u32 necro_exca[43] = {
-    (u32)necro_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
+    (u32)necro_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
     (u32)necro_exca_001,  /* 1 follow-up of APPEAR JUNBI 2 */
     (u32)necro_exca_002,  /* 2 follow-up of APPEAR JUNBI 3 */
-    (u32)necro_exca_003,  /* 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+    (u32)necro_exca_003,  /* 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
     (u32)necro_exca_004,  /* 4 follow-up of APPEAR JUNBI 4 */
-    (u32)necro_exca_005,  /* 5 follow-up of ALEX BACK D, NECRO G S +6 */
-    (u32)necro_exca_006,  /* 6 follow-up of DADLEY L B, NECRO S T +26 */
-    (u32)necro_exca_007,  /* 7 follow-up of DUDDLEY D S, KUNOJI A */
-    (u32)necro_exca_008,  /* 8 follow-up of TATAKI S, KGM TATAKI S +4 */
-    (u32)necro_exca_009,  /* 9 follow-up of ALEX BODY S, IBUKI KUBIORI +4 */
+    (u32)necro_exca_005,  /* 5 follow-up of ALEX BACK D / NECRO G S +6 */
+    (u32)necro_exca_006,  /* 6 follow-up of DADLEY L B / NECRO S T +26 */
+    (u32)necro_exca_007,  /* 7 follow-up of DUDDLEY D S / KUNOJI A */
+    (u32)necro_exca_008,  /* 8 follow-up of TATAKI S / KGM TATAKI S +4 */
+    (u32)necro_exca_009,  /* 9 follow-up of ALEX BODY S / IBUKI KUBIORI +4 */
     (u32)necro_exca_010,  /* 10 follow-up of APPEAR JUNBI 2 */
     (u32)necro_exca_011,  /* 11 follow-up of APPEAR JUNBI 3 */
     (u32)necro_exca_012,  /* 12 follow-up of APPEAR JUNBI 4 */
@@ -6579,7 +6579,7 @@ const u32 necro_exca[43] = {
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 necro_exca_000_head[4] = { HEAD(4, 24, 0, 0, 0, 0, 0) };
 const u16 necro_exca_000[100] = {
     L4(2, 0, 0, 0, 0, 0, 0, 0x2178, 0, 158, 0, 0, 0, 0, 0),
@@ -6620,7 +6620,7 @@ const u16 necro_exca_002[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+/* script: 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
 const u16 necro_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 necro_exca_003[108] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x2071, 0, 115, 0, 0, 0, 0, 0),
@@ -6653,7 +6653,7 @@ const u16 necro_exca_004[68] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of ALEX BACK D, NECRO G S +6 */
+/* script: 5 follow-up of ALEX BACK D / NECRO G S +6 */
 const u16 necro_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 necro_exca_005[108] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x2039, 0, 115, 0, 0, 0, 0, 0),
@@ -6672,7 +6672,7 @@ const u16 necro_exca_005[108] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of DADLEY L B, NECRO S T +26 */
+/* script: 6 follow-up of DADLEY L B / NECRO S T +26 */
 const u16 necro_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 necro_exca_006[108] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x2039, 0, 115, 0, 0, 0, 0, 0),
@@ -6691,7 +6691,7 @@ const u16 necro_exca_006[108] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 7 follow-up of DUDDLEY D S, KUNOJI A */
+/* script: 7 follow-up of DUDDLEY D S / KUNOJI A */
 const u16 necro_exca_007_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 necro_exca_007[100] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x2025, 0, 115, 0, 0, 0, 0, 0),
@@ -6709,7 +6709,7 @@ const u16 necro_exca_007[100] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of TATAKI S, KGM TATAKI S +4 */
+/* script: 8 follow-up of TATAKI S / KGM TATAKI S +4 */
 const u16 necro_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 necro_exca_008[100] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x2025, 0, 115, 0, 0, 0, 0, 0),
@@ -6727,7 +6727,7 @@ const u16 necro_exca_008[100] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of ALEX BODY S, IBUKI KUBIORI +4 */
+/* script: 9 follow-up of ALEX BODY S / IBUKI KUBIORI +4 */
 const u16 necro_exca_009_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 necro_exca_009[84] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x2050, 0, 115, 0, 0, 0, 0, 0),

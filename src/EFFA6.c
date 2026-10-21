@@ -34,7 +34,7 @@ void effect_A6_move(WORK_Other_CONN* ewk) {
         ewk->wu.routine_no[0]++;
         switch (Country) {
         case 1:
-            ((WORK*)effA6_mes_jp)->id;
+            (void)((WORK*)effA6_mes_jp)->id;
             mes = &effA6_mes_jp[ewk->master_player][mmes_already];
             break;
         case 4:
@@ -55,7 +55,7 @@ void effect_A6_move(WORK_Other_CONN* ewk) {
         case 3:
             switch (Language) {
             case 0:
-                ((WORK*)effA6_mes_es)->id;
+                (void)((WORK*)effA6_mes_es)->id;
                 conn_data = effA6_mes_en[ewk->master_player][mmes_already].conn;
                 chr_data = effA6_mes_en[ewk->master_player][mmes_already].chr;
                 break;
@@ -164,7 +164,7 @@ s32 effect_A6_init(WORK_Other* mwk) {
     wwwk_set(&ewk->wu);
     ewk->master_player = My_char[Player_id];
     ewk->my_master = (u32*)mwk;
-    ((WORK*)0x278)->id;
+    (void)((WORK*)0x278)->id;
     switch (Break_Into_CPU) {
     case 1:
         if (Player_id == 0) {

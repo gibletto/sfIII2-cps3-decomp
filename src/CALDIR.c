@@ -10,7 +10,6 @@
  * cal_top_of_position_y / cal_time_of_sign_change / cal_move_dir_forecast predict the top
  * of a jump and its timing.
  * Used by effects and stage objects that fly to target positions.
- * remake_2_10 packs numbers into BCD.
  */
 
 #include "structs.h"

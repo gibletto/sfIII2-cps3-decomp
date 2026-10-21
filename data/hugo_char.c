@@ -6946,15 +6946,15 @@ extern const u16 hugo_exca_000[], hugo_exca_001[], hugo_exca_002[], hugo_exca_00
 
 /* exca scripts (debug viewer: UNION): 55 entries */
 const u32 hugo_exca[56] = {
-    (u32)hugo_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
+    (u32)hugo_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
     (u32)hugo_exca_001,  /* 1 follow-up of APPEAR JUNBI 2 */
     (u32)hugo_exca_002,  /* 2 follow-up of APPEAR JUNBI 3 */
-    (u32)hugo_exca_003,  /* 3 follow-up of ASHIBARAI A, ASHIBARAI B +2 */
+    (u32)hugo_exca_003,  /* 3 follow-up of ASHIBARAI A / ASHIBARAI B +2 */
     (u32)hugo_exca_001,  /* 4 follow-up of APPEAR JUNBI 4 */
-    (u32)hugo_exca_005,  /* 5 follow-up of TATAKI S, TATAKI M +10 */
-    (u32)hugo_exca_006,  /* 6 follow-up of NECRO G S, ORO NIOURIKI +1 */
-    (u32)hugo_exca_007,  /* 7 follow-up of DADLEY L B, DUDDLEY D S +4 */
-    (u32)hugo_exca_008,  /* 8 follow-up of ALEX BODY S, HUGO BODY S +4 */
+    (u32)hugo_exca_005,  /* 5 follow-up of TATAKI S / TATAKI M +10 */
+    (u32)hugo_exca_006,  /* 6 follow-up of NECRO G S / ORO NIOURIKI +1 */
+    (u32)hugo_exca_007,  /* 7 follow-up of DADLEY L B / DUDDLEY D S +4 */
+    (u32)hugo_exca_008,  /* 8 follow-up of ALEX BODY S / HUGO BODY S +4 */
     (u32)hugo_exca_009,  /* 9 no name */
     (u32)hugo_exca_010,  /* 10 follow-up of APPEAR JUNBI 2 */
     (u32)hugo_exca_011,  /* 11 follow-up of APPEAR JUNBI 3 */
@@ -6996,15 +6996,15 @@ const u32 hugo_exca[56] = {
     (u32)hugo_exca_045,  /* 47 follow-up of ZANNEN 1 */
     (u32)hugo_exca_048,  /* 48 follow-up of ZANNEN 2 */
     (u32)hugo_exca_049,  /* 49 follow-up of ZANNEN 2 */
-    (u32)hugo_exca_050,  /* 50 follow-up of ALEX BACK D, SNAKE FANG A */
-    (u32)hugo_exca_051,  /* 51 follow-up of IBUKI KUBIORI, NECRO S T +17 */
-    (u32)hugo_exca_052,  /* 52 follow-up of ASIBRI MAKE A, ASIBRI MAKE B +6 */
-    (u32)hugo_exca_053,  /* 53 follow-up of APPEAR 6, ZANNEN 5 */
-    (u32)hugo_exca_054,  /* 54 follow-up of APPEAR 6, ZANNEN 5 */
+    (u32)hugo_exca_050,  /* 50 follow-up of ALEX BACK D / SNAKE FANG A */
+    (u32)hugo_exca_051,  /* 51 follow-up of IBUKI KUBIORI / NECRO S T +17 */
+    (u32)hugo_exca_052,  /* 52 follow-up of ASIBRI MAKE A / ASIBRI MAKE B +6 */
+    (u32)hugo_exca_053,  /* 53 follow-up of APPEAR 6 / ZANNEN 5 */
+    (u32)hugo_exca_054,  /* 54 follow-up of APPEAR 6 / ZANNEN 5 */
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 hugo_exca_000_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_000[100] = {
     L4(2, 0, 0, 0, 0, 0, 0, 0x253A, 0, 84, 0, 0, 0, 0, 0),
@@ -7046,7 +7046,7 @@ const u16 hugo_exca_002[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, ASHIBARAI B +2 */
+/* script: 3 follow-up of ASHIBARAI A / ASHIBARAI B +2 */
 const u16 hugo_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_003[148] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x24F6, 0, 69, 0, 0, 0, 0, 0),
@@ -7070,7 +7070,7 @@ const u16 hugo_exca_003[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of TATAKI S, TATAKI M +10 */
+/* script: 5 follow-up of TATAKI S / TATAKI M +10 */
 const u16 hugo_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_005[148] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x24F6, 0, 82, 0, 0, 0, 0, 0),
@@ -7094,7 +7094,7 @@ const u16 hugo_exca_005[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of NECRO G S, ORO NIOURIKI +1 */
+/* script: 6 follow-up of NECRO G S / ORO NIOURIKI +1 */
 const u16 hugo_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_006[156] = {
     CMD(CM_FLIP, 0, 0, 0), 0, 0, 0, 0,
@@ -7119,7 +7119,7 @@ const u16 hugo_exca_006[156] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 7 follow-up of DADLEY L B, DUDDLEY D S +4 */
+/* script: 7 follow-up of DADLEY L B / DUDDLEY D S +4 */
 const u16 hugo_exca_007_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_007[148] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x24F6, 0, 82, 0, 0, 0, 0, 0),
@@ -7143,7 +7143,7 @@ const u16 hugo_exca_007[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of ALEX BODY S, HUGO BODY S +4 */
+/* script: 8 follow-up of ALEX BODY S / HUGO BODY S +4 */
 const u16 hugo_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_008[148] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x24F6, 0, 82, 0, 0, 0, 0, 0),
@@ -7702,7 +7702,7 @@ const u16 hugo_exca_049[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 50 follow-up of ALEX BACK D, SNAKE FANG A */
+/* script: 50 follow-up of ALEX BACK D / SNAKE FANG A */
 const u16 hugo_exca_050_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_050[148] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x24F6, 0, 82, 0, 0, 0, 24, 0),
@@ -7726,7 +7726,7 @@ const u16 hugo_exca_050[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 51 follow-up of IBUKI KUBIORI, NECRO S T +17 */
+/* script: 51 follow-up of IBUKI KUBIORI / NECRO S T +17 */
 const u16 hugo_exca_051_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_051[148] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x24E1, 0, 82, 0, 0, 0, 0, 0),
@@ -7750,7 +7750,7 @@ const u16 hugo_exca_051[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 52 follow-up of ASIBRI MAKE A, ASIBRI MAKE B +6 */
+/* script: 52 follow-up of ASIBRI MAKE A / ASIBRI MAKE B +6 */
 const u16 hugo_exca_052_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_052[148] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x24F6, 0, 69, 0, 0, 0, 0, 0),
@@ -7774,7 +7774,7 @@ const u16 hugo_exca_052[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 53 follow-up of APPEAR 6, ZANNEN 5 */
+/* script: 53 follow-up of APPEAR 6 / ZANNEN 5 */
 const u16 hugo_exca_053_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_053[68] = {
     L4(2, 0, 286, 0, 0, 0, 0, 0x2434, 0, 2, 0, 0, 0, 21, 0),
@@ -7788,7 +7788,7 @@ const u16 hugo_exca_053[68] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 54 follow-up of APPEAR 6, ZANNEN 5 */
+/* script: 54 follow-up of APPEAR 6 / ZANNEN 5 */
 const u16 hugo_exca_054_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 hugo_exca_054[44] = {
     L4(2, 0, 286, 0, 0, 0, 0, 0x2434, 0, 2, 0, 0, 0, 21, 0),

@@ -90,7 +90,7 @@ const ATTACK_ATTR elena_catt_table[103] = {
     ATTR( 37,  0,  0,  2,  0,  1,  0, 72, 14,  3, 63,  0, 20, 18, 32,  6, 11,  0,  6, -6, 44, 73),  /* 69: ATTACK 1 L: 623+K heavy (routine Att_SHOURYUUKEN) */
     ATTR( 37,  1,  0,  1,  0,  1,  7,200,  9,  3, 63,  0,  9, 10, 54,  1,  0,  0,  4,-12, 42, 73),  /* 70: ATTACK 4 S: SA I 23623+K (routine Att_SHOURYUUREPPA) */
     ATTR( 32,  0,  0,  1,  0,  1,  0,  0,  9,  3, 54,  0,  0, 16, 37,  3,  4,  0,  6, -6, 34, 73),  /* 71: ATTACK 7 L: not started by a command */
-    ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 12,  3, 54,  0,  0, 10, 38,  1,  1,  0,  6, -6, 34, 73),  /* 72: follow-up of V JUMP P S A, F JUMP P S A */
+    ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 12,  3, 54,  0,  0, 10, 38,  1,  1,  0,  6, -6, 34, 73),  /* 72: follow-up of V JUMP P S A / F JUMP P S A */
     ATTR( 32,  0,  0,  2,  0,  1,  0, 80, 11,  3, 62,  0,  0, 12, 32,  1, 12,  0,  4,-12, 44, 73),  /* 73: ATTACK 9 M: 214+K light (routine Att_SLIDE_and_JUMP) */
     ATTR( 32,  0,  0,  2,  0,  1,  0, 80, 12,  3, 62,  0,  0, 12, 32,  1,  1,  0,  6, -8, 44, 73),  /* 74: ATTACK 9 M: 214+K light (routine Att_SLIDE_and_JUMP) */
     ATTR( 32,  0,  0,  2,  0,  1,  0, 80, 12,  3, 62,  0,  0, 12, 32,  3,  1,  0,  2, -4, 44, 73),  /* 75: ATTACK 9 M: 214+K light (routine Att_SLIDE_and_JUMP) */
@@ -116,7 +116,7 @@ const ATTACK_ATTR elena_catt_table[103] = {
     ATTR( 32,  0,  0,  2,  0,  1,  0, 80, 12,  3, 62,  0,  0, 12, 32,  1,  0,  0,  2,-12, 44, 73),  /* 95: ATTACK 10 S: EX 214+KK (routine Att_SLIDE_and_JUMP) */
     ATTR( 95,  1,  0,  2,  0,  1,  0, 80,  0,  3, 62,  0, 17,  8, 34,  1,  0,  0,  2, -2, 44, 73),  /* 96: ATTACK 11 S: after 214+K (routine Att_SLIDE_and_JUMP) */
     ATTR( 37,  1,  0,  0,  0,  1,  0,208, 13,  3, 63,  1,  0, 17, 54,  0,  0,  0,  4, -8, 44, 73),  /* 97: ATTACK 5 S: SA II 23623+K (routine Att_SHOURYUUREPPA) */
-    ATTR( 32,  0,  0,  2,  0,  1,  1,  0, 12,  3, 54,  0,  0, 12, 39,  1,  1,  0,  7, -7, 39, 73),  /* 98: follow-up of V JUMP P M A, F JUMP P M A */
+    ATTR( 32,  0,  0,  2,  0,  1,  1,  0, 12,  3, 54,  0,  0, 12, 39,  1,  1,  0,  7, -7, 39, 73),  /* 98: follow-up of V JUMP P M A / F JUMP P M A */
     ATTR( 32,  0,  0,  2,  0,  1,  0, 72, 12,  3, 63,  0,  0,  8, 49,  1,  0,  0,  8, -8, 44, 73),  /* 99: ATTACK 2 SP: EX 4(123)6+KK (routine Att_SENPUUKYAKU) */
     ATTR( 32,  0,  0,  2,  0,  1,  0, 72, 10,  3, 63,  0,  0,  8, 49,  1,  0,  0,  8, -8, 44, 73),  /* 100: ATTACK 2 SP: EX 4(123)6+KK (routine Att_SENPUUKYAKU) */
     ATTR( 32,  0,  0,  2,  0,  1,  0, 72,  9,  3, 63,  0,  0,  8, 49,  1,  0,  0,  8, -8, 44, 73),  /* 101: ATTACK 2 SP: EX 4(123)6+KK (routine Att_SENPUUKYAKU) */

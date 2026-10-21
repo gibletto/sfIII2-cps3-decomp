@@ -1,5 +1,5 @@
 /*
- * EFFB8.C  Effect B8: the winner's message banner (2nd Impact only)
+ * EFFB8.C  Effect B8: the winner's message banner (2nd Impact version)
  *
  * Effect B8 is the win message shown after a match. effect_B8_init (called from Win_3rd) takes
  * the winner and chooses the message: sometimes the loser's line, otherwise a Super Art line or
@@ -31,8 +31,7 @@ s16 old_mes_no2;
 s16 old_mes_no3;  
 s16 old_mes_no_pl;  
 
-/* the message tables are initialised RAM in 2nd Impact, still in the D blob (02007FE4 / 02008024 / 02008064 / 020080A4;
-   effB8_conn_tbl at 020080E4) */
+/* the message tables are initialised work RAM in 2nd Impact, defined in effb8_mes.c */
 extern const EFFB8_MESSAGE* effB8_conn_tbl[];
 
 extern s16 Max_vitality;

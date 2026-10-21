@@ -271,9 +271,9 @@ void mode_init_task(void) {
     No_Death = 0;
     Get_Demo_Index = Request_Break[0] = Request_Break[1] = 0;
     if (Game_setting.bonus & 2) {
-        Sel_Command_Off = 1;
+        Gouki_Select_Open = 1;
     } else {
-        Sel_Command_Off = 0;
+        Gouki_Select_Open = 0;
     }
     G_No0 = G_No1 = G_No2 = G_No3 = 0;
     E_No0 = E_No1 = E_No2 = E_No3 = 0;

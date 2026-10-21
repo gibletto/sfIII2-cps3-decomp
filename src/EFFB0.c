@@ -1,5 +1,5 @@
 /*
- * EFFB0.C  Effect B0: scene changes of an ending (2nd Impact only)
+ * EFFB0.C  Effect B0: scene changes of an ending (2nd Impact version)
  *
  * 2nd Impact's effect B0 is not 3rd Strike's random flicker object: effect_B0_init clears BG0 and BG3, puts
  * their cells (end_ake_cell_put) and starts effect B1. effect_B0_move runs three scenes in turn
@@ -257,7 +257,7 @@ s32 effect_B0_init(void) {
     ewk->wu.direction = 0;
     load_any_color_fade(9, 0, 0, 0);
     Bg_Off_R(16);
-    ((WORK*)2)->id;
+    (void)((WORK*)2)->id;
     bg_w.bgw[0].zuubun = 0;
     bg_w.quake_x_index = 0;
     bg_w.quake_y_index = 0;
@@ -275,9 +275,9 @@ s32 effect_B0_init(void) {
         bg_w.bgw[n].position_x = (0x200 - bg_w.pos_offset) & 0x3FF;
         bg_w.bgw[n].position_y = 0;
     }
-    ((WORK*)0x200)->id;
+    (void)((WORK*)0x200)->id;
     scrn_reg_w[0].ctrl &= 0xFE7F;
-    ((WORK*)0x2000000)->id;
+    (void)((WORK*)0x2000000)->id;
     
     end_ake_cell_put(0, 0x3040, 6, (u32)effb0_scrn_data);
     end_ake_cell_put(0, 0x3080, 7, (u32)effb0_scrn_data);

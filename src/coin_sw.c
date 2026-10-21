@@ -1,10 +1,10 @@
 /*
  * coin_sw.c  Coins, credits and switches
  *
- * coin_work_init (first in the file) clears the coin chute and credit work. Coin chute detection,
- * credit add and credit_use, the coin counter and lockout coils,
- * the player switch reads (normal and six-button panels, extended inputs), coin switch sampling and
- * the card dispenser.
+ * coin_work_init (first in the file) clears the coin chute and credit work. The other routines handle
+ * coin chute detection, credit add and credit_use, the coin counter and lockout coils, the player
+ * switch reads (normal and six-button panels, extended inputs), coin switch sampling and the card
+ * dispenser switches.
  */
 
 #include "structs.h"

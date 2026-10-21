@@ -1,9 +1,9 @@
 /*
- * SE.C  Screen wipe patterns and sound request routines
+ * SE.C  Screen wipe patterns
  *
- * Two groups of routines. The wipe routines (wipe_pattern_*, wipe_mask_*, mix_or/mix_put/ mix_copy)
- * OR or AND one step of a wipe-out or wipe-in pattern into the fix-layer character graphics, column
- * by column; Switch_Screen and Switch_Screen_Revival in SYS_sub call them.
+ * The wipe routines (wipe_pattern_*, mix_or_*, mix_put_*, mix_or_step) OR or AND one step of a
+ * wipe-out or wipe-in pattern into the fix-layer character graphics, column by column; Switch_Screen
+ * and Switch_Screen_Revival in SYS_sub call them. The sound request routines are in SE_3.C.
  */
 
 #include "structs.h"

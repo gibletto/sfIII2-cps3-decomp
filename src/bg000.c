@@ -1,15 +1,20 @@
 /*
- * BG000.C  Stage background setup and stages BG000-BG030
+ * BG000.C  Stage background services
  *
- * Common stage background services plus the first stage routines.
+ * The common stage background routines; the stage layers themselves are in BGSTnnn.C and ENDBGnn.C.
  * bg_initialize loads a stage: picks bg_index from stage and area, transfers its
  * scroll graphics and palette and initialises all seven layer works; bg_etc_write does the
- * same for the special screens, and akebono_initialize prepares the finish-screen BG3 pages.
+ * same for the special screens, and the akebono_* routines draw the finish-screen BG3 pages.
  * reset_all_char_display_with_backup returns every layer to its work position;
- * bg_rect_attr_preset/add and oh_opening_demo patch map cell attributes and scroll_cell_write
- * writes one 16x16 cell. bg_base_move_common and bg_move_common are the standard main-layer
- * and follower-layer moves; capcom_logo_anim runs a timed count, music change
- * and fade at the end of a round. BG000 and BG010 run their stages' layers.
+ * bg_rect_attr_preset and oh_opening_demo patch map cell attributes and scroll_cell_write
+ * writes one 16x16 cell. Bg_Family_Set and its variants load scroll and family registers;
+ * bg_pos_hosei_* add the screen offset and quake. Zoom: zoom_frame_judge, zoom_ud_check,
+ * zoom_x_width_check. Line scroll: suzi_line_clear, suzi_offset_set, suzi_sync_pos_set. Layer
+ * scrolling: bgw_xy_add, bgw_wxy_add, Bg_mv_tw, Bg_mv_tw_appoint, x_right_check, x_left_check, the
+ * scr_1x_2x routines and the chase moves (bg_chase_move); bg_base_x_move_check / bg_base_y_move_check
+ * and bg_x_move_check / bg_y_move_check are the standard main-layer and follower-layer moves.
+ * capcom_logo_anim steps the CAPCOM logo colours. 3rd Strike keeps the layer scrolling routines in
+ * a file of their own (BG_SUB_2.C).
  */
 
 #include "structs.h"
@@ -35,7 +40,6 @@
 #include "bg_sub_3.h"
 #include "bg_sub_4.h"
 #include "bg_sub_5.h"
-/* bg_sub.h left out */
 #include "bg040.h"
 #include "end_sub.h"
 #include "end_sub_2.h"
@@ -80,23 +84,6 @@ void scrn_map_set(u16 n, u32 p);
 #define SUZI_W  ((SUZI_CALC*)suzi_calc_w)
 #define SUZI_W0 (&suzi_calc_w[0])
 
-
-
-/*
- * Stage background subroutines: scrolling, zoom, family set, cell writers
- *
- * Zoom: zoom_frame_judge, zoom_ud_check, zoom_x_width_check, bg_base_y_move_check. Line scroll:
- * suzi_line_clear, suzi_offset_set, suzi_sync_pos_set.
- */
-
-
-
-/*
- * BG_SUB_2.C  Stage background subroutines: scrolling, zoom, family set, cell writers (part 2)
- *
- * Routines: bgw_xy_add, bgw_wxy_add, Bg_mv_tw, Bg_mv_tw_appoint, x_right_check, x_left_check,
- * scr_x_dummy, scr_10_20, scr_10_21, scr_10_22, scr_11_20, scr_11_21, ...
- */
 
 
 AKE_SCRL ake_scrl_w[5];  /* 02026B48 */
@@ -154,15 +141,6 @@ void (*scr_x_mv_jp[35])() = {
 s32 bg_cell_offset(s16 x, s16 y) {
     return ((((0x400 - (y & 0x300) - (y & 0xF0)) & 0x3F0) << 4) + ((x & 0x3F0) >> 2)) >> 1;
 }
-
-
-
-/*
- * Stage background subroutines: scrolling, zoom, family set, cell writers
- *
- * Bg_Family_Set and its variants load scroll and family registers; bg_pos_hosei_* add the screen
- * offset and quake.
- */
 
 
 
@@ -2033,7 +2011,7 @@ void bg_end_initialize(void) {
         bg_w.bgw[i].frame_deff = 0;
         bg_w.bgw[i].max_x_limit = bg_w.bgw[i].speed_x * bg_w.max_x;
     }
-    ((WORK*)16)->id;
+    (void)((WORK*)16)->id;
     base_y_pos = 40;
     bg_w.bgw[3].xy[0].cal = bg_w.bgw[3].wxy[0].cal = 0x100000;
     bg_w.bgw[3].xy[1].cal = bg_w.bgw[3].wxy[1].cal = 0;
@@ -2146,7 +2124,7 @@ void bg_etc_write(s16 type) {
     }
     bg_etc_scr_write(type);
     bg_w.scr_stop = 0;
-    ((WORK*)1)->id;
+    (void)((WORK*)1)->id;
     bg_w.frame_flag = 0;
     bg_w.dmm0[0] = 0;
     bg_land_flag = 0;

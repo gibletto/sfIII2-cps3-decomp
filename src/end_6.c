@@ -33,7 +33,7 @@
 
 
 extern const s8 end_6_msg_tbl[][8];
-extern u16 End_Time_Stock;
+extern u16 End_Course;
 
 
 
@@ -103,7 +103,7 @@ void end_600_0000(void) {
             Rewrite_End_Message(2);
             break;
         case 2:
-            if (end_6_msg_tbl[End_Time_Stock][0] != 8) {
+            if (end_6_msg_tbl[End_Course][0] != 8) {
                 Rewrite_End_Message(3);
             } else {
                 Rewrite_End_Message(8);
@@ -131,7 +131,7 @@ void end_600_0003(void) {
         effect_E6_init(84);
         effect_E6_init(88);
         effect_E6_init(89);
-        switch (end_6_msg_tbl[End_Time_Stock][0]) {
+        switch (end_6_msg_tbl[End_Course][0]) {
         case 0:
             effect_E6_init(94);
             Rewrite_End_Message(7);

@@ -83,7 +83,7 @@ extern const u8 gcfg_screen_scr_jp_0[];
 extern const u8 gcfg_screen_scr_jp_1[];
 extern const u32 gcfg_title_scr_jp_0[];
 extern const u32 gcfg_title_scr_jp_0_0615ADD4[];   /* provisional name */
-extern const u8 config_jp_chr_f400[];      /* provisional name: */
+extern const u8 config_jp_chr_f400[];      /* provisional name: data copied to SS_RAM + 0xF400 */
 
 s8 Config_Item_jp;  
 s8 Config_Exit_jp;  /* 02015A01 */

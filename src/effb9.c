@@ -1,7 +1,7 @@
 /*
  * EFFB9.C  Round-call number sprite (effect B9)
  *
- * A child sprite of the round-call banner (effect B4). effect_B9_init places it to the
+ * A child sprite of the round-call banner (effect B3, EFFB3.C). effect_B9_init places it to the
  * right of the banner on family 4 and shows either the round number (Round_num + 1) or,
  * for the other banner type, a fixed label. effect_B9_move copies the parent's zoom each
  * frame so it scales in and out with the banner, hides with it and frees itself when the

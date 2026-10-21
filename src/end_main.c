@@ -11,9 +11,8 @@
  * (combo_demo_load) when it reaches zero and moves the players while it is below zero; combo_demo_set_position
  * puts a player at the demo's start position. ending_effects_cleanup kills the effects the endings leave behind.
  *
- * bg_cell_write (u5 as u16), scfont_page0_fill (attr as u16) and Scrn_Move_Set are declared here rather than
- * taken from bg_sub.h / SYS_sub.h: the opening's zero-constant chains and its load order need these types,
- * while end_3/5/11 need bg_sub.h's s32 u5.
+ * bg_cell_write (u5 as u16), scfont_page0_fill (attr as u16) and Scrn_Move_Set are declared here with the
+ * argument types the opening uses; end_3/5/11 use bg_sub.h's s32 u5.
  */
 
 #include "structs.h"
@@ -248,7 +247,7 @@ void opning_init_01000(void) {
         for (j = 0; j < 16; j++) {
             q = &p->panel[j];
             bg_cell_write(i, q->ofs, q->cell, (u32)op_bg0_scrn_data, 0, 0x2C0);
-            q->ofs;     /* no code: HANDOVER review (weights q above j and 0x2C0, as in 2nd Impact) */
+            (void)q->ofs;
         }
         Bg_On_R(1 << i);
         Bg_On_W(1 << i);
@@ -915,7 +914,7 @@ void op_06_move(void) {
             opening_bgw_commit_pos(5);
             Bg_On_W(1);
             Bg_Off_W(2);
-            ((WORK*)0x38000)->id;       /* no code: HANDOVER review (const read that settles the third unrolled copy's r5/r6) */
+            (void)((WORK*)0x38000)->id;
         }
         opening_bgw_commit_pos(0);
         break;

@@ -5256,17 +5256,17 @@ extern const u16 gouki2_exca_000[], gouki2_exca_001[], gouki2_exca_002[], gouki2
 
 /* exca scripts (debug viewer: UNION): 65 entries */
 const u32 gouki2_exca[66] = {
-    (u32)gouki2_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
+    (u32)gouki2_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
     (u32)gouki2_exca_001,  /* 1 follow-up of APPEAR JUNBI 4 */
     (u32)gouki2_exca_002,  /* 2 follow-up of APPEAR JUNBI 5 */
-    (u32)gouki2_exca_003,  /* 3 follow-up of ASHIBARAI A, TUNNOMERI A */
+    (u32)gouki2_exca_003,  /* 3 follow-up of ASHIBARAI A / TUNNOMERI A */
     (u32)gouki2_exca_004,  /* 4 follow-up of APPEAR JUNBI 6 */
-    (u32)gouki2_exca_005,  /* 5 follow-up of KGM TATAKI S, ALEX POWER B +29 */
-    (u32)gouki2_exca_006,  /* 6 follow-up of ALEX BACK D, HUMI ASIB A +9 */
+    (u32)gouki2_exca_005,  /* 5 follow-up of KGM TATAKI S / ALEX POWER B +29 */
+    (u32)gouki2_exca_006,  /* 6 follow-up of ALEX BACK D / HUMI ASIB A +9 */
     (u32)gouki2_exca_007,  /* 7 no name */
-    (u32)gouki2_exca_008,  /* 8 follow-up of IBUKI, DUDDLEY D S +2 */
-    (u32)gouki2_exca_009,  /* 9 follow-up of TATAKI S, ALEX BODY S +5 */
-    (u32)gouki2_exca_010,  /* 10 follow-up of IBUKI KUBIORI, KIRIMOMI A +2 */
+    (u32)gouki2_exca_008,  /* 8 follow-up of IBUKI / DUDDLEY D S +2 */
+    (u32)gouki2_exca_009,  /* 9 follow-up of TATAKI S / ALEX BODY S +5 */
+    (u32)gouki2_exca_010,  /* 10 follow-up of IBUKI KUBIORI / KIRIMOMI A +2 */
     (u32)gouki2_exca_011,  /* 11 follow-up of APPEAR JUNBI 4 */
     (u32)gouki2_exca_012,  /* 12 follow-up of APPEAR JUNBI 5 */
     (u32)gouki2_exca_013,  /* 13 follow-up of APPEAR JUNBI 6 */
@@ -5280,7 +5280,7 @@ const u32 gouki2_exca[66] = {
     (u32)gouki2_exca_021,  /* 21 no name */
     (u32)gouki2_exca_022,  /* 22 no name */
     (u32)gouki2_exca_023,  /* 23 follow-up of HARAIGOSHI A */
-    (u32)gouki2_exca_024,  /* 24 follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1 */
+    (u32)gouki2_exca_024,  /* 24 follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1 */
     (u32)gouki2_exca_025,  /* 25 follow-up of APPEAR JUNBI 7 */
     (u32)gouki2_exca_026,  /* 26 follow-up of APPEAR JUNBI 7 */
     (u32)gouki2_exca_027,  /* 27 follow-up of APPEAR JUNBI 8 */
@@ -5291,7 +5291,7 @@ const u32 gouki2_exca[66] = {
     (u32)gouki2_exca_032,  /* 32 no name */
     (u32)gouki2_exca_033,  /* 33 follow-up of APPEAR 5 */
     (u32)gouki2_exca_034,  /* 34 follow-up of APPEAR 5 */
-    (u32)gouki2_exca_035,  /* 35 follow-up of SP APPEAR 2, SP APPEAR 4 */
+    (u32)gouki2_exca_035,  /* 35 follow-up of SP APPEAR 2 / SP APPEAR 4 */
     (u32)gouki2_exca_036,  /* 36 no name */
     (u32)gouki2_exca_037,  /* 37 follow-up of WIN 6 */
     (u32)gouki2_exca_038,  /* 38 follow-up of WIN 6 */
@@ -5317,14 +5317,14 @@ const u32 gouki2_exca[66] = {
     (u32)gouki2_exca_056,  /* 58 follow-up of APPEAR 8 */
     (u32)gouki2_exca_055,  /* 59 follow-up of SP APPEAR 1 */
     (u32)gouki2_exca_056,  /* 60 follow-up of SP APPEAR 1 */
-    (u32)gouki2_exca_061,  /* 61 follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1 */
+    (u32)gouki2_exca_061,  /* 61 follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1 */
     (u32)gouki2_exca_062,  /* 62 follow-up of ATTACK 11 S: not started by a command */
     (u32)gouki2_exca_063,  /* 63 follow-up of SP APPEAR 3 */
     (u32)gouki2_exca_064,  /* 64 follow-up of SP APPEAR 3 */
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 gouki2_exca_000_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 gouki2_exca_000[108] = {
     L4(3, 0, 0, 0, 0, 0, 0, 0x5452, 0, 162, 0, 0, 0, 0, 0),
@@ -5365,7 +5365,7 @@ const u16 gouki2_exca_002[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, TUNNOMERI A */
+/* script: 3 follow-up of ASHIBARAI A / TUNNOMERI A */
 const u16 gouki2_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gouki2_exca_003[68] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x54FA, 0, 126, 0, 0, 0, 0, 0),
@@ -5391,7 +5391,7 @@ const u16 gouki2_exca_004[52] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of KGM TATAKI S, ALEX POWER B +29 */
+/* script: 5 follow-up of KGM TATAKI S / ALEX POWER B +29 */
 const u16 gouki2_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gouki2_exca_005[148] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x54E8, 0, 126, 0, 0, 0, 0, 0),
@@ -5415,7 +5415,7 @@ const u16 gouki2_exca_005[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of ALEX BACK D, HUMI ASIB A +9 */
+/* script: 6 follow-up of ALEX BACK D / HUMI ASIB A +9 */
 const u16 gouki2_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gouki2_exca_006[116] = {
     L4(1, 2, 0, 0, 0, 0, 0, 0x54EC, 0, 126, 0, 0, 0, 0, 0),
@@ -5456,7 +5456,7 @@ const u16 gouki2_exca_007[124] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of IBUKI, DUDDLEY D S +2 */
+/* script: 8 follow-up of IBUKI / DUDDLEY D S +2 */
 const u16 gouki2_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gouki2_exca_008[100] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x5500, 0, 126, 0, 0, 0, 0, 0),
@@ -5474,7 +5474,7 @@ const u16 gouki2_exca_008[100] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of TATAKI S, ALEX BODY S +5 */
+/* script: 9 follow-up of TATAKI S / ALEX BODY S +5 */
 const u16 gouki2_exca_009_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gouki2_exca_009[124] = {
     L4(1, 2, 0, 0, 0, 0, 0, 0x5500, 0, 126, 0, 0, 0, 0, 0),
@@ -5495,7 +5495,7 @@ const u16 gouki2_exca_009[124] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 10 follow-up of IBUKI KUBIORI, KIRIMOMI A +2 */
+/* script: 10 follow-up of IBUKI KUBIORI / KIRIMOMI A +2 */
 const u16 gouki2_exca_010_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 gouki2_exca_010[92] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x54FB, 0, 126, 0, 0, 0, 0, 0),
@@ -5681,7 +5681,7 @@ const u16 gouki2_exca_023[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 24 follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1 */
+/* script: 24 follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1 */
 const u16 gouki2_exca_024_head[4] = { HEAD(6, 0, 32, 10, 0, 0, 4) };
 const u16 gouki2_exca_024[184] = {
     L6(5, 0, 0, 0, 0, 0, 0, 0x56A4, 0, 116, 0, 0, 0, 21, 0, 0, 0, 90, 0, 0),
@@ -5811,7 +5811,7 @@ const u16 gouki2_exca_034[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 35 follow-up of SP APPEAR 2, SP APPEAR 4 */
+/* script: 35 follow-up of SP APPEAR 2 / SP APPEAR 4 */
 const u16 gouki2_exca_035_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 gouki2_exca_035[108] = {
     CMD(CM_PA_X, 0, 1024, 0), 0, 0, 0, 0,
@@ -6054,7 +6054,7 @@ const u16 gouki2_exca_056[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 61 follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1 */
+/* script: 61 follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1 */
 const u16 gouki2_exca_061_head[4] = { HEAD(4, 0, 32, 10, 0, 0, 4) };
 const u16 gouki2_exca_061[220] = {
     CMD(CM_RLJMP, 0, 0, 16398), 0, 0, 0, 0,

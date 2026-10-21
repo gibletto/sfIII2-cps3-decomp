@@ -75,12 +75,12 @@ const HIT_IX yang_hit_ix_table[249] = {
     {   32,   32,    0,   42,    1,   42,    0,    1 },  /* 39: L PUNCH A, follow-up of JUDGMENT WAIT */
     {   33,   33,    0,   43,    1,   43,    0,    1 },  /* 40: L PUNCH A, follow-up of JUDGMENT WAIT */
     {   33,   33,    0,    0,    1,    0,    0,    1 },  /* 41: L PUNCH A, follow-up of JUDGMENT WAIT */
-    {   34,   34,    0,    0,    1,    0,    0,    1 },  /* 42: follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
-    {   35,   35,    0,    0,    1,    0,    0,    1 },  /* 43: follow-up of M PUNCH A, M PUNCH B */
-    {   36,   36,    0,   10,    1,   10,    0,    1 },  /* 44: follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
-    {   36,   36,    0,   44,    1,   44,    0,    1 },  /* 45: follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
-    {   36,   36,    0,    0,    1,    0,    0,    1 },  /* 46: follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
-    {   37,   37,    0,    0,    1,    0,    0,    1 },  /* 47: L PUNCH B, follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
+    {   34,   34,    0,    0,    1,    0,    0,    1 },  /* 42: follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
+    {   35,   35,    0,    0,    1,    0,    0,    1 },  /* 43: follow-up of M PUNCH A / M PUNCH B */
+    {   36,   36,    0,   10,    1,   10,    0,    1 },  /* 44: follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
+    {   36,   36,    0,   44,    1,   44,    0,    1 },  /* 45: follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
+    {   36,   36,    0,    0,    1,    0,    0,    1 },  /* 46: follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
+    {   37,   37,    0,    0,    1,    0,    0,    1 },  /* 47: L PUNCH B, follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
     {   38,   38,    0,    0,    1,    0,    0,    1 },  /* 48: L PUNCH B */
     {   39,   39,    0,   11,    1,   11,    0,    1 },  /* 49: L PUNCH B */
     {   39,   39,    0,   45,    1,   45,    0,    1 },  /* 50: L PUNCH B */
@@ -130,7 +130,7 @@ const HIT_IX yang_hit_ix_table[249] = {
     {   47,   47,    0,   55,    2,   55,    0,    2 },  /* 94: KAGAMI P A, follow-up of WIN 3 */
     {    2,   14,    0,    0,    2,   84,    0,    2 },  /* 95: KAGAMI P A, follow-up of WIN 4 */
     {    2,   15,    0,    0,    2,    0,    0,    2 },  /* 96: KAGAMI P A, follow-up of WIN 4 */
-    {  107,  107,    0,    0,    1,    0,    0,    1 },  /* 97: follow-up of HANASARE, APPEAR JUNBI 2, follow-up of SP APPEAR 2, follow-up of APPEAR JUNBI 5 +14 */
+    {  107,  107,    0,    0,    1,    0,    0,    1 },  /* 97: follow-up of HANASARE / APPEAR JUNBI 2, follow-up of SP APPEAR 2, follow-up of APPEAR JUNBI 5 +14 */
     {   79,   79,    0,    0,    1,    0,    0,    1 },  /* 98: M KICK C, follow-up of JUDGMENT WAIT */
     {   80,   80,    0,    0,    1,    0,    0,    1 },  /* 99: M KICK C, follow-up of JUDGMENT WAIT */
     {   81,   81,    0,    0,    4,    0,    0,    4 },  /* 100: M KICK C, follow-up of JUDGMENT WAIT */
@@ -187,8 +187,8 @@ const HIT_IX yang_hit_ix_table[249] = {
     {  113,  113,    0,   62,    1,   62,    0,    1 },  /* 151: not used by a script */
     {  113,  113,    0,   63,    1,   63,    0,    1 },  /* 152: not used by a script */
     {  113,  113,    0,    0,    1,    0,    0,    1 },  /* 153: not used by a script */
-    {  114,  114,    0,    0,    1,    0,    0,    1 },  /* 154: follow-up of SP APPEAR 3, JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
-    {  115,  115,    0,    0,    1,    0,    0,    1 },  /* 155: follow-up of SP APPEAR 3, JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
+    {  114,  114,    0,    0,    1,    0,    0,    1 },  /* 154: follow-up of SP APPEAR 3 / JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
+    {  115,  115,    0,    0,    1,    0,    0,    1 },  /* 155: follow-up of SP APPEAR 3 / JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
     {   63,   63,    0,   65,    2,   65,    0,    9 },  /* 156: ATTACK 6 S: not started by a command, ATTACK 13 SP: not started by a command */
     {   98,   98,    0,   66,    2,   66,    0,    9 },  /* 157: not used by a script */
     {   64,   64,    0,    0,    3,    0,    0,    3 },  /* 158: V JUMP P L A, follow-up of JUDGMENT LOSE */
@@ -251,8 +251,8 @@ const HIT_IX yang_hit_ix_table[249] = {
     {   66,   66,    0,    0,    3,    0,    0,    3 },  /* 215: V JUMP P L A, follow-up of JUDGMENT LOSE */
     {    1,    1,    0,    0,    1,    0,    0,    0 },  /* 216: LOSE SONABA */
     {  132,  132,    0,   65,    1,   65,    0,    2 },  /* 217: ATTACK 11 SP: not started by a command, ATTACK 12 S: not started by a command */
-    {  138,  138,    0,    0,    1,    0,    0,    1 },  /* 218: follow-up of follow-up of M PUNCH A, M PUNCH B, ATTACK 2 S: not started by a command */
-    {  138,  138,    0,   26,    1,   26,    0,    1 },  /* 219: follow-up of follow-up of M PUNCH A, M PUNCH B */
+    {  138,  138,    0,    0,    1,    0,    0,    1 },  /* 218: follow-up of follow-up of M PUNCH A / M PUNCH B, ATTACK 2 S: not started by a command */
+    {  138,  138,    0,   26,    1,   26,    0,    1 },  /* 219: follow-up of follow-up of M PUNCH A / M PUNCH B */
     {   14,   14,    0,    0,    1,   28,    0,    1 },  /* 220: follow-up of S KICK A */
     {   11,   11,    0,    2,    1,   93,    0,    1 },  /* 221: follow-up of S KICK A */
     {  139,  139,    0,    0,    3,   80,    0,    3 },  /* 222: V JUMP K M A, F JUMP K M A, follow-up of AFRICA JUMP +1 */
@@ -320,10 +320,10 @@ const BODY_BOX yang_body_box[149] = {
     { { {  -23,  31,  70,  20 },  {  -39,  66,  55,  16 },  {  -32,  54,  36,  22 },  {  -45,  76,   0,  34 } } },  /* 31: L PUNCH A, follow-up of JUDGMENT WAIT */
     { { {  -23,  31,  70,  20 },  {  -39,  66,  55,  16 },  {  -32,  54,  36,  22 },  {  -45,  76,   0,  34 } } },  /* 32: L PUNCH A, follow-up of JUDGMENT WAIT */
     { { {  -23,  31,  70,  20 },  {  -39,  66,  55,  16 },  {  -32,  54,  36,  22 },  {  -45,  76,   0,  34 } } },  /* 33: L PUNCH A, follow-up of JUDGMENT WAIT */
-    { { {  -30,  26,  68,  21 },  {  -60,  88,  62,  17 },  {  -42,  69,  34,  35 },  {  -34,  58,   0,  32 } } },  /* 34: follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
-    { { {  -28,  16,  66,  14 },  {  -30,  46,  60,  12 },  {  -16,  36,  34,  24 },  {  -38,  68,   0,  34 } } },  /* 35: follow-up of M PUNCH A, M PUNCH B */
-    { { {  -32,  30,  64,  20 },  {  -38,  67,  59,  12 },  {  -40,  65,  36,  22 },  {  -56,  95,   0,  34 } } },  /* 36: follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
-    { { {  -23,  28,  66,  21 },  {  -61,  89,  56,  14 },  {  -36,  57,  36,  20 },  {  -55,  88,   0,  34 } } },  /* 37: L PUNCH B, follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
+    { { {  -30,  26,  68,  21 },  {  -60,  88,  62,  17 },  {  -42,  69,  34,  35 },  {  -34,  58,   0,  32 } } },  /* 34: follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
+    { { {  -28,  16,  66,  14 },  {  -30,  46,  60,  12 },  {  -16,  36,  34,  24 },  {  -38,  68,   0,  34 } } },  /* 35: follow-up of M PUNCH A / M PUNCH B */
+    { { {  -32,  30,  64,  20 },  {  -38,  67,  59,  12 },  {  -40,  65,  36,  22 },  {  -56,  95,   0,  34 } } },  /* 36: follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
+    { { {  -23,  28,  66,  21 },  {  -61,  89,  56,  14 },  {  -36,  57,  36,  20 },  {  -55,  88,   0,  34 } } },  /* 37: L PUNCH B, follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
     { { {  -28,  16,  66,  14 },  {  -30,  46,  60,  12 },  {  -16,  36,  34,  24 },  {  -38,  68,   0,  34 } } },  /* 38: L PUNCH B */
     { { {  -26,  16,  64,  14 },  {  -38,  56,  56,  12 },  {  -24,  36,  36,  20 },  {  -38,  68,   0,  34 } } },  /* 39: L PUNCH B */
     { { {  -14,  16,  78,  14 },  {  -28,  46,  68,  12 },  {  -16,  30,  38,  28 },  {  -30,  54,   0,  36 } } },  /* 40: S KICK A, follow-up of ZANNEN 7 */
@@ -393,15 +393,15 @@ const BODY_BOX yang_body_box[149] = {
     { { {  -26,  16,  92,  14 },  {  -20,  36,  84,  14 },  {   -8,  28,  72,  16 },  {  -28,  56,  56,  20 } } },  /* 104: V JUMP P M A, F JUMP P M A, follow-up of JUDGMENT LOSE +1 */
     { { {  -26,  36,  90,  14 },  {  -34,  48,  76,  12 },  {  -42,  14,  68,  12 },  {  -24,  62,  56,  20 } } },  /* 105: V JUMP P M A, F JUMP P M A, follow-up of JUDGMENT LOSE +3 */
     { { {  -22,  16,  92,  14 },  {  -20,  36,  86,  14 },  {  -12,  30,  72,  16 },  {  -28,  56,  56,  20 } } },  /* 106: V JUMP P M A, F JUMP P M A, F JUMP P L A +5 */
-    { { {  -10,  16,  86,  14 },  {   -4,  28,  64,  28 },  {  -20,  44,  38,  24 },  {   -4,  28,   0,  36 } } },  /* 107: follow-up of HANASARE, APPEAR JUNBI 2, follow-up of SP APPEAR 2, follow-up of APPEAR JUNBI 5 +14 */
+    { { {  -10,  16,  86,  14 },  {   -4,  28,  64,  28 },  {  -20,  44,  38,  24 },  {   -4,  28,   0,  36 } } },  /* 107: follow-up of HANASARE / APPEAR JUNBI 2, follow-up of SP APPEAR 2, follow-up of APPEAR JUNBI 5 +14 */
     { { {  -33,  16,  96,  14 },  {  -20,  40,  90,  14 },  {   -4,  28,  72,  20 },  {  -20,  42,  54,  20 } } },  /* 108: not used by a script */
     { { {  -33,  16,  96,  14 },  {  -20,  40,  90,  14 },  {   -4,  28,  72,  20 },  {  -20,  42,  54,  20 } } },  /* 109: not used by a script */
     { { {  -18,  16,  74,  14 },  {  -26,  44,  68,  12 },  {   -6,  28,  38,  28 },  {  -26,  32,  16,  26 } } },  /* 110: not used by a script */
     { { {  -10,  16,  76,  14 },  {  -26,  44,  68,  12 },  {  -10,  30,  44,  22 },  {  -26,  34,  30,  26 } } },  /* 111: not used by a script */
     { { {    2,  16,  78,  14 },  {  -12,  42,  72,  12 },  {  -28,  44,  50,  20 },  {  -12,  28,  16,  32 } } },  /* 112: not used by a script */
     { { {   12,  16,  78,  14 },  {   -4,  36,  62,  22 },  {  -30,  46,  52,  20 },  {  -10,  28,  16,  34 } } },  /* 113: not used by a script */
-    { { {   -2,  16,  80,  14 },  {  -12,  38,  62,  22 },  {  -30,  48,  52,  20 },  {   -8,  28,   0,  50 } } },  /* 114: follow-up of SP APPEAR 3, JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
-    { { {   -8,  16,  74,  14 },  {  -20,  46,  58,  18 },  {  -22,  44,  24,  32 },  {   -6,  28,   0,  22 } } },  /* 115: follow-up of SP APPEAR 3, JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
+    { { {   -2,  16,  80,  14 },  {  -12,  38,  62,  22 },  {  -30,  48,  52,  20 },  {   -8,  28,   0,  50 } } },  /* 114: follow-up of SP APPEAR 3 / JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
+    { { {   -8,  16,  74,  14 },  {  -20,  46,  58,  18 },  {  -22,  44,  24,  32 },  {   -6,  28,   0,  22 } } },  /* 115: follow-up of SP APPEAR 3 / JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
     { { {   -2,  16,  96,  14 },  {  -18,  44,  86,  14 },  {   -8,  30,  66,  22 },  {  -26,  38,  48,  26 } } },  /* 116: V JUMP K S A, V JUMP K M A, F JUMP K S A +5 */
     { { {    8,  16,  94,  14 },  {   -8,  42,  86,  14 },  {  -24,  44,  68,  20 },  {   -8,  28,  36,  30 } } },  /* 117: V JUMP K S A, V JUMP K M A, F JUMP K S A +5 */
     { { {    9,  25,  94,  20 },  {  -50,  89,  90,  16 },  {  -18,  61,  70,  20 },  {  -32,  61,  42,  27 } } },  /* 118: V JUMP K S A, F JUMP K S A, follow-up of WAIT +2 */
@@ -424,7 +424,7 @@ const BODY_BOX yang_body_box[149] = {
     { { {   -9,  26,  85,  22 },  {  -25,  48,  54,  35 },  {  -54,  74,  30,  43 },  {    0,   0,   0,   0 } } },  /* 135: not used by a script */
     { { {  -10,  22,  71,  21 },  {  -16,  39,  70,   7 },  {  -15,  38,  34,  35 },  {  -16,  41,   0,  32 } } },  /* 136: ATTACK 2 S: not started by a command, ATTACK 2 SP: not started by a command, not started by a command */
     { { {  -10,  22,  71,  21 },  {  -16,  39,  70,   7 },  {  -62,  93,  47,  57 },  {    0,   0,   0,   0 } } },  /* 137: ATTACK 12 L: not started by a command, not started by a command */
-    { { {  -24,  16,  68,  14 },  {  -22,  32,  58,  12 },  {  -10,  30,  36,  22 },  {  -30,  54,   0,  36 } } },  /* 138: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command, follow-up of follow-up of M PUNCH A, M PUNCH B */
+    { { {  -24,  16,  68,  14 },  {  -22,  32,  58,  12 },  {  -10,  30,  36,  22 },  {  -30,  54,   0,  36 } } },  /* 138: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command, follow-up of follow-up of M PUNCH A / M PUNCH B */
     { { {  -28,  16,  96,  14 },  {  -34,  58,  86,  18 },  {  -73,  83,  61,  25 },  {  -26,  38,  48,  26 } } },  /* 139: V JUMP K M A, F JUMP K M A, follow-up of AFRICA JUMP +1 */
     { { {   -4,  16,  98,  14 },  {  -23,  49,  88,  14 },  {  -13,  35,  66,  22 },  {  -30,  44,  47,  27 } } },  /* 140: FUSHIN P S */
     { { {    6,  16,  96,  14 },  {  -26,  57,  86,  16 },  {  -39,  64,  66,  20 },  {  -10,  30,  37,  29 } } },  /* 141: FUSHIN P S */
@@ -475,7 +475,7 @@ const HAND_BOX yang_hand_box[143] = {
     { { {  -57,  46,  53,  47 },  {    0,   0,   0,   0 } } },  /* 33: L PUNCH A, follow-up of JUDGMENT WAIT */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 34: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 35: no box */
-    { { {  -70,  54,  43,  33 },  {    0,   0,   0,   0 } } },  /* 36: follow-up of M PUNCH A, M PUNCH B, follow-up of ZANNEN 6 */
+    { { {  -70,  54,  43,  33 },  {    0,   0,   0,   0 } } },  /* 36: follow-up of M PUNCH A / M PUNCH B, follow-up of ZANNEN 6 */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 37: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 38: no box */
     { { {  -66,  24,  60,  12 },  {    0,   0,   0,   0 } } },  /* 39: L PUNCH B */
@@ -553,8 +553,8 @@ const HAND_BOX yang_hand_box[143] = {
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 111: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 112: no box */
     { { {  -68,  36,  58,  16 },  {    0,   0,   0,   0 } } },  /* 113: not used by a script */
-    { { {  -56,  28,  48,  18 },  {    0,   0,   0,   0 } } },  /* 114: follow-up of SP APPEAR 3, JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
-    { { {  -46,  22,  24,  20 },  {    0,   0,   0,   0 } } },  /* 115: follow-up of SP APPEAR 3, JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
+    { { {  -56,  28,  48,  18 },  {    0,   0,   0,   0 } } },  /* 114: follow-up of SP APPEAR 3 / JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
+    { { {  -46,  22,  24,  20 },  {    0,   0,   0,   0 } } },  /* 115: follow-up of SP APPEAR 3 / JUDGMENT WIN, follow-up of ZANNEN 1, HANASARE */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 116: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 117: no box */
     { { {  -83,  65,  67,  30 },  {    0,   0,   0,   0 } } },  /* 118: V JUMP K S A, F JUMP K S A, follow-up of WAIT +2 */
@@ -577,7 +577,7 @@ const HAND_BOX yang_hand_box[143] = {
     { { {  -84,  73,  44,  25 },  {    0,   0,   0,   0 } } },  /* 135: not used by a script */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 136: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 137: no box */
-    { { {  -56,  46,  42,  37 },  {    0,   0,   0,   0 } } },  /* 138: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command, follow-up of follow-up of M PUNCH A, M PUNCH B */
+    { { {  -56,  46,  42,  37 },  {    0,   0,   0,   0 } } },  /* 138: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command, follow-up of follow-up of M PUNCH A / M PUNCH B */
     { { {  -75,  52,  35,  25 },  {    0,   0,   0,   0 } } },  /* 139: V JUMP K M A, F JUMP K M A, follow-up of AFRICA JUMP +1 */
     { { {  -90,  62,  34,  27 },  {    0,   0,   0,   0 } } },  /* 140: V JUMP K M A, F JUMP K M A, follow-up of AFRICA JUMP +1 */
     { { {  -82,  64,  69,  26 },  {    0,   0,   0,   0 } } },  /* 141: FUSHIN P S */

@@ -628,13 +628,13 @@ extern const u16 direct_03_char_table_006_head[];
 extern const u16 direct_03_char_table_006[];
 extern const u16 debug_scene_scrn_data[];
 extern const u16 scene_char_06360000[];
-extern const u16 scene_char_06363C3C[];
-extern const u16 scene_char_0636803C[];
-extern const u16 scene_char_0636C43C[];
+extern const u16 bg_scrn_data_01[];
+extern const u16 bg_scrn_data_02[];
+extern const u16 bg_scrn_data_03[];
 extern const u16 scene_char_06370000[];
-extern const u16 dat_0637083C[];
-extern const u16 scene_char_06374C3C[];
-extern const u16 scene_char_0637903C[];
+extern const u16 bg_scrn_data_11[];
+extern const u16 bg_scrn_data_04[];
+extern const u16 bg_scrn_data_05[];
 
 /* sel_pl_char_table: 95 entries */
 const u32 sel_pl_char_table[96] = {
@@ -6825,8 +6825,8 @@ const u16 scene_char_06360000[7710] = {
     0, 0, 0, 0, 0, 0,
 };
 
-/* provisional name */
-const u16 scene_char_06363C3C[8704] = {
+/* provisional name: the screen map of bg_index 1 (bg_cg_src_tbl) */
+const u16 bg_scrn_data_01[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -7917,8 +7917,8 @@ const u16 scene_char_06363C3C[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
 };
 
-/* provisional name */
-const u16 scene_char_0636803C[8704] = {
+/* provisional name: the screen map of bg_index 2 (bg_cg_src_tbl) */
+const u16 bg_scrn_data_02[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -9009,8 +9009,8 @@ const u16 scene_char_0636803C[8704] = {
     0xA16, 1, 0xA18, 1, 0xA1A, 1, 0xA1C, 1,
 };
 
-/* provisional name */
-const u16 scene_char_0636C43C[7650] = {
+/* provisional name: the screen map of bg_index 3 (bg_cg_src_tbl) */
+const u16 bg_scrn_data_03[7650] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -10106,7 +10106,8 @@ const u16 scene_char_06370000[1054] = {
     0, 0, 0, 0, 0, 0,
 };
 
-const u16 dat_0637083C[8704] = {
+/* provisional name: the screen map of bg_index 11 (bg_cg_src_tbl) */
+const u16 bg_scrn_data_11[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -11197,8 +11198,8 @@ const u16 dat_0637083C[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
 };
 
-/* provisional name */
-const u16 scene_char_06374C3C[8704] = {
+/* provisional name: the screen map of bg_index 4 (bg_cg_src_tbl) */
+const u16 bg_scrn_data_04[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -12289,8 +12290,8 @@ const u16 scene_char_06374C3C[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
 };
 
-/* provisional name */
-const u16 scene_char_0637903C[12800] = {
+/* provisional name: the screen map of bg_index 5 (bg_cg_src_tbl) */
+const u16 bg_scrn_data_05[12800] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,

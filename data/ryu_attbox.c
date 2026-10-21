@@ -39,7 +39,7 @@ const ATTACK_BOX ryu_att_box[73] = {
     { { {  -85,  17,  90,  32 },  {  -69,  19,  68,  26 } } },  /* 16: not used by a script */
     { { { -115,  37,  72,  18 },  {  -77,  41,  64,  19 } } },  /* 17: not used by a script */
     { { {  -80,  26,  78,  36 },  {  -67,  28,  63,  36 } } },  /* 18: not used by a script */
-    { { {  -91,  28,  81,  14 },  {  -62,  35,  60,  26 } } },  /* 19: L KICK A, follow-up of L PUNCH B, UP P GUARD P L; attack 17, 60 */
+    { { {  -91,  28,  81,  14 },  {  -62,  35,  60,  26 } } },  /* 19: L KICK A, follow-up of L PUNCH B / UP P GUARD P L; attack 17, 60 */
     { { {  -78,  42,  74,  14 },  {  -50,  39,  63,  12 } } },  /* 20: not used by a script */
     { { {  -64,  45,  37,  12 },  {    0,   0,   0,   0 } } },  /* 21: KAGAMI P A; attack 19 */
     { { {  -69,  52,  43,  10 },  {    0,   0,   0,   0 } } },  /* 22: KAGAMI P A; attack 20 */
@@ -69,7 +69,7 @@ const ATTACK_BOX ryu_att_box[73] = {
     { { {  -80,  49,  58,  12 },  {  -31,  14,  42,  28 } } },  /* 46: UP P GUARD K L, ATTACK 10 L: not started by a command, ATTACK 10 SP: not started by a command; attack 18, 73, 79 */
     { { {  -83,  57,  74,  14 },  {  -34,  10,  60,  13 } } },  /* 47: UP P GUARD K L, ATTACK 10 S: not started by a command; attack 71 */
     { { {  -86,  16,  52,  18 },  {  -70,  47,  54,  17 } } },  /* 48: F JUMP K L A, S V JP S P A; attack 37 */
-    { { {  -85,  34,  84,  24 },  {  -67,  27,  65,  31 } } },  /* 49: follow-up of L PUNCH B, UP P GUARD P L; attack 60 */
+    { { {  -85,  34,  84,  24 },  {  -67,  27,  65,  31 } } },  /* 49: follow-up of L PUNCH B / UP P GUARD P L; attack 60 */
     { { {  -66,  18,  72,  16 },  {  -48,  40,  75,  10 } } },  /* 50: FUSHIN P S; attack 58 */
     { { {  -71,  42,  58,  20 },  {    0,   0,   0,   0 } } },  /* 51: V JUMP P M A; attack 27 */
     { { {  -70,  54,  32,  40 },  {  -42,  30,  14,  22 } } },  /* 52: ATTACK 11 SP: not started by a command; attack 82 */
@@ -185,7 +185,7 @@ const CAUGHT_BOX ryu_cau_box[21] = {
     { {  -25,   50,   48,   40 } },  /* 13: TOUKETSU A, AIR S, AIR M +36 */
     { {   -8,   40,   66,   25 } },  /* 14: FUSHIN P S */
     { {  -16,   48,    0,   82 } },  /* 15: not used by a script */
-    { {  -46,   80,    0,   16 } },  /* 16: follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +9 */
+    { {  -46,   80,    0,   16 } },  /* 16: follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +9 */
     { {  -41,   81,    0,   16 } },  /* 17: not used by a script */
     { {  -36,   73,   46,   49 } },  /* 18: not used by a script */
     { {  -38,   63,    0,   16 } },  /* 19: DASH HUMIKOMI, DASH TOBINOKI */

@@ -7,12 +7,9 @@
  * Suicide, points both demo input streams at the current demo's data) and Setup_Combo_Demo_PL
  * (called from PLCNTAPP) loads both players' character, super art and colour from the combo demo
  * table.
- * Initialize_EM_Candidate (from sel_pl) builds a player's candidate buffer and fills the two CPU
- * opponent candidate lists for stages 1-8, sets the rival for stage 9 and clears stage 10.
- * Check_EM_Buff and Check_Same_CPU are the helpers that avoid repeated or duplicate opponents.
- * All_Clear_Suicide clears the eight Suicide (effect kill) flags; it is used when screens and
- * fights start (Manage, next_cpu, sel_pl, Win). clear_chainex_check clears a player's
- * chain-combo check table.
+ * stage_index_get turns bg_w.stage / bg_w.area into a stage index for Request_Fade (stage 8 with a
+ * non-zero area, and the stages after 8, count one higher). Initialize_EM_Candidate (from sel_pl)
+ * copies the player's eight CPU opponents from EM_Candidate_Data for the character and course.
  */
 
 #include "structs.h"

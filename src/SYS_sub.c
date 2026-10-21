@@ -10,7 +10,7 @@
  * here, with scene-cut helpers (Button_Cut_Hold, Button_Cut_EX, Cut_Cut_Cut and friends) that let a
  * player's button shorten a scene. Disp_Digit8x16/16x24 draw score digits, Disp_Win_Type the round
  * win marks, and Disp_Capcom_Rights the copyright lines chosen by Country.
- * 2nd Impact keeps two rankings of six (score, then continues) in 12-byte records, has no panel
+ * 2nd Impact keeps two rankings of six (score, then consecutive wins) in 12-byte records, has no panel
  * wipe and no Cut_Cut_Loser, adds the vertical Ck_Range_Out_Y, and tests buttons 0x7F0.
  */
 
@@ -355,8 +355,8 @@ void Setup_Play_Type(void) {
     }
 }
 
-/* Build this player's ranking entry and try it against all four ranking tables:
-   score, wins, CPU grade and grade.  Returns 1 if the player made any of them. */
+/* Build this player's ranking entry and try it against both ranking tables: score, then
+   consecutive wins (Win_Record).  Returns 1 if the player made either. */
 u32 Check_Ranking(PL_id)
 s16 PL_id;
 {
@@ -367,7 +367,7 @@ s16 PL_id;
     if (Rank_In[PL_id][0] >= 0 && Rank_In[PL_id ^ 1][0] >= 0) {
         Check_Partners_Rank(0, PL_id);
     }
-    Present_Data[PL_id].score = Continue_Count[PL_id];
+    Present_Data[PL_id].score = Win_Record[PL_id];
     Rank_In[PL_id][1] = Check_Sort_Ranking(6, PL_id);
     if (Rank_In[PL_id][1] >= 0 && Rank_In[PL_id ^ 1][1] >= 0) {
         Check_Partners_Rank(1, PL_id);

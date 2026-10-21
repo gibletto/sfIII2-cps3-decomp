@@ -1,5 +1,5 @@
 /*
- * POW_POW.C  Damage and score (2nd Impact only)
+ * POW_POW.C  Damage and score (2nd Impact version)
  *
  * cal_damage_vitality and cal_damage_vitality_eff turn an attack's power into damage using the
  * round-level rate tables (2nd Impact: no attack/defence multipliers); Additinal_Score_DM, Disp_Player_Score

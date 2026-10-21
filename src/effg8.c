@@ -1,5 +1,5 @@
 /*
- * EFFG8.C  Effect G8 (168): the ending's flying birds (2nd Impact only)
+ * EFFG8.C  Effect G8 (168): the ending's flying birds (2nd Impact version)
  *
  * 2nd Impact's own effect 168. effect_G8_init makes sixteen birds in four groups of four from
  * effg8_data_tbl (x, y, priority, pattern, height timer) with the group's speeds from

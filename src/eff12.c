@@ -6,7 +6,7 @@
  * colour, position, priority and animation; effect_12_move runs char_move each frame
  * (stopped during EXE_flag/Game_pause), draws the prop with disp_pos_trans_entry and frees
  * it when compel_dead_check says the stage is being torn down.
- * Used by the BG040, BG120, BG140, BG190 and second bonus-stage init routines.
+ * Used by the stage 02, 03, 05, 06, 09, 10, 11 and 16 backgrounds.
  */
 
 #include "structs.h"

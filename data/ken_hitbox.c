@@ -90,12 +90,12 @@ const HIT_IX ken_hit_ix_table[233] = {
     {   41,   41,    0,    0,    1,    0,    0,    1 },  /* 54: M KICK A, UP P GUARD K M, ATTACK 6 S: not started by a command */
     {   42,   42,    0,    0,    1,    0,    0,    1 },  /* 55: not used by a script */
     {   43,   43,    0,    0,    1,    0,    0,    1 },  /* 56: M KICK C */
-    {   44,   44,    0,    0,    1,    0,    0,    1 },  /* 57: M KICK C, follow-up of M KICK A, UP P GUARD K M */
+    {   44,   44,    0,    0,    1,    0,    0,    1 },  /* 57: M KICK C, follow-up of M KICK A / UP P GUARD K M */
     {   45,   45,    0,    0,    1,    0,    0,    1 },  /* 58: not used by a script */
-    {   45,   45,    0,   14,    1,   14,    0,    1 },  /* 59: M KICK C, follow-up of M KICK A, UP P GUARD K M */
-    {   46,   46,    0,   15,    1,   15,    0,    1 },  /* 60: M KICK C, follow-up of M KICK A, UP P GUARD K M */
-    {   47,   47,    0,   16,    1,   16,    0,    1 },  /* 61: M KICK C, follow-up of M KICK A, UP P GUARD K M */
-    {   49,   49,    0,   17,    1,   17,    0,    1 },  /* 62: M KICK C, follow-up of M KICK A, UP P GUARD K M */
+    {   45,   45,    0,   14,    1,   14,    0,    1 },  /* 59: M KICK C, follow-up of M KICK A / UP P GUARD K M */
+    {   46,   46,    0,   15,    1,   15,    0,    1 },  /* 60: M KICK C, follow-up of M KICK A / UP P GUARD K M */
+    {   47,   47,    0,   16,    1,   16,    0,    1 },  /* 61: M KICK C, follow-up of M KICK A / UP P GUARD K M */
+    {   49,   49,    0,   17,    1,   17,    0,    1 },  /* 62: M KICK C, follow-up of M KICK A / UP P GUARD K M */
     {   49,   49,    0,   18,    1,   18,    0,    1 },  /* 63: not used by a script */
     {   50,   50,    0,    0,    1,    0,    0,    1 },  /* 64: not used by a script */
     {   52,   52,    0,    0,    1,    0,    0,    1 },  /* 65: L KICK A, UP P GUARD K L */
@@ -314,12 +314,12 @@ const BODY_BOX ken_body_box[136] = {
     { { {   -5,  23,  82,  16 },  {  -16,  47,  67,  20 },  {  -25,  43,  37,  29 },  {  -20,  33,   0,  37 } } },  /* 41: M KICK A, UP P GUARD K M, ATTACK 6 S: not started by a command */
     { { {   -5,  23,  82,  16 },  {  -16,  47,  67,  20 },  {  -25,  43,  37,  29 },  {  -20,  33,   0,  37 } } },  /* 42: not used by a script */
     { { {  -20,  23,  88,  16 },  {  -34,  51,  70,  20 },  {  -31,  43,  42,  29 },  {  -36,  49,   0,  43 } } },  /* 43: M KICK C */
-    { { {  -16,  24,  84,  16 },  {  -28,  52,  69,  16 },  {  -32,  48,  36,  32 },  {  -32,  40,   0,  36 } } },  /* 44: M KICK C, follow-up of M KICK A, UP P GUARD K M */
-    { { {  -16,  24,  84,  16 },  {  -28,  52,  69,  16 },  {  -32,  48,  36,  32 },  {  -32,  40,   0,  36 } } },  /* 45: M KICK C, follow-up of M KICK A, UP P GUARD K M */
-    { { {  -16,  24,  84,  16 },  {  -28,  52,  69,  16 },  {  -32,  48,  36,  32 },  {  -32,  40,   0,  36 } } },  /* 46: M KICK C, follow-up of M KICK A, UP P GUARD K M */
-    { { {  -16,  24,  84,  16 },  {  -28,  52,  69,  16 },  {  -32,  48,  36,  32 },  {  -32,  40,   0,  36 } } },  /* 47: M KICK C, follow-up of M KICK A, UP P GUARD K M */
+    { { {  -16,  24,  84,  16 },  {  -28,  52,  69,  16 },  {  -32,  48,  36,  32 },  {  -32,  40,   0,  36 } } },  /* 44: M KICK C, follow-up of M KICK A / UP P GUARD K M */
+    { { {  -16,  24,  84,  16 },  {  -28,  52,  69,  16 },  {  -32,  48,  36,  32 },  {  -32,  40,   0,  36 } } },  /* 45: M KICK C, follow-up of M KICK A / UP P GUARD K M */
+    { { {  -16,  24,  84,  16 },  {  -28,  52,  69,  16 },  {  -32,  48,  36,  32 },  {  -32,  40,   0,  36 } } },  /* 46: M KICK C, follow-up of M KICK A / UP P GUARD K M */
+    { { {  -16,  24,  84,  16 },  {  -28,  52,  69,  16 },  {  -32,  48,  36,  32 },  {  -32,  40,   0,  36 } } },  /* 47: M KICK C, follow-up of M KICK A / UP P GUARD K M */
     { { {  -24,  24,  84,  16 },  {  -36,  52,  69,  16 },  {  -40,  48,  36,  32 },  {  -40,  40,   0,  36 } } },  /* 48: not used by a script */
-    { { {  -31,  23,  78,  16 },  {  -39,  46,  59,  20 },  {  -47,  39,  39,  23 },  {  -65,  43,   0,  48 } } },  /* 49: M KICK C, follow-up of M KICK A, UP P GUARD K M */
+    { { {  -31,  23,  78,  16 },  {  -39,  46,  59,  20 },  {  -47,  39,  39,  23 },  {  -65,  43,   0,  48 } } },  /* 49: M KICK C, follow-up of M KICK A / UP P GUARD K M */
     { { {  -25,  21,  80,  17 },  {  -28,  52,  59,  23 },  {  -33,  40,  35,  30 },  {  -37,  40,   1,  36 } } },  /* 50: not used by a script */
     { { {  -17,  28, 108,  16 },  {  -29,  54,  95,  15 },  {  -31,  69,  47,  49 },  {    0,   0,   0,   0 } } },  /* 51: V JUMP P L A */
     { { {   -5,  23,  77,  16 },  {  -25,  53,  67,  20 },  {  -18,  43,  36,  29 },  {  -25,  55,   0,  35 } } },  /* 52: L KICK A, UP P GUARD K L */
@@ -455,9 +455,9 @@ const HAND_BOX ken_hand_box[138] = {
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 42: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 43: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 44: no box */
-    { { {  -70,  51,  61,  60 },  {    0,   0,   0,   0 } } },  /* 45: M KICK C, follow-up of M KICK A, UP P GUARD K M */
-    { { { -107,  74,  41,  61 },  {    0,   0,   0,   0 } } },  /* 46: M KICK C, follow-up of M KICK A, UP P GUARD K M */
-    { { { -107,  74,  41,  61 },  {    0,   0,   0,   0 } } },  /* 47: M KICK C, follow-up of M KICK A, UP P GUARD K M */
+    { { {  -70,  51,  61,  60 },  {    0,   0,   0,   0 } } },  /* 45: M KICK C, follow-up of M KICK A / UP P GUARD K M */
+    { { { -107,  74,  41,  61 },  {    0,   0,   0,   0 } } },  /* 46: M KICK C, follow-up of M KICK A / UP P GUARD K M */
+    { { { -107,  74,  41,  61 },  {    0,   0,   0,   0 } } },  /* 47: M KICK C, follow-up of M KICK A / UP P GUARD K M */
     { { {  -61,  21,   9,  36 },  {    0,   0,   0,   0 } } },  /* 48: not used by a script */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 49: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 50: no box */

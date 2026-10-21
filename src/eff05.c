@@ -7,7 +7,8 @@
  * priority, animation index and line-scroll sync value.
  * effect_05_move starts the animation, draws it through disp_pos_trans_entry_s until the
  * object is retired by compel_dead_check, then frees its graphics and work.
- * Every stage BG init routine (BG000-BG190, bonus stages) calls effect_05_init.
+ * The stage background inits (all bgstNNN files except bgst070, bgst100 and bgst150) and effect 06
+ * call effect_05_init.
  */
 
 #include "structs.h"

@@ -90,7 +90,7 @@ const ATTACK_ATTR ibuki_catt_table[178] = {
     ATTR( 96,  0,  0,  2,  0,  1,  0,  0,  6,  3, 63,  0, 15, 24, 16,  6, 13,  1, 10,-10,  0, 77),  /* 69: CATCH 1 */
     ATTR( 32,  0,  0,  2,  0,  1,  0,  0, 12,  3,  0,  0,  0,  0, 16,  0,  0,  1, 10,-10,  0,  0),  /* 70: M PUNCH A, M PUNCH C, L PUNCH A +5 */
     ATTR( 95,  0,  0,  2,  0,  1,  7,196,  0,  3, 63,  0, 21, 12,  2,  1,  0,  0,  6,-12, 44, 73),  /* 71: not used by a script */
-    ATTR( 34,  0,  0,  2,  0,  1,  1,  0, 14,  3, 63,  0,  0, 22,  3,  6,  7,  0,  8,-12, 44, 73),  /* 72: L KICK B, follow-up of follow-up of M PUNCH C, L PUNCH A, OKIAGARI P S */
+    ATTR( 34,  0,  0,  2,  0,  1,  1,  0, 14,  3, 63,  0,  0, 22,  3,  6,  7,  0,  8,-12, 44, 73),  /* 72: L KICK B, follow-up of follow-up of M PUNCH C / L PUNCH A, OKIAGARI P S */
     ATTR( 32,  0,  0,  1,  0,  1,  0, 64, 10,  3,  0,  0,  0,  0, 34,  0,  0,  2, 10,-10,  0,  0),  /* 73: not used by a script */
     ATTR( 37,  0,  0,  2,  0,  1,  0,  0, 12,  3, 62,  0,  0, 12,  4,  6,  5,  0,  8,-12, 23, 73),  /* 74: not used by a script */
     ATTR( 33,  0,  0,  2,  0,  1,  0,  0, 12,  3, 62,  0,  0, 12,  2,  6,  5,  0,  6,-20, 23, 73),  /* 75: L PUNCH B */
@@ -144,9 +144,9 @@ const ATTACK_ATTR ibuki_catt_table[178] = {
     ATTR( 38,  1,  0,  2,  0,  1,  7,200, 14,  3, 62,  0,  8, 12, 54,  1,  0,  0,  5, -5, 23, 73),  /* 123: not used by a script */
     ATTR( 95,  0,  0,  3,  0,  1,  0,200,  0,  3, 62,  0, 21, 20,  0,  2,  0,  0,  9, -9, 44, 73),  /* 124: after SA III 23623+P (routine Att_CHOUCHUURENGEKI) */
     ATTR( 35,  0,  0,  2,  0,  1,  0,200,  0,  3, 62,  0,  9, 20,  0,  4,  0,  0,  9, -9, 44, 73),  /* 125: after SA III 23623+P (routine Att_CHOUCHUURENGEKI) */
-    ATTR( 89,  0,  0,  2,  0,  1,  0,  0, 13,  3, 45,  0,  3,  8,  3,  1,  1,  0,  6, -8, 39, 73),  /* 126: follow-up of M PUNCH C, L PUNCH A */
-    ATTR( 36,  0,  0,  1,  0,  1,  0,  0, 13,  3, 54,  0,  0, 10,  6,  4,  1,  0,  6, -6, 34, 73),  /* 127: follow-up of V JUMP P L A, F JUMP K S A */
-    ATTR( 36,  0,  0,  1,  0,  1,  0,  0, 12,  3, 54,  0,  0,  8,  6,  3,  1,  0,  6, -6, 34, 73),  /* 128: follow-up of V JUMP P L A, F JUMP K S A */
+    ATTR( 89,  0,  0,  2,  0,  1,  0,  0, 13,  3, 45,  0,  3,  8,  3,  1,  1,  0,  6, -8, 39, 73),  /* 126: follow-up of M PUNCH C / L PUNCH A */
+    ATTR( 36,  0,  0,  1,  0,  1,  0,  0, 13,  3, 54,  0,  0, 10,  6,  4,  1,  0,  6, -6, 34, 73),  /* 127: follow-up of V JUMP P L A / F JUMP K S A */
+    ATTR( 36,  0,  0,  1,  0,  1,  0,  0, 12,  3, 54,  0,  0,  8,  6,  3,  1,  0,  6, -6, 34, 73),  /* 128: follow-up of V JUMP P L A / F JUMP K S A */
     ATTR( 96,  0,  0,  2, 44,  1,  1,  0,  9,  3, 63,  0, 20, 16,  0,  4, 13,  0,  6, -6, 44, 51),  /* 129: CATCH 16 */
     ATTR( 37,  0,  0,  2, 49,  1,  7, 16, 12,  7, 63,  0, 22,  4, 54,  0,  0,  0,  0, -2, 28, 73),  /* 130: ATTACK 9 S: SA II 23623+P (routine Att_PL07_SA2) */
     ATTR( 33,  0,  0,  2, 52,  1,  7, 16, 12,  7, 63,  0, 22,  6,  0,  0,  0,  0,  0, -2, 23, 73),  /* 131: ATTACK 9 S: SA II 23623+P (routine Att_PL07_SA2) */
@@ -195,7 +195,7 @@ const ATTACK_ATTR ibuki_catt_table[178] = {
     ATTR( 36,  0,  0,  1,  0,  1,  0,  0, 10,  3, 54,  0,  1, 14,  3,  6,  1,  0,  7, -7, 39, 73),  /* 174: follow-up of M KICK B */
     ATTR( 35,  0,  0,  2,  0,  1,  1,  0, 13,  3, 63,  0, 11, 20,  2,  6,  1,  0, 10,-10, 23, 73),  /* 175: follow-up of KAGAMI P A */
     ATTR( 35,  0,  0,  2,  0,  1,  1,  0, 14,  3, 63,  0,  0, 20,  1,  6,  1,  0, 10,-10, 23, 73),  /* 176: follow-up of KAGAMI P A */
-    ATTR( 34,  0,  0,  2,  0,  1,  1,  0, 14,  3, 62,  0,  0, 16,  3,  6,  1,  0,  8,-12, 44, 73),  /* 177: follow-up of follow-up of M PUNCH C, L PUNCH A */
+    ATTR( 34,  0,  0,  2,  0,  1,  1,  0, 14,  3, 62,  0,  0, 16,  3,  6,  1,  0,  8,-12, 44, 73),  /* 177: follow-up of follow-up of M PUNCH C / L PUNCH A */
 };
 
 extern const u16 ibuki_se_random_0[];

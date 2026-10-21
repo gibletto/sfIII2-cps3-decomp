@@ -68,8 +68,8 @@ const ATTACK_ATTR ken_catt_table[97] = {
     ATTR( 96,  0,  0,  2,  0,  1,  0,  0,  0,  3, 63,  0,  4, 24, 16,  5, 13,  0,  8, -8,  0, 51),  /* 47: CATCH 1, CATCH 3 */
     ATTR( 37,  0,  0,  2,  0,  1,  0,  0, 10,  3,  0,  0,  6,  0, 18,  0,  0,  1, 10,-10,  0,  0),  /* 48: M PUNCH A, M PUNCH B, L PUNCH A +7 */
     ATTR( 96,  0,  0,  2,  0,  1,  0,  0, 10,  3, 63,  0,  5, 24, 16,  7, 13,  0,  8, -8,  0, 51),  /* 49: CATCH 5 */
-    ATTR( 32,  0,  0,  1,  0,  1,  0,  0, 10,  3, 54,  0,  0, 12, 16,  4,  5,  0,  6, -6, 39, 73),  /* 50: M KICK C, follow-up of M KICK A, UP P GUARD K M */
-    ATTR( 32,  0,  0,  1,  0,  1,  0,  0, 10,  3, 54,  0,  0, 20, 18,  4,  1,  0, 12,-12, 39, 73),  /* 51: M KICK C, follow-up of M KICK A, UP P GUARD K M */
+    ATTR( 32,  0,  0,  1,  0,  1,  0,  0, 10,  3, 54,  0,  0, 12, 16,  4,  5,  0,  6, -6, 39, 73),  /* 50: M KICK C, follow-up of M KICK A / UP P GUARD K M */
+    ATTR( 32,  0,  0,  1,  0,  1,  0,  0, 10,  3, 54,  0,  0, 20, 18,  4,  1,  0, 12,-12, 39, 73),  /* 51: M KICK C, follow-up of M KICK A / UP P GUARD K M */
     ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 14,  3, 54,  0,  0, 20, 22,  5,  4,  0,  6, -6, 18, 73),  /* 52: F JUMP P M A */
     ATTR( 37,  0,  0,  1,  0,  1,  1, 72, 15,  3, 63,  0,  2, 22, 16,  5, 11,  0, 10,-10, 28, 73),  /* 53: ATTACK 2 M: not started by a command */
     ATTR( 96,  0,  1,  2,  0,  1,  1, 72, 15,  3, 63,  0,  2, 14, 19,  1,  1,  0, 10,-10, 28, 73),  /* 54: ATTACK 2 L: not started by a command */

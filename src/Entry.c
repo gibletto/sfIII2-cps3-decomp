@@ -1,5 +1,5 @@
 /*
- * GAME.C  Task sleep timer tick
+ * ENTRY.C  Task control and the player entry / credit task
  *
  * task_sleep_tick is called once per frame from the Game_Task scheduler loop. It counts down the sleep
  * timer of every waiting task control block (status 1) and marks the task ready to run (status 2)
@@ -138,8 +138,6 @@ void task_sleep_tick(void) {
 }
 
 /*
- * ENTRY.C  Task control and the player entry / credit task
- *
  * Task control: init_task_stacks gives each of the eight task control blocks its stack; create_task,
  * destroy_current_task, kill_tasks_by_func and kill_tasks_by_priority start and stop tasks (used by
  * Com_Pl and end_sub).

@@ -11,7 +11,7 @@ extern const u8 op_scr_record_data_0[];
 extern const u8 op_scr_record_data_1[];
 extern const u8 op_scr_record_data_2[];
 extern const u8 op_scr_record_data_3[];
-extern const u8 end_main_tbl_06164C9C[];
+extern const u8 op_panel_data[];
 extern const s16 op_scrn_pos_tbl[];
 extern const u8 op_ctr_set[];
 
@@ -43,8 +43,8 @@ const u8 op_scr_record_data_3[56] = {
     0x7F, 0, 0, 0x3C, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-/* provisional name */
-const u8 end_main_tbl_06164C9C[752] = {
+/* provisional name: the opening's panels (op_panel_p, op_end_work.c) */
+const u8 op_panel_data[752] = {
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x40, 0, 0, 0, 0,
     0, 0, 0, 0x80, 0, 0, 0, 0, 0, 0, 0, 0xC0, 0, 0, 0, 0,
     0, 0, 0x10, 0, 0, 0, 0, 0, 0, 0, 0x10, 0x40, 0, 0, 0, 0,

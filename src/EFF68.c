@@ -1,5 +1,5 @@
 /*
- * EFF68.C  Effect 68: the stage object of background 040 (2nd Impact only)
+ * EFF68.C  Effect 68: the stage object of background 040 (2nd Impact version)
  *
  * effect_68_init (called from bgst040) places the object at 0x2A0,47 with the stage's character
  * table from char_add. effect_68_move runs eff68_jp while it waits: eff68_0000 starts the waiting

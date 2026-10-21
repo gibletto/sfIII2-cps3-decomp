@@ -34,7 +34,7 @@
 
 extern const s16 timer_4_tbl[5];
 extern const s16 end_4_pos[5][2];
-extern const u32 end_scrn_data_063F4C3C[];
+extern const u32 end_scrn_data[];
 extern const PANEL* end_4_panel_p[2];
 extern s8 end_etc_flag;
 
@@ -220,7 +220,7 @@ void end_400_cell_set(void) {
     for (j = 0; j < 2; j++) {
         p = end_4_panel_p[j];
         for (i = 0; i < 10; i++, p++) {
-            bg_cell_write(j, p->ofs, p->cell, (u32)end_scrn_data_063F4C3C, 0, 0x220);
+            bg_cell_write(j, p->ofs, p->cell, (u32)end_scrn_data, 0, 0x220);
         }
     }
 }

@@ -1,5 +1,5 @@
 /*
- * CMD_MAIN_2.C  Test-mode game configuration, debug menu and command input (part 2)
+ * CMD_MAIN_2.C  Special move command input
  *
  * Command input: waza_check runs for each player every frame; cmd_move steps the 56 waza (special
  * move) slots of the player's pl_CMD table through the check_* input-state routines (lever

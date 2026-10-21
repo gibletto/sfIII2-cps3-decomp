@@ -1,5 +1,5 @@
 /*
- * EFF86.C  Effect 86: one-shot object placed between the players
+ * EFF86.C  Effect 86: effect 85's partner object
  *
  * 3rd Strike: effect_86_init takes a type and reads its parameters from eff86_adrs_tbl (sub-state, family,
  * colour code, position, priority, character index; etc_char_table). It is spawned by appear.c

@@ -1,5 +1,5 @@
 /*
- * EFFE0.C  Effect E0 (140): the stage plates on the opponent select screen (2nd Impact only)
+ * EFFE0.C  Effect E0 (140): the stage plates on the opponent select screen (2nd Impact version)
  *
  * 2nd Impact's own effect 140. effect_E0_init makes eight plates, one per entry of the player's
  * EM_Candidate list (pattern 16 + stage, or 32 where Break_Com marks none). They slide in from

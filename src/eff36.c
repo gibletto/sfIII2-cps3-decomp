@@ -1,5 +1,5 @@
 /*
- * EFF36.C  Effect 36: zooming pictures (2nd Impact only)
+ * EFF36.C  Effect 36: zooming pictures (2nd Impact version)
  *
  * 2nd Impact's own effect 36. effect_36_init(typenum) makes eff36_data_num[typenum] objects from the
  * rows of eff36_data_adrs[typenum] (x, y, pattern, old_rno[0]); each object zooms in by its

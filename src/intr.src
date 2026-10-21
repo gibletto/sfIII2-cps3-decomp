@@ -620,10 +620,9 @@ p_coin_sw_sample_2:
           .DATA.L     _coin_sw_sample
 p_isp_frt_overflow:
           .DATA.L     _isp_frt_overflow
-; 06000810-0600083B: a small routine that nothing calls, kept as data words. It tests the byte at
-; 020143FF and stores 3F00 to 02064F44 when bit 0 is set and 0010 to 02064F48 when bit 7 is set (3rd Strike:
-; 020155F7, 0206AAA0, 0206AAA4);
-; its literal pool follows it.
+; 06000810-0600083B: a small routine that nothing calls, kept as data words (debug_exsw_preset, provisional
+; name). It tests the low byte of Demo_Time_Stop (020143FF) and stores 3F00 to exsw_1 when bit 0 is set and
+; 0010 to exsw_3 when bit 7 is set; 3rd Strike has the same routine. Its literal pool follows it.
           .DATA.W     H'D407
           .DATA.W     H'6040
           .DATA.W     H'C801

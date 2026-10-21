@@ -1,5 +1,5 @@
 /*
- * EFF39.C  Effect 39: the player's name plate on the character select screen (2nd Impact only)
+ * EFF39.C  Effect 39: the player's name plate on the character select screen (2nd Impact version)
  *
  * 2nd Impact's own effect 39, EFF38's partner. effect_39_init places the plate off screen on the
  * player's side; effect_39_move waits for the timer, slides it in, follows the cursor until

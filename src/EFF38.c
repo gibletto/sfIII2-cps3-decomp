@@ -1,5 +1,5 @@
 /*
- * EFF38.C  Effect 38: the player's face on the character select screen (2nd Impact only)
+ * EFF38.C  Effect 38: the player's face on the character select screen (2nd Impact version)
  *
  * 2nd Impact's own effect 38. effect_38_init places the face off screen on the player's side with its
  * pattern from the face under the cursor (or the given character); effect_38_move waits for

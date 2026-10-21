@@ -1,5 +1,5 @@
 /*
- * PLS03.C  Special move, super art and normal attack command checks (2nd Impact only)
+ * PLS03.C  Special move, super art and normal attack command checks (2nd Impact version)
  *
  * 2nd Impact keeps 3rd Strike's PLS03 and PLS03ATT in one object. check_full_gauge_attack, check_super_arts_attack
  * and execute_super_arts test the super art commands against the gauge; check_special_attack the
@@ -891,7 +891,7 @@ s32 sw;
 
 
 
-/* (the table had it as get_sel_hosei_tbl_ix) */
+/* the attack for button strength sw (shot_refresh) */
 s16 shot_data_refresh(s16 sw) {
     return shot_refresh[sw];
 }

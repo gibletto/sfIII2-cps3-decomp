@@ -8,7 +8,7 @@
 #pragma section TBL
 
 extern const u32 bg000_tbl_061626F4[];
-extern const u16 bg000_tbl_06162724[];
+extern const u16 bg_rewrite_cells[];
 extern const u16 bg_limit_tbl[];
 
 /* provisional name */
@@ -18,8 +18,8 @@ const u32 bg000_tbl_061626F4[12] = {
     0x3080, 7, 0x30C0, 8,
 };
 
-/* provisional name */
-const u16 bg000_tbl_06162724[554] = {
+/* provisional name: the cell lists of bg_rewrite_cell_tbl (bg_work.c) */
+const u16 bg_rewrite_cells[554] = {
     0, 0x2000, 0, 9, 0, 0x2040, 0, 0xA,
     0, 0x2080, 0, 0xB, 0, 0x20C0, 0, 0xC,
     0, 0x3000, 0, 0xD, 0, 0x3040, 0, 0xE,

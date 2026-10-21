@@ -2,8 +2,7 @@
  * COUNT.C  Vitality bars and round timers (part 3)
  *
  * Routines: count_cont_init, count_cont_reset, count_cont_main, counter_control, counter_flash,
- * counter_color_clear, bcount_cont_init, bcount_cont_reset, bcount_cont_main, bcounter_control,
- * bcounter_down.
+ * counter_color_clear.
  */
 
 #include "structs.h"

@@ -10,7 +10,7 @@
  * (set_damage_and_piyo), combo work and damage reduction (add_combo_work, cal_combo_waribiki), hit stop
  * and hit mark positions.
  * It also provides the damage routine lookups by damage index and general helpers used by many
- * effects and moves: hit_check_subroutine, hit_check_x_only, get_target_att_position.
+ * effects and moves: hit_check_subroutine and get_target_att_position.
  */
 
 #include "structs.h"

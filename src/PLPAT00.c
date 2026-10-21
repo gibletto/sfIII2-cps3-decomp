@@ -4,8 +4,7 @@
  * pl00_extra_attack runs the character-0 special moves from pl00_exatt_table for attack routine
  * numbers 16 and up:
  * Att_MOONSALT_KNEE_DROP; Att_RESURRECTION, with get_life_add_point giving the vitality gained
- * per frame during the resurrection animation; Att_JYOUKA, which rises toward a point above the
- * screen centre, pauses and drops back; and Att_PL00_TOKUSHUKOUDOU, the personal action, which
+ * per frame during the resurrection animation; and Att_PL00_TOKUSHUKOUDOU, the personal action, which
  * raises the character's bonus counters and reports it to the grade system.
  */
 

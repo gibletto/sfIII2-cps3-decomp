@@ -3,7 +3,8 @@
 **AI Disclosure**:
 Yes, this used Claude, as the 3rd Strike decomp did. 2nd Impact has no debug symbols of its own: the finished
 [3rd Strike decomp](https://github.com/gibletto/sfIII3-cps3-decomp) was the reference for its layout and names, and
-the names of the files here follow Capcom's 3rd Strike file names.
+the names of the files here follow Capcom's 3rd Strike file names (2nd Impact's own modules are named in the same
+style).
 
 C and SH-2 assembler source for the CPS3 program ROM of *Street Fighter III 2nd Impact: Giant Attack* (sfiii2n),
 built with the original Hitachi toolchain (SHC 5.0, asmsh, lnk 6.0, rof2bin). 2nd Impact is the game before
@@ -35,9 +36,11 @@ program, and writes:
 - `build/prog.bin` - the program image, 06000000-06FFFFFF
 - `build/sfiii2n.zip` - your ROM set with the two program SIMMs replaced
 
-`build/prog.bin` should match the SHA-1 in `tools/prog.sha1`, the arcade program's; the build prints whether it does,
-and whether each rebuilt program chip equals yours. 2nd Impact stores its instructions encrypted and its data plain,
-chosen per halfword; `tools/prog_enc.tsv` lists the encrypted stretches the packing writes back.
+The build checks `build/prog.bin` against the SHA-1 in `tools/prog.sha1`, the arcade program's, and each rebuilt
+program chip against yours; if any differs it still writes both files, then stops with BUILD FAILED (`make` fails
+too). 2nd Impact stores its instructions encrypted and its data plain, chosen per halfword; the packing works out
+which halfwords are instructions by following the code of the built program (`tools/codemap.py`), so a changed
+program is packed correctly too.
 
 When running a new build in MAME, use an empty `-nvram_directory`: MAME keeps the program SIMMs' flash in nvram
 and loads it over the ROM files.
@@ -49,10 +52,15 @@ and loads it over the ROM files.
               (cg_labels.src: names and sizes only; the bytes come from the ROM)
     include/  headers
     lib/      the compiler's run-time routines, as linked into the program
-    bin/      Hitachi SHC toolchain (four stages rebuilt, see below; the originals are in bin/original)
+    bin/      Hitachi SHC toolchain: shcmdl, shcgen, shcpep and shcasm are the rebuilt stages (see Compiler; the
+              originals are in bin/original)
     sf2i.sub  link order and section addresses
     functions.tsv  every routine of the arcade program: arcade address, size, name, file
-    tools/    cps3rom2.py: reads the ROM set, writes the new one
+    tools/    cps3rom2.py: reads the ROM set, writes the new one (codemap.py, sh2.py: its code walk)
+
+A data file holds the tables of the 3rd Strike file of that name (a `_b`, `_c` suffix: a further object of tables
+from it, linked elsewhere), or is named after the module that reads its tables (`<module>_tbl`) where no 3rd Strike
+file fits.
 
 ## Compiler
 
@@ -65,7 +73,7 @@ that shows it. None of them tests for a function's name or address, but several 
 so far and rest on that single example. As for 3rd Strike, a source form found later could make some of them
 unnecessary.
 
-With them, all 7,902 C routines (and the 37 assembler and 66 run-time routines) compile to the arcade's exact bytes,
+With them, all 7,913 C routines (and the 37 assembler and 19 run-time routines) compile to the arcade's exact bytes,
 and the linked `build/prog.bin` has the arcade program's SHA-1.
 
 ## Contributing

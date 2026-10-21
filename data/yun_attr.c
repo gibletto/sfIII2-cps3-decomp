@@ -29,7 +29,7 @@ const ATTACK_ATTR yun_catt_table[157] = {
     ATTR( 32,  0,  0,  1,  0,  1,  3,  0, 12,  3, 62,  0,  0, 12,  1,  2,  4,  0,  7, -7, 18, 73),  /* 8: M PUNCH A */
     ATTR( 38,  0,  0,  1,  0,  1,  3,  0, 14,  3, 62,  0,  0,  8,  3,  3,  8,  0,  8, -8, 23, 73),  /* 9: L PUNCH A */
     ATTR( 32,  0,  0,  2,  0,  1,  2,  0, 13,  3, 62,  0, 13, 26,  4,  7,  7,  0,  8, -8, 23, 73),  /* 10: L PUNCH B */
-    ATTR( 32,  0,  0,  2,  0,  1,  0,  0, 12,  3, 62,  0, 14, 10, 62,  2,  1,  0, 12,-12, 23, 73),  /* 11: follow-up of M PUNCH A, M PUNCH B */
+    ATTR( 32,  0,  0,  2,  0,  1,  0,  0, 12,  3, 62,  0, 14, 10, 62,  2,  1,  0, 12,-12, 23, 73),  /* 11: follow-up of M PUNCH A / M PUNCH B */
     ATTR( 32,  0,  0,  0,  0,  1,  3,  0, 12,  3, 63,  0,  0,  8,  0,  2,  1,  0,  6, -6, 29, 72),  /* 12: S KICK A, follow-up of S PUNCH A */
     ATTR( 32,  0,  0,  0,  0,  1,  3,  0, 12,  3, 63,  0,  0,  1,  0,  0, 15,  0,  6, -6, 13, 72),  /* 13: not started by a command */
     ATTR( 37,  0,  0,  0,  0,  1,  3,  0, 13,  3, 63,  0,  0,  4,  0,  1,  1,  0,  6, -6, 13, 72),  /* 14: KAGAMI P A */
@@ -91,10 +91,10 @@ const ATTACK_ATTR yun_catt_table[157] = {
     ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 13,  3, 54,  0,  0, 18,  7,  6,  7,  0,  7, -7, 39, 73),  /* 70: not used by a script */
     ATTR( 36,  0,  0,  1,  0,  1,  3,  0,  9,  3, 54,  0,  0, 16,  3,  5,  4,  0,  6, -6, 34, 73),  /* 71: F JUMP K S B, F JUMP K M B, F JUMP K L B */
     ATTR( 32,  0,  0,  1,  0,  1,  0,208, 13,  3, 54,  0,  0, 24,  7,  1,  0,  0, 12,-12, 39, 73),  /* 72: ATTACK 5 S: not started by a command */
-    ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 11,  3, 54,  0,  0, 18,  7,  3,  3,  0, 11,-11, 23, 73),  /* 73: follow-up of V JUMP P S A, F JUMP P S A */
+    ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 11,  3, 54,  0,  0, 18,  7,  3,  3,  0, 11,-11, 23, 73),  /* 73: follow-up of V JUMP P S A / F JUMP P S A */
     ATTR( 95,  0,  0,  2,  0,  1,  0,  0, 13,  3, 54,  0,  7,  8,  5,  1,  0,  0,  8, -8, 40, 73),  /* 74: not used by a script */
     ATTR( 95,  0,  0,  2,  0,  1,  0,  0, 13,  3, 54,  0,  7, 12,  6,  1,  0,  0,  8, -8, 40, 73),  /* 75: ATTACK 13 SP: not started by a command */
-    ATTR( 93,  0,  0,  2, 31,  1,  0,  0, 11,  7, 62,  0,  5, 12,  3,  3,  1,  0, 12,-14, 87, 73),  /* 76: follow-up of follow-up of M PUNCH A, M PUNCH B */
+    ATTR( 93,  0,  0,  2, 31,  1,  0,  0, 11,  7, 62,  0,  5, 12,  3,  3,  1,  0, 12,-14, 87, 73),  /* 76: follow-up of follow-up of M PUNCH A / M PUNCH B */
     ATTR( 35,  0,  0,  2,  0,  1,  1,  0,  0,  3, 62,  0,  0, 10,  2,  2,  1,  0,  6, -6, 34, 73),  /* 77: follow-up of S KICK A */
     ATTR( 32,  0,  0,  2,  0,  1,  0,  0, 10,  3, 62,  0,  0, 12, 20,  4,  8,  0,  8, -8, 39, 73),  /* 78: follow-up of follow-up of S KICK A */
     ATTR( 96,  0,  0,  3,  0,  1,  7,192, 14,  3, 63,  0, 15,  8,  2,  0,  0,  0,  4, -8, 39, 73),  /* 79: not used by a script */
@@ -144,7 +144,7 @@ const ATTACK_ATTR yun_catt_table[157] = {
     ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 11,  3, 54,  0,  0, 16,  6,  0,  0,  0,  6, -6, 28, 73),  /* 123: follow-up of follow-up of F JUMP P M A */
     ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 11,  3, 54,  0,  0, 20,  7,  0,  0,  0,  7, -7, 28, 73),  /* 124: follow-up of BONUS WIN 1 */
     ATTR( 32,  0,  0,  0,  0,  1,  1,  0, 13,  3, 54,  0,  0,  8,  5,  0,  0,  0,  5, -5, 44, 72),  /* 125: follow-up of BONUS WIN 2 */
-    ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 13,  3, 54,  0,  0, 14,  6,  0,  0,  0,  6, -6, 44, 73),  /* 126: follow-up of follow-up of V JUMP K M A, F JUMP K M A */
+    ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 13,  3, 54,  0,  0, 14,  6,  0,  0,  0,  6, -6, 44, 73),  /* 126: follow-up of follow-up of V JUMP K M A / F JUMP K M A */
     ATTR( 32,  0,  0,  1,  0,  1,  1,  0, 13,  3, 54,  0,  0, 18,  7,  0,  0,  0,  7, -7, 44, 73),  /* 127: follow-up of follow-up of F JUMP K L A */
     ATTR( 36,  0,  0,  1,  0,  1,  2,  0,  9,  3, 54,  0,  0, 16,  3,  0,  0,  0,  6, -6, 44, 73),  /* 128: follow-up of BONUS WIN 3, follow-up of follow-up of F JUMP K M B, follow-up of follow-up of F JUMP K L B */
     ATTR( 32,  0,  0,  0,  0,  1,  1,  0,  5,  3, 54,  0,  0,  8,  7,  0,  0,  0, 12,-16, 44, 73),  /* 129: follow-up of follow-up of SEAN BALL HIT */

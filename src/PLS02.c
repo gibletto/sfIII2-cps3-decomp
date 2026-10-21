@@ -1,5 +1,5 @@
 /*
- * PLS02.C  Movement data, body push, vitality and super art gauge rules (2nd Impact only)
+ * PLS02.C  Movement data, body push, vitality and super art gauge rules (2nd Impact version)
  *
  * 2nd Impact keeps 3rd Strike's PLS02 and PLSGAUGE in one object. The movement half: setup_mvxy_data,
  * add_to_mvxy_data, cal_mvxy_speed and the add_mvxy_speed family load and apply the per-move x/y
@@ -187,7 +187,8 @@ void attack_hit_dummy(PLW* wk) {}
 
 
 
-/* 2nd Impact form of both speeds rescaled by the x direction */
+/* 2nd Impact form: scale the y speed (x1.1 when positive, else x0.2) and the x speed (x1.2 when
+   negative; otherwise x0.6, at least 2, then reversed with d[0] cleared) */
 void remake_mvxy_PoSB(WORK* wk) {
     switch (((wk->mvxy.a[0].sp < 0) * 2) + (wk->mvxy.a[0].sp > 0)) {
     case 2:
@@ -224,7 +225,8 @@ void remake_mvxy_PoSB(WORK* wk) {
 
 
 
-/* 2nd Impact form of */
+/* 2nd Impact form: for an air parry, scale the y speed (x1.2 when positive, otherwise x0.4 and
+   reversed, at most 12) and the x speed (x1.25) */
 void setup_air_paring_mvxy(WORK* wk) {
     switch (((wk->mvxy.a[1].sp < 0) * 2) + (wk->mvxy.a[1].sp > 0)) {
     case 1:

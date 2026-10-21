@@ -15,7 +15,6 @@
 
 #pragma section TBL
 
-
 const s16 gouki2_stepxy_table[105][2] = {
     /*   x      y          offset */
     {     0,     0 },  /* 0 */

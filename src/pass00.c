@@ -165,7 +165,6 @@ void Passive00_0008(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0009(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -344,7 +343,6 @@ void Passive00_0018(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0019(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -418,7 +416,6 @@ void Passive00_0022(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0023(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -511,7 +508,6 @@ void Passive00_0027(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0028(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -589,7 +585,6 @@ void Passive00_0032(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0033(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -638,7 +633,6 @@ void Passive00_0035(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0036(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -664,7 +658,6 @@ void Passive00_0036(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0037(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -684,7 +677,6 @@ void Passive00_0037(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0038(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -908,7 +900,6 @@ void Passive00_0050(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0051(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1057,7 +1048,6 @@ void Passive00_0060(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0061(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1074,7 +1064,6 @@ void Passive00_0061(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0062(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1114,7 +1103,6 @@ void Passive00_0064(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0065(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1131,7 +1119,6 @@ void Passive00_0065(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0066(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1193,7 +1180,6 @@ void Passive00_0069(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0070(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1210,7 +1196,6 @@ void Passive00_0070(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0071(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1293,7 +1278,6 @@ void Passive00_0074(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0075(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1316,7 +1300,6 @@ void Passive00_0075(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0076(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1345,7 +1328,6 @@ void Passive00_0076(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0077(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1457,7 +1439,6 @@ void Passive00_0082(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0083(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1483,7 +1464,6 @@ void Passive00_0083(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0084(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1584,7 +1564,6 @@ void Passive00_0087(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0088(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1735,7 +1714,6 @@ void Passive00_0096(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0097(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1783,7 +1761,6 @@ void Passive00_0098(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0099(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1857,7 +1834,6 @@ void Passive00_0102(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0103(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1912,7 +1888,6 @@ void Passive00_0105(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0106(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -1989,7 +1964,6 @@ void Passive00_0109(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0110(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2025,7 +1999,6 @@ void Passive00_0111(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0112(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2079,7 +2052,6 @@ void Passive00_0113(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0114(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2105,7 +2077,6 @@ void Passive00_0114(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0115(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2256,7 +2227,6 @@ void Passive00_0123(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0124(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2374,7 +2344,6 @@ void Passive00_0129(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0130(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2419,7 +2388,6 @@ void Passive00_0131(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0132(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2533,7 +2501,6 @@ void Passive00_0139(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0140(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2547,7 +2514,6 @@ void Passive00_0140(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0141(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2564,7 +2530,6 @@ void Passive00_0141(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0142(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
@@ -2667,7 +2632,6 @@ void Passive00_0147(PLW* wk) {
 
 
 
-/* (2nd Impact steps differ) */
 void Passive00_0148(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:

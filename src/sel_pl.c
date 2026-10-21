@@ -81,12 +81,11 @@
 #include "sel_pl.h"
 #include "fighter.h"
 
-/* provisional declarations (trial) */
+/* declarations the headers do not give */
 extern s16 Sel_Arts_Pos[2];
 extern s8 Sel_Char_Shot[2];
-extern s16 sel_timer_stop;
+extern s16 Exit_No;
 extern s16 sel_plate_state[2][3];
-#define Exit_No sel_timer_stop
 void Exit_8th(void);
 void Exit_9th(void);
 #pragma inline(Setup_BG)
@@ -131,15 +130,15 @@ s32 effect_I1_init(s16 PL_id, s16 x, s16 y, s16 a3, s16 a4);
 s32 effect_59_init();
 s32 effect_E0_init();
 s32 effect_D8_entry();
-extern u16 Result_Timer[2];
+extern u16 EM_Course[2];
 extern u8 Straight_Lose_Count;
+extern s8 Introduce_Boss[2];
 extern s8 Introduce_Break_Into[2];
-extern s8 Straight_Flag[2];
 extern u8 Stock_Battle_Country[2];
 extern s16 Exit_Wait;
 extern s16 appear_type;
 extern const s8 EM_Candidate_Data[][4][8];
-extern const u8 Com_Data_0611A9E8[];
+extern const u8 rival_char_tbl[];
 extern u8 Special_Enemy[2];
 extern u8 paring_counter[2];
 extern u8 paring_bonus_r[2];
@@ -419,11 +418,11 @@ const u16 Sel_Command_Data[6][8] = {
 
 
 /* provisional name */
-/* the Shin Gouki command on the select screen: each step wants the cursor on one face and a
-   fixed run of lever moves */
+/* the Gouki code on the select screen: each step wants the cursor on one face (Ryu, Ken, Ryu, Ken,
+   Sean) and a fixed run of lever moves; the last opens Gouki's face */
 void Sel_Command_Check(void) {
     u16 sw;
-    if (Sel_Command_Off) {
+    if (Gouki_Select_Open) {
         return;
     }
     Sel_Command_Sw = Sel_Lever_Get(ID);
@@ -437,7 +436,7 @@ void Sel_Command_Check(void) {
     if (Sel_Command_Data[Sel_Command_Step[ID]][Sel_Command_Key[ID]] == Sel_Command_Sw) {
         if (Sel_Command_Data[Sel_Command_Step[ID]][Sel_Command_Key[ID] + 1] == 0xFFFF) {
             if (Sel_Command_Face[Sel_Command_Step[ID] + 1] == 0xFF) {
-                Sel_Command_Off = -1;
+                Gouki_Select_Open = -1;
                 return;
             }
             Sel_Command_Step[ID]++;
@@ -597,7 +596,7 @@ u16 sw;
         }
     }
     if (sw & 1) {
-        if (Cursor_X[PL_id] == 6 && Sel_Command_Off != 0) {
+        if (Cursor_X[PL_id] == 6 && Gouki_Select_Open != 0) {
             Cursor_Move[PL_id] = 1;
             if (++Cursor_Y[PL_id] > 1) {
                 Cursor_Y[PL_id] = 0;
@@ -605,7 +604,7 @@ u16 sw;
         }
     }
     if (sw & 2) {
-        if (Cursor_X[PL_id] == 6 && Sel_Command_Off != 0) {
+        if (Cursor_X[PL_id] == 6 && Gouki_Select_Open != 0) {
             Cursor_Move[PL_id] = 1;
             if (--Cursor_Y[PL_id] < 0) {
                 Cursor_Y[PL_id] = 1;
@@ -892,7 +891,7 @@ void Setup_EM_Course(PL_id, sw)
 s16 PL_id;
 u16 sw;
 {
-    if (Result_Timer[PL_id] == 0xFFFF) {
+    if (EM_Course[PL_id] == 0xFFFF) {
         goto set_id;
     }
 set_id:
@@ -907,25 +906,25 @@ set_id:
     case 24:
     case 40:
     case 72:
-        Result_Timer[PL_id] = 0;
+        EM_Course[PL_id] = 0;
         break;
     case 136:
     case 264:
     case 520:
-        Result_Timer[PL_id] = 1;
+        EM_Course[PL_id] = 1;
         break;
     case 20:
     case 36:
     case 68:
-        Result_Timer[PL_id] = 2;
+        EM_Course[PL_id] = 2;
         break;
     case 132:
     case 260:
     case 516:
-        Result_Timer[PL_id] = 3;
+        EM_Course[PL_id] = 3;
         break;
     default:
-        Result_Timer[PL_id] = random_32_com() & 3;
+        EM_Course[PL_id] = random_32_com() & 3;
         break;
     }
     Init_EM_Course(PL_id);
@@ -941,11 +940,11 @@ s16 PL_id;
     Stock_Com_Color[PL_id] = -1;
     Stock_Com_Arts[PL_id] = -1;
     Straight_Lose_Count = 0;
-    Introduce_Break_Into[PL_id] = 0;
-    Initialize_EM_Candidate(PL_id, Result_Timer[PL_id]);
+    Introduce_Boss[PL_id] = 0;
+    Initialize_EM_Candidate(PL_id, EM_Course[PL_id]);
     em = EM_Candidate[PL_id][7];
     Break_Com[PL_id][em] = 0;
-    Introduce_Break_Into[PL_id] = 0;
+    Introduce_Boss[PL_id] = 0;
     Special_Enemy[PL_id] = 0;
     Break_Com[PL_id][14] = 0;
     Last_Player_id = PL_id;
@@ -1593,7 +1592,7 @@ void Exit_4th(void) {
         Exit_No = 7;
         Exit_Wait = 90;
         Next_Step = 0;
-        Introduce_Break_Into[Player_id] = 1;
+        Introduce_Boss[Player_id] = 1;
         effect_43_init(0, 1);
         effect_43_init(1, 1);
         break;
@@ -1721,7 +1720,7 @@ void Boss_Exit_1st(void) {
     Setup_BG_Layer3();
     My_char[COM_id] = Break_Into_CPU;
     if (Break_Into_CPU == 2) {
-        (&My_char[COM_id])[0] = Com_Data_0611A9E8[My_char[Player_id]];
+        (&My_char[COM_id])[0] = rival_char_tbl[My_char[Player_id]];
     }
     EM_id = My_char[COM_id];
     Stock_Com_Arts[Player_id] = -1;
@@ -1802,7 +1801,7 @@ void Boss_Exit_6th(void) {
         Exit_No++;
         Exit_Wait = 120;
         Next_Step = 0;
-        Straight_Flag[Player_id] = 1;
+        Introduce_Break_Into[Player_id] = 1;
         bgm_request(3);
         effect_43_init(0, 10);
         effect_43_init(1, 10);
@@ -1819,9 +1818,9 @@ void Boss_Exit_7th(void) {
     if (--Exit_Wait == 0) {
         Exit_No++;
         if (Break_Into_CPU == 14 || Break_Into_CPU == 15) {
-            Battle_Country = EM_Candidate_Data[My_char[Player_id]][Result_Timer[Player_id]][VS_Index[Player_id]];
+            Battle_Country = EM_Candidate_Data[My_char[Player_id]][EM_Course[Player_id]][VS_Index[Player_id]];
         } else {
-            Battle_Country = EM_Candidate_Data[My_char[Player_id]][Result_Timer[Player_id]][VS_Index[Player_id] - 1];
+            Battle_Country = EM_Candidate_Data[My_char[Player_id]][EM_Course[Player_id]][VS_Index[Player_id] - 1];
         }
         bg_w.stage = Battle_Country;
     }
@@ -1833,7 +1832,7 @@ s32 Setup_Battle_Country(void) {
     if (My_char[COM_id] == 15) {
         return Stock_Battle_Country[Player_id];
     }
-    return EM_Candidate_Data[My_char[Player_id]][Result_Timer[Player_id]][VS_Index[Player_id]];
+    return EM_Candidate_Data[My_char[Player_id]][EM_Course[Player_id]][VS_Index[Player_id]];
 }
 
 
@@ -2063,7 +2062,7 @@ s32 Check_Boss(PL_id)
 s16 PL_id;
 {
     Setup_Next_EM();
-    if (VS_Index[Player_id] >= 7 && Introduce_Break_Into[Player_id] == 0) {
+    if (VS_Index[Player_id] >= 7 && Introduce_Boss[Player_id] == 0) {
         Control_Time = Limit_Time;
         SC_Personal_Time[PL_id] = Control_Time;
         return Break_Into_CPU = 1;

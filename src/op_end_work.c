@@ -12,11 +12,11 @@
 typedef struct { PANEL panel[16]; } OP_PANEL;
 
 extern const u16 end_10_anm_tbl[];
-extern const u16 end_5_ctbl_061653E4[];
+extern const u16 end_4_panel_data[];
 extern const u16 end_7_anm_tbl[];
 extern const PANEL end_10_panel_tbl_0[];
 extern const PANEL end_10_panel_tbl_1[];
-extern const u8 end_main_tbl_06164C9C[];
+extern const u8 op_panel_data[];
 extern void end_00000();
 extern void end_01000();
 extern void end_02000();
@@ -41,10 +41,10 @@ extern void end_13000();
 
 /* 02007724 */
 const OP_PANEL* op_panel_p[4] = {
-    (const OP_PANEL *)end_main_tbl_06164C9C,
-    (const OP_PANEL *)end_main_tbl_06164C9C,
-    (const OP_PANEL *)((const u8*)end_main_tbl_06164C9C + 128),
-    (const OP_PANEL *)((const u8*)end_main_tbl_06164C9C + 256),
+    (const OP_PANEL *)op_panel_data,
+    (const OP_PANEL *)op_panel_data,
+    (const OP_PANEL *)((const u8*)op_panel_data + 128),
+    (const OP_PANEL *)((const u8*)op_panel_data + 256),
 };
 /* the code declares end_main_jp[24]; end_map_tbl starts after its first 16 entries */
 /* 02007734 */
@@ -60,8 +60,8 @@ u32 end_map_tbl[4] = {
 };
 /* 02007784 */
 const PANEL* end_4_panel_p[2] = {
-    (const PANEL *)end_5_ctbl_061653E4,
-    (const PANEL *)((const u8*)end_5_ctbl_061653E4 + 80),
+    (const PANEL *)end_4_panel_data,
+    (const PANEL *)((const u8*)end_4_panel_data + 80),
 };
 /* 0200778C */
 const PANEL* end_8_panel_p[2] = {
@@ -109,10 +109,7 @@ u32 end_11_cell_ptr1_tail[11] = {
 };
 
 
-/* the code declares it OP_W op_w (28 bytes); effF6_end_flag and the names after it lie inside it */
-u8 op_w[8];  /* 02023A88 */
-s16 effF6_end_flag;  /* 02023A90, provisional name */
-u8 effF6_end_flag_tail[18];  /* after effF6_end_flag; nothing refers to it by name or address */
+OP_W op_w;  /* 02023A88 */
 s16 op_end_flag;  /* 02023AA4 */
 s16 op_obj_disp;  /* 02023AA6 */
 s8 effE1_end_flag;  /* 02023AA8, provisional name */

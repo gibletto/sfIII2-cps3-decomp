@@ -8,7 +8,7 @@
 #pragma section TBL
 
 extern const s16 paring_b_mark_data[][24][2];
-extern const u16 EFFF8_0617CDC0[];
+extern const u16 efff9_scene_data[];
 extern const s16 effg0_col_tbl[];
 extern const s16 effg0_pos_tbl[][3];
 extern const s16 effg0_flash_tbl[][4];
@@ -20,8 +20,9 @@ const s16 paring_b_mark_data[2][24][2] = {
     { { 28, 44 }, { 26, 44 }, { 10, 48 }, { 16, 50 }, { 16, 50 }, { 12, 52 }, { 16, 50 }, { 16, 50 }, { 40, 92 }, { 42, 62 }, { 28, 76 }, { 28, 76 }, { 38, 68 }, { 30, 84 }, { 28, 108 }, { 28, 56 }, { 38, 52 }, { 40, 60 }, { 28, 76 }, { 32, 48 }, { 32, 48 }, { 40, 92 }, { 28, 76 }, { 28, 76 } },
 };
 
-/* provisional name */
-const u16 EFFF8_0617CDC0[462] = {
+/* provisional name: effect F9's per-character scene lists, (message number, time) pairs each ended by 0, 0xFFFF;
+   effF9_mes_pt's entries from 17 on point into it */
+const u16 efff9_scene_data[462] = {
     0, 0xFFFF, 1, 0xA0, 2, 0xC8, 3, 0xB4,
     4, 0xDC, 5, 0xDC, 6, 0x118, 0, 0xFFFF,
     7, 0x200, 0, 0xFFFF, 8, 0xF0, 9, 0x5A,

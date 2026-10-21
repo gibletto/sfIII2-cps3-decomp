@@ -1,8 +1,8 @@
 /*
  * EFF93.C  Effect 93: face-select BG slide
  *
- * effect_93 (from sel_pl): slides BG1 on the face-select screen (Eff93_SLIDE_L/R, SHIFT_L/R),
- * hiding and re-enabling the cursor; Bg_Family_Set_Ex sets up a BG family for sel_pl and Win.
+ * effect_93 (from sel_pl): slides BG1 on the face-select screen vertically (Eff93_SLIDE_UP / Eff93_SLIDE_DOWN),
+ * hiding and re-enabling the cursor; Bg_Family_Set_Ex sets up a BG family for sel_pl and win_2.
  */
 
 #include "structs.h"

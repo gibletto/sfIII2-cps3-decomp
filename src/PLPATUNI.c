@@ -11,8 +11,7 @@
  * target-relative jump data used by the leaping moves (ahj_empos_hos, 16 characters in 2nd Impact).
  *
  * 2nd Impact has no metamorphose routines (Att_METAMOR_WAIT/REBIRTH) and no hoken_muriyari_chakuchi (the
- * landing reset is a plain store). cal_initial_speed_y is called through a K&R declaration: with the
- * prototype its constant argument weighs in the register choice (Att_SENPUUKYAKU2 kept 0 in r13).
+ * landing reset is a plain store). cal_initial_speed_y is declared here without a prototype.
  */
 
 #include "structs.h"

@@ -20,7 +20,7 @@
 #include "Com_Pl.h"
 #include "eff14.h"
 
-/* trial declarations */
+/* declarations the headers do not give */
 void zoom_ud_check(void);
 void bg_x_move_check(void);
 void bg_y_move_check(void);
@@ -141,7 +141,7 @@ void bg1803(void) {
 
 
 /* provisional name */
-/* (the bytes of 3rd Strike bns12_init00, src/bns_bg2.c:91) */
+/* (the same code as 3rd Strike bns12_init00) */
 void bg1803_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;

@@ -6,8 +6,7 @@
  *
  * att_box  two boxes per entry: the attack boxes the hit check tests against the opponent's
  *          damage boxes; while they are out they also count as damage boxes of this character
- * cat_box  the reach of a throw: the opponent's caught box must overlap it
- * cau_box  where this character can be thrown from
+ * cat_box, cau_box  the throw boxes: a projectile has none, only row 0
  *
  * Row comments: the moves whose frames use the box (debug viewer names) and, for att_box, the
  * catt_table attacks dealt through it (rows of the fighter's _attr.c). Row 0 is no box.

@@ -149,8 +149,8 @@ const HIT_IX gouki1_hit_ix_table[191] = {
     {  121,  121,    0,   36,    4,   36,    0,    3 },  /* 113: S V JP M P A */
     {   84,   84,    0,    0,    4,   37,    0,    4 },  /* 114: V JUMP K L A */
     {   84,   84,    0,    0,    4,    0,    0,    4 },  /* 115: V JUMP K L A */
-    {   85,   85,    0,    0,   16,    0,    0,   19 },  /* 116: follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +4 */
-    {   86,   86,    0,    0,   16,    0,    0,   19 },  /* 117: follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
+    {   85,   85,    0,    0,   16,    0,    0,   19 },  /* 116: follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +4 */
+    {   86,   86,    0,    0,   16,    0,    0,   19 },  /* 117: follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
     {   87,   87,    0,    0,   12,   16,    0,   18 },  /* 118: ATTACK 3 S: 214+K light (routine Att_SENPUUKYAKU), ATTACK 3 M: 214+K medium (routine Att_SENPUUKYAKU), ATTACK 3 L: 214+K heavy/EX (routine Att_SENPUUKYAKU) */
     {   88,   88,    0,    0,    1,    0,    0,   20 },  /* 119: ATTACK 3 S: 214+K light (routine Att_SENPUUKYAKU), ATTACK 3 M: 214+K medium (routine Att_SENPUUKYAKU), ATTACK 3 L: 214+K heavy/EX (routine Att_SENPUUKYAKU) */
     {   89,   89,    0,    0,    1,    0,    0,    1 },  /* 120: ATTACK 3 S: 214+K light (routine Att_SENPUUKYAKU), ATTACK 3 M: 214+K medium (routine Att_SENPUUKYAKU), ATTACK 3 L: 214+K heavy/EX (routine Att_SENPUUKYAKU) */
@@ -189,7 +189,7 @@ const HIT_IX gouki1_hit_ix_table[191] = {
     {    1,    0,    0,    0,    1,   64,    0,    6 },  /* 153: ATTACK 5 S: SA II 23623+P (routine Att_SHOURYUUREPPA) */
     {    1,    0,    0,    0,    3,   65,    0,    6 },  /* 154: ATTACK 5 S: SA II 23623+P (routine Att_SHOURYUUREPPA) */
     {    0,    0,    0,    0,    0,    0,    0,    6 },  /* 155: not used by a script */
-    {    0,    0,    0,    0,    0,    0,    0,    1 },  /* 156: follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +4 */
+    {    0,    0,    0,    0,    0,    0,    0,    1 },  /* 156: follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +4 */
     {    0,    0,    0,    0,    0,    0,    0,    1 },  /* 157: not used by a script */
     {    0,    0,    0,    0,    0,    0,    0,    2 },  /* 158: not used by a script */
     {  118,  118,    0,    0,    4,    0,    0,    4 },  /* 159: V JUMP P L A, S V JP L P A */
@@ -313,8 +313,8 @@ const BODY_BOX gouki1_body_box[131] = {
     { { {  -23,  39,  89,  16 },  {  -32,  63,  67,  24 },  {  -49,  76,  35,  33 },  {    0,   0,   0,   0 } } },  /* 82: V JUMP K S A, F JUMP K S A, S V JP S K A */
     { { {  -28,  48,  92,  14 },  {  -39,  68,  81,  14 },  {  -44,  74,  46,  41 },  {    0,   0,   0,   0 } } },  /* 83: F JUMP K M A, F JUMP K L A, S V JP L K A */
     { { {  -11,  23, 106,  16 },  {  -23,  53,  90,  20 },  {  -29,  57,  43,  40 },  {    0,   0,   0,   0 } } },  /* 84: V JUMP K L A */
-    { { {  -28,  38,  74,  16 },  {  -37,  65,  56,  20 },  {  -19,  43,  36,  29 },  {  -46,  80,   0,  35 } } },  /* 85: follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +4 */
-    { { {  -31,  29,  70,  16 },  {  -42,  77,  55,  23 },  {  -19,  43,  36,  29 },  {  -46,  80,   0,  35 } } },  /* 86: follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
+    { { {  -28,  38,  74,  16 },  {  -37,  65,  56,  20 },  {  -19,  43,  36,  29 },  {  -46,  80,   0,  35 } } },  /* 85: follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +4 */
+    { { {  -31,  29,  70,  16 },  {  -42,  77,  55,  23 },  {  -19,  43,  36,  29 },  {  -46,  80,   0,  35 } } },  /* 86: follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
     { { {  -13,  22, 100,  17 },  {  -34,  65,  88,  14 },  {  -29,  60,  49,  43 },  {    0,   0,   0,   0 } } },  /* 87: ATTACK 8 S: air 214+K light (routine Att_KUUCHUUNICHIRINSHOU), ATTACK 8 M: air 214+K medium (routine Att_KUUCHUUNICHIRINSHOU), ATTACK 8 L: air 214+K heavy/EX (routine Att_KUUCHUUNICHIRINSHOU) +3 */
     { { {  -12,  18,  72,  14 },  {  -24,  52,  62,  14 },  {  -14,  40,  38,  22 },  {  -24,  56,   0,  36 } } },  /* 88: ATTACK 3 S: 214+K light (routine Att_SENPUUKYAKU), ATTACK 3 M: 214+K medium (routine Att_SENPUUKYAKU), ATTACK 3 L: 214+K heavy/EX (routine Att_SENPUUKYAKU) */
     { { {  -10,  18,  84,  14 },  {  -18,  44,  74,  14 },  {  -12,  36,  42,  14 },  {  -16,  56,   0,  40 } } },  /* 89: ATTACK 3 S: 214+K light (routine Att_SENPUUKYAKU), ATTACK 3 M: 214+K medium (routine Att_SENPUUKYAKU), ATTACK 3 L: 214+K heavy/EX (routine Att_SENPUUKYAKU) */
@@ -449,7 +449,7 @@ const HAND_BOX gouki1_hand_box[134] = {
     { { {  -72,  47,  44,  37 },  {    0,   0,   0,   0 } } },  /* 83: F JUMP K M A, F JUMP K L A, S V JP L K A */
     { { {  -74,  68,  70,  24 },  {    0,   0,   0,   0 } } },  /* 84: V JUMP K L A */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 85: no box */
-    { { {  -64,  22,  55,  23 },  {    0,   0,   0,   0 } } },  /* 86: follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
+    { { {  -64,  22,  55,  23 },  {    0,   0,   0,   0 } } },  /* 86: follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
     { { {  -60,  50,  53,  16 },  {    0,   0,   0,   0 } } },  /* 87: ATTACK 8 S: air 214+K light (routine Att_KUUCHUUNICHIRINSHOU), ATTACK 8 M: air 214+K medium (routine Att_KUUCHUUNICHIRINSHOU), ATTACK 8 L: air 214+K heavy/EX (routine Att_KUUCHUUNICHIRINSHOU) +3 */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 88: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 89: no box */
@@ -520,7 +520,7 @@ const HOSEI_BOX gouki1_hos_box[26] = {
     { {  -25,   50,   48,   40 } },  /* 16: V JUMP P S A, F JUMP P S A, S V JP S P A +1 */
     { {  -22,   49,   58,   32 } },  /* 17: not used by a script */
     { {  -24,   44,   54,   52 } },  /* 18: ATTACK 6 S: SA III 23623+K (routine Att_SHOURYUUKEN), SA III air 23623+K (routine Att_KUUCHUUJINNCHUUWATARI), ATTACK 8 S: air 214+K light (routine Att_KUUCHUUNICHIRINSHOU) +5 */
-    { {  -46,   80,    0,   70 } },  /* 19: follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
+    { {  -46,   80,    0,   70 } },  /* 19: follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
     { {  -24,   57,   27,   63 } },  /* 20: ATTACK 3 S: 214+K light (routine Att_SENPUUKYAKU), ATTACK 3 M: 214+K medium (routine Att_SENPUUKYAKU), ATTACK 3 L: 214+K heavy/EX (routine Att_SENPUUKYAKU) */
     { {  -38,   63,    0,   80 } },  /* 21: DASH HUMIKOMI, DASH TOBINOKI */
     { {  -25,   50,   48,   40 } },  /* 22: AIR S, AIR M, AIR L +35 */

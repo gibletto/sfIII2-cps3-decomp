@@ -1,5 +1,5 @@
 /*
- * EffD8.C  Effect D8: the player's face cursor on the character select screen (2nd Impact only)
+ * EffD8.C  Effect D8: the player's face cursor on the character select screen (2nd Impact version)
  *
  * effect_D8_entry (from the select screen, one per player) makes the cursor unless the player
  * already stands on face 14 (effD8_face_check). effect_D8_move waits for Appear_Cursor, follows
@@ -29,7 +29,6 @@ s32 effD8_face_check(s16 PL_id);
 
 
 
-/* its own version */
 void effect_D8_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case 0:

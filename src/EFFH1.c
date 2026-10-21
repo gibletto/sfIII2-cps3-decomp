@@ -1,5 +1,5 @@
 /*
- * EFFH1.C  Effect H1: four ending objects that fly in when the scroll arrives (2nd Impact only)
+ * EFFH1.C  Effect H1: four ending objects that fly in when the scroll arrives (2nd Impact version)
  *
  * 2nd Impact rewrote effect H1 (3rd Strike: objects that reappear after a random wait). effect_H1_init
  * (ending 9) makes four objects from effh1_data_tbl; each waits until bg 0 has scrolled
@@ -90,6 +90,6 @@ s32 effect_H1_init(void) {
         ewk->wu.my_priority = ewk->wu.position_z = *data_ptr++;
         ewk->wu.old_rno[0] = ewk->wu.char_index - 1;
     }
-    end_w.r_no_2;
+    (void)end_w.r_no_2;
     return 0;
 }

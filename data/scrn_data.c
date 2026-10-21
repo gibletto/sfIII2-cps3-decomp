@@ -18,8 +18,8 @@ extern const u32 scrn_data_06380038[];
 extern const u32 scrn_data_0638003C[];
 extern const u32 scrn_data_06381038[];
 extern const u32 scrn_data_06390000[];
-extern const u32 dat_0639283C[];
-extern const u32 dat_0639943C[];
+extern const u32 bg_scrn_data_07[];
+extern const u32 bg_scrn_data_08[];
 extern const u8 eff08_scrn_data[];
 extern const u16 scrn_data_063A0000[];
 extern const u16 scrn_data_063A0002[];
@@ -30,18 +30,18 @@ extern const u16 scrn_data_063A001A[];
 extern const u32 scrn_data_063A0038[];
 extern const u32 scrn_data_063A003C[];
 extern const u32 scrn_data_063A1038[];
-extern const u32 dat_063A103C[];
-extern const u32 dat_063A743C[];
+extern const u32 bg_scrn_data_10[];
+extern const u32 bg_scrn_data_12[];
 extern const u32 eff74_scrn_data[];
 extern const u32 scrn_data_063A9DCC[];
 extern const u32 effJ5_scrn_data[];
 extern const u32 eff45_scrn_data[];
 extern const u32 scrn_data_063B0000[];
-extern const u32 dat_063B403C[];
+extern const u32 bg_scrn_data_15[];
 extern const u32 russia2_scrn_data[];
 extern const u32 effb0_scrn_data[];
-extern const u32 dat_063B903C[];
-extern const u32 dat_063BA43C[];
+extern const u32 etc_bg_scrn_data_0[];
+extern const u32 etc_bg_scrn_data_3[];
 extern const u16 scrn_data_063C0000[];
 extern const u16 scrn_data_063C0002[];
 extern const u32 scrn_data_063C0004[];
@@ -65,7 +65,7 @@ extern const u32 end_500_scrn_data[];
 extern const u32 end_900_scrn_data[];
 extern const u32 end_1100_scrn_data[];
 extern const u32 scrn_data_063F0000[];
-extern const u32 end_scrn_data_063F4C3C[];
+extern const u32 end_scrn_data[];
 extern const u32 scrn_data_063F9DBC[];
 extern const u32 scrn_data_063FFCC0[];
 extern const u32 scrn_data_06401940[];
@@ -80,366 +80,10 @@ extern const u32 end_1300_scrn_data[];
 extern const u32 end_1800_scrn_data[];
 extern const u8 Continue_Flag[];
 extern const u8 Free_Play[];
-extern const u8 Getup_06120002[];
-extern const u8 Getup_06120004[];
-extern const u8 Getup_06120008[];
-extern const u8 Getup_06120016[];
-extern const u8 Getup_0612003C[];
 extern const u8 Win_Point_Com[];
 extern const u8 Win_Point_Com_Min[];
 extern const u8 Win_Point_Human_Min[];
-extern const u8 cg_data_tbl[];
-extern const u8 chr_data_06420000[];
-extern const u8 chr_data_06420002[];
-extern const u8 chr_data_06420004[];
-extern const u8 chr_data_06420008[];
-extern const u8 chr_data_0642000A[];
-extern const u8 chr_data_0642001A[];
-extern const u8 chr_data_0642003C[];
-extern const u8 chr_data_06440000[];
-extern const u8 chr_data_06440002[];
-extern const u8 chr_data_06440006[];
-extern const u8 chr_data_06440008[];
-extern const u8 chr_data_0644000A[];
-extern const u8 chr_data_0644001A[];
-extern const u8 chr_data_0644003C[];
-extern const u8 chr_data_06460000[];
-extern const u8 chr_data_06460002[];
-extern const u8 chr_data_06460006[];
-extern const u8 chr_data_06460008[];
-extern const u8 chr_data_0646000A[];
-extern const u8 chr_data_0646001A[];
-extern const u8 chr_data_0646003C[];
-extern const u8 chr_data_06480000[];
-extern const u8 chr_data_06480002[];
-extern const u8 chr_data_06480006[];
-extern const u8 chr_data_06480008[];
-extern const u8 chr_data_0648000A[];
-extern const u8 chr_data_0648001A[];
-extern const u8 chr_data_0648003C[];
-extern const u8 chr_data_064A0000[];
-extern const u8 chr_data_064A0002[];
-extern const u8 chr_data_064A0006[];
-extern const u8 chr_data_064A0008[];
-extern const u8 chr_data_064A000A[];
-extern const u8 chr_data_064A0012[];
-extern const u8 chr_data_064A001A[];
-extern const u8 chr_data_064A003C[];
-extern const u8 chr_data_064C0000[];
-extern const u8 chr_data_064C0002[];
-extern const u8 chr_data_064C0006[];
-extern const u8 chr_data_064C0008[];
-extern const u8 chr_data_064C000A[];
-extern const u8 chr_data_064C001A[];
-extern const u8 chr_data_064C003C[];
-extern const u8 chr_data_064E0000[];
-extern const u8 chr_data_064E0002[];
-extern const u8 chr_data_064E0004[];
-extern const u8 chr_data_064E0008[];
-extern const u8 chr_data_064E000A[];
-extern const u8 chr_data_064E001A[];
-extern const u8 chr_data_064E003C[];
-extern const u8 chr_data_06500000[];
-extern const u8 chr_data_06500002[];
-extern const u8 chr_data_06500004[];
-extern const u8 chr_data_06500008[];
-extern const u8 chr_data_0650000A[];
-extern const u8 chr_data_0650001A[];
-extern const u8 chr_data_0650003C[];
-extern const u8 chr_data_06520000[];
-extern const u8 chr_data_06520002[];
-extern const u8 chr_data_06520004[];
-extern const u8 chr_data_06520008[];
-extern const u8 chr_data_0652000A[];
-extern const u8 chr_data_0652001A[];
-extern const u8 chr_data_0652003C[];
-extern const u8 cmd_data_06160000[];
-extern const u8 dat_06800006[];
-extern const u8 dat_06800007[];
-extern const u8 dat_0680000B[];
-extern const u8 dat_06800014[];
-extern const u8 dat_0680001B[];
-extern const u8 dat_06800807[];
-extern const u8 dat_06820000[];
-extern const u8 dat_06820006[];
-extern const u8 dat_06820007[];
-extern const u8 dat_0682000B[];
-extern const u8 dat_06820014[];
-extern const u8 dat_0682001B[];
-extern const u8 dat_06820807[];
-extern const u8 dat_06840000[];
-extern const u8 dat_06840006[];
-extern const u8 dat_06840007[];
-extern const u8 dat_0684000B[];
-extern const u8 dat_06840014[];
-extern const u8 dat_0684001B[];
-extern const u8 dat_06840807[];
-extern const u8 dat_06860000[];
-extern const u8 dat_06860001[];
-extern const u8 dat_06860006[];
-extern const u8 dat_06860007[];
-extern const u8 dat_0686000B[];
-extern const u8 dat_0686001B[];
-extern const u8 dat_06860807[];
-extern const u8 dat_06880000[];
-extern const u8 dat_06880001[];
-extern const u8 dat_06880006[];
-extern const u8 dat_06880007[];
-extern const u8 dat_0688000B[];
-extern const u8 dat_0688001B[];
-extern const u8 dat_06880807[];
-extern const u8 dat_068A0000[];
-extern const u8 dat_068A0001[];
-extern const u8 dat_068A0006[];
-extern const u8 dat_068A0007[];
-extern const u8 dat_068A000B[];
-extern const u8 dat_068A001B[];
-extern const u8 dat_068A0807[];
-extern const u8 dat_068C0000[];
-extern const u8 dat_068C0001[];
-extern const u8 dat_068C0006[];
-extern const u8 dat_068C0007[];
-extern const u8 dat_068C000B[];
-extern const u8 dat_068C001B[];
-extern const u8 dat_068C0807[];
-extern const u8 dat_068E0000[];
-extern const u8 dat_068E0001[];
-extern const u8 dat_068E0007[];
-extern const u8 dat_068E000B[];
-extern const u8 dat_068E001B[];
-extern const u8 dat_068E0807[];
-extern const u8 dat_06900000[];
-extern const u8 dat_06900007[];
-extern const u8 dat_0690000B[];
-extern const u8 dat_06900014[];
-extern const u8 dat_0690001B[];
-extern const u8 dat_06900807[];
-extern const u8 dat_06920000[];
-extern const u8 dat_06920007[];
-extern const u8 dat_0692000B[];
-extern const u8 dat_06920014[];
-extern const u8 dat_0692001B[];
-extern const u8 dat_06920807[];
-extern const u8 dat_06940000[];
-extern const u8 dat_06940007[];
-extern const u8 dat_0694000B[];
-extern const u8 dat_06940014[];
-extern const u8 dat_0694001B[];
-extern const u8 dat_06940807[];
-extern const u8 dat_06960000[];
-extern const u8 dat_06960007[];
-extern const u8 dat_0696000B[];
-extern const u8 dat_06960014[];
-extern const u8 dat_0696001B[];
-extern const u8 dat_06960807[];
-extern const u8 dat_06980000[];
-extern const u8 dat_06980001[];
-extern const u8 dat_06980006[];
-extern const u8 dat_06980007[];
-extern const u8 dat_0698000B[];
-extern const u8 dat_0698001B[];
-extern const u8 dat_069A0000[];
-extern const u8 dat_069A0001[];
-extern const u8 dat_069A0006[];
-extern const u8 dat_069A0007[];
-extern const u8 dat_069A000B[];
-extern const u8 dat_069A001B[];
-extern const u8 dat_069C0000[];
-extern const u8 dat_069C0001[];
-extern const u8 dat_069C0006[];
-extern const u8 dat_069C0007[];
-extern const u8 dat_069C000B[];
-extern const u8 dat_069C001B[];
-extern const u8 dat_069E0000[];
-extern const u8 dat_069E0001[];
-extern const u8 dat_069E0006[];
-extern const u8 dat_069E0007[];
-extern const u8 dat_069E000B[];
-extern const u8 dat_069E001B[];
-extern const u8 dat_06A00000[];
-extern const u8 dat_06A00001[];
-extern const u8 dat_06A00006[];
-extern const u8 dat_06A00007[];
-extern const u8 dat_06A0000B[];
-extern const u8 dat_06A00014[];
-extern const u8 dat_06A0001B[];
-extern const u8 dat_06A20000[];
-extern const u8 dat_06A20006[];
-extern const u8 dat_06A20007[];
-extern const u8 dat_06A2000B[];
-extern const u8 dat_06A20014[];
-extern const u8 dat_06A2001B[];
-extern const u8 dat_06A40000[];
-extern const u8 dat_06A40006[];
-extern const u8 dat_06A40007[];
-extern const u8 dat_06A4000B[];
-extern const u8 dat_06A40014[];
-extern const u8 dat_06A4001B[];
-extern const u8 dat_06A60000[];
-extern const u8 dat_06A60006[];
-extern const u8 dat_06A60007[];
-extern const u8 dat_06A6000B[];
-extern const u8 dat_06A60014[];
-extern const u8 dat_06A6001B[];
-extern const u8 dat_06A80000[];
-extern const u8 dat_06A80006[];
-extern const u8 dat_06A80007[];
-extern const u8 dat_06A8000B[];
-extern const u8 dat_06A80014[];
-extern const u8 dat_06A8001B[];
-extern const u8 dat_06AA0000[];
-extern const u8 dat_06AA0006[];
-extern const u8 dat_06AA0007[];
-extern const u8 dat_06AA000B[];
-extern const u8 dat_06AA0014[];
-extern const u8 dat_06AA001B[];
-extern const u8 dat_06AC0000[];
-extern const u8 dat_06AC0001[];
-extern const u8 dat_06AC0006[];
-extern const u8 dat_06AC0007[];
-extern const u8 dat_06AC000B[];
-extern const u8 dat_06AC001B[];
-extern const u8 dat_06AE0000[];
-extern const u8 dat_06AE0001[];
-extern const u8 dat_06AE0007[];
-extern const u8 dat_06AE000B[];
-extern const u8 dat_06AE001B[];
-extern const u8 dat_06B00000[];
-extern const u8 dat_06B00007[];
-extern const u8 dat_06B0000B[];
-extern const u8 dat_06B00014[];
-extern const u8 dat_06B0001B[];
-extern const u8 dat_06B20000[];
-extern const u8 dat_06B20001[];
-extern const u8 dat_06B20007[];
-extern const u8 dat_06B2000B[];
-extern const u8 dat_06B20015[];
-extern const u8 dat_06B2001B[];
-extern const u8 dat_06B40000[];
-extern const u8 dat_06B40001[];
-extern const u8 dat_06B40007[];
-extern const u8 dat_06B4000B[];
-extern const u8 dat_06B40015[];
-extern const u8 dat_06B4001C[];
-extern const u8 dat_06B60000[];
-extern const u8 dat_06B60001[];
-extern const u8 dat_06B60007[];
-extern const u8 dat_06B6000B[];
-extern const u8 dat_06B60015[];
-extern const u8 dat_06B6001C[];
-extern const u8 dat_06B80000[];
-extern const u8 dat_06B80001[];
-extern const u8 dat_06B80006[];
-extern const u8 dat_06B80007[];
-extern const u8 dat_06B8000B[];
-extern const u8 dat_06B80015[];
-extern const u8 dat_06B8001C[];
-extern const u8 dat_06BA0000[];
-extern const u8 dat_06BA0006[];
-extern const u8 dat_06BA0007[];
-extern const u8 dat_06BA000B[];
-extern const u8 dat_06BA0014[];
-extern const u8 dat_06BA001C[];
-extern const u8 dat_06BC0000[];
-extern const u8 dat_06BC0006[];
-extern const u8 dat_06BC0007[];
-extern const u8 dat_06BC000B[];
-extern const u8 dat_06BC0014[];
-extern const u8 dat_06BC001C[];
-extern const u8 dat_06BE0000[];
-extern const u8 dat_06BE0001[];
-extern const u8 dat_06BE0003[];
-extern const u8 dat_06BE0006[];
-extern const u8 dat_06BE0007[];
-extern const u8 dat_06BE000B[];
-extern const u8 dat_06BE001C[];
-extern const u8 dat_06C00000[];
-extern const u8 dat_06C00003[];
-extern const u8 dat_06C00006[];
-extern const u8 dat_06C00007[];
-extern const u8 dat_06C0000B[];
-extern const u8 dat_06C00014[];
-extern const u8 dat_06C0001C[];
-extern const u8 dat_06C20000[];
-extern const u8 dat_06C20006[];
-extern const u8 dat_06C20007[];
-extern const u8 dat_06C2000B[];
-extern const u8 dat_06C20015[];
-extern const u8 dat_06C2001C[];
-extern const u8 dat_06C40000[];
-extern const u8 dat_06C40004[];
-extern const u8 dat_06C40007[];
-extern const u8 dat_06C4000B[];
-extern const u8 dat_06C40015[];
-extern const u8 dat_06C4001C[];
-extern const u8 dat_06C60000[];
-extern const u8 dat_06C60001[];
-extern const u8 dat_06C60006[];
-extern const u8 dat_06C60007[];
-extern const u8 dat_06C6000B[];
-extern const u8 dat_06C6001C[];
-extern const u8 dat_06C80000[];
-extern const u8 dat_06C80001[];
-extern const u8 dat_06C80006[];
-extern const u8 dat_06C80007[];
-extern const u8 dat_06C8000B[];
-extern const u8 dat_06C8001C[];
-extern const u8 dat_06CA0000[];
-extern const u8 dat_06CA0001[];
-extern const u8 dat_06CA0006[];
-extern const u8 dat_06CA0007[];
-extern const u8 dat_06CA000B[];
-extern const u8 dat_06CA001C[];
-extern const u8 dat_06CC0000[];
-extern const u8 dat_06CC0001[];
-extern const u8 dat_06CC0006[];
-extern const u8 dat_06CC0007[];
-extern const u8 dat_06CC000B[];
-extern const u8 dat_06CC001C[];
-extern const u8 dat_06CE0000[];
-extern const u8 dat_06CE0001[];
-extern const u8 dat_06CE0007[];
-extern const u8 dat_06CE000B[];
-extern const u8 dat_06CE001C[];
-extern const u8 dat_06D00000[];
-extern const u8 dat_06D00001[];
-extern const u8 dat_06D00007[];
-extern const u8 dat_06D0000B[];
-extern const u8 dat_06D00014[];
-extern const u8 dat_06D0001C[];
-extern const u8 dat_06D20000[];
-extern const u8 dat_06D20007[];
-extern const u8 dat_06D2000B[];
-extern const u8 dat_06D2001C[];
-extern const u8 dat_06D40000[];
-extern const u8 dat_06D40007[];
-extern const u8 dat_06D4000B[];
-extern const u8 dat_06D4001C[];
-extern const u8 dat_06D60000[];
-extern const u8 dat_06D60007[];
-extern const u8 dat_06D6000B[];
-extern const u8 dat_06D6001C[];
-extern const u8 dat_06D80000[];
-extern const u8 dat_06D80006[];
-extern const u8 dat_06D80007[];
-extern const u8 dat_06D8000B[];
-extern const u8 dat_06D8001C[];
-extern const u8 dat_06DA0000[];
-extern const u8 dat_06DA0003[];
-extern const u8 dat_06DA0006[];
-extern const u8 dat_06DA0007[];
-extern const u8 dat_06DA000B[];
-extern const u8 dat_06DA001C[];
 extern const u8 frt_tick_count[];
-extern const u8 hissatsu_dageki_00[];
-extern const u8 pass0003_06140000[];
-extern const u8 pass0003_06140002[];
-extern const u8 pass0003_06140004[];
-extern const u8 pass0003_06140008[];
-extern const u8 pass0003_06140016[];
-extern const u8 pass0003_0614003C[];
-extern const u8 tsuujyou_dageki_01[];
-extern const u8 tsuujyou_dageki_02[];
 
 const u32 eff23_scrn_data[753] = {
     0, 0, 0, 0,
@@ -1245,8 +889,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0x600000F, 0x602000F, 0x604000F,
     0x606000F, 0x608000F, 0x60A000F, 0x60C000F,
-    0x60E000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7),
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x60E000F, 0x0610000F, 0x0612000F, 0x0614000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x061A000F, 0x061C000F, 0x061E000F,
     0x0620000F, 0x0622000F, 0x0624000F, 0x0626000F,
     0x0628000F, 0x062A000F, 0x062C000F, 0x062E000F,
@@ -1291,20 +935,20 @@ const u32 scrn_data_06381038[15346] = {
     8, 8, 8, 8,
     8, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
-    0x6C, 0x06360008, (u32)scrn_data_06380008, 8,
+    0x6C, 0x06360008, 0x06380008, 8,
     8, 8, 8, 8,
     8, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
-    0x6C, (u32)scrn_data_063A0008, (u32)scrn_data_063C0008, (u32)((const u8 *)scrn_data_063E0000 + 8),
+    0x6C, 0x063A0008, 0x063C0008, 0x063E0008,
     8, 8, 8, 8,
     8, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
-    0x6C, (u32)((const u8 *)scrn_data_063FFCC0 + 840), (u32)chr_data_06420008, (u32)chr_data_06440008,
-    (u32)chr_data_06460008, 8, 8, 8,
+    0x6C, 0x06400008, 0x06420008, 0x06440008,
+    0x06460008, 8, 8, 8,
     8, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
-    0x6C, (u32)chr_data_06480008, (u32)chr_data_064A0008, (u32)chr_data_064C0008,
-    (u32)chr_data_064E0008, (u32)chr_data_06500008, (u32)chr_data_06520008, 0x6540008,
+    0x6C, 0x06480008, 0x064A0008, 0x064C0008,
+    0x064E0008, 0x06500008, 0x06520008, 0x6540008,
     8, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6560009, 0x6580009, 0x65A0008,
@@ -1325,28 +969,28 @@ const u32 scrn_data_06381038[15346] = {
     1, 0x6780001, 0x67A0001, 0x67C0001,
     0x67E0001, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
-    0x6C, (u32)dat_06800014, (u32)dat_06820014, (u32)dat_06840014,
-    (u32)dat_06860001, (u32)dat_06880001, (u32)dat_068A0001, (u32)dat_068C0001,
-    (u32)dat_068E0001, 0x6C, 0x6C, 0x6C,
+    0x6C, 0x06800014, 0x06820014, 0x06840014,
+    0x06860001, 0x06880001, 0x068A0001, 0x068C0001,
+    0x068E0001, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
-    0x6C, (u32)dat_06900014, (u32)dat_06920014, (u32)dat_06940014,
-    (u32)dat_06960014, (u32)dat_06980001, (u32)dat_069A0001, (u32)dat_069C0001,
-    (u32)dat_069E0001, 0x6C, 0x6C, 0x6C,
+    0x6C, 0x06900014, 0x06920014, 0x06940014,
+    0x06960014, 0x06980001, 0x069A0001, 0x069C0001,
+    0x069E0001, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
-    0x6C, (u32)dat_06A00014, (u32)dat_06A20014, (u32)dat_06A40014,
-    (u32)dat_06A60014, (u32)dat_06A80014, (u32)dat_06AA0014, (u32)dat_06AC0001,
-    (u32)dat_06AE0001, 0x6C, 0x6C, 0x6C,
+    0x6C, 0x06A00014, 0x06A20014, 0x06A40014,
+    0x06A60014, 0x06A80014, 0x06AA0014, 0x06AC0001,
+    0x06AE0001, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
-    0x6C, (u32)dat_06B00014, (u32)dat_06B20015, (u32)dat_06B40015,
-    (u32)dat_06B60015, (u32)dat_06B80015, (u32)dat_06BA0014, (u32)dat_06BC0014,
-    (u32)dat_06BE0001, 0x6C, 0x6C, 0x6C,
+    0x6C, 0x06B00014, 0x06B20015, 0x06B40015,
+    0x06B60015, 0x06B80015, 0x06BA0014, 0x06BC0014,
+    0x06BE0001, 0x6C, 0x6C, 0x6C,
     0x6C, 0x6C, 0x6C, 0x6C,
-    0x6C, (u32)dat_06C00014, (u32)dat_06C20015, (u32)dat_06C40015,
-    (u32)dat_06C60000, (u32)dat_06C80000, (u32)dat_06CA0000, (u32)dat_06CC0000,
-    (u32)dat_06CE0000, 0x6C, 0x10, 0x10,
+    0x6C, 0x06C00014, 0x06C20015, 0x06C40015,
+    0x06C60000, 0x06C80000, 0x06CA0000, 0x06CC0000,
+    0x06CE0000, 0x6C, 0x10, 0x10,
     0x10, 0x10, 0x10, 0x10,
-    0x10, (u32)dat_06D00014, (u32)dat_06D20000, (u32)dat_06D40000,
-    (u32)dat_06D60000, (u32)dat_06D80000, (u32)dat_06DA0000, 0x6DC0000,
+    0x10, 0x06D00014, 0x06D20000, 0x06D40000,
+    0x06D60000, 0x06D80000, 0x06DA0000, 0x6DC0000,
     0x6DE0000, 0x6C, 0x10, 0x10,
     0x10, 0x10, 0x10, 0x10,
     0x10, 0x6E00014, 0x6E20000, 0x6E40000,
@@ -1693,8 +1337,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0x600000F, 0x602000F, 0x604000F,
     0x606000F, 0x608000F, 0x60A000F, 0x60C000F,
-    0x60E000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7),
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x60E000F, 0x0610000F, 0x0612000F, 0x0614000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x061A000F, 0x061C000F, 0x061E000F,
     0x0620000F, 0x0622000F, 0x0624000F, 0x0626000F,
     0x0628000F, 0x062A000F, 0x062C000F, 0x062E000F,
@@ -1949,8 +1593,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0x600000F, 0x602000F, 0x604000F,
     0x606000F, 0x608000F, 0x60A000F, 0x60C000F,
-    0x60E000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7),
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x60E000F, 0x0610000F, 0x0612000F, 0x0614000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x061A000F, 0x061C000F, 0x061E000F,
     0x0620000F, 0x0622000F, 0x0624000F, 0x0626000F,
     0x0628000F, 0x062A000F, 0x062C000F, 0x062E000F,
@@ -2205,8 +1849,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0xD06000F, 0xD08000F, 0xD0A000F,
     0xD0C000F, 0x608000F, 0x60A000F, 0x60C000F,
-    0x60E000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), 0xD0E000F, 0xD10000F,
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x60E000F, 0x0610000F, 0xD0E000F, 0xD10000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0xD12000F, 0x061C000F, 0xD14000F,
     0xD16000F, 0x0622000F, 0x0624000F, 0x0626000F,
     0x0628000F, 0x062A000F, 0x062C000F, 0xD18000F,
@@ -2461,8 +2105,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0xD92000F, 0xD94000F, 0xD96000F,
     0xD98000F, 0xD9A000F, 0x60A000F, 0x60C000F,
-    0x60E000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), 0xD9C000F, 0xD9E000F,
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x60E000F, 0x0610000F, 0xD9C000F, 0xD9E000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0xDA0000F, 0xDA2000F, 0xDA4000F,
     0xDA6000F, 0x0622000F, 0x0624000F, 0x0626000F,
     0x0628000F, 0x062A000F, 0x062C000F, 0xDA8000F,
@@ -2717,8 +2361,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0xE26000F, 0xE28000F, 0xE2A000F,
     0xE2C000F, 0xE2E000F, 0x60A000F, 0x60C000F,
-    0x60E000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), 0xE30000F, 0xE32000F,
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x60E000F, 0x0610000F, 0xE30000F, 0xE32000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0xE34000F, 0xE36000F, 0xE38000F,
     0xE3A000F, 0x0622000F, 0x0624000F, 0x0626000F,
     0xE3C000F, 0xE3E000F, 0xE40000F, 0xE42000F,
@@ -2973,8 +2617,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0xF10000F, 0xF12000F, 0xF14000F,
     0xF16000F, 0xF18000F, 0xF1A000F, 0x60C000F,
-    0x60E000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), 0xF1C000F, 0xF1E000F,
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x60E000F, 0x0610000F, 0xF1C000F, 0xF1E000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0xF20000F, 0xF22000F, 0xF24000F,
     0xF26000F, 0x0622000F, 0x0624000F, 0x0626000F,
     0xF28000F, 0xF2A000F, 0xF2C000F, 0xF2E000F,
@@ -3229,8 +2873,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0xFFA000F, 0xFFC000F, 0xFFE000F,
     0x1000000F, 0x1002000F, 0x1004000F, 0x1006000F,
-    0x60E000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), 0x1008000F, 0x100A000F,
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x60E000F, 0x0610000F, 0x1008000F, 0x100A000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x100C000F, 0x100E000F, 0xF24000F,
     0x1010000F, 0x1012000F, 0x0624000F, 0x0626000F,
     0x1014000F, 0x1016000F, 0x1018000F, 0x101A000F,
@@ -3485,8 +3129,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0x10E6000F, 0x10E8000F, 0x10EA000F,
     0x10EC000F, 0x10EE000F, 0x10F0000F, 0x10F2000F,
-    0x60E000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), 0x10F4000F, 0xE32000F,
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x60E000F, 0x0610000F, 0x10F4000F, 0xE32000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x10F6000F, 0x10F8000F, 0x10FA000F,
     0x10FC000F, 0x10FE000F, 0x1100000F, 0x1102000F,
     0x1104000F, 0x1106000F, 0x1108000F, 0x110A000F,
@@ -3741,8 +3385,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0x11D2000F, 0x11D4000F, 0x11D6000F,
     0x11D8000F, 0x11DA000F, 0x11DC000F, 0x11DE000F,
-    0x11E0000F, (u32)((const u8 *)tsuujyou_dageki_01 + 23), (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7),
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x11E0000F, 0x0610000F, 0x0612000F, 0x0614000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x11E2000F, 0x11E4000F, 0x11E6000F,
     0x11E8000F, 0x10FE000F, 0x11EA000F, 0x1102000F,
     0x11EC000F, 0x11EE000F, 0x11F0000F, 0x11F2000F,
@@ -3997,8 +3641,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0x12B6000F, 0x12B8000F, 0x12BA000F,
     0x12BC000F, 0x12BE000F, 0x12C0000F, 0x12C2000F,
-    0x12C4000F, 0x12C6000F, (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7),
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x12C4000F, 0x12C6000F, 0x0612000F, 0x0614000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x12C8000F, 0x12CA000F, 0x12CC000F,
     0x12CE000F, 0x10FE000F, 0x12D0000F, 0x12D2000F,
     0x12D4000F, 0x12D6000F, 0x12D8000F, 0x12DA000F,
@@ -4253,8 +3897,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0x1382000F, 0x1384000F, 0x1386000F,
     0x1388000F, 0x138A000F, 0x12C0000F, 0x12C2000F,
-    0x12C4000F, 0x12C6000F, (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7),
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x12C4000F, 0x12C6000F, 0x0612000F, 0x0614000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x138C000F, 0x138E000F, 0x1390000F,
     0x12CE000F, 0x10FE000F, 0x12D0000F, 0x1392000F,
     0x1394000F, 0x1396000F, 0x1398000F, 0x139A000F,
@@ -4509,8 +4153,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0x140E000F, 0x1410000F, 0x1412000F,
     0x1414000F, 0x1416000F, 0x12C0000F, 0x12C2000F,
-    0x12C4000F, 0x12C6000F, (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7),
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x12C4000F, 0x12C6000F, 0x0612000F, 0x0614000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x1418000F, 0x141A000F, 0x141C000F,
     0x12CE000F, 0x10FE000F, 0x12D0000F, 0x141E000F,
     0x1420000F, 0x1422000F, 0x1398000F, 0x1424000F,
@@ -4765,8 +4409,8 @@ const u32 scrn_data_06381038[15346] = {
     0xF, 0xF, 0xC, 0xC,
     0x5FE0008, 0x140E000F, 0x1410000F, 0x1412000F,
     0x1414000F, 0x1416000F, 0x12C0000F, 0x12C2000F,
-    0x12C4000F, 0x12C6000F, (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7),
-    (u32)((const u8 *)cmd_data_06160000 + 15), 0xF, 0xC, 0xC,
+    0x12C4000F, 0x12C6000F, 0x0612000F, 0x0614000F,
+    0x0616000F, 0xF, 0xC, 0xC,
     0x06180009, 0x1418000F,
 };
 
@@ -5026,7 +4670,7 @@ const u32 scrn_data_06390000[2575] = {
     0xC, 0xC, 0x5FE0008, 0x140E000F,
     0x1410000F, 0x1412000F, 0x1414000F, 0x1416000F,
     0x12C0000F, 0x12C2000F, 0x12C4000F, 0x12C6000F,
-    (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7), (u32)((const u8 *)cmd_data_06160000 + 15), 0xF,
+    0x0612000F, 0x0614000F, 0x0616000F, 0xF,
     0xC, 0xC, 0x06180009, 0x1418000F,
     0x141A000F, 0x141C000F, 0x12CE000F, 0x10FE000F,
     0x12D0000F, 0x141E000F, 0x1420000F, 0x1422000F,
@@ -5282,7 +4926,7 @@ const u32 scrn_data_06390000[2575] = {
     0xC, 0xC, 0x5FE0008, 0x140E000F,
     0x1410000F, 0x1412000F, 0x1414000F, 0x1416000F,
     0x12C0000F, 0x12C2000F, 0x12C4000F, 0x12C6000F,
-    (u32)((const u8 *)Getup_06120008 + 7), (u32)((const u8 *)pass0003_06140008 + 7), (u32)((const u8 *)cmd_data_06160000 + 15), 0xF,
+    0x0612000F, 0x0614000F, 0x0616000F, 0xF,
     0xC, 0xC, 0x06180009, 0x1418000F,
     0x141A000F, 0x141C000F, 0x12CE000F, 0x10FE000F,
     0x12D0000F, 0x14F2000F, 0x14F4000F, 0x14F6000F,
@@ -5418,7 +5062,8 @@ const u32 scrn_data_06390000[2575] = {
     0xB2C0012, 0xB2E0012, 0xB300012,
 };
 
-const u32 dat_0639283C[6912] = {
+/* provisional name: the screen map of bg_index 7 (bg_cg_src_tbl) */
+const u32 bg_scrn_data_07[6912] = {
     0, 0, 0, 0,
     0, 0, 0, 0,
     0, 0, 0, 0,
@@ -6249,10 +5894,10 @@ const u32 dat_0639283C[6912] = {
     0, 0, 0, 0,
     3, 3, 3, 3,
     3, 3, 3, 0x60E0003,
-    (u32)((const u8 *)tsuujyou_dageki_01 + 11), (u32)((const u8 *)Getup_06120002 + 1), 0, 0,
+    0x06100003, 0x06120003, 0, 0,
     0, 0, 0, 0,
     0, 0, 0, 0,
-    0, 0, (u32)pass0003_06140000, (u32)cmd_data_06160000,
+    0, 0, 0x06140000, 0x06160000,
     0x06180000, 0x061A0000, 0x061C0000, 0x061E0000,
     0x06200000, 0x06220000, 0x06240000, 0,
     0, 0, 0, 0,
@@ -6260,12 +5905,12 @@ const u32 dat_0639283C[6912] = {
     0x062A0000, 0x062C0000, 0x062E0000, 0x06300000,
     0x06320000, 0x06340000, 0, 0,
     0, 0, 0, 0,
-    0, 0, 0x06360000, (u32)scrn_data_06380000,
-    (u32)scrn_data_063A0000, (u32)scrn_data_063C0000, (u32)scrn_data_063E0000, (u32)((const u8 *)scrn_data_063FFCC0 + 832),
-    (u32)chr_data_06420000, (u32)chr_data_06440000, (u32)chr_data_06460000, 0,
+    0, 0, 0x06360000, 0x06380000,
+    0x063A0000, 0x063C0000, 0x063E0000, 0x06400000,
+    0x06420000, 0x06440000, 0x06460000, 0,
     0, 0, 0, 0,
-    0, 0, (u32)chr_data_06480000, (u32)chr_data_064A0000,
-    (u32)chr_data_064C0000, (u32)chr_data_064E0000, (u32)chr_data_06500000, (u32)chr_data_06520000,
+    0, 0, 0x06480000, 0x064A0000,
+    0x064C0000, 0x064E0000, 0x06500000, 0x06520000,
     0x6540000, 0x6560000, 0x6580000, 0x65A0000,
     0, 0, 0, 0,
     0, 0, 0x65C0000, 0x65E0000,
@@ -6276,25 +5921,25 @@ const u32 dat_0639283C[6912] = {
     0x6740000, 0x6760000, 0x6780000, 0x67A0000,
     0x67C0000, 0x67E0000, 0, 0,
     0, 0, 0, 0,
-    0, 0, (u32)cg_data_tbl, (u32)dat_06820000,
-    (u32)dat_06840000, (u32)dat_06860000, (u32)dat_06880000, (u32)dat_068A0000,
-    (u32)dat_068C0000, (u32)dat_068E0000, (u32)dat_06900000, 0,
+    0, 0, 0x06800000, 0x06820000,
+    0x06840000, 0x06860000, 0x06880000, 0x068A0000,
+    0x068C0000, 0x068E0000, 0x06900000, 0,
     0, 0, 0, 0,
-    0, 0, (u32)dat_06920000, (u32)dat_06940000,
-    (u32)dat_06960000, (u32)dat_06980000, (u32)dat_069A0000, (u32)dat_069C0000,
-    (u32)dat_069E0000, (u32)dat_06A00000, (u32)dat_06A20000, 0,
+    0, 0, 0x06920000, 0x06940000,
+    0x06960000, 0x06980000, 0x069A0000, 0x069C0000,
+    0x069E0000, 0x06A00000, 0x06A20000, 0,
     0, 0, 0, 0,
-    0, 0, (u32)dat_06A40000, (u32)dat_06A60000,
-    (u32)dat_06A80000, (u32)dat_06AA0000, (u32)dat_06AC0000, (u32)dat_06AE0000,
-    (u32)dat_06B00000, (u32)dat_06B20000, (u32)dat_06B40000, 0,
+    0, 0, 0x06A40000, 0x06A60000,
+    0x06A80000, 0x06AA0000, 0x06AC0000, 0x06AE0000,
+    0x06B00000, 0x06B20000, 0x06B40000, 0,
     0, 0, 0, 0,
-    0, 0, (u32)dat_06B60000, (u32)dat_06B80000,
-    (u32)dat_06BA0000, (u32)dat_06BC0000, (u32)dat_06BE0000, (u32)dat_06C00000,
-    (u32)dat_06C20000, (u32)dat_06C40000, (u32)dat_06C60001, (u32)dat_06C80001,
+    0, 0, 0x06B60000, 0x06B80000,
+    0x06BA0000, 0x06BC0000, 0x06BE0000, 0x06C00000,
+    0x06C20000, 0x06C40000, 0x06C60001, 0x06C80001,
     0, 0, 0, 0,
-    0, 0, (u32)dat_06CA0000, (u32)dat_06CC0000,
-    (u32)dat_06CE0000, (u32)dat_06D00000, (u32)dat_06D20000, (u32)dat_06D40000,
-    (u32)dat_06D60000, (u32)dat_06D80000, (u32)dat_06DA0000, 0x6DC0000,
+    0, 0, 0x06CA0000, 0x06CC0000,
+    0x06CE0000, 0x06D00000, 0x06D20000, 0x06D40000,
+    0x06D60000, 0x06D80000, 0x06DA0000, 0x6DC0000,
     0, 0, 0, 0,
     0, 0, 0x6DE0000, 0x6E00000,
     0x6E20000, 0x6E40000, 0x6E60000, 0x6E80000,
@@ -7149,7 +6794,8 @@ const u32 dat_0639283C[6912] = {
     0, 0, 0, 0,
 };
 
-const u32 dat_0639943C[2560] = {
+/* provisional name: the screen map of bg_index 8 (bg_cg_src_tbl) */
+const u32 bg_scrn_data_08[2560] = {
     0x8C, 0x8C, 0x8C, 0x8C,
     0x8C, 0x8C, 0x8C, 0x8C,
     0x8C, 0x8C, 0x8C, 0x8C,
@@ -9181,7 +8827,8 @@ const u32 scrn_data_063A1038[1] = {
     0x14,
 };
 
-const u32 dat_063A103C[6400] = {
+/* provisional name: the screen map of bg_index 10 (bg_cg_src_tbl) */
+const u32 bg_scrn_data_10[6400] = {
     0, 0, 0, 0,
     0, 0, 0, 0,
     0, 0, 0, 0,
@@ -10069,32 +9716,32 @@ const u32 dat_063A103C[6400] = {
     0x5F80002, 0x5FA0002, 0x5FC0002, 0x5FE0002,
     0x6000002, 0x6020002, 0x6040002, 0x6060002,
     0x6080002, 0x60A0002, 0x60C0002, 0x60E0002,
-    (u32)((const u8 *)tsuujyou_dageki_01 + 10), (u32)Getup_06120002, (u32)pass0003_06140002, (u32)((const u8 *)cmd_data_06160000 + 2),
+    0x06100002, 0x06120002, 0x06140002, 0x06160002,
     0x06180002, 0x061A0002, 0x061C0002, 0x061E0002,
     0x06200002, 0x06220002, 0x06240002, 0x06260002,
     0x06280002, 0x062A0002, 0x062C0002, 0x062E0002,
     0x06300002, 0x06320002, 0x06340002, 0x06360002,
-    (u32)scrn_data_06380002, (u32)scrn_data_063A0002, (u32)scrn_data_063C0002, (u32)((const u8 *)scrn_data_063E0000 + 2),
-    (u32)((const u8 *)scrn_data_063FFCC0 + 834), (u32)chr_data_06420002, (u32)chr_data_06440002, (u32)chr_data_06460002,
-    (u32)chr_data_06480002, (u32)chr_data_064A0002, (u32)chr_data_064C0002, (u32)chr_data_064E0002,
-    (u32)chr_data_06500002, (u32)chr_data_06520002, 0x6540002, 0x6560002,
+    0x06380002, 0x063A0002, 0x063C0002, 0x063E0002,
+    0x06400002, 0x06420002, 0x06440002, 0x06460002,
+    0x06480002, 0x064A0002, 0x064C0002, 0x064E0002,
+    0x06500002, 0x06520002, 0x6540002, 0x6560002,
     0x6580006, 0x65A0006, 0x65C0006, 0x65E0006,
     0x6600006, 0x6620006, 0x6640006, 0x6660006,
     0x6680006, 0x66A0006, 0x66C0006, 0x66E0007,
     0x6700007, 0x6720007, 0x6740007, 0x6760007,
     0x6780006, 0x67A0006, 0x67C0006, 0x67E0006,
-    (u32)dat_06800006, (u32)dat_06820006, (u32)dat_06840006, (u32)dat_06860006,
-    (u32)dat_06880006, (u32)dat_068A0006, (u32)dat_068C0006, (u32)dat_068E0007,
-    (u32)dat_06900007, (u32)dat_06920007, (u32)dat_06940007, (u32)dat_06960007,
-    (u32)dat_06980006, (u32)dat_069A0006, (u32)dat_069C0006, (u32)dat_069E0006,
-    (u32)dat_06A00006, (u32)dat_06A20006, (u32)dat_06A40006, (u32)dat_06A60006,
-    (u32)dat_06A80006, (u32)dat_06AA0006, (u32)dat_06AC0006, (u32)dat_06AE0007,
-    (u32)dat_06B00007, (u32)dat_06B20007, (u32)dat_06B40007, (u32)dat_06B60007,
-    (u32)dat_06B80006, (u32)dat_06BA0006, (u32)dat_06BC0006, (u32)dat_06BE0006,
-    (u32)dat_06C00006, (u32)dat_06C20006, (u32)dat_06C40004, (u32)dat_06C60006,
-    (u32)dat_06C80006, (u32)dat_06CA0006, (u32)dat_06CC0006, (u32)dat_06CE0007,
-    (u32)dat_06D00007, (u32)dat_06D20007, (u32)dat_06D40007, (u32)dat_06D60007,
-    (u32)dat_06D80006, 6, 6, (u32)dat_06DA0006,
+    0x06800006, 0x06820006, 0x06840006, 0x06860006,
+    0x06880006, 0x068A0006, 0x068C0006, 0x068E0007,
+    0x06900007, 0x06920007, 0x06940007, 0x06960007,
+    0x06980006, 0x069A0006, 0x069C0006, 0x069E0006,
+    0x06A00006, 0x06A20006, 0x06A40006, 0x06A60006,
+    0x06A80006, 0x06AA0006, 0x06AC0006, 0x06AE0007,
+    0x06B00007, 0x06B20007, 0x06B40007, 0x06B60007,
+    0x06B80006, 0x06BA0006, 0x06BC0006, 0x06BE0006,
+    0x06C00006, 0x06C20006, 0x06C40004, 0x06C60006,
+    0x06C80006, 0x06CA0006, 0x06CC0006, 0x06CE0007,
+    0x06D00007, 0x06D20007, 0x06D40007, 0x06D60007,
+    0x06D80006, 6, 6, 0x06DA0006,
     0x6DC0006, 0x6DE0006, 0x6E00005, 0x6E20005,
     0x6E40005, 0x6E60005, 0x6E80005, 0x6EA0005,
     0x6EC0007, 7, 0x6EE0007, 0x6F00007,
@@ -10784,7 +10431,8 @@ const u32 dat_063A103C[6400] = {
     0, 0, 0, 0,
 };
 
-const u32 dat_063A743C[2304] = {
+/* provisional name: the screen map of bg_index 12 (bg_cg_src_tbl) */
+const u32 bg_scrn_data_12[2304] = {
     0, 0, 0, 0,
     0, 0, 0, 0,
     0, 0, 0, 0,
@@ -11627,20 +11275,20 @@ const u32 scrn_data_063A9DCC[1692] = {
     4, 0, 0x66A0000, 0x66C0000,
     0x66E0000, 0x6700000, 0x6720000, 0x6740000,
     0x6760000, 0x6780000, 0x67A0000, 0x67C0000,
-    0x67E0000, (u32)cg_data_tbl, (u32)dat_06820000, (u32)dat_06840000,
-    4, 4, (u32)dat_06860000, (u32)dat_06880000,
-    (u32)dat_068A0000, (u32)dat_068C0000, (u32)dat_068E0000, (u32)dat_06900000,
-    (u32)dat_06920000, (u32)dat_06940000, (u32)dat_06960000, (u32)dat_06980000,
-    (u32)dat_069A0000, (u32)dat_069C0000, (u32)dat_069E0000, (u32)dat_06A00000,
-    4, 4, (u32)dat_06A20000, (u32)dat_06A40000,
-    (u32)dat_06A60000, (u32)dat_06A80000, (u32)dat_06AA0000, (u32)dat_06AC0000,
-    (u32)dat_06AE0000, (u32)dat_06B00000, (u32)dat_06B20000, (u32)dat_06B40000,
-    (u32)dat_06B60000, (u32)dat_06B80000, (u32)dat_06BA0000, (u32)dat_06BC0000,
-    4, 4, (u32)dat_06BE0003, (u32)dat_06C00003,
-    (u32)dat_06C20000, (u32)dat_06C40000, (u32)dat_06C60000, (u32)dat_06C80000,
-    (u32)dat_06CA0000, (u32)dat_06CC0000, (u32)dat_06CE0000, (u32)dat_06D00000,
-    (u32)dat_06D20000, (u32)dat_06D40000, (u32)dat_06D60000, (u32)dat_06D80000,
-    4, 4, (u32)dat_06DA0003, 0x6DC0003,
+    0x67E0000, 0x06800000, 0x06820000, 0x06840000,
+    4, 4, 0x06860000, 0x06880000,
+    0x068A0000, 0x068C0000, 0x068E0000, 0x06900000,
+    0x06920000, 0x06940000, 0x06960000, 0x06980000,
+    0x069A0000, 0x069C0000, 0x069E0000, 0x06A00000,
+    4, 4, 0x06A20000, 0x06A40000,
+    0x06A60000, 0x06A80000, 0x06AA0000, 0x06AC0000,
+    0x06AE0000, 0x06B00000, 0x06B20000, 0x06B40000,
+    0x06B60000, 0x06B80000, 0x06BA0000, 0x06BC0000,
+    4, 4, 0x06BE0003, 0x06C00003,
+    0x06C20000, 0x06C40000, 0x06C60000, 0x06C80000,
+    0x06CA0000, 0x06CC0000, 0x06CE0000, 0x06D00000,
+    0x06D20000, 0x06D40000, 0x06D60000, 0x06D80000,
+    4, 4, 0x06DA0003, 0x6DC0003,
     0x6DE0000, 0x6E00000, 0x6E20001, 0x6E40001,
     0x6E60001, 0x6E80001, 0x6EA0001, 0x6EC0001,
     0x6EE0001, 0x6F00001, 0x6F20000, 0x6F40000,
@@ -13917,64 +13565,64 @@ const u32 scrn_data_063B0000[4111] = {
     0, 0, 0, 4,
     4, 4, 4, 0,
     0, 0x60C0007, 0x60E0007, 7,
-    0, 0, 0, (u32)((const u8 *)tsuujyou_dageki_01 + 15),
-    (u32)((const u8 *)Getup_06120004 + 3), (u32)((const u8 *)pass0003_06140004 + 3), (u32)((const u8 *)cmd_data_06160000 + 7), 0x06180004,
+    0, 0, 0, 0x06100007,
+    0x06120007, 0x06140007, 0x06160007, 0x06180004,
     0x061A0004, 0x061C0004, 0x061E0007, 0x06200007,
     0x06220007, 0x06240007, 0x06260007, 0x06280007,
     0x062A0007, 0x062C0007, 0x062E0007, 0x06300007,
-    0x06320007, 0x06340007, 0x06360007, (u32)scrn_data_06380004,
-    (u32)scrn_data_063A0004, (u32)scrn_data_063C0004, (u32)((const u8 *)scrn_data_063E0000 + 7), (u32)((const u8 *)scrn_data_063FFCC0 + 839),
-    (u32)((const u8 *)chr_data_06420004 + 3), (u32)((const u8 *)chr_data_06440006 + 1), (u32)((const u8 *)chr_data_06460006 + 1), (u32)((const u8 *)chr_data_06480006 + 1),
-    (u32)((const u8 *)chr_data_064A0006 + 1), (u32)((const u8 *)chr_data_064C0006 + 1), (u32)((const u8 *)chr_data_064E0004 + 3), (u32)((const u8 *)chr_data_06500004 + 3),
-    (u32)((const u8 *)chr_data_06520004 + 3), 0x6540007, 0x6560007, 0x6580004,
+    0x06320007, 0x06340007, 0x06360007, 0x06380004,
+    0x063A0004, 0x063C0004, 0x063E0007, 0x06400007,
+    0x06420007, 0x06440007, 0x06460007, 0x06480007,
+    0x064A0007, 0x064C0007, 0x064E0007, 0x06500007,
+    0x06520007, 0x6540007, 0x6560007, 0x6580004,
     0x65A0004, 0x65C0004, 0x65E0007, 0x6600007,
     0x6620007, 0x6640007, 0x6660007, 0x6680007,
     0x66A0007, 0x66C0007, 0x66E0007, 0x6700007,
     0x6720007, 0x6740007, 0x6760007, 0x6780004,
-    0x67A0004, 0x67C0004, 0x67E0007, (u32)dat_06800007,
-    (u32)dat_06820007, (u32)dat_06840007, (u32)dat_06860007, (u32)dat_06880007,
-    (u32)dat_068A0007, (u32)dat_068C0007, (u32)dat_068E0007, (u32)dat_06900007,
-    (u32)dat_06920007, (u32)dat_06940007, (u32)dat_06960007, 0x6780804,
-    0x67A0804, 0x67C0804, 0x67E0807, (u32)dat_06800807,
-    (u32)dat_06820807, (u32)dat_06840807, (u32)dat_06860807, (u32)dat_06880807,
-    (u32)dat_068A0807, (u32)dat_068C0807, (u32)dat_068E0807, (u32)dat_06900807,
-    (u32)dat_06920807, (u32)dat_06940807, (u32)dat_06960807, 0,
+    0x67A0004, 0x67C0004, 0x67E0007, 0x06800007,
+    0x06820007, 0x06840007, 0x06860007, 0x06880007,
+    0x068A0007, 0x068C0007, 0x068E0007, 0x06900007,
+    0x06920007, 0x06940007, 0x06960007, 0x6780804,
+    0x67A0804, 0x67C0804, 0x67E0807, 0x06800807,
+    0x06820807, 0x06840807, 0x06860807, 0x06880807,
+    0x068A0807, 0x068C0807, 0x068E0807, 0x06900807,
+    0x06920807, 0x06940807, 0x06960807, 0,
     0, 5, 5, 5,
     5, 5, 5, 5,
     5, 7, 7, 7,
-    (u32)dat_06980007, (u32)dat_069A0007, (u32)dat_069C0007, 0,
+    0x06980007, 0x069A0007, 0x069C0007, 0,
     0, 5, 5, 5,
     5, 5, 5, 5,
     5, 7, 7, 7,
-    (u32)dat_069E0007, (u32)dat_06A00007, (u32)dat_06A20007, 0,
+    0x069E0007, 0x06A00007, 0x06A20007, 0,
     0, 5, 5, 5,
     5, 5, 5, 5,
     5, 7, 7, 7,
-    (u32)dat_06A40007, (u32)dat_06A60007, (u32)dat_06A80007, 0,
+    0x06A40007, 0x06A60007, 0x06A80007, 0,
     0, 5, 5, 5,
     5, 5, 5, 5,
     5, 7, 7, 7,
-    (u32)dat_06AA0007, (u32)dat_06AC0007, (u32)dat_06AE0007, 0,
+    0x06AA0007, 0x06AC0007, 0x06AE0007, 0,
     0, 5, 5, 5,
     5, 5, 5, 5,
     5, 7, 7, 7,
-    (u32)dat_06B00007, (u32)dat_06B20007, (u32)dat_06B40007, 0,
+    0x06B00007, 0x06B20007, 0x06B40007, 0,
     0, 5, 5, 5,
     5, 5, 5, 5,
-    5, 7, (u32)dat_06B60007, (u32)dat_06B80007,
-    (u32)dat_06BA0007, (u32)dat_06BC0007, (u32)dat_06BE0007, 0,
+    5, 7, 0x06B60007, 0x06B80007,
+    0x06BA0007, 0x06BC0007, 0x06BE0007, 0,
     0, 5, 5, 5,
     5, 5, 5, 5,
-    5, 7, (u32)dat_06C00007, (u32)dat_06C20007,
-    (u32)dat_06C40007, (u32)dat_06C60007, (u32)dat_06C80007, 7,
+    5, 7, 0x06C00007, 0x06C20007,
+    0x06C40007, 0x06C60007, 0x06C80007, 7,
     7, 5, 5, 5,
     5, 5, 5, 5,
-    5, 7, (u32)dat_06CA0007, (u32)dat_06CC0007,
-    (u32)dat_06CE0007, (u32)dat_06D00007, (u32)dat_06D20007, 7,
+    5, 7, 0x06CA0007, 0x06CC0007,
+    0x06CE0007, 0x06D00007, 0x06D20007, 7,
     7, 5, 5, 5,
     5, 5, 5, 5,
-    5, 7, (u32)dat_06D40007, (u32)dat_06D60007,
-    (u32)dat_06D80007, (u32)dat_06DA0007, 0x6DC0007, 0,
+    5, 7, 0x06D40007, 0x06D60007,
+    0x06D80007, 0x06DA0007, 0x6DC0007, 0,
     0, 5, 5, 5,
     5, 5, 5, 5,
     5, 7, 0x6DE0007, 0x6E00007,
@@ -14069,7 +13717,8 @@ const u32 scrn_data_063B0000[4111] = {
     0, 0, 0,
 };
 
-const u32 dat_063B403C[2304] = {
+/* provisional name: the screen map of bg_index 15 (bg_cg_src_tbl) */
+const u32 bg_scrn_data_15[2304] = {
     0, 0, 0, 0,
     0, 0, 0, 0,
     0, 0, 0, 0,
@@ -15359,7 +15008,8 @@ const u32 effb0_scrn_data[768] = {
     0xD60000, 0xD60000, 0xD60000, 0xD60000,
 };
 
-const u32 dat_063B903C[1280] = {
+/* provisional name: the screen map of the special screens 0-2 (etc_bg_cg_src_tbl) */
+const u32 etc_bg_scrn_data_0[1280] = {
     0, 0, 0, 0,
     0, 0, 0, 0,
     0, 0, 0, 0,
@@ -15682,7 +15332,8 @@ const u32 dat_063B903C[1280] = {
     2, 0x1020002, 0x1020002, 0x1020002,
 };
 
-const u32 dat_063BA43C[5873] = {
+/* provisional name: the screen map of the special screens 3 and 4 (etc_bg_cg_src_tbl) */
+const u32 etc_bg_scrn_data_3[5873] = {
     0, 0, 0, 0,
     0, 0, 0, 0,
     0, 0, 0, 0,
@@ -16597,32 +16248,32 @@ const u32 dat_063BA43C[5873] = {
     0x5F80009, 0x5FA0009, 0x5FC0009, 0x5FE0009,
     0x6000009, 0x6020009, 0x6040009, 0x6060009,
     0x6080009, 0x60A0009, 0x60C0009, 0x60E0009,
-    (u32)((const u8 *)tsuujyou_dageki_01 + 17), (u32)((const u8 *)Getup_06120008 + 1), (u32)((const u8 *)pass0003_06140008 + 1), (u32)((const u8 *)cmd_data_06160000 + 9),
+    0x06100009, 0x06120009, 0x06140009, 0x06160009,
     0x06180009, 0x061A0009, 0x061C0009, 0x061E0009,
     0x06200009, 0x06220009, 0x06240009, 0x06260009,
     0x06280009, 0x062A0009, 0x062C0009, 0x062E0009,
     0x06300009, 0x06320009, 0x06340009, 0x06360009,
-    (u32)((const u8 *)scrn_data_06380008 + 1), (u32)((const u8 *)scrn_data_063A0008 + 1), (u32)((const u8 *)scrn_data_063C0008 + 1), (u32)((const u8 *)scrn_data_063E0000 + 9),
-    (u32)((const u8 *)scrn_data_063FFCC0 + 842), (u32)((const u8 *)scrn_data_063FFCC0 + 842), (u32)chr_data_0642000A, (u32)chr_data_0644000A,
-    (u32)chr_data_0646000A, (u32)chr_data_0648000A, (u32)chr_data_064A000A, (u32)chr_data_064C000A,
-    (u32)chr_data_064E000A, (u32)chr_data_0650000A, (u32)chr_data_0652000A, 0x654000A,
+    0x06380009, 0x063A0009, 0x063C0009, 0x063E0009,
+    0x0640000A, 0x0640000A, 0x0642000A, 0x0644000A,
+    0x0646000A, 0x0648000A, 0x064A000A, 0x064C000A,
+    0x064E000A, 0x0650000A, 0x0652000A, 0x654000A,
     0x656000A, 0x658000A, 0x65A000A, 0x65C000A,
     0x65E000A, 0x660000A, 0x662000A, 0x664000A,
     0x666000A, 0x668000A, 0x66A000A, 0x66C000A,
     0x66E000A, 0x670000A, 0x672000A, 0x674000A,
     0x676000A, 0x678000A, 0x67A000A, 0x67C000A,
-    0x67E000B, (u32)dat_0680000B, (u32)dat_0682000B, (u32)dat_0684000B,
-    (u32)dat_0686000B, (u32)dat_0688000B, (u32)dat_068A000B, (u32)dat_068C000B,
-    (u32)dat_068E000B, (u32)dat_0690000B, (u32)dat_0692000B, (u32)dat_0694000B,
-    (u32)dat_0696000B, (u32)dat_0698000B, (u32)dat_069A000B, (u32)dat_069C000B,
-    (u32)dat_069E000B, (u32)dat_06A0000B, (u32)dat_06A2000B, (u32)dat_06A4000B,
-    (u32)dat_06A6000B, (u32)dat_06A8000B, (u32)dat_06AA000B, (u32)dat_06AC000B,
-    (u32)dat_06AE000B, (u32)dat_06B0000B, (u32)dat_06B2000B, (u32)dat_06B4000B,
-    (u32)dat_06B6000B, (u32)dat_06B8000B, (u32)dat_06BA000B, (u32)dat_06BC000B,
-    (u32)dat_06BE000B, (u32)dat_06C0000B, (u32)dat_06C2000B, (u32)dat_06C4000B,
-    (u32)dat_06C6000B, (u32)dat_06C8000B, (u32)dat_06CA000B, (u32)dat_06CC000B,
-    (u32)dat_06CE000B, (u32)dat_06D0000B, (u32)dat_06D2000B, (u32)dat_06D4000B,
-    (u32)dat_06D6000B, (u32)dat_06D8000B, (u32)dat_06DA000B, 0x6DC000B,
+    0x67E000B, 0x0680000B, 0x0682000B, 0x0684000B,
+    0x0686000B, 0x0688000B, 0x068A000B, 0x068C000B,
+    0x068E000B, 0x0690000B, 0x0692000B, 0x0694000B,
+    0x0696000B, 0x0698000B, 0x069A000B, 0x069C000B,
+    0x069E000B, 0x06A0000B, 0x06A2000B, 0x06A4000B,
+    0x06A6000B, 0x06A8000B, 0x06AA000B, 0x06AC000B,
+    0x06AE000B, 0x06B0000B, 0x06B2000B, 0x06B4000B,
+    0x06B6000B, 0x06B8000B, 0x06BA000B, 0x06BC000B,
+    0x06BE000B, 0x06C0000B, 0x06C2000B, 0x06C4000B,
+    0x06C6000B, 0x06C8000B, 0x06CA000B, 0x06CC000B,
+    0x06CE000B, 0x06D0000B, 0x06D2000B, 0x06D4000B,
+    0x06D6000B, 0x06D8000B, 0x06DA000B, 0x6DC000B,
     0x6DE000B, 0x6E0000B, 0x6E2000B, 0x6E4000B,
     0x6E6000B, 0x6E8000B, 0x6EA000B, 0x6EC000B,
     0x6EE000B, 0x6F0000B, 0x6F2000B, 0x6F2000B,
@@ -28662,7 +28313,7 @@ const u32 end_500_scrn_data[4864] = {
     0x3E, 0x3E, 0x3E, 0x3E,
     0x6080015, 0x60A0015, 0x60C0015, 0x15,
     0x15, 0x15, 0x15, 0x60E0015,
-    (u32)((const u8 *)tsuujyou_dageki_01 + 29), (u32)((const u8 *)Getup_06120008 + 13), (u32)((const u8 *)pass0003_06140008 + 13), (u32)((const u8 *)cmd_data_06160000 + 21),
+    0x06100015, 0x06120015, 0x06140015, 0x06160015,
     0x3E, 0x3E, 0x3E, 0x3E,
     0x06180015, 0x061A0015, 0x061C0015, 0x061E0015,
     0x15, 0x15, 0x15, 0x06200015,
@@ -28670,14 +28321,14 @@ const u32 end_500_scrn_data[4864] = {
     0x3E, 0x3E, 0x3E, 0x3E,
     0x062A0015, 0x062C0015, 0x062E0015, 0x15,
     0x15, 0x15, 0x06300015, 0x06320015,
-    0x06340015, 0x06360015, (u32)((const u8 *)scrn_data_06380008 + 13), (u32)((const u8 *)scrn_data_063A0008 + 13),
+    0x06340015, 0x06360015, 0x06380015, 0x063A0015,
     0x3E, 0x3E, 0x3E, 0x3E,
-    (u32)((const u8 *)scrn_data_063C0008 + 13), (u32)((const u8 *)scrn_data_063E0000 + 21), (u32)((const u8 *)scrn_data_063FFCC0 + 853), 0x15,
-    0x15, 0x15, (u32)((const u8 *)chr_data_0642000A + 11), (u32)((const u8 *)chr_data_0644000A + 11),
-    0x15, (u32)((const u8 *)chr_data_0646000A + 11), (u32)((const u8 *)chr_data_0648000A + 11), (u32)((const u8 *)chr_data_064A0012 + 3),
+    0x063C0015, 0x063E0015, 0x06400015, 0x15,
+    0x15, 0x15, 0x06420015, 0x06440015,
+    0x15, 0x06460015, 0x06480015, 0x064A0015,
     0x3E, 0x3E, 0x3E, 0x3E,
-    (u32)((const u8 *)chr_data_064C000A + 11), 0x15, 0x15, 0x15,
-    0x15, (u32)((const u8 *)chr_data_064E000A + 11), (u32)((const u8 *)chr_data_0650000A + 11), (u32)((const u8 *)chr_data_0652000A + 11),
+    0x064C0015, 0x15, 0x15, 0x15,
+    0x15, 0x064E0015, 0x06500015, 0x06520015,
     0x15, 0x6540015, 0x6560015, 0x6580015,
     0x3E, 0x3E, 0x3E, 0x3E,
     0x3E, 0x3E, 0x3E, 0x3E,
@@ -28846,28 +28497,28 @@ const u32 end_500_scrn_data[4864] = {
     0, 0, 0, 0,
     0, 0, 0, 0,
     0x6760000, 0x6780000, 0x67A0000, 0x67C0000,
-    0x67E0000, (u32)cg_data_tbl, (u32)dat_06820000, (u32)dat_06840000,
+    0x67E0000, 0x06800000, 0x06820000, 0x06840000,
     0, 0, 0, 0,
     0, 0, 0, 0,
-    (u32)dat_06860000, (u32)dat_06880000, (u32)dat_068A0000, (u32)dat_068C0000,
-    (u32)dat_068E0000, (u32)dat_06900000, (u32)dat_06920000, (u32)dat_06940000,
+    0x06860000, 0x06880000, 0x068A0000, 0x068C0000,
+    0x068E0000, 0x06900000, 0x06920000, 0x06940000,
     0, 0, 0, 0,
     0, 0, 0, 0,
-    (u32)dat_06960000, (u32)dat_06980000, (u32)dat_069A0000, (u32)dat_069C0000,
-    (u32)dat_069E0000, (u32)dat_06A00000, (u32)dat_06A20000, (u32)dat_06A40000,
+    0x06960000, 0x06980000, 0x069A0000, 0x069C0000,
+    0x069E0000, 0x06A00000, 0x06A20000, 0x06A40000,
     0, 0, 0, 0,
     0, 0, 0, 0,
-    (u32)dat_06A60000, (u32)dat_06A80000, (u32)dat_06AA0000, (u32)dat_06AC0000,
-    (u32)dat_06AE0000, (u32)dat_06B00000, (u32)dat_06B20000, (u32)dat_06B40000,
-    (u32)dat_06B60000, (u32)dat_06B80000, 0, 0,
+    0x06A60000, 0x06A80000, 0x06AA0000, 0x06AC0000,
+    0x06AE0000, 0x06B00000, 0x06B20000, 0x06B40000,
+    0x06B60000, 0x06B80000, 0, 0,
     0, 0, 0, 0,
-    (u32)dat_06BA0000, (u32)dat_06BC0000, (u32)dat_06BE0000, (u32)dat_06C00000,
-    (u32)dat_06C20000, (u32)dat_06C40000, (u32)dat_06C60000, (u32)dat_06C80000,
-    (u32)dat_06CA0000, (u32)dat_06CC0000, 0, 0,
+    0x06BA0000, 0x06BC0000, 0x06BE0000, 0x06C00000,
+    0x06C20000, 0x06C40000, 0x06C60000, 0x06C80000,
+    0x06CA0000, 0x06CC0000, 0, 0,
     0, 0, 0, 0,
-    0, 0, (u32)dat_06CE0000, (u32)dat_06D00000,
-    (u32)dat_06D20000, (u32)dat_06D40000, (u32)dat_06D60000, (u32)dat_06D80000,
-    (u32)dat_06DA0000, 0, 0, 0,
+    0, 0, 0x06CE0000, 0x06D00000,
+    0x06D20000, 0x06D40000, 0x06D60000, 0x06D80000,
+    0x06DA0000, 0, 0, 0,
     0, 0, 0, 0,
     0, 0, 0x6DC0000, 0x6DE0000,
     0x6E00000, 0x6E20000, 0x6E40000, 0x6E60000,
@@ -30265,17 +29916,17 @@ const u32 scrn_data_063F0000[4879] = {
     0x600001B, 0x602001B, 0x604001B, 0x606001B,
     0x608001B, 0x60A001B, 0x60C001B, 0x1B,
     0x1B, 0x1B, 0x1B, 0x60E001B,
-    (u32)((const u8 *)tsuujyou_dageki_02 + 3), (u32)((const u8 *)Getup_06120016 + 5), (u32)((const u8 *)pass0003_06140016 + 5), (u32)((const u8 *)cmd_data_06160000 + 27),
+    0x0610001B, 0x0612001B, 0x0614001B, 0x0616001B,
     0x0618001B, 0x061A001B, 0x061C001B, 0x061E001B,
     0x0620001B, 0x0622001B, 0x0624001B, 0x1B,
     0x1B, 0x1B, 0x1B, 0x0626001B,
     0x0628001B, 0x062A001B, 0x062C001B, 0x062E001B,
     0x0630001B, 0x0632001B, 0x0634001B, 0x0636001B,
-    (u32)((const u8 *)scrn_data_0638001A + 1), (u32)((const u8 *)scrn_data_063A001A + 1), (u32)((const u8 *)scrn_data_063C001A + 1), 0x1B,
-    0x1B, 0x1B, 0x1B, (u32)((const u8 *)scrn_data_063E0000 + 27),
-    (u32)((const u8 *)scrn_data_063FFCC0 + 859), (u32)((const u8 *)chr_data_0642001A + 1), (u32)((const u8 *)chr_data_0644001A + 1), (u32)((const u8 *)chr_data_0646001A + 1),
-    (u32)((const u8 *)chr_data_0648001A + 1), (u32)((const u8 *)chr_data_064A001A + 1), (u32)((const u8 *)chr_data_064C001A + 1), (u32)((const u8 *)chr_data_064E001A + 1),
-    (u32)((const u8 *)chr_data_0650001A + 1), (u32)((const u8 *)chr_data_0652001A + 1), 0x654001B, 0x1B,
+    0x0638001B, 0x063A001B, 0x063C001B, 0x1B,
+    0x1B, 0x1B, 0x1B, 0x063E001B,
+    0x0640001B, 0x0642001B, 0x0644001B, 0x0646001B,
+    0x0648001B, 0x064A001B, 0x064C001B, 0x064E001B,
+    0x0650001B, 0x0652001B, 0x654001B, 0x1B,
     0x1B, 0x1B, 0x1B, 0x656001B,
     0x658001B, 0x65A001B, 0x65C001B, 0x65E001B,
     0x660001B, 0x662001B, 0x664001B, 0x666001B,
@@ -30283,15 +29934,15 @@ const u32 scrn_data_063F0000[4879] = {
     0x1B, 0x1B, 0x1B, 0x66E001B,
     0x1B, 0x670001B, 0x672001B, 0x674001B,
     0x676001B, 0x678001B, 0x67A001B, 0x67C001B,
-    0x67E001B, (u32)dat_0680001B, (u32)dat_0682001B, 0x1B,
-    0x1B, 0x1B, 0x1B, (u32)dat_0684001B,
-    (u32)dat_0686001B, (u32)dat_0688001B, (u32)dat_068A001B, (u32)dat_068C001B,
-    (u32)dat_068E001B, (u32)dat_0690001B, (u32)dat_0692001B, (u32)dat_0694001B,
-    (u32)dat_0696001B, (u32)dat_0698001B, (u32)dat_069A001B, 0x1B,
-    0x1B, 0x1B, 0x1B, (u32)dat_069C001B,
-    (u32)dat_069E001B, (u32)dat_06A0001B, (u32)dat_06A2001B, (u32)dat_06A4001B,
-    (u32)dat_06A6001B, (u32)dat_06A8001B, (u32)dat_06AA001B, (u32)dat_06AC001B,
-    (u32)dat_06AE001B, (u32)dat_06B0001B, (u32)dat_06B2001B, 0x1B,
+    0x67E001B, 0x0680001B, 0x0682001B, 0x1B,
+    0x1B, 0x1B, 0x1B, 0x0684001B,
+    0x0686001B, 0x0688001B, 0x068A001B, 0x068C001B,
+    0x068E001B, 0x0690001B, 0x0692001B, 0x0694001B,
+    0x0696001B, 0x0698001B, 0x069A001B, 0x1B,
+    0x1B, 0x1B, 0x1B, 0x069C001B,
+    0x069E001B, 0x06A0001B, 0x06A2001B, 0x06A4001B,
+    0x06A6001B, 0x06A8001B, 0x06AA001B, 0x06AC001B,
+    0x06AE001B, 0x06B0001B, 0x06B2001B, 0x1B,
     0x1B, 0x1B, 0x1B, 0x1B,
     0x1B, 0x1B, 0x1B, 0x1B,
     0x1B, 0x1B, 0x1B, 0x1B,
@@ -30328,30 +29979,30 @@ const u32 scrn_data_063F0000[4879] = {
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
-    0x1C, (u32)dat_06B4001C, (u32)dat_06B6001C, 0x1C,
+    0x1C, 0x06B4001C, 0x06B6001C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
-    (u32)dat_06B8001C, (u32)dat_06BA001C, (u32)dat_06BC001C, 0x1C,
+    0x06B8001C, 0x06BA001C, 0x06BC001C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
-    (u32)dat_06BE001C, (u32)dat_06C0001C, (u32)dat_06C2001C, 0x1C,
+    0x06BE001C, 0x06C0001C, 0x06C2001C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
-    (u32)dat_06C4001C, (u32)dat_06C6001C, (u32)dat_06C8001C, 0x1C,
+    0x06C4001C, 0x06C6001C, 0x06C8001C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
-    (u32)dat_06CA001C, (u32)dat_06CC001C, (u32)dat_06CE001C, 0x1C,
+    0x06CA001C, 0x06CC001C, 0x06CE001C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
-    0x1C, 0x1C, (u32)dat_06D0001C, (u32)dat_06D2001C,
-    (u32)dat_06D4001C, (u32)dat_06D6001C, (u32)dat_06D8001C, 0x1C,
+    0x1C, 0x1C, 0x06D0001C, 0x06D2001C,
+    0x06D4001C, 0x06D6001C, 0x06D8001C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
-    0x1C, 0x1C, (u32)dat_06DA001C, 0x6DC001C,
+    0x1C, 0x1C, 0x06DA001C, 0x6DC001C,
     0x6DC001C, 0x6DC001C, 0x6DE001C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
     0x1C, 0x1C, 0x1C, 0x1C,
@@ -30759,7 +30410,8 @@ const u32 scrn_data_063F0000[4879] = {
     0, 0, 0,
 };
 
-const u32 end_scrn_data_063F4C3C[5216] = {
+/* provisional name: the screen map the endings 4, 7, 8 and 10 write cells from (bg_cell_write) */
+const u32 end_scrn_data[5216] = {
     0, 0, 0, 0,
     0, 0, 0, 0,
     0, 0, 0, 0,
@@ -37805,8 +37457,8 @@ const u32 scrn_data_06410000[1807] = {
     0x5F40002, 0x5F60002, 0x5F80002, 0x5FA0002,
     0x5FC0002, 0x5FE0002, 0x6000002, 0x6020002,
     0x6040002, 0x6060002, 0x6080002, 0x60A0002,
-    0x60C0002, 0x60E0002, (u32)((const u8 *)tsuujyou_dageki_01 + 10), (u32)Getup_06120002,
-    (u32)pass0003_06140002, (u32)((const u8 *)cmd_data_06160000 + 2), 0x06180002, 0x061A0002,
+    0x60C0002, 0x60E0002, 0x06100002, 0x06120002,
+    0x06140002, 0x06160002, 0x06180002, 0x061A0002,
     0x061C0002, 0x061E0002, 0x06200002, 0x06220002,
     0x06240002, 0x06260002, 0x06280002, 2,
     2, 2, 2, 2,
@@ -37839,11 +37491,11 @@ const u32 scrn_data_06410000[1807] = {
     0, 0, 0, 0,
     0, 0, 0, 0x062A0000,
     0x062C0000, 0x062E0000, 0x06300000, 0x06320000,
-    0x06340000, 0x06360000, (u32)scrn_data_06380000, (u32)scrn_data_063A0000,
-    (u32)scrn_data_063C0000, (u32)scrn_data_063E0000, (u32)((const u8 *)scrn_data_063FFCC0 + 832), 0,
-    0, 0, 0, (u32)chr_data_06420000,
-    (u32)chr_data_06440000, (u32)chr_data_06460000, (u32)chr_data_06480000, (u32)chr_data_064A0000,
-    (u32)chr_data_064C0000, (u32)chr_data_064E0000, (u32)chr_data_06500000, (u32)chr_data_06520000,
+    0x06340000, 0x06360000, 0x06380000, 0x063A0000,
+    0x063C0000, 0x063E0000, 0x06400000, 0,
+    0, 0, 0, 0x06420000,
+    0x06440000, 0x06460000, 0x06480000, 0x064A0000,
+    0x064C0000, 0x064E0000, 0x06500000, 0x06520000,
     0x6540000, 0x6560000, 0x6580000, 0,
     0, 0, 0, 0x65A0000,
     0x65C0000, 0x65E0000, 0x6600000, 0x6620000,
@@ -37851,22 +37503,22 @@ const u32 scrn_data_06410000[1807] = {
     0x66C0000, 0x66E0000, 0x6700000, 0,
     0, 0, 0, 0x6720000,
     0x6740000, 0x6760000, 0x6780000, 0x67A0000,
-    0x67C0000, 0x67E0000, (u32)cg_data_tbl, (u32)dat_06820000,
-    (u32)dat_06840000, (u32)dat_06860000, (u32)dat_06880000, 0,
-    0, 0, 0, (u32)dat_068A0000,
-    (u32)dat_068C0000, (u32)dat_068E0000, (u32)dat_06900000, (u32)dat_06920000,
-    (u32)dat_06940000, (u32)dat_06960000, (u32)dat_06980000, (u32)dat_069A0001,
-    (u32)dat_069C0001, (u32)dat_069E0001, (u32)dat_06A00001, 0,
-    0, 0, 0, (u32)dat_06A20000,
-    (u32)dat_06A40000, (u32)dat_06A60000, (u32)dat_06A80000, (u32)dat_06AA0000,
-    (u32)dat_06AC0000, (u32)dat_06AE0000, (u32)dat_06B00000, (u32)dat_06B20001,
-    (u32)dat_06B40001, (u32)dat_06B60001, (u32)dat_06B80001, 0,
-    0, 0, 0, (u32)dat_06BA0000,
-    (u32)dat_06BC0000, (u32)dat_06BE0000, (u32)dat_06C00000, (u32)dat_06C20000,
-    (u32)dat_06C40000, (u32)dat_06C60000, (u32)dat_06C80000, (u32)dat_06CA0001,
-    (u32)dat_06CC0001, (u32)dat_06CE0001, (u32)dat_06D00001, 0,
-    0, 0, 0, (u32)dat_06D20000,
-    (u32)dat_06D40000, (u32)dat_06D60000, (u32)dat_06D80000, (u32)dat_06DA0000,
+    0x67C0000, 0x67E0000, 0x06800000, 0x06820000,
+    0x06840000, 0x06860000, 0x06880000, 0,
+    0, 0, 0, 0x068A0000,
+    0x068C0000, 0x068E0000, 0x06900000, 0x06920000,
+    0x06940000, 0x06960000, 0x06980000, 0x069A0001,
+    0x069C0001, 0x069E0001, 0x06A00001, 0,
+    0, 0, 0, 0x06A20000,
+    0x06A40000, 0x06A60000, 0x06A80000, 0x06AA0000,
+    0x06AC0000, 0x06AE0000, 0x06B00000, 0x06B20001,
+    0x06B40001, 0x06B60001, 0x06B80001, 0,
+    0, 0, 0, 0x06BA0000,
+    0x06BC0000, 0x06BE0000, 0x06C00000, 0x06C20000,
+    0x06C40000, 0x06C60000, 0x06C80000, 0x06CA0001,
+    0x06CC0001, 0x06CE0001, 0x06D00001, 0,
+    0, 0, 0, 0x06D20000,
+    0x06D40000, 0x06D60000, 0x06D80000, 0x06DA0000,
     0x6DC0000, 0x6DE0000, 0x6E00000, 0x6E20001,
     0x6E40001, 0x6E60001, 0x6E80001, 0,
     0, 0, 0, 0x6EA0000,
@@ -40257,8 +39909,8 @@ const u32 end_1300_scrn_data[2304] = {
     0x604003C, 0x606003C, 0x608003C, 0x60A003C,
     0x30, 0x30, 0x30, 0x30,
     0x30, 0x30, 0x30, 0x30,
-    0x30, 0x60C003C, 0x60E003C, (u32)((const u8 *)hissatsu_dageki_00 + 4),
-    (u32)Getup_0612003C, (u32)pass0003_0614003C, (u32)((const u8 *)cmd_data_06160000 + 60), 0x0618003C,
+    0x30, 0x60C003C, 0x60E003C, 0x0610003C,
+    0x0612003C, 0x0614003C, 0x0616003C, 0x0618003C,
     0x30, 0x30, 0x30, 0x30,
     0x30, 0x30, 0x30, 0x30,
     0x30, 0x30, 0x30, 0x30,
@@ -40299,15 +39951,15 @@ const u32 end_1300_scrn_data[2304] = {
     0x0636003C, 0x3C, 0x3C, 0x30,
     0x30, 0x30, 0x30, 0x30,
     0x30, 0x30, 0x30, 0x30,
-    (u32)scrn_data_0638003C, (u32)scrn_data_063A003C, (u32)scrn_data_063C003C, (u32)((const u8 *)scrn_data_063E0000 + 60),
-    (u32)((const u8 *)scrn_data_063FFCC0 + 892), 0x3C, 0x3C, 0x30,
+    0x0638003C, 0x063A003C, 0x063C003C, 0x063E003C,
+    0x0640003C, 0x3C, 0x3C, 0x30,
     0x30, 0x30, 0x30, 0x30,
     0x30, 0x30, 0x30, 0x30,
-    (u32)chr_data_0642003C, (u32)chr_data_0644003C, (u32)chr_data_0646003C, (u32)chr_data_0648003C,
-    (u32)chr_data_064A003C, 0x3C, 0x3C, 0x30,
+    0x0642003C, 0x0644003C, 0x0646003C, 0x0648003C,
+    0x064A003C, 0x3C, 0x3C, 0x30,
     0x30, 0x30, 0x30, 0x30,
     0x30, 0x30, 0x30, 0x30,
-    (u32)chr_data_064C003C, (u32)chr_data_064E003C, (u32)chr_data_0650003C, (u32)chr_data_0652003C,
+    0x064C003C, 0x064E003C, 0x0650003C, 0x0652003C,
     0x654003C, 0x3C, 0x3C, 0x30,
     0x30, 0x30, 0x30, 0x30,
     0x30, 0x30, 0x30, 0x30,

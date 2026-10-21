@@ -5606,17 +5606,17 @@ extern const u16 sean_exca_000[], sean_exca_001[], sean_exca_002[], sean_exca_00
 
 /* exca scripts (debug viewer: UNION): 49 entries */
 const u32 sean_exca[50] = {
-    (u32)sean_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
+    (u32)sean_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
     (u32)sean_exca_001,  /* 1 follow-up of APPEAR JUNBI 4 */
     (u32)sean_exca_002,  /* 2 follow-up of APPEAR JUNBI 5 */
-    (u32)sean_exca_003,  /* 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+    (u32)sean_exca_003,  /* 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
     (u32)sean_exca_004,  /* 4 follow-up of APPEAR JUNBI 6 */
-    (u32)sean_exca_005,  /* 5 follow-up of KGM TATAKI S, ALEX POWER B +29 */
-    (u32)sean_exca_006,  /* 6 follow-up of ALEX BACK D, HUMI ASIB A +9 */
+    (u32)sean_exca_005,  /* 5 follow-up of KGM TATAKI S / ALEX POWER B +29 */
+    (u32)sean_exca_006,  /* 6 follow-up of ALEX BACK D / HUMI ASIB A +9 */
     (u32)sean_exca_007,  /* 7 no name */
-    (u32)sean_exca_008,  /* 8 follow-up of IBUKI, DUDDLEY D S +2 */
-    (u32)sean_exca_009,  /* 9 follow-up of TATAKI S, ALEX BODY S +5 */
-    (u32)sean_exca_010,  /* 10 follow-up of IBUKI KUBIORI, KIRIMOMI A +2 */
+    (u32)sean_exca_008,  /* 8 follow-up of IBUKI / DUDDLEY D S +2 */
+    (u32)sean_exca_009,  /* 9 follow-up of TATAKI S / ALEX BODY S +5 */
+    (u32)sean_exca_010,  /* 10 follow-up of IBUKI KUBIORI / KIRIMOMI A +2 */
     (u32)sean_exca_011,  /* 11 follow-up of APPEAR JUNBI 4 */
     (u32)sean_exca_012,  /* 12 follow-up of APPEAR JUNBI 5 */
     (u32)sean_exca_013,  /* 13 follow-up of APPEAR JUNBI 6 */
@@ -5629,7 +5629,7 @@ const u32 sean_exca[50] = {
     (u32)sean_exca_020,  /* 20 no name */
     (u32)sean_exca_021,  /* 21 no name */
     (u32)sean_exca_022,  /* 22 follow-up of APPEAR 5 */
-    (u32)sean_exca_023,  /* 23 follow-up of HARAIGOSHI A, APPEAR 5 */
+    (u32)sean_exca_023,  /* 23 follow-up of HARAIGOSHI A / APPEAR 5 */
     (u32)sean_exca_024,  /* 24 no name */
     (u32)sean_exca_025,  /* 25 no name */
     (u32)sean_exca_026,  /* 26 follow-up of APPEAR JUNBI 7 */
@@ -5639,8 +5639,8 @@ const u32 sean_exca[50] = {
     (u32)sean_exca_030,  /* 30 follow-up of APPEAR JUNBI 1 */
     (u32)sean_exca_031,  /* 31 follow-up of APPEAR 3 */
     (u32)sean_exca_032,  /* 32 follow-up of APPEAR 3 */
-    (u32)sean_exca_033,  /* 33 follow-up of GILL IMPACT C, APPEAR 4 */
-    (u32)sean_exca_034,  /* 34 follow-up of GILL IMPACT C, APPEAR 4 */
+    (u32)sean_exca_033,  /* 33 follow-up of GILL IMPACT C / APPEAR 4 */
+    (u32)sean_exca_034,  /* 34 follow-up of GILL IMPACT C / APPEAR 4 */
     (u32)sean_exca_035,  /* 35 follow-up of SP APPEAR 7 */
     (u32)sean_exca_036,  /* 36 follow-up of SP APPEAR 7 */
     (u32)sean_exca_037,  /* 37 follow-up of SP APPEAR 8 */
@@ -5658,7 +5658,7 @@ const u32 sean_exca[50] = {
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 sean_exca_000_head[4] = { HEAD(4, 24, 0, 0, 0, 0, 0) };
 const u16 sean_exca_000[100] = {
     L4(3, 0, 273, 0, 0, 0, 0, 0x4852, 0, 164, 0, 0, 0, 0, 0),
@@ -5696,7 +5696,7 @@ const u16 sean_exca_002[48] = {
     CMD(CM_JPSS, 7, 1, 4), 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000,
 };
 
-/* script: 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+/* script: 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
 const u16 sean_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 sean_exca_003[68] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x48FA, 0, 126, 0, 0, 0, 0, 0),
@@ -5722,7 +5722,7 @@ const u16 sean_exca_004[76] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of KGM TATAKI S, ALEX POWER B +29 */
+/* script: 5 follow-up of KGM TATAKI S / ALEX POWER B +29 */
 const u16 sean_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 sean_exca_005[148] = {
     L4(2, 0, 0, 0, 0, 0, 0, 0x48E8, 0, 126, 0, 0, 0, 0, 0),
@@ -5746,7 +5746,7 @@ const u16 sean_exca_005[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of ALEX BACK D, HUMI ASIB A +9 */
+/* script: 6 follow-up of ALEX BACK D / HUMI ASIB A +9 */
 const u16 sean_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 sean_exca_006[116] = {
     L4(1, 2, 0, 0, 0, 0, 0, 0x48EC, 0, 126, 0, 0, 0, 0, 0),
@@ -5779,7 +5779,7 @@ const u16 sean_exca_007[60] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of IBUKI, DUDDLEY D S +2 */
+/* script: 8 follow-up of IBUKI / DUDDLEY D S +2 */
 const u16 sean_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 sean_exca_008[100] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x4900, 0, 126, 0, 0, 0, 0, 0),
@@ -5797,7 +5797,7 @@ const u16 sean_exca_008[100] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of TATAKI S, ALEX BODY S +5 */
+/* script: 9 follow-up of TATAKI S / ALEX BODY S +5 */
 const u16 sean_exca_009_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 sean_exca_009[124] = {
     L4(1, 2, 0, 0, 0, 0, 0, 0x4900, 0, 126, 0, 0, 0, 0, 0),
@@ -5818,7 +5818,7 @@ const u16 sean_exca_009[124] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 10 follow-up of IBUKI KUBIORI, KIRIMOMI A +2 */
+/* script: 10 follow-up of IBUKI KUBIORI / KIRIMOMI A +2 */
 const u16 sean_exca_010_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 sean_exca_010[92] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x48FB, 0, 126, 0, 0, 0, 0, 0),
@@ -5977,7 +5977,7 @@ const u16 sean_exca_022[60] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 23 follow-up of HARAIGOSHI A, APPEAR 5 */
+/* script: 23 follow-up of HARAIGOSHI A / APPEAR 5 */
 const u16 sean_exca_023_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 sean_exca_023[84] = {
     CMD(CM_PA_X, 0, 1024, 0), 0, 0, 0, 0,
@@ -6095,7 +6095,7 @@ const u16 sean_exca_032[60] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 33 follow-up of GILL IMPACT C, APPEAR 4 */
+/* script: 33 follow-up of GILL IMPACT C / APPEAR 4 */
 const u16 sean_exca_033_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 sean_exca_033[68] = {
     L4(4, 2, 0, 0, 0, 0, 0, 0x48FA, 0, 126, 0, 0, 0, 0, 0),
@@ -6109,7 +6109,7 @@ const u16 sean_exca_033[68] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 34 follow-up of GILL IMPACT C, APPEAR 4 */
+/* script: 34 follow-up of GILL IMPACT C / APPEAR 4 */
 const u16 sean_exca_034_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 sean_exca_034[60] = {
     L4(4, 2, 0, 0, 0, 0, 0, 0x48FA, 0, 126, 0, 0, 0, 0, 0),

@@ -8,7 +8,7 @@
  * one of seven behaviours eff35_0000-0006: static display, horizontal zoom-in, repeating
  * sliding pieces, a reaction to the bonus result, and pieces pinned to BG1. Several of
  * them set Next_Step when done and most exit early on Break_Into.
- * Created from Game_Main, Manage and the second bonus-stage BG init (bns11_init00).
+ * Created from Game_Main and the stage 16 background (bgst160).
  */
 
 #include "structs.h"

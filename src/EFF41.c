@@ -22,7 +22,6 @@
 
 
 
-/* the older version */
 void effect_41_move(WORK_Other* ewk) {
     PLW* mwk = (PLW*)ewk->my_master;
     switch (ewk->wu.routine_no[0]) {

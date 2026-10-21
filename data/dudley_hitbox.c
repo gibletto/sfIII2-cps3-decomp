@@ -52,10 +52,10 @@ const HIT_IX dudley_hit_ix_table[149] = {
     {   15,   15,    0,    2,    1,    2,    0,    1 },  /* 16: M PUNCH A, follow-up of follow-up of S KICK A, follow-up of S PUNCH A +5 */
     {   16,   16,    0,    3,    1,    3,    0,    1 },  /* 17: S KICK A */
     {   16,   16,    0,    0,    1,    0,    0,    1 },  /* 18: S KICK A */
-    {   17,   17,    0,    0,    1,    0,    0,    1 },  /* 19: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4 */
-    {   18,   18,    0,    4,    1,    4,    0,    1 },  /* 20: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4 */
-    {   68,   68,    0,    5,    1,    5,    0,    1 },  /* 21: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4 */
-    {   68,   68,    0,    0,    1,    0,    0,    1 },  /* 22: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4 */
+    {   17,   17,    0,    0,    1,    0,    0,    1 },  /* 19: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4 */
+    {   18,   18,    0,    4,    1,    4,    0,    1 },  /* 20: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4 */
+    {   68,   68,    0,    5,    1,    5,    0,    1 },  /* 21: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4 */
+    {   68,   68,    0,    0,    1,    0,    0,    1 },  /* 22: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4 */
     {   19,   19,    0,    0,   10,    0,    0,    1 },  /* 23: S PUNCH C */
     {   20,   20,    0,    6,   10,    6,    0,    1 },  /* 24: S PUNCH C */
     {   15,   15,    0,    0,    1,    0,    0,    1 },  /* 25: M PUNCH A, follow-up of follow-up of S KICK A, follow-up of S PUNCH A +3 */
@@ -66,17 +66,17 @@ const HIT_IX dudley_hit_ix_table[149] = {
     {   25,   25,    0,    9,    1,    9,    0,    1 },  /* 30: L KICK A, atca 162, follow-up of M KICK A +1 */
     {   26,   26,    0,   10,    1,   10,    0,    1 },  /* 31: L KICK A, atca 162, follow-up of M KICK A +5 */
     {   26,   26,    0,    0,    1,    0,    0,    1 },  /* 32: L KICK A, atca 162, follow-up of M KICK A +5 */
-    {   27,   27,    0,   11,    1,   11,    0,    1 },  /* 33: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A, M KICK C +3 */
-    {   27,   27,    0,    0,    1,    0,    0,    1 },  /* 34: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A, M KICK C +5 */
+    {   27,   27,    0,   11,    1,   11,    0,    1 },  /* 33: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A / M KICK C +3 */
+    {   27,   27,    0,    0,    1,    0,    0,    1 },  /* 34: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A / M KICK C +5 */
     {   28,   28,    0,   12,    7,   12,    0,    3 },  /* 35: KAGAMI P A */
     {   29,   29,    0,    0,    6,    0,    0,    3 },  /* 36: KAGAMI P A, follow-up of JUDGMENT WAIT */
     {   30,   30,    0,   13,    6,   13,    0,    3 },  /* 37: KAGAMI P A, follow-up of JUDGMENT WAIT */
     {   30,   30,    0,    0,    6,    0,    0,    3 },  /* 38: KAGAMI P A, follow-up of JUDGMENT WAIT, follow-up of follow-up of JUDGMENT WAIT */
-    {   31,   31,    0,    0,    6,    0,    0,    1 },  /* 39: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    {   32,   32,    0,   14,    6,   14,    0,    1 },  /* 40: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    {   33,   33,    0,   15,    6,   15,    0,    1 },  /* 41: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    {   34,   34,    0,    0,    6,    0,    0,    1 },  /* 42: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    {   35,   35,    0,    0,    6,    0,    0,    1 },  /* 43: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +4 */
+    {   31,   31,    0,    0,    6,    0,    0,    1 },  /* 39: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    {   32,   32,    0,   14,    6,   14,    0,    1 },  /* 40: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    {   33,   33,    0,   15,    6,   15,    0,    1 },  /* 41: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    {   34,   34,    0,    0,    6,    0,    0,    1 },  /* 42: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    {   35,   35,    0,    0,    6,    0,    0,    1 },  /* 43: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +4 */
     {   36,   36,    0,   16,    7,   16,    0,    3 },  /* 44: KAGAMI K A */
     {   36,   36,    0,    0,    7,    0,    0,    3 },  /* 45: KAGAMI K A */
     {   37,   37,    0,    0,    6,    0,    0,    3 },  /* 46: KAGAMI K A, UP P GUARD K S */
@@ -203,8 +203,8 @@ const BODY_BOX dudley_body_box[90] = {
     { { {  -24,  26,  91,  16 },  {  -24,  52,  76,  23 },  {  -27,  54,  45,  29 },  {  -33,  68,   0,  43 } } },  /* 14: S PUNCH A, follow-up of S PUNCH A, ATTACK 10 M: not started by a command +1 */
     { { {  -24,  26,  91,  16 },  {  -29,  45,  73,  21 },  {  -33,  49,  41,  30 },  {  -39,  74,   0,  40 } } },  /* 15: M PUNCH A, follow-up of follow-up of S KICK A, follow-up of S PUNCH A +6 */
     { { {  -18,  34,  92,  17 },  {  -23,  48,  73,  18 },  {  -55,  80,  53,  20 },  {  -35,  71,   0,  53 } } },  /* 16: S KICK A */
-    { { {  -40,  29,  80,  18 },  {  -43,  59,  72,  17 },  {  -43,  69,  40,  32 },  {  -36,  82,   0,  40 } } },  /* 17: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4 */
-    { { {  -33,  34,  93,  16 },  {  -48,  70,  83,  17 },  {  -46,  74,  48,  35 },  {  -40,  80,   0,  48 } } },  /* 18: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4 */
+    { { {  -40,  29,  80,  18 },  {  -43,  59,  72,  17 },  {  -43,  69,  40,  32 },  {  -36,  82,   0,  40 } } },  /* 17: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4 */
+    { { {  -33,  34,  93,  16 },  {  -48,  70,  83,  17 },  {  -46,  74,  48,  35 },  {  -40,  80,   0,  48 } } },  /* 18: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4 */
     { { {  -34,  37,  79,  13 },  {  -34,  52,  61,  19 },  {  -34,  61,  37,  22 },  {  -34,  81,   0,  35 } } },  /* 19: S PUNCH C */
     { { {  -28,  40,  83,  13 },  {  -27,  56,  62,  22 },  {  -28,  69,  38,  22 },  {  -33,  86,   0,  37 } } },  /* 20: S PUNCH C */
     { { {  -18,  31,  72,  17 },  {  -45,  77,  62,  17 },  {  -45,  77,  28,  33 },  {  -45,  89,   0,  28 } } },  /* 21: ATTACK 1 S: 623+P light (routine Att_SENPUUKYAKU) */
@@ -213,15 +213,15 @@ const BODY_BOX dudley_body_box[90] = {
     { { {  -31,  39,  77,  22 },  {  -37,  67,  61,  21 },  {  -43,  73,  39,  22 },  {  -37,  77,   0,  39 } } },  /* 24: L KICK A, atca 162, follow-up of M KICK A */
     { { {  -31,  43,  81,  18 },  {  -25,  51,  64,  15 },  {  -53,  83,  46,  18 },  {  -37,  72,   0,  46 } } },  /* 25: L KICK A, atca 162, follow-up of M KICK A +1 */
     { { {  -24,  34,  84,  18 },  {  -73, 103,  64,  20 },  {  -36,  67,  41,  23 },  {  -36,  72,   0,  40 } } },  /* 26: L KICK A, atca 162, follow-up of M KICK A +5 */
-    { { {  -30,  42,  83,  16 },  {  -80, 106,  52,  39 },  {  -36,  63,  38,  14 },  {  -42,  88,   0,  38 } } },  /* 27: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A, M KICK C +5 */
+    { { {  -30,  42,  83,  16 },  {  -80, 106,  52,  39 },  {  -36,  63,  38,  14 },  {  -42,  88,   0,  38 } } },  /* 27: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A / M KICK C +5 */
     { { {  -22,  34,  59,  19 },  {  -41,  78,  47,  25 },  {  -39,  73,  29,  18 },  {  -43,  87,   0,  29 } } },  /* 28: KAGAMI P A */
     { { {  -29,  31,  69,  17 },  {  -40,  68,  53,  23 },  {  -37,  61,  33,  20 },  {  -42,  87,   0,  33 } } },  /* 29: KAGAMI P A, follow-up of JUDGMENT WAIT */
     { { {  -29,  31,  69,  17 },  {  -40,  68,  53,  23 },  {  -37,  61,  33,  20 },  {  -42,  87,   0,  33 } } },  /* 30: KAGAMI P A, follow-up of JUDGMENT WAIT, follow-up of follow-up of JUDGMENT WAIT */
-    { { {  -46,  31,  72,  17 },  {  -54,  68,  53,  23 },  {  -37,  61,  33,  20 },  {  -42,  87,   0,  33 } } },  /* 31: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    { { {  -35,  31,  82,  17 },  {  -49,  67,  60,  26 },  {  -37,  61,  33,  27 },  {  -42,  87,   0,  33 } } },  /* 32: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    { { {  -30,  31,  89,  17 },  {  -45,  63,  60,  30 },  {  -37,  61,  33,  27 },  {  -42,  87,   0,  33 } } },  /* 33: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    { { {  -30,  31,  89,  17 },  {  -45,  63,  60,  30 },  {  -37,  61,  33,  27 },  {  -42,  87,   0,  33 } } },  /* 34: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    { { {  -30,  31,  89,  17 },  {  -45,  63,  60,  30 },  {  -37,  61,  33,  27 },  {  -42,  87,   0,  33 } } },  /* 35: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +4 */
+    { { {  -46,  31,  72,  17 },  {  -54,  68,  53,  23 },  {  -37,  61,  33,  20 },  {  -42,  87,   0,  33 } } },  /* 31: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    { { {  -35,  31,  82,  17 },  {  -49,  67,  60,  26 },  {  -37,  61,  33,  27 },  {  -42,  87,   0,  33 } } },  /* 32: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    { { {  -30,  31,  89,  17 },  {  -45,  63,  60,  30 },  {  -37,  61,  33,  27 },  {  -42,  87,   0,  33 } } },  /* 33: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    { { {  -30,  31,  89,  17 },  {  -45,  63,  60,  30 },  {  -37,  61,  33,  27 },  {  -42,  87,   0,  33 } } },  /* 34: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    { { {  -30,  31,  89,  17 },  {  -45,  63,  60,  30 },  {  -37,  61,  33,  27 },  {  -42,  87,   0,  33 } } },  /* 35: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +4 */
     { { {  -21,  31,  61,  17 },  {  -39,  75,  46,  27 },  {  -38,  71,  29,  20 },  {  -43,  84,   0,  29 } } },  /* 36: KAGAMI K A */
     { { {  -29,  36,  56,  19 },  {  -47,  71,  50,  15 },  {  -48,  78,  29,  21 },  {  -48,  95,   0,  29 } } },  /* 37: KAGAMI K A, UP P GUARD K S */
     { { {  -46,  33,  51,  18 },  {  -54,  76,  39,  26 },  {  -66, 106,  25,  27 },  {  -55, 112,   0,  33 } } },  /* 38: KAGAMI K A, UP P GUARD K S */
@@ -254,7 +254,7 @@ const BODY_BOX dudley_body_box[90] = {
     { { {  -26,  16,  74,  14 },  {  -42,  56,  60,  14 },  {  -20,  34,  38,  20 },  {  -36,  72,   0,  36 } } },  /* 65: not used by a script */
     { { {  -33,  36,  74,  17 },  {  -42,  74,  60,  14 },  {  -40,  75,  38,  22 },  {  -40,  79,   0,  38 } } },  /* 66: ATTACK 2 S: SA III 23623+P (routine Att_CHOUCHUURENGEKI) */
     { { {  -61,  26,  22,  20 },  {  -35,  19,  22,  20 },  {  -16,  36,  22,  20 },  {  -55, 102,   0,  22 } } },  /* 67: ATTACK 3 S: SA II 23623+P (plain script), ATTACK 9 M: 4(123)6+K light (routine Att_CHOUCHUURENGEKI), ATTACK 9 L: 4(123)6+K medium (routine Att_CHOUCHUURENGEKI) +12 */
-    { { {  -50,  50,  96,  16 },  {  -72,  96,  83,  16 },  {  -45,  74,  48,  35 },  {  -45,  85,   0,  48 } } },  /* 68: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4 */
+    { { {  -50,  50,  96,  16 },  {  -72,  96,  83,  16 },  {  -45,  74,  48,  35 },  {  -45,  85,   0,  48 } } },  /* 68: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4 */
     { { {   -9,  16,  71,  16 },  {  -30,  64,  62,  16 },  {  -19,  49,  41,  20 },  {  -25,  53,   0,  39 } } },  /* 69: ATTACK 3 S: SA II 23623+P (plain script) */
     { { {    8,  16,  79,  16 },  {  -20,  53,  69,  16 },  {  -17,  39,  36,  31 },  {  -30,  56,   0,  34 } } },  /* 70: ATTACK 3 S: SA II 23623+P (plain script) */
     { { {   12,  16,  59,  16 },  {  -18,  53,  55,  15 },  {  -17,  41,  38,  15 },  {  -35,  53,   0,  36 } } },  /* 71: ATTACK 3 S: SA II 23623+P (plain script) */
@@ -307,14 +307,14 @@ const HAND_BOX dudley_hand_box[88] = {
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 24: no box */
     { { {  -72,  46,  65,  13 },  {    0,   0,   0,   0 } } },  /* 25: L KICK A, atca 162, follow-up of M KICK A +1 */
     { { {  -74,  50,  84,  21 },  {    0,   0,   0,   0 } } },  /* 26: L KICK A, atca 162, follow-up of M KICK A +5 */
-    { { {  -91,  11,  61,  30 },  {    0,   0,   0,   0 } } },  /* 27: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A, M KICK C +5 */
+    { { {  -91,  11,  61,  30 },  {    0,   0,   0,   0 } } },  /* 27: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A / M KICK C +5 */
     { { {  -81,  44,  39,  31 },  {    0,   0,   0,   0 } } },  /* 28: KAGAMI P A */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 29: no box */
     { { {  -83,  44,  52,  27 },  {    0,   0,   0,   0 } } },  /* 30: KAGAMI P A, follow-up of JUDGMENT WAIT, follow-up of follow-up of JUDGMENT WAIT */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 31: no box */
-    { { {  -83,  46,  57,  29 },  {    0,   0,   0,   0 } } },  /* 32: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    { { {  -79,  48,  76,  38 },  {    0,   0,   0,   0 } } },  /* 33: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
-    { { {  -79,  48,  76,  38 },  {    0,   0,   0,   0 } } },  /* 34: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    { { {  -83,  46,  57,  29 },  {    0,   0,   0,   0 } } },  /* 32: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    { { {  -79,  48,  76,  38 },  {    0,   0,   0,   0 } } },  /* 33: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
+    { { {  -79,  48,  76,  38 },  {    0,   0,   0,   0 } } },  /* 34: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3 */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 35: no box */
     { { {  -80,  52,  17,  42 },  {    0,   0,   0,   0 } } },  /* 36: KAGAMI K A */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 37: no box */
@@ -348,7 +348,7 @@ const HAND_BOX dudley_hand_box[88] = {
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 65: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 66: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 67: no box */
-    { { {  -73,  41,  99,  27 },  {    0,   0,   0,   0 } } },  /* 68: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4 */
+    { { {  -73,  41,  99,  27 },  {    0,   0,   0,   0 } } },  /* 68: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4 */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 69: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 70: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 71: no box */

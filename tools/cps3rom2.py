@@ -3,19 +3,24 @@
 
     python tools/cps3rom2.py extract <sfiii2n.zip> <cg.bin>
         Read the two program SIMMs (sfiii2-simm1.*, sfiii2-simm2.*) from the ROM set and write the graphics
-        pattern directory and patterns (06800000-06DA767B), which the build does not compile.
+        pattern directory and patterns (06800000 up to 06DA767C), which the build does not compile.
 
-    python tools/cps3rom2.py pack <sf2i.bin> <cg.bin> <sfiii2n.zip> <out dir>
+    python tools/cps3rom2.py pack <sf2i.bin> <cg.bin> <sfiii2n.zip> <out dir> [sf2i.map]
         Put the patterns into the linked image, write <out dir>/prog.bin (06000000-06FFFFFF), compare it with the
         expected image (tools/prog.sha1), and write <out dir>/sfiii2n.zip: the ROM set with the two program SIMMs
         replaced by the new program. Exit status 0 when the image and every program chip are the original's.
 
 A program SIMM is four 2 MB chips, one byte lane each. 2nd Impact stores its instructions encrypted with the CPS3
 address mask (MAME's cps3_state::cps3_mask, keys 0, 0) and its data (tables, literal pools, the program header)
-plain, chosen per halfword: tools/prog_enc.tsv lists the encrypted runs (start and end address, end exclusive).
+plain, chosen per halfword. pack works out which halfwords are instructions from the image itself: tools/codemap.py
+follows the code from the vector table, the program header and every routine the link map names (sf2i.map), so a
+changed program is packed correctly too; for the original program it gives the arcade's choice exactly.
 """
-import hashlib, sys, zipfile
+import hashlib, re, sys, zipfile
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import codemap
 
 CHIP = 0x200000
 SIMM = 4 * CHIP
@@ -62,7 +67,17 @@ def extract(rom, cg):
     print(f"{cg}: {CG_END - CG_START:#x} bytes of patterns")
 
 
-def pack(linked, cg, rom, outdir):
+def routines(mapfile):
+    """the code addresses the link map names (entry symbols in the program's code range)"""
+    out = set()
+    for l in Path(mapfile).read_text(errors="replace").splitlines():
+        m = re.match(r"\s*_\w+\s+H'(06[0-9A-F]{6})\s+ENT", l)
+        if m:
+            out.add(int(m.group(1), 16))
+    return sorted(out)
+
+
+def pack(linked, cg, rom, outdir, mapfile="sf2i.map"):
     prog = bytearray(Path(linked).read_bytes())
     if len(prog) != 2 * SIMM:
         sys.exit(f"{linked}: expected {2 * SIMM:#x} bytes")
@@ -74,21 +89,22 @@ def pack(linked, cg, rom, outdir):
     sha1 = hashlib.sha1(prog).hexdigest()
     ok = sha1 == want
     print(f"prog.bin sha1 {sha1}: " + ("matches" if ok else f"DIFFERS from expected {want}"))
+    _, cls = codemap.classify(bytes(prog), routines(mapfile))
     st = bytearray(prog)
-    for l in (HERE / "prog_enc.tsv").read_text().splitlines():
-        if not l or l.startswith("#"):
-            continue
-        lo, hi = (int(x, 16) for x in l.split()[:2])
-        for a in range(lo, hi, 2):
-            o = a - BASE
-            m = mask(a & ~3) & 0xFFFF
+    n = 0
+    for h, c in enumerate(cls):
+        if c in codemap.ENCRYPTED:
+            o = 2 * h
+            m = mask(BASE + (o & ~3)) & 0xFFFF
             v = (prog[o] << 8 | prog[o + 1]) ^ m
             st[o], st[o + 1] = v >> 8, v & 0xFF
+            n += 1
+    print(f"{n} instruction halfwords encrypted")
     new = {}
-    for n in (1, 2):
-        flat = st[(n - 1) * SIMM:n * SIMM]
+    for k in (1, 2):
+        flat = st[(k - 1) * SIMM:k * SIMM]
         for c in range(4):
-            new[f"sfiii2-simm{n}.{c}"] = bytes(flat[c::4])
+            new[f"sfiii2-simm{k}.{c}"] = bytes(flat[c::4])
     with zipfile.ZipFile(rom) as src, zipfile.ZipFile(out / "sfiii2n.zip", "w", zipfile.ZIP_DEFLATED) as dst:
         for info in src.infolist():
             old = src.read(info.filename)
@@ -106,7 +122,7 @@ def main():
     a = sys.argv[1:]
     if len(a) == 3 and a[0] == "extract":
         extract(a[1], a[2])
-    elif len(a) == 5 and a[0] == "pack":
+    elif len(a) in (5, 6) and a[0] == "pack":
         sys.exit(0 if pack(*a[1:]) else 1)
     else:
         sys.exit(__doc__)

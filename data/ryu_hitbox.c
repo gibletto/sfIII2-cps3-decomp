@@ -70,7 +70,7 @@ const HIT_IX ryu_hit_ix_table[206] = {
     {   26,   26,    0,   10,    1,   10,    0,    1 },  /* 34: L PUNCH B, UP P GUARD P L */
     {   27,   27,    0,   10,    1,   10,    0,    1 },  /* 35: L PUNCH B, UP P GUARD P L */
     {   27,   27,    0,    0,    1,    0,    0,    1 },  /* 36: not used by a script */
-    {   28,   28,    0,    0,    1,    0,    0,    1 },  /* 37: L PUNCH B, follow-up of L PUNCH B, UP P GUARD P L, UP P GUARD P L */
+    {   28,   28,    0,    0,    1,    0,    0,    1 },  /* 37: L PUNCH B, follow-up of L PUNCH B / UP P GUARD P L, UP P GUARD P L */
     {   29,   29,    0,    0,    1,    0,    0,    1 },  /* 38: L PUNCH B, UP P GUARD P L */
     {   30,   30,    0,    0,    9,    0,    0,    1 },  /* 39: S KICK A */
     {   31,   31,    0,   11,    9,   11,    0,    1 },  /* 40: S KICK A */
@@ -98,13 +98,13 @@ const HIT_IX ryu_hit_ix_table[206] = {
     {   49,   49,    0,   40,    1,   40,    0,    1 },  /* 62: not used by a script */
     {   50,   50,    0,    0,    1,    0,    0,    1 },  /* 63: not used by a script */
     {   51,   51,    0,    0,    1,    0,    0,    1 },  /* 64: not used by a script */
-    {   52,   52,    0,    0,    1,    0,    0,    1 },  /* 65: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    {   53,   53,    0,    0,    1,    0,    0,    1 },  /* 66: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    {   54,   54,    0,    0,    1,    0,    0,    1 },  /* 67: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
+    {   52,   52,    0,    0,    1,    0,    0,    1 },  /* 65: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    {   53,   53,    0,    0,    1,    0,    0,    1 },  /* 66: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    {   54,   54,    0,    0,    1,    0,    0,    1 },  /* 67: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
     {   55,  132,    0,   19,    1,   19,    0,    1 },  /* 68: L KICK A */
-    {   55,   55,    0,   19,    1,   19,    0,    1 },  /* 69: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    {   56,   56,    0,    0,    1,    0,    0,    1 },  /* 70: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    {   57,   57,    0,    0,    1,    0,    0,    1 },  /* 71: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
+    {   55,   55,    0,   19,    1,   19,    0,    1 },  /* 69: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    {   56,   56,    0,    0,    1,    0,    0,    1 },  /* 70: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    {   57,   57,    0,    0,    1,    0,    0,    1 },  /* 71: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
     {   58,   58,    0,    0,    1,    0,    0,    1 },  /* 72: not used by a script */
     {   59,   59,    0,    0,    1,    0,    0,   19 },  /* 73: not used by a script */
     {   60,   60,    0,    0,   13,    0,    0,   10 },  /* 74: TOUKETSU A */
@@ -149,8 +149,8 @@ const HIT_IX ryu_hit_ix_table[206] = {
     {  121,  121,    0,   36,    4,   36,    0,    3 },  /* 113: F JUMP P M A */
     {   84,   84,    0,    0,    4,   37,    0,    4 },  /* 114: V JUMP K L A */
     {   84,   84,    0,    0,    4,    0,    0,    4 },  /* 115: V JUMP K L A */
-    {   85,   85,    0,    0,   16,    0,    0,   19 },  /* 116: follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +4 */
-    {   86,   86,    0,    0,   16,    0,    0,   19 },  /* 117: follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +8 */
+    {   85,   85,    0,    0,   16,    0,    0,   19 },  /* 116: follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +4 */
+    {   86,   86,    0,    0,   16,    0,    0,   19 },  /* 117: follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +8 */
     {    0,    0,    0,    0,    1,    0,    0,   20 },  /* 118: follow-up of APPEAR JUNBI 1, follow-up of JUDGMENT WAIT, ATTACK 7 S: not started by a command */
     {   88,   88,    0,    0,    1,    0,    0,    1 },  /* 119: ATTACK 3 S: not started by a command, ATTACK 3 M: not started by a command, ATTACK 3 L: not started by a command +2 */
     {   89,   89,    0,    0,    1,    0,    0,    1 },  /* 120: ATTACK 3 S: not started by a command, ATTACK 3 M: not started by a command, ATTACK 3 L: not started by a command +2 */
@@ -181,7 +181,7 @@ const HIT_IX ryu_hit_ix_table[206] = {
     {   83,   83,    0,    0,    3,   48,    0,    3 },  /* 145: F JUMP K L A, S V JP S P A */
     {  108,  108,    0,    0,    1,    0,    0,    1 },  /* 146: M PUNCH A, UP P GUARD P M */
     {  106,  106,    0,    0,    1,    0,    0,    1 },  /* 147: M PUNCH C */
-    {   54,   54,    0,   49,    1,   49,    0,    1 },  /* 148: follow-up of L PUNCH B, UP P GUARD P L */
+    {   54,   54,    0,   49,    1,   49,    0,    1 },  /* 148: follow-up of L PUNCH B / UP P GUARD P L */
     {  116,  116,    0,    0,   14,    0,    0,   23 },  /* 149: FUSHIN P S */
     {  117,  117,    0,   50,   14,   50,    0,   23 },  /* 150: FUSHIN P S */
     {    7,    0,    0,    0,   13,    0,    0,   22 },  /* 151: AIR S, AIR M, AIR L +35 */
@@ -271,7 +271,7 @@ const BODY_BOX ryu_body_box[132] = {
     { { {  -21,  38,  83,  16 },  {  -29,  55,  67,  20 },  {  -21,  44,  47,  22 },  {  -35,  61,   0,  47 } } },  /* 25: L PUNCH B, UP P GUARD P L */
     { { {  -20,  23,  83,  16 },  {  -25,  44,  67,  20 },  {  -18,  43,  36,  29 },  {  -35,  61,   0,  35 } } },  /* 26: L PUNCH B, UP P GUARD P L */
     { { {   -6,  26,  82,  16 },  {  -25,  49,  67,  20 },  {  -20,  43,  36,  29 },  {  -36,  80,   0,  35 } } },  /* 27: L PUNCH B, UP P GUARD P L */
-    { { {    0,  23,  83,  16 },  {  -25,  44,  67,  20 },  {  -18,  43,  36,  29 },  {  -35,  61,   0,  35 } } },  /* 28: L PUNCH B, follow-up of L PUNCH B, UP P GUARD P L, UP P GUARD P L */
+    { { {    0,  23,  83,  16 },  {  -25,  44,  67,  20 },  {  -18,  43,  36,  29 },  {  -35,  61,   0,  35 } } },  /* 28: L PUNCH B, follow-up of L PUNCH B / UP P GUARD P L, UP P GUARD P L */
     { { {  -14,  23,  83,  16 },  {  -25,  44,  67,  20 },  {  -18,  43,  36,  29 },  {  -35,  61,   0,  35 } } },  /* 29: L PUNCH B, UP P GUARD P L */
     { { {  -14,  23,  83,  16 },  {  -25,  44,  67,  20 },  {  -35,  51,  36,  31 },  {  -33,  36,   0,  35 } } },  /* 30: S KICK A */
     { { {  -24,  31,  84,  16 },  {  -32,  51,  67,  20 },  {  -35,  56,  36,  29 },  {  -44,  56,   0,  35 } } },  /* 31: S KICK A */
@@ -295,12 +295,12 @@ const BODY_BOX ryu_body_box[132] = {
     { { {  -20,  23,  88,  16 },  {  -46,  46,  67,  20 },  {  -52,  43,  36,  29 },  {  -43,  34,   0,  35 } } },  /* 49: not used by a script */
     { { {  -20,  23,  88,  16 },  {  -46,  46,  67,  20 },  {  -52,  43,  36,  29 },  {  -43,  34,   0,  35 } } },  /* 50: not used by a script */
     { { {  -31,  23,  88,  16 },  {  -44,  46,  67,  20 },  {  -39,  43,  36,  29 },  {  -43,  50,   0,  35 } } },  /* 51: not used by a script */
-    { { {   -5,  23,  77,  16 },  {  -25,  53,  67,  20 },  {  -29,  45,  36,  29 },  {  -25,  55,   0,  35 } } },  /* 52: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    { { {    2,  23,  77,  16 },  {  -27,  60,  61,  20 },  {  -35,  60,  39,  29 },  {  -25,  55,   0,  35 } } },  /* 53: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    { { {    2,  23,  77,  16 },  {  -27,  60,  61,  20 },  {  -35,  54,  39,  29 },  {  -26,  55,   0,  35 } } },  /* 54: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    { { {    7,  23,  77,  16 },  {  -30,  63,  61,  20 },  {  -45,  73,  35,  26 },  {  -46,  72,   0,  35 } } },  /* 55: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    { { {   -1,  23,  77,  16 },  {  -14,  36,  57,  20 },  {  -45,  73,  35,  26 },  {  -46,  72,   0,  35 } } },  /* 56: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    { { {  -11,  23,  78,  16 },  {  -35,  60,  61,  21 },  {  -34,  59,  34,  29 },  {  -33,  58,   0,  46 } } },  /* 57: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
+    { { {   -5,  23,  77,  16 },  {  -25,  53,  67,  20 },  {  -29,  45,  36,  29 },  {  -25,  55,   0,  35 } } },  /* 52: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    { { {    2,  23,  77,  16 },  {  -27,  60,  61,  20 },  {  -35,  60,  39,  29 },  {  -25,  55,   0,  35 } } },  /* 53: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    { { {    2,  23,  77,  16 },  {  -27,  60,  61,  20 },  {  -35,  54,  39,  29 },  {  -26,  55,   0,  35 } } },  /* 54: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    { { {    7,  23,  77,  16 },  {  -30,  63,  61,  20 },  {  -45,  73,  35,  26 },  {  -46,  72,   0,  35 } } },  /* 55: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    { { {   -1,  23,  77,  16 },  {  -14,  36,  57,  20 },  {  -45,  73,  35,  26 },  {  -46,  72,   0,  35 } } },  /* 56: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    { { {  -11,  23,  78,  16 },  {  -35,  60,  61,  21 },  {  -34,  59,  34,  29 },  {  -33,  58,   0,  46 } } },  /* 57: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
     { { {   -4,  23,  90,  16 },  {  -25,  53,  67,  20 },  {  -18,  43,  36,  29 },  {  -25,  55,   0,  35 } } },  /* 58: not used by a script */
     { { {    6,  23,  86,  16 },  {  -14,  53,  67,  20 },  {  -18,  43,  36,  29 },  {  -25,  55,   0,  35 } } },  /* 59: not used by a script */
     { { {   20,  23,  77,  16 },  {  -14,  53,  67,  20 },  {  -18,  43,  36,  29 },  {  -25,  55,   0,  35 } } },  /* 60: TOUKETSU A */
@@ -328,8 +328,8 @@ const BODY_BOX ryu_body_box[132] = {
     { { {  -23,  39,  89,  16 },  {  -32,  63,  67,  24 },  {  -49,  76,  35,  33 },  {    0,   0,   0,   0 } } },  /* 82: V JUMP K S A, F JUMP K S A */
     { { {  -28,  48,  92,  14 },  {  -39,  68,  81,  14 },  {  -44,  74,  46,  41 },  {    0,   0,   0,   0 } } },  /* 83: F JUMP K M A, F JUMP K L A, S V JP S P A */
     { { {  -11,  23, 106,  16 },  {  -23,  53,  90,  20 },  {  -29,  57,  43,  40 },  {    0,   0,   0,   0 } } },  /* 84: V JUMP K L A */
-    { { {  -28,  38,  74,  16 },  {  -37,  65,  56,  20 },  {  -19,  43,  36,  29 },  {  -46,  80,   0,  35 } } },  /* 85: follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +4 */
-    { { {  -31,  29,  70,  16 },  {  -42,  77,  55,  23 },  {  -19,  43,  36,  29 },  {  -46,  80,   0,  35 } } },  /* 86: follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +8 */
+    { { {  -28,  38,  74,  16 },  {  -37,  65,  56,  20 },  {  -19,  43,  36,  29 },  {  -46,  80,   0,  35 } } },  /* 85: follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +4 */
+    { { {  -31,  29,  70,  16 },  {  -42,  77,  55,  23 },  {  -19,  43,  36,  29 },  {  -46,  80,   0,  35 } } },  /* 86: follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +8 */
     { { {  -12,  18,  72,  14 },  {  -24,  52,  62,  14 },  {  -14,  40,  38,  22 },  {  -24,  56,   0,  36 } } },  /* 87: not used by a script */
     { { {  -10,  18,  84,  14 },  {  -18,  48,  74,  14 },  {  -16,  43,  40,  34 },  {  -16,  56,   0,  40 } } },  /* 88: ATTACK 3 S: not started by a command, ATTACK 3 M: not started by a command, ATTACK 3 L: not started by a command +2 */
     { { {   -8,  18,  84,  14 },  {  -24,  46,  72,  14 },  {  -18,  30,  46,  24 },  {  -16,  24,   0,  44 } } },  /* 89: ATTACK 3 S: not started by a command, ATTACK 3 M: not started by a command, ATTACK 3 L: not started by a command +2 */
@@ -434,9 +434,9 @@ const HAND_BOX ryu_hand_box[135] = {
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 52: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 53: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 54: no box */
-    { { {  -85,  54,  57,  51 },  {    0,   0,   0,   0 } } },  /* 55: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    { { {  -87,  71,  58,  29 },  {    0,   0,   0,   0 } } },  /* 56: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
-    { { {  -54,  37,  26,  37 },  {    0,   0,   0,   0 } } },  /* 57: L KICK A, follow-up of L PUNCH B, UP P GUARD P L */
+    { { {  -85,  54,  57,  51 },  {    0,   0,   0,   0 } } },  /* 55: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    { { {  -87,  71,  58,  29 },  {    0,   0,   0,   0 } } },  /* 56: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
+    { { {  -54,  37,  26,  37 },  {    0,   0,   0,   0 } } },  /* 57: L KICK A, follow-up of L PUNCH B / UP P GUARD P L */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 58: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 59: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 60: no box */
@@ -465,7 +465,7 @@ const HAND_BOX ryu_hand_box[135] = {
     { { {  -72,  47,  44,  37 },  {    0,   0,   0,   0 } } },  /* 83: F JUMP K M A, F JUMP K L A, S V JP S P A */
     { { {  -74,  68,  70,  24 },  {    0,   0,   0,   0 } } },  /* 84: V JUMP K L A */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 85: no box */
-    { { {  -64,  22,  55,  23 },  {    0,   0,   0,   0 } } },  /* 86: follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +8 */
+    { { {  -64,  22,  55,  23 },  {    0,   0,   0,   0 } } },  /* 86: follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +8 */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 87: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 88: no box */
     { { {  -34,  15,  42,  29 },  {    0,   0,   0,   0 } } },  /* 89: ATTACK 3 S: not started by a command, ATTACK 3 M: not started by a command, ATTACK 3 L: not started by a command +2 */
@@ -537,7 +537,7 @@ const HOSEI_BOX ryu_hos_box[26] = {
     { {  -25,   50,   48,   40 } },  /* 16: V JUMP P S A, F JUMP P S A, F JUMP P M A */
     { {  -22,   49,   58,   32 } },  /* 17: ATTACK 12 S: not started by a command */
     { {  -24,   44,   54,   52 } },  /* 18: ATTACK 3 S: not started by a command, ATTACK 3 M: not started by a command, ATTACK 3 L: not started by a command +6 */
-    { {  -46,   80,    0,   70 } },  /* 19: follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +9 */
+    { {  -46,   80,    0,   70 } },  /* 19: follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +3, ATTACK 1 S: not started by a command, ATTACK 1 M: not started by a command +9 */
     { {  -24,   57,   47,   57 } },  /* 20: follow-up of APPEAR JUNBI 1, follow-up of JUDGMENT WAIT, ATTACK 7 S: not started by a command */
     { {  -38,   63,    0,   80 } },  /* 21: DASH HUMIKOMI, DASH TOBINOKI */
     { {  -25,   50,   48,   40 } },  /* 22: AIR S, AIR M, AIR L +35 */

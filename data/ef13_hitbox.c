@@ -23,7 +23,8 @@
  *               whose attribute has free4 bit 7 also hit it
  *
  * Row comments: the moves whose frames use the row or box (debug viewer names). Row 0 of a
- * box table is no box.
+ * box table is no box; a projectile has no hand or push boxes (hand_box and hos_box are row 0 only) and
+ * no throw boxes (caix and cuix are 0).
  *
  * Effect 13 is the projectile (shell) work the fighters fire (EFF13.c). Its scripts are ef13_char_table
  * in effect_char.c; the row comments number them (script N).

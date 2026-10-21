@@ -256,7 +256,7 @@ void EFF58_Type_04(WORK_Other* ewk) {
     case 1:
         if (--ewk->wu.dir_timer == 0) {
             ewk->wu.routine_no[1]++;
-            stop_flag_02014400 = 0;
+            win_slide_flag = 0;
             break;
         }
         bg_w.bgw[0].xy[0].cal += ewk->wu.mvxy.a[0].sp;

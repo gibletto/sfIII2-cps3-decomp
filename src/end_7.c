@@ -35,7 +35,7 @@
 extern const s16 end_7_anm_tbl[8];
 extern const PANEL end_700_panel0[16];
 extern const PANEL end_700_panel1[14];
-extern const u32 end_scrn_data_063F4C3C[];
+extern const u32 end_scrn_data[];
 
 
 
@@ -210,11 +210,11 @@ void end_700_cell_set(void) {
     const PANEL* p;
     p = end_700_panel0;
     for (i = 0; i < 16; i++, p++) {
-        bg_cell_write(0, p->ofs, p->cell, (u32)end_scrn_data_063F4C3C, 0, 0x220);
+        bg_cell_write(0, p->ofs, p->cell, (u32)end_scrn_data, 0, 0x220);
     }
     p = end_700_panel1;
     for (i = 0; i < 14; i++, p++) {
-        bg_cell_write(1, p->ofs, p->cell, (u32)end_scrn_data_063F4C3C, 0, 0x220);
+        bg_cell_write(1, p->ofs, p->cell, (u32)end_scrn_data, 0, 0x220);
     }
     bg_w.bgw[0].r_limit = 65;
     end_bg_block_attr_add(0, 0, 32, 0x1000, 16);

@@ -182,7 +182,7 @@ const CAUGHT_BOX gouki1_cau_box[21] = {
     { {  -25,   50,   48,   40 } },  /* 13: TOUKETSU A, AIR S, AIR M +36 */
     { {   -8,   40,   66,   25 } },  /* 14: FUSHIN P S */
     { {  -16,   48,    0,   82 } },  /* 15: not used by a script */
-    { {  -46,   80,    0,   16 } },  /* 16: follow-up of ATTACK 4 S: SA I 23623+P light (plain script), ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
+    { {  -46,   80,    0,   16 } },  /* 16: follow-up of ATTACK 4 S: SA I 23623+P light (plain script) / ATTACK 4 M: SA I 23623+P medium (plain script) +1, ATTACK 1 S: 236+P light (plain script), ATTACK 1 M: 236+P medium (plain script) +7 */
     { {  -41,   81,    0,   16 } },  /* 17: not used by a script */
     { {  -36,   73,   46,   49 } },  /* 18: not used by a script */
     { {  -38,   63,    0,   16 } },  /* 19: DASH HUMIKOMI, DASH TOBINOKI */

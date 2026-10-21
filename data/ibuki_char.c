@@ -9871,8 +9871,8 @@ const u32 ibuki_atca[169] = {
     (u32)ibuki_atca_048,  /* 154 TUKAMI AIR E */
     (u32)ibuki_atca_048,  /* 155 TUKAMI AIR F */
     (u32)ibuki_atca_156,  /* 156 follow-up of M KICK B */
-    (u32)ibuki_atca_157,  /* 157 follow-up of M PUNCH C, L PUNCH A */
-    (u32)ibuki_atca_158,  /* 158 follow-up of V JUMP P L A, F JUMP K S A */
+    (u32)ibuki_atca_157,  /* 157 follow-up of M PUNCH C / L PUNCH A */
+    (u32)ibuki_atca_158,  /* 158 follow-up of V JUMP P L A / F JUMP K S A */
     (u32)ibuki_atca_159,  /* 159 follow-up of F JUMP P S A */
     (u32)ibuki_atca_160,  /* 160 follow-up of S KICK A */
     (u32)ibuki_atca_161,  /* 161 follow-up of M KICK A */
@@ -9881,7 +9881,7 @@ const u32 ibuki_atca[169] = {
     (u32)ibuki_atca_164,  /* 164 follow-up of follow-up of KAGAMI K A */
     (u32)ibuki_atca_165,  /* 165 follow-up of M PUNCH C */
     (u32)ibuki_atca_166,  /* 166 follow-up of KAGAMI P A */
-    (u32)ibuki_atca_167,  /* 167 follow-up of follow-up of M PUNCH C, L PUNCH A */
+    (u32)ibuki_atca_167,  /* 167 follow-up of follow-up of M PUNCH C / L PUNCH A */
     0
 };
 
@@ -11003,7 +11003,7 @@ const u16 ibuki_atca_156[244] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 157 follow-up of M PUNCH C, L PUNCH A */
+/* script: 157 follow-up of M PUNCH C / L PUNCH A */
 const u16 ibuki_atca_157_head[4] = { HEAD(6, 32, 5, 13, 0, 1, 0) };
 const u16 ibuki_atca_157[244] = {
     CMD(CM_RMJA, 4, 167, 1), 0, 0, 0, 0, 0, 0, 0, 0,
@@ -11029,7 +11029,7 @@ const u16 ibuki_atca_157[244] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 158 follow-up of V JUMP P L A, F JUMP K S A */
+/* script: 158 follow-up of V JUMP P L A / F JUMP K S A */
 const u16 ibuki_atca_158_head[4] = { HEAD(4, 20, 3, 13, 0, 1, 0) };
 const u16 ibuki_atca_158[124] = {
     L4(3, 0, 269, 0, 0, 925, 0, 0x2CAE, 0, 39, 0, 0, 0, 0, 0),
@@ -11237,7 +11237,7 @@ const u16 ibuki_atca_166[280] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 167 follow-up of follow-up of M PUNCH C, L PUNCH A */
+/* script: 167 follow-up of follow-up of M PUNCH C / L PUNCH A */
 const u16 ibuki_atca_167_head[4] = { HEAD(6, 0, 5, 14, 0, 1, 0) };
 const u16 ibuki_atca_167[316] = {
     L6(1, 0, 0, 0, 0, 1124, 0, 0x2C34, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -15972,18 +15972,18 @@ extern const u16 ibuki_exca_000[], ibuki_exca_001[], ibuki_exca_002[], ibuki_exc
 
 /* exca scripts (debug viewer: UNION): 68 entries */
 const u32 ibuki_exca[69] = {
-    (u32)ibuki_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
+    (u32)ibuki_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
     (u32)ibuki_exca_001,  /* 1 follow-up of APPEAR JUNBI 2 */
     (u32)ibuki_exca_002,  /* 2 follow-up of APPEAR JUNBI 3 */
-    (u32)ibuki_exca_003,  /* 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
-    (u32)ibuki_exca_004,  /* 4 follow-up of APPEAR JUNBI 4, WIN 3 */
-    (u32)ibuki_exca_005,  /* 5 follow-up of APPEAR JUNBI 2, ZANNEN 4 +1 */
-    (u32)ibuki_exca_006,  /* 6 follow-up of APPEAR JUNBI 3, ZANNEN 6 +1 */
-    (u32)ibuki_exca_007,  /* 7 follow-up of APPEAR JUNBI 4, APPEAR JUNBI 5 +2 */
-    (u32)ibuki_exca_008,  /* 8 follow-up of NECRO S T, YUN HIZAGERI +16 */
-    (u32)ibuki_exca_009,  /* 9 follow-up of IBUKI, DADLEY L B +4 */
-    (u32)ibuki_exca_010,  /* 10 follow-up of IBUKI KUBIORI, KIRIMOMI A +1 */
-    (u32)ibuki_exca_011,  /* 11 follow-up of TATAKI S, KGM TATAKI S +15 */
+    (u32)ibuki_exca_003,  /* 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
+    (u32)ibuki_exca_004,  /* 4 follow-up of APPEAR JUNBI 4 / WIN 3 */
+    (u32)ibuki_exca_005,  /* 5 follow-up of APPEAR JUNBI 2 / ZANNEN 4 +1 */
+    (u32)ibuki_exca_006,  /* 6 follow-up of APPEAR JUNBI 3 / ZANNEN 6 +1 */
+    (u32)ibuki_exca_007,  /* 7 follow-up of APPEAR JUNBI 4 / APPEAR JUNBI 5 +2 */
+    (u32)ibuki_exca_008,  /* 8 follow-up of NECRO S T / YUN HIZAGERI +16 */
+    (u32)ibuki_exca_009,  /* 9 follow-up of IBUKI / DADLEY L B +4 */
+    (u32)ibuki_exca_010,  /* 10 follow-up of IBUKI KUBIORI / KIRIMOMI A +1 */
+    (u32)ibuki_exca_011,  /* 11 follow-up of TATAKI S / KGM TATAKI S +15 */
     (u32)ibuki_exca_012,  /* 12 no name */
     (u32)ibuki_exca_012,  /* 13 no name */
     (u32)ibuki_exca_012,  /* 14 no name */
@@ -15994,15 +15994,15 @@ const u32 ibuki_exca[69] = {
     (u32)ibuki_exca_019,  /* 19 follow-up of APPEAR JUNBI 8 */
     (u32)ibuki_exca_020,  /* 20 follow-up of APPEAR 1 */
     (u32)ibuki_exca_021,  /* 21 follow-up of APPEAR 2 */
-    (u32)ibuki_exca_022,  /* 22 follow-up of APPEAR JUNBI 8, APPEAR 1 +1 */
+    (u32)ibuki_exca_022,  /* 22 follow-up of APPEAR JUNBI 8 / APPEAR 1 +1 */
     (u32)ibuki_exca_012,  /* 23 no name */
     (u32)ibuki_exca_024,  /* 24 follow-up of HARAIGOSHI A */
-    (u32)ibuki_exca_025,  /* 25 follow-up of GILL IMPACT C, ASIBRI MAKE A +7 */
+    (u32)ibuki_exca_025,  /* 25 follow-up of GILL IMPACT C / ASIBRI MAKE A +7 */
     (u32)ibuki_exca_012,  /* 26 no name */
     (u32)ibuki_exca_027,  /* 27 follow-up of ZANNEN 2 */
     (u32)ibuki_exca_028,  /* 28 follow-up of ZANNEN 2 */
     (u32)ibuki_exca_012,  /* 29 follow-up of IBUKI */
-    (u32)ibuki_exca_030,  /* 30 follow-up of ATTACK 4 S: 236+K light (routine Att_PL07_AT1), ATTACK 4 M: 236+K medium (routine Att_PL07_AT1) +1 */
+    (u32)ibuki_exca_030,  /* 30 follow-up of ATTACK 4 S: 236+K light (routine Att_PL07_AT1) / ATTACK 4 M: 236+K medium (routine Att_PL07_AT1) +1 */
     (u32)ibuki_exca_031,  /* 31 follow-up of ZANNEN 4 */
     (u32)ibuki_exca_032,  /* 32 follow-up of ZANNEN 5 */
     (u32)ibuki_exca_033,  /* 33 follow-up of ZANNEN 6 */
@@ -16043,7 +16043,7 @@ const u32 ibuki_exca[69] = {
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 ibuki_exca_000_head[4] = { HEAD(4, 24, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_000[196] = {
     L4(2, 0, 0, 0, 0, 1021, 0, 0x2A72, 0, 154, 0, 0, 0, 0, 0),
@@ -16100,7 +16100,7 @@ const u16 ibuki_exca_002[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, ASHIBARAI B +6 */
+/* script: 3 follow-up of ASHIBARAI A / ASHIBARAI B +6 */
 const u16 ibuki_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_003[76] = {
     L4(3, 1, 0, 0, 0, 968, 0, 0x2B36, 0, 111, 0, 0, 0, 0, 0),
@@ -16115,7 +16115,7 @@ const u16 ibuki_exca_003[76] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 4 follow-up of APPEAR JUNBI 4, WIN 3 */
+/* script: 4 follow-up of APPEAR JUNBI 4 / WIN 3 */
 const u16 ibuki_exca_004_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_004[84] = {
     L4(1, 0, 273, 0, 0, 225, 0, 0x2A68, 0, 1, 0, 0, 0, 21, 0),
@@ -16131,7 +16131,7 @@ const u16 ibuki_exca_004[84] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of APPEAR JUNBI 2, ZANNEN 4 +1 */
+/* script: 5 follow-up of APPEAR JUNBI 2 / ZANNEN 4 +1 */
 const u16 ibuki_exca_005_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_005[84] = {
     L4(1, 0, 273, 0, 0, 147, 0, 0x2A3D, 0, 2, 0, 0, 0, 0, 0),
@@ -16147,7 +16147,7 @@ const u16 ibuki_exca_005[84] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of APPEAR JUNBI 3, ZANNEN 6 +1 */
+/* script: 6 follow-up of APPEAR JUNBI 3 / ZANNEN 6 +1 */
 const u16 ibuki_exca_006_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_006[44] = {
     L4(1, 0, 273, 0, 0, 147, 0, 0x2A3D, 0, 2, 0, 0, 0, 21, 0),
@@ -16158,7 +16158,7 @@ const u16 ibuki_exca_006[44] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 7 follow-up of APPEAR JUNBI 4, APPEAR JUNBI 5 +2 */
+/* script: 7 follow-up of APPEAR JUNBI 4 / APPEAR JUNBI 5 +2 */
 const u16 ibuki_exca_007_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_007[84] = {
     L4(1, 0, 273, 0, 0, 147, 0, 0x2A3D, 0, 2, 0, 0, 0, 21, 0),
@@ -16174,7 +16174,7 @@ const u16 ibuki_exca_007[84] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of NECRO S T, YUN HIZAGERI +16 */
+/* script: 8 follow-up of NECRO S T / YUN HIZAGERI +16 */
 const u16 ibuki_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_008[140] = {
     L4(3, 0, 0, 0, 0, 1267, 0, 0x2B20, 0, 111, 0, 0, 0, 0, 0),
@@ -16197,7 +16197,7 @@ const u16 ibuki_exca_008[140] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of IBUKI, DADLEY L B +4 */
+/* script: 9 follow-up of IBUKI / DADLEY L B +4 */
 const u16 ibuki_exca_009_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_009[100] = {
     L4(4, 2, 0, 0, 0, 1009, 0, 0x2B2E, 0, 111, 0, 0, 0, 0, 0),
@@ -16215,7 +16215,7 @@ const u16 ibuki_exca_009[100] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 10 follow-up of IBUKI KUBIORI, KIRIMOMI A +1 */
+/* script: 10 follow-up of IBUKI KUBIORI / KIRIMOMI A +1 */
 const u16 ibuki_exca_010_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_010[84] = {
     L4(4, 2, 0, 0, 0, 1297, 0, 0x2B57, 0, 111, 0, 0, 0, 0, 0),
@@ -16231,7 +16231,7 @@ const u16 ibuki_exca_010[84] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 11 follow-up of TATAKI S, KGM TATAKI S +15 */
+/* script: 11 follow-up of TATAKI S / KGM TATAKI S +15 */
 const u16 ibuki_exca_011_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_011[116] = {
     L4(4, 2, 0, 0, 0, 683, 0, 0x2CCE, 0, 111, 0, 0, 0, 0, 0),
@@ -16327,7 +16327,7 @@ const u16 ibuki_exca_021[84] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 22 follow-up of APPEAR JUNBI 8, APPEAR 1 +1 */
+/* script: 22 follow-up of APPEAR JUNBI 8 / APPEAR 1 +1 */
 const u16 ibuki_exca_022_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_022[92] = {
     L4(2, 0, 273, 0, 0, 1194, 0, 0x2C2A, 0, 1, 0, 0, 0, 21, 0),
@@ -16367,7 +16367,7 @@ const u16 ibuki_exca_024[140] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 25 follow-up of GILL IMPACT C, ASIBRI MAKE A +7 */
+/* script: 25 follow-up of GILL IMPACT C / ASIBRI MAKE A +7 */
 const u16 ibuki_exca_025_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_025[108] = {
     L4(2, 1, 0, 0, 0, 968, 0, 0x2B36, 0, 111, 0, 0, 0, 0, 0),
@@ -16414,7 +16414,7 @@ const u16 ibuki_exca_028[76] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 30 follow-up of ATTACK 4 S: 236+K light (routine Att_PL07_AT1), ATTACK 4 M: 236+K medium (routine Att_PL07_AT1) +1 */
+/* script: 30 follow-up of ATTACK 4 S: 236+K light (routine Att_PL07_AT1) / ATTACK 4 M: 236+K medium (routine Att_PL07_AT1) +1 */
 const u16 ibuki_exca_030_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 ibuki_exca_030[76] = {
     L4(2, 0, 0, 0, 0, 248, 0, 0x2A68, 0, 1, 0, 0, 0, 0, 0),

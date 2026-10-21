@@ -102,7 +102,7 @@ const HIT_IX hugo_hit_ix_table[171] = {
     {   55,   32,    0,    0,    2,   22,    0,    2 },  /* 66: KAGAMI K A */
     {   26,    0,    0,    0,    2,    0,    0,    2 },  /* 67: L KICK A, follow-up of APPEAR JUNBI 7 */
     {   27,    0,    0,    0,    1,    0,    0,    7 },  /* 68: PIYO */
-    {    0,    0,    0,    0,    0,    0,    0,    2 },  /* 69: CATCH 33, follow-up of ASHIBARAI A, ASHIBARAI B +2, follow-up of HUMI ASIB A +2 */
+    {    0,    0,    0,    0,    0,    0,    0,    2 },  /* 69: CATCH 33, follow-up of ASHIBARAI A / ASHIBARAI B +2, follow-up of HUMI ASIB A +2 */
     {   28,    0,    0,    0,    2,    0,    0,    2 },  /* 70: KAGAMI P A */
     {   29,    0,    0,    0,    2,    0,    0,    2 },  /* 71: KAGAMI P A */
     {   30,    0,    0,    0,    6,   23,    0,    8 },  /* 72: KAGAMI P A */

@@ -1,5 +1,5 @@
 /*
- * EFFI6.C  Effect I6: round-call line
+ * EFFI6.C  Effect I6: stage objects (3rd Strike: the round-call line)
  *
  * 3rd Strike: Effect I6 is a child of the round-call effect (effect_I6_init, called from effb2.c) placed at
  * screen centre on BG4. It follows its parent's state: it starts pattern 3 at zero size

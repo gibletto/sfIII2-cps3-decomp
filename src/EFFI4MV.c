@@ -1,5 +1,5 @@
 /*
- * EFFI4MV.C  Effect I4 (184): the stage 00 crowd (2nd Impact only)
+ * EFFI4MV.C  Effect I4 (184): the stage 00 crowd (2nd Impact version)
  *
  * 2nd Impact's own effect 184. effect_I4_init makes four objects from effi4_data_tbl (x, y, priority,
  * pattern); old_rno[0] is the object's type. Each one plays its pattern until the match is

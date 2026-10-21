@@ -117,10 +117,10 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\PLCNT_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\PLCNT_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\sc_data4_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\sc_data4_b.obj >obj\shc.log 2>&1
+shc data\PLCNT_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\PLCNT_tbl_b.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\PLCNT_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\PLCNT_tbl_b.obj >obj\shc.log 2>&1
+shc data\PLCNT_tbl_c.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\PLCNT_tbl_c.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\PLCNT3_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\PLCNT3_tbl.obj >obj\shc.log 2>&1
@@ -693,13 +693,13 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\Sel_Data.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\Sel_Data.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\POW_DATA_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\POW_DATA_b.obj >obj\shc.log 2>&1
+shc data\Sel_Data_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\Sel_Data_b.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\sel_pl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -noinline -section=const=CTBL -object=obj\sel_pl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\POW_DATA_c.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\POW_DATA_c.obj >obj\shc.log 2>&1
+shc data\game_config_jp_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\game_config_jp_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\next_cpu_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\next_cpu_tbl.obj >obj\shc.log 2>&1
@@ -753,19 +753,19 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\tate00.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\tate00.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\ta_sub_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\ta_sub_tbl_b.obj >obj\shc.log 2>&1
+shc data\bg_sub_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\bg_sub_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\bg000_tbl3.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\bg000_tbl3.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\EFFD5_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFD5_tbl.obj >obj\shc.log 2>&1
+shc data\bg000_tbl_c.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\bg000_tbl_c.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\bg000_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\bg000_tbl_b.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_17_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_17_tbl.obj >obj\shc.log 2>&1
+shc data\bg_work_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\bg_work_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\bg000_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\bg000_tbl.obj >obj\shc.log 2>&1
@@ -912,7 +912,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\lose_pl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\lose_pl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\lose_pl_data.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\lose_pl_data.obj >obj\shc.log 2>&1
+shc data\end_main_tbl_c.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_main_tbl_c.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\end_main_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_main_tbl.obj >obj\shc.log 2>&1
@@ -930,55 +930,55 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\end_main_tbl2.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_main_tbl2.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_5_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_5_tbl.obj >obj\shc.log 2>&1
+shc data\end_1_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_1_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_1.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_1.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_2_ctbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_2_ctbl.obj >obj\shc.log 2>&1
+shc data\end_2_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_2_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_2.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_2.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_2_ctbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_2_ctbl_b.obj >obj\shc.log 2>&1
+shc data\end_3_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_3_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_3.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_3.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_5_ctbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_5_ctbl.obj >obj\shc.log 2>&1
+shc data\end_4_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_4_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_4.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_4.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_5_ctbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_5_ctbl_b.obj >obj\shc.log 2>&1
+shc data\end_5_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_5_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_20_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_20_tbl.obj >obj\shc.log 2>&1
+shc data\end_5_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_5_tbl_b.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_5.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_5.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_11_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_11_tbl.obj >obj\shc.log 2>&1
+shc data\end_6_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_6_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_2_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_2_tbl.obj >obj\shc.log 2>&1
+shc data\end_6_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_6_tbl_b.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_11_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_11_tbl_b.obj >obj\shc.log 2>&1
+shc data\end_6_tbl_c.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_6_tbl_c.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_2_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_2_tbl_b.obj >obj\shc.log 2>&1
+shc data\end_6_tbl_d.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_6_tbl_d.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_6.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_6.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_2_tbl_c.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_2_tbl_c.obj >obj\shc.log 2>&1
+shc data\end_7_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_7_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_7.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_7.obj >obj\shc.log 2>&1
@@ -987,10 +987,10 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_8.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_8.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_2_tbl_d.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_2_tbl_d.obj >obj\shc.log 2>&1
+shc data\end_8_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_8_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_5_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_5_tbl_b.obj >obj\shc.log 2>&1
+shc data\end_9_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_9_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_9.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_9.obj >obj\shc.log 2>&1
@@ -999,22 +999,22 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_10.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_10.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_5_tbl_c.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_5_tbl_c.obj >obj\shc.log 2>&1
+shc data\end_10_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_10_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_11.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_11.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_5_tbl_d.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_5_tbl_d.obj >obj\shc.log 2>&1
+shc data\end_12_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_12_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_13_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_13_tbl.obj >obj\shc.log 2>&1
+shc data\end_12_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_12_tbl_b.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_12.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_12.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_13_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_13_tbl_b.obj >obj\shc.log 2>&1
+shc data\end_13_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_13_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\end_13.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\end_13.obj >obj\shc.log 2>&1
@@ -1221,7 +1221,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\eff14_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\eff14_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\EffG0_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EffG0_tbl.obj >obj\shc.log 2>&1
+shc data\EFF16_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF16_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\EFF18_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF18_tbl.obj >obj\shc.log 2>&1
@@ -1275,7 +1275,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\EFF47.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF47.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\EFF33_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF33_tbl_b.obj >obj\shc.log 2>&1
+shc data\EFF37_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF37_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\EFF41_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF41_tbl.obj >obj\shc.log 2>&1
@@ -1380,7 +1380,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\eff73.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\eff73.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\EFF72_data.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF72_data.obj >obj\shc.log 2>&1
+shc data\EFF74_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF74_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\EFF74.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\EFF74.obj >obj\shc.log 2>&1
@@ -1416,7 +1416,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\EFF84.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF84.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\EFF74_data.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF74_data.obj >obj\shc.log 2>&1
+shc data\EFF75_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF75_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\EFF85.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\EFF85.obj >obj\shc.log 2>&1
@@ -1443,7 +1443,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\eff92_code.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\eff92_code.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\EFF85_data.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFF85_data.obj >obj\shc.log 2>&1
+shc data\eff87_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\eff87_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\Eff93_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\Eff93_tbl.obj >obj\shc.log 2>&1
@@ -1542,7 +1542,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\EFFD4_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFD4_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\EFFD5_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFD5_tbl_b.obj >obj\shc.log 2>&1
+shc data\EFFD5_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFD5_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\EFFD6.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFD6.obj >obj\shc.log 2>&1
@@ -1695,7 +1695,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\EFFF4.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFF4.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\EFFE5_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFE5_tbl_b.obj >obj\shc.log 2>&1
+shc data\effe9_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\effe9_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\EFFF1_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFF1_tbl.obj >obj\shc.log 2>&1
@@ -1713,7 +1713,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\efff6.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\efff6.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\efff5_data.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\efff5_data.obj >obj\shc.log 2>&1
+shc data\efff7_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\efff7_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\efff7.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -section=const=CTBL -object=obj\efff7.obj >obj\shc.log 2>&1
@@ -1815,7 +1815,7 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc src\EFFI3_2.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFI3_2.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\effh5_data.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\effh5_data.obj >obj\shc.log 2>&1
+shc data\EFFH6.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFH6.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\EFFH9_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\EFFH9_tbl.obj >obj\shc.log 2>&1

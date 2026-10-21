@@ -104,7 +104,7 @@ void Continue_Scene(void) {
         bgm_request(9);
         break;
     case 1:
-        if (Continue_Count_Down[LOSER] < 0) {
+        if (Continue_Count[LOSER] < 0) {
             Cont_No++;
         }
         break;
@@ -161,7 +161,7 @@ s16 PL_id;
 s16 Limit;
 {
     s16 xx;
-    if (Continue_Count_Down[PL_id] >= (Limit)) {
+    if (Continue_Count[PL_id] >= (Limit)) {
         return 0;
     }
     if (PL_id) {
@@ -184,18 +184,18 @@ s16 PL_id;
     Cheap_Finish[PL_id] = 0;
     Completion_Bonus[PL_id] = 0;
     Stage_Continue[PL_id] = 0;
+    Introduce_Boss[PL_id] = 0;
     Introduce_Break_Into[PL_id] = 0;
-    Straight_Flag[PL_id] = 0;
     Score[PL_id][0] = 0;
     Stock_Score[PL_id] = 0;
     Stage_Stock_Score[PL_id] = 0;
     Continue_Coin[PL_id] = 0;
-    Continue_Count[PL_id] = 0;
+    Win_Record[PL_id] = 0;
     VS_Index[PL_id] = 0;
-    Result_Timer[PL_id] = 0xFFFF;
+    EM_Course[PL_id] = 0xFFFF;
     Decided_My_char[PL_id] = 0xFF;
     Arts_Y[PL_id] = 0;
-    Continue_Count_Down[PL_id] = 0;
+    Continue_Count[PL_id] = 0;
     Continue_Coin2[PL_id] = 0;
     Sel_PL_Complete[PL_id] = 0;
     Sel_Arts_Complete[PL_id] = 0;

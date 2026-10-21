@@ -91,9 +91,9 @@ const ATTACK_ATTR dudley_catt_table[112] = {
     ATTR( 32,  0,  0,  2,  0,  1,  0, 68, 12,  3, 63,  0, 10, 24, 19,  2,  2,  0, 10,-10, 28, 73),  /* 70: not used by a script */
     ATTR( 96,  1,  0,  2,  0,  1,  0,208, 13,  3, 62,  0, 30, 38, 16,  1,  0,  0, 10,-10, 23, 73),  /* 71: ATTACK 3 S: SA II 23623+P (plain script) */
     ATTR( 96,  1,  0,  2,  0,  1,  0,208, 13,  3, 62,  0, 30, 12, 16,  1,  0,  0, 10,-10, 13, 73),  /* 72: ATTACK 3 S: SA II 23623+P (plain script) */
-    ATTR( 35,  0,  0,  2,  0,  1,  0,  0, 15,  3, 62,  0,  0, 12, 18,  1,  1,  0,  8, -8, 18, 73),  /* 73: follow-up of L KICK C, KAGAMI K A +1 */
-    ATTR( 35,  0,  0,  2,  0,  1,  0,  0, 15,  3, 62,  0,  0, 12, 18,  2,  5,  0,  8, -8, 18, 73),  /* 74: follow-up of M PUNCH A, M KICK C */
-    ATTR( 32,  0,  0,  2,  0,  1,  0,  0, 12,  3, 62,  0, 10, 16, 19,  1,  1,  0, 10,-10, 23, 73),  /* 75: follow-up of follow-up of M PUNCH A, M KICK C */
+    ATTR( 35,  0,  0,  2,  0,  1,  0,  0, 15,  3, 62,  0,  0, 12, 18,  1,  1,  0,  8, -8, 18, 73),  /* 73: follow-up of L KICK C / KAGAMI K A +1 */
+    ATTR( 35,  0,  0,  2,  0,  1,  0,  0, 15,  3, 62,  0,  0, 12, 18,  2,  5,  0,  8, -8, 18, 73),  /* 74: follow-up of M PUNCH A / M KICK C */
+    ATTR( 32,  0,  0,  2,  0,  1,  0,  0, 12,  3, 62,  0, 10, 16, 19,  1,  1,  0, 10,-10, 23, 73),  /* 75: follow-up of follow-up of M PUNCH A / M KICK C */
     ATTR(100,  0,  0,  2,  0,  1,  0,  0, 13,  3, 63,  0,  0, 16, 19,  9,  7,  0,  2,-10, 23, 73),  /* 76: ATTACK 12 M: after 6(123)4+P (plain script), 6(123)456+P (plain script) +1 */
     ATTR(100,  0,  0,  2,  0,  1,  0,  0, 13,  3, 63,  0,  0, 20, 19,  9,  7,  0,  2,-10, 23, 73),  /* 77: ATTACK 12 L: after 6(123)456+P (plain script), 6(123)4+P (plain script) */
     ATTR(100,  0,  0,  2,  0,  1,  0,  0, 13,  3, 63,  0,  0, 24, 19,  9,  7,  0,  2,-10, 23, 73),  /* 78: ATTACK 12 SP: after 6(123)456+P (plain script), 6(123)4+P (plain script) */
@@ -105,8 +105,8 @@ const ATTACK_ATTR dudley_catt_table[112] = {
     ATTR( 32,  1,  0,  1,  0,  1,  0,  0, 12,  3, 62,  0,  0,  8, 48,  2,  1,  0,  8, -8, 18, 73),  /* 84: follow-up of S PUNCH A */
     ATTR( 35,  1,  0,  2,  0,  1,  0,  0, 15,  3, 62,  0,  0, 20, 18,  1,  4,  0,  6, -6, 18, 73),  /* 85: follow-up of follow-up of S PUNCH A */
     ATTR( 37,  1,  0,  2,  0,  1,  0,  0, 15,  3, 62,  0,  0, 12, 60,  1,  1,  0,  8, -8, 23, 73),  /* 86: follow-up of M KICK A */
-    ATTR( 37,  1,  0,  2,  0,  1,  0,  0, 13,  3, 63,  0,  0,  8, 19,  1,  1,  0,  8, -8, 28, 73),  /* 87: follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A */
-    ATTR( 35,  1,  0,  2,  0,  1,  0,  0, 13,  3, 63,  0,  0,  8, 19,  1,  1,  0, 10,-10, 28, 73),  /* 88: follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A */
+    ATTR( 37,  1,  0,  2,  0,  1,  0,  0, 13,  3, 63,  0,  0,  8, 19,  1,  1,  0,  8, -8, 28, 73),  /* 87: follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A */
+    ATTR( 35,  1,  0,  2,  0,  1,  0,  0, 13,  3, 63,  0,  0,  8, 19,  1,  1,  0, 10,-10, 28, 73),  /* 88: follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A */
     ATTR( 32,  1,  0,  2,  0,  1,  0, 72, 12,  3, 62,  0,  0,  4, 19,  2,  1,  0,  8, -8, 28, 73),  /* 89: not used by a script */
     ATTR( 37,  1,  0,  2,  0,  1,  0, 72, 12,  3, 62,  0,  0,  4, 19,  1,  1,  0,  8, -8, 28, 73),  /* 90: not used by a script */
     ATTR( 32,  0,  0,  1,  0,  1,  0,  0,  8,  3, 54,  0,  0, 20, 22,  4,  4,  0,  6, -6, 18, 73),  /* 91: not started by a command */

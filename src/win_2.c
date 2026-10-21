@@ -126,7 +126,7 @@ void Win_2nd(void) {
     load_side_color(1, My_char[LOSER]);
     load_any_color(4);
     load_any_color(0x86);
-    stop_flag_02014400 = 1;
+    win_slide_flag = 1;
     load_char_gfx(0x9C10, 1);
     load_char_gfx(0x9C90, 1);
     effect_95_init(16, WINNER);
@@ -280,10 +280,10 @@ s16 id;
 
 
 s32 Check_Win_BGM(void) {
-    if (Continue_Count[WINNER] == 0) {
+    if (Win_Record[WINNER] == 0) {
         return 1;
     }
-    return Continue_Count[WINNER] % 10;
+    return Win_Record[WINNER] % 10;
 }
 
 

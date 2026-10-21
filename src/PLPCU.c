@@ -2,10 +2,10 @@
  * PLPCU.C  Player caught (being thrown) process
  *
  * Runs a player who is held by the opponent's throw. Player_caught clears the state flags and
- * dispatches Caught_00000-Caught_03000: the victim follows the thrower's catch rectangle (index,
+ * dispatches Caught_00000-Caught_08000: the victim follows the thrower's catch rectangle (index,
  * flip, offset, priority) each frame, or moves the thrower relative to itself for the second
  * catch kind. check_tsukamare_keizoku_check decides whether the hold continues.
- * caught_cg_type_check and the scdmd_12000-scdmd_31000 routines set up the damage state the
+ * caught_cg_type_check and the scdmd_12000-scdmd_30000 routines set up the damage state the
  * victim is released into (blow-away data, vertical speed from buttobi_time_table).
  */
 

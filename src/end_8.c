@@ -34,7 +34,7 @@
 
 extern const s16 timer_8_tbl[4];
 extern const s16 end_8_pos[4][2];
-extern const u32 end_scrn_data_063F4C3C[];
+extern const u32 end_scrn_data[];
 extern const PANEL* end_8_panel_p[2];
 
 
@@ -178,15 +178,15 @@ void end_800_cell_set(void) {
     for (j = 0; j < 2; j++) {
         p = end_8_panel_p[j];
         for (i = 0; i < 8; i++, p++) {
-            bg_cell_write(j, p->ofs, p->cell, (u32)end_scrn_data_063F4C3C, 0, 0x220);
+            bg_cell_write(j, p->ofs, p->cell, (u32)end_scrn_data, 0, 0x220);
         }
     }
-    bg_cell_write_xyflip(1, 0x1080, 95, (u32)end_scrn_data_063F4C3C, 0, 0x220);
-    bg_cell_write_xyflip(1, 0x10C0, 94, (u32)end_scrn_data_063F4C3C, 0, 0x220);
+    bg_cell_write_xyflip(1, 0x1080, 95, (u32)end_scrn_data, 0, 0x220);
+    bg_cell_write_xyflip(1, 0x10C0, 94, (u32)end_scrn_data, 0, 0x220);
     bg_w.bgw[1].r_limit = 89;
     end_bg_block_attr_add(1, 0, 32, 0x1800, 16);
-    bg_cell_write(2, 0x3080, 46, (u32)end_scrn_data_063F4C3C, 0, 0x220);
-    bg_cell_write(2, 0x30C0, 47, (u32)end_scrn_data_063F4C3C, 0, 0x220);
+    bg_cell_write(2, 0x3080, 46, (u32)end_scrn_data, 0, 0x220);
+    bg_cell_write(2, 0x30C0, 47, (u32)end_scrn_data, 0, 0x220);
     bg_w.bgw[2].r_limit = 89;
     end_bg_block_attr_add(2, 64, 32, 0x1800, 16);
 }

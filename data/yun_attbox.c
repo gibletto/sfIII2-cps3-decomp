@@ -31,7 +31,7 @@ const ATTACK_BOX yun_att_box[101] = {
     { { {  -53,  35,  57,  23 },  {    0,   0,   0,   0 } } },  /* 8: M PUNCH A, follow-up of ZANNEN 4; attack 8, 100 */
     { { {  -60,  48,  45,  24 },  {    0,   0,   0,   0 } } },  /* 9: L PUNCH A, follow-up of JUDGMENT WAIT; attack 9, 102 */
     { { {  -83,  68,  57,  13 },  {  -60,  32,  50,  12 } } },  /* 10: L PUNCH B, follow-up of ZANNEN 6; attack 10, 104 */
-    { { {  -86,  32,  66,  12 },  {  -60,  32,  60,  12 } } },  /* 11: follow-up of M PUNCH A, M PUNCH B; attack 11 */
+    { { {  -86,  32,  66,  12 },  {  -60,  32,  60,  12 } } },  /* 11: follow-up of M PUNCH A / M PUNCH B; attack 11 */
     { { {  -84,  40,  18,  12 },  {  -60,  40,  30,  12 } } },  /* 12: not used by a script */
     { { {  -76,  36,  20,  12 },  {    0,   0,   0,   0 } } },  /* 13: not used by a script */
     { { {  -76,  54,  50,   8 },  {    0,   0,   0,   0 } } },  /* 14: follow-up of WIN 2, KAGAMI P A; attack 14, 109 */
@@ -46,7 +46,7 @@ const ATTACK_BOX yun_att_box[101] = {
     { { {  -83,  38,  53,  14 },  {  -49,  35,  56,  14 } } },  /* 23: not used by a script */
     { { {  -68,  46,  58,  11 },  {  -50,  40,  44,  14 } } },  /* 24: ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command, ATTACK 4 L: not started by a command +2; attack 20, 21, 87, 88 ... */
     { { {  -76,  49,  68,  10 },  {  -24,  16,  41,  29 } } },  /* 25: ATTACK 12 M: not started by a command; attack 97 */
-    { { {  -64,  53,  46,  32 },  {    0,   0,   0,   0 } } },  /* 26: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command, follow-up of follow-up of M PUNCH A, M PUNCH B; attack 22, 76, 80 */
+    { { {  -64,  53,  46,  32 },  {    0,   0,   0,   0 } } },  /* 26: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command, follow-up of follow-up of M PUNCH A / M PUNCH B; attack 22, 76, 80 */
     { { {  -71,  25,  53,  17 },  {    0,   0,   0,   0 } } },  /* 27: ATTACK 2 S: not started by a command, ATTACK 11 M: not started by a command; attack 23, 80 */
     { { {  -36,  24,  34,  34 },  {    0,   0,   0,   0 } } },  /* 28: M KICK A, follow-up of S KICK A; attack 2, 77 */
     { { {  -96,  73,  52,  28 },  {  -57,  39,  42,  21 } } },  /* 29: follow-up of follow-up of SEAN BALL HIT, ATTACK 5 S: not started by a command, ATTACK 8 S: not started by a command +1; attack 25, 82, 83, 129 ... */
@@ -65,7 +65,7 @@ const ATTACK_BOX yun_att_box[101] = {
     { { {  -62,  41,  91,  16 },  {  -47,  27,  60,  31 } } },  /* 42: L PUNCH A, follow-up of JUDGMENT WAIT; attack 41, 103 */
     { { {  -57,  21,  85,  16 },  {  -47,  39,  66,  19 } } },  /* 43: L PUNCH A, follow-up of JUDGMENT WAIT; attack 9 */
     { { {  -75,  59,  56,  13 },  {    0,   0,   0,   0 } } },  /* 44: L PUNCH B, follow-up of ZANNEN 6 */
-    { { {  -78,  32,  64,  12 },  {    0,   0,   0,   0 } } },  /* 45: follow-up of M PUNCH A, M PUNCH B */
+    { { {  -78,  32,  64,  12 },  {    0,   0,   0,   0 } } },  /* 45: follow-up of M PUNCH A / M PUNCH B */
     { { {  -68,  14,  16,  20 },  {  -52,  33,   0,  42 } } },  /* 46: S KICK A, follow-up of S PUNCH A, follow-up of ZANNEN 7; attack 12, 105, 153 */
     { { {  -52,  33,   8,  28 },  {    0,   0,   0,   0 } } },  /* 47: S KICK A, follow-up of S PUNCH A, follow-up of ZANNEN 7; attack 12 */
     { { {  -54,  18,  89,  19 },  {  -37,  17,  65,  26 } } },  /* 48: M KICK A, follow-up of S KICK A, atca 212; attack 2 */
@@ -89,11 +89,11 @@ const ATTACK_BOX yun_att_box[101] = {
     { { {  -32,  22,  42,  18 },  {  -24,  20,  32,  16 } } },  /* 66: not used by a script */
     { { {  -86,  65,  86,   8 },  {  -52,  34,  78,   8 } } },  /* 67: not used by a script */
     { { {  -82,  40,  86,   8 },  {    0,   0,   0,   0 } } },  /* 68: not used by a script */
-    { { {  -71,  51,  86,   8 },  {    0,   0,   0,   0 } } },  /* 69: V JUMP P L A, follow-up of V JUMP P S A, F JUMP P S A, follow-up of JUDGMENT LOSE */
+    { { {  -71,  51,  86,   8 },  {    0,   0,   0,   0 } } },  /* 69: V JUMP P L A, follow-up of V JUMP P S A / F JUMP P S A, follow-up of JUDGMENT LOSE */
     { { {  -81,  67,  87,  12 },  {    0,   0,   0,   0 } } },  /* 70: not used by a script */
     { { {  -82,  40,  86,   8 },  {    0,   0,   0,   0 } } },  /* 71: not used by a script */
-    { { {  -89,  77,  79,  13 },  {    0,   0,   0,   0 } } },  /* 72: V JUMP P L A, follow-up of V JUMP P S A, F JUMP P S A, follow-up of JUDGMENT LOSE; attack 33, 73, 118 */
-    { { {  -86,  44,  84,  10 },  {    0,   0,   0,   0 } } },  /* 73: V JUMP P L A, follow-up of V JUMP P S A, F JUMP P S A, follow-up of JUDGMENT LOSE */
+    { { {  -89,  77,  79,  13 },  {    0,   0,   0,   0 } } },  /* 72: V JUMP P L A, follow-up of V JUMP P S A / F JUMP P S A, follow-up of JUDGMENT LOSE; attack 33, 73, 118 */
+    { { {  -86,  44,  84,  10 },  {    0,   0,   0,   0 } } },  /* 73: V JUMP P L A, follow-up of V JUMP P S A / F JUMP P S A, follow-up of JUDGMENT LOSE */
     { { {  -67,  20,  92,  18 },  {  -48,  24,  43,  55 } } },  /* 74: V JUMP K L A, F JUMP K L A, follow-up of AFRICA LAND +2; attack 36, 72, 121, 127 */
     { { {  -56,  32,  77,  19 },  {    0,   0,   0,   0 } } },  /* 75: V JUMP K L A, F JUMP K L A, follow-up of AFRICA LAND +2; attack 72 */
     { { {  -53,  39,  83,  19 },  {  -34,  14,  53,  35 } } },  /* 76: not used by a script */

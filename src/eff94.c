@@ -1,5 +1,5 @@
 /*
- * EFF94.C  Effect 94: the bystander next to a player (2nd Impact only)
+ * EFF94.C  Effect 94: the bystander next to a player (2nd Impact version)
  *
  * 2nd Impact's own effect 94. effect_94_entry makes one for each player whose player_number is 7
  * (none when either player is 8). With old_rno[3] set it follows its player: eff94_00-07

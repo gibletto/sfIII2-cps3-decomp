@@ -3818,7 +3818,7 @@ const u32 ryu_atca[159] = {
     (u32)ryu_atca_048,  /* 154 TUKAMI AIR E */
     (u32)ryu_atca_048,  /* 155 TUKAMI AIR F */
     (u32)ryu_atca_156,  /* 156 follow-up of UP P GUARD P M */
-    (u32)ryu_atca_157,  /* 157 follow-up of L PUNCH B, UP P GUARD P L */
+    (u32)ryu_atca_157,  /* 157 follow-up of L PUNCH B / UP P GUARD P L */
     0
 };
 
@@ -4627,7 +4627,7 @@ const u16 ryu_atca_156[124] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 157 follow-up of L PUNCH B, UP P GUARD P L */
+/* script: 157 follow-up of L PUNCH B / UP P GUARD P L */
 const u16 ryu_atca_157_head[4] = { HEAD(6, 0, 5, 13, 0, 1, 0) };
 const u16 ryu_atca_157[208] = {
     L6(2, 0, 0, 1, 0, 0, 0, 0x0D71, 9, 37, 0, 0, 0, 0, 0, 0, 0, 36, 0, 0),
@@ -5028,20 +5028,20 @@ extern const u16 ryu_exca_000[], ryu_exca_001[], ryu_exca_002[], ryu_exca_003[],
 
 /* exca scripts (debug viewer: UNION): 56 entries */
 const u32 ryu_exca[57] = {
-    (u32)ryu_exca_000,  /* 0 follow-up of AIR S, AIR M +2 */
+    (u32)ryu_exca_000,  /* 0 follow-up of AIR S / AIR M +2 */
     (u32)ryu_exca_001,  /* 1 follow-up of APPEAR JUNBI 4 */
     (u32)ryu_exca_002,  /* 2 follow-up of APPEAR JUNBI 5 */
-    (u32)ryu_exca_003,  /* 3 follow-up of ASHIBARAI A, TUNNOMERI A */
+    (u32)ryu_exca_003,  /* 3 follow-up of ASHIBARAI A / TUNNOMERI A */
     (u32)ryu_exca_004,  /* 4 follow-up of APPEAR JUNBI 6 */
-    (u32)ryu_exca_005,  /* 5 follow-up of KGM TATAKI S, ALEX POWER B +29 */
-    (u32)ryu_exca_006,  /* 6 follow-up of ALEX BACK D, HUMI ASIB A +9 */
+    (u32)ryu_exca_005,  /* 5 follow-up of KGM TATAKI S / ALEX POWER B +29 */
+    (u32)ryu_exca_006,  /* 6 follow-up of ALEX BACK D / HUMI ASIB A +9 */
     (u32)ryu_exca_007,  /* 7 no name */
-    (u32)ryu_exca_008,  /* 8 follow-up of IBUKI, DUDDLEY D S +2 */
-    (u32)ryu_exca_009,  /* 9 follow-up of TATAKI S, ALEX BODY S +5 */
-    (u32)ryu_exca_010,  /* 10 follow-up of IBUKI KUBIORI, KIRIMOMI A +2 */
+    (u32)ryu_exca_008,  /* 8 follow-up of IBUKI / DUDDLEY D S +2 */
+    (u32)ryu_exca_009,  /* 9 follow-up of TATAKI S / ALEX BODY S +5 */
+    (u32)ryu_exca_010,  /* 10 follow-up of IBUKI KUBIORI / KIRIMOMI A +2 */
     (u32)ryu_exca_011,  /* 11 follow-up of APPEAR JUNBI 4 */
     (u32)ryu_exca_012,  /* 12 follow-up of APPEAR JUNBI 5 */
-    (u32)ryu_exca_013,  /* 13 follow-up of ATTACK 7 S: not started by a command, APPEAR JUNBI 6 */
+    (u32)ryu_exca_013,  /* 13 follow-up of ATTACK 7 S: not started by a command / APPEAR JUNBI 6 */
     (u32)ryu_exca_014,  /* 14 no name */
     (u32)ryu_exca_015,  /* 15 no name */
     (u32)ryu_exca_016,  /* 16 no name */
@@ -5052,7 +5052,7 @@ const u32 ryu_exca[57] = {
     (u32)ryu_exca_021,  /* 21 no name */
     (u32)ryu_exca_022,  /* 22 no name */
     (u32)ryu_exca_023,  /* 23 follow-up of HARAIGOSHI A */
-    (u32)ryu_exca_024,  /* 24 follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +3 */
+    (u32)ryu_exca_024,  /* 24 follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +3 */
     (u32)ryu_exca_025,  /* 25 follow-up of APPEAR JUNBI 7 */
     (u32)ryu_exca_026,  /* 26 follow-up of APPEAR JUNBI 7 */
     (u32)ryu_exca_027,  /* 27 follow-up of APPEAR JUNBI 8 */
@@ -5087,7 +5087,7 @@ const u32 ryu_exca[57] = {
     0
 };
 
-/* script: 0 follow-up of AIR S, AIR M +2 */
+/* script: 0 follow-up of AIR S / AIR M +2 */
 const u16 ryu_exca_000_head[4] = { HEAD(4, 0, 0, 0, 0, 0, 0) };
 const u16 ryu_exca_000[108] = {
     L4(3, 0, 0, 0, 0, 0, 0, 0x0C52, 0, 162, 0, 0, 0, 0, 0),
@@ -5128,7 +5128,7 @@ const u16 ryu_exca_002[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 3 follow-up of ASHIBARAI A, TUNNOMERI A */
+/* script: 3 follow-up of ASHIBARAI A / TUNNOMERI A */
 const u16 ryu_exca_003_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ryu_exca_003[68] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x0CFA, 0, 126, 0, 0, 0, 0, 0),
@@ -5154,7 +5154,7 @@ const u16 ryu_exca_004[52] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 5 follow-up of KGM TATAKI S, ALEX POWER B +29 */
+/* script: 5 follow-up of KGM TATAKI S / ALEX POWER B +29 */
 const u16 ryu_exca_005_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ryu_exca_005[148] = {
     L4(2, 2, 0, 0, 0, 0, 0, 0x0CE8, 0, 126, 0, 0, 0, 0, 0),
@@ -5178,7 +5178,7 @@ const u16 ryu_exca_005[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 6 follow-up of ALEX BACK D, HUMI ASIB A +9 */
+/* script: 6 follow-up of ALEX BACK D / HUMI ASIB A +9 */
 const u16 ryu_exca_006_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ryu_exca_006[116] = {
     L4(1, 2, 0, 0, 0, 0, 0, 0x0CEC, 0, 126, 0, 0, 0, 0, 0),
@@ -5219,7 +5219,7 @@ const u16 ryu_exca_007[124] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 8 follow-up of IBUKI, DUDDLEY D S +2 */
+/* script: 8 follow-up of IBUKI / DUDDLEY D S +2 */
 const u16 ryu_exca_008_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ryu_exca_008[100] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x0D00, 0, 126, 0, 0, 0, 0, 0),
@@ -5237,7 +5237,7 @@ const u16 ryu_exca_008[100] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 9 follow-up of TATAKI S, ALEX BODY S +5 */
+/* script: 9 follow-up of TATAKI S / ALEX BODY S +5 */
 const u16 ryu_exca_009_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ryu_exca_009[124] = {
     L4(1, 2, 0, 0, 0, 0, 0, 0x0D00, 0, 126, 0, 0, 0, 0, 0),
@@ -5258,7 +5258,7 @@ const u16 ryu_exca_009[124] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 10 follow-up of IBUKI KUBIORI, KIRIMOMI A +2 */
+/* script: 10 follow-up of IBUKI KUBIORI / KIRIMOMI A +2 */
 const u16 ryu_exca_010_head[4] = { HEAD(4, 38, 0, 0, 0, 0, 0) };
 const u16 ryu_exca_010[92] = {
     L4(3, 2, 0, 0, 0, 0, 0, 0x0CFB, 0, 126, 0, 0, 0, 0, 0),
@@ -5296,7 +5296,7 @@ const u16 ryu_exca_012[36] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 13 follow-up of ATTACK 7 S: not started by a command, APPEAR JUNBI 6 */
+/* script: 13 follow-up of ATTACK 7 S: not started by a command / APPEAR JUNBI 6 */
 const u16 ryu_exca_013_head[4] = { HEAD(4, 32, 0, 0, 0, 0, 0) };
 const u16 ryu_exca_013[60] = {
     L4(1, 0, 273, 0, 0, 0, 0, 0x0C29, 0, 2, 0, 0, 0, 0, 0),
@@ -5443,7 +5443,7 @@ const u16 ryu_exca_023[148] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-/* script: 24 follow-up of ATTACK 4 S: not started by a command, ATTACK 4 M: not started by a command +3 */
+/* script: 24 follow-up of ATTACK 4 S: not started by a command / ATTACK 4 M: not started by a command +3 */
 const u16 ryu_exca_024_head[4] = { HEAD(6, 0, 32, 10, 0, 0, 4) };
 const u16 ryu_exca_024[184] = {
     L6(5, 0, 384, 0, 0, 0, 0, 0x0EA4, 0, 116, 0, 0, 0, 21, 0, 0, 0, 90, 0, 0),

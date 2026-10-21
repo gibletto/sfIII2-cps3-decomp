@@ -179,7 +179,7 @@ s8 pl;
 
 
 
-/* attributes 18/146; an empty mode test before pt (review item) */
+/* attributes 18/146; the Game_setting.mode test has empty arms */
 void stun_mark_write(s8 pl, s8 kind) {
     const u16* cells;
     s16 attr;

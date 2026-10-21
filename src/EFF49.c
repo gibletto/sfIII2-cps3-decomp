@@ -2,7 +2,7 @@
  * EFF49.C  Effect 49 (continue count down digit)
  *
  * In 2nd Impact effect 49 is the loser's continue count: it waits dir_timer frames, zooms in from
- * 127 while rising in priority, then shows Continue_Count_Down[LOSER] (playing a sound as
+ * 127 while rising in priority, then shows Continue_Count[LOSER] (playing a sound as
  * each new digit comes up) until the count runs out, waits dir_old frames and zooms out.
  * Flash_Violent (in Eff51 in 3rd Strike) runs a timed colour-flash sequence on a work and returns 1
  * when finished.
@@ -65,19 +65,19 @@ void effect_49_move(WORK_Other* ewk) {
         }
         break;
     case 3:
-        if ((num = Continue_Count_Down[LOSER]) < 0) {
+        if ((num = Continue_Count[LOSER]) < 0) {
             ewk->wu.routine_no[0] = 5;
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, 10, 0);
         } else {
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, num + 10, 0);
             if (ewk->wu.direction != num) {
                 ewk->wu.direction = num;
-                Sound_SE(Continue_Count_Down[LOSER] + 0x90);
+                Sound_SE(Continue_Count[LOSER] + 0x90);
             }
         }
         break;
     case 4:
-        if (Continue_Count_Down[LOSER] < 0) {
+        if (Continue_Count[LOSER] < 0) {
             ewk->wu.routine_no[0] = 5;
         }
         ewk->wu.vitality = 0;

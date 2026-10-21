@@ -23,9 +23,9 @@ const ATTACK_BOX necro_att_box[57] = {
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 0: no box */
     { { {  -82,  21,  48,  15 },  {  -61,  36,  48,  15 } } },  /* 1: S PUNCH C; attack 1 */
     { { { -119,  24,  63,  12 },  {  -94,  65,  63,  12 } } },  /* 2: S PUNCH A; attack 2 */
-    { { { -102,  26,  67,  18 },  {  -76,  54,  67,  18 } } },  /* 3: M PUNCH A, follow-up of S KICK A, S KICK C, UP P GUARD P S +1; attack 3, 4, 76 */
+    { { { -102,  26,  67,  18 },  {  -76,  54,  67,  18 } } },  /* 3: M PUNCH A, follow-up of S KICK A / S KICK C, UP P GUARD P S +1; attack 3, 4, 76 */
     { { {   -4,  33, 125,  46 },  {  -41,  24,  72,  59 } } },  /* 4: not used by a script */
-    { { { -147,  21,  56,  17 },  { -125, 104,  56,  17 } } },  /* 5: L PUNCH A, follow-up of follow-up of S KICK A, S KICK C; attack 5, 77 */
+    { { { -147,  21,  56,  17 },  { -125, 104,  56,  17 } } },  /* 5: L PUNCH A, follow-up of follow-up of S KICK A / S KICK C; attack 5, 77 */
     { { {  -72,  41,  34,  11 },  {    0,   0,   0,   0 } } },  /* 6: S KICK C; attack 6 */
     { { {  -87,  11,  39,  24 },  {  -75,  53,  40,  15 } } },  /* 7: S KICK A; attack 7 */
     { { {  -73,  17,  70,  13 },  {  -60,  35,  40,  41 } } },  /* 8: M KICK C; attack 8 */

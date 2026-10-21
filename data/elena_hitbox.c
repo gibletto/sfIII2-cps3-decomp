@@ -37,7 +37,7 @@ const HIT_IX elena_hit_ix_table[313] = {
     {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 1: KAMAE, STAND UP, WALK END +75 */
     {    2,    2,    0,    0,    1,    0,    0,    1 },  /* 2: FRONT WALK, BACK WALK, ATTACK 4 S: SA I 23623+K (routine Att_SHOURYUUREPPA) */
     {    3,    3,    0,    0,    2,    0,    0,    2 },  /* 3: KAGAMU, KAGAMI KAMAE, PARING DOWN +34 */
-    {   11,   11,    0,    0,    1,    0,    0,    1 },  /* 4: follow-up of S PUNCH A, S PUNCH C +8, PIYO, WAIT */
+    {   11,   11,    0,    0,    1,    0,    0,    1 },  /* 4: follow-up of S PUNCH A / S PUNCH C +8, PIYO, WAIT */
     {    4,    4,    0,    0,    3,    0,    0,    3 },  /* 5: JUMP JUNBI, SP JUMP JUNBI, JUMP FRONT +2 */
     {    5,    5,    0,    0,    3,    0,    0,    3 },  /* 6: JUMP FRONT, S JUMP FRONT, PARING AIR F +19 */
     {    6,    6,    0,    0,    5,    0,    0,    6 },  /* 7: AIR S, AIR M, AIR L +23 */
@@ -85,13 +85,13 @@ const HIT_IX elena_hit_ix_table[313] = {
     {  109,  109,    0,    7,    3,    7,    0,    3 },  /* 49: V JUMP P M A, F JUMP P M A */
     {  109,  109,    0,    0,    3,    0,    0,    3 },  /* 50: V JUMP P M A, F JUMP P M A */
     {  110,  110,    0,    0,    3,    0,    0,    3 },  /* 51: V JUMP P L A, F JUMP P L A */
-    {  111,  111,    0,    0,    3,    0,    0,    3 },  /* 52: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A, F JUMP P M A */
-    {  112,  112,    0,    8,    3,    8,    0,    3 },  /* 53: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A, F JUMP P M A */
-    {  112,  112,    0,    0,    3,    0,    0,    3 },  /* 54: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A, F JUMP P M A */
+    {  111,  111,    0,    0,    3,    0,    0,    3 },  /* 52: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A / F JUMP P M A */
+    {  112,  112,    0,    8,    3,    8,    0,    3 },  /* 53: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A / F JUMP P M A */
+    {  112,  112,    0,    0,    3,    0,    0,    3 },  /* 54: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A / F JUMP P M A */
     {  114,  114,    0,    0,    3,    0,    0,    3 },  /* 55: V JUMP K S A, F JUMP K S A */
     {  114,  114,    0,    9,    3,    9,    0,    3 },  /* 56: V JUMP K S A, F JUMP K S A */
-    {  115,  115,    0,   10,    3,   10,    0,    3 },  /* 57: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A, F JUMP P S A */
-    {  115,  115,    0,    0,    3,    0,    0,    3 },  /* 58: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A, F JUMP P S A */
+    {  115,  115,    0,   10,    3,   10,    0,    3 },  /* 57: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A / F JUMP P S A */
+    {  115,  115,    0,    0,    3,    0,    0,    3 },  /* 58: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A / F JUMP P S A */
     {    0,    0,    0,    0,    3,    0,    0,    3 },  /* 59: ATTACK 5 S: SA II 23623+K (routine Att_SHOURYUUREPPA) */
     {    0,    0,    0,    0,    0,    0,    0,    6 },  /* 60: AIR S, AIR M, AIR L +2 */
     {    1,    1,    0,    0,    1,    0,    0,    1 },  /* 61: GUARD HEAD, GUARD UP, APPEAR 1 */
@@ -361,7 +361,7 @@ const BODY_BOX elena_body_box[261] = {
     { { {  -49,  24,  62,  19 },  {  -32,  41,  53,  24 },  {  -26,  53,  32,  35 },  {  -22,  68,   0,  37 } } },  /* 8: DASH HUMIKOMI */
     { { {  -41,  26,  66,  17 },  {  -28,  39,  56,  21 },  {  -21,  42,  36,  33 },  {  -31,  69,   0,  36 } } },  /* 9: DASH HUMIKOMI, ATTACK 5 S: SA II 23623+K (routine Att_SHOURYUUREPPA) */
     { { {  -35,  28,  70,  17 },  {  -26,  44,  60,  19 },  {  -22,  49,  36,  30 },  {  -32,  70,   0,  36 } } },  /* 10: DASH HUMIKOMI */
-    { { {  -54,  22,  64,  19 },  {  -36,  48,  68,  10 },  {  -38,  56,  37,  30 },  {  -36,  68,   0,  36 } } },  /* 11: follow-up of S PUNCH A, S PUNCH C +8, PIYO, WAIT */
+    { { {  -54,  22,  64,  19 },  {  -36,  48,  68,  10 },  {  -38,  56,  37,  30 },  {  -36,  68,   0,  36 } } },  /* 11: follow-up of S PUNCH A / S PUNCH C +8, PIYO, WAIT */
     { { {  -32,  16,  80,  16 },  {  -16,  32,  72,  22 },  {  -28,  50,  46,  26 },  {    0,   0,   0,   0 } } },  /* 12: GUARD AIR */
     { { {    9,  28,  41,  19 },  {  -16,  33,  30,  22 },  {  -22,  48,  14,  27 },  {  -29,  67,   0,  27 } } },  /* 13: KAGAMI TURN */
     { { {  -19,  25,  48,  16 },  {  -27,  46,  36,  18 },  {  -30,  59,  22,  16 },  {  -32,  67,   0,  22 } } },  /* 14: KAGAMI TURN */
@@ -461,11 +461,11 @@ const BODY_BOX elena_body_box[261] = {
     { { {  -15,  26,  94,  16 },  {  -40,  70,  76,  22 },  {  -47,  70,  48,  29 },  {    0,   0,   0,   0 } } },  /* 108: V JUMP P M A, V JUMP P L A, V JUMP K S A +7 */
     { { {    2,  26,  94,  16 },  {  -24,  63,  78,  21 },  {  -40,  76,  46,  32 },  {    0,   0,   0,   0 } } },  /* 109: V JUMP P M A, F JUMP P M A */
     { { {  -14,  24,  96,  16 },  {  -28,  57,  76,  24 },  {  -40,  72,  48,  28 },  {    0,   0,   0,   0 } } },  /* 110: V JUMP P L A, F JUMP P L A */
-    { { {   -8,  25,  94,  16 },  {  -20,  60,  76,  22 },  {  -24,  72,  46,  30 },  {    0,   0,   0,   0 } } },  /* 111: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A, F JUMP P M A */
-    { { {  -11,  25,  96,  16 },  {  -28,  56,  76,  24 },  {  -28,  72,  48,  28 },  {    0,   0,   0,   0 } } },  /* 112: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A, F JUMP P M A */
+    { { {   -8,  25,  94,  16 },  {  -20,  60,  76,  22 },  {  -24,  72,  46,  30 },  {    0,   0,   0,   0 } } },  /* 111: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A / F JUMP P M A */
+    { { {  -11,  25,  96,  16 },  {  -28,  56,  76,  24 },  {  -28,  72,  48,  28 },  {    0,   0,   0,   0 } } },  /* 112: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A / F JUMP P M A */
     { { {   -4,  16,  94,  16 },  {  -28,  64,  76,  22 },  {  -40,  72,  48,  28 },  {    0,   0,   0,   0 } } },  /* 113: not used by a script */
     { { {   -6,  25,  94,  16 },  {  -28,  64,  76,  22 },  {  -75, 111,  45,  32 },  {    0,   0,   0,   0 } } },  /* 114: V JUMP K S A, F JUMP K S A */
-    { { {    8,  24,  94,  16 },  {  -34,  77,  76,  22 },  {  -61,  92,  49,  32 },  {    0,   0,   0,   0 } } },  /* 115: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A, F JUMP P S A */
+    { { {    8,  24,  94,  16 },  {  -34,  77,  76,  22 },  {  -61,  92,  49,  32 },  {    0,   0,   0,   0 } } },  /* 115: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A / F JUMP P S A */
     { { {  -54,  16,  64,  16 },  {  -38,  32,  50,  44 },  {   -8,  56,  46,  40 },  {    0,   0,   0,   0 } } },  /* 116: V JUMP K L A, F JUMP K L A */
     { { {    0,   0,   0,   0 },  {  -34,  32,  34,  56 },  {   -2,  56,  52,  44 },  {    0,   0,   0,   0 } } },  /* 117: V JUMP K L A, F JUMP K L A */
     { { {    0,   0,   0,   0 },  {  -24,  56,  34,  32 },  {  -37,  72,  66,  39 },  {    0,   0,   0,   0 } } },  /* 118: V JUMP K L A, F JUMP K L A */
@@ -727,10 +727,10 @@ const HAND_BOX elena_hand_box[259] = {
     { { {  -94,  68,  65,  21 },  {    0,   0,   0,   0 } } },  /* 109: V JUMP P M A, F JUMP P M A */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 110: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 111: no box */
-    { { {  -84,  55,  47,  25 },  {    0,   0,   0,   0 } } },  /* 112: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A, F JUMP P M A */
+    { { {  -84,  55,  47,  25 },  {    0,   0,   0,   0 } } },  /* 112: V JUMP P L A, F JUMP P L A, follow-up of V JUMP P M A / F JUMP P M A */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 113: no box */
     { { { -101,  60,  41,  26 },  {    0,   0,   0,   0 } } },  /* 114: V JUMP K S A, F JUMP K S A */
-    { { {  -87,  42,  45,  26 },  {    0,   0,   0,   0 } } },  /* 115: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A, F JUMP P S A */
+    { { {  -87,  42,  45,  26 },  {    0,   0,   0,   0 } } },  /* 115: V JUMP K M A, F JUMP K M A, follow-up of V JUMP P S A / F JUMP P S A */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 116: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 117: no box */
     { { {    0,   0,   0,   0 },  {    0,   0,   0,   0 } } },  /* 118: no box */

@@ -24,18 +24,18 @@ const ATTACK_BOX dudley_att_box[72] = {
     { { {  -87,  16,  80,  13 },  {  -72,  47,  80,  13 } } },  /* 1: S PUNCH A, follow-up of S PUNCH A, ATTACK 10 M: not started by a command +1; attack 1, 65 */
     { { { -102,  18,  76,  16 },  {  -84,  56,  76,  16 } } },  /* 2: M PUNCH A, follow-up of follow-up of S KICK A, follow-up of S PUNCH A +5; attack 4, 66, 80, 84 ... */
     { { {  -70,  47,  72,  19 },  {  -52,  29,  56,  16 } } },  /* 3: S KICK A; attack 3 */
-    { { {  -65,  27,  71,  21 },  {  -54,  30,  53,  18 } } },  /* 4: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4; attack 5, 55, 67, 73 ... */
-    { { {  -56,  16, 106,  22 },  {  -65,  22,  88,  18 } } },  /* 5: M KICK A, follow-up of L KICK C, KAGAMI K A +1, follow-up of M PUNCH A, M KICK C +4; attack 55, 67 */
+    { { {  -65,  27,  71,  21 },  {  -54,  30,  53,  18 } } },  /* 4: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4; attack 5, 55, 67, 73 ... */
+    { { {  -56,  16, 106,  22 },  {  -65,  22,  88,  18 } } },  /* 5: M KICK A, follow-up of L KICK C / KAGAMI K A +1, follow-up of M PUNCH A / M KICK C +4; attack 55, 67 */
     { { {  -88,  19,  60,  16 },  {  -69,  47,  60,  16 } } },  /* 6: S PUNCH C; attack 7 */
     { { {  -84,  60,  63,  16 },  {  -65,  41,  48,  15 } } },  /* 7: M KICK C; attack 8 */
     { { {  -59,  33,  39,  20 },  {    0,   0,   0,   0 } } },  /* 8: L KICK A, atca 162, follow-up of M KICK A; attack 9, 83, 86 */
     { { {  -87,  61,  65,  21 },  {  -69,  43,  47,  18 } } },  /* 9: L KICK A, atca 162, follow-up of M KICK A +1; attack 56 */
     { { {  -70,  22,  66,  36 },  {  -46,  20,  66,  17 } } },  /* 10: L KICK A, atca 162, follow-up of M KICK A +5; attack 49, 106 */
-    { { { -108,  28,  64,  21 },  {  -80,  54,  55,  30 } } },  /* 11: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A, M KICK C +3; attack 11, 75, 82 */
+    { { { -108,  28,  64,  21 },  {  -80,  54,  55,  30 } } },  /* 11: L PUNCH A, L PUNCH C, follow-up of follow-up of M PUNCH A / M KICK C +3; attack 11, 75, 82 */
     { { {  -74,  22,  45,  15 },  {  -52,  28,  45,  12 } } },  /* 12: KAGAMI P A; attack 12 */
     { { {  -87,  19,  51,  22 },  {  -68,  48,  52,  10 } } },  /* 13: KAGAMI P A, follow-up of JUDGMENT WAIT; attack 13, 109 */
-    { { {  -76,  34,  49,  24 },  {  -60,  32,  33,  25 } } },  /* 14: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3; attack 14, 57, 71, 87 ... */
-    { { {  -69,  29,  94,  25 },  {  -74,  19,  84,  17 } } },  /* 15: KAGAMI P A, follow-up of follow-up of M KICK A, follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3; attack 15, 57, 72, 88 ... */
+    { { {  -76,  34,  49,  24 },  {  -60,  32,  33,  25 } } },  /* 14: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3; attack 14, 57, 71, 87 ... */
+    { { {  -69,  29,  94,  25 },  {  -74,  19,  84,  17 } } },  /* 15: KAGAMI P A, follow-up of follow-up of M KICK A / follow-up of follow-up of S KICK A, follow-up of follow-up of JUDGMENT WAIT +3; attack 15, 57, 72, 88 ... */
     { { {  -73,  23,  24,  18 },  {  -58,  32,  33,  16 } } },  /* 16: KAGAMI K A; attack 16 */
     { { {  -70,  23,   0,  23 },  {  -52,  22,  19,  17 } } },  /* 17: KAGAMI K A, UP P GUARD K S; attack 17 */
     { { {  -70,  22,   0,  21 },  {  -52,  18,  16,  14 } } },  /* 18: KAGAMI K A; attack 18 */

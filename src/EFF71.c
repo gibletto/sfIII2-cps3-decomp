@@ -1,5 +1,5 @@
 /*
- * EFF71.C  Effect 71: a stage object that watches the fighters (2nd Impact only)
+ * EFF71.C  Effect 71: a stage object that watches the fighters (2nd Impact version)
  *
  * 3rd Strike: effect 71 waits a random time and sends out two effect 72s. 2nd Impact's effect 71 is a different
  * routine: effect_71_init places it by the two characters (eff71_char_tbl) and gives it type 0
