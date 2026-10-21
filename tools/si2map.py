@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """2nd Impact program image: which halfwords are instructions (stored encrypted) and which are data (stored plain).
 
-    python tools/si2map.py image <rom dir> <out dir> [3s match tsv]
+    python tools/si2map.py image <rom dir> <out dir> [seeds: sf2i/functions.tsv, or a 3s match tsv]
 
 <rom dir> holds prog_data.bin and prog_op.bin (tools/cps3rom2.py extract). The program is followed from the vector
-table, the program header at 06001000, the entry points named in the optional match tsv (column addr2), and then
+table, the program header at 06001000, the entry points of the optional seeds file (the addresses of
+sf2i/functions.tsv, or a 3s match tsv's column addr2), and then
 every data word that points at an unexplored place in the code range and decodes there as clean code. Pools
 (mov.w/mov.l @(disp,PC)), switch tables (mova + braf/jmp) and pool-based address tables are data. What is still
 unreached is then swept: 0xFFFF fill (or one 0000/0009 before a 4-byte boundary) is padding, and a gap whose opcode
@@ -304,8 +305,11 @@ def main():
     if len(a) > 3:
         for l in open(a[3], encoding='utf-8'):
             f = l.rstrip('\n').split('\t')
-            if f[0] == 'name' or len(f) < 7 or not f[6]: continue
-            seeds.append((int(f[6], 16), 'match3s'))
+            if l.startswith('#') or f[0] == 'name': continue
+            if len(f) >= 7:                                                # a 3s match tsv: column addr2
+                if f[6]: seeds.append((int(f[6], 16), 'match3s'))
+            elif len(f) >= 4 and f[0]:                                     # sf2i/functions.tsv: the address
+                seeds.append((int(f[0], 16), 'match3s'))
     print('seeds', collections.Counter(h for _, h in seeds))
     fail = P.run(seeds[::-1], trial_kinds=('ptr', 'header', 'match3s'))
     print('after seeds: entries', len(P.entries), 'failed', dict(fail))

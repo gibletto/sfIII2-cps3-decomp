@@ -153,14 +153,5 @@ void Passive00_0145(PLW* wk);
 void Passive00_0146(PLW* wk);
 void Passive00_0147(PLW* wk);
 void Passive00_0148(PLW* wk);
-void Passive00_0149(PLW* wk);
-void Passive00_0150(PLW* wk);
-void Passive00_0151(PLW* wk);
-void Passive00_0152(PLW* wk);
-void Passive00_0153(PLW* wk);
-void Passive00_0154(PLW* wk);
-void Passive00_0155(PLW* wk);
-void Passive00_0156(PLW* wk);
-void Passive00_0157(PLW* wk);
 
 #endif

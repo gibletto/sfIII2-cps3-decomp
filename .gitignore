@@ -1,8 +1,10 @@
-# ROM contents and anything derived from them stay private
-/rom/
-/scratch/
-*.bin
-*.zip
+/build/
+/rom/*
+!/rom/README
+/sf2i/obj/
+/sf2i/build/
+/sf2i/prog.bin
+/sf2i/sf2i.abs
+/sf2i/sf2i.map
+/sf2i/*.log
 __pycache__/
-# generated Ghidra project (tools/ghidra-import.sh); only scripts and tables are tracked
-/ghidra/project/

@@ -3,10 +3,7 @@
 
 #include "structs.h"
 
-void dog24_data_set(WORK_Other* ewk);
-void eff24_quake_sub(WORK_Other* ewk);
-void eff24_sp_data_set(WORK_Other* ewk);
-s32 effect_24_init(void);
+s32 effect_24_init(WORK_Other* oya);
 void effect_24_move(WORK_Other* ewk);
 
 #endif

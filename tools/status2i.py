@@ -84,9 +84,13 @@ def listings(T, objs, jobs):
                 return
             lst = wd / f'{o}.lst'
             lst.unlink(missing_ok=True)
+            oenv = dict(env)       # the per-flags revision settings, as build2i.compile applies them
+            for kk, vv in build2i.REVISION_BY_FLAGS.get(fl.get(o, 'speed'), {}).items():
+                if kk not in os.environ:
+                    oenv[kk] = vv
             subprocess.run([str(T / 'bin' / 'shc.exe'), f'src/{o}.c', *build2i.COMMON, *build2i.FLAGS[fl.get(o, 'speed')],
                             '-include=include', f'-listfile={o}.lst', '-show=object', f'-object={o}.obj'],
-                           cwd=wd, env=env, capture_output=True, creationflags=0x00004000)
+                           cwd=wd, env=oenv, capture_output=True, creationflags=0x00004000)
             r = shclist.parse(lst.read_text(errors='replace'), FILL) if lst.exists() else None
             with lock:
                 res[o] = r

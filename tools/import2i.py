@@ -5,9 +5,10 @@
 
 <module> is the 3s object name (Entry, intr, slow_mvn). The source comes from the 3s tree: src/<module>.c (and
 its units.txt line), src/<module>.src or lib/<module>.src. A C module gets one comment line above every function
-the naming tables place in 2i, from its functions.tsv row (docs/PROVENANCE.md: "2i <address>, <class>: sf3
-<source> <3s name>"); a function whose 2i name differs from its 3s name is renamed in the module and reported,
-so the callers in other source modules can follow. --drop NAME removes a function definition that 2i does not
+the naming tables place in 2i, from its own functions.tsv row (docs/PROVENANCE.md: "2i <address>, <class>: sf3
+<source> <3s name>"); a function whose own row has another name is renamed in the module and reported, so the
+callers in other source modules can follow. A function's own row is the one that lies in the module (own_rows):
+the row of an identical copy elsewhere, named by its role there, neither renames it nor comments it. --drop NAME removes a function definition that 2i does not
 have (the census calls it absent), from its line to the closing brace at column 0 together with the comment
 lines straight above it. Run tools/layout2i.py afterwards: it places the module's sections and writes the link.
 """
@@ -31,6 +32,55 @@ def rows_for(src):
         m = re.fullmatch(r'(src|lib)/(.+):(\d+)', c[6])
         if m and f'{m.group(1)}/{m.group(2)}' == src:
             out.append((int(m.group(3)), c))
+    return out
+
+
+REACH = 0x4000      # how far past the module's outermost anchors a first or last routine's row may lie
+
+
+def own_rows(rows):
+    """each 3s function's own row: [(line, row)], at most one per line. Several rows can carry one 3s source line
+    (identical copies elsewhere, named by their roles), so a row counts only where it lies in the module: its
+    address must fall between those of the anchors (lines with exactly one row of the 3s name itself) before and
+    after it, the anchors kept in source order with rising addresses (longest such run). Among the rows in range
+    the 3s name itself wins; a line with no row in range gets none (the function keeps its 3s name)."""
+    by = {}
+    for line, c in rows:
+        by.setdefault(line, []).append(c)
+    anchors = []
+    for line in sorted(by):
+        own = [c for c in by[line] if c[1] == c[5]]
+        if len(own) == 1:
+            anchors.append((line, int(own[0][0], 16)))
+    # longest run of anchors with rising addresses (patience sort with back links)
+    tails, prev, idx = [], [None] * len(anchors), []
+    for k, (_, a) in enumerate(anchors):
+        lo, hi = 0, len(tails)
+        while lo < hi:
+            mid = (lo + hi) // 2
+            if anchors[tails[mid]][1] < a:
+                lo = mid + 1
+            else:
+                hi = mid
+        prev[k] = tails[lo - 1] if lo else None
+        if lo == len(tails):
+            tails.append(k)
+        else:
+            tails[lo] = k
+    k = tails[-1] if tails else None
+    while k is not None:
+        idx.append(k)
+        k = prev[k]
+    kept = sorted(anchors[k] for k in idx)
+    out = []
+    for line in sorted(by):
+        before = [a for l, a in kept if l <= line]
+        after = [a for l, a in kept if l >= line]
+        lo = before[-1] if before else (after[0] - REACH if after else None)
+        hi = after[0] if after else (before[-1] + REACH if before else None)
+        cands = [c for c in by[line] if lo is None or lo <= int(c[0], 16) <= hi]
+        if cands:
+            out.append((line, min(cands, key=lambda c: (c[1] != c[5], int(c[0], 16)))))
     return out
 
 
@@ -75,7 +125,7 @@ def main():
         if fname.endswith('.c'):
             nl = '\r\n' if '\r\n' in text else '\n'
             lines = text.split(nl)
-            rows = rows_for(f'{sub}/{fname}')
+            rows = own_rows(rows_for(f'{sub}/{fname}'))
             renames = {}
             for line, c in sorted(rows, reverse=True):
                 addr, name, cls, s3name = c[0], c[1], c[3], c[5]

@@ -7,7 +7,7 @@
  * until the combo score display (cmb_all_stock / cmb_calc_now) has finished. After the time from
  * Time_Data it clears the message area (eff84_message_clear), requests the dead voice, clears
  * request_message and resumes play. Messages are requested through request_center_message.
- * The effect dies when Suicide[0] is set.
+ * The effect dies when Suicide is set.
  */
 
 #include "structs.h"
@@ -32,7 +32,7 @@
 
 /* 2i 060D5730, 3s-reloc: sf3 src/EFF84.c:33 effect_84_move */
 void effect_84_move(WORK_Other* ewk) {
-    if (Suicide[0]) {
+    if (Suicide) {
         push_effect_work(&ewk->wu);
         return;
     }

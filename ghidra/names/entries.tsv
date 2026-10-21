@@ -1009,6 +1009,7 @@
 060A008A	si2map entry (unreached)
 060A0680	si2map entry (unreached)
 060A12D0	si2map entry (unreached)
+060A1334	unnamed after zoom_x_width_check moved to 060A133C (bg000); was 3s-near
 060A133C	si2map entry (unreached)
 060A13D6	si2map entry (unreached)
 060A14B0	si2map entry (unreached)
@@ -1369,6 +1370,7 @@
 060B6B8A	si2map entry (ptr)
 060B6C2E	si2map entry (ptr)
 060B6E40	si2map entry (ptr)
+060B6FD6	unnamed (lead decision 2026-10-19): the census put complete_victory_pause here, but this is no 8-byte stub (it stores 1, then loads #0 and another pool and goes on); the name moved to 0608BB34
 060B71FC	si2map entry (ptr)
 060B73C2	si2map entry (ptr)
 060B73F8	si2map entry (ptr)
@@ -1557,6 +1559,7 @@
 060F42FC	si2map entry (unreached)
 060F48CA	si2map entry (unreached)
 060F52FE	si2map entry (ptr)
+060F533A	unnamed after sysconfig_draw moved to 060F52FE (sys_config_2); was 3s-near
 060F671E	si2map entry (unreached)
 060F6AD0	si2map entry (unreached)
 060F6B38	si2map entry (unreached)

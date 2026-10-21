@@ -13,7 +13,6 @@ s32 pull_effect_work();
 void move_effect_work(s16 index);
 s32 push_effect_work(WORK* wkhd);
 void work_init_zero(s32* adrs_int, s32 xx);
-void work_init_copy(s32* src, s32* dst, s16 size);
 void setup_meoshi_hit_flag(WORK* wk, u8 flag);
 void clear_caution_flag(PLW* wk);
 void reset_extra_bg_flag(WORK* wk);

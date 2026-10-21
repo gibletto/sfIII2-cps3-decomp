@@ -5,7 +5,7 @@
 
 void Auto_Repeat_Sub();
 void Basic_Sub_Ex(void);
-s32 Check_Boss(s16 PL_id);
+s32 Check_Boss();
 void Correct_Control_Time();
 s32 Deley_Shot_Sub(s16 PL_id);
 void Sel_PL_4th(void);

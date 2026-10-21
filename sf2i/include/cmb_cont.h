@@ -10,7 +10,6 @@ void combo_cont_main(void);
 void combo_control(s8 PL);
 void check_and_set_combo();
 void combo_hensuu_clear();
-void combo_rp_clear_check();
 void combo_window_push();
 u32 SCORE_CALCULATION();
 void combo_window_trans(s8 PL);

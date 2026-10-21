@@ -48,7 +48,7 @@ void Ranking_00_6th(s8 flag);
 s32 ToneDown(s8 tone);
 void scfont_lnput(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code);
 void scfont_lnput_rev(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code);
-void max_mark_write(char side, s32 left, u32 count, s32 x, char mark);
+void max_mark_write(char side, s16 left, u16 count, s32 x, char mark);
 s32 tilemap_put_cell(u16 x, u16 y, u16 attr, u16 code);
 void winner_name_put(s8 chr);
 void player_face_char_set();

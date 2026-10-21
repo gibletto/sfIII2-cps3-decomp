@@ -4,6 +4,6 @@
 #include "structs.h"
 
 void effect_28_move(WORK_Other* ewk);
-s32 effect_28_init();
+s32 effect_28_init(WORK_Other* oya);
 
 #endif

@@ -28,4 +28,8 @@ void kakushi_setup(s32 pl);
 s32 get_kind_of_head_dm(s16 dir, char rl);
 s32 get_kind_of_trunk_dm(s16 dir, char rl);
 
+s32 get_buttobi_attlv(PLW* wk);   /* provisional name; 2i only (0600C842) */
+s32 get_buttobi_attlv2(PLW* wk);  /* provisional name; 2i only (0600C882) */
+void pl_voice_request(s8 pl, u8 kind);  /* provisional name; 2i only (0600C9A4) */
+void cal_sa_gauge_dummy(void);
 #endif

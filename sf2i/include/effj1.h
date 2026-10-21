@@ -3,6 +3,7 @@
 
 #include "structs.h"
 
-void effect_J1_move(void);
+s32 effect_J1_init(void);
+void effect_J1_move(WORK_Other* ewk);
 
 #endif

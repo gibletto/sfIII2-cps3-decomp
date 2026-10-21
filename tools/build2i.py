@@ -14,18 +14,22 @@ which is run again whenever a module comes in as source):
         ghidra/names/functions.tsv and globals.tsv inside it, and for the names the source modules refer to that
         the tables do not have yet (layout2i.py's build/layout/externs.tsv). Blobs hold ROM bytes, so they are
         generated, never committed.
+  data  a data unit of sf2i/data.tsv: data/<name>.c when the tree has one, else build/data/<name>.c, written here
+        from the 2nd Impact image by tools/emit2i_data.py (typed tables, ROM content: generated, never committed)
 Only out-of-date objects are rebuilt (--all: every one). The link goes to sf2i/sf2i.abs and sf2i.map, the image to
 sf2i/prog.bin (06000000-06FFFFFF, fill FF: rof2bin -v=FF), which is then compared with the 2nd Impact image
 (tools/verify2i.py). --pack also encrypts it into the ROM set, sf2i/build/rom/sfiii2n.zip (tools/cps3rom2.py
 pack, with si2map's hmap.bin), and compares the program SIMMs with the given set's. The rebuilt compiler stages'
 rule switches (GEN_*, MDL_*, PEP_*, ...) in the environment are passed on; none set means the arcade rules.
 """
-import argparse, csv, os, re, shutil, subprocess, sys
+import argparse, csv, os, re, shutil, subprocess, sys, zlib
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TMP = Path(os.environ.get('SF2I_TMP') or Path(os.environ.get('SystemDrive', 'C:') + os.sep) / 'shct_2i')   # SHC wants a short path without '-'
+# SHC wants a short path without '-'; one directory per tree, so builds in several worktrees at once don't share it
+TMP = Path(os.environ.get('SF2I_TMP') or Path(os.environ.get('SystemDrive', 'C:') + os.sep) / 'shct_2i'
+           / format(zlib.crc32(str(ROOT).lower().encode()), '08x'))
 KNOBS = re.compile(r'(PEP|SWITCH|GEN|MDL|XJUMP|ASM|SLOT|JNEXT|SHCGEN)_')     # rebuilt stages' rule switches
 FLAGS = {'speed': ['-optimize=1', '-speed'], 'nospeed': ['-optimize=1', '-nospeed'],
          'opt0': ['-optimize=0', '-nospeed'], 'speed_noinline': ['-optimize=1', '-speed', '-noinline'],
@@ -33,15 +37,25 @@ FLAGS = {'speed': ['-optimize=1', '-speed'], 'nospeed': ['-optimize=1', '-nospee
          'speed_noinline_consttbl': ['-optimize=1', '-speed', '-noinline', '-section=const=CTBL']}
 COMMON = ['-cpu=sh2', '-division=cpu', '-endian=big', '-pic=0', '-extra=m=8,a=8', '-nortnext']
 RAM, DROM = 0x02000000, 0x06577330          # the D section's RAM address (R) and its ROM copy
+# 2nd Impact was built by a slightly different revision of the arcade compiler: settings of the rebuilt stages
+# that are off for 3rd Strike and on here (sf2i/README.TXT)
+# (GEN_OR_LEFT_KEEP and GEN_STORE_ADDR_AVOID were retired 2026-10-20: they emulated 3s's `s8 Suicide[8]`; 2i's
+# Suicide is a scalar, and with `extern s8 Suicide;` the build is byte-identical with both off)
+REVISION = {'MDL_MUL_CONST': '15', 'XJUMP_2I': '62', 'MDL_IV_AUTOINC': '1', 'MDL_MOD_CONST': '3', 'MDL_IMM_REG': '127', 'MDL_EQ_CONST': '3', 'MDL_TEMP_EXPR': '1', 'MDL_GCSE': '26', 'GEN_STORE_RHS_INDEX': '1', 'GEN_LAST_IDX': '4', 'ASM_CALL_SLACK': '6', 'MDL_IV_START0': '6', 'MDL_IV_ADDR': '1', 'PEP_SWITCH_END': '1', 'MDL_IV': '31', 'MDL_IV_WEB_ORDER': '1'}
+# ... and per unit option: at -optimize=0 the 2nd Impact compiler does not reuse a constant a register already holds
+# for an add (GEN_NARROW_CONST off; sys_config_2 config_top_select `add #8,r4`; no other opt0 unit changes)
+REVISION_BY_FLAGS = {'opt0': {'GEN_NARROW_CONST': '0'}}
 
 
 def env_for(T, tmp, sets=None):
-    """the compiler's environment: the tree's bin/, a private work dir, the arcade rules at their defaults
-    (switches in the caller's environment are passed on; sets overrides them)"""
+    """the compiler's environment: the tree's bin/, a private work dir, the arcade rules at their defaults plus
+    2nd Impact's compiler revision (REVISION; switches in the caller's environment are passed on; sets
+    overrides them)"""
     tmp.mkdir(parents=True, exist_ok=True)
     b = str(T / 'bin')
     env = {'SHC_LIB': b, 'SHC_TMP': str(tmp), 'TMP': str(tmp), 'TEMP': str(tmp),
            'SystemRoot': os.environ.get('SystemRoot', ''), 'PATH': f"{b};{os.environ.get('PATH', '')}"}
+    env.update(REVISION)
     env.update({k: v for k, v in os.environ.items() if KNOBS.match(k)})
     env.update(sets or {})
     return env
@@ -66,13 +80,19 @@ def layout(T):
 
 
 def source(T, name, kind):
+    if kind == 'data':                          # a data unit: hand-maintained in data/, else generated
+        hand = T / 'data' / f'{name}.c'
+        return hand if hand.exists() else T / 'build' / 'data' / f'{name}.c'
+    if kind == 'asm' and (T / 'data' / f'{name}.src').exists():
+        return T / 'data' / f'{name}.src'       # an assembler table (data/sections.src)
     return {'c': T / 'src' / f'{name}.c', 'asm': T / 'src' / f'{name}.src', 'lib': T / 'lib' / f'{name}.src',
             'blob': T / 'build' / 'blob' / f'{name}.src'}[kind]
 
 
 def objpath(kind):
-    """where an object goes, relative to the tree: a blob's next to its generated source"""
-    return 'build\\blob' if kind == 'blob' else 'obj'
+    """where an object goes, relative to the tree: a blob's next to its generated source, a data unit's in
+    build/data"""
+    return {'blob': 'build\\blob', 'data': 'build\\data'}.get(kind, 'obj')
 
 
 def compile_one(T, src, obj, fl, tmp, listing=None, sets=None):
@@ -85,7 +105,11 @@ def compile_one(T, src, obj, fl, tmp, listing=None, sets=None):
     else:
         cmd = [str(T / 'bin' / 'asmsh.exe'), rs, f'-object={ro}']
     obj.unlink(missing_ok=True)
-    p = subprocess.run(cmd, capture_output=True, text=True, env=env_for(T, tmp, sets), cwd=str(T),
+    env = env_for(T, tmp, sets)
+    for k, v in REVISION_BY_FLAGS.get(fl, {}).items():
+        if k not in os.environ and not (sets and k in sets):
+            env[k] = v
+    p = subprocess.run(cmd, capture_output=True, text=True, env=env, cwd=str(T),
                        creationflags=0x00004000)            # BELOW_NORMAL_PRIORITY_CLASS
     out = p.stdout + p.stderr
     bad = p.returncode != 0 or not obj.exists() or '(E)' in out or '(F)' in out
@@ -93,9 +117,9 @@ def compile_one(T, src, obj, fl, tmp, listing=None, sets=None):
 
 
 def names(root=ROOT):
-    """{address: [label, ...]} from the naming tables (functions and globals)"""
+    """{address: [label, ...]} from the naming tables (functions, globals and their aliases)"""
     out = {}
-    for f in ('functions.tsv', 'globals.tsv'):
+    for f in ('functions.tsv', 'globals.tsv', 'aliases.tsv'):
         for l in open(root / 'ghidra' / 'names' / f, encoding='utf-8'):
             if l.startswith('#') or not l.strip():
                 continue
@@ -151,6 +175,10 @@ def write_blobs(T, rows, img):
     # names the source objects define (tools/layout2i.py lists them) are theirs, not a blob's
     defs = T / 'build' / 'layout' / 'defs.tsv'
     mine = {l.split('\t')[0] for l in open(defs)} if defs.exists() else set()
+    # and so are the data units' objects (tools/emit2i_data.py)
+    ddefs = T / 'build' / 'data' / 'defs.tsv'
+    if ddefs.exists():
+        mine |= {l.split('\t')[0] for l in open(ddefs)}
     labels = {a: [n for n in ls if n not in mine] for a, ls in labels.items()}
     # names the source objects refer to that the tables do not have yet: at the address 2i's code has for them
     # (tools/layout2i.py solves them from the relocated words and lists them for the tables)
@@ -158,12 +186,22 @@ def write_blobs(T, rows, img):
     if ext.exists():
         for l in list(open(ext))[1:]:
             sym, addr, st = l.split('\t')[:3]
-            if st == 'missing':
+            if st == 'missing' and sym not in mine:     # a data unit's object defines it
                 a = int(addr, 16)
                 if any(r['start'] <= a < r['end'] for r in rows if r['kind'] == 'blob'):
                     labels.setdefault(a, []).append(sym)
                 else:
                     print(f'  {sym} ({a:08X}): no blob holds it, so no label')
+    # the provisional labels the data units point at (tools/emit2i_data.py): in the blob that holds the address
+    dl = T / 'build' / 'data' / 'labels.tsv'
+    if dl.exists():
+        for l in open(dl):
+            sym, addr = l.split()[:2]
+            a = int(addr, 16)
+            if any(r['start'] <= a < r['end'] for r in rows if r['kind'] == 'blob'):
+                labels.setdefault(a, []).append(sym)
+            else:
+                print(f'  {sym} ({a:08X}): a data unit points at it, but no blob holds it')
     labels = {a: ls for a, ls in labels.items() if ls}
     d = T / 'build' / 'blob'
     d.mkdir(parents=True, exist_ok=True)
@@ -224,6 +262,9 @@ def main():
     if not a.no_link and not a.only:
         for f in ('prog.bin', 'sf2i.abs', 'sf2i.map'):
             (T / f).unlink(missing_ok=True)       # a failed build must not leave the last image to compare
+    if any(r['kind'] == 'data' for r in rows):
+        import emit2i_data
+        emit2i_data.emit(argparse.Namespace(rom=a.rom))
     blobs, nb = write_blobs(T, rows, img)
     newest_header = max(h.stat().st_mtime for h in (T / 'include').iterdir())
     units_time = (T / 'units.txt').stat().st_mtime
@@ -235,7 +276,7 @@ def main():
         if a.only and name not in a.only:
             continue
         src, obj = source(T, name, kind), T / objpath(kind) / f'{name}.obj'
-        newer = src.stat().st_mtime if kind != 'c' else max(src.stat().st_mtime, newest_header, units_time)
+        newer = src.stat().st_mtime if kind not in ('c', 'data') else max(src.stat().st_mtime, newest_header, units_time)
         if obj.exists() and obj.stat().st_mtime > newer and not a.all:
             continue
         jobs.append((src, obj, fl.get(name, 'speed')))

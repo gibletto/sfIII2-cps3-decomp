@@ -21,7 +21,7 @@ void char_move_cmhs(PLW* wk);
 void char_move_cmj4(WORK* wk);
 void char_move_cmja(WORK* wk);
 s32 char_move_cmms3(PLW* wk);
-void char_move_index(WORK* wk, s16 ix);
+void char_move_index(WORK* wk, s32 ix);   /* 2i: an int index (EFF82 effect_82_move passes a _divls quotient) */
 void char_move_wca(WORK* wk);
 void char_move_wca_init(WORK* wk);
 void char_move_z(WORK* wk);
@@ -66,7 +66,7 @@ s32 comm_hjmp(WORK* wk, CHAR_CMD* ctc);
 s32 comm_hclr(WORK* wk, CHAR_CMD* _p1);
 void char_move_cmj2(WORK* wk);
 void char_move_cmj3(WORK* wk);
-void exset_char_move_init(WORK* wk, s16 koc, s16 index);
+void exset_char_move_init(WORK* wk, s16 koc, s32 index);
 void set_char_move_init2(WORK* wk, s16 koc, s16 index, s16 ip, s16 scf);
 u32 comm_dummy(void);
 void set_char_move_init();

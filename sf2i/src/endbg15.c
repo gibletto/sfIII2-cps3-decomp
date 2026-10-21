@@ -1,0 +1,102 @@
+/*
+ * ENDBG15.C  Ending background 15 (2i)
+ *
+ * end_BG150 (entries 15 and 16) runs layer 1 (clears bg_app, no move step) and layer 0, then the zoom
+ * check, position correction and family set.
+ */
+#include "structs.h"
+#include "work.h"
+#include "romdata.h"
+#include "extern.h"
+#include "bg_sub.h"
+#include "bg_sub_2.h"
+#include "bg_sub_3.h"
+#include "bg_sub_4.h"
+#include "bg_sub_5.h"
+#include "SYS_sub.h"
+#include "ta_sub.h"
+#include "aboutspr.h"
+#include "color3rd.h"
+
+/* trial declarations */
+void zoom_ud_check(void);
+void bg_x_move_check(void);
+void bg_y_move_check(void);
+
+void end_bg150_layer0(void);
+void end_bg150_layer0_init00(void);
+void end_bg150_layer0_move(void);
+void end_bg150_layer1(void);
+void end_bg150_layer1_init00(void);
+void end_bg150_none(void);
+#pragma inline(end_bg150_layer1, end_bg150_layer0)
+
+
+/* provisional name */
+/* 2i 060AADF0 */
+void end_BG150(void) {
+    bgw_ptr = &bg_w.bgw[1];
+    end_bg150_layer1();
+    bgw_ptr = &bg_w.bgw[0];
+    end_bg150_layer0();
+    zoom_ud_check();
+    bg_pos_hosei2();
+    Bg_Family_Set();
+}
+
+
+
+/* provisional name */
+/* 2i 060AAE4C */
+void end_bg150_layer1(void) {
+    void (*end_bg1501_jmp[2])() = { end_bg150_layer1_init00, end_bg150_none };
+    end_bg1501_jmp[bgw_ptr->r_no_0]();
+}
+
+
+
+/* provisional name */
+/* 2i 060AAE76 */
+void end_bg150_layer1_init00(void) {
+    bgw_ptr->r_no_0++;
+    bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
+    bgw_ptr->hos_xy[0].cal = bgw_ptr->wxy[0].cal = bgw_ptr->xy[0].cal;
+    bgw_ptr->zuubun = 0;
+    bg_app = 0;
+}
+
+
+
+/* provisional name */
+/* 2i 060AAEB0 */
+void end_bg150_none(void) {
+}
+
+
+
+/* provisional name */
+/* 2i 060AAEB4 */
+void end_bg150_layer0(void) {
+    void (*end_bg1500_jmp[2])() = { end_bg150_layer0_init00, end_bg150_layer0_move };
+    end_bg1500_jmp[bgw_ptr->r_no_0]();
+}
+
+
+
+/* provisional name */
+/* 2i 060AAEDC */
+void end_bg150_layer0_init00(void) {
+    bgw_ptr->r_no_0++;
+    bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
+    bgw_ptr->hos_xy[0].cal = bgw_ptr->wxy[0].cal = bgw_ptr->xy[0].cal;
+    bgw_ptr->zuubun = 0;
+}
+
+
+
+/* provisional name */
+/* 2i 060AAF12 */
+void end_bg150_layer0_move(void) {
+    bg_x_move_check();
+    bg_y_move_check();
+}

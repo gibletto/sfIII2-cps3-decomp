@@ -3,7 +3,7 @@
 
 #include "structs.h"
 
-s32 effect_50_init(s16 PL_id, s16 Direction, s16 dm_vital);
+s32 effect_50_init(s16 PL_id, s16 Direction);
 void effect_50_move(WORK_Other* ewk);
 
 #endif

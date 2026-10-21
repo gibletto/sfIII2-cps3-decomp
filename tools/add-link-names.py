@@ -60,7 +60,7 @@ units.sort()
 ms = {}
 for l in open(TREE.parent.parent / 'tmp' / 'r50' / 'ms34.tsv', encoding='utf-8'):
     p = l.rstrip('\n').split('\t')
-    if len(p) > 4 and re.fullmatch(r'[0-9A-F]{8}', p[1]):
+    if len(p) > 4 and re.fullmatch(r'[0-9A-Fa-f]{8}', p[1]):
         ms[int(p[1], 16)] = (p[0], int(p[2]), p[3], p[4])
 census = {}
 rows = [l.rstrip('\n').split('\t') for l in open(ROOT / 'scratch' / 'si2map' / 'census.tsv', encoding='utf-8')]

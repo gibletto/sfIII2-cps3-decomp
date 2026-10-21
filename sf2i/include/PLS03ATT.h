@@ -26,5 +26,7 @@ s32 get_nearing_range();
 s16 renbanshot_conpaneshot();
 void set_attack_routine_number(PLW* wk);
 s16 shot_data_refresh(s16 sw);
+s32 check_leap_dummy(void);
+s32 get_catch_kos(PLW* wk);   /* provisional name; 2i only (0600E654) */
 
 #endif

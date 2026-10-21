@@ -13,7 +13,7 @@ void cal_hit_mark_position(WORK* wk1, WORK* wk2, s16* hd1, s16* hd2);
 void catch_hit_check(void);
 s32 check_blocking_flag(PLW* as, PLW* ds);
 s32 change_damage_attribute();
-s32 check_ttk_damage_request(s16 ix);
+s32 check_ttk_damage_request();
 s32 check_dm_att_blocking(WORK* as, WORK* ds, s16 dnum);
 s32 check_dm_att_guard(WORK* as, WORK* ds);
 s32 check_head_damage(s16 ix);

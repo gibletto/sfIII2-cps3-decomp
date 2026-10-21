@@ -1,0 +1,140 @@
+/*
+ * EFF63.C  Effect 63: breakable stage object (2i)
+ *
+ * 2i's effect 63 is not 3s's pair of idle objects: effect_63_init makes one object at
+ * (0x330, 52) of type 7. effect_63_move starts it by eff_hit_flag[type] (pattern 31, 33, or
+ * broken at once with pattern 30), takes a hit (pattern 32), waits for its pattern to end, takes
+ * hits until eff_hit_flag[7] is 2 (pattern 34), sets off effect 27 (type 6) at the pattern's
+ * signal 2 and stays broken after signal 1.
+ */
+
+#include "structs.h"
+#include "work.h"
+#include "romdata.h"
+#include "extern.h"
+#include "CHARMOVE.h"
+#include "charmove_2.h"
+#include "ta_sub.h"
+#include "EFFECT.h"
+#include "effect_2.h"
+#include "aboutspr.h"
+#include "EFF27.h"
+#include "EFF63.h"
+
+extern const u32 stg06_char_table[];    /* provisional name (06353034, eff05.c) */
+
+
+
+/* 2i 060D112C, inferred: sf3 src/EFF63.c effect_63_move (2i's own effect 63) */
+void effect_63_move(WORK_Other* ewk) {
+    if (obr_no_disp_check()) {
+        return;
+    }
+    if (compel_dead_check(ewk) != 0) {
+        ewk->wu.routine_no[0] = 99;
+        ewk->wu.disp_flag = 0;
+        return;
+    }
+    switch (ewk->wu.routine_no[0]) {
+    case 0:
+        ewk->wu.routine_no[0]++;
+        ewk->wu.disp_flag = 1;
+        switch (eff_hit_flag[ewk->wu.type]) {
+        case 0:
+            set_char_move_init(&ewk->wu, 0, 31);
+            break;
+        case 1:
+            set_char_move_init(&ewk->wu, 0, 33);
+            break;
+        case 2:
+            ewk->wu.routine_no[0] = 6;
+            set_char_move_init(&ewk->wu, 0, 30);
+            break;
+        }
+        break;
+    case 1:
+        if (!EXE_flag && !Game_pause && !EXE_obroll) {
+            if (eff_hit_check(ewk, 0)) {
+                ewk->wu.routine_no[0]++;
+                set_char_move_init(&ewk->wu, 0, 32);
+            }
+        }
+        disp_pos_trans_entry_rs(ewk);
+        break;
+    case 2:
+        if (!EXE_flag && !Game_pause && !EXE_obroll) {
+            char_move(&ewk->wu);
+            if (ewk->wu.cg_type) {
+                ewk->wu.routine_no[0]++;
+            }
+        }
+        disp_pos_trans_entry_rs(ewk);
+        break;
+    case 3:
+        if (!EXE_flag && !Game_pause && !EXE_obroll) {
+            eff_hit_check(ewk, 0);
+            if (eff_hit_flag[7] == 2) {
+                ewk->wu.routine_no[0]++;
+                set_char_move_init(&ewk->wu, 0, 34);
+            }
+        }
+        disp_pos_trans_entry_rs(ewk);
+        break;
+    case 4:
+        if (!EXE_flag && !Game_pause && !EXE_obroll) {
+            char_move(&ewk->wu);
+            if (ewk->wu.cg_type == 2) {
+                ewk->wu.routine_no[0]++;
+                ewk->wu.cg_type = 0;
+                effect_27_init(ewk, 6);
+            }
+        }
+        disp_pos_trans_entry_rs(ewk);
+        break;
+    case 5:
+        if (!EXE_flag && !Game_pause && !EXE_obroll) {
+            char_move(&ewk->wu);
+            if (ewk->wu.cg_type == 1) {
+                ewk->wu.routine_no[0]++;
+            }
+        }
+        /* fall through */
+    case 6:
+        disp_pos_trans_entry_rs(ewk);
+        break;
+    default:
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
+        break;
+    }
+}
+
+
+
+/* 2i 060D1374 (census piece new_060D1374): 2i's effect_63_init (one object) */
+s32 effect_63_init(void) {
+    WORK_Other* ewk;
+    s16 ix;
+    if ((ix = pull_effect_work(4)) == -1) {
+        return -1;
+    }
+    ewk = (WORK_Other*)frw[ix];
+    ewk->wu.be_flag = 1;
+    ewk->wu.id = 63;
+    ewk->wu.work_id = 16;
+    ewk->wu.cgromtype = 1;
+    ewk->wu.rl_flag = 0;
+    ewk->wu.type = 7;
+    ewk->wu.dead_f = 1;
+    ewk->wu.my_family = 2;
+    ewk->wu.my_col_mode = 0x4200;
+    ewk->wu.my_col_code = 0x2040;
+    ewk->wu.position_x = ewk->wu.xyz[0].disp.pos = 0x330;
+    ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = 52;
+    ewk->wu.position_z = ewk->wu.my_priority = 74;
+    ewk->wu.char_table[0] = stg06_char_table;
+    ewk->wu.hit_stop = 0;
+    ewk->wu.sync_suzi = 0;
+    suzi_offset_set(&ewk->wu);
+    return 0;
+}

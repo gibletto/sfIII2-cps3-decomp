@@ -3,7 +3,8 @@
 
 #include "structs.h"
 
-s32 effect_53_init(void);
 void effect_53_move(WORK_Other* ewk);
+void eff53_disp(WORK_Other* ewk);
+s32 effect_53_init(void);
 
 #endif

@@ -21,7 +21,7 @@ void scdmd_12000(PLW* wk);
 void scdmd_18000(PLW* wk);
 void scdmd_24000(PLW* wk);
 void scdmd_20000(void);
-void scdmd_26000(void);
+void scdmd_26000(PLW* wk);
 
 void scdmd_27000(PLW* wk);
 void scdmd_28000(PLW* wk);
@@ -29,4 +29,6 @@ void scdmd_29000(PLW* wk);
 void scdmd_30000(PLW* wk);
 void scdmd_31000(void);
 
+extern const u8 caught_dm_chg_tbl1[][2];   /* provisional name */
+extern const u8 caught_dm_chg_tbl6[][2];   /* provisional name */
 #endif

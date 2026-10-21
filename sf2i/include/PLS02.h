@@ -33,5 +33,6 @@ s32 set_field_hosei_flag();
 void setup_butt_own_data();
 void setup_move_data_easy(WORK* wk, const s16* adrs, s16 prx, s16 pry);
 void setup_mvxy_data();
+void attack_hit_dummy(PLW* wk);   /* provisional name; 2i only (0600BABE) */
 
 #endif

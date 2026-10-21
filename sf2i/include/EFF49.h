@@ -3,8 +3,7 @@
 
 #include "structs.h"
 
-s32 Setup_Char_49(WORK_Other* ewk);
-s32 effect_49_init(s16 vital_new);
+s32 effect_49_init(s16 Num, s16 Wait);
 void effect_49_move(WORK_Other* ewk);
 
 #endif

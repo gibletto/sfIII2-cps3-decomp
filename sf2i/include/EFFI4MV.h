@@ -3,10 +3,11 @@
 
 #include "structs.h"
 
-s32 effect_I4_init(void);
 void effect_I4_move(WORK_Other* ewk);
-void effect_i4_hit_sub(WORK_Other* ewk);
-void effi4_down_to_up(WORK_Other* ewk);
-void effi4_up_to_down(WORK_Other* ewk);
+void effi4_move_0(WORK_Other* ewk);
+void effi4_move_1(WORK_Other* ewk);
+void effi4_turn(WORK_Other* ewk);
+void effi4_move_2(WORK_Other* ewk);
+s32 effect_I4_init(void);
 
 #endif

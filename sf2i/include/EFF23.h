@@ -4,6 +4,7 @@
 #include "structs.h"
 
 s32 effect_23_init(void);
-void effect_23_move(WORK_Other_CONN* ewk);
+s32 effect_23_parts_init(void);
+void effect_23_move(WORK_Other* ewk);
 
 #endif

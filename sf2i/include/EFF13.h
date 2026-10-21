@@ -11,7 +11,6 @@ void kotp_01000(WORK_Other* ewk, TAMA* twk);
 void kotp_04000(WORK_Other* ewk);
 void set_tengu_my_home(WORK* ewk, WORK* mwk);
 s32 check_tengu_attack(WORK* ewk, WORK* mwk, TAMA* twk);
-s32 tama15_screen_check(WORK* wk);
 s32 screen_x_range_check(WORK* wk);
 s32 screen_range_check(WORK* wk);
 void tama_display(WORK_Other* ewk);

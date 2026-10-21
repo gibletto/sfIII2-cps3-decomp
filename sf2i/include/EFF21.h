@@ -3,7 +3,7 @@
 
 #include "structs.h"
 
-s32 effect_21_init(s16 sync_index);
+s32 effect_21_init(WORK_Other* oya);
 void effect_21_move(WORK_Other* ewk);
 
 #endif

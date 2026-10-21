@@ -42,7 +42,7 @@ s32 disp_seraph_cells(WORK* wk);
 s32 load_char_gfx();
 void all_cgps_put_back();
 s32 set_conn_sprite(WORK_Other_CONN* wk);
-s32 set_judge_area_sprite(WORK_Other* wk);
+s32 set_judge_area_sprite();
 s32 sort_push_request2(WORK_Other* wk);
 s32 sort_push_request3(WORK* wk);
 

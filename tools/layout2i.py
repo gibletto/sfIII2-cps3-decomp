@@ -15,6 +15,8 @@ both sides, and is a piece of its own (new_<address>) between two modules. A mod
 another module's is one piece per run: the run with most routines has the module's name, the others <name>_x<k>;
 a short run (two routines at most) of a module whose main run is elsewhere goes to the module around it (the
 census places identical copies, the per-character AI stubs, by guesswork). A piece ends where the next begins.
+sf2i/objects.tsv places objects by hand (name, start, end, evidence) where the census cut is wrong: the census
+pieces inside one are dropped, those overlapping it cut back, and its functions' census addresses are not used.
 
 A piece is C (src/<name>.c), asm (src/<name>.src), lib (lib/<name>.src) when the tree has that source, else a
 blob (tools/build2i.py writes it from the ROM). The other sections of a C, asm or lib object are placed from 2i's
@@ -39,7 +41,7 @@ START = 'START CVECT(06000000),P(06000400),CTBL,D(060FC564),R,B(02000000),CCDVOL
 IMG = 0x06000000
 
 
-def partition(mapdir, sf3):
+def partition(mapdir, sf3, tree=None):
     """P pieces: [(name, start, [(addr, unit or None, census name)])]"""
     units3 = [(a, b, u) for s, u, a, b in lnkmap.pieces((sf3 / 'sf3.map').read_text(errors='replace'))
               if s == 'P' and b > a]
@@ -121,7 +123,62 @@ def partition(mapdir, sf3):
             seen[u] += 1
             name = f'{u}_x{seen[u] + 1}'
         out.append((name, fs[0][0], fs))
-    return out
+    return placed_by_hand(out, objects(tree))
+
+
+def objects(tree=None):
+    """sf2i/objects.tsv: P objects placed by hand, [(name, start, end)]"""
+    f = Path(tree or ROOT / 'sf2i') / 'objects.tsv'
+    if not f.exists():
+        return []
+    rows = [l.rstrip('\n').split('\t') for l in open(f) if l.strip() and not l.startswith('#')]
+    return [(r[0], int(r[1], 16), int(r[2], 16)) for r in rows[1:]]
+
+
+def placed_by_hand(parts, hand):
+    """the census cut with the hand-placed objects put in: a census piece inside one is dropped, one that
+    overlaps it is cut back; a census piece with a placed object's name elsewhere is called x_<address>"""
+    if not hand:
+        return parts
+    names = {n for n, _, _ in hand}
+    nxt = [p[1] for p in parts[1:]] + [BOUNDS['P'][1]]
+    out = []
+    for (name, a, fs), b in zip(parts, nxt):
+        cut = False     # a piece a placed object cuts in two: the part after it is x_<address>
+        for _, s, e in sorted(hand, key=lambda h: h[1]):
+            if s <= a < e:
+                a = e
+            if a < s < b:
+                out.append((name if name not in names and not cut else f'x_{a:08X}', a,
+                            [f for f in fs if a <= f[0] < s]))
+                a = e
+                cut = True
+        if a < b:
+            out.append((name if name not in names and not cut else f'x_{a:08X}', a, [f for f in fs if a <= f[0] < b]))
+    for name, s, e in hand:
+        out.append((name, s, []))
+    return sorted(out, key=lambda p: p[1])
+
+
+def absorb(pieces, k, lo, hi):
+    """give lo..hi of P to piece k: the census can give a module's routines to identical copies elsewhere, so a
+    C module whose functions say it starts earlier or whose code runs on takes the blob pieces there (cut, or
+    dropped when wholly inside). False, changing nothing, when a source piece lies in the way."""
+    over = [i for i, p in enumerate(pieces) if i != k and p[0] == 'P' and p[1] < hi and lo < p[2]]
+    if any(pieces[i][4] != 'blob' for i in over):
+        return False
+    for i in over:
+        sec, a, e, n, kind = pieces[i]
+        if a < lo and e > hi:
+            pieces[i] = (sec, a, lo, n, kind)
+            pieces.append((sec, hi, e, f'new_{hi:08X}', kind))
+        elif a < lo:
+            pieces[i] = (sec, a, lo, n, kind)
+        elif e > hi:
+            pieces[i] = (sec, hi, e, n, kind)
+        else:
+            pieces[i] = (sec, a, a, n, kind)            # wholly inside: dropped with the empty blobs below
+    return True
 
 
 def cbase(T, name, work, placed):
@@ -268,7 +325,8 @@ def main():
     args = ap.parse_args()
     T, M, S3 = Path(args.tree).resolve(), Path(args.map), Path(args.sf3)
     img = (Path(args.rom) / 'prog.bin').read_bytes()
-    parts = partition(M, S3)
+    parts = partition(M, S3, T)
+    hand = {n for n, _, _ in objects(T)}
     byname, byaddr = {}, {}
     for addr, ls in build2i.names().items():
         byaddr[addr] = [n[1:] for n in ls]
@@ -291,7 +349,7 @@ def main():
     pieces.insert(0, ('CVECT', 0x06000000, 0x06000200, 'vectors', 'blob'))
     # source objects the census has no code for (fixed_addr: symbols only) go first, with an empty P
     have = {p[3] for p in pieces}
-    for kind, d, ext in (('c', 'src', '.c'), ('asm', 'src', '.src'), ('lib', 'lib', '.src')):
+    for kind, d, ext in (('c', 'src', '.c'), ('asm', 'src', '.src'), ('asm', 'data', '.src'), ('lib', 'lib', '.src')):
         for f in sorted((T / d).glob('*' + ext)):
             if f.stem not in have:
                 pieces.insert(1, ('P', plo, plo, f.stem, kind))
@@ -304,16 +362,13 @@ def main():
     for sec, start, end, name, kind in list(pieces):
         if sec != 'P' or kind == 'blob':
             continue
-        if kind == 'c':
+        if kind == 'c' and name not in hand:
             # the module starts where its functions' census addresses less their offsets in it say: the census
             # can give the first 2i routine of a module to an identical copy elsewhere (a pointer's role)
             b = cbase(T, name, work, placed)
             if b is not None and b != start:
                 k = pieces.index((sec, start, end, name, kind))
-                prev = next((i for i, p in enumerate(pieces) if p[0] == 'P' and p[1] <= b < p[2] and p[2] == start), None)
-                if b < start and prev is not None and pieces[prev][4] == 'blob' and b % 4 == 0:
-                    p = pieces[prev]
-                    pieces[prev] = (p[0], p[1], b, p[3], p[4])
+                if b < start and b % 4 == 0 and absorb(pieces, k, b, start):
                     pieces[k] = (sec, b, end, name, kind)
                     notes.append(f'{name}: starts at {b:08X}, the census layout at {start:08X}')
                     start = b
@@ -334,7 +389,28 @@ def main():
         ps = out['P'][1]
         cut = start + (ps + 3 & ~3)
         if start + ps > end:
-            problems.append(f'{name}: P is {ps:#x} bytes, its 2i piece {end - start:#x}')
+            # 2i code the census places no 3s routine on (new_ pieces) right after the module can be its own:
+            # the object takes it when it covers only such pieces
+            nxt = sorted((p for p in pieces if p[0] == 'P' and end <= p[1] < start + ps), key=lambda p: p[1])
+            if nxt and all(p[3].startswith('new_') and p[4] == 'blob' for p in nxt) and nxt[0][1] == end \
+                    and all(a[2] == b[1] for a, b in zip(nxt, nxt[1:])) and nxt[-1][2] >= cut:
+                for p in nxt:
+                    pieces.remove(p)
+                pieces[pieces.index((sec, start, end, name, kind))] = (sec, start, cut, name, kind)
+                last = nxt[-1]
+                if last[2] > cut:
+                    pieces.append(('P', cut, last[2], f'new_{cut:08X}', 'blob'))
+                notes.append(f'{name}: P ends at {start + ps:08X}, past the census piece; takes '
+                             + ', '.join(p[3] for p in nxt))
+                end = cut
+        if start + ps > end:
+            # otherwise blob pieces of any name in the way (absorb)
+            k = pieces.index((sec, start, end, name, kind))
+            if absorb(pieces, k, end, cut):
+                pieces[k] = (sec, start, cut, name, kind)
+                notes.append(f'{name}: P ends at {start + ps:08X}, past the census piece (ends {end:08X})')
+            else:
+                problems.append(f'{name}: P is {ps:#x} bytes, its 2i piece {end - start:#x}')
         elif cut < end:
             # the census put more 2i code in the piece than the object has: the rest is another object
             pieces[pieces.index((sec, start, end, name, kind))] = (sec, start, cut, name, kind)
@@ -343,6 +419,12 @@ def main():
         for s, (lo, n) in out.items():
             if s != 'P' and n:
                 pieces.append((s, lo, lo + n, name, kind))
+        if ps == 0 and start == end and any(s != 'P' and n for s, (lo, n) in out.items()):
+            pieces.remove((sec, start, end, name, kind))    # a table-only object (data/sections.src): no P
+    # the data units (sf2i/data.tsv, tools/emit2i_data.py): CTBL only, at the addresses the data layout gives
+    import emit2i_data
+    for u, rs in emit2i_data.units_of(emit2i_data.load_layout()).items():
+        pieces.append(('CTBL', rs[0]['addr'], rs[-1]['addr'] + rs[-1]['size'], u, 'data'))
     pieces = [p for p in pieces if p[4] != 'blob' or p[2] > p[1]]
     # data sections: blobs between the placed pieces
     for sec, lo, hi in SECTIONS:
@@ -417,6 +499,10 @@ def main():
                         + ' '.join(f'{o}:{n}' for o, n in refs) + '\n')
                 if st not in ('source', 'table'):
                     missing[st.split()[0]] += 1
+    # committed copies (sf2i/layout/): a tree without the 3rd Strike oracle builds from them (tools/build_all.py)
+    (T / 'layout').mkdir(exist_ok=True)
+    for n in ('defs.tsv', 'externs.tsv'):
+        shutil.copyfile(work / n, T / 'layout' / n)
     if args.report:
         Path(args.report).write_text('name\tstart\tend\tkind\tfunctions\tunits\n' + '\n'.join(rep) + '\n')
     kinds = Counter(p[4] for p in pieces)

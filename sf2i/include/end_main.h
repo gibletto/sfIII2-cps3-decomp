@@ -28,7 +28,7 @@ void op_bg0_0016(s16 r_index);
 void opening_title_00();
 void end_scn_pos_set(u16 bg_no);
 void end_bg_block_attr_set(s16 bg, s32 ofs, s16 w, s32 cell, s16 h);
-void end_bg_block_attr_add(s16 bg, s32 ofs, s16 w, s32 cell, s16 h);
+void end_bg_block_attr_add(s16 bg, u16 ofs, s16 w, s32 cell, s16 h);
 void op_118_move(void);
 void common_end_init00(s16 pl_num);
 void common_end_init01(void);

@@ -3,7 +3,7 @@
 
 #include "structs.h"
 
+void effect_45_move(WORK_Other* ewk);
 s32 effect_45_init(void);
-void effect_45_move(WORK_Other_CONN* ewk);
 
 #endif

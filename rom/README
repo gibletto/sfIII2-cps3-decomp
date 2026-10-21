@@ -1,0 +1,2 @@
+Put your sfiii2n.zip (Street Fighter III 2nd Impact: Giant Attack, the MAME set) here.
+The build reads its program SIMMs (simm1, simm2) and writes build/sfiii2n.zip, the same set with those two rebuilt.

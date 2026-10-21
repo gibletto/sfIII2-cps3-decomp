@@ -4,7 +4,7 @@
 #include "structs.h"
 
 void effect_08_build_tile_grid();
-s32 effect_08_init(void);
+s32 effect_08_init(WORK_Other* oya);
 void effect_08_move(WORK_Other* ewk);
 
 #endif

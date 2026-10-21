@@ -192,6 +192,8 @@ s32 Check_Lie(PLW* wk);
 s32 Check_Limited_Jump_Attack(PLW* wk, WORK* em, u8 PL_Status, s8 Status_00);
 s32 limited_jump_attack_set(PLW* wk, WORK* em, s16 VS_Technique);
 s32 Ck_Passive_Term(PLW* wk);
+s32 Ck_Guard_Passive_Term(PLW* wk);
+s32 Air_Guard_Lever(PLW* wk);
 s32 Check_PL_Unit_A(PLW* wk);
 s32 Check_PL_Unit_AS(PLW* wk);
 s32 Check_PL_Unit_B(PLW* wk);
