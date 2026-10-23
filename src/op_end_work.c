@@ -18,6 +18,7 @@ extern const PANEL end_800_panel1[];
 extern const PANEL op_panel0[];
 extern const PANEL op_panel1[];
 extern const PANEL op_panel2[];
+extern const u32 end_cg_src_tbl[];
 extern const s32 end_1100_cell0[];
 extern const s32 end_1100_cell1[];
 extern const s32 end_1100_cell2[];
@@ -67,7 +68,7 @@ void (*end_main_jp[16])(s16) = {
 };
 /* 02007774 */
 u32 end_map_tbl[4] = {
-    0x616510C, 0x6165144, 0x616517C, 0x61651B4,
+    (u32)&end_cg_src_tbl[11], (u32)&end_cg_src_tbl[25], (u32)&end_cg_src_tbl[39], (u32)&end_cg_src_tbl[53],
 };
 /* 02007784 */
 const PANEL* end_4_panel_p[2] = {
@@ -115,7 +116,7 @@ const s32* end_11_cell_ptr1[9] = {
 /* Stored after end_11_cell_ptr1. Nothing in the program refers to it by name or address; if it is read,
    it is through an index past the end of end_11_cell_ptr1. */
 u32 end_11_cell_ptr1_tail[11] = {
-    0x6165ABC, 0, 0x10000, 0x20000, 0x30000, 0x40000, 0x50000, 0x60000,
+    (u32)end_1100_cell6, 0, 0x10000, 0x20000, 0x30000, 0x40000, 0x50000, 0x60000,
     0x70000, 0x80000, 0x90000,
 };
 

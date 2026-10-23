@@ -388,7 +388,7 @@ s32 effect_F5_init(s16 type) {
     if (ix == -1) {
         return -1;
     }
-    data_ptr = (const s16*)((const u8*)efff5_data_tbl + (s16)(type * sizeof(efff5_data_tbl[0])));
+    data_ptr = efff5_data_tbl[type];
     ewk = (WORK_Other*)frw[ix];
     ewk->wu.id = 155;
     ewk->wu.be_flag = 1;

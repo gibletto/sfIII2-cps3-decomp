@@ -1,5 +1,9 @@
 /*
  * END_SUB_TBL.C  tables read by EM_Cand.c, color3rd.c and 3 other modules
+ *
+ * The staff roll (staff_roll_tbl, end_sub_2.c): a heading line is staff_<HEADING>, and the lines under it are
+ * staff_<HEADING>_NN in the order the roll first shows them (provisional names). A name is drawn as two lines on
+ * one row that hold every other letter (attribute 0 and 2): "        D K R T" and "         - U I A" make D-KURITA.
  */
 
 #include "types.h"
@@ -20,203 +24,205 @@ extern const STAFF_LINE staff_roll_tbl[];
 extern const char staff_STREET_FIGHTER_2ND_IMPACT[];
 extern const char staff_GIANT_ATTACK[];
 extern const char staff_STAFF[];
-extern const char staff_CHARACTER_DESIGN_2[];
-extern const char staff_WHO[];
-extern const char staff_H[];
-extern const char staff_D_K_R_T[];
-extern const char staff_U_I_A[];
-extern const char staff_C_I_O_I_H_G_N[];
-extern const char staff_H_M_R_N_S_O_U[];
-extern const char staff_S_I_A_I[];
-extern const char staff_H_B_K[];
-extern const char staff_C_u[];
-extern const char staff_h_n[];
-extern const char staff_J_N_I_A_A[];
-extern const char staff_U_K_W[];
-extern const char staff_S_I_I_Y_N[];
-extern const char staff_E_J_A_O[];
-extern const char staff_Y_K_S_I_A_A[];
-extern const char staff_U_I_I_H_K_W[];
-extern const char staff_S_I_N_S_K[];
-extern const char staff_H_N_O_U_E_N[];
-extern const char staff_SCROLL_DESIGN_2[];
-extern const char staff_H_R_S_I_S_G_Y_M[];
-extern const char staff_I_O_H_U_I_A_A[];
-extern const char staff_Y_K_U_U_O_O[];
-extern const char staff_O_O_F_K_M_T[];
-extern const char staff_H_R_Y_K_M_H_R[];
-extern const char staff_I_O_U_I_I_A_O_I[];
-extern const char staff_O_I_I[];
-extern const char staff_J_J[];
-extern const char staff_N_O_E[];
-extern const char staff_A_B_I[];
-extern const char staff_A_E_I_K_H_M[];
-extern const char staff_K_M_O_A_A[];
-extern const char staff_T_M[];
-extern const char staff_A_A[];
-extern const char staff_Y_M_M_T_O_I[];
-extern const char staff_A_A_O_O_K_J[];
-extern const char staff_K_U_C_I_T_K_D[];
-extern const char staff_O_I_H_A_E_A[];
-extern const char staff_ORIGINAL_ART_WORK_2[];
-extern const char staff_A_I_A[];
-extern const char staff_K_M_N[];
-extern const char staff_K_N_I_H_M_R[];
-extern const char staff_I_U_N_S_I_U_A[];
-extern const char staff_N[];
-extern const char staff_K[];
-extern const char staff_TITLE_LOGO_DESIGN_2[];
-extern const char staff_S_O_I[];
-extern const char staff_H_E[];
-extern const char staff_INSTRACTION_DESIGN_2[];
-extern const char staff_S_K_M_Z[];
-extern const char staff_A_O_I_U[];
-extern const char staff_PROGRAMMING_2[];
-extern const char staff_K_Z_H_T_A_A[];
-extern const char staff_A_U_I_O_N_K_I[];
-extern const u8 staff_blank_6[];
-extern const char staff_O_U_A_L_1_Y_S_I_U_I[];
-extern const char staff_Y_K_A_A_U_A_T_T[];
-extern const char staff_U_O_K_W_M_R_A_E[];
-extern const char staff_H_R_S_I_N_K_G_W[];
-extern const char end_sub_tbl_06166C60[];
-extern const char staff_M_S_H_T_h_Y[];
-extern const char staff_A_A_I_O_O_a[];
-extern const char staff_A_I_I_O_Y_K_Y_M[];
-extern const char staff_K_H_R_O_O_A_A[];
-extern const char staff_SOUND_EFFECT_DESIGN_2[];
-extern const char staff_S_T_S_I_I_E[];
-extern const char staff_A_O_H_S[];
-extern const u8 staff_blank_7[];
-extern const u8 staff_blank_8[];
-extern const char staff_MUSIC_COMPOSE_2[];
-extern const char staff_H_D_K_K_G_W[];
-extern const char staff_I_E_I_O_U_A_A[];
-extern const char staff_Y_K_W_I[];
-extern const char staff_U_I_I_A[];
+extern const char staff_CHARACTER_DESIGN[];
+extern const char staff_CHARACTER_DESIGN_00[];
+extern const char staff_CHARACTER_DESIGN_01[];
+extern const char staff_CHARACTER_DESIGN_02[];
+extern const char staff_CHARACTER_DESIGN_03[];
+extern const char staff_CHARACTER_DESIGN_04[];
+extern const char staff_CHARACTER_DESIGN_05[];
+extern const char staff_CHARACTER_DESIGN_06[];
+extern const char staff_CHARACTER_DESIGN_07[];
+extern const char staff_CHARACTER_DESIGN_08[];
+extern const char staff_CHARACTER_DESIGN_09[];
+extern const char staff_CHARACTER_DESIGN_10[];
+extern const char staff_CHARACTER_DESIGN_11[];
+extern const char staff_CHARACTER_DESIGN_12[];
+extern const char staff_CHARACTER_DESIGN_13[];
+extern const char staff_CHARACTER_DESIGN_14[];
+extern const char staff_CHARACTER_DESIGN_15[];
+extern const char staff_CHARACTER_DESIGN_16[];
+extern const char staff_CHARACTER_DESIGN_17[];
+extern const char staff_SCROLL_DESIGN[];
+extern const char staff_SCROLL_DESIGN_00[];
+extern const char staff_SCROLL_DESIGN_01[];
+extern const char staff_SCROLL_DESIGN_02[];
+extern const char staff_SCROLL_DESIGN_03[];
+extern const char staff_SCROLL_DESIGN_04[];
+extern const char staff_SCROLL_DESIGN_05[];
+extern const char staff_SCROLL_DESIGN_06[];
+extern const char staff_SCROLL_DESIGN_07[];
+extern const char staff_SCROLL_DESIGN_08[];
+extern const char staff_SCROLL_DESIGN_09[];
+extern const char staff_SCROLL_DESIGN_10[];
+extern const char staff_SCROLL_DESIGN_11[];
+extern const char staff_SCROLL_DESIGN_12[];
+extern const char staff_SCROLL_DESIGN_13[];
+extern const char staff_SCROLL_DESIGN_14[];
+extern const char staff_SCROLL_DESIGN_15[];
+extern const char staff_SCROLL_DESIGN_16[];
+extern const char staff_SCROLL_DESIGN_17[];
+extern const char staff_ORIGINAL_ART_WORK[];
+extern const char staff_ORIGINAL_ART_WORK_00[];
+extern const char staff_ORIGINAL_ART_WORK_01[];
+extern const char staff_ORIGINAL_ART_WORK_02[];
+extern const char staff_ORIGINAL_ART_WORK_03[];
+extern const char staff_ORIGINAL_ART_WORK_04[];
+extern const char staff_ORIGINAL_ART_WORK_05[];
+extern const char staff_TITLE_LOGO_DESIGN[];
+extern const char staff_TITLE_LOGO_DESIGN_00[];
+extern const char staff_TITLE_LOGO_DESIGN_01[];
+extern const char staff_INSTRACTION_DESIGN[];
+extern const char staff_INSTRACTION_DESIGN_00[];
+extern const char staff_INSTRACTION_DESIGN_01[];
+extern const char staff_PROGRAMMING[];
+extern const char staff_PROGRAMMING_00[];
+extern const char staff_PROGRAMMING_01[];
+extern const char staff_PROGRAMMING_02[];
+extern const char staff_PROGRAMMING_03[];
+extern const char staff_PROGRAMMING_04[];
+extern const char staff_PROGRAMMING_05[];
+extern const char staff_PROGRAMMING_06[];
+extern const char staff_PROGRAMMING_07[];
+extern const char staff_PROGRAMMING_08[];
+extern const char staff_PROGRAMMING_09[];
+extern const char staff_PROGRAMMING_10[];
+extern const char staff_PROGRAMMING_11[];
+extern const char staff_PROGRAMMING_12[];
+extern const char staff_PROGRAMMING_13[];
+extern const char staff_SOUND_EFFECT_DESIGN[];
+extern const char staff_SOUND_EFFECT_DESIGN_00[];
+extern const char staff_SOUND_EFFECT_DESIGN_01[];
+extern const char staff_SOUND_EFFECT_DESIGN_02[];
+extern const char staff_SOUND_EFFECT_DESIGN_03[];
+extern const char staff_MUSIC_COMPOSE[];
+extern const char staff_MUSIC_COMPOSE_00[];
+extern const char staff_MUSIC_COMPOSE_01[];
+extern const char staff_MUSIC_COMPOSE_02[];
+extern const char staff_MUSIC_COMPOSE_03[];
 extern const char staff_MUSIC_ARRANGEMENT[];
-extern const char staff_PLANNING_2[];
-extern const char staff_S_T_A_U_I_O[];
-extern const char staff_E_O_Y_S_H_R[];
-extern const char staff_N_O_G_S_I_A_A[];
-extern const char staff_E_H_I_H_Z_W[];
-extern const char staff_N_M_C[];
-extern const char staff_U_A_H[];
-extern const char staff_VOICE_ACTOR_2[];
-extern const char staff_Y_J_E_A[];
-extern const char staff_U_I_U_D[];
-extern const char staff_W_T_R_A_A_I[];
-extern const char staff_A_A_U_T_K_G[];
-extern const char staff_T_M_M_C_I_N_S_I_U_A[];
-extern const char staff_O_O_I_H_I_H_M_R[];
-extern const char staff_K_H_R_U_I_O[];
-extern const char staff_A_O_U_F_J_N[];
-extern const char staff_Y_R_M_N[];
-extern const char staff_U_I_A_A_O[];
-extern const char staff_I_S_I_H_B[];
-extern const char staff_S_H_N_C_I_A[];
-extern const char staff_K_N_T_K_M_R[];
-extern const char staff_A_O_U_A_U[];
-extern const char staff_K_J_O_E[];
-extern const char staff_O_I_T_B[];
-extern const char staff_B_U_E_R_B_R_S_N[];
-extern const char staff_R_C_O_E_T_O[];
-extern const char staff_M_C_A_L_S_M_E_S[];
-extern const char staff_I_H_E_O_M_R[];
-extern const char staff_MESSAGE_TRANSLATOR_2[];
-extern const char staff_E_I_U_U_I[];
-extern const char staff_R_K_S_Z_K[];
-extern const char staff_D_N_O_A_A[];
-extern const char staff_A_K_D[];
-extern const char staff_C_R_S_T_N[];
-extern const char staff_H_I_A_G[];
-extern const char staff_Y_M_K_I_H[];
-extern const char staff_U_I_O_N_S_I[];
-extern const char staff_K_R_A_O_H_R_E_F_E_T_S[];
-extern const char staff_A_L_S_I_O_D_R_I_A[];
-extern const char staff_SPECIAL_THANKS_2[];
-extern const char staff_T_U_O_H[];
-extern const char staff_S_Y_S_I[];
-extern const char staff_M_Y_N[];
-extern const char staff_A_A_O[];
-extern const char staff_O_O[];
-extern const char staff_B_B_N[];
-extern const char staff_L_O[];
-extern const char staff_T_K_F_M_A_A_A[];
-extern const char staff_A_A_U_I_S_G_T[];
-extern const char staff_M_A_K[];
-extern const char staff_O_I[];
-extern const char staff_N_A_E[];
-extern const char staff_K_I[];
-extern const char staff_H_N_K_M_R[];
-extern const char staff_A_A_U_A[];
-extern const char staff_H_O_I_A[];
-extern const char staff_J_M[];
-extern const u8 staff_blank_9[];
-extern const u8 staff_blank_10[];
-extern const char staff_T_K_Y_H_R_I_A[];
-extern const char staff_A_U_A_S_I_A_W[];
-extern const char staff_R_T_O_O[];
-extern const char staff_I_A_R_K_S[];
-extern const char staff_R_o_i[];
-extern const char staff_y_j[];
-extern const char staff_H_R_A_O_L_W[];
-extern const char staff_A_D_Y_S_F_L_O[];
-extern const char staff_C_U_H_C_E_S[];
-extern const char staff_S_B_G_C_E_K_R[];
-extern const char staff_K_N_S_I_E_M_T_U_A_A[];
-extern const char staff_U_I_H_G_A_S_B_R[];
-extern const char staff_M_N_B_A_S_M_T[];
-extern const char staff_A_A_U_M_T_U_O_O[];
-extern const char staff_T_M_Y_K_O_O_A[];
-extern const char staff_O_O_U_I_Y_K_T[];
-extern const char staff_T_T_U_A_H_Z[];
-extern const char staff_E_S_Y_A_E[];
-extern const char staff_K_T_U_U_E_M_U_A[];
-extern const char staff_A_S_S_K_I_R[];
-extern const char staff_M_S_H_R_A_I_A_I[];
-extern const char staff_A_A_I_O_K_J_T_N[];
-extern const char staff_T_K_S_I_H_S_I_O_O[];
-extern const char staff_A_A_H_A_H_M_T[];
-extern const char staff_T_S_I_I_O_K_R_T[];
-extern const char staff_O_H_H_K_U_A_A[];
-extern const char staff_Y_S_I_I_O_T_M_T[];
-extern const char staff_O_H_H_R_O_I_A[];
-extern const char staff_D_I_U_E_S_S_K[];
-extern const char staff_A_S_K_A_A_I[];
-extern const char staff_A_I_O_I_M_R_T[];
-extern const char staff_K_N_R_U_A_A[];
-extern const char staff_S_I_L_S_I_H_T_S_P_A[];
-extern const char staff_K_L_M_T_E_T_L_Y[];
-extern const char staff_T_K_K_S[];
-extern const char staff_T[];
-extern const char staff_H_R_S_I_S_G_M_T_U[];
-extern const char staff_I_O_H_U_I_O_O_B_G[];
-extern const char staff_G_N[];
-extern const char staff_O[];
-extern const char staff_K_H_U_E_A_A_K[];
-extern const char staff_O_S_K_R_I_T_O[];
-extern const char staff_PRODUCER_2[];
-extern const char staff_T_M_S_I_S_D_M_T[];
-extern const char staff_O_O_H_A_A_O_O[];
-extern const char staff_GENERAL_PRODUCER_2[];
-extern const char staff_N_R_T_K_U_A_I_U[];
-extern const char staff_O_I_A_A_F_N_M_Z[];
-extern const char staff_Y_S_I_I_O_A_O_O[];
-extern const char staff_O_H_K_K_M_T[];
+extern const char staff_PLANNING[];
+extern const char staff_PLANNING_00[];
+extern const char staff_PLANNING_01[];
+extern const char staff_PLANNING_02[];
+extern const char staff_PLANNING_03[];
+extern const char staff_PLANNING_04[];
+extern const char staff_PLANNING_05[];
+extern const char staff_VOICE_ACTOR[];
+extern const char staff_VOICE_ACTOR_00[];
+extern const char staff_VOICE_ACTOR_01[];
+extern const char staff_VOICE_ACTOR_02[];
+extern const char staff_VOICE_ACTOR_03[];
+extern const char staff_VOICE_ACTOR_04[];
+extern const char staff_VOICE_ACTOR_05[];
+extern const char staff_VOICE_ACTOR_06[];
+extern const char staff_VOICE_ACTOR_07[];
+extern const char staff_VOICE_ACTOR_08[];
+extern const char staff_VOICE_ACTOR_09[];
+extern const char staff_VOICE_ACTOR_10[];
+extern const char staff_VOICE_ACTOR_11[];
+extern const char staff_VOICE_ACTOR_12[];
+extern const char staff_VOICE_ACTOR_13[];
+extern const char staff_VOICE_ACTOR_14[];
+extern const char staff_VOICE_ACTOR_15[];
+extern const char staff_VOICE_ACTOR_16[];
+extern const char staff_VOICE_ACTOR_17[];
+extern const char staff_VOICE_ACTOR_18[];
+extern const char staff_VOICE_ACTOR_19[];
+extern const char staff_MESSAGE_TRANSLATOR[];
+extern const char staff_MESSAGE_TRANSLATOR_00[];
+extern const char staff_MESSAGE_TRANSLATOR_01[];
+extern const char staff_MESSAGE_TRANSLATOR_02[];
+extern const char staff_MESSAGE_TRANSLATOR_03[];
+extern const char staff_MESSAGE_TRANSLATOR_04[];
+extern const char staff_MESSAGE_TRANSLATOR_05[];
+extern const char staff_MESSAGE_TRANSLATOR_06[];
+extern const char staff_MESSAGE_TRANSLATOR_07[];
+extern const char staff_MESSAGE_TRANSLATOR_08[];
+extern const char staff_MESSAGE_TRANSLATOR_09[];
+extern const char staff_SPECIAL_THANKS[];
+extern const char staff_SPECIAL_THANKS_00[];
+extern const char staff_SPECIAL_THANKS_01[];
+extern const char staff_SPECIAL_THANKS_02[];
+extern const char staff_SPECIAL_THANKS_03[];
+extern const char staff_SPECIAL_THANKS_04[];
+extern const char staff_SPECIAL_THANKS_05[];
+extern const char staff_SPECIAL_THANKS_06[];
+extern const char staff_SPECIAL_THANKS_07[];
+extern const char staff_SPECIAL_THANKS_08[];
+extern const char staff_SPECIAL_THANKS_09[];
+extern const char staff_SPECIAL_THANKS_10[];
+extern const char staff_SPECIAL_THANKS_11[];
+extern const char staff_SPECIAL_THANKS_12[];
+extern const char staff_SPECIAL_THANKS_13[];
+extern const char staff_SPECIAL_THANKS_14[];
+extern const char staff_SPECIAL_THANKS_15[];
+extern const char staff_SPECIAL_THANKS_16[];
+extern const char staff_SPECIAL_THANKS_17[];
+extern const char staff_SPECIAL_THANKS_18[];
+extern const char staff_SPECIAL_THANKS_19[];
+extern const char staff_SPECIAL_THANKS_20[];
+extern const char staff_SPECIAL_THANKS_21[];
+extern const char staff_SPECIAL_THANKS_22[];
+extern const char staff_SPECIAL_THANKS_23[];
+extern const char staff_SPECIAL_THANKS_24[];
+extern const char staff_SPECIAL_THANKS_25[];
+extern const char staff_SPECIAL_THANKS_26[];
+extern const char staff_SPECIAL_THANKS_27[];
+extern const char staff_SPECIAL_THANKS_28[];
+extern const char staff_SPECIAL_THANKS_29[];
+extern const char staff_SPECIAL_THANKS_30[];
+extern const char staff_SPECIAL_THANKS_31[];
+extern const char staff_SPECIAL_THANKS_32[];
+extern const char staff_SPECIAL_THANKS_33[];
+extern const char staff_SPECIAL_THANKS_34[];
+extern const char staff_SPECIAL_THANKS_35[];
+extern const char staff_SPECIAL_THANKS_36[];
+extern const char staff_SPECIAL_THANKS_37[];
+extern const char staff_SPECIAL_THANKS_38[];
+extern const char staff_SPECIAL_THANKS_39[];
+extern const char staff_SPECIAL_THANKS_40[];
+extern const char staff_SPECIAL_THANKS_41[];
+extern const char staff_SPECIAL_THANKS_42[];
+extern const char staff_SPECIAL_THANKS_43[];
+extern const char staff_SPECIAL_THANKS_44[];
+extern const char staff_SPECIAL_THANKS_45[];
+extern const char staff_SPECIAL_THANKS_46[];
+extern const char staff_SPECIAL_THANKS_47[];
+extern const char staff_SPECIAL_THANKS_48[];
+extern const char staff_SPECIAL_THANKS_49[];
+extern const char staff_SPECIAL_THANKS_50[];
+extern const char staff_SPECIAL_THANKS_51[];
+extern const char staff_SPECIAL_THANKS_52[];
+extern const char staff_SPECIAL_THANKS_53[];
+extern const char staff_SPECIAL_THANKS_54[];
+extern const char staff_SPECIAL_THANKS_55[];
+extern const char staff_SPECIAL_THANKS_56[];
+extern const char staff_SPECIAL_THANKS_57[];
+extern const char staff_SPECIAL_THANKS_58[];
+extern const char staff_SPECIAL_THANKS_59[];
+extern const char staff_SPECIAL_THANKS_60[];
+extern const char staff_PRODUCER[];
+extern const char staff_PRODUCER_00[];
+extern const char staff_PRODUCER_01[];
+extern const char staff_GENERAL_PRODUCER[];
+extern const char staff_GENERAL_PRODUCER_00[];
+extern const char staff_GENERAL_PRODUCER_01[];
+extern const char staff_GENERAL_PRODUCER_02[];
+extern const char staff_GENERAL_PRODUCER_03[];
+extern const char staff_AND_CAPCOM_ALL_STAFF[];
 extern const char staff_blank_11[];
 extern const char staff_blank_5[];
 extern const char staff_THANK_YOU_FOR_PLAYING[];
-extern const char end_sub_tbl_061676F8[];
+extern const char staff_PRESENTED_BY[];
+extern const char staff_mark[];
 extern const char player_color_tbl[];
 extern const char any_color_tbl[];
 extern const char char_eff_color_tbl[];
 extern const char side_color_1p_tbl[];
 extern const char side_color_2p_tbl[];
 
-const s8 no_card_mes[8] = {
-    78, 79, 32, 67, 65, 82, 68, 0,
-};
+const s8 no_card_mes[8] = "NO CARD";
 
 const s8 no_card_clr_mes[8] = {
     32, 32, 32, 32, 32, 32, 32, 0,
@@ -226,15 +232,11 @@ const s8 win_card_clr_mes[16] = {
     32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 0, -1, -1, -1,
 };
 
-const s8 win_card_mes[16] = {
-    87, 73, 78, 32, 84, 72, 69, 32, 67, 65, 82, 68, 0, -1, -1, -1,
-};
+const s8 win_card_mes[16] = "WIN THE CARD\0\xFF\xFF\xFF";
 
 const char no_cd_drive_mes[16] = "NO CD-ROM DRIVE";
 
-const char no_cd_rom_mes[12] = {
-    0x4E, 0x4F, 0x20, 0x43, 0x44, 0x2D, 0x52, 0x4F, 0x4D, 0, 0xFF, 0xFF,
-};
+const char no_cd_rom_mes[12] = "NO CD-ROM\0\xFF\xFF";
 
 /* provisional name */
 const s32 combo_demo_pos_tbl[6] = {
@@ -256,998 +258,771 @@ const STAFF_LINE staff_roll_tbl[205] = {
     { 270, 48, 128, 3, (void *)staff_STREET_FIGHTER_2ND_IMPACT },
     { 270, 48, 96, 3, (void *)staff_GIANT_ATTACK },
     { 270, 48, 64, 3, (void *)staff_STAFF },
-    { 540, 96, 160, 1, (void *)staff_CHARACTER_DESIGN_2 },
-    { 270, 96, 136, 0, (void *)staff_WHO },
-    { 0, 96, 136, 2, (void *)staff_H },
-    { 0, 96, 112, 0, (void *)staff_D_K_R_T },
-    { 0, 96, 112, 2, (void *)staff_U_I_A },
-    { 0, 96, 88, 0, (void *)staff_C_I_O_I_H_G_N },
-    { 0, 96, 88, 2, (void *)staff_H_M_R_N_S_O_U },
-    { 0, 96, 64, 0, (void *)staff_S_I_A_I },
-    { 0, 96, 64, 2, (void *)staff_H_B_K },
-    { 0, 96, 40, 0, (void *)staff_C_u },
-    { 0, 96, 40, 2, (void *)staff_h_n },
-    { 270, 96, 136, 0, (void *)staff_J_N_I_A_A },
-    { 0, 96, 136, 2, (void *)staff_U_K_W },
-    { 0, 96, 112, 0, (void *)staff_S_I_I_Y_N },
-    { 0, 96, 112, 2, (void *)staff_E_J_A_O },
-    { 0, 96, 88, 0, (void *)staff_Y_K_S_I_A_A },
-    { 0, 96, 88, 2, (void *)staff_U_I_I_H_K_W },
-    { 0, 96, 64, 0, (void *)staff_S_I_N_S_K },
-    { 0, 96, 64, 2, (void *)staff_H_N_O_U_E_N },
-    { 540, 96, 160, 1, (void *)staff_SCROLL_DESIGN_2 },
-    { 270, 96, 136, 0, (void *)staff_H_R_S_I_S_G_Y_M },
-    { 0, 96, 136, 2, (void *)staff_I_O_H_U_I_A_A },
-    { 0, 96, 112, 0, (void *)staff_Y_K_U_U_O_O },
-    { 0, 96, 112, 2, (void *)staff_O_O_F_K_M_T },
-    { 0, 96, 88, 0, (void *)staff_H_R_Y_K_M_H_R },
-    { 0, 96, 88, 2, (void *)staff_I_O_U_I_I_A_O_I },
-    { 0, 96, 64, 0, (void *)staff_O_I_I },
-    { 0, 96, 64, 2, (void *)staff_J_J },
-    { 0, 96, 40, 0, (void *)staff_N_O_E },
-    { 0, 96, 40, 2, (void *)staff_A_B_I },
-    { 270, 96, 136, 0, (void *)staff_A_E_I_K_H_M },
-    { 0, 96, 136, 2, (void *)staff_K_M_O_A_A },
-    { 0, 96, 112, 0, (void *)staff_T_M },
-    { 0, 96, 112, 2, (void *)staff_A_A },
-    { 0, 96, 88, 0, (void *)staff_Y_M_M_T_O_I },
-    { 0, 96, 88, 2, (void *)staff_A_A_O_O_K_J },
-    { 0, 96, 64, 0, (void *)staff_K_U_C_I_T_K_D },
-    { 0, 96, 64, 2, (void *)staff_O_I_H_A_E_A },
-    { 270, 96, 160, 1, (void *)staff_ORIGINAL_ART_WORK_2 },
-    { 270, 96, 120, 0, (void *)staff_A_I_A },
-    { 0, 96, 120, 2, (void *)staff_K_M_N },
-    { 0, 96, 96, 0, (void *)staff_K_N_I_H_M_R },
-    { 0, 96, 96, 2, (void *)staff_I_U_N_S_I_U_A },
-    { 0, 96, 72, 0, (void *)staff_N },
-    { 0, 96, 72, 2, (void *)staff_K },
-    { 270, 96, 160, 1, (void *)staff_TITLE_LOGO_DESIGN_2 },
-    { 270, 96, 104, 0, (void *)staff_S_O_I },
-    { 0, 96, 104, 2, (void *)staff_H_E },
-    { 270, 96, 160, 1, (void *)staff_INSTRACTION_DESIGN_2 },
-    { 270, 96, 104, 0, (void *)staff_S_K_M_Z },
-    { 0, 96, 104, 2, (void *)staff_A_O_I_U },
-    { 540, 96, 160, 1, (void *)staff_PROGRAMMING_2 },
-    { 270, 96, 128, 0, (void *)staff_K_Z_H_T_A_A },
-    { 0, 96, 128, 2, (void *)staff_A_U_I_O_N_K_I },
-    { 0, 96, 104, 0, (void *)staff_blank_6 },
-    { 0, 96, 104, 2, (void *)staff_O_U_A_L_1_Y_S_I_U_I },
-    { 0, 96, 80, 0, (void *)staff_Y_K_A_A_U_A_T_T },
-    { 0, 96, 80, 2, (void *)staff_U_O_K_W_M_R_A_E },
-    { 0, 96, 56, 0, (void *)staff_H_R_S_I_N_K_G_W },
-    { 0, 96, 56, 2, (void *)end_sub_tbl_06166C60 },
-    { 270, 96, 128, 0, (void *)((const u8 *)end_sub_tbl_06166C60 + 24) },
-    { 0, 96, 128, 2, (void *)((const u8 *)end_sub_tbl_06166C60 + 48) },
-    { 0, 96, 104, 0, (void *)staff_M_S_H_T_h_Y },
-    { 0, 96, 104, 2, (void *)staff_A_A_I_O_O_a },
-    { 0, 96, 68, 0, (void *)staff_A_I_I_O_Y_K_Y_M },
-    { 0, 96, 68, 2, (void *)staff_K_H_R_O_O_A_A },
-    { 270, 96, 160, 1, (void *)staff_SOUND_EFFECT_DESIGN_2 },
-    { 270, 96, 112, 0, (void *)staff_S_T_S_I_I_E },
-    { 0, 96, 112, 2, (void *)staff_A_O_H_S },
-    { 0, 96, 88, 0, (void *)staff_blank_7 },
-    { 0, 96, 88, 2, (void *)staff_blank_8 },
-    { 270, 96, 160, 1, (void *)staff_MUSIC_COMPOSE_2 },
-    { 270, 96, 112, 0, (void *)staff_H_D_K_K_G_W },
-    { 0, 96, 112, 2, (void *)staff_I_E_I_O_U_A_A },
-    { 0, 96, 88, 0, (void *)staff_Y_K_W_I },
-    { 0, 96, 88, 2, (void *)staff_U_I_I_A },
+    { 540, 96, 160, 1, (void *)staff_CHARACTER_DESIGN },
+    { 270, 96, 136, 0, (void *)staff_CHARACTER_DESIGN_00 },
+    { 0, 96, 136, 2, (void *)staff_CHARACTER_DESIGN_01 },
+    { 0, 96, 112, 0, (void *)staff_CHARACTER_DESIGN_02 },
+    { 0, 96, 112, 2, (void *)staff_CHARACTER_DESIGN_03 },
+    { 0, 96, 88, 0, (void *)staff_CHARACTER_DESIGN_04 },
+    { 0, 96, 88, 2, (void *)staff_CHARACTER_DESIGN_05 },
+    { 0, 96, 64, 0, (void *)staff_CHARACTER_DESIGN_06 },
+    { 0, 96, 64, 2, (void *)staff_CHARACTER_DESIGN_07 },
+    { 0, 96, 40, 0, (void *)staff_CHARACTER_DESIGN_08 },
+    { 0, 96, 40, 2, (void *)staff_CHARACTER_DESIGN_09 },
+    { 270, 96, 136, 0, (void *)staff_CHARACTER_DESIGN_10 },
+    { 0, 96, 136, 2, (void *)staff_CHARACTER_DESIGN_11 },
+    { 0, 96, 112, 0, (void *)staff_CHARACTER_DESIGN_12 },
+    { 0, 96, 112, 2, (void *)staff_CHARACTER_DESIGN_13 },
+    { 0, 96, 88, 0, (void *)staff_CHARACTER_DESIGN_14 },
+    { 0, 96, 88, 2, (void *)staff_CHARACTER_DESIGN_15 },
+    { 0, 96, 64, 0, (void *)staff_CHARACTER_DESIGN_16 },
+    { 0, 96, 64, 2, (void *)staff_CHARACTER_DESIGN_17 },
+    { 540, 96, 160, 1, (void *)staff_SCROLL_DESIGN },
+    { 270, 96, 136, 0, (void *)staff_SCROLL_DESIGN_00 },
+    { 0, 96, 136, 2, (void *)staff_SCROLL_DESIGN_01 },
+    { 0, 96, 112, 0, (void *)staff_SCROLL_DESIGN_02 },
+    { 0, 96, 112, 2, (void *)staff_SCROLL_DESIGN_03 },
+    { 0, 96, 88, 0, (void *)staff_SCROLL_DESIGN_04 },
+    { 0, 96, 88, 2, (void *)staff_SCROLL_DESIGN_05 },
+    { 0, 96, 64, 0, (void *)staff_SCROLL_DESIGN_06 },
+    { 0, 96, 64, 2, (void *)staff_SCROLL_DESIGN_07 },
+    { 0, 96, 40, 0, (void *)staff_SCROLL_DESIGN_08 },
+    { 0, 96, 40, 2, (void *)staff_SCROLL_DESIGN_09 },
+    { 270, 96, 136, 0, (void *)staff_SCROLL_DESIGN_10 },
+    { 0, 96, 136, 2, (void *)staff_SCROLL_DESIGN_11 },
+    { 0, 96, 112, 0, (void *)staff_SCROLL_DESIGN_12 },
+    { 0, 96, 112, 2, (void *)staff_SCROLL_DESIGN_13 },
+    { 0, 96, 88, 0, (void *)staff_SCROLL_DESIGN_14 },
+    { 0, 96, 88, 2, (void *)staff_SCROLL_DESIGN_15 },
+    { 0, 96, 64, 0, (void *)staff_SCROLL_DESIGN_16 },
+    { 0, 96, 64, 2, (void *)staff_SCROLL_DESIGN_17 },
+    { 270, 96, 160, 1, (void *)staff_ORIGINAL_ART_WORK },
+    { 270, 96, 120, 0, (void *)staff_ORIGINAL_ART_WORK_00 },
+    { 0, 96, 120, 2, (void *)staff_ORIGINAL_ART_WORK_01 },
+    { 0, 96, 96, 0, (void *)staff_ORIGINAL_ART_WORK_02 },
+    { 0, 96, 96, 2, (void *)staff_ORIGINAL_ART_WORK_03 },
+    { 0, 96, 72, 0, (void *)staff_ORIGINAL_ART_WORK_04 },
+    { 0, 96, 72, 2, (void *)staff_ORIGINAL_ART_WORK_05 },
+    { 270, 96, 160, 1, (void *)staff_TITLE_LOGO_DESIGN },
+    { 270, 96, 104, 0, (void *)staff_TITLE_LOGO_DESIGN_00 },
+    { 0, 96, 104, 2, (void *)staff_TITLE_LOGO_DESIGN_01 },
+    { 270, 96, 160, 1, (void *)staff_INSTRACTION_DESIGN },
+    { 270, 96, 104, 0, (void *)staff_INSTRACTION_DESIGN_00 },
+    { 0, 96, 104, 2, (void *)staff_INSTRACTION_DESIGN_01 },
+    { 540, 96, 160, 1, (void *)staff_PROGRAMMING },
+    { 270, 96, 128, 0, (void *)staff_PROGRAMMING_00 },
+    { 0, 96, 128, 2, (void *)staff_PROGRAMMING_01 },
+    { 0, 96, 104, 0, (void *)staff_PROGRAMMING_02 },
+    { 0, 96, 104, 2, (void *)staff_PROGRAMMING_03 },
+    { 0, 96, 80, 0, (void *)staff_PROGRAMMING_04 },
+    { 0, 96, 80, 2, (void *)staff_PROGRAMMING_05 },
+    { 0, 96, 56, 0, (void *)staff_PROGRAMMING_06 },
+    { 0, 96, 56, 2, (void *)staff_PROGRAMMING_07 },
+    { 270, 96, 128, 0, (void *)staff_PROGRAMMING_08 },
+    { 0, 96, 128, 2, (void *)staff_PROGRAMMING_09 },
+    { 0, 96, 104, 0, (void *)staff_PROGRAMMING_10 },
+    { 0, 96, 104, 2, (void *)staff_PROGRAMMING_11 },
+    { 0, 96, 68, 0, (void *)staff_PROGRAMMING_12 },
+    { 0, 96, 68, 2, (void *)staff_PROGRAMMING_13 },
+    { 270, 96, 160, 1, (void *)staff_SOUND_EFFECT_DESIGN },
+    { 270, 96, 112, 0, (void *)staff_SOUND_EFFECT_DESIGN_00 },
+    { 0, 96, 112, 2, (void *)staff_SOUND_EFFECT_DESIGN_01 },
+    { 0, 96, 88, 0, (void *)staff_SOUND_EFFECT_DESIGN_02 },
+    { 0, 96, 88, 2, (void *)staff_SOUND_EFFECT_DESIGN_03 },
+    { 270, 96, 160, 1, (void *)staff_MUSIC_COMPOSE },
+    { 270, 96, 112, 0, (void *)staff_MUSIC_COMPOSE_00 },
+    { 0, 96, 112, 2, (void *)staff_MUSIC_COMPOSE_01 },
+    { 0, 96, 88, 0, (void *)staff_MUSIC_COMPOSE_02 },
+    { 0, 96, 88, 2, (void *)staff_MUSIC_COMPOSE_03 },
     { 270, 96, 160, 1, (void *)staff_MUSIC_ARRANGEMENT },
-    { 270, 96, 104, 0, (void *)staff_H_D_K_K_G_W },
-    { 0, 96, 104, 2, (void *)staff_I_E_I_O_U_A_A },
-    { 270, 96, 160, 1, (void *)staff_PLANNING_2 },
-    { 270, 96, 112, 0, (void *)staff_S_T_A_U_I_O },
-    { 0, 96, 112, 2, (void *)staff_E_O_Y_S_H_R },
-    { 0, 96, 88, 0, (void *)staff_N_O_G_S_I_A_A },
-    { 0, 96, 88, 2, (void *)staff_E_H_I_H_Z_W },
-    { 0, 96, 64, 0, (void *)staff_N_M_C },
-    { 0, 96, 64, 2, (void *)staff_U_A_H },
-    { 810, 96, 160, 1, (void *)staff_VOICE_ACTOR_2 },
-    { 270, 96, 128, 0, (void *)staff_Y_J_E_A },
-    { 0, 96, 128, 2, (void *)staff_U_I_U_D },
-    { 0, 96, 104, 0, (void *)staff_W_T_R_A_A_I },
-    { 0, 96, 104, 2, (void *)staff_A_A_U_T_K_G },
-    { 0, 96, 80, 0, (void *)staff_T_M_M_C_I_N_S_I_U_A },
-    { 0, 96, 80, 2, (void *)staff_O_O_I_H_I_H_M_R },
-    { 0, 96, 56, 0, (void *)staff_K_H_R_U_I_O },
-    { 0, 96, 56, 2, (void *)staff_A_O_U_F_J_N },
-    { 270, 96, 128, 0, (void *)staff_Y_R_M_N },
-    { 0, 96, 128, 2, (void *)staff_U_I_A_A_O },
-    { 0, 96, 104, 0, (void *)staff_I_S_I_H_B },
-    { 0, 96, 104, 2, (void *)staff_S_H_N_C_I_A },
-    { 0, 96, 80, 0, (void *)staff_K_N_T_K_M_R },
-    { 0, 96, 80, 2, (void *)staff_A_O_U_A_U },
-    { 0, 96, 56, 0, (void *)staff_K_J_O_E },
-    { 0, 96, 56, 2, (void *)staff_O_I_T_B },
-    { 270, 96, 128, 0, (void *)staff_B_U_E_R_B_R_S_N },
-    { 0, 96, 128, 2, (void *)staff_R_C_O_E_T_O },
-    { 0, 96, 104, 0, (void *)staff_M_C_A_L_S_M_E_S },
-    { 0, 96, 104, 2, (void *)staff_I_H_E_O_M_R },
-    { 270, 96, 160, 1, (void *)staff_MESSAGE_TRANSLATOR_2 },
-    { 270, 96, 136, 0, (void *)staff_E_I_U_U_I },
-    { 0, 96, 136, 2, (void *)staff_R_K_S_Z_K },
-    { 0, 96, 112, 0, (void *)staff_D_N_O_A_A },
-    { 0, 96, 112, 2, (void *)staff_A_K_D },
-    { 0, 96, 88, 0, (void *)staff_C_R_S_T_N },
-    { 0, 96, 88, 2, (void *)staff_H_I_A_G },
-    { 0, 96, 64, 0, (void *)staff_Y_M_K_I_H },
-    { 0, 96, 64, 2, (void *)staff_U_I_O_N_S_I },
-    { 0, 96, 40, 0, (void *)staff_K_R_A_O_H_R_E_F_E_T_S },
-    { 0, 96, 40, 2, (void *)staff_A_L_S_I_O_D_R_I_A },
-    { 1898, 96, 160, 1, (void *)staff_SPECIAL_THANKS_2 },
-    { 270, 96, 136, 0, (void *)staff_T_U_O_H },
-    { 0, 96, 136, 2, (void *)staff_S_Y_S_I },
-    { 0, 96, 112, 0, (void *)staff_M_Y_N },
-    { 0, 96, 112, 2, (void *)staff_A_A_O },
-    { 0, 96, 88, 0, (void *)staff_T_M },
-    { 0, 96, 88, 2, (void *)staff_O_O },
-    { 0, 96, 64, 0, (void *)staff_B_B_N },
-    { 0, 96, 64, 2, (void *)staff_L_O },
-    { 0, 96, 40, 0, (void *)staff_T_K_F_M_A_A_A },
-    { 0, 96, 40, 2, (void *)staff_A_A_U_I_S_G_T },
-    { 270, 96, 136, 0, (void *)staff_M_A_K },
-    { 0, 96, 136, 2, (void *)staff_O_I },
-    { 0, 96, 112, 0, (void *)staff_N_A_E },
-    { 0, 96, 112, 2, (void *)staff_K_I },
-    { 0, 96, 88, 0, (void *)staff_H_N_K_M_R },
-    { 0, 96, 88, 2, (void *)staff_A_A_U_A },
-    { 0, 96, 64, 0, (void *)staff_H_O_I_A },
-    { 0, 96, 64, 2, (void *)staff_J_M },
-    { 270, 96, 136, 0, (void *)staff_blank_9 },
-    { 0, 96, 136, 2, (void *)staff_blank_10 },
-    { 0, 96, 112, 0, (void *)staff_T_K_Y_H_R_I_A },
-    { 0, 96, 112, 2, (void *)staff_A_U_A_S_I_A_W },
-    { 0, 96, 88, 0, (void *)staff_R_T_O_O },
-    { 0, 96, 88, 2, (void *)staff_I_A_R_K_S },
-    { 0, 96, 64, 0, (void *)staff_R_o_i },
-    { 0, 96, 64, 2, (void *)staff_y_j },
-    { 0, 96, 40, 0, (void *)staff_H_R_A_O_L_W },
-    { 0, 96, 40, 2, (void *)staff_A_D_Y_S_F_L_O },
-    { 270, 96, 144, 0, (void *)staff_C_U_H_C_E_S },
-    { 0, 96, 144, 2, (void *)staff_S_B_G_C_E_K_R },
-    { 0, 96, 112, 0, (void *)staff_K_N_S_I_E_M_T_U_A_A },
-    { 0, 96, 112, 2, (void *)staff_U_I_H_G_A_S_B_R },
-    { 0, 96, 88, 0, (void *)staff_M_N_B_A_S_M_T },
-    { 0, 96, 88, 2, (void *)staff_A_A_U_M_T_U_O_O },
-    { 0, 96, 64, 0, (void *)staff_T_M_Y_K_O_O_A },
-    { 0, 96, 64, 2, (void *)staff_O_O_U_I_Y_K_T },
-    { 0, 96, 40, 0, (void *)staff_T_T_U_A_H_Z },
-    { 0, 96, 40, 2, (void *)staff_E_S_Y_A_E },
-    { 270, 96, 144, 0, (void *)staff_C_U_H_C_E_S },
-    { 0, 96, 144, 2, (void *)staff_S_B_G_C_E_K_R },
-    { 0, 96, 112, 0, (void *)staff_K_T_U_U_E_M_U_A },
-    { 0, 96, 112, 2, (void *)staff_A_S_S_K_I_R },
-    { 0, 96, 88, 0, (void *)staff_M_S_H_R_A_I_A_I },
-    { 0, 96, 88, 2, (void *)staff_A_A_I_O_K_J_T_N },
-    { 0, 96, 64, 0, (void *)staff_T_K_S_I_H_S_I_O_O },
-    { 0, 96, 64, 2, (void *)staff_A_A_H_A_H_M_T },
-    { 0, 96, 40, 0, (void *)staff_T_S_I_I_O_K_R_T },
-    { 0, 96, 40, 2, (void *)staff_O_H_H_K_U_A_A },
-    { 270, 96, 144, 0, (void *)staff_C_U_H_C_E_S },
-    { 0, 96, 144, 2, (void *)staff_S_B_G_C_E_K_R },
-    { 0, 96, 112, 0, (void *)staff_Y_S_I_I_O_T_M_T },
-    { 0, 96, 112, 2, (void *)staff_O_H_H_R_O_I_A },
-    { 0, 96, 88, 0, (void *)staff_D_I_U_E_S_S_K },
-    { 0, 96, 88, 2, (void *)staff_A_S_K_A_A_I },
-    { 0, 96, 64, 0, (void *)staff_A_I_O_I_M_R_T },
-    { 0, 96, 64, 2, (void *)staff_K_N_R_U_A_A },
-    { 270, 96, 144, 0, (void *)staff_S_I_L_S_I_H_T_S_P_A },
-    { 0, 96, 144, 2, (void *)staff_K_L_M_T_E_T_L_Y },
-    { 0, 96, 112, 0, (void *)staff_T_K_K_S },
-    { 0, 96, 112, 2, (void *)staff_T },
-    { 0, 96, 88, 0, (void *)staff_H_R_S_I_S_G_M_T_U },
-    { 0, 96, 88, 2, (void *)staff_I_O_H_U_I_O_O_B_G },
-    { 0, 96, 64, 0, (void *)staff_G_N },
-    { 0, 96, 64, 2, (void *)staff_O },
-    { 0, 96, 40, 0, (void *)staff_K_H_U_E_A_A_K },
-    { 0, 96, 40, 2, (void *)staff_O_S_K_R_I_T_O },
-    { 270, 96, 160, 1, (void *)staff_PRODUCER_2 },
-    { 270, 96, 104, 0, (void *)staff_T_M_S_I_S_D_M_T },
-    { 0, 96, 104, 2, (void *)staff_O_O_H_A_A_O_O },
-    { 270, 96, 160, 1, (void *)staff_GENERAL_PRODUCER_2 },
-    { 270, 96, 120, 0, (void *)staff_N_R_T_K_U_A_I_U },
-    { 0, 96, 120, 2, (void *)staff_O_I_A_A_F_N_M_Z },
-    { 0, 96, 80, 0, (void *)staff_Y_S_I_I_O_A_O_O },
-    { 0, 96, 80, 2, (void *)staff_O_H_K_K_M_T },
-    { 270, 96, 112, 4, (void *)staff_blank_11 },
-    { 270, 96, 0, 0, (void *)((const u8 *)staff_blank_11 + 24) },
-    { 0, 96, 0, 0, (void *)((const u8 *)staff_blank_11 + 24) },
+    { 270, 96, 104, 0, (void *)staff_MUSIC_COMPOSE_00 },
+    { 0, 96, 104, 2, (void *)staff_MUSIC_COMPOSE_01 },
+    { 270, 96, 160, 1, (void *)staff_PLANNING },
+    { 270, 96, 112, 0, (void *)staff_PLANNING_00 },
+    { 0, 96, 112, 2, (void *)staff_PLANNING_01 },
+    { 0, 96, 88, 0, (void *)staff_PLANNING_02 },
+    { 0, 96, 88, 2, (void *)staff_PLANNING_03 },
+    { 0, 96, 64, 0, (void *)staff_PLANNING_04 },
+    { 0, 96, 64, 2, (void *)staff_PLANNING_05 },
+    { 810, 96, 160, 1, (void *)staff_VOICE_ACTOR },
+    { 270, 96, 128, 0, (void *)staff_VOICE_ACTOR_00 },
+    { 0, 96, 128, 2, (void *)staff_VOICE_ACTOR_01 },
+    { 0, 96, 104, 0, (void *)staff_VOICE_ACTOR_02 },
+    { 0, 96, 104, 2, (void *)staff_VOICE_ACTOR_03 },
+    { 0, 96, 80, 0, (void *)staff_VOICE_ACTOR_04 },
+    { 0, 96, 80, 2, (void *)staff_VOICE_ACTOR_05 },
+    { 0, 96, 56, 0, (void *)staff_VOICE_ACTOR_06 },
+    { 0, 96, 56, 2, (void *)staff_VOICE_ACTOR_07 },
+    { 270, 96, 128, 0, (void *)staff_VOICE_ACTOR_08 },
+    { 0, 96, 128, 2, (void *)staff_VOICE_ACTOR_09 },
+    { 0, 96, 104, 0, (void *)staff_VOICE_ACTOR_10 },
+    { 0, 96, 104, 2, (void *)staff_VOICE_ACTOR_11 },
+    { 0, 96, 80, 0, (void *)staff_VOICE_ACTOR_12 },
+    { 0, 96, 80, 2, (void *)staff_VOICE_ACTOR_13 },
+    { 0, 96, 56, 0, (void *)staff_VOICE_ACTOR_14 },
+    { 0, 96, 56, 2, (void *)staff_VOICE_ACTOR_15 },
+    { 270, 96, 128, 0, (void *)staff_VOICE_ACTOR_16 },
+    { 0, 96, 128, 2, (void *)staff_VOICE_ACTOR_17 },
+    { 0, 96, 104, 0, (void *)staff_VOICE_ACTOR_18 },
+    { 0, 96, 104, 2, (void *)staff_VOICE_ACTOR_19 },
+    { 270, 96, 160, 1, (void *)staff_MESSAGE_TRANSLATOR },
+    { 270, 96, 136, 0, (void *)staff_MESSAGE_TRANSLATOR_00 },
+    { 0, 96, 136, 2, (void *)staff_MESSAGE_TRANSLATOR_01 },
+    { 0, 96, 112, 0, (void *)staff_MESSAGE_TRANSLATOR_02 },
+    { 0, 96, 112, 2, (void *)staff_MESSAGE_TRANSLATOR_03 },
+    { 0, 96, 88, 0, (void *)staff_MESSAGE_TRANSLATOR_04 },
+    { 0, 96, 88, 2, (void *)staff_MESSAGE_TRANSLATOR_05 },
+    { 0, 96, 64, 0, (void *)staff_MESSAGE_TRANSLATOR_06 },
+    { 0, 96, 64, 2, (void *)staff_MESSAGE_TRANSLATOR_07 },
+    { 0, 96, 40, 0, (void *)staff_MESSAGE_TRANSLATOR_08 },
+    { 0, 96, 40, 2, (void *)staff_MESSAGE_TRANSLATOR_09 },
+    { 1898, 96, 160, 1, (void *)staff_SPECIAL_THANKS },
+    { 270, 96, 136, 0, (void *)staff_SPECIAL_THANKS_00 },
+    { 0, 96, 136, 2, (void *)staff_SPECIAL_THANKS_01 },
+    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_02 },
+    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_03 },
+    { 0, 96, 88, 0, (void *)staff_SCROLL_DESIGN_12 },
+    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_04 },
+    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_05 },
+    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_06 },
+    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_07 },
+    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_08 },
+    { 270, 96, 136, 0, (void *)staff_SPECIAL_THANKS_09 },
+    { 0, 96, 136, 2, (void *)staff_SPECIAL_THANKS_10 },
+    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_11 },
+    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_12 },
+    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_13 },
+    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_14 },
+    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_15 },
+    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_16 },
+    { 270, 96, 136, 0, (void *)staff_SPECIAL_THANKS_17 },
+    { 0, 96, 136, 2, (void *)staff_SPECIAL_THANKS_18 },
+    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_19 },
+    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_20 },
+    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_21 },
+    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_22 },
+    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_23 },
+    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_24 },
+    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_25 },
+    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_26 },
+    { 270, 96, 144, 0, (void *)staff_SPECIAL_THANKS_27 },
+    { 0, 96, 144, 2, (void *)staff_SPECIAL_THANKS_28 },
+    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_29 },
+    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_30 },
+    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_31 },
+    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_32 },
+    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_33 },
+    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_34 },
+    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_35 },
+    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_36 },
+    { 270, 96, 144, 0, (void *)staff_SPECIAL_THANKS_27 },
+    { 0, 96, 144, 2, (void *)staff_SPECIAL_THANKS_28 },
+    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_37 },
+    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_38 },
+    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_39 },
+    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_40 },
+    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_41 },
+    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_42 },
+    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_43 },
+    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_44 },
+    { 270, 96, 144, 0, (void *)staff_SPECIAL_THANKS_27 },
+    { 0, 96, 144, 2, (void *)staff_SPECIAL_THANKS_28 },
+    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_45 },
+    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_46 },
+    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_47 },
+    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_48 },
+    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_49 },
+    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_50 },
+    { 270, 96, 144, 0, (void *)staff_SPECIAL_THANKS_51 },
+    { 0, 96, 144, 2, (void *)staff_SPECIAL_THANKS_52 },
+    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_53 },
+    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_54 },
+    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_55 },
+    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_56 },
+    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_57 },
+    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_58 },
+    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_59 },
+    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_60 },
+    { 270, 96, 160, 1, (void *)staff_PRODUCER },
+    { 270, 96, 104, 0, (void *)staff_PRODUCER_00 },
+    { 0, 96, 104, 2, (void *)staff_PRODUCER_01 },
+    { 270, 96, 160, 1, (void *)staff_GENERAL_PRODUCER },
+    { 270, 96, 120, 0, (void *)staff_GENERAL_PRODUCER_00 },
+    { 0, 96, 120, 2, (void *)staff_GENERAL_PRODUCER_01 },
+    { 0, 96, 80, 0, (void *)staff_GENERAL_PRODUCER_02 },
+    { 0, 96, 80, 2, (void *)staff_GENERAL_PRODUCER_03 },
+    { 270, 96, 112, 4, (void *)staff_AND_CAPCOM_ALL_STAFF },
+    { 270, 96, 0, 0, (void *)staff_blank_11 },
+    { 0, 96, 0, 0, (void *)staff_blank_11 },
     { 270, 48, 144, 5, (void *)staff_blank_5 },
     { 270, 48, 144, 5, (void *)staff_THANK_YOU_FOR_PLAYING },
-    { 0, 48, 96, 5, (void *)end_sub_tbl_061676F8 },
-    { 0, 190, 96, 0, (void *)((const u8 *)end_sub_tbl_061676F8 + 24) },
+    { 0, 48, 96, 5, (void *)staff_PRESENTED_BY },
+    { 0, 190, 96, 0, (void *)staff_mark },
     { 0, 190, 0, 0, (void *)staff_blank_5 },
     { 512, 0, 0, 0, 0 },
 };
 
-const char staff_STREET_FIGHTER_2ND_IMPACT[32] = {
-    0x20, 0x20, 0x20, 0x53, 0x54, 0x52, 0x45, 0x45, 0x54, 0x20, 0x46, 0x49, 0x47, 0x48, 0x54, 0x45,
-    0x52, 0x20, 0x24, 0x20, 0x32, 0x4E, 0x44, 0x20, 0x49, 0x4D, 0x50, 0x41, 0x43, 0x54, 0, 0xFF,
-};
+const char staff_STREET_FIGHTER_2ND_IMPACT[32] = "   STREET FIGHTER $ 2ND IMPACT\0\xFF";
 
-const char staff_GIANT_ATTACK[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x47, 0x49, 0x41, 0x4E, 0x54, 0x20,
-    0x41, 0x54, 0x54, 0x41, 0x43, 0x4B, 0, 0xFF,
-};
+const char staff_GIANT_ATTACK[24] = "          GIANT ATTACK\0\xFF";
 
-const char staff_STAFF[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x53, 0x54, 0x41,
-    0x46, 0x46, 0, 0xFF,
-};
+const char staff_STAFF[20] = "             STAFF\0\xFF";
 
-const char staff_CHARACTER_DESIGN_2[24] = {
-    0x20, 0x20, 0x2D, 0x20, 0x43, 0x48, 0x41, 0x52, 0x41, 0x43, 0x54, 0x45, 0x52, 0x20, 0x44, 0x45,
-    0x53, 0x49, 0x47, 0x4E, 0x20, 0x2D, 0, 0xFF,
-};
-
-const char staff_WHO[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x57, 0x20, 0x4F, 0, 0xFF, 0xFF,
-};
-
-const char staff_H[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x48, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_D_K_R_T[16] = "        D K R T";
-
-const char staff_U_I_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x2D, 0x20, 0x55, 0x20, 0x49, 0x20, 0x41,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_C_I_O_I_H_G_N[20] = "    C I O I   H G N";
-
-const char staff_H_M_R_N_S_O_U[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x48, 0x20, 0x4D, 0x20, 0x52, 0x20, 0x4E, 0x20, 0x53, 0x20, 0x4F,
-    0x20, 0x55, 0, 0xFF,
-};
-
-const char staff_S_I_A_I[16] = "        S I A I";
-
-const char staff_H_B_K[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x48, 0x20, 0x42, 0x20, 0x4B, 0, 0xFF,
-};
-
-const char staff_C_u[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x43, 0x20, 0x75, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_h_n[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x68, 0x20, 0x6E, 0, 0xFF, 0xFF,
-};
-
-const char staff_J_N_I_A_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4A, 0x20, 0x4E, 0x20, 0x49, 0x20, 0x41, 0x20, 0x41,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_U_K_W[16] = "        U   K W";
-
-const char staff_S_I_I_Y_N[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x53, 0x20, 0x49, 0x20, 0x49, 0x20, 0x59, 0x20, 0x4E,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_E_J_A_O[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x45, 0x20, 0x4A, 0x20, 0x20, 0x20, 0x41, 0x20,
-    0x4F, 0, 0xFF, 0xFF,
-};
-
-const char staff_Y_K_S_I_A_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x4B, 0x20, 0x20, 0x20, 0x53, 0x20, 0x49, 0x20, 0x41,
-    0x20, 0x41, 0, 0xFF,
-};
-
-const char staff_U_I_I_H_K_W[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x55, 0x20, 0x49, 0x20, 0x49, 0x20, 0x48, 0x20, 0x4B, 0x20,
-    0x57, 0, 0xFF, 0xFF,
-};
-
-const char staff_S_I_N_S_K[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x53, 0x20, 0x49, 0x20, 0x4E, 0x20, 0x53, 0x20, 0x4B, 0x20, 0x2E,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_H_N_O_U_E_N[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x48, 0x20, 0x4E, 0x20, 0x4F, 0x20, 0x55, 0x20, 0x45, 0x20,
-    0x20, 0x4E, 0, 0xFF,
-};
-
-const char staff_SCROLL_DESIGN_2[24] = {
-    0x20, 0x20, 0x20, 0x2D, 0x20, 0x53, 0x43, 0x52, 0x4F, 0x4C, 0x4C, 0x20, 0x44, 0x45, 0x53, 0x49,
-    0x47, 0x4E, 0x20, 0x2D, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_H_R_S_I_S_G_Y_M[20] = "    H R S I S G Y M";
-
-const char staff_I_O_H_U_I_A_A[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x48, 0x20, 0x20, 0x20, 0x55, 0x20, 0x49,
-    0x20, 0x41, 0x20, 0x41, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_Y_K_U_U_O_O[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x4B, 0x20, 0x20, 0x20, 0x55, 0x20, 0x55, 0x20, 0x4F,
-    0x20, 0x4F, 0, 0xFF,
-};
-
-const char staff_O_O_F_K_M_T[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x4F, 0x20, 0x46, 0x20, 0x4B, 0x20, 0x4D, 0x20,
-    0x54, 0, 0xFF, 0xFF,
-};
-
-const char staff_H_R_Y_K_M_H_R[20] = "    H R Y K   M H R";
-
-const char staff_I_O_U_I_I_A_O_I[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x55, 0x20, 0x49, 0x20, 0x49, 0x20, 0x41,
-    0x20, 0x4F, 0x20, 0x49, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_O_I_I[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x49, 0x20, 0x49, 0, 0xFF,
-};
-
-const char staff_J_J[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4A, 0x20, 0x4A, 0, 0xFF, 0xFF,
-};
-
-const char staff_N_O_E[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4E, 0x20, 0x4F, 0x20, 0x45, 0, 0xFF,
-};
-
-const char staff_A_B_I[16] = "          A B I";
-
-const char staff_A_E_I_K_H_M[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x45, 0x20, 0x49, 0x20, 0x4B, 0x20, 0x48, 0x20,
-    0x4D, 0, 0xFF, 0xFF,
-};
-
-const char staff_K_M_O_A_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x4D, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x41,
-    0x20, 0x41, 0, 0xFF,
-};
-
-const char staff_T_M[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x54, 0x20, 0x4D, 0, 0xFF, 0xFF,
-};
-
-const char staff_A_A[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41, 0, 0xFF,
-};
-
-const char staff_Y_M_M_T_O_I[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x4D, 0x20, 0x4D, 0x20, 0x54, 0x20, 0x20, 0x20, 0x4F,
-    0x20, 0x49, 0, 0xFF,
-};
-
-const char staff_A_A_O_O_K_J[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41, 0x20, 0x4F, 0x20, 0x4F, 0x20, 0x4B, 0x20,
-    0x4A, 0, 0xFF, 0xFF,
-};
-
-const char staff_K_U_C_I_T_K_D[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x55, 0x20, 0x43, 0x20, 0x49, 0x20, 0x54, 0x20, 0x4B,
-    0x20, 0x44, 0, 0xFF,
-};
-
-const char staff_O_I_H_A_E_A[20] = "      O I H   A E A";
-
-const char staff_ORIGINAL_ART_WORK_2[24] = {
-    0x20, 0x2D, 0x20, 0x4F, 0x52, 0x49, 0x47, 0x49, 0x4E, 0x41, 0x4C, 0x20, 0x41, 0x52, 0x54, 0x20,
-    0x57, 0x4F, 0x52, 0x4B, 0x20, 0x2D, 0, 0xFF,
-};
-
-const char staff_A_I_A[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x49, 0x20, 0x41, 0, 0xFF,
-};
-
-const char staff_K_M_N[16] = "          K M N";
-
-const char staff_K_N_I_H_M_R[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x4E, 0x20, 0x20, 0x20, 0x49, 0x20, 0x48, 0x20, 0x4D,
-    0x20, 0x52, 0, 0xFF,
-};
-
-const char staff_I_U_N_S_I_U_A[20] = "      I U N S I U A";
-
-const char staff_N[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4E, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_K[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0, 0xFF, 0xFF,
-};
-
-const char staff_TITLE_LOGO_DESIGN_2[24] = {
-    0x20, 0x2D, 0x20, 0x54, 0x49, 0x54, 0x4C, 0x45, 0x20, 0x4C, 0x4F, 0x47, 0x4F, 0x20, 0x44, 0x45,
-    0x53, 0x49, 0x47, 0x4E, 0x20, 0x2D, 0, 0xFF,
-};
-
-const char staff_S_O_I[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x53, 0x20, 0x4F, 0x20, 0x49, 0, 0xFF,
-};
-
-const char staff_H_E[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x48, 0x20, 0x45, 0, 0xFF, 0xFF,
-};
-
-const char staff_INSTRACTION_DESIGN_2[24] = " - INSTRACTION DESIGN -";
-
-const char staff_S_K_M_Z[16] = "        S K M Z";
-
-const char staff_A_O_I_U[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x4F, 0x20, 0x49, 0x20, 0x55,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_PROGRAMMING_2[20] = "    - PROGRAMMING -";
-
-const char staff_K_Z_H_T_A_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x5A, 0x20, 0x48, 0x20, 0x54, 0x20, 0x20, 0x20, 0x41,
-    0x20, 0x41, 0, 0xFF,
-};
-
-const char staff_A_U_I_O_N_K_I[20] = "      A U I O N K I";
-
-const u8 staff_blank_6[24] = {
-    0x20, 0x20, 0x4E, 0x20, 0x42, 0x20, 0x59, 0x20, 0x22, 0x20, 0x54, 0x20, 0x22, 0x20, 0x4F, 0x20,
-    0x48, 0x20, 0x5A, 0x20, 0x4D, 0, 0xFF, 0xFF,
-};
-
-const char staff_O_U_A_L_1_Y_S_I_U_I[24] = {
-    0x20, 0x20, 0x20, 0x4F, 0x20, 0x55, 0x20, 0x41, 0x20, 0x4C, 0x20, 0x31, 0x20, 0x59, 0x20, 0x53,
-    0x20, 0x49, 0x20, 0x55, 0x20, 0x49, 0, 0xFF,
-};
-
-const char staff_Y_K_A_A_U_A_T_T[24] = {
-    0x20, 0x20, 0x59, 0x20, 0x4B, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41, 0x20, 0x55, 0x20, 0x41, 0x20,
-    0x54, 0x20, 0x54, 0x20, 0x29, 0, 0xFF, 0xFF,
-};
-
-const char staff_U_O_K_W_M_R_A_E[24] = {
-    0x20, 0x20, 0x20, 0x55, 0x20, 0x4F, 0x20, 0x4B, 0x20, 0x57, 0x20, 0x4D, 0x20, 0x52, 0x20, 0x28,
-    0x20, 0x41, 0x20, 0x45, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_H_R_S_I_N_K_G_W[20] = "    H R S I N K G W";
+const char staff_CHARACTER_DESIGN[24] = "  - CHARACTER DESIGN -\0\xFF";
 
 /* provisional name */
-const char end_sub_tbl_06166C60[72] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x48, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41,
-    0x20, 0x41, 0x20, 0x41, 0, 0xFF, 0xFF, 0xFF, 0x20, 0x20, 0x59, 0x20, 0x53, 0x20, 0x4E, 0x20,
-    0x42, 0x20, 0x20, 0x20, 0x4E, 0x20, 0x44, 0x20, 0x28, 0x20, 0x4E, 0x20, 0x29, 0, 0xFF, 0xFF,
-    0x20, 0x20, 0x20, 0x4F, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x55, 0x20, 0x49, 0x20, 0x41, 0x20, 0x41,
-    0x20, 0x49, 0x20, 0x45, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_M_S_H_T_h_Y[20] = "    M S H T   h Y !";
-
-const char staff_A_A_I_O_O_a[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x4F, 0x20, 0x21,
-    0x20, 0x61, 0, 0xFF,
-};
-
-const char staff_A_I_I_O_Y_K_Y_M[20] = "    A I I O Y K Y M";
-
-const char staff_K_H_R_O_O_A_A[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x48, 0x20, 0x52, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x4F,
-    0x20, 0x41, 0x20, 0x41, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_SOUND_EFFECT_DESIGN_2[24] = "- SOUND EFFECT DESIGN -";
-
-const char staff_S_T_S_I_I_E[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x53, 0x20, 0x54, 0x20, 0x53, 0x20, 0x49, 0x20, 0x49, 0x20,
-    0x45, 0, 0xFF, 0xFF,
-};
-
-const char staff_A_O_H_S[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x4F, 0x20, 0x48, 0x20, 0x20, 0x20, 0x53,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const u8 staff_blank_7[24] = {
-    0x20, 0x20, 0x48, 0x20, 0x52, 0x20, 0x41, 0x20, 0x49, 0x22, 0x20, 0x36, 0x20, 0x6B, 0x20, 0x4B,
-    0x20, 0x4E, 0x20, 0x4F, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const u8 staff_blank_8[20] = {
-    0x20, 0x20, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x4B, 0x20, 0x20, 0x58, 0x20, 0x38, 0x20, 0x22, 0x20,
-    0x4F, 0x20, 0x44, 0,
-};
-
-const char staff_MUSIC_COMPOSE_2[24] = {
-    0x20, 0x20, 0x20, 0x2D, 0x20, 0x4D, 0x55, 0x53, 0x49, 0x43, 0x20, 0x43, 0x4F, 0x4D, 0x50, 0x4F,
-    0x53, 0x45, 0x20, 0x2D, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_H_D_K_K_G_W[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x48, 0x20, 0x44, 0x20, 0x4B, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x47, 0x20,
-    0x57, 0, 0xFF, 0xFF,
-};
-
-const char staff_I_E_I_O_U_A_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x49, 0x20, 0x45, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x55, 0x20, 0x41,
-    0x20, 0x41, 0, 0xFF,
-};
-
-const char staff_Y_K_W_I[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x4B, 0x20, 0x20, 0x20, 0x57, 0x20, 0x49,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_U_I_I_A[16] = "        U I I A";
-
-const char staff_MUSIC_ARRANGEMENT[24] = {
-    0x20, 0x2D, 0x20, 0x4D, 0x55, 0x53, 0x49, 0x43, 0x20, 0x41, 0x52, 0x52, 0x41, 0x4E, 0x47, 0x45,
-    0x4D, 0x45, 0x4E, 0x54, 0x20, 0x2D, 0, 0xFF,
-};
-
-const char staff_PLANNING_2[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x2D, 0x20, 0x50, 0x4C, 0x41, 0x4E, 0x4E, 0x49, 0x4E, 0x47,
-    0x20, 0x2D, 0, 0xFF,
-};
-
-const char staff_S_T_A_U_I_O[20] = "      S T   A U I O";
-
-const char staff_E_O_Y_S_H_R[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x45, 0x20, 0x4F, 0x20, 0x59, 0x20, 0x53, 0x20, 0x48,
-    0x20, 0x52, 0, 0xFF,
-};
-
-const char staff_N_O_G_S_I_A_A[24] = "  N O G     . S I A A -";
-
-const char staff_E_H_I_H_Z_W[24] = {
-    0x20, 0x20, 0x20, 0x45, 0x20, 0x2E, 0x20, 0x20, 0x20, 0x2D, 0x20, 0x48, 0x20, 0x49, 0x20, 0x48,
-    0x20, 0x5A, 0x20, 0x57, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_N_M_C[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4E, 0x20, 0x4D, 0x20, 0x43, 0, 0xFF,
-};
-
-const char staff_U_A_H[16] = "          U A H";
-
-const char staff_VOICE_ACTOR_2[20] = "    - VOICE ACTOR -";
-
-const char staff_Y_J_E_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x4A, 0x20, 0x20, 0x20, 0x45, 0x20, 0x41,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_U_I_U_D[16] = "        U I U D";
-
-const char staff_W_T_R_A_A_I[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x57, 0x20, 0x54, 0x20, 0x52, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41,
-    0x20, 0x49, 0, 0xFF,
-};
-
-const char staff_A_A_U_T_K_G[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41, 0x20, 0x55, 0x20, 0x54, 0x20, 0x4B, 0x20,
-    0x47, 0, 0xFF, 0xFF,
-};
-
-const char staff_T_M_M_C_I_N_S_I_U_A[24] = {
-    0x20, 0x20, 0x54, 0x20, 0x4D, 0x20, 0x4D, 0x20, 0x43, 0x20, 0x49, 0x20, 0x4E, 0x20, 0x53, 0x20,
-    0x49, 0x20, 0x55, 0x20, 0x41, 0, 0xFF, 0xFF,
-};
-
-const char staff_O_O_I_H_I_H_M_R[24] = {
-    0x20, 0x20, 0x20, 0x4F, 0x20, 0x4F, 0x20, 0x49, 0x20, 0x48, 0x20, 0x20, 0x20, 0x49, 0x20, 0x48,
-    0x20, 0x4D, 0x20, 0x52, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_K_H_R_U_I_O[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x48, 0x20, 0x52, 0x20, 0x20, 0x20, 0x55, 0x20, 0x49,
-    0x20, 0x4F, 0, 0xFF,
-};
-
-const char staff_A_O_U_F_J_N[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x4F, 0x20, 0x55, 0x20, 0x46, 0x20, 0x4A, 0x20,
-    0x4E, 0, 0xFF, 0xFF,
-};
-
-const char staff_Y_R_M_N[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x52, 0x20, 0x20, 0x20, 0x4D, 0x20, 0x4E,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_U_I_A_A_O[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x55, 0x20, 0x49, 0x20, 0x41, 0x20, 0x41, 0x20,
-    0x4F, 0, 0xFF, 0xFF,
-};
-
-const char staff_I_S_I_H_B[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x49, 0x20, 0x53, 0x20, 0x49, 0x20, 0x20, 0x20, 0x48, 0x20,
-    0x42, 0, 0xFF, 0xFF,
-};
-
-const char staff_S_H_N_C_I_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x53, 0x20, 0x48, 0x20, 0x4E, 0x20, 0x43, 0x20, 0x49,
-    0x20, 0x41, 0, 0xFF,
-};
-
-const char staff_K_N_T_K_M_R[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x4E, 0x20, 0x54, 0x20, 0x4B, 0x20, 0x4D, 0x20,
-    0x52, 0, 0xFF, 0xFF,
-};
-
-const char staff_A_O_U_A_U[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x55, 0x20, 0x41,
-    0x20, 0x55, 0, 0xFF,
-};
-
-const char staff_K_J_O_E[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x4A, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x45,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_O_I_T_B[16] = "        O I T B";
-
-const char staff_B_U_E_R_B_R_S_N[20] = "    B U E R B R S N";
-
-const char staff_R_C_O_E_T_O[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x52, 0x20, 0x43, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x45, 0x20, 0x54,
-    0x20, 0x4F, 0, 0xFF,
-};
-
-const char staff_M_C_A_L_S_M_E_S[20] = "    M C A L S M E S";
+const char staff_CHARACTER_DESIGN_00[16] = "          W O\0\xFF\xFF";
 
-const char staff_I_H_E_O_M_R[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x49, 0x20, 0x48, 0x20, 0x45, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x4D,
-    0x20, 0x52, 0, 0xFF,
-};
-
-const char staff_MESSAGE_TRANSLATOR_2[24] = " - MESSAGE TRANSLATOR -";
-
-const char staff_E_I_U_U_I[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x45, 0x20, 0x49, 0x20, 0x20, 0x20, 0x55, 0x20, 0x55, 0x20,
-    0x49, 0, 0xFF, 0xFF,
-};
-
-const char staff_R_K_S_Z_K[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x52, 0x20, 0x4B, 0x20, 0x53, 0x20, 0x5A, 0x20, 0x4B,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_D_N_O_A_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x44, 0x20, 0x4E, 0x20, 0x4F, 0x20, 0x41, 0x20, 0x41,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_A_K_D[16] = "        A   K D";
-
-const char staff_C_R_S_T_N[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x43, 0x20, 0x52, 0x20, 0x53, 0x20, 0x54, 0x20, 0x4E,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_H_I_A_G[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x48, 0x20, 0x49, 0x20, 0x20, 0x20, 0x41, 0x20,
-    0x47, 0, 0xFF, 0xFF,
-};
-
-const char staff_Y_M_K_I_H[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x4D, 0x20, 0x4B, 0x20, 0x20, 0x20, 0x49, 0x20,
-    0x48, 0, 0xFF, 0xFF,
-};
-
-const char staff_U_I_O_N_S_I[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x55, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x4E, 0x20, 0x53,
-    0x20, 0x49, 0, 0xFF,
-};
-
-const char staff_K_R_A_O_H_R_E_F_E_T_S[28] = {
-    0x20, 0x4B, 0x20, 0x52, 0x20, 0x41, 0x20, 0x4F, 0x20, 0x48, 0x20, 0x52, 0x20, 0x20, 0x20, 0x45,
-    0x20, 0x46, 0x20, 0x45, 0x20, 0x54, 0x20, 0x53, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_A_L_S_I_O_D_R_I_A[24] = "  A L   S I O D   R I A";
-
-const char staff_SPECIAL_THANKS_2[24] = {
-    0x20, 0x20, 0x20, 0x2D, 0x20, 0x53, 0x50, 0x45, 0x43, 0x49, 0x41, 0x4C, 0x20, 0x54, 0x48, 0x41,
-    0x4E, 0x4B, 0x53, 0x20, 0x2D, 0, 0xFF, 0xFF,
-};
-
-const char staff_T_U_O_H[16] = "        T U O H";
-
-const char staff_S_Y_S_I[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x53, 0x20, 0x59, 0x20, 0x53, 0x20, 0x49,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_M_Y_N[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4D, 0x20, 0x59, 0x20, 0x4E, 0, 0xFF,
-};
-
-const char staff_A_A_O[16] = "          A A O";
-
-const char staff_O_O[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x4F, 0, 0xFF,
-};
-
-const char staff_B_B_N[16] = "          B B N";
-
-const char staff_L_O[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4C, 0x20, 0x4F, 0, 0xFF,
-};
-
-const char staff_T_K_F_M_A_A_A[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x54, 0x20, 0x4B, 0x20, 0x46, 0x20, 0x4D, 0x20, 0x20, 0x20, 0x41,
-    0x20, 0x41, 0x20, 0x41, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_A_A_U_I_S_G_T[20] = "      A A U I S G T";
-
-const char staff_M_A_K[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4D, 0x20, 0x41, 0x20, 0x4B, 0, 0xFF,
-};
-
-const char staff_O_I[16] = "          . O I";
-
-const char staff_N_A_E[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4E, 0x20, 0x41, 0x20, 0x45, 0, 0xFF,
-};
-
-const char staff_K_I[16] = "          . K I";
-
-const char staff_H_N_K_M_R[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x48, 0x20, 0x4E, 0x20, 0x4B, 0x20, 0x4D, 0x20, 0x52,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_A_A_U_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x2E, 0x20, 0x41, 0x20, 0x41, 0x20, 0x55, 0x20,
-    0x41, 0, 0xFF, 0xFF,
-};
-
-const char staff_H_O_I_A[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x48, 0x20, 0x4F, 0x20, 0x49, 0x20, 0x41,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_J_M[16] = "          . J M";
-
-const u8 staff_blank_9[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x4A, 0x20, 0x22, 0x20, 0x36, 0x20, 0x6B, 0x20, 0x4D, 0x20,
-    0x4B, 0x20, 0x4D, 0,
-};
-
-const u8 staff_blank_10[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x49, 0x20, 0x58, 0x20, 0x38, 0x20, 0x22, 0x20, 0x49,
-    0x20, 0x41, 0x20, 0x49, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_T_K_Y_H_R_I_A[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x54, 0x20, 0x4B, 0x20, 0x59, 0x20, 0x20, 0x20, 0x48, 0x20, 0x52,
-    0x20, 0x49, 0x20, 0x41, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_A_U_A_S_I_A_W[20] = "      A U A S I A W";
-
-const char staff_R_T_O_O[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x52, 0x20, 0x54, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x4F,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_I_A_R_K_S[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x49, 0x20, 0x41, 0x20, 0x52, 0x20, 0x4B, 0x20,
-    0x53, 0, 0xFF, 0xFF,
-};
-
-const char staff_R_o_i[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x52, 0x20, 0x6F, 0x20, 0x69, 0, 0xFF,
-};
-
-const char staff_y_j[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x79, 0x20, 0x6A, 0, 0xFF, 0xFF,
-};
-
-const char staff_H_R_A_O_L_W[24] = {
-    0x20, 0x20, 0x20, 0x48, 0x20, 0x52, 0x20, 0x3A, 0x20, 0x41, 0x20, 0x20, 0x20, 0x2D, 0x20, 0x4F,
-    0x20, 0x4C, 0x20, 0x57, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_A_D_Y_S_F_L_O[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x44, 0x20, 0x59, 0x20, 0x53, 0x20, 0x20, 0x20, 0x46, 0x20,
-    0x4C, 0x20, 0x4F, 0x20, 0x2D, 0, 0xFF, 0xFF,
-};
-
-const char staff_C_U_H_C_E_S[24] = {
-    0x20, 0x20, 0x20, 0x28, 0x20, 0x43, 0x20, 0x20, 0x20, 0x55, 0x20, 0x20, 0x20, 0x48, 0x20, 0x43,
-    0x20, 0x45, 0x20, 0x53, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_S_B_G_C_E_K_R[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x53, 0x20, 0x42, 0x20, 0x47, 0x20, 0x43, 0x20, 0x45, 0x20,
-    0x4B, 0x20, 0x52, 0x20, 0x20, 0x29, 0, 0xFF,
-};
-
-const char staff_K_N_S_I_E_M_T_U_A_A[28] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x4E, 0x20, 0x53, 0x20, 0x49, 0x20, 0x45, 0x20, 0x4D,
-    0x20, 0x54, 0x20, 0x55, 0x20, 0x41, 0x20, 0x41, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_U_I_H_G_A_S_B_R[24] = "      U I H G   A S B R";
-
-const char staff_M_N_B_A_S_M_T[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4D, 0x20, 0x4E, 0x20, 0x42, 0x20, 0x20, 0x20, 0x41, 0x20, 0x53,
-    0x20, 0x4D, 0x20, 0x54, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_A_A_U_M_T_U_O_O[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41, 0x20, 0x55, 0x20, 0x4D, 0x20, 0x54, 0x20,
-    0x55, 0x20, 0x4F, 0x20, 0x4F, 0, 0xFF, 0xFF,
-};
-
-const char staff_T_M_Y_K_O_O_A[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x54, 0x20, 0x4D, 0x20, 0x59, 0x20, 0x4B, 0x20, 0x20, 0x20, 0x4F,
-    0x20, 0x4F, 0x20, 0x41, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_O_O_U_I_Y_K_T[20] = "      O O U I Y K T";
-
-const char staff_T_T_U_A_H_Z[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x54, 0x20, 0x54, 0x20, 0x55, 0x20, 0x41, 0x20, 0x48, 0x20, 0x5A,
-    0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_E_S_Y_A_E[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x45, 0x20, 0x53, 0x20, 0x59, 0x20, 0x20, 0x20, 0x41, 0x20,
-    0x45, 0, 0xFF, 0xFF,
-};
-
-const char staff_K_T_U_U_E_M_U_A[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x54, 0x20, 0x55, 0x20, 0x55, 0x20, 0x45, 0x20, 0x4D,
-    0x20, 0x55, 0x20, 0x41, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_A_S_S_K_I_R[20] = "      A S S K   I R";
-
-const char staff_M_S_H_R_A_I_A_I[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4D, 0x20, 0x53, 0x20, 0x48, 0x20, 0x52, 0x20, 0x20, 0x20, 0x41,
-    0x20, 0x49, 0x20, 0x41, 0x20, 0x49, 0, 0xFF,
-};
-
-const char staff_A_A_I_O_K_J_T_N[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x4B, 0x20,
-    0x4A, 0x20, 0x54, 0x20, 0x4E, 0, 0xFF, 0xFF,
-};
-
-const char staff_T_K_S_I_H_S_I_O_O[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x54, 0x20, 0x4B, 0x20, 0x53, 0x20, 0x49, 0x20, 0x48, 0x20, 0x53,
-    0x20, 0x49, 0x20, 0x4F, 0x20, 0x4F, 0, 0xFF,
-};
-
-const char staff_A_A_H_A_H_M_T[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41, 0x20, 0x48, 0x20, 0x20, 0x20, 0x41, 0x20,
-    0x48, 0x20, 0x4D, 0x20, 0x54, 0, 0xFF, 0xFF,
-};
-
-const char staff_T_S_I_I_O_K_R_T[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x54, 0x20, 0x53, 0x20, 0x49, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x4B,
-    0x20, 0x52, 0x20, 0x54, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_O_H_H_K_U_A_A[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x48, 0x20, 0x48, 0x20, 0x4B, 0x20, 0x20, 0x20,
-    0x55, 0x20, 0x41, 0x20, 0x41, 0, 0xFF, 0xFF,
-};
-
-const char staff_Y_S_I_I_O_T_M_T[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x53, 0x20, 0x49, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x54,
-    0x20, 0x4D, 0x20, 0x54, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_O_H_H_R_O_I_A[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x48, 0x20, 0x48, 0x20, 0x52, 0x20, 0x20, 0x20,
-    0x4F, 0x20, 0x49, 0x20, 0x41, 0, 0xFF, 0xFF,
-};
-
-const char staff_D_I_U_E_S_S_K[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x44, 0x20, 0x49, 0x20, 0x55, 0x20, 0x45, 0x20, 0x53, 0x20, 0x53,
-    0x20, 0x4B, 0, 0xFF,
-};
-
-const char staff_A_S_K_A_A_I[20] = "      A S K   A A I";
-
-const char staff_A_I_O_I_M_R_T[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x41, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x49, 0x20, 0x4D, 0x20, 0x52,
-    0x20, 0x54, 0, 0xFF,
-};
-
-const char staff_K_N_R_U_A_A[20] = "      K N R   U A A";
-
-const char staff_S_I_L_S_I_H_T_S_P_A[28] = {
-    0x28, 0x20, 0x53, 0x20, 0x49, 0x20, 0x4C, 0x20, 0x53, 0x20, 0x49, 0x20, 0x48, 0x20, 0x2D, 0x20,
-    0x54, 0x20, 0x53, 0x20, 0x20, 0x50, 0x20, 0x41, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_K_L_M_T_E_T_L_Y[28] = "   K L   M T     E T  L Y )";
-
-const char staff_T_K_K_S[16] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x54, 0x20, 0x4B, 0x20, 0x4B, 0x20, 0x53, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_T[12] = "      T - .";
-
-const char staff_H_R_S_I_S_G_M_T_U[28] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x48, 0x20, 0x52, 0x20, 0x53, 0x20, 0x49, 0x20, 0x53, 0x20, 0x47,
-    0x20, 0x4D, 0x20, 0x54, 0x20, 0x2D, 0x20, 0x55, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_I_O_H_U_I_O_O_B_G[28] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x48, 0x20, 0x2E, 0x20, 0x55, 0x20,
-    0x49, 0x20, 0x4F, 0x20, 0x4F, 0x20, 0x42, 0x20, 0x47, 0, 0xFF, 0xFF,
-};
-
-const char staff_G_N[12] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x47, 0x20, 0x4E, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_O[8] = "      O";
-
-const char staff_K_H_U_E_A_A_K[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4B, 0x20, 0x48, 0x20, 0x55, 0x20, 0x45, 0x20, 0x41, 0x20, 0x41,
-    0x20, 0x28, 0x20, 0x4B, 0x20, 0x29, 0, 0xFF,
-};
-
-const char staff_O_S_K_R_I_T_O[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x53, 0x20, 0x4B, 0x20, 0x2D, 0x20, 0x52, 0x20,
-    0x49, 0x20, 0x54, 0x20, 0x4F, 0, 0xFF, 0xFF,
-};
-
-const char staff_PRODUCER_2[20] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x2D, 0x20, 0x50, 0x52, 0x4F, 0x44, 0x55, 0x43, 0x45, 0x52,
-    0x20, 0x2D, 0, 0xFF,
-};
-
-const char staff_T_M_S_I_S_D_M_T[20] = "    T M S I S D M T";
-
-const char staff_O_O_H_A_A_O_O[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x4F, 0x20, 0x48, 0x20, 0x20, 0x20, 0x41, 0x20, 0x41,
-    0x20, 0x4F, 0x20, 0x4F, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_GENERAL_PRODUCER_2[24] = {
-    0x20, 0x20, 0x2D, 0x20, 0x47, 0x45, 0x4E, 0x45, 0x52, 0x41, 0x4C, 0x20, 0x50, 0x52, 0x4F, 0x44,
-    0x55, 0x43, 0x45, 0x52, 0x20, 0x2D, 0, 0xFF,
-};
-
-const char staff_N_R_T_K_U_A_I_U[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x4E, 0x20, 0x52, 0x20, 0x54, 0x20, 0x4B, 0x20, 0x20, 0x20, 0x55, 0x20,
-    0x41, 0x20, 0x49, 0x20, 0x55, 0, 0xFF, 0xFF,
-};
-
-const char staff_O_I_A_A_F_N_M_Z[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x4F, 0x20, 0x49, 0x20, 0x41, 0x20, 0x41, 0x20, 0x46, 0x20, 0x4E,
-    0x20, 0x4D, 0x20, 0x5A, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_Y_S_I_I_O_A_O_O[24] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x59, 0x20, 0x53, 0x20, 0x49, 0x20, 0x49, 0x20, 0x4F, 0x20, 0x41,
-    0x20, 0x4F, 0x20, 0x4F, 0, 0xFF, 0xFF, 0xFF,
-};
-
-const char staff_O_H_K_K_M_T[20] = "      O H K   K M T";
-
-const char staff_blank_11[28] = {
-    0x20, 0x20, 0x41, 0x4E, 0x44, 0x20, 0x43, 0x41, 0x50, 0x43, 0x4F, 0x4D, 0x20, 0x41, 0x4C, 0x4C,
-    0x20, 0x53, 0x54, 0x41, 0x46, 0x46, 0, 0xFF, 0x20, 0x20, 0x20, 0,
+/* provisional name */
+const char staff_CHARACTER_DESIGN_01[16] = "           H\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_02[16] = "        D K R T";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_03[20] = "         - U I A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_04[20] = "    C I O I   H G N";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_05[20] = "     H M R N S O U\0\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_06[16] = "        S I A I";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_07[16] = "         H B K\0\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_08[16] = "         C u\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_09[16] = "          h n\0\xFF\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_10[20] = "       J N I A A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_11[16] = "        U   K W";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_12[20] = "       S I I Y N\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_13[20] = "        E J   A O\0\xFF\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_14[20] = "     Y K   S I A A\0\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_15[20] = "      U I I H K W\0\xFF\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_16[20] = "     S I N S K .\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_CHARACTER_DESIGN_17[20] = "      H N O U E  N\0\xFF";
+
+const char staff_SCROLL_DESIGN[24] = "   - SCROLL DESIGN -\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_00[20] = "    H R S I S G Y M";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_01[24] = "     I O H   U I A A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_02[20] = "     Y K   U U O O\0\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_03[20] = "      O O F K M T\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_04[20] = "    H R Y K   M H R";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_05[24] = "     I O U I I A O I\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_06[16] = "         O I I\0\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_07[16] = "          J J\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_08[16] = "         N O E\0\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_09[16] = "          A B I";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_10[20] = "      A E I K H M\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_11[20] = "       K M   O A A\0\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_12[16] = "          T M\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_13[16] = "           A A\0\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_14[20] = "     Y M M T   O I\0\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_15[20] = "      A A O O K J\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_16[20] = "     K U C I T K D\0\xFF";
+
+/* provisional name */
+const char staff_SCROLL_DESIGN_17[20] = "      O I H   A E A";
+
+const char staff_ORIGINAL_ART_WORK[24] = " - ORIGINAL ART WORK -\0\xFF";
+
+/* provisional name */
+const char staff_ORIGINAL_ART_WORK_00[16] = "         A I A\0\xFF";
+
+/* provisional name */
+const char staff_ORIGINAL_ART_WORK_01[16] = "          K M N";
+
+/* provisional name */
+const char staff_ORIGINAL_ART_WORK_02[20] = "     K N   I H M R\0\xFF";
+
+/* provisional name */
+const char staff_ORIGINAL_ART_WORK_03[20] = "      I U N S I U A";
+
+/* provisional name */
+const char staff_ORIGINAL_ART_WORK_04[16] = "           N\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_ORIGINAL_ART_WORK_05[16] = "            K\0\xFF\xFF";
+
+const char staff_TITLE_LOGO_DESIGN[24] = " - TITLE LOGO DESIGN -\0\xFF";
+
+/* provisional name */
+const char staff_TITLE_LOGO_DESIGN_00[16] = "         S O I\0\xFF";
+
+/* provisional name */
+const char staff_TITLE_LOGO_DESIGN_01[16] = "          H E\0\xFF\xFF";
+
+const char staff_INSTRACTION_DESIGN[24] = " - INSTRACTION DESIGN -";
+
+/* provisional name */
+const char staff_INSTRACTION_DESIGN_00[16] = "        S K M Z";
+
+/* provisional name */
+const char staff_INSTRACTION_DESIGN_01[20] = "         A O I U\0\xFF\xFF\xFF";
+
+const char staff_PROGRAMMING[20] = "    - PROGRAMMING -";
+
+/* provisional name */
+const char staff_PROGRAMMING_00[20] = "     K Z H T   A A\0\xFF";
+
+/* provisional name */
+const char staff_PROGRAMMING_01[20] = "      A U I O N K I";
+
+const char staff_PROGRAMMING_02[24] = "  N B Y \" T \" O H Z M\0\xFF\xFF";
+
+/* provisional name */
+const char staff_PROGRAMMING_03[24] = "   O U A L 1 Y S I U I\0\xFF";
+
+/* provisional name */
+const char staff_PROGRAMMING_04[24] = "  Y K   A A U A T T )\0\xFF\xFF";
+
+/* provisional name */
+const char staff_PROGRAMMING_05[24] = "   U O K W M R ( A E\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_PROGRAMMING_06[20] = "    H R S I N K G W";
+
+/* provisional name */
+const char staff_PROGRAMMING_07[24] = "     I O H   A A A A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_PROGRAMMING_08[24] = "  Y S N B   N D ( N )\0\xFF\xFF";
+
+/* provisional name */
+const char staff_PROGRAMMING_09[24] = "   O I O U I A A I E\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_PROGRAMMING_10[20] = "    M S H T   h Y !";
+
+/* provisional name */
+const char staff_PROGRAMMING_11[20] = "     A A I O O ! a\0\xFF";
+
+/* provisional name */
+const char staff_PROGRAMMING_12[20] = "    A I I O Y K Y M";
+
+/* provisional name */
+const char staff_PROGRAMMING_13[24] = "     K H R   O O A A\0\xFF\xFF\xFF";
+
+const char staff_SOUND_EFFECT_DESIGN[24] = "- SOUND EFFECT DESIGN -";
+
+/* provisional name */
+const char staff_SOUND_EFFECT_DESIGN_00[20] = "      S T S I I E\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SOUND_EFFECT_DESIGN_01[20] = "       A O H   S\0\xFF\xFF\xFF";
+
+const char staff_SOUND_EFFECT_DESIGN_02[24] = "  H R A I\" 6 k K N O\0\xFF\xFF\xFF";
+
+const char staff_SOUND_EFFECT_DESIGN_03[20] = "   I O K  X 8 \" O D";
+
+const char staff_MUSIC_COMPOSE[24] = "   - MUSIC COMPOSE -\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_MUSIC_COMPOSE_00[20] = "    H D K   K G W\0\xFF\xFF";
+
+/* provisional name */
+const char staff_MUSIC_COMPOSE_01[20] = "     I E I O U A A\0\xFF";
+
+/* provisional name */
+const char staff_MUSIC_COMPOSE_02[20] = "       Y K   W I\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_MUSIC_COMPOSE_03[16] = "        U I I A";
+
+const char staff_MUSIC_ARRANGEMENT[24] = " - MUSIC ARRANGEMENT -\0\xFF";
+
+const char staff_PLANNING[20] = "      - PLANNING -\0\xFF";
+
+/* provisional name */
+const char staff_PLANNING_00[20] = "      S T   A U I O";
+
+/* provisional name */
+const char staff_PLANNING_01[20] = "       E O Y S H R\0\xFF";
+
+/* provisional name */
+const char staff_PLANNING_02[24] = "  N O G     . S I A A -";
+
+/* provisional name */
+const char staff_PLANNING_03[24] = "   E .   - H I H Z W\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_PLANNING_04[16] = "         N M C\0\xFF";
+
+/* provisional name */
+const char staff_PLANNING_05[16] = "          U A H";
+
+const char staff_VOICE_ACTOR[20] = "    - VOICE ACTOR -";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_00[20] = "       Y J   E A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_01[16] = "        U I U D";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_02[20] = "     W T R   A A I\0\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_03[20] = "      A A U T K G\0\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_04[24] = "  T M M C I N S I U A\0\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_05[24] = "   O O I H   I H M R\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_06[20] = "     K H R   U I O\0\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_07[20] = "      A O U F J N\0\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_08[20] = "       Y R   M N\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_09[20] = "        U I A A O\0\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_10[20] = "      I S I   H B\0\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_11[20] = "       S H N C I A\0\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_12[20] = "      K N T K M R\0\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_13[20] = "       A   O U A U\0\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_14[20] = "       K J   O E\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_15[16] = "        O I T B";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_16[20] = "    B U E R B R S N";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_17[20] = "     R C   O E T O\0\xFF";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_18[20] = "    M C A L S M E S";
+
+/* provisional name */
+const char staff_VOICE_ACTOR_19[20] = "     I H E   O M R\0\xFF";
+
+const char staff_MESSAGE_TRANSLATOR[24] = " - MESSAGE TRANSLATOR -";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_00[20] = "      E I   U U I\0\xFF\xFF";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_01[20] = "       R K S Z K\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_02[20] = "       D N O A A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_03[16] = "        A   K D";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_04[20] = "       C R S T N\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_05[20] = "        H I   A G\0\xFF\xFF";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_06[20] = "      Y M K   I H\0\xFF\xFF";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_07[20] = "       U I O N S I\0\xFF";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_08[28] = " K R A O H R   E F E T S\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_MESSAGE_TRANSLATOR_09[24] = "  A L   S I O D   R I A";
+
+const char staff_SPECIAL_THANKS[24] = "   - SPECIAL THANKS -\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_00[16] = "        T U O H";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_01[20] = "         S Y S I\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_02[16] = "         M Y N\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_03[16] = "          A A O";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_04[16] = "           O O\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_05[16] = "          B B N";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_06[16] = "           L O\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_07[24] = "     T K F M   A A A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_08[20] = "      A A U I S G T";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_09[16] = "         M A K\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_10[16] = "          . O I";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_11[16] = "         N A E\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_12[16] = "          . K I";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_13[20] = "       H N K M R\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_14[20] = "        . A A U A\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_15[20] = "         H O I A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_16[16] = "          . J M";
+
+const char staff_SPECIAL_THANKS_17[20] = "    Y J \" 6 k M K M";
+
+const char staff_SPECIAL_THANKS_18[24] = "     O I X 8 \" I A I\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_19[24] = "     T K Y   H R I A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_20[20] = "      A U A S I A W";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_21[20] = "       R T   O O\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_22[20] = "        I A R K S\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_23[16] = "         R o i\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_24[16] = "          y j\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_25[24] = "   H R : A   - O L W\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_26[24] = "    A D Y S   F L O -\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_27[24] = "   ( C   U   H C E S\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_28[24] = "      S B G C E K R  )\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_29[28] = "     K N S I E M T U A A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_30[24] = "      U I H G   A S B R";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_31[24] = "     M N B   A S M T\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_32[24] = "      A A U M T U O O\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_33[24] = "     T M Y K   O O A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_34[20] = "      O O U I Y K T";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_35[20] = "     T T U A H Z\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_36[20] = "      E S Y   A E\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_37[24] = "     K T U U E M U A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_38[20] = "      A S S K   I R";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_39[24] = "     M S H R   A I A I\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_40[24] = "      A A I O K J T N\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_41[24] = "     T K S I H S I O O\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_42[24] = "      A A H   A H M T\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_43[24] = "     T S I I O K R T\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_44[24] = "      O H H K   U A A\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_45[24] = "     Y S I I O T M T\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_46[24] = "      O H H R   O I A\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_47[20] = "     D I U E S S K\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_48[20] = "      A S K   A A I";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_49[20] = "     A I O I M R T\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_50[20] = "      K N R   U A A";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_51[28] = "( S I L S I H - T S  P A\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_52[28] = "   K L   M T     E T  L Y )";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_53[16] = "     T K K S\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_54[12] = "      T - .";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_55[28] = "     H R S I S G M T - U\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_56[28] = "      I O H . U I O O B G\0\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_57[12] = "     G N\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_58[8] = "      O";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_59[24] = "     K H U E A A ( K )\0\xFF";
+
+/* provisional name */
+const char staff_SPECIAL_THANKS_60[24] = "      O S K - R I T O\0\xFF\xFF";
+
+const char staff_PRODUCER[20] = "      - PRODUCER -\0\xFF";
+
+/* provisional name */
+const char staff_PRODUCER_00[20] = "    T M S I S D M T";
+
+/* provisional name */
+const char staff_PRODUCER_01[24] = "     O O H   A A O O\0\xFF\xFF\xFF";
+
+const char staff_GENERAL_PRODUCER[24] = "  - GENERAL PRODUCER -\0\xFF";
+
+/* provisional name */
+const char staff_GENERAL_PRODUCER_00[24] = "    N R T K   U A I U\0\xFF\xFF";
+
+/* provisional name */
+const char staff_GENERAL_PRODUCER_01[24] = "     O I A A F N M Z\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_GENERAL_PRODUCER_02[24] = "     Y S I I O A O O\0\xFF\xFF\xFF";
+
+/* provisional name */
+const char staff_GENERAL_PRODUCER_03[20] = "      O H K   K M T";
+
+const char staff_AND_CAPCOM_ALL_STAFF[24] = "  AND CAPCOM ALL STAFF\0\xFF";
+
+const char staff_blank_11[4] = {
+    0x20, 0x20, 0x20, 0,
 };
 
 const char staff_blank_5[4] = {
     0x20, 0, 0xFF, 0xFF,
 };
 
-const char staff_THANK_YOU_FOR_PLAYING[32] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x54, 0x48, 0x41, 0x4E, 0x4B, 0x20, 0x59, 0x4F, 0x55, 0x20,
-    0x46, 0x4F, 0x52, 0x20, 0x50, 0x4C, 0x41, 0x59, 0x49, 0x4E, 0x47, 0x21, 0, 0xFF, 0xFF, 0xFF,
-};
+const char staff_THANK_YOU_FOR_PLAYING[32] = "      THANK YOU FOR PLAYING!\0\xFF\xFF\xFF";
 
-/* provisional name */
-const char end_sub_tbl_061676F8[28] = {
-    0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x50, 0x52, 0x45, 0x53, 0x45,
-    0x4E, 0x54, 0x45, 0x44, 0x20, 0x42, 0x59, 0, 0x23, 0, 0xFF, 0xFF,
+const char staff_PRESENTED_BY[24] = "           PRESENTED BY";
+
+/* the mark after PRESENTED BY (provisional name) */
+const char staff_mark[4] = {
+    0x23, 0, 0xFF, 0xFF,
 };
 
 const char player_color_tbl[37632] = {

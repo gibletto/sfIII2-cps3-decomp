@@ -53,7 +53,7 @@ extern const char str_IX_4[];
 extern const char str_DELETE_ALL_SH4[];
 extern const char str_1DATA_SH5[];
 extern const char str_CANCEL_SH6[];
-extern const char str_n[];
+extern const char str_blank_line[];
 extern const char str_empty[];
 extern const char str_NO_EDIT[];
 extern const char str_DATA_NOTHING[];
@@ -128,9 +128,9 @@ extern const char str_BUTT_TYPE[];
 extern const char str_BUTT_PAT[];
 extern const char str_DIR_ATT[];
 extern const char str_VS_ID[];
-extern const char str_n_3[];
+extern const char str_blank_line_3[];
 extern const char str_empty_3[];
-extern const char str_n_4[];
+extern const char str_blank_line_4[];
 extern const char str_empty_4[];
 extern const char str_CMOA[];
 extern const char str_CMSW[];
@@ -1315,8 +1315,8 @@ TM_STRING dbg_rec_menu_str[3] = {
 };
 /* 020011D8 */
 TM_STRING dbg_rec_clear_str[3] = {
-    { 0x1B, 3, 6, (const s8 *)str_n },
-    { 0x1B, 4, 6, (const s8 *)str_n },
+    { 0x1B, 3, 6, (const s8 *)str_blank_line },
+    { 0x1B, 4, 6, (const s8 *)str_blank_line },
     { 0x1B, 5, 6, (const s8 *)str_empty },
 };
 /* 020011FC */
@@ -1421,58 +1421,58 @@ TM_STRING dbg_att_data_str[21] = {
 };
 /* 0200158C */
 TM_STRING dbg_hud_clr_str[26] = {
-    { 0x1B, 2, 2, (const s8 *)str_n_3 },
-    { 0x1B, 3, 2, (const s8 *)str_n_3 },
-    { 0x1B, 4, 2, (const s8 *)str_n_3 },
-    { 0x1B, 5, 2, (const s8 *)str_n_3 },
-    { 0x1B, 6, 2, (const s8 *)str_n_3 },
-    { 0x1B, 7, 2, (const s8 *)str_n_3 },
-    { 0x1B, 8, 2, (const s8 *)str_n_3 },
-    { 0x1B, 9, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0xA, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0xB, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0xC, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0xD, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0xE, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0xF, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x10, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x11, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x12, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x13, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x14, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x15, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x16, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x17, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x18, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x19, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x1A, 2, (const s8 *)str_n_3 },
+    { 0x1B, 2, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 3, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 4, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 5, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 6, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 7, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 8, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 9, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0xA, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0xB, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0xC, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0xD, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0xE, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0xF, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x10, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x11, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x12, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x13, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x14, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x15, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x16, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x17, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x18, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x19, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x1A, 2, (const s8 *)str_blank_line_3 },
     { 0x1B, 0x1B, 2, (const s8 *)str_empty_3 },
 };
 /* 020016C4 */
 TM_STRING dbg_hud_clr_mid_str[6] = {
-    { 0x1B, 0xE, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0xF, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x10, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x11, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x12, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x13, 2, (const s8 *)str_n_3 },
+    { 0x1B, 0xE, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0xF, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x10, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x11, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x12, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x13, 2, (const s8 *)str_blank_line_3 },
 };
 /* 0200170C */
 TM_STRING dbg_hud_clr_low_str[9] = {
-    { 0x1B, 0x14, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x15, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x16, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x17, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x18, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x19, 2, (const s8 *)str_n_3 },
-    { 0x1B, 0x1A, 2, (const s8 *)str_n_3 },
+    { 0x1B, 0x14, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x15, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x16, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x17, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x18, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x19, 2, (const s8 *)str_blank_line_3 },
+    { 0x1B, 0x1A, 2, (const s8 *)str_blank_line_3 },
     { 0x1B, 0x1B, 2, (const s8 *)str_empty_3 },
     { 0x1B, 0x1C, 2, (const s8 *)str_empty_3 },
 };
 /* 02001778 */
 TM_STRING dbg_hud_clr_bottom_str[3] = {
-    { 5, 0x19, 2, (const s8 *)str_n_4 },
-    { 5, 0x1A, 2, (const s8 *)str_n_4 },
+    { 5, 0x19, 2, (const s8 *)str_blank_line_4 },
+    { 5, 0x1A, 2, (const s8 *)str_blank_line_4 },
     { 5, 0x1B, 2, (const s8 *)str_empty_4 },
 };
 /* 0200179C */

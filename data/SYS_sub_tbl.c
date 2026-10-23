@@ -17,7 +17,6 @@ extern const s8 EFF91_Step_Data[];
 extern const s16 win_mark_pos_tbl[][8];
 extern const s16 win_mark_blink_tbl[];
 extern const s16 color_flash_tbl[];
-extern const s16 SYS_sub_tbl_06159F04[];
 
 const s8 Capcom_Rights_msg[44] = {
     64, 67, 65, 80, 67, 79, 77, 32, 67, 79, 46, 44, 32, 76, 84, 68,
@@ -126,7 +125,7 @@ const s16 win_mark_blink_tbl[36] = {
     0, 0, 0, 0,
 };
 
-const s16 color_flash_tbl[62] = {
+const s16 color_flash_tbl[65] = {
     2, 8261, 2, 8259, 2, 8261, 2, 8259,
     2, 8261, -1, 8259, 2, 0, 2, 0,
     2, 0, -1, 0, 2, 0, 2, 0,
@@ -134,10 +133,6 @@ const s16 color_flash_tbl[62] = {
     2, 8257, 2, 8258, 2, 8256, 2, 8257,
     2, 8258, 2, 8256, 2, 8257, 2, 8258,
     2, 8256, 2, 8257, 2, 8258, 2, 8256,
-    2, 8257, 2, 8258, 1, 8256,
-};
-
-/* provisional name */
-const s16 SYS_sub_tbl_06159F04[4] = {
-    -1, 8256, 255, -1,
+    2, 8257, 2, 8258, 1, 8256, -1, 8256,
+    255,
 };

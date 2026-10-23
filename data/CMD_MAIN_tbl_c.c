@@ -92,7 +92,7 @@ extern const char str_IX_4[];
 extern const char str_DELETE_ALL_SH4[];
 extern const char str_1DATA_SH5[];
 extern const char str_CANCEL_SH6[];
-extern const char str_n[];
+extern const char str_blank_line[];
 extern const char str_empty[];
 extern const char str_NO_EDIT[];
 extern const char str_DATA_NOTHING[];
@@ -169,9 +169,9 @@ extern const char str_BUTT_TYPE[];
 extern const char str_BUTT_PAT[];
 extern const char str_DIR_ATT[];
 extern const char str_VS_ID[];
-extern const char str_n_3[];
+extern const char str_blank_line_3[];
 extern const char str_empty_3[];
-extern const char str_n_4[];
+extern const char str_blank_line_4[];
 extern const char str_empty_4[];
 extern const char str_CMOA[];
 extern const char str_CMSW[];
@@ -1317,7 +1317,7 @@ const char str_1DATA_SH5[20] = "       1DATA  SH5\n\0\xFF";
 
 const char str_CANCEL_SH6[20] = "       CANCEL SH6\0\xFF\xFF";
 
-const char str_n[20] = "                  \n";
+const char str_blank_line[20] = "                  \n";
 
 const char str_empty[20] = "                  \0\xFF";
 
@@ -1471,11 +1471,11 @@ const char str_DIR_ATT[24] = "DIR ATT       (    )\n\0\xFF\xFF";
 
 const char str_VS_ID[24] = "VS ID         (    )\0\xFF\xFF\xFF";
 
-const char str_n_3[32] = "                            \n\0\xFF\xFF";
+const char str_blank_line_3[32] = "                            \n\0\xFF\xFF";
 
 const char str_empty_3[32] = "                            \0\xFF\xFF\xFF";
 
-const char str_n_4[40] = "                                     \n\0\xFF";
+const char str_blank_line_4[40] = "                                     \n\0\xFF";
 
 const char str_empty_4[40] = "                                     \0\xFF\xFF";
 

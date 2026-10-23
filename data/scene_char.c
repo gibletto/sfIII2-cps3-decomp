@@ -2,7 +2,8 @@
  * SCENE_CHAR.C  Scene character scripts
  *
  * Scripts for the select screen, general effects (etc, etc2, etc3), effect H3 and direct_03, then eff64's
- * step table and the background screen maps bg_cg_src_tbl gives bg_cell_write.
+ * step table and the background screen maps bg_cg_src_tbl gives bg_cell_write; scene_unref_char_table is
+ * read by nothing.
  * Each *_char_table is an index of animation scripts ending in 0; set_char_move_init starts script
  * char_table[kind][index], whose HEAD sits just before the address the index holds. See charscr.h for
  * the line layouts.
@@ -161,13 +162,13 @@ extern const u16 sel_pl_char_table_077_head[];
 extern const u16 sel_pl_char_table_077[];
 extern const u16 sel_pl_char_table_078_head[];
 extern const u16 sel_pl_char_table_078[];
-extern const u32 scene_char_06359364[];
-extern const u16 scene_char_06359364_000_head[];
-extern const u16 scene_char_06359364_000[];
-extern const u16 scene_char_06359364_001_head[];
-extern const u16 scene_char_06359364_001[];
-extern const u16 scene_char_06359364_002_head[];
-extern const u16 scene_char_06359364_002[];
+extern const u32 scene_unref_char_table[];
+extern const u16 scene_unref_char_table_000_head[];
+extern const u16 scene_unref_char_table_000[];
+extern const u16 scene_unref_char_table_001_head[];
+extern const u16 scene_unref_char_table_001[];
+extern const u16 scene_unref_char_table_002_head[];
+extern const u16 scene_unref_char_table_002[];
 extern const s16 eff64_stepxy_table[][2];
 extern const u32 etc_char_table[];
 extern const u16 etc_char_table_000_head[];
@@ -1906,12 +1907,12 @@ const u16 sel_pl_char_table_078[40] = {
 
 /* provisional name */
 /* 3 entries; nothing in the program refers to it */
-const u32 scene_char_06359364[4] = {
-    (u32)scene_char_06359364_000, (u32)scene_char_06359364_001, (u32)scene_char_06359364_002, 0,
+const u32 scene_unref_char_table[4] = {
+    (u32)scene_unref_char_table_000, (u32)scene_unref_char_table_001, (u32)scene_unref_char_table_002, 0,
 };
 
-const u16 scene_char_06359364_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 scene_char_06359364_000[220] = {
+const u16 scene_unref_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 scene_unref_char_table_000[220] = {
     L2(1, 0, 0, 0, 0, 0, 0, 0x9182),
     L2(1, 0, 0, 0, 0, 0, 0, 0x9181),
     L2(1, 0, 0, 0, 0, 0, 0, 0x9180),
@@ -1969,8 +1970,8 @@ const u16 scene_char_06359364_000[220] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-const u16 scene_char_06359364_001_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 scene_char_06359364_001[20] = {
+const u16 scene_unref_char_table_001_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 scene_unref_char_table_001[20] = {
     L2(1, 0, 0, 0, 0, 0, 0, 0x91A4),
     L2(1, 0, 0, 0, 0, 0, 0, 0x91A5),
     L2(1, 0, 0, 0, 0, 0, 0, 0x91A6),
@@ -1978,8 +1979,8 @@ const u16 scene_char_06359364_001[20] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-const u16 scene_char_06359364_002_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 scene_char_06359364_002[20] = {
+const u16 scene_unref_char_table_002_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 scene_unref_char_table_002[20] = {
     L2(1, 0, 0, 0, 0, 0, 0, 0x91A0),
     L2(1, 0, 0, 0, 0, 0, 0, 0x91A1),
     L2(1, 0, 0, 0, 0, 0, 0, 0x91A2),
@@ -6818,7 +6819,7 @@ const u16 debug_scene_scrn_data[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
 };
 
-/* provisional name: the screen map of bg_index 1 (bg_cg_src_tbl) */
+/* provisional name */
 const u16 bg_scrn_data_01[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -7910,7 +7911,7 @@ const u16 bg_scrn_data_01[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
 };
 
-/* provisional name: the screen map of bg_index 2 (bg_cg_src_tbl) */
+/* provisional name */
 const u16 bg_scrn_data_02[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -9002,7 +9003,7 @@ const u16 bg_scrn_data_02[8704] = {
     0xA16, 1, 0xA18, 1, 0xA1A, 1, 0xA1C, 1,
 };
 
-/* provisional name: the screen map of bg_index 3 (bg_cg_src_tbl) */
+/* provisional name */
 const u16 bg_scrn_data_03[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -10094,7 +10095,6 @@ const u16 bg_scrn_data_03[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
 };
 
-/* provisional name: the screen map of bg_index 11 (bg_cg_src_tbl) */
 const u16 bg_scrn_data_11[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -11186,7 +11186,7 @@ const u16 bg_scrn_data_11[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
 };
 
-/* provisional name: the screen map of bg_index 4 (bg_cg_src_tbl) */
+/* provisional name */
 const u16 bg_scrn_data_04[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -12278,7 +12278,7 @@ const u16 bg_scrn_data_04[8704] = {
     0, 0, 0, 0, 0, 0, 0, 0,
 };
 
-/* provisional name: the screen map of bg_index 5 (bg_cg_src_tbl) */
+/* provisional name */
 const u16 bg_scrn_data_05[12800] = {
     0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,

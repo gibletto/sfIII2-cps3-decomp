@@ -13,7 +13,7 @@ extern const s16 scr_obj_num44[];
 extern const s16 eff45_pos_x_tbl[];
 extern const s16 eff45_pos_y_tbl[];
 extern const s16 eff45_pos_y_tbl2[];
-extern const u16 EFF41_tbl_061793E0[];
+extern const s16 eff45_pos_y_tbl3[];
 extern const s16 eff46_char_tbl[];
 
 const s16 eff40_pos_x_tbl[8] = {
@@ -105,9 +105,10 @@ const s16 eff45_pos_y_tbl2[16] = {
 };
 
 /* provisional name */
-const u16 EFF41_tbl_061793E0[16] = {
-    0xA8, 0xAA, 0xAC, 0xAE, 0xB0, 0xB2, 0xB4, 0xB6,
-    0xB8, 0xBA, 0xBC, 0xBE, 0xC0, 0xC2, 0xC4, 0xC6,
+/* A third y table after eff45_pos_y_tbl2 (168..198 by 2). Nothing in the program refers to it by name or address. */
+const s16 eff45_pos_y_tbl3[16] = {
+    168, 170, 172, 174, 176, 178, 180, 182,
+    184, 186, 188, 190, 192, 194, 196, 198,
 };
 
 const s16 eff46_char_tbl[8] = {

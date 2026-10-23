@@ -29,7 +29,7 @@
 #include "color3rd.h"
 #include "EffG0.h"
 
-extern s8 flag_0202420C;   /* provisional name, the byte before frw (effG0_names_move tests it) */
+extern s8 Select_Flow_Akebono;   /* provisional name (sel_flow.c) */
 extern s16 effg0_judge_count;   /* provisional name: initialised work RAM (effg0_work.c) */
 extern u32* effg0_char_tbl[];   /* provisional name: initialised work RAM (effg0_work.c) */
 extern const s16 effg0_col_tbl[7];
@@ -141,7 +141,7 @@ void effG0_names_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case 0:
         x = bg_w.bgw[0].xy[0].disp.pos - 0xC0;
-        if (flag_0202420C != 0) {
+        if (Select_Flow_Akebono != 0) {
         }
         p = effg0_name_tbl[0];
         while (1) {

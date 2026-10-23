@@ -7,23 +7,19 @@
 
 #pragma section TBL
 
-extern const s16 bg_scno_tbl_06161C34[];
-extern const u16 bg_scno_tbl[];
-extern const s16 etc_bg_scno_tbl_06161C62[];
-extern const u16 etc_bg_scno_tbl[];
+extern const s16 bg_scno_tbl[];
+extern const s16 etc_bg_scno_tbl[];
 extern const s16 bg_scr_record_data[];
-extern const u16 bg000_tbl_06161C9A[];
-extern const u16 ake_scr_record_data[];
-extern const u32 bg_speed_tbl[];
-extern const u32 etc_bg_speed_tbl[];
-extern const u16 etc_bg_zuubun_tbl[];
-extern const u32 bg_gfx_tbl[];
-extern const u16 bg000_tbl_0616242C[];
-extern const u32 etc_bg_gfx_tbl[];
-extern const u16 bg_attr_tbl[];
-extern const u16 etc_bg_attr_tbl[];
-extern const u16 bg_cell_cnt_tbl[];
-extern const u16 etc_bg_cell_cnt_tbl[];
+extern const s16 ake_scr_record_data[];
+extern const s32 bg_speed_tbl[][4][2];
+extern const s32 etc_bg_speed_tbl[][4][2];
+extern const s32 etc_bg_zuubun_tbl[][4];
+extern const BG_GFX bg_gfx_tbl[];
+extern const BG_GFX etc_bg_gfx_tbl[];
+extern const s16 bg_attr_tbl[];
+extern const s16 etc_bg_attr_tbl[];
+extern const s16 bg_cell_cnt_tbl[][4];
+extern const s16 etc_bg_cell_cnt_tbl[][4];
 extern const u32 bg_cg_src_tbl[];
 extern const u32 etc_bg_cg_src_tbl[];
 extern const u8 bg_scrn_data_11[];
@@ -33,11 +29,11 @@ extern const u8 bg_scrn_data_10[];
 extern const u8 bg_scrn_data_12[];
 extern const u8 bg_scrn_data_15[];
 extern const u8 etc_bg_scrn_data_0[];
-extern const u8 etc_bg_scrn_data_3[];
+extern const u32 etc_bg_scrn_data_3[];
 extern const u8 debug_scene_scrn_data[];
 extern const u8 eff08_scrn_data[];
-extern const u8 eff23_scrn_data[];
-extern const u8 eff45_scrn_data[];
+extern const u32 eff23_scrn_data[];
+extern const u32 eff45_scrn_data[];
 extern const u8 effJ5_scrn_data[];
 extern const u8 effb0_scrn_data[];
 extern const u8 bg_scrn_data_01[];
@@ -46,247 +42,219 @@ extern const u8 bg_scrn_data_03[];
 extern const u8 bg_scrn_data_04[];
 extern const u8 bg_scrn_data_05[];
 
-/* provisional name: the 12 halfwords before bg_scno_tbl; nothing refers to them by this name */
-const s16 bg_scno_tbl_06161C34[12] = {
-    2, 0, 2, 0, 2, 0, 2, 0,
-    2, 0, 2, 0,
-};
-
 /* provisional name */
-const u16 bg_scno_tbl[11] = {
+const s16 bg_scno_tbl[18] = {
     2, 2, 2, 3, 2, 3, 2, 3,
-    2, 2, 3,
-};
-
-/* provisional name: the 7 halfwords before etc_bg_scno_tbl; nothing refers to them by this name */
-const s16 etc_bg_scno_tbl_06161C62[7] = {
-    2, 2, 2, 2, 2, 2, 1,
+    2, 2, 3, 2, 2, 2, 2, 2,
+    2, 1,
 };
 
 /* provisional name */
-const u16 etc_bg_scno_tbl[5] = {
+const s16 etc_bg_scno_tbl[5] = {
     1, 1, 1, 1, 1,
 };
 
-const s16 bg_scr_record_data[16] = {
+const s16 bg_scr_record_data[92] = {
     1, 94, 127, 32512, 12, 255, 32512, 12,
     383, 32512, 12, 511, 32512, 12, -1, -1,
+    2, 84, 127, 32512, 28, 255, 32512, 28,
+    383, 32512, 28, 511, 32512, 28, -1, -1,
+    3, 104, 127, 32512, 44, 255, 32512, 44,
+    383, 32512, 44, 511, 32512, 44, -1, -1,
+    4, 94, 127, 32512, 60, 255, 32512, 60,
+    383, 32512, 60, 511, 32512, 60, -1, -1,
+    0, 94, 127, 32512, 12, 255, 32512, 12,
+    383, 32512, 12, 511, 32512, 12, 639, 32512,
+    12, 767, 32512, 12, 895, 32512, 12, 1023,
+    32512, 12, -1, -1,
 };
 
 /* provisional name */
-const u16 bg000_tbl_06161C9A[76] = {
-    2, 0x54, 0x7F, 0x7F00, 0x1C, 0xFF, 0x7F00, 0x1C,
-    0x17F, 0x7F00, 0x1C, 0x1FF, 0x7F00, 0x1C, 0xFFFF, 0xFFFF,
-    3, 0x68, 0x7F, 0x7F00, 0x2C, 0xFF, 0x7F00, 0x2C,
-    0x17F, 0x7F00, 0x2C, 0x1FF, 0x7F00, 0x2C, 0xFFFF, 0xFFFF,
-    4, 0x5E, 0x7F, 0x7F00, 0x3C, 0xFF, 0x7F00, 0x3C,
-    0x17F, 0x7F00, 0x3C, 0x1FF, 0x7F00, 0x3C, 0xFFFF, 0xFFFF,
-    0, 0x5E, 0x7F, 0x7F00, 0xC, 0xFF, 0x7F00, 0xC,
-    0x17F, 0x7F00, 0xC, 0x1FF, 0x7F00, 0xC, 0x27F, 0x7F00,
-    0xC, 0x2FF, 0x7F00, 0xC, 0x37F, 0x7F00, 0xC, 0x3FF,
-    0x7F00, 0xC, 0xFFFF, 0xFFFF,
+const s16 ake_scr_record_data[499] = {
+    4, 69, 127, 32512, 60, 255, 32512, 60,
+    383, 32512, 60, 511, 32512, 60, 639, 32512,
+    60, 767, 32512, 60, 895, 32512, 60, 1023,
+    32512, 60, -1, -1, 1, 94, 255, 28416,
+    44, 383, 32512, 44, 511, 32512, 44, -1,
+    -1, 2, 84, 64, 16384, 28, -1, -1,
+    1, 94, 127, 10240, 12, 255, 32512, 12,
+    383, 32512, 12, 511, 32512, 12, -1, -1,
+    2, 84, 127, 28416, 28, 255, 32512, 28,
+    383, 32512, 28, 511, 32512, 28, -1, -1,
+    1, 94, 255, 32512, 12, 383, 32512, 12,
+    511, 32512, 12, -1, -1, 2, 84, 127,
+    32512, 28, 255, 32512, 28, 383, 32512, 28,
+    511, 32512, 28, -1, -1, 1, 104, 127,
+    6144, 12, 255, 32512, 12, 383, 32512, 12,
+    511, 32512, 12, -1, -1, 1, 94, 127,
+    32512, 28, 255, 32512, 28, 383, 32512, 28,
+    511, 32512, 28, -1, -1, 3, 114, 255,
+    7936, 44, 383, 32512, 44, 511, 32512, 44,
+    -1, -1, 1, 114, 127, 7936, 12, 383,
+    32512, 12, 511, 32512, 12, -1, -1, 2,
+    104, 127, 32512, 28, 255, 32512, 28, 383,
+    32512, 28, -1, -1, 1, 94, 127, 3840,
+    12, 255, 32512, 12, 383, 32512, 12, 511,
+    32512, 12, -1, -1, 2, 84, 127, 32512,
+    28, 255, 32512, 28, 383, 32512, 28, 511,
+    32512, 28, -1, -1, 3, 104, 255, 32512,
+    44, -1, -1, 1, 94, 255, 28416, 12,
+    383, 32512, 12, 511, 32512, 12, -1, -1,
+    1, 94, 127, 5376, 12, 255, 32512, 12,
+    383, 32512, 12, 511, 32512, 12, -1, -1,
+    3, 104, 127, 7936, 44, 255, 32512, 44,
+    383, 32512, 44, 511, 32512, 44, -1, -1,
+    1, 94, 127, 32512, 12, 255, 32512, 12,
+    383, 32512, 12, 511, 32512, 12, 895, 32512,
+    12, 1023, 32512, 12, -1, -1, 2, 120,
+    383, 256, 28, -1, -1, 2, 84, 127,
+    32512, 28, 255, 32512, 28, 383, 32512, 28,
+    511, 32512, 28, 639, 32512, 28, 767, 32512,
+    28, 895, 32512, 28, 1023, 32512, 28, -1,
+    -1, 1, 94, 127, 16128, 12, 207, 20224,
+    12, -1, -1, 3, 104, 127, 16128, 44,
+    207, 20224, 44, -1, -1, 1, 94, 127,
+    16128, 12, 255, 32512, 12, 383, 32512, 12,
+    511, 32512, 12, -1, -1, 2, 84, 127,
+    32512, 28, 255, 32512, 28, 383, 32512, 28,
+    511, 32512, 28, -1, -1, 1, 94, 127,
+    16128, 12, 255, 32512, 12, 383, 32512, 12,
+    511, 32512, 12, -1, -1, 1, 94, 127,
+    20224, 12, 255, 32512, 12, 383, 32512, 12,
+    511, 32512, 12, -1, -1, 2, 84, 127,
+    32512, 28, 255, 32512, 28, 383, 32512, 28,
+    -1, -1, 1, 94, 127, 19456, 12, 255,
+    32512, 12, 255, 32512, 12, 383, 32512, 12,
+    511, 32512, 12, -1, -1, 1, 84, 127,
+    32512, 12, 255, 32512, 12, 383, 32512, 12,
+    -1, -1, 1, 84, 127, 32512, 12, 255,
+    32512, 12, 383, 32512, 12, 511, 32512, 12,
+    -1, -1, 2, 94, 127, 32512, 28, 255,
+    32512, 28, 383, 32512, 28, 511, 32512, 28,
+    -1, -1, 3, 104, 127, 32512, 44, 255,
+    32512, 44, 383, 32512, 44, 511, 32512, 44,
+    -1, -1, -1,
 };
 
 /* provisional name */
-const u16 ake_scr_record_data[499] = {
-    4, 0x45, 0x7F, 0x7F00, 0x3C, 0xFF, 0x7F00, 0x3C,
-    0x17F, 0x7F00, 0x3C, 0x1FF, 0x7F00, 0x3C, 0x27F, 0x7F00,
-    0x3C, 0x2FF, 0x7F00, 0x3C, 0x37F, 0x7F00, 0x3C, 0x3FF,
-    0x7F00, 0x3C, 0xFFFF, 0xFFFF, 1, 0x5E, 0xFF, 0x6F00,
-    0x2C, 0x17F, 0x7F00, 0x2C, 0x1FF, 0x7F00, 0x2C, 0xFFFF,
-    0xFFFF, 2, 0x54, 0x40, 0x4000, 0x1C, 0xFFFF, 0xFFFF,
-    1, 0x5E, 0x7F, 0x2800, 0xC, 0xFF, 0x7F00, 0xC,
-    0x17F, 0x7F00, 0xC, 0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF,
-    2, 0x54, 0x7F, 0x6F00, 0x1C, 0xFF, 0x7F00, 0x1C,
-    0x17F, 0x7F00, 0x1C, 0x1FF, 0x7F00, 0x1C, 0xFFFF, 0xFFFF,
-    1, 0x5E, 0xFF, 0x7F00, 0xC, 0x17F, 0x7F00, 0xC,
-    0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF, 2, 0x54, 0x7F,
-    0x7F00, 0x1C, 0xFF, 0x7F00, 0x1C, 0x17F, 0x7F00, 0x1C,
-    0x1FF, 0x7F00, 0x1C, 0xFFFF, 0xFFFF, 1, 0x68, 0x7F,
-    0x1800, 0xC, 0xFF, 0x7F00, 0xC, 0x17F, 0x7F00, 0xC,
-    0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF, 1, 0x5E, 0x7F,
-    0x7F00, 0x1C, 0xFF, 0x7F00, 0x1C, 0x17F, 0x7F00, 0x1C,
-    0x1FF, 0x7F00, 0x1C, 0xFFFF, 0xFFFF, 3, 0x72, 0xFF,
-    0x1F00, 0x2C, 0x17F, 0x7F00, 0x2C, 0x1FF, 0x7F00, 0x2C,
-    0xFFFF, 0xFFFF, 1, 0x72, 0x7F, 0x1F00, 0xC, 0x17F,
-    0x7F00, 0xC, 0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF, 2,
-    0x68, 0x7F, 0x7F00, 0x1C, 0xFF, 0x7F00, 0x1C, 0x17F,
-    0x7F00, 0x1C, 0xFFFF, 0xFFFF, 1, 0x5E, 0x7F, 0xF00,
-    0xC, 0xFF, 0x7F00, 0xC, 0x17F, 0x7F00, 0xC, 0x1FF,
-    0x7F00, 0xC, 0xFFFF, 0xFFFF, 2, 0x54, 0x7F, 0x7F00,
-    0x1C, 0xFF, 0x7F00, 0x1C, 0x17F, 0x7F00, 0x1C, 0x1FF,
-    0x7F00, 0x1C, 0xFFFF, 0xFFFF, 3, 0x68, 0xFF, 0x7F00,
-    0x2C, 0xFFFF, 0xFFFF, 1, 0x5E, 0xFF, 0x6F00, 0xC,
-    0x17F, 0x7F00, 0xC, 0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF,
-    1, 0x5E, 0x7F, 0x1500, 0xC, 0xFF, 0x7F00, 0xC,
-    0x17F, 0x7F00, 0xC, 0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF,
-    3, 0x68, 0x7F, 0x1F00, 0x2C, 0xFF, 0x7F00, 0x2C,
-    0x17F, 0x7F00, 0x2C, 0x1FF, 0x7F00, 0x2C, 0xFFFF, 0xFFFF,
-    1, 0x5E, 0x7F, 0x7F00, 0xC, 0xFF, 0x7F00, 0xC,
-    0x17F, 0x7F00, 0xC, 0x1FF, 0x7F00, 0xC, 0x37F, 0x7F00,
-    0xC, 0x3FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF, 2, 0x78,
-    0x17F, 0x100, 0x1C, 0xFFFF, 0xFFFF, 2, 0x54, 0x7F,
-    0x7F00, 0x1C, 0xFF, 0x7F00, 0x1C, 0x17F, 0x7F00, 0x1C,
-    0x1FF, 0x7F00, 0x1C, 0x27F, 0x7F00, 0x1C, 0x2FF, 0x7F00,
-    0x1C, 0x37F, 0x7F00, 0x1C, 0x3FF, 0x7F00, 0x1C, 0xFFFF,
-    0xFFFF, 1, 0x5E, 0x7F, 0x3F00, 0xC, 0xCF, 0x4F00,
-    0xC, 0xFFFF, 0xFFFF, 3, 0x68, 0x7F, 0x3F00, 0x2C,
-    0xCF, 0x4F00, 0x2C, 0xFFFF, 0xFFFF, 1, 0x5E, 0x7F,
-    0x3F00, 0xC, 0xFF, 0x7F00, 0xC, 0x17F, 0x7F00, 0xC,
-    0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF, 2, 0x54, 0x7F,
-    0x7F00, 0x1C, 0xFF, 0x7F00, 0x1C, 0x17F, 0x7F00, 0x1C,
-    0x1FF, 0x7F00, 0x1C, 0xFFFF, 0xFFFF, 1, 0x5E, 0x7F,
-    0x3F00, 0xC, 0xFF, 0x7F00, 0xC, 0x17F, 0x7F00, 0xC,
-    0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF, 1, 0x5E, 0x7F,
-    0x4F00, 0xC, 0xFF, 0x7F00, 0xC, 0x17F, 0x7F00, 0xC,
-    0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF, 2, 0x54, 0x7F,
-    0x7F00, 0x1C, 0xFF, 0x7F00, 0x1C, 0x17F, 0x7F00, 0x1C,
-    0xFFFF, 0xFFFF, 1, 0x5E, 0x7F, 0x4C00, 0xC, 0xFF,
-    0x7F00, 0xC, 0xFF, 0x7F00, 0xC, 0x17F, 0x7F00, 0xC,
-    0x1FF, 0x7F00, 0xC, 0xFFFF, 0xFFFF, 1, 0x54, 0x7F,
-    0x7F00, 0xC, 0xFF, 0x7F00, 0xC, 0x17F, 0x7F00, 0xC,
-    0xFFFF, 0xFFFF, 1, 0x54, 0x7F, 0x7F00, 0xC, 0xFF,
-    0x7F00, 0xC, 0x17F, 0x7F00, 0xC, 0x1FF, 0x7F00, 0xC,
-    0xFFFF, 0xFFFF, 2, 0x5E, 0x7F, 0x7F00, 0x1C, 0xFF,
-    0x7F00, 0x1C, 0x17F, 0x7F00, 0x1C, 0x1FF, 0x7F00, 0x1C,
-    0xFFFF, 0xFFFF, 3, 0x68, 0x7F, 0x7F00, 0x2C, 0xFF,
-    0x7F00, 0x2C, 0x17F, 0x7F00, 0x2C, 0x1FF, 0x7F00, 0x2C,
-    0xFFFF, 0xFFFF, 0xFFFF,
+const s32 bg_speed_tbl[17][4][2] = {
+    { { 16384, 40960 }, { 65536, 65536 }, { 0, 0 }, { 65536, 65536 } },
+    { { 40960, 49152 }, { 65536, 65536 }, { 40960, 65536 }, { 0, 0 } },
+    { { 49152, 61440 }, { 65536, 65536 }, { 32768, 45056 }, { 0, 0 } },
+    { { 57344, 69632 }, { 65536, 65536 }, { 0, 0 }, { 0, 0 } },
+    { { 49152, 57344 }, { 65536, 65536 }, { 49152, 65536 }, { 0, 0 } },
+    { { 65536, 65536 }, { 65536, 65536 }, { 65536, 65536 }, { 0, 0 } },
+    { { 49152, 57344 }, { 65536, 65536 }, { 0, 0 }, { 0, 0 } },
+    { { 40960, 65536 }, { 65536, 65536 }, { 16384, 40960 }, { 0, 0 } },
+    { { 4096, 32768 }, { 65536, 65536 }, { 0, 0 }, { 0, 0 } },
+    { { 32768, 32768 }, { 65536, 65536 }, { 0, 0 }, { 0, 0 } },
+    { { 49152, 57344 }, { 65536, 65536 }, { 32768, 61440 }, { 0, 0 } },
+    { { 57344, 69632 }, { 65536, 65536 }, { 0, 0 }, { 0, 0 } },
+    { { 49152, 49152 }, { 65536, 65536 }, { 32768, 61440 }, { 0, 0 } },
+    { { 61440, 65536 }, { 65536, 65536 }, { 32768, 61440 }, { 0, 0 } },
+    { { 24576, 49152 }, { 65536, 65536 }, { 32768, 61440 }, { 0, 0 } },
+    { { 49152, 57344 }, { 65536, 65536 }, { 0, 0 }, { 0, 0 } },
+    { { 57344, 57344 }, { 65536, 65536 }, { 32768, 61440 }, { 0, 0 } },
 };
 
 /* provisional name */
-const u32 bg_speed_tbl[136] = {
-    0x4000, 0xA000, 0x10000, 0x10000,
-    0, 0, 0x10000, 0x10000,
-    0xA000, 0xC000, 0x10000, 0x10000,
-    0xA000, 0x10000, 0, 0,
-    0xC000, 0xF000, 0x10000, 0x10000,
-    0x8000, 0xB000, 0, 0,
-    0xE000, 0x11000, 0x10000, 0x10000,
-    0, 0, 0, 0,
-    0xC000, 0xE000, 0x10000, 0x10000,
-    0xC000, 0x10000, 0, 0,
-    0x10000, 0x10000, 0x10000, 0x10000,
-    0x10000, 0x10000, 0, 0,
-    0xC000, 0xE000, 0x10000, 0x10000,
-    0, 0, 0, 0,
-    0xA000, 0x10000, 0x10000, 0x10000,
-    0x4000, 0xA000, 0, 0,
-    0x1000, 0x8000, 0x10000, 0x10000,
-    0, 0, 0, 0,
-    0x8000, 0x8000, 0x10000, 0x10000,
-    0, 0, 0, 0,
-    0xC000, 0xE000, 0x10000, 0x10000,
-    0x8000, 0xF000, 0, 0,
-    0xE000, 0x11000, 0x10000, 0x10000,
-    0, 0, 0, 0,
-    0xC000, 0xC000, 0x10000, 0x10000,
-    0x8000, 0xF000, 0, 0,
-    0xF000, 0x10000, 0x10000, 0x10000,
-    0x8000, 0xF000, 0, 0,
-    0x6000, 0xC000, 0x10000, 0x10000,
-    0x8000, 0xF000, 0, 0,
-    0xC000, 0xE000, 0x10000, 0x10000,
-    0, 0, 0, 0,
-    0xE000, 0xE000, 0x10000, 0x10000,
-    0x8000, 0xF000, 0, 0,
+const s32 etc_bg_speed_tbl[5][4][2] = {
+    { { 65536, 65536 }, { 65536, 65536 }, { 63488, 61440 }, { 65536, 65536 } },
+    { { 65536, 65536 }, { 65536, 65536 }, { 57344, 57344 }, { 0, 0 } },
+    { { 65536, 65536 }, { 65536, 65536 }, { 57344, 57344 }, { 0, 0 } },
+    { { 65536, 65536 }, { 65536, 65536 }, { 57344, 57344 }, { 0, 0 } },
+    { { 65536, 65536 }, { 65536, 65536 }, { 57344, 57344 }, { 0, 0 } },
 };
 
 /* provisional name */
-const u32 etc_bg_speed_tbl[40] = {
-    0x10000, 0x10000, 0x10000, 0x10000,
-    0xF800, 0xF000, 0x10000, 0x10000,
-    0x10000, 0x10000, 0x10000, 0x10000,
-    0xE000, 0xE000, 0, 0,
-    0x10000, 0x10000, 0x10000, 0x10000,
-    0xE000, 0xE000, 0, 0,
-    0x10000, 0x10000, 0x10000, 0x10000,
-    0xE000, 0xE000, 0, 0,
-    0x10000, 0x10000, 0x10000, 0x10000,
-    0xE000, 0xE000, 0, 0,
+const s32 etc_bg_zuubun_tbl[5][4] = {
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
 };
 
 /* provisional name */
-const u16 etc_bg_zuubun_tbl[40] = {
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
+const BG_GFX bg_gfx_tbl[18] = {
+    { 0x116C020, 23311, 0x116C0A0, 1 },
+    { 0x11A38B0, 17983, 0x11A3930, 1 },
+    { 0x1016800, 20735, 0x1016880, 1 },
+    { 0x1032800, 27071, 0x1032880, 1 },
+    { 0x105B800, 24959, 0x105B880, 1 },
+    { 0x1077000, 39327, 0x1077080, 1 },
+    { 0x10A1800, 43295, 0x10A1880, 1 },
+    { 0x1146800, 32303, 0x1146880, 1 },
+    { 0x10DC800, 9887, 0x10DC880, 1 },
+    { 0x10F2000, 24623, 0x10F2080, 1 },
+    { 0x1125800, 26463, 0x1125880, 1 },
+    { 0x115E020, 20767, 0x115E0A0, 1 },
+    { 0x1218000, 26287, 0x1218080, 1 },
+    { 0x118A8B0, 15327, 0x118A930, 1 },
+    { 0x11BA8B0, 17215, 0x11BA930, 1 },
+    { 0x11D28B0, 25775, 0x11D2930, 1 },
+    { 0x10A1800, 43295, 0x10A1880, 1 },
+    { 0x1600000, 3759, 0x1600080, 1 },
 };
 
 /* provisional name */
-const u32 bg_gfx_tbl[1] = {
-    0x116C020,
+const BG_GFX etc_bg_gfx_tbl[5] = {
+    { 0x1602000, 6511, 0x1602080, 1 },
+    { 0x1602000, 6511, 0x1602080, 1 },
+    { 0x1602000, 6511, 0x1602080, 1 },
+    { 0x1189020, 4383, 0x11890A0, 1 },
+    { 0x1189020, 4383, 0x11890A0, 1 },
 };
 
 /* provisional name */
-const u16 bg000_tbl_0616242C[142] = {
-    0, 0x5B0F, 0x116, 0xC0A0, 0, 1, 0x11A, 0x38B0,
-    0, 0x463F, 0x11A, 0x3930, 0, 1, 0x101, 0x6800,
-    0, 0x50FF, 0x101, 0x6880, 0, 1, 0x103, 0x2800,
-    0, 0x69BF, 0x103, 0x2880, 0, 1, 0x105, 0xB800,
-    0, 0x617F, 0x105, 0xB880, 0, 1, 0x107, 0x7000,
-    0, 0x999F, 0x107, 0x7080, 0, 1, 0x10A, 0x1800,
-    0, 0xA91F, 0x10A, 0x1880, 0, 1, 0x114, 0x6800,
-    0, 0x7E2F, 0x114, 0x6880, 0, 1, 0x10D, 0xC800,
-    0, 0x269F, 0x10D, 0xC880, 0, 1, 0x10F, 0x2000,
-    0, 0x602F, 0x10F, 0x2080, 0, 1, 0x112, 0x5800,
-    0, 0x675F, 0x112, 0x5880, 0, 1, 0x115, 0xE020,
-    0, 0x511F, 0x115, 0xE0A0, 0, 1, 0x121, 0x8000,
-    0, 0x66AF, 0x121, 0x8080, 0, 1, 0x118, 0xA8B0,
-    0, 0x3BDF, 0x118, 0xA930, 0, 1, 0x11B, 0xA8B0,
-    0, 0x433F, 0x11B, 0xA930, 0, 1, 0x11D, 0x28B0,
-    0, 0x64AF, 0x11D, 0x2930, 0, 1, 0x10A, 0x1800,
-    0, 0xA91F, 0x10A, 0x1880, 0, 1, 0x160, 0,
-    0, 0xEAF, 0x160, 0x80, 0, 1,
+const s16 bg_attr_tbl[19] = {
+    512, 512, 512, 512, 512, 512, 512, 512,
+    512, 512, 512, 512, 512, 512, 512, 512,
+    512, 512, 512,
 };
 
 /* provisional name */
-const u32 etc_bg_gfx_tbl[20] = {
-    0x1602000, 0x196F, 0x1602080, 1,
-    0x1602000, 0x196F, 0x1602080, 1,
-    0x1602000, 0x196F, 0x1602080, 1,
-    0x1189020, 0x111F, 0x11890A0, 1,
-    0x1189020, 0x111F, 0x11890A0, 1,
+const s16 etc_bg_attr_tbl[5] = {
+    512, 512, 512, 512, 512,
 };
 
 /* provisional name */
-const u16 bg_attr_tbl[19] = {
-    0x200, 0x200, 0x200, 0x200, 0x200, 0x200, 0x200, 0x200,
-    0x200, 0x200, 0x200, 0x200, 0x200, 0x200, 0x200, 0x200,
-    0x200, 0x200, 0x200,
+const s16 bg_cell_cnt_tbl[18][4] = {
+    { 8, 8, 8, 0 },
+    { 8, 8, 2, 0 },
+    { 8, 8, 0, 0 },
+    { 8, 8, 8, 0 },
+    { 8, 8, 8, 0 },
+    { 8, 8, 8, 0 },
+    { 8, 8, 0, 0 },
+    { 8, 8, 8, 0 },
+    { 12, 0, 0, 0 },
+    { 8, 8, 0, 0 },
+    { 8, 8, 8, 0 },
+    { 8, 8, 0, 0 },
+    { 8, 8, 8, 0 },
+    { 8, 8, 8, 0 },
+    { 8, 8, 8, 0 },
+    { 8, 8, 0, 0 },
+    { 8, 8, 0, 0 },
+    { 4, 0, 0, 0 },
 };
 
 /* provisional name */
-const u16 etc_bg_attr_tbl[5] = {
-    0x200, 0x200, 0x200, 0x200, 0x200,
-};
-
-/* provisional name */
-const u16 bg_cell_cnt_tbl[72] = {
-    8, 8, 8, 0, 8, 8, 2, 0,
-    8, 8, 0, 0, 8, 8, 8, 0,
-    8, 8, 8, 0, 8, 8, 8, 0,
-    8, 8, 0, 0, 8, 8, 8, 0,
-    0xC, 0, 0, 0, 8, 8, 0, 0,
-    8, 8, 8, 0, 8, 8, 0, 0,
-    8, 8, 8, 0, 8, 8, 8, 0,
-    8, 8, 8, 0, 8, 8, 0, 0,
-    8, 8, 0, 0, 4, 0, 0, 0,
-};
-
-/* provisional name */
-const u16 etc_bg_cell_cnt_tbl[20] = {
-    2, 0, 0, 0, 2, 0, 0, 0,
-    2, 0, 0, 0, 2, 0, 0, 0,
-    2, 0, 0, 0,
+const s16 etc_bg_cell_cnt_tbl[5][4] = {
+    { 2, 0, 0, 0 },
+    { 2, 0, 0, 0 },
+    { 2, 0, 0, 0 },
+    { 2, 0, 0, 0 },
+    { 2, 0, 0, 0 },
 };
 
 /* provisional name */
 const u32 bg_cg_src_tbl[20] = {
-    (u32)debug_scene_scrn_data, (u32)bg_scrn_data_01, (u32)bg_scrn_data_02, (u32)bg_scrn_data_03, (u32)bg_scrn_data_04, (u32)bg_scrn_data_05, (u32)eff23_scrn_data, (u32)bg_scrn_data_07,
-    (u32)bg_scrn_data_08, (u32)eff08_scrn_data, (u32)bg_scrn_data_10, (u32)bg_scrn_data_11, (u32)bg_scrn_data_12, (u32)effJ5_scrn_data, (u32)eff45_scrn_data, (u32)bg_scrn_data_15,
+    (u32)debug_scene_scrn_data, (u32)bg_scrn_data_01, (u32)bg_scrn_data_02, (u32)bg_scrn_data_03,
+    (u32)bg_scrn_data_04, (u32)bg_scrn_data_05, (u32)eff23_scrn_data, (u32)bg_scrn_data_07,
+    (u32)bg_scrn_data_08, (u32)eff08_scrn_data, (u32)bg_scrn_data_10, (u32)bg_scrn_data_11,
+    (u32)bg_scrn_data_12, (u32)effJ5_scrn_data, (u32)eff45_scrn_data, (u32)bg_scrn_data_15,
     (u32)eff23_scrn_data, (u32)effb0_scrn_data, (u32)effb0_scrn_data, (u32)effb0_scrn_data,
 };
 

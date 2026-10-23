@@ -116,7 +116,6 @@ extern const s16 pA_cmd_32[];
 extern const s16 pA_cmd_31[];
 extern const s16 pA_cmd_30[];
 extern const s16 pB_cmd_20[];
-extern const s16 cmd_data_06160804[];
 extern const s16 pB_cmd_21[];
 extern const s16 pB_cmd_22[];
 extern const s16 pB_cmd_28[];
@@ -154,7 +153,6 @@ extern const s16 pE_cmd_38[];
 extern const s16 pE_cmd_39[];
 extern const s16 pE_cmd_46[];
 extern const s16 pE_cmd_47[];
-extern const s16 cmd_data_06160FF8[];
 extern const s16 ukemi_time_tbl[];
 extern const char player_cmd_line_str0[];
 extern const char player_cmd_line_str1[];
@@ -945,16 +943,12 @@ const s16 pA_cmd_30[25] = {
     28,
 };
 
-const s16 pB_cmd_20[25] = {
+const s16 pB_cmd_20[33] = {
     12, 0, 0, 19, 19, 19, 19, 5,
     0, 1, 2, 19, 1, 0, 0, -32766,
     1, 10, 0, -32762, 1, 10, 0, -32764,
-    1,
-};
-
-/* provisional name */
-const s16 cmd_data_06160804[8] = {
-    14, 0, -32766, 1, 10, 0, -32762, 28,
+    1, 14, 0, -32766, 1, 10, 0, -32762,
+    28,
 };
 
 const s16 pB_cmd_21[33] = {
@@ -1217,15 +1211,11 @@ const s16 pE_cmd_46[25] = {
     28,
 };
 
-const s16 pE_cmd_47[23] = {
+const s16 pE_cmd_47[25] = {
     12, 1, 0, 22, 22, 22, 22, 5,
     4, 5, 6, 23, 1, 0, 0, -32766,
-    1, 10, 0, -32758, 1, 10, 0,
-};
-
-/* provisional name */
-const s16 cmd_data_06160FF8[2] = {
-    -32760, 28,
+    1, 10, 0, -32758, 1, 10, 0, -32760,
+    28,
 };
 
 const s16 ukemi_time_tbl[18] = {
@@ -1250,24 +1240,16 @@ const char player_cmd_line_str3[20] = "RIGHT =    SHOT4 =\n";
 const char player_cmd_line_str4[20] = "DIR        SHOT5 =\n";
 
 /* provisional name */
-const char player_cmd_line_str5[12] = {
-    0x53, 0x48, 0x4F, 0x54, 0x36, 0x20, 0x3D, 0xA, 0, 0xFF, 0xFF, 0xFF,
-};
+const char player_cmd_line_str5[12] = "SHOT6 =\n\0\xFF\xFF\xFF";
 
 /* provisional name */
 const char player_cmd_line_str6[8] = "SHOT6 =";
 
 /* provisional name */
-const char lvr_chk_line_str0[4] = {
-    0x53, 0x20, 0, 0xFF,
-};
+const char lvr_chk_line_str0[4] = "S \0\xFF";
 
 /* provisional name */
-const char lvr_chk_line_str1[4] = {
-    0x4D, 0x20, 0, 0xFF,
-};
+const char lvr_chk_line_str1[4] = "M \0\xFF";
 
 /* provisional name */
-const char lvr_chk_line_str2[4] = {
-    0x4C, 0x20, 0, 0xFF,
-};
+const char lvr_chk_line_str2[4] = "L \0\xFF";

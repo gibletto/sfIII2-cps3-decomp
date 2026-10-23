@@ -9,9 +9,13 @@
 
 extern const PANEL end_600_bg0_cell_tbl[];
 
-const PANEL end_600_bg0_cell_tbl[4] = {
+const PANEL end_600_bg0_cell_tbl[8] = {
     { 8192, 7 },
     { 8256, 8 },
     { 8320, 9 },
     { 8384, 10 },
+    { 12288, 1 },
+    { 12352, 2 },
+    { 12416, 3 },
+    { 12480, 4 },
 };

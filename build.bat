@@ -969,9 +969,6 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\end_6_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_6_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\end_6_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_6_tbl_b.obj >obj\shc.log 2>&1
-if errorlevel 1 goto fail
-findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\end_6_tbl_c.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\end_6_tbl_c.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log

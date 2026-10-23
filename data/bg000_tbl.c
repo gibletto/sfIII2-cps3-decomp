@@ -7,7 +7,6 @@
 
 #pragma section TBL
 
-extern const u32 bg000_tbl_061626F4[];
 extern const HUD_CELL bg_rewrite_cells0[];
 extern const HUD_CELL bg_rewrite_cells1[];
 extern const HUD_CELL bg_rewrite_cells2[];
@@ -23,15 +22,8 @@ extern const TILEREQ bg_etc_cells1[];
 extern const TILEREQ bg_etc_cells2[];
 extern const TILEREQ bg_etc_cells3[];
 extern const TILEREQ bg_etc_cells4[];
-extern const s16 bg000_tbl_06162AAC[][6];
+extern const s16 bg_limit_unref_tbl[][6];
 extern const u16 bg_limit_tbl[];
-
-/* provisional name */
-const u32 bg000_tbl_061626F4[12] = {
-    0x2080, 3, 0x20C0, 4,
-    0x3000, 5, 0x3040, 6,
-    0x3080, 7, 0x30C0, 8,
-};
 
 /* provisional name */
 const HUD_CELL bg_rewrite_cells0[8] = {
@@ -201,8 +193,8 @@ const TILEREQ bg_etc_cells4[2] = {
     { 64, 12416, 4 },
 };
 
-/* provisional name */
-const s16 bg000_tbl_06162AAC[17][6] = {
+/* rows of bg_limit_tbl's form; nothing in the program refers to it (provisional name) */
+const s16 bg_limit_unref_tbl[17][6] = {
     { 328, 700, 384, 644, 160, 176 },
     { 274, 752, 330, 696, 160, 176 },
     { -202, 197, -146, 141, 144, 160 },

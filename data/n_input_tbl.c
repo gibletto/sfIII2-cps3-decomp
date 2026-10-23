@@ -39,8 +39,6 @@ const s8 name_code_tbl[50] = {
     -1, -1,
 };
 
-const char thank_you_str[12] = {
-    0x54, 0x48, 0x41, 0x4E, 0x4B, 0x20, 0x59, 0x4F, 0x55, 0, 0xFF, 0xFF,
-};
+const char thank_you_str[12] = "THANK YOU\0\xFF\xFF";
 
 const char for_playing_str[12] = "FOR PLAYING";

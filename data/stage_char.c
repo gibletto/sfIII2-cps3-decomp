@@ -2,8 +2,8 @@
  * STAGE_CHAR.C  Stage background character scripts
  *
  * Scripts for the characters in the stage backgrounds: the stgNN_char_table of each stage (provisional
- * names), brz_char_table, stage_char_06356D60, and the tables of the stage effects 07, 08, 09, 19, 21, 22,
- * 28, 29, 45, 54, 86 and 90.
+ * names), brz_char_table, the tables of the stage effects 07, 08, 09, 19, 21, 22, 28, 29, 45, 54, 86 and
+ * 90, and stage_unref_char_table, which nothing in the program reads.
  * Each *_char_table is an index of animation scripts ending in 0; set_char_move_init starts script
  * char_table[kind][index], whose HEAD sits just before the address the index holds. See charscr.h for
  * the line layouts.
@@ -135,7 +135,7 @@ extern const u16 stg02_char_table_023_head[];
 extern const u16 stg02_char_table_023[];
 extern const u32 stg03_char_table[];
 extern const u32 eff21_char_table[];
-extern const u16 eff22_char_table[];
+extern const u32 eff22_char_table[];
 extern const u16 stg03_char_table_000_head[];
 extern const u16 stg03_char_table_000[];
 extern const u16 stg03_char_table_001_head[];
@@ -216,10 +216,16 @@ extern const u16 eff21_char_table_004_head[];
 extern const u16 eff21_char_table_004[];
 extern const u16 eff21_char_table_005_head[];
 extern const u16 eff21_char_table_005[];
+extern const u16 eff22_char_table_000_head[];
+extern const u16 eff22_char_table_000[];
+extern const u16 eff22_char_table_001_head[];
+extern const u16 eff22_char_table_001[];
+extern const u16 eff22_char_table_002_head[];
+extern const u16 eff22_char_table_002[];
 extern const u32 stg10_char_table[];
 extern const u32 eff28_char_table[];
 extern const u32 eff29_type0_char_table[];
-extern const u16 eff29_type1_char_table[];
+extern const u32 eff29_type1_char_table[];
 extern const u16 stg10_char_table_000_head[];
 extern const u16 stg10_char_table_000[];
 extern const u16 stg10_char_table_001_head[];
@@ -392,6 +398,20 @@ extern const u16 eff29_type0_char_table_002_head[];
 extern const u16 eff29_type0_char_table_002[];
 extern const u16 eff29_type0_char_table_003_head[];
 extern const u16 eff29_type0_char_table_003[];
+extern const u16 eff29_type1_char_table_000_head[];
+extern const u16 eff29_type1_char_table_000[];
+extern const u16 eff29_type1_char_table_001_head[];
+extern const u16 eff29_type1_char_table_001[];
+extern const u16 eff29_type1_char_table_002_head[];
+extern const u16 eff29_type1_char_table_002[];
+extern const u16 eff29_type1_char_table_003_head[];
+extern const u16 eff29_type1_char_table_003[];
+extern const u16 eff29_type1_char_table_004_head[];
+extern const u16 eff29_type1_char_table_004[];
+extern const u16 eff29_type1_char_table_005_head[];
+extern const u16 eff29_type1_char_table_005[];
+extern const u16 eff29_type1_char_table_006_head[];
+extern const u16 eff29_type1_char_table_006[];
 extern const u32 stg04_char_table[];
 extern const u16 stg04_char_table_000_head[];
 extern const u16 stg04_char_table_000[];
@@ -417,7 +437,7 @@ extern const u16 stg04_char_table_010_head[];
 extern const u16 stg04_char_table_010[];
 extern const u32 stg05_char_table[];
 extern const u32 eff08_char_table[];
-extern const u16 eff07_char_table[];
+extern const u32 eff07_char_table[];
 extern const u16 stg05_char_table_000_head[];
 extern const u16 stg05_char_table_000[];
 extern const u16 stg05_char_table_001_head[];
@@ -486,6 +506,16 @@ extern const u16 eff08_char_table_014_head[];
 extern const u16 eff08_char_table_014[];
 extern const u16 eff08_char_table_015_head[];
 extern const u16 eff08_char_table_015[];
+extern const u16 eff07_char_table_000_head[];
+extern const u16 eff07_char_table_000[];
+extern const u16 eff07_char_table_001_head[];
+extern const u16 eff07_char_table_001[];
+extern const u16 eff07_char_table_002_head[];
+extern const u16 eff07_char_table_002[];
+extern const u16 eff07_char_table_003_head[];
+extern const u16 eff07_char_table_003[];
+extern const u16 eff07_char_table_004_head[];
+extern const u16 eff07_char_table_004[];
 extern const u32 stg06_char_table[];
 extern const u16 stg06_char_table_000_head[];
 extern const u16 stg06_char_table_000[];
@@ -565,7 +595,7 @@ extern const u32 stg07_char_table[];
 extern const u16 stg07_char_table_000_head[];
 extern const u16 stg07_char_table_000[];
 extern const u32 eff45_char_table[];
-extern const u16 eff54_char_table[];
+extern const u32 eff54_char_table[];
 extern const u16 eff45_char_table_000_head[];
 extern const u16 eff45_char_table_000[];
 extern const u16 eff45_char_table_001_head[];
@@ -620,6 +650,16 @@ extern const u16 eff45_char_table_025_head[];
 extern const u16 eff45_char_table_025[];
 extern const u16 eff45_char_table_026_head[];
 extern const u16 eff45_char_table_026[];
+extern const u16 eff54_char_table_000_head[];
+extern const u16 eff54_char_table_000[];
+extern const u16 eff54_char_table_001_head[];
+extern const u16 eff54_char_table_001[];
+extern const u16 eff54_char_table_002_head[];
+extern const u16 eff54_char_table_002[];
+extern const u16 eff54_char_table_003_head[];
+extern const u16 eff54_char_table_003[];
+extern const u16 eff54_char_table_004_head[];
+extern const u16 eff54_char_table_004[];
 extern const u32 eff86_char_table[];
 extern const u16 eff86_char_table_000_head[];
 extern const u16 eff86_char_table_000[];
@@ -786,19 +826,19 @@ extern const u16 brz_char_table_051_head[];
 extern const u16 brz_char_table_051[];
 extern const u16 eff90_char_table_000_head[];
 extern const u16 eff90_char_table_000[];
-extern const u32 stage_char_06356D60[];
-extern const u16 stage_char_06356D60_000_head[];
-extern const u16 stage_char_06356D60_000[];
-extern const u16 stage_char_06356D60_001_head[];
-extern const u16 stage_char_06356D60_001[];
-extern const u16 stage_char_06356D60_002_head[];
-extern const u16 stage_char_06356D60_002[];
-extern const u16 stage_char_06356D60_003_head[];
-extern const u16 stage_char_06356D60_003[];
-extern const u16 stage_char_06356D60_004_head[];
-extern const u16 stage_char_06356D60_004[];
-extern const u16 stage_char_06356D60_005_head[];
-extern const u16 stage_char_06356D60_005[];
+extern const u32 stage_unref_char_table[];
+extern const u16 stage_unref_char_table_000_head[];
+extern const u16 stage_unref_char_table_000[];
+extern const u16 stage_unref_char_table_001_head[];
+extern const u16 stage_unref_char_table_001[];
+extern const u16 stage_unref_char_table_002_head[];
+extern const u16 stage_unref_char_table_002[];
+extern const u16 stage_unref_char_table_003_head[];
+extern const u16 stage_unref_char_table_003[];
+extern const u16 stage_unref_char_table_004_head[];
+extern const u16 stage_unref_char_table_004[];
+extern const u16 stage_unref_char_table_005_head[];
+extern const u16 stage_unref_char_table_005[];
 
 /* stg00_char_table: 13 entries */
 const u32 stg00_char_table[14] = {
@@ -1828,8 +1868,9 @@ const u32 eff21_char_table[6] = {
     (u32)eff21_char_table_000, (u32)eff21_char_table_001, (u32)eff21_char_table_002, (u32)eff21_char_table_003, (u32)eff21_char_table_004, (u32)eff21_char_table_005,
 };
 
-const u16 eff22_char_table[8] = {
-    0x634, 0xF9CC, 0x634, 0xF9FC, 0x634, 0xFC24, 0, 0,
+/* eff22_char_table: 3 entries */
+const u32 eff22_char_table[4] = {
+    (u32)eff22_char_table_000, (u32)eff22_char_table_001, (u32)eff22_char_table_002, 0,
 };
 
 const u16 stg03_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
@@ -2367,18 +2408,24 @@ const u16 eff21_char_table_004[64] = {
 };
 
 const u16 eff21_char_table_005_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 eff21_char_table_005[356] = {
+const u16 eff21_char_table_005[16] = {
     L2(3, 0, 0, 0, 0, 0, 0, 0x7F0B),
     L2(3, 0, 0, 0, 0, 0, 0, 0x7F0C),
     L2(3, 0, 0, 0, 0, 0, 0, 0x7F0D),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff22_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff22_char_table_000[20] = {
     L2(80, 0, 0, 0, 0, 0, 0, 0x7EF7),
     L2(48, 0, 0, 0, 0, 0, 0, 0x7EF6),
     L2(15, 0, 0, 0, 0, 0, 0, 0x7EF7),
     L2(10, 0, 0, 0, 0, 0, 0, 0x7EF6),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff22_char_table_001_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff22_char_table_001[272] = {
     L2(2, 8, 0, 0, 0, 0, 0, 0x7F07),
     L2(2, 8, 0, 0, 0, 0, 0, 0x7F08),
     L2(2, 7, 0, 0, 0, 0, 0, 0x7F07),
@@ -2447,7 +2494,10 @@ const u16 eff21_char_table_005[356] = {
     L2(2, 8, 0, 0, 0, 0, 0, 0x7F08),
     L2(2, 99, 0, 0, 0, 0, 0, 0x7F08),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff22_char_table_002_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff22_char_table_002[36] = {
     L2(80, 0, 0, 0, 0, 0, 0, 0x7EF9),
     L2(48, 0, 0, 0, 0, 0, 0, 0x7EF8),
     L2(15, 0, 0, 0, 0, 0, 0, 0x7EF9),
@@ -2486,10 +2536,10 @@ const u32 eff29_type0_char_table[4] = {
     (u32)eff29_type0_char_table_000, (u32)eff29_type0_char_table_001, (u32)eff29_type0_char_table_002, (u32)eff29_type0_char_table_003,
 };
 
-/* provisional name */
-const u16 eff29_type1_char_table[16] = {
-    0x635, 0x1734, 0x635, 0x1814, 0x635, 0x1874, 0x635, 0x18C4,
-    0x635, 0x18EC, 0x635, 0x1954, 0x635, 0x197C, 0, 0,
+/* eff29_type1_char_table: 7 entries */
+const u32 eff29_type1_char_table[8] = {
+    (u32)eff29_type1_char_table_000, (u32)eff29_type1_char_table_001, (u32)eff29_type1_char_table_002, (u32)eff29_type1_char_table_003, (u32)eff29_type1_char_table_004, (u32)eff29_type1_char_table_005,
+    (u32)eff29_type1_char_table_006, 0,
 };
 
 const u16 stg10_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
@@ -3545,7 +3595,7 @@ const u16 eff29_type0_char_table_002[56] = {
 };
 
 const u16 eff29_type0_char_table_003_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 eff29_type0_char_table_003[376] = {
+const u16 eff29_type0_char_table_003[44] = {
     L2(10, 0, 0, 0, 0, 0, 0, 0x8355),
     L2(10, 0, 0, 0, 0, 0, 0, 0x8356),
     L2(10, 0, 0, 0, 0, 0, 0, 0x8357),
@@ -3557,7 +3607,10 @@ const u16 eff29_type0_char_table_003[376] = {
     L2(10, 0, 0, 0, 0, 0, 0, 0x835D),
     L2(10, 1, 0, 0, 0, 0, 0, 0x835D),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff29_type1_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff29_type1_char_table_000[108] = {
     L2(8, 0, 0, 0, 0, 0, 0, 0x833A),
     L2(8, 0, 0, 0, 0, 0, 0, 0x833B),
     L2(8, 0, 0, 0, 0, 0, 0, 0x833C),
@@ -3585,7 +3638,10 @@ const u16 eff29_type0_char_table_003[376] = {
     L2(8, 0, 0, 0, 0, 0, 0, 0x836C),
     L2(8, 0, 0, 0, 0, 0, 0, 0x836D),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff29_type1_char_table_001_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff29_type1_char_table_001[44] = {
     L2(8, 0, 0, 0, 0, 0, 0, 0x8341),
     L2(8, 0, 0, 0, 0, 0, 0, 0x8342),
     L2(8, 0, 0, 0, 0, 0, 0, 0x8343),
@@ -3597,7 +3653,10 @@ const u16 eff29_type0_char_table_003[376] = {
     L2(8, 0, 0, 0, 0, 0, 0, 0x8349),
     L2(8, 1, 0, 0, 0, 0, 0, 0x8349),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff29_type1_char_table_002_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff29_type1_char_table_002[36] = {
     L2(10, 0, 0, 0, 0, 0, 0, 0x834A),
     L2(10, 0, 0, 0, 0, 0, 0, 0x834B),
     L2(10, 0, 0, 0, 0, 0, 0, 0x834C),
@@ -3607,12 +3666,18 @@ const u16 eff29_type0_char_table_003[376] = {
     L2(10, 0, 0, 0, 0, 0, 0, 0x8350),
     L2(10, 0, 0, 0, 0, 0, 0, 0x8351),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff29_type1_char_table_003_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff29_type1_char_table_003[16] = {
     L2(8, 0, 0, 0, 0, 0, 0, 0x8352),
     L2(8, 0, 0, 0, 0, 0, 0, 0x8353),
     L2(8, 1, 0, 0, 0, 0, 0, 0x8353),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff29_type1_char_table_004_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff29_type1_char_table_004[48] = {
     L2(10, 0, 0, 0, 0, 0, 0, 0x8325),
     L2(10, 0, 0, 0, 0, 0, 0, 0x8326),
     L2(10, 0, 0, 0, 0, 0, 0, 0x8327),
@@ -3625,12 +3690,18 @@ const u16 eff29_type0_char_table_003[376] = {
     L2(10, 0, 0, 0, 0, 0, 0, 0x832E),
     L2(10, 1, 0, 0, 0, 0, 0, 0x832F),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff29_type1_char_table_005_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff29_type1_char_table_005[16] = {
     L2(8, 0, 0, 0, 0, 0, 0, 0x8330),
     L2(8, 0, 0, 0, 0, 0, 0, 0x8331),
     L2(8, 1, 0, 0, 0, 0, 0, 0x8331),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff29_type1_char_table_006_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff29_type1_char_table_006[36] = {
     L2(10, 0, 0, 0, 0, 0, 0, 0x8332),
     L2(10, 0, 0, 0, 0, 0, 0, 0x8333),
     L2(10, 0, 0, 0, 0, 0, 0, 0x8334),
@@ -3801,9 +3872,9 @@ const u32 eff08_char_table[16] = {
     (u32)eff08_char_table_012, (u32)eff08_char_table_013, (u32)eff08_char_table_014, (u32)eff08_char_table_015,
 };
 
-const u16 eff07_char_table[12] = {
-    0x635, 0x2DAC, 0x635, 0x2E2C, 0x635, 0x2F44, 0x635, 0x2FB4,
-    0x635, 0x2FFC, 0, 0,
+/* eff07_char_table: 5 entries */
+const u32 eff07_char_table[6] = {
+    (u32)eff07_char_table_000, (u32)eff07_char_table_001, (u32)eff07_char_table_002, (u32)eff07_char_table_003, (u32)eff07_char_table_004, 0,
 };
 
 const u16 stg05_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
@@ -4388,7 +4459,7 @@ const u16 eff08_char_table_014[36] = {
 };
 
 const u16 eff08_char_table_015_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 eff08_char_table_015[412] = {
+const u16 eff08_char_table_015[84] = {
     L2(2, 0, 0, 0, 0, 0, 0, 0x85B6),
     L2(2, 0, 0, 0, 0, 0, 0, 0x85B7),
     L2(2, 0, 0, 0, 0, 0, 0, 0x85B8),
@@ -4410,7 +4481,10 @@ const u16 eff08_char_table_015[412] = {
     L2(2, 0, 0, 0, 0, 0, 0, 0x85BE),
     L2(2, 0, 0, 0, 0, 0, 0, 0x85BF),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff07_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff07_char_table_000[60] = {
     CMD(CM_FOR, 0, 0, 3),
     L2(7, 0, 0, 0, 0, 0, 0, 0x856E),
     L2(17, 0, 0, 0, 0, 0, 0, 0x856F),
@@ -4426,7 +4500,10 @@ const u16 eff08_char_table_015[412] = {
     L2(6, 0, 0, 0, 0, 0, 0, 0x8575),
     L2(6, 1, 0, 0, 0, 0, 0, 0x8575),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff07_char_table_001_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff07_char_table_001[136] = {
     L2(21, 0, 0, 0, 0, 0, 0, 0x856E),
     L2(6, 0, 0, 0, 0, 0, 0, 0x8572),
     L2(6, 0, 0, 0, 0, 0, 0, 0x8573),
@@ -4461,7 +4538,10 @@ const u16 eff08_char_table_015[412] = {
     L2(7, 0, 0, 0, 0, 0, 0, 0x8573),
     L2(7, 1, 0, 0, 0, 0, 0, 0x8573),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff07_char_table_002_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff07_char_table_002[52] = {
     L2(16, 0, 0, 0, 0, 0, 0, 0x8579),
     L2(6, 0, 0, 0, 0, 0, 0, 0x857A),
     L2(32, 0, 0, 0, 0, 0, 0, 0x857B),
@@ -4475,7 +4555,10 @@ const u16 eff08_char_table_015[412] = {
     L2(8, 0, 0, 0, 0, 0, 0, 0x8581),
     L2(8, 1, 0, 0, 0, 0, 0, 0x8581),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff07_char_table_003_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff07_char_table_003[32] = {
     CMD(CM_FOR, 0, 0, 5),
     L2(6, 0, 0, 0, 0, 0, 0, 0x857F),
     L2(5, 0, 0, 0, 0, 0, 0, 0x8581),
@@ -4484,7 +4567,10 @@ const u16 eff08_char_table_015[412] = {
     L2(3, 0, 0, 0, 0, 0, 0, 0x8571),
     L2(8, 1, 0, 0, 0, 0, 0, 0x8571),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff07_char_table_004_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff07_char_table_004[28] = {
     L2(6, 0, 0, 0, 0, 0, 0, 0x8578),
     L2(6, 0, 0, 0, 0, 0, 0, 0x857C),
     L2(8, 0, 0, 0, 0, 0, 0, 0x857D),
@@ -5110,9 +5196,9 @@ const u32 eff45_char_table[27] = {
     (u32)eff45_char_table_024, (u32)eff45_char_table_025, (u32)eff45_char_table_026,
 };
 
-const u16 eff54_char_table[12] = {
-    0x635, 0x4590, 0x635, 0x46C8, 0x635, 0x4710, 0x635, 0x4738,
-    0x635, 0x4778, 0, 0,
+/* eff54_char_table: 5 entries */
+const u32 eff54_char_table[6] = {
+    (u32)eff54_char_table_000, (u32)eff54_char_table_001, (u32)eff54_char_table_002, (u32)eff54_char_table_003, (u32)eff54_char_table_004, 0,
 };
 
 const u16 eff45_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
@@ -5357,13 +5443,16 @@ const u16 eff45_char_table_025[20] = {
 };
 
 const u16 eff45_char_table_026_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 eff45_char_table_026[348] = {
+const u16 eff45_char_table_026[20] = {
     L2(12, 0, 0, 0, 0, 0, 0, 0x8765),
     L2(12, 0, 0, 0, 0, 0, 0, 0x8766),
     L2(12, 0, 0, 0, 0, 0, 0, 0x8767),
     L2(12, 0, 0, 0, 0, 0, 0, 0x8766),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff54_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff54_char_table_000[152] = {
     L2(6, 0, 0, 0, 0, 0, 0, 0x8818),
     L2(6, 0, 0, 0, 0, 0, 0, 0x8819),
     L2(6, 0, 0, 0, 0, 0, 0, 0x881A),
@@ -5402,7 +5491,10 @@ const u16 eff45_char_table_026[348] = {
     L2(9, 0, 0, 0, 0, 0, 0, 0x8838),
     L2(2, 1, 0, 0, 0, 0, 0, 0x8838),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff54_char_table_001_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff54_char_table_001[32] = {
     L2(9, 0, 0, 0, 0, 0, 0, 0x8839),
     L2(10, 0, 0, 0, 0, 0, 0, 0x883A),
     L2(9, 0, 0, 0, 0, 0, 0, 0x883B),
@@ -5411,12 +5503,18 @@ const u16 eff45_char_table_026[348] = {
     L2(11, 0, 0, 0, 0, 0, 0, 0x883E),
     L2(8, 0, 0, 0, 0, 0, 0, 0x883F),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff54_char_table_002_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff54_char_table_002[16] = {
     L2(16, 0, 0, 0, 0, 0, 0, 0x8848),
     L2(16, 0, 0, 0, 0, 0, 0, 0x8849),
     L2(16, 0, 0, 0, 0, 0, 0, 0x884A),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff54_char_table_003_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff54_char_table_003[28] = {
     L2(4, 0, 0, 0, 0, 0, 0, 0x8841),
     L2(24, 0, 0, 0, 0, 0, 0, 0x8843),
     L2(2, 0, 0, 0, 0, 0, 0, 0x8844),
@@ -5424,7 +5522,10 @@ const u16 eff45_char_table_026[348] = {
     L2(2, 2, 0, 0, 0, 0, 0, 0x8845),
     L2(250, 1, 0, 0, 0, 0, 0, 0x8845),
     CMD(CM_ROA, 0, 0, 0),
-    CMD(CM_END, 0, 0, 0),
+};
+
+const u16 eff54_char_table_004_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 eff54_char_table_004[80] = {
     L2(5, 0, 0, 0, 0, 0, 0, 0x8839),
     L2(6, 0, 0, 0, 0, 0, 0, 0x883A),
     L2(4, 0, 0, 0, 0, 0, 0, 0x883B),
@@ -6875,13 +6976,13 @@ const u16 eff90_char_table_000[8] = {
 
 /* provisional name */
 /* 6 entries; nothing in the program refers to it */
-const u32 stage_char_06356D60[7] = {
-    (u32)stage_char_06356D60_000, (u32)stage_char_06356D60_001, (u32)stage_char_06356D60_002, (u32)stage_char_06356D60_003, (u32)stage_char_06356D60_004, (u32)stage_char_06356D60_005,
+const u32 stage_unref_char_table[7] = {
+    (u32)stage_unref_char_table_000, (u32)stage_unref_char_table_001, (u32)stage_unref_char_table_002, (u32)stage_unref_char_table_003, (u32)stage_unref_char_table_004, (u32)stage_unref_char_table_005,
     0,
 };
 
-const u16 stage_char_06356D60_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 stage_char_06356D60_000[224] = {
+const u16 stage_unref_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 stage_unref_char_table_000[224] = {
     L2(4, 13, 0, 0, 0, 0, 0, 0x9A90),
     L2(4, 13, 0, 0, 0, 0, 0, 0x9A91),
     L2(4, 13, 0, 0, 0, 0, 0, 0x9A92),
@@ -6940,8 +7041,8 @@ const u16 stage_char_06356D60_000[224] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-const u16 stage_char_06356D60_001_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 stage_char_06356D60_001[176] = {
+const u16 stage_unref_char_table_001_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 stage_unref_char_table_001[176] = {
     L2(1, 13, 0, 0, 0, 0, 0, 0x9A96),
     L2(1, 13, 0, 0, 0, 0, 0, 0x9A97),
     L2(1, 13, 0, 0, 0, 0, 0, 0x9A98),
@@ -6988,8 +7089,8 @@ const u16 stage_char_06356D60_001[176] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-const u16 stage_char_06356D60_002_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 stage_char_06356D60_002[40] = {
+const u16 stage_unref_char_table_002_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 stage_unref_char_table_002[40] = {
     L2(8, 0, 0, 0, 0, 0, 0, 0xAF38),
     L2(8, 0, 0, 0, 0, 0, 0, 0xAF39),
     L2(8, 0, 0, 0, 0, 0, 0, 0xAF3A),
@@ -7002,8 +7103,8 @@ const u16 stage_char_06356D60_002[40] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-const u16 stage_char_06356D60_003_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 stage_char_06356D60_003[40] = {
+const u16 stage_unref_char_table_003_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 stage_unref_char_table_003[40] = {
     L2(8, 0, 0, 0, 0, 0, 0, 0xAF3B),
     L2(8, 0, 0, 0, 0, 0, 0, 0xAF3C),
     L2(8, 0, 0, 0, 0, 0, 0, 0xAF3D),
@@ -7016,16 +7117,16 @@ const u16 stage_char_06356D60_003[40] = {
     CMD(CM_ROA, 0, 0, 0),
 };
 
-const u16 stage_char_06356D60_004_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 stage_char_06356D60_004[16] = {
+const u16 stage_unref_char_table_004_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 stage_unref_char_table_004[16] = {
     L2(18, 0, 0, 0, 0, 0, 0, 0xAF40),
     L2(18, 0, 0, 0, 0, 0, 0, 0xAF41),
     L2(18, 0, 0, 0, 0, 0, 0, 0xAF42),
     CMD(CM_ROA, 0, 0, 0),
 };
 
-const u16 stage_char_06356D60_005_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 stage_char_06356D60_005[16] = {
+const u16 stage_unref_char_table_005_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 stage_unref_char_table_005[16] = {
     L2(18, 0, 0, 0, 0, 0, 0, 0xAF43),
     L2(18, 0, 0, 0, 0, 0, 0, 0xAF44),
     L2(18, 0, 0, 0, 0, 0, 0, 0xAF45),

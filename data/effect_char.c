@@ -2,7 +2,8 @@
  * EFFECT_CHAR.C  Effect character scripts
  *
  * Scripts for effects drawn with character data: player effects (plef), ef01, the ef13 effect, effect G0's
- * character sets, the rival face panels (ag_face_panel_table) and effD4.
+ * character sets, the rival face panels (ag_face_panel_table) and effD4; effect_unref_char_table is read
+ * by nothing.
  * Each *_char_table is an index of animation scripts ending in 0; set_char_move_init starts script
  * char_table[kind][index], whose HEAD sits just before the address the index holds. See charscr.h for
  * the line layouts.
@@ -766,9 +767,9 @@ extern const u16 effD4_char_table_000_head[];
 extern const u16 effD4_char_table_000[];
 extern const u16 effD4_char_table_001_head[];
 extern const u16 effD4_char_table_001[];
-extern const u32 effect_char_062FEAF4[];
-extern const u16 effect_char_062FEAF4_000_head[];
-extern const u16 effect_char_062FEAF4_000[];
+extern const u32 effect_unref_char_table[];
+extern const u16 effect_unref_char_table_000_head[];
+extern const u16 effect_unref_char_table_000[];
 
 /* plef_char_table: 170 entries */
 const u32 plef_char_table[171] = {
@@ -6879,12 +6880,12 @@ const u16 effD4_char_table_001[48] = {
 
 /* provisional name */
 /* 1 entry; nothing in the program refers to it */
-const u32 effect_char_062FEAF4[2] = {
-    (u32)effect_char_062FEAF4_000, 0,
+const u32 effect_unref_char_table[2] = {
+    (u32)effect_unref_char_table_000, 0,
 };
 
-const u16 effect_char_062FEAF4_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
-const u16 effect_char_062FEAF4_000[20] = {
+const u16 effect_unref_char_table_000_head[4] = { HEAD(2, 0, 0, 0, 0, 0, 0) };
+const u16 effect_unref_char_table_000[20] = {
     CMD(CM_EXEC, 1, 65, 0),
     CMD(CM_PAXY, 0, 8192, 0),
     CMD(CM_EXEC, 1, 66, 0),

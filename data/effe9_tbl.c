@@ -7,15 +7,11 @@
 
 #pragma section TBL
 
-extern const s16 effE9_data[][4];
-extern const u16 effe9_tbl_0617C58C[];
+extern const s16 effE9_data[][3];
 
-const s16 effE9_data[1][4] = {
-    { 512, 0, 0, 512 },
+const s16 effE9_data[4][3] = {
+    { 512, 0, 0 },
+    { 512, 208, 1 },
+    { 292, 136, 2 },
+    { 728, 136, 2 },
 };
-
-/* provisional name */
-const u16 effe9_tbl_0617C58C[8] = {
-    0xD0, 1, 0x124, 0x88, 2, 0x2D8, 0x88, 2,
-};
-

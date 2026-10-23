@@ -7,10 +7,17 @@
 
 #pragma section TBL
 
-extern const u32 sc_data4_06174D84[];
+extern const s16 hud_cell_pos_tbl[][2];
 
 /* provisional name */
-const u32 sc_data4_06174D84[8] = {
-    0x30005, 0x70005, 0xB0005, 0x130005,
-    0x1F0005, 0x2F0005, 0x330005, 0x370005,
+/* Eight (x, y) cell positions on row 5. Nothing in the program refers to it by name or address. */
+const s16 hud_cell_pos_tbl[8][2] = {
+    { 3, 5 },
+    { 7, 5 },
+    { 11, 5 },
+    { 19, 5 },
+    { 31, 5 },
+    { 47, 5 },
+    { 51, 5 },
+    { 55, 5 },
 };

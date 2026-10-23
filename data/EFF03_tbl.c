@@ -12,7 +12,7 @@ extern const s16 eff04_col_tbl[];
 extern const s16 scr_obj_num[];
 extern const s16 scr_obj_num6[];
 extern const u16 eff07_char_index_tbl[];
-extern const u16 eff09_data[];
+extern const s16 eff09_data[][9];
 
 const s16 plef_kage_data[1][4] = {
     { 0, 0, 0, 0 },
@@ -128,10 +128,9 @@ const u16 eff07_char_index_tbl[18] = {
 };
 
 /* provisional name */
-const u16 eff09_data[36] = {
-    0, 2, 0x2040, 0x180, 0x30, 0x46, 0, 1,
-    0, 0, 2, 0x2059, 0xFD, 0x82, 0x4A, 1,
-    1, 0, 0, 2, 0x2059, 0xFC, 0x87, 0x4A,
-    2, 1, 0, 0, 2, 0x2059, 0x101, 0x82,
-    0x4A, 3, 1, 0,
+const s16 eff09_data[4][9] = {
+    { 0, 2, 8256, 384, 48, 70, 0, 1, 0 },
+    { 0, 2, 8281, 253, 130, 74, 1, 1, 0 },
+    { 0, 2, 8281, 252, 135, 74, 2, 1, 0 },
+    { 0, 2, 8281, 257, 130, 74, 3, 1, 0 },
 };

@@ -9,12 +9,11 @@
 
 extern const s16 coltbl_000_1P[];
 extern const s16 coltbl_000_2P[];
-extern const s16 EFFD9_tbl_0617AF20[];
 extern const s16 coltbl_008_2P[];
 extern const ColorTableIndex color_table_index[];
 extern const s16 effE0_x_tbl[];
 extern const s16 effE0_delay_tbl[];
-extern const u16 EFFD9_tbl_0617B02C[];
+extern const u16 effE0_delay_tbl_tail[];
 extern const u16 flames_stand[];
 
 const s16 coltbl_000_1P[10] = {
@@ -22,22 +21,17 @@ const s16 coltbl_000_1P[10] = {
     0, 0,
 };
 
-const s16 coltbl_000_2P[10] = {
+const s16 coltbl_000_2P[78] = {
     1, 8208, 2, 8209, 1, 8211, 2, 8209,
-    0, 0,
-};
-
-/* provisional name */
-const s16 EFFD9_tbl_0617AF20[68] = {
-    2, 8192, 2, 8194, 0, 0, 2, 8208,
-    2, 8210, 0, 0, 999, 8195, 0, 0,
-    999, 8211, 0, 0, 2, 8192, 2, 8193,
-    0, 0, 2, 8208, 2, 8209, 0, 0,
-    2, 8192, 2, 8196, 0, 0, 2, 8208,
-    2, 8212, 0, 0, 1, 8318, 2, 8192,
-    0, 0, 1, 8319, 2, 8208, 0, 0,
-    2, 8192, 2, 8371, 2, 8192, 2, 8374,
-    0, 0, 2, 8208,
+    0, 0, 2, 8192, 2, 8194, 0, 0,
+    2, 8208, 2, 8210, 0, 0, 999, 8195,
+    0, 0, 999, 8211, 0, 0, 2, 8192,
+    2, 8193, 0, 0, 2, 8208, 2, 8209,
+    0, 0, 2, 8192, 2, 8196, 0, 0,
+    2, 8208, 2, 8212, 0, 0, 1, 8318,
+    2, 8192, 0, 0, 1, 8319, 2, 8208,
+    0, 0, 2, 8192, 2, 8371, 2, 8192,
+    2, 8374, 0, 0, 2, 8208,
 };
 
 const s16 coltbl_008_2P[8] = {
@@ -46,12 +40,12 @@ const s16 coltbl_008_2P[8] = {
 
 const ColorTableIndex color_table_index[7] = {
     { 8, 0, (void *)coltbl_000_1P, (void *)coltbl_000_2P },
-    { 7, 24, (void *)((const u8 *)EFFD9_tbl_0617AF20 + 40), (void *)((const u8 *)EFFD9_tbl_0617AF20 + 52) },
-    { 7, 30, (void *)EFFD9_tbl_0617AF20, (void *)((const u8 *)EFFD9_tbl_0617AF20 + 12) },
-    { 5, 0, (void *)((const u8 *)EFFD9_tbl_0617AF20 + 24), (void *)((const u8 *)EFFD9_tbl_0617AF20 + 32) },
-    { 7, 18, (void *)((const u8 *)EFFD9_tbl_0617AF20 + 64), (void *)((const u8 *)EFFD9_tbl_0617AF20 + 76) },
-    { 18, 24, (void *)((const u8 *)EFFD9_tbl_0617AF20 + 88), (void *)((const u8 *)EFFD9_tbl_0617AF20 + 100) },
-    { 17, 24, (void *)((const u8 *)EFFD9_tbl_0617AF20 + 112), (void *)((const u8 *)EFFD9_tbl_0617AF20 + 132) },
+    { 7, 24, (void *)&coltbl_000_2P[30], (void *)&coltbl_000_2P[36] },
+    { 7, 30, (void *)&coltbl_000_2P[10], (void *)&coltbl_000_2P[16] },
+    { 5, 0, (void *)&coltbl_000_2P[22], (void *)&coltbl_000_2P[26] },
+    { 7, 18, (void *)&coltbl_000_2P[42], (void *)&coltbl_000_2P[48] },
+    { 18, 24, (void *)&coltbl_000_2P[54], (void *)&coltbl_000_2P[60] },
+    { 17, 24, (void *)&coltbl_000_2P[66], (void *)&coltbl_000_2P[76] },
 };
 
 /* provisional name */
@@ -65,7 +59,8 @@ const s16 effE0_delay_tbl[8] = {
 };
 
 /* provisional name */
-const u16 EFFD9_tbl_0617B02C[8] = {
+/* Stored after effE0_delay_tbl. Nothing in the program refers to it by name or address. */
+const u16 effE0_delay_tbl_tail[8] = {
     1, 1, 1, 1, 1, 1, 1, 1,
 };
 

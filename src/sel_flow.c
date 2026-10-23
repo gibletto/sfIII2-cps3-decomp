@@ -43,7 +43,7 @@ void Select_Flow_10th(void);
 s32 Check_Select_Flow_Entry(void);
 
 
-s8 flag_0202420C;   /* provisional name: a flag effG0_names_move tests */
+s8 Select_Flow_Akebono;   /* provisional name: effG0_names_move tests it; nothing in the program sets it */
 s16 Select_Flow_X;   /* provisional name: this scene's WIN_X */
 
 

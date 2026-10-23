@@ -14,7 +14,6 @@ extern const u8 wipe_set_bitmap_2[];
 extern const u8 wipe_set_bitmap_3[];
 extern const u8 wipe_set_bitmap_4[];
 extern const BitmapSrc wipe_set_pattern_tbl[];
-extern const u8 SLOWF_tbl_06153C90[];
 extern const u8 wipe_clear_bitmap_0[];
 extern const u8 wipe_clear_bitmap_1[];
 extern const u8 wipe_clear_bitmap_2[];
@@ -103,15 +102,13 @@ const u8 wipe_set_bitmap_4[128] = {
     0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-const BitmapSrc wipe_set_pattern_tbl[1] = {
+const BitmapSrc wipe_set_pattern_tbl[6] = {
     { (void *)wipe_set_bitmap_0, 0, 8, 0 },
-};
-
-/* provisional name */
-const u8 SLOWF_tbl_06153C90[40] = {
-    6, 0x15, 0x39, 0xA8, 0, 3, 0, 0, 6, 0x15, 0x39, 0xA8, 0, 3, 0, 0,
-    6, 0x15, 0x3A, 0x88, 0, 8, 0, 0, 6, 0x15, 0x3B, 0x88, 0, 4, 0, 0,
-    6, 0x15, 0x3C, 8, 0, 4, 0, 0,
+    { (void *)wipe_set_bitmap_1, 0, 3, 0 },
+    { (void *)wipe_set_bitmap_1, 0, 3, 0 },
+    { (void *)wipe_set_bitmap_2, 0, 8, 0 },
+    { (void *)wipe_set_bitmap_3, 0, 4, 0 },
+    { (void *)wipe_set_bitmap_4, 0, 4, 0 },
 };
 
 const u8 wipe_clear_bitmap_0[256] = {

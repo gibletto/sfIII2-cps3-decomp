@@ -20,6 +20,20 @@ extern const u32 ake_cell0_data[];
 extern const u32 ake_cell4_data[];
 extern const u32 ake_cell3_data[];
 extern const u32 ake_cell2_data[];
+extern const char str_BG_1_POS_X[];
+extern const char str_BG_1_POS_Y[];
+extern const char str_BG_2_POS_X[];
+extern const char str_BG_2_POS_Y[];
+extern const char str_BG_3_POS_X[];
+extern const char str_BG_3_POS_Y[];
+extern const char str_BG_4_POS_X[];
+extern const char str_BG_4_POS_Y[];
+extern const char str_BG_1[];
+extern const char str_BG_2[];
+extern const char str_BG_3[];
+extern const char str_BG_4[];
+extern const char str_STAGE[];
+extern const char str_AREA[];
 
 const s16 quake_x_tbl[130] = {
     0, -1, 1, -1, 1, -1, 1, -2,
@@ -148,22 +162,37 @@ const u32 ake_cell3_data[32] = {
 };
 
 /* provisional name */
-const u32 ake_cell2_data[65] = {
+const u32 ake_cell2_data[16] = {
     0x2000, 9, 0x2040, 0xA,
     0x2080, 0xB, 0x20C0, 0xC,
     0x3000, 0xB, 0x3040, 0xC,
     0x3080, 0xD, 0x30C0, 0xE,
-    0x42472031, 0x20504F53, 0x2058203D, 0x200A00FF,
-    0x42472031, 0x20504F53, 0x2059203D, 0x200A00FF,
-    0x42472032, 0x20504F53, 0x2058203D, 0x200A00FF,
-    0x42472032, 0x20504F53, 0x2059203D, 0x200A00FF,
-    0x42472033, 0x20504F53, 0x2058203D, 0x200A00FF,
-    0x42472033, 0x20504F53, 0x2059203D, 0x200A00FF,
-    0x42472034, 0x20504F53, 0x2058203D, 0x200A00FF,
-    0x42472034, 0x20504F53, 0x2059203D, 0x2000FFFF,
-    0x42472031, 0x203D200A, 0xFFFFFF, 0x42472032,
-    0x203D200A, 0xFFFFFF, 0x42472033, 0x203D200A,
-    0xFFFFFF, 0x42472034, 0x203D2000, 0x53544147,
-    0x45203D20, 0xA00FFFF, 0x41524541, 0x20203D20,
-    0xFFFFFF,
 };
+
+const char str_BG_1_POS_X[16] = "BG 1 POS X = \n\0\xFF";
+
+const char str_BG_1_POS_Y[16] = "BG 1 POS Y = \n\0\xFF";
+
+const char str_BG_2_POS_X[16] = "BG 2 POS X = \n\0\xFF";
+
+const char str_BG_2_POS_Y[16] = "BG 2 POS Y = \n\0\xFF";
+
+const char str_BG_3_POS_X[16] = "BG 3 POS X = \n\0\xFF";
+
+const char str_BG_3_POS_Y[16] = "BG 3 POS Y = \n\0\xFF";
+
+const char str_BG_4_POS_X[16] = "BG 4 POS X = \n\0\xFF";
+
+const char str_BG_4_POS_Y[16] = "BG 4 POS Y = \0\xFF\xFF";
+
+const char str_BG_1[12] = "BG 1 = \n\0\xFF\xFF\xFF";
+
+const char str_BG_2[12] = "BG 2 = \n\0\xFF\xFF\xFF";
+
+const char str_BG_3[12] = "BG 3 = \n\0\xFF\xFF\xFF";
+
+const char str_BG_4[8] = "BG 4 = ";
+
+const char str_STAGE[12] = "STAGE = \n\0\xFF\xFF";
+
+const char str_AREA[12] = "AREA  = \0\xFF\xFF\xFF";

@@ -23,36 +23,38 @@ extern const TILEREQ bg_etc_cells1[];
 extern const TILEREQ bg_etc_cells2[];
 extern const TILEREQ bg_etc_cells3[];
 extern const TILEREQ bg_etc_cells4[];
-extern const u8 end_1100_bg0_cell_tbl[];
+extern const s16 bg_scr_record_data[];
+extern const s16 ake_scr_record_data[];
+extern const PANEL end_1100_bg0_cell_tbl[];
 
 /* 020074D4 */
 u32 bg_map_tbl[18][4] = {
-    { 0x6161C7A, 0x6161C9A, 0x6161CBA, 0 },
-    { 0x6161D92, 0x6161DB2, 0, 0 },
-    { 0x6161DD2, 0x6161DEC, 0, 0 },
-    { 0x6161E0C, 0x6161E2C, 0x6161E4C, 0 },
-    { 0x6161E9A, 0x6161EBA, 0, 0 },
-    { 0x6161C7A, 0x6161C9A, 0x6161EDA, 0 },
-    { 0x6161EE8, 0x6161C9A, 0, 0 },
-    { 0x6161F02, 0x6161C9A, 0x6161F22, 0 },
-    { 0x6161F42, 0x6161F6E, 0, 0 },
-    { 0x6161C7A, 0x6161F7C, 0, 0 },
-    { 0x6161FB4, 0x6161C9A, 0x6161FC8, 0 },
-    { 0x6161E66, 0x6161E80, 0, 0 },
-    { 0x6161FDC, 0x6161FFC, 0x6161CBA, 0 },
-    { 0x616201C, 0x6161C9A, 0x6161CBA, 0 },
-    { 0x616203C, 0x616205C, 0, 0 },
-    { 0x6162076, 0x6161C9A, 0, 0 },
-    { 0x6161EE8, 0x6161C9A, 0, 0 },
-    { 0x616209C, 0, 0, 0 },
+    { (u32)bg_scr_record_data, (u32)&bg_scr_record_data[16], (u32)&bg_scr_record_data[32], 0 },
+    { (u32)&ake_scr_record_data[48], (u32)&ake_scr_record_data[64], 0, 0 },
+    { (u32)&ake_scr_record_data[80], (u32)&ake_scr_record_data[93], 0, 0 },
+    { (u32)&ake_scr_record_data[109], (u32)&ake_scr_record_data[125], (u32)&ake_scr_record_data[141], 0 },
+    { (u32)&ake_scr_record_data[180], (u32)&ake_scr_record_data[196], 0, 0 },
+    { (u32)bg_scr_record_data, (u32)&bg_scr_record_data[16], (u32)&ake_scr_record_data[212], 0 },
+    { (u32)&ake_scr_record_data[219], (u32)&bg_scr_record_data[16], 0, 0 },
+    { (u32)&ake_scr_record_data[232], (u32)&bg_scr_record_data[16], (u32)&ake_scr_record_data[248], 0 },
+    { (u32)&ake_scr_record_data[264], (u32)&ake_scr_record_data[286], 0, 0 },
+    { (u32)bg_scr_record_data, (u32)&ake_scr_record_data[293], 0, 0 },
+    { (u32)&ake_scr_record_data[321], (u32)&bg_scr_record_data[16], (u32)&ake_scr_record_data[331], 0 },
+    { (u32)&ake_scr_record_data[154], (u32)&ake_scr_record_data[167], 0, 0 },
+    { (u32)&ake_scr_record_data[341], (u32)&ake_scr_record_data[357], (u32)&bg_scr_record_data[32], 0 },
+    { (u32)&ake_scr_record_data[373], (u32)&bg_scr_record_data[16], (u32)&bg_scr_record_data[32], 0 },
+    { (u32)&ake_scr_record_data[389], (u32)&ake_scr_record_data[405], 0, 0 },
+    { (u32)&ake_scr_record_data[418], (u32)&bg_scr_record_data[16], 0, 0 },
+    { (u32)&ake_scr_record_data[219], (u32)&bg_scr_record_data[16], 0, 0 },
+    { (u32)&ake_scr_record_data[437], 0, 0, 0 },
 };
 /* 020075F4 */
 u32 bg_map_tbl2[5][4] = {
-    { 0x6161C7A, 0x6161C9A, 0x6161CBA, 0x6161CDA },
-    { 0x6161C7A, 0, 0, 0 },
-    { 0x6161C7A, 0, 0, 0 },
-    { 0x6161C7A, 0, 0, 0 },
-    { 0x6161C7A, 0, 0, 0 },
+    { (u32)bg_scr_record_data, (u32)&bg_scr_record_data[16], (u32)&bg_scr_record_data[32], (u32)&bg_scr_record_data[48] },
+    { (u32)bg_scr_record_data, 0, 0, 0 },
+    { (u32)bg_scr_record_data, 0, 0, 0 },
+    { (u32)bg_scr_record_data, 0, 0, 0 },
+    { (u32)bg_scr_record_data, 0, 0, 0 },
 };
 /* 02007644 */
 HUD_CELL* bg_rewrite_cell_tbl[5][4] = {

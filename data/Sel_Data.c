@@ -7,11 +7,12 @@
 
 #pragma section TBL
 
-extern const s8 Sel_Data_0615A814[];
+extern const s8 Face_Cursor_Data_unref[];
 extern const s8 Face_Cursor_Data[][13];
 
 /* provisional name */
-const s8 Sel_Data_0615A814[13] = {
+/* A row stored before Face_Cursor_Data. Nothing in the program refers to it by name or address. */
+const s8 Face_Cursor_Data_unref[13] = {
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9,
 };
 

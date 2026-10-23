@@ -7,15 +7,9 @@
 
 #pragma section TBL
 
-extern const s16 scr_obj_data87_0_06179F44[];
 extern const s16 eff88_loop_tbl[][4];
 extern const s16 scr_obj_data88_0[];
 extern const u16 eff90_pos_y_tbl[];
-
-/* provisional name */
-const s16 scr_obj_data87_0_06179F44[2] = {
-    1, 0,
-};
 
 const s16 eff88_loop_tbl[20][4] = {
     { 3, 3, 3, 3 },

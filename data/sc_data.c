@@ -14,9 +14,6 @@ extern const u16 picture_chr_tbl[];
 extern const u16 picture_set_tbl[];
 extern const u16 picture_attr_tbl[];
 extern const NAME_PLATE nwdata_tbl[];
-extern const u16 sc_cells_1[];
-extern const u16 sc_cells_50[];
-extern const u16 sc_cells_6[];
 extern const u16 sc_vram_01_attr[];
 extern const u16 sc_vram_01_pos[];
 extern const u16 sc_vram_02_attr[];
@@ -73,9 +70,12 @@ extern const u16 sc_vram_23_code[];
 extern const u16 sc_vram_23_pos[];
 extern const u16 sc_vram_27_code[];
 extern const u16 sc_vram_27_pos[];
+extern const u16 sc_vram_00_attr[];
+extern const u16 sc_vram_00_code[];
+extern const u16 sc_vram_00_pos[];
 
 const CELL_SET sc_ram_vram_tbl[29] = {
-    { (void *)sc_cells_1, (void *)sc_cells_6, (void *)sc_cells_50 },
+    { (void *)sc_vram_00_pos, (void *)sc_vram_00_code, (void *)sc_vram_00_attr },
     { (void *)sc_vram_01_pos, (void *)sc_vram_01_code, (void *)sc_vram_01_attr },
     { (void *)sc_vram_02_pos, (void *)sc_vram_02_code, (void *)sc_vram_02_attr },
     { (void *)sc_vram_03_pos, (void *)sc_vram_03_code, (void *)sc_vram_03_attr },
@@ -91,19 +91,19 @@ const CELL_SET sc_ram_vram_tbl[29] = {
     { (void *)sc_vram_13_pos, (void *)sc_vram_12_code, (void *)sc_vram_12_attr },
     { (void *)sc_vram_14_pos, (void *)sc_vram_14_code, (void *)sc_vram_14_attr },
     { (void *)sc_vram_15_pos, (void *)sc_vram_15_code, (void *)sc_vram_15_attr },
-    { (void *)sc_vram_16_pos, (void *)sc_vram_16_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_16_pos, (void *)sc_vram_16_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_18_pos, (void *)sc_vram_18_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_19_pos, (void *)sc_vram_19_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_20_pos, (void *)sc_vram_20_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_21_pos, (void *)sc_vram_21_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_22_pos, (void *)sc_vram_22_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_23_pos, (void *)sc_vram_23_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_24_pos, (void *)sc_vram_24_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_25_pos, (void *)sc_vram_25_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_26_pos, (void *)sc_vram_26_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_27_pos, (void *)sc_vram_27_code, (void *)sc_cells_50 },
-    { (void *)sc_vram_28_pos, (void *)sc_vram_28_code, (void *)sc_cells_50 },
+    { (void *)sc_vram_16_pos, (void *)sc_vram_16_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_16_pos, (void *)sc_vram_16_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_18_pos, (void *)sc_vram_18_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_19_pos, (void *)sc_vram_19_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_20_pos, (void *)sc_vram_20_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_21_pos, (void *)sc_vram_21_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_22_pos, (void *)sc_vram_22_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_23_pos, (void *)sc_vram_23_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_24_pos, (void *)sc_vram_24_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_25_pos, (void *)sc_vram_25_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_26_pos, (void *)sc_vram_26_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_27_pos, (void *)sc_vram_27_code, (void *)sc_vram_00_attr },
+    { (void *)sc_vram_28_pos, (void *)sc_vram_28_code, (void *)sc_vram_00_attr },
 };
 
 /* provisional name */

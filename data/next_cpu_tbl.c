@@ -30,7 +30,7 @@ extern const u32 gcfg_gauge_scr_jp_5[];
 extern const u32 gcfg_gauge_scr_jp_6[];
 extern const u32 gcfg_gauge_scr_jp_7[];
 extern const u32 gcfg_gauge_clr_scr_jp_0[];
-extern const u32 gcfg_title_scr_jp_0_0615ADD4[];
+extern const u32 gcfg_title_old_scr_jp_0[];
 
 const u32 gcfg_guide_scr_jp_0[12] = {
     0x130005, 0x180002, 0x13541350, 0x12741278,
@@ -138,7 +138,9 @@ const u32 gcfg_gauge_clr_scr_jp_0[3] = {
 };
 
 /* provisional name */
-const u32 gcfg_title_scr_jp_0_0615ADD4[55] = {
+/* A shorter title screen script; only gcfg_gauge_clr_scr_jp_tail (game_config_jp.c), which nothing reads, points at
+   it. */
+const u32 gcfg_title_old_scr_jp_0[55] = {
     0x50013, 2, 0x129C13C8, 0x12FC133C,
     0x13400002, 0x40002, 0x21398, 0x13A0000A,
     0x180002, 0x2139C, 0x13CC13CC, 0x13CC13CC,
