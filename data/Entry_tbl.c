@@ -7,8 +7,7 @@
 
 #pragma section TBL
 
-extern const u32 monitor_msg_tbl[];
-extern const u16 Entry_tbl_060FC604[];
+extern const TM_STRING monitor_msg_tbl[];
 extern const TM_STRING dbg_dump_title[];
 extern const TM_STRING dbg_disasm_title[];
 extern const MoveName sh_op_none_tbl[];
@@ -201,22 +200,23 @@ extern const char str_R13[];
 extern const char str_R14[];
 extern const char str_SP[];
 
-const u32 monitor_msg_tbl[18] = {
-    0x10016, 0xE0000, (u32)sh_str_monitor_entry, 0x10016,
-    0xE0000, (u32)sh_str_illegal_inst, 0x10016, 0xE0000,
-    (u32)sh_str_slot_illegal_inst, 0x10016, 0xE0000, (u32)sh_str_cpu_addr_error,
-    0x10016, 0xE0000, (u32)sh_str_dma_addr_error, 0x10016,
-    0xE0000, (u32)sh_str_unknown_exception,
-};
-
-/* provisional name */
-const u16 Entry_tbl_060FC604[48] = {
-    0xC, 0, 0xE, 0, 0x60F, 0xCBDC, 0, 2,
-    0xE, 0, 0x60F, 0xCBEC, 0, 3, 0xE, 0,
-    0x60F, 0xCC1C, 0, 4, 0xE, 0, 0x60F, 0xCC4C,
-    0, 5, 0xE, 0, 0x60F, 0xCC7C, 0, 6,
-    0xE, 0, 0x60F, 0xCCAC, 0, 7, 0xE, 0,
-    0x60F, 0xCCDC, 0, 8, 0xE, 0, 0x60F, 0xCCFC,
+/* provisional name: the exception monitor's text, the six exception messages ([0..5]) and the register
+   panel ([6..13]) */
+const TM_STRING monitor_msg_tbl[14] = {
+    { 1, 0x16, 0xE, (void *)sh_str_monitor_entry },
+    { 1, 0x16, 0xE, (void *)sh_str_illegal_inst },
+    { 1, 0x16, 0xE, (void *)sh_str_slot_illegal_inst },
+    { 1, 0x16, 0xE, (void *)sh_str_cpu_addr_error },
+    { 1, 0x16, 0xE, (void *)sh_str_dma_addr_error },
+    { 1, 0x16, 0xE, (void *)sh_str_unknown_exception },
+    { 0xC, 0, 0xE, (void *)sh_str_monitor_title },
+    { 0, 2, 0xE, (void *)sh_str_regs_r0_r2 },
+    { 0, 3, 0xE, (void *)sh_str_regs_r3_r5 },
+    { 0, 4, 0xE, (void *)sh_str_regs_r6_r8 },
+    { 0, 5, 0xE, (void *)sh_str_regs_r9_r11 },
+    { 0, 6, 0xE, (void *)sh_str_regs_r12_r14 },
+    { 0, 7, 0xE, (void *)sh_str_regs_sp_pc },
+    { 0, 8, 0xE, (void *)sh_str_regs_pr_gbr },
 };
 
 const TM_STRING dbg_dump_title[1] = {

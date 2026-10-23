@@ -9,7 +9,6 @@
 
 extern void (*const process_ndcca[])();
 extern void (*const plpnm_xxxxx[])();
-extern void (*const PLS00_tbl_06100804[])();
 extern void (*const plpdm_xxxxx[])();
 extern const u8 about_rno[];
 extern const s16 sel_hd_fg_hos[][2];
@@ -64,7 +63,7 @@ void (*const process_ndcca[5])() = {
     (void (*)())process_attack,
 };
 
-void (*const plpnm_xxxxx[7])() = {
+void (*const plpnm_xxxxx[51])() = {
     (void (*)())nm_00000,
     (void (*)())nm_01000,
     (void (*)())nm_02000,
@@ -72,10 +71,6 @@ void (*const plpnm_xxxxx[7])() = {
     (void (*)())nm_03000,
     (void (*)())nm_05000,
     (void (*)())nm_05000,
-};
-
-/* provisional name */
-void (*const PLS00_tbl_06100804[44])() = {
     (void (*)())nm_07000,
     (void (*)())nm_08000,
     (void (*)())nm_09000,

@@ -5,7 +5,7 @@
 
 extern const TM_STRING dbg_dump_title[];
 extern const TM_STRING dbg_disasm_title[];
-extern const u32 monitor_msg_tbl[];   /* provisional name: opcode records ahead of the disassembler's tables */
+extern const TM_STRING monitor_msg_tbl[14];   /* provisional name: the exception monitor's text */
 extern const char sh_str_break[];   /* provisional name: the Break: label of the disassembler */
 extern const MoveName sh_op_none_tbl[];
 extern const MoveName sh_op_ldm_tbl[];
@@ -138,7 +138,7 @@ extern const s16 Get_Up_SA_Tech_Data[16][3];
 extern const s8 Passive_Guard_Off_Data[16][250];
 extern const s8 Float_Attack_Data[4][16];
 extern const s8 PL_Damage_Data[];
-extern const s8 PL_Blow_Off_Data[27];
+extern const s8 PL_Blow_Off_Data[28];
 extern const s16 Hit_Range_Data[];
 extern const s8 PL_Body_Width_Data[20];
 extern const u8 Shell_Reaction_Type_Data[];
@@ -924,7 +924,7 @@ extern void (*const sag_jmp_tbl[4])(PLW* wk);     /* super-art gauge process by 
 extern void (*const plmain_b_lv_00[5])(PLW* wk);
 extern const s8 lvdir_conv[4];
 extern void (*const process_ndcca[5])(PLW* wk);
-extern void (*const plpnm_xxxxx[59])(PLW* wk);
+extern void (*const plpnm_xxxxx[51])(PLW* wk);
 extern const u8 about_rno[6];
 extern const s16 sel_hd_fg_hos[16][4];
 extern const s16 dir32_rl_conv[32];
@@ -1003,8 +1003,8 @@ extern const s16 dra_em_tall[24][2];
 extern void (*const pl19_exatt_table[18])(PLW*);
 extern void (*const pl20_exatt_table[18])(PLW*);
 extern const AS_ROW asstbl_lv_E010[24][3];
-extern const AS_ROW asstbl_lv_B010[24][6];
-extern const AS_ROW asstbl_lv_A010[24][6];
+extern const AS_ROW asstbl_lv_B010[16][6];
+extern const AS_ROW asstbl_lv_A010[16][6];
 extern const AS_ROW asstbl_lv_D010[][2][4];
 extern const AS_ROW asstbl_sa_ground[24][18][4];
 extern const AS_ROW asstbl_sa_air[24][18][4];

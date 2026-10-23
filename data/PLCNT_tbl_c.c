@@ -17,7 +17,6 @@ extern const s16 hissatsu_dageki_02[];
 extern const s16 tsuujyou_nage_00[];
 extern const s16 tsuujyou_nage_01[];
 extern const s16 tsuujyou_nage_02[];
-extern const s16 PLCNT_tbl_061000F8[];
 extern const s16 super_arts_nage_00[];
 extern const s16 super_arts_nage_01[];
 extern const s16 super_arts_nage_02[];
@@ -70,13 +69,9 @@ const s16 tsuujyou_nage_01[16] = {
     140, 140, 140, 140, 120, 120, 120, 120,
 };
 
-const s16 tsuujyou_nage_02[16] = {
+const s16 tsuujyou_nage_02[112] = {
     180, 180, 180, 180, 180, 180, 160, 160,
     160, 160, 160, 140, 140, 140, 120, 120,
-};
-
-/* provisional name */
-const s16 PLCNT_tbl_061000F8[96] = {
     240, 240, 200, 200, 200, 160, 160, 160,
     160, 160, 120, 120, 120, 120, 120, 120,
     240, 240, 240, 240, 200, 200, 200, 200,
