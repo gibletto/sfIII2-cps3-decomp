@@ -3212,28 +3212,28 @@ WORK_Other_JUDGE* dbg_judge_ewk;  /* 020191F4 */
 u8 dbg_look_judge[1584];  /* 020191F8 */
 HITA_BOX dbg_look_body[99];  /* 02019828 */
 HITA_BOX dbg_look_hand[99];  /* 0201A488 */
-u8 dbg_look_catch[792];  /* 0201B0E8 */
-u8 dbg_look_caught[792];  /* 0201B400 */
+CATCH_BOX dbg_look_catch[99];  /* 0201B0E8 */
+CAUGHT_BOX dbg_look_caught[99];  /* 0201B400 */
 HITA_BOX dbg_look_attack[49];  /* 0201B718 */
 u8 dbg_look_attack_tail[16];  /* after dbg_look_attack; nothing refers to it by name or address */
-u8 dbg_look_eat[1584];  /* 0201BD48, provisional name */
-u8 dbg_look_hosei[792];  /* 0201C378 */
+ATTACK_BOX dbg_look_eat[99];  /* 0201BD48, provisional name */
+HOSEI_BOX dbg_look_hosei[99];  /* 0201C378 */
 u8 dbg_edit_judge[1584];  /* 0201C690 */
-u8 dbg_edit_body[3168];  /* 0201CCC0 */
-u8 dbg_edit_hand[3168];  /* 0201D920 */
-u8 dbg_edit_catch[792];  /* 0201E580 */
-u8 dbg_edit_caught[792];  /* 0201E898 */
-u8 dbg_edit_attack[1584];  /* 0201EBB0 */
-u8 dbg_edit_eat[1584];  /* 0201F1E0, provisional name */
-u8 dbg_edit_hosei[792];  /* 0201F810 */
+BODY_BOX dbg_edit_body[99];  /* 0201CCC0 */
+HAND_BOX dbg_edit_hand[198];  /* 0201D920 */
+CATCH_BOX dbg_edit_catch[99];  /* 0201E580 */
+CAUGHT_BOX dbg_edit_caught[99];  /* 0201E898 */
+ATTACK_BOX dbg_edit_attack[99];  /* 0201EBB0 */
+ATTACK_BOX dbg_edit_eat[99];  /* 0201F1E0, provisional name */
+HOSEI_BOX dbg_edit_hosei[99];  /* 0201F810 */
 u8 dbg_copy_judge[16];  /* 0201FB28 */
-u8 dbg_copy_body[32];  /* 0201FB38 */
-u8 dbg_copy_hand[32];  /* 0201FB58 */
-u8 dbg_copy_catch[8];  /* 0201FB78 */
-u8 dbg_copy_caught[8];  /* 0201FB80 */
-u8 dbg_copy_attack[16];  /* 0201FB88 */
-u8 dbg_copy_eat[16];  /* 0201FB98, provisional name */
-u8 dbg_copy_hosei[8];  /* 0201FBA8 */
+BODY_BOX dbg_copy_body[1];  /* 0201FB38 */
+HAND_BOX dbg_copy_hand[2];  /* 0201FB58 */
+CATCH_BOX dbg_copy_catch[1];  /* 0201FB78 */
+CAUGHT_BOX dbg_copy_caught[1];  /* 0201FB80 */
+ATTACK_BOX dbg_copy_attack[1];  /* 0201FB88 */
+ATTACK_BOX dbg_copy_eat[1];  /* 0201FB98, provisional name */
+HOSEI_BOX dbg_copy_hosei[1];  /* 0201FBA8 */
 s16 dbg_parts_olc_ix[4];  /* 0201FBB0 */
 s8 dbg_parts_sel;  /* 0201FBB8 */
 PLW dbg_parts_plw[4];  /* 0201FBBC */

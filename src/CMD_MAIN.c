@@ -2234,12 +2234,12 @@ void debug_hit_judgment_init(void) {
     debug_motion_list_count();
     plw[1].wu.rl_flag = 1;
     dbg_look_buf.judge = dbg_look_judge;
-    dbg_look_buf.body_adrs = dbg_look_buf.h_bod = (u8*)dbg_look_body;
-    dbg_look_buf.hand_adrs = dbg_look_buf.h_han = (u8*)dbg_look_hand;
+    dbg_look_buf.body_adrs = dbg_look_buf.h_bod = (BODY_BOX*)dbg_look_body;
+    dbg_look_buf.hand_adrs = dbg_look_buf.h_han = (HAND_BOX*)dbg_look_hand;
     dbg_look_buf.catch_adrs = dbg_look_buf.h_cat = dbg_look_catch;
     dbg_look_buf.caught_adrs = dbg_look_buf.h_cau = dbg_look_caught;
-    dbg_look_buf.attack_adrs = dbg_look_buf.h_att = (u8*)dbg_look_attack;
-    dbg_look_buf.adrs11 = dbg_look_buf.adrs13 = dbg_look_eat;
+    dbg_look_buf.attack_adrs = dbg_look_buf.h_att = (ATTACK_BOX*)dbg_look_attack;
+    dbg_look_buf.eat_adrs = dbg_look_buf.h_eat = dbg_look_eat;
     dbg_look_buf.hosei_adrs = dbg_look_buf.h_hos = dbg_look_hosei;
     dbg_copy_buf.judge = dbg_copy_judge;
     dbg_copy_buf.body_adrs = dbg_copy_buf.h_bod = dbg_copy_body;
@@ -2247,7 +2247,7 @@ void debug_hit_judgment_init(void) {
     dbg_copy_buf.catch_adrs = dbg_copy_buf.h_cat = dbg_copy_catch;
     dbg_copy_buf.caught_adrs = dbg_copy_buf.h_cau = dbg_copy_caught;
     dbg_copy_buf.attack_adrs = dbg_copy_buf.h_att = dbg_copy_attack;
-    dbg_copy_buf.adrs11 = dbg_copy_buf.adrs13 = dbg_copy_eat;
+    dbg_copy_buf.eat_adrs = dbg_copy_buf.h_eat = dbg_copy_eat;
     dbg_copy_buf.hosei_adrs = dbg_copy_buf.h_hos = dbg_copy_hosei;
     dbg_edit_buf.judge = dbg_edit_judge;
     dbg_edit_buf.body_adrs = dbg_edit_buf.h_bod = dbg_edit_body;
@@ -2255,7 +2255,7 @@ void debug_hit_judgment_init(void) {
     dbg_edit_buf.catch_adrs = dbg_edit_buf.h_cat = dbg_edit_catch;
     dbg_edit_buf.caught_adrs = dbg_edit_buf.h_cau = dbg_edit_caught;
     dbg_edit_buf.attack_adrs = dbg_edit_buf.h_att = dbg_edit_attack;
-    dbg_edit_buf.adrs11 = dbg_edit_buf.adrs13 = dbg_edit_eat;
+    dbg_edit_buf.eat_adrs = dbg_edit_buf.h_eat = dbg_edit_eat;
     dbg_edit_buf.hosei_adrs = dbg_edit_buf.h_hos = dbg_edit_hosei;
     dbg_pl = &plw[1];
     dbg_slot = (DBG_SLOT*)&dbg_slot_w[1];
@@ -3316,10 +3316,10 @@ void debug_bg_scroll_by_pad(void) {
 
 /* provisional name */
 void debug_hit_box_edit(void) {
-    u8* body;
-    u8* hand;
-    u8* attack;
-    u8* eat;
+    BODY_BOX* body;
+    HAND_BOX* hand;
+    ATTACK_BOX* attack;
+    ATTACK_BOX* eat;
     s16* box;
     u16 pad;
     if (Debug_PL_id) {
@@ -3333,48 +3333,48 @@ void debug_hit_box_edit(void) {
         body = dbg_copy_buf.h_bod;
         hand = dbg_copy_buf.h_han;
         attack = dbg_copy_buf.h_att;
-        eat = dbg_copy_buf.adrs13;
+        eat = dbg_copy_buf.h_eat;
         (void)&((WORK*)eat)->id;
         (void)&((WORK*)pad)->id;
         switch (dbg_judge_ewk->curr_ja) {
         case 0:
-            box = (s16*)body;
+            box = body->body_dm[0];
             break;
         case 1:
-            box = (s16*)(body + 8);
+            box = body->body_dm[1];
             break;
         case 2:
-            box = (s16*)(body + 16);
+            box = body->body_dm[2];
             break;
         case 3:
-            box = (s16*)(body + 24);
+            box = body->body_dm[3];
             break;
         case 4:
-            box = (s16*)hand;
+            box = hand->hand_dm[0];
             break;
         case 5:
-            box = (s16*)(hand + 8);
+            box = hand->hand_dm[1];
             break;
         case 6:
-            box = (s16*)dbg_copy_buf.h_cat;
+            box = dbg_copy_buf.h_cat->cat_box;
             break;
         case 7:
-            box = (s16*)dbg_copy_buf.h_cau;
+            box = dbg_copy_buf.h_cau->cau_box;
             break;
         case 8:
-            box = (s16*)attack;
+            box = attack->att_box[0];
             break;
         case 9:
-            box = (s16*)(attack + 8);
+            box = attack->att_box[1];
             break;
         case 10:
-            box = (s16*)eat;
+            box = eat->att_box[0];
             break;
         case 11:
-            box = (s16*)(eat + 8);
+            box = eat->att_box[1];
             break;
         case 12:
-            box = (s16*)dbg_copy_buf.h_hos;
+            box = dbg_copy_buf.h_hos->hos_box;
             break;
         }
         dbg_edit_box = box;
@@ -3383,47 +3383,47 @@ void debug_hit_box_edit(void) {
         body = dbg_look_buf.h_bod;
         hand = dbg_look_buf.h_han;
         attack = dbg_look_buf.h_att;
-        eat = dbg_look_buf.adrs13;
+        eat = dbg_look_buf.h_eat;
         (void)&((WORK*)hand)->id;
         switch (dbg_judge_ewk->curr_ja) {
         case 0:
-            box = (s16*)body;
+            box = body->body_dm[0];
             break;
         case 1:
-            box = (s16*)(body + 8);
+            box = body->body_dm[1];
             break;
         case 2:
-            box = (s16*)(body + 16);
+            box = body->body_dm[2];
             break;
         case 3:
-            box = (s16*)(body + 24);
+            box = body->body_dm[3];
             break;
         case 4:
-            box = (s16*)hand;
+            box = hand->hand_dm[0];
             break;
         case 5:
-            box = (s16*)(hand + 8);
+            box = hand->hand_dm[1];
             break;
         case 6:
-            box = (s16*)dbg_look_buf.h_cat;
+            box = dbg_look_buf.h_cat->cat_box;
             break;
         case 7:
-            box = (s16*)dbg_look_buf.h_cau;
+            box = dbg_look_buf.h_cau->cau_box;
             break;
         case 8:
-            box = (s16*)attack;
+            box = attack->att_box[0];
             break;
         case 9:
-            box = (s16*)(attack + 8);
+            box = attack->att_box[1];
             break;
         case 10:
-            box = (s16*)eat;
+            box = eat->att_box[0];
             break;
         case 11:
-            box = (s16*)(eat + 8);
+            box = eat->att_box[1];
             break;
         case 12:
-            box = (s16*)dbg_look_buf.h_hos;
+            box = dbg_look_buf.h_hos->hos_box;
             break;
         }
         (void)&((WORK*)eat)->id;
@@ -3467,46 +3467,46 @@ void debug_hit_box_edit(void) {
         body = dbg_edit_buf.h_bod;
         hand = dbg_edit_buf.h_han;
         attack = dbg_edit_buf.h_att;
-        eat = dbg_edit_buf.adrs13;
+        eat = dbg_edit_buf.h_eat;
         switch (dbg_judge_ewk->curr_ja) {
         case 0:
-            box = (s16*)body;
+            box = body->body_dm[0];
             break;
         case 1:
-            box = (s16*)(body + 8);
+            box = body->body_dm[1];
             break;
         case 2:
-            box = (s16*)(body + 16);
+            box = body->body_dm[2];
             break;
         case 3:
-            box = (s16*)(body + 24);
+            box = body->body_dm[3];
             break;
         case 4:
-            box = (s16*)hand;
+            box = hand->hand_dm[0];
             break;
         case 5:
-            box = (s16*)(hand + 8);
+            box = hand->hand_dm[1];
             break;
         case 6:
-            box = (s16*)dbg_edit_buf.h_cat;
+            box = dbg_edit_buf.h_cat->cat_box;
             break;
         case 7:
-            box = (s16*)dbg_edit_buf.h_cau;
+            box = dbg_edit_buf.h_cau->cau_box;
             break;
         case 8:
-            box = (s16*)attack;
+            box = attack->att_box[0];
             break;
         case 9:
-            box = (s16*)(attack + 8);
+            box = attack->att_box[1];
             break;
         case 10:
-            box = (s16*)eat;
+            box = eat->att_box[0];
             break;
         case 11:
-            box = (s16*)(eat + 8);
+            box = eat->att_box[1];
             break;
         case 12:
-            box = (s16*)dbg_edit_buf.h_hos;
+            box = dbg_edit_buf.h_hos->hos_box;
             break;
         }
         dbg_edit_box = box;
@@ -3523,8 +3523,8 @@ void debug_set_dummy_box(void) {
 
 /* provisional name */
 void debug_set_body_box(s16 n) {
-    dbg_look_buf.h_bod = dbg_look_buf.body_adrs + n * 32;
-    dbg_edit_buf.h_bod = dbg_edit_buf.body_adrs + n * 32;
+    dbg_look_buf.h_bod = dbg_look_buf.body_adrs + n;
+    dbg_edit_buf.h_bod = dbg_edit_buf.body_adrs + n;
 }
 
 
@@ -3532,40 +3532,40 @@ void debug_set_body_box(s16 n) {
 /* provisional name */
 /* the extra (dumm) boxes */
 void debug_set_dumm_box(s16 n) {
-    dbg_look_buf.adrs5 = dbg_look_buf.adrs4 + n * 16;
-    dbg_edit_buf.adrs5 = dbg_edit_buf.adrs4 + n * 16;
+    dbg_look_buf.h_dumm = dbg_look_buf.dumm_adrs + n;
+    dbg_edit_buf.h_dumm = dbg_edit_buf.dumm_adrs + n;
 }
 
 
 
 /* provisional name */
 void debug_set_hand_box(s16 n) {
-    dbg_look_buf.h_han = dbg_look_buf.hand_adrs + n * 16;
-    dbg_edit_buf.h_han = dbg_edit_buf.hand_adrs + n * 16;
+    dbg_look_buf.h_han = dbg_look_buf.hand_adrs + n;
+    dbg_edit_buf.h_han = dbg_edit_buf.hand_adrs + n;
 }
 
 
 
 /* provisional name */
 void debug_set_catch_box(s16 n) {
-    dbg_look_buf.h_cat = dbg_look_buf.catch_adrs + n * 8;
-    dbg_edit_buf.h_cat = dbg_edit_buf.catch_adrs + n * 8;
+    dbg_look_buf.h_cat = dbg_look_buf.catch_adrs + n;
+    dbg_edit_buf.h_cat = dbg_edit_buf.catch_adrs + n;
 }
 
 
 
 /* provisional name */
 void debug_set_caught_box(s16 n) {
-    dbg_look_buf.h_cau = dbg_look_buf.caught_adrs + n * 8;
-    dbg_edit_buf.h_cau = dbg_edit_buf.caught_adrs + n * 8;
+    dbg_look_buf.h_cau = dbg_look_buf.caught_adrs + n;
+    dbg_edit_buf.h_cau = dbg_edit_buf.caught_adrs + n;
 }
 
 
 
 /* provisional name */
 void debug_set_attack_box(s16 n) {
-    dbg_look_buf.h_att = dbg_look_buf.attack_adrs + n * 16;
-    dbg_edit_buf.h_att = dbg_edit_buf.attack_adrs + n * 16;
+    dbg_look_buf.h_att = dbg_look_buf.attack_adrs + n;
+    dbg_edit_buf.h_att = dbg_edit_buf.attack_adrs + n;
 }
 
 
@@ -3573,16 +3573,16 @@ void debug_set_attack_box(s16 n) {
 /* provisional name */
 /* the extra (eat) attack boxes */
 void debug_set_eat_box(s16 n) {
-    dbg_look_buf.adrs13 = dbg_look_buf.adrs11 + n * 16;
-    dbg_edit_buf.adrs13 = dbg_edit_buf.adrs11 + n * 16;
+    dbg_look_buf.h_eat = dbg_look_buf.eat_adrs + n;
+    dbg_edit_buf.h_eat = dbg_edit_buf.eat_adrs + n;
 }
 
 
 
 /* provisional name */
 void debug_set_hosei_box(s16 n) {
-    dbg_look_buf.h_hos = dbg_look_buf.hosei_adrs + n * 8;
-    dbg_edit_buf.h_hos = dbg_edit_buf.hosei_adrs + n * 8;
+    dbg_look_buf.h_hos = dbg_look_buf.hosei_adrs + n;
+    dbg_edit_buf.h_hos = dbg_edit_buf.hosei_adrs + n;
 }
 
 
@@ -3664,7 +3664,7 @@ void debug_hit_box_copy(void) {
                 debug_memcpy_u16((u16*)dbg_look_buf.h_bod, (u16*)dbg_copy_buf.h_bod, 16);
                 debug_memcpy_u16((u16*)dbg_look_buf.h_han, (u16*)dbg_copy_buf.h_han, 8);
                 debug_memcpy_u16((u16*)dbg_look_buf.h_att, (u16*)dbg_copy_buf.h_att, 8);
-                debug_memcpy_u16((u16*)dbg_look_buf.adrs13, (u16*)dbg_copy_buf.adrs13, 8);
+                debug_memcpy_u16((u16*)dbg_look_buf.h_eat, (u16*)dbg_copy_buf.h_eat, 8);
                 debug_memcpy_u16((u16*)dbg_look_buf.h_cat, (u16*)dbg_copy_buf.h_cat, 4);
                 debug_memcpy_u16((u16*)dbg_look_buf.h_cau, (u16*)dbg_copy_buf.h_cau, 4);
                 debug_memcpy_u16((u16*)dbg_look_buf.h_hos, (u16*)dbg_copy_buf.h_hos, 4);
@@ -3672,7 +3672,7 @@ void debug_hit_box_copy(void) {
                 debug_memcpy_u16((u16*)dbg_pl->wu.h_bod, (u16*)dbg_copy_buf.h_bod, 16);
                 debug_memcpy_u16((u16*)dbg_pl->wu.h_han, (u16*)dbg_copy_buf.h_han, 8);
                 debug_memcpy_u16((u16*)dbg_pl->wu.h_att, (u16*)dbg_copy_buf.h_att, 8);
-                debug_memcpy_u16((u16*)dbg_pl->wu.h_eat, (u16*)dbg_copy_buf.adrs13, 8);
+                debug_memcpy_u16((u16*)dbg_pl->wu.h_eat, (u16*)dbg_copy_buf.h_eat, 8);
                 debug_memcpy_u16((u16*)dbg_pl->wu.h_cat, (u16*)dbg_copy_buf.h_cat, 4);
                 debug_memcpy_u16((u16*)dbg_pl->wu.h_cau, (u16*)dbg_copy_buf.h_cau, 4);
                 debug_memcpy_u16((u16*)dbg_pl->wu.h_hos, (u16*)dbg_copy_buf.h_hos, 4);
@@ -3693,7 +3693,7 @@ void debug_hit_box_copy(void) {
         debug_set_attack_box(dbg_slot->sel[2]);
         debug_memcpy_u16((u16*)dbg_copy_buf.h_att, (u16*)dbg_look_buf.h_att, 8);
         debug_set_eat_box(dbg_slot->sel[2]);
-        debug_memcpy_u16((u16*)dbg_copy_buf.adrs13, (u16*)dbg_look_buf.adrs13, 8);
+        debug_memcpy_u16((u16*)dbg_copy_buf.h_eat, (u16*)dbg_look_buf.h_eat, 8);
         debug_set_catch_box(dbg_slot->sel[2]);
         debug_memcpy_u16((u16*)dbg_copy_buf.h_cat, (u16*)dbg_look_buf.h_cat, 4);
         debug_set_caught_box(dbg_slot->sel[2]);
@@ -4640,50 +4640,50 @@ void debug_pattern_entry_copy_dual(s16 n, s16 box) {
     }
     ix = &dbg_pl->wu.hit_ix_table[box];
     src = (u16*)&dbg_pl->wu.body_adrs[ix->boix];
-    a = (u16*)(dbg_look_buf.body_adrs + n * 32);
-    b = (u16*)(dbg_edit_buf.body_adrs + n * 32);
+    a = (u16*)((u8*)dbg_look_buf.body_adrs + n * 32);
+    b = (u16*)((u8*)dbg_edit_buf.body_adrs + n * 32);
     for (i = 0; i < 16; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.hand_adrs[ix->haix];
-    a = (u16*)(dbg_look_buf.hand_adrs + n * 16);
-    b = (u16*)(dbg_edit_buf.hand_adrs + n * 16);
+    a = (u16*)((u8*)dbg_look_buf.hand_adrs + n * 16);
+    b = (u16*)((u8*)dbg_edit_buf.hand_adrs + n * 16);
     for (i = 0; i < 8; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.attack_adrs[ix->atix];
-    a = (u16*)(dbg_look_buf.attack_adrs + n * 16);
-    b = (u16*)(dbg_edit_buf.attack_adrs + n * 16);
+    a = (u16*)((u8*)dbg_look_buf.attack_adrs + n * 16);
+    b = (u16*)((u8*)dbg_edit_buf.attack_adrs + n * 16);
     for (i = 0; i < 8; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.attack_adrs[ix->eaix];
-    a = (u16*)(dbg_look_buf.adrs11 + n * 16);
-    b = (u16*)(dbg_edit_buf.adrs11 + n * 16);
+    a = (u16*)((u8*)dbg_look_buf.eat_adrs + n * 16);
+    b = (u16*)((u8*)dbg_edit_buf.eat_adrs + n * 16);
     for (i = 0; i < 8; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.catch_adrs[ix->caix];
-    a = (u16*)(dbg_look_buf.catch_adrs + n * 8);
-    b = (u16*)(dbg_edit_buf.catch_adrs + n * 8);
+    a = (u16*)((u8*)dbg_look_buf.catch_adrs + n * 8);
+    b = (u16*)((u8*)dbg_edit_buf.catch_adrs + n * 8);
     for (i = 0; i < 4; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.caught_adrs[ix->cuix];
-    a = (u16*)(dbg_look_buf.caught_adrs + n * 8);
-    b = (u16*)(dbg_edit_buf.caught_adrs + n * 8);
+    a = (u16*)((u8*)dbg_look_buf.caught_adrs + n * 8);
+    b = (u16*)((u8*)dbg_edit_buf.caught_adrs + n * 8);
     for (i = 0; i < 4; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.hosei_adrs[ix->hoix];
-    a = (u16*)(dbg_look_buf.hosei_adrs + n * 8);
-    b = (u16*)(dbg_edit_buf.hosei_adrs + n * 8);
+    a = (u16*)((u8*)dbg_look_buf.hosei_adrs + n * 8);
+    b = (u16*)((u8*)dbg_edit_buf.hosei_adrs + n * 8);
     for (i = 0; i < 4; i++) {
         *a++ = *src;
         *b++ = *src++;

@@ -176,14 +176,13 @@ wait_dm:
         }
         goto four;
     } else if (ds->wu.xyz[1].disp.pos > 0) {
-        if (0) {
-            return;
-        }
         switch (defense_sky(as, ds, gddir)) {
         case 0:
             goto blocking;
         case 1:
             goto guard;
+        default:
+            break;
         }
     three:
         as->wu.hf.hit.player = 2;
@@ -345,11 +344,10 @@ char gddir;
         if (ds->wu.routine_no[1] == PLAYER_DAMAGE) {
             if (ds->wu.xyz[1].disp.pos > 0) {
                 goto jump_one;
+            } else {
+                goto jump_two;
             }
-            goto jump_two;
         }
-    }
-    if (0) {
     }
     if (ds->wu.xyz[1].disp.pos > 0) {
         switch (defense_sky(as, ds, gddir)) {
@@ -1122,11 +1120,11 @@ void attack_hit_check(void) {
         next2:
             lp++;
         test2:
-        if (lp < 4) {
-            goto loop2;
+        if (lp >= 4) {
+            goto body_end;
         }
-        goto fill1;
-    fill1:
+        goto loop2;
+    body_end:
         dmdat_adrs[4] = (s16*)sad->h_hos;
         sh = (s16*)sad->h_att;
         lp = 0;
@@ -1153,11 +1151,11 @@ void attack_hit_check(void) {
         next4:
             lp++;
         test4:
-        if (lp < 2) {
-            goto loop4;
+        if (lp >= 2) {
+            goto hand_end;
         }
-        goto fill2;
-    fill2:
+        goto loop4;
+    hand_end:
         mi = 0;
         goto test5;
         loop5:
@@ -1173,14 +1171,14 @@ void attack_hit_check(void) {
                 goto next5;
             }
             if (!(mad->att.dipsw & 2) || (!(sad->att.dipsw & 2) && (sad->work_id == 1 || !(((WORK_Other*)sad)->refrected)))) {
-                if ((mad->work_id != 1 && mad->work_id != 8) || !(sad->att.dipsw & 2)) {
-                    goto g1;
-                g1:
-                    if (!(mad->vs_id & sad->work_id)) {
-                        goto next5;
-                    }
+                if ((mad->work_id == 1 || mad->work_id == 8) && (sad->att.dipsw & 2)) {
+                    goto owner_check;
+                }
+                if (!(mad->vs_id & sad->work_id)) {
+                    goto next5;
                 }
             }
+        owner_check:
             if (mad->work_id != 1) {
                 if (sad->work_id == 1) {
                     if (((WORK_Other*)mad)->master_id == sad->id) {
@@ -1268,11 +1266,11 @@ void attack_hit_check(void) {
                     lp++;
                     ah += 4;
                 test6:
-                if (lp < 2) {
-                    goto loop6;
+                if (lp >= 2) {
+                    goto eat_end;
                 }
-                goto fill3;
-            fill3:
+                goto loop6;
+            eat_end:
                 if (mad->att_hit_ok == 0) {
                     goto next_si;
                 }
@@ -1358,11 +1356,11 @@ void attack_hit_check(void) {
                 lp++;
                 ah += 4;
             test8:
-            if (lp < 2) {
-                goto loop8;
+            if (lp >= 2) {
+                goto att_end;
             }
-            goto fill4;
-        fill4:
+            goto loop8;
+        att_end:
             if (mad->att_hit_ok == 0) {
                 goto next_si;
             }

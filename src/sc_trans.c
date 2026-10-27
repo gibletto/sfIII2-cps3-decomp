@@ -283,32 +283,19 @@ void sc_chr_to_ram(u16 n) {
 
 
 void sc_chr_sheet_to_ram(u16 chr, u16 pos, u16 w, u16 h) {
-    s32 i, j, k;
+    u16 i, j, k;
+    u16 d;
     u8* src;
     sc_trans_src = (u8*)&sc_chr_data[chr * 32 / 2];
     sc_bak_ptr = &sc_chr_ram[pos * 32];
-    i = 0;
     src = sc_trans_src;
-    for (; (u16)i < h; i++) {
-        for (j = 0; (u16)j < w; j++) {
-            k = 0;
-            for (;;) {
-                k += 2;
-                {
-                    u8 v = *sc_trans_src;
-                    *sc_bak_ptr = v;
-                }
+    for (i = 0; i < h; i++) {
+        for (j = 0; j < w; j++) {
+            for (k = 0; k < 32; k++) {
+                d = *sc_trans_src;
+                *sc_bak_ptr = d;
                 sc_bak_ptr++;
                 sc_trans_src++;
-                {
-                    u16 v = *sc_trans_src;
-                    *sc_bak_ptr = v;
-                }
-                sc_bak_ptr++;
-                sc_trans_src++;
-                if ((u16)k >= 32) {
-                    break;
-                }
             }
         }
         sc_trans_src = src + 0x200;

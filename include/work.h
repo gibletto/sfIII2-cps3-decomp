@@ -974,27 +974,27 @@ extern WORK_Other_JUDGE * dbg_judge_ewk;
 extern u8 dbg_look_judge[];
 extern HITA_BOX dbg_look_body[];
 extern HITA_BOX dbg_look_hand[];
-extern u8 dbg_look_catch[];
-extern u8 dbg_look_caught[];
+extern CATCH_BOX dbg_look_catch[];
+extern CAUGHT_BOX dbg_look_caught[];
 extern HITA_BOX dbg_look_attack[];
-extern u8 dbg_look_eat[];  /* provisional name: the extra (eat) attack boxes */
-extern u8 dbg_look_hosei[];
+extern ATTACK_BOX dbg_look_eat[];  /* provisional name: the extra (eat) attack boxes */
+extern HOSEI_BOX dbg_look_hosei[];
 extern u8 dbg_edit_judge[];
-extern u8 dbg_edit_body[];
-extern u8 dbg_edit_hand[];
-extern u8 dbg_edit_catch[];
-extern u8 dbg_edit_caught[];
-extern u8 dbg_edit_attack[];
-extern u8 dbg_edit_eat[];  /* provisional name */
-extern u8 dbg_edit_hosei[];
+extern BODY_BOX dbg_edit_body[];
+extern HAND_BOX dbg_edit_hand[];
+extern CATCH_BOX dbg_edit_catch[];
+extern CAUGHT_BOX dbg_edit_caught[];
+extern ATTACK_BOX dbg_edit_attack[];
+extern ATTACK_BOX dbg_edit_eat[];  /* provisional name */
+extern HOSEI_BOX dbg_edit_hosei[];
 extern u8 dbg_copy_judge[];
-extern u8 dbg_copy_body[];
-extern u8 dbg_copy_hand[];
-extern u8 dbg_copy_catch[];
-extern u8 dbg_copy_caught[];
-extern u8 dbg_copy_attack[];
-extern u8 dbg_copy_eat[];  /* provisional name */
-extern u8 dbg_copy_hosei[];
+extern BODY_BOX dbg_copy_body[];
+extern HAND_BOX dbg_copy_hand[];
+extern CATCH_BOX dbg_copy_catch[];
+extern CAUGHT_BOX dbg_copy_caught[];
+extern ATTACK_BOX dbg_copy_attack[];
+extern ATTACK_BOX dbg_copy_eat[];  /* provisional name */
+extern HOSEI_BOX dbg_copy_hosei[];
 extern WORK_Other * dbg_hita_ewk[7];
 extern u8 dbg_hita_ewk_tail[4];
 extern s16 dbg_hita_num;

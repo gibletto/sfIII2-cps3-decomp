@@ -93,23 +93,23 @@ void renewal_table_address(WORK_Other_JUDGE* ewk, WORK* twk) {
         }
     }
     if (Debug_Box_Edit) {
-        ewk->wu.h_bod = (BODY_BOX*)dbg_copy_buf.h_bod;
-        ewk->wu.h_han = (HAND_BOX*)dbg_copy_buf.h_han;
-        ewk->wu.h_dumm = (HAND_BOX*)dbg_copy_buf.adrs5;
-        ewk->wu.h_att = (ATTACK_BOX*)dbg_copy_buf.h_att;
-        ewk->wu.h_eat = (ATTACK_BOX*)dbg_copy_buf.adrs13;
-        ewk->wu.h_cat = (CATCH_BOX*)dbg_copy_buf.h_cat;
-        ewk->wu.h_cau = (CAUGHT_BOX*)dbg_copy_buf.h_cau;
-        ewk->wu.h_hos = (HOSEI_BOX*)dbg_copy_buf.h_hos;
+        ewk->wu.h_bod = dbg_copy_buf.h_bod;
+        ewk->wu.h_han = dbg_copy_buf.h_han;
+        ewk->wu.h_dumm = dbg_copy_buf.h_dumm;
+        ewk->wu.h_att = dbg_copy_buf.h_att;
+        ewk->wu.h_eat = dbg_copy_buf.h_eat;
+        ewk->wu.h_cat = dbg_copy_buf.h_cat;
+        ewk->wu.h_cau = dbg_copy_buf.h_cau;
+        ewk->wu.h_hos = dbg_copy_buf.h_hos;
     } else if (ewk->look_up_flag) {
-        ewk->wu.h_bod = (BODY_BOX*)dbg_look_buf.h_bod;
-        ewk->wu.h_han = (HAND_BOX*)dbg_look_buf.h_han;
-        ewk->wu.h_dumm = (HAND_BOX*)dbg_look_buf.adrs5;
-        ewk->wu.h_att = (ATTACK_BOX*)dbg_look_buf.h_att;
-        ewk->wu.h_eat = (ATTACK_BOX*)dbg_look_buf.adrs13;
-        ewk->wu.h_cat = (CATCH_BOX*)dbg_look_buf.h_cat;
-        ewk->wu.h_cau = (CAUGHT_BOX*)dbg_look_buf.h_cau;
-        ewk->wu.h_hos = (HOSEI_BOX*)dbg_look_buf.h_hos;
+        ewk->wu.h_bod = dbg_look_buf.h_bod;
+        ewk->wu.h_han = dbg_look_buf.h_han;
+        ewk->wu.h_dumm = dbg_look_buf.h_dumm;
+        ewk->wu.h_att = dbg_look_buf.h_att;
+        ewk->wu.h_eat = dbg_look_buf.h_eat;
+        ewk->wu.h_cat = dbg_look_buf.h_cat;
+        ewk->wu.h_cau = dbg_look_buf.h_cau;
+        ewk->wu.h_hos = dbg_look_buf.h_hos;
     } else {
         ewk->wu.h_bod = twk->h_bod;
         ewk->wu.h_han = twk->h_han;
