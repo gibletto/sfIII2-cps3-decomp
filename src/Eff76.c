@@ -18,17 +18,24 @@
 #include "aboutspr.h"
 #include "Eff76.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* count the start delay down */
+#define R0_SLIDE        1       /* slide in to its place */
+#define R0_STAY         2       /* stay in place */
+#define R0_END          3       /* hidden for a frame */
+#define R0_KILL         4       /* (default) put the work back */
+
 
 
 void effect_76_move(WORK_Other* ewk) {
     if (Suicide) {
         ewk->wu.disp_flag = 0;
-        ewk->wu.routine_no[0] = 3;
+        ewk->wu.routine_no[0] = R0_END;
         return;
     }
     Cut_Cut_Sub(3);
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer) {
             return;
         }
@@ -36,7 +43,7 @@ void effect_76_move(WORK_Other* ewk) {
         ewk->wu.disp_flag = 1;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.vital_new + 1, 0);
         break;
-    case 1:
+    case R0_SLIDE:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp * 3;
         ewk->wu.mvxy.a[0].sp += ewk->wu.mvxy.d[0].sp;
         if (ewk->wu.mvxy.a[0].sp > 0) {
@@ -47,9 +54,9 @@ void effect_76_move(WORK_Other* ewk) {
             ewk->wu.routine_no[0]++;
         }
         break;
-    case 2:
+    case R0_STAY:
         break;
-    case 3:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:

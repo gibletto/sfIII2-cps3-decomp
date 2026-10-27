@@ -1,5 +1,11 @@
 /*
- * BG000_TBL.C  tables read by bg000.c: stage background setup and stages BG000-BG030
+ * BG000_TBL.C  stage background cell lists and scroll limits
+ *
+ * bg_rewrite_cells0 - 9 are the cell lists (map offset, cell number) bg_scr_write puts into
+ * each background layer, and bg_etc_cells0 - 4 those bg_etc_scr_write puts on the special
+ * screens; both are reached through bg_rewrite_cell_tbl and bg_etc_cell_tbl in BG_WORK.C.
+ * bg_limit_tbl gives, per background and layer, the left, right and y scroll limits; read by
+ * BG000.C. bg_limit_unref_tbl is not referred to.
  */
 
 #include "types.h"

@@ -1,5 +1,8 @@
 /*
- * EEPROM_TBL.C  tables read by eeprom.c: EEPROM access and bookkeeping counters
+ * EEPROM_TBL.C  EEPROM error message
+ *
+ * eeprom_error_str is the "EEPROM  ERROR" line printed by EEPROM.C when the EEPROM check
+ * fails.
  */
 
 #include "types.h"

@@ -21,6 +21,25 @@
 #include "se_3.h"
 #include "EFFE1.h"
 
+/* routine_no[0], all three windows */
+#define R0_WAIT         0       /* wait the delay, then show */
+#define R0_OPEN         1       /* open the window */
+#define R0_SET          2       /* set the final state */
+#define R0_STAY         3       /* (default) stay in the final state */
+
+/* routine_no[1], effE1_0000 */
+#define R1_CUE          0       /* wait for opening scene 12 */
+#define R1_ANIM         1       /* play the opening pattern */
+
+/* routine_no[1], effE1_1000 and effE1_2000 */
+#define R1_SHRINK       0       /* shrink while flying to the point */
+#define R1_HOLD         1       /* hold for 60 frames */
+#define R1_START        2       /* start the opening pattern */
+#define R1_PLAY         3       /* play it to the end */
+
+/* routine_no[1], effE1_2000 */
+#define R1_HIDE         2       /* hide */
+
 
 
 extern s8 effE1_end_flag;                  /* provisional name */
@@ -49,7 +68,7 @@ void effect_E1_move(WORK_Other* ewk) {
 
 static void effE1_0000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer) {
             return;
         }
@@ -59,9 +78,9 @@ static void effE1_0000(WORK_Other* ewk) {
         ewk->wu.xyz[1].disp.low = 0;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[0] + 1, 0);
         break;
-    case 1:
+    case R0_OPEN:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_CUE:
             if (op_w.r_no_1 != 12) {
                 break;
             }
@@ -71,7 +90,7 @@ static void effE1_0000(WORK_Other* ewk) {
             ewk->wu.my_mr.size.y = 63;
             set_char_move_init(&ewk->wu, 0, 95);
             break;
-        case 1:
+        case R1_ANIM:
             if (ewk->wu.cg_type == 0xFF) {
                 ewk->wu.routine_no[0]++;
                 ewk->wu.xyz[0].disp.pos = 0x1B8;
@@ -82,7 +101,7 @@ static void effE1_0000(WORK_Other* ewk) {
             break;
         }
         break;
-    case 2:
+    case R0_SET:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, 89);
@@ -101,7 +120,7 @@ static void effE1_0000(WORK_Other* ewk) {
 
 static void effE1_1000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer) {
             return;
         }
@@ -113,9 +132,9 @@ static void effE1_1000(WORK_Other* ewk) {
         ewk->wu.my_mr.size.y = 127;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[0] + 1, 0);
         break;
-    case 1:
+    case R0_OPEN:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_SHRINK:
             if (ewk->wu.my_mr.size.x >= 67) {
                 ewk->wu.my_mr.size.x -= 4;
                 ewk->wu.my_mr.size.y -= 4;
@@ -134,20 +153,20 @@ static void effE1_1000(WORK_Other* ewk) {
                 add_y_sub(ewk);
             }
             break;
-        case 1:
+        case R1_HOLD:
             ewk->wu.old_rno[1] -= 1;
             if (ewk->wu.old_rno[1] <= 0) {
                 ewk->wu.routine_no[1]++;
                 effE1_end_flag = 1;
             }
             break;
-        case 2:
+        case R1_START:
             ewk->wu.routine_no[1]++;
             ewk->wu.xyz[0].disp.low = 0;
             ewk->wu.xyz[1].disp.low = 0;
             set_char_move_init(&ewk->wu, 0, 94);
             break;
-        case 3:
+        case R1_PLAY:
             if (ewk->wu.cg_type == 9) {
                 effE1_end_flag = 1;
                 ewk->wu.cg_type = 0;
@@ -162,7 +181,7 @@ static void effE1_1000(WORK_Other* ewk) {
             break;
         }
         break;
-    case 2:
+    case R0_SET:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, 90);
@@ -182,7 +201,7 @@ static void effE1_1000(WORK_Other* ewk) {
 
 static void effE1_2000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer) {
             return;
         }
@@ -194,9 +213,9 @@ static void effE1_2000(WORK_Other* ewk) {
         ewk->wu.my_mr.size.y = 127;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[0] + 1, 0);
         break;
-    case 1:
+    case R0_OPEN:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_SHRINK:
             if (ewk->wu.my_mr.size.x >= 67) {
                 ewk->wu.my_mr.size.x -= 4;
                 ewk->wu.my_mr.size.y -= 4;
@@ -214,19 +233,19 @@ static void effE1_2000(WORK_Other* ewk) {
                 add_y_sub(ewk);
             }
             break;
-        case 1:
+        case R1_HOLD:
             ewk->wu.old_rno[1] -= 1;
             if (ewk->wu.old_rno[1] <= 0) {
                 ewk->wu.routine_no[1]++;
             }
             break;
-        case 2:
+        case R1_HIDE:
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 0;
             ewk->wu.xyz[0].disp.low = 0;
             ewk->wu.xyz[1].disp.low = 0;
             break;
-        case 3:
+        case R1_PLAY:
             if (ewk->wu.cg_type == 0xFF) {
                 ewk->wu.routine_no[0]++;
                 ewk->wu.xyz[0].disp.pos = 0x1B8;
@@ -237,7 +256,7 @@ static void effE1_2000(WORK_Other* ewk) {
             break;
         }
         break;
-    case 2:
+    case R0_SET:
         ewk->wu.routine_no[0]++;
         ewk->wu.my_mr.size.x = 63;
         ewk->wu.my_mr.size.y = 63;
@@ -281,7 +300,7 @@ s32 effect_E1_init(s16 id, s16 Time, s16 _p2) {
         ewk->wu.my_priority = ewk->wu.position_z = 51;
         ewk->wu.old_rno[4] = 61;
         if (_p2) {
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_SET;
             ewk->wu.old_rno[4] = 89;
             ewk->wu.xyz[0].disp.pos = 0x1B8;
             ewk->wu.xyz[1].disp.pos = 0x94;
@@ -299,7 +318,7 @@ s32 effect_E1_init(s16 id, s16 Time, s16 _p2) {
         if (_p2) {
             ewk->wu.xyz[0].disp.pos = 0x1B8;
             ewk->wu.xyz[1].disp.pos = 0x94;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_SET;
             ewk->wu.old_rno[4] = 90;
         } else {
             ewk->wu.xyz[0].disp.pos = 0x100;
@@ -316,7 +335,7 @@ s32 effect_E1_init(s16 id, s16 Time, s16 _p2) {
         if (_p2) {
             ewk->wu.xyz[0].disp.pos = 0x200;
             ewk->wu.xyz[1].disp.pos = 0xA0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_SET;
             ewk->wu.char_index = 60;
         } else {
             ewk->wu.old_rno[2] = 0x200;

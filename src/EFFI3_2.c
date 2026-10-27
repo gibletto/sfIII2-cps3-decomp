@@ -24,15 +24,20 @@
 #include "aboutspr.h"
 #include "EFFI3.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* stop the background */
+#define R0_HOLD         1       /* hold until the time runs out */
+#define R0_KILL         2       /* restart the background and free */
+
 
 
 void effect_I3_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         bg_stop = 1;
         /* fall through */
-    case 1:
+    case R0_HOLD:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.routine_no[0]++;
             break;
@@ -43,7 +48,7 @@ void effect_I3_move(WORK_Other* ewk) {
             }
         }
         break;
-    case 2:
+    case R0_KILL:
     default:
         bg_stop = 0;
         push_effect_work(&ewk->wu);

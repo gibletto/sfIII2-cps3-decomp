@@ -1,5 +1,9 @@
 /*
- * TEXTSOUND_TBL.C  tables read by textsound_2.c
+ * TEXTSOUND_TBL.C  sound driver envelope and LFO tables
+ *
+ * snd_attack_rate_tbl and snd_decay_rate_tbl are the envelope rates, and snd_lfo_rate_tbl,
+ * snd_pitch_lfo_tbl and snd_vol_lfo_tbl the LFO speeds and the pitch and volume depths;
+ * sound_init in TEXTSOUND_2.C points the driver at them.
  */
 
 #include "types.h"

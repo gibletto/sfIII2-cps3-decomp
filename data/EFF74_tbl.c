@@ -1,5 +1,9 @@
 /*
- * EFF74_TBL.C  tables read by effect 74
+ * EFF74_TBL.C  stage bird tables
+ *
+ * eff74_data_tbl gives the placement of the four birds on their perches, and eff74_move_tbl
+ * the eight flight paths a bird takes off along when a player comes near. Read by EFF74.C, the
+ * birds on the stage.
  */
 
 #include "types.h"

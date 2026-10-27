@@ -33,6 +33,10 @@
 #include "effect_2.h"
 #include "cmb_cont.h"
 
+/* combo_score_tbl[slot] columns */
+#define COMBO_SCORE_BASE 0      /* score for a slot that hit */
+#define COMBO_SCORE_HIT 1       /* times the combo hits so far */
+
 
 s16 old_cmb_flag[2];  /* 02028838 */
 s8 cmb_stock[2];  /* 0202883C */
@@ -247,7 +251,7 @@ s8 PL;
     if (rever_attack[PL]) {
         return 0;
     }
-    if (plw[PL].wu.routine_no[1] == 4 && plw[PL].wu.old_rno[1] == 1 && pcon_dp_flag == 0) {
+    if (plw[PL].wu.routine_no[1] == PLAYER_ATTACK && plw[PL].wu.old_rno[1] == 1 && pcon_dp_flag == 0) {
         if (plw[PL].wu.routine_no[2] >= 0x10) {
             rever_attack[PL] = 1;
             if (PL == 0) {
@@ -266,7 +270,7 @@ s8 PL;
 void reversal_continue_check(PL)
 s8 PL;
 {
-    if (plw[PL].wu.routine_no[1] != 4) {
+    if (plw[PL].wu.routine_no[1] != PLAYER_ATTACK) {
         rever_attack[PL] = 0;
     } else {
         return;
@@ -329,7 +333,7 @@ s8 PL;
 s32 arts_finish_check(PL)
 s8 PL;
 {
-    if (Conclusion_Flag && Conclusion_Type == 0 && Loser_id == PL) {
+    if (Conclusion_Flag && Conclusion_Type == CONCLUSION_KO && Loser_id == PL) {
         if (sarts_finish_flag[PL]) {
             return 1;
         }
@@ -342,7 +346,7 @@ s32 arts_finish_check2(PL)
 s8 PL;
 {
     if (Conclusion_Flag) {
-        if (Conclusion_Type == 0) {
+        if (Conclusion_Type == CONCLUSION_KO) {
             if (Loser_id == PL) {
                 if ((plw[PL].cb->new_dm & 0x3F) >= 32) {
                     return 1;
@@ -386,12 +390,12 @@ s8 PL;
             hit += h;
             score += *combo_score_tbl[lpy];
             if (h - 1) {
-                score += (hit - 1) * combo_score_tbl[lpy][1];
+                score += (hit - 1) * combo_score_tbl[lpy][COMBO_SCORE_HIT];
             }
         }
     }
     if (bonus_pts[PL]) {
-        score += bonus_pts[PL] * combo_score_tbl[last][1];
+        score += bonus_pts[PL] * combo_score_tbl[last][COMBO_SCORE_HIT];
     }
     return score;
 }
@@ -401,14 +405,14 @@ void SCORE_PLUS(pl, pts)
 s8 pl;
 u32 pts;
 {
-    Score[pl][2] += pts;
-    if (Play_Type == 0) {
-        Score[pl][0] += pts;
-        if (Score[pl][0] >= 9999900) {
-            Score[pl][0] = 9999900;
+    Score[pl][SCORE_ROUND] += pts;
+    if (Play_Type == PLAY_VS_CPU) {
+        Score[pl][SCORE_CPU] += pts;
+        if (Score[pl][SCORE_CPU] >= 9999900) {
+            Score[pl][SCORE_CPU] = 9999900;
         }
     } else {
-        Score[pl][1] += pts;
+        Score[pl][SCORE_VS] += pts;
     }
 }
 

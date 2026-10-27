@@ -1,5 +1,11 @@
 /*
- * EFFD6.C  tables read by effects D6, D7 and D8
+ * EFFD6.C  rose petal, thrown ball and select cursor tables
+ *
+ * num_of_hana gives the number of petals in each petal set, and hana_dir_hosei,
+ * hana_speed_hosei and hana_delta_hosei the direction offset, speed and slowdown of each
+ * petal, picked at random; read by EFFD6_CODE.C, the rose petals. effD7_hit_box is the box in
+ * which a player catches the thrown ball (EFFD7.C), and effD8_char_tbl the patterns of the
+ * face cursor of each player on the character select screen (EFFD8.C).
  */
 
 #include "types.h"

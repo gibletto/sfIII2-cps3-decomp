@@ -27,15 +27,21 @@
 #include "sys_config_2.h"
 #include "sys_config_3.h"
 #include "effj4.h"
+
+/* routine_no[0] */
+#define R0_INIT         0       /* set up and show */
+#define R0_PLAY         1       /* play the animation once */
+#define R0_KILL         2       /* (default) put the work back */
+
 void effect_J3_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         disp_pos_trans_entry(ewk);
         break;
-    case 1:
+    case R0_PLAY:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type == 0xFF) {
             ewk->wu.routine_no[0]++;

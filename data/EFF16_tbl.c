@@ -1,5 +1,10 @@
 /*
- * EFF16_TBL.C  tables read by effects 16 and 18
+ * EFF16_TBL.C  bonus stage score display and zoom piece tables
+ *
+ * bunkai_table holds the powers of ten used to split the score into digits, bunkai_numobj the
+ * character of each digit, and bbbs_score the screen position and character of each digit of
+ * the score display of each type; read by EFF16.C, the bonus-stage score display.
+ * eff17_data_tbl gives the settings of the nine zoom-in pieces of effect 17, read by EFF18.C.
  */
 
 #include "types.h"

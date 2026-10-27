@@ -1,5 +1,8 @@
 /*
- * END_MAIN_TBL_B.C  tables read by end_main_c.c: ending main control and the helpers the endings share
+ * END_MAIN_TBL_B.C  ending type table
+ *
+ * end_type_tbl gives, by the ending's character number, one of three ending types, which picks
+ * the colour load and the fades into and out of the staff roll. Read by END_MAIN_C.C.
  */
 
 #include "types.h"

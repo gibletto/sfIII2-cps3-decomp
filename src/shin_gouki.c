@@ -13,12 +13,13 @@
 #include "romdata.h"
 #include "extern.h"
 #include "EM_Cand.h"
+#include "fighter.h"
 
 
 
 /* provisional name */
 s32 Check_Shin_Gouki_Next(void) {
-    if (Play_Type == 1) {
+    if (Play_Type == PLAY_VS_PLAYER) {
         return 0;
     }
     if (EM_Candidate[Player_id][VS_Index[Player_id]] == 15) {
@@ -31,10 +32,10 @@ s32 Check_Shin_Gouki_Next(void) {
 
 /* provisional name */
 s32 Get_Stage_Shin_Gouki(void) {
-    if (Play_Type == 1) {
+    if (Play_Type == PLAY_VS_PLAYER) {
         return (u16)bg_w.stage;
     }
-    if (My_char[COM_id] == 15) {
+    if (My_char[COM_id] == PL_GOUKI2) {
         return 15;
     }
     return (u16)bg_w.stage;

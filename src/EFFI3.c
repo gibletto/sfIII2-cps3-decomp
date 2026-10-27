@@ -18,6 +18,11 @@
 #include "aboutspr.h"
 #include "EFFI3.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the cycle */
+#define R0_MOVE         1       /* step the colours until told to end */
+#define R0_KILL         2       /* put the work back */
+
 
 
 
@@ -39,9 +44,9 @@ s32 effect_I2_init(void) {
 
 void effect_I2_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
-    case 1:
+    case R0_MOVE:
         if (Suicide) {
             all_cgps_put_back(ewk);
             push_effect_work((WORK*)ewk);
@@ -58,7 +63,7 @@ void effect_I2_move(WORK_Other* ewk) {
             return;
         }
         break;
-    case 2:
+    case R0_KILL:
     default:
         push_effect_work((WORK*)ewk);
         return;

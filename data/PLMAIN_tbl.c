@@ -1,5 +1,13 @@
 /*
- * PLMAIN_TBL.C  tables read by PLMAIN.c, PLMAIN2.c and PLS00.c
+ * PLMAIN_TBL.C  player move routine tables
+ *
+ * plmain_lv_00 is the five routine_no[0] steps (player_mv_0000 .. 4000) of the player move,
+ * read by PLMAIN.C, and plmain_b_lv_00 the same steps for the bonus stage (player_mvbs_*),
+ * read by PLMAIN2.C; plmain_lv_02 the routine_no[1] states (normal, damage, catch, caught,
+ * attack), used by both; sag_jmp_tbl the super art gauge process by gauge type (PLMAIN.C).
+ * lvdir_conv turns the lever direction round when a jumping player changes facing, and
+ * defense_cg_ix_table gives each character's guard animation by defence kind; read by PLS00.C.
+ * sag_jmp_tbl_tail and sag_jmp_tbl_tail_2 follow sag_jmp_tbl and are not referred to by name.
  */
 
 #include "types.h"
@@ -35,26 +43,26 @@ extern void sag_rebirth();
 extern void sag_timer();
 
 void (*const plmain_lv_00[5])() = {
-    (void (*)())player_mv_0000,
-    (void (*)())player_mv_1000,
-    (void (*)())player_mv_2000,
-    (void (*)())player_mv_3000,
-    (void (*)())player_mv_4000,
+    player_mv_0000,
+    player_mv_1000,
+    player_mv_2000,
+    player_mv_3000,
+    player_mv_4000,
 };
 
 void (*const plmain_lv_02[5])() = {
-    (void (*)())Player_normal,
-    (void (*)())Player_damage,
-    (void (*)())Player_catch,
-    (void (*)())Player_caught,
-    (void (*)())Player_attack,
+    Player_normal,
+    Player_damage,
+    Player_catch,
+    Player_caught,
+    Player_attack,
 };
 
 void (*const sag_jmp_tbl[4])() = {
-    (void (*)())sag_normal,
-    (void (*)())sag_timer,
-    (void (*)())sag_normal,
-    (void (*)())sag_rebirth,
+    sag_normal,
+    sag_timer,
+    sag_normal,
+    sag_rebirth,
 };
 
 /* provisional name */
@@ -209,11 +217,11 @@ const s16 sag_jmp_tbl_tail_2[128][4] = {
 };
 
 void (*const plmain_b_lv_00[5])() = {
-    (void (*)())player_mvbs_0000,
-    (void (*)())player_mvbs_1000,
-    (void (*)())player_mvbs_2000,
-    (void (*)())player_mvbs_3000,
-    (void (*)())player_mvbs_4000,
+    player_mvbs_0000,
+    player_mvbs_1000,
+    player_mvbs_2000,
+    player_mvbs_3000,
+    player_mvbs_4000,
 };
 
 const s8 lvdir_conv[4] = {

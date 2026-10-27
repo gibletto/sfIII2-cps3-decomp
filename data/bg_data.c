@@ -1,5 +1,11 @@
 /*
- * BG_DATA.C  tables read by bg000.c: stage background setup and stages BG000-BG030
+ * BG_DATA.C  stage background index table
+ *
+ * bg_index_tbl gives the background number (bg_index) for each stage and area, and every other
+ * stage background table is indexed by it; etc_bg_pos_tbl is the starting x and y of each
+ * layer of the special screens. Read by BG000.C (bg_initialize, bg_end_initialize,
+ * bg_etc_write). bg_index_tbl_tail, which follows bg_index_tbl, and bg_test_menu_scr, the
+ * position lines of the background test (strings in BG_DATA2.C), are not referred to.
  */
 
 #include "types.h"

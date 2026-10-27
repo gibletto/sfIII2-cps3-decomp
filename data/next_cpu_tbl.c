@@ -1,5 +1,12 @@
 /*
- * NEXT_CPU_TBL.C  tables read by game_config_jp.c: test-mode game configuration, Japanese page
+ * NEXT_CPU_TBL.C  Japanese game configuration page scripts
+ *
+ * The gcfg_*_scr_jp_* tables are the text-layer scripts of the Japanese GAME CONFIGURATION
+ * page of test mode: the guide and exit guide lines, the value labels of the screen mode,
+ * round, event and bonus items, the cursor and its eraser, and the eight steps of the star
+ * gauges with their eraser. They are reached through the TMSCRIPT tables of GAME_CONFIG_JP.C.
+ * gcfg_title_old_scr_jp_0, a shorter title script, is only pointed at by
+ * gcfg_gauge_clr_scr_jp_tail, which nothing reads.
  */
 
 #include "types.h"

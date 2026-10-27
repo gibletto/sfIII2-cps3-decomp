@@ -1,5 +1,12 @@
 /*
- * EFFH9_TBL.C  tables read by effects H9 and I0
+ * EFFH9_TBL.C  pop-up object tables for effects H7 and H8, and the balls-left counter
+ *
+ * For the objects that pop out of the ground: per-type delays (effH7_wait_tbl,
+ * effH7_wait2_tbl, effH8_wait_tbl), patterns by facing and type (effH7_char_tbl,
+ * effH8_char_tbl, and effH8_char2_tbl for the second pattern), { x, y, priority } offsets
+ * (effH7_pos_tbl, effH8_pos_tbl) and effH7_bound_tbl, the bounce and bobbing height steps;
+ * read by EFFH9.C. bbbs_ball is the three-sprite bonus-stage balls-left counter per facing;
+ * read by EFFI0.C.
  */
 
 #include "types.h"
@@ -31,6 +38,10 @@ const s16 effH7_char_tbl[2][4] = {
     { 74, 75, 76, 77 },
 };
 
+/*
+ * Indexed by facing (rl_waza) and type: x offset (toward the facing), y offset and
+ * priority offset of the object from where it was created.
+ */
 const s16 effH7_pos_tbl[2][4][3] = {
     { { -32, -6, -2 }, { -4, 4, 2 }, { 24, -6, -2 }, { 48, 4, 2 } },
     { { -32, -6, -2 }, { -8, 4, 2 }, { 20, -6, -2 }, { 48, 4, 2 } },
@@ -75,6 +86,7 @@ const s16 effH8_char2_tbl[2][4] = {
     { 37, 39, 41, 43 },
 };
 
+/* Indexed by facing (rl_waza) and type: x offset, y offset and priority offset. */
 const s16 effH8_pos_tbl[2][4][3] = {
     { { -32, -4, -2 }, { -12, -4, -2 }, { 12, -4, -2 }, { 36, -4, -2 } },
     { { -32, -4, -2 }, { -8, -4, -2 }, { 16, -4, -2 }, { 36, -4, -2 } },

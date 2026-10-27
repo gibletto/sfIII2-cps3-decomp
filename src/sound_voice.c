@@ -19,6 +19,7 @@
 #include "extern.h"
 #include "sound_voice_2.h"
 #include "sound_voice.h"
+#include "seqop.h"
 #include "cps3.h"
 /* provisional name */
 u32 sound_envelope_rate(u16 level, u8 index, const u16* table) {
@@ -66,19 +67,19 @@ void voice_process_primary(SNDVOICE* voice, s8 is_bgm, u8 voice_index) {
     paired_bgm_voice = &bgm_voice[voice_index];
     automation = &se_pan_ramp[voice_index];
     bgm_ticks = &bgm_tick_step;
-    (void)((WORK*)bgm_ticks)->id;
+    (void)&((WORK*)bgm_ticks)->id;
     event_mask = 0x80;
     (void)&((WORK*)1)->id;
     (void)&((WORK*)0)->id;
 next_event:
     argument = voice->cursor;
     event = *argument++;
-    if (event >= 0xC0) {
+    if (event >= SEQ_CONTROL) {
 control_event:;
         switch (event) {
-        case 0xC0:
+        case SEQ_NOP:
             break;
-        case 0xC1:
+        case SEQ_TEMPO:
             if (is_bgm) {
                 *bgm_ticks = *argument++ << 8;
                 *bgm_ticks += *argument++;
@@ -87,32 +88,32 @@ control_event:;
                 *sfx_ticks += *argument++;
             }
             break;
-        case 0xC2:
+        case SEQ_BANK:
             voice->instrument_bank = *argument++ & 0x0f;
             break;
-        case 0xC3:
+        case SEQ_BEND:
             voice->coarse_pitch_bend = *argument++;
             break;
-        case 0xE7:
+        case SEQ_FINE:
             voice->fine_pitch_control = *argument++;
             break;
-        case 0xC4:
+        case SEQ_PROG:
             voice->program_index = *argument++ & 0x7f;
             break;
-        case 0xC5:
+        case SEQ_PLFO:
             event = *argument++;
             voice->pitch_lfo_depth = snd_pitch_lfo_ptr[event];
             break;
-        case 0xC6:
+        case SEQ_VOL:
             voice->volume = *argument++;
             break;
-        case 0xC7:
+        case SEQ_PAN:
             voice->pan_override = *argument++;
             break;
-        case 0xC8:
+        case SEQ_EXPR:
             voice->expression = *argument++;
             break;
-        case 0xC9:
+        case SEQ_PORTA:
             voice->saved_portamento_step = voice->portamento_step;
             event = *argument++;
             if (event) {
@@ -123,19 +124,19 @@ control_event:;
                 voice->portamento_step = 0;
             }
             break;
-        case 0xCA:
+        case SEQ_REPEAT:
             if (!voice->loop_latch) {
                 argument = voice->origin;
                 voice->loop_latch = 1;
             }
             break;
-        case 0xCB:
+        case SEQ_END_REPEAT:
             if (voice->loop_latch) {
                 voice->status |= 0x40;
                 return;
             }
             break;
-        case 0xCD:
+        case SEQ_JUMP2:
             if (voice->loop_latch) {
                 relative = (s8)*argument++ * 0x100;
                 relative += (s8)*argument++;
@@ -145,7 +146,7 @@ control_event:;
                 argument += 2;
             }
             break;
-        case 0xCC:
+        case SEQ_JUMP1:
             if (!voice->loop_latch) {
                 relative = (s8)argument[0] * 0x100 + argument[1] + 2;
                 argument += relative;
@@ -154,26 +155,26 @@ control_event:;
                 argument += 2;
             }
             break;
-        case 0xCE:
+        case SEQ_JUMP:
             relative = (s8)*argument++;
             relative <<= 8;
             relative |= *argument++;
             argument += relative;
             break;
-        case 0xCF:
+        case SEQ_JUMP_TRACK:
             argument = bgm_voice[*argument].origin;
             break;
-        case 0xD0:
-        case 0xD1:
-        case 0xD2:
-        case 0xD3:
-            voice->loop_cursor[event - 0xd0] = argument;
+        case SEQ_LOOP_START:
+        case SEQ_LOOP_START + 1:
+        case SEQ_LOOP_START + 2:
+        case SEQ_LOOP_START + 3:
+            voice->loop_cursor[event - SEQ_LOOP_START] = argument;
             break;
-        case 0xD4:
-        case 0xD5:
-        case 0xD6:
-        case 0xD7:
-            loop_index = event - 0xd4;
+        case SEQ_LOOP:
+        case SEQ_LOOP + 1:
+        case SEQ_LOOP + 2:
+        case SEQ_LOOP + 3:
+            loop_index = event - SEQ_LOOP;
             if (voice->loop_count[loop_index]) {
                 voice->loop_count[loop_index]--;
                 if (voice->loop_count[loop_index]) {
@@ -186,11 +187,11 @@ control_event:;
                 argument = voice->loop_cursor[loop_index];
             }
             break;
-        case 0xD8:
-        case 0xD9:
-        case 0xDA:
-        case 0xDB:
-            skip_index = event - 0xd8;
+        case SEQ_LOOP_EXIT:
+        case SEQ_LOOP_EXIT + 1:
+        case SEQ_LOOP_EXIT + 2:
+        case SEQ_LOOP_EXIT + 3:
+            skip_index = event - SEQ_LOOP_EXIT;
             if (voice->loop_count[skip_index] == 1) {
                 voice->loop_count[skip_index] = 0;
                 relative = (argument[0] << 8) + argument[1];
@@ -200,44 +201,44 @@ control_event:;
                 argument += 2;
             }
             break;
-        case 0xDC:
+        case SEQ_KEY:
             voice->transpose = (s8)*argument++;
             break;
-        case 0xDD:
+        case SEQ_KEY_ADD:
             voice->transpose += (s8)*argument++;
             break;
-        case 0xDE:
+        case SEQ_TUNE:
             voice->volume_offset = (s8)*argument++;
             break;
-        case 0xDF:
+        case SEQ_TUNE_ADD:
             voice->volume_offset += (s8)*argument++;
             break;
-        case 0xE0:
+        case SEQ_LFO_SYNC:
             if (*argument++) {
                 voice->status |= 0x01;
             } else {
                 voice->status &= ~0x01;
             }
             break;
-        case 0xE1:
+        case SEQ_LFO_RATE:
             event = *argument++;
             voice->lfo_rate = snd_lfo_rate_ptr[event];
             break;
-        case 0xE2:
+        case SEQ_VLFO:
             event = *argument++;
             voice->volume_lfo_depth = snd_vol_lfo_ptr[event];
             break;
-        case 0xE3:
+        case SEQ_PRIO:
             voice->priority_flags = *argument++;
             break;
-        case 0xE4:
-        case 0xE5:
+        case SEQ_E4:
+        case SEQ_E5:
             argument += 2;
             break;
-        case 0xE6:
+        case SEQ_E6:
             argument++;
             break;
-        case 0xFF:
+        case SEQ_END:
             voice->status |= 0x40;
             if (!is_bgm) {
                 if (!(paired_bgm_voice->status & event_mask)) {

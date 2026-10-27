@@ -1,5 +1,8 @@
 /*
- * END_5_TBL.C  tables read by end_5.c: ending 5 (end_05000)
+ * END_5_TBL.C  Necro's ending cell list (ending 5)
+ *
+ * end_500_bg0_cell_tbl lists the BG0 cells (map offset, cell number) written at the start of
+ * Necro's ending. Read by END_5.C.
  */
 
 #include "types.h"

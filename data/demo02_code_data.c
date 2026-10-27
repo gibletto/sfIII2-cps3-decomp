@@ -1,5 +1,8 @@
 /*
- * DEMO02_CODE_DATA.C  tables read by demo02_code.c: attract mode: demonstration play
+ * DEMO02_CODE_DATA.C  demonstration play character table
+ *
+ * Demo_PL_Play_Data gives the two characters of each of the four attract mode demonstration
+ * fights, picked by Demo_PL_Index. Read by Setup_Demo_PL in DEMO02_CODE.C.
  */
 
 #include "types.h"

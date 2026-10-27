@@ -1,5 +1,9 @@
 /*
- * END_13_TBL.C  tables read by end_13.c: ending 13
+ * END_13_TBL.C  Gouki's ending tables (ending 13)
+ *
+ * end_1300_panel0 and end_1300_panel1 list the BG cells (map offset, cell number) written at
+ * the start of the ending, timer_13_tbl is the length in frames of each scene and end_13_pos
+ * the BG x and y of each scene. Read by END_13.C.
  */
 
 #include "types.h"

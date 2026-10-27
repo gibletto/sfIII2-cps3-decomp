@@ -42,6 +42,15 @@
 #include "textsound_3.h"
 #include "effd3.h"
 
+/* routine_no[0], akebono_finish (R0_INIT in both) */
+#define R0_INIT         0       /* set up the screen */
+#define R0_FLASH        1       /* flash the pictures in turn */
+
+/* routine_no[0], syungoku_finish */
+#define R0_WAIT         1       /* two frames, then the finish effect */
+#define R0_HOLD         2       /* wait for the effect to end */
+#define R0_END          3       /* restore the screen, call the finish */
+
 
 
 void effect_D3_move(WORK_Other* ewk) {
@@ -58,7 +67,7 @@ void effect_D3_move(WORK_Other* ewk) {
 void akebono_finish(WORK_Other* ewk) {
     s16 i;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0] += 1;
         ewk->wu.old_rno[1] = 0;
         ewk->wu.dir_timer = ake_timer_tbl[0];
@@ -77,7 +86,7 @@ void akebono_finish(WORK_Other* ewk) {
         bg_w.bgw[3].position_x = ake_pos_tbl[0][0] - bg_w.pos_offset;
         bg_w.bgw[3].position_y = ake_pos_tbl[0][1];
         break;
-    case 1:
+    case R0_FLASH:
         ewk->wu.dir_timer -= 1;
         if (ewk->wu.dir_timer < 0) {
             ewk->wu.old_rno[1] += 1;
@@ -121,7 +130,7 @@ void akebono_finish(WORK_Other* ewk) {
 void syungoku_finish(WORK_Other* ewk) {
     s16 i;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0] += 1;
         akebono_flag = 1;
         Extra_Break = 1;
@@ -139,7 +148,7 @@ void syungoku_finish(WORK_Other* ewk) {
         scrn_map_set(3, ake_scrl_w[2].adrs);
         ake_Family_Set();
         break;
-    case 1:
+    case R0_WAIT:
         ewk->wu.dir_timer -= 1;
         if (ewk->wu.dir_timer <= 0) {
             ewk->wu.routine_no[0] += 1;
@@ -151,7 +160,7 @@ void syungoku_finish(WORK_Other* ewk) {
         bg_w.bgw[3].position_y = 0;
         ake_Family_Set();
         break;
-    case 2:
+    case R0_HOLD:
         if (ewk->wu.old_rno[0]) {
             ewk->wu.routine_no[0] += 1;
             akebono_flag = 0;
@@ -164,7 +173,7 @@ void syungoku_finish(WORK_Other* ewk) {
         bg_w.bgw[3].position_y = 0;
         ake_Family_Set();
         break;
-    case 3:
+    case R0_END:
         ewk->wu.routine_no[0] += 1;
         for (i = 0; i < bg_w.scno; i++) {
             Bg_On_W(1 << i);

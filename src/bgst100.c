@@ -26,6 +26,12 @@
 #include "EFF74.h"
 #include "eff56.h"
 
+/* bgw r_no_0 of a layer with an entrance demo: its bg*_jmp routine */
+#define R0_INIT         0       /* set up the layer */
+#define R0_WAIT         1       /* wait or colour step, then the entrance demo */
+#define R0_DEMO         2       /* the entrance demo */
+#define R0_MOVE         3       /* follow the fight */
+
 /* declarations the headers do not give */
 void zoom_ud_check(void);
 void bg_x_move_check(void);
@@ -222,11 +228,11 @@ void bg0903_move(void) {
 /* the entrance demo (step 1, raised by speed_y * 200) only with Oro playing in the first area, else step 3 */
 void bg090_demo_check(void) {
     if ((plw->player_number != PL_ORO) && (plw[1].player_number != PL_ORO)) {
-        bgw_ptr->r_no_0 = 3;
+        bgw_ptr->r_no_0 = R0_MOVE;
     } else if (bg_w.area != 0) {
-        bgw_ptr->r_no_0 = 3;
+        bgw_ptr->r_no_0 = R0_MOVE;
     } else {
-        bgw_ptr->r_no_0 = 1;
+        bgw_ptr->r_no_0 = R0_WAIT;
         bgw_ptr->xy[1].cal = bgw_ptr->wxy[1].cal = bgw_ptr->speed_y * 200;
     }
 }

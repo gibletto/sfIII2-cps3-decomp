@@ -1,5 +1,8 @@
 /*
- * PLCNT_TBL_B.C  tables read by PLCNTDAT.c: player base data, stun and super-art setup, round resets
+ * PLCNT_TBL_B.C  stun limits
+ *
+ * pl_piyo_tbl gives each character's stun limit. Read by PLCNTDAT.C, the player base data and
+ * stun setup.
  */
 
 #include "types.h"

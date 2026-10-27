@@ -24,18 +24,23 @@
 #include "bg_sub_5.h"
 #include "EFF61.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set up and show */
+#define R0_SCROLL       1       /* scroll up or down with the mode */
+#define R0_KILL         99      /* (default) put the work back */
+
 void effect_62_move(WORK_Other* ewk) {
     WORK_Other* mwk = (WORK_Other*)ewk->my_master;
     if (akebono_flag || !seraph_flag) {
-        ewk->wu.routine_no[0] = 99;
+        ewk->wu.routine_no[0] = R0_KILL;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.be_flag = 1;
         ewk->wu.disp_flag = 1;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_old + 1, 0);
-    case 1:
+    case R0_SCROLL:
         switch (another_bg[mwk->wu.type]) {
         case 4:
             ewk->wu.xyz[1].cal -= ewk->wu.mvxy.a[1].sp;

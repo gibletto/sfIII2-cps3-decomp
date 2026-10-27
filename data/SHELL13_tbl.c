@@ -1,5 +1,8 @@
 /*
- * SHELL13_TBL.C  tables read by SHELL13.c: CPU anti-projectile patterns, table 13
+ * SHELL13_TBL.C  CPU anti-projectile pattern table 13 (Urien)
+ *
+ * Shell13_Tbl lists the Shell13_nnnn pattern routines the computer-controlled Urien runs when
+ * the opponent fires a projectile, indexed by Pattern_Index. Read by SHELL13.C.
  */
 
 #include "types.h"
@@ -22,16 +25,16 @@ extern void Shell13_0010();
 extern void Shell13_0011();
 
 void (*const Shell13_Tbl[12])() = {
-    (void (*)())Shell13_0000,
-    (void (*)())Shell13_0001,
-    (void (*)())Shell13_0002,
-    (void (*)())Shell13_0003,
-    (void (*)())Shell13_0004,
-    (void (*)())Shell13_0005,
-    (void (*)())Shell13_0006,
-    (void (*)())Shell13_0007,
-    (void (*)())Shell13_0008,
-    (void (*)())Shell13_0009,
-    (void (*)())Shell13_0010,
-    (void (*)())Shell13_0011,
+    Shell13_0000,
+    Shell13_0001,
+    Shell13_0002,
+    Shell13_0003,
+    Shell13_0004,
+    Shell13_0005,
+    Shell13_0006,
+    Shell13_0007,
+    Shell13_0008,
+    Shell13_0009,
+    Shell13_0010,
+    Shell13_0011,
 };

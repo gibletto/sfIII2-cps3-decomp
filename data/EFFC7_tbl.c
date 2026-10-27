@@ -1,5 +1,9 @@
 /*
- * EFFC7_TBL.C  tables read by effects C7 and C8
+ * EFFC7_TBL.C  parry mark positions and entrance prop throw speeds
+ *
+ * paring_mark_data gives the offset of the parry mark from the player for each parry type and
+ * character; read by EFFC7.C, the parry (blocking) mark. effc8_data_tbl gives the speeds with
+ * which the entrance prop is thrown clear at the end of the entrance; read by EFFC8.C.
  */
 
 #include "types.h"

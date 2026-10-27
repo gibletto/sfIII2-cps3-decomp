@@ -1,5 +1,9 @@
 /*
- * EFFF1_TBL.C  tables read by effect F1
+ * EFFF1_TBL.C  another-BG switch tables for effect F1
+ *
+ * effF1_data_tbl has a row per switch number: { another-BG value, type, timer, and two end
+ * condition settings }; effF1_rl_type_tbl swaps the type when the player faces left. Read by
+ * EFFF1.C, the another-BG switch control.
  */
 
 #include "types.h"

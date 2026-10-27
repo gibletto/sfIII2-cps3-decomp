@@ -1,5 +1,18 @@
 /*
- * PLS02_TBL.C  tables read by PLS00.c, PLS02.c and 2 other modules
+ * PLS02_TBL.C  player movement, damage and super art gauge tables
+ *
+ * satse is each character's body half-width, used by the screen-edge checks of PLS02.C and the
+ * scroll limits of BG000.C; jump_pat_status_data, the jump posture by lever direction and
+ * facing, is read by PLS00.C and PLS03.C. The rest are read by PLS02.C: the CPU random number
+ * sequences (random_tbl_32_com, random_tbl_16_com, random_tbl_32_ex, random_tbl_16_ex_com);
+ * dir16_rl_conv (mirrors a 16-way direction), dir16_hddm and dir16_trdm (head and body damage
+ * routine by attack direction) and dir32_skydm and dir32_grddm (air and ground blow-away
+ * routine by flight direction); konjyou_tbl (damage scaling by character and remaining
+ * vitality); apagt_table, ukemi_apagt_table and nagenuke_apagt_table (super art gauge gains
+ * for special actions, recovery rolls and throw escapes) with asagh_zuru and asagh_zuru2
+ * (their adjustment by game level against the computer); dead_voice_table and
+ * voice_select_table (character voices); convert_saishin_lvdir (lever left/right to
+ * forward/back by facing) and gauge_rank_table (the bands of gauge_rank_value).
  */
 
 #include "types.h"
@@ -105,22 +118,22 @@ const s16 dir16_trdm[16] = {
 };
 
 const s16 konjyou_tbl[16][6] = {
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
-    { 24, 28, 28, 32, 32, 32 },
+    { 24, 28, 28, 32, 32, 32 },  /* Gill */
+    { 24, 28, 28, 32, 32, 32 },  /* Alex */
+    { 24, 28, 28, 32, 32, 32 },  /* Ryu */
+    { 24, 28, 28, 32, 32, 32 },  /* Yun */
+    { 24, 28, 28, 32, 32, 32 },  /* Dudley */
+    { 24, 28, 28, 32, 32, 32 },  /* Necro */
+    { 24, 28, 28, 32, 32, 32 },  /* Hugo */
+    { 24, 28, 28, 32, 32, 32 },  /* Ibuki */
+    { 24, 28, 28, 32, 32, 32 },  /* Elena */
+    { 24, 28, 28, 32, 32, 32 },  /* Oro */
+    { 24, 28, 28, 32, 32, 32 },  /* Yang */
+    { 24, 28, 28, 32, 32, 32 },  /* Ken */
+    { 24, 28, 28, 32, 32, 32 },  /* Sean */
+    { 24, 28, 28, 32, 32, 32 },  /* Urien */
+    { 24, 28, 28, 32, 32, 32 },  /* Gouki */
+    { 24, 28, 28, 32, 32, 32 },  /* Shin Gouki */
 };
 
 const s16 apagt_table[16] = {
@@ -153,42 +166,42 @@ const s16 dir32_grddm[32] = {
 };
 
 const s16 dead_voice_table[16][2] = {
-    { 479, 480 },
-    { 448, 449 },
-    { 375, 376 },
-    { 400, 401 },
-    { 462, 463 },
-    { 492, 493 },
-    { 544, 545 },
-    { 352, 353 },
-    { 364, 365 },
-    { 424, 425 },
-    { 412, 413 },
-    { 387, 388 },
-    { 436, 437 },
-    { 688, 689 },
-    { 624, 625 },
-    { 624, 625 },
+    { 479, 480 },  /* Gill */
+    { 448, 449 },  /* Alex */
+    { 375, 376 },  /* Ryu */
+    { 400, 401 },  /* Yun */
+    { 462, 463 },  /* Dudley */
+    { 492, 493 },  /* Necro */
+    { 544, 545 },  /* Hugo */
+    { 352, 353 },  /* Ibuki */
+    { 364, 365 },  /* Elena */
+    { 424, 425 },  /* Oro */
+    { 412, 413 },  /* Yang */
+    { 387, 388 },  /* Ken */
+    { 436, 437 },  /* Sean */
+    { 688, 689 },  /* Urien */
+    { 624, 625 },  /* Gouki */
+    { 624, 625 },  /* Shin Gouki */
 };
 
 /* provisional name */
 const s16 voice_select_table[16][4] = {
-    { 484, 481, 488, 480 },
-    { 455, 451, 456, 449 },
-    { 380, 378, 381, 376 },
-    { 408, 402, 406, 401 },
-    { 466, 464, 468, 463 },
-    { 498, 494, 499, 493 },
-    { 479, 480, 480, 480 },
-    { 357, 354, 356, 353 },
-    { 369, 367, 373, 365 },
-    { 429, 426, 428, 425 },
-    { 417, 415, 421, 413 },
-    { 391, 390, 398, 388 },
-    { 440, 438, 445, 437 },
-    { 479, 480, 480, 480 },
-    { 479, 480, 480, 480 },
-    { 479, 480, 480, 480 },
+    { 484, 481, 488, 480 },  /* Gill */
+    { 455, 451, 456, 449 },  /* Alex */
+    { 380, 378, 381, 376 },  /* Ryu */
+    { 408, 402, 406, 401 },  /* Yun */
+    { 466, 464, 468, 463 },  /* Dudley */
+    { 498, 494, 499, 493 },  /* Necro */
+    { 479, 480, 480, 480 },  /* Hugo */
+    { 357, 354, 356, 353 },  /* Ibuki */
+    { 369, 367, 373, 365 },  /* Elena */
+    { 429, 426, 428, 425 },  /* Oro */
+    { 417, 415, 421, 413 },  /* Yang */
+    { 391, 390, 398, 388 },  /* Ken */
+    { 440, 438, 445, 437 },  /* Sean */
+    { 479, 480, 480, 480 },  /* Urien */
+    { 479, 480, 480, 480 },  /* Gouki */
+    { 479, 480, 480, 480 },  /* Shin Gouki */
 };
 
 const u8 convert_saishin_lvdir[2][16] = {

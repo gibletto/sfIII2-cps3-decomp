@@ -16,25 +16,32 @@
 #include "effect_2.h"
 #include "Eff50.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* wait for the art select to open */
+#define R0_MOVE         1       /* animate until the art is chosen */
+#define R0_HOLD         2       /* hold a few frames, then hide */
+#define R0_END          3       /* one more frame */
+#define R0_KILL         4       /* (default) put the work back */
+
 
 
 /* shown after Select_Arts clears, held 5 frames after Sel_Arts_Complete */
 void effect_50_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (Select_Arts[ewk->master_id] == 0) {
             ewk->wu.routine_no[0]++;
             ewk->wu.disp_flag = 1;
         }
         break;
-    case 1:
+    case R0_MOVE:
         char_move(&ewk->wu);
         if (Sel_Arts_Complete[ewk->master_id]) {
             ewk->wu.routine_no[0]++;
             ewk->wu.dir_timer = 5;
         }
         break;
-    case 2:
+    case R0_HOLD:
         char_move(&ewk->wu);
         if (--ewk->wu.dir_timer == 0) {
             ewk->wu.disp_flag = 0;
@@ -42,7 +49,7 @@ void effect_50_move(WORK_Other* ewk) {
             return;
         }
         break;
-    case 3:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:

@@ -42,13 +42,30 @@
 #include "Com_Pl.h"
 #include "lose_pl.h"
 
+/* lose_rno[2] (and lose_rno[1]) in lose_stage8_action */
+#define LS8_INIT        0       /* already down (pat_status 38) or standing: set up */
+#define LS8_RUN         1       /* go down with the stage */
+#define LS8_WAIT_BG     0       /* lose_rno[1]: until the stage starts to move */
+#define LS8_FALL        1       /* lose_rno[1]: fall for lose_free frames */
+#define LS8_HOLD        2       /* lose_rno[1]: stay there */
+
+/* lose_rno[0] in lose_time_over */
+#define LT_FIRST        0       /* the first animation, until cue 9 */
+#define LT_REFILL       1       /* refill the vitality, then on */
+
+/* routine_no[3], lose_time_over */
+#define LOSE_TIME_OVER_NEXT 1   /* start the next animation */
+
+/* wk->wu.routine_no[3] in a win or lose pose */
+#define POSE_RUN        1       /* the pose runs until its script sets RN3_DONE */
+
 s16 lose_rno[3];  /* 02023A7C */
 s16 lose_free[2];  /* 02023A82 */
 
 
 void lose_player(PLW* wk) {
     void (*lose_jp_tbl[4])(PLW*) = { Lose_00000, Lose_10000, Lose_20000, Lose_30000 };
-    if (pcon_rno[0] == 2 && (pcon_rno[1] == 5 || pcon_rno[1] == 6)) {
+    if (pcon_rno[0] == PCON_DIE && (pcon_rno[1] == SETTLE_SPECIAL || pcon_rno[1] == SETTLE_SPECIAL2)) {
         lose_time_over(wk);
     } else {
         lose_jp_tbl[lose_type_tbl[wk->player_number]](wk);
@@ -58,7 +75,7 @@ void lose_player(PLW* wk) {
 
 
 void Lose_00000(PLW* wk) {
-    if (pcon_rno[0] == 2 && pcon_rno[1] == 3) {
+    if (pcon_rno[0] == PCON_DIE && pcon_rno[1] == SETTLE_JUDGE) {
         Judge_normal_loser(wk);
     } else {
         Normal_normal_Loser(wk);
@@ -72,9 +89,9 @@ void Lose_10000(PLW* wk) {
         lose_stage8_action(wk);
         return;
     }
-    if ((pcon_rno[0] == 2) && (pcon_rno[1] == 3)) {
+    if ((pcon_rno[0] == PCON_DIE) && (pcon_rno[1] == SETTLE_JUDGE)) {
         switch (wk->wu.routine_no[3]) {
-        case 0:
+        case RN3_START:
             wk->wu.routine_no[3]++;
             lose_rno[0] = lose_rno[1] = lose_rno[2] = 0;
             wk->wu.char_index = random_16_com();
@@ -82,24 +99,24 @@ void Lose_10000(PLW* wk) {
             set_char_move_init(&wk->wu, 9, wk->wu.char_index + 0x38);
             break;
         default:
-        case 1:
-        case 9:
+        case POSE_RUN:
+        case RN3_DONE:
             char_move(&wk->wu);
             break;
         }
-    } else if ((pcon_rno[1] == 0) || (pcon_rno[1] == 4)) {
+    } else if ((pcon_rno[1] == SETTLE_KO) || (pcon_rno[1] == SETTLE_GOUKI)) {
         return;
     } else {
         switch (wk->wu.routine_no[3]) {
-        case 0:
+        case RN3_START:
             wk->wu.routine_no[3]++;
             lose_rno[0] = lose_rno[1] = lose_rno[2] = 0;
             wk->wu.char_index = random_16_com();
             wk->wu.char_index &= 7;
             set_char_move_init(&wk->wu, 9, wk->wu.char_index + 0x18);
             break;
-        case 1:
-        case 9:
+        case POSE_RUN:
+        case RN3_DONE:
             char_move(&wk->wu);
             break;
         }
@@ -115,12 +132,12 @@ void Lose_20000(PLW* wk) {
         lose_stage8_action(wk);
         return;
     }
-    if ((pcon_rno[0] == 2) && (pcon_rno[1] == 3)) {
+    if ((pcon_rno[0] == PCON_DIE) && (pcon_rno[1] == SETTLE_JUDGE)) {
         Judge_normal_loser(wk);
         return;
     }
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         id_w = wk->wu.id ^ 1;
         if ((Round_num >= (work = Game_setting.set4) * 2) || (PL_Wins[id_w] >= work + 1)) {
@@ -138,9 +155,9 @@ void Lose_30000(PLW* wk) {
         lose_stage8_action(wk);
         return;
     }
-    if ((pcon_rno[0] == 2) && (pcon_rno[1] == 3)) {
+    if ((pcon_rno[0] == PCON_DIE) && (pcon_rno[1] == SETTLE_JUDGE)) {
         switch (wk->wu.routine_no[3]) {
-        case 0:
+        case RN3_START:
             wk->wu.routine_no[3]++;
             lose_rno[0] = lose_rno[1] = lose_rno[2] = 0;
             if (Country != 1) {
@@ -150,16 +167,16 @@ void Lose_30000(PLW* wk) {
             }
             break;
         default:
-        case 1:
-        case 9:
+        case POSE_RUN:
+        case RN3_DONE:
             char_move(&wk->wu);
             break;
         }
-    } else if ((pcon_rno[1] == 0) || (pcon_rno[1] == 4)) {
+    } else if ((pcon_rno[1] == SETTLE_KO) || (pcon_rno[1] == SETTLE_GOUKI)) {
         return;
     } else {
         switch (wk->wu.routine_no[3]) {
-        case 0:
+        case RN3_START:
             wk->wu.routine_no[3]++;
             lose_rno[0] = lose_rno[1] = lose_rno[2] = 0;
             if (Country != 1) {
@@ -168,8 +185,8 @@ void Lose_30000(PLW* wk) {
                 set_char_move_init(&wk->wu, 9, 0x18);
             }
             break;
-        case 1:
-        case 9:
+        case POSE_RUN:
+        case RN3_DONE:
             char_move(&wk->wu);
             break;
         }
@@ -184,19 +201,19 @@ void Normal_normal_Loser(PLW* wk) {
         lose_stage8_action(wk);
         return;
     }
-    if ((pcon_rno[1] == 0) || (pcon_rno[1] == 4)) {
+    if ((pcon_rno[1] == SETTLE_KO) || (pcon_rno[1] == SETTLE_GOUKI)) {
         return;
     }
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         lose_rno[0] = lose_rno[1] = lose_rno[2] = 0;
         work = random_16_com();
         work &= 7;
         set_char_move_init(&wk->wu, 9, work + 0x18);
         break;
-    case 1:
-    case 9:
+    case POSE_RUN:
+    case RN3_DONE:
         char_move(&wk->wu);
         break;
     }
@@ -211,14 +228,14 @@ void Judge_normal_loser(PLW* wk) {
         return;
     }
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3] += 1;
         work = random_16_com();
         work &= 3;
         set_char_move_init(&wk->wu, 9, work + 0x38);
         break;
-    case 1:
-    case 9:
+    case POSE_RUN:
+    case RN3_DONE:
     default:
         char_move(&wk->wu);
         break;
@@ -229,12 +246,12 @@ void Judge_normal_loser(PLW* wk) {
 
 /* provisional name: the loser on stage 8 area 0 */
 void lose_stage8_action(PLW* wk) {
-    if (wk->wu.routine_no[3] == 0) {
+    if (wk->wu.routine_no[3] == RN3_START) {
         wk->wu.routine_no[3]++;
         lose_rno[0] = lose_rno[1] = lose_rno[2] = 0;
     }
     switch (lose_rno[2]) {
-    case 0:
+    case LS8_INIT:
         lose_rno[2]++;
         lose_rno[1] = 0;
         if (wk->wu.pat_status != 38) {
@@ -244,30 +261,30 @@ void lose_stage8_action(PLW* wk) {
             lose_rno[0] = 1;
         }
         break;
-    case 1:
+    case LS8_RUN:
         if (lose_rno[0]) {
             switch (lose_rno[1]) {
-            case 0:
+            case LS8_WAIT_BG:
                 if (bg_w.bgw[1].r_no_1 >= 1) {
                     lose_rno[1]++;
                     lose_free[wk->wu.id] = 110;
                 }
                 wk->wu.position_y = wk->wu.xyz[1].disp.pos = stage8_base_y + wk->wu.xyz[1].disp.pos - 40;
                 break;
-            case 1:
+            case LS8_FALL:
                 lose_free[wk->wu.id]--;
                 if (lose_free[wk->wu.id] < 0) {
                     wk->wu.routine_no[3]++;
                 }
                 wk->wu.position_y = wk->wu.xyz[1].disp.pos = stage8_base_y - 40;
                 /* fall through */
-            case 2:
+            case LS8_HOLD:
                 wk->wu.kage_flag = 0;
                 break;
             }
         } else {
             switch (lose_rno[1]) {
-            case 0:
+            case LS8_WAIT_BG:
                 if (bg_w.bgw[1].r_no_1 >= 1) {
                     lose_rno[1]++;
                     set_char_move_init(&wk->wu, 9, 61);
@@ -278,7 +295,7 @@ void lose_stage8_action(PLW* wk) {
                     char_move(&wk->wu);
                 }
                 break;
-            case 1:
+            case LS8_FALL:
                 lose_free[wk->wu.id]--;
                 if (lose_free[wk->wu.id] < 0) {
                     wk->wu.routine_no[3]++;
@@ -286,7 +303,7 @@ void lose_stage8_action(PLW* wk) {
                     add_y_sub((WORK_Other*)wk);
                 }
                 /* fall through */
-            case 2:
+            case LS8_HOLD:
                 char_move(&wk->wu);
                 wk->wu.kage_flag = 0;
                 break;
@@ -303,7 +320,7 @@ void lose_time_over(PLW* wk) {
     s16 id_w;
 
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         lose_rno[0] = lose_rno[1] = lose_rno[2] = 0;
         id_w = wk->wu.id ^ 1;
@@ -337,9 +354,9 @@ void lose_time_over(PLW* wk) {
         set_char_move_init(&wk->wu, 9, wk->wu.char_index);
         wk->wu.kind_of_waza = 0;
         break;
-    case 1:
+    case LOSE_TIME_OVER_NEXT:
         switch (lose_rno[0]) {
-        case 0:
+        case LT_FIRST:
             char_move(&wk->wu);
             if (wk->wu.cg_type == 9) {
                 lose_rno[0]++;
@@ -361,7 +378,7 @@ void lose_time_over(PLW* wk) {
                 set_char_move_init(&wk->wu, 9, wk->wu.char_index);
             }
             break;
-        case 1:
+        case LT_REFILL:
             char_move(&wk->wu);
             if (wk->wu.vital_new < wk->wu.vitality) {
                 wk->wu.vital_new += 2;

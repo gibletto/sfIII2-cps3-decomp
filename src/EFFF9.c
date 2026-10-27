@@ -35,6 +35,16 @@
 #include "textsound_3.h"
 #include "EFFF9.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* load the message */
+#define R0_WAIT1        1       /* wait a frame before showing */
+#define R0_WAIT2        2       /* wait a frame before showing */
+#define R0_WAIT3        3       /* wait a frame before showing */
+#define R0_WAIT4        4       /* wait a frame before showing */
+#define R0_MOVE         5       /* type the message out until replaced */
+#define R0_END          6       /* hidden for a frame */
+#define R0_KILL         7       /* (default) put the work back */
+
 
 
 s16 efff9_suicide;  
@@ -62,7 +72,7 @@ void effect_F9_move(WORK_Other_CONN* ewk) {
     const CONN* conn_data;
     s16 i;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         switch (Country) {
         case 1:
@@ -147,13 +157,13 @@ void effect_F9_move(WORK_Other_CONN* ewk) {
         ewk->wu.cg_number++;
         ewk->wu.cg_number &= 0x7FFF;
         break;
-    case 1:
-    case 2:
-    case 3:
-    case 4:
+    case R0_WAIT1:
+    case R0_WAIT2:
+    case R0_WAIT3:
+    case R0_WAIT4:
         ewk->wu.routine_no[0]++;
         break;
-    case 5:
+    case R0_MOVE:
         efff9_mes_wait--;
         if (efff9_mes_wait == 0) {
             efff9_mes_wait = 2;
@@ -187,7 +197,7 @@ void effect_F9_move(WORK_Other_CONN* ewk) {
         ewk->wu.cg_number &= 0x7FFF;
         sort_push_request3(&ewk->wu);
         break;
-    case 6:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:
@@ -207,7 +217,7 @@ s32 effect_F9_init(s16 pl_no)
         return -1;
     }
     ewk = (WORK_Other*)frw[ix];
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     mes_already = 0;
     efff9_suicide = 0;
     efff9_txt_point = 0;
@@ -245,7 +255,7 @@ s32 effF9_talk_init(s16 pl) {
         return -1;
     }
     ewk = (WORK_Other*)frw[ix];
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     mes_already = 0;
     efff9_suicide = 0;
     efff9_txt_point = 0;
@@ -290,7 +300,7 @@ s32 Rewrite_End_Message(u16 mes_no) {
     }
     ewk = (WORK_Other*)frw[ix];
     efff9_mes_no = mes_no;
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     efff9_suicide = 1;
     ewk->master_player = efff9_PL_NO;
     efff9_wk_set((WORK_Other_CONN*)ewk);
@@ -314,7 +324,7 @@ s32 Rewrite_Talk_Message(u16 mes_no) {
     }
     ewk = (WORK_Other*)frw[ix];
     efff9_mes_no = mes_no;
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     efff9_suicide = 1;
     ewk->master_player = efff9_PL_NO;
     effF9_talk_wk_set(ewk);
@@ -337,7 +347,7 @@ s32 Set_Direct_Message(s16 mes) {
         return -1;
     }
     ewk = (WORK_Other*)frw[ix];
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     efff9_suicide = 0;
     ewk->master_player = efff9_PL_NO;
     efff9_wk_set((WORK_Other_CONN*)ewk);
@@ -355,7 +365,7 @@ s32 Next_Talk_Message(void) {
         return -1;
     }
     ewk = (WORK_Other*)frw[ix];
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     efff9_suicide = 1;
     ewk->master_player = efff9_PL_NO;
     if (efff9_PL_NO >= 15) {

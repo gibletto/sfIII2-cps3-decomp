@@ -1,5 +1,10 @@
 /*
- * EFF59_TBL.C  tables read by effect 59
+ * EFF59_TBL.C  country name letters of effect 59
+ *
+ * eff59_country_tbl gives, for each battle country, the row of eff59_name_tbl and its number
+ * of letters; eff59_name_tbl holds the { letter, width } pairs of each country name (0xFF a
+ * space), and eff59_name_x_tbl the x position each name starts at. Read by EFF59.C, the
+ * country name letters.
  */
 
 #include "types.h"
@@ -12,6 +17,10 @@ extern const s16 eff59_name_x_tbl[];
 extern const u8 eff59_name_tbl[][39];
 
 /* provisional name */
+/*
+ * One row per Battle_Country: the row of eff59_name_tbl / eff59_name_x_tbl with its
+ * name, and the number of letters.
+ */
 const u8 eff59_country_tbl[16][2] = {
     { 0, 0x10 },
     { 1, 0xB },

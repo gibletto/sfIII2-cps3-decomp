@@ -25,6 +25,11 @@
 #include "color3rd.h"
 #include "EFF19.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the scaled animation */
+#define R0_MOVE         1       /* animate until the stage ends */
+#define R0_KILL         99      /* (default) put the work back */
+
 extern const u32 eff19_char_table[];   /* provisional name */
 
 
@@ -32,10 +37,10 @@ extern const u32 eff19_char_table[];   /* provisional name */
 /* compel_dead_check, my_mr 58 x 58, no quake reactions */
 void effect_19_move(WORK_Other* ewk) {
     if (compel_dead_check(ewk)) {
-        ewk->wu.routine_no[0] = 99;
+        ewk->wu.routine_no[0] = R0_KILL;
     } else {
         switch (ewk->wu.routine_no[0]) {
-        case 0:
+        case R0_INIT:
             ewk->wu.routine_no[0]++;
             ewk->wu.disp_flag = 1;
             ewk->wu.my_mr_flag = 1;
@@ -43,7 +48,7 @@ void effect_19_move(WORK_Other* ewk) {
             ewk->wu.my_mr.size.y = 58;
             set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
             break;
-        case 1:
+        case R0_MOVE:
             if (!EXE_flag && !Game_pause) {
                 char_move(&ewk->wu);
             }

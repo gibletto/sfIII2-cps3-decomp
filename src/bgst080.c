@@ -30,6 +30,13 @@
 #include "EFF45.h"
 #include "EFF53.h"
 #include "EFFC2.h"
+#include "fighter.h"
+
+/* bgw r_no_0 of a layer with an entrance demo: its bg*_jmp routine */
+#define R0_INIT         0       /* set up the layer */
+#define R0_WAIT         1       /* wait or colour step, then the entrance demo */
+#define R0_DEMO         2       /* the entrance demo */
+#define R0_MOVE         3       /* follow the fight */
 
 /* declarations the headers do not give */
 void zoom_ud_check(void);
@@ -95,7 +102,7 @@ void bg080_layer0_init(void) {
         bgw_ptr->xy[1].cal = bgw_ptr->speed_y * 176;
         bgw_ptr->hos_xy[1].disp.pos = bgw_ptr->wxy[1].cal = bgw_ptr->xy[1].cal;
     } else {
-        bgw_ptr->r_no_0 = 3;
+        bgw_ptr->r_no_0 = R0_MOVE;
         lv = bg_fade_level_tbl[bg_w.bg_index];
         if (Check_Shin_Gouki_Next()) {
             load_any_color_fade(98, lv, lv, lv);
@@ -158,7 +165,7 @@ void bg080_layer1_init(void) {
         bgw_ptr->xy[1].cal = bgw_ptr->speed_y * 176;
         bgw_ptr->hos_xy[1].disp.pos = bgw_ptr->wxy[1].cal = bgw_ptr->xy[1].cal;
     } else {
-        bgw_ptr->r_no_0 = 3;
+        bgw_ptr->r_no_0 = R0_MOVE;
     }
     bg_land_flag = 0;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -177,7 +184,7 @@ void bg080_layer1_wait(void) {
 
 /* provisional name */
 void bg080_layer1_move(void) {
-    if (C_No0 >= 8 && C_No0 != 11) {
+    if (C_No0 >= C0_NEXT && C_No0 != C0_BREAK_IN_CPU) {
         if (Round_num < Game_setting.set4 * 2 || PL_Wins[Winner_id] < Game_setting.set4 + 1) {
             bg_land_flag = 1;
             bgw_ptr->r_no_0++;
@@ -297,7 +304,7 @@ void bg080_layer2(void) {
             bgw_ptr->xy[1].cal = bgw_ptr->speed_y * 176;
             bgw_ptr->hos_xy[1].disp.pos = bgw_ptr->wxy[1].cal = bgw_ptr->xy[1].cal;
         } else {
-            bgw_ptr->r_no_0 = 3;
+            bgw_ptr->r_no_0 = R0_MOVE;
         }
         sync_fam_set3(2);
         break;
@@ -323,7 +330,7 @@ void bg080_demo(void) {
     if (EXE_flag || Game_pause) {
         return;
     }
-    if (plw[0].player_number == 8 && plw[1].player_number == 8) {
+    if (plw[0].player_number == PL_ELENA && plw[1].player_number == PL_ELENA) {
         bgw_ptr->xy[1].cal -= bgw_ptr->speed_y * 4;
     } else if (Cut_Cut_Cut()) {
         bgw_ptr->xy[1].cal -= bgw_ptr->speed_y * 4;

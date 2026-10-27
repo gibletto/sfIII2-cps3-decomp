@@ -1,5 +1,11 @@
 /*
- * CMD_MAIN_TBL_B.C  tables read by CMD_MAIN.c and game_config_en.c
+ * CMD_MAIN_TBL_B.C  English game configuration text and debug character sets
+ *
+ * gcfg_line_*_en and gcfg_help_*_en are the item and help lines of the English GAME
+ * CONFIGURATION page (the *2_en lines are the layout without SCREEN MODE), reached through the
+ * tables in CMD_MAIN_TBL.C. str_NORMAL_2 .. str_ON are the setting values printed beside the
+ * items, read by GAME_CONFIG_EN.C. debug_charset_tbl gives the charset_id loaded for each
+ * character number in the debug menu, read by CMD_MAIN.C.
  */
 
 #include "types.h"

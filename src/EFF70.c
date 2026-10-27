@@ -18,20 +18,26 @@
 #include "aboutspr.h"
 #include "EFF70.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* wait until it may show */
+#define R0_MOVE         1       /* show until told to die */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 s32 eff70_ready();
 
 
 
 void effect_70_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (!eff70_ready()) {
             return;
         }
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         /* fall through */
-    case 1:
+    case R0_MOVE:
         if (Suicide == 1) {
             ewk->wu.routine_no[0]++;
             ewk->wu.disp_flag = 0;
@@ -44,7 +50,7 @@ void effect_70_move(WORK_Other* ewk) {
             sort_push_request4(&ewk->wu);
         }
         break;
-    case 2:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:
@@ -81,8 +87,8 @@ s32 effect_70_init(s16 id) {
     ewk = (WORK_Other*)frw[ix];
     Setup_Eff70(&ewk->wu);
     x = DE_X[10] + 0x101;
-    ewk->wu.xyz[0].disp.pos = x + Face_Pos_Data[id][0] + 0xC0;
-    ewk->wu.xyz[1].disp.pos = Face_Pos_Data[id][1];
+    ewk->wu.xyz[0].disp.pos = x + Face_Pos_Data[id][SEL_POS_X] + 0xC0;
+    ewk->wu.xyz[1].disp.pos = Face_Pos_Data[id][SEL_POS_Y];
     ewk->wu.xyz[2].disp.pos = 62;
     ewk->wu.dir_timer = id;
 }

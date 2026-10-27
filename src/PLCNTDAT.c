@@ -49,6 +49,7 @@
 #include "plcntdat_2.h"
 #include "PLCNTDAT.h"
 #include "fighter.h"
+#include "cmd_data.h"
 
 
 
@@ -57,36 +58,36 @@
 s32 debug_player_change(void) {
     s16 chg = 0;
     if (exsw_1 & 0x80) {
-        if (plw[0].cp->sw_now & 0x10) {
+        if (plw[0].cp->sw_now & CMD_SW_LP) {
             chg = 1;
             My_char[0] = (My_char[0] + 1) & 15;
         }
-        if (plw[0].cp->sw_now & 0x20) {
+        if (plw[0].cp->sw_now & CMD_SW_MP) {
             chg = 2;
             Super_Arts[0]++;
             if (Super_Arts[0] > 2) {
                 Super_Arts[0] = 0;
             }
         }
-        if (plw[0].cp->sw_now & 0x40) {
+        if (plw[0].cp->sw_now & CMD_SW_HP) {
             chg = 1;
             Player_Color[0]++;
             if (Player_Color[0] > 6) {
                 Player_Color[0] = 0;
             }
         }
-        if (plw[1].cp->sw_now & 0x10) {
+        if (plw[1].cp->sw_now & CMD_SW_LP) {
             chg = 1;
             My_char[1] = (My_char[1] + 1) & 15;
         }
-        if (plw[1].cp->sw_now & 0x20) {
+        if (plw[1].cp->sw_now & CMD_SW_MP) {
             chg = 2;
             Super_Arts[1]++;
             if (Super_Arts[1] > 2) {
                 Super_Arts[1] = 0;
             }
         }
-        if (plw[1].cp->sw_now & 0x40) {
+        if (plw[1].cp->sw_now & CMD_SW_HP) {
             chg = 1;
             Player_Color[1]++;
             if (Player_Color[1] > 6) {
@@ -138,7 +139,7 @@ void reset_round_and_screen(void) {
     load_any_color(2);
     count_cont_reset();
     pcon_rno[0] = pcon_rno[1] = pcon_rno[2] = pcon_rno[3] = 0;
-    appear_type = 0;
+    appear_type = APPEAR_STAND;
     G_No2 = 0;
     Round_num = 0;
 }
@@ -313,7 +314,7 @@ s16 ix;
     if (plw[ix].tsukamare_f) {
         return 1;
     }
-    if (pcon_rno[0] == 2 && pcon_rno[1] == 0 && pcon_rno[2] == 2) {
+    if (pcon_rno[0] == PCON_DIE && pcon_rno[1] == SETTLE_KO && pcon_rno[2] == 2) {
         return 0;
     }
     if (plw[ix].wu.cg_ja.boix == 0 && plw[ix].wu.cg_ja.cuix == 0 && plw[ix].wu.pat_status == 38) {
@@ -322,7 +323,7 @@ s16 ix;
     if (plw[ix].zuru_flag) {
         return 0;
     }
-    if (plw[ix].wu.routine_no[1] != 1 && plw[ix].wu.routine_no[1] != 3) {
+    if (plw[ix].wu.routine_no[1] != PLAYER_DAMAGE && plw[ix].wu.routine_no[1] != PLAYER_CAUGHT) {
         return 0;
     }
     if (plw[ix].old_gdflag != plw[ix].guard_flag) {

@@ -30,12 +30,18 @@
 #include "EFFECT.h"
 #include "effect_2.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set up the run with a shadow */
+#define R0_RUN          1       /* run in until 112 dots away */
+#define R0_CLOSE        2       /* run the rest of the way */
+#define R0_POSE         3       /* play the landing pattern */
+
 /* voice master_id * 512 + 350, case 3 follows the master pattern with char_move_index */
 void effect_82_move(WORK_Other* ewk) {
     WORK* oya_ptr = (WORK*)ewk->my_master;
     s16 work;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.kage_flag = 1;
@@ -47,7 +53,7 @@ void effect_82_move(WORK_Other* ewk) {
         ewk->wu.old_rno[0] = 50;
         cal_all_speed_data(&ewk->wu, ewk->wu.old_rno[0], ewk->wu.old_rno[1], ewk->wu.xyz[1].disp.pos, 2, 2);
         break;
-    case 1:
+    case R0_RUN:
         if (!EXE_flag && !Game_pause) {
             ewk->wu.old_rno[0]--;
             add_x_sub(ewk);
@@ -65,7 +71,7 @@ void effect_82_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 2:
+    case R0_CLOSE:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
             add_x_sub(ewk);
@@ -80,7 +86,7 @@ void effect_82_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 3:
+    case R0_POSE:
         if (!EXE_flag && !Game_pause) {
             char_move_index(&ewk->wu, oya_ptr->cg_ix / oya_ptr->cgd_type + 1);
         }

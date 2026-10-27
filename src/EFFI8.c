@@ -35,11 +35,29 @@
 #include "CHARID.h"
 #include "EFFI8.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set up and lob to the thrower */
+#define R0_MOVE         1       /* fly, bounce and take hits */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_FLY          0       /* fly and bounce */
+#define R1_HIT          1       /* react to a hit */
+#define R1_STRUCK       2       /* struck the player: vanish soon */
+
+/* routine_no[2] */
+#define R2_FLY          0       /* fly until the thrower catches it */
+#define R2_HELD         1       /* held until it is thrown */
+
+/* Sean's attack routine 31 (pl12_exatt_table: Att_PL12_BONUS_STAGE), the ball thrower of the bonus stage */
+#define SEAN_BONUS_STAGE 31
+
 
 
 void effect_I8_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.charset_id = 11;
         set_char_base_data(&ewk->wu);
@@ -58,11 +76,11 @@ void effect_I8_move(WORK_Other* ewk) {
         cal_speeds_to_me_effI8(ewk, (PLW*)ewk->my_master);
         set_char_move_init(&ewk->wu, 0, 0x75);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
             ewk->wu.type = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         if (sa_stop_check()) {
@@ -81,8 +99,8 @@ void effect_I8_move(WORK_Other* ewk) {
         }
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);
@@ -96,19 +114,19 @@ void effect_I8_move(WORK_Other* ewk) {
 void effI8_main_process(WORK_Other* ewk) {
     PLW* mwk = (PLW*)ewk->my_master;
     if (ewk->wu.hf.hit_flag) {
-        ewk->wu.routine_no[1] = 1;
+        ewk->wu.routine_no[1] = R1_HIT;
     }
     if (ewk->wu.shell_ix[1]) {
         ewk->wu.kage_flag = ewk->wu.shell_ix[1] = 0;
     }
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_FLY:
         if (ewk->wu.hit_stop) {
             ewk->wu.hit_stop--;
             break;
         }
         switch (ewk->wu.routine_no[2]) {
-        case 0:
+        case R2_FLY:
             char_move(&ewk->wu);
             add_mvxy_speed(&ewk->wu);
             cal_mvxy_speed(&ewk->wu);
@@ -127,24 +145,24 @@ void effI8_main_process(WORK_Other* ewk) {
                 if (screen_range_check_effD7(&ewk->wu)) {
                     ewk->wu.disp_flag = 0;
                     ewk->wu.type = 0;
-                    ewk->wu.routine_no[0] = 2;
+                    ewk->wu.routine_no[0] = R0_END;
                     break;
                 }
             }
             if (ewk->wu.kage_flag != 0 && ewk->refrected == 0) {
-                if (mwk->wu.routine_no[1] == 4 && mwk->wu.routine_no[2] == 31 && mwk->wu.cg_type == 0x28) {
+                if (mwk->wu.routine_no[1] == PLAYER_ATTACK && mwk->wu.routine_no[2] == SEAN_BONUS_STAGE && mwk->wu.cg_type == 0x28) {
                     if (hit_check_subroutine(&ewk->wu, (WORK*)ewk->my_master, effI8_hit_box[0], effI8_hit_box[1])) {
                         mwk->wu.cmwk[7] = 1;
                         ewk->wu.type = 0;
-                        ewk->wu.routine_no[2] = 1;
+                        ewk->wu.routine_no[2] = R2_HELD;
                     }
                 }
             }
             break;
-        case 1:
+        case R2_HELD:
             ewk->wu.disp_flag = 0;
-            if (mwk->wu.routine_no[1] != 4) {
-                ewk->wu.routine_no[2] = 0;
+            if (mwk->wu.routine_no[1] != PLAYER_ATTACK) {
+                ewk->wu.routine_no[2] = R2_FLY;
                 ewk->wu.xyz[0].disp.pos = mwk->wu.xyz[0].disp.pos;
                 ewk->wu.xyz[1].disp.pos = mwk->wu.xyz[1].disp.pos + 136;
                 ewk->wu.disp_flag = 1;
@@ -154,7 +172,7 @@ void effI8_main_process(WORK_Other* ewk) {
                 ewk->wu.mvxy.a[1].sp = 0x20000;
                 ewk->wu.mvxy.d[1].sp = -0x6800;
             } else if (mwk->wu.cmwk[6]) {
-                ewk->wu.routine_no[2] = 0;
+                ewk->wu.routine_no[2] = R2_FLY;
                 mwk->wu.cmwk[6] = 0;
                 if (mwk->wu.rl_flag) {
                     ewk->wu.xyz[0].disp.pos = mwk->wu.xyz[0].disp.pos + 10;
@@ -173,10 +191,10 @@ void effI8_main_process(WORK_Other* ewk) {
             break;
         }
         break;
-    case 1:
+    case R1_HIT:
         if (ewk->wu.hf.hit.player) {
             if (ewk->wu.hf.hit.player & 0x33) {
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[1] = R1_FLY;
                 if (ewk->wu.hf.hit.player & 0x30) {
                     ewk->wu.mvxy.a[0].sp = -ewk->wu.mvxy.a[0].sp;
                     ewk->wu.mvxy.a[0].sp /= 3;
@@ -189,7 +207,7 @@ void effI8_main_process(WORK_Other* ewk) {
                     ewk->wu.mvxy.d[1].sp = -0x6000;
                 }
             } else if (ewk->wu.hf.hit.player & 0xC0) {
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[1] = R1_FLY;
                 ewk->wu.rl_flag = (ewk->wu.rl_flag + 1) & 1;
                 ewk->wu.mvxy.a[0].sp = 0x30000;
                 ewk->wu.mvxy.a[1].sp = 0x44000;
@@ -205,7 +223,7 @@ void effI8_main_process(WORK_Other* ewk) {
             }
         } else if (ewk->wu.hf.hit.effect && ((WORK*)ewk->wu.hit_adrs)->id == 0x89) {
             sound_effect_request[0x157](ewk, 0x157);
-            ewk->wu.routine_no[1] = 0;
+            ewk->wu.routine_no[1] = R1_FLY;
             ewk->wu.rl_flag = (ewk->wu.rl_flag + 1) & 1;
             ewk->wu.mvxy.a[0].sp = (ewk->wu.mvxy.a[0].sp * 3) / 4;
             ewk->wu.hit_stop = 2;
@@ -213,7 +231,7 @@ void effI8_main_process(WORK_Other* ewk) {
             if (ewk->wu.dmg_work_id != 1) {
                 sound_effect_request[0x10B](ewk, 0x10B);
             }
-            ewk->wu.routine_no[1] = 2;
+            ewk->wu.routine_no[1] = R1_STRUCK;
             ewk->wu.rl_flag = (ewk->wu.rl_flag + 1) & 1;
             ewk->wu.disp_flag = 2;
             ewk->wu.type = 0;
@@ -227,11 +245,11 @@ void effI8_main_process(WORK_Other* ewk) {
         ewk->wu.hf.hit_flag = 0;
         ewk->refrected = 1;
         break;
-    case 2:
+    case R1_STRUCK:
         ewk->wu.dir_timer--;
         if (ewk->wu.dir_timer <= 0) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
         }
         break;
     }

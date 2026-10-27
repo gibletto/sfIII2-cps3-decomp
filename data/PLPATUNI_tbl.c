@@ -1,5 +1,8 @@
 /*
- * PLPATUNI_TBL.C  tables read by PLPATUNI.c: shared special-move routines for all characters
+ * PLPATUNI_TBL.C  leaping move control rows
+ *
+ * ahj_kop gives the control row of each leaping move, stepped by att_ahj_table_reader with the
+ * target points of ahj_empos_hos. Read by PLPATUNI.C, the shared special-move routines.
  */
 
 #include "types.h"

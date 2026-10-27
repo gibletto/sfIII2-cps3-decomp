@@ -25,12 +25,21 @@
 #include "PLS02.h"
 #include "EFFB6.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* copy the cell positions */
+#define R0_MOVE         1       /* show and slide the parts */
+#define R0_KILL         2       /* put the work back */
+
+/* routine_no[1] */
+#define R1_WAIT         0       /* wait for the another-BG switch */
+#define R1_SLIDE        1       /* slide the parts while it runs */
+
 void effect_B6_move(WORK_Other_CONN* ewk_conn) {
     WORK_B6* ewk = (WORK_B6*)ewk_conn;
     WORK* oya = ewk->my_master;
     s16 i;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 0;
         ewk->num = effB6_num_tbl[ewk->wu.type];
@@ -40,7 +49,7 @@ void effect_B6_move(WORK_Other_CONN* ewk_conn) {
             effB6_pos_data_set(ewk, effB6_pos_tbl_0, ewk->num);
         }
         return;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
             ewk->wu.routine_no[0]++;
@@ -50,13 +59,13 @@ void effect_B6_move(WORK_Other_CONN* ewk_conn) {
             break;
         }
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_WAIT:
             if (!(another_bg[0] | another_bg[1])) {
                 break;
             }
             ewk->wu.routine_no[1]++;
             break;
-        case 1:
+        case R1_SLIDE:
             if (another_bg[0] | another_bg[1]) {
                 ewk->wu.disp_flag = 0;
                 switch (another_bg[oya->type]) {
@@ -100,13 +109,13 @@ void effect_B6_move(WORK_Other_CONN* ewk_conn) {
                 }
             } else {
                 ewk->wu.disp_flag = 0;
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[1] = R1_WAIT;
             }
             break;
         }
         disp_car_parts_cells(&ewk->wu);
         break;
-    case 2:
+    case R0_KILL:
     default:
         push_effect_work(&ewk->wu);
         return;

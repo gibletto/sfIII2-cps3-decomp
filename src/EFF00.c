@@ -18,13 +18,20 @@
 #include "effect_2.h"
 #include "EFF00.h"
 #include "fighter.h"
+
+/* routine_no[0] */
+#define R0_INIT         0       /* set up from the master */
+#define R0_MOVE         1       /* follow the master and show its boxes */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 void effect_00_move(WORK_Other_JUDGE* judge) {
     WORK_Other_JUDGE* ewk = judge;
     u16 dip;
     ewk->fade_cja.l += 0x2000;
     ewk->fade_cja.w = ewk->fade_cja.w & 3;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         renewal_table_address(ewk, ewk->my_master);
         ewk->wu.cgromtype = 1;
@@ -34,15 +41,15 @@ void effect_00_move(WORK_Other_JUDGE* judge) {
         ewk->wu.cg_number = 0x7800;
         ewk->curr_ja = ewk->look_up_flag = 0;
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         if (ewk->my_master->waku_work_index != ewk->wu.myself) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         dip = exsw_1 & 0x3F00;
@@ -63,8 +70,8 @@ void effect_00_move(WORK_Other_JUDGE* judge) {
         renewal_table_data(ewk);
         sort_push_request2((WORK_Other*)ewk);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back((WORK_Other*)ewk);

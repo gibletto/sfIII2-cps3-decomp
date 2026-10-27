@@ -29,21 +29,26 @@
 #include "effect_2.h"
 #include "EFF99.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* count the delay down, then show */
+#define R0_MOVE         1       /* show until Disp_PERFECT clears */
+#define R0_KILL         99      /* (default) put the work back */
+
 
 
 void effect_99_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer != 0) {
             return;
         }
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         break;
-    case 1:
+    case R0_MOVE:
         if (Disp_PERFECT == 0) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_KILL;
             return;
         }
         break;

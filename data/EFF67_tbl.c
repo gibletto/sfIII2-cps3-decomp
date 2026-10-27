@@ -1,5 +1,10 @@
 /*
- * EFF67_TBL.C  tables read by effects 64 and 66
+ * EFF67_TBL.C  stage passer-by and reacting object tables
+ *
+ * eff64_data_tbl has one entry per passer-by type: behaviour, family, colour, position,
+ * priority, animation and movement settings; eff64_move_tbl and eff64_move2_tbl hold the
+ * random waits before it crosses again. Read by EFF64.C, the stage passers-by. eff66_data_tbl
+ * gives the settings of the objects that react when a player comes near, read by EFF66.C.
  */
 
 #include "types.h"

@@ -31,11 +31,23 @@
 #include "effect_2.h"
 #include "effa0.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show with a shadow, aim at the target */
+#define R0_RUN          1       /* run in for 40 frames */
+#define R0_VANISH       2       /* hide for the warp */
+#define R0_WARP         3       /* wake the opponent, then reappear */
+#define R0_POSE         4       /* play the pose to its end */
+#define R0_NEXT         5       /* hand back to the game flow */
+#define R0_STAY         6       /* stay on the screen */
+#define R0_HIDE         7       /* hide with the shadow */
+#define R0_END          8       /* one more frame */
+#define R0_KILL         9       /* (default) put the work back */
+
 
 
 void effect_A0_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.kage_flag = 1;
@@ -47,7 +59,7 @@ void effect_A0_move(WORK_Other* ewk) {
         ewk->wu.old_rno[0] = 40;
         cal_all_speed_data(&ewk->wu, ewk->wu.old_rno[0], ewk->wu.old_rno[1], ewk->wu.xyz[1].disp.pos, 2, 2);
         break;
-    case 1:
+    case R0_RUN:
         add_x_sub(ewk);
         add_y_sub(ewk);
         ewk->wu.old_rno[0]--;
@@ -61,7 +73,7 @@ void effect_A0_move(WORK_Other* ewk) {
             sort_push_request(&ewk->wu);
         }
         break;
-    case 2:
+    case R0_VANISH:
         char_move_z(&ewk->wu);
         ewk->wu.disp_flag = 0;
         ewk->wu.kage_flag = 0;
@@ -72,7 +84,7 @@ void effect_A0_move(WORK_Other* ewk) {
             sort_push_request(&ewk->wu);
         }
         break;
-    case 3:
+    case R0_WARP:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type == 40) {
             gouki_app = 1;
@@ -93,7 +105,7 @@ void effect_A0_move(WORK_Other* ewk) {
             sort_push_request(&ewk->wu);
         }
         break;
-    case 4:
+    case R0_POSE:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type == 0xFF) {
             ewk->wu.routine_no[0]++;
@@ -104,7 +116,7 @@ void effect_A0_move(WORK_Other* ewk) {
             sort_push_request(&ewk->wu);
         }
         break;
-    case 5:
+    case R0_NEXT:
         Next_Step = 1;
         ewk->wu.routine_no[0]++;
         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos;
@@ -113,19 +125,19 @@ void effect_A0_move(WORK_Other* ewk) {
             sort_push_request(&ewk->wu);
         }
         break;
-    case 6:
+    case R0_STAY:
         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos;
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos;
         if (!obr_no_disp_check()) {
             sort_push_request(&ewk->wu);
         }
         break;
-    case 7:
+    case R0_HIDE:
         ewk->wu.disp_flag = 0;
         ewk->wu.kage_flag = 0;
         ewk->wu.routine_no[0]++;
         break;
-    case 8:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:
@@ -141,7 +153,6 @@ s32 effect_A0_init(s16 pl) {
     PLW* mwk;
     WORK* twk;
     s16 ix;
-    s16 offset;
     if ((ix = pull_effect_work(4)) == -1) {
         return -1;
     }

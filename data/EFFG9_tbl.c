@@ -1,5 +1,11 @@
 /*
- * EFFG9_TBL.C  tables read by effects G9, H0 and H1
+ * EFFG9_TBL.C  trail particle offsets, bonus level display and ending fly-in objects
+ *
+ * g9_pos_hos is the 16 random offsets added to a G9 particle's x and y when it appears; a y
+ * offset above 1 also puts it behind the characters. Read by EFFG9.C. effh0_nando_tbl is the
+ * six-cell bonus-stage level display, by screen mode and facing (EFFH0.C). effh1_data_tbl and
+ * effh1_speed_tbl give the settings and speeds of the four ending objects that fly in when the
+ * scroll arrives (EFFH1.C).
  */
 
 #include "types.h"

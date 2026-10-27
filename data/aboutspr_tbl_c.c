@@ -1,5 +1,12 @@
 /*
- * ABOUTSPR_TBL_C.C  tables read by aboutspr.c: cell flipping, cell sizes and zoom steps
+ * ABOUTSPR_TBL_C.C  sprite cell flip, size and zoom tables
+ *
+ * char_cell_flip_tbl picks the cell flip routine from the current and wanted flip, and
+ * make_char_cells_tbl the cell builder for each sprite flip (make_char_cells_n/x/y/xy);
+ * cell_size_tbl and flip_attr_tbl give the sprite size and flip attribute codes;
+ * judge_area_code_tbl is the cell code of each hit and hurt box kind drawn by the box display;
+ * zoom_up_tbl and zoom_down_tbl are the zoom steps for growing and shrinking sprites, and
+ * cell_zoom_tbl the zoom lookup of get_cell_zoom. Read by ABOUTSPR.C.
  */
 
 #include "types.h"
@@ -27,29 +34,29 @@ extern const s16 zoom_up_tbl[];
 extern const s16 cell_zoom_tbl[];
 
 void (*const char_cell_flip_tbl[16])() = {
-    (void (*)())char_cell_flip_none,
-    (void (*)())char_cell_flip_x,
-    (void (*)())char_cell_flip_y,
-    (void (*)())char_cell_flip_xy,
-    (void (*)())char_cell_flip_x,
-    (void (*)())char_cell_flip_none,
-    (void (*)())char_cell_flip_xy,
-    (void (*)())char_cell_flip_y,
-    (void (*)())char_cell_unflip_y,
-    (void (*)())char_cell_unflip_xy,
-    (void (*)())char_cell_flip_none,
-    (void (*)())char_cell_flip_x,
-    (void (*)())char_cell_unflip_xy,
-    (void (*)())char_cell_unflip_y,
-    (void (*)())char_cell_flip_x,
-    (void (*)())char_cell_flip_none,
+    char_cell_flip_none,
+    char_cell_flip_x,
+    char_cell_flip_y,
+    char_cell_flip_xy,
+    char_cell_flip_x,
+    char_cell_flip_none,
+    char_cell_flip_xy,
+    char_cell_flip_y,
+    char_cell_unflip_y,
+    char_cell_unflip_xy,
+    char_cell_flip_none,
+    char_cell_flip_x,
+    char_cell_unflip_xy,
+    char_cell_unflip_y,
+    char_cell_flip_x,
+    char_cell_flip_none,
 };
 
 void (*const make_char_cells_tbl[4])() = {
-    (void (*)())make_char_cells_n,
-    (void (*)())make_char_cells_x,
-    (void (*)())make_char_cells_y,
-    (void (*)())make_char_cells_xy,
+    make_char_cells_n,
+    make_char_cells_x,
+    make_char_cells_y,
+    make_char_cells_xy,
 };
 
 const s16 cell_size_tbl[16] = {

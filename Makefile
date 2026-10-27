@@ -12,7 +12,6 @@ export MDL_IV_AUTOINC = 1
 export MDL_MOD_CONST = 3
 export MDL_IMM_REG = 127
 export MDL_EQ_CONST = 3
-export MDL_TEMP_EXPR = 1
 export MDL_GCSE = 26
 export GEN_STORE_RHS_INDEX = 1
 export GEN_LAST_IDX = 4
@@ -20,16 +19,13 @@ export ASM_CALL_SLACK = 6
 export MDL_IV_START0 = 6
 export MDL_IV_ADDR = 1
 export PEP_SWITCH_END = 1
-export MDL_IV = 31
 export MDL_IV_WEB_ORDER = 1
 
 CFLAGS = -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include
 OPT = -optimize=1 -speed
 
 # modules compiled with other settings
-NOINLINE = CMD_MAIN EFF15 EFF25 EFF38 EFF70 EFF98 EFFI4MV Eff39 EffD8 EffE0 Entry Entry_dbg \
-	SYS_sub cmd_main_2 continue count eff36 eff94 end_main end_main_c entry_2 game_config_en game_config_jp manage_2 \
-	plcntset_2 sc_sub sc_sub_2 sc_sub_3 sc_trans sel_pl ta_sub textsound textsound_2 textsound_3 win_2
+NOINLINE = CMD_MAIN entry_2 manage_2 sel_pl win_2
 OPT0 = coin_sw coin_sw_2 colortest cram_bank eeprom family iotest_out poly_que scrn_ctrl simmram_slot soundtest spr_list \
 	spr_pool spr_pool_2 sys_config sys_config_2 sys_config_3 sys_test sys_test_2 sys_test_2a sys_test_2b sys_test_2c sys_test_3 sys_test_4 \
 	sys_test_5
@@ -40,7 +36,7 @@ CONSTTBL = CMD_MAIN Com_Pl EFF48 EFF55 EFF69 EFF71 EFF72 EFF74 EFF85 EFF86 EFFI4
 	end_11 end_12 end_13 end_2 end_3 end_4 end_5 end_6 end_7 end_8 end_9 end_main \
 	end_main_c end_staff endbg00 endbg01 endbg02 endbg03 endbg04 endbg05 endbg06 endbg07 endbg08 endbg09 \
 	endbg10 endbg11 endbg12 endbg13 endbg14 endbg15 entry_2 game_config_en game_config_jp game_config_main lose_pl manage_2 \
-	sel_flow sel_pl tate00 textsound_2 win_2 win_pl
+	sel_flow sel_pl tate00 win_2 win_pl
 
 $(NOINLINE:%=obj/%.obj): OPT += -noinline
 $(OPT0:%=obj/%.obj): OPT = -optimize=0 -nospeed

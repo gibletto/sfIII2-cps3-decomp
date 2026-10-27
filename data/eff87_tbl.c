@@ -1,5 +1,9 @@
 /*
- * EFF87_TBL.C  tables read by effect 87
+ * EFF87_TBL.C  stage background object table (effect 87)
+ *
+ * eff87_loop_tbl gives the number of objects by type and compel flag, and scr_obj_data87_0
+ * holds the object rows that scr_obj_data87 in EFF87.C points into. Read by EFF87.C, whose
+ * objects are started by the stage 03 and 06 backgrounds.
  */
 
 #include "types.h"

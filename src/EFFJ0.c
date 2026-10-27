@@ -16,6 +16,12 @@
 #include "effect_2.h"
 #include "EFFJ0.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show */
+#define R0_MOVE         1       /* draw the shell's old position */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 
 
 
@@ -25,26 +31,26 @@ void effect_J0_move(WORK_Other* ewk) {
     WORK* sub_w = (WORK*)cwk->wu.target_adrs;
     ImageBuff* image_buff = (ImageBuff*)sub_w + 9;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.cg_att_ix = 0;
         ewk->wu.cg_hit_ix = 0;
         sort_push_request(&ewk->wu);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         if (mwk->wu.routine_no[0] >= 2 || mwk->wu.routine_no[1] >= 2) {
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             ewk->wu.disp_flag = 0;
             break;
         }
         if (!EXE_flag && !Game_pause && mwk->wu.hit_stop <= 0) {
             if (--ewk->wu.dir_timer == 0) {
-                ewk->wu.routine_no[0] = 2;
+                ewk->wu.routine_no[0] = R0_END;
                 break;
             }
             ewk->wu.position_x = image_buff[ewk->wu.dir_step].pos_x;
@@ -59,8 +65,8 @@ void effect_J0_move(WORK_Other* ewk) {
         ewk->wu.done_rl = mwk->wu.done_rl;
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

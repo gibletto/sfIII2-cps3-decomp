@@ -31,24 +31,21 @@ void win_lose_work_clear(void) {
 
 
 
+static void bg_speed_disp(s8 r1, s8 r2, s8 stage, s8 area) {}
+
+static void chase_xy_disp(s32 cal, s16 pos, s16 low) {}
+
 void cal_bg_speed_data(bg_num, tm)
 s16 bg_num;
 s16 tm;
 {
     MotionState ms;
     XY* xy = bg_w.bgw[bg_num].chase_xy;
-    (void)bg_w.bg_routine;
-    (void)bg_w.bg_r_1;
-    (void)bg_w.bg_r_2;
-    (void)bg_w.stage;
-    (void)bg_w.area;
+    bg_speed_disp(bg_w.bg_r_1, bg_w.bg_r_2, bg_w.stage, bg_w.area);
     if (0) {
         return;
     }
-    (void)&((WORK*)xy)->disp_flag;
-    (void)&((WORK*)xy)->blink_timing;
-    (void)&((WORK*)xy)->operator;
-    (void)&((WORK*)xy)->type;
+    chase_xy_disp(xy->cal, xy->disp.pos, xy->disp.low);
     xy[0].disp.low = xy[1].disp.low = 0;
     (void)&((WORK*)bg_num)->be_flag;
     ms.timer = tm;

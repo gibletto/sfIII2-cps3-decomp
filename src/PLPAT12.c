@@ -25,9 +25,19 @@
 #include "PLS02.h"
 #include "PLPAT12.h"
 
+/* routine_no[3], Att_PL12_TOKUSHUKOUDOU */
+#define TOKUSHUKOUDOU_CUE 1     /* run the animation to cue 20 */
+#define TOKUSHUKOUDOU_ACTION 2  /* the personal action, filling the super art gauge */
+#define TOKUSHUKOUDOU_RUN 3     /* run the animation */
+
+/* routine_no[3], Att_PL12_BONUS_STAGE */
+#define BONUS_STAGE_CUE 1       /* run the animation to cue 20 */
+#define BONUS_STAGE_AIR 2       /* in the air until it lands */
+#define BONUS_STAGE_LAND 3      /* the landing */
+
 
 void pl12_extra_attack(PLW* wk) {
-    pl12_exatt_table[wk->wu.routine_no[2] - 16](wk);
+    pl12_exatt_table[wk->wu.routine_no[2] - ATTACK_SPECIAL](wk);
 }
 
 
@@ -35,7 +45,7 @@ void pl12_extra_attack(PLW* wk) {
 void Att_PL12_TOKUSHUKOUDOU(PLW* wk) {
     wk->scr_pos_set_flag = 0;
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.rl_flag = wk->wu.rl_waza;
         wk->wu.mvxy.index = wk->as->data_ix;
@@ -48,7 +58,7 @@ void Att_PL12_TOKUSHUKOUDOU(PLW* wk) {
             set_char_move_init(&wk->wu, 5, wk->as->char_ix);
         }
         break;
-    case 1:
+    case TOKUSHUKOUDOU_CUE:
         char_move(&wk->wu);
         if (wk->wu.cg_type == 20) {
             setup_mvxy_data(&wk->wu, wk->wu.mvxy.index);
@@ -57,7 +67,7 @@ void Att_PL12_TOKUSHUKOUDOU(PLW* wk) {
             wk->wu.cg_type = 0;
         }
         break;
-    case 2:
+    case TOKUSHUKOUDOU_ACTION:
         if (wk->wu.cmwk[7] != 0) {
             char_move_cmj4(&wk->wu);
             wk->wu.cmwk[7] = 0;
@@ -77,7 +87,7 @@ void Att_PL12_TOKUSHUKOUDOU(PLW* wk) {
             }
         }
         break;
-    case 3:
+    case TOKUSHUKOUDOU_RUN:
         char_move(&wk->wu);
         break;
     }
@@ -88,7 +98,7 @@ void Att_PL12_TOKUSHUKOUDOU(PLW* wk) {
 void Att_PL12_BONUS_STAGE(PLW* wk) {
     wk->scr_pos_set_flag = 0;
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.rl_flag = wk->wu.rl_waza;
         wk->wu.mvxy.index = wk->as->data_ix;
@@ -96,20 +106,20 @@ void Att_PL12_BONUS_STAGE(PLW* wk) {
         wk->wu.cmwk[7] = 0;
         set_char_move_init((WORK*)wk, 5, wk->wu.char_index);
         break;
-    case 1:
+    case BONUS_STAGE_CUE:
         char_move((WORK*)wk);
         if (wk->wu.cg_type == 20) {
             wk->wu.routine_no[3]++;
         }
         break;
-    case 2:
+    case BONUS_STAGE_AIR:
         if (wk->wu.cmwk[7] != 0) {
             char_move_cmj4((WORK*)wk);
             wk->wu.cmwk[7] = 0;
         }
         jumping_union_process((WORK*)wk, 3);
         break;
-    case 3:
+    case BONUS_STAGE_LAND:
         char_move((WORK*)wk);
         break;
     }

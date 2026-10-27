@@ -1,5 +1,9 @@
 /*
- * END_9_TBL.C  tables read by end_9.c: ending 9 (end_09000)
+ * END_9_TBL.C  Oro's ending tables (ending 9)
+ *
+ * end_900_bg0_cell_tbl lists the BG0 cells (map offset, cell number) written at the start of
+ * the ending, timer_9_tbl is the length in frames of each scene and end_9_pos the BG x and y
+ * of each scene. Read by END_9.C.
  */
 
 #include "types.h"

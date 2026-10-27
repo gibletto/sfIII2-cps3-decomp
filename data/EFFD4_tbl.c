@@ -1,5 +1,10 @@
 /*
- * EFFD4_TBL.C  tables read by effects D4 and D5
+ * EFFD4_TBL.C  suction pull speeds and thrown rose tables
+ *
+ * swallow_speeds gives the pull speed of each speed number, read by EFFD4.C, the suction pull
+ * of an attack. range_time_table gives the flight time of the rose by distance to the
+ * opponent, and dm_sp_sel_tbl the petal set and petal acceleration by the strength of the
+ * attack that hits it; read by EFFD5.C, the thrown rose.
  */
 
 #include "types.h"
@@ -19,6 +24,10 @@ const s32 swallow_speeds[16] = {
 };
 
 /* provisional name */
+/*
+ * Read as two s16 entries per attack strength (dm_kind_of_waza): petal set (num_of_hana) and
+ * petal acceleration.
+ */
 const s32 dm_sp_sel_tbl[4] = {
     14, 65552, 131090, 196628,
 };

@@ -1,5 +1,12 @@
 /*
- * EFFC9_TBL.C  tables read by effect C9
+ * EFFC9_TBL.C  judge girl tables
+ *
+ * ag_sel_table gives the character set of each judge for each stage, round and slot, and
+ * ag_cc_table the colour of each character set. app_pos_hosei gives the position of each of
+ * the three judges, judge_gals_kage_tbl the shadow of each character set, efy_data the drop-in
+ * position and speeds of character set 7, and sel_ejg_ix_table the votes of the three judges
+ * when the grades are close. Read by EFFC9.C, the judge girls. judge_gals_kage_tbl_tail
+ * follows the shadow table and is not referred to by name.
  */
 
 #include "types.h"

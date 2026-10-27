@@ -23,6 +23,16 @@
 #include "effect_2.h"
 #include "efff7.h"
 
+/* routine_no[2] */
+#define R2_INIT         0       /* start the animation */
+#define R2_MOVE         1       /* run the sprite's routine */
+
+/* routine_no[1]: the sprite's state within a step */
+#define R1_INIT         0       /* set up for the master's new step */
+#define R1_MOVE         1       /* play the step */
+#define R1_END          2       /* one more frame */
+#define R1_KILL         3       /* (default) put the work back */
+
 /* x, y of each sprite at each step of the master (0617CAC0) */
 extern const s16 effF7_pos_tbl[23][6][2];
 
@@ -32,11 +42,11 @@ extern const s16 effF7_pos_tbl[23][6][2];
 void effect_F7_move(WORK_Other* ewk) {
     void (*effF7_jp[6])(WORK_Other*) = { effF7_0000, effF7_0001, effF7_0002, effF7_0002, effF7_0003, effF7_0003 };
     switch (ewk->wu.routine_no[2]) {
-    case 0:
+    case R2_INIT:
         ewk->wu.routine_no[2]++;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R2_MOVE:
         effF7_jp[ewk->wu.old_rno[0]](ewk);
         break;
     }
@@ -48,23 +58,23 @@ void effect_F7_move(WORK_Other* ewk) {
 void effF7_0000(WORK_Other* ewk) {
     WORK_Other* mwk;
     mwk = (WORK_Other*)ewk->my_master;
-    if (mwk->wu.old_rno[3] && ewk->wu.routine_no[1] != 2) {
-        ewk->wu.routine_no[1] = 2;
+    if (mwk->wu.old_rno[3] && ewk->wu.routine_no[1] != R1_END) {
+        ewk->wu.routine_no[1] = R1_END;
     } else if (ewk->wu.routine_no[0] != mwk->wu.routine_no[0]) {
-        ewk->wu.routine_no[1] = 0;
+        ewk->wu.routine_no[1] = R1_INIT;
         ewk->wu.routine_no[0] = mwk->wu.routine_no[0];
     }
     switch (mwk->wu.routine_no[0]) {
     case 16:
     case 17:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             set_char_move_init(&ewk->wu, 0, 63);
             ewk->wu.position_x = ewk->wu.xyz[0].disp.pos = 0x200;
             ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = 48;
             /* fall through */
-        case 1:
+        case R1_MOVE:
             char_move(&ewk->wu);
             sort_push_request4(&ewk->wu);
             break;
@@ -72,7 +82,7 @@ void effF7_0000(WORK_Other* ewk) {
         break;
     case 18:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             set_char_move_init(&ewk->wu, 0, 53);
             ewk->wu.xyz[0].disp.pos = effF7_pos_tbl[mwk->wu.routine_no[0]][ewk->wu.old_rno[0]][0];
@@ -80,7 +90,7 @@ void effF7_0000(WORK_Other* ewk) {
             cal_all_speed_data(&ewk->wu, mwk->wu.old_rno[1], effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][0],
                                effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][1], 1, 1);
             /* fall through */
-        case 1:
+        case R1_MOVE:
             char_move(&ewk->wu);
             add_x_sub(ewk);
             add_y_sub(ewk);
@@ -92,7 +102,7 @@ void effF7_0000(WORK_Other* ewk) {
         break;
     default:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
             ewk->wu.xyz[0].disp.pos = effF7_pos_tbl[mwk->wu.routine_no[0]][ewk->wu.old_rno[0]][0];
@@ -100,7 +110,7 @@ void effF7_0000(WORK_Other* ewk) {
             cal_all_speed_data(&ewk->wu, mwk->wu.old_rno[1], effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][0],
                                effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][1], 1, 1);
             break;
-        case 1:
+        case R1_MOVE:
             char_move(&ewk->wu);
             add_x_sub(ewk);
             add_y_sub(ewk);
@@ -108,7 +118,7 @@ void effF7_0000(WORK_Other* ewk) {
             ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
             sort_push_request4(&ewk->wu);
             break;
-        case 2:
+        case R1_END:
             ewk->wu.routine_no[1]++;
             break;
         default:
@@ -126,10 +136,10 @@ void effF7_0000(WORK_Other* ewk) {
 void effF7_0001(WORK_Other* ewk) {
     WORK_Other* mwk;
     mwk = (WORK_Other*)ewk->my_master;
-    if (mwk->wu.old_rno[3] && ewk->wu.routine_no[1] != 2) {
-        ewk->wu.routine_no[1] = 2;
+    if (mwk->wu.old_rno[3] && ewk->wu.routine_no[1] != R1_END) {
+        ewk->wu.routine_no[1] = R1_END;
     } else if (ewk->wu.routine_no[0] != mwk->wu.routine_no[0]) {
-        ewk->wu.routine_no[1] = 0;
+        ewk->wu.routine_no[1] = R1_INIT;
         ewk->wu.routine_no[0] = mwk->wu.routine_no[0];
     }
     switch (mwk->wu.routine_no[0]) {
@@ -138,13 +148,13 @@ void effF7_0001(WORK_Other* ewk) {
     case 11:
     case 12:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             set_char_move_init(&ewk->wu, 0, 64);
             ewk->wu.position_x = ewk->wu.xyz[0].disp.pos = 0x200;
             ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = 48;
             /* fall through */
-        case 1:
+        case R1_MOVE:
             char_move(&ewk->wu);
             sort_push_request4(&ewk->wu);
             break;
@@ -152,7 +162,7 @@ void effF7_0001(WORK_Other* ewk) {
         break;
     case 13:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             set_char_move_init(&ewk->wu, 0, 53);
             ewk->wu.xyz[0].disp.pos = effF7_pos_tbl[mwk->wu.routine_no[0]][ewk->wu.old_rno[0]][0];
@@ -160,7 +170,7 @@ void effF7_0001(WORK_Other* ewk) {
             cal_all_speed_data(&ewk->wu, mwk->wu.old_rno[1], effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][0],
                                effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][1], 1, 1);
             /* fall through */
-        case 1:
+        case R1_MOVE:
             char_move(&ewk->wu);
             add_x_sub(ewk);
             add_y_sub(ewk);
@@ -172,7 +182,7 @@ void effF7_0001(WORK_Other* ewk) {
         break;
     default:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
             ewk->wu.xyz[0].disp.pos = effF7_pos_tbl[mwk->wu.routine_no[0]][ewk->wu.old_rno[0]][0];
@@ -180,7 +190,7 @@ void effF7_0001(WORK_Other* ewk) {
             cal_all_speed_data(&ewk->wu, mwk->wu.old_rno[1], effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][0],
                                effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][1], 1, 1);
             break;
-        case 1:
+        case R1_MOVE:
             char_move(&ewk->wu);
             add_x_sub(ewk);
             add_y_sub(ewk);
@@ -188,7 +198,7 @@ void effF7_0001(WORK_Other* ewk) {
             ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
             sort_push_request4(&ewk->wu);
             break;
-        case 2:
+        case R1_END:
             ewk->wu.routine_no[1]++;
             break;
         default:
@@ -207,7 +217,7 @@ void effF7_0002(WORK_Other* ewk) {
     WORK_Other* mwk;
     mwk = (WORK_Other*)ewk->my_master;
     if (ewk->wu.routine_no[0] != mwk->wu.routine_no[0]) {
-        ewk->wu.routine_no[1] = 0;
+        ewk->wu.routine_no[1] = R1_INIT;
         ewk->wu.routine_no[0] = mwk->wu.routine_no[0];
     }
     switch (mwk->wu.routine_no[0]) {
@@ -220,7 +230,7 @@ void effF7_0002(WORK_Other* ewk) {
         break;
     default:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
             ewk->wu.xyz[0].disp.pos = effF7_pos_tbl[mwk->wu.routine_no[0]][ewk->wu.old_rno[0]][0];
@@ -228,7 +238,7 @@ void effF7_0002(WORK_Other* ewk) {
             cal_all_speed_data(&ewk->wu, mwk->wu.old_rno[1], effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][0],
                                effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][1], 1, 1);
             break;
-        case 1:
+        case R1_MOVE:
             char_move(&ewk->wu);
             add_x_sub(ewk);
             add_y_sub(ewk);
@@ -256,7 +266,7 @@ void effF7_0003(WORK_Other* ewk) {
     WORK_Other* mwk;
     mwk = (WORK_Other*)ewk->my_master;
     if (ewk->wu.routine_no[0] != mwk->wu.routine_no[0]) {
-        ewk->wu.routine_no[1] = 0;
+        ewk->wu.routine_no[1] = R1_INIT;
         ewk->wu.routine_no[0] = mwk->wu.routine_no[0];
     }
     switch (mwk->wu.routine_no[0]) {
@@ -274,7 +284,7 @@ void effF7_0003(WORK_Other* ewk) {
         break;
     default:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
             ewk->wu.xyz[0].disp.pos = effF7_pos_tbl[mwk->wu.routine_no[0]][ewk->wu.old_rno[0]][0];
@@ -282,7 +292,7 @@ void effF7_0003(WORK_Other* ewk) {
             cal_all_speed_data(&ewk->wu, mwk->wu.old_rno[1], effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][0],
                                effF7_pos_tbl[mwk->wu.routine_no[0] + 1][ewk->wu.old_rno[0]][1], 1, 1);
             break;
-        case 1:
+        case R1_MOVE:
             char_move(&ewk->wu);
             add_x_sub(ewk);
             add_y_sub(ewk);
@@ -324,6 +334,6 @@ s32 effect_F7_init(WORK_Other* oya) {
         ewk->wu.my_priority = ewk->wu.position_z = 50;
         ewk->wu.char_index = 53;
     }
-    (void)((WORK*)etc_char_table)->id;
+    (void)&((WORK*)etc_char_table)->id;
     return 0;
 }

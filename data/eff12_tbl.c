@@ -1,5 +1,12 @@
 /*
- * EFF12_TBL.C  tables read by effects 12 and 13
+ * EFF12_TBL.C  animated stage prop list and projectile data
+ *
+ * scr_obj_num12 holds the prop count of each prop type and the prop rows (family, colour,
+ * position, priority, animation) that scr_obj_data12 points into; read by EFF12.C. tama_data
+ * is the parameter record of each projectile (shell kind, animations, 1P and 2P colours,
+ * defence power, life time, offset), and tcct the colour codes its colour numbers pick;
+ * kotp_07_dm_vital is the damage of the kotp_07000 shell by attack strength. These are read by
+ * EFF13.C.
  */
 
 #include "types.h"

@@ -236,6 +236,9 @@ void opning_init_00000(void) {
 
 
 
+#pragma inline(end_ofs_disp)
+static void end_ofs_disp(s32 ofs) {}
+
 void opning_init_01000(void) {
     s16 i;
     s16 j;
@@ -247,7 +250,7 @@ void opning_init_01000(void) {
         for (j = 0; j < 16; j++) {
             q = &p->panel[j];
             bg_cell_write(i, q->ofs, q->cell, (u32)op_bg0_scrn_data, 0, 0x2C0);
-            (void)q->ofs;
+            end_ofs_disp(q->ofs);
         }
         Bg_On_R(1 << i);
         Bg_On_W(1 << i);
@@ -914,7 +917,7 @@ void op_06_move(void) {
             opening_bgw_commit_pos(5);
             Bg_On_W(1);
             Bg_Off_W(2);
-            (void)((WORK*)0x38000)->id;
+            (void)&((WORK*)0x38000)->id;
         }
         opening_bgw_commit_pos(0);
         break;

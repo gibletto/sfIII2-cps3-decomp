@@ -19,13 +19,19 @@
 #include "effect_2.h"
 #include "EFF03.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set up from plef_data */
+#define R0_MOVE         1       /* animate, following the master if asked */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 
 
 void effect_03_move(WORK_Other* ewk) {
     const PLEF* plef;
     s16* pos;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         plef = plef_data;
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = plef[ewk->wu.type].dspf;
@@ -69,7 +75,7 @@ void effect_03_move(WORK_Other* ewk) {
             ewk->wu.xyz[1].disp.pos = ewk->wu.position_y;
             ewk->wu.xyz[2].disp.pos = ewk->wu.position_z;
         }
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
             ewk->wu.routine_no[0]++;
@@ -92,8 +98,8 @@ void effect_03_move(WORK_Other* ewk) {
         eff03_disp_pos(&ewk->wu, (WORK*)ewk->my_master);
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

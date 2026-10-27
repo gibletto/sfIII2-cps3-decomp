@@ -127,7 +127,7 @@ void Entry_00(void) {
         } else {
             tilemap_print_string(DE_X[3] + 14, Text_Page_Y + Insert_Y, 0xFFFF, insert_coin_mes + coin_chute1_w.per_credit - 1);
         }
-        if (G_No1 == 5 || G_No1 == 7) {
+        if (G_No1 == G1_DEMO_PLAY || G_No1 == G1_DEMO_PLAY2) {
             if (Free_Play) {
                 tilemap_print_string_attr(DE_X[16] + 2, Text_Page_Y, 40, msg_free_play);
                 tilemap_print_string_attr(DE_X[3] + 27, Text_Page_Y, 40, msg_free_play);
@@ -147,7 +147,7 @@ void Entry_00(void) {
         E_No1++;
         E_Timer = 30;
         tilemap_print_string_attr(DE_X[3] + 14, Text_Page_Y + Insert_Y, 40, msg_blank);
-        if (G_No1 == 5 || G_No1 == 7) {
+        if (G_No1 == G1_DEMO_PLAY || G_No1 == G1_DEMO_PLAY2) {
             tilemap_print_string_attr(DE_X[16] + 2, Text_Page_Y, 40, msg_blank18);
             tilemap_print_string_attr(DE_X[3] + 27, Text_Page_Y, 40, msg_blank18);
         }
@@ -166,7 +166,7 @@ void Entry_00(void) {
             tilemap_print_string(DE_X[3] + 14, Text_Page_Y + Insert_Y, 0xFFFF,
                                  insert_coin_mes + coin_chute1_w.per_credit - 1);
         }
-        if (G_No1 == 5 || G_No1 == 7) {
+        if (G_No1 == G1_DEMO_PLAY || G_No1 == G1_DEMO_PLAY2) {
             if (Free_Play) {
                 tilemap_print_string_attr(DE_X[16] + 2, Text_Page_Y, 40, msg_free_play);
                 tilemap_print_string_attr(DE_X[3] + 27, Text_Page_Y, 40, msg_free_play);
@@ -196,11 +196,11 @@ void Entry_01(void) {
         if (credit_display_render(0) != 0) {
             Disp_Start_Message();
         }
-        if (~p1sw_1 & p1sw_0 & 0x1000) {
+        if (~p1sw_1 & p1sw_0 & BUTTON_START) {
             if (Pay_Start_Credit(0) != 0) {
                 Entry_01_Sub(0);
             }
-        } else if (~p2sw_1 & p2sw_0 & 0x1000) {
+        } else if (~p2sw_1 & p2sw_0 & BUTTON_START) {
             if (Pay_Start_Credit(1) != 0) {
                 Entry_01_Sub(1);
             }
@@ -245,7 +245,7 @@ void Entry_01_Sub(s16 PL_id) {
 void Exit_Title_Sub_Entry(void) {
     s16 i;
     s16 j;
-    E_No0 = 2;
+    E_No0 = E0_SELECT;
     E_No1 = 0;
     E_No2 = 0;
     E_No3 = 0;
@@ -319,10 +319,10 @@ void Entry_03_2nd(void) {
     case 2:
         if (Switch_Screen() != 0) {
             Cover_Timer = 23;
-            G_No1 = 1;
+            G_No1 = G1_SELECT;
             G_No2 = 0;
             G_No3 = 0;
-            E_No0 = 2;
+            E_No0 = E0_SELECT;
             E_No1 = 0;
             E_No2 = 0;
             E_No3 = 0;
@@ -382,18 +382,18 @@ void Entry_04_2nd(void) {
     default:
         if (Switch_Screen() != 0) {
             Cover_Timer = 23;
-            G_No1 = 1;
+            G_No1 = G1_SELECT;
             G_No2 = 0;
             G_No3 = 0;
             if (E_No3 == -1 && Continue_Flag) {
-                E_Number[LOSER][0] = 1;
+                E_Number[LOSER][0] = ENTRY_CONTINUE;
                 E_Number[LOSER][1] = 0;
                 E_Number[LOSER][2] = 0;
                 E_Number[LOSER][3] = 0;
             } else {
                 Correct_BI_Data();
             }
-            E_No0 = 2;
+            E_No0 = E0_SELECT;
             E_No1 = 0;
             E_No2 = 0;
             E_No3 = 0;
@@ -455,10 +455,10 @@ void Entry_06_2nd(void) {
         break;
     default:
         if (Switch_Screen() != 0) {
-            G_No1 = 1;
+            G_No1 = G1_SELECT;
             G_No2 = 0;
             G_No3 = 0;
-            E_No0 = 2;
+            E_No0 = E0_SELECT;
             E_No1 = 0;
             E_No2 = 0;
             E_No3 = 0;
@@ -473,9 +473,9 @@ void Entry_06_2nd(void) {
             }
             E_07_Flag[0] = 0;
             E_07_Flag[1] = 0;
-            if (E_Number[LOSER][0] == 5) {
+            if (E_Number[LOSER][0] == ENTRY_LOSER) {
                 if (Continue_Flag != 0) {
-                    E_Number[LOSER][0] = 1;
+                    E_Number[LOSER][0] = ENTRY_CONTINUE;
                 }
             }
         }
@@ -530,10 +530,10 @@ void Entry_07_2nd(void) {
     default:
         if (Switch_Screen() != 0) {
             Cover_Timer = 23;
-            G_No1 = 1;
+            G_No1 = G1_SELECT;
             G_No2 = 0;
             G_No3 = 0;
-            E_No0 = 2;
+            E_No0 = E0_SELECT;
             E_No1 = 0;
             E_No2 = 0;
             E_No3 = 0;
@@ -595,7 +595,7 @@ void Entry_08_2nd(void) {
     switch (E_No2) {
     case 0:
         E_No2 += 1;
-        if (E_Number[LOSER][0] == 8 && E_Number[LOSER][1] == 1) {
+        if (E_Number[LOSER][0] == ENTRY_GAME_OVER && E_Number[LOSER][1] == 1) {
             Clear_Personal_Data(LOSER);
         }
         sc_vram_to_ram();
@@ -604,10 +604,10 @@ void Entry_08_2nd(void) {
     default:
         if (Switch_Screen() != 0) {
             Cover_Timer = 23;
-            G_No1 = 1;
+            G_No1 = G1_SELECT;
             G_No2 = 0;
             G_No3 = 0;
-            E_No0 = 2;
+            E_No0 = E0_SELECT;
             E_No1 = 0;
             E_No2 = 0;
             E_No3 = 0;
@@ -621,10 +621,10 @@ void Entry_08_2nd(void) {
             }
             E_07_Flag[0] = 0;
             E_07_Flag[1] = 0;
-            Request_Disp_Rank[0][0] = -1;
-            Request_Disp_Rank[0][1] = -1;
-            Request_Disp_Rank[1][0] = -1;
-            Request_Disp_Rank[1][1] = -1;
+            Request_Disp_Rank[0][RANK_SCORE] = -1;
+            Request_Disp_Rank[0][RANK_WINS] = -1;
+            Request_Disp_Rank[1][RANK_SCORE] = -1;
+            Request_Disp_Rank[1][RANK_WINS] = -1;
         }
         break;
     }
@@ -650,17 +650,17 @@ void Entry_10_1st(void) {
     case 0:
         E_No2 += 1;
         Text_Page_Y = 0;
-        Score[WINNER][0] += Continue_Coin[WINNER];
+        Score[WINNER][SCORE_CPU] += Continue_Coin[WINNER];
         if (Check_Ranking(WINNER) != 0) {
-            E_Number[WINNER][0] = 2;
+            E_Number[WINNER][0] = ENTRY_NAME;
             E_Number[WINNER][1] = 0;
             E_Number[WINNER][2] = 0;
             E_Number[WINNER][3] = 0;
-            Score[WINNER][0] += Continue_Coin[WINNER];
-            Request_Disp_Rank[WINNER][0] = Rank_In[WINNER][0];
-            Request_Disp_Rank[WINNER][1] = Rank_In[WINNER][1];
+            Score[WINNER][SCORE_CPU] += Continue_Coin[WINNER];
+            Request_Disp_Rank[WINNER][RANK_SCORE] = Rank_In[WINNER][RANK_SCORE];
+            Request_Disp_Rank[WINNER][RANK_WINS] = Rank_In[WINNER][RANK_WINS];
         } else {
-            E_Number[WINNER][0] = 8;
+            E_Number[WINNER][0] = ENTRY_GAME_OVER;
             E_Number[WINNER][1] = 0;
         }
     default:
@@ -682,7 +682,7 @@ void Entry_10_2nd(void) {
     switch (E_No2) {
     case 0:
         E_No2 += 1;
-        if ((E_Number[LOSER][0] == 8) && (E_Number[LOSER][1] == 1)) {
+        if ((E_Number[LOSER][0] == ENTRY_GAME_OVER) && (E_Number[LOSER][1] == 1)) {
             Clear_Personal_Data(LOSER);
         }
         sc_vram_to_ram();
@@ -691,10 +691,10 @@ void Entry_10_2nd(void) {
     default:
         if (Switch_Screen() != 0) {
             Cover_Timer = 23;
-            G_No1 = 1;
+            G_No1 = G1_SELECT;
             G_No2 = 0;
             G_No3 = 0;
-            E_No0 = 2;
+            E_No0 = E0_SELECT;
             E_No1 = 0;
             E_No2 = 0;
             E_No3 = 0;
@@ -708,10 +708,10 @@ void Entry_10_2nd(void) {
             }
             E_07_Flag[0] = 0;
             E_07_Flag[1] = 0;
-            Request_Disp_Rank[0][0] = -1;
-            Request_Disp_Rank[0][1] = -1;
-            Request_Disp_Rank[1][0] = -1;
-            Request_Disp_Rank[1][1] = -1;
+            Request_Disp_Rank[0][RANK_SCORE] = -1;
+            Request_Disp_Rank[0][RANK_WINS] = -1;
+            Request_Disp_Rank[1][RANK_SCORE] = -1;
+            Request_Disp_Rank[1][RANK_WINS] = -1;
         }
         break;
     }
@@ -725,7 +725,7 @@ s16 Jump_Index;
 {
     ENTRY_X = 0;
     switch (E_Number[PL_id][0]) {
-    case 0:
+    case ENTRY_NONE:
         if (Game_setting.set5) {
             break;
         }
@@ -736,7 +736,7 @@ s16 Jump_Index;
             Entry_Common_Sub(PL_id, Jump_Index);
         }
         break;
-    case 1:
+    case ENTRY_CONTINUE:
         if (PL_id) {
             if (Credit_Continue_2P() != 0) {
                 Break_Into_Sub(PL_id, Jump_Index);
@@ -745,15 +745,15 @@ s16 Jump_Index;
             Break_Into_Sub(PL_id, Jump_Index);
         }
         if (Request_Break[PL_id]) {
-            E_Number[PL_id][0] = 0;
+            E_Number[PL_id][0] = ENTRY_NONE;
             E_Number[PL_id][1] = 0;
             E_Number[PL_id][2] = 0;
             E_Number[PL_id][3] = 0;
-        } else if ((E_Number[PL_id][0] == 1) && (E_07_Flag[PL_id ^ 1] == 0)) {
+        } else if ((E_Number[PL_id][0] == ENTRY_CONTINUE) && (E_07_Flag[PL_id ^ 1] == 0)) {
             Entry_Continue_Sub(PL_id);
         }
         break;
-    case 2:
+    case ENTRY_NAME:
         switch (E_Number[PL_id][1]) {
         case 0:
             E_Number[PL_id][1] += 1;
@@ -790,23 +790,23 @@ s16 Jump_Index;
             }
             E_Number[PL_id][2] = 0;
             E_Number[PL_id][3] = 0;
-            if (E_No0 == 8) {
-                E_Number[PL_id][0] = 8;
+            if (E_No0 == E0_GAME_OVER) {
+                E_Number[PL_id][0] = ENTRY_GAME_OVER;
                 E_Number[PL_id][1] = 1;
             } else {
-                E_Number[PL_id][0] = 8;
+                E_Number[PL_id][0] = ENTRY_GAME_OVER;
                 E_Number[PL_id][1] = 0;
             }
             break;
         }
         break;
-    case 3:
+    case ENTRY_NAME_WAIT:
         switch (E_Number[PL_id][1]) {
         case 0:
-            if ((E_No0 != 8) && (E_No0 != 2)) {
+            if ((E_No0 != E0_GAME_OVER) && (E_No0 != E0_SELECT)) {
                 break;
             }
-            E_Number[PL_id][0] = 2;
+            E_Number[PL_id][0] = ENTRY_NAME;
             E_Number[PL_id][1] = 2;
             E_Number[PL_id][2] = 0;
             E_Number[PL_id][3] = 0;
@@ -814,20 +814,20 @@ s16 Jump_Index;
             tilemap_print_string_attr(DE_X[Entry_Mes_Wide[PL_id]] + Entry_Mes_X[PL_id], Text_Page_Y, 40, msg_blank);
             break;
         case 1:
-            if ((E_No0 != 8) && (E_No0 != 2)) {
+            if ((E_No0 != E0_GAME_OVER) && (E_No0 != E0_SELECT)) {
                 break;
             }
-            E_Number[PL_id][0] = 8;
+            E_Number[PL_id][0] = ENTRY_GAME_OVER;
             E_Number[PL_id][1] = 1;
             E_Number[PL_id][2] = 0;
             E_Number[PL_id][3] = 0;
-            if (E_No0 == 2) {
+            if (E_No0 == E0_SELECT) {
                 E_Number[PL_id][1] = 0;
             }
             break;
         }
         break;
-    case 8:
+    case ENTRY_GAME_OVER:
         switch (E_Number[PL_id][1]) {
         case 0:
             In_Game_Sub(PL_id);
@@ -837,7 +837,7 @@ s16 Jump_Index;
             break;
         }
         break;
-    case 5:
+    case ENTRY_LOSER:
         Loser_Scene_Sub(PL_id, Jump_Index);
         break;
     }
@@ -918,8 +918,8 @@ s16 PL_id;
 {
     s16 xx;
 
-    if (Rank_In[PL_id][0] >= 0) {
-        xx = Rank_In[PL_id][0];
+    if (Rank_In[PL_id][RANK_SCORE] >= 0) {
+        xx = Rank_In[PL_id][RANK_SCORE];
         Ranking_Data[xx].name[0] = rank_name_w[PL_id].code[0];
         Ranking_Data[xx].name[1] = rank_name_w[PL_id].code[1];
         Ranking_Data[xx].name[2] = rank_name_w[PL_id].code[2];
@@ -940,12 +940,12 @@ s16 PL_id;
             }
         }
     }
-    if (Rank_In[PL_id][1] >= 0) {
-        xx = Rank_In[PL_id][1] + 6;
+    if (Rank_In[PL_id][RANK_WINS] >= 0) {
+        xx = Rank_In[PL_id][RANK_WINS] + 6;
         Ranking_Data[xx].name[0] = rank_name_w[PL_id].code[0];
         Ranking_Data[xx].name[1] = rank_name_w[PL_id].code[1];
         Ranking_Data[xx].name[2] = rank_name_w[PL_id].code[2];
-        if (G_No1 == 8) {
+        if (G_No1 == G1_ENDING) {
             if (Continue_Coin[PL_id]) {
                 Ranking_Data[xx].mark = 'I';
             } else {
@@ -1211,40 +1211,40 @@ s16 PL_id;
     E_Number[PL_id][1] = 0;
     E_Number[PL_id][2] = 0;
     E_Number[PL_id][3] = 0;
-    Score[PL_id][0] += Continue_Coin[PL_id];
+    Score[PL_id][SCORE_CPU] += Continue_Coin[PL_id];
     for (xx = 0; xx < 16; xx++) {
         Break_Com[PL_id][xx] = 0;
     }
-    if (E_No0 != 7) {
+    if (E_No0 != E0_CONTINUE) {
         tilemap_print_string_attr(DE_X[Entry_Mes_Wide[PL_id]] + Entry_Mes_X[PL_id], Text_Page_Y, 40, msg_blank);
         if (Check_Ranking(PL_id) != 0) {
-            E_Number[PL_id][0] = 2;
-            if (E_No0 == 6) {
-                Request_Disp_Rank[PL_id][0] = Rank_In[PL_id][0];
-                Request_Disp_Rank[PL_id][1] = Rank_In[PL_id][1];
+            E_Number[PL_id][0] = ENTRY_NAME;
+            if (E_No0 == E0_LOSER) {
+                Request_Disp_Rank[PL_id][RANK_SCORE] = Rank_In[PL_id][RANK_SCORE];
+                Request_Disp_Rank[PL_id][RANK_WINS] = Rank_In[PL_id][RANK_WINS];
             }
             return;
         }
-        E_Number[PL_id][0] = 8;
+        E_Number[PL_id][0] = ENTRY_GAME_OVER;
         E_Number[PL_id][1] = 0;
         return;
     } else {
         if (Check_Ranking(PL_id) != 0) {
-            Request_Disp_Rank[PL_id][0] = Rank_In[PL_id][0];
-            Request_Disp_Rank[PL_id][1] = Rank_In[PL_id][1];
-            if (E_Number[PL_id ^ 1][0] != 0) {
-                E_Number[PL_id][0] = 2;
+            Request_Disp_Rank[PL_id][RANK_SCORE] = Rank_In[PL_id][RANK_SCORE];
+            Request_Disp_Rank[PL_id][RANK_WINS] = Rank_In[PL_id][RANK_WINS];
+            if (E_Number[PL_id ^ 1][0] != ENTRY_NONE) {
+                E_Number[PL_id][0] = ENTRY_NAME;
                 return;
             }
-            E_Number[PL_id][0] = 3;
+            E_Number[PL_id][0] = ENTRY_NAME_WAIT;
             E_Number[PL_id][1] = 0;
             return;
         } else {
-            if (E_Number[PL_id ^ 1][0] != 0) {
-                E_Number[PL_id][0] = 8;
+            if (E_Number[PL_id ^ 1][0] != ENTRY_NONE) {
+                E_Number[PL_id][0] = ENTRY_GAME_OVER;
                 E_Number[PL_id][1] = 0;
             } else {
-                E_Number[PL_id][0] = 3;
+                E_Number[PL_id][0] = ENTRY_NAME_WAIT;
                 E_Number[PL_id][1] = 1;
             }
         }
@@ -1319,16 +1319,15 @@ s16 PL_id;
 
 
 
+#pragma inline(flash_disp_check)
+static void flash_disp_check(s16 y, s16 timer, s16 x) {}
+
 s32 Flash_Insert_Coin(PL_id)
 s16 PL_id;
 {
     s16 *timer;
-    if (E_No0 == 6 || E_No0 == 8 || E_No0 == 7) {
-        (void)tilemap_print_string_attr;
-        (void)msg_blank;
-        (void)Text_Page_Y;
-        (void)Entry_Mes_X[PL_id];
-        (void)F_Timer[PL_id];
+    if (E_No0 == E0_LOSER || E_No0 == E0_GAME_OVER || E_No0 == E0_CONTINUE) {
+        flash_disp_check(Text_Page_Y, F_Timer[PL_id], Entry_Mes_X[PL_id]);
         tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
                                   msg_blank);
         return 0;
@@ -1376,12 +1375,15 @@ s16 PL_id;
 
 
 
+#pragma inline(flash_no_disp)
+static void flash_no_disp(s16 no) {}
+
 s32 Flash_Start(PL_id, x)
 s16 PL_id;
 u16 x;
 {
     s16 *timer;
-    (void)F_No1[PL_id];
+    flash_no_disp(F_No1[PL_id]);
     switch (timer = &F_Timer[PL_id], F_No1[PL_id]) {
     case 0:
         F_No1[PL_id] += 1;
@@ -1390,7 +1392,7 @@ u16 x;
         F_No3[PL_id] = 0;
         F_Timer[PL_id] = 1;
         tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40, msg_blank);
-        if (E_No0 == 6 && PL_id == LOSER) {
+        if (E_No0 == E0_LOSER && PL_id == LOSER) {
             if (Continue_Flag) {
                 F_No1[PL_id] = 3;
             }
@@ -1432,7 +1434,7 @@ s16 PL_id;
 {
     s16 *timer;
     s16 *step;
-    if (E_No0 == 6 || E_No0 == 8) {
+    if (E_No0 == E0_LOSER || E_No0 == E0_GAME_OVER) {
         return 0;
     }
     switch (step = F_No3, timer = &F_Timer[PL_id], step[PL_id]) {
@@ -1462,6 +1464,9 @@ s16 PL_id;
 
 
 
+#pragma inline(flash_pos_disp)
+static void flash_pos_disp(s16 x, s16 y) {}
+
 s32 Flash_More_Coins(PL_id, unused, coins)
 s16 PL_id;
 s16 unused;
@@ -1474,11 +1479,10 @@ s8 coins;
         F_No0[PL_id] = F_No1[PL_id] = 0;
         F_Timer[PL_id] = 1;
         (void)tilemap_print_string_attr;
-        (void)Text_Page_Y;
-        (void)Entry_Mes_X[PL_id];
+        flash_pos_disp(Entry_Mes_X[PL_id], Text_Page_Y);
         tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
                                   msg_blank);
-        if (E_No0 == 6 && PL_id == LOSER) {
+        if (E_No0 == E0_LOSER && PL_id == LOSER) {
             F_No2[PL_id] = 3;
         }
         break;
@@ -1809,7 +1813,7 @@ s16 PL_id;
         if (!Pay_Start_Credit(PL_id)) {
             return 0;
         }
-        if (E_No0 == 6) {
+        if (E_No0 == E0_LOSER) {
             effect_58_init(6, 1, 116);
         }
         if (Forbid_Break || Extra_Break) {
@@ -1853,7 +1857,7 @@ s16 PL_id;
         bookkeep_freeplay_count();
         return 1;
     }
-    if (E_Number[PL_id][0] == 1 || E_Number[PL_id][0] == 5) {
+    if (E_Number[PL_id][0] == ENTRY_CONTINUE || E_Number[PL_id][0] == ENTRY_LOSER) {
         return (s8)credit_use(PL_id);
     }
     if (Two_Coin_Start) {
@@ -1894,7 +1898,7 @@ s16 PL_id;
     Continue_Score_Sub(PL_id);
     plw[New_Challenger].wu.operator = 1;
     Operator_Status[New_Challenger] = 1;
-    E_Number[New_Challenger][0] = 0;
+    E_Number[New_Challenger][0] = ENTRY_NONE;
     E_Number[New_Challenger][1] = 0;
     E_Number[New_Challenger][2] = 0;
     E_Number[New_Challenger][3] = 0;
@@ -1913,7 +1917,7 @@ s16 PL_id;
     E_No1++;
     E_No2 = 0;
     E_Timer = 150;
-    E_Number[New_Challenger][0] = 0;
+    E_Number[New_Challenger][0] = ENTRY_NONE;
     E_Number[New_Challenger][1] = 0;
     E_Number[New_Challenger][2] = 0;
     E_Number[New_Challenger][3] = 0;
@@ -1934,11 +1938,11 @@ s16 PL_id;
     Stop_Combo = 1;
     E_No1 = E_No1 + 1;
     E_No2 = 0;
-    E_Number[New_Challenger][0] = 0;
+    E_Number[New_Challenger][0] = ENTRY_NONE;
     E_Number[New_Challenger][1] = 0;
     E_Number[New_Challenger][2] = 0;
     E_Number[New_Challenger][3] = 0;
-    if ((Play_Type == 0) && (Conclusion_Flag != 0) && (plw[Champion].wu.operator == 0)) {
+    if ((Play_Type == PLAY_VS_CPU) && (Conclusion_Flag != 0) && (plw[Champion].wu.operator == 0)) {
         E_Timer = 1;
         if (LOSER != New_Challenger) {
             E_No3 = -1;
@@ -1948,7 +1952,7 @@ s16 PL_id;
     } else {
         E_Timer = 150;
         if (Conclusion_Flag == 0) {
-            Score[Champion][0] = Stage_Stock_Score[Champion];
+            Score[Champion][SCORE_CPU] = Stage_Stock_Score[Champion];
         }
         effect_56_init(0);
         effect_A2_init(0);
@@ -1964,7 +1968,7 @@ void Break_Into_07(PL_id)
 s16 PL_id;
 {
     Continue_Score_Sub(PL_id);
-    E_Number[New_Challenger][0] = 0;
+    E_Number[New_Challenger][0] = ENTRY_NONE;
     E_Number[New_Challenger][1] = 0;
     E_Number[New_Challenger][2] = 0;
     E_Number[New_Challenger][3] = 0;
@@ -1984,7 +1988,7 @@ s16 PL_id;
 {
     tilemap_print_string_attr(DE_X[Entry_Mes_Wide[PL_id]] + Entry_Mes_X[PL_id], Text_Page_Y, 40, msg_blank);
     Continue_Score_Sub(PL_id);
-    E_Number[New_Challenger][0] = 0;
+    E_Number[New_Challenger][0] = ENTRY_NONE;
     E_Number[New_Challenger][1] = 0;
     E_Number[New_Challenger][2] = 0;
     E_Number[New_Challenger][3] = 0;
@@ -2009,7 +2013,7 @@ void Break_Into_09(PL_id)
 s16 PL_id;
 {
     tilemap_print_string_attr(DE_X[Entry_Mes_Wide[PL_id]] + Entry_Mes_X[PL_id], Text_Page_Y, 40, msg_blank);
-    E_Number[New_Challenger][0] = 0;
+    E_Number[New_Challenger][0] = ENTRY_NONE;
     E_Number[New_Challenger][1] = 0;
     E_Number[New_Challenger][2] = 0;
     E_Number[New_Challenger][3] = 0;
@@ -2029,7 +2033,7 @@ void Break_Into_10(PL_id)
 s16 PL_id;
 {
     tilemap_print_string_attr(DE_X[Entry_Mes_Wide[PL_id]] + Entry_Mes_X[PL_id], Text_Page_Y, 40, msg_blank);
-    E_Number[New_Challenger][0] = 0;
+    E_Number[New_Challenger][0] = ENTRY_NONE;
     E_Number[New_Challenger][1] = 0;
     E_Number[New_Challenger][2] = 0;
     E_Number[New_Challenger][3] = 0;
@@ -2048,9 +2052,9 @@ s16 PL_id;
 void Continue_Score_Sub(PL_id)
 s16 PL_id;
 {
-    if ((E_Number[PL_id][0] == 1) || (E_Number[PL_id][0] == 5)) {
+    if ((E_Number[PL_id][0] == ENTRY_CONTINUE) || (E_Number[PL_id][0] == ENTRY_LOSER)) {
         Continue_Coin[PL_id] += 1;
-        Score[PL_id][0] = Stage_Stock_Score[PL_id];
+        Score[PL_id][SCORE_CPU] = Stage_Stock_Score[PL_id];
         if (Continue_Coin[PL_id] >= 99) {
             Continue_Coin[PL_id] = 99;
         }
@@ -2071,7 +2075,7 @@ void Correct_BI_Data(void) {
 void coin_in_sound_request(void) {
     if (coin_chute1_w.dropped | coin_chute2_w.dropped) {
         if (Demo_Flag == 1) {
-            sound_request(E_No0 == 1 ? 115 : 106);
+            sound_request(E_No0 == E0_TITLE ? 115 : 106);
         }
     }
 }
@@ -2079,7 +2083,7 @@ void coin_in_sound_request(void) {
 
 
 void Redisp_Continue_Count(s16 pl_id) {
-    if (E_Number[pl_id][0] == 1) {
+    if (E_Number[pl_id][0] == ENTRY_CONTINUE) {
         tilemap_print_string_attr(DE_X[Entry_Mes_Wide[pl_id]] + Entry_Mes_X[pl_id], Text_Page_Y, 40, msg_continue);
         Disp_Personal_Count(pl_id, Continue_Count[pl_id]);
     }

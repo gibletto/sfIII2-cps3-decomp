@@ -1,5 +1,9 @@
 /*
- * EFFF7_TBL.C  tables read by effect F7
+ * EFFF7_TBL.C  opening sprite position table (effect F7)
+ *
+ * effF7_pos_tbl gives, for each step of the master counter and each of the six opening
+ * sprites, the x and y the sprite moves from; it moves toward the next step's position. Read
+ * by EFFF7.C.
  */
 
 #include "types.h"

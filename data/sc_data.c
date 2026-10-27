@@ -1,5 +1,12 @@
 /*
- * SC_DATA.C  tables read by sc_trans.c: text (fix) layer character transfer and put routines
+ * SC_DATA.C  text layer transfer, picture and name plate tables
+ *
+ * sc_ram_vram_tbl has 29 entries, each pointing at a position list, a character code list and
+ * an attribute list in SC_TRANS_TBL.C, for putting prepared screen parts on the text layer.
+ * sc_celllist_scr_tbl gives each cell list its screen column base, tone_down_tbl the character
+ * transfers of ToneDown, picture_chr_tbl, picture_set_tbl and picture_attr_tbl the characters,
+ * screen part and attribute of each text-layer picture (sc_picture_put), and nwdata_tbl the
+ * winner name plate of each character (cells, size and two positions). Read by SC_TRANS.C.
  */
 
 #include "types.h"

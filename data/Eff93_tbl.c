@@ -1,5 +1,10 @@
 /*
- * EFF93_TBL.C  tables read by effects 88 and 90
+ * EFF93_TBL.C  stage background object counts and BG1 display positions
+ *
+ * eff88_loop_tbl gives the number of effect 88 background objects to spawn by type and compel
+ * flag, and scr_obj_data88_0 their records, reached through scr_obj_data88; read by EFF88.C.
+ * eff90_pos_y_tbl gives the y positions of the nine parts of the BG1 display object; read by
+ * EFF90.C.
  */
 
 #include "types.h"

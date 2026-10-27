@@ -1,5 +1,12 @@
 /*
- * ENTRY_TBL_B.C  tables read by entry_2.c and mode_init.c
+ * ENTRY_TBL_B.C  player entry and credit messages, and region tables
+ *
+ * The fixed-width messages of the entry / credit task: FREE PLAY, INSERT COIN(S), CONTINUE and
+ * its count, GAME OVER, JOIN IN, PRESS START, PLEASE WAIT, the INSERT MORE COIN(S) prompts and
+ * the CREDIT and COINS displays; a control character in a string stands for a player number or
+ * coin count. Read by ENTRY_2.C. region_type_tbl gives the area type of each country,
+ * region_cc_type_tbl its level correction type, and region_param_tbl the two corrections of
+ * each type (CPU level and vitality); read by MODE_INIT.C.
  */
 
 #include "types.h"
@@ -62,14 +69,16 @@ const s8 msg_blank18[20] = {
 
 const s8 msg_continue[20] = "     CONTINUE_     ";
 
-const s8 msg_continue_cnt[20] = {
+/* Messages whose digits are the font's glyph numbers 0-9 (not ASCII) are written as numbers; the comment
+   after each name is the text it shows. */
+const s8 msg_continue_cnt[20] = {  /* "     CONTINUE_9    " */
     32, 32, 32, 32, 32, 67, 79, 78, 84, 73, 78, 85, 69, 95, 9, 32,
     32, 32, 32, 0,
 };
 
 const u8 msg_game_over[20] = "     GAME OVER     ";
 
-const u8 msg_insert_2coins[24] = {
+const u8 msg_insert_2coins[24] = {  /* "   INSERT 2 COINS   ", then other data */
     0x20, 0x20, 0x20, 0x49, 0x4E, 0x53, 0x45, 0x52, 0x54, 0x20, 2, 0x20, 0x43, 0x4F, 0x49, 0x4E,
     0x53, 0x20, 0x20, 0x20, 0, 0xFF, 0xFF, 0xFF,
 };
@@ -80,12 +89,12 @@ const u8 msg_insert_coins[20] = "   INSERT   COINS  ";
 
 const u8 msg_join_in[20] = "      JOIN IN      ";
 
-const s8 msg_press_2p_start[20] = {
+const s8 msg_press_2p_start[20] = {  /* "   PRESS 2P START  " */
     32, 32, 32, 80, 82, 69, 83, 83, 32, 2, 80, 32, 83, 84, 65, 82,
     84, 32, 32, 0,
 };
 
-const s8 msg_press_1p_start[20] = {
+const s8 msg_press_1p_start[20] = {  /* "   PRESS 1P START  " */
     32, 32, 32, 80, 82, 69, 83, 83, 32, 1, 80, 32, 83, 84, 65, 82,
     84, 32, 32, 0,
 };
@@ -121,61 +130,61 @@ const s8 msg_blank25[28] = {
 
 const s8 msg_insert_1_more[20] = "INSERT 1 MORE COIN\0\xFF";
 
-const s8 msg_press_1or2_start[28] = {
+const s8 msg_press_1or2_start[28] = {  /* "PRESS 1 OR 2 START BUTTON" */
     80, 82, 69, 83, 83, 32, 1, 32, 79, 82, 32, 2, 32, 83, 84, 65,
     82, 84, 32, 66, 85, 84, 84, 79, 78, 0, -1, -1,
 };
 
 const s8 msg_insert_2_more[20] = "INSERT 2 MORE COINS";
 
-const s8 msg_press_1p_button[24] = {
+const s8 msg_press_1p_button[24] = {  /* "PRESS 1P START BUTTON" */
     80, 82, 69, 83, 83, 32, 1, 80, 32, 83, 84, 65, 82, 84, 32, 66,
     85, 84, 84, 79, 78, 0, -1, -1,
 };
 
-const s8 msg_press_2p_button[24] = {
+const s8 msg_press_2p_button[24] = {  /* "PRESS 2P START BUTTON" */
     80, 82, 69, 83, 83, 32, 2, 80, 32, 83, 84, 65, 82, 84, 32, 66,
     85, 84, 84, 79, 78, 0, -1, -1,
 };
 
 const s8 str_INSERT_COIN[20] = "     INSERT COIN   ";
 
-const s8 str_INSERT_COINS[20] = {
+const s8 str_INSERT_COINS[20] = {  /* "   INSERT 2 COINS  " */
     32, 32, 32, 73, 78, 83, 69, 82, 84, 32, 2, 32, 67, 79, 73, 78,
     83, 32, 32, 0,
 };
 
-const s8 str_INSERT_COINS_2[20] = {
+const s8 str_INSERT_COINS_2[20] = {  /* "   INSERT 3 COINS  " */
     32, 32, 32, 73, 78, 83, 69, 82, 84, 32, 3, 32, 67, 79, 73, 78,
     83, 32, 32, 0,
 };
 
-const s8 str_INSERT_COINS_3[20] = {
+const s8 str_INSERT_COINS_3[20] = {  /* "   INSERT 4 COINS  " */
     32, 32, 32, 73, 78, 83, 69, 82, 84, 32, 4, 32, 67, 79, 73, 78,
     83, 32, 32, 0,
 };
 
-const s8 str_INSERT_COINS_4[20] = {
+const s8 str_INSERT_COINS_4[20] = {  /* "   INSERT 5 COINS  " */
     32, 32, 32, 73, 78, 83, 69, 82, 84, 32, 5, 32, 67, 79, 73, 78,
     83, 32, 32, 0,
 };
 
-const s8 str_INSERT_COINS_5[20] = {
+const s8 str_INSERT_COINS_5[20] = {  /* "   INSERT 6 COINS  " */
     32, 32, 32, 73, 78, 83, 69, 82, 84, 32, 6, 32, 67, 79, 73, 78,
     83, 32, 32, 0,
 };
 
-const s8 str_INSERT_COINS_6[20] = {
+const s8 str_INSERT_COINS_6[20] = {  /* "   INSERT 7 COINS  " */
     32, 32, 32, 73, 78, 83, 69, 82, 84, 32, 7, 32, 67, 79, 73, 78,
     83, 32, 32, 0,
 };
 
-const s8 str_INSERT_COINS_7[20] = {
+const s8 str_INSERT_COINS_7[20] = {  /* "   INSERT 8 COINS  " */
     32, 32, 32, 73, 78, 83, 69, 82, 84, 32, 8, 32, 67, 79, 73, 78,
     83, 32, 32, 0,
 };
 
-const s8 str_INSERT_COINS_8[20] = {
+const s8 str_INSERT_COINS_8[20] = {  /* "   INSERT 9 COINS  " */
     32, 32, 32, 73, 78, 83, 69, 82, 84, 32, 9, 32, 67, 79, 73, 78,
     83, 32, 32, 0,
 };

@@ -21,6 +21,12 @@
 #include "aboutspr.h"
 #include "EFFF2_code.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the pattern */
+#define R0_START        1       /* go home with the first speeds */
+#define R0_FLY          2       /* fly through the three stages */
+#define R0_KILL         99      /* (default) put the work back */
+
 
 
 extern const s16 efff2_pos_tbl[8][2];
@@ -32,13 +38,13 @@ extern const s16 efff2_data_tbl[8][3];
 void effect_F2_move(WORK_Other* ewk) {
     const s32* p;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
-    case 1:
+    case R0_START:
         if (ewk->wu.old_rno[0] != end_w.r_no_2) {
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_KILL;
         } else {
             ewk->wu.routine_no[0]++;
             ewk->wu.old_rno[2] = 0;
@@ -51,9 +57,9 @@ void effect_F2_move(WORK_Other* ewk) {
             ewk->wu.xyz[1].disp.pos = efff2_pos_tbl[ewk->wu.old_rno[1]][1];
         }
         break;
-    case 2:
+    case R0_FLY:
         if (ewk->wu.old_rno[0] != end_w.r_no_2) {
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_KILL;
             break;
         }
         char_move(&ewk->wu);
@@ -87,7 +93,7 @@ void effect_F2_move(WORK_Other* ewk) {
             break;
         case 2:
             if (ewk->wu.xyz[0].disp.pos > 0x2C0) {
-                ewk->wu.routine_no[0] = 1;
+                ewk->wu.routine_no[0] = R0_START;
             }
             break;
         }
@@ -101,6 +107,8 @@ void effect_F2_move(WORK_Other* ewk) {
 }
 
 
+
+static void end_rno_disp(s16 r_no_2) {}
 
 s32 effect_F2_init(s16 no) {
     WORK_Other* ewk;
@@ -133,5 +141,5 @@ s32 effect_F2_init(s16 no) {
         }
         ewk->wu.old_rno[3] = *data_ptr++;
     }
-    (void)end_w.r_no_2;
+    end_rno_disp(end_w.r_no_2);
 }

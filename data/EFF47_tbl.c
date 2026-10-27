@@ -1,5 +1,10 @@
 /*
- * EFF47_TBL.C  tables read by effects 47 and 48
+ * EFF47_TBL.C  scattering piece and opening scene object tables
+ *
+ * eff47_data_tbl gives the offset from the character and the life time of each of the four
+ * pieces, and eff47_sp_tbl their speeds and accelerations; read by EFF47.C, the four
+ * scattering pieces. eff48_data_tbl holds the rows of each type of opening scene object, read
+ * by EFF48.C.
  */
 
 #include "types.h"

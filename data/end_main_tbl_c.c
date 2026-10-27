@@ -1,5 +1,7 @@
 /*
- * END_MAIN_TBL_C.C  tables read by end_main.c
+ * END_MAIN_TBL_C.C  opening scene timer table
+ *
+ * op_timer_tbl is the length in frames of the scenes of the opening. Read by END_MAIN.C.
  */
 
 #include "types.h"

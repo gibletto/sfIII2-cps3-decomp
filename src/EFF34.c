@@ -24,12 +24,20 @@
 #include "bg_sub_5.h"
 #include "EFF34.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show with a shadow, aim at the player */
+#define R0_SHOW         1       /* animate once the stage has scrolled */
+#define R0_TURN         2       /* finish the pattern, then turn round */
+#define R0_LEAVE        3       /* walk away for a while */
+#define R0_END          4       /* one more frame */
+#define R0_KILL         5       /* put the work back */
+
 
 
 void effect_34_move(WORK_Other* ewk) {
     WORK* oya_ptr = (WORK*)ewk->my_master;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.kage_flag = 1;
@@ -41,7 +49,7 @@ void effect_34_move(WORK_Other* ewk) {
         ewk->wu.old_rno[0] = 60;
         cal_initial_speed(&ewk->wu, ewk->wu.old_rno[0], ewk->wu.old_rno[1], ewk->wu.xyz[1].disp.pos);
         break;
-    case 1:
+    case R0_SHOW:
         if (EXE_flag || Game_pause || bg_w.bgw[1].xy[1].disp.pos >= 104) {
             suzi_sync_pos_set(ewk);
             sort_push_request(&ewk->wu);
@@ -57,7 +65,7 @@ void effect_34_move(WORK_Other* ewk) {
         ewk->wu.cg_type = 0;
         oya_ptr->cmwk[1] = 9;
         break;
-    case 2:
+    case R0_TURN:
         if (EXE_flag || Game_pause) {
             suzi_sync_pos_set(ewk);
             sort_push_request(&ewk->wu);
@@ -73,7 +81,7 @@ void effect_34_move(WORK_Other* ewk) {
         ewk->wu.rl_flag = ewk->wu.rl_flag ? 0 : 1;
         set_char_move_init(&ewk->wu, 0, 0);
         break;
-    case 3:
+    case R0_LEAVE:
         if (EXE_flag || Game_pause) {
             suzi_sync_pos_set(ewk);
             sort_push_request(&ewk->wu);
@@ -89,10 +97,10 @@ void effect_34_move(WORK_Other* ewk) {
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 0;
         break;
-    case 4:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
-    case 5:
+    case R0_KILL:
     default:
         all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);

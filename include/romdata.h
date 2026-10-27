@@ -224,10 +224,17 @@ extern const s16 Finish_SE_Data[2][7];
 extern const u16 Voice_SE_Data[];
 extern const u16 Bonus_SE_Voice_Data[];
 extern const s32 rate_256_table[256][2];
+/* rate_256_table[direction] columns */
+#define RATE_X          0       /* x step per 256 of speed */
+#define RATE_Y          1       /* y step per 256 of speed */
 extern const u8 dir_sel_table[128][128];
 extern const s8 Capcom_Rights_msg[];
 extern const s8 Capcom_Rights_msg2[];
 extern const s8 Capcom_USA_Rights_msg[];
+/* EFF89_Init_Data / EFF91_Init_Data columns; a row per type */
+#define STEP_INIT_START 0       /* first entry in the step data */
+#define STEP_INIT_LOOP  1       /* non-zero: start the steps again */
+#define STEP_INIT_STEPS 2       /* steps in one pass */
 extern const s16 EFF89_Init_Data[][3];
 extern const s16 EFF91_Init_Data[][3];
 extern const s16 EFF91_Step_Data[];
@@ -277,6 +284,9 @@ extern const s16 EFFA3_Area_Data[][2][4];
 extern const s16 Damage_Power_Data[];
 extern const s8 Pow_Control_Data_1[][8];
 extern const s8 Face_Cursor_Data[2][13];
+/* columns of the select and result screen position tables */
+#define SEL_POS_X       0       /* x */
+#define SEL_POS_Y       1       /* y */
 extern const s16 Face_Pos_Data[24][2];
 extern const s16 Name_Pos_Data[2][2][24][2];
 extern const s16 Name_Cover_Pos_Data[2][2][24][2];
@@ -557,7 +567,7 @@ extern const s32 (*effinitjptbl[])();
 extern void (*const effinitjp_quake_y[])();
 extern const u16 jdb[16];
 extern const u16 jdb2[16];
-extern const s16 parts_colmd_table[2];
+extern const u16 parts_colmd_table[2];
 extern const s16 parts_colcd_table[14];
 extern const s16 hit_mark_dir_table[16];
 extern const PLEF plef_data[165];
@@ -571,7 +581,7 @@ extern const EFF08_FRAME eff08_anm_tbl[8];
 extern const EFF08_FRAME eff08_anm2_tbl[4];
 extern const s8 eff08_loop_tbl[];
 extern const s16 eff09_data[4][9];
-extern const s16 eff09_data2[43][8];
+extern const s16 eff09_data2[24][8];
 extern const s32 eff09_2000_data[2][4];
 extern const s32 eff09_add_tbl0[2][2];
 extern const s32 eff09_add_tbl1[2][2];
@@ -587,7 +597,7 @@ extern const s32 eff11_quake_speed_x_tbl[2][8];
 extern const s16 eff11_data_tbl[4][5];
 extern const s32 eff11_speed_tbl[4][4];
 extern const s16 scr_obj_num12[];
-extern const s16 kotp_07_dm_vital[4];
+extern const u16 kotp_07_dm_vital[4];
 extern const TAMA tama_data[];
 extern const s16 tcct[];
 extern void (*const kind_of_tama_process[])(WORK_Other* ewk, TAMA* twk);
@@ -596,7 +606,7 @@ extern const s16 homing_empos_hos[1][24][2];
 extern const s16 enemy_pos_hos[1][24][2];
 extern const s16 X_F_L_A_T_pos_hos[1][24][2];
 extern const u16 eff14_ofs_tbl[];
-extern const u32 eff14_data_tbl[11][5];
+extern const u32 eff14_data_tbl[12][5];
 extern const u32 bunkai_table[7];
 extern const u16 bunkai_numobj[10];
 extern const CONN bbbs_score[4][7];
@@ -646,7 +656,7 @@ extern const s32 eff62_speed_tbl[];
 extern const s16 eff78_init_tbl[2][4];
 extern const s16 eff64_move_tbl[16];
 extern const s16 eff64_move2_tbl[16];
-extern const s16 eff66_data_tbl[1][12];
+extern const s16 eff66_data_tbl[3][12];
 extern const s16 eff68_data_tbl[52];
 extern void (*const EFF69_Jmp_Tbl[6])();
 extern const s16 eff71_time_tbl[8];
@@ -657,9 +667,9 @@ extern const CELL_REQ eff74_cell_tbl[3][16];
 extern const EFF74_ANIM eff74_anim_tbl[4];
 extern void (*const EFF75_Jmp_Tbl[5])();
 extern void (*const EFF76_Jmp_Tbl[8])();
-extern const s16 eff77_data_tbl[7][3];
+extern const s16 eff77_data_tbl[3][3];
 extern const s32 Pos_Z_Data_79[3];
-extern const s8 Time_Data[5];
+extern const s8 Time_Data[8];
 extern const s16 eff85_char_index_tbl[9];
 extern const s16 eff86_data_tbl00[7];
 extern const s16 eff87_loop_tbl[][4];
@@ -673,7 +683,7 @@ extern const s16 eff94_2000_tbl[8];
 extern const s16 eff94_3000_tbl[4][3];
 extern const s16 eff95_data_tbl[1][4];
 extern void (*const EFF98_Jmp_Tbl[5])();
-extern const s8 effA0_swap_tbl[7];
+extern const s8 effA0_swap_tbl[8];
 extern const s16 effA6_pl2_data_tbl[20][64];
 extern const s16 effb0_timer_tbl[8];
 extern const s16 effb0_data_tbl[8][2];
@@ -697,18 +707,18 @@ extern const s16 shizumi_guai[13][8];
 extern const s16 shindou_guai[7][8];
 extern const u16 effC3_nsc[6];
 extern const s32 effC4_sp_tbl[][4];
-extern const s32 effc8_data_tbl[4];
+extern const u16 effc8_data_tbl[8];
 extern const s32 efy_data[6];
 extern const u8 sel_ejg_ix_table[2][2][4];
 extern const u16 ag_cc_table[8];
 extern const s16 app_pos_hosei[3][3];
 extern const s16 judge_gals_kage_tbl[8][4];
-extern const u8 ag_sel_table[23][4][4];
+extern const u8 ag_sel_table[16][4][4];
 extern const s32 effd0_data_tbl[9][4];
-extern const s16 effd0_conter[9];
+extern const s16 effd0_conter[10];
 extern void (*const EFFD3_Jmp_Tbl[2])();
-extern const s16 ake_timer_tbl[13];
-extern const s16 ake_pos_tbl[13][2];
+extern const s16 ake_timer_tbl[70];
+extern const s16 ake_pos_tbl[4][2];
 extern const s8 sel_suikomi_tbl[2][5];
 extern const s8 swallow_areas_x[12][32];
 extern const s8 swallow_areas_y[12][32];
@@ -720,12 +730,12 @@ extern const s16 num_of_hana[];
 extern const s16 effD7_hit_box[2][4];
 extern const u8 D8_Priority_Data[];
 extern const s16 flames_stand[24][4][4];
-extern const s16 flames_crunch[24][4][4];
-extern const s16 flames_ariel[24][4][4];
-extern const s16 freeze_stand[24][4][4];
-extern const s16 freeze_crunch[24][4][4];
-extern const s16 freeze_set_pos_B[24][4][4];
-extern const s16 thunder_set_pos_SKB[24][4];
+extern const s16 flames_crunch[16][4][4];
+extern const s16 flames_ariel[16][4][4];
+extern const s16 freeze_stand[16][4][4];
+extern const s16 freeze_crunch[16][4][4];
+extern const s16 freeze_set_pos_B[16][4][4];
+extern const s16 thunder_set_pos_SKB[16][4];
 extern const s16 effE3_data[5][3];
 extern const s16 effe6_data_tbl[98][8];
 extern const s16 effE9_data[4][3];   /* 3 values per object */
@@ -747,7 +757,7 @@ extern const u16 suji_numobj_G0[];
 extern const CONN Result_Score[6];
 extern const GillEffData gill_eff_data[54];
 extern const s16 num_of_ase[];
-extern const s16 effg6_data[230][8];
+extern const s16 effg6_data[109][8];
 extern const s32 effg8_sp_tbl[][4];
 extern const s16 g9_pos_hos[16];
 extern const CONN bbbs_nando_small[2][2];
@@ -840,7 +850,7 @@ extern const u32 ag_face_panel_table[];
 extern const u32 effD4_char_table[];
 extern const u32 effH3_char_table[];   /* effect H3/H4 patterns (0635E79C) */
 extern const u32 eff90_char_table[];   /* provisional name: effect 90 patterns */
-extern const s16 eff90_pos_y_tbl[];   /* provisional name: effect 90 y positions */
+extern const u16 eff90_pos_y_tbl[];   /* provisional name: effect 90 y positions */
 extern const u32 eff22_char_table[];   /* provisional name: effect 22 patterns */
 extern const s32 eff61_speed_tbl[];   /* provisional name: effect 61 rise speeds */
 extern const HIT_IX ef13_hit_ix_table[];
@@ -1101,6 +1111,9 @@ extern const TM_STRING rewrite_not_ready_str[1];
 extern const u8 jp_menu_font_cg[];
 extern const u8 coin_counter_bit_tbl[4];
 extern const u8 coin_rate_tbl[][2];
+/* coin_rate_tbl[Coin_Mode] columns */
+#define COIN_RATE_COINS 0       /* coins for ... */
+#define COIN_RATE_CREDITS 1     /* ... this many credits */
 extern const s8 cursor_blank_str[];
 extern const s8 cursor_mark_str[];
 extern const TM_STRING config_top_guide_scr[2];
@@ -1152,7 +1165,7 @@ extern const AS_ROW8 asstbl_dm_att[24][6];
 extern const u16 sys_font_cg[];
 extern const u16 sys_palette[];
 extern const u16 EM_Select_Voice_Data[4];
-extern const u16 acatkoa_table[65];
+extern const u16 acatkoa_table[66];
 extern const u16 after_image_color[34][2];
 extern const u8 animal_decide_tbl[16];
 extern const APPEAR_DATA appear_data[];
@@ -1167,6 +1180,9 @@ extern const s16 eff78_data_tbl[][2];
 extern const u16 exdm_ix_data[][16][5];
 extern const EXPLEM explem[];
 extern const EXPLEM explem2[][16];
+/* gqdt columns; a row per quake number (hmdt quake) */
+#define GQ_DELAY        0       /* frames before the screen quake starts */
+#define GQ_INDEX        1       /* quake_y_index set then */
 extern const s16 gqdt[][2];
 extern const u8 guard_kind[12];
 extern const s16 hcct[];
@@ -1285,7 +1301,7 @@ extern const s8 effect_19_l_tbl[16];
 extern const s16 illusion_setup_table[13][2];
 extern const s16 paring_b_mark_data[][16][2];   /* 16 characters */
 extern const u8 Victory_Color_Data[21];
-extern const s16 EFF89_Step_Data[172];
+extern const s16 EFF89_Step_Data[154];
 extern const s32 Score_Data[21];
 extern const u8 super_arts_data[16][4][16];   /* 16 characters */
 extern const s16 random_tbl_32_ex[32];

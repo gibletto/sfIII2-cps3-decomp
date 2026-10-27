@@ -1,5 +1,11 @@
 /*
- * EFF10_TBL.C  tables read by effects 10 and 11
+ * EFF10_TBL.C  character scene objects and bg000 flying objects
+ *
+ * scr_obj_num10 starts with the number of objects of each of the four types, followed by the
+ * rows of each type (x offset from the owner, y position, animation number), reached through
+ * scr_obj_data10; read by EFF10.C, the character scene objects. eff11_data_tbl gives the
+ * position, priority, pattern and delay of each of the four objects that fly off at the start
+ * on bg000, and eff11_speed_tbl their speeds; read by EFF11.C.
  */
 
 #include "types.h"

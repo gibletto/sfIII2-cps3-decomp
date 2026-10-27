@@ -19,17 +19,29 @@
 #include "SYS_sub.h"
 #include "EFF42.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set up and flash the gauge */
+#define R0_MOVE         1       /* animate beside the player */
+#define R0_END          2       /* leave the player's shell list */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* sa_sign_data columns */
+#define SA_SIGN_X       0       /* x offset from the player, mirrored by rl_flag */
+#define SA_SIGN_Y       1       /* y offset from the player */
+#define SA_SIGN_CHAR    2       /* animation number */
+#define SA_SIGN_GAUGE   3       /* gauge used: 1 super art, 2 EX */
+
 
 
 void effect_41_move(WORK_Other* ewk) {
     PLW* mwk = (PLW*)ewk->my_master;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.my_col_mode = 0x4200;
         ewk->wu.my_col_code = 0x2020;
-        switch (sa_sign_data[ewk->wu.type][3]) {
+        switch (sa_sign_data[ewk->wu.type][SA_SIGN_GAUGE]) {
         case 1:
             sa_gauge_flash[mwk->wu.id] = 1;
             break;
@@ -38,11 +50,11 @@ void effect_41_move(WORK_Other* ewk) {
         default:
             break;
         }
-        set_char_move_init(&ewk->wu, 0, sa_sign_data[ewk->wu.type][2]);
+        set_char_move_init(&ewk->wu, 0, sa_sign_data[ewk->wu.type][SA_SIGN_CHAR]);
         sort_push_request(&ewk->wu);
         break;
-    case 1:
-        if (ewk->wu.dead_f == 1 || mwk->wu.routine_no[1] != 4) {
+    case R0_MOVE:
+        if (ewk->wu.dead_f == 1 || mwk->wu.routine_no[1] != PLAYER_ATTACK) {
             ewk->wu.routine_no[0]++;
             ewk->wu.disp_flag = 0;
             break;
@@ -56,7 +68,7 @@ void effect_41_move(WORK_Other* ewk) {
         }
         if (ewk->wu.cg_type == 1) {
             ewk->wu.cg_type = 0;
-            switch (sa_sign_data[ewk->wu.type][3]) {
+            switch (sa_sign_data[ewk->wu.type][SA_SIGN_GAUGE]) {
             case 1:
                 mwk->sa->saeff_ok = -1;
                 break;
@@ -72,17 +84,17 @@ void effect_41_move(WORK_Other* ewk) {
         }
         ewk->wu.position_x = mwk->wu.position_x;
         if (mwk->wu.rl_flag) {
-            ewk->wu.position_x -= sa_sign_data[ewk->wu.type][0];
+            ewk->wu.position_x -= sa_sign_data[ewk->wu.type][SA_SIGN_X];
         } else {
-            ewk->wu.position_x += sa_sign_data[ewk->wu.type][0];
+            ewk->wu.position_x += sa_sign_data[ewk->wu.type][SA_SIGN_X];
         }
-        ewk->wu.position_y = mwk->wu.position_y + sa_sign_data[ewk->wu.type][1];
+        ewk->wu.position_y = mwk->wu.position_y + sa_sign_data[ewk->wu.type][SA_SIGN_Y];
         ewk->wu.position_z = mwk->wu.position_z - 4;
         sort_push_request(&ewk->wu);
         break;
-    case 2:
+    case R0_END:
         erase_my_shell_ix((WORK*)ewk->my_master, ewk->wu.myself);
-        ewk->wu.routine_no[0] = 3;
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

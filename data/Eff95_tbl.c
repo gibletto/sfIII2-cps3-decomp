@@ -1,5 +1,8 @@
 /*
- * EFF95_TBL.C  tables nothing reads, kept for the layout
+ * EFF95_TBL.C  tables nothing reads
+ *
+ * eff95_data_tbl (four pose numbers), half_ramp_tbl and ramp_tbl (128-step ramps) are not
+ * referred to by any code; they are kept for the layout.
  */
 
 #include "types.h"

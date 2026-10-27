@@ -25,6 +25,25 @@
 #include "EFF58.h"
 #include "EFF61.h"
 
+/* routine_no[0], effect 59 */
+#define R0_WAIT         0       /* count the start delay down */
+#define R0_OPEN         1       /* shrink the window open */
+#define R0_HOLD         2       /* hold for a while */
+#define R0_BLAST        3       /* the last letter sets off the blast */
+#define R0_STAY         4       /* stay on screen */
+#define R0_DONE         5       /* ask for the next step until told to die */
+#define R0_HIDE         6       /* hidden for a frame */
+#define R0_KILL         7       /* (default) put the work back */
+
+/* routine_no[0], effect 60 */
+#define R0_INIT         0       /* start the animation */
+#define R0_FLASH        1       /* blink and animate until retired */
+#define R0_END          2       /* hidden for a frame */
+
+/* eff59_country_tbl columns */
+#define COUNTRY_NAME    0       /* row of eff59_name_tbl */
+#define COUNTRY_LEN     1       /* number of letters */
+
 extern const u8 eff59_country_tbl[16][2];
 extern const s16 eff59_name_x_tbl[14];
 extern const u8 eff59_name_tbl[14][39];
@@ -43,11 +62,11 @@ const s16* flash_obj_data61[2] = {
 void effect_59_move(WORK_Other* ewk) {
     if (Suicide) {
         ewk->wu.disp_flag = 0;
-        ewk->wu.routine_no[0] = 6;
+        ewk->wu.routine_no[0] = R0_HIDE;
         return;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (Cut_Cut_Sub(3) == 3) {
             ewk->wu.dir_timer = 1;
         }
@@ -58,7 +77,7 @@ void effect_59_move(WORK_Other* ewk) {
         ewk->wu.disp_flag = 1;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_step + 1, 0);
         break;
-    case 1:
+    case R0_OPEN:
         if (Cut_Cut_Sub(3) == 3) {
             effect_59_open_end(ewk);
             break;
@@ -74,7 +93,7 @@ void effect_59_move(WORK_Other* ewk) {
             effect_59_open_end(ewk);
         }
         break;
-    case 2:
+    case R0_HOLD:
         if (Break_Into) {
             break;
         }
@@ -82,16 +101,16 @@ void effect_59_move(WORK_Other* ewk) {
             ewk->wu.routine_no[0]++;
         }
         break;
-    case 3:
+    case R0_BLAST:
         if (ewk->master_id) {
             ewk->wu.routine_no[0]++;
             Explosion = 1;
             effect_58_init(7, 3, -1);
         }
         break;
-    case 4:
+    case R0_STAY:
         break;
-    case 5:
+    case R0_DONE:
         if (ewk->master_id) {
             Next_Step = 1;
         }
@@ -101,7 +120,7 @@ void effect_59_move(WORK_Other* ewk) {
             return;
         }
         break;
-    case 6:
+    case R0_HIDE:
         ewk->wu.routine_no[0]++;
         return;
     default:
@@ -138,8 +157,8 @@ s32 effect_59_init(s16 timer) {
     s32 n;
     const u8* name;
     const u8* p;
-    no = eff59_country_tbl[Battle_Country][0];
-    num = eff59_country_tbl[Battle_Country][1];
+    no = eff59_country_tbl[Battle_Country][COUNTRY_NAME];
+    num = eff59_country_tbl[Battle_Country][COUNTRY_LEN];
     i = 0;
     x = eff59_name_x_tbl[no];
     n = num * 2;
@@ -189,13 +208,13 @@ s32 effect_59_init(s16 timer) {
 /* disp_flag 2 blinks, no old_rno timer */
 void effect_60_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         ewk->wu.disp_flag = 2;
         ewk->wu.blink_timing = 1;
         break;
-    case 1:
+    case R0_FLASH:
         if (compel_dead_check(ewk)) {
             ewk->wu.routine_no[0]++;
             ewk->wu.disp_flag = 0;
@@ -206,7 +225,7 @@ void effect_60_move(WORK_Other* ewk) {
         }
         disp_pos_trans_entry_rs(ewk);
         break;
-    case 2:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:

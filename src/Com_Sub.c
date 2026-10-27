@@ -29,6 +29,31 @@
 #include "Com_Sub.h"
 #include "fighter.h"
 
+/* Rapid_No[pl][0] in Rapid_Sub: the kind of rapid fire */
+#define RAPID_OFF       0       /* none */
+#define RAPID_BURST     2       /* three presses, a pause, then steady presses */
+#define RAPID_STEADY    1       /* (default) steady presses */
+
+/* a shell's routine_no[1] (EFF13) */
+#define SHELL_VANISH    2       /* playing its end pattern: no longer a threat */
+
+/* Rapid_No[pl][1] in Rapid_Sub */
+#define RAPID1_INIT     0       /* set the timers */
+#define RAPID1_BURST    1       /* the burst */
+#define RAPID1_PAUSE    2       /* the pause (then steady) */
+
+/* Rapid_No[pl][2]: when Check_Rapid_End stops the rapid fire */
+#define RAPID_END_FALL  1       /* once falling */
+#define RAPID_END_CAUTION 2     /* once caution_flag has come and gone */
+#define RAPID_END_ATTACK 4      /* a while after the attack is out */
+
+/* Rapid_No[pl][3] in Check_Rapid_End */
+#define RAPID3_WAIT     0       /* until the first condition */
+#define RAPID3_END      1       /* until the second, then stop */
+
+/* Term_No[pl] in the Exit_Term_* routines */
+#define TERM_INIT       0       /* set Timer_00 (then wait or watch for the end) */
+
 extern const FOLLOW_MENU_1ST Follow_Menu_1st_Unit_Data_0[];
 extern const FOLLOW_MENU_1ST Follow_Menu_1st_Unit_Data_2[];
 extern const FOLLOW_MENU_2ND Follow_Menu_2nd_Unit_Data_0[];
@@ -174,7 +199,7 @@ s16 Power_Level;
     s16 xx;
     switch (CP_Index[wk->wu.id][1]) {
     case 0:
-        if ((wk->wu.cg_type == 0x40) || (wk->wu.routine_no[1] == 0)) {
+        if ((wk->wu.cg_type == 0x40) || (wk->wu.routine_no[1] == PLAYER_NORMAL)) {
             Reaction_Exit_Sub(wk);
         } else {
             Lever_Buff[wk->wu.id] = Lever_LR[wk->wu.id];
@@ -195,7 +220,7 @@ s16 Power_Level;
             CP_Index[wk->wu.id][1] = 0x63;
         }
     default:
-        if ((wk->wu.cg_type == 0x40) || (wk->wu.routine_no[1] == 0)) {
+        if ((wk->wu.cg_type == 0x40) || (wk->wu.routine_no[1] == PLAYER_NORMAL)) {
             Reaction_Exit_Sub(wk);
         } else {
             Stock_Hit_Flag[wk->wu.id] = wk->wu.hf.hit.player;
@@ -389,7 +414,7 @@ s16 Option;
             CP_Index[wk->wu.id][3] = 0;
             Flip_Flag[wk->wu.id] = 0;
             Limited_Flag[wk->wu.id] = 0;
-            if (CP_No[wk->wu.id][0] != 6) {
+            if (CP_No[wk->wu.id][0] != COM_PASSIVE) {
                 Passive_Flag[wk->wu.id] = 0;
             }
         } else {
@@ -457,7 +482,7 @@ s16 Target_Pos;
         Lever_Buff[wk->wu.id] = 0;
         Flip_Flag[wk->wu.id] = 0;
         Limited_Flag[wk->wu.id] = 0;
-        if (CP_No[wk->wu.id][0] != 6) {
+        if (CP_No[wk->wu.id][0] != COM_PASSIVE) {
             Passive_Flag[wk->wu.id] = 0;
         }
         break;
@@ -550,7 +575,7 @@ s16 Lever;
         return;
     default:
         Lever_Buff[wk->wu.id] = Lever_LR[wk->wu.id];
-        if (wk->wu.routine_no[1] == 4 && wk->wu.routine_no[2] == 0x1E) {
+        if (wk->wu.routine_no[1] == PLAYER_ATTACK && wk->wu.routine_no[2] == ATTACK_PERSONAL) {
             return;
         }
         Reaction_Exit_Sub(wk);
@@ -724,7 +749,7 @@ s32 Check_Target_Pat_Status(WORK* wk) {
 
 
 s32 Check_Start_Normal_Attack(PLW* wk, s16 Reaction, u16 Lever_Data) {
-    if (((wk->wu.routine_no[1]) != 4) || ((wk->wu.cg_type) == 0x40)) {
+    if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
         return 0;
     }
     if (wk->wu.cg_cancel & 4) {
@@ -771,7 +796,7 @@ u16 Lever_Data;
         CP_Index[wk->wu.id][1]++;
         break;
     default:
-        if (wk->wu.routine_no[1] == 2) {
+        if (wk->wu.routine_no[1] == PLAYER_CATCH) {
             Be_Catch(wk);
         } else {
             Stock_Hit_Flag[wk->wu.id] = wk->wu.hf.hit.player;
@@ -804,7 +829,7 @@ PLW* wk;
 u16 Lever;
 u16 Lever_Data;
 {
-    if ((wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+    if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
         return 0;
     }
     if (wk->wu.cg_cancel & 4) {
@@ -1108,7 +1133,7 @@ s16 Time_03;
         CP_Index[wk->wu.id][3] = 0;
         Flip_Flag[wk->wu.id] = 0;
         Limited_Flag[wk->wu.id] = 0;
-        if (CP_No[wk->wu.id][0] != 6) {
+        if (CP_No[wk->wu.id][0] != COM_PASSIVE) {
             Passive_Flag[wk->wu.id] = 0;
         }
         break;
@@ -1138,7 +1163,7 @@ s16 Time;
             CP_Index[wk->wu.id][3] = 0;
             Flip_Flag[wk->wu.id] = 0;
             Limited_Flag[wk->wu.id] = 0;
-            if (CP_No[wk->wu.id][0] != 6) {
+            if (CP_No[wk->wu.id][0] != COM_PASSIVE) {
                 Passive_Flag[wk->wu.id] = 0;
             }
         }
@@ -1212,7 +1237,7 @@ s16 Option_Data;
             CP_Index[wk->wu.id][3] = 0;
             Flip_Flag[wk->wu.id] = 0;
             Limited_Flag[wk->wu.id] = 0;
-            if (CP_No[wk->wu.id][0] != 6) {
+            if (CP_No[wk->wu.id][0] != COM_PASSIVE) {
                 Passive_Flag[wk->wu.id] = 0;
             }
         }
@@ -1324,7 +1349,7 @@ s16 Option;
 {
     WORK* em;
     em = (WORK*)wk->wu.target_adrs;
-    if (em->routine_no[1] == 1 && em->pat_status == 0x18) {
+    if (em->routine_no[1] == PLAYER_DAMAGE && em->pat_status == 0x18) {
         return 0;
     }
     if (Lie_Flag[wk->wu.id] == 0) {
@@ -1383,12 +1408,12 @@ PLW* wk;
 s16 Option;
 {
     WORK* em;
-    if (wk->wu.routine_no[1] == 1) {
+    if (wk->wu.routine_no[1] == PLAYER_DAMAGE) {
         return 1;
     }
     if (Option == 0) {
         em = (WORK*)wk->wu.target_adrs;
-        if (em->routine_no[1] != 4) {
+        if (em->routine_no[1] != PLAYER_ATTACK) {
             return 0;
         }
         return 1;
@@ -1621,7 +1646,7 @@ s16 Jump_Dir;
         if (Check_Passive(wk) != 0) {
             break;
         }
-        if ((wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+        if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
             CP_Index[wk->wu.id][1]++;
             hi_jump_flag_clear(wk->wu.id);
             Check_First_Menu(wk);
@@ -1727,7 +1752,7 @@ s16 Jump_Dir;
 
 
 s32 Check_Start_Hi_Jump(PLW* wk) {
-    if ((wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+    if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
         return 0;
     }
     if (wk->wu.cg_cancel & 4) {
@@ -1809,7 +1834,7 @@ s16 Lever;
         if (Check_Passive(wk) != 0) {
             break;
         }
-        if (wk->wu.routine_no[1] == 4 && wk->wu.cg_type != 64) {
+        if (wk->wu.routine_no[1] == PLAYER_ATTACK && wk->wu.cg_type != 64) {
             break;
         }
         CP_Index[wk->wu.id][1]++;
@@ -1848,7 +1873,7 @@ s16 Jump_Dir;
         if (Check_Passive(wk) != 0) {
             break;
         }
-        if ((wk->wu.routine_no[1] == 4) && (wk->wu.cg_type != 0x40)) {
+        if ((wk->wu.routine_no[1] == PLAYER_ATTACK) && (wk->wu.cg_type != 0x40)) {
             break;
         }
         CP_Index[wk->wu.id][1]++;
@@ -1915,7 +1940,7 @@ s16 J_Lever_Data;
     switch (Reaction2 = Reaction & 0x7F, CP_Index[wk->wu.id][1]) {
     case 0:
         Setup_Lever_LR(wk, wk->wu.id, Reaction & 0xF000);
-        if ((wk->wu.routine_no[1] == 4) && (wk->wu.cg_type != 0x40)) {
+        if ((wk->wu.routine_no[1] == PLAYER_ATTACK) && (wk->wu.cg_type != 0x40)) {
             break;
         }
         hi_jump_flag_clear(wk->wu.id);
@@ -2326,7 +2351,7 @@ s32 Check_Com_Add_Y(PLW* wk, s16 Pos_Y, s16 Range) {
 
 /* provisional name */
 s32 Check_Com_Add_Y_Sub(PLW* wk) {
-    if (wk->wu.routine_no[1] != 4 || (u8)wk->wu.cg_type == 64) {
+    if (wk->wu.routine_no[1] != PLAYER_ATTACK || (u8)wk->wu.cg_type == 64) {
         return 1;
     }
     return 0;
@@ -2412,7 +2437,7 @@ s16 Ex_Shot;
         if (plw[wk->wu.id].tsukami_f) {
             break;
         }
-        if (((wk->wu.cg_type) == 0x40) || (wk->wu.routine_no[1] == 0)) {
+        if (((wk->wu.cg_type) == 0x40) || (wk->wu.routine_no[1] == PLAYER_NORMAL)) {
             Reaction_Exit_Sub(wk);
         } else {
             Lever_Buff[wk->wu.id] = Free_Lever[wk->wu.id];
@@ -2431,7 +2456,7 @@ s16 Ex_Shot;
         if (PL_Distance[wk->wu.id] > 0x70) {
             Lever_Buff[wk->wu.id] = 0x40;
         }
-        if (((wk->wu.cg_type) == 0x40) || (wk->wu.routine_no[1] == 0)) {
+        if (((wk->wu.cg_type) == 0x40) || (wk->wu.routine_no[1] == PLAYER_NORMAL)) {
             Reaction_Exit_Sub(wk);
         }
         break;
@@ -2538,7 +2563,7 @@ s16 Ex_Shot;
     default:
         Lever_Buff[wk->wu.id] = Lever_LR[wk->wu.id];
         Stock_Hit_Flag[wk->wu.id] = wk->wu.hf.hit.player;
-        if ((wk->wu.cg_type == 0x40) || (wk->wu.routine_no[1] == 0)) {
+        if ((wk->wu.cg_type == 0x40) || (wk->wu.routine_no[1] == PLAYER_NORMAL)) {
             Reaction_Exit_Sub(wk);
         } else {
             Rapid_Sub(wk);
@@ -2599,16 +2624,16 @@ void Rapid_Sub(PLW* wk) {
         return;
     }
     switch (Rapid_No[wk->wu.id][0]) {
-    case 0:
+    case RAPID_OFF:
         break;
-    case 2:
+    case RAPID_BURST:
         switch (Rapid_No[wk->wu.id][1]) {
-        case 0:
+        case RAPID1_INIT:
             Rapid_No[wk->wu.id][1]++;
             Timer_00[wk->wu.id] = 1;
             Timer_01[wk->wu.id] = 3;
             return;
-        case 1:
+        case RAPID1_BURST:
             if (--Timer_00[wk->wu.id] == 0) {
                 Lever_Buff[wk->wu.id] = Rapid_Index[wk->wu.id];
                 Timer_00[wk->wu.id] = 2;
@@ -2618,7 +2643,7 @@ void Rapid_Sub(PLW* wk) {
                 }
             }
             break;
-        case 2:
+        case RAPID1_PAUSE:
             if (--Timer_01[wk->wu.id] == 0) {
                 Rapid_No[wk->wu.id][1]++;
                 Timer_00[wk->wu.id] = 1;
@@ -2635,7 +2660,7 @@ void Rapid_Sub(PLW* wk) {
         break;
     default:
         switch (Rapid_No[wk->wu.id][1]) {
-        case 0:
+        case RAPID1_INIT:
             Rapid_No[wk->wu.id][1]++;
             Timer_00[wk->wu.id] = 1;
             Timer_01[wk->wu.id] = 2;
@@ -2655,20 +2680,20 @@ void Rapid_Sub(PLW* wk) {
 
 s32 Check_Rapid_End(PLW* wk) {
     switch (Rapid_No[wk->wu.id][2]) {
-    case 1:
+    case RAPID_END_FALL:
         if (wk->wu.mvxy.a[1].real.h < 0) {
             Rapid_No[wk->wu.id][0] = 0;
             return 1;
         }
         break;
-    case 2:
+    case RAPID_END_CAUTION:
         switch (Rapid_No[wk->wu.id][3]) {
-        case 0:
+        case RAPID3_WAIT:
             if (plw[wk->wu.id].caution_flag) {
                 Rapid_No[wk->wu.id][3]++;
             }
             break;
-        case 1:
+        case RAPID3_END:
             if (plw[wk->wu.id].caution_flag == 0) {
                 Rapid_No[wk->wu.id][0] = 0;
                 return 1;
@@ -2676,7 +2701,7 @@ s32 Check_Rapid_End(PLW* wk) {
             break;
         }
         break;
-    case 4:
+    case RAPID_END_ATTACK:
         if (--Rapid_No[wk->wu.id][3] == 0) {
             Rapid_No[wk->wu.id][0] = 0;
             return 1;
@@ -2696,10 +2721,10 @@ u16 Tech_Number;
     if (Before_Jump[wk->wu.id]) {
         return Before_Jump[wk->wu.id] = 0;
     }
-    if (wk->wu.routine_no[1] == 2) {
+    if (wk->wu.routine_no[1] == PLAYER_CATCH) {
         return 1;
     }
-    if ((wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+    if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
         return 0;
     }
     if ((Tech_Number == 0) || (Tech_Number == 1)) {
@@ -2744,7 +2769,7 @@ u16 JLD;
             break;
         }
         Lever_Buff[wk->wu.id] = Lever_LR[wk->wu.id];
-        if ((wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+        if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
             Continue_Menu[wk->wu.id] = 0;
             CP_Index[wk->wu.id][1]++;
             Tech_Address[wk->wu.id] = player_cmd[wk->player_number][Tech_Number & 0xFF];
@@ -2940,7 +2965,7 @@ s16 Reaction;
             return 1;
         }
     }
-    if ((wk->wu.old_pos[1] == 0) && (wk->wu.xyz[1].disp.pos == 0) && (wk->wu.routine_no[1] != 4)) {
+    if ((wk->wu.old_pos[1] == 0) && (wk->wu.xyz[1].disp.pos == 0) && (wk->wu.routine_no[1] != PLAYER_ATTACK)) {
         Lever_Buff[wk->wu.id] = 0;
         if (Continue_Menu[wk->wu.id]) {
             Next_End(wk);
@@ -2977,7 +3002,7 @@ u16 Tech_Number;
         if ((get_vs_shell_adrs(em, em->id, i, &tmw) == 0) && (get_vs_shell_adrs((WORK*)wk, em->id, i, &tmw) == 0)) {
             return 0;
         }
-        if (tmw->wu.routine_no[1] == 2) {
+        if (tmw->wu.routine_no[1] == SHELL_VANISH) {
             continue;
         }
         xx = wk->wu.xyz[0].disp.pos - tmw->wu.xyz[0].disp.pos;
@@ -3500,7 +3525,7 @@ s16 Power_Level;
     case 9:
         if (Stock_Hit_Flag[wk->wu.id]) {
             Reaction_Exit_Sub(wk);
-        } else if ((wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+        } else if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
             Next_End(wk);
         }
         break;
@@ -3509,7 +3534,7 @@ s16 Power_Level;
             Next_End(wk);
             break;
         }
-        if (Stock_Hit_Flag[wk->wu.id] || wk->wu.routine_no[1] != 4 || wk->wu.cg_type == 0x40) {
+        if (Stock_Hit_Flag[wk->wu.id] || wk->wu.routine_no[1] != PLAYER_ATTACK || wk->wu.cg_type == 0x40) {
             Reaction_Exit_Sub(wk);
         }
         break;
@@ -3526,7 +3551,7 @@ s16 Power_Level;
         }
         if (Stock_Hit_Flag[wk->wu.id]) {
             Reaction_Exit_Sub(wk);
-        } else if ((wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+        } else if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
             Next_End(wk);
         }
         break;
@@ -3544,7 +3569,7 @@ s16 Power_Level;
         }
         if (Stock_Hit_Flag[wk->wu.id]) {
             Reaction_Exit_Sub(wk);
-        } else if ((wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+        } else if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
             Setup_Follow(wk, Reaction & 0xFFF);
         }
         break;
@@ -3567,9 +3592,9 @@ s16 Power_Level;
             }
         }
         Last_Eftype[wk->wu.id] = -1;
-        if ((wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+        if ((wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
             if (Stock_Hit_Flag[wk->wu.id]) {
-                if ((CP_No[wk->wu.id][0] == 6) && (Pattern_Index[wk->wu.id] == 0)) {
+                if ((CP_No[wk->wu.id][0] == COM_PASSIVE) && (Pattern_Index[wk->wu.id] == 0)) {
                     CP_No[wk->wu.id][0] = Return_CP_No[wk->wu.id];
                     CP_Index[wk->wu.id][0] = Return_CP_Index[wk->wu.id];
                     CP_Index[wk->wu.id][1] = 0;
@@ -3591,7 +3616,7 @@ s16 Power_Level;
         if (plw[wk->wu.id].tsukami_f) {
             break;
         }
-        if (Stock_Hit_Flag[wk->wu.id] || (wk->wu.routine_no[1] != 4) || (wk->wu.cg_type == 0x40)) {
+        if (Stock_Hit_Flag[wk->wu.id] || (wk->wu.routine_no[1] != PLAYER_ATTACK) || (wk->wu.cg_type == 0x40)) {
             Reaction_Exit_Sub(wk);
         }
         break;
@@ -3619,7 +3644,7 @@ s16 Power_Level;
             CP_Index[wk->wu.id][3] = 0;
             Return_Pattern_Index[wk->wu.id] = Pattern_Index[wk->wu.id];
         }
-        CP_No[wk->wu.id][0] = 6;
+        CP_No[wk->wu.id][0] = COM_PASSIVE;
         CP_Index[wk->wu.id][0] = 0;
         CP_Index[wk->wu.id][1] = 0;
         CP_Index[wk->wu.id][2] = 0;
@@ -3654,7 +3679,7 @@ void Reaction_Exit_Sub(PLW* wk) {
     Counter_Attack[wk->wu.id] = 0;
     Limited_Flag[wk->wu.id] = 0;
     Before_Jump[wk->wu.id] = 0;
-    if (CP_No[wk->wu.id][0] != 6) {
+    if (CP_No[wk->wu.id][0] != COM_PASSIVE) {
         Passive_Flag[wk->wu.id] = 0;
     }
 }
@@ -3808,7 +3833,7 @@ s16* pl_id;
     if (My_char[wk->wu.id] == PL_YUN && plw[wk->wu.id].sa->kind_of_arts == 2) {
         return *pl_id = 1;
     }
-    if (My_char[wk->wu.id] == 0xA && plw[wk->wu.id].sa->kind_of_arts == 2) {
+    if (My_char[wk->wu.id] == PL_YANG && plw[wk->wu.id].sa->kind_of_arts == 2) {
         return *pl_id = 1;
     }
     return 0;
@@ -3820,7 +3845,7 @@ void Setup_Follow(wk, Follow_Type)
 PLW* wk;
 s16 Follow_Type;
 {
-    CP_No[wk->wu.id][0] = 3;
+    CP_No[wk->wu.id][0] = COM_BEFORE_FOLLOW;
     CP_No[wk->wu.id][1] = Follow_Type;
     if (wk->wu.hf.hit.player == 0) {
         CP_No[wk->wu.id][2] = 0;
@@ -3915,13 +3940,13 @@ s32 Select_Passive(PLW* wk) {
     CP_No[wk->wu.id][3] = 0;
     Timer_00[wk->wu.id] = Select_Reflection_Time(wk);
     if ((VS_Tech[wk->wu.id] == 0x19) || (VS_Tech[wk->wu.id] == 0x13) || (Timer_00[wk->wu.id] == 0)) {
-        CP_No[wk->wu.id][0] = 6;
+        CP_No[wk->wu.id][0] = COM_PASSIVE;
         CP_Index[wk->wu.id][0] = 0;
         CP_Index[wk->wu.id][1] = 0;
         CP_Index[wk->wu.id][2] = 0;
         CP_Index[wk->wu.id][3] = 0;
     } else {
-        CP_No[wk->wu.id][0] = 5;
+        CP_No[wk->wu.id][0] = COM_BEFORE_PASSIVE;
     }
     return 1;
 }
@@ -4148,7 +4173,7 @@ PLW* wk;
 WORK* em;
 s16 Type_Of_Guard;
 {
-    CP_No[wk->wu.id][0] = 7;
+    CP_No[wk->wu.id][0] = COM_GUARD;
     CP_No[wk->wu.id][1] = 0;
     CP_No[wk->wu.id][2] = 0;
     CP_No[wk->wu.id][3] = 0;
@@ -4213,7 +4238,7 @@ s32 Check_Shell(PLW* wk) {
         Shell_Ignore_Timer[wk->wu.id]--;
         return 0;
     }
-    if (CP_No[wk->wu.id][0] == 8) {
+    if (CP_No[wk->wu.id][0] == COM_VS_SHELL) {
         return 0;
     }
     em = (WORK*)wk->wu.target_adrs;
@@ -4221,7 +4246,7 @@ s32 Check_Shell(PLW* wk) {
         if ((get_vs_shell_adrs(em, em->id, ix = i, &tmw) == 0) && (get_vs_shell_adrs(&wk->wu, em->id, ix, &tmw) == 0)) {
             return 0;
         }
-        if (tmw->wu.routine_no[1] == 2) {
+        if (tmw->wu.routine_no[1] == SHELL_VANISH) {
             continue;
         }
         if (wk->wu.rl_waza == tmw->wu.rl_flag) {
@@ -4243,7 +4268,7 @@ s32 Check_Shell(PLW* wk) {
         if (Decide_Shell_Guard(wk, tmw)) {
             return 0;
         }
-        CP_No[wk->wu.id][0] = 8;
+        CP_No[wk->wu.id][0] = COM_VS_SHELL;
         CP_No[wk->wu.id][1] = 0;
         CP_No[wk->wu.id][2] = 0;
         CP_No[wk->wu.id][3] = 0;
@@ -4351,7 +4376,7 @@ void Setup_Shell_Disposal(PLW* wk, WORK_Other* tmw) {
 
 
 void Next_Be_Shell_Guard(PLW* wk, WORK* tmw) {
-    CP_No[wk->wu.id][0] = 9;
+    CP_No[wk->wu.id][0] = COM_SHELL_GUARD;
     CP_No[wk->wu.id][1] = 0;
     CP_No[wk->wu.id][2] = 0;
     CP_No[wk->wu.id][3] = 0;
@@ -4531,7 +4556,7 @@ s16* xx;
 
 s32 Exit_Term_0000(PLW* wk, WORK* em) {
     switch (Term_No[wk->wu.id]) {
-    case 0:
+    case TERM_INIT:
         Term_No[wk->wu.id]++;
         Timer_00[wk->wu.id] = 0x1E;
         break;
@@ -4553,7 +4578,7 @@ s32 Exit_Term_0001(PLW* wk, WORK* em) {
 
 
 s32 Exit_Term_0002(PLW* wk, WORK* em) {
-    if (em->routine_no[1] == 2) {
+    if (em->routine_no[1] == PLAYER_CATCH) {
         return 1;
     }
     if (em->id != 0xD) {
@@ -4566,7 +4591,7 @@ s32 Exit_Term_0002(PLW* wk, WORK* em) {
 
 s32 Exit_Term_0003(PLW* wk, WORK* em) {
     switch (Term_No[wk->wu.id]) {
-    case 0:
+    case TERM_INIT:
         Term_No[wk->wu.id]++;
         Timer_00[wk->wu.id] = 0xA;
         break;
@@ -4587,7 +4612,7 @@ s32 Exit_Term_0003(PLW* wk, WORK* em) {
 
 s32 Exit_Term_0004(PLW* wk, WORK* em) {
     switch (Term_No[wk->wu.id]) {
-    case 0:
+    case TERM_INIT:
         Term_No[wk->wu.id]++;
         Timer_00[wk->wu.id] = 1;
         break;
@@ -4608,7 +4633,7 @@ s32 Exit_Term_0004(PLW* wk, WORK* em) {
 
 s32 Exit_Term_0005(PLW* wk, WORK* em) {
     switch (Term_No[wk->wu.id]) {
-    case 0:
+    case TERM_INIT:
         Term_No[wk->wu.id]++;
         Timer_00[wk->wu.id] = 5;
         break;
@@ -4629,7 +4654,7 @@ s32 Exit_Term_0005(PLW* wk, WORK* em) {
 
 s32 Exit_Term_0006(PLW* wk, WORK* em) {
     switch (Term_No[wk->wu.id]) {
-    case 0:
+    case TERM_INIT:
         Term_No[wk->wu.id]++;
         Timer_00[wk->wu.id] = 0x3C;
         break;
@@ -4650,7 +4675,7 @@ s32 Exit_Term_0006(PLW* wk, WORK* em) {
 
 s32 Exit_Term_0007(PLW* wk, WORK* em) {
     switch (Term_No[wk->wu.id]) {
-    case 0:
+    case TERM_INIT:
         Term_No[wk->wu.id]++;
         Timer_00[wk->wu.id] = 0x1E;
     default:
@@ -4694,7 +4719,7 @@ s32 Check_SHINRYU(PLW* wk) {
     if (em->sa->ok != -1) {
         return 0;
     }
-    if (My_char[em->wu.id] != 0xB) {
+    if (My_char[em->wu.id] != PL_KEN) {
         return 0;
     }
     if (plw[em->wu.id].sa->kind_of_arts != 1) {
@@ -4710,7 +4735,6 @@ PLW* wk;
 u32 Next_Action;
 s16 Next_Menu;
 {
-    WORK* em = (WORK*)wk->wu.target_adrs;
     if (Break_Into_CPU == 1) {
         Disposal_Again[wk->wu.id] = 1;
         CP_Index[wk->wu.id][0]++;
@@ -4732,7 +4756,6 @@ PLW* wk;
 u32 Next_Action;
 s16 Next_Menu;
 {
-    WORK* em = (WORK*)wk->wu.target_adrs;
     if (Break_Into_CPU != 1) {
         Disposal_Again[wk->wu.id] = 1;
         CP_Index[wk->wu.id][0]++;

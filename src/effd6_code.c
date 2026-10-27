@@ -29,16 +29,27 @@
 #include "CHARID.h"
 #include "effd6_code.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set off */
+#define R0_MOVE         1       /* drift, hang and blink */
+#define R0_END          2       /* one more frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_DRIFT        0       /* slow to a stop */
+#define R1_HANG         1       /* hang for 24 frames */
+#define R1_BLINK        2       /* (default) blink for 12 frames, then end */
+
 
 
 void effect_D6_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         add_pos_dir_064(&ewk->wu, ewk->wu.dir_old << 1);
         set_char_move_init(&ewk->wu, 0, 0x7D);
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
             ewk->wu.routine_no[0]++;
@@ -48,7 +59,7 @@ void effect_D6_move(WORK_Other* ewk) {
         } else {
             if (EXE_flag == 0 && Game_pause == 0) {
                 switch (ewk->wu.routine_no[1]) {
-                case 0:
+                case R1_DRIFT:
                     ewk->wu.dir_old += ewk->wu.dir_step;
                     if (ewk->wu.dir_old < 0) {
                         ewk->wu.dir_old = 0;
@@ -58,7 +69,7 @@ void effect_D6_move(WORK_Other* ewk) {
                     add_pos_dir_064(&ewk->wu, ewk->wu.dir_old);
                     char_move(&ewk->wu);
                     break;
-                case 1:
+                case R1_HANG:
                     char_move(&ewk->wu);
                     if (--ewk->wu.dir_timer <= 0) {
                         ewk->wu.routine_no[1]++;
@@ -80,8 +91,8 @@ void effect_D6_move(WORK_Other* ewk) {
         }
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

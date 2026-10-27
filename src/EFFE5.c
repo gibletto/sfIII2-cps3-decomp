@@ -27,6 +27,23 @@
 #include "HITCHECK.h"
 #include "EFFE5.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* wait for an after-image request */
+#define R0_RUN          1       /* make the after-images */
+#define R0_KILL         2       /* put the work back */
+
+/* routine_no[1] */
+#define R1_TRAIL        0       /* a trail image every few frames */
+#define R1_BURST        1       /* a burst of images at once */
+
+/* routine_no[2], trail images */
+#define R2_FIRST        0       /* first trail image */
+#define R2_INTERVAL     1       /* start the interval */
+#define R2_COUNT        2       /* count to the next image */
+
+/* routine_no[2], burst */
+#define R2_BURST        0       /* make the burst */
+
 
 
 void effect_E4_move(void)
@@ -48,9 +65,9 @@ void effect_E5_move(WORK_Other* ewk) {
     s16* er;
     s16* mr;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (ewk->wu.dead_f == 1) {
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_KILL;
             mwk->image_setup_flag = 0;
             break;
         }
@@ -63,15 +80,15 @@ void effect_E5_move(WORK_Other* ewk) {
         }
         setup_illusion_data(ewk, mwk);
         if (ewk->wu.old_rno[2]) {
-            ewk->wu.routine_no[1] = 1;
+            ewk->wu.routine_no[1] = R1_BURST;
         } else {
-            ewk->wu.routine_no[1] = 0;
+            ewk->wu.routine_no[1] = R1_TRAIL;
         }
-        ewk->wu.routine_no[0] = 1;
+        ewk->wu.routine_no[0] = R0_RUN;
         ewk->wu.routine_no[2] = 0;
-    case 1:
+    case R0_RUN:
         if (ewk->wu.dead_f == 1) {
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_KILL;
             mwk->image_setup_flag = 0;
             break;
         }
@@ -100,13 +117,13 @@ void effect_E5_move(WORK_Other* ewk) {
         }
         if (ewk->wu.dir_old & 8) {
             rno = ((WORK*)mwk->wu.target_adrs)->routine_no[1];
-            if (rno != 4 && rno != 2) {
+            if (rno != PLAYER_ATTACK && rno != PLAYER_CATCH) {
                 goto off;
             }
         }
         if (ewk->wu.dir_old & 0x10) {
             rno = mwk->wu.routine_no[1];
-            if (rno != 4 && rno != 2) {
+            if (rno != PLAYER_ATTACK && rno != PLAYER_CATCH) {
                 goto off;
             }
         }
@@ -136,35 +153,35 @@ void effect_E5_move(WORK_Other* ewk) {
             break;
         }
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_TRAIL:
             if (mwk->image_setup_flag == 0) {
-                ewk->wu.routine_no[0] = 0;
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[0] = R0_WAIT;
+                ewk->wu.routine_no[1] = R1_TRAIL;
                 break;
             }
             switch (ewk->wu.routine_no[2]) {
-            case 0:
+            case R2_FIRST:
                 ewk->wu.routine_no[2]++;
                 effect_E7_init(ewk, mwk);
-            case 1:
+            case R2_INTERVAL:
                 ewk->wu.routine_no[2]++;
                 ewk->wu.dir_step = ewk->wu.dmcal_m;
-            case 2:
+            case R2_COUNT:
                 if (EXE_flag == 0 && Game_pause == 0 && --ewk->wu.dir_step <= 0) {
                     effect_E7_init(ewk, mwk);
-                    ewk->wu.routine_no[2] = 1;
+                    ewk->wu.routine_no[2] = R2_INTERVAL;
                 }
                 break;
             }
             break;
-        case 1:
+        case R1_BURST:
             if (mwk->image_setup_flag == 0) {
-                ewk->wu.routine_no[0] = 0;
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[0] = R0_WAIT;
+                ewk->wu.routine_no[1] = R1_TRAIL;
                 break;
             }
             switch (ewk->wu.routine_no[2]) {
-            case 0:
+            case R2_BURST:
                 ewk->wu.routine_no[2]++;
                 ewk->wu.dir_step = 0;
                 if (ewk->wu.old_rno[5]) {
@@ -184,7 +201,7 @@ void effect_E5_move(WORK_Other* ewk) {
         }
         break;
     default:
-    case 2:
+    case R0_KILL:
         push_effect_work(&ewk->wu);
         break;
     }

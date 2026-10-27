@@ -18,13 +18,19 @@
 #include "charmove_2.h"
 #include "EFFH2.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set up hidden */
+#define R0_MOVE         1       /* circle the panel */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 
 
 /* my_col_code 0x2039, char index type + 0x16 */
 void effect_H2_move(WORK_Other* ewk) {
     WORK* mwk = (WORK*)ewk->my_master;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 0;
         ewk->wu.my_col_mode = 0x4200;
@@ -36,10 +42,10 @@ void effect_H2_move(WORK_Other* ewk) {
         ewk->wu.dir_timer = 0;
         ewk->wu.dir_step = 0;
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         if (mwk->disp_flag == 1) {
@@ -53,8 +59,8 @@ void effect_H2_move(WORK_Other* ewk) {
         ewk->wu.position_y = mwk->position_y + panel_guide[ewk->wu.dir_step][1] + 17;
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

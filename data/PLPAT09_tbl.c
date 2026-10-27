@@ -1,5 +1,12 @@
 /*
- * PLPAT09_TBL.C  tables read by PLPAT09.c, PLPAT11.c and plpat10.c
+ * PLPAT09_TBL.C  Oro, Yang and Ken special attack tables
+ *
+ * pl09_exatt_table is the list of Oro's special attack routines, indexed by attack routine
+ * number minus 16. homing_hos (per opponent character) and homing_kop hold the target-relative
+ * jump data stepped by mvxy_table_reader; pl09_tk_table is the stun timer cut rate per
+ * personal-action repeat count. Read by PLPAT09.C. pl10_exatt_table and pl11_exatt_table are
+ * the special attack routines of characters 10 (Yang) and 11 (Ken), read by PLPAT10.C and
+ * PLPAT11.C.
  */
 
 #include "types.h"
@@ -45,55 +52,55 @@ const s16 homing_kop[2][4] = {
 };
 
 void (*const pl09_exatt_table[15])() = {
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_SHOURYUUKEN,
-    (void (*)())Att_KUUCHUUNICHIRINSHOU,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_KUUCHUUJINNCHUUWATARI,
-    (void (*)())Att_JINNCHUUWATARI,
-    (void (*)())Att_JINNCHUUWATARI_EX,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_PL09_TOKUSHUKOUDOU,
+    Att_HADOUKEN,
+    Att_SHOURYUUKEN,
+    Att_KUUCHUUNICHIRINSHOU,
+    Att_HADOUKEN,
+    Att_HADOUKEN,
+    Att_HADOUKEN,
+    Att_HADOUKEN,
+    Att_KUUCHUUJINNCHUUWATARI,
+    Att_JINNCHUUWATARI,
+    Att_JINNCHUUWATARI_EX,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_PL09_TOKUSHUKOUDOU,
 };
 
 void (*const pl10_exatt_table[15])() = {
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_TENSHINSENKYUUTAI,
-    (void (*)())Att_SLIDE_and_JUMP,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_SLIDE_and_JUMP,
-    (void (*)())Att_TENSHINSENKYUUTAI,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_PL10_TOKUSHUKOUDOU,
+    Att_HADOUKEN,
+    Att_TENSHINSENKYUUTAI,
+    Att_SLIDE_and_JUMP,
+    Att_HADOUKEN,
+    Att_SLIDE_and_JUMP,
+    Att_TENSHINSENKYUUTAI,
+    Att_HADOUKEN,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_PL10_TOKUSHUKOUDOU,
 };
 
 void (*const pl11_exatt_table[15])() = {
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_SHOURYUUKEN,
-    (void (*)())Att_SENPUUKYAKU,
-    (void (*)())Att_SHOURYUUREPPA,
-    (void (*)())Att_SHOURYUUREPPA,
-    (void (*)())Att_SLIDE_and_JUMP,
-    (void (*)())Att_KUUCHUUNICHIRINSHOU,
-    (void (*)())Att_CHOUCHUURENGEKI,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_PL11_TOKUSHUKOUDOU,
+    Att_HADOUKEN,
+    Att_SHOURYUUKEN,
+    Att_SENPUUKYAKU,
+    Att_SHOURYUUREPPA,
+    Att_SHOURYUUREPPA,
+    Att_SLIDE_and_JUMP,
+    Att_KUUCHUUNICHIRINSHOU,
+    Att_CHOUCHUURENGEKI,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_PL11_TOKUSHUKOUDOU,
 };

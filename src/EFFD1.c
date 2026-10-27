@@ -1,13 +1,11 @@
 /*
- * EFFD1.C  Effect D0 init and effect D1, the falling object
+ * EFFD1.C  Effect D1: the falling object
  *
- * effect_D0_init creates effect D0 (EFFD0.C) at a player's position with a palette chosen by
- * side (etc_char_table pattern 14).
  * Effect D1 is created under a parent effect, 138 dots above it (pattern 17). fall_data_set aims
  * it to land 32 dots or more in front of the parent, taking the distance between the two players
  * into account, over 44 frames; effect_D1_move flies it there, moves it to priority 20 for the
- * last part of the drop and keeps animating after landing. Both effects remove themselves after
- * a screen wipe (Exec_Wipe).
+ * last part of the drop and keeps animating after landing. It removes itself after a screen
+ * wipe (Exec_Wipe).
  */
 
 #include "structs.h"
@@ -23,6 +21,14 @@
 #include "aboutspr.h"
 #include "EFFD1.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* aim at the landing point */
+#define R0_FALL         1       /* fly toward it */
+#define R0_DROP         2       /* last part of the drop, in front */
+#define R0_LAND         3       /* animate on the floor */
+#define R0_HIDE         99      /* hide after the wipe */
+#define R0_KILL         100     /* (default) put the work back */
+
 
 
 void effect_D1_move(WORK_Other* ewk) {
@@ -30,16 +36,16 @@ void effect_D1_move(WORK_Other* ewk) {
         ewk->wu.no_death_attack = 1;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, (s16)(ewk->wu.char_index));
         fall_data_set(ewk);
         pl_eff_trans_entry(ewk);
         break;
-    case 1:
+    case R0_FALL:
         if (ewk->wu.no_death_attack && !Exec_Wipe) {
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_HIDE;
         } else {
             if (!ewk->wu.cg_type) {
                 char_move(&ewk->wu);
@@ -54,9 +60,9 @@ void effect_D1_move(WORK_Other* ewk) {
         }
         pl_eff_trans_entry(ewk);
         break;
-    case 2:
+    case R0_DROP:
         if (ewk->wu.no_death_attack && !Exec_Wipe) {
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_HIDE;
         } else {
             if (!ewk->wu.cg_type) {
                 char_move(&ewk->wu);
@@ -71,15 +77,15 @@ void effect_D1_move(WORK_Other* ewk) {
         }
         pl_eff_trans_entry(ewk);
         break;
-    case 3:
+    case R0_LAND:
         if (ewk->wu.no_death_attack && !Exec_Wipe) {
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_HIDE;
         } else {
             char_move(&ewk->wu);
         }
         pl_eff_trans_entry(ewk);
         break;
-    case 99:
+    case R0_HIDE:
         ewk->wu.disp_flag = 0;
         ewk->wu.routine_no[0]++;
         break;
@@ -129,7 +135,7 @@ void fall_data_set(WORK_Other* ewk) {
 void fall_data_restore(WORK_Other* ewk) {
     ewk->wu.xyz[0].disp.pos = ewk->wu.old_rno[1];
     ewk->wu.xyz[1].disp.pos = ewk->wu.old_rno[2];
-    ewk->wu.routine_no[0] = 99;
+    ewk->wu.routine_no[0] = R0_HIDE;
     set_char_move_init(&ewk->wu, 0, 0);
 }
 

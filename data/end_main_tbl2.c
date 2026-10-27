@@ -1,5 +1,11 @@
 /*
- * END_MAIN_TBL2.C  tables read by end_main_c.c: ending main control and the helpers the endings share
+ * END_MAIN_TBL2.C  ending background tables
+ *
+ * Indexed by the ending's character number: end_bg_index_tbl picks the ending's background,
+ * whose scroll graphics source and size are in end_bg_gfx_tbl, and end_scno_tbl gives its
+ * number of BG layers; read by END_MAIN_C.C. end_cg_src_tbl holds the screen data of the
+ * ending backgrounds, followed by the four layer layout records that end_map_tbl in
+ * OP_END_WORK.C points at for sprite_list_setup.
  */
 
 #include "types.h"

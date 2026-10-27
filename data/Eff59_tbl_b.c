@@ -1,5 +1,8 @@
 /*
- * EFF59_TBL_B.C  tables read by Eff59.c: effect 60's flashing stage objects (flash_obj_data61)
+ * EFF59_TBL_B.C  flashing stage object records of effect 60
+ *
+ * flash_obj_data61_0 and flash_obj_data61_1 are the records of the two flashing stage objects
+ * of effect 60, reached through flash_obj_data61. Read by EFF59.C.
  */
 
 #include "types.h"

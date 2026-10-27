@@ -23,6 +23,14 @@
 #include "aboutspr.h"
 #include "EFF77.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* hide the players */
+#define R0_BG_ON        1       /* show only bg 3, set the time */
+#define R0_BG_AGAIN     2       /* show only bg 3 again */
+#define R0_HOLD         3       /* hold for the set time */
+#define R0_RESTORE      4       /* bring the layers back */
+#define R0_KILL         99      /* (default) put the work back */
+
 
 
 s16 chk77_flag;  /* 02068C08 */
@@ -33,10 +41,10 @@ void effect_77_move(WORK_Other* ewk) {
     another_bg[0] = another_bg[1] = 0;
     Flash_MT[0] = Flash_MT[1] = 0;
     if (akebono_flag) {
-        ewk->wu.routine_no[0] = 99;
+        ewk->wu.routine_no[0] = R0_KILL;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         if (Game_pause || EXE_flag) {
             break;
         }
@@ -46,7 +54,7 @@ void effect_77_move(WORK_Other* ewk) {
         if (ewk->wu.type == 0) {
             Extra_Break = 1;
         }
-    case 1:
+    case R0_BG_ON:
         if (Game_pause || EXE_flag) {
             break;
         }
@@ -60,7 +68,7 @@ void effect_77_move(WORK_Other* ewk) {
         eff77_scroll_set(ewk);
         return;
         break;
-    case 2:
+    case R0_BG_AGAIN:
         if (Game_pause || EXE_flag) {
             break;
         }
@@ -70,7 +78,7 @@ void effect_77_move(WORK_Other* ewk) {
         }
         Bg_On_W(8);
         sa_pa_flag = 1;
-    case 3:
+    case R0_HOLD:
         if (Game_pause || EXE_flag) {
         } else {
             ewk->wu.old_rno[0]--;
@@ -86,7 +94,7 @@ void effect_77_move(WORK_Other* ewk) {
         eff77_scroll_set(ewk);
         return;
         break;
-    case 4:
+    case R0_RESTORE:
         if (Game_pause || EXE_flag) {
             break;
         }

@@ -1,5 +1,10 @@
 /*
- * SPGAUGE_TBL.C  tables read by sc_sub_2.c: HUD win marks, palette fade control and stun gauge
+ * SPGAUGE_TBL.C  palette fade tables
+ *
+ * fade_data_tbl gives, for each fade number, the number of layers and for each layer an entry
+ * of fade_adrs_tbl (its list of colour loads) and a row of fade_param_tbl; fade_param_tbl
+ * holds the fade parameters (speed, levels, fade kind and so on). Read by fade_cont_init in
+ * SC_SUB_2.C.
  */
 
 #include "types.h"

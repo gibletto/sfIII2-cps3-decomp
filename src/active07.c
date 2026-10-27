@@ -946,10 +946,7 @@ void Pattern07_0052(PLW* wk) {
 void Pattern07_0053(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        {
-            s16 menu = 58;
-            Branch_Unit_Area(wk, 2, 56, menu, menu, menu);
-        }
+        Branch_Unit_Area(wk, 2, 56, 58, 58, 58);
         break;
     default:
         End_Pattern(wk);

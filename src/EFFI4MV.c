@@ -18,6 +18,13 @@
 #include "effect_2.h"
 #include "aboutspr.h"
 #include "EFFI4MV.h"
+#include "fighter.h"
+
+/* routine_no[0], effi4_move_0 */
+#define R0_INIT         0       /* start the pattern */
+#define R0_WATCH        1       /* watch until the match is decided */
+#define R0_CHEER        2       /* cheer for the winner */
+#define R0_STOP         3       /* stand still */
 
 extern const u32 stg00_char_table[];    /* provisional name */
 extern const s16 effi4_turn_tbl[16];
@@ -47,28 +54,28 @@ void effect_I4_move(WORK_Other* ewk) {
 /* provisional name */
 void effi4_move_0(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, 11);
         break;
-    case 1:
+    case R0_WATCH:
         char_move(&ewk->wu);
         if (Round_num >= Game_setting.set4 << 1 || PL_Wins[Winner_id] >= Game_setting.set4 + 1) {
-            if (plw[Winner_id].player_number == 0) {
+            if (plw[Winner_id].player_number == PL_GILL) {
                 ewk->wu.routine_no[0]++;
                 set_char_move_init(&ewk->wu, 0, 3);
             } else {
-                ewk->wu.routine_no[0] = 3;
+                ewk->wu.routine_no[0] = R0_STOP;
             }
         }
         disp_pos_trans_entry_r(ewk);
         break;
-    case 2:
+    case R0_CHEER:
         if (!EXE_flag && !Game_pause && !EXE_obroll) {
             char_move(&ewk->wu);
         }
-    case 3:
+    case R0_STOP:
         disp_pos_trans_entry_r(ewk);
         break;
     default:
@@ -83,35 +90,35 @@ void effi4_move_0(WORK_Other* ewk) {
 /* provisional name */
 void effi4_move_1(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.old_rno[3] = 99;
         effi4_turn(ewk);
-        if (plw[0].player_number == 0) {
+        if (plw[0].player_number == PL_GILL) {
             ewk->wu.old_rno[1] = 0;
         } else {
             ewk->wu.old_rno[1] = 1;
         }
         break;
-    case 1:
+    case R0_WATCH:
         if (Round_num >= Game_setting.set4 << 1 || PL_Wins[Winner_id] >= Game_setting.set4 + 1) {
-            if (plw[Winner_id].player_number == 0) {
+            if (plw[Winner_id].player_number == PL_GILL) {
                 ewk->wu.routine_no[0]++;
                 set_char_move_init(&ewk->wu, 0, 4);
             } else {
-                ewk->wu.routine_no[0] = 3;
+                ewk->wu.routine_no[0] = R0_STOP;
             }
         } else {
             effi4_turn(ewk);
         }
         disp_pos_trans_entry_r(ewk);
         break;
-    case 2:
+    case R0_CHEER:
         if (!EXE_flag && !Game_pause && !EXE_obroll) {
             char_move(&ewk->wu);
         }
-    case 3:
+    case R0_STOP:
         disp_pos_trans_entry_r(ewk);
         break;
     default:
@@ -141,26 +148,26 @@ void effi4_turn(WORK_Other* ewk) {
 /* provisional name */
 void effi4_move_2(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_WATCH:
         if (Round_num >= Game_setting.set4 << 1 || PL_Wins[Winner_id] >= Game_setting.set4 + 1) {
-            if (plw[Winner_id].player_number == 0) {
+            if (plw[Winner_id].player_number == PL_GILL) {
                 ewk->wu.routine_no[0]++;
             } else {
-                ewk->wu.routine_no[0] = 3;
+                ewk->wu.routine_no[0] = R0_STOP;
             }
         }
         disp_pos_trans_entry_r(ewk);
         break;
-    case 2:
+    case R0_CHEER:
         if (!EXE_flag && !Game_pause && !EXE_obroll) {
             char_move(&ewk->wu);
         }
-    case 3:
+    case R0_STOP:
         disp_pos_trans_entry_r(ewk);
         break;
     default:

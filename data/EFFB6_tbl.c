@@ -1,5 +1,10 @@
 /*
- * EFFB6_TBL.C  tables read by effects B6 and B9
+ * EFFB6_TBL.C  another-BG overlay parts and round number sprites
+ *
+ * effB6_num_tbl gives the number of parts of each type, and effB6_pos_tbl_0 and
+ * effB6_pos_tbl_1 the position, slide offsets and cell of each part of the two types; read by
+ * EFFB6.C, the another-BG overlay parts. effb9_round_char_tbl gives the round number sprite of
+ * each round, read by EFFB9.C.
  */
 
 #include "types.h"

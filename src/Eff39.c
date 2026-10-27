@@ -19,12 +19,24 @@
 #include "charmove_2.h"
 #include "Eff39.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* count the start wait down, then show */
+#define R0_SLIDE_IN     1       /* slide in to the place */
+#define R0_FOLLOW       2       /* follow the cursor until chosen */
+#define R0_READY        3       /* wait for the select to end */
+#define R0_PAUSE        4       /* count down before leaving */
+#define R0_SLIDE_OUT    5       /* slide off the screen */
+#define R0_STAY         6       /* stay in place */
+#define R0_HOLD         7       /* stay until Suicide is set */
+#define R0_END          8       /* one more frame */
+#define R0_KILL         9       /* (default) put the work back */
+
 
 
 void effect_39_move(WORK_Other* ewk) {
     Cut_Cut_Sub(3);
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer != 0) {
             return;
         }
@@ -33,7 +45,7 @@ void effect_39_move(WORK_Other* ewk) {
         ewk->wu.disp_flag = 1;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, eff39_pattern(ewk) + 1, 0);
         break;
-    case 1:
+    case R0_SLIDE_IN:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp * 3;
         if (ewk->wu.mvxy.a[0].sp > 0) {
             if (ewk->wu.hit_quake < ewk->wu.xyz[0].disp.pos) {
@@ -43,42 +55,42 @@ void effect_39_move(WORK_Other* ewk) {
             eff39_slide_in_end(ewk);
         }
         break;
-    case 2:
+    case R0_FOLLOW:
         if (Order[0] == 2) {
-            ewk->wu.routine_no[0] = 4;
+            ewk->wu.routine_no[0] = R0_PAUSE;
         }
         if (ewk->wu.dir_step != ID_of_Face[Cursor_Y[ewk->master_id]][Cursor_X[ewk->master_id]]) {
             ewk->wu.dir_step = ID_of_Face[Cursor_Y[ewk->master_id]][Cursor_X[ewk->master_id]];
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, eff39_pattern(ewk) + 1, 0);
         }
         break;
-    case 3:
+    case R0_READY:
         if (Order[0] == 2) {
             ewk->wu.routine_no[0]++;
         }
         break;
-    case 4:
+    case R0_PAUSE:
         if (--ewk->wu.dir_timer == 0) {
             ewk->wu.routine_no[0]++;
         }
         break;
-    case 5:
+    case R0_SLIDE_OUT:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         if (Ck_Range_Out_S(ewk, 2, 80)) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 8;
+            ewk->wu.routine_no[0] = R0_END;
         }
         break;
-    case 6:
+    case R0_STAY:
         break;
-    case 7:
+    case R0_HOLD:
         if (Suicide) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 8;
+            ewk->wu.routine_no[0] = R0_END;
             return;
         }
         break;
-    case 8:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:
@@ -122,9 +134,9 @@ void eff39_slide_in_end(WORK_Other* ewk) {
     Select_Start[ewk->master_id]--;
     ewk->wu.mvxy.a[0].sp = -ewk->wu.mvxy.a[0].sp;
     if (ewk->wu.dm_vital == 3) {
-        ewk->wu.routine_no[0] = 6;
+        ewk->wu.routine_no[0] = R0_STAY;
     } else if (Sel_PL_Complete[ewk->master_id] || plw[ewk->master_id].wu.operator == 0) {
-        ewk->wu.routine_no[0] = 2;
+        ewk->wu.routine_no[0] = R0_FOLLOW;
     } else {
         ewk->wu.routine_no[0]++;
     }
@@ -172,11 +184,11 @@ s32 effect_39_init(s16 PL_id, s16 Wait, s16 Kind, s16 Face_Set, s16 Your_Char) {
         return 0;
     }
     if (Kind != 0) {
-        ewk->wu.routine_no[0] = 6;
+        ewk->wu.routine_no[0] = R0_STAY;
         ewk->wu.disp_flag = 1;
         ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;
         if (ewk->wu.dm_vital == 2) {
-            ewk->wu.routine_no[0] = 7;
+            ewk->wu.routine_no[0] = R0_HOLD;
         }
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, eff39_pattern(ewk) + 1, 0);
     }

@@ -1,5 +1,12 @@
 /*
- * EFF03_TBL.C  tables read by effects 03, 04, 05, 06, 07 and 09
+ * EFF03_TBL.C  effect 03 shadow, zoom colours, stage scenery lists and prop data
+ *
+ * plef_kage_data gives the shadow offset, priority and pattern of effect 03 (EFF03.C).
+ * eff04_col_tbl is the colour of each step of the nine-piece zoom display (EFF04.C).
+ * scr_obj_num and scr_obj_num6 hold the object counts and object rows of the stage scenery of
+ * effects 05 and 06, reached by stage and area through the lists in EFF05.C and EFF06.C.
+ * eff07_char_index_tbl is the animation sequence of the stage 05 background object (EFF07.C),
+ * and eff09_data the settings of the props made by effect_09_init (EFF09.C).
  */
 
 #include "types.h"

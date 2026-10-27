@@ -19,6 +19,12 @@
 #include "effect_2.h"
 #include "EFFC7.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* place the mark */
+#define R0_MOVE         1       /* play the mark */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 
 
 #pragma inline(effc7_sort_push)
@@ -28,7 +34,7 @@
 void effect_C7_move(WORK_Other* ewk) {
     WORK* mwk = (WORK*)ewk->my_master;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.xyz[2].disp.pos = 26;
@@ -47,7 +53,7 @@ void effect_C7_move(WORK_Other* ewk) {
         set_char_move_init(&ewk->wu, 0, 0);
         effc7_sort_push(&ewk->wu, mwk);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
             ewk->wu.routine_no[0]++;
@@ -63,8 +69,8 @@ void effect_C7_move(WORK_Other* ewk) {
         }
         effc7_sort_push(&ewk->wu, mwk);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

@@ -1,5 +1,11 @@
 /*
- * COM_PL_DATA.C  tables read by EM_Cand.c, PLS02.c and 2 other modules
+ * COM_PL_DATA.C  CPU opponent lists and computer player vitality
+ *
+ * EM_Candidate_Data gives the eight CPU opponents of each character on each of four courses;
+ * EM_CAND.C copies them into the player's opponent list and SEL_PL.C reads the next opponent
+ * from it. Its bytes from 199 on are declared as end_6_msg_tbl, which END_6.C (ending 6) reads
+ * in rows of eight by End_Course to choose its scene and message. Com_Vital_Unit_Data is the
+ * starting vitality by character, damage setting and level, read by setup_vitality in PLS02.C.
  */
 
 #include "types.h"

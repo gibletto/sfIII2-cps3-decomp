@@ -4,7 +4,7 @@
  * cal_damage_vitality and cal_damage_vitality_eff turn an attack's power into damage using the
  * round-level rate tables; Additinal_Score_DM, Disp_Player_Score
  * and Score_Sub add to and display the players' scores (six digits, capped at 9999900).
- * Disp_Player_Score_Debug (unreferenced) shows Score[id][1] on row 18 while exsw_3 bit 6 is set.
+ * Disp_Player_Score_Debug (unreferenced) shows Score[id][SCORE_VS] on row 18 while exsw_3 bit 6 is set.
  */
 
 #include "structs.h"
@@ -110,15 +110,15 @@ u16 ix;
         }
         id = wk->master_id;
     }
-    Score[id][2] += Score_Data[ix];
+    Score[id][SCORE_ROUND] += Score_Data[ix];
     if (plw[id].wu.operator) {
-        if (Play_Type == 0) {
-            Score[id][0] += Score_Data[ix];
-            if (Score[id][0] >= 9999900) {
-                Score[id][0] = 9999900;
+        if (Play_Type == PLAY_VS_CPU) {
+            Score[id][SCORE_CPU] += Score_Data[ix];
+            if (Score[id][SCORE_CPU] >= 9999900) {
+                Score[id][SCORE_CPU] = 9999900;
             }
         } else {
-            Score[id][1] += Score_Data[ix];
+            Score[id][SCORE_VS] += Score_Data[ix];
         }
     }
     if (plw[id].wu.operator != 0 && bg_w.stage != 16) {
@@ -175,7 +175,7 @@ s16 id;
     if (!(exsw_3 & 0x40)) {
         return;
     }
-    score = Score[id][1];
+    score = Score[id][SCORE_VS];
     i = 5;
     div = 1000000;
     top = -1;

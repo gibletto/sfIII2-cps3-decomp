@@ -1,5 +1,8 @@
 /*
- * CMD_MAIN_CTBL.C  tables read by CMD_MAIN.c: debug menu and command input
+ * CMD_MAIN_CTBL.C  debug screen filler strings
+ *
+ * dbg_minus_str ("-") and dbg_space2_str (two spaces) are printed beside the values on the
+ * debug screens. Read by CMD_MAIN.C, the debug menu.
  */
 
 #include "types.h"

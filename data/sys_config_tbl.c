@@ -1,5 +1,11 @@
 /*
- * SYS_CONFIG_TBL.C  tables read by sys_config.c and sys_config_2.c
+ * SYS_CONFIG_TBL.C  test mode system configuration values
+ *
+ * coin_rate_tbl gives the coins and credits of each coin setting; read by SYS_CONFIG.C and
+ * SYS_CONFIG_2.C. The coin_setting_, chute_mode_, on_off_, sound_mode_ and monitor_ string
+ * tables place the value texts of the system configuration page (coin and chute settings,
+ * on/off, sound output, language, monitor), which are the str_ strings that follow, and
+ * cursor_mark_str and cursor_blank_str draw and erase the menu cursor; read by SYS_CONFIG_2.C.
  */
 
 #include "types.h"
@@ -92,6 +98,7 @@ extern const char str_cfg_normal[];
 extern const char str_cfg_flip[];
 extern const s8 str_cfg_flip_tail[];
 
+/* one row per coin setting (Coin_Mode): { coins, credits } */
 const u8 coin_rate_tbl[20][2] = {
     { 1, 1 },
     { 1, 2 },

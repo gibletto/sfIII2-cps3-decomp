@@ -1,5 +1,10 @@
 /*
- * EFF33_TBL.C  tables read by effects 33 and 35
+ * EFF33_TBL.C  appearance companion results and bonus-stage presentation sprites
+ *
+ * WinLoseID gives, by master and winner, whether the companion plays its win or lose
+ * animation; read by EFF33.C, the appearance companion that reacts to the result.
+ * eff35_data_tbl holds one entry per presentation sprite of the bonus games, picked by
+ * effect_35_init; read by EFF35.C.
  */
 
 #include "types.h"

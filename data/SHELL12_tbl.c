@@ -1,5 +1,8 @@
 /*
- * SHELL12_TBL.C  tables read by SHELL12.c: CPU anti-projectile patterns, table 12
+ * SHELL12_TBL.C  CPU anti-projectile pattern table 12 (Sean)
+ *
+ * Shell12_Tbl lists the Shell12_nnnn pattern routines the computer-controlled Sean runs when
+ * the opponent fires a projectile, indexed by Pattern_Index. Read by SHELL12.C.
  */
 
 #include "types.h"
@@ -21,15 +24,15 @@ extern void Shell12_0009();
 extern void Shell12_0010();
 
 void (*const Shell12_Tbl[11])() = {
-    (void (*)())Shell12_0000,
-    (void (*)())Shell12_0001,
-    (void (*)())Shell12_0002,
-    (void (*)())Shell12_0003,
-    (void (*)())Shell12_0004,
-    (void (*)())Shell12_0005,
-    (void (*)())Shell12_0006,
-    (void (*)())Shell12_0007,
-    (void (*)())Shell12_0008,
-    (void (*)())Shell12_0009,
-    (void (*)())Shell12_0010,
+    Shell12_0000,
+    Shell12_0001,
+    Shell12_0002,
+    Shell12_0003,
+    Shell12_0004,
+    Shell12_0005,
+    Shell12_0006,
+    Shell12_0007,
+    Shell12_0008,
+    Shell12_0009,
+    Shell12_0010,
 };

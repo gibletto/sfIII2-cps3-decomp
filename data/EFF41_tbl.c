@@ -1,5 +1,14 @@
 /*
- * EFF41_TBL.C  tables read by effects 40, 41, 44, 45 and 46
+ * EFF41_TBL.C  super art sign, zoom object and animated stage object tables
+ *
+ * sa_sign_data has one row of four per super art sign: offset from the player, animation
+ * number and gauge used (super art or EX); read by EFF41.C, the super art sign.
+ * eff40_pos_x_tbl gives the x position of the select-screen zoom object for each direction
+ * (EFF40.C). scr_obj_num44 holds the counts and object rows of the animated stage objects,
+ * reached through scr_obj_data44 (EFF44.C). eff45_pos_x_tbl, eff45_pos_y_tbl and
+ * eff45_pos_y_tbl2 are the random x and y positions of the stage objects of effect 45
+ * (EFF45.C); eff45_pos_y_tbl3 is not referred to by name. eff46_char_tbl is the eight patterns
+ * the object beside the winner picks from (EFF46.C).
  */
 
 #include "types.h"
@@ -20,6 +29,10 @@ const s16 eff40_pos_x_tbl[8] = {
     -109, -83, -54, -24, 24, 48, 72, 96,
 };
 
+/*
+ * Four entries per super art sign (effect_41_init's data): x offset from the player
+ * (mirrored by rl_flag), y offset, animation number and gauge used (1 super art, 2 EX).
+ */
 const s16 sa_sign_data[196] = {
     28, 70, 156, 1, -41, 37, 156, 1,
     12, 56, 156, 1, -14, 80, 156, 1,

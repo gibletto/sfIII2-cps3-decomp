@@ -83,8 +83,7 @@ void load_any_color(ix)
 u8 ix;
 {
     const XFER* p = &any_color_tbl[ix];
-    s32 zero = 0;
-    polygon2d_submit_quad(p->src, p->dst, p->size, zero, zero, zero);
+    polygon2d_submit_quad(p->src, p->dst, p->size, 0, 0, 0);
 }
 
 
@@ -182,10 +181,9 @@ u16 slot;
 
 /* provisional name */
 void load_side_color(u8 side, u16 ix) {
-    s16 zero = 0;
     if (side) {
-        polygon2d_submit_quad(side_color_2p_tbl[ix].src, 0x4800, side_color_2p_tbl[ix].size, zero, zero, zero);
+        polygon2d_submit_quad(side_color_2p_tbl[ix].src, 0x4800, side_color_2p_tbl[ix].size, 0, 0, 0);
     } else {
-        polygon2d_submit_quad(side_color_1p_tbl[ix].src, 0x3800, side_color_1p_tbl[ix].size, zero, zero, zero);
+        polygon2d_submit_quad(side_color_1p_tbl[ix].src, 0x3800, side_color_1p_tbl[ix].size, 0, 0, 0);
     }
 }

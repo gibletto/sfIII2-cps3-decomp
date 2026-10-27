@@ -1,5 +1,8 @@
 /*
- * APPEAR_TBL_B.C  tables read by appear.c: fighter entrance (appearance) sequences
+ * APPEAR_TBL_B.C  entrance smoke table
+ *
+ * smoke_check marks, per background (bg_index), the stages where the Appear_16000 entrance
+ * starts with its alternative animation. Read by APPEAR.C.
  */
 
 #include "types.h"

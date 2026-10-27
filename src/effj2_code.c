@@ -16,13 +16,22 @@
 #include "effect_2.h"
 #include "effj2_code.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* wait for the delay */
+#define R0_SHOW         1       /* show the plate for a second */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_INIT         0       /* hide on the first frame */
+
 
 
 void effect_J2_move(WORK_Other_CONN* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 0;
             ewk->wu.old_cgnum = 0;
@@ -31,7 +40,7 @@ void effect_J2_move(WORK_Other_CONN* ewk) {
             break;
         }
         ewk->wu.routine_no[0]++;
-        ewk->wu.routine_no[1] = 0;
+        ewk->wu.routine_no[1] = R1_INIT;
         ewk->wu.disp_flag = 1;
         ewk->wu.old_cgnum = 0;
         ewk->wu.dir_timer = 60;
@@ -40,20 +49,20 @@ void effect_J2_move(WORK_Other_CONN* ewk) {
         if (0) {
         }
         break;
-    case 1:
+    case R0_SHOW:
         if (ewk->wu.dead_f == 1) {
             goto end;
         }
         if (--ewk->wu.dir_timer <= 0) {
         end:
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         effJ2_trans(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

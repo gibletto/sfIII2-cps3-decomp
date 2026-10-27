@@ -26,10 +26,17 @@
 #include "PLPAT.h"
 #include "PLS01.h"
 #include "PLPAT09.h"
+#include "cmd_data.h"
+
+/* routine_no[3], Att_PL08_HEALING */
+#define HEALING_RUN     1       /* run the animation */
+
+/* routine_no[3], Att_PL08_TOKUSHUKOUDOU */
+#define TOKUSHUKOUDOU_ACTION 1  /* the personal action, filling the super art gauge */
 
 
 void pl08_extra_attack(PLW* wk) {
-    pl08_exatt_table[wk->wu.routine_no[2] - 16](wk);
+    pl08_exatt_table[wk->wu.routine_no[2] - ATTACK_SPECIAL](wk);
 }
 
 
@@ -38,14 +45,14 @@ void Att_PL08_HEALING(PLW* wk) {
     u16 cpsw;
     wk->scr_pos_set_flag = 0;
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         set_char_move_init(&wk->wu, 5, wk->as->char_ix);
         break;
-    case 1:
+    case HEALING_RUN:
         char_move(&wk->wu);
         if (wk->wu.cmwk[0]) {
-            cpsw = (wk->cp->sw_now & 0x770);
+            cpsw = (wk->cp->sw_now & CMD_SW_SHOT);
             cpsw >>= 4;
             if (pl08_hcs_tbl[cpsw & 7] || pl08_hcs_tbl[(cpsw >> 4) & 7]) {
                 wk->wu.cmwk[0] = 0;
@@ -79,12 +86,12 @@ void Att_PL08_HEALING(PLW* wk) {
 void Att_PL08_TOKUSHUKOUDOU(PLW* wk) {
     wk->scr_pos_set_flag = 0;
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.rl_flag = wk->wu.rl_waza;
         set_char_move_init((WORK*)wk, 5, wk->as->char_ix);
         break;
-    case 1:
+    case TOKUSHUKOUDOU_ACTION:
         char_move((WORK*)wk);
         if (wk->wu.cg_type == 40) {
             wk->wu.cg_type = 0;

@@ -592,19 +592,18 @@ void Pattern15_0034(PLW* wk) {
 
 
 void Pattern15_0035(PLW* wk) {
-    s16 none = -1;
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
         Turn_Over_On(wk);
         break;
     case 1:
-        Hi_Jump_Attack_Term(wk, none, 97, 8, (0x102), 0, 0x8080, none, (0x200));
+        Hi_Jump_Attack_Term(wk, -1, 97, 8, (0x102), 0, 0x8080, -1, (0x200));
         break;
     case 2:
         Normal_Attack(wk, 11, (0x102));
         break;
     case 3:
-        Command_Attack(wk, 8, 31, 10, none);
+        Command_Attack(wk, 8, 31, 10, -1);
         break;
     default:
         End_Pattern(wk);
@@ -2046,16 +2045,15 @@ void Pattern15_0107(PLW* wk) {
 
 
 void Pattern15_0108(PLW* wk) {
-    s16 none = -1;
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Command_Attack(wk, 8, 1, none, none);
+        Command_Attack(wk, 8, 1, -1, -1);
         break;
     case 1:
         Turn_Over_On(wk);
         break;
     case 2:
-        Jump_Attack_Term(wk, none, 73, 9, (0x102), 0, 0x8080, none, 64);
+        Jump_Attack_Term(wk, -1, 73, 9, (0x102), 0, 0x8080, -1, 64);
         break;
     case 3:
         Com_Random_Select(wk, 2, 76, 77, 78, 79, 0);
@@ -2069,16 +2067,15 @@ void Pattern15_0108(PLW* wk) {
 
 
 void Pattern15_0109(PLW* wk) {
-    s16 none = -1;
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Command_Attack(wk, 8, 1, none, none);
+        Command_Attack(wk, 8, 1, -1, -1);
         break;
     case 1:
         Turn_Over_On(wk);
         break;
     case 2:
-        Jump_Attack_Term(wk, none, 73, 9, (0x102), 0, 0x8080, none, 64);
+        Jump_Attack_Term(wk, -1, 73, 9, (0x102), 0, 0x8080, -1, 64);
         break;
     case 3:
         Com_Random_Select(wk, 2, 80, 81, 82, 83, 0);
@@ -2092,16 +2089,15 @@ void Pattern15_0109(PLW* wk) {
 
 
 void Pattern15_0110(PLW* wk) {
-    s16 none = -1;
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Command_Attack(wk, 8, 1, none, none);
+        Command_Attack(wk, 8, 1, -1, -1);
         break;
     case 1:
         Turn_Over_On(wk);
         break;
     case 2:
-        Jump_Attack_Term(wk, none, 73, 9, (0x102), 0, 0x8080, none, 64);
+        Jump_Attack_Term(wk, -1, 73, 9, (0x102), 0, 0x8080, -1, 64);
         break;
     case 3:
         Com_Random_Select(wk, 2, 84, 85, 86, 87, 0);
@@ -2115,16 +2111,15 @@ void Pattern15_0110(PLW* wk) {
 
 
 void Pattern15_0111(PLW* wk) {
-    s16 none = -1;
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Command_Attack(wk, 8, 1, none, none);
+        Command_Attack(wk, 8, 1, -1, -1);
         break;
     case 1:
         Turn_Over_On(wk);
         break;
     case 2:
-        Jump_Attack_Term(wk, none, 73, 9, (0x102), 0, 0x8080, none, 64);
+        Jump_Attack_Term(wk, -1, 73, 9, (0x102), 0, 0x8080, -1, 64);
         break;
     case 3:
         Com_Random_Select(wk, 2, 88, 89, 90, 91, 0);

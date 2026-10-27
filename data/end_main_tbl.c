@@ -1,5 +1,11 @@
 /*
- * END_MAIN_TBL.C  tables read by end_main.c
+ * END_MAIN_TBL.C  opening demo BG tables
+ *
+ * op_scr_record_data_0 .. op_scr_record_data_3 are the layout records of the four opening BG
+ * layers, passed to sprite_list_setup; op_scrn_pos_tbl is the BG positions set by
+ * opening_scrn_pos_set and op_ctr_set the counter start of an opening scene. These are read by
+ * END_MAIN.C. op_panel0 - op_panel2 are the cell lists (map offset, cell number) written into
+ * the opening BG layers, reached through op_panel_p in OP_END_WORK.C.
  */
 
 #include "types.h"

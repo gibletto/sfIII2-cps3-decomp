@@ -20,6 +20,10 @@
 #include "PLS02.h"
 #include "EFF45.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show and start the animation */
+#define R0_MOVE         1       /* animate */
+
 extern const s16 eff45_pos_x_tbl[];       /* provisional names (06179360, 061793A0, 061793C0) */
 extern const s16 eff45_pos_y_tbl[16];
 extern const s16 eff45_pos_y_tbl2[16];
@@ -32,12 +36,12 @@ void effect_45_move(WORK_Other* ewk) {
         return;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_MOVE:
         if (!EXE_flag && !Game_pause && !EXE_obroll) {
             char_move(&ewk->wu);
         }

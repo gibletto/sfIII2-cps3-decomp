@@ -29,33 +29,43 @@
 #include "effi6.h"
 #include "EFFI5.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show the first pattern */
+#define R0_SYNC         1       /* wait for the ending's signal */
+#define R0_WAIT         2       /* wait three seconds */
+#define R0_FADE         3       /* fade the colours in */
+#define R0_COLOUR       4       /* restore the colours */
+#define R0_ANIM         5       /* animate up to the cue */
+#define R0_DROP         6       /* drift down near the floor */
+#define R0_STAY         7       /* stay where it stopped */
+
 
 
 void effect_I5_move(WORK_Other* ewk) {
     s16 work;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, 54);
         ewk->wu.old_rno[0] = 0;
         disp_pos_trans_entry(ewk);
         break;
-    case 1:
+    case R0_SYNC:
         if (end_obj_sync) {
             ewk->wu.routine_no[0]++;
             ewk->wu.old_rno[1] = 180;
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 2:
+    case R0_WAIT:
         ewk->wu.old_rno[1]--;
         if (ewk->wu.old_rno[1] <= 0) {
             ewk->wu.routine_no[0]++;
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 3:
+    case R0_FADE:
         work = effI5_fade_tbl[ewk->wu.old_rno[0]];
         load_any_color_fade(144, work, work, work);
         ewk->wu.old_rno[0]++;
@@ -64,10 +74,10 @@ void effect_I5_move(WORK_Other* ewk) {
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 4:
+    case R0_COLOUR:
         ewk->wu.routine_no[0]++;
         load_any_color(144);
-    case 5:
+    case R0_ANIM:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type == 9) {
             ewk->wu.routine_no[0]++;
@@ -75,7 +85,7 @@ void effect_I5_move(WORK_Other* ewk) {
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 6:
+    case R0_DROP:
         char_move(&ewk->wu);
         ewk->wu.xyz[1].cal -= 0x4000;
         if (ewk->wu.xyz[1].disp.pos < 20) {
@@ -83,7 +93,7 @@ void effect_I5_move(WORK_Other* ewk) {
         }
         disp_pos_trans_entry(ewk);
         return;
-    case 7:
+    case R0_STAY:
         disp_pos_trans_entry(ewk);
         break;
     default:

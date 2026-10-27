@@ -1,5 +1,8 @@
 /*
- * EFFB4_TBL.C  tables read by effect B4
+ * EFFB4_TBL.C  ball hit spark patterns
+ *
+ * s_mark_tbl gives the pattern added to the spark's animation, picked at random. Read by
+ * EFFB4.C, the ball hit spark.
  */
 
 #include "types.h"

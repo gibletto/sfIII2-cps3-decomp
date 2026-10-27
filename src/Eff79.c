@@ -24,6 +24,26 @@
 #include "effect_2.h"
 #include "Eff79.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* count the delay down */
+#define R0_SLIDE_IN     1       /* slide in to its slot */
+#define R0_SELECT       2       /* turn with the selection until chosen */
+#define R0_OUT          3       /* leave the screen */
+#define R0_FLASH        4       /* chosen: flash */
+#define R0_PAUSE        5       /* wait 10 frames, then leave */
+#define R0_STAY         6       /* stay in place */
+#define R0_HOLD         7       /* stay until told to die */
+#define R0_END          8       /* hidden for a frame */
+#define R0_KILL         9       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_IDLE         0       /* wait for the selection to move */
+#define R1_TURN         1       /* turn with the other plates */
+
+/* routine_no[2] */
+#define R2_DELAY        0       /* count the delay down */
+#define R2_MOVE         1       /* move to the new slot */
+
 s32 effect_81_init(WORK_Other* oya, s16 PL_id, s16 Master_Player, s16 Priority, s16 Kind);
 
 extern s16 Flash_Complete[2];
@@ -35,7 +55,7 @@ extern const s16 eff79_plate_pos[2][6];
 
 void effect_79_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer) {
             return;
         }
@@ -45,7 +65,7 @@ void effect_79_move(WORK_Other* ewk) {
         effect_80_init(ewk, ewk->master_id, ewk->master_player, ewk->master_priority & 0x7FFF, ewk->wu.routine_no[7]);
         effect_81_init(ewk, ewk->master_id, ewk->master_player, ewk->master_priority & 0x7FFF, ewk->wu.routine_no[7]);
         break;
-    case 1:
+    case R0_SLIDE_IN:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         ewk->wu.mvxy.a[0].sp += ewk->wu.mvxy.d[0].sp;
         if (ewk->wu.mvxy.a[0].sp > 0) {
@@ -56,10 +76,10 @@ void effect_79_move(WORK_Other* ewk) {
                 Move_Super_Arts[ewk->master_id]--;
                 Select_Arts[ewk->master_id]--;
                 if (Flash_Complete[ewk->master_id] == -1 || plw[ewk->master_id].wu.operator == 0) {
-                    ewk->wu.routine_no[0] = 8;
+                    ewk->wu.routine_no[0] = R0_END;
                 }
                 if (ewk->wu.vitality != 0) {
-                    ewk->wu.routine_no[0] = 6;
+                    ewk->wu.routine_no[0] = R0_STAY;
                 }
             }
         } else if (ewk->wu.dir_step >= ewk->wu.xyz[0].disp.pos) {
@@ -69,16 +89,16 @@ void effect_79_move(WORK_Other* ewk) {
             Move_Super_Arts[ewk->master_id]--;
             Select_Arts[ewk->master_id]--;
             if (Flash_Complete[ewk->master_id] == -1 || plw[ewk->master_id].wu.operator == 0) {
-                ewk->wu.routine_no[0] = 8;
+                ewk->wu.routine_no[0] = R0_END;
             }
             if (ewk->wu.vitality != 0) {
-                ewk->wu.routine_no[0] = 6;
+                ewk->wu.routine_no[0] = R0_STAY;
             }
         }
         break;
-    case 2:
+    case R0_SELECT:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_IDLE:
             switch (Moving_Plate[ewk->master_id]) {
             case 1:
                 switch (ewk->wu.hit_quake) {
@@ -123,19 +143,19 @@ void effect_79_move(WORK_Other* ewk) {
                 break;
             }
             break;
-        case 1:
+        case R1_TURN:
             Move_79(ewk);
             break;
         }
         break;
-    case 3:
+    case R0_OUT:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         if (Ck_Range_Out_S(ewk, 2, 0x80)) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 8;
+            ewk->wu.routine_no[0] = R0_END;
         }
         break;
-    case 4:
+    case R0_FLASH:
         if (Flash_Violent(ewk, 1)) {
             ewk->wu.routine_no[0]++;
             ewk->wu.dir_timer = 10;
@@ -145,22 +165,22 @@ void effect_79_move(WORK_Other* ewk) {
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dm_vital + 1, 0);
         }
         break;
-    case 5:
+    case R0_PAUSE:
         if (--ewk->wu.dir_timer) {
             break;
         }
-        ewk->wu.routine_no[0] = 3;
+        ewk->wu.routine_no[0] = R0_OUT;
         break;
-    case 6:
+    case R0_STAY:
         break;
-    case 7:
+    case R0_HOLD:
         if (Suicide) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 8;
+            ewk->wu.routine_no[0] = R0_END;
             return;
         }
         break;
-    case 8:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:
@@ -180,12 +200,12 @@ void effect_79_move(WORK_Other* ewk) {
 
 void Move_79(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[2]) {
-    case 0:
+    case R2_DELAY:
         if (--ewk->wu.dir_timer == 0) {
             ewk->wu.routine_no[2]++;
         }
         break;
-    case 1:
+    case R2_MOVE:
         EFF79_Move_X(ewk);
         Check_Priority(ewk);
         if (EFF79_Move_Y(ewk)) {
@@ -197,7 +217,7 @@ void Move_79(WORK_Other* ewk) {
         break;
     default:
         if (Moving_Plate_Counter[ewk->master_id] == 0) {
-            ewk->wu.routine_no[1] = 0;
+            ewk->wu.routine_no[1] = R1_IDLE;
             Moving_Plate[ewk->master_id] = 0;
         }
         break;
@@ -250,8 +270,8 @@ s32 Y_Value;
         X_Value = -X_Value;
     }
     ewk->wu.mvxy.a[0].sp = X_Value;
-    ewk->wu.routine_no[1] = 1;
-    ewk->wu.routine_no[2] = 0;
+    ewk->wu.routine_no[1] = R1_TURN;
+    ewk->wu.routine_no[2] = R2_DELAY;
     ewk->wu.routine_no[3] = move_type;
     ewk->wu.routine_no[4] = 0;
     ewk->wu.dir_timer = 1;
@@ -314,7 +334,7 @@ s32 Select_End_Sub_79(WORK_Other* ewk) {
         return 0;
     }
     if (Super_Arts[ewk->master_id] == ewk->master_player) {
-        ewk->wu.routine_no[0] = 4;
+        ewk->wu.routine_no[0] = R0_FLASH;
         ewk->wu.routine_no[2] = 1;
         ewk->wu.routine_no[3] = 8;
         ewk->wu.routine_no[4] = 32;
@@ -348,7 +368,7 @@ s32 effect_79_init(s16 pl_id, s16 plate_id, s16 pos_id, s16 time, s16 type) {
     ewk->wu.my_col_mode = 0x4200;
     ewk->wu.my_col_code = 0x2040;
     ewk->wu.my_family = 3;
-    (void)((WORK*)3)->id;
+    (void)&((WORK*)3)->id;
     ewk->wu.dir_timer = time;
     *ewk->wu.char_table = sel_pl_char_table;
     ewk->master_id = pl_id;
@@ -367,7 +387,7 @@ s32 effect_79_init(s16 pl_id, s16 plate_id, s16 pos_id, s16 time, s16 type) {
 
 void Setup_Pos_79(WORK_Other* ewk) {
     s16 pos;
-    ewk->wu.routine_no[7] = 1;
+    ewk->wu.routine_no[7] = R0_SLIDE_IN;
     if (ewk->wu.vitality != 0) {
         pos = 2;
         ewk->wu.xyz[1].disp.pos = 40;
@@ -389,11 +409,11 @@ void Setup_Pos_79(WORK_Other* ewk) {
         ewk->wu.dir_step = eff79_plate_pos[ewk->master_id][pos * 2] + DE_X[6];
     }
     if (ewk->wu.vitality == 2) {
-        ewk->wu.routine_no[7] = 6;
+        ewk->wu.routine_no[7] = R0_STAY;
         ewk->wu.xyz[0].disp.pos = ewk->wu.dir_step;
     }
     if (ewk->wu.vitality == 3) {
-        ewk->wu.routine_no[7] = 7;
+        ewk->wu.routine_no[7] = R0_HOLD;
         ewk->wu.xyz[0].disp.pos = ewk->wu.dir_step;
     }
 }

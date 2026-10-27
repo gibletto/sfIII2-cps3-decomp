@@ -1,5 +1,8 @@
 /*
- * EFFI3_TBL.C  tables read by effect I3: the colours and timers of effect I2
+ * EFFI3_TBL.C  stage colour cycle of effect I2
+ *
+ * effI2_col_tbl and effI2_timer_tbl are the ten colours and step times that effect I2 cycles
+ * through. Read by EFFI3.C.
  */
 
 #include "types.h"

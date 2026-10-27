@@ -23,7 +23,14 @@
 #include "bg_sub_5.h"
 #include "EFF15.h"
 
-void eff15_kemuri(WORK_Other* ewk);
+/* routine_no[0] */
+#define R0_INIT         0       /* throw the stone */
+#define R0_FLY          1       /* fly under gravity until it lands */
+#define R0_LAND         2       /* play the landing animation */
+#define R0_END          3       /* hidden for a frame */
+#define R0_KILL         4       /* (default) put the work back */
+
+void eff15_kemuri();
 
 void eff15_koishi(WORK_Other* ewk);
 
@@ -39,16 +46,14 @@ void effect_15_move(WORK_Other* ewk) {
 
 
 
-void eff15_kemuri(WORK_Other* ewk) {
-    WORK* oya_ptr;
+void eff15_kemuri() {
 }
 
 
 
 void eff15_koishi(WORK_Other* ewk) {
-    WORK* oya_ptr = (WORK*)ewk->my_master;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
@@ -68,7 +73,7 @@ void eff15_koishi(WORK_Other* ewk) {
         ewk->wu.xyz[0].disp.pos = 576;
         ewk->wu.old_rno[2] = 72;
         break;
-    case 1:
+    case R0_FLY:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
             add_x_sub(ewk);
@@ -81,7 +86,7 @@ void eff15_koishi(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 2:
+    case R0_LAND:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
             if (ewk->wu.cg_type) {
@@ -92,7 +97,7 @@ void eff15_koishi(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 3:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:

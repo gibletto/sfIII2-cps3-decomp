@@ -24,12 +24,20 @@
 #include "bg_sub_5.h"
 #include "EFF31.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show with a shadow, aim at the player */
+#define R0_ENTER        1       /* walk in beside the player */
+#define R0_ARRIVE       2       /* play the arrival pattern */
+#define R0_POSE         3       /* pose, moving the shadow with it */
+#define R0_HIDE         4       /* hide it and its shadow */
+#define R0_END          5       /* one more frame */
+#define R0_KILL         6       /* (default) put the work back */
+
 
 
 void effect_31_move(WORK_Other* ewk) {
-    WORK* oya_ptr = (WORK*)ewk->my_master;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.kage_flag = 1;
@@ -41,7 +49,7 @@ void effect_31_move(WORK_Other* ewk) {
         ewk->wu.old_rno[0] = 120;
         cal_initial_speed(&ewk->wu, ewk->wu.old_rno[0], ewk->wu.old_rno[1], ewk->wu.xyz[1].disp.pos);
         break;
-    case 1:
+    case R0_ENTER:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
             add_x_sub(ewk);
@@ -55,7 +63,7 @@ void effect_31_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 2:
+    case R0_ARRIVE:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
             if (ewk->wu.cg_type == 0xFF) {
@@ -66,7 +74,7 @@ void effect_31_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 3:
+    case R0_POSE:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
             if (ewk->wu.cg_type == 10) {
@@ -77,12 +85,12 @@ void effect_31_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 4:
+    case R0_HIDE:
         ewk->wu.disp_flag = 0;
         ewk->wu.kage_flag = 0;
         ewk->wu.routine_no[0]++;
         break;
-    case 5:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:

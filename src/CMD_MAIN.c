@@ -63,6 +63,13 @@
 #include "CMD_MAIN.h"
 #include "cps3.h"
 
+/* Debug_R_No: the debug menu routine (debug_scene_outer_dispatch) */
+#define DBG_INIT        0       /* debug_menu_work_init */
+#define DBG_GFX         1       /* debug_menu_gfx_load */
+#define DBG_PLAYER      2       /* debug_menu_player_setup */
+#define DBG_SELECT      3       /* debug_menu_select_dispatch */
+#define DBG_RUN         4       /* the debug scene, until exit */
+
 extern const u16 rca_char_table_023[318];
 extern const u16 ef13_char_table_225[180];
 extern const char str_1DATA_SH5[];
@@ -1134,26 +1141,26 @@ s32 debug_scene_outer_dispatch(void) {
     plw[0].wu.old_rno[0] = plw[0].wu.cg_number;
     plw[1].wu.old_rno[0] = plw[1].wu.cg_number;
     switch (Debug_R_No) {
-    case 0:
+    case DBG_INIT:
         debug_menu_work_init();
         break;
-    case 1:
+    case DBG_GFX:
         debug_menu_gfx_load();
         break;
-    case 2:
+    case DBG_PLAYER:
         debug_menu_player_setup();
         break;
-    case 3:
+    case DBG_SELECT:
         debug_menu_select_dispatch();
         break;
-    case 4:
+    case DBG_RUN:
         if (!debug_menu_exit_check()) {
             debug_main_dispatch();
             debug_effect_move_all();
         }
         break;
     }
-    if ((dbg_p2sw_0 & 0x70) == 0x70) {
+    if ((dbg_p2sw_0 & BUTTON_PUNCHES) == BUTTON_PUNCHES) {
         return 1;
     }
     return 0;
@@ -1184,11 +1191,10 @@ void debug_menu_work_init(void) {
     debug_edit_slots_reset();
     for (i = 0; i < 2; i++) {
         p = (s16*)(dbg_slot_w + i);
-        for (j = 0; j < 16; j++) {
+        for (j = 0; j < 16; j = j + 1) {
             *p++ = 0;
         }
     }
-    (void)&((WORK*)0)->id;
     for (i = 0; i < 2; i++) {
         ((DBG_SLOT*)(dbg_slot_w + i))->sel[1] = 1;
         ((DBG_SLOT*)(dbg_slot_w + i))->sel[2] = 0;
@@ -2527,38 +2533,38 @@ void debug_char_preview_init(void) {
 /* provisional name */
 static void debug_rgb_editor_navigate(u16 sw) {
     {
-        if (dbg_p2sw_0 & 0x10) {
+        if (dbg_p2sw_0 & BUTTON_LP) {
             Debug_RGB[0]--;
             if (sw & 0x10) {
                 Debug_RGB[0] -= 3;
             }
         }
-        if (dbg_p2sw_0 & 0x20) {
+        if (dbg_p2sw_0 & BUTTON_MP) {
             Debug_RGB[1]--;
             if (sw & 0x20) {
                 Debug_RGB[1] -= 3;
             }
         }
-        if (dbg_p2sw_0 & 0x40) {
+        if (dbg_p2sw_0 & BUTTON_HP) {
             Debug_RGB[2]--;
             if (sw & 0x40) {
                 Debug_RGB[2] -= 3;
             }
         }
     }
-    if (dbg_p2sw_0 & 0x80) {
+    if (dbg_p2sw_0 & BUTTON_LK) {
         Debug_RGB[0]++;
         if (sw & 0x80) {
             Debug_RGB[0] += 3;
         }
     }
-    if (dbg_p2sw_0 & 0x100) {
+    if (dbg_p2sw_0 & BUTTON_MK) {
         Debug_RGB[1]++;
         if (sw & 0x100) {
             Debug_RGB[1] += 3;
         }
     }
-    if (dbg_p2sw_0 & 0x200) {
+    if (dbg_p2sw_0 & BUTTON_HK) {
         Debug_RGB[2]++;
         if (sw & 0x200) {
             Debug_RGB[2] += 3;
@@ -2940,7 +2946,7 @@ s32 debug_slot_all_select(u16 sw)
 {
     s16 moved;
     s16 row;
-    if (!(dbg_p1sw_0 & 0x1000)) {
+    if (!(dbg_p1sw_0 & BUTTON_START)) {
         return 0;
     }
     if (!(dbg_p1sw_0 & 3)) {
@@ -3006,7 +3012,7 @@ s32 debug_slot_motion_select(void) {
 
 /* provisional name: command 4 (step one frame) on P1 button 1, unreferenced */
 s32 debug_check_step(void) {
-    if (dbg_p1sw_0 & 0x10) {
+    if (dbg_p1sw_0 & BUTTON_LP) {
         return 4;
     }
     return 0;
@@ -3017,7 +3023,7 @@ s32 debug_check_step(void) {
 /* provisional name: command 6 (next recorded frame) on P2 button 1, unreferenced */
 s32 debug_check_rec_step(void) {
     if (Debug_Rec_Count != 0) {
-        if (dbg_p2sw_0 & 0x10) {
+        if (dbg_p2sw_0 & BUTTON_LP) {
             return 6;
         }
     }
@@ -3202,12 +3208,12 @@ void debug_playback_mode_cycle(u16 sw) {
 
 /* provisional name */
 void debug_position_by_pad(void) {
-    if (!(dbg_p1sw_0 & 0x1000)) {
-        if (dbg_p1sw_0 & 2) {
+    if (!(dbg_p1sw_0 & BUTTON_START)) {
+        if (dbg_p1sw_0 & LEVER_DOWN) {
             debug_bg_scroll_by_pad();
             return;
         }
-        if ((dbg_p1sw_0 & 1) && (dbg_p2sw_0 & 0xF)) {
+        if ((dbg_p1sw_0 & LEVER_UP) && (dbg_p2sw_0 & LEVER_ALL)) {
             debug_bg_position_reset();
         }
     }
@@ -3229,19 +3235,19 @@ void debug_position_by_pad(void) {
 
 /* provisional name: debug_bg_scroll_by_pad for BG layer 0 only, unreferenced */
 void debug_bg0_scroll_by_pad(void) {
-    if (p2sw_0 & 4) {
+    if (p2sw_0 & LEVER_LEFT) {
         bg_w.bgw[0].position_x--;
         bg_w.bgw[0].xy[0].disp.pos--;
     }
-    if (p2sw_0 & 8) {
+    if (p2sw_0 & LEVER_RIGHT) {
         bg_w.bgw[0].position_x++;
         bg_w.bgw[0].xy[0].disp.pos++;
     }
-    if (p2sw_0 & 1) {
+    if (p2sw_0 & LEVER_UP) {
         bg_w.bgw[0].position_y++;
         bg_w.bgw[0].xy[1].disp.pos++;
     }
-    if (p2sw_0 & 2) {
+    if (p2sw_0 & LEVER_DOWN) {
         bg_w.bgw[0].position_y--;
         bg_w.bgw[0].xy[1].disp.pos--;
     }
@@ -3268,28 +3274,31 @@ void debug_bg_position_reset(void) {
 
 
 
+#pragma inline(bg_scroll_pos_disp)
+static void bg_scroll_pos_disp(s16 disp_pos, s16 position) {}
+
 /* provisional name */
 void debug_bg_scroll_by_pad(void) {
     s16 i;
-    if (p2sw_0 & 4) {
+    if (p2sw_0 & LEVER_LEFT) {
         for (i = 0; i < bg_w.scno; i++) {
             bg_w.bgw[i].position_x--;
             bg_w.bgw[i].xy[0].disp.pos--;
         }
     }
-    if (p2sw_0 & 8) {
+    if (p2sw_0 & LEVER_RIGHT) {
         for (i = 0; i < bg_w.scno; i++) {
             bg_w.bgw[i].position_x++;
             bg_w.bgw[i].xy[0].disp.pos++;
         }
     }
-    if (p2sw_0 & 1) {
+    if (p2sw_0 & LEVER_UP) {
         for (i = 0; i < bg_w.scno; i++) {
             bg_w.bgw[i].position_y++;
             bg_w.bgw[i].xy[1].disp.pos++;
         }
     }
-    if (p2sw_0 & 2) {
+    if (p2sw_0 & LEVER_DOWN) {
         for (i = 0; i < bg_w.scno; i++) {
             bg_w.bgw[i].position_y--;
             bg_w.bgw[i].xy[1].disp.pos--;
@@ -3298,7 +3307,7 @@ void debug_bg_scroll_by_pad(void) {
     if (!bg_w.stage) {
         bg_w.bgw[4].hos_xy[0].cal = bg_w.bgw[4].xy[0].cal = bg_w.bgw[0].xy[0].cal;
         bg_w.bgw[4].hos_xy[0].cal = bg_w.bgw[4].xy[1].cal = bg_w.bgw[0].xy[1].cal;
-        bg_w.bgw[4].position_x == bg_w.bgw[4].xy[0].disp.pos;
+        bg_scroll_pos_disp(bg_w.bgw[4].xy[0].disp.pos, bg_w.bgw[4].position_x);
     }
     Bg_Family_Set();
 }
@@ -3459,7 +3468,6 @@ void debug_hit_box_edit(void) {
         hand = dbg_edit_buf.h_han;
         attack = dbg_edit_buf.h_att;
         eat = dbg_edit_buf.adrs13;
-        (void)&((WORK*)hand)->id;
         switch (dbg_judge_ewk->curr_ja) {
         case 0:
             box = (s16*)body;
@@ -3603,8 +3611,9 @@ void debug_hit_box_cursor(void) {
     u16 sw;
     u16 *input = &now;
     if (Debug_PL_id) {
-        goto idle;
-    idle:
+        if (DEBUG_EDIT) {
+            sw = ~dbg_p2sw_1 & now;
+        }
         return;
     } else {
     poll:
@@ -3899,7 +3908,7 @@ void debug_dec_disp_input(u16 sw) {
 void debug_cmd_panel_run(void) {
     WORK* wk;
     u16 trg = ~dbg_p1sw_1 & dbg_p1sw_0;
-    u16 sel = ~dbg_p2sw_1 & dbg_p2sw_0 & 0x3f0;
+    u16 sel = ~dbg_p2sw_1 & dbg_p2sw_0 & BUTTON_SHOTS;
     u16 i;
     sel = sel * 16 + (0x3f0 & trg) / 16;
     if (dbg_cmd_panel != 0) {
@@ -3975,7 +3984,7 @@ void debug_cg_number_browse(void) {
     u16 group;
     debug_position_by_pad();
     debug_flip_cycle(~dbg_p1sw_1 & dbg_p1sw_0);
-    if (dbg_p1sw_0 & 0x1000) {
+    if (dbg_p1sw_0 & BUTTON_START) {
         if (debug_lever_repeat_fast(dbg_p1sw_0, dbg_p1sw_1, 1, 0)) {
             dbg_pl->wu.cg_number -= 1;
             if (dbg_pl->wu.cg_number > 0xB2F7) {
@@ -4492,6 +4501,9 @@ void debug_char_disp_once(WORK* wk) {
 
 
 
+#pragma inline(parts_disp)
+static void parts_disp(s16 id) {}
+
 /* provisional name */
 void debug_parts_disp(void) {
     s16 i;
@@ -4507,7 +4519,7 @@ void debug_parts_disp(void) {
             dbg_parts_plw[i].wu.position_x += dbg_parts_plw[i].wu.dir_step;
         }
         dbg_parts_plw[i].wu.cg_flip &= 2;
-        (void)&dbg_parts_plw[i].wu.id;
+        parts_disp(dbg_parts_plw[i].wu.id);
         switch (((plw[0].wu.cg_flip & 2) != 0) + ((dbg_parts_plw[i].wu.dir_old & 2) != 0) * 2) {
         case 0:
         case 2:
@@ -4595,7 +4607,6 @@ void debug_motion_list_count(void) {
 /* provisional name */
 void debug_pattern_count(void) {
     u32* p;
-    s16 m = 0x100;
     dbg_slot->sel[2] = 0;
     p = dbg_pl->wu.set_char_ad;
     dbg_slot->rec_count = 0;
@@ -4604,7 +4615,7 @@ void debug_pattern_count(void) {
         if (*(u16*)q == 1) {
             break;
         }
-        if (*(u16*)q >= m) {
+        if (*(u16*)q >= 0x100) {
             dbg_slot->rec_count++;
         }
         p += dbg_pl->wu.cgd_type;
@@ -5556,8 +5567,8 @@ void debug_both_players_reset(void) {
 
 /* provisional name */
 s32 debug_menu_exit_check(void) {
-    if ((dbg_p1sw_0 & 0x1000) && (dbg_p2sw_0 & 0x1000)) {
-        Debug_R_No = 2;
+    if ((dbg_p1sw_0 & BUTTON_START) && (dbg_p2sw_0 & BUTTON_START)) {
+        Debug_R_No = DBG_PLAYER;
         Debug_Select_No = 0;
         Debug_Tool_No = 0;
         Scr_all_clear_Wait();

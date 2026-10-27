@@ -1,5 +1,9 @@
 /*
- * SEL_DATA.C  tables read by sel_pl.c: player (character) select screen
+ * SEL_DATA.C  select screen face cursor table
+ *
+ * Face_Cursor_Data gives the character at each face position of the select screen, copied into
+ * ID_of_Face by Setup_Face_ID in SEL_PL.C. Face_Cursor_Data_unref, the row before it, is not
+ * referred to.
  */
 
 #include "types.h"

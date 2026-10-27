@@ -19,6 +19,15 @@
 #include "charmove_2.h"
 #include "EFF69.h"
 
+/* routine_no[0]: the order being carried out */
+#define R0_WAIT         0       /* wait for an order */
+
+/* routine_no[1]: within an order */
+#define R1_DELAY        0       /* count the order timer down */
+
+/* routine_no[1], EFF69_RISE_OUT */
+#define R1_OUT          1       /* move out until off screen */
+
 s32 Ck_Range_Out_Y(WORK_Other* ewk, s16 BG_No, s16 R);    /* provisional name */
 
 void EFF69_WAIT(WORK_Other* ewk);
@@ -54,7 +63,7 @@ void effect_69_move(WORK_Other* ewk) {
 
 void EFF69_WAIT(WORK_Other* ewk) {
     if ((ewk->wu.routine_no[0] = Order[ewk->wu.dir_step])) {
-        ewk->wu.routine_no[1] = 0;
+        ewk->wu.routine_no[1] = R1_DELAY;
     }
 }
 
@@ -63,7 +72,7 @@ void EFF69_WAIT(WORK_Other* ewk) {
 /* provisional name */
 void EFF69_RISE_IN(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_DELAY:
         if (--Order_Timer[ewk->wu.dir_step]) {
             break;
         }
@@ -78,7 +87,7 @@ void EFF69_RISE_IN(WORK_Other* ewk) {
         ewk->wu.xyz[1].cal += ewk->wu.mvxy.a[1].sp;
         if (ewk->wu.hit_quake >= ewk->wu.xyz[1].disp.pos) {
             Order[ewk->wu.dir_step] = 0;
-            ewk->wu.routine_no[0] = 0;
+            ewk->wu.routine_no[0] = R0_WAIT;
             ewk->wu.xyz[1].disp.pos = ewk->wu.hit_quake;
         }
         break;
@@ -90,7 +99,7 @@ void EFF69_RISE_IN(WORK_Other* ewk) {
 /* provisional name */
 void EFF69_RISE_OUT(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_DELAY:
         if (--Order_Timer[ewk->wu.dir_step]) {
             break;
         }
@@ -100,7 +109,7 @@ void EFF69_RISE_OUT(WORK_Other* ewk) {
         ewk->wu.mvxy.a[1].sp = 0x100000;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_old + 1, 0);
         break;
-    case 1:
+    case R1_OUT:
         ewk->wu.xyz[1].cal += ewk->wu.mvxy.a[1].sp;
         if (Ck_Range_Out_Y(ewk, 2, 32)) {
             ewk->wu.routine_no[1]++;
@@ -118,7 +127,7 @@ void EFF69_RISE_OUT(WORK_Other* ewk) {
 
 void EFF69_SLIDE_IN(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_DELAY:
         if (--Order_Timer[ewk->wu.dir_step]) {
             break;
         }
@@ -146,7 +155,7 @@ void EFF69_SLIDE_IN(WORK_Other* ewk) {
                 if (Order[ewk->wu.dir_step] == ewk->wu.routine_no[0]) {
                     Order[ewk->wu.dir_step] = 0;
                 }
-                ewk->wu.routine_no[0] = 0;
+                ewk->wu.routine_no[0] = R0_WAIT;
                 ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;
                 ewk->wu.position_z = 70;
             }
@@ -154,7 +163,7 @@ void EFF69_SLIDE_IN(WORK_Other* ewk) {
             if (Order[ewk->wu.dir_step] == ewk->wu.routine_no[0]) {
                 Order[ewk->wu.dir_step] = 0;
             }
-            ewk->wu.routine_no[0] = 0;
+            ewk->wu.routine_no[0] = R0_WAIT;
             ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;
             ewk->wu.position_z = 70;
         }
@@ -166,7 +175,7 @@ void EFF69_SLIDE_IN(WORK_Other* ewk) {
 
 void EFF69_SLIDE_OUT(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_DELAY:
         if (--Order_Timer[ewk->wu.dir_step]) {
             break;
         }
@@ -179,7 +188,7 @@ void EFF69_SLIDE_OUT(WORK_Other* ewk) {
             ewk->wu.mvxy.d[0].sp = 0x8000;
         }
         break;
-    case 1:
+    case R1_OUT:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         ewk->wu.mvxy.a[0].sp += ewk->wu.mvxy.d[0].sp;
         if (Ck_Range_Out_S(ewk, 2, 128)) {

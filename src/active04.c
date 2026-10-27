@@ -945,8 +945,7 @@ void Pattern04_0060(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
         {
-            s16 zero = 0;
-            EM_Term(wk, 0x8070, zero, zero, 2, zero);
+            EM_Term(wk, 0x8070, 0, 0, 2, 0);
         }
         break;
     case 1:

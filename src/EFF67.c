@@ -27,6 +27,13 @@
 #include "bg_sub_4.h"
 #include "bg_sub_5.h"
 #include "EFF67.h"
+#include "fighter.h"
+
+/* routine_no[0] */
+#define R0_INIT         0       /* load the page and show */
+#define R0_MOVE         1       /* follow the master */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) free the graphics and the work */
 
 typedef struct {
     const CONN* conn;
@@ -174,7 +181,7 @@ void effect_67_move(WORK_Other_CONN* ewk) {
     u16 chr;
     WORK* mwk;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         switch (Country) {
         case 1:
@@ -265,7 +272,7 @@ void effect_67_move(WORK_Other_CONN* ewk) {
         ewk->wu.cg_number++;
         ewk->wu.cg_number &= 0x7FFF;
         break;
-    case 1:
+    case R0_MOVE:
         mwk = (WORK*)ewk->my_master;
         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos = mwk->position_x - 124;
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = mwk->cg_type + mwk->position_y - 22;
@@ -304,7 +311,7 @@ void effect_67_move(WORK_Other_CONN* ewk) {
         ewk->wu.cg_number &= 0x7FFF;
         sort_push_request3(&ewk->wu);
         break;
-    case 2:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:
@@ -347,7 +354,7 @@ s32 effect_67_init(WORK* master) {
         return -1;
     }
     ewk = (WORK_Other_CONN*)frw[ix];
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     eff67_setup(ewk);
     ewk->master_player = My_char[Player_id];
     eff67_cnt0 = My_char[Player_id];
@@ -365,18 +372,18 @@ s32 effect_67_init(WORK* master) {
         } else {
             ewk->wu.position_x = 0x2C0;
         }
-        if (My_char[Player_id] == 6) {
+        if (My_char[Player_id] == PL_HUGO) {
             switch (My_char[COM_id]) {
-            case 0:
+            case PL_GILL:
                 page = 6;
                 break;
-            case 2:
+            case PL_RYU:
                 page = 2;
                 break;
-            case 8:
+            case PL_ELENA:
                 page = 4;
                 break;
-            case 5:
+            case PL_NECRO:
             default:
                 page = 0;
                 break;
@@ -436,7 +443,7 @@ s32 eff67_spawn(s16 player, s16 page) {
         return -1;
     }
     ewk = (WORK_Other_CONN*)frw[ix];
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     eff67_setup(ewk);
     ewk->master_player = player;
     mes_already = page;

@@ -1,5 +1,11 @@
 /*
- * EFF09_TBL.C  tables read by effect 09
+ * EFF09_TBL.C  character prop settings
+ *
+ * eff09_data2 holds one row per prop kind for effect_09_init2: colour, offset from the owner,
+ * priority, animation and sync settings. eff09_2000_data, eff09_add_tbl0 .. eff09_add_tbl2 and
+ * eff09_13_tbl are the speeds and accelerations of the thrown and moving props, and
+ * sean_ball_hit is the hit box of the bouncing ball. Read by EFF09.C, the character props for
+ * appearances and win poses.
  */
 
 #include "types.h"
@@ -15,6 +21,11 @@ extern const s32 eff09_add_tbl2[][4];
 extern const s16 sean_ball_hit[];
 extern const s32 eff09_13_tbl[][4];
 
+/*
+ * One row per effect_09_init2 kind, read in order: routine_no[0], colour code (added to
+ * the owner's), x offset from the owner (mirrored by rl_flag), y offset, priority (added
+ * to the owner's), animation number, hit_stop and sync_suzi.
+ */
 const s16 eff09_data2[24][8] = {
     { 1, 0, 0, 4, 1, 25, 1, 0 },
     { 2, 0, -34, 153, -10, 26, 1, 0 },

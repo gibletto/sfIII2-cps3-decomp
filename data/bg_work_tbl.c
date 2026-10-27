@@ -1,5 +1,8 @@
 /*
- * BG_WORK_TBL.C  tables read by bg_work.c: background work
+ * BG_WORK_TBL.C  background layer 0 cell list
+ *
+ * end_1100_bg0_cell_tbl is a cell list (map offset, cell number) for background layer 0,
+ * reached through bg_rewrite_cell_tbl in BG_WORK.C and written by bg_scr_write in BG000.C.
  */
 
 #include "types.h"

@@ -1,5 +1,9 @@
 /*
- * EFF48_TBL.C  tables read by effects 48, 49 and 54
+ * EFF48_TBL.C  opening scene object counts, continue digit offsets and a flight course
+ *
+ * eff48_num_tbl gives the number of opening scene objects of each type (EFF48.C).
+ * eff49_pos_tbl is the x offset of each continue count digit (EFF49.C). eff54_move_tbl is the
+ * timer and speed rows of the stage object that flies a fixed course (EFF54.C).
  */
 
 #include "types.h"

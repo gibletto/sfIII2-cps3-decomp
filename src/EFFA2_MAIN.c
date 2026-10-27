@@ -20,11 +20,14 @@
 #include "sc_clear.h"
 #include "EFFA2_MAIN.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* clear the banner area */
+
 
 
 void effect_A2_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         Disp_PERFECT = 0;
         tilemap_clear_rect(1, 8, DE_X[1] + 47, 21);

@@ -1,5 +1,10 @@
 /*
- * EFFF2.C  tables read by effect F2
+ * EFFF2.C  ending falling objects of effect F2
+ *
+ * efff2_data_tbl gives the priority, pattern and delay of each object of a set,
+ * efff2_speed_tbl the speeds of each of the three flight stages of each object, and
+ * efff2_pos_tbl the position an object starts again from. Read by EFFF2_CODE.C, the ending
+ * falling objects.
  */
 
 #include "types.h"

@@ -20,9 +20,15 @@
 #include "PLPAT.h"
 #include "PLPAT02.h"
 
+/* routine_no[3], Att_DENJINHADOUKEN */
+#define DENJINHADOUKEN_RUN 1    /* run the animation */
+
+/* routine_no[3], Att_PL02_TOKUSHUKOUDOU */
+#define TOKUSHUKOUDOU_ACTION 1  /* the personal action, filling the super art gauge */
+
 
 void pl02_extra_attack(PLW* wk) {
-    pl02_exatt_table[wk->wu.routine_no[2] - 16](wk);
+    pl02_exatt_table[wk->wu.routine_no[2] - ATTACK_SPECIAL](wk);
 }
 
 
@@ -32,12 +38,12 @@ void Att_DENJINHADOUKEN(PLW* wk) {
     s16 lgix;
     wk->scr_pos_set_flag = 0;
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.rl_flag = wk->wu.rl_waza;
         set_char_move_init((WORK*)wk, 5, wk->as->char_ix);
         break;
-    case 1:
+    case DENJINHADOUKEN_RUN:
         char_move((WORK*)wk);
         if (wk->wu.now_koc == 8 && wk->wu.char_index == 13) {
             if (wk->cp->lgp > 13) {
@@ -60,12 +66,12 @@ void Att_DENJINHADOUKEN(PLW* wk) {
 void Att_PL02_TOKUSHUKOUDOU(PLW* wk) {
     wk->scr_pos_set_flag = 0;
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.rl_flag = wk->wu.rl_waza;
         set_char_move_init(&wk->wu, 5, wk->as->char_ix);
         break;
-    case 1:
+    case TOKUSHUKOUDOU_ACTION:
         char_move(&wk->wu);
         if ((u8)wk->wu.cg_type == 40) {
             wk->wu.cg_type = 0;

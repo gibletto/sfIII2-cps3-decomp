@@ -1,5 +1,9 @@
 /*
- * EFF75_TBL.C  tables read by effects 75 and 77
+ * EFF75_TBL.C  select-screen object fly-off speeds and full-screen background positions
+ *
+ * eff75_speed_tbl gives the x and y speeds and accelerations with which the select-screen
+ * object flies off, by its current pattern; read by EFF75_ORDER.C. eff77_data_tbl gives the
+ * time and the BG layer 3 position of each temporary full-screen background; read by EFF77.C.
  */
 
 #include "types.h"

@@ -1,5 +1,8 @@
 /*
- * EFF24_TBL.C  tables read by effect 25
+ * EFF24_TBL.C  bg130 breakable stage object lists
+ *
+ * scr_obj_data25_0 .. scr_obj_data25_4 are the object lists of the breakable stage objects,
+ * reached through scr_obj_data25 in EFF25.C, the bg130 breakable stage objects.
  */
 
 #include "types.h"

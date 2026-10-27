@@ -1,5 +1,10 @@
 /*
- * EFFI0_TBL.C  tables read by effect I0
+ * EFFI0_TBL.C  small stone debris tables for effect I0
+ *
+ * char_of_koishi is the eight stone patterns; num_of_koishi the number of pieces for each
+ * debris size; koishi_app_area eight random layouts that give each piece a column of
+ * koishi_area_hosei (x offset) and of koishi_speed_x / koishi_speed_y (eight random speeds
+ * each). Read by EFFI0.C.
  */
 
 #include "types.h"

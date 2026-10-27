@@ -18,14 +18,28 @@
 #include "aboutspr.h"
 #include "EFFB1.h"
 
+/* routine_no[0] */
+#define R0_BUILD        0       /* build the row of marks */
+#define R0_MOVE         1       /* follow the bonus result */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] while building the row */
+#define R1_INIT         0       /* set the row up */
+#define R1_ADD          1       /* add a mark every three frames */
+
+/* routine_no[1] while following the result */
+#define R1_COUNT        0       /* light the marks for new successes */
+#define R1_LOSE         1       /* (default) take lost marks back */
+
 
 
 void effect_B1_move(WORK_Other_CONN* ewk) {
     s16 i;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_BUILD:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
             ewk->wu.old_cgnum = 0;
@@ -36,7 +50,7 @@ void effect_B1_move(WORK_Other_CONN* ewk) {
             ewk->wu.dir_timer = 0;
             ewk->wu.dir_step = Bonus_Game_result;
             break;
-        case 1:
+        case R1_ADD:
             if (--ewk->wu.dir_timer > 0) {
                 break;
             }
@@ -45,25 +59,25 @@ void effect_B1_move(WORK_Other_CONN* ewk) {
             ewk->num_of_conn++;
             if (ewk->num_of_conn < ewk->wu.direction) {
             } else {
-                ewk->wu.routine_no[0] = 1;
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[0] = R0_MOVE;
+                ewk->wu.routine_no[1] = R1_COUNT;
             }
             break;
         }
         effB1_trans(&ewk->wu);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
             ewk->wu.type = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         if (ewk->wu.dir_step > Bonus_Game_result) {
-            ewk->wu.routine_no[1] = 1;
+            ewk->wu.routine_no[1] = R1_LOSE;
         }
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_COUNT:
             if (Bonus_Game_result) {
                 for (i = 0; i < Bonus_Game_result; i++) {
                     if (ewk->conn[i + 20].nx) {
@@ -90,7 +104,7 @@ void effect_B1_move(WORK_Other_CONN* ewk) {
         ewk->wu.dir_step = Bonus_Game_result;
         effB1_trans(&ewk->wu);
         break;
-    case 2:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:

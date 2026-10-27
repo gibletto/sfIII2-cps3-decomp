@@ -24,22 +24,28 @@
 #include "bg_sub_5.h"
 #include "EFF61.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set up hidden */
+#define R0_WAIT         1       /* wait for the alternate bg */
+#define R0_SLIDE        2       /* slide in while the alternate bg is on */
+#define R0_OFF          3       /* mode over: back to waiting */
+
 void effect_61_move(WORK_Other_CONN* ewk) {
     WORK* mwk = (WORK*)ewk->my_master;
     if (!akebono_flag) {
         switch (ewk->wu.routine_no[0]) {
-        case 0:
+        case R0_INIT:
             ewk->wu.routine_no[0]++;
             ewk->wu.be_flag = 1;
             ewk->wu.disp_flag = 0;
             ewk->wu.xyz[0].disp.pos += bg_w.bgw[1].pos_x_work;
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_old + 1, 0);
-        case 1:
+        case R0_WAIT:
             if (!another_bg[0] && !another_bg[1]) {
                 break;
             }
             ewk->wu.routine_no[0]++;
-        case 2:
+        case R0_SLIDE:
             if (another_bg[0] || another_bg[1]) {
                 switch (another_bg[mwk->type]) {
                 case 1:
@@ -87,11 +93,11 @@ void effect_61_move(WORK_Other_CONN* ewk) {
                     break;
                 }
             } else {
-                ewk->wu.routine_no[0] = 3;
+                ewk->wu.routine_no[0] = R0_OFF;
             }
             break;
-        case 3:
-            ewk->wu.routine_no[0] = 1;
+        case R0_OFF:
+            ewk->wu.routine_no[0] = R0_WAIT;
             break;
         default:
             all_cgps_put_back((WORK_Other*)ewk);

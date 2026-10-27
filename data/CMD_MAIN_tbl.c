@@ -1,5 +1,12 @@
 /*
- * CMD_MAIN_TBL.C  tables read by game_config_en.c: test-mode game configuration, English page
+ * CMD_MAIN_TBL.C  English game configuration screen layout
+ *
+ * config_title_str_tbl places the title, item and help lines of the English GAME CONFIGURATION
+ * page; its rows 10 .. 17 hold a second layout without the SCREEN MODE item, which no code
+ * prints. config_help_modify_str_tbl and config_help_return_str_tbl are the help lines at the
+ * foot of the page; the text itself is in CMD_MAIN_TBL_B.C. gcfg_gauge_chr_en and
+ * gcfg_gauge_clr_chr_en are the characters of the star gauges. Read by GAME_CONFIG_EN.C, the
+ * English configuration page.
  */
 
 #include "types.h"

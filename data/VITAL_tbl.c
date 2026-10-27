@@ -1,5 +1,15 @@
 /*
- * VITAL_TBL.C  tables read by VITAL.c, count.c and spgauge.c
+ * VITAL_TBL.C  vitality bar, round timer and super art gauge tables
+ *
+ * vital_cell_tbl and vital_cell_1p_tbl are the text-layer cells of the vitality bars (later
+ * parts of vital_cell_1p_tbl are reached through vital_npos_tbl and vital_attr_tbl); read by
+ * VITAL.C. hoji_counter_tbl is the frames per round timer count for each timer speed setting,
+ * and flash_timer_tbl and flash_color_tbl the rate and colours of the flashing round timer;
+ * read by COUNT.C. spgauge_puttbl_0/1 are the cell codes of each fill step of the super art
+ * gauge and spgauge_postbl_0/1 and spgauge_postbl_0_2/1_2 its cell columns for each side in
+ * the normal and wide screen modes, sa_time_data_tbl the frames of the gauge's time lettering,
+ * sa_color_data2_tbl the gauge colours and sagauge_colchg_tbl its flash colours; read by
+ * SPGAUGE.C.
  */
 
 #include "types.h"

@@ -1,5 +1,10 @@
 /*
- * EFF79_TBL.C  tables read by effect 79 (eff79_plate_pos, Pos_Z_Data_79), and Time_Data, read by Com_Sub.c and effect 84
+ * EFF79_TBL.C  super art plate positions and centre message times
+ *
+ * eff79_plate_pos gives the x and y position of each of the three super art plate slots of
+ * each player, and Pos_Z_Data_79 the depth of each slot; read by EFF79.C, the super art
+ * selection plates. Time_Data gives how long each centre-screen message stays up, read by
+ * EFF84.C, the centre-screen message controller.
  */
 
 #include "types.h"

@@ -1,5 +1,14 @@
 /*
- * PLPDM_TBL.C  tables read by PLNORMAL.c, PLPDM.c and PLS02.c
+ * PLPDM_TBL.C  player damage tables
+ *
+ * plpdm_lv_00 lists the damage routines Damage_00000 .. Damage_30000; dm_reaction_table holds
+ * the reaction animation data and dd_convert the damage routine change by attack level, both
+ * per damage routine number. Also the stun mash steps (hok_table), the air-hit timing tables
+ * (sky_dm_zuru_table and sky_dm_zuru_ix), the get-up choice after a recovery roll
+ * (oki_select_table2), the extra damage data exdm_ix_data by kind and character, and
+ * tama_select, the projectile hit count by projectile type. Read by PLPDM.C; guard_kind (guard
+ * kind per guard routine) also by PLNORMAL.C, and atsagct (dead voice flags per damage
+ * routine) by PLS02.C. exdm_ix_data_tail follows exdm_ix_data and is not referred to by name.
  */
 
 #include "types.h"
@@ -310,37 +319,37 @@ const u8 guard_kind[12] = {
 };
 
 void (*const plpdm_lv_00[31])() = {
-    (void (*)())Damage_00000,
-    (void (*)())Damage_01000,
-    (void (*)())Damage_01000,
-    (void (*)())Damage_01000,
-    (void (*)())Damage_04000,
-    (void (*)())Damage_04000,
-    (void (*)())Damage_04000,
-    (void (*)())Damage_07000,
-    (void (*)())Damage_08000,
-    (void (*)())Damage_08000,
-    (void (*)())Damage_08000,
-    (void (*)())Damage_08000,
-    (void (*)())Damage_12000,
-    (void (*)())Damage_12000,
-    (void (*)())Damage_14000,
-    (void (*)())Damage_14000,
-    (void (*)())Damage_16000,
-    (void (*)())Damage_17000,
-    (void (*)())Damage_18000,
-    (void (*)())Damage_19000,
-    (void (*)())Damage_20000,
-    (void (*)())Damage_21000,
-    (void (*)())Damage_21000,
-    (void (*)())Damage_23000,
-    (void (*)())Damage_24000,
-    (void (*)())Damage_25000,
-    (void (*)())Damage_26000,
-    (void (*)())Damage_27000,
-    (void (*)())Damage_28000,
-    (void (*)())Damage_29000,
-    (void (*)())Damage_30000,
+    Damage_00000,
+    Damage_01000,
+    Damage_01000,
+    Damage_01000,
+    Damage_04000,
+    Damage_04000,
+    Damage_04000,
+    Damage_07000,
+    Damage_08000,
+    Damage_08000,
+    Damage_08000,
+    Damage_08000,
+    Damage_12000,
+    Damage_12000,
+    Damage_14000,
+    Damage_14000,
+    Damage_16000,
+    Damage_17000,
+    Damage_18000,
+    Damage_19000,
+    Damage_20000,
+    Damage_21000,
+    Damage_21000,
+    Damage_23000,
+    Damage_24000,
+    Damage_25000,
+    Damage_26000,
+    Damage_27000,
+    Damage_28000,
+    Damage_29000,
+    Damage_30000,
 };
 
 const s8 atsagct[32] = {

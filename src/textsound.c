@@ -400,7 +400,8 @@ void tilemap_print_binary(u16 x, u16 y, u16 attr, const s8* data, u16 n) {
 
 
 /* provisional name */
-void tilemap_print_script_seq(u16 x, u16 y, u16 pal, const TMSCRIPT* scr) {
+void tilemap_print_script_seq(u16 pos_x, u16 y, u16 pal, const TMSCRIPT* scr) {
+    u16 x = pos_x;
     u16* dst;
     u16* blk;
     TMLINE* line;
@@ -415,7 +416,6 @@ void tilemap_print_script_seq(u16 x, u16 y, u16 pal, const TMSCRIPT* scr) {
     u32 h;
     u32 row;
     u32 col;
-    (void)&((TEXT_CELL*)SS_RAM)->code;
     ox = x;
     oy = y;
     if (scr->kind == 0) {
@@ -494,12 +494,11 @@ void tilemap_print_script_seq(u16 x, u16 y, u16 pal, const TMSCRIPT* scr) {
 /* provisional name */
 void tilemap_print_string(u16 x, u16 y, u16 attr, const TM_STRING* sc) {
     u16* p;
-    const u8* s;
+    register const u8* s;
     s32 ox;
     s32 oy;
     p = (u16*)(SS_RAM + (sc->x << 2) + (sc->y << 8));
     ox = x;
-    (void)&((TEXT_CELL*)ox)->code;
     oy = y;
     if (ox + oy != 0) {
         p += ox * 2 + oy * 128;

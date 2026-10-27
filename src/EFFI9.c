@@ -20,6 +20,12 @@
 #include "effect_2.h"
 #include "EFFI9.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* fill the buffer, start the images */
+#define R0_MOVE         1       /* record the shell's positions */
+#define R0_END          2       /* one more frame */
+#define R0_KILL         3       /* (default) put both works back */
+
 
 void effect_I9_move(WORK_Other* ewk) {
     WORK* sub_w = (WORK*)ewk->wu.target_adrs;
@@ -27,7 +33,7 @@ void effect_I9_move(WORK_Other* ewk) {
     WORK_Other* mwk = (WORK_Other*)ewk->my_master;
     s16 i;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         init_image_buff(mwk, image_buff);
         push_image_buff(mwk, image_buff);
@@ -35,25 +41,25 @@ void effect_I9_move(WORK_Other* ewk) {
             effect_J0_init(ewk, mwk, i * ewk->wu.dmcal_m);
         }
         break;
-    case 1:
+    case R0_MOVE:
         push_image_buff(mwk, image_buff);
         if (ewk->wu.dead_f == 1) {
             ewk->wu.routine_no[0]++;
             break;
         }
         if (mwk->wu.routine_no[0] >= 2 || mwk->wu.routine_no[1] >= 2) {
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             ewk->wu.disp_flag = 0;
             break;
         }
         if (!EXE_flag && !Game_pause && mwk->wu.hit_stop <= 0) {
             if (--ewk->wu.dir_timer == 0) {
-                ewk->wu.routine_no[0] = 2;
+                ewk->wu.routine_no[0] = R0_END;
             }
         }
         return;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         push_effect_work(&ewk->wu);

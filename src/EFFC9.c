@@ -30,9 +30,32 @@
 #include "bg_sub_5.h"
 #include "EFFC9.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* place her with her shadow */
+#define R0_MOVE         1       /* judge and animate */
+#define R0_END          2       /* one more frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_WAIT         0       /* wait for the judgement */
+#define R1_JUDGE        1       /* judging pattern */
+#define R1_VOTE         2       /* vote pattern */
+#define R1_DONE         3       /* wait for all the judges */
+#define R1_NEXT         4       /* choose what comes after */
+#define R1_STAGE8       5       /* stage 8: fall when the floor drops */
+
+/* routine_no[2], character set 7 dropping in */
+#define R2_DELAY        0       /* wait before dropping in */
+#define R2_JUMP         1       /* set the drop speeds */
+#define R2_DROP         2       /* fall to the floor and land */
+
+/* routine_no[2], stage 8 floor */
+#define R2_HOLD         0       /* wait for the floor to drop */
+#define R2_FALL         1       /* fall with the floor */
 
 
-extern const u16 ef13_char_table_225[180];
+
+extern const u16 ef13_char_table_225[108];
 
 /* 0200704C */
 u32* ag_char_table[8] = {
@@ -51,7 +74,7 @@ u32* ag_char_table[8] = {
 void effect_C9_move(WORK_Other* ewk) {
     s16 scrc;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ++ewk->wu.routine_no[0];
         ewk->wu.disp_flag = 1;
         scrc = get_center_position();
@@ -78,33 +101,33 @@ void effect_C9_move(WORK_Other* ewk) {
         ewk->wu.old_pos[1] = stage8_base_y;
         sort_push_request(&ewk->wu);
         break;
-    case 1:
+    case R0_MOVE:
         if ((ewk->wu.dead_f == 1) || (Suicide != 0)) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         if (EXE_flag == 0) {
             if (!Game_pause) {
                 char_move(&ewk->wu);
                 switch (ewk->wu.routine_no[1]) {
-                case 0:
+                case R1_WAIT:
                     if (ewk->wu.charset_id == 7) {
                         switch (ewk->wu.routine_no[2]) {
-                        case 0:
+                        case R2_DELAY:
                             ewk->wu.next_x -= 1;
                             if (ewk->wu.next_x > 0) {
                                 break;
                             }
                             ewk->wu.routine_no[2] += 1;
-                        case 1:
+                        case R2_JUMP:
                             ewk->wu.mvxy.a[0].sp = efy_data[2];
                             ewk->wu.mvxy.d[0].sp = efy_data[3];
                             ewk->wu.mvxy.a[1].sp = efy_data[4];
                             ewk->wu.mvxy.d[1].sp = efy_data[5];
                             ewk->wu.mvxy.kop[0] = 2;
                             ewk->wu.routine_no[2] += 1;
-                        case 2:
+                        case R2_DROP:
                             add_mvxy_speed(&ewk->wu);
                             cal_mvxy_speed(&ewk->wu);
                             if (ewk->wu.xyz[1].disp.pos <= ewk->wu.next_y) {
@@ -128,34 +151,34 @@ void effect_C9_move(WORK_Other* ewk) {
                         set_char_move_init(&ewk->wu, 0, 1);
                     }
                     break;
-                case 1:
+                case R1_JUDGE:
                     if (ewk->wu.cg_type == 0xFF) {
                         ewk->wu.routine_no[1] += 1;
                         set_char_move_init(&ewk->wu, 0, 2);
                         effect_37_init(&ewk->wu, ewk->wu.charset_id, EJG_index[ewk->wu.type]);
                     }
                     break;
-                case 2:
+                case R1_VOTE:
                     if (ewk->wu.cg_type == 0xFF) {
                         ewk->wu.routine_no[1] += 1;
                         Event_Judge_Gals -= 1;
                     }
                     break;
-                case 3:
+                case R1_DONE:
                     if (Event_Judge_Gals < 0) {
                         ewk->wu.routine_no[1] += 1;
                     }
-                case 4:
+                case R1_NEXT:
                     if (bg_w.stage == 8 && Round_num == 0) {
                         ewk->wu.routine_no[1] += 1;
-                        ewk->wu.routine_no[2] = 0;
+                        ewk->wu.routine_no[2] = R2_HOLD;
                     } else {
                         ewk->wu.routine_no[1] += 9;
                     }
                     break;
-                case 5:
+                case R1_STAGE8:
                     switch (ewk->wu.routine_no[2]) {
-                    case 0:
+                    case R2_HOLD:
                         if (ewk->wu.old_pos[1] != stage8_base_y) {
                             ewk->wu.mvxy.d[0].sp = 0;
                             ewk->wu.mvxy.a[0].sp = 0;
@@ -166,7 +189,7 @@ void effect_C9_move(WORK_Other* ewk) {
                             ewk->wu.routine_no[2]++;
                         }
                         break;
-                    case 1:
+                    case R2_FALL:
                         add_mvxy_speed(&ewk->wu);
                         cal_mvxy_speed(&ewk->wu);
                         if (ewk->wu.mvxy.a[1].sp < -0x100000) {
@@ -182,8 +205,8 @@ void effect_C9_move(WORK_Other* ewk) {
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos;
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

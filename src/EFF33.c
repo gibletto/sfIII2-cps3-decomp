@@ -22,12 +22,20 @@
 #include "bg_sub_5.h"
 #include "EFF33.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show with a shadow */
+#define R0_WAIT         1       /* stand until the judgement is complete */
+#define R0_RESULT       2       /* start the win or lose animation */
+#define R0_MOVE         3       /* animate until the master is killed */
+#define R0_END          4       /* one more frame */
+#define R0_KILL         5       /* put the work back */
+
 
 
 void effect_33_move(WORK_Other* ewk) {
     WORK* oya_ptr = (WORK*)ewk->my_master;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.kage_flag = 1;
@@ -37,7 +45,7 @@ void effect_33_move(WORK_Other* ewk) {
         ewk->wu.kage_char = 16;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_WAIT:
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         if (!EXE_flag && !Game_pause) {
@@ -48,7 +56,7 @@ void effect_33_move(WORK_Other* ewk) {
             }
         }
         break;
-    case 2:
+    case R0_RESULT:
         if (!EXE_flag && !Game_pause) {
             ewk->wu.routine_no[0]++;
             ewk->wu.char_index = WinLoseID[ewk->master_id][Winner_id] + 10;
@@ -57,7 +65,7 @@ void effect_33_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 3:
+    case R0_MOVE:
         if (!EXE_flag && !Game_pause) {
             if (ewk->wu.dead_f == 1 || Suicide != 0) {
                 ewk->wu.disp_flag = 0;
@@ -69,10 +77,10 @@ void effect_33_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 4:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
-    case 5:
+    case R0_KILL:
     default:
         all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);

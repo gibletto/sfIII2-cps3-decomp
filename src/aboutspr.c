@@ -432,7 +432,8 @@ s32 check_cg_data(id)
 
 
 /* provisional name */
-s32 trans_char_cells(WORK* wk) {
+s32 trans_char_cells(WORK* work) {
+    WORK* wk = work;
     CharGfxSet* set;
     CHAR_CELL* cells;
     CHAR_SPRITE* dst;
@@ -457,7 +458,6 @@ s32 trans_char_cells(WORK* wk) {
         }
         addr = cg_slot_tbl[set->slot].addr;
         wk->spr.slot_addr = addr;
-        (void)((CHAR_CELL*)addr)->code;
         cells = (CHAR_CELL*)set->chunk;
         cells = (CHAR_CELL*)((u8*)cells + set->count * sizeof(CharGfxChunk));
         wk->spr.cells = cells;
@@ -506,10 +506,9 @@ s32 trans_char_cells(WORK* wk) {
             return 0;
         }
         base = simmram_slot_to_offset(blk10);
-        (void)((CHAR_CELL*)blk10)->code;
         wk->spr.slot_addr = addr = ((u16)simmram_slot_to_cg_no(blk10));
         chunk = set->chunk;
-        for (i = 0; i < set->count; i++) {
+        for (i = 0; i < set->count; i = i + 1) {
             adr = base + chunk[i].dst * 16;
             err = polygon2d_submit_line(chunk[i].src, adr, chunk[i].size, wk->cgromtype);
             if (err != 0) {
@@ -558,7 +557,7 @@ s32 trans_char_cells(WORK* wk) {
         make_char_cells_tbl[wk->spr.sprite_flip](wk, cells, dst, set->cells, addr, wk->spr.disp_colcd);
     }
     wk->old_cgnum = wk->cg_number;
-    (void)((WORK*)cg_data_list)->id;
+    (void)&((WORK*)cg_data_list)->id;
     return 1;
 }
 
@@ -1073,7 +1072,6 @@ s32 sort_push_request(WORK* wk) {
 
 s32 sort_push_request2(WORK_Other* wk) {
     SPRITE_ENTRY* spr;
-    u32 flip_mask;
     s16 i;
     CHAR_SPRITE* cell;
 
@@ -1107,7 +1105,6 @@ s32 sort_push_request2(WORK_Other* wk) {
 
 s32 sort_push_request3(WORK* wk) {
     SPRITE_ENTRY* spr;
-    u32 flip_mask;
     s16 i;
     CHAR_SPRITE* cell;
 
@@ -1143,7 +1140,6 @@ s32 sort_push_request3(WORK* wk) {
 
 s32 sort_push_request4(WORK* wk) {
     SPRITE_ENTRY* spr;
-    u32 flip_mask;
     if (wk->disp_flag == 0 || wk->cg_number == 0) {
         return 1;
     }
@@ -1426,7 +1422,6 @@ void char_sprite_zoom_cells(WORK* wk) {
     m.mul_x = wk->my_mr.size.x;
     *p = wk->my_mr.size.x - 63;
     if (*p > 0) {
-        (void)((WORK*)zoom_up_tbl)->id;
         p = &m.div_x;
         (*p)--;
         *p = zoom_up_tbl[*p] + 63;
@@ -1454,7 +1449,7 @@ void char_sprite_zoom_cells(WORK* wk) {
     case 0:
         i = 0;
         p = (s16*)&m;
-        for (; i < wk->spr.gfx_cells; i++) {
+        for (; i < wk->spr.gfx_cells; i = i + 1) {
             pos.l = zoom_cell_position(p, (u16)wk->spr.cells[i].x, (u16)wk->spr.cells[i].y);
             spr[i].x = (pos.s.x + base_x) & 0x3FF;
             spr[i].y = (-pos.s.y + base_y) & 0x3FF;

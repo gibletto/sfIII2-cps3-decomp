@@ -39,6 +39,30 @@ void set_char_move_init2();
 #include "effb2.h"
 #include "effb3.h"
 
+/* routine_no[1]: a ROUND letter coming in */
+#define R1_INIT         0       /* set the letter up */
+#define R1_MOVE         1       /* fly to its place, zooming */
+#define R1_STAY         2       /* in place */
+
+/* routine_no[3]: a ROUND letter going away */
+#define R3_SHRINK       0       /* shrink away */
+#define R3_WAIT         1       /* wait, then report done */
+
+/* routine_no[2]: a FIGHT letter coming in */
+#define R2_INIT         0       /* set up a FIGHT letter */
+#define R2_GROW         1       /* grow in */
+#define R2_DRAW         2       /* draw only */
+#define R2_SPARE        98      /* not needed: one frame, then go */
+
+/* routine_no[4]: a FIGHT letter going away */
+#define R4_INIT         0       /* set off with its speed */
+#define R4_FLY          1       /* zoom out and fall away */
+#define R4_GONE         2       /* off the screen */
+
+/* effb3_fight_tbl columns read by number */
+#define FIGHT_CHAR      0       /* letter pattern */
+#define FIGHT_X         3       /* x from BG 1 */
+
 
 
 WORK_Other * oya_adrs;  
@@ -49,13 +73,12 @@ extern const s16 effb3_fight_tbl[6][5];
 extern const s32 effb3_fight_speed_tbl[5][2];
 
 
-void effect_B3_move(WORK_Other* ewk) {
+void effect_B3_move(register WORK_Other* ewk) {
     oya_adrs = (WORK_Other*)ewk->my_master;
     b3_Break_Into_check(ewk);
     switch (oya_adrs->wu.routine_no[0]) {
     case 0:
         ewk->wu.routine_no[0] = ewk->wu.routine_no[1] = ewk->wu.routine_no[2] = 0;
-        ewk->wu.disp_flag;
         break;
     case 1:
         round_move_init(ewk);
@@ -104,7 +127,7 @@ void round_move_init(WORK_Other* ewk) {
 /* provisional name */
 void round_letter_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         ewk->wu.routine_no[1]++;
         if (!ewk->wu.vital_new) {
             Sound_SE(Round_num + 0x80);
@@ -119,7 +142,7 @@ void round_letter_move(WORK_Other* ewk) {
         ewk->wu.hit_stop = 8;
         cal_all_speed_data(ewk, ewk->wu.hit_stop, ewk->wu.scr_mv_x, ewk->wu.scr_mv_y, 1, 1);
         break;
-    case 1:
+    case R1_MOVE:
         ewk->wu.my_mr.size.x -= 8;
         ewk->wu.my_mr.size.y -= 8;
         if (ewk->wu.my_mr.size.x <= 63) {
@@ -141,7 +164,7 @@ void round_letter_move(WORK_Other* ewk) {
         }
         disp_pos_trans_entry5(ewk);
         break;
-    case 2:
+    case R1_STAY:
         break;
     }
 }
@@ -154,7 +177,7 @@ void final_letter_move(WORK_Other* ewk) {
         return;
     }
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         ewk->wu.routine_no[1]++;
         if (!ewk->wu.vital_new) {
             Sound_SE(0x8C);
@@ -167,7 +190,7 @@ void final_letter_move(WORK_Other* ewk) {
         ewk->wu.hit_stop = 4;
         cal_all_speed_data(ewk, ewk->wu.hit_stop, ewk->wu.scr_mv_x, ewk->wu.scr_mv_y, 1, 1);
         break;
-    case 1:
+    case R1_MOVE:
         ewk->wu.my_mr.size.x += 10;
         ewk->wu.my_mr.size.y += 10;
         ewk->wu.hit_stop--;
@@ -183,7 +206,7 @@ void final_letter_move(WORK_Other* ewk) {
                 b2_curr_no++;
             }
         }
-    case 2:
+    case R1_STAY:
     default:
         disp_pos_trans_entry5(ewk);
         break;
@@ -198,7 +221,7 @@ void round_vanish(WORK_Other* ewk) {
         return;
     }
     switch (ewk->wu.routine_no[3]) {
-    case 0:
+    case R3_SHRINK:
         ewk->wu.disp_flag = 1;
         ewk->wu.my_mr.size.y -= 12;
         if (ewk->wu.my_mr.size.y < 0) {
@@ -208,7 +231,7 @@ void round_vanish(WORK_Other* ewk) {
         }
         disp_pos_trans_entry5(ewk);
         break;
-    case 1:
+    case R3_WAIT:
         ewk->wu.hit_stop--;
         if (ewk->wu.hit_stop < 0) {
             rf_b2_flag++;
@@ -221,9 +244,9 @@ void round_vanish(WORK_Other* ewk) {
 
 void fight_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[2]) {
-    case 0:
+    case R2_INIT:
         if (ewk->wu.vital_new > 4) {
-            ewk->wu.routine_no[2] = 98;
+            ewk->wu.routine_no[2] = R2_SPARE;
             break;
         }
         ewk->wu.routine_no[2]++;
@@ -232,13 +255,13 @@ void fight_move(WORK_Other* ewk) {
         ewk->wu.my_mr.size.y = 0;
         ewk->wu.my_mr_flag = 1;
         ewk->wu.xyz[1].cal = 0x780000;
-        ewk->wu.old_rno[0] = effb3_fight_tbl[ewk->wu.vital_new][0];
-        ewk->wu.xyz[0].disp.pos = effb3_fight_tbl[ewk->wu.vital_new][3];
+        ewk->wu.old_rno[0] = effb3_fight_tbl[ewk->wu.vital_new][FIGHT_CHAR];
+        ewk->wu.xyz[0].disp.pos = effb3_fight_tbl[ewk->wu.vital_new][FIGHT_X];
         ewk->wu.xyz[0].disp.pos += bg_w.bgw[1].pos_x_work;
         ewk->wu.xyz[0].disp.low = 0;
         set_char_move_init2(&ewk->wu, 0, 4, ewk->wu.old_rno[0], 0);
         break;
-    case 1:
+    case R2_GROW:
         ewk->wu.my_mr.size.y += 10;
         if (ewk->wu.my_mr.size.y >= 63) {
             ewk->wu.my_mr.size.x = 63;
@@ -250,10 +273,10 @@ void fight_move(WORK_Other* ewk) {
                 rf_b2_flag = 1;
             }
         }
-    case 2:
+    case R2_DRAW:
         disp_pos_trans_entry5(ewk);
         break;
-    case 98:
+    case R2_SPARE:
         ewk->wu.routine_no[2]++;
         break;
     default:
@@ -267,7 +290,7 @@ void fight_move(WORK_Other* ewk) {
 
 void fight_vanish(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[4]) {
-    case 0:
+    case R4_INIT:
         ewk->wu.routine_no[4]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.my_mr.size.x = 63;
@@ -278,7 +301,7 @@ void fight_vanish(WORK_Other* ewk) {
         ewk->wu.mvxy.d[1].sp = -0x18000;
         disp_pos_trans_entry5(ewk);
         break;
-    case 1:
+    case R4_FLY:
         ewk->wu.my_mr.size.x += 8;
         ewk->wu.my_mr.size.y += 8;
         if (ewk->wu.my_mr.size.x >= 127) {
@@ -295,7 +318,7 @@ void fight_vanish(WORK_Other* ewk) {
                 rf_b2_flag = 1;
             }
         }
-    case 2:
+    case R4_GONE:
         disp_pos_trans_entry5(ewk);
         break;
     }

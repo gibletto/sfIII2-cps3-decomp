@@ -1,5 +1,8 @@
 /*
- * SC_DATA4_C.C  a table nothing reads, kept for the layout
+ * SC_DATA4_C.C  unused HUD cell position table
+ *
+ * hud_cell_pos_tbl holds eight (x, y) cell positions on row 5. Nothing reads it; it is kept
+ * for the layout.
  */
 
 #include "types.h"

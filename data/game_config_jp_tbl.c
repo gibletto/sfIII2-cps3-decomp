@@ -1,5 +1,8 @@
 /*
- * GAME_CONFIG_JP_TBL.C  tables read by game_config_jp.c: test-mode game configuration, Japanese page
+ * GAME_CONFIG_JP_TBL.C  Japanese game configuration title script
+ *
+ * gcfg_title_scr_jp_0 is the text-layer script of the title of the Japanese GAME CONFIGURATION
+ * page of test mode, reached through gcfg_title_scr_jp in GAME_CONFIG_JP.C.
  */
 
 #include "types.h"

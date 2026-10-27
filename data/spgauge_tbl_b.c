@@ -1,5 +1,9 @@
 /*
- * SPGAUGE_TBL_B.C  tables read by sc_sub_2.c: HUD win marks, palette fade control and stun gauge
+ * SPGAUGE_TBL_B.C  palette fade colour lists
+ *
+ * fade_adrs_tbl_0 - fade_adrs_tbl_30 (all but 16 and 24) are the lists of colour load numbers
+ * each fade works through, reached through fade_adrs_tbl in SC_SUB_2.C (fade_cont_init and
+ * fade_cont_main).
  */
 
 #include "types.h"

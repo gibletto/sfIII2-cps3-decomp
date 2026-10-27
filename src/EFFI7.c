@@ -20,12 +20,18 @@
 #include "effect_2.h"
 #include "EFFI7.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* place beside the player and show */
+#define R0_MOVE         1       /* animate while the attack lasts */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 
 
 void effect_I7_move(WORK_Other* ewk) {
     PLW* mwk = (PLW*)ewk->my_master;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.my_col_mode = 0x4200;
@@ -35,8 +41,8 @@ void effect_I7_move(WORK_Other* ewk) {
         set_char_move_init(&ewk->wu, 0, ex_sign_data[ewk->wu.type][2]);
         sort_push_request(&ewk->wu);
         break;
-    case 1:
-        if (ewk->wu.dead_f == 1 || mwk->wu.routine_no[1] != 4) {
+    case R0_MOVE:
+        if (ewk->wu.dead_f == 1 || mwk->wu.routine_no[1] != PLAYER_ATTACK) {
             ewk->wu.routine_no[0]++;
             ewk->wu.disp_flag = 0;
             break;
@@ -59,8 +65,8 @@ void effect_I7_move(WORK_Other* ewk) {
         ewk->wu.position_z = mwk->wu.position_z - 4;
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

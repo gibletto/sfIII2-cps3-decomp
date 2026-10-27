@@ -1,5 +1,12 @@
 /*
- * END_10_TBL.C  tables read by end_10.c: ending 10
+ * END_10_TBL.C  Ken's ending tables (ending 10) and Sean's ending cells
+ *
+ * end_10_panel_tbl_0 and end_10_panel_tbl_1 are BG cell lists (map offset, cell number),
+ * reached through end_10_panel_p in OP_END_WORK.C; timer_10_tbl is the length in frames of
+ * each scene, end_10_pos the BG x and y of each scene and end_10_anm_tbl the steps of a
+ * layer's cell animation; all are read by END_10.C. end_1100_cell0 - 7 are the cell pairs of
+ * Sean's ending (ending 11), reached through end_11_cell_ptr0 and end_11_cell_ptr1 in
+ * OP_END_WORK.C and written by END_11.C.
  */
 
 #include "types.h"

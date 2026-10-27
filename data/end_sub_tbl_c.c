@@ -1,5 +1,9 @@
 /*
- * END_SUB_TBL_C.C  cell lists referred to only by sc_trans_tbl.c's pointer table
+ * END_SUB_TBL_C.C  text layer cell lists
+ *
+ * sc_celllist_data holds the cell lists (x, y, attribute, character code, ended by x = 100)
+ * that sc_celllist_tbl in SC_TRANS_TBL.C points into; nothing else refers to it. SC_TRANS.C
+ * puts the lists on the text layer (sc_celllist_put and its variants).
  */
 
 #include "types.h"

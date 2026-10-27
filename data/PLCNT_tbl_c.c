@@ -1,5 +1,13 @@
 /*
- * PLCNT_TBL_C.C  tables read by PLCNT2.c, PLCNTDAT.c and PLPDM.c
+ * PLCNT_TBL_C.C  stun recovery, stun times and bonus-stage scroll limits
+ *
+ * pl_nr_piyo_tbl gives each character's stun recovery rate, read by PLCNTDAT.C. The
+ * tsuujyou_*, hissatsu_* and super_arts_nage_* tables are the stun times, 16 random draws
+ * each, after normal strikes, special moves, throws and super art throws by attack strength
+ * (the later rows of tsuujyou_nage_02 serve two further attack kinds), reached through the
+ * kizetsu_timer_table lists of PLPDM.C, the player damage process. bsmr_range_table gives the
+ * players' scroll limits in the bonus stage by screen mode and by which players are human;
+ * read by PLCNT2.C.
  */
 
 #include "types.h"

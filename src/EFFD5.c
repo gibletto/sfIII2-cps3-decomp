@@ -25,11 +25,26 @@
 #include "CHARID.h"
 #include "EFFD5.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* aim at the opponent */
+#define R0_MOVE         1       /* fly and take hits */
+#define R0_END          2       /* one more frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_FLY          0       /* fly, settle on the floor */
+#define R1_HIT          1       /* sort out the hit */
+#define R1_SCATTER      2       /* scatter the petals, then end */
+
+/* dm_sp_sel_tbl columns */
+#define DMSP_SET        0       /* petal set, index into num_of_hana */
+#define DMSP_ACC        1       /* petal acceleration */
+
 
 
 void effect_D5_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.charset_id = 11;
         set_char_base_data(&ewk->wu);
@@ -46,7 +61,7 @@ void effect_D5_move(WORK_Other* ewk) {
         set_char_move_init(&ewk->wu, 0, 0x7C);
         sort_push_request(&ewk->wu);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
             ewk->wu.routine_no[0]++;
@@ -74,8 +89,8 @@ void effect_D5_move(WORK_Other* ewk) {
         }
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);
@@ -89,10 +104,10 @@ void effect_D5_move(WORK_Other* ewk) {
 void effD5_main_process(WORK_Other* ewk) {
     s16 dsst;
     if (ewk->wu.hf.hit_flag) {
-        ewk->wu.routine_no[1] = 1;
+        ewk->wu.routine_no[1] = R1_HIT;
     }
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_FLY:
         if (ewk->wu.hit_stop) {
             ewk->wu.hit_stop--;
             break;
@@ -107,10 +122,10 @@ void effD5_main_process(WORK_Other* ewk) {
             ewk->wu.mvxy.d[0].sp = ewk->wu.mvxy.d[1].sp = 0;
         }
         break;
-    case 1:
+    case R1_HIT:
         if (ewk->wu.hf.hit.player) {
             if (ewk->wu.hf.hit.player & 0x33) {
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[1] = R1_FLY;
                 ewk->wu.mvxy.d[0].sp = 0;
                 ewk->wu.mvxy.a[0].sp = 0;
                 ewk->wu.mvxy.a[1].sp = 0;
@@ -120,7 +135,7 @@ void effD5_main_process(WORK_Other* ewk) {
                 }
                 setup_hana_extra(&ewk->wu, 0, 8);
             } else if (ewk->wu.hf.hit.player & 0xC0) {
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[1] = R1_FLY;
                 ewk->refrected = 1;
                 ewk->wu.rl_flag = (ewk->wu.rl_flag + 1) & 1;
                 ewk->wu.mvxy.a[0].sp = 0x60000;
@@ -136,7 +151,7 @@ void effD5_main_process(WORK_Other* ewk) {
             }
         } else {
             sound_effect_request[0x10B](ewk, 0x10B);
-            ewk->wu.routine_no[1] = 2;
+            ewk->wu.routine_no[1] = R1_SCATTER;
             ewk->wu.rl_flag = (ewk->wu.rl_flag + 1) & 1;
             ewk->wu.disp_flag = 2;
             ewk->wu.type = 0;
@@ -148,15 +163,15 @@ void effD5_main_process(WORK_Other* ewk) {
             if (!(ewk->wu.dm_kind_of_waza & 0xF8)) {
                 dsst = (ewk->wu.dm_kind_of_waza / 2) & 3;
             }
-            setup_hana_extra(&ewk->wu, dm_sp_sel_tbl[dsst][0], dm_sp_sel_tbl[dsst][1]);
+            setup_hana_extra(&ewk->wu, dm_sp_sel_tbl[dsst][DMSP_SET], dm_sp_sel_tbl[dsst][DMSP_ACC]);
         }
         ewk->wu.hf.hit_flag = 0;
         break;
-    case 2:
+    case R1_SCATTER:
         ewk->wu.dir_timer--;
         if (ewk->wu.dir_timer <= 0) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
         }
         break;
     }

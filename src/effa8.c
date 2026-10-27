@@ -24,17 +24,22 @@
 #include "PLS02.h"
 #include "effa8.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* put the picture and start the fade */
+#define R0_FADE         1       /* run the fade */
+#define R0_DONE         2       /* finished */
+
 
 
 void effect_A8_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         sc_picture_put(7, 0, 0);
         Request_Fade(69, 0);
         end_no_cut = 1;
         break;
-    case 1:
+    case R0_FADE:
         if (Fade_Flag) {
             fade_cont_main();
         } else {
@@ -46,7 +51,7 @@ void effect_A8_move(WORK_Other* ewk) {
         all_cgps_put_back(ewk);
         push_effect_work((WORK*)ewk);
         break;
-    case 2:
+    case R0_DONE:
         break;
     }
 }

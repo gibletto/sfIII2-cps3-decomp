@@ -17,10 +17,13 @@
 #include "PLPAT.h"
 #include "PLPAT05.h"
 
+/* routine_no[3], Att_PL05_TOKUSHUKOUDOU */
+#define TOKUSHUKOUDOU_ACTION 1  /* the personal action, filling the super art gauge */
+
 
 
 void pl05_extra_attack(PLW* wk) {
-    pl05_exatt_table[wk->wu.routine_no[2] - 16](wk);
+    pl05_exatt_table[wk->wu.routine_no[2] - ATTACK_SPECIAL](wk);
 }
 
 
@@ -28,12 +31,12 @@ void pl05_extra_attack(PLW* wk) {
 void Att_PL05_TOKUSHUKOUDOU(PLW* wk) {
     wk->scr_pos_set_flag = 0;
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.rl_flag = wk->wu.rl_waza;
         set_char_move_init((WORK*)wk, 5, wk->as->char_ix);
         break;
-    case 1:
+    case TOKUSHUKOUDOU_ACTION:
         char_move((WORK*)wk);
         if (wk->wu.cg_type == 40) {
             wk->wu.cg_type = 0;

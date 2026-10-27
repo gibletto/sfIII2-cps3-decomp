@@ -1,5 +1,9 @@
 /*
- * EFF62_TBL.C  tables read by effect 62
+ * EFF62_TBL.C  alternate background scrolling parts
+ *
+ * eff62_data_tbl gives the x, y position and speed number of each of the 24 parts, and
+ * eff62_speed_tbl the scroll speed of each speed number. Read by EFF62.C, the parts of the
+ * alternate background.
  */
 
 #include "types.h"

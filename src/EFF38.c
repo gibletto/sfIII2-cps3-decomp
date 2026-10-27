@@ -19,6 +19,17 @@
 #include "charmove_2.h"
 #include "EFF38.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* count the start wait down, then show */
+#define R0_SLIDE_IN     1       /* slide in to the place */
+#define R0_FOLLOW       2       /* follow the cursor until chosen */
+#define R0_READY        3       /* wait for the select to end */
+#define R0_PAUSE        4       /* count down before leaving */
+#define R0_SLIDE_OUT    5       /* slide off the screen */
+#define R0_STAY         6       /* stay in place */
+#define R0_END          7       /* one more frame */
+#define R0_KILL         99      /* (default) put the work back */
+
 extern const s16 eff38_z_tbl[2][16];    /* provisional name */
 
 
@@ -27,12 +38,12 @@ void effect_38_move(WORK_Other* ewk) {
     u16 cut;
     if (ewk->wu.direction == 2 && Suicide != 0) {
         ewk->wu.disp_flag = 0;
-        ewk->wu.routine_no[0] = 7;
+        ewk->wu.routine_no[0] = R0_END;
         return;
     }
     cut = Cut_Cut_Sub(3);
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer != 0) {
             return;
         }
@@ -41,39 +52,39 @@ void effect_38_move(WORK_Other* ewk) {
         ewk->wu.disp_flag = 1;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_step + 1, 0);
         break;
-    case 1:
+    case R0_SLIDE_IN:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp * cut;
         if (ewk->wu.mvxy.a[0].sp > 0) {
             if (ewk->wu.hit_quake < ewk->wu.xyz[0].disp.pos) {
                 if (plw[ewk->master_id].wu.operator) {
                     ewk->wu.routine_no[0]++;
                 } else {
-                    ewk->wu.routine_no[0] = 99;
+                    ewk->wu.routine_no[0] = R0_KILL;
                 }
                 ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;
                 Select_Start[ewk->master_id]--;
                 ewk->wu.mvxy.a[0].sp = -ewk->wu.mvxy.a[0].sp;
                 if (ewk->wu.dm_vital) {
-                    ewk->wu.routine_no[0] = 6;
+                    ewk->wu.routine_no[0] = R0_STAY;
                 }
             }
         } else if (ewk->wu.hit_quake > ewk->wu.xyz[0].disp.pos) {
             if (plw[ewk->master_id].wu.operator) {
                 ewk->wu.routine_no[0]++;
             } else {
-                ewk->wu.routine_no[0] = 99;
+                ewk->wu.routine_no[0] = R0_KILL;
             }
             ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;
             Select_Start[ewk->master_id]--;
             ewk->wu.mvxy.a[0].sp = -ewk->wu.mvxy.a[0].sp;
             if (ewk->wu.dm_vital) {
-                ewk->wu.routine_no[0] = 6;
+                ewk->wu.routine_no[0] = R0_STAY;
             }
         }
         break;
-    case 2:
+    case R0_FOLLOW:
         if (Order[0] == 2) {
-            ewk->wu.routine_no[0] = 4;
+            ewk->wu.routine_no[0] = R0_PAUSE;
             break;
         }
         if (ewk->wu.dir_step != ID_of_Face[Cursor_Y[ewk->master_id]][Cursor_X[ewk->master_id]]) {
@@ -82,26 +93,26 @@ void effect_38_move(WORK_Other* ewk) {
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_step + 1, 0);
         }
         break;
-    case 3:
+    case R0_READY:
         if (Order[0] == 2) {
             ewk->wu.routine_no[0]++;
         }
         break;
-    case 4:
+    case R0_PAUSE:
         if (--ewk->wu.dir_timer == 0) {
             ewk->wu.routine_no[0]++;
         }
         break;
-    case 5:
+    case R0_SLIDE_OUT:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         if (Ck_Range_Out_S(ewk, 2, 80)) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 7;
+            ewk->wu.routine_no[0] = R0_END;
         }
         break;
-    case 6:
+    case R0_STAY:
         break;
-    case 7:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:
@@ -163,7 +174,7 @@ s32 effect_38_init(s16 PL_id, s16 Wait, s16 Kind, s16 Face_Set, s16 Your_Char, s
         ewk->wu.mvxy.a[0].sp = 0xF0000;
     }
     if (Kind == 1) {
-        ewk->wu.routine_no[0] = 6;
+        ewk->wu.routine_no[0] = R0_STAY;
         ewk->wu.disp_flag = 1;
         ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_step + 1, 0);

@@ -1,5 +1,12 @@
 /*
- * EFFB1_TBL.C  tables read by effects B1 and B3
+ * EFFB1_TBL.C  blocking bonus stage result marks and round / FIGHT letters
+ *
+ * bbbs_blocking gives the position and character of each of the 20 marks for each layout, and
+ * bbbs_clear the cleared state of a mark, read by EFFB1_INIT.C. effB1_wait_table and
+ * effB1_wait_tbl_2 are the frame times of the mark's appear and exchange animations, read by
+ * EFFB1.C, the bonus-stage result marks. effb3_round_tbl, effb3_final_tbl and effb3_fight_tbl
+ * give the letters and start and goal positions of the ROUND, FINAL ROUND and FIGHT displays,
+ * and effb3_fight_speed_tbl the speeds of the falling FIGHT letters; read by EFFB3.C.
  */
 
 #include "types.h"
@@ -54,6 +61,10 @@ const s16 effb3_final_tbl[10][3] = {
     { 10, 49, 108 },
 };
 
+/*
+ * One row per letter of FIGHT (vital_new): pattern, two unused entries, x from BG 1
+ * and one unused entry.
+ */
 const s16 effb3_fight_tbl[6][5] = {
     { 1, 0, 80, -74, 128 },
     { 2, 0, 80, -34, 128 },

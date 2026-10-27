@@ -22,13 +22,20 @@
 #include "effect_2.h"
 #include "eff20.h"
 
+/* routine_no[1] */
+#define R1_INIT         0       /* show it, hold the parent, aim the flight */
+#define R1_FLY          1       /* fly in while the box grows */
+#define R1_MOVE         2       /* grow the box and animate once */
+#define R1_END          3       /* hidden for a frame */
+#define R1_KILL         4       /* (default) put the work back */
+
 
 
 /* growing hit box and a flight first */
 void effect_20_move(WORK_Other* ewk) {
     WORK_Other* oya = (WORK_Other*)ewk->my_master;
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         ewk->wu.routine_no[1]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.my_mr_flag = 1;
@@ -42,7 +49,7 @@ void effect_20_move(WORK_Other* ewk) {
         ewk->wu.old_rno[7] = (90 - ewk->wu.my_mr.size.x) / 3;
         cal_all_speed_data(&ewk->wu, ewk->wu.old_rno[7], ewk->wu.xyz[0].disp.pos, ewk->wu.xyz[1].disp.pos - 32, 0, 0);
         break;
-    case 1:
+    case R1_FLY:
         ewk->wu.old_rno[7]--;
         if (ewk->wu.old_rno[7] < 0) {
             ewk->wu.routine_no[1]++;
@@ -51,7 +58,7 @@ void effect_20_move(WORK_Other* ewk) {
             add_y_sub(ewk);
         }
         /* fall through */
-    case 2:
+    case R1_MOVE:
         ewk->wu.my_mr.size.x += 3;
         ewk->wu.my_mr.size.y += 3;
         if (ewk->wu.my_mr.size.x > 90) {
@@ -69,7 +76,7 @@ void effect_20_move(WORK_Other* ewk) {
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
         sort_push_request4(&ewk->wu);
         break;
-    case 3:
+    case R1_END:
         ewk->wu.routine_no[1]++;
         break;
     default:

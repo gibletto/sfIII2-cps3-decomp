@@ -1,5 +1,11 @@
 /*
- * FOLLOW02_TBL.C  tables read by Com_Sub.c, FOLLOW01.c and FOLLOW02.c
+ * FOLLOW02_TBL.C  CPU follow-up menus and follow-up routine tables
+ *
+ * Follow_Menu_1st_Unit_Data_0 / _2 give the follow-up menu choice by CPU step and a random
+ * draw, and Follow_Menu_2nd_Unit_Data_0 / _2 the pattern by menu choice and area; read by
+ * COM_SUB.C through its per-character lists. Follow01_Tbl and Follow02_Tbl are the four
+ * follow-up routines of FOLLOW01.C and FOLLOW02.C. Pattern20_Tbl_data_0 lists the active
+ * patterns Pattern15_0138 .. Pattern15_0148 of character 15 and is not referred to by name.
  */
 
 #include "types.h"
@@ -65,15 +71,15 @@ const FOLLOW_MENU_2ND Follow_Menu_2nd_Unit_Data_2[1] = {
 };
 
 void (*const Follow01_Tbl[4])() = {
-    (void (*)())Follow01_0000,
-    (void (*)())Follow01_0001,
-    (void (*)())Follow01_0002,
-    (void (*)())Follow01_0003,
+    Follow01_0000,
+    Follow01_0001,
+    Follow01_0002,
+    Follow01_0003,
 };
 
 void (*const Follow02_Tbl[4])() = {
-    (void (*)())Follow02_0000,
-    (void (*)())Follow02_0001,
-    (void (*)())Follow02_0002,
-    (void (*)())Follow02_0003,
+    Follow02_0000,
+    Follow02_0001,
+    Follow02_0002,
+    Follow02_0003,
 };

@@ -1620,14 +1620,12 @@ void Passive14_0079(PLW* wk) {
 
 
 void Passive14_0080(PLW* wk) {
-    s16 m = -1;
-
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Command_Attack(wk, 8, 0, m, m);
+        Command_Attack(wk, 8, 0, -1, -1);
         break;
     case 1:
-        Command_Attack(wk, 8, 0, m, m);
+        Command_Attack(wk, 8, 0, -1, -1);
         break;
     default:
         End_Pattern(wk);

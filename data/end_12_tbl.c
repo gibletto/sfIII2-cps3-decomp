@@ -1,5 +1,8 @@
 /*
- * END_12_TBL.C  tables read by end_12.c: ending 12
+ * END_12_TBL.C  Urien's ending cell list (ending 12)
+ *
+ * end_1200_panel0 lists the BG0 cells (map offset, cell number) written at the start of
+ * Urien's ending. Read by END_12.C.
  */
 
 #include "types.h"

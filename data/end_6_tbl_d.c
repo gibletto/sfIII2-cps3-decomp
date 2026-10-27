@@ -1,5 +1,8 @@
 /*
- * END_6_TBL_D.C  tables read by end_6.c: ending 6 (end_06000)
+ * END_6_TBL_D.C  Hugo's ending scene tables (ending 6)
+ *
+ * timer_6_tbl is the length in frames of each scene of Hugo's ending and end_6_pos the BG x
+ * and y of each scene; read by END_6.C. end_200_panel1 is not referred to.
  */
 
 #include "types.h"

@@ -29,6 +29,27 @@
 #include "end_main.h"
 #include "effh5.h"
 
+/* routine_no[1], effH5_0000: still frame */
+#define R1_INIT         0       /* start the pattern */
+#define R1_STILL        1       /* show until the scene changes */
+#define R1_KILL         99      /* (default) put the work back */
+
+/* routine_no[1], effH5_0001: loop */
+#define R1_LOOP         1       /* animate until the scene changes */
+
+/* routine_no[1], effH5_0002 and effH5_0004: single play */
+#define R1_PLAY         1       /* play the pattern once */
+
+/* routine_no[1], effH5_0003: bobbing flight */
+#define R1_WAIT         1       /* wait for the background to reach step 2 */
+#define R1_BOB_UP       2       /* fly up toward height 56 */
+#define R1_BOB_DOWN     3       /* fly down toward height 40 */
+
+/* routine_no[1], effH5_0004: two-step move */
+#define R1_MOVE_1       2       /* first move, 20 frames */
+#define R1_MOVE_2       3       /* second move, 40 frames */
+#define R1_STAY         4       /* stay in place */
+
 extern const u32 effH3_char_table[];   /* provisional name (EFFH3.c) */
 
 
@@ -42,13 +63,13 @@ void effect_H5_move(WORK_Other* ewk) {
 
 void effH5_0000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         effH5_init_common(ewk);
         disp_pos_trans_entry(ewk);
         break;
-    case 1:
+    case R1_STILL:
         if (ewk->wu.old_rno[0] != end_w.r_no_2) {
-            ewk->wu.routine_no[1] = 99;
+            ewk->wu.routine_no[1] = R1_KILL;
         } else {
             disp_pos_trans_entry(ewk);
         }
@@ -64,12 +85,12 @@ void effH5_0000(WORK_Other* ewk) {
 
 void effH5_0001(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         effH5_init_common(ewk);
         break;
-    case 1:
+    case R1_LOOP:
         if (ewk->wu.old_rno[0] != end_w.r_no_2) {
-            ewk->wu.routine_no[1] = 99;
+            ewk->wu.routine_no[1] = R1_KILL;
             break;
         }
         char_move(&ewk->wu);
@@ -86,10 +107,10 @@ void effH5_0001(WORK_Other* ewk) {
 
 void effH5_0002(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         effH5_init_common(ewk);
         break;
-    case 1:
+    case R1_PLAY:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type) {
             ewk->wu.routine_no[1]++;
@@ -108,23 +129,23 @@ void effH5_0002(WORK_Other* ewk) {
 
 void effH5_0003(WORK_Other* ewk) {
     if (ewk->wu.old_rno[0] != end_w.r_no_2) {
-        ewk->wu.routine_no[1] = 99;
+        ewk->wu.routine_no[1] = R1_KILL;
     }
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         effH5_init_common(ewk);
         ewk->wu.old_rno[5] = 20;
         cal_all_speed_data(&ewk->wu, ewk->wu.old_rno[5], 512, 56, 1, 1);
         disp_pos_trans_entry(ewk);
         break;
-    case 1:
+    case R1_WAIT:
         if (bg_w.bgw[0].r_no_1 == 2) {
             ewk->wu.routine_no[1]++;
             char_move_z(&ewk->wu);
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 2:
+    case R1_BOB_UP:
         ewk->wu.old_rno[5]--;
         if (ewk->wu.old_rno[5] <= 0) {
             ewk->wu.routine_no[1]++;
@@ -137,7 +158,7 @@ void effH5_0003(WORK_Other* ewk) {
         char_move(&ewk->wu);
         disp_pos_trans_entry(ewk);
         break;
-    case 3:
+    case R1_BOB_DOWN:
         ewk->wu.old_rno[5]--;
         if (ewk->wu.old_rno[5] <= 0) {
             ewk->wu.routine_no[1]--;
@@ -161,13 +182,13 @@ void effH5_0003(WORK_Other* ewk) {
 
 void effH5_0004(WORK_Other* ewk) {
     if (ewk->wu.old_rno[0] != end_w.r_no_2) {
-        ewk->wu.routine_no[1] = 99;
+        ewk->wu.routine_no[1] = R1_KILL;
     }
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         effH5_init_common(ewk);
         break;
-    case 1:
+    case R1_PLAY:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type) {
             ewk->wu.routine_no[1]++;
@@ -180,7 +201,7 @@ void effH5_0004(WORK_Other* ewk) {
             disp_pos_trans_entry(ewk);
             return;
         }
-    case 2:
+    case R1_MOVE_1:
         ewk->wu.old_rno[5]--;
         if (ewk->wu.old_rno[5] <= 0) {
             ewk->wu.routine_no[1]++;
@@ -193,7 +214,7 @@ void effH5_0004(WORK_Other* ewk) {
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 3:
+    case R1_MOVE_2:
         ewk->wu.old_rno[5]--;
         if (ewk->wu.old_rno[5] <= 0) {
             ewk->wu.routine_no[1]++;
@@ -201,7 +222,7 @@ void effH5_0004(WORK_Other* ewk) {
             add_x_sub(ewk);
             add_y_sub(ewk);
         }
-    case 4:
+    case R1_STAY:
         disp_pos_trans_entry(ewk);
         break;
     default:

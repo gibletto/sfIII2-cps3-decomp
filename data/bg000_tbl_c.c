@@ -1,5 +1,8 @@
 /*
- * BG000_TBL_C.C  tables nothing reads, kept for the layout
+ * BG000_TBL_C.C  unused background step tables
+ *
+ * bg_ramp_tbl (32 to 94 in steps of 2, then rising by one) and bg_step_speed_tbl (16.16 speeds
+ * from 1.25 to 2.0) are not read by anything; they are kept for the layout.
  */
 
 #include "types.h"

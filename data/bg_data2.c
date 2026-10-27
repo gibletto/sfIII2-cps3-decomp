@@ -1,5 +1,15 @@
 /*
- * BG_DATA2.C  tables read by CMD_MAIN.c, Game_Main.c and 14 other modules
+ * BG_DATA2.C  screen quake, stage colour and finish screen cell tables
+ *
+ * quake_x_tbl and quake_y_tbl are the screen shake offsets stepped by the quake index; read by
+ * BG000.C and TA_SUB.C, quake_y_tbl also by END_5.C. bg_palette_no_tbl, bg_color2_tbl and
+ * bg_color3_tbl are each background's colour loads, read by GAME_MAIN.C and MANAGE_2.C (the
+ * first two also by BG000.C and CMD_MAIN.C); etc_bg_color_tbl is the colour load of each
+ * special screen, read by BG000.C, and bg_fade_level_tbl each background's colour fade level,
+ * read by BG000.C and the stage modules BGST020.C - BGST110.C (all but BGST070.C). mark_cg_tbl
+ * lists the mark graphics loaded by ABOUTSPR.C, and ake_cell0_data - ake_cell4_data are the
+ * finish screen cell panels written by akebono_scr_write in BG000.C. The str_ strings are the
+ * text of bg_test_menu_scr in BG_DATA.C.
  */
 
 #include "types.h"

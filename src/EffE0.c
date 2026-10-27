@@ -19,6 +19,18 @@
 #include "effect_2.h"
 #include "EffE0.h"
 
+/* routine_no[0] */
+#define R0_DELAY        0       /* wait the stagger */
+#define R0_IN_L         1       /* slide in leftwards */
+#define R0_IN_R         2       /* slide in rightwards */
+#define R0_STOP         3       /* pause, then pick the plate */
+#define R0_CLOSE        4       /* close the plate */
+#define R0_OPEN         5       /* reopen with the stage */
+#define R0_SHOW         6       /* show it for 40 frames */
+#define R0_OUT          7       /* slide out once all are done */
+#define R0_END          8       /* one more frame */
+#define R0_KILL         9       /* (default) put the work back */
+
 extern s8 effE0_go;                     /* provisional name */
 extern const s16 effE0_x_tbl[8];        /* provisional name */
 extern const s16 effE0_delay_tbl[8];    /* provisional name */
@@ -28,11 +40,11 @@ extern const s16 effE0_delay_tbl[8];    /* provisional name */
 void effect_E0_move(WORK_Other* ewk) {
     if (Suicide) {
         ewk->wu.disp_flag = 0;
-        ewk->wu.routine_no[0] = 8;
+        ewk->wu.routine_no[0] = R0_END;
         return;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_DELAY:
         if (Cut_Cut_Cut()) {
             effE0_arrive(ewk, 0);
         } else {
@@ -40,16 +52,16 @@ void effect_E0_move(WORK_Other* ewk) {
                 return;
             }
             if (ewk->wu.mvxy.a[0].sp < 0) {
-                ewk->wu.routine_no[0] = 1;
+                ewk->wu.routine_no[0] = R0_IN_L;
             } else {
-                ewk->wu.routine_no[0] = 2;
+                ewk->wu.routine_no[0] = R0_IN_R;
             }
         }
         ewk->wu.disp_flag = 1;
         ewk->wu.dir_timer = 5;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_step + 1, 0);
         break;
-    case 1:
+    case R0_IN_L:
         if (Cut_Cut_Cut()) {
             effE0_arrive(ewk, 1);
             break;
@@ -57,12 +69,12 @@ void effect_E0_move(WORK_Other* ewk) {
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         ewk->wu.mvxy.a[0].sp += ewk->wu.mvxy.d[0].sp;
         if (ewk->wu.vital_new >= ewk->wu.xyz[0].disp.pos) {
-            ewk->wu.routine_no[0] = 3;
+            ewk->wu.routine_no[0] = R0_STOP;
             ewk->wu.xyz[0].disp.pos = ewk->wu.vital_new;
             ewk->wu.mvxy.a[0].sp = -ewk->wu.mvxy.a[0].sp;
         }
         break;
-    case 2:
+    case R0_IN_R:
         if (Cut_Cut_Cut()) {
             effE0_arrive(ewk, 2);
             break;
@@ -75,16 +87,16 @@ void effect_E0_move(WORK_Other* ewk) {
             ewk->wu.mvxy.a[0].sp = -ewk->wu.mvxy.a[0].sp;
         }
         break;
-    case 3:
+    case R0_STOP:
         if (--ewk->wu.dir_timer == 0) {
             if (VS_Index[Player_id] != ewk->master_id) {
-                ewk->wu.routine_no[0] = 7;
+                ewk->wu.routine_no[0] = R0_OUT;
             } else {
                 ewk->wu.routine_no[0]++;
             }
         }
         break;
-    case 4:
+    case R0_CLOSE:
         if ((ewk->wu.my_mr.size.x -= 6) > 0) {
             break;
         }
@@ -93,7 +105,7 @@ void effect_E0_move(WORK_Other* ewk) {
         ewk->wu.dir_step = EM_Candidate[Player_id][VS_Index[Player_id]];
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_step + 1, 0);
         break;
-    case 5:
+    case R0_OPEN:
         if ((ewk->wu.my_mr.size.x += 6) < 63) {
             break;
         }
@@ -101,13 +113,13 @@ void effect_E0_move(WORK_Other* ewk) {
         ewk->wu.dir_timer = 40;
         ewk->wu.my_mr.size.x = 63;
         break;
-    case 6:
+    case R0_SHOW:
         if (--ewk->wu.dir_timer) {
             break;
         }
         ewk->wu.routine_no[0]++;
         effE0_go = 1;
-    case 7:
+    case R0_OUT:
         if (effE0_go != 0) {
             ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
             if (Ck_Range_Out_S(ewk, 2, 32)) {
@@ -117,7 +129,7 @@ void effect_E0_move(WORK_Other* ewk) {
             }
         }
         break;
-    case 8:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:
@@ -138,7 +150,7 @@ void effE0_arrive(ewk, sw)
 WORK_Other* ewk;
 s16 sw;
 {
-    ewk->wu.routine_no[0] = 3;
+    ewk->wu.routine_no[0] = R0_STOP;
     ewk->wu.dir_timer = 1;
     ewk->wu.xyz[0].disp.pos = ewk->wu.vital_new;
     ewk->wu.mvxy.a[0].sp = -ewk->wu.mvxy.a[0].sp;

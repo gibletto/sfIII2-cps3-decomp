@@ -26,11 +26,12 @@
 #include "PLPDM.h"
 #include "PLS00.h"
 #include "fighter.h"
+#include "cmd_data.h"
 
 
 
 void check_lever_data(PLW* wk) {
-    if (wk->wu.routine_no[0] == 4) {
+    if (wk->wu.routine_no[0] == PLAYER_MV_FIGHT) {
         process_ndcca[wk->wu.routine_no[1]](wk);
     }
 }
@@ -256,7 +257,7 @@ void nm_03000(PLW* wk) {
     }
     if (check_walking_lv_dir(wk)) {
         wk->wu.routine_no[2] = 39;
-        wk->wu.routine_no[3] = 0;
+        wk->wu.routine_no[3] = RN3_START;
         wk->wu.cg_type = 0;
     }
     if (check_defense_lever(wk)) {
@@ -550,17 +551,17 @@ void nm_16000(PLW* wk) {
     case 0xFF:
         check_jump_rl_dir(wk);
         switch (wk->jpdir) {
-        case 1:
+        case LVDIR_FORWARD:
             wk->wu.routine_no[2] = 21;
             break;
-        case 2:
+        case LVDIR_BACK:
             wk->wu.routine_no[2] = 23;
             break;
         default:
             wk->wu.routine_no[2] = 22;
             break;
         }
-        wk->wu.routine_no[3] = 0;
+        wk->wu.routine_no[3] = RN3_START;
         break;
     case 1:
         break;
@@ -596,17 +597,17 @@ void nm_17000(PLW* wk) {
     if (wk->wu.cg_type == 0xFF) {
         check_jump_rl_dir(wk);
         switch (wk->jpdir) {
-        case 1:
+        case LVDIR_FORWARD:
             wk->wu.routine_no[2] = 24;
             break;
-        case 2:
+        case LVDIR_BACK:
             wk->wu.routine_no[2] = 26;
             break;
         default:
             wk->wu.routine_no[2] = 25;
             break;
         }
-        wk->wu.routine_no[3] = 0;
+        wk->wu.routine_no[3] = RN3_START;
         return;
     }
     if (check_full_gauge_attack(wk, 0)) {
@@ -638,7 +639,7 @@ void check_jump_rl_dir(PLW* wk) {
 
 
 void set_new_jpdir(PLW* wk) {
-    if (wk->cp->sw_lvbt & 1) {
+    if (wk->cp->sw_lvbt & LEVER_UP) {
         if (wk->cp->lever_dir) {
             wk->jpdir = wk->cp->lever_dir;
         }
@@ -970,7 +971,7 @@ void nm_27000(PLW* wk) {
     if (check_jump_ready(wk)) {
         return;
     }
-    if (wk->cp->lever_dir != 2) {
+    if (wk->cp->lever_dir != LVDIR_BACK) {
         if (check_bend_myself(wk)) {
             return;
         }
@@ -986,7 +987,7 @@ void nm_27000(PLW* wk) {
 
 void nm_27_cg_type_check(PLW* wk) {
     s16 kind;
-    if (wk->wu.routine_no[3] == 0) {
+    if (wk->wu.routine_no[3] == RN3_START) {
         return;
     }
     switch ((u8)wk->wu.cg_type) {
@@ -1007,7 +1008,7 @@ void nm_27_cg_type_check(PLW* wk) {
         } else {
             wk->wu.routine_no[2] = 36;
         }
-        wk->wu.routine_no[3] = 0;
+        wk->wu.routine_no[3] = RN3_START;
         wk->wu.cg_type = 0;
         return;
     case 32:
@@ -1061,7 +1062,7 @@ void nm_29000(PLW* wk) {
     if (check_jump_ready(wk)) {
         return;
     }
-    if (wk->cp->lever_dir != 2) {
+    if (wk->cp->lever_dir != LVDIR_BACK) {
         if (check_stand_up(wk)) {
             return;
         }
@@ -1144,7 +1145,7 @@ void nm_36000(PLW* wk) {
             wk->wu.routine_no[3] = 1;
         } else {
             wk->wu.routine_no[2] = 1;
-            wk->wu.routine_no[3] = 0;
+            wk->wu.routine_no[3] = RN3_START;
         }
     } else if (wk->player_number == PL_ELENA && wk->wu.now_koc == 0 && wk->wu.char_index == 36) {
         exset_char_move_init(&wk->wu, 0, 0);
@@ -1159,7 +1160,7 @@ void nm_36000(PLW* wk) {
 void nm_37000(PLW* wk) {
     if (wk->wu.cg_type == 0xFF) {
         wk->wu.routine_no[2] = 9;
-        wk->wu.routine_no[3] = 0;
+        wk->wu.routine_no[3] = RN3_START;
     }
     nm_09000(wk);
 }
@@ -1202,7 +1203,7 @@ void nm_39000(PLW* wk) {
             wk->wu.routine_no[3] = 1;
         } else {
             wk->wu.routine_no[2] = 1;
-            wk->wu.routine_no[3] = 0;
+            wk->wu.routine_no[3] = RN3_START;
         }
     }
     nm_01000(wk);
@@ -1212,7 +1213,7 @@ void nm_39000(PLW* wk) {
 
 void nm_40000(PLW* wk) {
     if (wk->wu.routine_no[3] && wk->wu.cg_type == 0xFF) {
-        wk->wu.routine_no[3] = 9;
+        wk->wu.routine_no[3] = RN3_DONE;
     }
 }
 
@@ -1300,7 +1301,7 @@ void nm_49000(PLW* wk) {
 
 
 void process_damage(PLW* wk) {
-    if (wk->wu.routine_no[3] != 0) {
+    if (wk->wu.routine_no[3] != RN3_START) {
         plpdm_xxxxx[wk->wu.routine_no[2]](wk);
     }
 }
@@ -1340,7 +1341,7 @@ void dm_04000(PLW* wk) {
             }
         } else {
             wk->wu.routine_no[2] = 19;
-            wk->wu.routine_no[3] = 0;
+            wk->wu.routine_no[3] = RN3_START;
         }
         break;
     case 0xFF:
@@ -1353,7 +1354,7 @@ void dm_04000(PLW* wk) {
             }
         } else {
             wk->wu.routine_no[2] = 19;
-            wk->wu.routine_no[3] = 0;
+            wk->wu.routine_no[3] = RN3_START;
         }
         break;
     }
@@ -1383,7 +1384,7 @@ void dm_08000(PLW* wk) {
 
 void dm_17000(PLW* wk) {
     if (wk->wu.routine_no[3] == 3) {
-        wk->wu.routine_no[1] = 0;
+        wk->wu.routine_no[1] = PLAYER_NORMAL;
         wk->wu.routine_no[2] = 23;
         wk->wu.routine_no[3] = 2;
         jumping_cg_type_check(wk);
@@ -1405,7 +1406,7 @@ void dm_18000(PLW* wk) {
         } else {
             wk->wu.routine_no[2] = 1;
         }
-        wk->wu.routine_no[3] = 0;
+        wk->wu.routine_no[3] = RN3_START;
         wk->wu.cg_type = 0;
         break;
     case 64:
@@ -1415,7 +1416,7 @@ void dm_18000(PLW* wk) {
             break;
         }
         wk->wu.routine_no[2] = 19;
-        wk->wu.routine_no[3] = 0;
+        wk->wu.routine_no[3] = RN3_START;
         break;
     }
 }
@@ -1433,7 +1434,7 @@ void dm_25000(PLW* wk) {
 
 
 void process_catch(PLW* wk) {
-    if (wk->wu.routine_no[3] == 0) {
+    if (wk->wu.routine_no[3] == RN3_START) {
         return;
     }
     switch (wk->wu.cg_type) {
@@ -1509,7 +1510,7 @@ void process_attack(PLW* wk) {
                 return;
             }
         }
-        if (wk->wu.routine_no[2] < 16 && check_full_gauge_attack(wk, 1)) {
+        if (wk->wu.routine_no[2] < ATTACK_SPECIAL && check_full_gauge_attack(wk, 1)) {
             wk->wu.cg_cancel &= 0;
             return;
         }
@@ -1551,7 +1552,7 @@ s32 check_cg_cancel_data(PLW* wk) {
     if ((wk->wu.cg_cancel & 8) && (check_meoshi_cancel(wk) != 0)) {
         return 1;
     }
-    if ((wk->wu.cg_cancel & 4) && ((wk->cp->sw_now & 0x770) != ((wk->current_attack))) && (check_nm_attack(wk) != 0)) {
+    if ((wk->wu.cg_cancel & 4) && ((wk->cp->sw_now & CMD_SW_SHOT) != ((wk->current_attack))) && (check_nm_attack(wk) != 0)) {
         return 1;
     }
     if (wk->wu.meoshi_hit_flag == 0) {

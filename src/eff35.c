@@ -26,6 +26,22 @@
 #include "aboutspr.h"
 #include "eff35.h"
 
+/* routine_no[1], eff35_0000 */
+#define R1_WAIT         0       /* count the start wait down, then show */
+#define R1_SHOW         1       /* stay on screen */
+
+/* routine_no[1], eff35_0001 */
+#define R1_NARROW       1       /* narrow the width to nothing */
+#define R1_WIDEN        2       /* widen back to full size */
+#define R1_HOLD         3       /* hold, then hide and step on */
+#define R1_END          4       /* one more frame */
+#define R1_KILL         5       /* (default) put the work back */
+
+/* routine_no[1], eff35_0002 */
+#define R1_TIMER        1       /* show until the timer runs out */
+#define R1_OVER         2       /* one more frame */
+#define R1_ABORT        4       /* (default) put the work back at once */
+
 
 void effect_35_move(WORK_Other* ewk) {
     void (*eff35_jp[3])(WORK_Other*) = { eff35_0000, eff35_0001, eff35_0002 };
@@ -36,7 +52,7 @@ void effect_35_move(WORK_Other* ewk) {
 
 void eff35_0000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_WAIT:
         ewk->wu.old_rno[1]--;
         if (ewk->wu.old_rno[1] > 0) {
             break;
@@ -56,7 +72,7 @@ void eff35_0000(WORK_Other* ewk) {
         }
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[3], 0);
         break;
-    case 1:
+    case R1_SHOW:
         disp_pos_trans_entry(ewk);
         break;
     default:
@@ -69,9 +85,9 @@ void eff35_0000(WORK_Other* ewk) {
 
 void eff35_0001(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_WAIT:
         if (Break_Into) {
-            ewk->wu.routine_no[1] = 4;
+            ewk->wu.routine_no[1] = R1_END;
             break;
         }
         ewk->wu.old_rno[1]--;
@@ -85,9 +101,9 @@ void eff35_0001(WORK_Other* ewk) {
         ewk->wu.my_mr.size.y = 0x3F;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[3], 0);
         break;
-    case 1:
+    case R1_NARROW:
         if (Break_Into) {
-            ewk->wu.routine_no[1] = 4;
+            ewk->wu.routine_no[1] = R1_END;
             break;
         }
         ewk->wu.my_mr.size.x -= 12;
@@ -97,9 +113,9 @@ void eff35_0001(WORK_Other* ewk) {
         }
         disp_pos_trans_entry5(ewk);
         break;
-    case 2:
+    case R1_WIDEN:
         if (Break_Into) {
-            ewk->wu.routine_no[1] = 4;
+            ewk->wu.routine_no[1] = R1_END;
             break;
         }
         ewk->wu.my_mr.size.x += 12;
@@ -109,9 +125,9 @@ void eff35_0001(WORK_Other* ewk) {
         }
         disp_pos_trans_entry5(ewk);
         break;
-    case 3:
+    case R1_HOLD:
         if (Break_Into) {
-            ewk->wu.routine_no[1] = 4;
+            ewk->wu.routine_no[1] = R1_END;
             break;
         }
         ewk->wu.old_rno[4]--;
@@ -122,7 +138,7 @@ void eff35_0001(WORK_Other* ewk) {
         }
         disp_pos_trans_entry5(ewk);
         break;
-    case 4:
+    case R1_END:
         ewk->wu.routine_no[1]++;
         break;
     default:
@@ -135,9 +151,9 @@ void eff35_0001(WORK_Other* ewk) {
 
 void eff35_0002(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_WAIT:
         if (Break_Into) {
-            ewk->wu.routine_no[1] = 4;
+            ewk->wu.routine_no[1] = R1_ABORT;
             break;
         }
         ewk->wu.old_rno[1]--;
@@ -149,9 +165,9 @@ void eff35_0002(WORK_Other* ewk) {
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[3], 0);
         effect_58_init(6, 4, 0xA8);
         break;
-    case 1:
+    case R1_TIMER:
         if (Break_Into) {
-            ewk->wu.routine_no[1] = 4;
+            ewk->wu.routine_no[1] = R1_ABORT;
             break;
         }
         ewk->wu.old_rno[4]--;
@@ -161,7 +177,7 @@ void eff35_0002(WORK_Other* ewk) {
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 2:
+    case R1_OVER:
         ewk->wu.routine_no[1]++;
         break;
     default:

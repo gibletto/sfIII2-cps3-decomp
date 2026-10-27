@@ -52,6 +52,11 @@
 #include "eff56.h"
 #include "sc_logo.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the steps */
+#define R0_MOVE         1       /* step the palette by its timer */
+#define R0_KILL         2       /* (default) put the work back */
+
 void load_any_color();
 
 
@@ -77,9 +82,9 @@ s32 effect_56_init(s8 side)
 
 void effect_56_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
-    case 1:
+    case R0_MOVE:
         ewk->wu.type--;
         if (ewk->wu.type == 0) {
             ewk->wu.operator++;
@@ -91,7 +96,7 @@ void effect_56_move(WORK_Other* ewk) {
         }
         break;
     default:
-    case 2:
+    case R0_KILL:
         push_effect_work(&ewk->wu);
         break;
     }

@@ -20,6 +20,13 @@
 #include "effect_2.h"
 #include "EffD8.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* wait for the cursor to appear */
+#define R0_SELECT       1       /* follow the cursor */
+#define R0_DECIDE       2       /* play the chosen pattern, then hide */
+#define R0_END          3       /* one more frame */
+#define R0_KILL         4       /* (default) put the work back */
+
 extern const u8 effD8_char_tbl[3][2];   /* provisional name */
 
 void effD8_char_set(WORK_Other* ewk);
@@ -31,7 +38,7 @@ s32 effD8_face_check(s16 PL_id);
 
 void effect_D8_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (Appear_Cursor == 0) {
             return;
         }
@@ -39,7 +46,7 @@ void effect_D8_move(WORK_Other* ewk) {
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_SELECT:
         if (ewk->wu.dir_step != Cursor_X[ewk->master_id] || ewk->wu.dir_old != Cursor_Y[ewk->master_id]) {
             ewk->wu.dir_step = Cursor_X[ewk->master_id];
             ewk->wu.dir_old = Cursor_Y[ewk->master_id];
@@ -59,7 +66,7 @@ void effect_D8_move(WORK_Other* ewk) {
             char_move(&ewk->wu);
         }
         break;
-    case 2:
+    case R0_DECIDE:
         if (--ewk->wu.dir_timer) {
             char_move(&ewk->wu);
         } else {
@@ -72,7 +79,7 @@ void effect_D8_move(WORK_Other* ewk) {
             Unit_Of_Timer = 50;
         }
         break;
-    case 3:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:
@@ -175,8 +182,8 @@ void effD8_same_face(WORK_Other* ewk) {
 /* one argument, X from DE_X[10] */
 void effect_D8_init(WORK_Other* ewk) {
     s16 xx = ID_of_Face[Cursor_Y[ewk->master_id]][Cursor_X[ewk->master_id]];
-    ewk->wu.xyz[0].disp.pos = Face_Pos_Data[xx][0] + DE_X[10] + 0x1C1;
-    ewk->wu.xyz[1].disp.pos = Face_Pos_Data[xx][1];
+    ewk->wu.xyz[0].disp.pos = Face_Pos_Data[xx][SEL_POS_X] + DE_X[10] + 0x1C1;
+    ewk->wu.xyz[1].disp.pos = Face_Pos_Data[xx][SEL_POS_Y];
 }
 
 

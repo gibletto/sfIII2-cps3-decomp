@@ -19,6 +19,13 @@
 #include "aboutspr.h"
 #include "Eff81.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the animation */
+#define R0_WAIT         1       /* wait until the cursor is released */
+#define R0_MOVE         2       /* follow the parent until off screen */
+#define R0_END          3       /* hidden for a frame */
+#define R0_KILL         4       /* (default) put the work back */
+
 
 
 void effect_81_move(WORK_Other* ewk) {
@@ -29,23 +36,23 @@ void effect_81_move(WORK_Other* ewk) {
         ewk->wu.disp_flag = 0;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.vital_new + 1, 0);
         break;
-    case 1:
+    case R0_WAIT:
         if (Stop_Cursor[ewk->master_id] == 0) {
             ewk->wu.routine_no[0]++;
         }
         break;
-    case 2:
+    case R0_MOVE:
         if (Ck_Range_Out_S(ewk, 2, 96)) {
             ewk->wu.disp_flag = 0;
             ewk->wu.routine_no[0]++;
             return;
         }
         break;
-    case 3:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:

@@ -20,6 +20,13 @@
 #include "EFFA6.h"
 #include "EFFI3.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* wait, then start the side's effect */
+#define R0_SLIDE_IN     1       /* slide in to the stop position */
+#define R0_HOLD         2       /* hold until the next step is called */
+#define R0_SLIDE_OUT    3       /* slide out of the screen */
+#define R0_GONE         4       /* off the screen, stay hidden */
+
 void set_char_move_init2();
 s32 effect_67_init();                   /* in EFF67.c */
 
@@ -27,7 +34,7 @@ s32 effect_67_init();                   /* in EFF67.c */
 
 void effect_I1_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer != 0) {
             return;
         }
@@ -39,7 +46,7 @@ void effect_I1_move(WORK_Other* ewk) {
             effect_A6_init(ewk);
         }
         break;
-    case 1:
+    case R0_SLIDE_IN:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         ewk->wu.mvxy.a[0].sp += ewk->wu.mvxy.d[0].sp;
         if (ewk->wu.mvxy.a[0].sp > 0) {
@@ -54,15 +61,14 @@ void effect_I1_move(WORK_Other* ewk) {
             ewk->wu.mvxy.a[0].sp = 0x17FFF7;
         }
         break;
-    case 2:
-        if (Next_Step >= 8) {
-            if (0) {
-            }
-            ewk->wu.routine_no[0]++;
-            Next_Step -= 8;
+    case R0_HOLD:
+        if (Next_Step < 8) {
+            break;
         }
+        ewk->wu.routine_no[0]++;
+        Next_Step -= 8;
         break;
-    case 3:
+    case R0_SLIDE_OUT:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         if (Ck_Range_Out_S(ewk, 2, 152)) {
             ewk->wu.disp_flag = 0;
@@ -73,7 +79,7 @@ void effect_I1_move(WORK_Other* ewk) {
             return;
         }
         break;
-    case 4:
+    case R0_GONE:
         return;
     default:
         all_cgps_put_back(&ewk->wu);

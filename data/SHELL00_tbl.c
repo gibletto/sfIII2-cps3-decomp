@@ -1,5 +1,8 @@
 /*
- * SHELL00_TBL.C  tables read by SHELL00.c: CPU anti-projectile patterns, table 00
+ * SHELL00_TBL.C  CPU anti-projectile pattern table 00 (Gill)
+ *
+ * Shell00_Tbl lists the Shell00_nnnn pattern routines the computer-controlled Gill runs when
+ * the opponent fires a projectile, indexed by Pattern_Index. Read by SHELL00.C.
  */
 
 #include "types.h"
@@ -21,15 +24,15 @@ extern void Shell00_0009();
 extern void Shell00_0010();
 
 void (*const Shell00_Tbl[11])() = {
-    (void (*)())Shell00_0000,
-    (void (*)())Shell00_0001,
-    (void (*)())Shell00_0002,
-    (void (*)())Shell00_0003,
-    (void (*)())Shell00_0004,
-    (void (*)())Shell00_0005,
-    (void (*)())Shell00_0006,
-    (void (*)())Shell00_0007,
-    (void (*)())Shell00_0008,
-    (void (*)())Shell00_0009,
-    (void (*)())Shell00_0010,
+    Shell00_0000,
+    Shell00_0001,
+    Shell00_0002,
+    Shell00_0003,
+    Shell00_0004,
+    Shell00_0005,
+    Shell00_0006,
+    Shell00_0007,
+    Shell00_0008,
+    Shell00_0009,
+    Shell00_0010,
 };

@@ -27,6 +27,12 @@
 #include "eff06.h"
 #include "EFF63.h"
 
+/* bgw r_no_0 of a layer with an entrance demo: its bg*_jmp routine */
+#define R0_INIT         0       /* set up the layer */
+#define R0_WAIT         1       /* wait or colour step, then the entrance demo */
+#define R0_DEMO         2       /* the entrance demo */
+#define R0_MOVE         3       /* follow the fight */
+
 /* declarations the headers do not give */
 void zoom_ud_check(void);
 void bg_x_move_check(void);
@@ -115,7 +121,7 @@ void bg060_layer0_init(void) {
         bgw_ptr->hos_xy[1].disp.pos = bgw_ptr->wxy[1].cal = bgw_ptr->xy[1].cal;
     } else {
         bg_app = 0;
-        bgw_ptr->r_no_0 = 3;
+        bgw_ptr->r_no_0 = R0_MOVE;
         lv = bg_fade_level_tbl[bg_w.bg_index];
         if (Check_Shin_Gouki_Next()) {
             load_any_color_fade(96, lv, lv, lv);
@@ -184,7 +190,7 @@ void bg060_layer1_init(void) {
         bgw_ptr->xy[1].cal = bgw_ptr->speed_y * 240;
         bgw_ptr->hos_xy[1].disp.pos = bgw_ptr->wxy[1].cal = bgw_ptr->xy[1].cal;
     } else {
-        bgw_ptr->r_no_0 = 3;
+        bgw_ptr->r_no_0 = R0_MOVE;
     }
 }
 

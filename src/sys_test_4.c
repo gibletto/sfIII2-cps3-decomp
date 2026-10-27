@@ -26,6 +26,12 @@
 #include "sys_test_4.h"
 #include "cps3.h"
 
+/* rewrite_no: the rewrite page step */
+#define REWRITE_INIT    0       /* rewrite_menu_init */
+#define REWRITE_SELECT  1       /* rewrite_menu_select */
+#define REWRITE_CHECK   2       /* check the drive and the disc */
+#define REWRITE_NOT_READY 3     /* rewrite_cd_not_ready */
+
 
 
 s16 rewrite_no = 0;  /* 02007CDC */
@@ -61,7 +67,7 @@ void rewrite_menu_select(void) {
     } else {
         col = 0;
     }
-    if ((p1sw_0 & 1) == 1 && (p1sw_1 & 1) != 1) {
+    if ((p1sw_0 & LEVER_UP) == LEVER_UP && (p1sw_1 & LEVER_UP) != LEVER_UP) {
         tilemap_put_block(col + 15, rewrite_cursor * 2 + 9, 2, 32);
         if (--rewrite_cursor < 0) {
             rewrite_cursor = 2;
@@ -72,7 +78,7 @@ void rewrite_menu_select(void) {
             tilemap_print_string(col, 0, 0xFFFF, rewrite_guide_scr);
         }
         tilemap_put_block(col + 15, rewrite_cursor * 2 + 9, 2, 62);
-    } else if ((p1sw_0 & 2) == 2 && (p1sw_1 & 2) != 2) {
+    } else if ((p1sw_0 & LEVER_DOWN) == LEVER_DOWN && (p1sw_1 & LEVER_DOWN) != LEVER_DOWN) {
         tilemap_put_block(col + 15, rewrite_cursor * 2 + 9, 2, 32);
         if (++rewrite_cursor > 2) {
             rewrite_cursor = 0;
@@ -84,11 +90,11 @@ void rewrite_menu_select(void) {
         }
         tilemap_put_block(col + 15, rewrite_cursor * 2 + 9, 2, 62);
     }
-    if ((p1sw_0 & 0x10) == 0x10 && (p1sw_1 & 0x10) != 0x10) {
+    if ((p1sw_0 & BUTTON_LP) == BUTTON_LP && (p1sw_1 & BUTTON_LP) != BUTTON_LP) {
         if (rewrite_cursor == 2) {
             rewrite_no++;
         }
-    } else if ((p1sw_0 & 0x1000) == 0x1000 && (p1sw_0 & 0x10) == 0x10) {
+    } else if ((p1sw_0 & BUTTON_START) == BUTTON_START && (p1sw_0 & BUTTON_LP) == BUTTON_LP) {
         tilemap_fill_all(0, 32);
         task_sleep(1);
         if (rewrite_cursor == 0) {
@@ -125,19 +131,19 @@ s32 rewrite_page(void) {
     }
     rc = 0;
     switch (rewrite_no) {
-    case 0:
+    case REWRITE_INIT:
         rewrite_menu_init();
         break;
-    case 1:
+    case REWRITE_SELECT:
         rewrite_menu_select();
         break;
-    case 2:
+    case REWRITE_CHECK:
         if (cd_check_drive_inquiry() == 0) {
             if (cd_check_disc_id() == 0) {
                 while (scsi_prevent_allow_medium_removal(1, 1)) {
                 }
                 rc = -1;
-                rewrite_no = 0;
+                rewrite_no = REWRITE_INIT;
             } else {
                 rewrite_no++;
             }
@@ -145,7 +151,7 @@ s32 rewrite_page(void) {
             rewrite_no++;
         }
         break;
-    case 3:
+    case REWRITE_NOT_READY:
         rewrite_cd_not_ready();
         break;
     }

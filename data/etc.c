@@ -1,5 +1,10 @@
 /*
- * ETC.C  tables read by PLPCU.c and PLPDM.c
+ * ETC.C  guard and damage reaction tables
+ *
+ * guard_pause_table and damage_pause_table give the pause in frames by attack level for the
+ * guard and damage reactions. select_hit_dsd and select_grd_dsd pick, by attack impact and the
+ * victim's weight class, a row of dm_step_data, whose 32 entries are the per-frame push-back
+ * steps. Read by PLPDM.C; PLPCU.C uses damage_pause_table, select_hit_dsd and dm_step_data.
  */
 
 #include "types.h"

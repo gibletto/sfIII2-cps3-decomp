@@ -22,18 +22,24 @@
 #include "PLS02.h"
 #include "EFFG5.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* pick a pattern and set off */
+#define R0_MOVE         1       /* fly outward, slowing down */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 
 
 s32 effect_G5_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.my_col_mode = 0x4200;
         ewk->wu.my_col_code = 0x2020;
         add_pos_dir_064(&ewk->wu, ewk->wu.dir_old * 4);
         set_char_move_init(&ewk->wu, 0, (random_16_com() & 1) + 8);
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
             ewk->wu.routine_no[0]++;
@@ -59,8 +65,8 @@ s32 effect_G5_move(WORK_Other* ewk) {
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos;
         sort_push_request8(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

@@ -114,18 +114,16 @@ s16 bg_no;
 
 s32 range_x_check(WORK* wk) {
     s16 x;
-    s16 w;
     if ((s8)bg_w.chase_flag & 0xF) {
         x = bg_w.bgw[wk->my_family - 1].chase_xy[0].disp.pos;
     } else {
         x = bg_w.bgw[wk->my_family - 1].wxy[0].disp.pos;
     }
-    w = 272;
-    x -= w;
+    x -= 272;
     if (x > wk->xyz[0].disp.pos) {
         return 0;
     }
-    x = bg_w.bgw[wk->my_family - 1].wxy[0].disp.pos + w;
+    x = bg_w.bgw[wk->my_family - 1].wxy[0].disp.pos + 272;
     if (wk->xyz[0].disp.pos > x) {
         return 0;
     }
@@ -138,15 +136,13 @@ s32 range_x_check(WORK* wk) {
 s32 range_x_check2(WORK* wk) {
     s16 left;
     register s16 right;
-    s16 w;
     left = bg_w.bgw[wk->my_family - 1].abs_x;
-    w = 320;
-    left -= w;
+    left -= 320;
     if (left > wk->xyz[0].disp.pos) {
         return 0;
     }
     right = bg_w.bgw[wk->my_family - 1].wxy[0].disp.pos;
-    right += w;
+    right += 320;
     if (wk->xyz[0].disp.pos > right) {
         return 0;
     }
@@ -314,8 +310,8 @@ s32 eff_hit_check(WORK_Other* ewk, s16 type) {
 
 
 s32 eff_hit_check_sub(WORK_Other* ewk, PLW* pl) {
-    if (pl->wu.routine_no[1] == 1) {
-        if (pl->wu.routine_no[2] < 14 || pl->wu.routine_no[2] >= 24) {
+    if (pl->wu.routine_no[1] == PLAYER_DAMAGE) {
+        if (pl->wu.routine_no[2] < DAMAGE_AIR || pl->wu.routine_no[2] >= DAMAGE_AIR_END) {
             return 0;
         }
         if (hit_check_subroutine(
@@ -340,7 +336,7 @@ void eff_hit_flag_clear(void) {
 
 /* provisional name */
 s32 complete_victory_check(void) {
-    if (!Allow_a_battle_f && Conclusion_Flag == 1 && C_No0 >= 2 && Complete_Victory) {
+    if (!Allow_a_battle_f && Conclusion_Flag == 1 && C_No0 >= C0_FIGHT && Complete_Victory) {
         return 1;
     }
     return 0;
@@ -376,10 +372,10 @@ u32 range_abs_check(s16 a, s16 b, s16 range)
 
 /* provisional name */
 s32 either_pl_hissatsu_check(void) {
-    if (plw[0].wu.routine_no[1] == 4 && plw[0].wu.routine_no[2] >= 16) {
+    if (plw[0].wu.routine_no[1] == PLAYER_ATTACK && plw[0].wu.routine_no[2] >= ATTACK_SPECIAL) {
         return 1;
     }
-    if (plw[1].wu.routine_no[1] == 4 && plw[1].wu.routine_no[2] >= 16) {
+    if (plw[1].wu.routine_no[1] == PLAYER_ATTACK && plw[1].wu.routine_no[2] >= ATTACK_SPECIAL) {
         return 1;
     }
     return 0;

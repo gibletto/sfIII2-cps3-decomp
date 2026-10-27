@@ -18,16 +18,22 @@
 #include "efff6.h"
 #include "efff7.h"
 
+/* routine_no[1] */
+#define R1_INIT         0       /* clear the done flag */
+#define R1_COUNT        1       /* count the steps up to 23 */
+#define R1_END          2       /* one more frame */
+#define R1_KILL         3       /* put the work back */
+
 
 
 /* a step counter */
 void effect_F6_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         ewk->wu.routine_no[1]++;
         ewk->wu.old_rno[3] = 0;
         /* fall through */
-    case 1:
+    case R1_COUNT:
         ewk->wu.old_rno[2]--;
         if (ewk->wu.old_rno[2] <= 0) {
             ewk->wu.routine_no[0]++;
@@ -39,10 +45,10 @@ void effect_F6_move(WORK_Other* ewk) {
             }
         }
         break;
-    case 2:
+    case R1_END:
         ewk->wu.routine_no[1]++;
         break;
-    case 3:
+    case R1_KILL:
         all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;

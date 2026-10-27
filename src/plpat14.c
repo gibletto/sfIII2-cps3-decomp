@@ -22,19 +22,30 @@
 #include "PLS01.h"
 #include "plpat14.h"
 
+/* routine_no[3], Att_PL14_AT1 */
+#define AT1_MOVE        1       /* move and run the animation */
+
+/* routine_no[3], Att_PL14_AT2 */
+#define AT2_MOVE        1       /* move and run the animation */
+#define AT2_AIR         2       /* in the air until it lands */
+#define AT2_LAND        3       /* the landing */
+
+/* routine_no[3], Att_PL14_TOKUSHUKOUDOU */
+#define TOKUSHUKOUDOU_ACTION 1  /* the personal action, filling the super art gauge */
+
 
 
 
 
 void pl14_extra_attack(PLW* wk) {
-    pl14_exatt_table[wk->wu.routine_no[2] - 16](wk);
+    pl14_exatt_table[wk->wu.routine_no[2] - ATTACK_SPECIAL](wk);
 }
 
 
 
 void Att_PL14_AT1(PLW* wk) {
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.xyz[1].cal = 0;
         wk->wu.rl_flag = wk->wu.rl_waza;
@@ -43,7 +54,7 @@ void Att_PL14_AT1(PLW* wk) {
         wk->wu.mvxy.index = wk->as->r_no;
         set_char_move_init(&wk->wu, 5, wk->as->char_ix);
         break;
-    case 1:
+    case AT1_MOVE:
         char_move(&wk->wu);
         cal_mvxy_speed(&wk->wu);
         if (wk->rl_save) {
@@ -99,12 +110,12 @@ void Att_PL14_AT1(PLW* wk) {
 
 void Att_PL14_AT2(PLW* wk) {
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         set_char_move_init(&wk->wu, 5, wk->as->char_ix);
         wk->wu.mvxy.index = wk->as->r_no;
         break;
-    case 1:
+    case AT2_MOVE:
         char_move(&wk->wu);
         switch ((u8)wk->wu.cg_type) {
         case 10:
@@ -123,14 +134,14 @@ void Att_PL14_AT2(PLW* wk) {
             break;
         }
         return;
-    case 2:
+    case AT2_AIR:
         jumping_union_process(&wk->wu, 3);
         if ((u8)wk->wu.cg_type == 40) {
-            wk->wu.routine_no[3] = 1;
+            wk->wu.routine_no[3] = AT2_MOVE;
             wk->wu.cg_type = 0;
         }
         break;
-    case 3:
+    case AT2_LAND:
         char_move(&wk->wu);
         break;
     }
@@ -142,12 +153,12 @@ void Att_PL14_AT2(PLW* wk) {
 void Att_PL14_TOKUSHUKOUDOU(PLW* wk) {
     wk->scr_pos_set_flag = 0;
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.rl_flag = wk->wu.rl_waza;
         set_char_move_init(&wk->wu, 5, wk->as->char_ix);
         break;
-    case 1:
+    case TOKUSHUKOUDOU_ACTION:
         char_move(&wk->wu);
         if (wk->wu.cg_type == 40) {
             wk->wu.cg_type = 0;

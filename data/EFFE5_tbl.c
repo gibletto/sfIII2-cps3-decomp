@@ -1,5 +1,9 @@
 /*
- * EFFE5_TBL.C  tables read by effect E5
+ * EFFE5_TBL.C  after-image setup table
+ *
+ * illusion_setup_table gives { who, parameter set } pairs for setup_after_images (0 this
+ * player, 1 the opponent, other both); the parameter sets are in after_image_data. Read by
+ * EFFE5.C, the after-image controller.
  */
 
 #include "types.h"

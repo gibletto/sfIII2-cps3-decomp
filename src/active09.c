@@ -53,13 +53,12 @@ void Pattern09_0001(PLW* wk) {
 
 
 void Pattern09_0002(PLW* wk) {
-    s16 none = -1;
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        EM_Term(wk, 0x8040, none, 5, 1, none);
+        EM_Term(wk, 0x8040, -1, 5, 1, -1);
         break;
     case 1:
-        J_Command_Attack(wk, 8, 28, 8, none);
+        J_Command_Attack(wk, 8, 28, 8, -1);
         break;
     default:
         End_Pattern(wk);
@@ -456,16 +455,15 @@ void Pattern09_0028(PLW* wk) {
 
 
 void Pattern09_0029(PLW* wk) {
-    s16 none = -1;
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        EM_Term(wk, 0x8050, none, 5, 1, none);
+        EM_Term(wk, 0x8050, -1, 5, 1, -1);
         break;
     case 1:
         Adjust_Attack(wk, 9, (0x80));
         break;
     case 2:
-        Command_Attack(wk, 8, 30, 9, none);
+        Command_Attack(wk, 8, 30, 9, -1);
         break;
     default:
         End_Pattern(wk);
@@ -655,16 +653,15 @@ void Pattern09_0040(PLW* wk) {
 
 
 void Pattern09_0041(PLW* wk) {
-    s16 none = -1;
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        EM_Term(wk, 0x8060, none, 5, 1, none);
+        EM_Term(wk, 0x8060, -1, 5, 1, -1);
         break;
     case 1:
         Normal_Attack(wk, 9, 0x40);
         break;
     case 2:
-        J_Command_Attack(wk, 8, 28, 10, none);
+        J_Command_Attack(wk, 8, 28, 10, -1);
         break;
     default:
         End_Pattern(wk);

@@ -29,6 +29,12 @@
 #include "bg_sub_5.h"
 #include "EFFC1.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* aim at the loser */
+#define R0_RUN          1       /* run in until close */
+#define R0_ARRIVE       2       /* finish the run, animating */
+#define R0_STAND        3       /* animate beside the loser */
+
 
 
 /* voice master_id * 0x200 + 0x15E */
@@ -36,7 +42,7 @@ void effect_C1_move(WORK_Other* ewk) {
     WORK* oya_ptr = (WORK*)ewk->my_master;
     s16 work;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.kage_flag = 1;
@@ -54,7 +60,7 @@ void effect_C1_move(WORK_Other* ewk) {
         }
         cal_all_speed_data(&ewk->wu, ewk->wu.old_rno[0], work, ewk->wu.xyz[1].disp.pos, 2, 2);
         break;
-    case 1:
+    case R0_RUN:
         if (!EXE_flag && !Game_pause) {
             ewk->wu.old_rno[0]--;
             add_x_sub(ewk);
@@ -72,7 +78,7 @@ void effect_C1_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 2:
+    case R0_ARRIVE:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
             add_x_sub(ewk);
@@ -90,7 +96,7 @@ void effect_C1_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 3:
+    case R0_STAND:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
         }

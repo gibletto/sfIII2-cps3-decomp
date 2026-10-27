@@ -25,25 +25,30 @@
 #include "bg_sub_5.h"
 #include "EFF11.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* wait out the delay, then appear */
+#define R0_MOVE         1       /* fly until below height 64 */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 extern const u32 stg00_char_table[];    /* provisional name */
 
 
 
 void effect_11_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (!EXE_flag && !Game_pause) {
             ewk->wu.direction--;
-            if (ewk->wu.direction <= 0) {
-                if (0) {
-                }
-                ewk->wu.routine_no[0]++;
-                ewk->wu.disp_flag = 1;
-                set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
+            if (ewk->wu.direction > 0) {
+                break;
             }
+            ewk->wu.routine_no[0]++;
+            ewk->wu.disp_flag = 1;
+            set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         }
         break;
-    case 1:
+    case R0_MOVE:
         if (!EXE_flag && !Game_pause && !EXE_obroll) {
             add_x_sub(ewk);
             add_y_sub(ewk);
@@ -55,7 +60,7 @@ void effect_11_move(WORK_Other* ewk) {
         }
         disp_pos_trans_entry_s(ewk);
         break;
-    case 2:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:

@@ -17,6 +17,16 @@
 #include "aboutspr.h"
 #include "EFFH0.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set the digit, then wait */
+#define R0_MOVE         1       /* show until killed */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_INIT         0       /* set up hidden */
+#define R1_WAIT         1       /* wait 60 frames, then show */
+
 void effH0_trans(WORK* ewk);
 extern const CONN effh0_nando_tbl[4][6];
 
@@ -25,9 +35,9 @@ extern const CONN effh0_nando_tbl[4][6];
 /* priority 27, number cells from 0xB2E0 */
 void effect_H0_move(WORK_Other_CONN* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 0;
             ewk->wu.old_cgnum = 0;
@@ -35,27 +45,27 @@ void effect_H0_move(WORK_Other_CONN* ewk) {
             ewk->wu.position_z = ewk->wu.my_priority = 27;
             ewk->conn[0].chr = (Bonus_Stage_Level % 10) + 45792;
             break;
-        case 1:
+        case R1_WAIT:
             if (--ewk->wu.dir_timer <= 0) {
                 ewk->wu.disp_flag = 1;
-                ewk->wu.routine_no[0] = 1;
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[0] = R0_MOVE;
+                ewk->wu.routine_no[1] = R1_INIT;
             }
             break;
         }
         effH0_trans(&ewk->wu);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
             ewk->wu.type = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         effH0_trans(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back((WORK_Other*)ewk);

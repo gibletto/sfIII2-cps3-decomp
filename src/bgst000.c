@@ -24,6 +24,11 @@
 #include "eff05.h"
 #include "EFF11.h"
 
+/* bgw r_no_0 of a layer with an entrance demo: its bg*_jmp routine */
+#define R0_INIT         0       /* set up the layer */
+#define R0_DEMO         1       /* the entrance demo */
+#define R0_MOVE         2       /* follow the fight */
+
 /* declarations the headers do not give */
 /* provisional name */
 extern s8 bg_demo_cnt;
@@ -212,7 +217,7 @@ const s32 bg_sync_speed_tbl[7] = {
 /* provisional name */
 void bg000_layer(s16 n) {
     switch (bgw_ptr->r_no_0) {
-    case 0:
+    case R0_INIT:
         bgw_ptr->r_no_0++;
         bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
         bgw_ptr->xy[1].cal = 0;
@@ -239,11 +244,11 @@ void bg000_layer(s16 n) {
         bgw_ptr->r_no_1 = 0;
         sync_fam_set3(n);
         break;
-    case 1:
+    case R0_DEMO:
         bg0000_demo();
         sync_fam_set3(n);
         break;
-    case 2:
+    case R0_MOVE:
         bg_x_move_check();
         bg_y_move_check();
         sync_fam_set3(n);

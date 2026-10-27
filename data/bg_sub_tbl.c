@@ -1,5 +1,11 @@
 /*
- * BG_SUB_TBL.C  tables read by bg000.c and tate00.c
+ * BG_SUB_TBL.C  background test, zoom and scroll area tables
+ *
+ * bg_test_stage_tbl is the stage and area of each entry the debug background test steps
+ * through; read by TATE00.C. bg_zoom_rate_tbl is the zoom rate for each step of the screen
+ * zoom (zoom_ud_check), akebono_scrn_pos_tbl the x and y of the finish screen pages
+ * (akebono_scrn_move), and pos_area_tbl maps a player's screen x in the normal mode to an area
+ * code for the background scroll choice; read by BG000.C.
  */
 
 #include "types.h"

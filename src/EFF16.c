@@ -17,14 +17,24 @@
 #include "aboutspr.h"
 #include "EFF16.h"
 
+/* routine_no[0] */
+#define R0_APPEAR       0       /* show the digits one by one */
+#define R0_MOVE         1       /* redraw the score every frame */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_INIT         0       /* split the score into digits */
+#define R1_ADD          1       /* add a digit every 3 frames */
+
 
 
 
 void effect_16_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_APPEAR:
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_INIT:
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
             ewk->wu.old_cgnum = 0;
@@ -35,32 +45,32 @@ void effect_16_move(WORK_Other* ewk) {
             ((WORK_Other_CONN*)ewk)->num_of_conn = 0;
             ewk->wu.dir_timer = 0;
             break;
-        case 1:
+        case R1_ADD:
             if (--ewk->wu.dir_timer <= 0) {
                 ewk->wu.dir_timer = 3;
                 ((WORK_Other_CONN*)ewk)->num_of_conn++;
                 if (((WORK_Other_CONN*)ewk)->num_of_conn < ewk->wu.direction) {
                     break;
                 }
-                ewk->wu.routine_no[0] = 1;
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[0] = R0_MOVE;
+                ewk->wu.routine_no[1] = R1_INIT;
             }
             break;
         }
         eff16_trans(&ewk->wu);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
             ewk->wu.type = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         ((WORK_Other_CONN*)ewk)->num_of_conn = score_bunkai_eff16((WORK_Other_CONN*)ewk, Score[ewk->wu.type][0]);
         eff16_trans(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(ewk);

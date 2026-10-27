@@ -160,7 +160,7 @@ void Select_Flow_7th(void) {
         bg_w.bgw[0].xy[1].cal = 0;
         bg_w.bgw[1].wxy[0].cal = bg_w.bgw[1].xy[0].cal = 0x2000000;
         bg_w.bgw[1].xy[1].cal = 0;
-        (void)((WORK*)0x2000000)->id;
+        (void)&((WORK*)0x2000000)->id;
         Bg_Off_R(191);
         effect_G0_init(0, 7);
         load_any_color(4);
@@ -206,7 +206,7 @@ void Select_Flow_10th(void) {
 
 /* provisional name */
 s32 Check_Select_Flow_Entry(void) {
-    if (E_Number[0][0] == 2 || E_Number[1][0] == 2) {
+    if (E_Number[0][0] == ENTRY_NAME || E_Number[1][0] == ENTRY_NAME) {
         return 0;
     }
     return 1;

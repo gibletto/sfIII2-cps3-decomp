@@ -20,34 +20,44 @@
 #include "effect_2.h"
 #include "EFFE8.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start at its slot of the trail */
+#define R0_MOVE         1       /* follow the trail */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_FOLLOW       0       /* keep its slot while the controller runs */
+#define R1_RETURN       1       /* (default) walk back to the head of the trail */
+
 
 
 void effect_E8_move(WORK_Other* ewk) {
     PLW* mwk = (PLW*)ewk->my_master;
     WORK_Other* cwk = (WORK_Other*)ewk->wu.target_adrs;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.type = ewk->wu.charset_id;
         ewk->wu.cg_att_ix = 0;
         ewk->wu.cg_hit_ix = 0;
         if (ewk->wu.type >= ewk->wu.charset_id) {
             ewk->wu.type = ewk->wu.charset_id;
-            ewk->wu.routine_no[0] = 1;
+            ewk->wu.routine_no[0] = R0_MOVE;
         }
         effe8_zanzou_process(ewk, mwk);
         effE8_trans(ewk);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_FOLLOW:
             effe8_zanzou_process(ewk, mwk);
             if (cwk->wu.routine_no[0] != 1 || cwk->wu.routine_no[1] != 1) {
-                ewk->wu.routine_no[1] = 1;
+                ewk->wu.routine_no[1] = R1_RETURN;
             }
             effE8_trans(ewk);
             break;
@@ -55,7 +65,7 @@ void effect_E8_move(WORK_Other* ewk) {
             ewk->wu.type -= ewk->wu.rl_waza;
             if (ewk->wu.type <= 0) {
                 ewk->wu.disp_flag = 0;
-                ewk->wu.routine_no[0] = 2;
+                ewk->wu.routine_no[0] = R0_END;
             } else {
                 effe8_zanzou_process(ewk, mwk);
                 effE8_trans(ewk);
@@ -63,8 +73,8 @@ void effect_E8_move(WORK_Other* ewk) {
             break;
         }
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         if (ewk->wu.old_rno[3]) {

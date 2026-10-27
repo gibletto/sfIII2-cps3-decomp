@@ -25,6 +25,11 @@
 #include "eff88.h"
 #include "EFF23.h"
 
+/* bgw r_no_0 of a layer with an entrance demo: its bg*_jmp routine */
+#define R0_INIT         0       /* set up the layer */
+#define R0_DEMO         1       /* the entrance demo */
+#define R0_MOVE         2       /* follow the fight */
+
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
 extern const u8 bg_fade_level_tbl[];
@@ -79,7 +84,7 @@ void bg030_layer0_init(void) {
     bgw_ptr->hos_xy[0].disp.pos = bgw_ptr->wxy[0].disp.pos - bg_w.pos_offset;
     bgw_ptr->hos_xy[0].disp.low = 0;
     if (bg030_appear_check()) {
-        bgw_ptr->r_no_0 = 2;
+        bgw_ptr->r_no_0 = R0_MOVE;
     } else {
         bgw_ptr->r_no_0++;
         if (bg_w.area == 0) {
@@ -118,7 +123,7 @@ void bg030_layer1_init(void) {
     bgw_ptr->hos_xy[0].disp.pos = bgw_ptr->wxy[0].disp.pos - bg_w.pos_offset;
     bgw_ptr->hos_xy[0].disp.low = 0;
     if (bg030_appear_check()) {
-        bgw_ptr->r_no_0 = 2;
+        bgw_ptr->r_no_0 = R0_MOVE;
     } else {
         bgw_ptr->r_no_0++;
         if (bg_w.area == 0) {
@@ -170,7 +175,7 @@ void bg030_layer2_init(void) {
     bgw_ptr->hos_xy[0].disp.pos = bgw_ptr->wxy[0].disp.pos - bg_w.pos_offset;
     bgw_ptr->hos_xy[0].disp.low = 0;
     if (bg030_appear_check()) {
-        bgw_ptr->r_no_0 = 2;
+        bgw_ptr->r_no_0 = R0_MOVE;
     } else {
         bgw_ptr->r_no_0++;
         if (bg_w.area == 0) {

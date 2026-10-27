@@ -1,11 +1,21 @@
 /*
- * EFF14_TBL.C  tables read by effect 14
+ * EFF14_TBL.C  background colour-cycle scripts
+ *
+ * eff14_ofs_tbl is the map offset of each id's cell rectangle; eff14_data_tbl points each id
+ * at its script (eff14_script_n: rows of timer and colour, looping at a -1 timer), its cell
+ * pattern mask (eff14_pattern_n, 1 = recolour) and its size in columns and rows
+ * (eff14_size_n). Read by EFF14.C, the colour animation started by the stage 07, 08, 09 and 15
+ * backgrounds.
  */
 
 #include "types.h"
 #include "structs.h"
 
 #pragma section TBL
+
+/* a script step: the frames it lasts, then the colour, a big-endian word (EFF14.C reads it with *(s16*)) */
+#define EFF14_STEP(time, col)   0, (time), (s8)((col) >> 8), (s8)(col)
+#define EFF14_END               -1, -1
 
 extern const u16 eff14_ofs_tbl[];
 extern const s8 eff14_script_0[];
@@ -51,67 +61,76 @@ const u16 eff14_ofs_tbl[12] = {
 };
 
 const s8 eff14_script_0[52] = {
-    0, 5, 0, 80, 0, 5, 0, 81, 0, 5, 0, 82, 0, 5, 0, 83,
-    0, 5, 0, 84, 0, 5, 0, 85, 0, 5, 0, 86, 0, 5, 0, 87,
-    0, 5, 0, 88, 0, 5, 0, 89, 0, 5, 0, 90, 0, 5, 0, 91,
-    -1, -1, 0, 0,
+    EFF14_STEP(5, 0x50), EFF14_STEP(5, 0x51), EFF14_STEP(5, 0x52), EFF14_STEP(5, 0x53),
+    EFF14_STEP(5, 0x54), EFF14_STEP(5, 0x55), EFF14_STEP(5, 0x56), EFF14_STEP(5, 0x57),
+    EFF14_STEP(5, 0x58), EFF14_STEP(5, 0x59), EFF14_STEP(5, 0x5A), EFF14_STEP(5, 0x5B),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_1[16] = {
-    0, 3, 0, 89, 0, 3, 0, 96, 0, 3, 0, 97, -1, -1, 0, 0,
+    EFF14_STEP(3, 0x59), EFF14_STEP(3, 0x60), EFF14_STEP(3, 0x61),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_2[16] = {
-    0, 3, 0, 82, 0, 3, 0, 92, 0, 3, 0, 93, -1, -1, 0, 0,
+    EFF14_STEP(3, 0x52), EFF14_STEP(3, 0x5C), EFF14_STEP(3, 0x5D),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_3[16] = {
-    0, 3, 0, 65, 0, 3, 0, 94, 0, 3, 0, 95, -1, -1, 0, 0,
+    EFF14_STEP(3, 0x41), EFF14_STEP(3, 0x5E), EFF14_STEP(3, 0x5F),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_4[28] = {
-    0, 4, 0, 69, 0, 4, 0, 73, 0, 4, 0, 74, 0, 4, 0, 75,
-    0, 4, 0, 76, 0, 4, 0, 77, -1, -1, 0, 0,
+    EFF14_STEP(4, 0x45), EFF14_STEP(4, 0x49), EFF14_STEP(4, 0x4A), EFF14_STEP(4, 0x4B),
+    EFF14_STEP(4, 0x4C), EFF14_STEP(4, 0x4D),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_6[76] = {
-    0, 6, 0, 73, 0, 5, 0, 77, 0, 6, 0, 78, 0, 6, 0, 79,
-    0, 7, 0, 78, 0, 6, 0, 77, 0, 5, 0, 73, 0, 6, 0, 77,
-    0, 5, 0, 78, 0, 6, 0, 79, 0, 5, 0, 78, 0, 5, 0, 77,
-    0, 6, 0, 73, 0, 7, 0, 77, 0, 6, 0, 78, 0, 7, 0, 79,
-    0, 6, 0, 78, 0, 6, 0, 77, -1, -1, 0, 0,
+    EFF14_STEP(6, 0x49), EFF14_STEP(5, 0x4D), EFF14_STEP(6, 0x4E), EFF14_STEP(6, 0x4F),
+    EFF14_STEP(7, 0x4E), EFF14_STEP(6, 0x4D), EFF14_STEP(5, 0x49), EFF14_STEP(6, 0x4D),
+    EFF14_STEP(5, 0x4E), EFF14_STEP(6, 0x4F), EFF14_STEP(5, 0x4E), EFF14_STEP(5, 0x4D),
+    EFF14_STEP(6, 0x49), EFF14_STEP(7, 0x4D), EFF14_STEP(6, 0x4E), EFF14_STEP(7, 0x4F),
+    EFF14_STEP(6, 0x4E), EFF14_STEP(6, 0x4D),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_7[76] = {
-    0, 5, 0, 75, 0, 4, 0, 80, 0, 4, 0, 81, 0, 5, 0, 82,
-    0, 4, 0, 81, 0, 3, 0, 80, 0, 4, 0, 75, 0, 3, 0, 80,
-    0, 5, 0, 81, 0, 4, 0, 82, 0, 4, 0, 81, 0, 3, 0, 80,
-    0, 4, 0, 75, 0, 4, 0, 80, 0, 5, 0, 81, 0, 4, 0, 82,
-    0, 4, 0, 81, 0, 3, 0, 80, -1, -1, 0, 0,
+    EFF14_STEP(5, 0x4B), EFF14_STEP(4, 0x50), EFF14_STEP(4, 0x51), EFF14_STEP(5, 0x52),
+    EFF14_STEP(4, 0x51), EFF14_STEP(3, 0x50), EFF14_STEP(4, 0x4B), EFF14_STEP(3, 0x50),
+    EFF14_STEP(5, 0x51), EFF14_STEP(4, 0x52), EFF14_STEP(4, 0x51), EFF14_STEP(3, 0x50),
+    EFF14_STEP(4, 0x4B), EFF14_STEP(4, 0x50), EFF14_STEP(5, 0x51), EFF14_STEP(4, 0x52),
+    EFF14_STEP(4, 0x51), EFF14_STEP(3, 0x50),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_8[28] = {
-    0, 4, 0, 69, 0, 4, 0, 70, 0, 4, 0, 71, 0, 4, 0, 72,
-    0, 4, 0, 73, 0, 4, 0, 74, -1, -1, 0, 0,
+    EFF14_STEP(4, 0x45), EFF14_STEP(4, 0x46), EFF14_STEP(4, 0x47), EFF14_STEP(4, 0x48),
+    EFF14_STEP(4, 0x49), EFF14_STEP(4, 0x4A),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_9[20] = {
-    0, 4, 0, 65, 0, 4, 0, 76, 0, 4, 0, 77, 0, 4, 0, 78,
-    -1, -1, 0, 0,
+    EFF14_STEP(4, 0x41), EFF14_STEP(4, 0x4C), EFF14_STEP(4, 0x4D), EFF14_STEP(4, 0x4E),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_10[12] = {
-    0, 4, 0, 67, 0, 4, 0, 75, -1, -1, 0, 0,
+    EFF14_STEP(4, 0x43), EFF14_STEP(4, 0x4B),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_script_11[108] = {
-    0, 4, 0, 64, 0, 4, 0, 71, 0, 4, 0, 64, 0, 4, 0, 71,
-    0, 3, 0, 64, 0, 3, 0, 71, 0, 2, 0, 64, 0, 3, 0, 71,
-    0, 4, 0, 64, 0, 5, 0, 71, 0, 4, 0, 64, 0, 4, 0, 71,
-    0, 4, 0, 64, 0, 4, 0, 71, 0, 2, 0, 64, 0, 3, 0, 71,
-    0, 4, 0, 64, 0, 5, 0, 71, 0, 4, 0, 64, 0, 4, 0, 71,
-    0, 4, 0, 64, 0, 4, 0, 71, 0, 5, 0, 64, 0, 6, 0, 71,
-    0, 5, 0, 64, 0, 4, 0, 71, -1, -1, 0, 0,
+    EFF14_STEP(4, 0x40), EFF14_STEP(4, 0x47), EFF14_STEP(4, 0x40), EFF14_STEP(4, 0x47),
+    EFF14_STEP(3, 0x40), EFF14_STEP(3, 0x47), EFF14_STEP(2, 0x40), EFF14_STEP(3, 0x47),
+    EFF14_STEP(4, 0x40), EFF14_STEP(5, 0x47), EFF14_STEP(4, 0x40), EFF14_STEP(4, 0x47),
+    EFF14_STEP(4, 0x40), EFF14_STEP(4, 0x47), EFF14_STEP(2, 0x40), EFF14_STEP(3, 0x47),
+    EFF14_STEP(4, 0x40), EFF14_STEP(5, 0x47), EFF14_STEP(4, 0x40), EFF14_STEP(4, 0x47),
+    EFF14_STEP(4, 0x40), EFF14_STEP(4, 0x47), EFF14_STEP(5, 0x40), EFF14_STEP(6, 0x47),
+    EFF14_STEP(5, 0x40), EFF14_STEP(4, 0x47),
+    EFF14_END, 0, 0,
 };
 
 const s8 eff14_pattern_0[190] = {

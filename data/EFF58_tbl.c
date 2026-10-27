@@ -1,5 +1,8 @@
 /*
- * EFF58_TBL.C  tables read by effect 56
+ * EFF58_TBL.C  palette step tables
+ *
+ * eff56_color_tbl gives the eight palette numbers of each of the two cycles and
+ * eff56_timer_tbl the time of each step. Read by EFF56.C, the palette steps.
  */
 
 #include "types.h"

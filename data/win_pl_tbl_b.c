@@ -1,5 +1,11 @@
 /*
- * WIN_PL_TBL_B.C  tables read by lose_pl.c and win_pl.c
+ * WIN_PL_TBL_B.C  round winner and loser pose tables
+ *
+ * win_10000_tbl, Win_3000_tbl and Win_3001_tbl are the pose lists picked from by the winner
+ * routines Win_01000 and Win_03000, and win_2000_tbl marks the backgrounds on which Win_02000
+ * uses its other final-win poses; these are read by WIN_PL.C. lose_type_tbl selects, by
+ * character, the loser routine (Lose_00000 .. Lose_30000), read by LOSE_PL.C.
+ * win_pl_unref_words is not referred to.
  */
 
 #include "types.h"

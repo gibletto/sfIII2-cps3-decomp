@@ -1,5 +1,14 @@
 /*
- * SC_TRANS_TBL2.C  tables read by sc_trans.c: text (fix) layer character transfer and put routines
+ * SC_TRANS_TBL2.C  text layer win mark, stun mark and combo message tables
+ *
+ * vmark_tbl gives the cell positions of each player's round win marks (win_mark_put,
+ * win_mark_find_put); smark_pos_tbl and smark_kind_tbl give the stun mark's position by
+ * character, side and screen mode and its size by character (stun_mark_put); combo_mtbl holds
+ * the frame cells and size of each combo message, combo_mpos_tbl, combo_mclr_pos_tbl and
+ * combo_hitpos_tbl its columns, clearing column and hit count column by message kind and side,
+ * and combo_erase_pos_tbl and combo_erase_len_tbl the area cleared by combo_window_erase;
+ * sa_color_data_tbl is the colours of the super art stock number (sa_stock_trans). Read by
+ * SC_TRANS.C.
  */
 
 #include "types.h"

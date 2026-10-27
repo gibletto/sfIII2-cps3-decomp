@@ -27,12 +27,21 @@
 #include "PLS01.h"
 #include "PLPAT09.h"
 
+/* routine_no[3], Att_PL09_TOKUSHUKOUDOU */
+#define TOKUSHUKOUDOU_ACTION 1  /* the personal action, filling the super art gauge */
+
+/* routine_no[3], Att_JINNCHUUWATARI_EX */
+#define JINNCHUUWATARI_MOVE 1   /* move along its table and run the animation */
+#define JINNCHUUWATARI_AIR 2    /* in the air until it lands */
+#define JINNCHUUWATARI_AIR2 3   /* in the air until it lands */
+#define JINNCHUUWATARI_CUE 4    /* run the animation to cue 1 */
+
 static void mvxy_table_reader(PLW* wk);
 
 
 
 void pl09_extra_attack(PLW* wk) {
-    pl09_exatt_table[wk->wu.routine_no[2] - 16](wk);
+    pl09_exatt_table[wk->wu.routine_no[2] - ATTACK_SPECIAL](wk);
 }
 
 
@@ -74,13 +83,13 @@ void set_tenguiwa(PLW* wk, u8 data) {
 void Att_PL09_TOKUSHUKOUDOU(PLW* wk) {
     wk->scr_pos_set_flag = 0;
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->tk_success = 0;
         wk->wu.rl_flag = wk->wu.rl_waza;
         set_char_move_init((WORK*)wk, 5, wk->as->char_ix);
         break;
-    case 1:
+    case TOKUSHUKOUDOU_ACTION:
         char_move((WORK*)wk);
         if (wk->wu.cg_type == 40) {
             wk->wu.cg_type = 0;
@@ -112,7 +121,7 @@ void Att_PL09_TOKUSHUKOUDOU(PLW* wk) {
 
 void Att_JINNCHUUWATARI_EX(PLW* wk) {
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.rl_flag = wk->wu.rl_waza;
         wk->wu.xyz[1].disp.pos = 0;
@@ -120,27 +129,27 @@ void Att_JINNCHUUWATARI_EX(PLW* wk) {
         wk->wu.kow = wk->as->r_no;
         wk->wu.mvxy.index = wk->as->data_ix;
         break;
-    case 1:
+    case JINNCHUUWATARI_MOVE:
         char_move((WORK*)wk);
         mvxy_table_reader(wk);
         break;
-    case 2:
+    case JINNCHUUWATARI_AIR:
         mvxy_table_reader(wk);
         jumping_union_process((WORK*)wk, 3);
         break;
-    case 3:
+    case JINNCHUUWATARI_AIR2:
         if (wk->wu.cg_type == 1) {
             wk->wu.cg_type = 0;
-            wk->wu.routine_no[3] = (wk->wu.routine_no[1] == 0) ? 2 : 4;
+            wk->wu.routine_no[3] = (wk->wu.routine_no[1] == PLAYER_NORMAL) ? 2 : 4;
             break;
         }
         jumping_union_process((WORK*)wk, 4);
         break;
-    case 4:
+    case JINNCHUUWATARI_CUE:
         char_move((WORK*)wk);
         if (wk->wu.cg_type == 1) {
             wk->wu.cg_type = 0;
-            wk->wu.routine_no[3] = (wk->wu.routine_no[1] == 0) ? 2 : 3;
+            wk->wu.routine_no[3] = (wk->wu.routine_no[1] == PLAYER_NORMAL) ? 2 : 3;
         }
         break;
     }

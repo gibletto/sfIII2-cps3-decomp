@@ -16,15 +16,20 @@
 #include "aboutspr.h"
 #include "Eff52.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show */
+#define R0_MOVE         1       /* stay until told to go */
+#define R0_KILL         2       /* (default) put the work back */
+
 
 
 void effect_52_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         break;
-    case 1:
+    case R0_MOVE:
         if (Suicide) {
             ewk->wu.routine_no[0]++;
             ewk->wu.disp_flag = 0;

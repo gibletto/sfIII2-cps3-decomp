@@ -1,11 +1,12 @@
 /*
- * EFFD0.C  Effect D0: thrown object that bounces along the floor (move)
+ * EFFD0.C  Effect D0: thrown object that bounces along the floor
  *
  * effect_D0_move plays the object's start pattern, then switches to pattern 15, moves it 96 dots
  * up and 22 dots forward, and flies it through a series of arcs whose timers and speeds come from
  * effd0_conter / effd0_data_tbl (d0_speed_set, mirrored for facing). When it falls below the
  * floor it plays its landing pattern 16 and rests. It is removed when a screen wipe (Exec_Wipe)
- * has finished. The init, effect_D0_init, is in EFFD1.C.
+ * has finished. effect_D0_init creates it at a player's position with a palette chosen by
+ * side (etc_char_table pattern 14).
  */
 
 #include "structs.h"
@@ -22,6 +23,15 @@
 #include "CALDIR.h"
 #include "EFFD1.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the first pattern */
+#define R0_THROW        1       /* play it, then take off */
+#define R0_BOUNCE       2       /* bounce along the floor */
+#define R0_LAND         3       /* play the landing pattern */
+#define R0_REST         4       /* rest on the floor */
+#define R0_HIDE         99      /* hide after the wipe */
+#define R0_KILL         100     /* (default) put the work back */
+
 
 
 void effect_D0_move(WORK_Other* ewk) {
@@ -36,15 +46,15 @@ void effect_D0_move(WORK_Other* ewk) {
     bind = set_char_move_init;
     fin = pl_eff_trans_entry;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.old_rno[1] = 0;
         bind(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_THROW:
         if (ewk->wu.no_death_attack && !Exec_Wipe) {
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_HIDE;
             break;
         }
         node(&ewk->wu);
@@ -61,9 +71,9 @@ void effect_D0_move(WORK_Other* ewk) {
         }
         fin(ewk);
         return;
-    case 2:
+    case R0_BOUNCE:
         if (ewk->wu.no_death_attack && !Exec_Wipe) {
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_HIDE;
             break;
         }
         ewk->wu.old_rno[0]--;
@@ -80,9 +90,9 @@ void effect_D0_move(WORK_Other* ewk) {
         }
         fin(ewk);
         return;
-    case 3:
+    case R0_LAND:
         if (ewk->wu.no_death_attack && !Exec_Wipe) {
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_HIDE;
             break;
         }
         node(&ewk->wu);
@@ -91,14 +101,14 @@ void effect_D0_move(WORK_Other* ewk) {
         }
         fin(ewk);
         return;
-    case 4:
+    case R0_REST:
         if (ewk->wu.no_death_attack && !Exec_Wipe) {
-            ewk->wu.routine_no[0] = 99;
+            ewk->wu.routine_no[0] = R0_HIDE;
             break;
         }
         fin(ewk);
         return;
-    case 99:
+    case R0_HIDE:
         ewk->wu.disp_flag = 0;
         ewk->wu.routine_no[0]++;
         break;

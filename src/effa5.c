@@ -27,6 +27,13 @@
 #include "sc_trans.h"
 #include "effa5.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* wait while the timer is stopped */
+#define R0_COUNT        1       /* count the timer down */
+#define R0_ZERO         2       /* at zero: time over after 30 frames */
+#define R0_OVER         3       /* time over until the timer is reset */
+#define R0_KILL         4       /* (default) put the work back */
+
 extern s16 Exit_No;
 
 
@@ -34,9 +41,9 @@ extern s16 Exit_No;
 /* the timer ends while Exit_No is set */
 void effect_A5_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (Exit_No) {
-            ewk->wu.routine_no[0] = 4;
+            ewk->wu.routine_no[0] = R0_KILL;
             Time_Stop = -1;
             break;
         }
@@ -44,9 +51,9 @@ void effect_A5_move(WORK_Other* ewk) {
             ewk->wu.routine_no[0]++;
         }
         break;
-    case 1:
+    case R0_COUNT:
         if (Exit_No) {
-            ewk->wu.routine_no[0] = 4;
+            ewk->wu.routine_no[0] = R0_KILL;
             Time_Stop = -1;
             break;
         }
@@ -60,29 +67,29 @@ void effect_A5_move(WORK_Other* ewk) {
             ewk->wu.dir_timer = 30;
         }
         break;
-    case 2:
+    case R0_ZERO:
         if (Exit_No) {
-            ewk->wu.routine_no[0] = 4;
+            ewk->wu.routine_no[0] = R0_KILL;
             Time_Stop = -1;
             break;
         }
         if (Select_Timer) {
-            ewk->wu.routine_no[0] = 1;
+            ewk->wu.routine_no[0] = R0_COUNT;
             Unit_Of_Timer = 50;
         } else if (--ewk->wu.dir_timer == 0) {
             Time_Over = 1;
             ewk->wu.routine_no[0]++;
         }
         break;
-    case 3:
+    case R0_OVER:
         Time_Over = 1;
         if (Exit_No) {
-            ewk->wu.routine_no[0] = 4;
+            ewk->wu.routine_no[0] = R0_KILL;
             Time_Stop = -1;
             break;
         }
         if (Select_Timer) {
-            ewk->wu.routine_no[0] = 1;
+            ewk->wu.routine_no[0] = R0_COUNT;
             Unit_Of_Timer = 50;
         }
         break;

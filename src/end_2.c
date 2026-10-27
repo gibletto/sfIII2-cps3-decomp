@@ -50,7 +50,7 @@ extern s32 end_2_timer;
 
 void end_02000(u16 pl_num) {
     switch (end_w.r_no_1) {
-    case 0:
+    case END1_INIT:
         end_w.r_no_1++;
         end_w.r_no_2 = 0;
         common_end_init00(pl_num);
@@ -70,7 +70,7 @@ void end_02000(u16 pl_num) {
         effect_H5_init(2);
         sound_request(25);
         break;
-    case 1:
+    case END1_SCENES:
         end_w.timer = end_w.timer - 1;
         if (end_w.timer < 0) {
             end_w.r_no_2 = end_w.r_no_2 + 1;
@@ -91,7 +91,7 @@ void end_02000(u16 pl_num) {
         end_bg_pos_hosei2();
         end_fam_set2();
         break;
-    case 2:
+    case END1_DONE:
         break;
     }
 }
@@ -197,7 +197,6 @@ void end_200_3000(void) {
         bg_cell_write(0, 0xC0, 15, (u32)end_200_scrn_data, 0, 0x220);
         end_2_bg0_step = 8;
         end_2_timer = 180;
-        (void)((WORK*)0x80)->id;
         effect_H5_init(9);
         effect_H5_init(10);
         Rewrite_End_Message(3);
@@ -212,7 +211,7 @@ void end_200_3000(void) {
     case 2:
         bgw_ptr->abs_x = bgw_ptr->xy[0].disp.pos;
         work = bgw_ptr->xy[0].disp.pos;
-        work &= 0x200;
+        work = work & 0x200;
         if (work == 0x200) {
             bgw_ptr->r_no_1++;
         }

@@ -1,5 +1,14 @@
 /*
- * EFFI5_TBL.C  tables read by effects I5, I6, I7, I8, J1 and J2
+ * EFFI5_TBL.C  ending object, stage object, attack sign and blocking bonus stage tables
+ *
+ * effI5_fade_tbl is the 16 palette steps the ending object of effect I5 fades in through
+ * (EFFI5.C). scr_obj_numI6 holds the counts and object rows of the stage objects of effect I6,
+ * reached by stage through scr_obj_dataI6 (EFFI6.C). ex_sign_data gives the x and y offset,
+ * pattern and follow flag of each sign shown beside a player during an attack (EFFI7.C).
+ * effI8_hit_box is the box in which the thrower catches a ball of the blocking bonus stage and
+ * bbbs_emtall the height the ball is aimed at for each character (EFFI8.C). effj1_col_tbl is
+ * the { timer, colour } cycle of the ending object of effect J1 (EFFJ1.C), and
+ * bbbs_nando_large the six-part bonus-stage level plate (EFFJ2_CODE.C).
  */
 
 #include "types.h"

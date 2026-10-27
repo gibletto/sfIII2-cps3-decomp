@@ -1,5 +1,8 @@
 /*
- * SEL_DATA_B.C  tables read by effects 70 and D8
+ * SEL_DATA_B.C  select screen face positions
+ *
+ * Face_Pos_Data holds the x and y of each face on the character select screen. Read by EFF70.C
+ * (the face plates) and EFFD8.C (the player's face cursor).
  */
 
 #include "types.h"
@@ -10,6 +13,7 @@
 extern const u16 Face_Pos_Data[];
 
 /* provisional name */
+/* Two entries per face on the character select screen: x, y. */
 const u16 Face_Pos_Data[128] = {
     0, 0x5D, 0xFF88, 0x5F, 0xFF70, 0x65, 0xFFA0, 0x63,
     0x78, 0x5F, 0xFFB8, 0x5F, 0xFFE8, 0x5F, 0xFFD0, 0x61,

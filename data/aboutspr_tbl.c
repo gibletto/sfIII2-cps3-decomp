@@ -1,5 +1,8 @@
 /*
- * ABOUTSPR_TBL.C  tables read by aboutspr.c: character sprite graphics and display lists
+ * ABOUTSPR_TBL.C  mark sprite index table
+ *
+ * mark_index_tbl gives, by mark type and number, the index into the mark graphics tables
+ * (mark_gfx_cells, mark_gfx_ofs, mark_gfx_colcd) used by disp_mark_cells. Read by ABOUTSPR.C.
  */
 
 #include "types.h"

@@ -22,13 +22,23 @@
 #include "effect_2.h"
 #include "EFFE2.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the pattern */
+#define R0_MOVE         1       /* stay on the player */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_ON           0       /* follow the player */
+#define R1_FADE         1       /* (default) play the fade-out part */
+
 
 
 void effect_E2_move(WORK_Other* ewk) {
     PLW* mwk = (PLW*)ewk->my_master;
     ewk->wu.hit_stop = mwk->wu.hit_stop;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         if (ewk->wu.weight_level) {
             ewk->wu.disp_flag = 2;
@@ -39,23 +49,23 @@ void effect_E2_move(WORK_Other* ewk) {
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         effE2_sort_push(&ewk->wu, &mwk->wu);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         switch (ewk->wu.routine_no[1]) {
-        case 0:
+        case R1_ON:
             if (EXE_flag == 0 && Game_pause == 0) {
                 char_move(&ewk->wu);
                 if (ewk->wu.cg_type) {
                     if (ewk->wu.cg_type == 0xFF) {
                         ewk->wu.disp_flag = 0;
-                        ewk->wu.routine_no[0] = 2;
+                        ewk->wu.routine_no[0] = R0_END;
                         break;
                     } else if (ewk->wu.cg_type == 1) {
-                        ewk->wu.routine_no[1] = 1;
+                        ewk->wu.routine_no[1] = R1_FADE;
                         sort_push_request8(&ewk->wu);
                         break;
                     }
@@ -64,7 +74,7 @@ void effect_E2_move(WORK_Other* ewk) {
             if (ewk->wu.dir_old != mwk->wu.dm_count_up) {
                 if (ewk->wu.dm_attribute == mwk->wu.dm_attribute) {
                     ewk->wu.disp_flag = 0;
-                    ewk->wu.routine_no[0] = 2;
+                    ewk->wu.routine_no[0] = R0_END;
                     break;
                 }
                 effe2_erase_or_die(&ewk->wu);
@@ -87,7 +97,7 @@ void effect_E2_move(WORK_Other* ewk) {
                 if (ewk->wu.cg_type) {
                     if (ewk->wu.cg_type == 0xFF) {
                         ewk->wu.disp_flag = 0;
-                        ewk->wu.routine_no[0] = 2;
+                        ewk->wu.routine_no[0] = R0_END;
                         break;
                     }
                 }
@@ -96,8 +106,8 @@ void effect_E2_move(WORK_Other* ewk) {
             break;
         }
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);
@@ -128,12 +138,12 @@ void effE2_sort_push(WORK* ewk, WORK* mwk) {
 /* provisional name */
 void effe2_erase_or_die(WORK* wk) {
     if (wk->cg_wca_ix != 0) {
-        wk->routine_no[1] = 1;
+        wk->routine_no[1] = R1_FADE;
         char_move_wca(wk);
         sort_push_request8(wk);
     } else {
         wk->disp_flag = 0;
-        wk->routine_no[0] = 2;
+        wk->routine_no[0] = R0_END;
     }
 }
 

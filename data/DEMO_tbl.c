@@ -1,5 +1,9 @@
 /*
- * DEMO_TBL.C  tables read by Game_Main.c: game phase dispatcher: title, select, fight, bonus, continue, ending
+ * DEMO_TBL.C  operator information headings
+ *
+ * Game_Data_msg, Income_msg, Service_msg and Card_msg are the headings of the coin, service
+ * and card counts shown to the operator in two regions while 1P light punch is held. Read by
+ * GAME_MAIN.C, the game phase dispatcher.
  */
 
 #include "types.h"

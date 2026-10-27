@@ -35,11 +35,26 @@
 #include "EFFD7.h"
 #include "EFFD5.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start at the screen edge */
+#define R0_MOVE         1       /* fly and take hits */
+#define R0_END          2       /* one more frame */
+#define R0_KILL         3       /* (default) put the work back */
+
+/* routine_no[1] */
+#define R1_FLY          0       /* bounce, or be caught */
+#define R1_HIT          1       /* sort out the hit */
+#define R1_BREAK        2       /* flash, then end */
+
+/* routine_no[2] */
+#define R2_BOUNCE       0       /* bounce along the floor */
+#define R2_HELD         1       /* held by the player */
+
 
 
 void effect_D7_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.charset_id = 11;
         set_char_base_data(&ewk->wu);
@@ -58,11 +73,11 @@ void effect_D7_move(WORK_Other* ewk) {
         cal_speeds_to_me(ewk, (PLW*)ewk->my_master);
         set_char_move_init(&ewk->wu, 0, 0x75);
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
             ewk->wu.type = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         if (sa_stop_check()) {
@@ -81,8 +96,8 @@ void effect_D7_move(WORK_Other* ewk) {
         }
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);
@@ -96,19 +111,19 @@ void effect_D7_move(WORK_Other* ewk) {
 void effD7_main_process(WORK_Other* ewk) {
     PLW* mwk = (PLW*)ewk->my_master;
     if (ewk->wu.hf.hit_flag) {
-        ewk->wu.routine_no[1] = 1;
+        ewk->wu.routine_no[1] = R1_HIT;
     }
     if (ewk->wu.shell_ix[1]) {
         ewk->wu.kage_flag = ewk->wu.shell_ix[1] = 0;
     }
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_FLY:
         if (ewk->wu.hit_stop) {
             ewk->wu.hit_stop--;
             break;
         }
         switch (ewk->wu.routine_no[2]) {
-        case 0:
+        case R2_BOUNCE:
             char_move(&ewk->wu);
             add_mvxy_speed(&ewk->wu);
             cal_mvxy_speed(&ewk->wu);
@@ -126,25 +141,25 @@ void effD7_main_process(WORK_Other* ewk) {
                 if (screen_range_check_effD7(&ewk->wu)) {
                     ewk->wu.disp_flag = 0;
                     ewk->wu.type = 0;
-                    ewk->wu.routine_no[0] = 2;
+                    ewk->wu.routine_no[0] = R0_END;
                     break;
                 }
             }
             if (ewk->wu.kage_flag) {
-                if (mwk->wu.routine_no[1] == 4 && mwk->wu.routine_no[2] == 30 &&
+                if (mwk->wu.routine_no[1] == PLAYER_ATTACK && mwk->wu.routine_no[2] == ATTACK_PERSONAL &&
                     mwk->wu.cg_type == 0x28 && mwk->tk_success == ewk->wu.shell_ix[0]) {
                     if (hit_check_subroutine(&ewk->wu, (WORK*)ewk->my_master, effD7_hit_box[0], effD7_hit_box[1])) {
                     mwk->wu.cmwk[7] = 1;
                     ewk->wu.type = 0;
-                    ewk->wu.routine_no[2] = 1;
+                    ewk->wu.routine_no[2] = R2_HELD;
                 }
                 }
             }
             break;
-        case 1:
+        case R2_HELD:
             ewk->wu.disp_flag = 0;
-            if (mwk->wu.routine_no[1] != 4) {
-                ewk->wu.routine_no[2] = 0;
+            if (mwk->wu.routine_no[1] != PLAYER_ATTACK) {
+                ewk->wu.routine_no[2] = R2_BOUNCE;
                 ewk->wu.xyz[0].disp.pos = mwk->wu.xyz[0].disp.pos;
                 ewk->wu.xyz[1].disp.pos = mwk->wu.xyz[1].disp.pos + 136;
                 ewk->wu.disp_flag = 1;
@@ -154,7 +169,7 @@ void effD7_main_process(WORK_Other* ewk) {
                 ewk->wu.mvxy.a[1].sp = 0x20000;
                 ewk->wu.mvxy.d[1].sp = -0x6800;
             } else if (mwk->wu.cmwk[6]) {
-                ewk->wu.routine_no[2] = 0;
+                ewk->wu.routine_no[2] = R2_BOUNCE;
                 if (mwk->wu.rl_flag) {
                     ewk->wu.xyz[0].disp.pos = mwk->wu.xyz[0].disp.pos + 10;
                 } else {
@@ -171,10 +186,10 @@ void effD7_main_process(WORK_Other* ewk) {
             break;
         }
         break;
-    case 1:
+    case R1_HIT:
         if (ewk->wu.hf.hit.player) {
             if (ewk->wu.hf.hit.player & 0x33) {
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[1] = R1_FLY;
                 if (ewk->wu.hf.hit.player & 0x30) {
                     ewk->wu.mvxy.a[0].sp = -ewk->wu.mvxy.a[0].sp;
                     ewk->wu.mvxy.a[0].sp /= 3;
@@ -187,7 +202,7 @@ void effD7_main_process(WORK_Other* ewk) {
                     ewk->wu.mvxy.d[1].sp = -0x6000;
                 }
             } else if (ewk->wu.hf.hit.player & 0xC0) {
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[1] = R1_FLY;
                 ewk->wu.rl_flag = (ewk->wu.rl_flag + 1) & 1;
                 ewk->wu.mvxy.a[0].sp = 0x30000;
                 ewk->wu.mvxy.a[1].sp = 0x44000;
@@ -196,7 +211,7 @@ void effD7_main_process(WORK_Other* ewk) {
             }
         } else if (ewk->wu.hf.hit.effect && ((WORK*)ewk->wu.hit_adrs)->id == 0x89) {
             sound_effect_request[0x157](ewk, 0x157);
-            ewk->wu.routine_no[1] = 0;
+            ewk->wu.routine_no[1] = R1_FLY;
             ewk->wu.rl_flag = (ewk->wu.rl_flag + 1) & 1;
             ewk->wu.mvxy.a[0].sp = (ewk->wu.mvxy.a[0].sp * 3) / 4;
             ewk->wu.hit_stop = 2;
@@ -204,7 +219,7 @@ void effD7_main_process(WORK_Other* ewk) {
             if (ewk->wu.dmg_work_id != 1) {
                 sound_effect_request[0x10B](ewk, 0x10B);
             }
-            ewk->wu.routine_no[1] = 2;
+            ewk->wu.routine_no[1] = R1_BREAK;
             ewk->wu.rl_flag = (ewk->wu.rl_flag + 1) & 1;
             ewk->wu.disp_flag = 2;
             ewk->wu.type = 0;
@@ -216,11 +231,11 @@ void effD7_main_process(WORK_Other* ewk) {
         ewk->wu.hf.hit_flag = 0;
         ewk->refrected = 1;
         break;
-    case 2:
+    case R1_BREAK:
         ewk->wu.dir_timer--;
         if (ewk->wu.dir_timer <= 0) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
         }
         break;
     }

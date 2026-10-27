@@ -18,6 +18,23 @@
 #include "charmove_2.h"
 #include "EFF48.h"
 
+/* routine_no[1], eff48_0000 */
+#define R1_WAIT         0       /* count the start time down, then show */
+#define R1_SHOW         1       /* show while its scene lasts */
+#define R1_OVER         2       /* one more frame */
+
+/* routine_no[1], eff48_1000 */
+#define R1_PLAY         1       /* play the pattern through */
+#define R1_HOLD         2       /* hold, then clear op_obj_disp */
+#define R1_END          3       /* one more frame */
+
+/* routine_no[1], eff48_2000 */
+#define R1_TIMER        1       /* show until its time runs out */
+#define R1_SHRINK       2       /* shrink the window shut */
+
+/* routine_no[1], eff48_4000 */
+#define R1_STAY         2       /* show while its scene lasts */
+
 
 
 extern const s16 eff48_data_tbl[6][5][6];
@@ -38,7 +55,7 @@ void effect_48_move(WORK_Other* ewk) {
 
 void eff48_0000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_WAIT:
         ewk->wu.old_rno[2] -= 1;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
@@ -46,7 +63,7 @@ void eff48_0000(WORK_Other* ewk) {
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[1], 0);
         }
         break;
-    case 1:
+    case R1_SHOW:
         if (ewk->wu.old_rno[3] != op_w.r_no_1) {
             ewk->wu.routine_no[1]++;
         } else {
@@ -55,7 +72,7 @@ void eff48_0000(WORK_Other* ewk) {
             sort_push_request4(&ewk->wu);
         }
         break;
-    case 2:
+    case R1_OVER:
         ewk->wu.routine_no[1]++;
         break;
     default:
@@ -69,7 +86,7 @@ void eff48_0000(WORK_Other* ewk) {
 
 void eff48_1000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_WAIT:
         ewk->wu.old_rno[2] -= 1;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
@@ -77,9 +94,9 @@ void eff48_1000(WORK_Other* ewk) {
             set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         }
         break;
-    case 1:
+    case R1_PLAY:
         if (ewk->wu.old_rno[3] != op_w.r_no_1) {
-            ewk->wu.routine_no[1] = 3;
+            ewk->wu.routine_no[1] = R1_END;
             break;
         }
         char_move(&ewk->wu);
@@ -90,7 +107,7 @@ void eff48_1000(WORK_Other* ewk) {
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
         sort_push_request4(&ewk->wu);
         break;
-    case 2:
+    case R1_HOLD:
         ewk->wu.old_rno[4] -= 1;
         if (ewk->wu.old_rno[4] <= 0) {
             ewk->wu.routine_no[1]++;
@@ -101,7 +118,7 @@ void eff48_1000(WORK_Other* ewk) {
             sort_push_request4(&ewk->wu);
         }
         break;
-    case 3:
+    case R1_END:
         ewk->wu.routine_no[1]++;
         break;
     default:
@@ -115,7 +132,7 @@ void eff48_1000(WORK_Other* ewk) {
 
 void eff48_2000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_WAIT:
         ewk->wu.old_rno[2] -= 1;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
@@ -123,7 +140,7 @@ void eff48_2000(WORK_Other* ewk) {
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[1], 0);
         }
         break;
-    case 1:
+    case R1_TIMER:
         ewk->wu.old_rno[4] -= 1;
         if (ewk->wu.old_rno[4] <= 0) {
             ewk->wu.routine_no[1]++;
@@ -135,7 +152,7 @@ void eff48_2000(WORK_Other* ewk) {
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
         sort_push_request4(&ewk->wu);
         break;
-    case 2:
+    case R1_SHRINK:
         ewk->wu.my_mr.size.x--;
         ewk->wu.my_mr.size.y -= 1;
         if (ewk->wu.my_mr.size.y <= 0) {
@@ -146,7 +163,7 @@ void eff48_2000(WORK_Other* ewk) {
             sort_push_request4(&ewk->wu);
         }
         break;
-    case 3:
+    case R1_END:
         ewk->wu.routine_no[1]++;
         break;
     default:
@@ -160,7 +177,7 @@ void eff48_2000(WORK_Other* ewk) {
 
 void eff48_3000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_WAIT:
         ewk->wu.old_rno[2] -= 1;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
@@ -168,7 +185,7 @@ void eff48_3000(WORK_Other* ewk) {
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[1], 0);
         }
         break;
-    case 1:
+    case R1_TIMER:
         ewk->wu.old_rno[4] -= 1;
         if (ewk->wu.old_rno[4] <= 0) {
             ewk->wu.routine_no[1]++;
@@ -178,7 +195,7 @@ void eff48_3000(WORK_Other* ewk) {
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
         sort_push_request4(&ewk->wu);
         break;
-    case 2:
+    case R1_OVER:
         ewk->wu.routine_no[1]++;
         break;
     default:
@@ -192,7 +209,7 @@ void eff48_3000(WORK_Other* ewk) {
 
 void eff48_4000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_WAIT:
         ewk->wu.old_rno[2] -= 1;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
@@ -200,7 +217,7 @@ void eff48_4000(WORK_Other* ewk) {
             set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         }
         break;
-    case 1:
+    case R1_PLAY:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type == 0xFF) {
             ewk->wu.routine_no[1]++;
@@ -209,7 +226,7 @@ void eff48_4000(WORK_Other* ewk) {
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
         sort_push_request4(&ewk->wu);
         break;
-    case 2:
+    case R1_STAY:
         if (ewk->wu.old_rno[3] != op_w.r_no_1) {
             ewk->wu.routine_no[1]++;
         } else {
@@ -218,7 +235,7 @@ void eff48_4000(WORK_Other* ewk) {
             sort_push_request4(&ewk->wu);
         }
         break;
-    case 3:
+    case R1_END:
         ewk->wu.routine_no[1]++;
         break;
     default:
@@ -267,6 +284,6 @@ s32 effect_48_init(s16 type) {
         ewk->wu.old_rno[4] = *data_ptr++;
         ewk->wu.old_rno[3] = *data_ptr;
     }
-    (void)((WORK*)etc_char_table)->id;
+    (void)&((WORK*)etc_char_table)->id;
     return 0;
 }

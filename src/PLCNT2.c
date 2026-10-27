@@ -46,6 +46,13 @@
 #include "EFFECT.h"
 #include "effect_2.h"
 #include "PLCNT2.h"
+#include "fighter.h"
+
+/* pcon_rno[2] in plcnt_b_die */
+#define BD_INIT         0       /* stop both players */
+#define BD_FOOTWORK     1       /* until both are steady */
+#define BD_POSE_INIT    2       /* the pause and the win poses */
+#define BD_POSE         3       /* until both poses are done */
 
 
 
@@ -100,7 +107,7 @@ run:
         sort_push_request((WORK*)&plw[0]);
         sort_push_request((WORK*)&plw[1]);
     }
-    if (pcon_rno[0] == 2) {
+    if (pcon_rno[0] == PCON_DIE) {
         return 1;
     }
     return 0;
@@ -115,7 +122,7 @@ static void move_player_work_bonus(void);
 
 void plcnt_b_init(void) {
     switch (pcon_rno[1]) {
-    case 0:
+    case APP_SETUP:
         pcon_rno[1]++;
         round_slow_flag = 0;
         work_init_zero((s32*)&plw[0], sizeof(PLW));
@@ -135,13 +142,13 @@ void plcnt_b_init(void) {
         dead_voice_flag = 0;
         pcon_dp_flag = 0;
         another_bg[0] = another_bg[1] = 0;
-        if (plw[0].player_number == 9 || plw[1].player_number == 9) {
+        if (plw[0].player_number == PL_ORO || plw[1].player_number == PL_ORO) {
             load_any_color(0x8B);
         }
-        if (plw[0].player_number == 8 || plw[1].player_number == 8) {
+        if (plw[0].player_number == PL_ELENA || plw[1].player_number == PL_ELENA) {
             load_any_color(0x9B);
         }
-        if (plw[0].player_number == 13 || plw[1].player_number == 13) {
+        if (plw[0].player_number == PL_URIEN || plw[1].player_number == PL_URIEN) {
             load_any_color(0x9F);
         }
         setup_bs_scrrrl_bs();
@@ -151,15 +158,15 @@ void plcnt_b_init(void) {
         clear_super_arts_point(&plw[0]);
         clear_super_arts_point(&plw[1]);
         break;
-    case 1:
-        if (plw[0].wu.routine_no[0] != 3 || plw[1].wu.routine_no[0] != 3) {
+    case APP_WAIT_READY:
+        if (plw[0].wu.routine_no[0] != PLAYER_MV_READY || plw[1].wu.routine_no[0] != PLAYER_MV_READY) {
             break;
         }
         if (Allow_a_battle_f) {
-            pcon_rno[0] = 1;
+            pcon_rno[0] = PCON_MOVE;
             pcon_rno[1] = 0;
-            plw[0].wu.routine_no[0] = 4;
-            plw[1].wu.routine_no[0] = 4;
+            plw[0].wu.routine_no[0] = PLAYER_MV_FIGHT;
+            plw[1].wu.routine_no[0] = PLAYER_MV_FIGHT;
             ca_check_flag = 1;
         }
         break;
@@ -193,7 +200,7 @@ void plcnt_b_move(void) {
         }
     }
     if (Bonus_Stage_RNO[0] == 2) {
-        pcon_rno[0] = 2;
+        pcon_rno[0] = PCON_DIE;
     }
 }
 
@@ -202,25 +209,25 @@ void plcnt_b_move(void) {
 void plcnt_b_die(void) {
     plw[0].wu.dm_vital = plw[1].wu.dm_vital = 0;
     switch (pcon_rno[2]) {
-    case 0:
+    case BD_INIT:
         plw[0].wkey_flag = plw[1].wkey_flag = 1;
         plw[0].image_setup_flag = plw[1].image_setup_flag = 0;
         pcon_rno[2]++;
-    case 1:
+    case BD_FOOTWORK:
         if (footwork_check(0) && footwork_check(1)) {
             pcon_rno[2]++;
         }
         break;
-    case 2:
+    case BD_POSE_INIT:
         complete_victory_pause();
-        plw[0].wu.routine_no[2] = 40;
-        plw[1].wu.routine_no[2] = 40;
-        plw[0].wu.routine_no[3] = plw[1].wu.routine_no[3] = 0;
+        plw[0].wu.routine_no[2] = NORMAL_WIN;
+        plw[1].wu.routine_no[2] = NORMAL_WIN;
+        plw[0].wu.routine_no[3] = plw[1].wu.routine_no[3] = RN3_START;
         plw[0].wu.cg_type = plw[1].wu.cg_type = 0;
         pcon_rno[2]++;
         break;
-    case 3:
-        if ((plw[0].wu.routine_no[3] == 9) && (plw[1].wu.routine_no[3] == 9)) {
+    case BD_POSE:
+        if ((plw[0].wu.routine_no[3] == RN3_DONE) && (plw[1].wu.routine_no[3] == RN3_DONE)) {
             pcon_rno[2]++;
         }
         break;

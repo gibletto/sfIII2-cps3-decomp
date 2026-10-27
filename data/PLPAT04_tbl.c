@@ -1,5 +1,9 @@
 /*
- * PLPAT04_TBL.C  tables read by PLPAT04.c, PLPAT05.c and PLPAT06.c
+ * PLPAT04_TBL.C  Dudley, Necro and Hugo special attack tables
+ *
+ * pl04_exatt_table, pl05_exatt_table and pl06_exatt_table are the special attack routines of
+ * characters 4 (Dudley), 5 (Necro) and 6 (Hugo), indexed by attack routine number minus 16.
+ * Read by PLPAT04.C, PLPAT05.C and PLPAT06.C.
  */
 
 #include "types.h"
@@ -27,55 +31,55 @@ extern void Att_SLIDE_and_JUMP();
 extern void Att_TENSHINSENKYUUTAI();
 
 void (*const pl04_exatt_table[15])() = {
-    (void (*)())Att_SENPUUKYAKU,
-    (void (*)())Att_SENPUUKYAKU,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_SHOURYUUREPPA,
-    (void (*)())Att_HADOUKEN2,
-    (void (*)())Att_CHOUCHUURENGEKI,
-    (void (*)())Att_CHOUCHUURENGEKI,
-    (void (*)())Att_SLIDE_and_JUMP,
-    (void (*)())Att_SLIDE_and_JUMP,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_NM_OKIAGARI,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_HOMING_JUMP,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_PL04_TOKUSHUKOUDOU,
+    Att_SENPUUKYAKU,
+    Att_SENPUUKYAKU,
+    Att_HADOUKEN,
+    Att_SHOURYUUREPPA,
+    Att_HADOUKEN2,
+    Att_CHOUCHUURENGEKI,
+    Att_CHOUCHUURENGEKI,
+    Att_SLIDE_and_JUMP,
+    Att_SLIDE_and_JUMP,
+    Att_HADOUKEN,
+    Att_NM_OKIAGARI,
+    Att_DUMMY,
+    Att_HOMING_JUMP,
+    Att_DUMMY,
+    Att_PL04_TOKUSHUKOUDOU,
 };
 
 void (*const pl05_exatt_table[15])() = {
-    (void (*)())Att_CHOUCHUURENGEKI,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_SENPUUKYAKU,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_JINNCHUUWATARI,
-    (void (*)())Att_SLIDE_and_JUMP,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_PL05_TOKUSHUKOUDOU,
+    Att_CHOUCHUURENGEKI,
+    Att_HADOUKEN,
+    Att_HADOUKEN,
+    Att_HADOUKEN,
+    Att_HADOUKEN,
+    Att_SENPUUKYAKU,
+    Att_HADOUKEN,
+    Att_HADOUKEN,
+    Att_HADOUKEN,
+    Att_JINNCHUUWATARI,
+    Att_SLIDE_and_JUMP,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_PL05_TOKUSHUKOUDOU,
 };
 
 void (*const pl06_exatt_table[15])() = {
-    (void (*)())Att_HADOUKEN2,
-    (void (*)())Att_HADOUKEN2,
-    (void (*)())Att_CHOUCHUURENGEKI,
-    (void (*)())Att_HADOUKEN2,
-    (void (*)())Att_SHOURYUUKEN,
-    (void (*)())Att_SLIDE_and_JUMP,
-    (void (*)())Att_HADOUKEN2,
-    (void (*)())Att_SHOURYUUKEN,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_TENSHINSENKYUUTAI,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_PL06_TOKUSHUKOUDOU,
+    Att_HADOUKEN2,
+    Att_HADOUKEN2,
+    Att_CHOUCHUURENGEKI,
+    Att_HADOUKEN2,
+    Att_SHOURYUUKEN,
+    Att_SLIDE_and_JUMP,
+    Att_HADOUKEN2,
+    Att_SHOURYUUKEN,
+    Att_DUMMY,
+    Att_TENSHINSENKYUUTAI,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_PL06_TOKUSHUKOUDOU,
 };

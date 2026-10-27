@@ -23,6 +23,12 @@
 #include "CHARMOVE.h"
 #include "charmove_2.h"
 
+/* routine_no[3], Normal_01000 */
+#define N01_STAND       1       /* stand; pose 60 while pcon_dp_flag is set */
+
+/* routine_no[3], Normal_02000 */
+#define N02_RUN         1       /* run the animation */
+
 
 
 void Player_normal(wk)
@@ -54,7 +60,7 @@ PLW* wk;
     wk->cmd_request = 0;
     check_my_tk_power_off(wk, (PLW*)wk->wu.target_adrs);
     check_em_tk_power_off(wk, (PLW*)wk->wu.target_adrs);
-    if (wk->wu.routine_no[3] == 0 && (u32)(wk->wu.routine_no[2] - 31) < 5 && wk->wu.dm_fushin) {
+    if (wk->wu.routine_no[3] == RN3_START && (u32)(wk->wu.routine_no[2] - 31) < 5 && wk->wu.dm_fushin) {
         wk->wu.routine_no[2] = wk->wu.routine_no[2] + 11;
     }
     plpnm_lv_00[wk->wu.routine_no[2]](wk);
@@ -80,7 +86,7 @@ void Normal_01000(PLW* wk) {
         wk->wu.next_z = wk->wu.my_priority + 1;
     }
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         if (pcon_dp_flag) {
             if (wk->wu.now_koc == 0 && wk->wu.char_index == 0) {
@@ -92,7 +98,7 @@ void Normal_01000(PLW* wk) {
             set_char_move_init((WORK*)wk, 0, 0);
             wk->scr_pos_set_flag = 0;
         }
-    case 1:
+    case N01_STAND:
         if (pcon_dp_flag) {
             if (wk->wu.now_koc != 9 || wk->wu.char_index != 60) {
                 exset_char_move_init((WORK*)wk, 9, 60);
@@ -113,12 +119,12 @@ void Normal_02000(PLW* wk) {
         wk->wu.next_z = wk->wu.my_priority + 1;
     }
     switch (wk->wu.routine_no[3]) {
-    case 0:
+    case RN3_START:
         wk->wu.routine_no[3]++;
         wk->wu.rl_flag = wk->wu.rl_waza;
         set_char_move_init((WORK*)wk, 0, 1);
         break;
-    case 1:
+    case N02_RUN:
         char_move((WORK*)wk);
         break;
     }

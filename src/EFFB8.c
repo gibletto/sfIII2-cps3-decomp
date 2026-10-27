@@ -3,7 +3,7 @@
  *
  * Effect B8 is the win message shown after a match. effect_B8_init (called from Win_3rd) takes
  * the winner and chooses the message: sometimes the loser's line, otherwise a Super Art line or
- * one of seven general lines picked by b8_sel_1_by_7 without repeating the last two.
+ * one of seven general lines picked at random without repeating the last two.
  * effect_B8_move picks effB8_mes_jp / _en / _es / _pt by Country and Language, loads the line's
  * graphics and connected sprites and holds the banner until Suicide; on death it purges the
  * line's graphics. With extra switch 2 bit 2 on, player 1's buttons cycle characters and
@@ -21,6 +21,12 @@
 #include "effect_2.h"
 #include "PLS02.h"
 #include "EFFB8.h"
+
+/* routine_no[0] */
+#define R0_INIT         0       /* load the line */
+#define R0_HOLD         1       /* hold until told to go */
+#define R0_END          2       /* one more frame */
+#define R0_KILL         3       /* (default) free the graphics and the work */
 
 
 
@@ -47,7 +53,7 @@ void effect_B8_move(WORK_Other_CONN* ewk) {
     s16 num;
     s16 i;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         switch (Country) {
         case 1:
@@ -137,7 +143,7 @@ void effect_B8_move(WORK_Other_CONN* ewk) {
         ewk->wu.cg_number++;
         ewk->wu.cg_number &= 0x7FFF;
         break;
-    case 1:
+    case R0_HOLD:
         if (Suicide == 1) {
             ewk->wu.disp_flag = 0;
             ewk->wu.routine_no[0]++;
@@ -167,11 +173,11 @@ void effect_B8_move(WORK_Other_CONN* ewk) {
         ewk->wu.cg_number &= 0x7FFF;
         sort_push_request3(&ewk->wu);
         break;
-    case 2:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:
-        (void)((WORK*)Country)->id;
+        (void)&((WORK*)Country)->id;
         if (test_in == 0) {
             switch (Country) {
             case 1:
@@ -217,7 +223,7 @@ s32 effect_B8_init(s8 WIN_PL_NO) {
         return -1;
     }
     ewk = (WORK_Other_CONN*)frw[work_index];
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     wk_set(ewk);
     ewk->my_master = (u32*)wk;
     ewk->master_work_id = wk->wu.work_id;
@@ -392,7 +398,7 @@ s32 effB8_mes_change_init(s16 pl, s16 mes_no) {
         return -1;
     }
     ewk = (WORK_Other_CONN*)frw[ix];
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     wk_set(ewk);
     ewk->master_player = pl;
     mes_already = mes_no;

@@ -1,5 +1,8 @@
 /*
- * SC_DATA2.C  a table nothing reads, kept for the layout
+ * SC_DATA2.C  unused super art gauge position table
+ *
+ * spgauge_postbl_unref has the form of spgauge_postbl_0 in VITAL_TBL.C. Nothing reads it; it
+ * is kept for the layout.
  */
 
 #include "types.h"

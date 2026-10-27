@@ -20,19 +20,25 @@
 #include "sys_config.h"
 #include "effj1.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show the pattern */
+#define R0_SYNC         1       /* wait for the ending's signal */
+#define R0_WAIT         2       /* wait three seconds */
+#define R0_COLOUR       3       /* cycle the extra colour */
+
 extern const s16 effj1_col_tbl[4][2];
 
 
 
 void effect_J1_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, 55);
         disp_pos_trans_entry(ewk);
         break;
-    case 1:
+    case R0_SYNC:
         if (end_obj_sync) {
             ewk->wu.routine_no[0]++;
             ewk->wu.old_rno[3] = 180;
@@ -42,7 +48,7 @@ void effect_J1_move(WORK_Other* ewk) {
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 2:
+    case R0_WAIT:
         ewk->wu.old_rno[3]--;
         if (ewk->wu.old_rno[3] <= 0) {
             ewk->wu.routine_no[0]++;
@@ -51,7 +57,7 @@ void effect_J1_move(WORK_Other* ewk) {
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 3:
+    case R0_COLOUR:
         ewk->wu.old_rno[0]--;
         if (ewk->wu.old_rno[0] < 0) {
             ewk->wu.extra_col = effj1_col_tbl[ewk->wu.old_rno[1]][1];

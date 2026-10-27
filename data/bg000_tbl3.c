@@ -1,5 +1,9 @@
 /*
- * BG000_TBL3.C  tables read by bg000.c: stage background setup and stages BG000-BG030
+ * BG000_TBL3.C  wide-mode scroll area table
+ *
+ * pos_area_wide_tbl maps a player's screen x in the wide mode to an area code (pos_area_tbl in
+ * BG_SUB_TBL.C does the same for the normal mode); the two players' codes pick the background
+ * scroll routine. Read by BG000.C.
  */
 
 #include "types.h"

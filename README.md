@@ -87,6 +87,8 @@ are the first candidates.
 Thanks to the 3sx Team and Artem for the 3s-decomp, which helped recover a large amount of the 3rd Strike code style
 this tree builds on, and to DrewDos for his matching work and help.
 
+Thanks also to Dominic Evans (X: [@oldmanuk](https://x.com/oldmanuk)) for clean-up suggestions.
+
 ## License
 
 GNU Affero General Public License v3.0 (`LICENSE`): parts of the source come from the 3rd Strike decomp and through it

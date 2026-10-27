@@ -18,6 +18,15 @@
 #include "aboutspr.h"
 #include "EFFC2.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the pattern */
+#define R0_WAIT         1       /* wait for the landing */
+#define R0_FALL         2       /* play the drop pattern */
+#define R0_HOLD         3       /* wait for background layer 1 */
+#define R0_HIDE         4       /* hide */
+#define R0_END          5       /* one more frame */
+#define R0_KILL         6       /* (default) put the work back */
+
 extern const s16 effc2_data_tbl[4][4];   /* provisional name */
 extern const u32 eff45_char_table[];     /* provisional name */
 
@@ -28,18 +37,18 @@ void effect_C2_move(WORK_Other* ewk) {
         return;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_WAIT:
         if (bg_land_flag) {
             ewk->wu.routine_no[0]++;
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 2:
+    case R0_FALL:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type) {
             ewk->wu.routine_no[0]++;
@@ -47,17 +56,17 @@ void effect_C2_move(WORK_Other* ewk) {
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 3:
+    case R0_HOLD:
         if (bg_w.bgw[1].r_no_1 >= 2) {
             ewk->wu.routine_no[0]++;
         }
         disp_pos_trans_entry(ewk);
         break;
-    case 4:
+    case R0_HIDE:
         ewk->wu.disp_flag = 0;
         ewk->wu.routine_no[0]++;
         break;
-    case 5:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:

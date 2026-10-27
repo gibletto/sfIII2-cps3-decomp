@@ -55,6 +55,41 @@
 #include "end_staff.h"
 #include "end_main_c.h"
 
+/* end_w.r_no_0 in normal_ending */
+#define END_INIT        0       /* clear the system and start the character's ending */
+#define END_COVER       1       /* after Cover_Timer, set up the screen and wipe in */
+#define END_REVIVAL     2       /* finish the wipe */
+#define END_PLAY        3       /* the ending, until it ends or is cut */
+#define END_TO_STAFF    4       /* fade out to the staff roll */
+#define END_STAFF_SETUP 5       /* after the fade, set up the staff roll screen */
+#define END_FADE_IN     6       /* fade the staff roll in */
+#define END_FADE_WAIT   7       /* until the fade is done */
+#define END_STAFF       8       /* the staff roll */
+#define END_FADE_OUT    9       /* fade out */
+#define END_MUSIC       10      /* after the fade, fade the music (longer when the name entry was cut short) */
+#define END_WAIT        11      /* wait end_w.timer, then finished */
+
+/* end_w.r_no_0 in gouki_ending */
+#define GOU_INIT        0       /* clear the system and start the ending */
+#define GOU_COVER       1       /* after Cover_Timer, set up the screen and wipe in */
+#define GOU_REVIVAL     2       /* finish the wipe */
+#define GOU_PLAY        3       /* the ending, until it ends or is cut */
+#define GOU_WIPE        4       /* save the screen and wipe */
+#define GOU_SETUP       5       /* after the wipe, set up the staff roll screen */
+#define GOU_COVER2      6       /* after Cover_Timer, wipe in */
+#define GOU_REVIVAL2    7       /* finish the wipe */
+#define GOU_STAFF       8       /* the staff roll */
+#define GOU_MUSIC       9       /* fade the music */
+#define GOU_WAIT        10      /* wait end_w.timer, then finished */
+
+/* end_w.r_no_0 in gill_ending */
+#define GILL_INIT       0       /* clear the system and set up the ending */
+#define GILL_COVER      1       /* after Cover_Timer, wipe in */
+#define GILL_REVIVAL    2       /* finish the wipe */
+#define GILL_STAFF      3       /* the staff roll */
+#define GILL_MUSIC      4       /* fade the music */
+#define GILL_WAIT       5       /* wait end_w.timer, then finished */
+
 
 
 extern s32 staff_r_no;
@@ -122,7 +157,7 @@ void gill_ending(pl_num)
 s16 pl_num;
 {
     switch (end_w.r_no_0) {
-    case 0:
+    case GILL_INIT:
         end_w.r_no_0++;
         System_all_clear_Wait();
         bg_work_clear();
@@ -151,7 +186,7 @@ s16 pl_num;
         gill_pos_limit();
         effect_I5_init();
         break;
-    case 1:
+    case GILL_COVER:
         if (Cover_Timer -= 1) {
             break;
         }
@@ -174,14 +209,14 @@ s16 pl_num;
         card_msg_disp();
         end_bg_move();
         break;
-    case 2:
+    case GILL_REVIVAL:
         if (Switch_Screen_Revival()) {
             end_w.r_no_0++;
             Ignore_Entry[LOSER] = 0;
             Forbid_Break = -1;
         }
         break;
-    case 3:
+    case GILL_STAFF:
         if (DEBUG_DISP) {
             end_w.r_no_0++;
         }
@@ -193,7 +228,7 @@ s16 pl_num;
             end_no_cut = 1;
         }
         break;
-    case 4:
+    case GILL_MUSIC:
         end_w.r_no_0++;
         end_no_cut = 0;
         end_w.timer = 360;
@@ -203,7 +238,7 @@ s16 pl_num;
             end_name_cut[WINNER] = 1;
         }
         break;
-    case 5:
+    case GILL_WAIT:
         end_w.timer--;
         if (end_w.timer < 0) {
             ending_all_end = 1;
@@ -234,7 +269,7 @@ void normal_ending(pl_num)
 s16 pl_num;
 {
     switch (end_w.r_no_0) {
-    case 0:
+    case END_INIT:
         end_w.r_no_0 += 1;
         System_all_clear_Wait();
         load_any_color(0x8D);
@@ -243,7 +278,7 @@ s16 pl_num;
         end_main_jp[pl_num](pl_num);
         card_win_check(1);
         break;
-    case 1:
+    case END_COVER:
         if (Cover_Timer -= 1) {
             break;
         }
@@ -259,14 +294,14 @@ s16 pl_num;
         load_char_gfx(0x9C10, 1);
         load_char_gfx(0xAEC8, 1);
         break;
-    case 2:
+    case END_REVIVAL:
         if (Switch_Screen_Revival()) {
             end_w.r_no_0 += 1;
             Ignore_Entry[LOSER] = 0;
             Forbid_Break = -1;
         }
         break;
-    case 3:
+    case END_PLAY:
         end_main_move(pl_num);
         card_msg_disp();
         if (end_w.end_flag) {
@@ -280,7 +315,7 @@ s16 pl_num;
             end_fade_flag = 0;
         }
         break;
-    case 4:
+    case END_TO_STAFF:
         if (end_no_cut == 0) {
             fadeout_to_staff_roll();
             end_w.r_no_0 += 1;
@@ -288,7 +323,7 @@ s16 pl_num;
             end_w.r_no_0 += 1;
         }
         break;
-    case 5:
+    case END_STAFF_SETUP:
         if (end_fade_complete()) {
             end_w.r_no_0 += 1;
             end_w.r_no_2 += 1;
@@ -298,7 +333,7 @@ s16 pl_num;
             end_no_cut = 1;
         }
         break;
-    case 6:
+    case END_FADE_IN:
         end_w.r_no_0 += 1;
         switch (end_type_tbl[end_w.type]) {
         case 0:
@@ -314,19 +349,19 @@ s16 pl_num;
         end_no_cut = 1;
         Forbid_Break = -1;
         break;
-    case 7:
+    case END_FADE_WAIT:
         if (end_fade_complete()) {
             end_w.r_no_0 += 1;
             end_no_cut = 0;
         }
         break;
-    case 8:
+    case END_STAFF:
         Forbid_Break = 0;
         if (staff_roll_main(end_staff_flag)) {
             end_w.r_no_0 += 1;
         }
         break;
-    case 9:
+    case END_FADE_OUT:
         switch (end_type_tbl[end_w.type]) {
         case 0:
             Request_Fade(60, 0);
@@ -341,7 +376,7 @@ s16 pl_num;
         end_w.r_no_0 += 1;
         end_no_cut = 1;
         break;
-    case 10:
+    case END_MUSIC:
         if (end_fade_complete()) {
             end_w.r_no_0 += 1;
             end_no_cut = 0;
@@ -356,7 +391,7 @@ s16 pl_num;
             }
         }
         break;
-    case 11:
+    case END_WAIT:
         end_w.timer--;
         if (end_w.timer < 0) {
             ending_all_end = 1;
@@ -372,7 +407,7 @@ void gouki_ending(pl_num)
 s16 pl_num;
 {
     switch (end_w.r_no_0) {
-    case 0:
+    case GOU_INIT:
         end_w.r_no_0 += 1;
         System_all_clear_Wait();
         load_any_color(0x8D);
@@ -381,7 +416,7 @@ s16 pl_num;
         end_main_jp[pl_num](pl_num);
         card_win_check(1);
         break;
-    case 1:
+    case GOU_COVER:
         if (Cover_Timer -= 1) {
             break;
         }
@@ -397,14 +432,14 @@ s16 pl_num;
         load_char_gfx(0x9C10, 1);
         load_char_gfx(0xAEC8, 1);
         break;
-    case 2:
+    case GOU_REVIVAL:
         if (Switch_Screen_Revival()) {
             end_w.r_no_0 += 1;
             Ignore_Entry[LOSER] = 0;
             Forbid_Break = -1;
         }
         break;
-    case 3:
+    case GOU_PLAY:
         end_main_move(pl_num);
         card_msg_disp();
         if (end_w.end_flag) {
@@ -418,13 +453,13 @@ s16 pl_num;
             end_fade_flag = 0;
         }
         break;
-    case 4:
+    case GOU_WIPE:
         end_w.r_no_0 += 1;
         end_no_cut = 1;
         sc_vram_to_ram();
         Switch_Screen_Init(3, 3);
         break;
-    case 5:
+    case GOU_SETUP:
         if (Switch_Screen()) {
             end_w.r_no_0 += 1;
             Cover_Timer = 24;
@@ -454,26 +489,26 @@ s16 pl_num;
             end_fam_set(3);
         }
         break;
-    case 6:
+    case GOU_COVER2:
         Cover_Timer--;
         if (Cover_Timer < 0) {
             end_w.r_no_0 += 1;
             Switch_Screen_Init(3, 3);
         }
         break;
-    case 7:
+    case GOU_REVIVAL2:
         if (Switch_Screen_Revival()) {
             end_w.r_no_0 += 1;
             Forbid_Break = 0;
             end_no_cut = 0;
         }
         break;
-    case 8:
+    case GOU_STAFF:
         if (staff_roll_main(end_staff_flag)) {
             end_w.r_no_0 += 1;
         }
         break;
-    case 9:
+    case GOU_MUSIC:
         end_w.r_no_0 += 1;
         end_obj_sync = 1;
         Forbid_Break = 0;
@@ -485,7 +520,7 @@ s16 pl_num;
             end_name_cut[WINNER] = 1;
         }
         break;
-    case 10:
+    case GOU_WAIT:
         end_w.timer--;
         if (end_w.timer < 0) {
             ending_all_end = 1;

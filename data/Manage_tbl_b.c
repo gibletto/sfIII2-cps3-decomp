@@ -1,5 +1,9 @@
 /*
- * MANAGE_TBL_B.C  tables read by Manage.c: round and match management
+ * MANAGE_TBL_B.C  attract-mode and title text
+ *
+ * The text strings of the attract mode and title flow: the FBI warning, Q SOUND, EYE CATCH,
+ * STREET FIGHTER III, 199X CAPCOM, PLAY DEMO, RANKING, SELECT PLAYER, INSERT COIN and PUSH 1
+ * OR 2 START BUTTON. Read by MANAGE.C, the FBI warning screen and attract titles.
  */
 
 #include "types.h"

@@ -1,5 +1,14 @@
 /*
- * CMD_MAIN_TBL_C.C  tables read by CMD_MAIN.c and cmd_main_2.c
+ * CMD_MAIN_TBL_C.C  debug menu text and tables
+ *
+ * The dbg_*_str and str_* strings are the labels of the debug screens: menu titles, cg data
+ * and judgement box field names, stage, stage part and character names, and the names of the
+ * normal, damage, catch, caught and attack motions and of the throws; read by CMD_MAIN.C, the
+ * debug menu, and gathered into the menu tables of DBG_WORK.C. The tables give the colours of
+ * debug objects and players, the first cg code of each cg group, colour codes and numbers, and
+ * the stage and area of each BG select entry; bcp_group_top_tbl and dbg_stage_area_tbl are not
+ * referred to by name. chk22_tbl lists the eight lever directions marked in a move slot when
+ * the command check starts; read by CMD_MAIN_2.C, the command input.
  */
 
 #include "types.h"

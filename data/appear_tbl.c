@@ -1,5 +1,11 @@
 /*
- * APPEAR_TBL.C  tables read by PLMAIN.c, PLMAIN2.c and appear.c
+ * APPEAR_TBL.C  fighter entrance tables
+ *
+ * appear_data is the list of entrance types: each row holds the start position (with a
+ * separate x for the wide mode), facing, the Appear_ routine number and the character index.
+ * appear_type_tbl picks the row by fighter, stage and area, and appear_type_hv_tbl does the
+ * same for a home/visitor rematch. Read by APPEAR.C, PLMAIN.C and PLMAIN2.C, which set up each
+ * fighter's entrance from them.
  */
 
 #include "types.h"

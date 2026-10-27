@@ -1,5 +1,12 @@
 /*
- * EFF18_TBL.C  tables read by effects 18, 21 and 23
+ * EFF18_TBL.C  reacting stage objects and breakable stage object parts
+ *
+ * scr_obj_num18 gives the number of effect 18 objects for each stage setting and compel flag,
+ * and scr_obj_data18_0 .. scr_obj_data18_10 their settings, reached through scr_obj_data18;
+ * read by EFF18.C, which holds effects 17 and 18. eff21_data_adrs_0 gives the pattern,
+ * position, priority and flip of the three breakable parts of effect 21, and eff21_sp_tbl
+ * their speeds and accelerations (EFF21.C). eff23_data_tbl holds the three broken pieces of
+ * the effect 23 object (EFF23.C), used only by effect_23_parts_init, which nothing calls.
  */
 
 #include "types.h"
@@ -115,9 +122,9 @@ const s32 eff21_sp_tbl[12] = {
 
 /* provisional name */
 const s16 eff23_data_tbl[34] = {
-    8, 752, 104, 2, -32768, 0, 12288, 8,
-    0, -1, -32768, 9, 752, 96, 3, -32768,
-    0, 12288, 3, 0, -1, -32768, 11, 672,
-    80, 4, -32768, 0, 16384, 5, -32768, -1,
-    -32768, -1,
+    8, 752, 104, 2, 0x8000, 0, 12288, 8,
+    0, -1, 0x8000, 9, 752, 96, 3, 0x8000,
+    0, 12288, 3, 0, -1, 0x8000, 11, 672,
+    80, 4, 0x8000, 0, 16384, 5, 0x8000, -1,
+    0x8000, -1,
 };

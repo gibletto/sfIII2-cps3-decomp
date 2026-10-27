@@ -24,6 +24,13 @@
 #include "SYS_sub.h"
 #include "EFF43.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* count the wait down, then show */
+#define R0_SLIDE_IN     1       /* slide in to the stop point */
+#define R0_PLAY         2       /* play the pattern, then step on */
+#define R0_STAY         3       /* stay in place */
+#define R0_KILL         99      /* (default) put the work back */
+
 
 
 /* provisional name */
@@ -31,7 +38,7 @@
 void effect_43_move(WORK_Other* ewk) {
     Cut_Cut_Sub(3);
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer != 0) {
             return;
         }
@@ -39,12 +46,12 @@ void effect_43_move(WORK_Other* ewk) {
         ewk->wu.disp_flag = 1;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_step + 1, 0);
         break;
-    case 1:
+    case R0_SLIDE_IN:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp * 3;
         ewk->wu.mvxy.a[0].sp += ewk->wu.mvxy.d[0].sp;
         if (ewk->wu.mvxy.a[0].sp > 0) {
             if (ewk->wu.hit_quake < ewk->wu.xyz[0].disp.pos) {
-                ewk->wu.routine_no[0] = 99;
+                ewk->wu.routine_no[0] = R0_KILL;
                 ewk->wu.disp_flag = 0;
                 ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;
             }
@@ -54,7 +61,7 @@ void effect_43_move(WORK_Other* ewk) {
             char_move(&ewk->wu);
         }
         break;
-    case 2:
+    case R0_PLAY:
         if (ewk->wu.cg_type) {
             Next_Step = 1;
             ewk->wu.routine_no[0]++;
@@ -62,7 +69,7 @@ void effect_43_move(WORK_Other* ewk) {
             char_move(&ewk->wu);
         }
         break;
-    case 3:
+    case R0_STAY:
         break;
     default:
         all_cgps_put_back(ewk);

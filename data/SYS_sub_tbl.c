@@ -1,5 +1,13 @@
 /*
- * SYS_SUB_TBL.C  tables read by EFF49.c, EFFA3.c and 4 other modules
+ * SYS_SUB_TBL.C  copyright messages, text animation and win mark tables
+ *
+ * Capcom_Rights_msg, Capcom_Rights_msg2 and Capcom_USA_Rights_msg are the copyright lines put
+ * on screen by SYS_SUB.C, chosen by country. EFF89_Init_Data and EFF91_Init_Data give, per
+ * object type, the first entry in EFF89_Step_Data or EFF91_Step_Data, whether the steps start
+ * again, and the step count; they are read by EFF89.C (blinking text rectangle) and by EFF91.C
+ * and EFFA3.C (text-layer cell animation). win_mark_pos_tbl and win_mark_blink_tbl place and
+ * blink the round win marks, read by SC_SUB.C; color_flash_tbl is the timer and colour
+ * sequence of Flash_Violent in EFF49.C.
  */
 
 #include "types.h"
@@ -18,23 +26,29 @@ extern const s16 win_mark_pos_tbl[][8];
 extern const s16 win_mark_blink_tbl[];
 extern const s16 color_flash_tbl[];
 
-const s8 Capcom_Rights_msg[44] = {
+/* Messages whose digits are the font's glyph numbers 0-9 (not ASCII) are written as numbers; the comment
+   after each name is the text it shows. */
+const s8 Capcom_Rights_msg[44] = {  /* "@CAPCOM CO., LTD. 1997 ALL RIGHTS RESERVED." */
     64, 67, 65, 80, 67, 79, 77, 32, 67, 79, 46, 44, 32, 76, 84, 68,
     46, 32, 1, 9, 9, 7, 32, 65, 76, 76, 32, 82, 73, 71, 72, 84,
     83, 32, 82, 69, 83, 69, 82, 86, 69, 68, 46, 0,
 };
 
-const s8 Capcom_Rights_msg2[24] = {
+const s8 Capcom_Rights_msg2[24] = {  /* "@CAPCOM CO., LTD. 1997," */
     64, 67, 65, 80, 67, 79, 77, 32, 67, 79, 46, 44, 32, 76, 84, 68,
     46, 32, 1, 9, 9, 7, 44, 0,
 };
 
-const s8 Capcom_USA_Rights_msg[48] = {
+const s8 Capcom_USA_Rights_msg[48] = {  /* "@CAPCOM U.S.A., INC. 1997 ALL RIGHTS RESERVED." */
     64, 67, 65, 80, 67, 79, 77, 32, 85, 46, 83, 46, 65, 46, 44, 32,
     73, 78, 67, 46, 32, 1, 9, 9, 7, 32, 65, 76, 76, 32, 82, 73,
     71, 72, 84, 83, 32, 82, 69, 83, 69, 82, 86, 69, 68, 46, 0, -1,
 };
 
+/*
+ * One row per effect 89 type: first entry in EFF89_Step_Data, whether the steps start
+ * again when they run out, and the number of steps in one pass.
+ */
 const s16 EFF89_Init_Data[10][3] = {
     { 0, 0, 11 },
     { 22, 0, 11 },
@@ -48,6 +62,10 @@ const s16 EFF89_Init_Data[10][3] = {
     { 134, 0, 11 },
 };
 
+/*
+ * Read as three s16 entries per effect 91 / A3 type: first entry in EFF91_Step_Data,
+ * whether the steps start again when they run out, and the number of steps in one pass.
+ */
 const s8 EFF91_Init_Data[18] = {
     0, 0, 0, 1, 0, 4, 0, 100, 0, 1, 0, 4, 0, -56, 0, 1,
     0, 3,

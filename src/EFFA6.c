@@ -1,5 +1,3 @@
-#include "EFFA6.h"
-
 /*
  * EFFA6.C  Effect A6: VS-screen speech line
  *
@@ -12,6 +10,8 @@
  * wwwk_set fills the fixed fields of the work (id 106).
  */
 
+#include "EFFA6.h"
+
 #include "structs.h"
 #include "work.h"
 #include "romdata.h"
@@ -20,21 +20,29 @@
 #include "aboutspr.h"
 #include "EFFECT.h"
 #include "effect_2.h"
+#include "fighter.h"
+
+/* routine_no[0] */
+#define R0_INIT         0       /* load the line and build its sprites */
+#define R0_MOVE         1       /* follow the parent plate */
+#define R0_HIDE         2       /* hide the line */
+#define R0_END          3       /* one more frame */
+#define R0_KILL         4       /* (default) put the work back */
 
 
 
-void effect_A6_move(WORK_Other_CONN* ewk) {
+void effect_A6_move(WORK_Other_CONN* wk) {
+    WORK_Other_CONN* ewk = wk;
     WORK_Other* mwk;
     const EFFA6_MESSAGE* mes;
     const CONN* conn_data;
     const u16* chr_data;
     s16 i;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         switch (Country) {
         case 1:
-            (void)((WORK*)effA6_mes_jp)->id;
             mes = &effA6_mes_jp[ewk->master_player][mmes_already];
             break;
         case 4:
@@ -55,7 +63,7 @@ void effect_A6_move(WORK_Other_CONN* ewk) {
         case 3:
             switch (Language) {
             case 0:
-                (void)((WORK*)effA6_mes_es)->id;
+                (void)&((WORK*)effA6_mes_es)->id;
                 conn_data = effA6_mes_en[ewk->master_player][mmes_already].conn;
                 chr_data = effA6_mes_en[ewk->master_player][mmes_already].chr;
                 break;
@@ -93,11 +101,9 @@ void effect_A6_move(WORK_Other_CONN* ewk) {
                 break;
             }
             break;
-        case 2:
-            if (0) {
-            }
-        case 4:
         default:
+        case 2:
+        case 4:
             conn_data = effA6_mes_en[ewk->master_player][mmes_already].conn;
             chr_data = effA6_mes_en[ewk->master_player][mmes_already].chr;
             break;
@@ -119,7 +125,7 @@ void effect_A6_move(WORK_Other_CONN* ewk) {
         ewk->wu.cg_number++;
         ewk->wu.cg_number &= 0x7FFF;
         break;
-    case 1:
+    case R0_MOVE:
         mwk = (WORK_Other*)ewk->my_master;
         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos = mwk->wu.position_x - 124;
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = mwk->wu.position_y + mwk->wu.cg_type - 22;
@@ -136,11 +142,11 @@ void effect_A6_move(WORK_Other_CONN* ewk) {
         ewk->wu.cg_number &= 0x7FFF;
         sort_push_request3(&ewk->wu);
         break;
-    case 2:
+    case R0_HIDE:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 0;
         break;
-    case 3:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:
@@ -154,17 +160,16 @@ void effect_A6_move(WORK_Other_CONN* ewk) {
 
 s32 effect_A6_init(WORK_Other* mwk) {
     WORK_Other_CONN* ewk;
-    s16 ix;
+    register s16 ix;
     s16 mes_no;
     if ((ix = pull_effect_work(4)) == -1) {
         return -1;
     }
     ewk = (WORK_Other_CONN*)frw[ix];
-    ewk->wu.routine_no[0] = 0;
+    ewk->wu.routine_no[0] = R0_INIT;
     wwwk_set(&ewk->wu);
     ewk->master_player = My_char[Player_id];
     ewk->my_master = (u32*)mwk;
-    (void)((WORK*)0x278)->id;
     switch (Break_Into_CPU) {
     case 1:
         if (Player_id == 0) {
@@ -178,18 +183,18 @@ s32 effect_A6_init(WORK_Other* mwk) {
         } else {
             ewk->wu.position_x = 0x2C0;
         }
-        if (My_char[Player_id] == 6) {
+        if (My_char[Player_id] == PL_HUGO) {
             switch (My_char[COM_id]) {
-            case 0:
+            case PL_GILL:
                 mes_no = 7;
                 break;
-            case 2:
+            case PL_RYU:
                 mes_no = 3;
                 break;
-            case 8:
+            case PL_ELENA:
                 mes_no = 5;
                 break;
-            case 5:
+            case PL_NECRO:
             default:
                 mes_no = 1;
             }

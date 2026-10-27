@@ -1,5 +1,8 @@
 /*
- * EFFC4_TBL.C  tables read by effect C4
+ * EFFC4_TBL.C  bouncing object speeds
+ *
+ * effC4_sp_tbl gives the speeds and accelerations of each flight phase of the object; each
+ * landing starts the next phase. Read by EFFC4.C, the bouncing object.
  */
 
 #include "types.h"

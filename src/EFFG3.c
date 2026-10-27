@@ -20,6 +20,14 @@
 #include "effect_2.h"
 #include "EFFG3.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* set up beside the pulled player */
+#define R0_MOVE         1       /* follow, then play the closing pattern */
+#define R0_KILL         3       /* put the work back */
+
+/* routine_no[1] */
+#define R1_FOLLOW       0       /* follow while the suction lasts */
+
 
 
 void effect_G1_move(void)
@@ -52,25 +60,25 @@ void effect_G3_move(WORK_Other* ewk) {
     PLW* pwk = (PLW*)ewk->wu.target_adrs;
     s16 adjust;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
-        ewk->wu.routine_no[1] = 0;
+        ewk->wu.routine_no[1] = R1_FOLLOW;
         ewk->wu.disp_flag = 1;
         ewk->wu.my_col_mode = 0x4200;
         ewk->wu.my_col_code = 0x2020;
         ewk->wu.position_y = pwk->wu.position_y - 8;
         ewk->wu.position_z = pwk->wu.position_z - 4;
         set_char_move_init(&ewk->wu, 0, 0);
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f) {
-            ewk->wu.routine_no[0] = 3;
+            ewk->wu.routine_no[0] = R0_KILL;
             ewk->wu.disp_flag = 0;
             break;
         }
         if (!ewk->wu.routine_no[1]) {
             mwk = (WORK_Other*)ewk->my_master;
             if (mwk->wu.dead_f) {
-                ewk->wu.routine_no[0] = 3;
+                ewk->wu.routine_no[0] = R0_KILL;
                 ewk->wu.disp_flag = 0;
                 break;
             }
@@ -79,7 +87,7 @@ void effect_G3_move(WORK_Other* ewk) {
                 set_char_move_init(&ewk->wu, 0, 1);
             }
         } else if (ewk->wu.cg_type == 0xFF) {
-            ewk->wu.routine_no[0] = 3;
+            ewk->wu.routine_no[0] = R0_KILL;
             ewk->wu.disp_flag = 0;
             break;
         }
@@ -97,7 +105,7 @@ void effect_G3_move(WORK_Other* ewk) {
         break;
     default:
     case 2:
-    case 3:
+    case R0_KILL:
         all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;

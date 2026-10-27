@@ -1,5 +1,13 @@
 /*
- * PLPAT08_TBL.C  tables read by PLPAT08.c and PLPAT09.c
+ * PLPAT08_TBL.C  Elena's special attack tables and Oro's rock-summon tables
+ *
+ * pl08_exatt_table is the list of Elena's special attack routines, indexed by attack routine
+ * number minus 16. pl08_hcs_tbl marks, for each of the three punch and three kick button bits,
+ * whether pressing it cuts the healing super art's pose short. Read by PLPAT08.C. For Oro's
+ * rock-summon move, tenguiwa_stage_data picks by stage and round a row of tenguiwa_stand_by
+ * (eight rock shell types chosen from at random), tenguiwa_type_flag marks the shell types
+ * that are rocks, and tenguiwa_pos_hosei gives each rock's start position, scroll speed and
+ * direction; read by PLPAT09.C.
  */
 
 #include "types.h"
@@ -26,21 +34,21 @@ const u8 pl08_hcs_tbl[8] = {
 };
 
 void (*const pl08_exatt_table[15])() = {
-    (void (*)())Att_SHOURYUUKEN,
-    (void (*)())Att_SENPUUKYAKU,
-    (void (*)())Att_SENPUUKYAKU,
-    (void (*)())Att_SHOURYUUREPPA,
-    (void (*)())Att_SHOURYUUREPPA,
-    (void (*)())Att_PL08_HEALING,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_SLIDE_and_JUMP,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_PL08_TOKUSHUKOUDOU,
+    Att_SHOURYUUKEN,
+    Att_SENPUUKYAKU,
+    Att_SENPUUKYAKU,
+    Att_SHOURYUUREPPA,
+    Att_SHOURYUUREPPA,
+    Att_PL08_HEALING,
+    Att_DUMMY,
+    Att_SLIDE_and_JUMP,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_PL08_TOKUSHUKOUDOU,
 };
 
 const u8 tenguiwa_stage_data[34][2] = {

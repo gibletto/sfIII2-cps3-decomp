@@ -1,5 +1,14 @@
 /*
- * EFFD9_TBL.C  tables read by effects D9, E0 and E2
+ * EFFD9_TBL.C  palette change, opponent select plate and flame position tables
+ *
+ * color_table_index has seven entries { end-condition flags, timer, 1P table, 2P table }; the
+ * entry number is given when effect D9 is started. coltbl_000_1P and coltbl_000_2P (and slices
+ * of it, the last running on into coltbl_008_2P) are the colour steps, { frames, colour }
+ * pairs ending with 0, that the effect cycles through the player's extra colour. Read by
+ * EFFD9.C, the palette change controller. effE0_x_tbl and effE0_delay_tbl give the x position
+ * and slide-in delay of the eight stage plates on the opponent select screen (EFFE0.C);
+ * effE0_delay_tbl_tail is not referred to by name. flames_stand is the flame pieces of a
+ * standing player, read by EFFE2.C with the tables of EFFE2_TBL.C.
  */
 
 #include "types.h"

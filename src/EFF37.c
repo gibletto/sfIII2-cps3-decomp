@@ -18,6 +18,13 @@
 #include "CHARMOVE.h"
 #include "charmove_2.h"
 #include "EFF37.h"
+#include "fighter.h"
+
+/* routine_no[0] */
+#define R0_INIT         0       /* pick the panel for the player */
+#define R0_MOVE         1       /* follow the master's animation */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
 
 
 
@@ -26,13 +33,13 @@ void effect_37_move(WORK_Other* ewk) {
     WORK* mwk = (WORK*)ewk->my_master;
     s16 ix;
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 0;
         ewk->wu.my_col_mode = 0x4200;
         ewk->wu.my_col_code = 138;
         ewk->wu.my_col_code += Player_Color[ewk->wu.type] * 4;
-        if (plw[ewk->wu.type].player_number == 0 && ewk->wu.type == 1) {
+        if (plw[ewk->wu.type].player_number == PL_GILL && ewk->wu.type == 1) {
             set_char_move_init2(&ewk->wu, 0, 0, 21, 0);
         } else {
             set_char_move_init2(&ewk->wu, 0, 0, plw[ewk->wu.type].player_number + 1, 0);
@@ -42,10 +49,10 @@ void effect_37_move(WORK_Other* ewk) {
             break;
         }
         break;
-    case 1:
+    case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
-            ewk->wu.routine_no[0] = 2;
+            ewk->wu.routine_no[0] = R0_END;
             break;
         }
         if (mwk->cg_type) {
@@ -66,8 +73,8 @@ void effect_37_move(WORK_Other* ewk) {
         }
         sort_push_request(&ewk->wu);
         break;
-    case 2:
-        ewk->wu.routine_no[0] = 3;
+    case R0_END:
+        ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
         all_cgps_put_back(&ewk->wu);

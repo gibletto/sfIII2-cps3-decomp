@@ -368,6 +368,9 @@ s32 ToneDown(s8 tone) {
 
 
 
+#pragma inline(sc_slot_disp)
+static void sc_slot_disp(const u16* slot) {}
+
 void sc_chr_list_trans(s8 ix) {
     const PAL_BYTE_LIST* entry;
     const u16* slot;
@@ -375,7 +378,7 @@ void sc_chr_list_trans(s8 ix) {
     u16 n;
     u16 i;
     entry = &sc_chr_list_tbl[ix];
-    (void)entry->slot;
+    sc_slot_disp(entry->slot);
     slot = entry->slot;
     src = entry->src;
     n = *slot++;
@@ -833,10 +836,9 @@ void win_mark_put(s16 pl, u16 n, s16 attr) {
 void win_mark_ram_clear(void) {
     u16 i;
     u8* dst;
-    s32 blank = 0xBDC0;
     for (i = 0, dst = &sc_chr_ram[0x200]; i < 8; i++) {
         u32 src;
-        src = (u32)sc_chr_data, sc_trans_src = (u8*)(src + blank);
+        src = (u32)sc_chr_data, sc_trans_src = (u8*)(src + 0xBDC0);
         sc_bak_ptr = dst;
         sc_chr_to_ram(64);
         dst += 64;
@@ -861,7 +863,7 @@ void win_mark_find_put(s16 x, s16 y, s16 pl) {
 s32 win_mark_find(s16 pl) {
     s16 i;
     for (i = 0; i < Game_setting.set4 + 1; i++) {
-        if (win_type[pl][i] == 3) {
+        if (win_type[pl][i] == WIN_MARK_PERFECT) {
             return i;
         }
     }

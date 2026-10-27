@@ -31,6 +31,14 @@
 #include "textsound_3.h"
 #include "efff0.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* point BG 3 at the first page */
+#define R0_NORMAL       1       /* turn the stage layers back on */
+#define R0_WAIT         2       /* wait for an another-BG request */
+#define R0_ON           3       /* turn the stage layers off */
+#define R0_MOVE         4       /* show the BG of the player in charge */
+#define R0_OFF          5       /* put the stage scroll back */
+
 
 
 void effect_F0_move(WORK_Other* ewk) {
@@ -39,10 +47,10 @@ void effect_F0_move(WORK_Other* ewk) {
         seraph_flag = 0;
     } else {
         switch (ewk->wu.routine_no[0]) {
-        case 0:
+        case R0_INIT:
             ewk->wu.routine_no[0]++;
             scrn_map_set_now(3, ake_scrl_w[0].adrs);
-        case 1:
+        case R0_NORMAL:
             seraph_flag = 0;
             if (!akebono_flag && !sa_pa_flag) {
                 for (i = 0; i < bg_w.scno; i++) {
@@ -52,7 +60,7 @@ void effect_F0_move(WORK_Other* ewk) {
             }
             ewk->wu.routine_no[0]++;
             ewk->wu.dir_old = 0;
-        case 2:
+        case R0_WAIT:
             if (!another_bg[0] && !another_bg[1]) {
                 break;
             }
@@ -68,7 +76,7 @@ void effect_F0_move(WORK_Other* ewk) {
             }
             seraph_flag = 1;
             break;
-        case 3:
+        case R0_ON:
             ewk->wu.routine_no[0]++;
             for (i = 0; i < bg_w.scno; i++) {
                 Bg_Off_W(1 << i);
@@ -84,7 +92,7 @@ void effect_F0_move(WORK_Other* ewk) {
                 break;
             }
             sound_reg_level_set(0, 0xF0);
-        case 4:
+        case R0_MOVE:
             if (ewk->wu.type) {
                 if (another_bg[0] && another_bg_old[0] == 0) {
                     ewk->wu.type = 0;
@@ -122,15 +130,15 @@ void effect_F0_move(WORK_Other* ewk) {
                 seraph_flag = 1;
                 effF0_scroll_set(ewk);
             } else {
-                ewk->wu.routine_no[0] = 5;
+                ewk->wu.routine_no[0] = R0_OFF;
                 sound_reg_level_set(0, 0);
                 another_bg_old[0] = another_bg_old[1] = 0;
                 effF0_scroll_set(ewk);
                 seraph_flag = 0;
             }
             break;
-        case 5:
-            ewk->wu.routine_no[0] = 1;
+        case R0_OFF:
+            ewk->wu.routine_no[0] = R0_NORMAL;
             another_bg_old[0] = another_bg_old[1] = 0;
             effF0_scroll_reset(ewk);
             effF0_scroll_set(ewk);
@@ -220,7 +228,6 @@ void effF0_scroll_set(WORK_Other* ewk) {
 s32 effect_F0_init(WORK* wk) {
     s16 ix;
     WORK_Other* ewk;
-    s32 zero = 0;
 
     if (Combo_Demo_Flag) {
         return;
@@ -231,9 +238,9 @@ s32 effect_F0_init(WORK* wk) {
     }
     ewk = (WORK_Other*)frw[ix];
     ewk->wu.id = 150;
-    another_bg[1] = another_bg[0] = another_bg[1] = zero;
-    another_bg_old[0] = zero;
+    another_bg[1] = another_bg[0] = another_bg[1] = 0;
+    another_bg_old[0] = 0;
     load_char_gfx(0x9A40, 1);
-    effect_B6_init(ewk, zero);
+    effect_B6_init(ewk, 0);
     return effect_B6_init(ewk, 1);
 }

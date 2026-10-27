@@ -19,6 +19,14 @@
 #include "SYS_sub.h"
 #include "EFF75_ORDER.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* count the start delay down */
+#define R0_DROP         1       /* drop to its height */
+#define R0_HOLD         2       /* wait for the explosion */
+#define R0_FLY          3       /* fly off until off screen */
+#define R0_END          4       /* hidden for a frame */
+#define R0_KILL         5       /* (default) put the work back */
+
 extern const s32 eff75_speed_tbl[][4];
 
 
@@ -26,11 +34,11 @@ extern const s32 eff75_speed_tbl[][4];
 void effect_75_move(WORK_Other* ewk) {
     if (Suicide) {
         ewk->wu.disp_flag = 0;
-        ewk->wu.routine_no[0] = 4;
+        ewk->wu.routine_no[0] = R0_END;
         return;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.dir_timer != 0) {
             return;
         }
@@ -38,7 +46,7 @@ void effect_75_move(WORK_Other* ewk) {
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_DROP:
         ewk->wu.xyz[1].cal += ewk->wu.mvxy.a[1].sp;
         ewk->wu.mvxy.a[1].sp += ewk->wu.mvxy.d[1].sp;
         if (ewk->wu.direction <= ewk->wu.xyz[1].disp.pos) {
@@ -47,7 +55,7 @@ void effect_75_move(WORK_Other* ewk) {
             ewk->wu.xyz[1].disp.pos = ewk->wu.direction;
         }
         break;
-    case 2:
+    case R0_HOLD:
         if (Explosion) {
             ewk->wu.routine_no[0]++;
             ewk->wu.mvxy.a[0].sp = eff75_speed_tbl[ewk->wu.cg_type][0];
@@ -56,7 +64,7 @@ void effect_75_move(WORK_Other* ewk) {
             ewk->wu.mvxy.d[1].sp = eff75_speed_tbl[ewk->wu.cg_type][3];
         }
         break;
-    case 3:
+    case R0_FLY:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         ewk->wu.mvxy.a[0].sp += ewk->wu.mvxy.d[0].sp;
         ewk->wu.xyz[1].cal += ewk->wu.mvxy.a[1].sp;
@@ -67,7 +75,7 @@ void effect_75_move(WORK_Other* ewk) {
             return;
         }
         break;
-    case 4:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         return;
     default:

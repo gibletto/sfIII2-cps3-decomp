@@ -1,5 +1,10 @@
 /*
- * EFFH4_TBL.C  tables read by effects H4 and H5
+ * EFFH4_TBL.C  ending object tables for effects H4 and H5
+ *
+ * effH4_data_tbl gives the settings of each H4 object and effH4_sp_tbl its x speed while it
+ * grows, x speed change once full size, and y speed; read by EFFH4.C. effH5_data_tbl has a row
+ * per H5 object: family, colour, pattern, x, y, priority, first frame and behaviour; read by
+ * EFFH5.C.
  */
 
 #include "types.h"
@@ -18,6 +23,10 @@ const s16 effH4_data_tbl[4][4] = {
     { 11, 448, 96, 70 },
 };
 
+/*
+ * One row per object (type): x speed while it grows, x speed change once it is full size,
+ * and y speed.
+ */
 const s32 effH4_sp_tbl[4][3] = {
     { 688128, 229376, -65536 },
     { 557056, 229376, -65536 },

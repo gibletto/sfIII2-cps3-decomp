@@ -1,5 +1,10 @@
 /*
- * END_8_TBL.C  tables read by end_7.c, end_8.c and end_9.c
+ * END_8_TBL.C  Elena's ending tables (ending 8)
+ *
+ * end_800_panel0 and end_800_panel1 are BG cell lists (map offset, cell number), reached
+ * through end_8_panel_p in OP_END_WORK.C; timer_8_tbl is the length in frames of each scene
+ * and end_8_pos the BG x and y of each scene; these are read by END_8.C. end_7_anm_tbl, the
+ * steps of a layer's cell animation in Ibuki's ending, is read by END_7.C.
  */
 
 #include "types.h"

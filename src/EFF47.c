@@ -18,18 +18,24 @@
 #include "effect_2.h"
 #include "EFF47.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* show and start the animation */
+#define R0_MOVE         1       /* fly until the life time runs out */
+#define R0_END          2       /* hidden for a frame */
+#define R0_KILL         3       /* (default) put the work back */
+
 
 
 /* case 1 not gated by EXE_flag/Game_pause, no draw on the last frame */
 void effect_47_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.kage_flag = 0;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_MOVE:
         ewk->wu.old_rno[0]--;
         if (ewk->wu.old_rno[0] < 0) {
             ewk->wu.routine_no[0]++;
@@ -43,7 +49,7 @@ void effect_47_move(WORK_Other* ewk) {
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
         sort_push_request(&ewk->wu);
         break;
-    case 2:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:

@@ -24,6 +24,13 @@
 #include "eff06.h"
 #include "eff88.h"
 
+/* bgw r_no_0 of the bg1101 / bg1102 layers: their jump table routine */
+#define R0_INIT         0       /* set up the layer */
+#define R0_TO_MOVE      1       /* bg11xx_next4 / color4: then R0_MOVE */
+#define R0_TO_DEMO      2       /* bg11xx_next3 / color3: then R0_DEMO */
+#define R0_DEMO         3       /* the entrance demo */
+#define R0_MOVE         4       /* follow the fight */
+
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
 extern const u8 bg_fade_level_tbl[];
@@ -75,9 +82,9 @@ void bg1101_init00(void) {
     bgw_ptr->hos_xy[0].disp.pos = bgw_ptr->wxy[0].disp.pos - bg_w.pos_offset;
     bgw_ptr->hos_xy[0].disp.low = 0;
     if (bg110_appear_check()) {
-        bgw_ptr->r_no_0 = 1;
+        bgw_ptr->r_no_0 = R0_TO_MOVE;
     } else {
-        bgw_ptr->r_no_0 = 2;
+        bgw_ptr->r_no_0 = R0_TO_DEMO;
         if (bg_w.area == 0) {
             bgw_ptr->free = 74;
             bgw_ptr->xy[1].cal = bgw_ptr->wxy[1].cal = 0x960000;
@@ -89,14 +96,14 @@ void bg1101_init00(void) {
 
 /* provisional name */
 void bg1101_next4(void) {
-    bgw_ptr->r_no_0 = 4;
+    bgw_ptr->r_no_0 = R0_MOVE;
 }
 
 
 
 /* provisional name */
 void bg1101_next3(void) {
-    bgw_ptr->r_no_0 = 3;
+    bgw_ptr->r_no_0 = R0_DEMO;
 }
 
 
@@ -127,9 +134,9 @@ void bg1102_init00(void) {
     bgw_ptr->hos_xy[0].disp.pos = bgw_ptr->wxy[0].disp.pos - bg_w.pos_offset;
     bgw_ptr->hos_xy[0].disp.low = 0;
     if (bg110_appear_check()) {
-        bgw_ptr->r_no_0 = 1;
+        bgw_ptr->r_no_0 = R0_TO_MOVE;
     } else {
-        bgw_ptr->r_no_0 = 2;
+        bgw_ptr->r_no_0 = R0_TO_DEMO;
         if (bg_w.area == 0) {
             bgw_ptr->free = 74;
             bgw_ptr->xy[1].cal = bgw_ptr->wxy[1].cal = 0x960000;
@@ -153,7 +160,7 @@ void bg1102_init00(void) {
 /* provisional name */
 void bg1102_color4(void) {
     u8 lv;
-    bgw_ptr->r_no_0 = 4;
+    bgw_ptr->r_no_0 = R0_MOVE;
     lv = bg_fade_level_tbl[bg_w.bg_index];
     if (Check_Shin_Gouki_Next()) {
         load_any_color_fade(107, lv, lv, lv);
@@ -167,7 +174,7 @@ void bg1102_color4(void) {
 /* provisional name */
 void bg1102_color3(void) {
     u8 lv;
-    bgw_ptr->r_no_0 = 3;
+    bgw_ptr->r_no_0 = R0_DEMO;
     lv = bg_fade_level_tbl[bg_w.bg_index];
     if (Check_Shin_Gouki_Next()) {
         load_any_color_fade(107, lv, lv, lv);

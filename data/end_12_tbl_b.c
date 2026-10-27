@@ -1,5 +1,9 @@
 /*
- * END_12_TBL_B.C  tables read by end_12.c: ending 12
+ * END_12_TBL_B.C  Urien's ending tables (ending 12)
+ *
+ * end_1200_panel1 is the second cell list written at the start of the ending, timer_12_tbl the
+ * length in frames of each scene and end_12_pos the BG x and y of each scene. Read by
+ * END_12.C.
  */
 
 #include "types.h"

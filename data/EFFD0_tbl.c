@@ -1,5 +1,12 @@
 /*
- * EFFD0_TBL.C  tables read by effects D0, D3 and D4
+ * EFFD0_TBL.C  bouncing thrown object, special finish screen and suction pull tables
+ *
+ * effd0_data_tbl gives the speeds and accelerations of each arc of the thrown object and
+ * effd0_conter the time of each arc; read by EFFD0.C, the thrown object that bounces along the
+ * floor. ake_timer_tbl and ake_pos_tbl are the timings and BG3 positions of the pictures of a
+ * special finish screen, read by EFFD3.C. sel_suikomi_tbl gives the facing, pull direction and
+ * duration of each kind of pull, and swallow_areas_x and swallow_areas_y the pull speed number
+ * by x and y distance from the master; read by EFFD4.C, the suction pull of an attack.
  */
 
 #include "types.h"

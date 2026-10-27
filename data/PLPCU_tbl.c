@@ -1,5 +1,12 @@
 /*
- * PLPCU_TBL.C  tables read by PLPCU.c: player caught (being thrown) process
+ * PLPCU_TBL.C  thrown player routine tables
+ *
+ * plpcu_lv_00 is the list of caught routines Caught_00000 .. Caught_03000, indexed by caught
+ * routine number; setup_cu_dm_init_data lists the scdmd_ routines that set up the damage state
+ * a thrown player is released into, indexed by routine number minus 12. caught_dm_chg_tbl1 and
+ * caught_dm_chg_tbl6 give, by animation number, whether the animation a released player goes
+ * on with is replaced, and the first replacement animation, to which the attack level is
+ * added. Read by PLPCU.C, the player caught process.
  */
 
 #include "types.h"
@@ -33,32 +40,32 @@ extern void scdmd_29000();
 extern void scdmd_30000();
 
 void (*const setup_cu_dm_init_data[19])() = {
-    (void (*)())scdmd_12000,
-    (void (*)())scdmd_12000,
-    (void (*)())scdmd_14000,
-    (void (*)())scdmd_14000,
-    (void (*)())scdmd_16000,
-    (void (*)())scdmd_17000,
-    (void (*)())scdmd_18000,
-    (void (*)())scdmd_19000,
-    (void (*)())scdmd_20000,
-    (void (*)())scdmd_21000,
-    (void (*)())scdmd_21000,
-    (void (*)())scdmd_23000,
-    (void (*)())scdmd_24000,
-    (void (*)())scdmd_25000,
-    (void (*)())scdmd_26000,
-    (void (*)())scdmd_27000,
-    (void (*)())scdmd_28000,
-    (void (*)())scdmd_29000,
-    (void (*)())scdmd_30000,
+    scdmd_12000,
+    scdmd_12000,
+    scdmd_14000,
+    scdmd_14000,
+    scdmd_16000,
+    scdmd_17000,
+    scdmd_18000,
+    scdmd_19000,
+    scdmd_20000,
+    scdmd_21000,
+    scdmd_21000,
+    scdmd_23000,
+    scdmd_24000,
+    scdmd_25000,
+    scdmd_26000,
+    scdmd_27000,
+    scdmd_28000,
+    scdmd_29000,
+    scdmd_30000,
 };
 
 void (*const plpcu_lv_00[4])() = {
-    (void (*)())Caught_00000,
-    (void (*)())Caught_01000,
-    (void (*)())Caught_02000,
-    (void (*)())Caught_03000,
+    Caught_00000,
+    Caught_01000,
+    Caught_02000,
+    Caught_03000,
 };
 
 const u8 caught_dm_chg_tbl1[194] = {

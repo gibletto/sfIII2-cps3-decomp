@@ -1,5 +1,9 @@
 /*
- * N_INPUT_TBL.C  tables read by n_input.c: ranking name entry
+ * N_INPUT_TBL.C  ranking name entry tables
+ *
+ * slang_tbl lists the 17 three-letter names that are replaced when entered, name_code_tbl
+ * converts a position in the entry character set to the letter code stored in the ranking, and
+ * thank_you_str and for_playing_str are the closing message. Read by N_INPUT.C.
  */
 
 #include "types.h"

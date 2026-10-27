@@ -26,6 +26,10 @@
 #include "aboutspr.h"
 #include "effi6.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the pattern */
+#define R0_MOVE         1       /* draw */
+
 
 
 extern const s16 scr_obj_numI6[];   /* provisional name */
@@ -57,12 +61,12 @@ const s16* scr_obj_dataI6[18] = {
 /* a stage object */
 void effect_I6_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_MOVE:
         disp_pos_trans_entry(ewk);
         break;
     default:

@@ -1,5 +1,8 @@
 /*
- * SOUND_VOICE_TBL.C  tables read by sound_voice_2.c: sound driver voice sequencer
+ * SOUND_VOICE_TBL.C  sound driver pitch table
+ *
+ * snd_pitch_tbl holds the pitch values of one octave in 3072 steps; sound_note_to_pitch in
+ * SOUND_VOICE_2.C looks up a note within its octave and shifts the result by the octave.
  */
 
 #include "types.h"

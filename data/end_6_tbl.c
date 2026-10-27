@@ -1,5 +1,8 @@
 /*
- * END_6_TBL.C  tables read by end_6.c: ending 6 (end_06000)
+ * END_6_TBL.C  Hugo's ending BG0 cell list (ending 6)
+ *
+ * end_600_bg0_cell_tbl lists the BG0 cells (map offset, cell number) written at the start of
+ * Hugo's ending. Read by END_6.C.
  */
 
 #include "types.h"

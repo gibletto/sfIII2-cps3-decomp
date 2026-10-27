@@ -81,6 +81,44 @@
 #include "sel_pl.h"
 #include "fighter.h"
 
+/* S_Sub_No in Exit_4th: the VS screen */
+#define VS4_WAIT        0       /* until Next_Step */
+#define VS4_FADE_SEL    1       /* from select: fade, set up both plates */
+#define VS4_FADE_NEXT   2       /* from the next-opponent screen: fade, set up the CPU plate */
+#define VS4_FADE_WAIT   3       /* until the fade is done */
+#define VS4_PAUSE       4       /* wait Exit_Wait */
+#define VS4_SHOW        5       /* show the VS screen until cut or Exit_Wait, then the characters and arts */
+#define VS4_END         6       /* until Next_Step, then the next exit step */
+
+/* Deley_Shot_No[pl]: the button delay in Deley_Shot_Sub */
+#define DELAY_NONE      0       /* until a button is pressed */
+#define DELAY_HP        1       /* HP alone: wait a moment for LK */
+#define DELAY_LK        2       /* (default) LK alone: wait a moment for HP */
+
+/* Auto_No[pl]: the cursor auto-repeat */
+#define AUTO_IDLE       0       /* until the lever is held */
+#define AUTO_REPEAT     1       /* repeat the cursor move while it stays held */
+
+/* Face_No[1]: the face panel move (Move_Face_BG) */
+#define FACE_MOVE_IDLE  0       /* until a move is requested */
+#define FACE_MOVING     1       /* (default) until the move is done */
+
+/* Select_Status[0]: who is playing; Select_Status[1]: who has chosen a super art (bits) */
+#define SEL_1P          1       /* player 1 */
+#define SEL_2P          2       /* player 2 */
+#define SEL_BOTH        3       /* both players */
+
+/* SP_No[pl][0]: a player's select routine (Sel_PL_Jmp_Tbl) */
+#define SP_INIT         0       /* Sel_PL_1st: set up the cursor */
+#define SP_WAIT         1       /* Sel_PL_2nd: until the select starts */
+#define SP_CHAR         2       /* Sel_PL_3rd: choose a character */
+#define SP_ARTS_WAIT    3       /* Sel_PL_4th: until the super art select opens */
+#define SP_ARTS         4       /* Sel_PL_5th: choose a super art */
+#define SP_DONE         5       /* Sel_PL_6th: done */
+
+/* Face_No[0]: the face panel routine (Face_Tbl) */
+#define FACE_DONE       3       /* Face_4th: the face panel is done */
+
 /* declarations the headers do not give */
 extern s16 Sel_Arts_Pos[2];
 extern s8 Sel_Char_Shot[2];
@@ -241,7 +279,7 @@ void Sel_PL_Cont_1st(void) {
 void Sel_PL_Cont_2nd(void) {
     if (--Cover_Timer == 0) {
         S_No++;
-        if (G_No1 == 1) {
+        if (G_No1 == G1_SELECT) {
             Request_E_No = 1;
         }
         Clear_Flash_No();
@@ -250,7 +288,7 @@ void Sel_PL_Cont_2nd(void) {
         commit_name_entry_row_both_players(Text_Page_Y);
         Scrn_Move_Set(4, 0, 0x100);
         Switch_Screen_Init(0, 1);
-        if (Demo_Flag == 1 && G_No1 == 5) {
+        if (Demo_Flag == 1 && G_No1 == G1_NEXT_CPU) {
             load_any_color_fade(86, 19, 19, 19);
             load_any_color_fade(87, 19, 19, 19);
             load_any_color_fade(87, 19, 19, 19);
@@ -264,9 +302,9 @@ void Sel_PL_Cont_3rd(void) {
     if (Switch_Screen_Revival()) {
         S_No++;
         Forbid_Break = 0;
-        if (G_No1 == 1 || !Demo_Flag) {
+        if (G_No1 == G1_SELECT || !Demo_Flag) {
             bgm_request(2);
-            if (E_Number[0][0] != 2 && E_Number[1][0] != 2) {
+            if (E_Number[0][0] != ENTRY_NAME && E_Number[1][0] != ENTRY_NAME) {
                 Ranking_00_6th(0);
             }
         }
@@ -339,7 +377,7 @@ void Sel_PL_1st(void) {
     effect_38_init(ID, 30, 0, 0, -1, 2);
     effect_39_init(ID, 30, 0, 0, -1);
     if (Sel_PL_Complete[ID]) {
-        SP_No[ID][0] = 3;
+        SP_No[ID][0] = SP_ARTS_WAIT;
         Select_Start[ID] = 3;
         Select_Arts[ID] = 3;
         Stop_Cursor[ID] = 1;
@@ -455,9 +493,9 @@ void Sel_Command_Check(void) {
 /* provisional name */
 s32 Sel_Lever_Get(s16 PL_id) {
     if (PL_id == 0) {
-        return ~p1sw_1 & p1sw_0 & 0xF;
+        return ~p1sw_1 & p1sw_0 & LEVER_ALL;
     }
-    return ~p2sw_1 & p2sw_0 & 0xF;
+    return ~p2sw_1 & p2sw_0 & LEVER_ALL;
 }
 
 
@@ -473,7 +511,7 @@ s32 Deley_Shot_Sub(s16 PL_id) {
     lever = sw & 0xF;
     sw = sw & 0x7F0;
     switch (Deley_Shot_No[PL_id]) {
-    case 0:
+    case DELAY_NONE:
         if (sw & 0x7F0) {
             if (sw == 0xC0) {
                 return lever | 0xC0;
@@ -483,14 +521,14 @@ s32 Deley_Shot_Sub(s16 PL_id) {
             }
             Deley_Shot_Timer[PL_id] = 3;
             if (sw == 0x40) {
-                Deley_Shot_No[PL_id] = 1;
+                Deley_Shot_No[PL_id] = DELAY_HP;
             }
             if (sw == 0x80) {
-                Deley_Shot_No[PL_id] = 2;
+                Deley_Shot_No[PL_id] = DELAY_LK;
             }
         }
         break;
-    case 1:
+    case DELAY_HP:
         if (--Deley_Shot_Timer[PL_id] == 0) {
             return lever | 0x40;
         }
@@ -661,24 +699,24 @@ s16 PL_id;
         sw = p2sw_0;
     }
     switch (Auto_No[PL_id]) {
-    case 0:
+    case AUTO_IDLE:
         if (sw & 8) {
-            Auto_No[PL_id] = 1;
+            Auto_No[PL_id] = AUTO_REPEAT;
             Auto_Cursor[PL_id] = 8;
             Auto_Timer[PL_id] = Repeat_Time_Data[0];
             Auto_Index[PL_id] = 1;
             break;
         } else if (sw & 4) {
-            Auto_No[PL_id] = 1;
+            Auto_No[PL_id] = AUTO_REPEAT;
             Auto_Cursor[PL_id] = 4;
             Auto_Timer[PL_id] = Repeat_Time_Data[0];
             Auto_Index[PL_id] = 1;
             break;
         }
         break;
-    case 1:
+    case AUTO_REPEAT:
         if ((sw &= 0xC) != Auto_Cursor[PL_id]) {
-            Auto_No[PL_id] = 0;
+            Auto_No[PL_id] = AUTO_IDLE;
         } else {
             if (--Auto_Timer[PL_id] != 0) {
                 break;
@@ -717,23 +755,23 @@ s32 Auto_Repeat_Sub_Wife(s16 pl) {
         sw = p2sw_0;
     }
     switch (Auto_No[pl]) {
-    case 0:
+    case AUTO_IDLE:
         if (sw & 1) {
-            Auto_No[pl] = 1;
+            Auto_No[pl] = AUTO_REPEAT;
             Auto_Cursor[pl] = 1;
             Auto_Timer[pl] = Auto_Repeat_Wife_Data[0];
             Auto_Index[pl] = 1;
             break;
         }
         if (sw & 2) {
-            Auto_No[pl] = 1;
+            Auto_No[pl] = AUTO_REPEAT;
             Auto_Cursor[pl] = 2;
             Auto_Timer[pl] = Auto_Repeat_Wife_Data[0];
             Auto_Index[pl] = 1;
             break;
         }
         break;
-    case 1:
+    case AUTO_REPEAT:
         if (sw &= Auto_Cursor[pl]) {
             if (--Auto_Timer[pl] == 0) {
                 Auto_Timer[pl] = Auto_Repeat_Wife_Data[Auto_Index[pl]++];
@@ -748,7 +786,7 @@ s32 Auto_Repeat_Sub_Wife(s16 pl) {
                 }
             }
         } else {
-            Auto_No[pl] = 0;
+            Auto_No[pl] = AUTO_IDLE;
         }
         break;
     }
@@ -874,9 +912,9 @@ u16 sw;
         *(s8*)&Last_Super_Arts[PL_id] = *(s8*)&Super_Arts[PL_id] = Arts_Y[PL_id];
         Sound_SE(ID + 98);
         if (ID == 0) {
-            sw |= p1sw_0 & 0xF;
+            sw |= p1sw_0 & LEVER_ALL;
         } else {
-            sw |= p2sw_0 & 0xF;
+            sw |= p2sw_0 & LEVER_ALL;
         }
         Setup_EM_Course(PL_id, sw);
         Decided_My_char[PL_id] = My_char[PL_id];
@@ -963,8 +1001,8 @@ void sel_pl_face_control(void) {
 
 void Face_1st(void) {
     switch (Select_Status[1]) {
-    case 1:
-    case 2:
+    case SEL_1P:
+    case SEL_2P:
         if (Sel_Arts_Complete[Select_Status[1] - 1] < 0) {
             Face_MV_Request = 2;
             Face_MV_Time = 5;
@@ -975,7 +1013,7 @@ void Face_1st(void) {
         if (Sel_Arts_Complete[0] < 0 && Sel_Arts_Complete[1] < 0) {
             Face_MV_Request = 2;
             Face_MV_Time = 5;
-            Face_No[0] = 3;
+            Face_No[0] = FACE_DONE;
         }
         break;
     }
@@ -984,7 +1022,7 @@ void Face_1st(void) {
 
 
 void Face_2nd(void) {
-    if (Move_Super_Arts[0] == 0 && Move_Super_Arts[1] == 0 && Select_Status[1] == 3 && Face_Move == 0) {
+    if (Move_Super_Arts[0] == 0 && Move_Super_Arts[1] == 0 && Select_Status[1] == SEL_BOTH && Face_Move == 0) {
         Face_MV_Request = 1;
         Face_MV_Time = 20;
         Face_No[0]++;
@@ -997,7 +1035,7 @@ void Face_3rd(void) {
     if (Sel_PL_Complete[0] < 0 && Sel_PL_Complete[1] < 0) {
         Face_MV_Request = 2;
         Face_MV_Time = 5;
-        Face_No[0] = 3;
+        Face_No[0] = FACE_DONE;
     }
 }
 
@@ -1009,7 +1047,7 @@ void Face_4th(void) {}
 
 void Move_Face_BG(void) {
     switch (Face_No[1]) {
-    case 0:
+    case FACE_MOVE_IDLE:
         if (Face_MV_Request == 0) {
             break;
         }
@@ -1021,7 +1059,7 @@ void Move_Face_BG(void) {
         if (Face_MV_Request = Face_Move) {
             break;
         }
-        Face_No[1] = 0;
+        Face_No[1] = FACE_MOVE_IDLE;
         break;
     }
 }
@@ -1140,20 +1178,20 @@ void PL_Sel_5th(void) {}
 
 void Setup_Select_Status(void) {
     if (plw[0].wu.operator) {
-        Select_Status[0] = 1;
+        Select_Status[0] = SEL_1P;
     } else {
         Select_Status[0] = 0;
     }
     if (plw[1].wu.operator) {
-        Select_Status[0] |= 2;
+        Select_Status[0] |= SEL_2P;
     }
     if (Sel_Arts_Complete[0] != -1 && plw[0].wu.operator) {
-        Select_Status[1] = 1;
+        Select_Status[1] = SEL_1P;
     } else {
         Select_Status[1] = 0;
     }
     if (Sel_Arts_Complete[1] != -1 && plw[1].wu.operator) {
-        Select_Status[1] |= 2;
+        Select_Status[1] |= SEL_2P;
     }
 }
 
@@ -1253,14 +1291,13 @@ void Setup_BG_Layer2(void) {
 
 /* provisional name */
 void Setup_BG_Layer3(void) {
-    s16 i = 1;
-    bg_w.bgw[i].xy[0].disp.pos = 259;
-    bg_w.bgw[i].xy[1].disp.pos = 144;
-    bg_w.bgw[i].xy[0].disp.low = 0;
-    bg_w.bgw[i].xy[1].disp.low = 0;
-    bg_w.bgw[i].position_x = 257;
-    bg_w.bgw[i].position_y = 144;
-    bg_w.bgw[i].hos_xy[0].disp.pos = bg_w.bgw[i].wxy[0].disp.pos = bg_w.bgw[i].xy[0].disp.pos;
+    bg_w.bgw[1].xy[0].disp.pos = 259;
+    bg_w.bgw[1].xy[1].disp.pos = 144;
+    bg_w.bgw[1].xy[0].disp.low = 0;
+    bg_w.bgw[1].xy[1].disp.low = 0;
+    bg_w.bgw[1].position_x = 257;
+    bg_w.bgw[1].position_y = 144;
+    bg_w.bgw[1].hos_xy[0].disp.pos = bg_w.bgw[1].wxy[0].disp.pos = bg_w.bgw[1].xy[0].disp.pos;
 }
 
 
@@ -1312,7 +1349,7 @@ const u8 Arts_Rnd_Data[8] = {
 
 
 s32 Setup_Com_Arts(void) {
-    if (EM_id == 0) {
+    if (EM_id == PL_GILL) {
         return 1;
     }
     if (Stock_Com_Arts[Player_id] == -1) {
@@ -1454,7 +1491,7 @@ void Exit_1st(void) {
     if (Demo_Flag == 0) {
         return;
     }
-    E_No0 = 3;
+    E_No0 = E0_SELECTED;
     E_No1 = 0;
     E_No2 = 0;
     E_No3 = 0;
@@ -1492,8 +1529,8 @@ void Exit_2nd(void) {
         Super_Arts[COM_id] = Stock_Com_Arts[Player_id] = Setup_Com_Arts();
         Setup_Com_Color();
         Setup_PL_Color(COM_id, Com_Color_Shot);
-        Request_Disp_Rank[COM_id][0] = -1;
-        Request_Disp_Rank[COM_id][1] = -1;
+        Request_Disp_Rank[COM_id][RANK_SCORE] = -1;
+        Request_Disp_Rank[COM_id][RANK_WINS] = -1;
         Next_Step = 0;
         Setup_EFF75_Order();
         Setup_EFF76_Pair();
@@ -1526,18 +1563,18 @@ exit:
 
 void Exit_4th(void) {
     switch (S_Sub_No) {
-    case 0:
+    case VS4_WAIT:
         if (Next_Step) {
-            if (G_No1 == 5) {
-                S_Sub_No = 2;
+            if (G_No1 == G1_NEXT_CPU) {
+                S_Sub_No = VS4_FADE_NEXT;
             } else {
                 S_Sub_No++;
             }
         }
         break;
-    case 1:
+    case VS4_FADE_SEL:
         if (Request_Fade(65, 0)) {
-            S_Sub_No = 3;
+            S_Sub_No = VS4_FADE_WAIT;
             Suicide = 1;
             Forbid_Break = 0;
             Next_Step = 2;
@@ -1550,7 +1587,7 @@ void Exit_4th(void) {
             Exit_Wait = 60;
         }
         break;
-    case 2:
+    case VS4_FADE_NEXT:
         if (Request_Fade(65, 0)) {
             S_Sub_No++;
             Suicide = 1;
@@ -1564,18 +1601,18 @@ void Exit_4th(void) {
             Exit_Wait = 60;
         }
         break;
-    case 3:
+    case VS4_FADE_WAIT:
         if (Check_Fade_Complete_SP()) {
             S_Sub_No++;
         }
         break;
-    case 4:
+    case VS4_PAUSE:
         if (--Exit_Wait == 0) {
             S_Sub_No++;
             Exit_Wait = 240;
         }
         break;
-    case 5:
+    case VS4_SHOW:
         if (Cut_Cut_Cut() || --Exit_Wait == 0) {
             S_Sub_No++;
             Next_Step = 16;
@@ -1585,7 +1622,7 @@ void Exit_4th(void) {
             effect_79_init(1, Super_Arts[1], 1, 1, 1);
         }
         break;
-    case 6:
+    case VS4_END:
         if (Next_Step == 0) {
             break;
         }
@@ -1625,7 +1662,7 @@ void Exit_5th(void) {
 
 /* provisional name */
 void Setup_Exit_Plates(void) {
-    if (Demo_Flag == 1 && G_No1 == 5) {
+    if (Demo_Flag == 1 && G_No1 == G1_NEXT_CPU) {
         Setup_COM_Plate(0);
     } else {
         if (plw[0].wu.operator) {
@@ -1653,7 +1690,7 @@ void Exit_Plate_Sub(s16 PL_id) {
 
 /* provisional name */
 void Exit_Arts_Plate(s16 both) {
-    if (both == 0 && G_No1 == 5) {
+    if (both == 0 && G_No1 == G1_NEXT_CPU) {
         effect_79_init(COM_id, Super_Arts[COM_id], 1, 1, 2);
     } else {
         effect_79_init(0, Super_Arts[0], 1, 1, 2);
@@ -1726,14 +1763,14 @@ void Boss_Exit_1st(void) {
     Stock_Com_Arts[Player_id] = -1;
     Super_Arts[COM_id] = Stock_Com_Arts[Player_id] = Setup_Com_Arts();
     Setup_Com_Color();
-    if (My_char[COM_id] != 14) {
+    if (My_char[COM_id] != PL_GOUKI1) {
         Setup_PL_Color(COM_id, Com_Color_Shot);
     }
     pcon_rno[0] = 0;
     pcon_rno[1] = 0;
     pcon_rno[2] = 0;
     pcon_rno[3] = 0;
-    appear_type = 1;
+    appear_type = APPEAR_ENTRY;
     erase_extra_plef_work();
     effect_38_init(Player_id, -1, 1, 1, My_char[Player_id], 0);
     effect_38_init(COM_id, -1, 1, 1, My_char[COM_id], 0);
@@ -1761,7 +1798,7 @@ void Boss_Exit_3rd(void) {
         Forbid_Break = 0;
         Next_Step = 2;
         Exit_Wait = 60;
-        if (My_char[COM_id] == 14) {
+        if (My_char[COM_id] == PL_GOUKI1) {
             Setup_VS_Plates(0, 10, 15);
         } else {
             Setup_VS_Plates(1, 10, 15);
@@ -1829,7 +1866,7 @@ void Boss_Exit_7th(void) {
 
 
 s32 Setup_Battle_Country(void) {
-    if (My_char[COM_id] == 15) {
+    if (My_char[COM_id] == PL_GOUKI2) {
         return Stock_Battle_Country[Player_id];
     }
     return EM_Candidate_Data[My_char[Player_id]][EM_Course[Player_id]][VS_Index[Player_id]];
@@ -1864,12 +1901,12 @@ void Last_Exit_1st(void) {
     Setup_BG_General();
     Setup_BG_Layer2();
     Setup_BG_Layer3();
-    My_char[COM_id] = 14;
+    My_char[COM_id] = PL_GOUKI1;
     pcon_rno[0] = 0;
     pcon_rno[1] = 0;
     pcon_rno[2] = 0;
     pcon_rno[3] = 0;
-    appear_type = 0;
+    appear_type = APPEAR_STAND;
     erase_extra_plef_work();
     effect_38_init(Player_id, -1, 1, 1, My_char[Player_id], 0);
     effect_39_init(Player_id, -1, 1, 1, My_char[Player_id]);
@@ -2010,8 +2047,8 @@ const s16 Com_Color_Data[17] = {
 
 
 void Setup_Com_Color(void) {
-    if (EM_id == 0 || EM_id == 15) {
-        if (My_char[COM_id] == 0) {
+    if (EM_id == PL_GILL || EM_id == PL_GOUKI2) {
+        if (My_char[COM_id] == PL_GILL) {
             Com_Color_Shot = 16;
         } else if (COM_id == 0) {
             Com_Color_Shot = 16;
@@ -2032,7 +2069,7 @@ s16 PL_id;
 {
     u8 xx;
     u8 zz;
-    if (Play_Type == 1) {
+    if (Play_Type == PLAY_VS_PLAYER) {
         return;
     }
     if (Stage_Continue[PL_id] == 0) {

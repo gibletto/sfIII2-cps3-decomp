@@ -25,17 +25,25 @@
 #include "bg_sub_5.h"
 #include "EFFA1.h"
 
+/* routine_no[0] */
+#define R0_WAIT         0       /* wait n * 2 frames */
+#define R0_INIT         1       /* show with a shadow, aim at the target */
+#define R0_MOVE         2       /* run toward the target for 40 frames */
+#define R0_HIDE         3       /* hide the copy and its shadow */
+#define R0_END          4       /* one more frame */
+#define R0_KILL         5       /* (default) put the work back */
+
 
 
 void effect_A1_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_WAIT:
         if (--ewk->wu.old_rno[0] > 0) {
             return;
         }
         ewk->wu.routine_no[0]++;
         break;
-    case 1:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.kage_flag = 1;
@@ -47,7 +55,7 @@ void effect_A1_move(WORK_Other* ewk) {
         ewk->wu.old_rno[0] = 40;
         cal_all_speed_data(&ewk->wu, ewk->wu.old_rno[0], ewk->wu.old_rno[1], ewk->wu.xyz[1].disp.pos, 2, 2);
         break;
-    case 2:
+    case R0_MOVE:
         add_x_sub(ewk);
         add_y_sub(ewk);
         if (--ewk->wu.old_rno[0] <= 0) {
@@ -56,12 +64,12 @@ void effect_A1_move(WORK_Other* ewk) {
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);
         break;
-    case 3:
+    case R0_HIDE:
         ewk->wu.disp_flag = 0;
         ewk->wu.kage_flag = 0;
         ewk->wu.routine_no[0]++;
         break;
-    case 4:
+    case R0_END:
         ewk->wu.routine_no[0]++;
         break;
     default:

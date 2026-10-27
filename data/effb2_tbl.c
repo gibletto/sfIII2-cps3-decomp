@@ -1,5 +1,8 @@
 /*
- * EFFB2_TBL.C  fight_col_move_tbl, colour steps for the FIGHT flash: nothing reads it, kept for the layout
+ * EFFB2_TBL.C  FIGHT flash colour table
+ *
+ * fight_col_move_tbl holds the colour steps of the FIGHT flash. Nothing reads it; it is kept
+ * for the layout.
  */
 
 #include "types.h"

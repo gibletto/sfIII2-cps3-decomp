@@ -1,5 +1,9 @@
 /*
- * EFF13_TBL.C  tables read by effect 13
+ * EFF13_TBL.C  projectile (shell) process tables
+ *
+ * kind_of_tama_process is the jump table of the shell processes kotp_00000 .. kotp_09000,
+ * kage_tbl the shadow offset, priority and pattern by shadow index, and homing_empos_hos the
+ * point on the opponent that a homing shell turns toward. Read by EFF13.C, the projectiles.
  */
 
 #include "types.h"
@@ -22,16 +26,16 @@ extern void kotp_08000();
 extern void kotp_09000();
 
 void (*const kind_of_tama_process[10])() = {
-    (void (*)())kotp_00000,
-    (void (*)())kotp_01000,
-    (void (*)())kotp_02000,
-    (void (*)())kotp_03000,
-    (void (*)())kotp_04000,
-    (void (*)())kotp_05000,
-    (void (*)())kotp_06000,
-    (void (*)())kotp_07000,
-    (void (*)())kotp_08000,
-    (void (*)())kotp_09000,
+    kotp_00000,
+    kotp_01000,
+    kotp_02000,
+    kotp_03000,
+    kotp_04000,
+    kotp_05000,
+    kotp_06000,
+    kotp_07000,
+    kotp_08000,
+    kotp_09000,
 };
 
 const s16 kage_tbl[6][4] = {

@@ -1,5 +1,12 @@
 /*
- * EXCHANGE.C  tables read by BBBSCOM.c and HITCHECK.c
+ * EXCHANGE.C  combo damage scaling tables
+ *
+ * exchange_pow points, for each attack kind, at a row of exchange_pow_data_0 - 2: the damage
+ * scale (out of 32) by how much combo has built up; exchange_pow_pl03_sa3 replaces it for Yun
+ * and Yang while their third super art is active. exchange_koa points at the
+ * exchange_koa_data_0 - 10 rows, the weight each kind of earlier hit adds to that count. Read
+ * by HITCHECK.C. bonus_level_rate_tbl is the bonus stage rating factor by the rounds setting,
+ * read by BBBSCOM.C.
  */
 
 #include "types.h"

@@ -1,5 +1,9 @@
 /*
- * EFF37_TBL.C  tables read by effects 37 and 38
+ * EFF37_TBL.C  face panel offsets and select-screen face depths
+ *
+ * panel_pos_hosei gives the offset of the face panel from its master for each character set
+ * and display frame type; read by EFF37.C, the face panel shown with a character. eff38_z_tbl
+ * gives the depth of the player's face on the character select screen; read by EFF38.C.
  */
 
 #include "types.h"

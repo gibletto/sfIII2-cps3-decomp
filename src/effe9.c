@@ -2,9 +2,9 @@
  * EFFE9.C  Opening frame bars (effect E9)
  *
  * effect_E9_init creates two sprites (top and bottom) from effE9_data on family 4 using the
- * end character table. effect_E9_move starts their animation and, once end_w.r_no_0
- * reaches 6, moves them to their final positions at y 224 and y -32; they hide when
- * dead_f is set. Created from the opening routines in end_main.c.
+ * end character table, and two more from the third row when Game_setting.mode is set.
+ * effect_E9_move starts their animation and then just draws them where they were placed.
+ * Created from the ending routines in end_main_c.c.
  */
 
 #include "structs.h"
@@ -19,16 +19,20 @@
 #include "charmove_2.h"
 #include "effe9.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the animation */
+#define R0_MOVE         1       /* show the bar */
+
 
 
 void effect_E9_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init2(&ewk->wu, 0, 7, ewk->wu.char_index + 1, 0);
         break;
-    case 1:
+    case R0_MOVE:
         disp_pos_trans_entry(ewk);
         break;
     default:

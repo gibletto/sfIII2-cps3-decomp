@@ -19,7 +19,24 @@
 #include "aboutspr.h"
 #include "EFF71.h"
 
-extern const s16 eff71_char_tbl[];          /* provisional name */
+/* routine_no[0], type 0 */
+#define R0_WATCH        0       /* watch the fighters */
+#define R0_STARTLED     1       /* startled by a super art */
+#define R0_CLOSE        2       /* a fighter came close */
+
+/* routine_no[0], type 1 */
+#define R0_START        0       /* start the idle pattern */
+#define R0_SUPER        2       /* play the super art pattern */
+
+/* routine_no[1], type 0 watching */
+#define R1_INIT         0       /* start the pattern */
+#define R1_WATCH        1       /* follow the fighters */
+#define R1_TURN         2       /* play the turn, then watch */
+
+/* routine_no[1], type 0 reactions */
+#define R1_PLAY         1       /* play it, then watch again */
+
+extern const u16 eff71_char_tbl[];          /* provisional name */
 extern const u32 brz_char_table[];
 
 void eff71_0000(WORK_Other* ewk);
@@ -91,14 +108,14 @@ static s32 eff71_pattern_get(WORK_Other* ewk) {
 void eff71_0000_0000(WORK_Other* ewk) {
     s16 n;
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         ewk->wu.routine_no[1]++;
         ewk->wu.disp_flag = 1;
         n = eff71_pattern_get(ewk);
         ewk->wu.dir_old = n;
         set_char_move_init2(&ewk->wu, 0, 28, n, 0);
         break;
-    case 1:
+    case R1_WATCH:
         n = eff71_pattern_get(ewk);
         if (ewk->wu.dir_old != n) {
             set_char_move_init2(&ewk->wu, 0, 28, n, 0);
@@ -108,10 +125,10 @@ void eff71_0000_0000(WORK_Other* ewk) {
             eff71_check(ewk);
         }
         break;
-    case 2:
+    case R1_TURN:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type) {
-            ewk->wu.routine_no[1] = 1;
+            ewk->wu.routine_no[1] = R1_WATCH;
         }
         break;
     }
@@ -122,15 +139,15 @@ void eff71_0000_0000(WORK_Other* ewk) {
 /* provisional name */
 void eff71_0000_1000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         ewk->wu.routine_no[1]++;
         set_char_move_init(&ewk->wu, 0, 29);
         break;
-    case 1:
+    case R1_PLAY:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type) {
-            ewk->wu.routine_no[0] = 0;
-            ewk->wu.routine_no[1] = 0;
+            ewk->wu.routine_no[0] = R0_WATCH;
+            ewk->wu.routine_no[1] = R1_INIT;
         }
         break;
     }
@@ -141,19 +158,19 @@ void eff71_0000_1000(WORK_Other* ewk) {
 /* provisional name */
 void eff71_0000_2000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
-    case 0:
+    case R1_INIT:
         ewk->wu.routine_no[1]++;
         set_char_move_init(&ewk->wu, 0, 30);
         break;
-    case 1:
+    case R1_PLAY:
         if (either_pl_hissatsu_check()) {
-            ewk->wu.routine_no[0] = 1;
-            ewk->wu.routine_no[1] = 0;
+            ewk->wu.routine_no[0] = R0_STARTLED;
+            ewk->wu.routine_no[1] = R1_INIT;
         } else {
             char_move(&ewk->wu);
             if (ewk->wu.cg_type) {
-                ewk->wu.routine_no[0] = 0;
-                ewk->wu.routine_no[1] = 0;
+                ewk->wu.routine_no[0] = R0_WATCH;
+                ewk->wu.routine_no[1] = R1_INIT;
             }
         }
         break;
@@ -166,8 +183,8 @@ void eff71_0000_2000(WORK_Other* ewk) {
 static s32 eff71_check(WORK_Other* ewk) {
     s16 dx;
     if (either_pl_hissatsu_check()) {
-        ewk->wu.routine_no[0] = 1;
-        ewk->wu.routine_no[1] = 0;
+        ewk->wu.routine_no[0] = R0_STARTLED;
+        ewk->wu.routine_no[1] = R1_INIT;
         return 0;
     }
     if (!ewk->wu.routine_no[0]) {
@@ -196,8 +213,8 @@ static s32 eff71_near_check(WORK_Other* ewk, s16 dx) {
             dx = -dx;
         }
         if (dx < 32) {
-            ewk->wu.routine_no[0] = 2;
-            ewk->wu.routine_no[1] = 0;
+            ewk->wu.routine_no[0] = R0_CLOSE;
+            ewk->wu.routine_no[1] = R1_INIT;
             return 1;
         }
     }
@@ -226,7 +243,7 @@ void eff71_1000_0000(WORK_Other* ewk) {
 /* provisional name */
 void eff71_1000_1000(WORK_Other* ewk) {
     if (either_pl_hissatsu_check()) {
-        ewk->wu.routine_no[0] = 2;
+        ewk->wu.routine_no[0] = R0_SUPER;
         set_char_move_init(&ewk->wu, 0, 41);
     } else {
         char_move(&ewk->wu);
@@ -239,7 +256,7 @@ void eff71_1000_1000(WORK_Other* ewk) {
 void eff71_1000_2000(WORK_Other* ewk) {
     char_move(&ewk->wu);
     if (ewk->wu.cg_type) {
-        ewk->wu.routine_no[0] = 0;
+        ewk->wu.routine_no[0] = R0_START;
     }
 }
 

@@ -1,5 +1,8 @@
 /*
- * PLPAT12_TBL.C  tables read by PLPAT12.c: player 12 (Sean) special attack routines
+ * PLPAT12_TBL.C  Sean's special attack table
+ *
+ * pl12_exatt_table is the list of Sean's special attack routines, indexed by attack routine
+ * number minus 16. Read by PLPAT12.C, which dispatches through it from pl12_extra_attack.
  */
 
 #include "types.h"
@@ -22,20 +25,20 @@ extern void Att_SHOURYUUREPPA();
 extern void Att_SLIDE_and_JUMP();
 
 void (*const pl12_exatt_table[16])() = {
-    (void (*)())Att_HADOUKEN,
-    (void (*)())Att_SHOURYUUREPPA,
-    (void (*)())Att_SLIDE_and_JUMP,
-    (void (*)())Att_ABISEGERI,
-    (void (*)())Att_CHOUCHUURENGEKI,
-    (void (*)())Att_SHOURYUUKEN,
-    (void (*)())Att_CHOUCHUURENGEKI,
-    (void (*)())Att_KUUCHUUNICHIRINSHOU,
-    (void (*)())Att_SENPUUKYAKU,
-    (void (*)())Att_HOMING_JUMP,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_DUMMY,
-    (void (*)())Att_PL12_TOKUSHUKOUDOU,
-    (void (*)())Att_PL12_BONUS_STAGE,
+    Att_HADOUKEN,
+    Att_SHOURYUUREPPA,
+    Att_SLIDE_and_JUMP,
+    Att_ABISEGERI,
+    Att_CHOUCHUURENGEKI,
+    Att_SHOURYUUKEN,
+    Att_CHOUCHUURENGEKI,
+    Att_KUUCHUUNICHIRINSHOU,
+    Att_SENPUUKYAKU,
+    Att_HOMING_JUMP,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_DUMMY,
+    Att_PL12_TOKUSHUKOUDOU,
+    Att_PL12_BONUS_STAGE,
 };

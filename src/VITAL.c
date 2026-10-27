@@ -20,6 +20,10 @@
 
 #define BAR_WORD(tbl, ix) (*(s16*)((u32)(tbl) + (ix) * 2))
 
+#define VITAL_FULL      160     /* full vitality (vital_new) */
+#define VITAL_CELLS     20      /* tile cells in a bar */
+#define VITAL_CELL_DOTS 8       /* vitality points per cell */
+
 s16 vital_col_ix;
 s16 vital_dot_pos;
 s16 vital_red_ofs;
@@ -100,7 +104,7 @@ s32 vital_control(s8 pl) {
     }
     if (vit_bar[pl].cyerw == plw[pl].wu.vital_new) {
         if (vit_bar[pl].cred == plw[pl].wu.vital_new) {
-            if (vit_bar[pl].ored != (plw[pl].wu.vital_new + 1)) {
+            if (vit_bar[pl].ored != plw[pl].wu.vital_new + 1) {
                 return 0;
             }
         }
@@ -109,7 +113,6 @@ s32 vital_control(s8 pl) {
         vit_bar[pl].cred = plw[pl].wu.vital_new;
     }
     vit_bar[pl].cyerw = plw[pl].wu.vital_new;
-    (void)((WORK*)0)->id;
     if (plw[pl].wu.vital_new < 0) {
         vit_bar[pl].cyerw = 0;
     }
@@ -124,40 +127,40 @@ s32 vital_control(s8 pl) {
         vit_bar[pl].colnum = 0;
     }
     for (i = 0; i < Game_setting.mode * 4 + 20; i++) {
-        vital_dot_pos -= 8;
+        vital_dot_pos -= VITAL_CELL_DOTS;
         if (vital_dot_pos < vit_bar[pl].cred) {
             if (vit_bar[pl].cyerw > vital_dot_pos) {
-                if (vital_dot_pos + 8 > vit_bar[pl].cred) {
-                    vital_red_ofs = vital_dot_pos - vit_bar[pl].cred + 8;
+                if (vital_dot_pos + VITAL_CELL_DOTS > vit_bar[pl].cred) {
+                    vital_red_ofs = vital_dot_pos - vit_bar[pl].cred + VITAL_CELL_DOTS;
                 } else {
                     vital_red_ofs = 0;
                 }
-                if (vital_dot_pos + 8 > vit_bar[pl].cyerw) {
+                if (vital_dot_pos + VITAL_CELL_DOTS > vit_bar[pl].cyerw) {
                     vital_yel_ofs = vit_bar[pl].cyerw - vital_dot_pos;
                 } else {
-                    vital_yel_ofs = 8;
+                    vital_yel_ofs = VITAL_CELL_DOTS;
                 }
-                tilemap_put_cell(BAR_WORD(vit_bar[pl].xpos, vital_col_ix), 2, BAR_WORD(vit_bar[pl].attr, vit_bar[pl].colnum),
-                                 BAR_WORD(vit_bar[pl].cell, vital_yel_ofs * 9 + vital_red_ofs));
+                tilemap_put_cell((s16)vit_bar[pl].xpos[vital_col_ix], 2, (s16)vit_bar[pl].attr[vit_bar[pl].colnum],
+                                 (s16)vit_bar[pl].cell[vital_yel_ofs * (VITAL_CELL_DOTS + 1) + vital_red_ofs]);
                 vital_col_ix++;
                 continue;
             } else {
-                if (vit_bar[pl].cred >= vital_dot_pos + 8) {
+                if (vit_bar[pl].cred >= vital_dot_pos + VITAL_CELL_DOTS) {
                     vital_red_ofs = 0;
                 } else {
-                    vital_red_ofs = 8 - (vit_bar[pl].cred - vital_dot_pos);
+                    vital_red_ofs = VITAL_CELL_DOTS - (vit_bar[pl].cred - vital_dot_pos);
                 }
                 vital_yel_ofs = 0;
-                tilemap_put_cell(BAR_WORD(vit_bar[pl].xpos, vital_col_ix), 2, BAR_WORD(vit_bar[pl].attr, vit_bar[pl].colnum),
-                                 BAR_WORD(vit_bar[pl].cell, vital_red_ofs));
+                tilemap_put_cell((s16)vit_bar[pl].xpos[vital_col_ix], 2, (s16)vit_bar[pl].attr[vit_bar[pl].colnum],
+                                 (s16)vit_bar[pl].cell[vital_red_ofs]);
             }
         } else {
-            tilemap_put_cell(BAR_WORD(vit_bar[pl].xpos, vital_col_ix), 2, BAR_WORD(vit_bar[pl].attr, vit_bar[pl].colnum), 0xAC);
+            tilemap_put_cell((s16)vit_bar[pl].xpos[vital_col_ix], 2, (s16)vit_bar[pl].attr[vit_bar[pl].colnum], 0xAC);
         }
         vital_col_ix++;
     }
     vit_bar[pl].ored = vit_bar[pl].cred;
-    vit_bar[pl].cred--;
+    vit_bar[pl].cred = vit_bar[pl].cred - 1;
     if (vit_bar[pl].cred < plw[pl].wu.vital_new) {
         vit_bar[pl].cred = plw[pl].wu.vital_new;
     }
@@ -188,27 +191,27 @@ s32 vital_parts_allwrite(s8 pl) {
     vital_dot_pos = Game_setting.mode * 32 + 160;
     vital_col_ix = 0;
     for (i = 0; i < Game_setting.mode * 4 + 20; i++) {
-        vital_dot_pos -= 8;
+        vital_dot_pos -= VITAL_CELL_DOTS;
         if (vital_dot_pos < vit_bar[1].cred) {
             if (vit_bar[1].cyerw > vital_dot_pos) {
-                if (vital_dot_pos + 8 > vit_bar[1].cred) {
-                    vital_red_ofs = vital_dot_pos - vit_bar[1].cred + 8;
+                if (vital_dot_pos + VITAL_CELL_DOTS > vit_bar[1].cred) {
+                    vital_red_ofs = vital_dot_pos - vit_bar[1].cred + VITAL_CELL_DOTS;
                 } else {
                     vital_red_ofs = 0;
                 }
-                if (vital_dot_pos + 8 > vit_bar[1].cyerw) {
+                if (vital_dot_pos + VITAL_CELL_DOTS > vit_bar[1].cyerw) {
                     vital_yel_ofs = vit_bar[1].cyerw - vital_dot_pos;
                 } else {
-                    vital_yel_ofs = 8;
+                    vital_yel_ofs = VITAL_CELL_DOTS;
                 }
-                tilemap_put_cell(cols[vital_col_ix], 2, attrs[vit_bar[1].colnum], tbl[vital_yel_ofs * 9 + vital_red_ofs]);
+                tilemap_put_cell(cols[vital_col_ix], 2, attrs[vit_bar[1].colnum], tbl[vital_yel_ofs * (VITAL_CELL_DOTS + 1) + vital_red_ofs]);
                 vital_col_ix++;
                 continue;
             }
-            if (vit_bar[1].cred >= vital_dot_pos + 8) {
+            if (vit_bar[1].cred >= vital_dot_pos + VITAL_CELL_DOTS) {
                 vital_red_ofs = 0;
             } else {
-                vital_red_ofs = 8 - (vit_bar[1].cred - vital_dot_pos);
+                vital_red_ofs = VITAL_CELL_DOTS - (vit_bar[1].cred - vital_dot_pos);
             }
             vital_yel_ofs = 0;
             tilemap_put_cell(cols[vital_col_ix], 2, attrs[vit_bar[1].colnum], 0xAC);

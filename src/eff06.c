@@ -25,6 +25,11 @@
 #include "bg_sub_5.h"
 #include "eff06.h"
 
+/* routine_no[0] */
+#define R0_INIT         0       /* start the animation */
+#define R0_MOVE         1       /* draw until retired */
+#define R0_KILL         2       /* (default) put the work back */
+
 
 
 /* by stage and area */
@@ -55,12 +60,12 @@ void effect_06_move(WORK_Other* ewk) {
         return;
     }
     switch (ewk->wu.routine_no[0]) {
-    case 0:
+    case R0_INIT:
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
-    case 1:
+    case R0_MOVE:
         if (compel_dead_check(ewk)) {
             ewk->wu.routine_no[0]++;
             break;

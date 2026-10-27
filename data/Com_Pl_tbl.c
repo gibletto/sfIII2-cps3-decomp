@@ -1,5 +1,14 @@
 /*
- * COM_PL_TBL.C  tables read by demo00.c, mode_init.c and test_mode.c
+ * COM_PL_TBL.C  boot screen text, region warnings and default settings
+ *
+ * boot_title_str and boot_region_str lay out the boot screen title and region name, and the
+ * str_* strings are the boot, version, region warning and parental advisory text, the warning
+ * lines placed through the warning screen layouts of MODE_INIT.C. sys_cfg_default_* are the
+ * default system settings, nine rows for each of three cabinet types, and
+ * game_cfg_default_tbl_row* the nine default game settings rows, reached through the lists in
+ * MODE_INIT.C. All read by MODE_INIT.C, except parental_advisory_msg (DEMO00.C, the
+ * attract-mode logos) and test_cursor_x_tbl and test_cursor_y_tbl (TEST_MODE.C, the test-mode
+ * cursor). boot_version_str is not referred to by name.
  */
 
 #include "types.h"
