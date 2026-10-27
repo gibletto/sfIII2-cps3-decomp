@@ -13,7 +13,7 @@
 
 extern const PANEL end_1200_panel1[];
 extern const s16 timer_12_tbl[];
-extern const u16 end_12_pos[];
+extern const s16 end_12_pos[][2];
 
 const PANEL end_1200_panel1[8] = {
     { 8192, 0 },
@@ -31,6 +31,6 @@ const s16 timer_12_tbl[4] = {
 };
 
 /* provisional name */
-const u16 end_12_pos[8] = {
-    0x100, 0x100, 0x300, 0x100, 0x100, 0, 0x300, 0,
+const s16 end_12_pos[4][2] = {
+    { 0x100, 0x100 }, { 0x300, 0x100 }, { 0x100, 0 }, { 0x300, 0 },
 };

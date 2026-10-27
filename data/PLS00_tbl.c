@@ -18,7 +18,7 @@ extern void (*const process_ndcca[])();
 extern void (*const plpnm_xxxxx[])();
 extern void (*const plpdm_xxxxx[])();
 extern const u8 about_rno[];
-extern const s16 sel_hd_fg_hos[][2];
+extern const s16 sel_hd_fg_hos[][4];
 extern const s16 dir32_rl_conv[];
 extern void dm_00000();
 extern void dm_04000();
@@ -169,39 +169,23 @@ const u8 about_rno[6] = {
     0, 1, 2, 1, 2, 0,
 };
 
-const s16 sel_hd_fg_hos[32][2] = {
-    { 0, 0 },
-    { 8, 0 },
-    { 48, 88 },
-    { 8, 6 },
-    { 36, 76 },
-    { 8, 5 },
-    { 40, 64 },
-    { 8, 4 },
-    { 44, 76 },
-    { 8, 5 },
-    { 40, 68 },
-    { 8, 5 },
-    { 0, 0 },
-    { 8, 0 },
-    { 36, 68 },
-    { 8, 6 },
-    { 24, 72 },
-    { 8, 5 },
-    { 16, 60 },
-    { 8, 4 },
-    { 40, 64 },
-    { 8, 4 },
-    { 36, 76 },
-    { 8, 5 },
-    { 36, 76 },
-    { 8, 5 },
-    { 0, 0 },
-    { 8, 0 },
-    { 0, 0 },
-    { 8, 0 },
-    { 0, 0 },
-    { 8, 0 },
+const s16 sel_hd_fg_hos[16][4] = {
+    { 0, 0, 8, 0 },  /* Gill */
+    { 48, 88, 8, 6 },  /* Alex */
+    { 36, 76, 8, 5 },  /* Ryu */
+    { 40, 64, 8, 4 },  /* Yun */
+    { 44, 76, 8, 5 },  /* Dudley */
+    { 40, 68, 8, 5 },  /* Necro */
+    { 0, 0, 8, 0 },  /* Hugo */
+    { 36, 68, 8, 6 },  /* Ibuki */
+    { 24, 72, 8, 5 },  /* Elena */
+    { 16, 60, 8, 4 },  /* Oro */
+    { 40, 64, 8, 4 },  /* Yang */
+    { 36, 76, 8, 5 },  /* Ken */
+    { 36, 76, 8, 5 },  /* Sean */
+    { 0, 0, 8, 0 },  /* Urien */
+    { 0, 0, 8, 0 },  /* Gouki */
+    { 0, 0, 8, 0 },  /* Shin Gouki */
 };
 
 const s16 dir32_rl_conv[11] = {

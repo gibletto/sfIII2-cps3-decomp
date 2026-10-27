@@ -32,7 +32,7 @@
 
 
 
-extern const s16 timer_13_tbl[9];
+extern const u16 timer_13_tbl[];
 extern const s16 end_13_pos[9][2];
 extern const PANEL end_1300_panel0[8];
 extern const PANEL end_1300_panel1[8];

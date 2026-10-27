@@ -11,8 +11,8 @@
 #pragma section TBL
 
 extern const PANEL end_200_panel1[];
-extern const u16 timer_6_tbl[];
-extern const u16 end_6_pos[];
+extern const s16 timer_6_tbl[];
+extern const s16 end_6_pos[][2];
 
 const PANEL end_200_panel1[2] = {
     { 8320, 5 },
@@ -20,11 +20,11 @@ const PANEL end_200_panel1[2] = {
 };
 
 /* provisional name */
-const u16 timer_6_tbl[4] = {
+const s16 timer_6_tbl[4] = {
     0x1A4, 0x30C, 0x294, 0x2D0,
 };
 
 /* provisional name */
-const u16 end_6_pos[8] = {
-    0x100, 0x100, 0x300, 0x100, 0x100, 0, 0x300, 0,
+const s16 end_6_pos[4][2] = {
+    { 0x100, 0x100 }, { 0x300, 0x100 }, { 0x100, 0 }, { 0x300, 0 },
 };

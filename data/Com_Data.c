@@ -15,6 +15,7 @@
 
 #include "types.h"
 #include "structs.h"
+#include "fighter.h"
 
 #pragma section TBL
 
@@ -46,17 +47,17 @@ extern const u8 Standing_Time_Data[][4][8];
 extern const u8 Squat_Time_Data[][8];
 extern const u8 Denjin_Data[][16];
 extern const u16 Correct_Cont_Time_Data[];
-extern const u16 Dash_Distance_Data[];
+extern const s16 Dash_Distance_Data[][2];
 extern const s16 Get_Up_SA_Tech_Data[][3];
 extern const s8 Float_Attack_Data[][16];
-extern const u16 PL_Damage_Data[];
+extern const s8 PL_Damage_Data[];
 extern const s8 PL_Blow_Off_Data[];
 extern const s16 Hit_Range_Data[];
 extern const s8 PL_Body_Width_Data[];
 extern const s8 Passive_Guard_Off_Data[][250];
-extern const u16 Shell_Reaction_Type_Data[];
+extern const u8 Shell_Reaction_Type_Data[];
 extern const u8 Shell_Dodge_Data[][16];
-extern const u16 Command_Wait_Data[];
+extern const u8 Command_Wait_Data[][2];
 extern const u8 Distance_XX_Data[][3];
 extern const u8 Com_Rnd_Select_Data[][16];
 extern const s16 KA_Jump_Data[];
@@ -911,7 +912,22 @@ const u8 LOOK_POSITION_Data[8][32] = {
 
 /* provisional name: the character who breaks in against each character (Break_Into_CPU 2) */
 const u8 rival_char_tbl[16] = {
-    0, 0xB, 0xC, 0xD, 6, 7, 3, 8, 2, 5, 9, 4, 0xA, 1, 0xC, 0,
+    PL_GILL,    /* Gill */
+    PL_KEN,     /* Alex */
+    PL_SEAN,    /* Ryu */
+    PL_URIEN,   /* Yun */
+    PL_HUGO,    /* Dudley */
+    PL_IBUKI,   /* Necro */
+    PL_YUN,     /* Hugo */
+    PL_ELENA,   /* Ibuki */
+    PL_RYU,     /* Elena */
+    PL_NECRO,   /* Oro */
+    PL_ORO,     /* Yang */
+    PL_DUDLEY,  /* Ken */
+    PL_YANG,    /* Sean */
+    PL_ALEX,    /* Urien */
+    PL_SEAN,    /* Gouki */
+    PL_GILL,    /* Shin Gouki */
 };
 
 const u8 Exit_Throw_Data[17][18] = {
@@ -1588,11 +1604,23 @@ const u16 Correct_Cont_Time_Data[39] = {
     1, 0x203, 0x405, 0x607, 0x809, 0x909, 0x9FF,
 };
 
-const u16 Dash_Distance_Data[32] = {
-    0xA5, 0x8C, 0xA5, 0x8C, 0xA5, 0x8C, 0xA5, 0x8C,
-    0xA5, 0x8C, 0xA5, 0x8C, 0xA5, 0x8C, 0xA5, 0x8C,
-    0xA5, 0x8C, 0xA5, 0x8C, 0xA5, 0x8C, 0xA5, 0x8C,
-    0xA5, 0x8C, 0xA5, 0x8C, 0xA5, 0x8C, 0xA5, 0x8C,
+const s16 Dash_Distance_Data[16][2] = {
+    { 0xA5, 0x8C },  /* Gill */
+    { 0xA5, 0x8C },  /* Alex */
+    { 0xA5, 0x8C },  /* Ryu */
+    { 0xA5, 0x8C },  /* Yun */
+    { 0xA5, 0x8C },  /* Dudley */
+    { 0xA5, 0x8C },  /* Necro */
+    { 0xA5, 0x8C },  /* Hugo */
+    { 0xA5, 0x8C },  /* Ibuki */
+    { 0xA5, 0x8C },  /* Elena */
+    { 0xA5, 0x8C },  /* Oro */
+    { 0xA5, 0x8C },  /* Yang */
+    { 0xA5, 0x8C },  /* Ken */
+    { 0xA5, 0x8C },  /* Sean */
+    { 0xA5, 0x8C },  /* Urien */
+    { 0xA5, 0x8C },  /* Gouki */
+    { 0xA5, 0x8C },  /* Shin Gouki */
 };
 
 const s16 Get_Up_SA_Tech_Data[16][3] = {
@@ -1621,14 +1649,14 @@ const s8 Float_Attack_Data[4][16] = {
     { 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2 },
 };
 
-const u16 PL_Damage_Data[50] = {
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 1,
-    0x101, 0x101, 0, 0, 0, 0, 0, 0,
-    0, 1, 0x100, 0, 0, 1, 0x100, 0,
-    0, 0, 0x101, 0x101, 0x101, 0x101, 0x100, 0,
-    1, 0x101, 0x101, 0x100, 0, 0, 0, 0,
-    0, 0,
+const s8 PL_Damage_Data[100] = {
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+    1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0,
+    0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0,
 };
 
 const s8 PL_Blow_Off_Data[28] = {
@@ -1669,30 +1697,30 @@ const s8 Passive_Guard_Off_Data[16][250] = {
 };
 
 /* provisional name */
-const u16 Shell_Reaction_Type_Data[182] = {
-    0, 0, 0x101, 0x101, 0x202, 0x202, 0, 0,
-    0xFFFF, 0xFFFF, 0x303, 0x303, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF,
-    0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0, 0, 0xFFFF, 0xFFFF,
-    0, 0, 0x201, 0x101, 0x100, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0xFF, 0xFFFF,
-    0xFF00, 0, 0xFFFF, 0xFF00, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0xFF, 0x27, 0x2B,
-    0x2B, 0x29, 0x2B, 0x27, 0x2B, 0x28, 0x27, 0x2B,
-    0x2B, 0x25, 0x27, 0x2B, 0x2B, 0,
+const u8 Shell_Reaction_Type_Data[364] = {
+    0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 0, 0, 0, 0,
+    255, 255, 255, 255, 3, 3, 3, 3, 255, 255, 255, 255, 255, 255, 255, 255,
+    255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255,
+    0, 0, 0, 0, 2, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255,
+    255, 0, 0, 0, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 0, 39, 0, 43,
+    0, 43, 0, 41, 0, 43, 0, 39, 0, 43, 0, 40, 0, 39, 0, 43,
+    0, 43, 0, 37, 0, 39, 0, 43, 0, 43, 0, 0,
 };
 
 const u8 Shell_Dodge_Data[4][16] = {
@@ -1703,11 +1731,15 @@ const u8 Shell_Dodge_Data[4][16] = {
 };
 
 /* provisional name */
-const u16 Command_Wait_Data[29] = {
-    0xA0A, 0x1010, 0xA0A, 0xA0A, 0xA0A, 0xA0A, 0x1414, 0xA0A,
-    0xA0A, 0xA0A, 0xA0A, 0xA0A, 0xA0A, 0xA0A, 0xA0A, 0xA0A,
-    0x70, 0x70, 0x70, 0x70, 0x70, 0x70, 0x70, 0x70,
-    0x70, 0x70, 0x70, 0x70, 0x70,
+const u8 Command_Wait_Data[29][2] = {
+    { 10, 10 }, { 16, 16 }, { 10, 10 }, { 10, 10 },
+    { 10, 10 }, { 10, 10 }, { 20, 20 }, { 10, 10 },
+    { 10, 10 }, { 10, 10 }, { 10, 10 }, { 10, 10 },
+    { 10, 10 }, { 10, 10 }, { 10, 10 }, { 10, 10 },
+    { 0, 112 }, { 0, 112 }, { 0, 112 }, { 0, 112 },
+    { 0, 112 }, { 0, 112 }, { 0, 112 }, { 0, 112 },
+    { 0, 112 }, { 0, 112 }, { 0, 112 }, { 0, 112 },
+    { 0, 112 },
 };
 
 const u8 Distance_XX_Data[16][3] = {

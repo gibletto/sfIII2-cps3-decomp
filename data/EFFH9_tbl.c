@@ -18,7 +18,7 @@ extern const u8 effH7_wait_tbl[];
 extern const u8 effH7_wait2_tbl[];
 extern const s16 effH7_char_tbl[][4];
 extern const s16 effH7_pos_tbl[][4][3];
-extern const u8 effH7_bound_tbl[];
+extern const s16 effH7_bound_tbl[];
 extern const u8 effH8_wait_tbl[];
 extern const s16 effH8_char_tbl[][4];
 extern const s16 effH8_char2_tbl[][4];
@@ -48,28 +48,28 @@ const s16 effH7_pos_tbl[2][4][3] = {
 };
 
 /* provisional name */
-const u8 effH7_bound_tbl[328] = {
-    0, 4, 0, 3, 0, 3, 0, 3, 0, 2, 0, 2, 0, 1, 0, 1,
-    0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0xFF, 0xFF, 0, 0,
-    0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFC,
-    0xFF, 0xFC, 0xFF, 0xFC, 0, 3, 0, 3, 0, 2, 0, 2, 0, 1, 0, 1,
-    0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0xFF, 0xFF, 0, 0, 0xFF, 0xFF,
-    0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFD, 0xFF, 0xFD, 0, 2, 0, 2, 0, 1,
-    0, 1, 0, 1, 0, 0, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE,
-    0, 0x63, 0, 2, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0,
-    0, 0, 0, 0, 0xFF, 0xFF, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE,
-    0, 0x63, 0, 3, 0, 2, 0, 2, 0, 1, 0, 1, 0, 1, 0, 0,
-    0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0xFF, 0xFF, 0, 0,
-    0xFF, 0xFF, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFD,
-    0, 0x63, 0, 4, 0, 3, 0, 3, 0, 3, 0, 2, 0, 2, 0, 2,
-    0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
-    0xFF, 0xFF, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFE,
-    0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFC, 0, 0x63, 0, 5, 0, 5, 0, 4,
-    0, 4, 0, 4, 0, 3, 0, 3, 0, 3, 0, 2, 0, 2, 0, 2,
-    0, 2, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0,
-    0, 0, 0xFF, 0xFF, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFF, 0xFE,
-    0xFF, 0xFE, 0xFF, 0xFE, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFD, 0xFF, 0xFC, 0xFF, 0xFC, 0xFF, 0xFC,
-    0xFF, 0xFB, 0xFF, 0xFB, 0, 0x63, 0xFF, 0xFF,
+const s16 effH7_bound_tbl[164] = {
+    4, 3, 3, 3, 2, 2, 1, 1,
+    1, 0, 1, 0, 0, 0, -1, 0,
+    -1, -1, -2, -2, -3, -3, -3, -4,
+    -4, -4, 3, 3, 2, 2, 1, 1,
+    1, 0, 1, 0, 0, -1, 0, -1,
+    -1, -2, -2, -3, -3, 2, 2, 1,
+    1, 1, 0, 0, -1, -1, -2, -2,
+    99, 2, 1, 1, 1, 0, 1, 0,
+    0, 0, -1, 0, -1, -1, -1, -2,
+    99, 3, 2, 2, 1, 1, 1, 0,
+    1, 0, 1, 0, 0, 0, -1, 0,
+    -1, 0, -1, -1, -1, -2, -2, -3,
+    99, 4, 3, 3, 3, 2, 2, 2,
+    1, 1, 1, 0, 1, 0, 0, 0,
+    -1, 0, -1, -1, -1, -2, -2, -2,
+    -3, -3, -3, -4, 99, 5, 5, 4,
+    4, 4, 3, 3, 3, 2, 2, 2,
+    2, 1, 1, 1, 0, 1, 0, 0,
+    0, -1, 0, -1, -1, -1, -2, -2,
+    -2, -2, -3, -3, -3, -4, -4, -4,
+    -5, -5, 99, -1,
 };
 
 const u8 effH8_wait_tbl[4] = {

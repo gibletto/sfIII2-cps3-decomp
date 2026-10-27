@@ -15,8 +15,8 @@
 
 extern const s8 bg_test_stage_tbl[][2];
 extern const u16 bg_zoom_rate_tbl[];
-extern const u16 akebono_scrn_pos_tbl[];
-extern const u16 pos_area_tbl[];
+extern const s16 akebono_scrn_pos_tbl[][2];
+extern const s16 pos_area_tbl[];
 
 const s8 bg_test_stage_tbl[18][2] = {
     { 0, 0 },
@@ -58,12 +58,12 @@ const u16 bg_zoom_rate_tbl[112] = {
 };
 
 /* provisional name */
-const u16 akebono_scrn_pos_tbl[8] = {
-    0x100, 0x100, 0x300, 0x100, 0x100, 0, 0x300, 0,
+const s16 akebono_scrn_pos_tbl[4][2] = {
+    { 0x100, 0x100 }, { 0x300, 0x100 }, { 0x100, 0 }, { 0x300, 0 },
 };
 
 /* provisional name */
-const u16 pos_area_tbl[384] = {
+const s16 pos_area_tbl[384] = {
     1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 1, 1,

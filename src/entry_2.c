@@ -77,15 +77,15 @@ extern const s8 str_INSERT_COINS_8[];
 
 /* 020000B0 */
 TM_STRING insert_coin_mes[9] = {
-    { 0, 0, 0x28, (void*)str_INSERT_COIN },
-    { 0, 0, 0x28, (void*)str_INSERT_COINS },
-    { 0, 0, 0x28, (void*)str_INSERT_COINS_2 },
-    { 0, 0, 0x28, (void*)str_INSERT_COINS_3 },
-    { 0, 0, 0x28, (void*)str_INSERT_COINS_4 },
-    { 0, 0, 0x28, (void*)str_INSERT_COINS_5 },
-    { 0, 0, 0x28, (void*)str_INSERT_COINS_6 },
-    { 0, 0, 0x28, (void*)str_INSERT_COINS_7 },
-    { 0, 0, 0x28, (void*)str_INSERT_COINS_8 },
+    { 0, 0, 0x28, str_INSERT_COIN },
+    { 0, 0, 0x28, str_INSERT_COINS },
+    { 0, 0, 0x28, str_INSERT_COINS_2 },
+    { 0, 0, 0x28, str_INSERT_COINS_3 },
+    { 0, 0, 0x28, str_INSERT_COINS_4 },
+    { 0, 0, 0x28, str_INSERT_COINS_5 },
+    { 0, 0, 0x28, str_INSERT_COINS_6 },
+    { 0, 0, 0x28, str_INSERT_COINS_7 },
+    { 0, 0, 0x28, str_INSERT_COINS_8 },
 };
 
 

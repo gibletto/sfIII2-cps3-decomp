@@ -13,8 +13,8 @@
 
 extern const PANEL end_100_panel0[];
 extern const PANEL end_100_panel1[];
-extern const u16 timer_1_tbl[];
-extern const u16 end_1_pos[];
+extern const s16 timer_1_tbl[];
+extern const s16 end_1_pos[][2];
 
 const PANEL end_100_panel0[8] = {
     { 8192, 1 },
@@ -35,13 +35,13 @@ const PANEL end_100_panel1[4] = {
 };
 
 /* provisional name */
-const u16 timer_1_tbl[8] = {
+const s16 timer_1_tbl[8] = {
     0x474, 0xF0, 0xF0, 0xF0, 0xF0, 0x1E0, 0x1E0, 0x258,
 };
 
 /* provisional name */
-const u16 end_1_pos[16] = {
-    0x100, 0x100, 0x150, 0x100, 0x100, 0x100, 0x300, 0x100,
-    0x300, 0x100, 0x300, 0x100, 0x100, 0, 0x300, 0,
+const s16 end_1_pos[8][2] = {
+    { 0x100, 0x100 }, { 0x150, 0x100 }, { 0x100, 0x100 }, { 0x300, 0x100 },
+    { 0x300, 0x100 }, { 0x300, 0x100 }, { 0x100, 0 }, { 0x300, 0 },
 };
 

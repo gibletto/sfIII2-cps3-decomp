@@ -23,417 +23,417 @@
 
 extern const CHAR_INIT_ROM char_init_data[];
 extern const s16 Dsas_dir_table[];
-extern const u16 sel_sp_ch_tbl[];
-extern const u16 rsix_r_table[];
-extern const u16 attr_flame_tbl[];
-extern const u16 attr_thunder_tbl[];
-extern const u16 attr_freeze_tbl[];
-extern const u16 sky_nm_damage_tbl[];
-extern const u16 sky_nm2_damage_tbl[];
-extern const u16 sky_sp_damage_tbl[];
-extern const u16 kagami_damage_tbl[];
-extern const u16 kagami2_damage_tbl[];
-extern const u16 grd_hand_damage_tbl[];
+extern const s8 sel_sp_ch_tbl[];
+extern const s16 rsix_r_table[][2];
+extern const s16 attr_flame_tbl[];
+extern const s16 attr_thunder_tbl[];
+extern const s16 attr_freeze_tbl[];
+extern const s16 sky_nm_damage_tbl[];
+extern const s16 sky_nm2_damage_tbl[];
+extern const s16 sky_sp_damage_tbl[];
+extern const s16 kagami_damage_tbl[];
+extern const s16 kagami2_damage_tbl[];
+extern const s16 grd_hand_damage_tbl[];
 extern const u16 hddm_damage_tbl[];
-extern const u16 trdm_damage_tbl[];
-extern const u16 ttk_damage_req_tbl[];
-extern const u16 parisucc_pts[];
-extern const u16 dm_oiuchi_catch[];
-extern const u8 alex_atca[];
-extern const u8 alex_att_box[];
-extern const u8 alex_btca[];
-extern const u8 alex_caca[];
-extern const u8 alex_cat_box[];
-extern const u8 alex_catt_table[];
-extern const u8 alex_cau_box[];
-extern const u8 alex_cbca[];
-extern const u8 alex_cuca[];
-extern const u8 alex_dmca[];
-extern const u8 alex_exca[];
-extern const u8 alex_hand_box[];
-extern const u8 alex_hit_ix_table[];
-extern const u8 alex_body_box[];
-extern const u8 alex_hos_box[];
-extern const u8 alex_movexy_table[];
-extern const u8 alex_nmca[];
-extern const u8 alex_olc_ix_table[];
-extern const u8 alex_overlap_char_tbl[];
-extern const u8 alex_rival_catch_tbl[];
-extern const u8 alex_saca[];
+extern const u8 trdm_damage_tbl[];
+extern const u8 ttk_damage_req_tbl[];
+extern const u8 parisucc_pts[][40];
+extern const u8 dm_oiuchi_catch[];
+extern const u32 alex_atca[];
+extern const ATTACK_BOX alex_att_box[];
+extern const u32 alex_btca[];
+extern const u32 alex_caca[];
+extern const CATCH_BOX alex_cat_box[];
+extern const ATTACK_ATTR alex_catt_table[];
+extern const CAUGHT_BOX alex_cau_box[];
+extern const u32 alex_cbca[];
+extern const u32 alex_cuca[];
+extern const u32 alex_dmca[];
+extern const u32 alex_exca[];
+extern const HAND_BOX alex_hand_box[];
+extern const HIT_IX alex_hit_ix_table[];
+extern const BODY_BOX alex_body_box[];
+extern const HOSEI_BOX alex_hos_box[];
+extern const s16 alex_movexy_table[][6];
+extern const u32 alex_nmca[];
+extern const OLC_IX alex_olc_ix_table[];
+extern const OVERLAP_PARTS alex_overlap_char_tbl[];
+extern const CatchTable alex_rival_catch_tbl[];
+extern const u32 alex_saca[];
 extern const u8 alex_se_random_table[];
-extern const u8 alex_stepxy_table[];
-extern const u8 alex_yuca[];
-extern const u8 hugo_rival_catch_tbl[];
-extern const u8 hugo_cbca[];
-extern const u8 ibuki_overlap_char_tbl[];
-extern const u8 yang_catt_table[];
-extern const u8 sean_catt_table[];
-extern const u8 dudley_atca[];
-extern const u8 dudley_att_box[];
-extern const u8 dudley_body_box[];
-extern const u8 dudley_btca[];
-extern const u8 dudley_caca[];
-extern const u8 dudley_cat_box[];
-extern const u8 dudley_catt_table[];
-extern const u8 dudley_cau_box[];
-extern const u8 dudley_cbca[];
-extern const u8 dudley_cuca[];
-extern const u8 dudley_dmca[];
-extern const u8 dudley_exca[];
-extern const u8 dudley_hand_box[];
-extern const u8 dudley_hit_ix_table[];
-extern const u8 dudley_hos_box[];
-extern const u8 dudley_movexy_table[];
-extern const u8 dudley_nmca[];
-extern const u8 dudley_olc_ix_table[];
-extern const u8 dudley_overlap_char_tbl[];
-extern const u8 dudley_rival_catch_tbl[];
-extern const u8 dudley_saca[];
+extern const s16 alex_stepxy_table[][2];
+extern const u32 alex_yuca[];
+extern const CatchTable hugo_rival_catch_tbl[];
+extern const u32 hugo_cbca[];
+extern const OVERLAP_PARTS ibuki_overlap_char_tbl[];
+extern const ATTACK_ATTR yang_catt_table[];
+extern const ATTACK_ATTR sean_catt_table[];
+extern const u32 dudley_atca[];
+extern const ATTACK_BOX dudley_att_box[];
+extern const BODY_BOX dudley_body_box[];
+extern const u32 dudley_btca[];
+extern const u32 dudley_caca[];
+extern const CATCH_BOX dudley_cat_box[];
+extern const ATTACK_ATTR dudley_catt_table[];
+extern const CAUGHT_BOX dudley_cau_box[];
+extern const u32 dudley_cbca[];
+extern const u32 dudley_cuca[];
+extern const u32 dudley_dmca[];
+extern const u32 dudley_exca[];
+extern const HAND_BOX dudley_hand_box[];
+extern const HIT_IX dudley_hit_ix_table[];
+extern const HOSEI_BOX dudley_hos_box[];
+extern const s16 dudley_movexy_table[][6];
+extern const u32 dudley_nmca[];
+extern const OLC_IX dudley_olc_ix_table[];
+extern const OVERLAP_PARTS dudley_overlap_char_tbl[];
+extern const CatchTable dudley_rival_catch_tbl[];
+extern const u32 dudley_saca[];
 extern const u8 dudley_se_random_table[];
-extern const u8 dudley_stepxy_table[];
-extern const u8 dudley_yuca[];
-extern const u8 ef13_att_box[];
-extern const u8 ef13_body_box[];
-extern const u8 ef13_cat_box[];
-extern const u8 ef13_catt_table[];
-extern const u8 ef13_cau_box[];
-extern const u8 ef13_char_table[];
-extern const u8 ef13_hand_box[];
-extern const u8 ef13_hit_ix_table[];
-extern const u8 ef13_hos_box[];
-extern const u8 ef13_movexy_table[];
-extern const u8 ef13_stepxy_table[];
-extern const u8 elena_atca[];
-extern const u8 elena_att_box[];
-extern const u8 elena_body_box[];
-extern const u8 elena_btca[];
-extern const u8 elena_caca[];
-extern const u8 elena_cat_box[];
-extern const u8 elena_catt_table[];
-extern const u8 elena_cau_box[];
-extern const u8 elena_cbca[];
-extern const u8 elena_cuca[];
-extern const u8 elena_dmca[];
-extern const u8 elena_exca[];
-extern const u8 elena_hand_box[];
-extern const u8 elena_hit_ix_table[];
-extern const u8 elena_hos_box[];
-extern const u8 elena_movexy_table[];
-extern const u8 elena_nmca[];
-extern const u8 elena_olc_ix_table[];
-extern const u8 elena_overlap_char_tbl[];
-extern const u8 elena_rival_catch_tbl[];
-extern const u8 elena_saca[];
+extern const s16 dudley_stepxy_table[][2];
+extern const u32 dudley_yuca[];
+extern const ATTACK_BOX ef13_att_box[];
+extern const BODY_BOX ef13_body_box[];
+extern const CATCH_BOX ef13_cat_box[];
+extern const ATTACK_ATTR ef13_catt_table[];
+extern const CAUGHT_BOX ef13_cau_box[];
+extern const u32 ef13_char_table[];
+extern const HAND_BOX ef13_hand_box[];
+extern const HIT_IX ef13_hit_ix_table[];
+extern const HOSEI_BOX ef13_hos_box[];
+extern const s16 ef13_movexy_table[][6];
+extern const s16 ef13_stepxy_table[][2];
+extern const u32 elena_atca[];
+extern const ATTACK_BOX elena_att_box[];
+extern const BODY_BOX elena_body_box[];
+extern const u32 elena_btca[];
+extern const u32 elena_caca[];
+extern const CATCH_BOX elena_cat_box[];
+extern const ATTACK_ATTR elena_catt_table[];
+extern const CAUGHT_BOX elena_cau_box[];
+extern const u32 elena_cbca[];
+extern const u32 elena_cuca[];
+extern const u32 elena_dmca[];
+extern const u32 elena_exca[];
+extern const HAND_BOX elena_hand_box[];
+extern const HIT_IX elena_hit_ix_table[];
+extern const HOSEI_BOX elena_hos_box[];
+extern const s16 elena_movexy_table[][6];
+extern const u32 elena_nmca[];
+extern const OLC_IX elena_olc_ix_table[];
+extern const OVERLAP_PARTS elena_overlap_char_tbl[];
+extern const CatchTable elena_rival_catch_tbl[];
+extern const u32 elena_saca[];
 extern const u8 elena_se_random_table[];
-extern const u8 elena_stepxy_table[];
-extern const u8 elena_yuca[];
-extern const u8 gill_atca[];
-extern const u8 gill_att_box[];
-extern const u8 gill_body_box[];
-extern const u8 gill_btca[];
-extern const u8 gill_caca[];
-extern const u8 gill_cat_box[];
-extern const u8 gill_catt_table[];
-extern const u8 gill_cau_box[];
-extern const u8 gill_cbca[];
-extern const u8 gill_olc_ix_table[];
-extern const u8 gill_cuca[];
-extern const u8 gill_dmca[];
-extern const u8 gill_exca[];
-extern const u8 gill_hand_box[];
-extern const u8 gill_hit_ix_table[];
-extern const u8 gill_hos_box[];
-extern const u8 gill_movexy_table[];
-extern const u8 gill_nmca[];
-extern const u8 gill_overlap_char_tbl[];
-extern const u8 gill_rival_catch_tbl[];
-extern const u8 gill_saca[];
+extern const s16 elena_stepxy_table[][2];
+extern const u32 elena_yuca[];
+extern const u32 gill_atca[];
+extern const ATTACK_BOX gill_att_box[];
+extern const BODY_BOX gill_body_box[];
+extern const u32 gill_btca[];
+extern const u32 gill_caca[];
+extern const CATCH_BOX gill_cat_box[];
+extern const ATTACK_ATTR gill_catt_table[];
+extern const CAUGHT_BOX gill_cau_box[];
+extern const u32 gill_cbca[];
+extern const OLC_IX gill_olc_ix_table[];
+extern const u32 gill_cuca[];
+extern const u32 gill_dmca[];
+extern const u32 gill_exca[];
+extern const HAND_BOX gill_hand_box[];
+extern const HIT_IX gill_hit_ix_table[];
+extern const HOSEI_BOX gill_hos_box[];
+extern const s16 gill_movexy_table[][6];
+extern const u32 gill_nmca[];
+extern const OVERLAP_PARTS gill_overlap_char_tbl[];
+extern const CatchTable gill_rival_catch_tbl[];
+extern const u32 gill_saca[];
 extern const u8 gill_se_random_table[];
-extern const u8 gill_stepxy_table[];
-extern const u8 gill_yuca[];
-extern const u8 gouki1_atca[];
-extern const u8 gouki1_att_box[];
-extern const u8 gouki1_btca[];
-extern const u8 gouki1_caca[];
-extern const u8 gouki1_cat_box[];
-extern const u8 gouki1_catt_table[];
-extern const u8 gouki1_cau_box[];
-extern const u8 gouki1_cbca[];
-extern const u8 gouki1_cuca[];
-extern const u8 gouki1_dmca[];
-extern const u8 gouki1_exca[];
-extern const u8 gouki1_hand_box[];
-extern const u8 gouki1_hit_ix_table[];
-extern const u8 gouki1_body_box[];
-extern const u8 gouki1_hos_box[];
-extern const u8 gouki1_movexy_table[];
-extern const u8 gouki1_nmca[];
-extern const u8 gouki1_olc_ix_table[];
-extern const u8 gouki1_overlap_char_tbl[];
-extern const u8 gouki1_rival_catch_tbl[];
-extern const u8 gouki1_saca[];
+extern const s16 gill_stepxy_table[][2];
+extern const u32 gill_yuca[];
+extern const u32 gouki1_atca[];
+extern const ATTACK_BOX gouki1_att_box[];
+extern const u32 gouki1_btca[];
+extern const u32 gouki1_caca[];
+extern const CATCH_BOX gouki1_cat_box[];
+extern const ATTACK_ATTR gouki1_catt_table[];
+extern const CAUGHT_BOX gouki1_cau_box[];
+extern const u32 gouki1_cbca[];
+extern const u32 gouki1_cuca[];
+extern const u32 gouki1_dmca[];
+extern const u32 gouki1_exca[];
+extern const HAND_BOX gouki1_hand_box[];
+extern const HIT_IX gouki1_hit_ix_table[];
+extern const BODY_BOX gouki1_body_box[];
+extern const HOSEI_BOX gouki1_hos_box[];
+extern const s16 gouki1_movexy_table[][6];
+extern const u32 gouki1_nmca[];
+extern const OLC_IX gouki1_olc_ix_table[];
+extern const OVERLAP_PARTS gouki1_overlap_char_tbl[];
+extern const CatchTable gouki1_rival_catch_tbl[];
+extern const u32 gouki1_saca[];
 extern const u8 gouki1_se_random_table[];
-extern const u8 gouki1_stepxy_table[];
-extern const u8 gouki1_yuca[];
-extern const u8 gouki2_atca[];
-extern const u8 gouki2_att_box[];
-extern const u8 gouki2_body_box[];
-extern const u8 gouki2_btca[];
-extern const u8 gouki2_caca[];
-extern const u8 gouki2_cat_box[];
-extern const u8 gouki2_catt_table[];
-extern const u8 gouki2_cau_box[];
-extern const u8 gouki2_cbca[];
-extern const u8 gouki2_cuca[];
-extern const u8 gouki2_dmca[];
-extern const u8 gouki2_exca[];
-extern const u8 gouki2_hand_box[];
-extern const u8 gouki2_hit_ix_table[];
-extern const u8 gouki2_hos_box[];
-extern const u8 gouki2_movexy_table[];
-extern const u8 gouki2_nmca[];
-extern const u8 gouki2_olc_ix_table[];
-extern const u8 gouki2_overlap_char_tbl[];
-extern const u8 gouki2_rival_catch_tbl[];
-extern const u8 gouki2_saca[];
+extern const s16 gouki1_stepxy_table[][2];
+extern const u32 gouki1_yuca[];
+extern const u32 gouki2_atca[];
+extern const ATTACK_BOX gouki2_att_box[];
+extern const BODY_BOX gouki2_body_box[];
+extern const u32 gouki2_btca[];
+extern const u32 gouki2_caca[];
+extern const CATCH_BOX gouki2_cat_box[];
+extern const ATTACK_ATTR gouki2_catt_table[];
+extern const CAUGHT_BOX gouki2_cau_box[];
+extern const u32 gouki2_cbca[];
+extern const u32 gouki2_cuca[];
+extern const u32 gouki2_dmca[];
+extern const u32 gouki2_exca[];
+extern const HAND_BOX gouki2_hand_box[];
+extern const HIT_IX gouki2_hit_ix_table[];
+extern const HOSEI_BOX gouki2_hos_box[];
+extern const s16 gouki2_movexy_table[][6];
+extern const u32 gouki2_nmca[];
+extern const OLC_IX gouki2_olc_ix_table[];
+extern const OVERLAP_PARTS gouki2_overlap_char_tbl[];
+extern const CatchTable gouki2_rival_catch_tbl[];
+extern const u32 gouki2_saca[];
 extern const u8 gouki2_se_random_table[];
-extern const u8 gouki2_stepxy_table[];
-extern const u8 gouki2_yuca[];
-extern const u8 hugo_atca[];
-extern const u8 hugo_att_box[];
-extern const u8 hugo_body_box[];
-extern const u8 hugo_btca[];
-extern const u8 hugo_caca[];
-extern const u8 hugo_cat_box[];
-extern const u8 hugo_catt_table[];
-extern const u8 hugo_cau_box[];
-extern const u8 hugo_cuca[];
-extern const u8 hugo_dmca[];
-extern const u8 hugo_exca[];
-extern const u8 hugo_hand_box[];
-extern const u8 hugo_hit_ix_table[];
-extern const u8 hugo_hos_box[];
-extern const u8 hugo_movexy_table[];
-extern const u8 hugo_nmca[];
-extern const u8 hugo_olc_ix_table[];
-extern const u8 hugo_overlap_char_tbl[];
-extern const u8 hugo_saca[];
+extern const s16 gouki2_stepxy_table[][2];
+extern const u32 gouki2_yuca[];
+extern const u32 hugo_atca[];
+extern const ATTACK_BOX hugo_att_box[];
+extern const BODY_BOX hugo_body_box[];
+extern const u32 hugo_btca[];
+extern const u32 hugo_caca[];
+extern const CATCH_BOX hugo_cat_box[];
+extern const ATTACK_ATTR hugo_catt_table[];
+extern const CAUGHT_BOX hugo_cau_box[];
+extern const u32 hugo_cuca[];
+extern const u32 hugo_dmca[];
+extern const u32 hugo_exca[];
+extern const HAND_BOX hugo_hand_box[];
+extern const HIT_IX hugo_hit_ix_table[];
+extern const HOSEI_BOX hugo_hos_box[];
+extern const s16 hugo_movexy_table[][6];
+extern const u32 hugo_nmca[];
+extern const OLC_IX hugo_olc_ix_table[];
+extern const OVERLAP_PARTS hugo_overlap_char_tbl[];
+extern const u32 hugo_saca[];
 extern const u8 hugo_se_random_table[];
-extern const u8 hugo_stepxy_table[];
-extern const u8 hugo_yuca[];
-extern const u8 ibuki_atca[];
-extern const u8 ibuki_att_box[];
-extern const u8 ibuki_body_box[];
-extern const u8 ibuki_btca[];
-extern const u8 ibuki_caca[];
-extern const u8 ibuki_cat_box[];
-extern const u8 ibuki_catt_table[];
-extern const u8 ibuki_cau_box[];
-extern const u8 ibuki_cbca[];
-extern const u8 ibuki_cuca[];
-extern const u8 ibuki_dmca[];
-extern const u8 ibuki_exca[];
-extern const u8 ibuki_hand_box[];
-extern const u8 ibuki_hit_ix_table[];
-extern const u8 ibuki_hos_box[];
-extern const u8 ibuki_movexy_table[];
-extern const u8 ibuki_nmca[];
-extern const u8 ibuki_olc_ix_table[];
-extern const u8 ibuki_rival_catch_tbl[];
-extern const u8 ibuki_saca[];
+extern const s16 hugo_stepxy_table[][2];
+extern const u32 hugo_yuca[];
+extern const u32 ibuki_atca[];
+extern const ATTACK_BOX ibuki_att_box[];
+extern const BODY_BOX ibuki_body_box[];
+extern const u32 ibuki_btca[];
+extern const u32 ibuki_caca[];
+extern const CATCH_BOX ibuki_cat_box[];
+extern const ATTACK_ATTR ibuki_catt_table[];
+extern const CAUGHT_BOX ibuki_cau_box[];
+extern const u32 ibuki_cbca[];
+extern const u32 ibuki_cuca[];
+extern const u32 ibuki_dmca[];
+extern const u32 ibuki_exca[];
+extern const HAND_BOX ibuki_hand_box[];
+extern const HIT_IX ibuki_hit_ix_table[];
+extern const HOSEI_BOX ibuki_hos_box[];
+extern const s16 ibuki_movexy_table[][6];
+extern const u32 ibuki_nmca[];
+extern const OLC_IX ibuki_olc_ix_table[];
+extern const CatchTable ibuki_rival_catch_tbl[];
+extern const u32 ibuki_saca[];
 extern const u8 ibuki_se_random_table[];
-extern const u8 ibuki_stepxy_table[];
-extern const u8 ibuki_yuca[];
-extern const u8 ken_atca[];
-extern const u8 ken_att_box[];
-extern const u8 sean_att_box[];
-extern const u8 ken_body_box[];
-extern const u8 ken_btca[];
-extern const u8 ken_caca[];
-extern const u8 ken_cat_box[];
-extern const u8 ken_catt_table[];
-extern const u8 ken_cau_box[];
-extern const u8 ken_cbca[];
-extern const u8 ken_cuca[];
-extern const u8 ken_dmca[];
-extern const u8 ken_exca[];
-extern const u8 ken_hand_box[];
-extern const u8 ken_hit_ix_table[];
-extern const u8 ken_hos_box[];
-extern const u8 ken_movexy_table[];
-extern const u8 ken_nmca[];
-extern const u8 ken_olc_ix_table[];
-extern const u8 ken_overlap_char_tbl[];
-extern const u8 ken_rival_catch_tbl[];
-extern const u8 ken_saca[];
+extern const s16 ibuki_stepxy_table[][2];
+extern const u32 ibuki_yuca[];
+extern const u32 ken_atca[];
+extern const ATTACK_BOX ken_att_box[];
+extern const ATTACK_BOX sean_att_box[];
+extern const BODY_BOX ken_body_box[];
+extern const u32 ken_btca[];
+extern const u32 ken_caca[];
+extern const CATCH_BOX ken_cat_box[];
+extern const ATTACK_ATTR ken_catt_table[];
+extern const CAUGHT_BOX ken_cau_box[];
+extern const u32 ken_cbca[];
+extern const u32 ken_cuca[];
+extern const u32 ken_dmca[];
+extern const u32 ken_exca[];
+extern const HAND_BOX ken_hand_box[];
+extern const HIT_IX ken_hit_ix_table[];
+extern const HOSEI_BOX ken_hos_box[];
+extern const s16 ken_movexy_table[][6];
+extern const u32 ken_nmca[];
+extern const OLC_IX ken_olc_ix_table[];
+extern const OVERLAP_PARTS ken_overlap_char_tbl[];
+extern const CatchTable ken_rival_catch_tbl[];
+extern const u32 ken_saca[];
 extern const u8 ken_se_random_table[];
-extern const u8 ken_stepxy_table[];
-extern const u8 ken_yuca[];
-extern const u8 necro_atca[];
-extern const u8 necro_att_box[];
-extern const u8 necro_body_box[];
-extern const u8 necro_btca[];
-extern const u8 necro_caca[];
-extern const u8 necro_cat_box[];
-extern const u8 necro_catt_table[];
-extern const u8 necro_cau_box[];
-extern const u8 necro_cbca[];
-extern const u8 necro_cuca[];
-extern const u8 necro_dmca[];
-extern const u8 necro_exca[];
-extern const u8 necro_hand_box[];
-extern const u8 necro_hit_ix_table[];
-extern const u8 necro_hos_box[];
-extern const u8 necro_movexy_table[];
-extern const u8 necro_nmca[];
-extern const u8 necro_olc_ix_table[];
-extern const u8 necro_overlap_char_tbl[];
-extern const u8 necro_rival_catch_tbl[];
-extern const u8 necro_saca[];
+extern const s16 ken_stepxy_table[][2];
+extern const u32 ken_yuca[];
+extern const u32 necro_atca[];
+extern const ATTACK_BOX necro_att_box[];
+extern const BODY_BOX necro_body_box[];
+extern const u32 necro_btca[];
+extern const u32 necro_caca[];
+extern const CATCH_BOX necro_cat_box[];
+extern const ATTACK_ATTR necro_catt_table[];
+extern const CAUGHT_BOX necro_cau_box[];
+extern const u32 necro_cbca[];
+extern const u32 necro_cuca[];
+extern const u32 necro_dmca[];
+extern const u32 necro_exca[];
+extern const HAND_BOX necro_hand_box[];
+extern const HIT_IX necro_hit_ix_table[];
+extern const HOSEI_BOX necro_hos_box[];
+extern const s16 necro_movexy_table[][6];
+extern const u32 necro_nmca[];
+extern const OLC_IX necro_olc_ix_table[];
+extern const OVERLAP_PARTS necro_overlap_char_tbl[];
+extern const CatchTable necro_rival_catch_tbl[];
+extern const u32 necro_saca[];
 extern const u8 necro_se_random_table[];
-extern const u8 necro_stepxy_table[];
-extern const u8 necro_yuca[];
-extern const u8 oro_atca[];
-extern const u8 oro_att_box[];
-extern const u8 oro_body_box[];
-extern const u8 oro_btca[];
-extern const u8 oro_caca[];
-extern const u8 oro_cat_box[];
-extern const u8 oro_catt_table[];
-extern const u8 oro_cau_box[];
-extern const u8 oro_cbca[];
-extern const u8 oro_olc_ix_table[];
-extern const u8 oro_cuca[];
-extern const u8 oro_dmca[];
-extern const u8 oro_exca[];
-extern const u8 oro_hand_box[];
-extern const u8 oro_hit_ix_table[];
-extern const u8 oro_hos_box[];
-extern const u8 oro_movexy_table[];
-extern const u8 oro_nmca[];
-extern const u8 oro_overlap_char_tbl[];
-extern const u8 oro_rival_catch_tbl[];
-extern const u8 oro_saca[];
+extern const s16 necro_stepxy_table[][2];
+extern const u32 necro_yuca[];
+extern const u32 oro_atca[];
+extern const ATTACK_BOX oro_att_box[];
+extern const BODY_BOX oro_body_box[];
+extern const u32 oro_btca[];
+extern const u32 oro_caca[];
+extern const CATCH_BOX oro_cat_box[];
+extern const ATTACK_ATTR oro_catt_table[];
+extern const CAUGHT_BOX oro_cau_box[];
+extern const u32 oro_cbca[];
+extern const OLC_IX oro_olc_ix_table[];
+extern const u32 oro_cuca[];
+extern const u32 oro_dmca[];
+extern const u32 oro_exca[];
+extern const HAND_BOX oro_hand_box[];
+extern const HIT_IX oro_hit_ix_table[];
+extern const HOSEI_BOX oro_hos_box[];
+extern const s16 oro_movexy_table[][6];
+extern const u32 oro_nmca[];
+extern const OVERLAP_PARTS oro_overlap_char_tbl[];
+extern const CatchTable oro_rival_catch_tbl[];
+extern const u32 oro_saca[];
 extern const u8 oro_se_random_table[];
-extern const u8 oro_stepxy_table[];
-extern const u8 oro_yuca[];
-extern const u8 ryu_atca[];
-extern const u8 ryu_att_box[];
-extern const u8 ryu_body_box[];
-extern const u8 ryu_btca[];
-extern const u8 ryu_caca[];
-extern const u8 ryu_cat_box[];
-extern const u8 ryu_catt_table[];
-extern const u8 ryu_cau_box[];
-extern const u8 ryu_cbca[];
-extern const u8 ryu_cuca[];
-extern const u8 ryu_dmca[];
-extern const u8 ryu_exca[];
-extern const u8 ryu_hand_box[];
-extern const u8 ryu_hit_ix_table[];
-extern const u8 ryu_hos_box[];
-extern const u8 ryu_movexy_table[];
-extern const u8 ryu_nmca[];
-extern const u8 ryu_olc_ix_table[];
-extern const u8 ryu_overlap_char_tbl[];
-extern const u8 ryu_rival_catch_tbl[];
-extern const u8 ryu_saca[];
+extern const s16 oro_stepxy_table[][2];
+extern const u32 oro_yuca[];
+extern const u32 ryu_atca[];
+extern const ATTACK_BOX ryu_att_box[];
+extern const BODY_BOX ryu_body_box[];
+extern const u32 ryu_btca[];
+extern const u32 ryu_caca[];
+extern const CATCH_BOX ryu_cat_box[];
+extern const ATTACK_ATTR ryu_catt_table[];
+extern const CAUGHT_BOX ryu_cau_box[];
+extern const u32 ryu_cbca[];
+extern const u32 ryu_cuca[];
+extern const u32 ryu_dmca[];
+extern const u32 ryu_exca[];
+extern const HAND_BOX ryu_hand_box[];
+extern const HIT_IX ryu_hit_ix_table[];
+extern const HOSEI_BOX ryu_hos_box[];
+extern const s16 ryu_movexy_table[][6];
+extern const u32 ryu_nmca[];
+extern const OLC_IX ryu_olc_ix_table[];
+extern const OVERLAP_PARTS ryu_overlap_char_tbl[];
+extern const CatchTable ryu_rival_catch_tbl[];
+extern const u32 ryu_saca[];
 extern const u8 ryu_se_random_table[];
-extern const u8 ryu_stepxy_table[];
-extern const u8 ryu_yuca[];
-extern const u8 sean_atca[];
-extern const u8 sean_body_box[];
-extern const u8 sean_btca[];
-extern const u8 sean_caca[];
-extern const u8 sean_cat_box[];
-extern const u8 sean_cau_box[];
-extern const u8 sean_cbca[];
-extern const u8 sean_cuca[];
-extern const u8 sean_dmca[];
-extern const u8 sean_exca[];
-extern const u8 sean_hand_box[];
-extern const u8 sean_hit_ix_table[];
-extern const u8 sean_hos_box[];
-extern const u8 sean_movexy_table[];
-extern const u8 sean_nmca[];
-extern const u8 sean_olc_ix_table[];
-extern const u8 sean_overlap_char_tbl[];
-extern const u8 sean_rival_catch_tbl[];
-extern const u8 sean_saca[];
+extern const s16 ryu_stepxy_table[][2];
+extern const u32 ryu_yuca[];
+extern const u32 sean_atca[];
+extern const BODY_BOX sean_body_box[];
+extern const u32 sean_btca[];
+extern const u32 sean_caca[];
+extern const CATCH_BOX sean_cat_box[];
+extern const CAUGHT_BOX sean_cau_box[];
+extern const u32 sean_cbca[];
+extern const u32 sean_cuca[];
+extern const u32 sean_dmca[];
+extern const u32 sean_exca[];
+extern const HAND_BOX sean_hand_box[];
+extern const HIT_IX sean_hit_ix_table[];
+extern const HOSEI_BOX sean_hos_box[];
+extern const s16 sean_movexy_table[][6];
+extern const u32 sean_nmca[];
+extern const OLC_IX sean_olc_ix_table[];
+extern const OVERLAP_PARTS sean_overlap_char_tbl[];
+extern const CatchTable sean_rival_catch_tbl[];
+extern const u32 sean_saca[];
 extern const u8 sean_se_random_table[];
-extern const u8 sean_stepxy_table[];
-extern const u8 sean_yuca[];
-extern const u8 urien_atca[];
-extern const u8 urien_att_box[];
-extern const u8 urien_body_box[];
-extern const u8 urien_btca[];
-extern const u8 urien_caca[];
-extern const u8 urien_cat_box[];
-extern const u8 urien_catt_table[];
-extern const u8 urien_cau_box[];
-extern const u8 urien_cbca[];
-extern const u8 urien_cuca[];
-extern const u8 urien_dmca[];
-extern const u8 urien_exca[];
-extern const u8 urien_hand_box[];
-extern const u8 urien_hit_ix_table[];
-extern const u8 urien_hos_box[];
-extern const u8 urien_movexy_table[];
-extern const u8 urien_nmca[];
-extern const u8 urien_olc_ix_table[];
-extern const u8 urien_overlap_char_tbl[];
-extern const u8 urien_rival_catch_tbl[];
-extern const u8 urien_saca[];
+extern const s16 sean_stepxy_table[][2];
+extern const u32 sean_yuca[];
+extern const u32 urien_atca[];
+extern const ATTACK_BOX urien_att_box[];
+extern const BODY_BOX urien_body_box[];
+extern const u32 urien_btca[];
+extern const u32 urien_caca[];
+extern const CATCH_BOX urien_cat_box[];
+extern const ATTACK_ATTR urien_catt_table[];
+extern const CAUGHT_BOX urien_cau_box[];
+extern const u32 urien_cbca[];
+extern const u32 urien_cuca[];
+extern const u32 urien_dmca[];
+extern const u32 urien_exca[];
+extern const HAND_BOX urien_hand_box[];
+extern const HIT_IX urien_hit_ix_table[];
+extern const HOSEI_BOX urien_hos_box[];
+extern const s16 urien_movexy_table[][6];
+extern const u32 urien_nmca[];
+extern const OLC_IX urien_olc_ix_table[];
+extern const OVERLAP_PARTS urien_overlap_char_tbl[];
+extern const CatchTable urien_rival_catch_tbl[];
+extern const u32 urien_saca[];
 extern const u8 urien_se_random_table[];
-extern const u8 urien_stepxy_table[];
-extern const u8 urien_yuca[];
-extern const u8 yang_atca[];
-extern const u8 yang_att_box[];
-extern const u8 yang_body_box[];
-extern const u8 yang_btca[];
-extern const u8 yang_caca[];
-extern const u8 yang_cat_box[];
-extern const u8 yang_cau_box[];
-extern const u8 yang_cbca[];
-extern const u8 yang_cuca[];
-extern const u8 yang_dmca[];
-extern const u8 yang_exca[];
-extern const u8 yang_hand_box[];
-extern const u8 yang_hit_ix_table[];
-extern const u8 yang_hos_box[];
-extern const u8 yang_movexy_table[];
-extern const u8 yang_nmca[];
-extern const u8 yang_olc_ix_table[];
-extern const u8 yang_overlap_char_tbl[];
-extern const u8 yang_rival_catch_tbl[];
-extern const u8 yang_saca[];
+extern const s16 urien_stepxy_table[][2];
+extern const u32 urien_yuca[];
+extern const u32 yang_atca[];
+extern const ATTACK_BOX yang_att_box[];
+extern const BODY_BOX yang_body_box[];
+extern const u32 yang_btca[];
+extern const u32 yang_caca[];
+extern const CATCH_BOX yang_cat_box[];
+extern const CAUGHT_BOX yang_cau_box[];
+extern const u32 yang_cbca[];
+extern const u32 yang_cuca[];
+extern const u32 yang_dmca[];
+extern const u32 yang_exca[];
+extern const HAND_BOX yang_hand_box[];
+extern const HIT_IX yang_hit_ix_table[];
+extern const HOSEI_BOX yang_hos_box[];
+extern const s16 yang_movexy_table[][6];
+extern const u32 yang_nmca[];
+extern const OLC_IX yang_olc_ix_table[];
+extern const OVERLAP_PARTS yang_overlap_char_tbl[];
+extern const CatchTable yang_rival_catch_tbl[];
+extern const u32 yang_saca[];
 extern const u8 yang_se_random_table[];
-extern const u8 yang_stepxy_table[];
-extern const u8 yang_yuca[];
-extern const u8 yun_atca[];
-extern const u8 yun_att_box[];
-extern const u8 yun_body_box[];
-extern const u8 yun_btca[];
-extern const u8 yun_caca[];
-extern const u8 yun_cat_box[];
-extern const u8 yun_catt_table[];
-extern const u8 yun_cau_box[];
-extern const u8 yun_cbca[];
-extern const u8 yun_rival_catch_tbl[];
-extern const u8 yun_cuca[];
-extern const u8 yun_dmca[];
-extern const u8 yun_exca[];
-extern const u8 yun_hand_box[];
-extern const u8 yun_hit_ix_table[];
-extern const u8 yun_hos_box[];
-extern const u8 yun_movexy_table[];
-extern const u8 yun_nmca[];
-extern const u8 yun_olc_ix_table[];
-extern const u8 yun_overlap_char_tbl[];
-extern const u8 yun_saca[];
+extern const s16 yang_stepxy_table[][2];
+extern const u32 yang_yuca[];
+extern const u32 yun_atca[];
+extern const ATTACK_BOX yun_att_box[];
+extern const BODY_BOX yun_body_box[];
+extern const u32 yun_btca[];
+extern const u32 yun_caca[];
+extern const CATCH_BOX yun_cat_box[];
+extern const ATTACK_ATTR yun_catt_table[];
+extern const CAUGHT_BOX yun_cau_box[];
+extern const u32 yun_cbca[];
+extern const CatchTable yun_rival_catch_tbl[];
+extern const u32 yun_cuca[];
+extern const u32 yun_dmca[];
+extern const u32 yun_exca[];
+extern const HAND_BOX yun_hand_box[];
+extern const HIT_IX yun_hit_ix_table[];
+extern const HOSEI_BOX yun_hos_box[];
+extern const s16 yun_movexy_table[][6];
+extern const u32 yun_nmca[];
+extern const OLC_IX yun_olc_ix_table[];
+extern const OVERLAP_PARTS yun_overlap_char_tbl[];
+extern const u32 yun_saca[];
 extern const u8 yun_se_random_table[];
-extern const u8 yun_stepxy_table[];
-extern const u8 yun_yuca[];
+extern const s16 yun_stepxy_table[][2];
+extern const u32 yun_yuca[];
 
 const CHAR_INIT_ROM char_init_data[18] = {
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -461,19 +461,19 @@ const s16 Dsas_dir_table[16] = {
     0, 0, 1, 1, 1, 1, 1, 0,
 };
 
-const u16 sel_sp_ch_tbl[5] = {
-    1, 1, 0x101, 0x101, 0x100,
+const s8 sel_sp_ch_tbl[10] = {
+    0, 1, 0, 1, 1, 1, 1, 1, 1, 0,
 };
 
-const u16 rsix_r_table[34] = {
-    0x3D, 1, 0x79, 2, 0xB5, 3, 0xF1, 4,
-    0x12D, 5, 0x169, 6, 0x1A5, 7, 0x1E1, 8,
-    0x21D, 9, 0x259, 0xA, 0x295, 0xB, 0x2D1, 0xC,
-    0x30D, 0xD, 0x349, 0xE, 0x385, 0xF, 0x3C1, 0x10,
-    0x3E7, 0x11,
+const s16 rsix_r_table[17][2] = {
+    { 0x3D, 1 }, { 0x79, 2 }, { 0xB5, 3 }, { 0xF1, 4 },
+    { 0x12D, 5 }, { 0x169, 6 }, { 0x1A5, 7 }, { 0x1E1, 8 },
+    { 0x21D, 9 }, { 0x259, 0xA }, { 0x295, 0xB }, { 0x2D1, 0xC },
+    { 0x30D, 0xD }, { 0x349, 0xE }, { 0x385, 0xF }, { 0x3C1, 0x10 },
+    { 0x3E7, 0x11 },
 };
 
-const u16 attr_flame_tbl[82] = {
+const s16 attr_flame_tbl[82] = {
     0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A,
     0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -487,7 +487,7 @@ const u16 attr_flame_tbl[82] = {
     0x67, 0x67,
 };
 
-const u16 attr_thunder_tbl[82] = {
+const s16 attr_thunder_tbl[82] = {
     0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0x2B,
     0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -501,7 +501,7 @@ const u16 attr_thunder_tbl[82] = {
     0x68, 0x68,
 };
 
-const u16 attr_freeze_tbl[82] = {
+const s16 attr_freeze_tbl[82] = {
     0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C,
     0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -515,7 +515,7 @@ const u16 attr_freeze_tbl[82] = {
     0x69, 0x69,
 };
 
-const u16 sky_nm_damage_tbl[82] = {
+const s16 sky_nm_damage_tbl[82] = {
     0x58, 0x58, 0x58, 0x58, 0x58, 0x58, 0x58, 0x61,
     0x62, 0x58, 0x67, 0x68, 0x69, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -529,7 +529,7 @@ const u16 sky_nm_damage_tbl[82] = {
     0x70, 0x71,
 };
 
-const u16 sky_nm2_damage_tbl[82] = {
+const s16 sky_nm2_damage_tbl[82] = {
     0x58, 0x58, 0x58, 0x58, 0x58, 0x58, 0x58, 0x58,
     0x58, 0x58, 0x58, 0x58, 0x58, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -543,7 +543,7 @@ const u16 sky_nm2_damage_tbl[82] = {
     0x58, 0x58,
 };
 
-const u16 sky_sp_damage_tbl[82] = {
+const s16 sky_sp_damage_tbl[82] = {
     0x5B, 0x5B, 0x5B, 0x5F, 0x5B, 0x5B, 0x60, 0x61,
     0x62, 0x5B, 0x67, 0x68, 0x69, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -557,7 +557,7 @@ const u16 sky_sp_damage_tbl[82] = {
     0x61, 0x71,
 };
 
-const u16 kagami_damage_tbl[82] = {
+const s16 kagami_damage_tbl[82] = {
     0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x41,
     0x42, 0x40, 0x43, 0x44, 0x45, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -571,7 +571,7 @@ const u16 kagami_damage_tbl[82] = {
     0x70, 0x71,
 };
 
-const u16 kagami2_damage_tbl[82] = {
+const s16 kagami2_damage_tbl[82] = {
     0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
     0x40, 0x40, 0x43, 0x44, 0x45, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -585,7 +585,7 @@ const u16 kagami2_damage_tbl[82] = {
     0x40, 0x40,
 };
 
-const u16 grd_hand_damage_tbl[82] = {
+const s16 grd_hand_damage_tbl[82] = {
     0x29, 0x29, 0x29, 0x29, 0x29, 0x29, 0x29, 0x29,
     0x29, 0x29, 0x2A, 0x2B, 0x2C, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
@@ -608,33 +608,30 @@ const u16 hddm_damage_tbl[41] = {
     0,
 };
 
-const u16 trdm_damage_tbl[41] = {
-    0x101, 0x101, 0x101, 0x100, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0,
+const u8 trdm_damage_tbl[82] = {
+    1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0,
 };
 
-const u16 ttk_damage_req_tbl[41] = {
-    0, 0, 0, 1, 0x100, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    1, 0x100, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 1, 0x100,
-    1, 0x100, 0, 0, 0, 0x100, 0, 0x101,
-    0,
+const u8 ttk_damage_req_tbl[82] = {
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0,
+    0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1,
+    0, 0,
 };
 
-const u16 parisucc_pts[40] = {
-    0xA0B, 0xC0D, 0xE0F, 0x1011, 0x1213, 0x1416, 0x181A, 0x1C1E,
-    0x2022, 0x2426, 0x282C, 0x3034, 0x383C, 0x4044, 0x484C, 0x5054,
-    0x585C, 0x6064, 0x6464, 0x6464, 0x1414, 0x1414, 0x1414, 0x1414,
-    0x1414, 0x1414, 0x1414, 0x1414, 0x1414, 0x1414, 0x1414, 0x1414,
-    0x1414, 0x1414, 0x1414, 0x1414, 0x1414, 0x1414, 0x1414, 0x1414,
+const u8 parisucc_pts[2][40] = {
+    { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 100, 100, 100, 100 },
+    { 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20 },
 };
 
-const u16 dm_oiuchi_catch[16] = {
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0x100, 0x101, 0x100, 1, 1, 0x100, 1, 0x1FF,
+const u8 dm_oiuchi_catch[32] = {
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 255,
 };

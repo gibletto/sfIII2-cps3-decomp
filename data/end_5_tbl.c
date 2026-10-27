@@ -10,10 +10,9 @@
 
 #pragma section TBL
 
-extern const u32 end_500_bg0_cell_tbl[];
+extern const PANEL end_500_bg0_cell_tbl[];
 
 /* provisional name */
-const u32 end_500_bg0_cell_tbl[8] = {
-    0, 9, 0x40, 0xA,
-    0x80, 0xD, 0xC0, 0xE,
+const PANEL end_500_bg0_cell_tbl[4] = {
+    { 0, 9 }, { 0x40, 0xA }, { 0x80, 0xD }, { 0xC0, 0xE },
 };

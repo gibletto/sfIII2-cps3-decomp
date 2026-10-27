@@ -13,8 +13,8 @@
 #pragma section TBL
 
 extern const s32 swallow_speeds[];
-extern const s32 dm_sp_sel_tbl[];
-extern const s32 range_time_table[];
+extern const s16 dm_sp_sel_tbl[][2];
+extern const s16 range_time_table[][1];
 
 const s32 swallow_speeds[16] = {
     0, 32768, 65536, 98304,
@@ -28,11 +28,11 @@ const s32 swallow_speeds[16] = {
  * Read as two s16 entries per attack strength (dm_kind_of_waza): petal set (num_of_hana) and
  * petal acceleration.
  */
-const s32 dm_sp_sel_tbl[4] = {
-    14, 65552, 131090, 196628,
+const s16 dm_sp_sel_tbl[4][2] = {
+    { 0, 14 }, { 1, 16 }, { 2, 18 }, { 3, 20 },
 };
 
-const s32 range_time_table[8] = {
-    2097186, 2359334, 2621482, 2883630,
-    3145778, 3407926, 3670074, 3932222,
+const s16 range_time_table[16][1] = {
+    { 32 }, { 34 }, { 36 }, { 38 }, { 40 }, { 42 }, { 44 }, { 46 },
+    { 48 }, { 50 }, { 52 }, { 54 }, { 56 }, { 58 }, { 60 }, { 62 },
 };

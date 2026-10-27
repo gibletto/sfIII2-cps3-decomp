@@ -13,7 +13,7 @@
 
 extern const PANEL end_400_panel0[];
 extern const PANEL end_400_panel1[];
-extern const u16 timer_4_tbl[];
+extern const s16 timer_4_tbl[];
 extern const u16 end_4_pos[];
 
 /* provisional name */
@@ -45,7 +45,7 @@ const PANEL end_400_panel1[10] = {
 };
 
 /* provisional name */
-const u16 timer_4_tbl[5] = {
+const s16 timer_4_tbl[5] = {
     0x21C, 0x168, 0xB4, 0x258, 0x1E0,
 };
 

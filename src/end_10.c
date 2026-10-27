@@ -33,7 +33,7 @@
 
 
 extern const s16 timer_10_tbl[];
-extern const s16 end_10_anm_tbl[4];
+extern const u16 end_10_anm_tbl[];
 extern const u32 end_scrn_data[];
 extern void (*end_10_jp[7])();
 extern const PANEL* end_10_panel_p[2];

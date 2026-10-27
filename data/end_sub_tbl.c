@@ -17,208 +17,208 @@ extern const s8 win_card_clr_mes[];
 extern const s8 win_card_mes[];
 extern const char no_cd_drive_mes[];
 extern const char no_cd_rom_mes[];
-extern const s32 combo_demo_pos_tbl[];
+extern const s32 combo_demo_pos_tbl[][2];
 extern const s16 combo_demo_timer_tbl[];
-extern const s16 combo_demo_pl_tbl[];
+extern const s8 combo_demo_pl_tbl[][6];
 extern const STAFF_LINE staff_roll_tbl[];
-extern const char staff_STREET_FIGHTER_2ND_IMPACT[];
-extern const char staff_GIANT_ATTACK[];
-extern const char staff_STAFF[];
-extern const char staff_CHARACTER_DESIGN[];
-extern const char staff_CHARACTER_DESIGN_00[];
-extern const char staff_CHARACTER_DESIGN_01[];
-extern const char staff_CHARACTER_DESIGN_02[];
-extern const char staff_CHARACTER_DESIGN_03[];
-extern const char staff_CHARACTER_DESIGN_04[];
-extern const char staff_CHARACTER_DESIGN_05[];
-extern const char staff_CHARACTER_DESIGN_06[];
-extern const char staff_CHARACTER_DESIGN_07[];
-extern const char staff_CHARACTER_DESIGN_08[];
-extern const char staff_CHARACTER_DESIGN_09[];
-extern const char staff_CHARACTER_DESIGN_10[];
-extern const char staff_CHARACTER_DESIGN_11[];
-extern const char staff_CHARACTER_DESIGN_12[];
-extern const char staff_CHARACTER_DESIGN_13[];
-extern const char staff_CHARACTER_DESIGN_14[];
-extern const char staff_CHARACTER_DESIGN_15[];
-extern const char staff_CHARACTER_DESIGN_16[];
-extern const char staff_CHARACTER_DESIGN_17[];
-extern const char staff_SCROLL_DESIGN[];
-extern const char staff_SCROLL_DESIGN_00[];
-extern const char staff_SCROLL_DESIGN_01[];
-extern const char staff_SCROLL_DESIGN_02[];
-extern const char staff_SCROLL_DESIGN_03[];
-extern const char staff_SCROLL_DESIGN_04[];
-extern const char staff_SCROLL_DESIGN_05[];
-extern const char staff_SCROLL_DESIGN_06[];
-extern const char staff_SCROLL_DESIGN_07[];
-extern const char staff_SCROLL_DESIGN_08[];
-extern const char staff_SCROLL_DESIGN_09[];
-extern const char staff_SCROLL_DESIGN_10[];
-extern const char staff_SCROLL_DESIGN_11[];
-extern const char staff_SCROLL_DESIGN_12[];
-extern const char staff_SCROLL_DESIGN_13[];
-extern const char staff_SCROLL_DESIGN_14[];
-extern const char staff_SCROLL_DESIGN_15[];
-extern const char staff_SCROLL_DESIGN_16[];
-extern const char staff_SCROLL_DESIGN_17[];
-extern const char staff_ORIGINAL_ART_WORK[];
-extern const char staff_ORIGINAL_ART_WORK_00[];
-extern const char staff_ORIGINAL_ART_WORK_01[];
-extern const char staff_ORIGINAL_ART_WORK_02[];
-extern const char staff_ORIGINAL_ART_WORK_03[];
-extern const char staff_ORIGINAL_ART_WORK_04[];
-extern const char staff_ORIGINAL_ART_WORK_05[];
-extern const char staff_TITLE_LOGO_DESIGN[];
-extern const char staff_TITLE_LOGO_DESIGN_00[];
-extern const char staff_TITLE_LOGO_DESIGN_01[];
-extern const char staff_INSTRACTION_DESIGN[];
-extern const char staff_INSTRACTION_DESIGN_00[];
-extern const char staff_INSTRACTION_DESIGN_01[];
-extern const char staff_PROGRAMMING[];
-extern const char staff_PROGRAMMING_00[];
-extern const char staff_PROGRAMMING_01[];
-extern const char staff_PROGRAMMING_02[];
-extern const char staff_PROGRAMMING_03[];
-extern const char staff_PROGRAMMING_04[];
-extern const char staff_PROGRAMMING_05[];
-extern const char staff_PROGRAMMING_06[];
-extern const char staff_PROGRAMMING_07[];
-extern const char staff_PROGRAMMING_08[];
-extern const char staff_PROGRAMMING_09[];
-extern const char staff_PROGRAMMING_10[];
-extern const char staff_PROGRAMMING_11[];
-extern const char staff_PROGRAMMING_12[];
-extern const char staff_PROGRAMMING_13[];
-extern const char staff_SOUND_EFFECT_DESIGN[];
-extern const char staff_SOUND_EFFECT_DESIGN_00[];
-extern const char staff_SOUND_EFFECT_DESIGN_01[];
-extern const char staff_SOUND_EFFECT_DESIGN_02[];
-extern const char staff_SOUND_EFFECT_DESIGN_03[];
-extern const char staff_MUSIC_COMPOSE[];
-extern const char staff_MUSIC_COMPOSE_00[];
-extern const char staff_MUSIC_COMPOSE_01[];
-extern const char staff_MUSIC_COMPOSE_02[];
-extern const char staff_MUSIC_COMPOSE_03[];
-extern const char staff_MUSIC_ARRANGEMENT[];
-extern const char staff_PLANNING[];
-extern const char staff_PLANNING_00[];
-extern const char staff_PLANNING_01[];
-extern const char staff_PLANNING_02[];
-extern const char staff_PLANNING_03[];
-extern const char staff_PLANNING_04[];
-extern const char staff_PLANNING_05[];
-extern const char staff_VOICE_ACTOR[];
-extern const char staff_VOICE_ACTOR_00[];
-extern const char staff_VOICE_ACTOR_01[];
-extern const char staff_VOICE_ACTOR_02[];
-extern const char staff_VOICE_ACTOR_03[];
-extern const char staff_VOICE_ACTOR_04[];
-extern const char staff_VOICE_ACTOR_05[];
-extern const char staff_VOICE_ACTOR_06[];
-extern const char staff_VOICE_ACTOR_07[];
-extern const char staff_VOICE_ACTOR_08[];
-extern const char staff_VOICE_ACTOR_09[];
-extern const char staff_VOICE_ACTOR_10[];
-extern const char staff_VOICE_ACTOR_11[];
-extern const char staff_VOICE_ACTOR_12[];
-extern const char staff_VOICE_ACTOR_13[];
-extern const char staff_VOICE_ACTOR_14[];
-extern const char staff_VOICE_ACTOR_15[];
-extern const char staff_VOICE_ACTOR_16[];
-extern const char staff_VOICE_ACTOR_17[];
-extern const char staff_VOICE_ACTOR_18[];
-extern const char staff_VOICE_ACTOR_19[];
-extern const char staff_MESSAGE_TRANSLATOR[];
-extern const char staff_MESSAGE_TRANSLATOR_00[];
-extern const char staff_MESSAGE_TRANSLATOR_01[];
-extern const char staff_MESSAGE_TRANSLATOR_02[];
-extern const char staff_MESSAGE_TRANSLATOR_03[];
-extern const char staff_MESSAGE_TRANSLATOR_04[];
-extern const char staff_MESSAGE_TRANSLATOR_05[];
-extern const char staff_MESSAGE_TRANSLATOR_06[];
-extern const char staff_MESSAGE_TRANSLATOR_07[];
-extern const char staff_MESSAGE_TRANSLATOR_08[];
-extern const char staff_MESSAGE_TRANSLATOR_09[];
-extern const char staff_SPECIAL_THANKS[];
-extern const char staff_SPECIAL_THANKS_00[];
-extern const char staff_SPECIAL_THANKS_01[];
-extern const char staff_SPECIAL_THANKS_02[];
-extern const char staff_SPECIAL_THANKS_03[];
-extern const char staff_SPECIAL_THANKS_04[];
-extern const char staff_SPECIAL_THANKS_05[];
-extern const char staff_SPECIAL_THANKS_06[];
-extern const char staff_SPECIAL_THANKS_07[];
-extern const char staff_SPECIAL_THANKS_08[];
-extern const char staff_SPECIAL_THANKS_09[];
-extern const char staff_SPECIAL_THANKS_10[];
-extern const char staff_SPECIAL_THANKS_11[];
-extern const char staff_SPECIAL_THANKS_12[];
-extern const char staff_SPECIAL_THANKS_13[];
-extern const char staff_SPECIAL_THANKS_14[];
-extern const char staff_SPECIAL_THANKS_15[];
-extern const char staff_SPECIAL_THANKS_16[];
-extern const char staff_SPECIAL_THANKS_17[];
-extern const char staff_SPECIAL_THANKS_18[];
-extern const char staff_SPECIAL_THANKS_19[];
-extern const char staff_SPECIAL_THANKS_20[];
-extern const char staff_SPECIAL_THANKS_21[];
-extern const char staff_SPECIAL_THANKS_22[];
-extern const char staff_SPECIAL_THANKS_23[];
-extern const char staff_SPECIAL_THANKS_24[];
-extern const char staff_SPECIAL_THANKS_25[];
-extern const char staff_SPECIAL_THANKS_26[];
-extern const char staff_SPECIAL_THANKS_27[];
-extern const char staff_SPECIAL_THANKS_28[];
-extern const char staff_SPECIAL_THANKS_29[];
-extern const char staff_SPECIAL_THANKS_30[];
-extern const char staff_SPECIAL_THANKS_31[];
-extern const char staff_SPECIAL_THANKS_32[];
-extern const char staff_SPECIAL_THANKS_33[];
-extern const char staff_SPECIAL_THANKS_34[];
-extern const char staff_SPECIAL_THANKS_35[];
-extern const char staff_SPECIAL_THANKS_36[];
-extern const char staff_SPECIAL_THANKS_37[];
-extern const char staff_SPECIAL_THANKS_38[];
-extern const char staff_SPECIAL_THANKS_39[];
-extern const char staff_SPECIAL_THANKS_40[];
-extern const char staff_SPECIAL_THANKS_41[];
-extern const char staff_SPECIAL_THANKS_42[];
-extern const char staff_SPECIAL_THANKS_43[];
-extern const char staff_SPECIAL_THANKS_44[];
-extern const char staff_SPECIAL_THANKS_45[];
-extern const char staff_SPECIAL_THANKS_46[];
-extern const char staff_SPECIAL_THANKS_47[];
-extern const char staff_SPECIAL_THANKS_48[];
-extern const char staff_SPECIAL_THANKS_49[];
-extern const char staff_SPECIAL_THANKS_50[];
-extern const char staff_SPECIAL_THANKS_51[];
-extern const char staff_SPECIAL_THANKS_52[];
-extern const char staff_SPECIAL_THANKS_53[];
-extern const char staff_SPECIAL_THANKS_54[];
-extern const char staff_SPECIAL_THANKS_55[];
-extern const char staff_SPECIAL_THANKS_56[];
-extern const char staff_SPECIAL_THANKS_57[];
-extern const char staff_SPECIAL_THANKS_58[];
-extern const char staff_SPECIAL_THANKS_59[];
-extern const char staff_SPECIAL_THANKS_60[];
-extern const char staff_PRODUCER[];
-extern const char staff_PRODUCER_00[];
-extern const char staff_PRODUCER_01[];
-extern const char staff_GENERAL_PRODUCER[];
-extern const char staff_GENERAL_PRODUCER_00[];
-extern const char staff_GENERAL_PRODUCER_01[];
-extern const char staff_GENERAL_PRODUCER_02[];
-extern const char staff_GENERAL_PRODUCER_03[];
-extern const char staff_AND_CAPCOM_ALL_STAFF[];
-extern const char staff_blank_11[];
-extern const char staff_blank_5[];
-extern const char staff_THANK_YOU_FOR_PLAYING[];
-extern const char staff_PRESENTED_BY[];
-extern const char staff_mark[];
+extern const u8 staff_STREET_FIGHTER_2ND_IMPACT[];
+extern const u8 staff_GIANT_ATTACK[];
+extern const u8 staff_STAFF[];
+extern const u8 staff_CHARACTER_DESIGN[];
+extern const u8 staff_CHARACTER_DESIGN_00[];
+extern const u8 staff_CHARACTER_DESIGN_01[];
+extern const u8 staff_CHARACTER_DESIGN_02[];
+extern const u8 staff_CHARACTER_DESIGN_03[];
+extern const u8 staff_CHARACTER_DESIGN_04[];
+extern const u8 staff_CHARACTER_DESIGN_05[];
+extern const u8 staff_CHARACTER_DESIGN_06[];
+extern const u8 staff_CHARACTER_DESIGN_07[];
+extern const u8 staff_CHARACTER_DESIGN_08[];
+extern const u8 staff_CHARACTER_DESIGN_09[];
+extern const u8 staff_CHARACTER_DESIGN_10[];
+extern const u8 staff_CHARACTER_DESIGN_11[];
+extern const u8 staff_CHARACTER_DESIGN_12[];
+extern const u8 staff_CHARACTER_DESIGN_13[];
+extern const u8 staff_CHARACTER_DESIGN_14[];
+extern const u8 staff_CHARACTER_DESIGN_15[];
+extern const u8 staff_CHARACTER_DESIGN_16[];
+extern const u8 staff_CHARACTER_DESIGN_17[];
+extern const u8 staff_SCROLL_DESIGN[];
+extern const u8 staff_SCROLL_DESIGN_00[];
+extern const u8 staff_SCROLL_DESIGN_01[];
+extern const u8 staff_SCROLL_DESIGN_02[];
+extern const u8 staff_SCROLL_DESIGN_03[];
+extern const u8 staff_SCROLL_DESIGN_04[];
+extern const u8 staff_SCROLL_DESIGN_05[];
+extern const u8 staff_SCROLL_DESIGN_06[];
+extern const u8 staff_SCROLL_DESIGN_07[];
+extern const u8 staff_SCROLL_DESIGN_08[];
+extern const u8 staff_SCROLL_DESIGN_09[];
+extern const u8 staff_SCROLL_DESIGN_10[];
+extern const u8 staff_SCROLL_DESIGN_11[];
+extern const u8 staff_SCROLL_DESIGN_12[];
+extern const u8 staff_SCROLL_DESIGN_13[];
+extern const u8 staff_SCROLL_DESIGN_14[];
+extern const u8 staff_SCROLL_DESIGN_15[];
+extern const u8 staff_SCROLL_DESIGN_16[];
+extern const u8 staff_SCROLL_DESIGN_17[];
+extern const u8 staff_ORIGINAL_ART_WORK[];
+extern const u8 staff_ORIGINAL_ART_WORK_00[];
+extern const u8 staff_ORIGINAL_ART_WORK_01[];
+extern const u8 staff_ORIGINAL_ART_WORK_02[];
+extern const u8 staff_ORIGINAL_ART_WORK_03[];
+extern const u8 staff_ORIGINAL_ART_WORK_04[];
+extern const u8 staff_ORIGINAL_ART_WORK_05[];
+extern const u8 staff_TITLE_LOGO_DESIGN[];
+extern const u8 staff_TITLE_LOGO_DESIGN_00[];
+extern const u8 staff_TITLE_LOGO_DESIGN_01[];
+extern const u8 staff_INSTRACTION_DESIGN[];
+extern const u8 staff_INSTRACTION_DESIGN_00[];
+extern const u8 staff_INSTRACTION_DESIGN_01[];
+extern const u8 staff_PROGRAMMING[];
+extern const u8 staff_PROGRAMMING_00[];
+extern const u8 staff_PROGRAMMING_01[];
+extern const u8 staff_PROGRAMMING_02[];
+extern const u8 staff_PROGRAMMING_03[];
+extern const u8 staff_PROGRAMMING_04[];
+extern const u8 staff_PROGRAMMING_05[];
+extern const u8 staff_PROGRAMMING_06[];
+extern const u8 staff_PROGRAMMING_07[];
+extern const u8 staff_PROGRAMMING_08[];
+extern const u8 staff_PROGRAMMING_09[];
+extern const u8 staff_PROGRAMMING_10[];
+extern const u8 staff_PROGRAMMING_11[];
+extern const u8 staff_PROGRAMMING_12[];
+extern const u8 staff_PROGRAMMING_13[];
+extern const u8 staff_SOUND_EFFECT_DESIGN[];
+extern const u8 staff_SOUND_EFFECT_DESIGN_00[];
+extern const u8 staff_SOUND_EFFECT_DESIGN_01[];
+extern const u8 staff_SOUND_EFFECT_DESIGN_02[];
+extern const u8 staff_SOUND_EFFECT_DESIGN_03[];
+extern const u8 staff_MUSIC_COMPOSE[];
+extern const u8 staff_MUSIC_COMPOSE_00[];
+extern const u8 staff_MUSIC_COMPOSE_01[];
+extern const u8 staff_MUSIC_COMPOSE_02[];
+extern const u8 staff_MUSIC_COMPOSE_03[];
+extern const u8 staff_MUSIC_ARRANGEMENT[];
+extern const u8 staff_PLANNING[];
+extern const u8 staff_PLANNING_00[];
+extern const u8 staff_PLANNING_01[];
+extern const u8 staff_PLANNING_02[];
+extern const u8 staff_PLANNING_03[];
+extern const u8 staff_PLANNING_04[];
+extern const u8 staff_PLANNING_05[];
+extern const u8 staff_VOICE_ACTOR[];
+extern const u8 staff_VOICE_ACTOR_00[];
+extern const u8 staff_VOICE_ACTOR_01[];
+extern const u8 staff_VOICE_ACTOR_02[];
+extern const u8 staff_VOICE_ACTOR_03[];
+extern const u8 staff_VOICE_ACTOR_04[];
+extern const u8 staff_VOICE_ACTOR_05[];
+extern const u8 staff_VOICE_ACTOR_06[];
+extern const u8 staff_VOICE_ACTOR_07[];
+extern const u8 staff_VOICE_ACTOR_08[];
+extern const u8 staff_VOICE_ACTOR_09[];
+extern const u8 staff_VOICE_ACTOR_10[];
+extern const u8 staff_VOICE_ACTOR_11[];
+extern const u8 staff_VOICE_ACTOR_12[];
+extern const u8 staff_VOICE_ACTOR_13[];
+extern const u8 staff_VOICE_ACTOR_14[];
+extern const u8 staff_VOICE_ACTOR_15[];
+extern const u8 staff_VOICE_ACTOR_16[];
+extern const u8 staff_VOICE_ACTOR_17[];
+extern const u8 staff_VOICE_ACTOR_18[];
+extern const u8 staff_VOICE_ACTOR_19[];
+extern const u8 staff_MESSAGE_TRANSLATOR[];
+extern const u8 staff_MESSAGE_TRANSLATOR_00[];
+extern const u8 staff_MESSAGE_TRANSLATOR_01[];
+extern const u8 staff_MESSAGE_TRANSLATOR_02[];
+extern const u8 staff_MESSAGE_TRANSLATOR_03[];
+extern const u8 staff_MESSAGE_TRANSLATOR_04[];
+extern const u8 staff_MESSAGE_TRANSLATOR_05[];
+extern const u8 staff_MESSAGE_TRANSLATOR_06[];
+extern const u8 staff_MESSAGE_TRANSLATOR_07[];
+extern const u8 staff_MESSAGE_TRANSLATOR_08[];
+extern const u8 staff_MESSAGE_TRANSLATOR_09[];
+extern const u8 staff_SPECIAL_THANKS[];
+extern const u8 staff_SPECIAL_THANKS_00[];
+extern const u8 staff_SPECIAL_THANKS_01[];
+extern const u8 staff_SPECIAL_THANKS_02[];
+extern const u8 staff_SPECIAL_THANKS_03[];
+extern const u8 staff_SPECIAL_THANKS_04[];
+extern const u8 staff_SPECIAL_THANKS_05[];
+extern const u8 staff_SPECIAL_THANKS_06[];
+extern const u8 staff_SPECIAL_THANKS_07[];
+extern const u8 staff_SPECIAL_THANKS_08[];
+extern const u8 staff_SPECIAL_THANKS_09[];
+extern const u8 staff_SPECIAL_THANKS_10[];
+extern const u8 staff_SPECIAL_THANKS_11[];
+extern const u8 staff_SPECIAL_THANKS_12[];
+extern const u8 staff_SPECIAL_THANKS_13[];
+extern const u8 staff_SPECIAL_THANKS_14[];
+extern const u8 staff_SPECIAL_THANKS_15[];
+extern const u8 staff_SPECIAL_THANKS_16[];
+extern const u8 staff_SPECIAL_THANKS_17[];
+extern const u8 staff_SPECIAL_THANKS_18[];
+extern const u8 staff_SPECIAL_THANKS_19[];
+extern const u8 staff_SPECIAL_THANKS_20[];
+extern const u8 staff_SPECIAL_THANKS_21[];
+extern const u8 staff_SPECIAL_THANKS_22[];
+extern const u8 staff_SPECIAL_THANKS_23[];
+extern const u8 staff_SPECIAL_THANKS_24[];
+extern const u8 staff_SPECIAL_THANKS_25[];
+extern const u8 staff_SPECIAL_THANKS_26[];
+extern const u8 staff_SPECIAL_THANKS_27[];
+extern const u8 staff_SPECIAL_THANKS_28[];
+extern const u8 staff_SPECIAL_THANKS_29[];
+extern const u8 staff_SPECIAL_THANKS_30[];
+extern const u8 staff_SPECIAL_THANKS_31[];
+extern const u8 staff_SPECIAL_THANKS_32[];
+extern const u8 staff_SPECIAL_THANKS_33[];
+extern const u8 staff_SPECIAL_THANKS_34[];
+extern const u8 staff_SPECIAL_THANKS_35[];
+extern const u8 staff_SPECIAL_THANKS_36[];
+extern const u8 staff_SPECIAL_THANKS_37[];
+extern const u8 staff_SPECIAL_THANKS_38[];
+extern const u8 staff_SPECIAL_THANKS_39[];
+extern const u8 staff_SPECIAL_THANKS_40[];
+extern const u8 staff_SPECIAL_THANKS_41[];
+extern const u8 staff_SPECIAL_THANKS_42[];
+extern const u8 staff_SPECIAL_THANKS_43[];
+extern const u8 staff_SPECIAL_THANKS_44[];
+extern const u8 staff_SPECIAL_THANKS_45[];
+extern const u8 staff_SPECIAL_THANKS_46[];
+extern const u8 staff_SPECIAL_THANKS_47[];
+extern const u8 staff_SPECIAL_THANKS_48[];
+extern const u8 staff_SPECIAL_THANKS_49[];
+extern const u8 staff_SPECIAL_THANKS_50[];
+extern const u8 staff_SPECIAL_THANKS_51[];
+extern const u8 staff_SPECIAL_THANKS_52[];
+extern const u8 staff_SPECIAL_THANKS_53[];
+extern const u8 staff_SPECIAL_THANKS_54[];
+extern const u8 staff_SPECIAL_THANKS_55[];
+extern const u8 staff_SPECIAL_THANKS_56[];
+extern const u8 staff_SPECIAL_THANKS_57[];
+extern const u8 staff_SPECIAL_THANKS_58[];
+extern const u8 staff_SPECIAL_THANKS_59[];
+extern const u8 staff_SPECIAL_THANKS_60[];
+extern const u8 staff_PRODUCER[];
+extern const u8 staff_PRODUCER_00[];
+extern const u8 staff_PRODUCER_01[];
+extern const u8 staff_GENERAL_PRODUCER[];
+extern const u8 staff_GENERAL_PRODUCER_00[];
+extern const u8 staff_GENERAL_PRODUCER_01[];
+extern const u8 staff_GENERAL_PRODUCER_02[];
+extern const u8 staff_GENERAL_PRODUCER_03[];
+extern const u8 staff_AND_CAPCOM_ALL_STAFF[];
+extern const u8 staff_blank_11[];
+extern const u8 staff_blank_5[];
+extern const u8 staff_THANK_YOU_FOR_PLAYING[];
+extern const u8 staff_PRESENTED_BY[];
+extern const u8 staff_mark[];
 extern const char player_color_tbl[];
 extern const char any_color_tbl[];
-extern const char char_eff_color_tbl[];
+extern const u32 char_eff_color_tbl[];
 extern const char side_color_1p_tbl[];
 extern const char side_color_2p_tbl[];
 
@@ -239,9 +239,8 @@ const char no_cd_drive_mes[16] = "NO CD-ROM DRIVE";
 const char no_cd_rom_mes[12] = "NO CD-ROM\0\xFF\xFF";
 
 /* provisional name */
-const s32 combo_demo_pos_tbl[6] = {
-    33226752, 44826624, 25952256, 30015488,
-    40763392, 35061760,
+const s32 combo_demo_pos_tbl[3][2] = {
+    { 33226752, 44826624 }, { 25952256, 30015488 }, { 40763392, 35061760 },
 };
 
 /* provisional name */
@@ -249,779 +248,780 @@ const s16 combo_demo_timer_tbl[3] = {
     202, 120, 172,
 };
 
-const s16 combo_demo_pl_tbl[9] = {
-    513, 13, 0, 257, 6, 256, 768, 10,
-    0,
+const s8 combo_demo_pl_tbl[3][6] = {
+    { 2, 1, 0, 13, 0, 0 },
+    { 1, 1, 0, 6, 1, 0 },
+    { 3, 0, 0, 10, 0, 0 },
 };
 
 const STAFF_LINE staff_roll_tbl[205] = {
-    { 270, 48, 128, 3, (void *)staff_STREET_FIGHTER_2ND_IMPACT },
-    { 270, 48, 96, 3, (void *)staff_GIANT_ATTACK },
-    { 270, 48, 64, 3, (void *)staff_STAFF },
-    { 540, 96, 160, 1, (void *)staff_CHARACTER_DESIGN },
-    { 270, 96, 136, 0, (void *)staff_CHARACTER_DESIGN_00 },
-    { 0, 96, 136, 2, (void *)staff_CHARACTER_DESIGN_01 },
-    { 0, 96, 112, 0, (void *)staff_CHARACTER_DESIGN_02 },
-    { 0, 96, 112, 2, (void *)staff_CHARACTER_DESIGN_03 },
-    { 0, 96, 88, 0, (void *)staff_CHARACTER_DESIGN_04 },
-    { 0, 96, 88, 2, (void *)staff_CHARACTER_DESIGN_05 },
-    { 0, 96, 64, 0, (void *)staff_CHARACTER_DESIGN_06 },
-    { 0, 96, 64, 2, (void *)staff_CHARACTER_DESIGN_07 },
-    { 0, 96, 40, 0, (void *)staff_CHARACTER_DESIGN_08 },
-    { 0, 96, 40, 2, (void *)staff_CHARACTER_DESIGN_09 },
-    { 270, 96, 136, 0, (void *)staff_CHARACTER_DESIGN_10 },
-    { 0, 96, 136, 2, (void *)staff_CHARACTER_DESIGN_11 },
-    { 0, 96, 112, 0, (void *)staff_CHARACTER_DESIGN_12 },
-    { 0, 96, 112, 2, (void *)staff_CHARACTER_DESIGN_13 },
-    { 0, 96, 88, 0, (void *)staff_CHARACTER_DESIGN_14 },
-    { 0, 96, 88, 2, (void *)staff_CHARACTER_DESIGN_15 },
-    { 0, 96, 64, 0, (void *)staff_CHARACTER_DESIGN_16 },
-    { 0, 96, 64, 2, (void *)staff_CHARACTER_DESIGN_17 },
-    { 540, 96, 160, 1, (void *)staff_SCROLL_DESIGN },
-    { 270, 96, 136, 0, (void *)staff_SCROLL_DESIGN_00 },
-    { 0, 96, 136, 2, (void *)staff_SCROLL_DESIGN_01 },
-    { 0, 96, 112, 0, (void *)staff_SCROLL_DESIGN_02 },
-    { 0, 96, 112, 2, (void *)staff_SCROLL_DESIGN_03 },
-    { 0, 96, 88, 0, (void *)staff_SCROLL_DESIGN_04 },
-    { 0, 96, 88, 2, (void *)staff_SCROLL_DESIGN_05 },
-    { 0, 96, 64, 0, (void *)staff_SCROLL_DESIGN_06 },
-    { 0, 96, 64, 2, (void *)staff_SCROLL_DESIGN_07 },
-    { 0, 96, 40, 0, (void *)staff_SCROLL_DESIGN_08 },
-    { 0, 96, 40, 2, (void *)staff_SCROLL_DESIGN_09 },
-    { 270, 96, 136, 0, (void *)staff_SCROLL_DESIGN_10 },
-    { 0, 96, 136, 2, (void *)staff_SCROLL_DESIGN_11 },
-    { 0, 96, 112, 0, (void *)staff_SCROLL_DESIGN_12 },
-    { 0, 96, 112, 2, (void *)staff_SCROLL_DESIGN_13 },
-    { 0, 96, 88, 0, (void *)staff_SCROLL_DESIGN_14 },
-    { 0, 96, 88, 2, (void *)staff_SCROLL_DESIGN_15 },
-    { 0, 96, 64, 0, (void *)staff_SCROLL_DESIGN_16 },
-    { 0, 96, 64, 2, (void *)staff_SCROLL_DESIGN_17 },
-    { 270, 96, 160, 1, (void *)staff_ORIGINAL_ART_WORK },
-    { 270, 96, 120, 0, (void *)staff_ORIGINAL_ART_WORK_00 },
-    { 0, 96, 120, 2, (void *)staff_ORIGINAL_ART_WORK_01 },
-    { 0, 96, 96, 0, (void *)staff_ORIGINAL_ART_WORK_02 },
-    { 0, 96, 96, 2, (void *)staff_ORIGINAL_ART_WORK_03 },
-    { 0, 96, 72, 0, (void *)staff_ORIGINAL_ART_WORK_04 },
-    { 0, 96, 72, 2, (void *)staff_ORIGINAL_ART_WORK_05 },
-    { 270, 96, 160, 1, (void *)staff_TITLE_LOGO_DESIGN },
-    { 270, 96, 104, 0, (void *)staff_TITLE_LOGO_DESIGN_00 },
-    { 0, 96, 104, 2, (void *)staff_TITLE_LOGO_DESIGN_01 },
-    { 270, 96, 160, 1, (void *)staff_INSTRACTION_DESIGN },
-    { 270, 96, 104, 0, (void *)staff_INSTRACTION_DESIGN_00 },
-    { 0, 96, 104, 2, (void *)staff_INSTRACTION_DESIGN_01 },
-    { 540, 96, 160, 1, (void *)staff_PROGRAMMING },
-    { 270, 96, 128, 0, (void *)staff_PROGRAMMING_00 },
-    { 0, 96, 128, 2, (void *)staff_PROGRAMMING_01 },
-    { 0, 96, 104, 0, (void *)staff_PROGRAMMING_02 },
-    { 0, 96, 104, 2, (void *)staff_PROGRAMMING_03 },
-    { 0, 96, 80, 0, (void *)staff_PROGRAMMING_04 },
-    { 0, 96, 80, 2, (void *)staff_PROGRAMMING_05 },
-    { 0, 96, 56, 0, (void *)staff_PROGRAMMING_06 },
-    { 0, 96, 56, 2, (void *)staff_PROGRAMMING_07 },
-    { 270, 96, 128, 0, (void *)staff_PROGRAMMING_08 },
-    { 0, 96, 128, 2, (void *)staff_PROGRAMMING_09 },
-    { 0, 96, 104, 0, (void *)staff_PROGRAMMING_10 },
-    { 0, 96, 104, 2, (void *)staff_PROGRAMMING_11 },
-    { 0, 96, 68, 0, (void *)staff_PROGRAMMING_12 },
-    { 0, 96, 68, 2, (void *)staff_PROGRAMMING_13 },
-    { 270, 96, 160, 1, (void *)staff_SOUND_EFFECT_DESIGN },
-    { 270, 96, 112, 0, (void *)staff_SOUND_EFFECT_DESIGN_00 },
-    { 0, 96, 112, 2, (void *)staff_SOUND_EFFECT_DESIGN_01 },
-    { 0, 96, 88, 0, (void *)staff_SOUND_EFFECT_DESIGN_02 },
-    { 0, 96, 88, 2, (void *)staff_SOUND_EFFECT_DESIGN_03 },
-    { 270, 96, 160, 1, (void *)staff_MUSIC_COMPOSE },
-    { 270, 96, 112, 0, (void *)staff_MUSIC_COMPOSE_00 },
-    { 0, 96, 112, 2, (void *)staff_MUSIC_COMPOSE_01 },
-    { 0, 96, 88, 0, (void *)staff_MUSIC_COMPOSE_02 },
-    { 0, 96, 88, 2, (void *)staff_MUSIC_COMPOSE_03 },
-    { 270, 96, 160, 1, (void *)staff_MUSIC_ARRANGEMENT },
-    { 270, 96, 104, 0, (void *)staff_MUSIC_COMPOSE_00 },
-    { 0, 96, 104, 2, (void *)staff_MUSIC_COMPOSE_01 },
-    { 270, 96, 160, 1, (void *)staff_PLANNING },
-    { 270, 96, 112, 0, (void *)staff_PLANNING_00 },
-    { 0, 96, 112, 2, (void *)staff_PLANNING_01 },
-    { 0, 96, 88, 0, (void *)staff_PLANNING_02 },
-    { 0, 96, 88, 2, (void *)staff_PLANNING_03 },
-    { 0, 96, 64, 0, (void *)staff_PLANNING_04 },
-    { 0, 96, 64, 2, (void *)staff_PLANNING_05 },
-    { 810, 96, 160, 1, (void *)staff_VOICE_ACTOR },
-    { 270, 96, 128, 0, (void *)staff_VOICE_ACTOR_00 },
-    { 0, 96, 128, 2, (void *)staff_VOICE_ACTOR_01 },
-    { 0, 96, 104, 0, (void *)staff_VOICE_ACTOR_02 },
-    { 0, 96, 104, 2, (void *)staff_VOICE_ACTOR_03 },
-    { 0, 96, 80, 0, (void *)staff_VOICE_ACTOR_04 },
-    { 0, 96, 80, 2, (void *)staff_VOICE_ACTOR_05 },
-    { 0, 96, 56, 0, (void *)staff_VOICE_ACTOR_06 },
-    { 0, 96, 56, 2, (void *)staff_VOICE_ACTOR_07 },
-    { 270, 96, 128, 0, (void *)staff_VOICE_ACTOR_08 },
-    { 0, 96, 128, 2, (void *)staff_VOICE_ACTOR_09 },
-    { 0, 96, 104, 0, (void *)staff_VOICE_ACTOR_10 },
-    { 0, 96, 104, 2, (void *)staff_VOICE_ACTOR_11 },
-    { 0, 96, 80, 0, (void *)staff_VOICE_ACTOR_12 },
-    { 0, 96, 80, 2, (void *)staff_VOICE_ACTOR_13 },
-    { 0, 96, 56, 0, (void *)staff_VOICE_ACTOR_14 },
-    { 0, 96, 56, 2, (void *)staff_VOICE_ACTOR_15 },
-    { 270, 96, 128, 0, (void *)staff_VOICE_ACTOR_16 },
-    { 0, 96, 128, 2, (void *)staff_VOICE_ACTOR_17 },
-    { 0, 96, 104, 0, (void *)staff_VOICE_ACTOR_18 },
-    { 0, 96, 104, 2, (void *)staff_VOICE_ACTOR_19 },
-    { 270, 96, 160, 1, (void *)staff_MESSAGE_TRANSLATOR },
-    { 270, 96, 136, 0, (void *)staff_MESSAGE_TRANSLATOR_00 },
-    { 0, 96, 136, 2, (void *)staff_MESSAGE_TRANSLATOR_01 },
-    { 0, 96, 112, 0, (void *)staff_MESSAGE_TRANSLATOR_02 },
-    { 0, 96, 112, 2, (void *)staff_MESSAGE_TRANSLATOR_03 },
-    { 0, 96, 88, 0, (void *)staff_MESSAGE_TRANSLATOR_04 },
-    { 0, 96, 88, 2, (void *)staff_MESSAGE_TRANSLATOR_05 },
-    { 0, 96, 64, 0, (void *)staff_MESSAGE_TRANSLATOR_06 },
-    { 0, 96, 64, 2, (void *)staff_MESSAGE_TRANSLATOR_07 },
-    { 0, 96, 40, 0, (void *)staff_MESSAGE_TRANSLATOR_08 },
-    { 0, 96, 40, 2, (void *)staff_MESSAGE_TRANSLATOR_09 },
-    { 1898, 96, 160, 1, (void *)staff_SPECIAL_THANKS },
-    { 270, 96, 136, 0, (void *)staff_SPECIAL_THANKS_00 },
-    { 0, 96, 136, 2, (void *)staff_SPECIAL_THANKS_01 },
-    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_02 },
-    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_03 },
-    { 0, 96, 88, 0, (void *)staff_SCROLL_DESIGN_12 },
-    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_04 },
-    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_05 },
-    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_06 },
-    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_07 },
-    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_08 },
-    { 270, 96, 136, 0, (void *)staff_SPECIAL_THANKS_09 },
-    { 0, 96, 136, 2, (void *)staff_SPECIAL_THANKS_10 },
-    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_11 },
-    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_12 },
-    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_13 },
-    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_14 },
-    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_15 },
-    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_16 },
-    { 270, 96, 136, 0, (void *)staff_SPECIAL_THANKS_17 },
-    { 0, 96, 136, 2, (void *)staff_SPECIAL_THANKS_18 },
-    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_19 },
-    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_20 },
-    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_21 },
-    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_22 },
-    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_23 },
-    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_24 },
-    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_25 },
-    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_26 },
-    { 270, 96, 144, 0, (void *)staff_SPECIAL_THANKS_27 },
-    { 0, 96, 144, 2, (void *)staff_SPECIAL_THANKS_28 },
-    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_29 },
-    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_30 },
-    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_31 },
-    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_32 },
-    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_33 },
-    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_34 },
-    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_35 },
-    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_36 },
-    { 270, 96, 144, 0, (void *)staff_SPECIAL_THANKS_27 },
-    { 0, 96, 144, 2, (void *)staff_SPECIAL_THANKS_28 },
-    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_37 },
-    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_38 },
-    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_39 },
-    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_40 },
-    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_41 },
-    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_42 },
-    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_43 },
-    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_44 },
-    { 270, 96, 144, 0, (void *)staff_SPECIAL_THANKS_27 },
-    { 0, 96, 144, 2, (void *)staff_SPECIAL_THANKS_28 },
-    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_45 },
-    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_46 },
-    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_47 },
-    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_48 },
-    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_49 },
-    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_50 },
-    { 270, 96, 144, 0, (void *)staff_SPECIAL_THANKS_51 },
-    { 0, 96, 144, 2, (void *)staff_SPECIAL_THANKS_52 },
-    { 0, 96, 112, 0, (void *)staff_SPECIAL_THANKS_53 },
-    { 0, 96, 112, 2, (void *)staff_SPECIAL_THANKS_54 },
-    { 0, 96, 88, 0, (void *)staff_SPECIAL_THANKS_55 },
-    { 0, 96, 88, 2, (void *)staff_SPECIAL_THANKS_56 },
-    { 0, 96, 64, 0, (void *)staff_SPECIAL_THANKS_57 },
-    { 0, 96, 64, 2, (void *)staff_SPECIAL_THANKS_58 },
-    { 0, 96, 40, 0, (void *)staff_SPECIAL_THANKS_59 },
-    { 0, 96, 40, 2, (void *)staff_SPECIAL_THANKS_60 },
-    { 270, 96, 160, 1, (void *)staff_PRODUCER },
-    { 270, 96, 104, 0, (void *)staff_PRODUCER_00 },
-    { 0, 96, 104, 2, (void *)staff_PRODUCER_01 },
-    { 270, 96, 160, 1, (void *)staff_GENERAL_PRODUCER },
-    { 270, 96, 120, 0, (void *)staff_GENERAL_PRODUCER_00 },
-    { 0, 96, 120, 2, (void *)staff_GENERAL_PRODUCER_01 },
-    { 0, 96, 80, 0, (void *)staff_GENERAL_PRODUCER_02 },
-    { 0, 96, 80, 2, (void *)staff_GENERAL_PRODUCER_03 },
-    { 270, 96, 112, 4, (void *)staff_AND_CAPCOM_ALL_STAFF },
-    { 270, 96, 0, 0, (void *)staff_blank_11 },
-    { 0, 96, 0, 0, (void *)staff_blank_11 },
-    { 270, 48, 144, 5, (void *)staff_blank_5 },
-    { 270, 48, 144, 5, (void *)staff_THANK_YOU_FOR_PLAYING },
-    { 0, 48, 96, 5, (void *)staff_PRESENTED_BY },
-    { 0, 190, 96, 0, (void *)staff_mark },
-    { 0, 190, 0, 0, (void *)staff_blank_5 },
+    { 270, 48, 128, 3, staff_STREET_FIGHTER_2ND_IMPACT },
+    { 270, 48, 96, 3, staff_GIANT_ATTACK },
+    { 270, 48, 64, 3, staff_STAFF },
+    { 540, 96, 160, 1, staff_CHARACTER_DESIGN },
+    { 270, 96, 136, 0, staff_CHARACTER_DESIGN_00 },
+    { 0, 96, 136, 2, staff_CHARACTER_DESIGN_01 },
+    { 0, 96, 112, 0, staff_CHARACTER_DESIGN_02 },
+    { 0, 96, 112, 2, staff_CHARACTER_DESIGN_03 },
+    { 0, 96, 88, 0, staff_CHARACTER_DESIGN_04 },
+    { 0, 96, 88, 2, staff_CHARACTER_DESIGN_05 },
+    { 0, 96, 64, 0, staff_CHARACTER_DESIGN_06 },
+    { 0, 96, 64, 2, staff_CHARACTER_DESIGN_07 },
+    { 0, 96, 40, 0, staff_CHARACTER_DESIGN_08 },
+    { 0, 96, 40, 2, staff_CHARACTER_DESIGN_09 },
+    { 270, 96, 136, 0, staff_CHARACTER_DESIGN_10 },
+    { 0, 96, 136, 2, staff_CHARACTER_DESIGN_11 },
+    { 0, 96, 112, 0, staff_CHARACTER_DESIGN_12 },
+    { 0, 96, 112, 2, staff_CHARACTER_DESIGN_13 },
+    { 0, 96, 88, 0, staff_CHARACTER_DESIGN_14 },
+    { 0, 96, 88, 2, staff_CHARACTER_DESIGN_15 },
+    { 0, 96, 64, 0, staff_CHARACTER_DESIGN_16 },
+    { 0, 96, 64, 2, staff_CHARACTER_DESIGN_17 },
+    { 540, 96, 160, 1, staff_SCROLL_DESIGN },
+    { 270, 96, 136, 0, staff_SCROLL_DESIGN_00 },
+    { 0, 96, 136, 2, staff_SCROLL_DESIGN_01 },
+    { 0, 96, 112, 0, staff_SCROLL_DESIGN_02 },
+    { 0, 96, 112, 2, staff_SCROLL_DESIGN_03 },
+    { 0, 96, 88, 0, staff_SCROLL_DESIGN_04 },
+    { 0, 96, 88, 2, staff_SCROLL_DESIGN_05 },
+    { 0, 96, 64, 0, staff_SCROLL_DESIGN_06 },
+    { 0, 96, 64, 2, staff_SCROLL_DESIGN_07 },
+    { 0, 96, 40, 0, staff_SCROLL_DESIGN_08 },
+    { 0, 96, 40, 2, staff_SCROLL_DESIGN_09 },
+    { 270, 96, 136, 0, staff_SCROLL_DESIGN_10 },
+    { 0, 96, 136, 2, staff_SCROLL_DESIGN_11 },
+    { 0, 96, 112, 0, staff_SCROLL_DESIGN_12 },
+    { 0, 96, 112, 2, staff_SCROLL_DESIGN_13 },
+    { 0, 96, 88, 0, staff_SCROLL_DESIGN_14 },
+    { 0, 96, 88, 2, staff_SCROLL_DESIGN_15 },
+    { 0, 96, 64, 0, staff_SCROLL_DESIGN_16 },
+    { 0, 96, 64, 2, staff_SCROLL_DESIGN_17 },
+    { 270, 96, 160, 1, staff_ORIGINAL_ART_WORK },
+    { 270, 96, 120, 0, staff_ORIGINAL_ART_WORK_00 },
+    { 0, 96, 120, 2, staff_ORIGINAL_ART_WORK_01 },
+    { 0, 96, 96, 0, staff_ORIGINAL_ART_WORK_02 },
+    { 0, 96, 96, 2, staff_ORIGINAL_ART_WORK_03 },
+    { 0, 96, 72, 0, staff_ORIGINAL_ART_WORK_04 },
+    { 0, 96, 72, 2, staff_ORIGINAL_ART_WORK_05 },
+    { 270, 96, 160, 1, staff_TITLE_LOGO_DESIGN },
+    { 270, 96, 104, 0, staff_TITLE_LOGO_DESIGN_00 },
+    { 0, 96, 104, 2, staff_TITLE_LOGO_DESIGN_01 },
+    { 270, 96, 160, 1, staff_INSTRACTION_DESIGN },
+    { 270, 96, 104, 0, staff_INSTRACTION_DESIGN_00 },
+    { 0, 96, 104, 2, staff_INSTRACTION_DESIGN_01 },
+    { 540, 96, 160, 1, staff_PROGRAMMING },
+    { 270, 96, 128, 0, staff_PROGRAMMING_00 },
+    { 0, 96, 128, 2, staff_PROGRAMMING_01 },
+    { 0, 96, 104, 0, staff_PROGRAMMING_02 },
+    { 0, 96, 104, 2, staff_PROGRAMMING_03 },
+    { 0, 96, 80, 0, staff_PROGRAMMING_04 },
+    { 0, 96, 80, 2, staff_PROGRAMMING_05 },
+    { 0, 96, 56, 0, staff_PROGRAMMING_06 },
+    { 0, 96, 56, 2, staff_PROGRAMMING_07 },
+    { 270, 96, 128, 0, staff_PROGRAMMING_08 },
+    { 0, 96, 128, 2, staff_PROGRAMMING_09 },
+    { 0, 96, 104, 0, staff_PROGRAMMING_10 },
+    { 0, 96, 104, 2, staff_PROGRAMMING_11 },
+    { 0, 96, 68, 0, staff_PROGRAMMING_12 },
+    { 0, 96, 68, 2, staff_PROGRAMMING_13 },
+    { 270, 96, 160, 1, staff_SOUND_EFFECT_DESIGN },
+    { 270, 96, 112, 0, staff_SOUND_EFFECT_DESIGN_00 },
+    { 0, 96, 112, 2, staff_SOUND_EFFECT_DESIGN_01 },
+    { 0, 96, 88, 0, staff_SOUND_EFFECT_DESIGN_02 },
+    { 0, 96, 88, 2, staff_SOUND_EFFECT_DESIGN_03 },
+    { 270, 96, 160, 1, staff_MUSIC_COMPOSE },
+    { 270, 96, 112, 0, staff_MUSIC_COMPOSE_00 },
+    { 0, 96, 112, 2, staff_MUSIC_COMPOSE_01 },
+    { 0, 96, 88, 0, staff_MUSIC_COMPOSE_02 },
+    { 0, 96, 88, 2, staff_MUSIC_COMPOSE_03 },
+    { 270, 96, 160, 1, staff_MUSIC_ARRANGEMENT },
+    { 270, 96, 104, 0, staff_MUSIC_COMPOSE_00 },
+    { 0, 96, 104, 2, staff_MUSIC_COMPOSE_01 },
+    { 270, 96, 160, 1, staff_PLANNING },
+    { 270, 96, 112, 0, staff_PLANNING_00 },
+    { 0, 96, 112, 2, staff_PLANNING_01 },
+    { 0, 96, 88, 0, staff_PLANNING_02 },
+    { 0, 96, 88, 2, staff_PLANNING_03 },
+    { 0, 96, 64, 0, staff_PLANNING_04 },
+    { 0, 96, 64, 2, staff_PLANNING_05 },
+    { 810, 96, 160, 1, staff_VOICE_ACTOR },
+    { 270, 96, 128, 0, staff_VOICE_ACTOR_00 },
+    { 0, 96, 128, 2, staff_VOICE_ACTOR_01 },
+    { 0, 96, 104, 0, staff_VOICE_ACTOR_02 },
+    { 0, 96, 104, 2, staff_VOICE_ACTOR_03 },
+    { 0, 96, 80, 0, staff_VOICE_ACTOR_04 },
+    { 0, 96, 80, 2, staff_VOICE_ACTOR_05 },
+    { 0, 96, 56, 0, staff_VOICE_ACTOR_06 },
+    { 0, 96, 56, 2, staff_VOICE_ACTOR_07 },
+    { 270, 96, 128, 0, staff_VOICE_ACTOR_08 },
+    { 0, 96, 128, 2, staff_VOICE_ACTOR_09 },
+    { 0, 96, 104, 0, staff_VOICE_ACTOR_10 },
+    { 0, 96, 104, 2, staff_VOICE_ACTOR_11 },
+    { 0, 96, 80, 0, staff_VOICE_ACTOR_12 },
+    { 0, 96, 80, 2, staff_VOICE_ACTOR_13 },
+    { 0, 96, 56, 0, staff_VOICE_ACTOR_14 },
+    { 0, 96, 56, 2, staff_VOICE_ACTOR_15 },
+    { 270, 96, 128, 0, staff_VOICE_ACTOR_16 },
+    { 0, 96, 128, 2, staff_VOICE_ACTOR_17 },
+    { 0, 96, 104, 0, staff_VOICE_ACTOR_18 },
+    { 0, 96, 104, 2, staff_VOICE_ACTOR_19 },
+    { 270, 96, 160, 1, staff_MESSAGE_TRANSLATOR },
+    { 270, 96, 136, 0, staff_MESSAGE_TRANSLATOR_00 },
+    { 0, 96, 136, 2, staff_MESSAGE_TRANSLATOR_01 },
+    { 0, 96, 112, 0, staff_MESSAGE_TRANSLATOR_02 },
+    { 0, 96, 112, 2, staff_MESSAGE_TRANSLATOR_03 },
+    { 0, 96, 88, 0, staff_MESSAGE_TRANSLATOR_04 },
+    { 0, 96, 88, 2, staff_MESSAGE_TRANSLATOR_05 },
+    { 0, 96, 64, 0, staff_MESSAGE_TRANSLATOR_06 },
+    { 0, 96, 64, 2, staff_MESSAGE_TRANSLATOR_07 },
+    { 0, 96, 40, 0, staff_MESSAGE_TRANSLATOR_08 },
+    { 0, 96, 40, 2, staff_MESSAGE_TRANSLATOR_09 },
+    { 1898, 96, 160, 1, staff_SPECIAL_THANKS },
+    { 270, 96, 136, 0, staff_SPECIAL_THANKS_00 },
+    { 0, 96, 136, 2, staff_SPECIAL_THANKS_01 },
+    { 0, 96, 112, 0, staff_SPECIAL_THANKS_02 },
+    { 0, 96, 112, 2, staff_SPECIAL_THANKS_03 },
+    { 0, 96, 88, 0, staff_SCROLL_DESIGN_12 },
+    { 0, 96, 88, 2, staff_SPECIAL_THANKS_04 },
+    { 0, 96, 64, 0, staff_SPECIAL_THANKS_05 },
+    { 0, 96, 64, 2, staff_SPECIAL_THANKS_06 },
+    { 0, 96, 40, 0, staff_SPECIAL_THANKS_07 },
+    { 0, 96, 40, 2, staff_SPECIAL_THANKS_08 },
+    { 270, 96, 136, 0, staff_SPECIAL_THANKS_09 },
+    { 0, 96, 136, 2, staff_SPECIAL_THANKS_10 },
+    { 0, 96, 112, 0, staff_SPECIAL_THANKS_11 },
+    { 0, 96, 112, 2, staff_SPECIAL_THANKS_12 },
+    { 0, 96, 88, 0, staff_SPECIAL_THANKS_13 },
+    { 0, 96, 88, 2, staff_SPECIAL_THANKS_14 },
+    { 0, 96, 64, 0, staff_SPECIAL_THANKS_15 },
+    { 0, 96, 64, 2, staff_SPECIAL_THANKS_16 },
+    { 270, 96, 136, 0, staff_SPECIAL_THANKS_17 },
+    { 0, 96, 136, 2, staff_SPECIAL_THANKS_18 },
+    { 0, 96, 112, 0, staff_SPECIAL_THANKS_19 },
+    { 0, 96, 112, 2, staff_SPECIAL_THANKS_20 },
+    { 0, 96, 88, 0, staff_SPECIAL_THANKS_21 },
+    { 0, 96, 88, 2, staff_SPECIAL_THANKS_22 },
+    { 0, 96, 64, 0, staff_SPECIAL_THANKS_23 },
+    { 0, 96, 64, 2, staff_SPECIAL_THANKS_24 },
+    { 0, 96, 40, 0, staff_SPECIAL_THANKS_25 },
+    { 0, 96, 40, 2, staff_SPECIAL_THANKS_26 },
+    { 270, 96, 144, 0, staff_SPECIAL_THANKS_27 },
+    { 0, 96, 144, 2, staff_SPECIAL_THANKS_28 },
+    { 0, 96, 112, 0, staff_SPECIAL_THANKS_29 },
+    { 0, 96, 112, 2, staff_SPECIAL_THANKS_30 },
+    { 0, 96, 88, 0, staff_SPECIAL_THANKS_31 },
+    { 0, 96, 88, 2, staff_SPECIAL_THANKS_32 },
+    { 0, 96, 64, 0, staff_SPECIAL_THANKS_33 },
+    { 0, 96, 64, 2, staff_SPECIAL_THANKS_34 },
+    { 0, 96, 40, 0, staff_SPECIAL_THANKS_35 },
+    { 0, 96, 40, 2, staff_SPECIAL_THANKS_36 },
+    { 270, 96, 144, 0, staff_SPECIAL_THANKS_27 },
+    { 0, 96, 144, 2, staff_SPECIAL_THANKS_28 },
+    { 0, 96, 112, 0, staff_SPECIAL_THANKS_37 },
+    { 0, 96, 112, 2, staff_SPECIAL_THANKS_38 },
+    { 0, 96, 88, 0, staff_SPECIAL_THANKS_39 },
+    { 0, 96, 88, 2, staff_SPECIAL_THANKS_40 },
+    { 0, 96, 64, 0, staff_SPECIAL_THANKS_41 },
+    { 0, 96, 64, 2, staff_SPECIAL_THANKS_42 },
+    { 0, 96, 40, 0, staff_SPECIAL_THANKS_43 },
+    { 0, 96, 40, 2, staff_SPECIAL_THANKS_44 },
+    { 270, 96, 144, 0, staff_SPECIAL_THANKS_27 },
+    { 0, 96, 144, 2, staff_SPECIAL_THANKS_28 },
+    { 0, 96, 112, 0, staff_SPECIAL_THANKS_45 },
+    { 0, 96, 112, 2, staff_SPECIAL_THANKS_46 },
+    { 0, 96, 88, 0, staff_SPECIAL_THANKS_47 },
+    { 0, 96, 88, 2, staff_SPECIAL_THANKS_48 },
+    { 0, 96, 64, 0, staff_SPECIAL_THANKS_49 },
+    { 0, 96, 64, 2, staff_SPECIAL_THANKS_50 },
+    { 270, 96, 144, 0, staff_SPECIAL_THANKS_51 },
+    { 0, 96, 144, 2, staff_SPECIAL_THANKS_52 },
+    { 0, 96, 112, 0, staff_SPECIAL_THANKS_53 },
+    { 0, 96, 112, 2, staff_SPECIAL_THANKS_54 },
+    { 0, 96, 88, 0, staff_SPECIAL_THANKS_55 },
+    { 0, 96, 88, 2, staff_SPECIAL_THANKS_56 },
+    { 0, 96, 64, 0, staff_SPECIAL_THANKS_57 },
+    { 0, 96, 64, 2, staff_SPECIAL_THANKS_58 },
+    { 0, 96, 40, 0, staff_SPECIAL_THANKS_59 },
+    { 0, 96, 40, 2, staff_SPECIAL_THANKS_60 },
+    { 270, 96, 160, 1, staff_PRODUCER },
+    { 270, 96, 104, 0, staff_PRODUCER_00 },
+    { 0, 96, 104, 2, staff_PRODUCER_01 },
+    { 270, 96, 160, 1, staff_GENERAL_PRODUCER },
+    { 270, 96, 120, 0, staff_GENERAL_PRODUCER_00 },
+    { 0, 96, 120, 2, staff_GENERAL_PRODUCER_01 },
+    { 0, 96, 80, 0, staff_GENERAL_PRODUCER_02 },
+    { 0, 96, 80, 2, staff_GENERAL_PRODUCER_03 },
+    { 270, 96, 112, 4, staff_AND_CAPCOM_ALL_STAFF },
+    { 270, 96, 0, 0, staff_blank_11 },
+    { 0, 96, 0, 0, staff_blank_11 },
+    { 270, 48, 144, 5, staff_blank_5 },
+    { 270, 48, 144, 5, staff_THANK_YOU_FOR_PLAYING },
+    { 0, 48, 96, 5, staff_PRESENTED_BY },
+    { 0, 190, 96, 0, staff_mark },
+    { 0, 190, 0, 0, staff_blank_5 },
     { 512, 0, 0, 0, 0 },
 };
 
-const char staff_STREET_FIGHTER_2ND_IMPACT[32] = "   STREET FIGHTER $ 2ND IMPACT\0\xFF";
+const u8 staff_STREET_FIGHTER_2ND_IMPACT[32] = "   STREET FIGHTER $ 2ND IMPACT\0\xFF";
 
-const char staff_GIANT_ATTACK[24] = "          GIANT ATTACK\0\xFF";
+const u8 staff_GIANT_ATTACK[24] = "          GIANT ATTACK\0\xFF";
 
-const char staff_STAFF[20] = "             STAFF\0\xFF";
+const u8 staff_STAFF[20] = "             STAFF\0\xFF";
 
-const char staff_CHARACTER_DESIGN[24] = "  - CHARACTER DESIGN -\0\xFF";
+const u8 staff_CHARACTER_DESIGN[24] = "  - CHARACTER DESIGN -\0\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_00[16] = "          W O\0\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_00[16] = "          W O\0\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_01[16] = "           H\0\xFF\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_01[16] = "           H\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_02[16] = "        D K R T";
+const u8 staff_CHARACTER_DESIGN_02[16] = "        D K R T";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_03[20] = "         - U I A\0\xFF\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_03[20] = "         - U I A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_04[20] = "    C I O I   H G N";
+const u8 staff_CHARACTER_DESIGN_04[20] = "    C I O I   H G N";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_05[20] = "     H M R N S O U\0\xFF";
+const u8 staff_CHARACTER_DESIGN_05[20] = "     H M R N S O U\0\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_06[16] = "        S I A I";
+const u8 staff_CHARACTER_DESIGN_06[16] = "        S I A I";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_07[16] = "         H B K\0\xFF";
+const u8 staff_CHARACTER_DESIGN_07[16] = "         H B K\0\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_08[16] = "         C u\0\xFF\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_08[16] = "         C u\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_09[16] = "          h n\0\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_09[16] = "          h n\0\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_10[20] = "       J N I A A\0\xFF\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_10[20] = "       J N I A A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_11[16] = "        U   K W";
+const u8 staff_CHARACTER_DESIGN_11[16] = "        U   K W";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_12[20] = "       S I I Y N\0\xFF\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_12[20] = "       S I I Y N\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_13[20] = "        E J   A O\0\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_13[20] = "        E J   A O\0\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_14[20] = "     Y K   S I A A\0\xFF";
+const u8 staff_CHARACTER_DESIGN_14[20] = "     Y K   S I A A\0\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_15[20] = "      U I I H K W\0\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_15[20] = "      U I I H K W\0\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_16[20] = "     S I N S K .\0\xFF\xFF\xFF";
+const u8 staff_CHARACTER_DESIGN_16[20] = "     S I N S K .\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_CHARACTER_DESIGN_17[20] = "      H N O U E  N\0\xFF";
+const u8 staff_CHARACTER_DESIGN_17[20] = "      H N O U E  N\0\xFF";
 
-const char staff_SCROLL_DESIGN[24] = "   - SCROLL DESIGN -\0\xFF\xFF\xFF";
+const u8 staff_SCROLL_DESIGN[24] = "   - SCROLL DESIGN -\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_00[20] = "    H R S I S G Y M";
+const u8 staff_SCROLL_DESIGN_00[20] = "    H R S I S G Y M";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_01[24] = "     I O H   U I A A\0\xFF\xFF\xFF";
+const u8 staff_SCROLL_DESIGN_01[24] = "     I O H   U I A A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_02[20] = "     Y K   U U O O\0\xFF";
+const u8 staff_SCROLL_DESIGN_02[20] = "     Y K   U U O O\0\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_03[20] = "      O O F K M T\0\xFF\xFF";
+const u8 staff_SCROLL_DESIGN_03[20] = "      O O F K M T\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_04[20] = "    H R Y K   M H R";
+const u8 staff_SCROLL_DESIGN_04[20] = "    H R Y K   M H R";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_05[24] = "     I O U I I A O I\0\xFF\xFF\xFF";
+const u8 staff_SCROLL_DESIGN_05[24] = "     I O U I I A O I\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_06[16] = "         O I I\0\xFF";
+const u8 staff_SCROLL_DESIGN_06[16] = "         O I I\0\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_07[16] = "          J J\0\xFF\xFF";
+const u8 staff_SCROLL_DESIGN_07[16] = "          J J\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_08[16] = "         N O E\0\xFF";
+const u8 staff_SCROLL_DESIGN_08[16] = "         N O E\0\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_09[16] = "          A B I";
+const u8 staff_SCROLL_DESIGN_09[16] = "          A B I";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_10[20] = "      A E I K H M\0\xFF\xFF";
+const u8 staff_SCROLL_DESIGN_10[20] = "      A E I K H M\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_11[20] = "       K M   O A A\0\xFF";
+const u8 staff_SCROLL_DESIGN_11[20] = "       K M   O A A\0\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_12[16] = "          T M\0\xFF\xFF";
+const u8 staff_SCROLL_DESIGN_12[16] = "          T M\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_13[16] = "           A A\0\xFF";
+const u8 staff_SCROLL_DESIGN_13[16] = "           A A\0\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_14[20] = "     Y M M T   O I\0\xFF";
+const u8 staff_SCROLL_DESIGN_14[20] = "     Y M M T   O I\0\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_15[20] = "      A A O O K J\0\xFF\xFF";
+const u8 staff_SCROLL_DESIGN_15[20] = "      A A O O K J\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_16[20] = "     K U C I T K D\0\xFF";
+const u8 staff_SCROLL_DESIGN_16[20] = "     K U C I T K D\0\xFF";
 
 /* provisional name */
-const char staff_SCROLL_DESIGN_17[20] = "      O I H   A E A";
+const u8 staff_SCROLL_DESIGN_17[20] = "      O I H   A E A";
 
-const char staff_ORIGINAL_ART_WORK[24] = " - ORIGINAL ART WORK -\0\xFF";
+const u8 staff_ORIGINAL_ART_WORK[24] = " - ORIGINAL ART WORK -\0\xFF";
 
 /* provisional name */
-const char staff_ORIGINAL_ART_WORK_00[16] = "         A I A\0\xFF";
+const u8 staff_ORIGINAL_ART_WORK_00[16] = "         A I A\0\xFF";
 
 /* provisional name */
-const char staff_ORIGINAL_ART_WORK_01[16] = "          K M N";
+const u8 staff_ORIGINAL_ART_WORK_01[16] = "          K M N";
 
 /* provisional name */
-const char staff_ORIGINAL_ART_WORK_02[20] = "     K N   I H M R\0\xFF";
+const u8 staff_ORIGINAL_ART_WORK_02[20] = "     K N   I H M R\0\xFF";
 
 /* provisional name */
-const char staff_ORIGINAL_ART_WORK_03[20] = "      I U N S I U A";
+const u8 staff_ORIGINAL_ART_WORK_03[20] = "      I U N S I U A";
 
 /* provisional name */
-const char staff_ORIGINAL_ART_WORK_04[16] = "           N\0\xFF\xFF\xFF";
+const u8 staff_ORIGINAL_ART_WORK_04[16] = "           N\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_ORIGINAL_ART_WORK_05[16] = "            K\0\xFF\xFF";
+const u8 staff_ORIGINAL_ART_WORK_05[16] = "            K\0\xFF\xFF";
 
-const char staff_TITLE_LOGO_DESIGN[24] = " - TITLE LOGO DESIGN -\0\xFF";
+const u8 staff_TITLE_LOGO_DESIGN[24] = " - TITLE LOGO DESIGN -\0\xFF";
 
 /* provisional name */
-const char staff_TITLE_LOGO_DESIGN_00[16] = "         S O I\0\xFF";
+const u8 staff_TITLE_LOGO_DESIGN_00[16] = "         S O I\0\xFF";
 
 /* provisional name */
-const char staff_TITLE_LOGO_DESIGN_01[16] = "          H E\0\xFF\xFF";
+const u8 staff_TITLE_LOGO_DESIGN_01[16] = "          H E\0\xFF\xFF";
 
-const char staff_INSTRACTION_DESIGN[24] = " - INSTRACTION DESIGN -";
+const u8 staff_INSTRACTION_DESIGN[24] = " - INSTRACTION DESIGN -";
 
 /* provisional name */
-const char staff_INSTRACTION_DESIGN_00[16] = "        S K M Z";
+const u8 staff_INSTRACTION_DESIGN_00[16] = "        S K M Z";
 
 /* provisional name */
-const char staff_INSTRACTION_DESIGN_01[20] = "         A O I U\0\xFF\xFF\xFF";
+const u8 staff_INSTRACTION_DESIGN_01[20] = "         A O I U\0\xFF\xFF\xFF";
 
-const char staff_PROGRAMMING[20] = "    - PROGRAMMING -";
+const u8 staff_PROGRAMMING[20] = "    - PROGRAMMING -";
 
 /* provisional name */
-const char staff_PROGRAMMING_00[20] = "     K Z H T   A A\0\xFF";
+const u8 staff_PROGRAMMING_00[20] = "     K Z H T   A A\0\xFF";
 
 /* provisional name */
-const char staff_PROGRAMMING_01[20] = "      A U I O N K I";
+const u8 staff_PROGRAMMING_01[20] = "      A U I O N K I";
 
-const char staff_PROGRAMMING_02[24] = "  N B Y \" T \" O H Z M\0\xFF\xFF";
+const u8 staff_PROGRAMMING_02[24] = "  N B Y \" T \" O H Z M\0\xFF\xFF";
 
 /* provisional name */
-const char staff_PROGRAMMING_03[24] = "   O U A L 1 Y S I U I\0\xFF";
+const u8 staff_PROGRAMMING_03[24] = "   O U A L 1 Y S I U I\0\xFF";
 
 /* provisional name */
-const char staff_PROGRAMMING_04[24] = "  Y K   A A U A T T )\0\xFF\xFF";
+const u8 staff_PROGRAMMING_04[24] = "  Y K   A A U A T T )\0\xFF\xFF";
 
 /* provisional name */
-const char staff_PROGRAMMING_05[24] = "   U O K W M R ( A E\0\xFF\xFF\xFF";
+const u8 staff_PROGRAMMING_05[24] = "   U O K W M R ( A E\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_PROGRAMMING_06[20] = "    H R S I N K G W";
+const u8 staff_PROGRAMMING_06[20] = "    H R S I N K G W";
 
 /* provisional name */
-const char staff_PROGRAMMING_07[24] = "     I O H   A A A A\0\xFF\xFF\xFF";
+const u8 staff_PROGRAMMING_07[24] = "     I O H   A A A A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_PROGRAMMING_08[24] = "  Y S N B   N D ( N )\0\xFF\xFF";
+const u8 staff_PROGRAMMING_08[24] = "  Y S N B   N D ( N )\0\xFF\xFF";
 
 /* provisional name */
-const char staff_PROGRAMMING_09[24] = "   O I O U I A A I E\0\xFF\xFF\xFF";
+const u8 staff_PROGRAMMING_09[24] = "   O I O U I A A I E\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_PROGRAMMING_10[20] = "    M S H T   h Y !";
+const u8 staff_PROGRAMMING_10[20] = "    M S H T   h Y !";
 
 /* provisional name */
-const char staff_PROGRAMMING_11[20] = "     A A I O O ! a\0\xFF";
+const u8 staff_PROGRAMMING_11[20] = "     A A I O O ! a\0\xFF";
 
 /* provisional name */
-const char staff_PROGRAMMING_12[20] = "    A I I O Y K Y M";
+const u8 staff_PROGRAMMING_12[20] = "    A I I O Y K Y M";
 
 /* provisional name */
-const char staff_PROGRAMMING_13[24] = "     K H R   O O A A\0\xFF\xFF\xFF";
+const u8 staff_PROGRAMMING_13[24] = "     K H R   O O A A\0\xFF\xFF\xFF";
 
-const char staff_SOUND_EFFECT_DESIGN[24] = "- SOUND EFFECT DESIGN -";
+const u8 staff_SOUND_EFFECT_DESIGN[24] = "- SOUND EFFECT DESIGN -";
 
 /* provisional name */
-const char staff_SOUND_EFFECT_DESIGN_00[20] = "      S T S I I E\0\xFF\xFF";
+const u8 staff_SOUND_EFFECT_DESIGN_00[20] = "      S T S I I E\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SOUND_EFFECT_DESIGN_01[20] = "       A O H   S\0\xFF\xFF\xFF";
+const u8 staff_SOUND_EFFECT_DESIGN_01[20] = "       A O H   S\0\xFF\xFF\xFF";
 
-const char staff_SOUND_EFFECT_DESIGN_02[24] = "  H R A I\" 6 k K N O\0\xFF\xFF\xFF";
+const u8 staff_SOUND_EFFECT_DESIGN_02[24] = "  H R A I\" 6 k K N O\0\xFF\xFF\xFF";
 
-const char staff_SOUND_EFFECT_DESIGN_03[20] = "   I O K  X 8 \" O D";
+const u8 staff_SOUND_EFFECT_DESIGN_03[20] = "   I O K  X 8 \" O D";
 
-const char staff_MUSIC_COMPOSE[24] = "   - MUSIC COMPOSE -\0\xFF\xFF\xFF";
+const u8 staff_MUSIC_COMPOSE[24] = "   - MUSIC COMPOSE -\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_MUSIC_COMPOSE_00[20] = "    H D K   K G W\0\xFF\xFF";
+const u8 staff_MUSIC_COMPOSE_00[20] = "    H D K   K G W\0\xFF\xFF";
 
 /* provisional name */
-const char staff_MUSIC_COMPOSE_01[20] = "     I E I O U A A\0\xFF";
+const u8 staff_MUSIC_COMPOSE_01[20] = "     I E I O U A A\0\xFF";
 
 /* provisional name */
-const char staff_MUSIC_COMPOSE_02[20] = "       Y K   W I\0\xFF\xFF\xFF";
+const u8 staff_MUSIC_COMPOSE_02[20] = "       Y K   W I\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_MUSIC_COMPOSE_03[16] = "        U I I A";
+const u8 staff_MUSIC_COMPOSE_03[16] = "        U I I A";
 
-const char staff_MUSIC_ARRANGEMENT[24] = " - MUSIC ARRANGEMENT -\0\xFF";
+const u8 staff_MUSIC_ARRANGEMENT[24] = " - MUSIC ARRANGEMENT -\0\xFF";
 
-const char staff_PLANNING[20] = "      - PLANNING -\0\xFF";
+const u8 staff_PLANNING[20] = "      - PLANNING -\0\xFF";
 
 /* provisional name */
-const char staff_PLANNING_00[20] = "      S T   A U I O";
+const u8 staff_PLANNING_00[20] = "      S T   A U I O";
 
 /* provisional name */
-const char staff_PLANNING_01[20] = "       E O Y S H R\0\xFF";
+const u8 staff_PLANNING_01[20] = "       E O Y S H R\0\xFF";
 
 /* provisional name */
-const char staff_PLANNING_02[24] = "  N O G     . S I A A -";
+const u8 staff_PLANNING_02[24] = "  N O G     . S I A A -";
 
 /* provisional name */
-const char staff_PLANNING_03[24] = "   E .   - H I H Z W\0\xFF\xFF\xFF";
+const u8 staff_PLANNING_03[24] = "   E .   - H I H Z W\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_PLANNING_04[16] = "         N M C\0\xFF";
+const u8 staff_PLANNING_04[16] = "         N M C\0\xFF";
 
 /* provisional name */
-const char staff_PLANNING_05[16] = "          U A H";
+const u8 staff_PLANNING_05[16] = "          U A H";
 
-const char staff_VOICE_ACTOR[20] = "    - VOICE ACTOR -";
+const u8 staff_VOICE_ACTOR[20] = "    - VOICE ACTOR -";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_00[20] = "       Y J   E A\0\xFF\xFF\xFF";
+const u8 staff_VOICE_ACTOR_00[20] = "       Y J   E A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_01[16] = "        U I U D";
+const u8 staff_VOICE_ACTOR_01[16] = "        U I U D";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_02[20] = "     W T R   A A I\0\xFF";
+const u8 staff_VOICE_ACTOR_02[20] = "     W T R   A A I\0\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_03[20] = "      A A U T K G\0\xFF\xFF";
+const u8 staff_VOICE_ACTOR_03[20] = "      A A U T K G\0\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_04[24] = "  T M M C I N S I U A\0\xFF\xFF";
+const u8 staff_VOICE_ACTOR_04[24] = "  T M M C I N S I U A\0\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_05[24] = "   O O I H   I H M R\0\xFF\xFF\xFF";
+const u8 staff_VOICE_ACTOR_05[24] = "   O O I H   I H M R\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_06[20] = "     K H R   U I O\0\xFF";
+const u8 staff_VOICE_ACTOR_06[20] = "     K H R   U I O\0\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_07[20] = "      A O U F J N\0\xFF\xFF";
+const u8 staff_VOICE_ACTOR_07[20] = "      A O U F J N\0\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_08[20] = "       Y R   M N\0\xFF\xFF\xFF";
+const u8 staff_VOICE_ACTOR_08[20] = "       Y R   M N\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_09[20] = "        U I A A O\0\xFF\xFF";
+const u8 staff_VOICE_ACTOR_09[20] = "        U I A A O\0\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_10[20] = "      I S I   H B\0\xFF\xFF";
+const u8 staff_VOICE_ACTOR_10[20] = "      I S I   H B\0\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_11[20] = "       S H N C I A\0\xFF";
+const u8 staff_VOICE_ACTOR_11[20] = "       S H N C I A\0\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_12[20] = "      K N T K M R\0\xFF\xFF";
+const u8 staff_VOICE_ACTOR_12[20] = "      K N T K M R\0\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_13[20] = "       A   O U A U\0\xFF";
+const u8 staff_VOICE_ACTOR_13[20] = "       A   O U A U\0\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_14[20] = "       K J   O E\0\xFF\xFF\xFF";
+const u8 staff_VOICE_ACTOR_14[20] = "       K J   O E\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_15[16] = "        O I T B";
+const u8 staff_VOICE_ACTOR_15[16] = "        O I T B";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_16[20] = "    B U E R B R S N";
+const u8 staff_VOICE_ACTOR_16[20] = "    B U E R B R S N";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_17[20] = "     R C   O E T O\0\xFF";
+const u8 staff_VOICE_ACTOR_17[20] = "     R C   O E T O\0\xFF";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_18[20] = "    M C A L S M E S";
+const u8 staff_VOICE_ACTOR_18[20] = "    M C A L S M E S";
 
 /* provisional name */
-const char staff_VOICE_ACTOR_19[20] = "     I H E   O M R\0\xFF";
+const u8 staff_VOICE_ACTOR_19[20] = "     I H E   O M R\0\xFF";
 
-const char staff_MESSAGE_TRANSLATOR[24] = " - MESSAGE TRANSLATOR -";
+const u8 staff_MESSAGE_TRANSLATOR[24] = " - MESSAGE TRANSLATOR -";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_00[20] = "      E I   U U I\0\xFF\xFF";
+const u8 staff_MESSAGE_TRANSLATOR_00[20] = "      E I   U U I\0\xFF\xFF";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_01[20] = "       R K S Z K\0\xFF\xFF\xFF";
+const u8 staff_MESSAGE_TRANSLATOR_01[20] = "       R K S Z K\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_02[20] = "       D N O A A\0\xFF\xFF\xFF";
+const u8 staff_MESSAGE_TRANSLATOR_02[20] = "       D N O A A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_03[16] = "        A   K D";
+const u8 staff_MESSAGE_TRANSLATOR_03[16] = "        A   K D";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_04[20] = "       C R S T N\0\xFF\xFF\xFF";
+const u8 staff_MESSAGE_TRANSLATOR_04[20] = "       C R S T N\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_05[20] = "        H I   A G\0\xFF\xFF";
+const u8 staff_MESSAGE_TRANSLATOR_05[20] = "        H I   A G\0\xFF\xFF";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_06[20] = "      Y M K   I H\0\xFF\xFF";
+const u8 staff_MESSAGE_TRANSLATOR_06[20] = "      Y M K   I H\0\xFF\xFF";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_07[20] = "       U I O N S I\0\xFF";
+const u8 staff_MESSAGE_TRANSLATOR_07[20] = "       U I O N S I\0\xFF";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_08[28] = " K R A O H R   E F E T S\0\xFF\xFF\xFF";
+const u8 staff_MESSAGE_TRANSLATOR_08[28] = " K R A O H R   E F E T S\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_MESSAGE_TRANSLATOR_09[24] = "  A L   S I O D   R I A";
+const u8 staff_MESSAGE_TRANSLATOR_09[24] = "  A L   S I O D   R I A";
 
-const char staff_SPECIAL_THANKS[24] = "   - SPECIAL THANKS -\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS[24] = "   - SPECIAL THANKS -\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_00[16] = "        T U O H";
+const u8 staff_SPECIAL_THANKS_00[16] = "        T U O H";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_01[20] = "         S Y S I\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_01[20] = "         S Y S I\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_02[16] = "         M Y N\0\xFF";
+const u8 staff_SPECIAL_THANKS_02[16] = "         M Y N\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_03[16] = "          A A O";
+const u8 staff_SPECIAL_THANKS_03[16] = "          A A O";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_04[16] = "           O O\0\xFF";
+const u8 staff_SPECIAL_THANKS_04[16] = "           O O\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_05[16] = "          B B N";
+const u8 staff_SPECIAL_THANKS_05[16] = "          B B N";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_06[16] = "           L O\0\xFF";
+const u8 staff_SPECIAL_THANKS_06[16] = "           L O\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_07[24] = "     T K F M   A A A\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_07[24] = "     T K F M   A A A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_08[20] = "      A A U I S G T";
+const u8 staff_SPECIAL_THANKS_08[20] = "      A A U I S G T";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_09[16] = "         M A K\0\xFF";
+const u8 staff_SPECIAL_THANKS_09[16] = "         M A K\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_10[16] = "          . O I";
+const u8 staff_SPECIAL_THANKS_10[16] = "          . O I";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_11[16] = "         N A E\0\xFF";
+const u8 staff_SPECIAL_THANKS_11[16] = "         N A E\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_12[16] = "          . K I";
+const u8 staff_SPECIAL_THANKS_12[16] = "          . K I";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_13[20] = "       H N K M R\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_13[20] = "       H N K M R\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_14[20] = "        . A A U A\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_14[20] = "        . A A U A\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_15[20] = "         H O I A\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_15[20] = "         H O I A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_16[16] = "          . J M";
+const u8 staff_SPECIAL_THANKS_16[16] = "          . J M";
 
-const char staff_SPECIAL_THANKS_17[20] = "    Y J \" 6 k M K M";
+const u8 staff_SPECIAL_THANKS_17[20] = "    Y J \" 6 k M K M";
 
-const char staff_SPECIAL_THANKS_18[24] = "     O I X 8 \" I A I\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_18[24] = "     O I X 8 \" I A I\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_19[24] = "     T K Y   H R I A\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_19[24] = "     T K Y   H R I A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_20[20] = "      A U A S I A W";
+const u8 staff_SPECIAL_THANKS_20[20] = "      A U A S I A W";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_21[20] = "       R T   O O\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_21[20] = "       R T   O O\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_22[20] = "        I A R K S\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_22[20] = "        I A R K S\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_23[16] = "         R o i\0\xFF";
+const u8 staff_SPECIAL_THANKS_23[16] = "         R o i\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_24[16] = "          y j\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_24[16] = "          y j\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_25[24] = "   H R : A   - O L W\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_25[24] = "   H R : A   - O L W\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_26[24] = "    A D Y S   F L O -\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_26[24] = "    A D Y S   F L O -\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_27[24] = "   ( C   U   H C E S\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_27[24] = "   ( C   U   H C E S\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_28[24] = "      S B G C E K R  )\0\xFF";
+const u8 staff_SPECIAL_THANKS_28[24] = "      S B G C E K R  )\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_29[28] = "     K N S I E M T U A A\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_29[28] = "     K N S I E M T U A A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_30[24] = "      U I H G   A S B R";
+const u8 staff_SPECIAL_THANKS_30[24] = "      U I H G   A S B R";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_31[24] = "     M N B   A S M T\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_31[24] = "     M N B   A S M T\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_32[24] = "      A A U M T U O O\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_32[24] = "      A A U M T U O O\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_33[24] = "     T M Y K   O O A\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_33[24] = "     T M Y K   O O A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_34[20] = "      O O U I Y K T";
+const u8 staff_SPECIAL_THANKS_34[20] = "      O O U I Y K T";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_35[20] = "     T T U A H Z\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_35[20] = "     T T U A H Z\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_36[20] = "      E S Y   A E\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_36[20] = "      E S Y   A E\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_37[24] = "     K T U U E M U A\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_37[24] = "     K T U U E M U A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_38[20] = "      A S S K   I R";
+const u8 staff_SPECIAL_THANKS_38[20] = "      A S S K   I R";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_39[24] = "     M S H R   A I A I\0\xFF";
+const u8 staff_SPECIAL_THANKS_39[24] = "     M S H R   A I A I\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_40[24] = "      A A I O K J T N\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_40[24] = "      A A I O K J T N\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_41[24] = "     T K S I H S I O O\0\xFF";
+const u8 staff_SPECIAL_THANKS_41[24] = "     T K S I H S I O O\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_42[24] = "      A A H   A H M T\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_42[24] = "      A A H   A H M T\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_43[24] = "     T S I I O K R T\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_43[24] = "     T S I I O K R T\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_44[24] = "      O H H K   U A A\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_44[24] = "      O H H K   U A A\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_45[24] = "     Y S I I O T M T\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_45[24] = "     Y S I I O T M T\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_46[24] = "      O H H R   O I A\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_46[24] = "      O H H R   O I A\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_47[20] = "     D I U E S S K\0\xFF";
+const u8 staff_SPECIAL_THANKS_47[20] = "     D I U E S S K\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_48[20] = "      A S K   A A I";
+const u8 staff_SPECIAL_THANKS_48[20] = "      A S K   A A I";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_49[20] = "     A I O I M R T\0\xFF";
+const u8 staff_SPECIAL_THANKS_49[20] = "     A I O I M R T\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_50[20] = "      K N R   U A A";
+const u8 staff_SPECIAL_THANKS_50[20] = "      K N R   U A A";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_51[28] = "( S I L S I H - T S  P A\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_51[28] = "( S I L S I H - T S  P A\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_52[28] = "   K L   M T     E T  L Y )";
+const u8 staff_SPECIAL_THANKS_52[28] = "   K L   M T     E T  L Y )";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_53[16] = "     T K K S\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_53[16] = "     T K K S\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_54[12] = "      T - .";
+const u8 staff_SPECIAL_THANKS_54[12] = "      T - .";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_55[28] = "     H R S I S G M T - U\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_55[28] = "     H R S I S G M T - U\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_56[28] = "      I O H . U I O O B G\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_56[28] = "      I O H . U I O O B G\0\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_57[12] = "     G N\0\xFF\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_57[12] = "     G N\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_58[8] = "      O";
+const u8 staff_SPECIAL_THANKS_58[8] = "      O";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_59[24] = "     K H U E A A ( K )\0\xFF";
+const u8 staff_SPECIAL_THANKS_59[24] = "     K H U E A A ( K )\0\xFF";
 
 /* provisional name */
-const char staff_SPECIAL_THANKS_60[24] = "      O S K - R I T O\0\xFF\xFF";
+const u8 staff_SPECIAL_THANKS_60[24] = "      O S K - R I T O\0\xFF\xFF";
 
-const char staff_PRODUCER[20] = "      - PRODUCER -\0\xFF";
+const u8 staff_PRODUCER[20] = "      - PRODUCER -\0\xFF";
 
 /* provisional name */
-const char staff_PRODUCER_00[20] = "    T M S I S D M T";
+const u8 staff_PRODUCER_00[20] = "    T M S I S D M T";
 
 /* provisional name */
-const char staff_PRODUCER_01[24] = "     O O H   A A O O\0\xFF\xFF\xFF";
+const u8 staff_PRODUCER_01[24] = "     O O H   A A O O\0\xFF\xFF\xFF";
 
-const char staff_GENERAL_PRODUCER[24] = "  - GENERAL PRODUCER -\0\xFF";
+const u8 staff_GENERAL_PRODUCER[24] = "  - GENERAL PRODUCER -\0\xFF";
 
 /* provisional name */
-const char staff_GENERAL_PRODUCER_00[24] = "    N R T K   U A I U\0\xFF\xFF";
+const u8 staff_GENERAL_PRODUCER_00[24] = "    N R T K   U A I U\0\xFF\xFF";
 
 /* provisional name */
-const char staff_GENERAL_PRODUCER_01[24] = "     O I A A F N M Z\0\xFF\xFF\xFF";
+const u8 staff_GENERAL_PRODUCER_01[24] = "     O I A A F N M Z\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_GENERAL_PRODUCER_02[24] = "     Y S I I O A O O\0\xFF\xFF\xFF";
+const u8 staff_GENERAL_PRODUCER_02[24] = "     Y S I I O A O O\0\xFF\xFF\xFF";
 
 /* provisional name */
-const char staff_GENERAL_PRODUCER_03[20] = "      O H K   K M T";
+const u8 staff_GENERAL_PRODUCER_03[20] = "      O H K   K M T";
 
-const char staff_AND_CAPCOM_ALL_STAFF[24] = "  AND CAPCOM ALL STAFF\0\xFF";
+const u8 staff_AND_CAPCOM_ALL_STAFF[24] = "  AND CAPCOM ALL STAFF\0\xFF";
 
-const char staff_blank_11[4] = {
+const u8 staff_blank_11[4] = {
     0x20, 0x20, 0x20, 0,
 };
 
-const char staff_blank_5[4] = {
+const u8 staff_blank_5[4] = {
     0x20, 0, 0xFF, 0xFF,
 };
 
-const char staff_THANK_YOU_FOR_PLAYING[32] = "      THANK YOU FOR PLAYING!\0\xFF\xFF\xFF";
+const u8 staff_THANK_YOU_FOR_PLAYING[32] = "      THANK YOU FOR PLAYING!\0\xFF\xFF\xFF";
 
-const char staff_PRESENTED_BY[24] = "           PRESENTED BY";
+const u8 staff_PRESENTED_BY[24] = "           PRESENTED BY";
 
 /* the mark after PRESENTED BY (provisional name) */
-const char staff_mark[4] = {
+const u8 staff_mark[4] = {
     0x23, 0, 0xFF, 0xFF,
 };
 
@@ -3519,11 +3519,11 @@ const char any_color_tbl[2172] = {
     2, 0x79, 0xEC, 0, 0, 3, 0xFF, 0, 0, 0, 0, 0x20,
 };
 
-const char char_eff_color_tbl[64] = {
-    2, 0x7D, 0x13, 0x80, 2, 0x7D, 0x17, 0x80, 2, 0x7D, 0x1B, 0x80, 2, 0x7D, 0x1F, 0x80,
-    2, 0x7D, 0x23, 0x80, 2, 0x7D, 0x27, 0x80, 2, 0x7D, 0x2B, 0x80, 2, 0x7D, 0x2F, 0x80,
-    2, 0x7D, 0x33, 0x80, 2, 0x7D, 0x37, 0x80, 2, 0x7D, 0x3B, 0x80, 2, 0x7D, 0x3F, 0x80,
-    2, 0x7D, 0x43, 0x80, 2, 0x7D, 0x47, 0x80, 2, 0x7D, 0x4B, 0x80, 2, 0x7D, 0x4F, 0x80,
+const u32 char_eff_color_tbl[16] = {
+    0x27D1380, 0x27D1780, 0x27D1B80, 0x27D1F80,
+    0x27D2380, 0x27D2780, 0x27D2B80, 0x27D2F80,
+    0x27D3380, 0x27D3780, 0x27D3B80, 0x27D3F80,
+    0x27D4380, 0x27D4780, 0x27D4B80, 0x27D4F80,
 };
 
 const char side_color_1p_tbl[128] = {

@@ -22,7 +22,7 @@ extern void (*const effinitjp_quake_y[])();
 extern const u16 jdb[];
 extern const u16 jdb2[];
 extern const u16 parts_colmd_table[];
-extern const u16 parts_colcd_table[];
+extern const s16 parts_colcd_table[];
 extern void clear_caution_flag();
 extern void effect_00_move();
 extern void effect_01_move();
@@ -536,7 +536,7 @@ const u16 parts_colmd_table[2] = {
     0x4000, 0,
 };
 
-const u16 parts_colcd_table[10] = {
+const s16 parts_colcd_table[10] = {
     0x2000, 0, 6, 0x2000, 4, 0x2020, 4, 4,
-    0, 0xFFFF,
+    0, -1,
 };

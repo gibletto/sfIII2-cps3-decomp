@@ -22,7 +22,7 @@ extern const s16 sag_jmp_tbl_tail[];
 extern const s16 sag_jmp_tbl_tail_2[][4];
 extern void (*const plmain_b_lv_00[])();
 extern const s8 lvdir_conv[];
-extern const u16 defense_cg_ix_table[];
+extern const s16 defense_cg_ix_table[][3];
 extern void Player_attack();
 extern void Player_catch();
 extern void Player_caught();
@@ -228,11 +228,21 @@ const s8 lvdir_conv[4] = {
     0, 2, 1, 0,
 };
 
-const u16 defense_cg_ix_table[48] = {
-    1, 1, 1, 1, 1, 1, 1, 1,
-    1, 2, 2, 2, 3, 3, 3, 1,
-    1, 1, 0, 0, 0, 2, 2, 2,
-    1, 1, 1, 1, 1, 1, 2, 2,
-    2, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1,
+const s16 defense_cg_ix_table[16][3] = {
+    { 1, 1, 1 },  /* Gill */
+    { 1, 1, 1 },  /* Alex */
+    { 1, 1, 1 },  /* Ryu */
+    { 2, 2, 2 },  /* Yun */
+    { 3, 3, 3 },  /* Dudley */
+    { 1, 1, 1 },  /* Necro */
+    { 0, 0, 0 },  /* Hugo */
+    { 2, 2, 2 },  /* Ibuki */
+    { 1, 1, 1 },  /* Elena */
+    { 1, 1, 1 },  /* Oro */
+    { 2, 2, 2 },  /* Yang */
+    { 1, 1, 1 },  /* Ken */
+    { 1, 1, 1 },  /* Sean */
+    { 1, 1, 1 },  /* Urien */
+    { 1, 1, 1 },  /* Gouki */
+    { 1, 1, 1 },  /* Shin Gouki */
 };

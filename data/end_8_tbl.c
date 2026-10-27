@@ -15,8 +15,8 @@
 extern const u16 end_7_anm_tbl[];
 extern const PANEL end_800_panel0[];
 extern const PANEL end_800_panel1[];
-extern const u16 timer_8_tbl[];
-extern const u16 end_8_pos[];
+extern const s16 timer_8_tbl[];
+extern const s16 end_8_pos[][2];
 
 /* provisional name */
 const u16 end_7_anm_tbl[8] = {
@@ -48,11 +48,11 @@ const PANEL end_800_panel1[8] = {
 };
 
 /* provisional name */
-const u16 timer_8_tbl[4] = {
+const s16 timer_8_tbl[4] = {
     0x30C, 0x12C, 0x1E0, 0x1E0,
 };
 
 /* provisional name */
-const u16 end_8_pos[8] = {
-    0x100, 0x100, 0x300, 0x100, 0x100, 0x200, 0x300, 0,
+const s16 end_8_pos[4][2] = {
+    { 0x100, 0x100 }, { 0x300, 0x100 }, { 0x100, 0x200 }, { 0x300, 0 },
 };

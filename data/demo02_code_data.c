@@ -7,14 +7,15 @@
 
 #include "types.h"
 #include "structs.h"
+#include "fighter.h"
 
 #pragma section TBL
 
 extern const s8 Demo_PL_Play_Data[][2];
 
 const s8 Demo_PL_Play_Data[4][2] = {
-    { 1, 2 },
-    { 11, 10 },
-    { 6, 9 },
-    { 13, 7 },
+    { PL_ALEX, PL_RYU },
+    { PL_KEN, PL_YANG },
+    { PL_HUGO, PL_ORO },
+    { PL_URIEN, PL_IBUKI },
 };

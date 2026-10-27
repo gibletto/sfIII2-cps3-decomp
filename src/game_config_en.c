@@ -57,14 +57,14 @@
 #include "cps3.h"
 
 extern const char str_NORMAL_2[];
-extern const char str_WIDE[];
-extern const char str_1_ROUND[];
-extern const char str_3_ROUNDS[];
-extern const char str_5_ROUNDS[];
-extern const char str_7_ROUNDS[];
-extern const char str_OFF[];
-extern const char str_1_MATCH[];
-extern const char str_OFF_2[];
+extern const s8 str_WIDE[];
+extern const s8 str_1_ROUND[];
+extern const s8 str_3_ROUNDS[];
+extern const s8 str_5_ROUNDS[];
+extern const s8 str_7_ROUNDS[];
+extern const s8 str_OFF[];
+extern const s8 str_1_MATCH[];
+extern const s8 str_OFF_2[];
 extern const char str_ON[];
 
 s8 Config_Item_en;  
@@ -88,23 +88,23 @@ s16 gcfg_code_list_en[13][2] = {
 };
 TM_STRING gcfg_screen_str_en[2] = {
     { 2, 0, 2, (void*)str_NORMAL_2 },
-    { 2, 0, 2, (void*)str_WIDE },
+    { 2, 0, 2, str_WIDE },
 };
 /* 020008C4 */
 TM_STRING gcfg_round_str_en[4] = {
-    { 2, 0, 2, (void*)str_1_ROUND },
-    { 2, 0, 2, (void*)str_3_ROUNDS },
-    { 2, 0, 2, (void*)str_5_ROUNDS },
-    { 2, 0, 2, (void*)str_7_ROUNDS },
+    { 2, 0, 2, str_1_ROUND },
+    { 2, 0, 2, str_3_ROUNDS },
+    { 2, 0, 2, str_5_ROUNDS },
+    { 2, 0, 2, str_7_ROUNDS },
 };
 /* 020008F4 */
 TM_STRING gcfg_event_str_en[2] = {
-    { 2, 0, 2, (void*)str_OFF },
-    { 2, 0, 2, (void*)str_1_MATCH },
+    { 2, 0, 2, str_OFF },
+    { 2, 0, 2, str_1_MATCH },
 };
 /* 0200090C */
 TM_STRING gcfg_bonus_str_en[2] = {
-    { 2, 0, 2, (void*)str_OFF_2 },
+    { 2, 0, 2, str_OFF_2 },
     { 2, 0, 2, (void*)str_ON },
 };
 

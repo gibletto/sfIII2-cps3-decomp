@@ -14,9 +14,9 @@
 
 extern const PANEL end_2000_bg0_cell_tbl[];
 extern const PANEL end_2000_ake_cell_tbl[];
-extern const u32 end_500_bg1_cell_tbl[];
-extern const u16 timer_5_tbl[];
-extern const u16 end_5_pos[];
+extern const PANEL end_500_bg1_cell_tbl[];
+extern const s16 timer_5_tbl[];
+extern const s16 end_5_pos[][2];
 
 const PANEL end_2000_bg0_cell_tbl[4] = {
     { 4224, 1 },
@@ -33,20 +33,18 @@ const PANEL end_2000_ake_cell_tbl[4] = {
 };
 
 /* provisional name */
-const u32 end_500_bg1_cell_tbl[16] = {
-    0x80, 0xB, 0xC0, 0xC,
-    0x1000, 0xF, 0x1040, 0x10,
-    0x2000, 1, 0x2040, 2,
-    0x3000, 7, 0x3040, 8,
+const PANEL end_500_bg1_cell_tbl[8] = {
+    { 0x80, 0xB }, { 0xC0, 0xC }, { 0x1000, 0xF }, { 0x1040, 0x10 },
+    { 0x2000, 1 }, { 0x2040, 2 }, { 0x3000, 7 }, { 0x3040, 8 },
 };
 
 /* provisional name */
-const u16 timer_5_tbl[6] = {
+const s16 timer_5_tbl[6] = {
     0x12C, 0x258, 0x168, 0x30C, 0x96, 0x3FC,
 };
 
 /* provisional name */
-const u16 end_5_pos[12] = {
-    0x100, 0x300, 0x300, 0x300, 0x100, 0x200, 0x300, 0x200,
-    0x100, 0x100, 0x100, 0,
+const s16 end_5_pos[6][2] = {
+    { 0x100, 0x300 }, { 0x300, 0x300 }, { 0x100, 0x200 }, { 0x300, 0x200 },
+    { 0x100, 0x100 }, { 0x100, 0 },
 };

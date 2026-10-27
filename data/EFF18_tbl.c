@@ -27,7 +27,7 @@ extern const u16 scr_obj_data18_8[];
 extern const u16 scr_obj_data18_9[];
 extern const u16 scr_obj_data18_10[];
 extern const s16 eff21_data_adrs_0[];
-extern const s32 eff21_sp_tbl[];
+extern const s32 eff21_sp_tbl[][4];
 extern const s16 eff23_data_tbl[];
 
 const s16 scr_obj_num18[8][4] = {
@@ -114,10 +114,9 @@ const s16 eff21_data_adrs_0[16] = {
     74, 0, 4, 752, 63, 74, 1, -1,
 };
 
-const s32 eff21_sp_tbl[12] = {
-    0, 0, -4096, 1152,
-    0, 0, -6144, 1024,
-    65536, 0, 9216, 1152,
+const s32 eff21_sp_tbl[3][4] = {
+    { 0, 0, -4096, 1152 }, { 0, 0, -6144, 1024 },
+    { 65536, 0, 9216, 1152 },
 };
 
 /* provisional name */

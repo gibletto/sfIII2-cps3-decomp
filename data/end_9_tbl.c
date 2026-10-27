@@ -12,7 +12,7 @@
 #pragma section TBL
 
 extern const PANEL end_900_bg0_cell_tbl[];
-extern const u16 timer_9_tbl[];
+extern const s16 timer_9_tbl[];
 extern const u16 end_9_pos[];
 
 const PANEL end_900_bg0_cell_tbl[7] = {
@@ -26,7 +26,7 @@ const PANEL end_900_bg0_cell_tbl[7] = {
 };
 
 /* provisional name */
-const u16 timer_9_tbl[7] = {
+const s16 timer_9_tbl[7] = {
     0xF0, 0xF0, 0xF0, 0xB4, 0xB4, 0xB4, 0x294,
 };
 

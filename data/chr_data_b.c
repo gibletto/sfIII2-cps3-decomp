@@ -22,11 +22,11 @@ extern const u32 config_jp_chr_f400[];
 extern const u8 config_jp_chr_0[];
 extern const EFFB8_MESSAGE effB8_conn_0[];
 extern const u32 effB8_conn_0_0[];
-extern const u32 effB8_conn_0_2[];
-extern const u32 effB8_conn_0_4[];
-extern const u32 effB8_conn_0_6[];
+extern const CONN effB8_conn_0_2[];
+extern const CONN effB8_conn_0_4[];
+extern const CONN effB8_conn_0_6[];
 extern const u32 effB8_conn_0_8[];
-extern const u32 effB8_conn_0_10[];
+extern const CONN effB8_conn_0_10[];
 extern const u16 effB8_conn_0_1[];
 extern const u16 effB8_conn_0_3[];
 extern const u16 effB8_conn_0_5[];
@@ -34,11 +34,11 @@ extern const u16 effB8_conn_0_7[];
 extern const u16 effB8_conn_0_9[];
 extern const u16 effB8_conn_0_11[];
 extern const EFFB8_MESSAGE effB8_conn_1[];
-extern const u32 effB8_conn_1_0[];
-extern const u32 effB8_conn_1_2[];
-extern const u32 effB8_conn_1_4[];
+extern const CONN effB8_conn_1_0[];
+extern const CONN effB8_conn_1_2[];
+extern const CONN effB8_conn_1_4[];
 extern const u32 effB8_conn_1_6[];
-extern const u32 effB8_conn_1_8[];
+extern const CONN effB8_conn_1_8[];
 extern const u32 effB8_conn_1_10[];
 extern const u16 effB8_conn_1_1[];
 extern const u16 effB8_conn_1_3[];
@@ -47,12 +47,12 @@ extern const u16 effB8_conn_1_7[];
 extern const u16 effB8_conn_1_9[];
 extern const u16 effB8_conn_1_11[];
 extern const EFFB8_MESSAGE effB8_conn_2[];
-extern const u32 effB8_conn_2_0[];
-extern const u32 effB8_conn_2_2[];
+extern const CONN effB8_conn_2_0[];
+extern const CONN effB8_conn_2_2[];
 extern const u32 effB8_conn_2_4[];
-extern const u32 effB8_conn_2_6[];
+extern const CONN effB8_conn_2_6[];
 extern const u32 effB8_conn_2_8[];
-extern const u32 effB8_conn_2_10[];
+extern const CONN effB8_conn_2_10[];
 extern const u16 effB8_conn_2_1[];
 extern const u16 effB8_conn_2_3[];
 extern const u16 effB8_conn_2_5[];
@@ -60,12 +60,12 @@ extern const u16 effB8_conn_2_7[];
 extern const u16 effB8_conn_2_9[];
 extern const u16 effB8_conn_2_11[];
 extern const EFFB8_MESSAGE effB8_conn_3[];
-extern const u32 effB8_conn_3_0[];
-extern const u32 effB8_conn_3_2[];
-extern const u32 effB8_conn_3_4[];
-extern const u32 effB8_conn_3_6[];
+extern const CONN effB8_conn_3_0[];
+extern const CONN effB8_conn_3_2[];
+extern const CONN effB8_conn_3_4[];
+extern const CONN effB8_conn_3_6[];
 extern const u32 effB8_conn_3_8[];
-extern const u32 effB8_conn_3_10[];
+extern const CONN effB8_conn_3_10[];
 extern const u16 effB8_conn_3_1[];
 extern const u16 effB8_conn_3_3[];
 extern const u16 effB8_conn_3_5[];
@@ -73,12 +73,12 @@ extern const u16 effB8_conn_3_7[];
 extern const u16 effB8_conn_3_9[];
 extern const u16 effB8_conn_3_11[];
 extern const EFFB8_MESSAGE effB8_conn_4[];
-extern const u32 effB8_conn_4_0[];
-extern const u32 effB8_conn_4_2[];
-extern const u32 effB8_conn_4_4[];
+extern const CONN effB8_conn_4_0[];
+extern const CONN effB8_conn_4_2[];
+extern const CONN effB8_conn_4_4[];
 extern const u32 effB8_conn_4_6[];
 extern const u32 effB8_conn_4_8[];
-extern const u32 effB8_conn_4_10[];
+extern const CONN effB8_conn_4_10[];
 extern const u16 effB8_conn_4_1[];
 extern const u16 effB8_conn_4_3[];
 extern const u16 effB8_conn_4_5[];
@@ -86,11 +86,11 @@ extern const u16 effB8_conn_4_7[];
 extern const u16 effB8_conn_4_9[];
 extern const u16 effB8_conn_4_11[];
 extern const EFFB8_MESSAGE effB8_conn_5[];
-extern const u32 effB8_conn_5_0[];
-extern const u32 effB8_conn_5_2[];
+extern const CONN effB8_conn_5_0[];
+extern const CONN effB8_conn_5_2[];
 extern const u32 effB8_conn_5_4[];
-extern const u32 effB8_conn_5_6[];
-extern const u32 effB8_conn_5_8[];
+extern const CONN effB8_conn_5_6[];
+extern const CONN effB8_conn_5_8[];
 extern const u32 effB8_conn_5_10[];
 extern const u16 effB8_conn_5_1[];
 extern const u16 effB8_conn_5_3[];
@@ -99,12 +99,12 @@ extern const u16 effB8_conn_5_7[];
 extern const u16 effB8_conn_5_9[];
 extern const u16 effB8_conn_5_11[];
 extern const EFFB8_MESSAGE effB8_conn_7[];
-extern const u32 effB8_conn_7_0[];
-extern const u32 effB8_conn_7_2[];
-extern const u32 effB8_conn_7_4[];
-extern const u32 effB8_conn_7_6[];
+extern const CONN effB8_conn_7_0[];
+extern const CONN effB8_conn_7_2[];
+extern const CONN effB8_conn_7_4[];
+extern const CONN effB8_conn_7_6[];
 extern const u32 effB8_conn_7_8[];
-extern const u32 effB8_conn_7_10[];
+extern const CONN effB8_conn_7_10[];
 extern const u16 effB8_conn_7_1[];
 extern const u16 effB8_conn_7_3[];
 extern const u16 effB8_conn_7_5[];
@@ -112,12 +112,12 @@ extern const u16 effB8_conn_7_7[];
 extern const u16 effB8_conn_7_9[];
 extern const u16 effB8_conn_7_11[];
 extern const EFFB8_MESSAGE effB8_conn_8[];
-extern const u32 effB8_conn_8_0[];
-extern const u32 effB8_conn_8_2[];
-extern const u32 effB8_conn_8_4[];
-extern const u32 effB8_conn_8_6[];
-extern const u32 effB8_conn_8_8[];
-extern const u32 effB8_conn_8_10[];
+extern const CONN effB8_conn_8_0[];
+extern const CONN effB8_conn_8_2[];
+extern const CONN effB8_conn_8_4[];
+extern const CONN effB8_conn_8_6[];
+extern const CONN effB8_conn_8_8[];
+extern const CONN effB8_conn_8_10[];
 extern const u16 effB8_conn_8_1[];
 extern const u16 effB8_conn_8_3[];
 extern const u16 effB8_conn_8_5[];
@@ -125,12 +125,12 @@ extern const u16 effB8_conn_8_7[];
 extern const u16 effB8_conn_8_9[];
 extern const u16 effB8_conn_8_11[];
 extern const EFFB8_MESSAGE effB8_conn_9[];
-extern const u32 effB8_conn_9_0[];
-extern const u32 effB8_conn_9_2[];
-extern const u32 effB8_conn_9_4[];
+extern const CONN effB8_conn_9_0[];
+extern const CONN effB8_conn_9_2[];
+extern const CONN effB8_conn_9_4[];
 extern const u32 effB8_conn_9_6[];
-extern const u32 effB8_conn_9_8[];
-extern const u32 effB8_conn_9_10[];
+extern const CONN effB8_conn_9_8[];
+extern const CONN effB8_conn_9_10[];
 extern const u16 effB8_conn_9_1[];
 extern const u16 effB8_conn_9_3[];
 extern const u16 effB8_conn_9_5[];
@@ -138,12 +138,12 @@ extern const u16 effB8_conn_9_7[];
 extern const u16 effB8_conn_9_9[];
 extern const u16 effB8_conn_9_11[];
 extern const EFFB8_MESSAGE effB8_conn_10[];
-extern const u32 effB8_conn_10_0[];
-extern const u32 effB8_conn_10_2[];
-extern const u32 effB8_conn_10_4[];
-extern const u32 effB8_conn_10_6[];
+extern const CONN effB8_conn_10_0[];
+extern const CONN effB8_conn_10_2[];
+extern const CONN effB8_conn_10_4[];
+extern const CONN effB8_conn_10_6[];
 extern const u32 effB8_conn_10_8[];
-extern const u32 effB8_conn_10_10[];
+extern const CONN effB8_conn_10_10[];
 extern const u16 effB8_conn_10_1[];
 extern const u16 effB8_conn_10_3[];
 extern const u16 effB8_conn_10_5[];
@@ -151,12 +151,12 @@ extern const u16 effB8_conn_10_7[];
 extern const u16 effB8_conn_10_9[];
 extern const u16 effB8_conn_10_11[];
 extern const EFFB8_MESSAGE effB8_conn_11[];
-extern const u32 effB8_conn_11_0[];
-extern const u32 effB8_conn_11_2[];
+extern const CONN effB8_conn_11_0[];
+extern const CONN effB8_conn_11_2[];
 extern const u32 effB8_conn_11_4[];
-extern const u32 effB8_conn_11_6[];
+extern const CONN effB8_conn_11_6[];
 extern const u32 effB8_conn_11_8[];
-extern const u32 effB8_conn_11_10[];
+extern const CONN effB8_conn_11_10[];
 extern const u16 effB8_conn_11_1[];
 extern const u16 effB8_conn_11_3[];
 extern const u16 effB8_conn_11_5[];
@@ -164,12 +164,12 @@ extern const u16 effB8_conn_11_7[];
 extern const u16 effB8_conn_11_9[];
 extern const u16 effB8_conn_11_11[];
 extern const EFFB8_MESSAGE effB8_conn_12[];
-extern const u32 effB8_conn_12_0[];
-extern const u32 effB8_conn_12_2[];
-extern const u32 effB8_conn_12_4[];
-extern const u32 effB8_conn_12_6[];
+extern const CONN effB8_conn_12_0[];
+extern const CONN effB8_conn_12_2[];
+extern const CONN effB8_conn_12_4[];
+extern const CONN effB8_conn_12_6[];
 extern const u32 effB8_conn_12_8[];
-extern const u32 effB8_conn_12_10[];
+extern const CONN effB8_conn_12_10[];
 extern const u16 effB8_conn_12_1[];
 extern const u16 effB8_conn_12_3[];
 extern const u16 effB8_conn_12_5[];
@@ -177,19 +177,19 @@ extern const u16 effB8_conn_12_7[];
 extern const u16 effB8_conn_12_9[];
 extern const u16 effB8_conn_12_11[];
 extern const EFFF9_MESSAGE effF9_mes_jp_0[];
-extern const u32 effF9_mes_jp_0_0[];
+extern const CONN effF9_mes_jp_0_0[];
 extern const u32 effF9_mes_jp_0_4[];
 extern const u32 effF9_mes_jp_0_6[];
 extern const u32 effF9_mes_jp_0_8[];
-extern const u32 effF9_mes_jp_0_10[];
+extern const CONN effF9_mes_jp_0_10[];
 extern const u32 effF9_mes_jp_0_12[];
 extern const u32 effF9_mes_jp_0_14[];
 extern const u32 effF9_mes_jp_0_16[];
-extern const u32 effF9_mes_jp_0_18[];
-extern const u32 effF9_mes_jp_0_20[];
-extern const u32 effF9_mes_jp_0_22[];
+extern const CONN effF9_mes_jp_0_18[];
+extern const CONN effF9_mes_jp_0_20[];
+extern const CONN effF9_mes_jp_0_22[];
 extern const u32 effF9_mes_jp_0_24[];
-extern const u32 effF9_mes_jp_0_26[];
+extern const CONN effF9_mes_jp_0_26[];
 extern const u32 effF9_mes_jp_0_28[];
 extern const u32 effF9_mes_jp_0_30[];
 extern const u32 effF9_mes_jp_0_32[];
@@ -213,15 +213,15 @@ extern const u16 effF9_mes_jp_0_31[];
 extern const u16 effF9_mes_jp_0_33[];
 extern const u16 effF9_mes_jp_0_35[];
 extern const EFFF9_MESSAGE effF9_mes_jp_2[];
-extern const u32 effF9_mes_jp_2_0[];
+extern const CONN effF9_mes_jp_2_0[];
 extern const u32 effF9_mes_jp_2_4[];
-extern const u32 effF9_mes_jp_2_6[];
+extern const CONN effF9_mes_jp_2_6[];
 extern const u32 effF9_mes_jp_2_8[];
 extern const u32 effF9_mes_jp_2_10[];
-extern const u32 effF9_mes_jp_2_12[];
+extern const CONN effF9_mes_jp_2_12[];
 extern const u32 effF9_mes_jp_2_14[];
 extern const u32 effF9_mes_jp_2_16[];
-extern const u32 effF9_mes_jp_2_18[];
+extern const CONN effF9_mes_jp_2_18[];
 extern const u32 effF9_mes_jp_2_20[];
 extern const u16 effF9_mes_jp_2_1[];
 extern const u16 effF9_mes_jp_2_3[];
@@ -235,21 +235,21 @@ extern const u16 effF9_mes_jp_2_17[];
 extern const u16 effF9_mes_jp_2_19[];
 extern const u16 effF9_mes_jp_2_21[];
 extern const EFFF9_MESSAGE effF9_mes_jp_3[];
-extern const u32 effF9_mes_jp_3_0[];
-extern const u32 effF9_mes_jp_3_4[];
-extern const u32 effF9_mes_jp_3_6[];
+extern const CONN effF9_mes_jp_3_0[];
+extern const CONN effF9_mes_jp_3_4[];
+extern const CONN effF9_mes_jp_3_6[];
 extern const u32 effF9_mes_jp_3_8[];
-extern const u32 effF9_mes_jp_3_10[];
-extern const u32 effF9_mes_jp_3_12[];
+extern const CONN effF9_mes_jp_3_10[];
+extern const CONN effF9_mes_jp_3_12[];
 extern const u32 effF9_mes_jp_3_14[];
-extern const u32 effF9_mes_jp_3_16[];
-extern const u32 effF9_mes_jp_3_18[];
+extern const CONN effF9_mes_jp_3_16[];
+extern const CONN effF9_mes_jp_3_18[];
 extern const u32 effF9_mes_jp_3_20[];
-extern const u32 effF9_mes_jp_3_22[];
+extern const CONN effF9_mes_jp_3_22[];
 extern const u32 effF9_mes_jp_3_24[];
-extern const u32 effF9_mes_jp_3_26[];
+extern const CONN effF9_mes_jp_3_26[];
 extern const u32 effF9_mes_jp_3_28[];
-extern const u32 effF9_mes_jp_3_30[];
+extern const CONN effF9_mes_jp_3_30[];
 extern const u16 effF9_mes_jp_3_1[];
 extern const u16 effF9_mes_jp_3_3[];
 extern const u16 effF9_mes_jp_3_5[];
@@ -267,16 +267,16 @@ extern const u16 effF9_mes_jp_3_27[];
 extern const u16 effF9_mes_jp_3_29[];
 extern const u16 effF9_mes_jp_3_31[];
 extern const EFFF9_MESSAGE effF9_mes_jp_4[];
-extern const u32 effF9_mes_jp_4_0[];
+extern const CONN effF9_mes_jp_4_0[];
 extern const u32 effF9_mes_jp_4_4[];
-extern const u32 effF9_mes_jp_4_6[];
+extern const CONN effF9_mes_jp_4_6[];
 extern const u32 effF9_mes_jp_4_8[];
-extern const u32 effF9_mes_jp_4_10[];
+extern const CONN effF9_mes_jp_4_10[];
 extern const u32 effF9_mes_jp_4_12[];
-extern const u32 effF9_mes_jp_4_14[];
+extern const CONN effF9_mes_jp_4_14[];
 extern const u32 effF9_mes_jp_4_16[];
-extern const u32 effF9_mes_jp_4_18[];
-extern const u32 effF9_mes_jp_4_20[];
+extern const CONN effF9_mes_jp_4_18[];
+extern const CONN effF9_mes_jp_4_20[];
 extern const u16 effF9_mes_jp_4_1[];
 extern const u16 effF9_mes_jp_4_3[];
 extern const u16 effF9_mes_jp_4_5[];
@@ -293,14 +293,14 @@ extern const u32 effF9_mes_jp_5_0[];
 extern const u32 effF9_mes_jp_5_4[];
 extern const u32 effF9_mes_jp_5_6[];
 extern const u32 effF9_mes_jp_5_8[];
-extern const u32 effF9_mes_jp_5_10[];
+extern const CONN effF9_mes_jp_5_10[];
 extern const u32 effF9_mes_jp_5_12[];
-extern const u32 effF9_mes_jp_5_14[];
+extern const CONN effF9_mes_jp_5_14[];
 extern const u32 effF9_mes_jp_5_16[];
-extern const u32 effF9_mes_jp_5_18[];
-extern const u32 effF9_mes_jp_5_20[];
-extern const u32 effF9_mes_jp_5_22[];
-extern const u32 effF9_mes_jp_5_24[];
+extern const CONN effF9_mes_jp_5_18[];
+extern const CONN effF9_mes_jp_5_20[];
+extern const CONN effF9_mes_jp_5_22[];
+extern const CONN effF9_mes_jp_5_24[];
 extern const u16 effF9_mes_jp_5_1[];
 extern const u16 effF9_mes_jp_5_3[];
 extern const u16 effF9_mes_jp_5_5[];
@@ -315,29 +315,29 @@ extern const u16 effF9_mes_jp_5_21[];
 extern const u16 effF9_mes_jp_5_23[];
 extern const u16 effF9_mes_jp_5_25[];
 extern const EFFF9_MESSAGE effF9_mes_jp_6[];
-extern const u32 effF9_mes_jp_6_0[];
+extern const CONN effF9_mes_jp_6_0[];
 extern const u32 effF9_mes_jp_6_4[];
-extern const u32 effF9_mes_jp_6_6[];
+extern const CONN effF9_mes_jp_6_6[];
 extern const u32 effF9_mes_jp_6_8[];
 extern const u32 effF9_mes_jp_6_10[];
-extern const u32 effF9_mes_jp_6_12[];
+extern const CONN effF9_mes_jp_6_12[];
 extern const u32 effF9_mes_jp_6_14[];
 extern const u32 effF9_mes_jp_6_16[];
 extern const u32 effF9_mes_jp_6_18[];
-extern const u32 effF9_mes_jp_6_20[];
+extern const CONN effF9_mes_jp_6_20[];
 extern const u32 effF9_mes_jp_6_22[];
-extern const u32 effF9_mes_jp_6_24[];
+extern const CONN effF9_mes_jp_6_24[];
 extern const u32 effF9_mes_jp_6_26[];
 extern const u32 effF9_mes_jp_6_28[];
-extern const u32 effF9_mes_jp_6_30[];
+extern const CONN effF9_mes_jp_6_30[];
 extern const u32 effF9_mes_jp_6_32[];
-extern const u32 effF9_mes_jp_6_34[];
+extern const CONN effF9_mes_jp_6_34[];
 extern const u32 effF9_mes_jp_6_36[];
 extern const u32 effF9_mes_jp_6_38[];
-extern const u32 effF9_mes_jp_6_40[];
+extern const CONN effF9_mes_jp_6_40[];
 extern const u32 effF9_mes_jp_6_42[];
 extern const u32 effF9_mes_jp_6_44[];
-extern const u32 effF9_mes_jp_6_46[];
+extern const CONN effF9_mes_jp_6_46[];
 extern const u32 effF9_mes_jp_6_48[];
 extern const u16 effF9_mes_jp_6_1[];
 extern const u16 effF9_mes_jp_6_3[];
@@ -365,20 +365,20 @@ extern const u16 effF9_mes_jp_6_45[];
 extern const u16 effF9_mes_jp_6_47[];
 extern const u16 effF9_mes_jp_6_49[];
 extern const EFFF9_MESSAGE effF9_mes_jp_7[];
-extern const u32 effF9_mes_jp_7_0[];
-extern const u32 effF9_mes_jp_7_4[];
+extern const CONN effF9_mes_jp_7_0[];
+extern const CONN effF9_mes_jp_7_4[];
 extern const u32 effF9_mes_jp_7_6[];
 extern const u32 effF9_mes_jp_7_8[];
-extern const u32 effF9_mes_jp_7_10[];
+extern const CONN effF9_mes_jp_7_10[];
 extern const u32 effF9_mes_jp_7_12[];
-extern const u32 effF9_mes_jp_7_14[];
+extern const CONN effF9_mes_jp_7_14[];
 extern const u32 effF9_mes_jp_7_16[];
-extern const u32 effF9_mes_jp_7_18[];
-extern const u32 effF9_mes_jp_7_20[];
+extern const CONN effF9_mes_jp_7_18[];
+extern const CONN effF9_mes_jp_7_20[];
 extern const u32 effF9_mes_jp_7_22[];
-extern const u32 effF9_mes_jp_7_24[];
+extern const CONN effF9_mes_jp_7_24[];
 extern const u32 effF9_mes_jp_7_26[];
-extern const u32 effF9_mes_jp_7_28[];
+extern const CONN effF9_mes_jp_7_28[];
 extern const u16 effF9_mes_jp_7_1[];
 extern const u16 effF9_mes_jp_7_3[];
 extern const u16 effF9_mes_jp_7_5[];
@@ -395,11 +395,11 @@ extern const u16 effF9_mes_jp_7_25[];
 extern const u16 effF9_mes_jp_7_27[];
 extern const u16 effF9_mes_jp_7_29[];
 extern const EFFF9_MESSAGE effF9_mes_jp_8[];
-extern const u32 effF9_mes_jp_8_0[];
+extern const CONN effF9_mes_jp_8_0[];
 extern const u32 effF9_mes_jp_8_4[];
 extern const u32 effF9_mes_jp_8_6[];
 extern const u32 effF9_mes_jp_8_8[];
-extern const u32 effF9_mes_jp_8_10[];
+extern const CONN effF9_mes_jp_8_10[];
 extern const u32 effF9_mes_jp_8_12[];
 extern const u16 effF9_mes_jp_8_1[];
 extern const u16 effF9_mes_jp_8_3[];
@@ -409,10 +409,10 @@ extern const u16 effF9_mes_jp_8_9[];
 extern const u16 effF9_mes_jp_8_11[];
 extern const u16 effF9_mes_jp_8_13[];
 extern const EFFF9_MESSAGE effF9_mes_jp_9[];
-extern const u32 effF9_mes_jp_9_0[];
+extern const CONN effF9_mes_jp_9_0[];
 extern const u32 effF9_mes_jp_9_4[];
 extern const u32 effF9_mes_jp_9_6[];
-extern const u32 effF9_mes_jp_9_8[];
+extern const CONN effF9_mes_jp_9_8[];
 extern const u32 effF9_mes_jp_9_10[];
 extern const u16 effF9_mes_jp_9_1[];
 extern const u16 effF9_mes_jp_9_3[];
@@ -421,21 +421,21 @@ extern const u16 effF9_mes_jp_9_7[];
 extern const u16 effF9_mes_jp_9_9[];
 extern const u16 effF9_mes_jp_9_11[];
 extern const EFFF9_MESSAGE effF9_mes_jp_10[];
-extern const u32 effF9_mes_jp_10_0[];
-extern const u32 effF9_mes_jp_10_4[];
-extern const u32 effF9_mes_jp_10_6[];
+extern const CONN effF9_mes_jp_10_0[];
+extern const CONN effF9_mes_jp_10_4[];
+extern const CONN effF9_mes_jp_10_6[];
 extern const u32 effF9_mes_jp_10_8[];
-extern const u32 effF9_mes_jp_10_10[];
+extern const CONN effF9_mes_jp_10_10[];
 extern const u32 effF9_mes_jp_10_12[];
-extern const u32 effF9_mes_jp_10_14[];
+extern const CONN effF9_mes_jp_10_14[];
 extern const u32 effF9_mes_jp_10_16[];
-extern const u32 effF9_mes_jp_10_18[];
+extern const CONN effF9_mes_jp_10_18[];
 extern const u32 effF9_mes_jp_10_20[];
-extern const u32 effF9_mes_jp_10_22[];
-extern const u32 effF9_mes_jp_10_24[];
+extern const CONN effF9_mes_jp_10_22[];
+extern const CONN effF9_mes_jp_10_24[];
 extern const u32 effF9_mes_jp_10_26[];
 extern const u32 effF9_mes_jp_10_28[];
-extern const u32 effF9_mes_jp_10_30[];
+extern const CONN effF9_mes_jp_10_30[];
 extern const u16 effF9_mes_jp_10_1[];
 extern const u16 effF9_mes_jp_10_3[];
 extern const u16 effF9_mes_jp_10_5[];
@@ -453,11 +453,11 @@ extern const u16 effF9_mes_jp_10_27[];
 extern const u16 effF9_mes_jp_10_29[];
 extern const u16 effF9_mes_jp_10_31[];
 extern const EFFF9_MESSAGE effF9_mes_jp_11[];
-extern const u32 effF9_mes_jp_11_0[];
-extern const u32 effF9_mes_jp_11_4[];
+extern const CONN effF9_mes_jp_11_0[];
+extern const CONN effF9_mes_jp_11_4[];
 extern const u32 effF9_mes_jp_11_6[];
-extern const u32 effF9_mes_jp_11_8[];
-extern const u32 effF9_mes_jp_11_10[];
+extern const CONN effF9_mes_jp_11_8[];
+extern const CONN effF9_mes_jp_11_10[];
 extern const u32 effF9_mes_jp_11_12[];
 extern const u16 effF9_mes_jp_11_1[];
 extern const u16 effF9_mes_jp_11_3[];
@@ -467,14 +467,14 @@ extern const u16 effF9_mes_jp_11_9[];
 extern const u16 effF9_mes_jp_11_11[];
 extern const u16 effF9_mes_jp_11_13[];
 extern const EFFF9_MESSAGE effF9_mes_jp_12[];
-extern const u32 effF9_mes_jp_12_0[];
-extern const u32 effF9_mes_jp_12_4[];
+extern const CONN effF9_mes_jp_12_0[];
+extern const CONN effF9_mes_jp_12_4[];
 extern const u32 effF9_mes_jp_12_6[];
 extern const u32 effF9_mes_jp_12_8[];
-extern const u32 effF9_mes_jp_12_10[];
+extern const CONN effF9_mes_jp_12_10[];
 extern const u32 effF9_mes_jp_12_12[];
 extern const u32 effF9_mes_jp_12_14[];
-extern const u32 effF9_mes_jp_12_16[];
+extern const CONN effF9_mes_jp_12_16[];
 extern const u16 effF9_mes_jp_12_1[];
 extern const u16 effF9_mes_jp_12_3[];
 extern const u16 effF9_mes_jp_12_5[];
@@ -486,16 +486,16 @@ extern const u16 effF9_mes_jp_12_15[];
 extern const u16 effF9_mes_jp_12_17[];
 extern const EFFF9_MESSAGE effF9_mes_jp_13[];
 extern const u32 effF9_mes_jp_13_0[];
-extern const u32 effF9_mes_jp_13_4[];
+extern const CONN effF9_mes_jp_13_4[];
 extern const u32 effF9_mes_jp_13_6[];
-extern const u32 effF9_mes_jp_13_8[];
+extern const CONN effF9_mes_jp_13_8[];
 extern const u32 effF9_mes_jp_13_10[];
-extern const u32 effF9_mes_jp_13_12[];
+extern const CONN effF9_mes_jp_13_12[];
 extern const u32 effF9_mes_jp_13_14[];
 extern const u32 effF9_mes_jp_13_16[];
-extern const u32 effF9_mes_jp_13_18[];
+extern const CONN effF9_mes_jp_13_18[];
 extern const u32 effF9_mes_jp_13_20[];
-extern const u32 effF9_mes_jp_13_22[];
+extern const CONN effF9_mes_jp_13_22[];
 extern const u32 effF9_mes_jp_13_24[];
 extern const u32 effF9_mes_jp_13_26[];
 extern const u16 effF9_mes_jp_13_1[];
@@ -515,10 +515,10 @@ extern const u16 effF9_mes_jp_13_27[];
 extern const EFFF9_MESSAGE effF9_mes_jp_14[];
 extern const u32 effF9_mes_jp_14_0[];
 extern const u32 effF9_mes_jp_14_4[];
-extern const u32 effF9_mes_jp_14_6[];
-extern const u32 effF9_mes_jp_14_8[];
+extern const CONN effF9_mes_jp_14_6[];
+extern const CONN effF9_mes_jp_14_8[];
 extern const u32 effF9_mes_jp_14_10[];
-extern const u32 effF9_mes_jp_14_12[];
+extern const CONN effF9_mes_jp_14_12[];
 extern const u32 effF9_mes_jp_14_14[];
 extern const u16 effF9_mes_jp_14_1[];
 extern const u16 effF9_mes_jp_14_3[];
@@ -529,7 +529,7 @@ extern const u16 effF9_mes_jp_14_11[];
 extern const u16 effF9_mes_jp_14_13[];
 extern const u16 effF9_mes_jp_14_15[];
 extern const EFFF9_MESSAGE effF9_mes_en_0[];
-extern const u32 effF9_mes_en_0_0[];
+extern const CONN effF9_mes_en_0_0[];
 extern const u32 effF9_mes_en_0_4[];
 extern const u32 effF9_mes_en_0_6[];
 extern const u32 effF9_mes_en_0_8[];
@@ -538,8 +538,8 @@ extern const u32 effF9_mes_en_0_12[];
 extern const u32 effF9_mes_en_0_14[];
 extern const u32 effF9_mes_en_0_16[];
 extern const u32 effF9_mes_en_0_18[];
-extern const u32 effF9_mes_en_0_20[];
-extern const u32 effF9_mes_en_0_22[];
+extern const CONN effF9_mes_en_0_20[];
+extern const CONN effF9_mes_en_0_22[];
 extern const u32 effF9_mes_en_0_24[];
 extern const u32 effF9_mes_en_0_26[];
 extern const u32 effF9_mes_en_0_28[];
@@ -587,17 +587,17 @@ extern const u16 effF9_mes_en_2_17[];
 extern const u16 effF9_mes_en_2_19[];
 extern const u16 effF9_mes_en_2_21[];
 extern const EFFF9_MESSAGE effF9_mes_en_3[];
-extern const u32 effF9_mes_en_3_0[];
-extern const u32 effF9_mes_en_3_4[];
-extern const u32 effF9_mes_en_3_6[];
+extern const CONN effF9_mes_en_3_0[];
+extern const CONN effF9_mes_en_3_4[];
+extern const CONN effF9_mes_en_3_6[];
 extern const u32 effF9_mes_en_3_8[];
-extern const u32 effF9_mes_en_3_10[];
+extern const CONN effF9_mes_en_3_10[];
 extern const u32 effF9_mes_en_3_12[];
-extern const u32 effF9_mes_en_3_14[];
+extern const CONN effF9_mes_en_3_14[];
 extern const u32 effF9_mes_en_3_16[];
 extern const u32 effF9_mes_en_3_18[];
 extern const u32 effF9_mes_en_3_20[];
-extern const u32 effF9_mes_en_3_22[];
+extern const CONN effF9_mes_en_3_22[];
 extern const u32 effF9_mes_en_3_24[];
 extern const u32 effF9_mes_en_3_26[];
 extern const u32 effF9_mes_en_3_28[];
@@ -621,14 +621,14 @@ extern const u16 effF9_mes_en_3_31[];
 extern const EFFF9_MESSAGE effF9_mes_en_4[];
 extern const u32 effF9_mes_en_4_0[];
 extern const u32 effF9_mes_en_4_4[];
-extern const u32 effF9_mes_en_4_6[];
+extern const CONN effF9_mes_en_4_6[];
 extern const u32 effF9_mes_en_4_8[];
 extern const u32 effF9_mes_en_4_10[];
 extern const u32 effF9_mes_en_4_12[];
 extern const u32 effF9_mes_en_4_14[];
-extern const u32 effF9_mes_en_4_16[];
+extern const CONN effF9_mes_en_4_16[];
 extern const u32 effF9_mes_en_4_18[];
-extern const u32 effF9_mes_en_4_20[];
+extern const CONN effF9_mes_en_4_20[];
 extern const u16 effF9_mes_en_4_1[];
 extern const u16 effF9_mes_en_4_3[];
 extern const u16 effF9_mes_en_4_5[];
@@ -644,14 +644,14 @@ extern const EFFF9_MESSAGE effF9_mes_en_5[];
 extern const u32 effF9_mes_en_5_0[];
 extern const u32 effF9_mes_en_5_4[];
 extern const u32 effF9_mes_en_5_6[];
-extern const u32 effF9_mes_en_5_8[];
+extern const CONN effF9_mes_en_5_8[];
 extern const u32 effF9_mes_en_5_10[];
-extern const u32 effF9_mes_en_5_12[];
+extern const CONN effF9_mes_en_5_12[];
 extern const u32 effF9_mes_en_5_14[];
 extern const u32 effF9_mes_en_5_16[];
-extern const u32 effF9_mes_en_5_18[];
-extern const u32 effF9_mes_en_5_20[];
-extern const u32 effF9_mes_en_5_22[];
+extern const CONN effF9_mes_en_5_18[];
+extern const CONN effF9_mes_en_5_20[];
+extern const CONN effF9_mes_en_5_22[];
 extern const u32 effF9_mes_en_5_24[];
 extern const u16 effF9_mes_en_5_1[];
 extern const u16 effF9_mes_en_5_3[];
@@ -678,11 +678,11 @@ extern const u32 effF9_mes_en_6_16[];
 extern const u32 effF9_mes_en_6_18[];
 extern const u32 effF9_mes_en_6_20[];
 extern const u32 effF9_mes_en_6_22[];
-extern const u32 effF9_mes_en_6_24[];
+extern const CONN effF9_mes_en_6_24[];
 extern const u32 effF9_mes_en_6_26[];
 extern const u32 effF9_mes_en_6_28[];
 extern const u32 effF9_mes_en_6_30[];
-extern const u32 effF9_mes_en_6_32[];
+extern const CONN effF9_mes_en_6_32[];
 extern const u32 effF9_mes_en_6_34[];
 extern const u32 effF9_mes_en_6_36[];
 extern const u32 effF9_mes_en_6_38[];
@@ -717,20 +717,20 @@ extern const u16 effF9_mes_en_6_45[];
 extern const u16 effF9_mes_en_6_47[];
 extern const u16 effF9_mes_en_6_49[];
 extern const EFFF9_MESSAGE effF9_mes_en_7[];
-extern const u32 effF9_mes_en_7_0[];
+extern const CONN effF9_mes_en_7_0[];
 extern const u32 effF9_mes_en_7_4[];
 extern const u32 effF9_mes_en_7_6[];
 extern const u32 effF9_mes_en_7_8[];
 extern const u32 effF9_mes_en_7_10[];
 extern const u32 effF9_mes_en_7_12[];
-extern const u32 effF9_mes_en_7_14[];
+extern const CONN effF9_mes_en_7_14[];
 extern const u32 effF9_mes_en_7_16[];
-extern const u32 effF9_mes_en_7_18[];
+extern const CONN effF9_mes_en_7_18[];
 extern const u32 effF9_mes_en_7_20[];
-extern const u32 effF9_mes_en_7_22[];
+extern const CONN effF9_mes_en_7_22[];
 extern const u32 effF9_mes_en_7_24[];
 extern const u32 effF9_mes_en_7_26[];
-extern const u32 effF9_mes_en_7_28[];
+extern const CONN effF9_mes_en_7_28[];
 extern const u16 effF9_mes_en_7_1[];
 extern const u16 effF9_mes_en_7_3[];
 extern const u16 effF9_mes_en_7_5[];
@@ -763,7 +763,7 @@ extern const u16 effF9_mes_en_8_13[];
 extern const EFFF9_MESSAGE effF9_mes_en_9[];
 extern const u32 effF9_mes_en_9_0[];
 extern const u32 effF9_mes_en_9_4[];
-extern const u32 effF9_mes_en_9_6[];
+extern const CONN effF9_mes_en_9_6[];
 extern const u32 effF9_mes_en_9_8[];
 extern const u32 effF9_mes_en_9_10[];
 extern const u16 effF9_mes_en_9_1[];
@@ -773,17 +773,17 @@ extern const u16 effF9_mes_en_9_7[];
 extern const u16 effF9_mes_en_9_9[];
 extern const u16 effF9_mes_en_9_11[];
 extern const EFFF9_MESSAGE effF9_mes_en_10[];
-extern const u32 effF9_mes_en_10_0[];
-extern const u32 effF9_mes_en_10_4[];
-extern const u32 effF9_mes_en_10_6[];
+extern const CONN effF9_mes_en_10_0[];
+extern const CONN effF9_mes_en_10_4[];
+extern const CONN effF9_mes_en_10_6[];
 extern const u32 effF9_mes_en_10_8[];
-extern const u32 effF9_mes_en_10_10[];
+extern const CONN effF9_mes_en_10_10[];
 extern const u32 effF9_mes_en_10_12[];
-extern const u32 effF9_mes_en_10_14[];
+extern const CONN effF9_mes_en_10_14[];
 extern const u32 effF9_mes_en_10_16[];
 extern const u32 effF9_mes_en_10_18[];
 extern const u32 effF9_mes_en_10_20[];
-extern const u32 effF9_mes_en_10_22[];
+extern const CONN effF9_mes_en_10_22[];
 extern const u32 effF9_mes_en_10_24[];
 extern const u32 effF9_mes_en_10_26[];
 extern const u32 effF9_mes_en_10_28[];
@@ -805,12 +805,12 @@ extern const u16 effF9_mes_en_10_27[];
 extern const u16 effF9_mes_en_10_29[];
 extern const u16 effF9_mes_en_10_31[];
 extern const EFFF9_MESSAGE effF9_mes_en_11[];
-extern const u32 effF9_mes_en_11_0[];
-extern const u32 effF9_mes_en_11_4[];
-extern const u32 effF9_mes_en_11_6[];
-extern const u32 effF9_mes_en_11_8[];
+extern const CONN effF9_mes_en_11_0[];
+extern const CONN effF9_mes_en_11_4[];
+extern const CONN effF9_mes_en_11_6[];
+extern const CONN effF9_mes_en_11_8[];
 extern const u32 effF9_mes_en_11_10[];
-extern const u32 effF9_mes_en_11_12[];
+extern const CONN effF9_mes_en_11_12[];
 extern const u16 effF9_mes_en_11_1[];
 extern const u16 effF9_mes_en_11_3[];
 extern const u16 effF9_mes_en_11_5[];
@@ -819,14 +819,14 @@ extern const u16 effF9_mes_en_11_9[];
 extern const u16 effF9_mes_en_11_11[];
 extern const u16 effF9_mes_en_11_13[];
 extern const EFFF9_MESSAGE effF9_mes_en_12[];
-extern const u32 effF9_mes_en_12_0[];
+extern const CONN effF9_mes_en_12_0[];
 extern const u32 effF9_mes_en_12_4[];
 extern const u32 effF9_mes_en_12_6[];
 extern const u32 effF9_mes_en_12_8[];
-extern const u32 effF9_mes_en_12_10[];
+extern const CONN effF9_mes_en_12_10[];
 extern const u32 effF9_mes_en_12_12[];
 extern const u32 effF9_mes_en_12_14[];
-extern const u32 effF9_mes_en_12_16[];
+extern const CONN effF9_mes_en_12_16[];
 extern const u16 effF9_mes_en_12_1[];
 extern const u16 effF9_mes_en_12_3[];
 extern const u16 effF9_mes_en_12_5[];
@@ -842,7 +842,7 @@ extern const u32 effF9_mes_en_13_4[];
 extern const u32 effF9_mes_en_13_6[];
 extern const u32 effF9_mes_en_13_8[];
 extern const u32 effF9_mes_en_13_10[];
-extern const u32 effF9_mes_en_13_12[];
+extern const CONN effF9_mes_en_13_12[];
 extern const u32 effF9_mes_en_13_14[];
 extern const u32 effF9_mes_en_13_16[];
 extern const u32 effF9_mes_en_13_18[];
@@ -867,7 +867,7 @@ extern const u16 effF9_mes_en_13_27[];
 extern const EFFF9_MESSAGE effF9_mes_en_14[];
 extern const u32 effF9_mes_en_14_0[];
 extern const u32 effF9_mes_en_14_4[];
-extern const u32 effF9_mes_en_14_6[];
+extern const CONN effF9_mes_en_14_6[];
 extern const u32 effF9_mes_en_14_8[];
 extern const u32 effF9_mes_en_14_10[];
 extern const u32 effF9_mes_en_14_12[];
@@ -881,17 +881,17 @@ extern const u16 effF9_mes_en_14_11[];
 extern const u16 effF9_mes_en_14_13[];
 extern const u16 effF9_mes_en_14_15[];
 extern const EFFF9_MESSAGE effF9_mes_es_0[];
-extern const u32 effF9_mes_es_0_0[];
+extern const CONN effF9_mes_es_0_0[];
 extern const u32 effF9_mes_es_0_4[];
-extern const u32 effF9_mes_es_0_6[];
+extern const CONN effF9_mes_es_0_6[];
 extern const u32 effF9_mes_es_0_8[];
 extern const u32 effF9_mes_es_0_10[];
 extern const u32 effF9_mes_es_0_12[];
 extern const u32 effF9_mes_es_0_14[];
 extern const u32 effF9_mes_es_0_16[];
 extern const u32 effF9_mes_es_0_18[];
-extern const u32 effF9_mes_es_0_20[];
-extern const u32 effF9_mes_es_0_22[];
+extern const CONN effF9_mes_es_0_20[];
+extern const CONN effF9_mes_es_0_22[];
 extern const u32 effF9_mes_es_0_24[];
 extern const u32 effF9_mes_es_0_26[];
 extern const u32 effF9_mes_es_0_28[];
@@ -925,7 +925,7 @@ extern const u32 effF9_mes_es_2_10[];
 extern const u32 effF9_mes_es_2_12[];
 extern const u32 effF9_mes_es_2_14[];
 extern const u32 effF9_mes_es_2_16[];
-extern const u32 effF9_mes_es_2_18[];
+extern const CONN effF9_mes_es_2_18[];
 extern const u32 effF9_mes_es_2_20[];
 extern const u16 effF9_mes_es_2_1[];
 extern const u16 effF9_mes_es_2_3[];
@@ -939,17 +939,17 @@ extern const u16 effF9_mes_es_2_17[];
 extern const u16 effF9_mes_es_2_19[];
 extern const u16 effF9_mes_es_2_21[];
 extern const EFFF9_MESSAGE effF9_mes_es_3[];
-extern const u32 effF9_mes_es_3_0[];
-extern const u32 effF9_mes_es_3_4[];
-extern const u32 effF9_mes_es_3_6[];
+extern const CONN effF9_mes_es_3_0[];
+extern const CONN effF9_mes_es_3_4[];
+extern const CONN effF9_mes_es_3_6[];
 extern const u32 effF9_mes_es_3_8[];
-extern const u32 effF9_mes_es_3_10[];
+extern const CONN effF9_mes_es_3_10[];
 extern const u32 effF9_mes_es_3_12[];
 extern const u32 effF9_mes_es_3_14[];
-extern const u32 effF9_mes_es_3_16[];
+extern const CONN effF9_mes_es_3_16[];
 extern const u32 effF9_mes_es_3_18[];
 extern const u32 effF9_mes_es_3_20[];
-extern const u32 effF9_mes_es_3_22[];
+extern const CONN effF9_mes_es_3_22[];
 extern const u32 effF9_mes_es_3_24[];
 extern const u32 effF9_mes_es_3_26[];
 extern const u32 effF9_mes_es_3_28[];
@@ -973,13 +973,13 @@ extern const u16 effF9_mes_es_3_31[];
 extern const EFFF9_MESSAGE effF9_mes_es_4[];
 extern const u32 effF9_mes_es_4_0[];
 extern const u32 effF9_mes_es_4_4[];
-extern const u32 effF9_mes_es_4_6[];
+extern const CONN effF9_mes_es_4_6[];
 extern const u32 effF9_mes_es_4_8[];
 extern const u32 effF9_mes_es_4_10[];
 extern const u32 effF9_mes_es_4_12[];
 extern const u32 effF9_mes_es_4_14[];
-extern const u32 effF9_mes_es_4_16[];
-extern const u32 effF9_mes_es_4_18[];
+extern const CONN effF9_mes_es_4_16[];
+extern const CONN effF9_mes_es_4_18[];
 extern const u32 effF9_mes_es_4_20[];
 extern const u16 effF9_mes_es_4_1[];
 extern const u16 effF9_mes_es_4_3[];
@@ -998,13 +998,13 @@ extern const u32 effF9_mes_es_5_4[];
 extern const u32 effF9_mes_es_5_6[];
 extern const u32 effF9_mes_es_5_8[];
 extern const u32 effF9_mes_es_5_10[];
-extern const u32 effF9_mes_es_5_12[];
+extern const CONN effF9_mes_es_5_12[];
 extern const u32 effF9_mes_es_5_14[];
 extern const u32 effF9_mes_es_5_16[];
-extern const u32 effF9_mes_es_5_18[];
-extern const u32 effF9_mes_es_5_20[];
-extern const u32 effF9_mes_es_5_22[];
-extern const u32 effF9_mes_es_5_24[];
+extern const CONN effF9_mes_es_5_18[];
+extern const CONN effF9_mes_es_5_20[];
+extern const CONN effF9_mes_es_5_22[];
+extern const CONN effF9_mes_es_5_24[];
 extern const u16 effF9_mes_es_5_1[];
 extern const u16 effF9_mes_es_5_3[];
 extern const u16 effF9_mes_es_5_5[];
@@ -1033,8 +1033,8 @@ extern const u32 effF9_mes_es_6_22[];
 extern const u32 effF9_mes_es_6_24[];
 extern const u32 effF9_mes_es_6_26[];
 extern const u32 effF9_mes_es_6_28[];
-extern const u32 effF9_mes_es_6_30[];
-extern const u32 effF9_mes_es_6_32[];
+extern const CONN effF9_mes_es_6_30[];
+extern const CONN effF9_mes_es_6_32[];
 extern const u32 effF9_mes_es_6_34[];
 extern const u32 effF9_mes_es_6_36[];
 extern const u32 effF9_mes_es_6_38[];
@@ -1069,19 +1069,19 @@ extern const u16 effF9_mes_es_6_45[];
 extern const u16 effF9_mes_es_6_47[];
 extern const u16 effF9_mes_es_6_49[];
 extern const EFFF9_MESSAGE effF9_mes_es_7[];
-extern const u32 effF9_mes_es_7_0[];
+extern const CONN effF9_mes_es_7_0[];
 extern const u32 effF9_mes_es_7_4[];
-extern const u32 effF9_mes_es_7_6[];
+extern const CONN effF9_mes_es_7_6[];
 extern const u32 effF9_mes_es_7_8[];
 extern const u32 effF9_mes_es_7_10[];
 extern const u32 effF9_mes_es_7_12[];
 extern const u32 effF9_mes_es_7_14[];
 extern const u32 effF9_mes_es_7_16[];
-extern const u32 effF9_mes_es_7_18[];
-extern const u32 effF9_mes_es_7_20[];
-extern const u32 effF9_mes_es_7_22[];
+extern const CONN effF9_mes_es_7_18[];
+extern const CONN effF9_mes_es_7_20[];
+extern const CONN effF9_mes_es_7_22[];
 extern const u32 effF9_mes_es_7_24[];
-extern const u32 effF9_mes_es_7_26[];
+extern const CONN effF9_mes_es_7_26[];
 extern const u32 effF9_mes_es_7_28[];
 extern const u16 effF9_mes_es_7_1[];
 extern const u16 effF9_mes_es_7_3[];
@@ -1115,7 +1115,7 @@ extern const u16 effF9_mes_es_8_13[];
 extern const EFFF9_MESSAGE effF9_mes_es_9[];
 extern const u32 effF9_mes_es_9_0[];
 extern const u32 effF9_mes_es_9_4[];
-extern const u32 effF9_mes_es_9_6[];
+extern const CONN effF9_mes_es_9_6[];
 extern const u32 effF9_mes_es_9_8[];
 extern const u32 effF9_mes_es_9_10[];
 extern const u16 effF9_mes_es_9_1[];
@@ -1125,17 +1125,17 @@ extern const u16 effF9_mes_es_9_7[];
 extern const u16 effF9_mes_es_9_9[];
 extern const u16 effF9_mes_es_9_11[];
 extern const EFFF9_MESSAGE effF9_mes_es_10[];
-extern const u32 effF9_mes_es_10_0[];
-extern const u32 effF9_mes_es_10_4[];
-extern const u32 effF9_mes_es_10_6[];
+extern const CONN effF9_mes_es_10_0[];
+extern const CONN effF9_mes_es_10_4[];
+extern const CONN effF9_mes_es_10_6[];
 extern const u32 effF9_mes_es_10_8[];
-extern const u32 effF9_mes_es_10_10[];
+extern const CONN effF9_mes_es_10_10[];
 extern const u32 effF9_mes_es_10_12[];
 extern const u32 effF9_mes_es_10_14[];
-extern const u32 effF9_mes_es_10_16[];
+extern const CONN effF9_mes_es_10_16[];
 extern const u32 effF9_mes_es_10_18[];
 extern const u32 effF9_mes_es_10_20[];
-extern const u32 effF9_mes_es_10_22[];
+extern const CONN effF9_mes_es_10_22[];
 extern const u32 effF9_mes_es_10_24[];
 extern const u32 effF9_mes_es_10_26[];
 extern const u32 effF9_mes_es_10_28[];
@@ -1157,10 +1157,10 @@ extern const u16 effF9_mes_es_10_27[];
 extern const u16 effF9_mes_es_10_29[];
 extern const u16 effF9_mes_es_10_31[];
 extern const EFFF9_MESSAGE effF9_mes_es_11[];
-extern const u32 effF9_mes_es_11_0[];
-extern const u32 effF9_mes_es_11_4[];
-extern const u32 effF9_mes_es_11_6[];
-extern const u32 effF9_mes_es_11_8[];
+extern const CONN effF9_mes_es_11_0[];
+extern const CONN effF9_mes_es_11_4[];
+extern const CONN effF9_mes_es_11_6[];
+extern const CONN effF9_mes_es_11_8[];
 extern const u32 effF9_mes_es_11_10[];
 extern const u32 effF9_mes_es_11_12[];
 extern const u16 effF9_mes_es_11_1[];
@@ -1171,14 +1171,14 @@ extern const u16 effF9_mes_es_11_9[];
 extern const u16 effF9_mes_es_11_11[];
 extern const u16 effF9_mes_es_11_13[];
 extern const EFFF9_MESSAGE effF9_mes_es_12[];
-extern const u32 effF9_mes_es_12_0[];
+extern const CONN effF9_mes_es_12_0[];
 extern const u32 effF9_mes_es_12_4[];
 extern const u32 effF9_mes_es_12_6[];
 extern const u32 effF9_mes_es_12_8[];
-extern const u32 effF9_mes_es_12_10[];
+extern const CONN effF9_mes_es_12_10[];
 extern const u32 effF9_mes_es_12_12[];
 extern const u32 effF9_mes_es_12_14[];
-extern const u32 effF9_mes_es_12_16[];
+extern const CONN effF9_mes_es_12_16[];
 extern const u16 effF9_mes_es_12_1[];
 extern const u16 effF9_mes_es_12_3[];
 extern const u16 effF9_mes_es_12_5[];
@@ -1194,14 +1194,14 @@ extern const u32 effF9_mes_es_13_4[];
 extern const u32 effF9_mes_es_13_6[];
 extern const u32 effF9_mes_es_13_8[];
 extern const u32 effF9_mes_es_13_10[];
-extern const u32 effF9_mes_es_13_12[];
+extern const CONN effF9_mes_es_13_12[];
 extern const u32 effF9_mes_es_13_14[];
 extern const u32 effF9_mes_es_13_16[];
 extern const u32 effF9_mes_es_13_18[];
 extern const u32 effF9_mes_es_13_20[];
 extern const u32 effF9_mes_es_13_22[];
 extern const u32 effF9_mes_es_13_24[];
-extern const u32 effF9_mes_es_13_26[];
+extern const CONN effF9_mes_es_13_26[];
 extern const u16 effF9_mes_es_13_1[];
 extern const u16 effF9_mes_es_13_3[];
 extern const u16 effF9_mes_es_13_5[];
@@ -1217,10 +1217,10 @@ extern const u16 effF9_mes_es_13_23[];
 extern const u16 effF9_mes_es_13_25[];
 extern const u16 effF9_mes_es_13_27[];
 extern const EFFF9_MESSAGE effF9_mes_es_14[];
-extern const u32 effF9_mes_es_14_0[];
+extern const CONN effF9_mes_es_14_0[];
 extern const u32 effF9_mes_es_14_4[];
-extern const u32 effF9_mes_es_14_6[];
-extern const u32 effF9_mes_es_14_8[];
+extern const CONN effF9_mes_es_14_6[];
+extern const CONN effF9_mes_es_14_8[];
 extern const u32 effF9_mes_es_14_10[];
 extern const u32 effF9_mes_es_14_12[];
 extern const u32 effF9_mes_es_14_14[];
@@ -1233,16 +1233,16 @@ extern const u16 effF9_mes_es_14_11[];
 extern const u16 effF9_mes_es_14_13[];
 extern const u16 effF9_mes_es_14_15[];
 extern const EFFF9_MESSAGE effF9_mes_pt_0[];
-extern const u32 effF9_mes_pt_0_0[];
+extern const CONN effF9_mes_pt_0_0[];
 extern const u32 effF9_mes_pt_0_4[];
-extern const u32 effF9_mes_pt_0_6[];
+extern const CONN effF9_mes_pt_0_6[];
 extern const u32 effF9_mes_pt_0_8[];
 extern const u32 effF9_mes_pt_0_10[];
 extern const u32 effF9_mes_pt_0_12[];
 extern const u32 effF9_mes_pt_0_14[];
 extern const u32 effF9_mes_pt_0_16[];
 extern const u32 effF9_mes_pt_0_18[];
-extern const u32 effF9_mes_pt_0_20[];
+extern const CONN effF9_mes_pt_0_20[];
 extern const u32 effF9_mes_pt_0_22[];
 extern const u32 effF9_mes_pt_0_24[];
 extern const u32 effF9_mes_pt_0_26[];
@@ -1277,7 +1277,7 @@ extern const u32 effF9_mes_pt_2_10[];
 extern const u32 effF9_mes_pt_2_12[];
 extern const u32 effF9_mes_pt_2_14[];
 extern const u32 effF9_mes_pt_2_16[];
-extern const u32 effF9_mes_pt_2_18[];
+extern const CONN effF9_mes_pt_2_18[];
 extern const u32 effF9_mes_pt_2_20[];
 extern const u16 effF9_mes_pt_2_1[];
 extern const u16 effF9_mes_pt_2_3[];
@@ -1291,17 +1291,17 @@ extern const u16 effF9_mes_pt_2_17[];
 extern const u16 effF9_mes_pt_2_19[];
 extern const u16 effF9_mes_pt_2_21[];
 extern const EFFF9_MESSAGE effF9_mes_pt_3[];
-extern const u32 effF9_mes_pt_3_0[];
-extern const u32 effF9_mes_pt_3_4[];
-extern const u32 effF9_mes_pt_3_6[];
+extern const CONN effF9_mes_pt_3_0[];
+extern const CONN effF9_mes_pt_3_4[];
+extern const CONN effF9_mes_pt_3_6[];
 extern const u32 effF9_mes_pt_3_8[];
-extern const u32 effF9_mes_pt_3_10[];
-extern const u32 effF9_mes_pt_3_12[];
+extern const CONN effF9_mes_pt_3_10[];
+extern const CONN effF9_mes_pt_3_12[];
 extern const u32 effF9_mes_pt_3_14[];
 extern const u32 effF9_mes_pt_3_16[];
 extern const u32 effF9_mes_pt_3_18[];
 extern const u32 effF9_mes_pt_3_20[];
-extern const u32 effF9_mes_pt_3_22[];
+extern const CONN effF9_mes_pt_3_22[];
 extern const u32 effF9_mes_pt_3_24[];
 extern const u32 effF9_mes_pt_3_26[];
 extern const u32 effF9_mes_pt_3_28[];
@@ -1325,14 +1325,14 @@ extern const u16 effF9_mes_pt_3_31[];
 extern const EFFF9_MESSAGE effF9_mes_pt_4[];
 extern const u32 effF9_mes_pt_4_0[];
 extern const u32 effF9_mes_pt_4_4[];
-extern const u32 effF9_mes_pt_4_6[];
+extern const CONN effF9_mes_pt_4_6[];
 extern const u32 effF9_mes_pt_4_8[];
 extern const u32 effF9_mes_pt_4_10[];
 extern const u32 effF9_mes_pt_4_12[];
 extern const u32 effF9_mes_pt_4_14[];
-extern const u32 effF9_mes_pt_4_16[];
-extern const u32 effF9_mes_pt_4_18[];
-extern const u32 effF9_mes_pt_4_20[];
+extern const CONN effF9_mes_pt_4_16[];
+extern const CONN effF9_mes_pt_4_18[];
+extern const CONN effF9_mes_pt_4_20[];
 extern const u16 effF9_mes_pt_4_1[];
 extern const u16 effF9_mes_pt_4_3[];
 extern const u16 effF9_mes_pt_4_5[];
@@ -1350,13 +1350,13 @@ extern const u32 effF9_mes_pt_5_4[];
 extern const u32 effF9_mes_pt_5_6[];
 extern const u32 effF9_mes_pt_5_8[];
 extern const u32 effF9_mes_pt_5_10[];
-extern const u32 effF9_mes_pt_5_12[];
+extern const CONN effF9_mes_pt_5_12[];
 extern const u32 effF9_mes_pt_5_14[];
 extern const u32 effF9_mes_pt_5_16[];
 extern const u32 effF9_mes_pt_5_18[];
-extern const u32 effF9_mes_pt_5_20[];
-extern const u32 effF9_mes_pt_5_22[];
-extern const u32 effF9_mes_pt_5_24[];
+extern const CONN effF9_mes_pt_5_20[];
+extern const CONN effF9_mes_pt_5_22[];
+extern const CONN effF9_mes_pt_5_24[];
 extern const u16 effF9_mes_pt_5_1[];
 extern const u16 effF9_mes_pt_5_3[];
 extern const u16 effF9_mes_pt_5_5[];
@@ -1373,7 +1373,7 @@ extern const u16 effF9_mes_pt_5_25[];
 extern const EFFF9_MESSAGE effF9_mes_pt_6[];
 extern const u32 effF9_mes_pt_6_0[];
 extern const u32 effF9_mes_pt_6_4[];
-extern const u32 effF9_mes_pt_6_6[];
+extern const CONN effF9_mes_pt_6_6[];
 extern const u32 effF9_mes_pt_6_8[];
 extern const u32 effF9_mes_pt_6_10[];
 extern const u32 effF9_mes_pt_6_12[];
@@ -1385,8 +1385,8 @@ extern const u32 effF9_mes_pt_6_22[];
 extern const u32 effF9_mes_pt_6_24[];
 extern const u32 effF9_mes_pt_6_26[];
 extern const u32 effF9_mes_pt_6_28[];
-extern const u32 effF9_mes_pt_6_30[];
-extern const u32 effF9_mes_pt_6_32[];
+extern const CONN effF9_mes_pt_6_30[];
+extern const CONN effF9_mes_pt_6_32[];
 extern const u32 effF9_mes_pt_6_34[];
 extern const u32 effF9_mes_pt_6_36[];
 extern const u32 effF9_mes_pt_6_38[];
@@ -1421,19 +1421,19 @@ extern const u16 effF9_mes_pt_6_45[];
 extern const u16 effF9_mes_pt_6_47[];
 extern const u16 effF9_mes_pt_6_49[];
 extern const EFFF9_MESSAGE effF9_mes_pt_7[];
-extern const u32 effF9_mes_pt_7_0[];
+extern const CONN effF9_mes_pt_7_0[];
 extern const u32 effF9_mes_pt_7_4[];
-extern const u32 effF9_mes_pt_7_6[];
+extern const CONN effF9_mes_pt_7_6[];
 extern const u32 effF9_mes_pt_7_8[];
 extern const u32 effF9_mes_pt_7_10[];
 extern const u32 effF9_mes_pt_7_12[];
-extern const u32 effF9_mes_pt_7_14[];
+extern const CONN effF9_mes_pt_7_14[];
 extern const u32 effF9_mes_pt_7_16[];
-extern const u32 effF9_mes_pt_7_18[];
+extern const CONN effF9_mes_pt_7_18[];
 extern const u32 effF9_mes_pt_7_20[];
-extern const u32 effF9_mes_pt_7_22[];
+extern const CONN effF9_mes_pt_7_22[];
 extern const u32 effF9_mes_pt_7_24[];
-extern const u32 effF9_mes_pt_7_26[];
+extern const CONN effF9_mes_pt_7_26[];
 extern const u32 effF9_mes_pt_7_28[];
 extern const u16 effF9_mes_pt_7_1[];
 extern const u16 effF9_mes_pt_7_3[];
@@ -1477,17 +1477,17 @@ extern const u16 effF9_mes_pt_9_7[];
 extern const u16 effF9_mes_pt_9_9[];
 extern const u16 effF9_mes_pt_9_11[];
 extern const EFFF9_MESSAGE effF9_mes_pt_10[];
-extern const u32 effF9_mes_pt_10_0[];
-extern const u32 effF9_mes_pt_10_4[];
-extern const u32 effF9_mes_pt_10_6[];
+extern const CONN effF9_mes_pt_10_0[];
+extern const CONN effF9_mes_pt_10_4[];
+extern const CONN effF9_mes_pt_10_6[];
 extern const u32 effF9_mes_pt_10_8[];
-extern const u32 effF9_mes_pt_10_10[];
-extern const u32 effF9_mes_pt_10_12[];
+extern const CONN effF9_mes_pt_10_10[];
+extern const CONN effF9_mes_pt_10_12[];
 extern const u32 effF9_mes_pt_10_14[];
 extern const u32 effF9_mes_pt_10_16[];
 extern const u32 effF9_mes_pt_10_18[];
 extern const u32 effF9_mes_pt_10_20[];
-extern const u32 effF9_mes_pt_10_22[];
+extern const CONN effF9_mes_pt_10_22[];
 extern const u32 effF9_mes_pt_10_24[];
 extern const u32 effF9_mes_pt_10_26[];
 extern const u32 effF9_mes_pt_10_28[];
@@ -1510,11 +1510,11 @@ extern const u16 effF9_mes_pt_10_29[];
 extern const u16 effF9_mes_pt_10_31[];
 extern const EFFF9_MESSAGE effF9_mes_pt_11[];
 extern const u32 effF9_mes_pt_11_0[];
-extern const u32 effF9_mes_pt_11_4[];
-extern const u32 effF9_mes_pt_11_6[];
+extern const CONN effF9_mes_pt_11_4[];
+extern const CONN effF9_mes_pt_11_6[];
 extern const u32 effF9_mes_pt_11_8[];
 extern const u32 effF9_mes_pt_11_10[];
-extern const u32 effF9_mes_pt_11_12[];
+extern const CONN effF9_mes_pt_11_12[];
 extern const u16 effF9_mes_pt_11_1[];
 extern const u16 effF9_mes_pt_11_3[];
 extern const u16 effF9_mes_pt_11_5[];
@@ -1523,14 +1523,14 @@ extern const u16 effF9_mes_pt_11_9[];
 extern const u16 effF9_mes_pt_11_11[];
 extern const u16 effF9_mes_pt_11_13[];
 extern const EFFF9_MESSAGE effF9_mes_pt_12[];
-extern const u32 effF9_mes_pt_12_0[];
+extern const CONN effF9_mes_pt_12_0[];
 extern const u32 effF9_mes_pt_12_4[];
 extern const u32 effF9_mes_pt_12_6[];
 extern const u32 effF9_mes_pt_12_8[];
-extern const u32 effF9_mes_pt_12_10[];
+extern const CONN effF9_mes_pt_12_10[];
 extern const u32 effF9_mes_pt_12_12[];
 extern const u32 effF9_mes_pt_12_14[];
-extern const u32 effF9_mes_pt_12_16[];
+extern const CONN effF9_mes_pt_12_16[];
 extern const u16 effF9_mes_pt_12_1[];
 extern const u16 effF9_mes_pt_12_3[];
 extern const u16 effF9_mes_pt_12_5[];
@@ -1546,7 +1546,7 @@ extern const u32 effF9_mes_pt_13_4[];
 extern const u32 effF9_mes_pt_13_6[];
 extern const u32 effF9_mes_pt_13_8[];
 extern const u32 effF9_mes_pt_13_10[];
-extern const u32 effF9_mes_pt_13_12[];
+extern const CONN effF9_mes_pt_13_12[];
 extern const u32 effF9_mes_pt_13_14[];
 extern const u32 effF9_mes_pt_13_16[];
 extern const u32 effF9_mes_pt_13_18[];
@@ -1570,7 +1570,7 @@ extern const u16 effF9_mes_pt_13_25[];
 extern const u16 effF9_mes_pt_13_27[];
 extern const EFFF9_MESSAGE effF9_mes_pt_14[];
 extern const u32 effF9_mes_pt_14_0[];
-extern const u32 effF9_mes_pt_14_4[];
+extern const CONN effF9_mes_pt_14_4[];
 extern const u32 effF9_mes_pt_14_6[];
 extern const u32 effF9_mes_pt_14_8[];
 extern const u32 effF9_mes_pt_14_10[];
@@ -1586,33 +1586,33 @@ extern const u16 effF9_mes_pt_14_13[];
 extern const u16 effF9_mes_pt_14_15[];
 extern const EFFB8_MESSAGE effB8_mes_jp_0[];
 extern const u32 effB8_mes_jp_0_0[];
-extern const u32 effB8_mes_jp_0_4[];
+extern const CONN effB8_mes_jp_0_4[];
 extern const u32 effB8_mes_jp_0_6[];
 extern const u32 effB8_mes_jp_0_8[];
 extern const u32 effB8_mes_jp_0_10[];
-extern const u32 effB8_mes_jp_0_12[];
+extern const CONN effB8_mes_jp_0_12[];
 extern const u32 effB8_mes_jp_0_14[];
 extern const u32 effB8_mes_jp_0_16[];
 extern const u32 effB8_mes_jp_0_18[];
 extern const u32 effB8_mes_jp_0_20[];
 extern const u32 effB8_mes_jp_0_22[];
-extern const u32 effB8_mes_jp_0_24[];
+extern const CONN effB8_mes_jp_0_24[];
 extern const u32 effB8_mes_jp_0_26[];
 extern const u32 effB8_mes_jp_0_28[];
-extern const u32 effB8_mes_jp_0_30[];
+extern const CONN effB8_mes_jp_0_30[];
 extern const u32 effB8_mes_jp_0_32[];
 extern const u32 effB8_mes_jp_0_34[];
-extern const u32 effB8_mes_jp_0_36[];
+extern const CONN effB8_mes_jp_0_36[];
 extern const u32 effB8_mes_jp_0_38[];
 extern const u32 effB8_mes_jp_0_40[];
-extern const u32 effB8_mes_jp_0_42[];
+extern const CONN effB8_mes_jp_0_42[];
 extern const u32 effB8_mes_jp_0_44[];
 extern const u32 effB8_mes_jp_0_46[];
-extern const u32 effB8_mes_jp_0_48[];
-extern const u32 effB8_mes_jp_0_50[];
+extern const CONN effB8_mes_jp_0_48[];
+extern const CONN effB8_mes_jp_0_50[];
 extern const u32 effB8_mes_jp_0_52[];
 extern const u32 effB8_mes_jp_0_54[];
-extern const u32 effB8_mes_jp_0_56[];
+extern const CONN effB8_mes_jp_0_56[];
 extern const u32 effB8_mes_jp_0_58[];
 extern const u16 effB8_mes_jp_0_1[];
 extern const u16 effB8_mes_jp_0_3[];
@@ -1645,33 +1645,33 @@ extern const u16 effB8_mes_jp_0_55[];
 extern const u16 effB8_mes_jp_0_57[];
 extern const u16 effB8_mes_jp_0_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_1[];
-extern const u32 effB8_mes_jp_1_0[];
+extern const CONN effB8_mes_jp_1_0[];
 extern const u32 effB8_mes_jp_1_4[];
 extern const u32 effB8_mes_jp_1_6[];
 extern const u32 effB8_mes_jp_1_8[];
-extern const u32 effB8_mes_jp_1_10[];
+extern const CONN effB8_mes_jp_1_10[];
 extern const u32 effB8_mes_jp_1_12[];
 extern const u32 effB8_mes_jp_1_14[];
 extern const u32 effB8_mes_jp_1_16[];
-extern const u32 effB8_mes_jp_1_18[];
+extern const CONN effB8_mes_jp_1_18[];
 extern const u32 effB8_mes_jp_1_20[];
 extern const u32 effB8_mes_jp_1_22[];
-extern const u32 effB8_mes_jp_1_24[];
+extern const CONN effB8_mes_jp_1_24[];
 extern const u32 effB8_mes_jp_1_26[];
-extern const u32 effB8_mes_jp_1_28[];
+extern const CONN effB8_mes_jp_1_28[];
 extern const u32 effB8_mes_jp_1_30[];
 extern const u32 effB8_mes_jp_1_32[];
-extern const u32 effB8_mes_jp_1_34[];
+extern const CONN effB8_mes_jp_1_34[];
 extern const u32 effB8_mes_jp_1_36[];
 extern const u32 effB8_mes_jp_1_38[];
-extern const u32 effB8_mes_jp_1_40[];
+extern const CONN effB8_mes_jp_1_40[];
 extern const u32 effB8_mes_jp_1_42[];
 extern const u32 effB8_mes_jp_1_48[];
-extern const u32 effB8_mes_jp_1_50[];
+extern const CONN effB8_mes_jp_1_50[];
 extern const u32 effB8_mes_jp_1_52[];
 extern const u32 effB8_mes_jp_1_54[];
 extern const u32 effB8_mes_jp_1_56[];
-extern const u32 effB8_mes_jp_1_58[];
+extern const CONN effB8_mes_jp_1_58[];
 extern const u16 effB8_mes_jp_1_1[];
 extern const u16 effB8_mes_jp_1_3[];
 extern const u16 effB8_mes_jp_1_5[];
@@ -1704,33 +1704,33 @@ extern const u16 effB8_mes_jp_1_57[];
 extern const u16 effB8_mes_jp_1_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_2[];
 extern const u32 effB8_mes_jp_2_0[];
-extern const u32 effB8_mes_jp_2_2[];
+extern const CONN effB8_mes_jp_2_2[];
 extern const u32 effB8_mes_jp_2_4[];
 extern const u32 effB8_mes_jp_2_6[];
-extern const u32 effB8_mes_jp_2_8[];
+extern const CONN effB8_mes_jp_2_8[];
 extern const u32 effB8_mes_jp_2_10[];
-extern const u32 effB8_mes_jp_2_12[];
+extern const CONN effB8_mes_jp_2_12[];
 extern const u32 effB8_mes_jp_2_14[];
 extern const u32 effB8_mes_jp_2_16[];
 extern const u32 effB8_mes_jp_2_18[];
-extern const u32 effB8_mes_jp_2_20[];
+extern const CONN effB8_mes_jp_2_20[];
 extern const u32 effB8_mes_jp_2_22[];
-extern const u32 effB8_mes_jp_2_24[];
+extern const CONN effB8_mes_jp_2_24[];
 extern const u32 effB8_mes_jp_2_26[];
 extern const u32 effB8_mes_jp_2_28[];
-extern const u32 effB8_mes_jp_2_30[];
+extern const CONN effB8_mes_jp_2_30[];
 extern const u32 effB8_mes_jp_2_32[];
-extern const u32 effB8_mes_jp_2_34[];
-extern const u32 effB8_mes_jp_2_36[];
+extern const CONN effB8_mes_jp_2_34[];
+extern const CONN effB8_mes_jp_2_36[];
 extern const u32 effB8_mes_jp_2_38[];
-extern const u32 effB8_mes_jp_2_40[];
+extern const CONN effB8_mes_jp_2_40[];
 extern const u32 effB8_mes_jp_2_42[];
-extern const u32 effB8_mes_jp_2_48[];
+extern const CONN effB8_mes_jp_2_48[];
 extern const u32 effB8_mes_jp_2_50[];
-extern const u32 effB8_mes_jp_2_52[];
+extern const CONN effB8_mes_jp_2_52[];
 extern const u32 effB8_mes_jp_2_54[];
 extern const u32 effB8_mes_jp_2_56[];
-extern const u32 effB8_mes_jp_2_58[];
+extern const CONN effB8_mes_jp_2_58[];
 extern const u16 effB8_mes_jp_2_1[];
 extern const u16 effB8_mes_jp_2_3[];
 extern const u16 effB8_mes_jp_2_5[];
@@ -1762,32 +1762,32 @@ extern const u16 effB8_mes_jp_2_55[];
 extern const u16 effB8_mes_jp_2_57[];
 extern const u16 effB8_mes_jp_2_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_3[];
-extern const u32 effB8_mes_jp_3_0[];
+extern const CONN effB8_mes_jp_3_0[];
 extern const u32 effB8_mes_jp_3_2[];
 extern const u32 effB8_mes_jp_3_4[];
-extern const u32 effB8_mes_jp_3_6[];
+extern const CONN effB8_mes_jp_3_6[];
 extern const u32 effB8_mes_jp_3_8[];
 extern const u32 effB8_mes_jp_3_10[];
 extern const u32 effB8_mes_jp_3_12[];
 extern const u32 effB8_mes_jp_3_14[];
-extern const u32 effB8_mes_jp_3_16[];
+extern const CONN effB8_mes_jp_3_16[];
 extern const u32 effB8_mes_jp_3_18[];
 extern const u32 effB8_mes_jp_3_20[];
-extern const u32 effB8_mes_jp_3_22[];
+extern const CONN effB8_mes_jp_3_22[];
 extern const u32 effB8_mes_jp_3_24[];
 extern const u32 effB8_mes_jp_3_26[];
-extern const u32 effB8_mes_jp_3_28[];
+extern const CONN effB8_mes_jp_3_28[];
 extern const u32 effB8_mes_jp_3_30[];
-extern const u32 effB8_mes_jp_3_32[];
+extern const CONN effB8_mes_jp_3_32[];
 extern const u32 effB8_mes_jp_3_34[];
-extern const u32 effB8_mes_jp_3_36[];
+extern const CONN effB8_mes_jp_3_36[];
 extern const u32 effB8_mes_jp_3_38[];
 extern const u32 effB8_mes_jp_3_40[];
-extern const u32 effB8_mes_jp_3_42[];
+extern const CONN effB8_mes_jp_3_42[];
 extern const u32 effB8_mes_jp_3_48[];
-extern const u32 effB8_mes_jp_3_50[];
+extern const CONN effB8_mes_jp_3_50[];
 extern const u32 effB8_mes_jp_3_52[];
-extern const u32 effB8_mes_jp_3_54[];
+extern const CONN effB8_mes_jp_3_54[];
 extern const u32 effB8_mes_jp_3_56[];
 extern const u32 effB8_mes_jp_3_58[];
 extern const u16 effB8_mes_jp_3_1[];
@@ -1822,32 +1822,32 @@ extern const u16 effB8_mes_jp_3_57[];
 extern const u16 effB8_mes_jp_3_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_4[];
 extern const u32 effB8_mes_jp_4_0[];
-extern const u32 effB8_mes_jp_4_4[];
+extern const CONN effB8_mes_jp_4_4[];
 extern const u32 effB8_mes_jp_4_6[];
 extern const u32 effB8_mes_jp_4_8[];
 extern const u32 effB8_mes_jp_4_10[];
 extern const u32 effB8_mes_jp_4_12[];
 extern const u32 effB8_mes_jp_4_14[];
 extern const u32 effB8_mes_jp_4_16[];
-extern const u32 effB8_mes_jp_4_18[];
+extern const CONN effB8_mes_jp_4_18[];
 extern const u32 effB8_mes_jp_4_20[];
-extern const u32 effB8_mes_jp_4_22[];
+extern const CONN effB8_mes_jp_4_22[];
 extern const u32 effB8_mes_jp_4_24[];
-extern const u32 effB8_mes_jp_4_26[];
+extern const CONN effB8_mes_jp_4_26[];
 extern const u32 effB8_mes_jp_4_28[];
 extern const u32 effB8_mes_jp_4_30[];
-extern const u32 effB8_mes_jp_4_32[];
+extern const CONN effB8_mes_jp_4_32[];
 extern const u32 effB8_mes_jp_4_34[];
 extern const u32 effB8_mes_jp_4_36[];
 extern const u32 effB8_mes_jp_4_38[];
-extern const u32 effB8_mes_jp_4_40[];
+extern const CONN effB8_mes_jp_4_40[];
 extern const u32 effB8_mes_jp_4_42[];
-extern const u32 effB8_mes_jp_4_48[];
+extern const CONN effB8_mes_jp_4_48[];
 extern const u32 effB8_mes_jp_4_50[];
 extern const u32 effB8_mes_jp_4_52[];
-extern const u32 effB8_mes_jp_4_54[];
+extern const CONN effB8_mes_jp_4_54[];
 extern const u32 effB8_mes_jp_4_56[];
-extern const u32 effB8_mes_jp_4_58[];
+extern const CONN effB8_mes_jp_4_58[];
 extern const u16 effB8_mes_jp_4_1[];
 extern const u16 effB8_mes_jp_4_3[];
 extern const u16 effB8_mes_jp_4_5[];
@@ -1879,33 +1879,33 @@ extern const u16 effB8_mes_jp_4_55[];
 extern const u16 effB8_mes_jp_4_57[];
 extern const u16 effB8_mes_jp_4_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_5[];
-extern const u32 effB8_mes_jp_5_0[];
+extern const CONN effB8_mes_jp_5_0[];
 extern const u32 effB8_mes_jp_5_4[];
 extern const u32 effB8_mes_jp_5_6[];
-extern const u32 effB8_mes_jp_5_8[];
+extern const CONN effB8_mes_jp_5_8[];
 extern const u32 effB8_mes_jp_5_10[];
 extern const u32 effB8_mes_jp_5_12[];
-extern const u32 effB8_mes_jp_5_14[];
+extern const CONN effB8_mes_jp_5_14[];
 extern const u32 effB8_mes_jp_5_16[];
 extern const u32 effB8_mes_jp_5_18[];
-extern const u32 effB8_mes_jp_5_20[];
+extern const CONN effB8_mes_jp_5_20[];
 extern const u32 effB8_mes_jp_5_22[];
 extern const u32 effB8_mes_jp_5_24[];
 extern const u32 effB8_mes_jp_5_26[];
-extern const u32 effB8_mes_jp_5_28[];
+extern const CONN effB8_mes_jp_5_28[];
 extern const u32 effB8_mes_jp_5_30[];
-extern const u32 effB8_mes_jp_5_32[];
+extern const CONN effB8_mes_jp_5_32[];
 extern const u32 effB8_mes_jp_5_34[];
 extern const u32 effB8_mes_jp_5_36[];
 extern const u32 effB8_mes_jp_5_38[];
-extern const u32 effB8_mes_jp_5_40[];
+extern const CONN effB8_mes_jp_5_40[];
 extern const u32 effB8_mes_jp_5_42[];
-extern const u32 effB8_mes_jp_5_48[];
+extern const CONN effB8_mes_jp_5_48[];
 extern const u32 effB8_mes_jp_5_50[];
-extern const u32 effB8_mes_jp_5_52[];
+extern const CONN effB8_mes_jp_5_52[];
 extern const u32 effB8_mes_jp_5_54[];
 extern const u32 effB8_mes_jp_5_56[];
-extern const u32 effB8_mes_jp_5_58[];
+extern const CONN effB8_mes_jp_5_58[];
 extern const u16 effB8_mes_jp_5_1[];
 extern const u16 effB8_mes_jp_5_3[];
 extern const u16 effB8_mes_jp_5_5[];
@@ -1938,33 +1938,33 @@ extern const u16 effB8_mes_jp_5_57[];
 extern const u16 effB8_mes_jp_5_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_6[];
 extern const u32 effB8_mes_jp_6_0[];
-extern const u32 effB8_mes_jp_6_2[];
+extern const CONN effB8_mes_jp_6_2[];
 extern const u32 effB8_mes_jp_6_4[];
 extern const u32 effB8_mes_jp_6_6[];
-extern const u32 effB8_mes_jp_6_8[];
+extern const CONN effB8_mes_jp_6_8[];
 extern const u32 effB8_mes_jp_6_10[];
 extern const u32 effB8_mes_jp_6_12[];
-extern const u32 effB8_mes_jp_6_14[];
+extern const CONN effB8_mes_jp_6_14[];
 extern const u32 effB8_mes_jp_6_16[];
 extern const u32 effB8_mes_jp_6_18[];
 extern const u32 effB8_mes_jp_6_20[];
-extern const u32 effB8_mes_jp_6_22[];
+extern const CONN effB8_mes_jp_6_22[];
 extern const u32 effB8_mes_jp_6_24[];
 extern const u32 effB8_mes_jp_6_26[];
 extern const u32 effB8_mes_jp_6_28[];
-extern const u32 effB8_mes_jp_6_30[];
+extern const CONN effB8_mes_jp_6_30[];
 extern const u32 effB8_mes_jp_6_32[];
-extern const u32 effB8_mes_jp_6_34[];
+extern const CONN effB8_mes_jp_6_34[];
 extern const u32 effB8_mes_jp_6_36[];
-extern const u32 effB8_mes_jp_6_38[];
-extern const u32 effB8_mes_jp_6_40[];
+extern const CONN effB8_mes_jp_6_38[];
+extern const CONN effB8_mes_jp_6_40[];
 extern const u32 effB8_mes_jp_6_42[];
 extern const u32 effB8_mes_jp_6_48[];
-extern const u32 effB8_mes_jp_6_50[];
+extern const CONN effB8_mes_jp_6_50[];
 extern const u32 effB8_mes_jp_6_52[];
 extern const u32 effB8_mes_jp_6_54[];
 extern const u32 effB8_mes_jp_6_56[];
-extern const u32 effB8_mes_jp_6_58[];
+extern const CONN effB8_mes_jp_6_58[];
 extern const u16 effB8_mes_jp_6_1[];
 extern const u16 effB8_mes_jp_6_3[];
 extern const u16 effB8_mes_jp_6_5[];
@@ -1997,32 +1997,32 @@ extern const u16 effB8_mes_jp_6_57[];
 extern const u16 effB8_mes_jp_6_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_7[];
 extern const u32 effB8_mes_jp_7_0[];
-extern const u32 effB8_mes_jp_7_4[];
+extern const CONN effB8_mes_jp_7_4[];
 extern const u32 effB8_mes_jp_7_6[];
 extern const u32 effB8_mes_jp_7_8[];
 extern const u32 effB8_mes_jp_7_10[];
-extern const u32 effB8_mes_jp_7_12[];
+extern const CONN effB8_mes_jp_7_12[];
 extern const u32 effB8_mes_jp_7_14[];
 extern const u32 effB8_mes_jp_7_16[];
-extern const u32 effB8_mes_jp_7_18[];
+extern const CONN effB8_mes_jp_7_18[];
 extern const u32 effB8_mes_jp_7_20[];
 extern const u32 effB8_mes_jp_7_22[];
-extern const u32 effB8_mes_jp_7_24[];
+extern const CONN effB8_mes_jp_7_24[];
 extern const u32 effB8_mes_jp_7_26[];
 extern const u32 effB8_mes_jp_7_28[];
-extern const u32 effB8_mes_jp_7_30[];
-extern const u32 effB8_mes_jp_7_32[];
+extern const CONN effB8_mes_jp_7_30[];
+extern const CONN effB8_mes_jp_7_32[];
 extern const u32 effB8_mes_jp_7_34[];
-extern const u32 effB8_mes_jp_7_36[];
-extern const u32 effB8_mes_jp_7_38[];
+extern const CONN effB8_mes_jp_7_36[];
+extern const CONN effB8_mes_jp_7_38[];
 extern const u32 effB8_mes_jp_7_40[];
-extern const u32 effB8_mes_jp_7_42[];
+extern const CONN effB8_mes_jp_7_42[];
 extern const u32 effB8_mes_jp_7_48[];
 extern const u32 effB8_mes_jp_7_50[];
-extern const u32 effB8_mes_jp_7_52[];
-extern const u32 effB8_mes_jp_7_54[];
+extern const CONN effB8_mes_jp_7_52[];
+extern const CONN effB8_mes_jp_7_54[];
 extern const u32 effB8_mes_jp_7_56[];
-extern const u32 effB8_mes_jp_7_58[];
+extern const CONN effB8_mes_jp_7_58[];
 extern const u16 effB8_mes_jp_7_1[];
 extern const u16 effB8_mes_jp_7_3[];
 extern const u16 effB8_mes_jp_7_5[];
@@ -2054,29 +2054,29 @@ extern const u16 effB8_mes_jp_7_55[];
 extern const u16 effB8_mes_jp_7_57[];
 extern const u16 effB8_mes_jp_7_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_8[];
-extern const u32 effB8_mes_jp_8_0[];
+extern const CONN effB8_mes_jp_8_0[];
 extern const u32 effB8_mes_jp_8_4[];
 extern const u32 effB8_mes_jp_8_6[];
 extern const u32 effB8_mes_jp_8_8[];
-extern const u32 effB8_mes_jp_8_10[];
+extern const CONN effB8_mes_jp_8_10[];
 extern const u32 effB8_mes_jp_8_12[];
-extern const u32 effB8_mes_jp_8_14[];
+extern const CONN effB8_mes_jp_8_14[];
 extern const u32 effB8_mes_jp_8_16[];
-extern const u32 effB8_mes_jp_8_18[];
+extern const CONN effB8_mes_jp_8_18[];
 extern const u32 effB8_mes_jp_8_20[];
 extern const u32 effB8_mes_jp_8_22[];
 extern const u32 effB8_mes_jp_8_24[];
 extern const u32 effB8_mes_jp_8_26[];
 extern const u32 effB8_mes_jp_8_28[];
-extern const u32 effB8_mes_jp_8_30[];
+extern const CONN effB8_mes_jp_8_30[];
 extern const u32 effB8_mes_jp_8_32[];
 extern const u32 effB8_mes_jp_8_34[];
 extern const u32 effB8_mes_jp_8_36[];
 extern const u32 effB8_mes_jp_8_38[];
 extern const u32 effB8_mes_jp_8_48[];
-extern const u32 effB8_mes_jp_8_50[];
+extern const CONN effB8_mes_jp_8_50[];
 extern const u32 effB8_mes_jp_8_52[];
-extern const u32 effB8_mes_jp_8_54[];
+extern const CONN effB8_mes_jp_8_54[];
 extern const u32 effB8_mes_jp_8_56[];
 extern const u32 effB8_mes_jp_8_58[];
 extern const u16 effB8_mes_jp_8_1[];
@@ -2112,29 +2112,29 @@ extern const u16 effB8_mes_jp_8_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_9[];
 extern const u32 effB8_mes_jp_9_0[];
 extern const u32 effB8_mes_jp_9_4[];
-extern const u32 effB8_mes_jp_9_6[];
+extern const CONN effB8_mes_jp_9_6[];
 extern const u32 effB8_mes_jp_9_8[];
-extern const u32 effB8_mes_jp_9_10[];
+extern const CONN effB8_mes_jp_9_10[];
 extern const u32 effB8_mes_jp_9_12[];
 extern const u32 effB8_mes_jp_9_14[];
-extern const u32 effB8_mes_jp_9_16[];
+extern const CONN effB8_mes_jp_9_16[];
 extern const u32 effB8_mes_jp_9_18[];
 extern const u32 effB8_mes_jp_9_20[];
 extern const u32 effB8_mes_jp_9_22[];
-extern const u32 effB8_mes_jp_9_24[];
+extern const CONN effB8_mes_jp_9_24[];
 extern const u32 effB8_mes_jp_9_26[];
 extern const u32 effB8_mes_jp_9_28[];
-extern const u32 effB8_mes_jp_9_30[];
+extern const CONN effB8_mes_jp_9_30[];
 extern const u32 effB8_mes_jp_9_32[];
 extern const u32 effB8_mes_jp_9_34[];
-extern const u32 effB8_mes_jp_9_36[];
+extern const CONN effB8_mes_jp_9_36[];
 extern const u32 effB8_mes_jp_9_38[];
-extern const u32 effB8_mes_jp_9_40[];
+extern const CONN effB8_mes_jp_9_40[];
 extern const u32 effB8_mes_jp_9_42[];
 extern const u32 effB8_mes_jp_9_48[];
-extern const u32 effB8_mes_jp_9_50[];
+extern const CONN effB8_mes_jp_9_50[];
 extern const u32 effB8_mes_jp_9_52[];
-extern const u32 effB8_mes_jp_9_54[];
+extern const CONN effB8_mes_jp_9_54[];
 extern const u32 effB8_mes_jp_9_56[];
 extern const u32 effB8_mes_jp_9_58[];
 extern const u16 effB8_mes_jp_9_1[];
@@ -2168,34 +2168,34 @@ extern const u16 effB8_mes_jp_9_55[];
 extern const u16 effB8_mes_jp_9_57[];
 extern const u16 effB8_mes_jp_9_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_10[];
-extern const u32 effB8_mes_jp_10_0[];
+extern const CONN effB8_mes_jp_10_0[];
 extern const u32 effB8_mes_jp_10_2[];
 extern const u32 effB8_mes_jp_10_4[];
-extern const u32 effB8_mes_jp_10_6[];
+extern const CONN effB8_mes_jp_10_6[];
 extern const u32 effB8_mes_jp_10_8[];
 extern const u32 effB8_mes_jp_10_10[];
-extern const u32 effB8_mes_jp_10_12[];
+extern const CONN effB8_mes_jp_10_12[];
 extern const u32 effB8_mes_jp_10_14[];
 extern const u32 effB8_mes_jp_10_16[];
-extern const u32 effB8_mes_jp_10_18[];
+extern const CONN effB8_mes_jp_10_18[];
 extern const u32 effB8_mes_jp_10_20[];
 extern const u32 effB8_mes_jp_10_22[];
-extern const u32 effB8_mes_jp_10_24[];
+extern const CONN effB8_mes_jp_10_24[];
 extern const u32 effB8_mes_jp_10_26[];
 extern const u32 effB8_mes_jp_10_28[];
 extern const u32 effB8_mes_jp_10_30[];
-extern const u32 effB8_mes_jp_10_32[];
+extern const CONN effB8_mes_jp_10_32[];
 extern const u32 effB8_mes_jp_10_34[];
 extern const u32 effB8_mes_jp_10_36[];
-extern const u32 effB8_mes_jp_10_38[];
+extern const CONN effB8_mes_jp_10_38[];
 extern const u32 effB8_mes_jp_10_40[];
-extern const u32 effB8_mes_jp_10_42[];
+extern const CONN effB8_mes_jp_10_42[];
 extern const u32 effB8_mes_jp_10_48[];
 extern const u32 effB8_mes_jp_10_50[];
-extern const u32 effB8_mes_jp_10_52[];
+extern const CONN effB8_mes_jp_10_52[];
 extern const u32 effB8_mes_jp_10_54[];
 extern const u32 effB8_mes_jp_10_56[];
-extern const u32 effB8_mes_jp_10_58[];
+extern const CONN effB8_mes_jp_10_58[];
 extern const u16 effB8_mes_jp_10_1[];
 extern const u16 effB8_mes_jp_10_3[];
 extern const u16 effB8_mes_jp_10_5[];
@@ -2227,33 +2227,33 @@ extern const u16 effB8_mes_jp_10_55[];
 extern const u16 effB8_mes_jp_10_57[];
 extern const u16 effB8_mes_jp_10_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_11[];
-extern const u32 effB8_mes_jp_11_0[];
+extern const CONN effB8_mes_jp_11_0[];
 extern const u32 effB8_mes_jp_11_2[];
-extern const u32 effB8_mes_jp_11_4[];
+extern const CONN effB8_mes_jp_11_4[];
 extern const u32 effB8_mes_jp_11_6[];
 extern const u32 effB8_mes_jp_11_8[];
-extern const u32 effB8_mes_jp_11_10[];
+extern const CONN effB8_mes_jp_11_10[];
 extern const u32 effB8_mes_jp_11_12[];
 extern const u32 effB8_mes_jp_11_14[];
-extern const u32 effB8_mes_jp_11_16[];
+extern const CONN effB8_mes_jp_11_16[];
 extern const u32 effB8_mes_jp_11_18[];
 extern const u32 effB8_mes_jp_11_20[];
-extern const u32 effB8_mes_jp_11_22[];
+extern const CONN effB8_mes_jp_11_22[];
 extern const u32 effB8_mes_jp_11_24[];
 extern const u32 effB8_mes_jp_11_26[];
-extern const u32 effB8_mes_jp_11_28[];
+extern const CONN effB8_mes_jp_11_28[];
 extern const u32 effB8_mes_jp_11_30[];
-extern const u32 effB8_mes_jp_11_32[];
+extern const CONN effB8_mes_jp_11_32[];
 extern const u32 effB8_mes_jp_11_34[];
 extern const u32 effB8_mes_jp_11_36[];
-extern const u32 effB8_mes_jp_11_38[];
+extern const CONN effB8_mes_jp_11_38[];
 extern const u32 effB8_mes_jp_11_40[];
-extern const u32 effB8_mes_jp_11_42[];
+extern const CONN effB8_mes_jp_11_42[];
 extern const u32 effB8_mes_jp_11_48[];
-extern const u32 effB8_mes_jp_11_50[];
+extern const CONN effB8_mes_jp_11_50[];
 extern const u32 effB8_mes_jp_11_52[];
 extern const u32 effB8_mes_jp_11_54[];
-extern const u32 effB8_mes_jp_11_56[];
+extern const CONN effB8_mes_jp_11_56[];
 extern const u32 effB8_mes_jp_11_58[];
 extern const u16 effB8_mes_jp_11_1[];
 extern const u16 effB8_mes_jp_11_3[];
@@ -2286,34 +2286,34 @@ extern const u16 effB8_mes_jp_11_55[];
 extern const u16 effB8_mes_jp_11_57[];
 extern const u16 effB8_mes_jp_11_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_12[];
-extern const u32 effB8_mes_jp_12_0[];
+extern const CONN effB8_mes_jp_12_0[];
 extern const u32 effB8_mes_jp_12_2[];
 extern const u32 effB8_mes_jp_12_4[];
 extern const u32 effB8_mes_jp_12_6[];
-extern const u32 effB8_mes_jp_12_8[];
+extern const CONN effB8_mes_jp_12_8[];
 extern const u32 effB8_mes_jp_12_10[];
-extern const u32 effB8_mes_jp_12_12[];
+extern const CONN effB8_mes_jp_12_12[];
 extern const u32 effB8_mes_jp_12_14[];
 extern const u32 effB8_mes_jp_12_16[];
-extern const u32 effB8_mes_jp_12_18[];
+extern const CONN effB8_mes_jp_12_18[];
 extern const u32 effB8_mes_jp_12_20[];
-extern const u32 effB8_mes_jp_12_22[];
+extern const CONN effB8_mes_jp_12_22[];
 extern const u32 effB8_mes_jp_12_24[];
 extern const u32 effB8_mes_jp_12_26[];
 extern const u32 effB8_mes_jp_12_28[];
-extern const u32 effB8_mes_jp_12_30[];
-extern const u32 effB8_mes_jp_12_32[];
+extern const CONN effB8_mes_jp_12_30[];
+extern const CONN effB8_mes_jp_12_32[];
 extern const u32 effB8_mes_jp_12_34[];
-extern const u32 effB8_mes_jp_12_36[];
+extern const CONN effB8_mes_jp_12_36[];
 extern const u32 effB8_mes_jp_12_38[];
 extern const u32 effB8_mes_jp_12_40[];
-extern const u32 effB8_mes_jp_12_42[];
+extern const CONN effB8_mes_jp_12_42[];
 extern const u32 effB8_mes_jp_12_48[];
-extern const u32 effB8_mes_jp_12_50[];
+extern const CONN effB8_mes_jp_12_50[];
 extern const u32 effB8_mes_jp_12_52[];
 extern const u32 effB8_mes_jp_12_54[];
-extern const u32 effB8_mes_jp_12_56[];
-extern const u32 effB8_mes_jp_12_58[];
+extern const CONN effB8_mes_jp_12_56[];
+extern const CONN effB8_mes_jp_12_58[];
 extern const u16 effB8_mes_jp_12_1[];
 extern const u16 effB8_mes_jp_12_3[];
 extern const u16 effB8_mes_jp_12_5[];
@@ -2346,31 +2346,31 @@ extern const u16 effB8_mes_jp_12_57[];
 extern const u16 effB8_mes_jp_12_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_13[];
 extern const u32 effB8_mes_jp_13_0[];
-extern const u32 effB8_mes_jp_13_4[];
+extern const CONN effB8_mes_jp_13_4[];
 extern const u32 effB8_mes_jp_13_6[];
-extern const u32 effB8_mes_jp_13_8[];
+extern const CONN effB8_mes_jp_13_8[];
 extern const u32 effB8_mes_jp_13_10[];
 extern const u32 effB8_mes_jp_13_12[];
-extern const u32 effB8_mes_jp_13_14[];
+extern const CONN effB8_mes_jp_13_14[];
 extern const u32 effB8_mes_jp_13_16[];
 extern const u32 effB8_mes_jp_13_18[];
 extern const u32 effB8_mes_jp_13_20[];
 extern const u32 effB8_mes_jp_13_22[];
-extern const u32 effB8_mes_jp_13_24[];
+extern const CONN effB8_mes_jp_13_24[];
 extern const u32 effB8_mes_jp_13_26[];
 extern const u32 effB8_mes_jp_13_28[];
 extern const u32 effB8_mes_jp_13_30[];
 extern const u32 effB8_mes_jp_13_32[];
-extern const u32 effB8_mes_jp_13_34[];
+extern const CONN effB8_mes_jp_13_34[];
 extern const u32 effB8_mes_jp_13_36[];
 extern const u32 effB8_mes_jp_13_38[];
-extern const u32 effB8_mes_jp_13_40[];
+extern const CONN effB8_mes_jp_13_40[];
 extern const u32 effB8_mes_jp_13_42[];
 extern const u32 effB8_mes_jp_13_48[];
-extern const u32 effB8_mes_jp_13_50[];
+extern const CONN effB8_mes_jp_13_50[];
 extern const u32 effB8_mes_jp_13_52[];
 extern const u32 effB8_mes_jp_13_54[];
-extern const u32 effB8_mes_jp_13_56[];
+extern const CONN effB8_mes_jp_13_56[];
 extern const u32 effB8_mes_jp_13_58[];
 extern const u16 effB8_mes_jp_13_1[];
 extern const u16 effB8_mes_jp_13_3[];
@@ -2403,36 +2403,36 @@ extern const u16 effB8_mes_jp_13_55[];
 extern const u16 effB8_mes_jp_13_57[];
 extern const u16 effB8_mes_jp_13_59[];
 extern const EFFB8_MESSAGE effB8_mes_jp_14[];
-extern const u32 effB8_mes_jp_14_0[];
-extern const u32 effB8_mes_jp_14_2[];
+extern const CONN effB8_mes_jp_14_0[];
+extern const CONN effB8_mes_jp_14_2[];
 extern const u32 effB8_mes_jp_14_4[];
 extern const u32 effB8_mes_jp_14_6[];
-extern const u32 effB8_mes_jp_14_8[];
-extern const u32 effB8_mes_jp_14_10[];
+extern const CONN effB8_mes_jp_14_8[];
+extern const CONN effB8_mes_jp_14_10[];
 extern const u32 effB8_mes_jp_14_12[];
-extern const u32 effB8_mes_jp_14_14[];
+extern const CONN effB8_mes_jp_14_14[];
 extern const u32 effB8_mes_jp_14_16[];
-extern const u32 effB8_mes_jp_14_18[];
+extern const CONN effB8_mes_jp_14_18[];
 extern const u32 effB8_mes_jp_14_20[];
-extern const u32 effB8_mes_jp_14_22[];
+extern const CONN effB8_mes_jp_14_22[];
 extern const u32 effB8_mes_jp_14_24[];
-extern const u32 effB8_mes_jp_14_26[];
+extern const CONN effB8_mes_jp_14_26[];
 extern const u32 effB8_mes_jp_14_28[];
-extern const u32 effB8_mes_jp_14_30[];
+extern const CONN effB8_mes_jp_14_30[];
 extern const u32 effB8_mes_jp_14_32[];
-extern const u32 effB8_mes_jp_14_34[];
+extern const CONN effB8_mes_jp_14_34[];
 extern const u32 effB8_mes_jp_14_36[];
-extern const u32 effB8_mes_jp_14_38[];
+extern const CONN effB8_mes_jp_14_38[];
 extern const u32 effB8_mes_jp_14_40[];
-extern const u32 effB8_mes_jp_14_42[];
-extern const u32 effB8_mes_jp_14_44[];
+extern const CONN effB8_mes_jp_14_42[];
+extern const CONN effB8_mes_jp_14_44[];
 extern const u32 effB8_mes_jp_14_46[];
-extern const u32 effB8_mes_jp_14_48[];
+extern const CONN effB8_mes_jp_14_48[];
 extern const u32 effB8_mes_jp_14_50[];
-extern const u32 effB8_mes_jp_14_52[];
-extern const u32 effB8_mes_jp_14_54[];
+extern const CONN effB8_mes_jp_14_52[];
+extern const CONN effB8_mes_jp_14_54[];
 extern const u32 effB8_mes_jp_14_56[];
-extern const u32 effB8_mes_jp_14_58[];
+extern const CONN effB8_mes_jp_14_58[];
 extern const u16 effB8_mes_jp_14_1[];
 extern const u16 effB8_mes_jp_14_3[];
 extern const u16 effB8_mes_jp_14_5[];
@@ -2717,7 +2717,7 @@ extern const u32 effB8_mes_en_4_34[];
 extern const u32 effB8_mes_en_4_36[];
 extern const u32 effB8_mes_en_4_38[];
 extern const u32 effB8_mes_en_4_40[];
-extern const u32 effB8_mes_en_4_42[];
+extern const CONN effB8_mes_en_4_42[];
 extern const u32 effB8_mes_en_4_48[];
 extern const u32 effB8_mes_en_4_50[];
 extern const u32 effB8_mes_en_4_52[];
@@ -2830,11 +2830,11 @@ extern const u32 effB8_mes_en_6_24[];
 extern const u32 effB8_mes_en_6_26[];
 extern const u32 effB8_mes_en_6_28[];
 extern const u32 effB8_mes_en_6_30[];
-extern const u32 effB8_mes_en_6_32[];
-extern const u32 effB8_mes_en_6_34[];
+extern const CONN effB8_mes_en_6_32[];
+extern const CONN effB8_mes_en_6_34[];
 extern const u32 effB8_mes_en_6_36[];
 extern const u32 effB8_mes_en_6_38[];
-extern const u32 effB8_mes_en_6_40[];
+extern const CONN effB8_mes_en_6_40[];
 extern const u32 effB8_mes_en_6_42[];
 extern const u32 effB8_mes_en_6_48[];
 extern const u32 effB8_mes_en_6_50[];
@@ -2897,7 +2897,7 @@ extern const u32 effB8_mes_en_7_40[];
 extern const u32 effB8_mes_en_7_42[];
 extern const u32 effB8_mes_en_7_48[];
 extern const u32 effB8_mes_en_7_50[];
-extern const u32 effB8_mes_en_7_52[];
+extern const CONN effB8_mes_en_7_52[];
 extern const u32 effB8_mes_en_7_54[];
 extern const u32 effB8_mes_en_7_56[];
 extern const u32 effB8_mes_en_7_58[];
@@ -3184,9 +3184,9 @@ extern const u32 effB8_mes_en_12_24[];
 extern const u32 effB8_mes_en_12_26[];
 extern const u32 effB8_mes_en_12_28[];
 extern const u32 effB8_mes_en_12_30[];
-extern const u32 effB8_mes_en_12_32[];
+extern const CONN effB8_mes_en_12_32[];
 extern const u32 effB8_mes_en_12_34[];
-extern const u32 effB8_mes_en_12_36[];
+extern const CONN effB8_mes_en_12_36[];
 extern const u32 effB8_mes_en_12_38[];
 extern const u32 effB8_mes_en_12_40[];
 extern const u32 effB8_mes_en_12_42[];
@@ -3292,7 +3292,7 @@ extern const u32 effB8_mes_en_14_4[];
 extern const u32 effB8_mes_en_14_6[];
 extern const u32 effB8_mes_en_14_8[];
 extern const u32 effB8_mes_en_14_10[];
-extern const u32 effB8_mes_en_14_12[];
+extern const CONN effB8_mes_en_14_12[];
 extern const u32 effB8_mes_en_14_14[];
 extern const u32 effB8_mes_en_14_16[];
 extern const u32 effB8_mes_en_14_18[];
@@ -3650,7 +3650,7 @@ extern const u32 effB8_mes_pt_5_4[];
 extern const u32 effB8_mes_pt_5_6[];
 extern const u32 effB8_mes_pt_5_8[];
 extern const u32 effB8_mes_pt_5_10[];
-extern const u32 effB8_mes_pt_5_12[];
+extern const CONN effB8_mes_pt_5_12[];
 extern const u32 effB8_mes_pt_5_14[];
 extern const u32 effB8_mes_pt_5_16[];
 extern const u32 effB8_mes_pt_5_18[];
@@ -3719,15 +3719,15 @@ extern const u32 effB8_mes_pt_6_24[];
 extern const u32 effB8_mes_pt_6_26[];
 extern const u32 effB8_mes_pt_6_28[];
 extern const u32 effB8_mes_pt_6_30[];
-extern const u32 effB8_mes_pt_6_32[];
-extern const u32 effB8_mes_pt_6_34[];
+extern const CONN effB8_mes_pt_6_32[];
+extern const CONN effB8_mes_pt_6_34[];
 extern const u32 effB8_mes_pt_6_36[];
-extern const u32 effB8_mes_pt_6_38[];
+extern const CONN effB8_mes_pt_6_38[];
 extern const u32 effB8_mes_pt_6_40[];
 extern const u32 effB8_mes_pt_6_42[];
 extern const u32 effB8_mes_pt_6_48[];
 extern const u32 effB8_mes_pt_6_50[];
-extern const u32 effB8_mes_pt_6_52[];
+extern const CONN effB8_mes_pt_6_52[];
 extern const u32 effB8_mes_pt_6_54[];
 extern const u32 effB8_mes_pt_6_56[];
 extern const u32 effB8_mes_pt_6_58[];
@@ -3844,7 +3844,7 @@ extern const u32 effB8_mes_pt_8_38[];
 extern const u32 effB8_mes_pt_8_40[];
 extern const u32 effB8_mes_pt_8_42[];
 extern const u32 effB8_mes_pt_8_48[];
-extern const u32 effB8_mes_pt_8_50[];
+extern const CONN effB8_mes_pt_8_50[];
 extern const u32 effB8_mes_pt_8_52[];
 extern const u32 effB8_mes_pt_8_54[];
 extern const u32 effB8_mes_pt_8_56[];
@@ -3963,7 +3963,7 @@ extern const u32 effB8_mes_pt_10_40[];
 extern const u32 effB8_mes_pt_10_42[];
 extern const u32 effB8_mes_pt_10_48[];
 extern const u32 effB8_mes_pt_10_50[];
-extern const u32 effB8_mes_pt_10_52[];
+extern const CONN effB8_mes_pt_10_52[];
 extern const u32 effB8_mes_pt_10_54[];
 extern const u32 effB8_mes_pt_10_56[];
 extern const u32 effB8_mes_pt_10_58[];
@@ -4019,7 +4019,7 @@ extern const u32 effB8_mes_pt_11_34[];
 extern const u32 effB8_mes_pt_11_36[];
 extern const u32 effB8_mes_pt_11_38[];
 extern const u32 effB8_mes_pt_11_40[];
-extern const u32 effB8_mes_pt_11_42[];
+extern const CONN effB8_mes_pt_11_42[];
 extern const u32 effB8_mes_pt_11_48[];
 extern const u32 effB8_mes_pt_11_50[];
 extern const u32 effB8_mes_pt_11_52[];
@@ -4069,7 +4069,7 @@ extern const u32 effB8_mes_pt_12_16[];
 extern const u32 effB8_mes_pt_12_18[];
 extern const u32 effB8_mes_pt_12_20[];
 extern const u32 effB8_mes_pt_12_22[];
-extern const u32 effB8_mes_pt_12_24[];
+extern const CONN effB8_mes_pt_12_24[];
 extern const u32 effB8_mes_pt_12_26[];
 extern const u32 effB8_mes_pt_12_28[];
 extern const u32 effB8_mes_pt_12_30[];
@@ -4539,7 +4539,7 @@ extern const u32 effB8_mes_es_5_4[];
 extern const u32 effB8_mes_es_5_6[];
 extern const u32 effB8_mes_es_5_8[];
 extern const u32 effB8_mes_es_5_10[];
-extern const u32 effB8_mes_es_5_12[];
+extern const CONN effB8_mes_es_5_12[];
 extern const u32 effB8_mes_es_5_14[];
 extern const u32 effB8_mes_es_5_16[];
 extern const u32 effB8_mes_es_5_18[];
@@ -4608,18 +4608,18 @@ extern const u32 effB8_mes_es_6_24[];
 extern const u32 effB8_mes_es_6_26[];
 extern const u32 effB8_mes_es_6_28[];
 extern const u32 effB8_mes_es_6_30[];
-extern const u32 effB8_mes_es_6_32[];
+extern const CONN effB8_mes_es_6_32[];
 extern const u32 effB8_mes_es_6_34[];
-extern const u32 effB8_mes_es_6_36[];
+extern const CONN effB8_mes_es_6_36[];
 extern const u32 effB8_mes_es_6_38[];
-extern const u32 effB8_mes_es_6_40[];
+extern const CONN effB8_mes_es_6_40[];
 extern const u32 effB8_mes_es_6_42[];
 extern const u32 effB8_mes_es_6_48[];
 extern const u32 effB8_mes_es_6_50[];
 extern const u32 effB8_mes_es_6_52[];
 extern const u32 effB8_mes_es_6_54[];
 extern const u32 effB8_mes_es_6_56[];
-extern const u32 effB8_mes_es_6_58[];
+extern const CONN effB8_mes_es_6_58[];
 extern const u16 effB8_mes_es_6_1[];
 extern const u16 effB8_mes_es_6_3[];
 extern const u16 effB8_mes_es_6_5[];
@@ -4666,7 +4666,7 @@ extern const u32 effB8_mes_es_7_22[];
 extern const u32 effB8_mes_es_7_24[];
 extern const u32 effB8_mes_es_7_26[];
 extern const u32 effB8_mes_es_7_28[];
-extern const u32 effB8_mes_es_7_30[];
+extern const CONN effB8_mes_es_7_30[];
 extern const u32 effB8_mes_es_7_32[];
 extern const u32 effB8_mes_es_7_34[];
 extern const u32 effB8_mes_es_7_36[];
@@ -4948,7 +4948,7 @@ extern const u16 effB8_mes_es_11_59[];
 extern const EFFB8_MESSAGE effB8_mes_es_12[];
 extern const u32 effB8_mes_es_12_0[];
 extern const u32 effB8_mes_es_12_2[];
-extern const u32 effB8_mes_es_12_4[];
+extern const CONN effB8_mes_es_12_4[];
 extern const u32 effB8_mes_es_12_6[];
 extern const u32 effB8_mes_es_12_8[];
 extern const u32 effB8_mes_es_12_10[];
@@ -5022,7 +5022,7 @@ extern const u32 effB8_mes_es_13_26[];
 extern const u32 effB8_mes_es_13_28[];
 extern const u32 effB8_mes_es_13_30[];
 extern const u32 effB8_mes_es_13_32[];
-extern const u32 effB8_mes_es_13_34[];
+extern const CONN effB8_mes_es_13_34[];
 extern const u32 effB8_mes_es_13_36[];
 extern const u32 effB8_mes_es_13_38[];
 extern const u32 effB8_mes_es_13_40[];
@@ -5078,7 +5078,7 @@ extern const u32 effB8_mes_es_14_20[];
 extern const u32 effB8_mes_es_14_22[];
 extern const u32 effB8_mes_es_14_24[];
 extern const u32 effB8_mes_es_14_26[];
-extern const u32 effB8_mes_es_14_28[];
+extern const CONN effB8_mes_es_14_28[];
 extern const u32 effB8_mes_es_14_30[];
 extern const u32 effB8_mes_es_14_32[];
 extern const u32 effB8_mes_es_14_34[];
@@ -5126,11 +5126,11 @@ extern const u16 effB8_mes_es_14_57[];
 extern const u16 effB8_mes_es_14_59[];
 extern const EFFA6_MESSAGE effA6_mes_jp_0[];
 extern const u32 effA6_mes_jp_0_0[];
-extern const u32 effA6_mes_jp_0_2[];
+extern const CONN effA6_mes_jp_0_2[];
 extern const u32 effA6_mes_jp_0_4[];
 extern const u32 effA6_mes_jp_0_18[];
 extern const u32 effA6_mes_jp_0_20[];
-extern const u32 effA6_mes_jp_0_22[];
+extern const CONN effA6_mes_jp_0_22[];
 extern const u16 effA6_mes_jp_0_1[];
 extern const u16 effA6_mes_jp_0_3[];
 extern const u16 effA6_mes_jp_0_5[];
@@ -5144,11 +5144,11 @@ extern const u16 effA6_mes_jp_0_19[];
 extern const u16 effA6_mes_jp_0_21[];
 extern const u16 effA6_mes_jp_0_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_2[];
-extern const u32 effA6_mes_jp_2_0[];
+extern const CONN effA6_mes_jp_2_0[];
 extern const u32 effA6_mes_jp_2_2[];
 extern const u32 effA6_mes_jp_2_4[];
 extern const u32 effA6_mes_jp_2_18[];
-extern const u32 effA6_mes_jp_2_20[];
+extern const CONN effA6_mes_jp_2_20[];
 extern const u32 effA6_mes_jp_2_22[];
 extern const u16 effA6_mes_jp_2_1[];
 extern const u16 effA6_mes_jp_2_3[];
@@ -5164,10 +5164,10 @@ extern const u16 effA6_mes_jp_2_21[];
 extern const u16 effA6_mes_jp_2_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_3[];
 extern const u32 effA6_mes_jp_3_0[];
-extern const u32 effA6_mes_jp_3_2[];
+extern const CONN effA6_mes_jp_3_2[];
 extern const u32 effA6_mes_jp_3_4[];
 extern const u32 effA6_mes_jp_3_18[];
-extern const u32 effA6_mes_jp_3_20[];
+extern const CONN effA6_mes_jp_3_20[];
 extern const u32 effA6_mes_jp_3_22[];
 extern const u16 effA6_mes_jp_3_1[];
 extern const u16 effA6_mes_jp_3_3[];
@@ -5183,7 +5183,7 @@ extern const u16 effA6_mes_jp_3_21[];
 extern const u16 effA6_mes_jp_3_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_4[];
 extern const u32 effA6_mes_jp_4_0[];
-extern const u32 effA6_mes_jp_4_2[];
+extern const CONN effA6_mes_jp_4_2[];
 extern const u32 effA6_mes_jp_4_4[];
 extern const u32 effA6_mes_jp_4_18[];
 extern const u32 effA6_mes_jp_4_20[];
@@ -5203,7 +5203,7 @@ extern const u16 effA6_mes_jp_4_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_5[];
 extern const u32 effA6_mes_jp_5_0[];
 extern const u32 effA6_mes_jp_5_2[];
-extern const u32 effA6_mes_jp_5_4[];
+extern const CONN effA6_mes_jp_5_4[];
 extern const u32 effA6_mes_jp_5_18[];
 extern const u32 effA6_mes_jp_5_20[];
 extern const u32 effA6_mes_jp_5_22[];
@@ -5221,16 +5221,16 @@ extern const u16 effA6_mes_jp_5_21[];
 extern const u16 effA6_mes_jp_5_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_6[];
 extern const u32 effA6_mes_jp_6_0[];
-extern const u32 effA6_mes_jp_6_2[];
+extern const CONN effA6_mes_jp_6_2[];
 extern const u32 effA6_mes_jp_6_4[];
 extern const u32 effA6_mes_jp_6_6[];
-extern const u32 effA6_mes_jp_6_8[];
+extern const CONN effA6_mes_jp_6_8[];
 extern const u32 effA6_mes_jp_6_10[];
 extern const u32 effA6_mes_jp_6_12[];
-extern const u32 effA6_mes_jp_6_14[];
+extern const CONN effA6_mes_jp_6_14[];
 extern const u32 effA6_mes_jp_6_16[];
 extern const u32 effA6_mes_jp_6_18[];
-extern const u32 effA6_mes_jp_6_20[];
+extern const CONN effA6_mes_jp_6_20[];
 extern const u32 effA6_mes_jp_6_22[];
 extern const u16 effA6_mes_jp_6_1[];
 extern const u16 effA6_mes_jp_6_3[];
@@ -5245,9 +5245,9 @@ extern const u16 effA6_mes_jp_6_19[];
 extern const u16 effA6_mes_jp_6_21[];
 extern const u16 effA6_mes_jp_6_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_7[];
-extern const u32 effA6_mes_jp_7_0[];
+extern const CONN effA6_mes_jp_7_0[];
 extern const u32 effA6_mes_jp_7_2[];
-extern const u32 effA6_mes_jp_7_4[];
+extern const CONN effA6_mes_jp_7_4[];
 extern const u32 effA6_mes_jp_7_18[];
 extern const u32 effA6_mes_jp_7_20[];
 extern const u32 effA6_mes_jp_7_22[];
@@ -5264,11 +5264,11 @@ extern const u16 effA6_mes_jp_7_19[];
 extern const u16 effA6_mes_jp_7_21[];
 extern const u16 effA6_mes_jp_7_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_8[];
-extern const u32 effA6_mes_jp_8_0[];
+extern const CONN effA6_mes_jp_8_0[];
 extern const u32 effA6_mes_jp_8_2[];
 extern const u32 effA6_mes_jp_8_4[];
 extern const u32 effA6_mes_jp_8_18[];
-extern const u32 effA6_mes_jp_8_20[];
+extern const CONN effA6_mes_jp_8_20[];
 extern const u32 effA6_mes_jp_8_22[];
 extern const u16 effA6_mes_jp_8_1[];
 extern const u16 effA6_mes_jp_8_3[];
@@ -5283,12 +5283,12 @@ extern const u16 effA6_mes_jp_8_19[];
 extern const u16 effA6_mes_jp_8_21[];
 extern const u16 effA6_mes_jp_8_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_9[];
-extern const u32 effA6_mes_jp_9_0[];
+extern const CONN effA6_mes_jp_9_0[];
 extern const u32 effA6_mes_jp_9_2[];
 extern const u32 effA6_mes_jp_9_4[];
 extern const u32 effA6_mes_jp_9_18[];
 extern const u32 effA6_mes_jp_9_20[];
-extern const u32 effA6_mes_jp_9_22[];
+extern const CONN effA6_mes_jp_9_22[];
 extern const u16 effA6_mes_jp_9_1[];
 extern const u16 effA6_mes_jp_9_3[];
 extern const u16 effA6_mes_jp_9_5[];
@@ -5302,10 +5302,10 @@ extern const u16 effA6_mes_jp_9_19[];
 extern const u16 effA6_mes_jp_9_21[];
 extern const u16 effA6_mes_jp_9_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_10[];
-extern const u32 effA6_mes_jp_10_0[];
+extern const CONN effA6_mes_jp_10_0[];
 extern const u32 effA6_mes_jp_10_2[];
 extern const u32 effA6_mes_jp_10_4[];
-extern const u32 effA6_mes_jp_10_18[];
+extern const CONN effA6_mes_jp_10_18[];
 extern const u32 effA6_mes_jp_10_20[];
 extern const u32 effA6_mes_jp_10_22[];
 extern const u16 effA6_mes_jp_10_1[];
@@ -5322,11 +5322,11 @@ extern const u16 effA6_mes_jp_10_21[];
 extern const u16 effA6_mes_jp_10_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_11[];
 extern const u32 effA6_mes_jp_11_0[];
-extern const u32 effA6_mes_jp_11_2[];
+extern const CONN effA6_mes_jp_11_2[];
 extern const u32 effA6_mes_jp_11_4[];
 extern const u32 effA6_mes_jp_11_18[];
 extern const u32 effA6_mes_jp_11_20[];
-extern const u32 effA6_mes_jp_11_22[];
+extern const CONN effA6_mes_jp_11_22[];
 extern const u16 effA6_mes_jp_11_1[];
 extern const u16 effA6_mes_jp_11_3[];
 extern const u16 effA6_mes_jp_11_5[];
@@ -5341,9 +5341,9 @@ extern const u16 effA6_mes_jp_11_21[];
 extern const u16 effA6_mes_jp_11_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_12[];
 extern const u32 effA6_mes_jp_12_0[];
-extern const u32 effA6_mes_jp_12_2[];
+extern const CONN effA6_mes_jp_12_2[];
 extern const u32 effA6_mes_jp_12_4[];
-extern const u32 effA6_mes_jp_12_18[];
+extern const CONN effA6_mes_jp_12_18[];
 extern const u32 effA6_mes_jp_12_20[];
 extern const u32 effA6_mes_jp_12_22[];
 extern const u16 effA6_mes_jp_12_1[];
@@ -5360,10 +5360,10 @@ extern const u16 effA6_mes_jp_12_21[];
 extern const u16 effA6_mes_jp_12_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_13[];
 extern const u32 effA6_mes_jp_13_0[];
-extern const u32 effA6_mes_jp_13_2[];
+extern const CONN effA6_mes_jp_13_2[];
 extern const u32 effA6_mes_jp_13_4[];
 extern const u32 effA6_mes_jp_13_18[];
-extern const u32 effA6_mes_jp_13_20[];
+extern const CONN effA6_mes_jp_13_20[];
 extern const u32 effA6_mes_jp_13_22[];
 extern const u16 effA6_mes_jp_13_1[];
 extern const u16 effA6_mes_jp_13_3[];
@@ -5378,12 +5378,12 @@ extern const u16 effA6_mes_jp_13_19[];
 extern const u16 effA6_mes_jp_13_21[];
 extern const u16 effA6_mes_jp_13_23[];
 extern const EFFA6_MESSAGE effA6_mes_jp_14[];
-extern const u32 effA6_mes_jp_14_0[];
+extern const CONN effA6_mes_jp_14_0[];
 extern const u32 effA6_mes_jp_14_2[];
 extern const u32 effA6_mes_jp_14_4[];
-extern const u32 effA6_mes_jp_14_18[];
-extern const u32 effA6_mes_jp_14_20[];
-extern const u32 effA6_mes_jp_14_22[];
+extern const CONN effA6_mes_jp_14_18[];
+extern const CONN effA6_mes_jp_14_20[];
+extern const CONN effA6_mes_jp_14_22[];
 extern const u16 effA6_mes_jp_14_1[];
 extern const u16 effA6_mes_jp_14_3[];
 extern const u16 effA6_mes_jp_14_5[];
@@ -5420,7 +5420,7 @@ extern const u32 effA6_mes_en_2_0[];
 extern const u32 effA6_mes_en_2_2[];
 extern const u32 effA6_mes_en_2_4[];
 extern const u32 effA6_mes_en_2_18[];
-extern const u32 effA6_mes_en_2_20[];
+extern const CONN effA6_mes_en_2_20[];
 extern const u32 effA6_mes_en_2_22[];
 extern const u16 effA6_mes_en_2_1[];
 extern const u16 effA6_mes_en_2_3[];
@@ -5439,7 +5439,7 @@ extern const u32 effA6_mes_en_3_0[];
 extern const u32 effA6_mes_en_3_2[];
 extern const u32 effA6_mes_en_3_4[];
 extern const u32 effA6_mes_en_3_18[];
-extern const u32 effA6_mes_en_3_20[];
+extern const CONN effA6_mes_en_3_20[];
 extern const u32 effA6_mes_en_3_22[];
 extern const u16 effA6_mes_en_3_1[];
 extern const u16 effA6_mes_en_3_3[];
@@ -5458,7 +5458,7 @@ extern const u32 effA6_mes_en_4_0[];
 extern const u32 effA6_mes_en_4_2[];
 extern const u32 effA6_mes_en_4_4[];
 extern const u32 effA6_mes_en_4_18[];
-extern const u32 effA6_mes_en_4_20[];
+extern const CONN effA6_mes_en_4_20[];
 extern const u32 effA6_mes_en_4_22[];
 extern const u16 effA6_mes_en_4_1[];
 extern const u16 effA6_mes_en_4_3[];
@@ -5477,7 +5477,7 @@ extern const u32 effA6_mes_en_5_0[];
 extern const u32 effA6_mes_en_5_2[];
 extern const u32 effA6_mes_en_5_4[];
 extern const u32 effA6_mes_en_5_18[];
-extern const u32 effA6_mes_en_5_20[];
+extern const CONN effA6_mes_en_5_20[];
 extern const u32 effA6_mes_en_5_22[];
 extern const u16 effA6_mes_en_5_1[];
 extern const u16 effA6_mes_en_5_3[];
@@ -5502,7 +5502,7 @@ extern const u32 effA6_mes_en_6_12[];
 extern const u32 effA6_mes_en_6_14[];
 extern const u32 effA6_mes_en_6_16[];
 extern const u32 effA6_mes_en_6_18[];
-extern const u32 effA6_mes_en_6_20[];
+extern const CONN effA6_mes_en_6_20[];
 extern const u32 effA6_mes_en_6_22[];
 extern const u16 effA6_mes_en_6_1[];
 extern const u16 effA6_mes_en_6_3[];
@@ -5521,7 +5521,7 @@ extern const u32 effA6_mes_en_7_0[];
 extern const u32 effA6_mes_en_7_2[];
 extern const u32 effA6_mes_en_7_4[];
 extern const u32 effA6_mes_en_7_18[];
-extern const u32 effA6_mes_en_7_20[];
+extern const CONN effA6_mes_en_7_20[];
 extern const u32 effA6_mes_en_7_22[];
 extern const u16 effA6_mes_en_7_1[];
 extern const u16 effA6_mes_en_7_3[];
@@ -5559,7 +5559,7 @@ extern const u32 effA6_mes_en_9_0[];
 extern const u32 effA6_mes_en_9_2[];
 extern const u32 effA6_mes_en_9_4[];
 extern const u32 effA6_mes_en_9_18[];
-extern const u32 effA6_mes_en_9_20[];
+extern const CONN effA6_mes_en_9_20[];
 extern const u32 effA6_mes_en_9_22[];
 extern const u16 effA6_mes_en_9_1[];
 extern const u16 effA6_mes_en_9_3[];
@@ -5578,7 +5578,7 @@ extern const u32 effA6_mes_en_10_0[];
 extern const u32 effA6_mes_en_10_2[];
 extern const u32 effA6_mes_en_10_4[];
 extern const u32 effA6_mes_en_10_18[];
-extern const u32 effA6_mes_en_10_20[];
+extern const CONN effA6_mes_en_10_20[];
 extern const u32 effA6_mes_en_10_22[];
 extern const u16 effA6_mes_en_10_1[];
 extern const u16 effA6_mes_en_10_3[];
@@ -5635,7 +5635,7 @@ extern const u32 effA6_mes_en_13_0[];
 extern const u32 effA6_mes_en_13_2[];
 extern const u32 effA6_mes_en_13_4[];
 extern const u32 effA6_mes_en_13_18[];
-extern const u32 effA6_mes_en_13_20[];
+extern const CONN effA6_mes_en_13_20[];
 extern const u32 effA6_mes_en_13_22[];
 extern const u16 effA6_mes_en_13_1[];
 extern const u16 effA6_mes_en_13_3[];
@@ -5654,7 +5654,7 @@ extern const u32 effA6_mes_en_14_0[];
 extern const u32 effA6_mes_en_14_2[];
 extern const u32 effA6_mes_en_14_4[];
 extern const u32 effA6_mes_en_14_18[];
-extern const u32 effA6_mes_en_14_20[];
+extern const CONN effA6_mes_en_14_20[];
 extern const u32 effA6_mes_en_14_22[];
 extern const u16 effA6_mes_en_14_1[];
 extern const u16 effA6_mes_en_14_3[];
@@ -5711,7 +5711,7 @@ extern const u32 effA6_mes_es_3_0[];
 extern const u32 effA6_mes_es_3_2[];
 extern const u32 effA6_mes_es_3_4[];
 extern const u32 effA6_mes_es_3_18[];
-extern const u32 effA6_mes_es_3_20[];
+extern const CONN effA6_mes_es_3_20[];
 extern const u32 effA6_mes_es_3_22[];
 extern const u16 effA6_mes_es_3_1[];
 extern const u16 effA6_mes_es_3_3[];
@@ -5730,7 +5730,7 @@ extern const u32 effA6_mes_es_4_0[];
 extern const u32 effA6_mes_es_4_2[];
 extern const u32 effA6_mes_es_4_4[];
 extern const u32 effA6_mes_es_4_18[];
-extern const u32 effA6_mes_es_4_20[];
+extern const CONN effA6_mes_es_4_20[];
 extern const u32 effA6_mes_es_4_22[];
 extern const u16 effA6_mes_es_4_1[];
 extern const u16 effA6_mes_es_4_3[];
@@ -5749,7 +5749,7 @@ extern const u32 effA6_mes_es_5_0[];
 extern const u32 effA6_mes_es_5_2[];
 extern const u32 effA6_mes_es_5_4[];
 extern const u32 effA6_mes_es_5_18[];
-extern const u32 effA6_mes_es_5_20[];
+extern const CONN effA6_mes_es_5_20[];
 extern const u32 effA6_mes_es_5_22[];
 extern const u16 effA6_mes_es_5_1[];
 extern const u16 effA6_mes_es_5_3[];
@@ -5774,7 +5774,7 @@ extern const u32 effA6_mes_es_6_12[];
 extern const u32 effA6_mes_es_6_14[];
 extern const u32 effA6_mes_es_6_16[];
 extern const u32 effA6_mes_es_6_18[];
-extern const u32 effA6_mes_es_6_20[];
+extern const CONN effA6_mes_es_6_20[];
 extern const u32 effA6_mes_es_6_22[];
 extern const u16 effA6_mes_es_6_1[];
 extern const u16 effA6_mes_es_6_3[];
@@ -5831,7 +5831,7 @@ extern const u32 effA6_mes_es_9_0[];
 extern const u32 effA6_mes_es_9_2[];
 extern const u32 effA6_mes_es_9_4[];
 extern const u32 effA6_mes_es_9_18[];
-extern const u32 effA6_mes_es_9_20[];
+extern const CONN effA6_mes_es_9_20[];
 extern const u32 effA6_mes_es_9_22[];
 extern const u16 effA6_mes_es_9_1[];
 extern const u16 effA6_mes_es_9_3[];
@@ -5850,7 +5850,7 @@ extern const u32 effA6_mes_es_10_0[];
 extern const u32 effA6_mes_es_10_2[];
 extern const u32 effA6_mes_es_10_4[];
 extern const u32 effA6_mes_es_10_18[];
-extern const u32 effA6_mes_es_10_20[];
+extern const CONN effA6_mes_es_10_20[];
 extern const u32 effA6_mes_es_10_22[];
 extern const u16 effA6_mes_es_10_1[];
 extern const u16 effA6_mes_es_10_3[];
@@ -5907,7 +5907,7 @@ extern const u32 effA6_mes_es_13_0[];
 extern const u32 effA6_mes_es_13_2[];
 extern const u32 effA6_mes_es_13_4[];
 extern const u32 effA6_mes_es_13_18[];
-extern const u32 effA6_mes_es_13_20[];
+extern const CONN effA6_mes_es_13_20[];
 extern const u32 effA6_mes_es_13_22[];
 extern const u16 effA6_mes_es_13_1[];
 extern const u16 effA6_mes_es_13_3[];
@@ -5926,7 +5926,7 @@ extern const u32 effA6_mes_es_14_0[];
 extern const u32 effA6_mes_es_14_2[];
 extern const u32 effA6_mes_es_14_4[];
 extern const u32 effA6_mes_es_14_18[];
-extern const u32 effA6_mes_es_14_20[];
+extern const CONN effA6_mes_es_14_20[];
 extern const u32 effA6_mes_es_14_22[];
 extern const u16 effA6_mes_es_14_1[];
 extern const u16 effA6_mes_es_14_3[];
@@ -5945,7 +5945,7 @@ extern const u32 effA6_mes_pt_0_0[];
 extern const u32 effA6_mes_pt_0_2[];
 extern const u32 effA6_mes_pt_0_4[];
 extern const u32 effA6_mes_pt_0_18[];
-extern const u32 effA6_mes_pt_0_20[];
+extern const CONN effA6_mes_pt_0_20[];
 extern const u32 effA6_mes_pt_0_22[];
 extern const u16 effA6_mes_pt_0_1[];
 extern const u16 effA6_mes_pt_0_3[];
@@ -5983,7 +5983,7 @@ extern const u32 effA6_mes_pt_3_0[];
 extern const u32 effA6_mes_pt_3_2[];
 extern const u32 effA6_mes_pt_3_4[];
 extern const u32 effA6_mes_pt_3_18[];
-extern const u32 effA6_mes_pt_3_20[];
+extern const CONN effA6_mes_pt_3_20[];
 extern const u32 effA6_mes_pt_3_22[];
 extern const u16 effA6_mes_pt_3_1[];
 extern const u16 effA6_mes_pt_3_3[];
@@ -6002,7 +6002,7 @@ extern const u32 effA6_mes_pt_4_0[];
 extern const u32 effA6_mes_pt_4_2[];
 extern const u32 effA6_mes_pt_4_4[];
 extern const u32 effA6_mes_pt_4_18[];
-extern const u32 effA6_mes_pt_4_20[];
+extern const CONN effA6_mes_pt_4_20[];
 extern const u32 effA6_mes_pt_4_22[];
 extern const u16 effA6_mes_pt_4_1[];
 extern const u16 effA6_mes_pt_4_3[];
@@ -6021,7 +6021,7 @@ extern const u32 effA6_mes_pt_5_0[];
 extern const u32 effA6_mes_pt_5_2[];
 extern const u32 effA6_mes_pt_5_4[];
 extern const u32 effA6_mes_pt_5_18[];
-extern const u32 effA6_mes_pt_5_20[];
+extern const CONN effA6_mes_pt_5_20[];
 extern const u32 effA6_mes_pt_5_22[];
 extern const u16 effA6_mes_pt_5_1[];
 extern const u16 effA6_mes_pt_5_3[];
@@ -6046,7 +6046,7 @@ extern const u32 effA6_mes_pt_6_12[];
 extern const u32 effA6_mes_pt_6_14[];
 extern const u32 effA6_mes_pt_6_16[];
 extern const u32 effA6_mes_pt_6_18[];
-extern const u32 effA6_mes_pt_6_20[];
+extern const CONN effA6_mes_pt_6_20[];
 extern const u32 effA6_mes_pt_6_22[];
 extern const u16 effA6_mes_pt_6_1[];
 extern const u16 effA6_mes_pt_6_3[];
@@ -6065,7 +6065,7 @@ extern const u32 effA6_mes_pt_7_0[];
 extern const u32 effA6_mes_pt_7_2[];
 extern const u32 effA6_mes_pt_7_4[];
 extern const u32 effA6_mes_pt_7_18[];
-extern const u32 effA6_mes_pt_7_20[];
+extern const CONN effA6_mes_pt_7_20[];
 extern const u32 effA6_mes_pt_7_22[];
 extern const u16 effA6_mes_pt_7_1[];
 extern const u16 effA6_mes_pt_7_3[];
@@ -6084,7 +6084,7 @@ extern const u32 effA6_mes_pt_8_0[];
 extern const u32 effA6_mes_pt_8_2[];
 extern const u32 effA6_mes_pt_8_4[];
 extern const u32 effA6_mes_pt_8_18[];
-extern const u32 effA6_mes_pt_8_20[];
+extern const CONN effA6_mes_pt_8_20[];
 extern const u32 effA6_mes_pt_8_22[];
 extern const u16 effA6_mes_pt_8_1[];
 extern const u16 effA6_mes_pt_8_3[];
@@ -6122,7 +6122,7 @@ extern const u32 effA6_mes_pt_10_0[];
 extern const u32 effA6_mes_pt_10_2[];
 extern const u32 effA6_mes_pt_10_4[];
 extern const u32 effA6_mes_pt_10_18[];
-extern const u32 effA6_mes_pt_10_20[];
+extern const CONN effA6_mes_pt_10_20[];
 extern const u32 effA6_mes_pt_10_22[];
 extern const u16 effA6_mes_pt_10_1[];
 extern const u16 effA6_mes_pt_10_3[];
@@ -6141,7 +6141,7 @@ extern const u32 effA6_mes_pt_11_0[];
 extern const u32 effA6_mes_pt_11_2[];
 extern const u32 effA6_mes_pt_11_4[];
 extern const u32 effA6_mes_pt_11_18[];
-extern const u32 effA6_mes_pt_11_20[];
+extern const CONN effA6_mes_pt_11_20[];
 extern const u32 effA6_mes_pt_11_22[];
 extern const u16 effA6_mes_pt_11_1[];
 extern const u16 effA6_mes_pt_11_3[];
@@ -6160,7 +6160,7 @@ extern const u32 effA6_mes_pt_12_0[];
 extern const u32 effA6_mes_pt_12_2[];
 extern const u32 effA6_mes_pt_12_4[];
 extern const u32 effA6_mes_pt_12_18[];
-extern const u32 effA6_mes_pt_12_20[];
+extern const CONN effA6_mes_pt_12_20[];
 extern const u32 effA6_mes_pt_12_22[];
 extern const u16 effA6_mes_pt_12_1[];
 extern const u16 effA6_mes_pt_12_3[];
@@ -6179,7 +6179,7 @@ extern const u32 effA6_mes_pt_13_0[];
 extern const u32 effA6_mes_pt_13_2[];
 extern const u32 effA6_mes_pt_13_4[];
 extern const u32 effA6_mes_pt_13_18[];
-extern const u32 effA6_mes_pt_13_20[];
+extern const CONN effA6_mes_pt_13_20[];
 extern const u32 effA6_mes_pt_13_22[];
 extern const u16 effA6_mes_pt_13_1[];
 extern const u16 effA6_mes_pt_13_3[];
@@ -6198,7 +6198,7 @@ extern const u32 effA6_mes_pt_14_0[];
 extern const u32 effA6_mes_pt_14_2[];
 extern const u32 effA6_mes_pt_14_4[];
 extern const u32 effA6_mes_pt_14_18[];
-extern const u32 effA6_mes_pt_14_20[];
+extern const CONN effA6_mes_pt_14_20[];
 extern const u32 effA6_mes_pt_14_22[];
 extern const u16 effA6_mes_pt_14_1[];
 extern const u16 effA6_mes_pt_14_3[];
@@ -6214,9 +6214,9 @@ extern const u16 effA6_mes_pt_14_21[];
 extern const u16 effA6_mes_pt_14_23[];
 extern const EFFF9_MESSAGE effF9_mes_jp_15[];
 extern const u32 effF9_mes_jp_15_0[];
-extern const u32 effF9_mes_jp_15_4[];
+extern const CONN effF9_mes_jp_15_4[];
 extern const u32 effF9_mes_jp_15_6[];
-extern const u32 effF9_mes_jp_15_8[];
+extern const CONN effF9_mes_jp_15_8[];
 extern const u16 effF9_mes_jp_15_1[];
 extern const u16 effF9_mes_jp_15_3[];
 extern const u16 effF9_mes_jp_15_5[];
@@ -6235,7 +6235,7 @@ extern const u16 effF9_mes_en_15_9[];
 extern const EFFF9_MESSAGE effF9_mes_jp_16[];
 extern const u32 effF9_mes_jp_16_0[];
 extern const u32 effF9_mes_jp_16_4[];
-extern const u32 effF9_mes_jp_16_6[];
+extern const CONN effF9_mes_jp_16_6[];
 extern const u32 effF9_mes_jp_16_8[];
 extern const u16 effF9_mes_jp_16_1[];
 extern const u16 effF9_mes_jp_16_3[];
@@ -17559,9 +17559,9 @@ const u8 config_jp_chr_0[128] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_0[6] = {
-    { (const CONN*)effB8_conn_0_0, (const u16*)effB8_conn_0_1 }, { (const CONN*)effB8_conn_0_2, (const u16*)effB8_conn_0_3 },
-    { (const CONN*)effB8_conn_0_4, (const u16*)effB8_conn_0_5 }, { (const CONN*)effB8_conn_0_6, (const u16*)effB8_conn_0_7 },
-    { (const CONN*)effB8_conn_0_8, (const u16*)effB8_conn_0_9 }, { (const CONN*)effB8_conn_0_10, (const u16*)effB8_conn_0_11 },
+    { (const CONN*)effB8_conn_0_0, effB8_conn_0_1 }, { effB8_conn_0_2, effB8_conn_0_3 },
+    { effB8_conn_0_4, effB8_conn_0_5 }, { effB8_conn_0_6, effB8_conn_0_7 },
+    { (const CONN*)effB8_conn_0_8, effB8_conn_0_9 }, { effB8_conn_0_10, effB8_conn_0_11 },
 };
 
 /* provisional name */
@@ -17571,23 +17571,23 @@ const u32 effB8_conn_0_0[12] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_0_2[18] = {
-    0, 0xA09B, 0x100000, 0xA0AE, 0x200000, 0xA081, 0x300000, 0xA080,
-    0x400000, 0xA0B7, 0x500000, 0xA094, 0x600000, 0xA0B3, 0x700000, 0xA087,
-    0x800000, 0xA0A8,
+const CONN effB8_conn_0_2[9] = {
+    { 0, 0, 0, 0xA09B }, { 16, 0, 0, 0xA0AE }, { 32, 0, 0, 0xA081 }, { 48, 0, 0, 0xA080 },
+    { 64, 0, 0, 0xA0B7 }, { 80, 0, 0, 0xA094 }, { 96, 0, 0, 0xA0B3 }, { 112, 0, 0, 0xA087 },
+    { 128, 0, 0, 0xA0A8 },
 };
 
 /* provisional name */
-const u32 effB8_conn_0_4[14] = {
-    0, 0xA09A, 0x100000, 0xA0B7, 0x200000, 0xA0A8, 0x300000, 0xA09B,
-    0x400000, 0xA0B2, 0x500000, 0xA0B7, 0x600000, 0xA08C,
+const CONN effB8_conn_0_4[7] = {
+    { 0, 0, 0, 0xA09A }, { 16, 0, 0, 0xA0B7 }, { 32, 0, 0, 0xA0A8 }, { 48, 0, 0, 0xA09B },
+    { 64, 0, 0, 0xA0B2 }, { 80, 0, 0, 0xA0B7 }, { 96, 0, 0, 0xA08C },
 };
 
 /* provisional name */
-const u32 effB8_conn_0_6[20] = {
-    0, 0xA084, 0x100000, 0xA0B7, 0x200000, 0xA0A6, 0x300000, 0xA018,
-    0x400000, 0xA22A, 0x500000, 0xA04B, 0xA00000, 0xA124, 0xB00000, 0xA2C4,
-    0xC00000, 0xA2E8, 0xD00000, 0xA273,
+const CONN effB8_conn_0_6[10] = {
+    { 0, 0, 0, 0xA084 }, { 16, 0, 0, 0xA0B7 }, { 32, 0, 0, 0xA0A6 }, { 48, 0, 0, 0xA018 },
+    { 64, 0, 0, 0xA22A }, { 80, 0, 0, 0xA04B }, { 160, 0, 0, 0xA124 }, { 176, 0, 0, 0xA2C4 },
+    { 192, 0, 0, 0xA2E8 }, { 208, 0, 0, 0xA273 },
 };
 
 /* provisional name */
@@ -17598,10 +17598,10 @@ const u32 effB8_conn_0_8[22] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_0_10[20] = {
-    0, 0xA084, 0x100000, 0xA0B7, 0x200000, 0xA0A6, 0x300000, 0xA018,
-    0x400000, 0xA119, 0x500000, 0xA04B, 0xA00000, 0xA1F2, 0xB00000, 0xA2C5,
-    0xC00000, 0xA00C, 0xD00000, 0xA028,
+const CONN effB8_conn_0_10[10] = {
+    { 0, 0, 0, 0xA084 }, { 16, 0, 0, 0xA0B7 }, { 32, 0, 0, 0xA0A6 }, { 48, 0, 0, 0xA018 },
+    { 64, 0, 0, 0xA119 }, { 80, 0, 0, 0xA04B }, { 160, 0, 0, 0xA1F2 }, { 176, 0, 0, 0xA2C5 },
+    { 192, 0, 0, 0xA00C }, { 208, 0, 0, 0xA028 },
 };
 
 /* provisional name */
@@ -17636,28 +17636,28 @@ const u16 effB8_conn_0_11[7] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_1[6] = {
-    { (const CONN*)effB8_conn_1_0, (const u16*)effB8_conn_1_1 }, { (const CONN*)effB8_conn_1_2, (const u16*)effB8_conn_1_3 },
-    { (const CONN*)effB8_conn_1_4, (const u16*)effB8_conn_1_5 }, { (const CONN*)effB8_conn_1_6, (const u16*)effB8_conn_1_7 },
-    { (const CONN*)effB8_conn_1_8, (const u16*)effB8_conn_1_9 }, { (const CONN*)effB8_conn_1_10, (const u16*)effB8_conn_1_11 },
+    { effB8_conn_1_0, effB8_conn_1_1 }, { effB8_conn_1_2, effB8_conn_1_3 },
+    { effB8_conn_1_4, effB8_conn_1_5 }, { (const CONN*)effB8_conn_1_6, effB8_conn_1_7 },
+    { effB8_conn_1_8, effB8_conn_1_9 }, { (const CONN*)effB8_conn_1_10, effB8_conn_1_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_1_0[12] = {
-    0, 0xA099, 0x100000, 0xA081, 0x200000, 0xA0CC, 0x300000, 0xA0B7,
-    0x400000, 0xA0CB, 0x500000, 0xA0A0,
+const CONN effB8_conn_1_0[6] = {
+    { 0, 0, 0, 0xA099 }, { 16, 0, 0, 0xA081 }, { 32, 0, 0, 0xA0CC }, { 48, 0, 0, 0xA0B7 },
+    { 64, 0, 0, 0xA0CB }, { 80, 0, 0, 0xA0A0 },
 };
 
 /* provisional name */
-const u32 effB8_conn_1_2[16] = {
-    0, 0xA0C9, 0x100000, 0xA0B7, 0x200000, 0xA0A1, 0x300000, 0xA0A6,
-    0x400000, 0xA0AD, 0x500000, 0xA0C9, 0x600000, 0xA0AA, 0x700000, 0xA0B7,
+const CONN effB8_conn_1_2[8] = {
+    { 0, 0, 0, 0xA0C9 }, { 16, 0, 0, 0xA0B7 }, { 32, 0, 0, 0xA0A1 }, { 48, 0, 0, 0xA0A6 },
+    { 64, 0, 0, 0xA0AD }, { 80, 0, 0, 0xA0C9 }, { 96, 0, 0, 0xA0AA }, { 112, 0, 0, 0xA0B7 },
 };
 
 /* provisional name */
-const u32 effB8_conn_1_4[22] = {
-    0, 0xA08C, 0x100000, 0xA08F, 0x200000, 0xA0AD, 0x300000, 0xA0B8,
-    0x400000, 0xA0AD, 0xA00000, 0xA09C, 0xB00000, 0xA0B3, 0xC00000, 0xA0C6,
-    0xD00000, 0xA0C7, 0xE00000, 0xA0B3, 0xF00000, 0xA093,
+const CONN effB8_conn_1_4[11] = {
+    { 0, 0, 0, 0xA08C }, { 16, 0, 0, 0xA08F }, { 32, 0, 0, 0xA0AD }, { 48, 0, 0, 0xA0B8 },
+    { 64, 0, 0, 0xA0AD }, { 160, 0, 0, 0xA09C }, { 176, 0, 0, 0xA0B3 }, { 192, 0, 0, 0xA0C6 },
+    { 208, 0, 0, 0xA0C7 }, { 224, 0, 0, 0xA0B3 }, { 240, 0, 0, 0xA093 },
 };
 
 /* provisional name */
@@ -17669,12 +17669,12 @@ const u32 effB8_conn_1_6[32] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_1_8[36] = {
-    0, 0xA2C7, 0x100000, 0xA007, 0x200000, 0xA11C, 0x300000, 0xA2C4,
-    0x400000, 0xA04B, 0x500000, 0xA108, 0x600000, 0xA006, 0x700000, 0xA02C,
-    0x800000, 0xA264, 0x900000, 0xA021, 0xA00000, 0xA037, 0xB00000, 0xA23E,
-    0xC00000, 0xA041, 0xD00000, 0xA02C, 0xE00000, 0xA26A, 0xF00000, 0xA026,
-    0xFFF0, 0xA02B, 0x10FFF0, 0xA00C,
+const CONN effB8_conn_1_8[18] = {
+    { 0, 0, 0, 0xA2C7 }, { 16, 0, 0, 0xA007 }, { 32, 0, 0, 0xA11C }, { 48, 0, 0, 0xA2C4 },
+    { 64, 0, 0, 0xA04B }, { 80, 0, 0, 0xA108 }, { 96, 0, 0, 0xA006 }, { 112, 0, 0, 0xA02C },
+    { 128, 0, 0, 0xA264 }, { 144, 0, 0, 0xA021 }, { 160, 0, 0, 0xA037 }, { 176, 0, 0, 0xA23E },
+    { 192, 0, 0, 0xA041 }, { 208, 0, 0, 0xA02C }, { 224, 0, 0, 0xA26A }, { 240, 0, 0, 0xA026 },
+    { 0, -16, 0, 0xA02B }, { 16, -16, 0, 0xA00C },
 };
 
 /* provisional name */
@@ -17717,24 +17717,24 @@ const u16 effB8_conn_1_11[7] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_2[6] = {
-    { (const CONN*)effB8_conn_2_0, (const u16*)effB8_conn_2_1 }, { (const CONN*)effB8_conn_2_2, (const u16*)effB8_conn_2_3 },
-    { (const CONN*)effB8_conn_2_4, (const u16*)effB8_conn_2_5 }, { (const CONN*)effB8_conn_2_6, (const u16*)effB8_conn_2_7 },
-    { (const CONN*)effB8_conn_2_8, (const u16*)effB8_conn_2_9 }, { (const CONN*)effB8_conn_2_10, (const u16*)effB8_conn_2_11 },
+    { effB8_conn_2_0, effB8_conn_2_1 }, { effB8_conn_2_2, effB8_conn_2_3 },
+    { (const CONN*)effB8_conn_2_4, effB8_conn_2_5 }, { effB8_conn_2_6, effB8_conn_2_7 },
+    { (const CONN*)effB8_conn_2_8, effB8_conn_2_9 }, { effB8_conn_2_10, effB8_conn_2_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_2_0[26] = {
-    0, 0xA17B, 0x100000, 0xA217, 0x200000, 0xA107, 0x300000, 0xA108,
-    0x400000, 0xA109, 0x900000, 0x9F84, 0xA00000, 0x9F83, 0xB00000, 0x9F82,
-    0xC00000, 0x9F84, 0xD00000, 0x9F83, 0xE00000, 0x9F82, 0xF00000, 0x9F88,
-    0xFFF0, 0x9F89,
+const CONN effB8_conn_2_0[13] = {
+    { 0, 0, 0, 0xA17B }, { 16, 0, 0, 0xA217 }, { 32, 0, 0, 0xA107 }, { 48, 0, 0, 0xA108 },
+    { 64, 0, 0, 0xA109 }, { 144, 0, 0, 0x9F84 }, { 160, 0, 0, 0x9F83 }, { 176, 0, 0, 0x9F82 },
+    { 192, 0, 0, 0x9F84 }, { 208, 0, 0, 0x9F83 }, { 224, 0, 0, 0x9F82 }, { 240, 0, 0, 0x9F88 },
+    { 0, -16, 0, 0x9F89 },
 };
 
 /* provisional name */
-const u32 effB8_conn_2_2[22] = {
-    0, 0xA1CD, 0x100000, 0xA1CE, 0x200000, 0xA28F, 0x300000, 0xA10B,
-    0xA00000, 0x9F84, 0xB00000, 0x9F83, 0xC00000, 0x9F82, 0xD00000, 0x9F84,
-    0xE00000, 0x9F83, 0xF00000, 0x9F88, 0xFFF0, 0x9F89,
+const CONN effB8_conn_2_2[11] = {
+    { 0, 0, 0, 0xA1CD }, { 16, 0, 0, 0xA1CE }, { 32, 0, 0, 0xA28F }, { 48, 0, 0, 0xA10B },
+    { 160, 0, 0, 0x9F84 }, { 176, 0, 0, 0x9F83 }, { 192, 0, 0, 0x9F82 }, { 208, 0, 0, 0x9F84 },
+    { 224, 0, 0, 0x9F83 }, { 240, 0, 0, 0x9F88 }, { 0, -16, 0, 0x9F89 },
 };
 
 /* provisional name */
@@ -17745,12 +17745,12 @@ const u32 effB8_conn_2_4[24] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_2_6[36] = {
-    0, 0xA100, 0x100000, 0xA018, 0x200000, 0xA101, 0x300000, 0xA102,
-    0x400000, 0xA015, 0x500000, 0xA103, 0x600000, 0xA00B, 0x700000, 0xA00F,
-    0x800000, 0xA104, 0x900000, 0xA105, 0xA00000, 0xA027, 0xB00000, 0xA106,
-    0xC00000, 0xA00A, 0xD00000, 0xA029, 0xE00000, 0xA028, 0xF00000, 0xA107,
-    0xFFF0, 0xA108, 0x10FFF0, 0xA109,
+const CONN effB8_conn_2_6[18] = {
+    { 0, 0, 0, 0xA100 }, { 16, 0, 0, 0xA018 }, { 32, 0, 0, 0xA101 }, { 48, 0, 0, 0xA102 },
+    { 64, 0, 0, 0xA015 }, { 80, 0, 0, 0xA103 }, { 96, 0, 0, 0xA00B }, { 112, 0, 0, 0xA00F },
+    { 128, 0, 0, 0xA104 }, { 144, 0, 0, 0xA105 }, { 160, 0, 0, 0xA027 }, { 176, 0, 0, 0xA106 },
+    { 192, 0, 0, 0xA00A }, { 208, 0, 0, 0xA029 }, { 224, 0, 0, 0xA028 }, { 240, 0, 0, 0xA107 },
+    { 0, -16, 0, 0xA108 }, { 16, -16, 0, 0xA109 },
 };
 
 /* provisional name */
@@ -17761,12 +17761,12 @@ const u32 effB8_conn_2_8[22] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_2_10[34] = {
-    0, 0xA001, 0x100000, 0xA005, 0x200000, 0xA045, 0x300000, 0xA010,
-    0x400000, 0xA02C, 0x500000, 0xA01E, 0x600000, 0xA013, 0x700000, 0xA001,
-    0x900000, 0xA0B8, 0xA00000, 0xA0B7, 0xB00000, 0xA0C6, 0xC00000, 0xA022,
-    0xD00000, 0xA10F, 0xE00000, 0xA006, 0xF00000, 0xA110, 0xFFF0, 0xA04D,
-    0x10FFF0, 0xA00C,
+const CONN effB8_conn_2_10[17] = {
+    { 0, 0, 0, 0xA001 }, { 16, 0, 0, 0xA005 }, { 32, 0, 0, 0xA045 }, { 48, 0, 0, 0xA010 },
+    { 64, 0, 0, 0xA02C }, { 80, 0, 0, 0xA01E }, { 96, 0, 0, 0xA013 }, { 112, 0, 0, 0xA001 },
+    { 144, 0, 0, 0xA0B8 }, { 160, 0, 0, 0xA0B7 }, { 176, 0, 0, 0xA0C6 }, { 192, 0, 0, 0xA022 },
+    { 208, 0, 0, 0xA10F }, { 224, 0, 0, 0xA006 }, { 240, 0, 0, 0xA110 }, { 0, -16, 0, 0xA04D },
+    { 16, -16, 0, 0xA00C },
 };
 
 /* provisional name */
@@ -17801,32 +17801,32 @@ const u16 effB8_conn_2_11[5] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_3[6] = {
-    { (const CONN*)effB8_conn_3_0, (const u16*)effB8_conn_3_1 }, { (const CONN*)effB8_conn_3_2, (const u16*)effB8_conn_3_3 },
-    { (const CONN*)effB8_conn_3_4, (const u16*)effB8_conn_3_5 }, { (const CONN*)effB8_conn_3_6, (const u16*)effB8_conn_3_7 },
-    { (const CONN*)effB8_conn_3_8, (const u16*)effB8_conn_3_9 }, { (const CONN*)effB8_conn_3_10, (const u16*)effB8_conn_3_11 },
+    { effB8_conn_3_0, effB8_conn_3_1 }, { effB8_conn_3_2, effB8_conn_3_3 },
+    { effB8_conn_3_4, effB8_conn_3_5 }, { effB8_conn_3_6, effB8_conn_3_7 },
+    { (const CONN*)effB8_conn_3_8, effB8_conn_3_9 }, { effB8_conn_3_10, effB8_conn_3_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_3_0[8] = {
-    0, 0xA110, 0x100000, 0xA2EA, 0x200000, 0xA2EB, 0x300000, 0xA280,
+const CONN effB8_conn_3_0[4] = {
+    { 0, 0, 0, 0xA110 }, { 16, 0, 0, 0xA2EA }, { 32, 0, 0, 0xA2EB }, { 48, 0, 0, 0xA280 },
 };
 
 /* provisional name */
-const u32 effB8_conn_3_2[8] = {
-    0, 0xA2EC, 0x100000, 0xA294, 0x200000, 0xA089, 0x300000, 0xA082,
+const CONN effB8_conn_3_2[4] = {
+    { 0, 0, 0, 0xA2EC }, { 16, 0, 0, 0xA294 }, { 32, 0, 0, 0xA089 }, { 48, 0, 0, 0xA082 },
 };
 
 /* provisional name */
-const u32 effB8_conn_3_4[8] = {
-    0, 0xA2CA, 0x100000, 0xA2ED, 0x200000, 0xA2EE, 0x300000, 0xA14D,
+const CONN effB8_conn_3_4[4] = {
+    { 0, 0, 0, 0xA2CA }, { 16, 0, 0, 0xA2ED }, { 32, 0, 0, 0xA2EE }, { 48, 0, 0, 0xA14D },
 };
 
 /* provisional name */
-const u32 effB8_conn_3_6[26] = {
-    0, 0xA2CE, 0x100000, 0xA217, 0x200000, 0xA015, 0x300000, 0xA012,
-    0x400000, 0xA280, 0x500000, 0xA027, 0x600000, 0xA015, 0x700000, 0xA025,
-    0x800000, 0xA028, 0xA00000, 0xA2EF, 0xB00000, 0xA2C6, 0xC00000, 0xA296,
-    0xD00000, 0xA039,
+const CONN effB8_conn_3_6[13] = {
+    { 0, 0, 0, 0xA2CE }, { 16, 0, 0, 0xA217 }, { 32, 0, 0, 0xA015 }, { 48, 0, 0, 0xA012 },
+    { 64, 0, 0, 0xA280 }, { 80, 0, 0, 0xA027 }, { 96, 0, 0, 0xA015 }, { 112, 0, 0, 0xA025 },
+    { 128, 0, 0, 0xA028 }, { 160, 0, 0, 0xA2EF }, { 176, 0, 0, 0xA2C6 }, { 192, 0, 0, 0xA296 },
+    { 208, 0, 0, 0xA039 },
 };
 
 /* provisional name */
@@ -17837,8 +17837,8 @@ const u32 effB8_conn_3_8[24] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_3_10[2] = {
-    0x100000, 0xA157,
+const CONN effB8_conn_3_10[1] = {
+    { 16, 0, 0, 0xA157 },
 };
 
 /* provisional name */
@@ -17873,28 +17873,28 @@ const u16 effB8_conn_3_11[4] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_4[6] = {
-    { (const CONN*)effB8_conn_4_0, (const u16*)effB8_conn_4_1 }, { (const CONN*)effB8_conn_4_2, (const u16*)effB8_conn_4_3 },
-    { (const CONN*)effB8_conn_4_4, (const u16*)effB8_conn_4_5 }, { (const CONN*)effB8_conn_4_6, (const u16*)effB8_conn_4_7 },
-    { (const CONN*)effB8_conn_4_8, (const u16*)effB8_conn_4_9 }, { (const CONN*)effB8_conn_4_10, (const u16*)effB8_conn_4_11 },
+    { effB8_conn_4_0, effB8_conn_4_1 }, { effB8_conn_4_2, effB8_conn_4_3 },
+    { effB8_conn_4_4, effB8_conn_4_5 }, { (const CONN*)effB8_conn_4_6, effB8_conn_4_7 },
+    { (const CONN*)effB8_conn_4_8, effB8_conn_4_9 }, { effB8_conn_4_10, effB8_conn_4_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_4_0[16] = {
-    0, 0xA0AA, 0x100000, 0xA088, 0x200000, 0xA0B3, 0x300000, 0xA093,
-    0x400000, 0xA080, 0x500000, 0xA0B3, 0x600000, 0xA0CC, 0x700000, 0xA0B7,
+const CONN effB8_conn_4_0[8] = {
+    { 0, 0, 0, 0xA0AA }, { 16, 0, 0, 0xA088 }, { 32, 0, 0, 0xA0B3 }, { 48, 0, 0, 0xA093 },
+    { 64, 0, 0, 0xA080 }, { 80, 0, 0, 0xA0B3 }, { 96, 0, 0, 0xA0CC }, { 112, 0, 0, 0xA0B7 },
 };
 
 /* provisional name */
-const u32 effB8_conn_4_2[18] = {
-    0, 0xA0AA, 0x100000, 0xA0B7, 0x200000, 0xA0A7, 0x300000, 0xA0AD,
-    0x400000, 0xA0BA, 0x500000, 0xA08A, 0x600000, 0xA0AD, 0x700000, 0xA0C2,
-    0x800000, 0xA0B7,
+const CONN effB8_conn_4_2[9] = {
+    { 0, 0, 0, 0xA0AA }, { 16, 0, 0, 0xA0B7 }, { 32, 0, 0, 0xA0A7 }, { 48, 0, 0, 0xA0AD },
+    { 64, 0, 0, 0xA0BA }, { 80, 0, 0, 0xA08A }, { 96, 0, 0, 0xA0AD }, { 112, 0, 0, 0xA0C2 },
+    { 128, 0, 0, 0xA0B7 },
 };
 
 /* provisional name */
-const u32 effB8_conn_4_4[16] = {
-    0, 0xA087, 0x100000, 0xA0AA, 0x200000, 0xA08C, 0x300000, 0xA085,
-    0x400000, 0xA082, 0x500000, 0xA0AD, 0x600000, 0xA08F, 0x700000, 0xA0B7,
+const CONN effB8_conn_4_4[8] = {
+    { 0, 0, 0, 0xA087 }, { 16, 0, 0, 0xA0AA }, { 32, 0, 0, 0xA08C }, { 48, 0, 0, 0xA085 },
+    { 64, 0, 0, 0xA082 }, { 80, 0, 0, 0xA0AD }, { 96, 0, 0, 0xA08F }, { 112, 0, 0, 0xA0B7 },
 };
 
 /* provisional name */
@@ -17916,12 +17916,12 @@ const u32 effB8_conn_4_8[36] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_4_10[36] = {
-    0, 0xA0C2, 0x100000, 0xA0A1, 0x200000, 0xA0B7, 0x300000, 0xA0BE,
-    0x400000, 0xA02C, 0x500000, 0xA26A, 0x600000, 0xA026, 0x700000, 0xA001,
-    0x800000, 0xA014, 0x900000, 0xA03E, 0xA00000, 0xA026, 0xB00000, 0xA022,
-    0xC00000, 0xA13A, 0xD00000, 0xA1CC, 0xE00000, 0xA018, 0xF00000, 0xA2D3,
-    0xFFF0, 0xA296, 0x10FFF0, 0xA2CF,
+const CONN effB8_conn_4_10[18] = {
+    { 0, 0, 0, 0xA0C2 }, { 16, 0, 0, 0xA0A1 }, { 32, 0, 0, 0xA0B7 }, { 48, 0, 0, 0xA0BE },
+    { 64, 0, 0, 0xA02C }, { 80, 0, 0, 0xA26A }, { 96, 0, 0, 0xA026 }, { 112, 0, 0, 0xA001 },
+    { 128, 0, 0, 0xA014 }, { 144, 0, 0, 0xA03E }, { 160, 0, 0, 0xA026 }, { 176, 0, 0, 0xA022 },
+    { 192, 0, 0, 0xA13A }, { 208, 0, 0, 0xA1CC }, { 224, 0, 0, 0xA018 }, { 240, 0, 0, 0xA2D3 },
+    { 0, -16, 0, 0xA296 }, { 16, -16, 0, 0xA2CF },
 };
 
 /* provisional name */
@@ -17957,21 +17957,21 @@ const u16 effB8_conn_4_11[9] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_5[6] = {
-    { (const CONN*)effB8_conn_5_0, (const u16*)effB8_conn_5_1 }, { (const CONN*)effB8_conn_5_2, (const u16*)effB8_conn_5_3 },
-    { (const CONN*)effB8_conn_5_4, (const u16*)effB8_conn_5_5 }, { (const CONN*)effB8_conn_5_6, (const u16*)effB8_conn_5_7 },
-    { (const CONN*)effB8_conn_5_8, (const u16*)effB8_conn_5_9 }, { (const CONN*)effB8_conn_5_10, (const u16*)effB8_conn_5_11 },
+    { effB8_conn_5_0, effB8_conn_5_1 }, { effB8_conn_5_2, effB8_conn_5_3 },
+    { (const CONN*)effB8_conn_5_4, effB8_conn_5_5 }, { effB8_conn_5_6, effB8_conn_5_7 },
+    { effB8_conn_5_8, effB8_conn_5_9 }, { (const CONN*)effB8_conn_5_10, effB8_conn_5_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_5_0[16] = {
-    0, 0xA2F0, 0x100000, 0xA2D5, 0x200000, 0xA2D6, 0x300000, 0xA08B,
-    0x400000, 0xA0B5, 0x500000, 0xA093, 0x600000, 0xA0AA, 0x700000, 0xA0A0,
+const CONN effB8_conn_5_0[8] = {
+    { 0, 0, 0, 0xA2F0 }, { 16, 0, 0, 0xA2D5 }, { 32, 0, 0, 0xA2D6 }, { 48, 0, 0, 0xA08B },
+    { 64, 0, 0, 0xA0B5 }, { 80, 0, 0, 0xA093 }, { 96, 0, 0, 0xA0AA }, { 112, 0, 0, 0xA0A0 },
 };
 
 /* provisional name */
-const u32 effB8_conn_5_2[16] = {
-    0, 0xA08C, 0x100000, 0xA0A6, 0x200000, 0xA0A0, 0x300000, 0xA089,
-    0x400000, 0xA0AD, 0x500000, 0xA0C7, 0x600000, 0xA081, 0x700000, 0xA0AD,
+const CONN effB8_conn_5_2[8] = {
+    { 0, 0, 0, 0xA08C }, { 16, 0, 0, 0xA0A6 }, { 32, 0, 0, 0xA0A0 }, { 48, 0, 0, 0xA089 },
+    { 64, 0, 0, 0xA0AD }, { 80, 0, 0, 0xA0C7 }, { 96, 0, 0, 0xA081 }, { 112, 0, 0, 0xA0AD },
 };
 
 /* provisional name */
@@ -17982,18 +17982,18 @@ const u32 effB8_conn_5_4[24] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_5_6[20] = {
-    0, 0xA1BC, 0x100000, 0xA02C, 0x200000, 0xA2D4, 0x300000, 0xA001,
-    0x400000, 0xA1AA, 0x500000, 0xA020, 0xA00000, 0xA2D5, 0xB00000, 0xA2D6,
-    0xC00000, 0xA018, 0xD00000, 0xA2D1,
+const CONN effB8_conn_5_6[10] = {
+    { 0, 0, 0, 0xA1BC }, { 16, 0, 0, 0xA02C }, { 32, 0, 0, 0xA2D4 }, { 48, 0, 0, 0xA001 },
+    { 64, 0, 0, 0xA1AA }, { 80, 0, 0, 0xA020 }, { 160, 0, 0, 0xA2D5 }, { 176, 0, 0, 0xA2D6 },
+    { 192, 0, 0, 0xA018 }, { 208, 0, 0, 0xA2D1 },
 };
 
 /* provisional name */
-const u32 effB8_conn_5_8[26] = {
-    0, 0xA23E, 0x100000, 0xA041, 0x200000, 0xA10E, 0x300000, 0xA018,
-    0x400000, 0xA089, 0x500000, 0xA0AD, 0x600000, 0xA0CB, 0x700000, 0xA04B,
-    0xA00000, 0xA1BD, 0xB00000, 0xA0C2, 0xC00000, 0xA0A1, 0xD00000, 0xA0B7,
-    0xE00000, 0xA0BE,
+const CONN effB8_conn_5_8[13] = {
+    { 0, 0, 0, 0xA23E }, { 16, 0, 0, 0xA041 }, { 32, 0, 0, 0xA10E }, { 48, 0, 0, 0xA018 },
+    { 64, 0, 0, 0xA089 }, { 80, 0, 0, 0xA0AD }, { 96, 0, 0, 0xA0CB }, { 112, 0, 0, 0xA04B },
+    { 160, 0, 0, 0xA1BD }, { 176, 0, 0, 0xA0C2 }, { 192, 0, 0, 0xA0A1 }, { 208, 0, 0, 0xA0B7 },
+    { 224, 0, 0, 0xA0BE },
 };
 
 /* provisional name */
@@ -18036,32 +18036,32 @@ const u16 effB8_conn_5_11[8] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_7[6] = {
-    { (const CONN*)effB8_conn_7_0, (const u16*)effB8_conn_7_1 }, { (const CONN*)effB8_conn_7_2, (const u16*)effB8_conn_7_3 },
-    { (const CONN*)effB8_conn_7_4, (const u16*)effB8_conn_7_5 }, { (const CONN*)effB8_conn_7_6, (const u16*)effB8_conn_7_7 },
-    { (const CONN*)effB8_conn_7_8, (const u16*)effB8_conn_7_9 }, { (const CONN*)effB8_conn_7_10, (const u16*)effB8_conn_7_11 },
+    { effB8_conn_7_0, effB8_conn_7_1 }, { effB8_conn_7_2, effB8_conn_7_3 },
+    { effB8_conn_7_4, effB8_conn_7_5 }, { effB8_conn_7_6, effB8_conn_7_7 },
+    { (const CONN*)effB8_conn_7_8, effB8_conn_7_9 }, { effB8_conn_7_10, effB8_conn_7_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_7_0[6] = {
-    0, 0xA292, 0x100000, 0xA1D8, 0x200000, 0xA2F1,
+const CONN effB8_conn_7_0[3] = {
+    { 0, 0, 0, 0xA292 }, { 16, 0, 0, 0xA1D8 }, { 32, 0, 0, 0xA2F1 },
 };
 
 /* provisional name */
-const u32 effB8_conn_7_2[8] = {
-    0, 0xA2F2, 0x100000, 0xA2F3, 0x200000, 0xA178, 0x300000, 0xA00B,
+const CONN effB8_conn_7_2[4] = {
+    { 0, 0, 0, 0xA2F2 }, { 16, 0, 0, 0xA2F3 }, { 32, 0, 0, 0xA178 }, { 48, 0, 0, 0xA00B },
 };
 
 /* provisional name */
-const u32 effB8_conn_7_4[14] = {
-    0, 0xA27F, 0x100000, 0xA04E, 0x200000, 0xA280, 0x300000, 0xA027,
-    0x400000, 0xA2F9, 0x500000, 0xA2F4, 0x600000, 0xA2FA,
+const CONN effB8_conn_7_4[7] = {
+    { 0, 0, 0, 0xA27F }, { 16, 0, 0, 0xA04E }, { 32, 0, 0, 0xA280 }, { 48, 0, 0, 0xA027 },
+    { 64, 0, 0, 0xA2F9 }, { 80, 0, 0, 0xA2F4 }, { 96, 0, 0, 0xA2FA },
 };
 
 /* provisional name */
-const u32 effB8_conn_7_6[22] = {
-    0, 0xA280, 0x100000, 0xA027, 0x200000, 0xA013, 0x300000, 0xA11C,
-    0x400000, 0xA2D8, 0x500000, 0xA22A, 0x600000, 0xA018, 0xA00000, 0xA107,
-    0xB00000, 0xA2CB, 0xC00000, 0xA2F5, 0xD00000, 0xA296,
+const CONN effB8_conn_7_6[11] = {
+    { 0, 0, 0, 0xA280 }, { 16, 0, 0, 0xA027 }, { 32, 0, 0, 0xA013 }, { 48, 0, 0, 0xA11C },
+    { 64, 0, 0, 0xA2D8 }, { 80, 0, 0, 0xA22A }, { 96, 0, 0, 0xA018 }, { 160, 0, 0, 0xA107 },
+    { 176, 0, 0, 0xA2CB }, { 192, 0, 0, 0xA2F5 }, { 208, 0, 0, 0xA296 },
 };
 
 /* provisional name */
@@ -18073,10 +18073,10 @@ const u32 effB8_conn_7_8[30] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_7_10[22] = {
-    0, 0xA00C, 0x100000, 0xA04D, 0x200000, 0xA023, 0x300000, 0xA001,
-    0x400000, 0xA27F, 0x500000, 0xA2DA, 0x600000, 0xA04B, 0xA00000, 0xA2DB,
-    0xB00000, 0xA2DC, 0xC00000, 0xA00C, 0xD00000, 0xA028,
+const CONN effB8_conn_7_10[11] = {
+    { 0, 0, 0, 0xA00C }, { 16, 0, 0, 0xA04D }, { 32, 0, 0, 0xA023 }, { 48, 0, 0, 0xA001 },
+    { 64, 0, 0, 0xA27F }, { 80, 0, 0, 0xA2DA }, { 96, 0, 0, 0xA04B }, { 160, 0, 0, 0xA2DB },
+    { 176, 0, 0, 0xA2DC }, { 192, 0, 0, 0xA00C }, { 208, 0, 0, 0xA028 },
 };
 
 /* provisional name */
@@ -18111,46 +18111,46 @@ const u16 effB8_conn_7_11[6] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_8[6] = {
-    { (const CONN*)effB8_conn_8_0, (const u16*)effB8_conn_8_1 }, { (const CONN*)effB8_conn_8_2, (const u16*)effB8_conn_8_3 },
-    { (const CONN*)effB8_conn_8_4, (const u16*)effB8_conn_8_5 }, { (const CONN*)effB8_conn_8_6, (const u16*)effB8_conn_8_7 },
-    { (const CONN*)effB8_conn_8_8, (const u16*)effB8_conn_8_9 }, { (const CONN*)effB8_conn_8_10, (const u16*)effB8_conn_8_11 },
+    { effB8_conn_8_0, effB8_conn_8_1 }, { effB8_conn_8_2, effB8_conn_8_3 },
+    { effB8_conn_8_4, effB8_conn_8_5 }, { effB8_conn_8_6, effB8_conn_8_7 },
+    { effB8_conn_8_8, effB8_conn_8_9 }, { effB8_conn_8_10, effB8_conn_8_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_8_0[16] = {
-    0, 0xA093, 0x100000, 0xA0A8, 0x200000, 0xA097, 0x300000, 0xA081,
-    0x400000, 0xA0C6, 0x500000, 0xA086, 0x600000, 0xA0B3, 0x700000, 0xA087,
+const CONN effB8_conn_8_0[8] = {
+    { 0, 0, 0, 0xA093 }, { 16, 0, 0, 0xA0A8 }, { 32, 0, 0, 0xA097 }, { 48, 0, 0, 0xA081 },
+    { 64, 0, 0, 0xA0C6 }, { 80, 0, 0, 0xA086 }, { 96, 0, 0, 0xA0B3 }, { 112, 0, 0, 0xA087 },
 };
 
 /* provisional name */
-const u32 effB8_conn_8_2[14] = {
-    0, 0xA081, 0x100000, 0xA0A7, 0x200000, 0xA0B5, 0x300000, 0xA0B7,
-    0x400000, 0xA0BE, 0x500000, 0xA0B6, 0x600000, 0xA0AD,
+const CONN effB8_conn_8_2[7] = {
+    { 0, 0, 0, 0xA081 }, { 16, 0, 0, 0xA0A7 }, { 32, 0, 0, 0xA0B5 }, { 48, 0, 0, 0xA0B7 },
+    { 64, 0, 0, 0xA0BE }, { 80, 0, 0, 0xA0B6 }, { 96, 0, 0, 0xA0AD },
 };
 
 /* provisional name */
-const u32 effB8_conn_8_4[10] = {
-    0, 0xA09A, 0x100000, 0xA0B7, 0x200000, 0xA0A7, 0x300000, 0xA0AD,
-    0x400000, 0xA0BA,
+const CONN effB8_conn_8_4[5] = {
+    { 0, 0, 0, 0xA09A }, { 16, 0, 0, 0xA0B7 }, { 32, 0, 0, 0xA0A7 }, { 48, 0, 0, 0xA0AD },
+    { 64, 0, 0, 0xA0BA },
 };
 
 /* provisional name */
-const u32 effB8_conn_8_6[22] = {
-    0, 0xA112, 0x100000, 0xA2DE, 0x200000, 0xA01C, 0x300000, 0xA2DD,
-    0x400000, 0xA2DE, 0x500000, 0xA01C, 0xA00000, 0xA086, 0xB00000, 0xA0B3,
-    0xC00000, 0xA087, 0xD00000, 0xA018, 0xE00000, 0xA2D1,
+const CONN effB8_conn_8_6[11] = {
+    { 0, 0, 0, 0xA112 }, { 16, 0, 0, 0xA2DE }, { 32, 0, 0, 0xA01C }, { 48, 0, 0, 0xA2DD },
+    { 64, 0, 0, 0xA2DE }, { 80, 0, 0, 0xA01C }, { 160, 0, 0, 0xA086 }, { 176, 0, 0, 0xA0B3 },
+    { 192, 0, 0, 0xA087 }, { 208, 0, 0, 0xA018 }, { 224, 0, 0, 0xA2D1 },
 };
 
 /* provisional name */
-const u32 effB8_conn_8_8[2] = {
-    0x100000, 0xA157,
+const CONN effB8_conn_8_8[1] = {
+    { 16, 0, 0, 0xA157 },
 };
 
 /* provisional name */
-const u32 effB8_conn_8_10[24] = {
-    0, 0xA1BD, 0x100000, 0xA102, 0x200000, 0xA018, 0x300000, 0xA119,
-    0x400000, 0xA02C, 0x500000, 0xA2DF, 0x600000, 0xA027, 0x700000, 0xA012,
-    0xA00000, 0xA1F2, 0xB00000, 0xA2C5, 0xC00000, 0xA00C, 0xD00000, 0xA028,
+const CONN effB8_conn_8_10[12] = {
+    { 0, 0, 0, 0xA1BD }, { 16, 0, 0, 0xA102 }, { 32, 0, 0, 0xA018 }, { 48, 0, 0, 0xA119 },
+    { 64, 0, 0, 0xA02C }, { 80, 0, 0, 0xA2DF }, { 96, 0, 0, 0xA027 }, { 112, 0, 0, 0xA012 },
+    { 160, 0, 0, 0xA1F2 }, { 176, 0, 0, 0xA2C5 }, { 192, 0, 0, 0xA00C }, { 208, 0, 0, 0xA028 },
 };
 
 /* provisional name */
@@ -18185,26 +18185,26 @@ const u16 effB8_conn_8_11[6] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_9[6] = {
-    { (const CONN*)effB8_conn_9_0, (const u16*)effB8_conn_9_1 }, { (const CONN*)effB8_conn_9_2, (const u16*)effB8_conn_9_3 },
-    { (const CONN*)effB8_conn_9_4, (const u16*)effB8_conn_9_5 }, { (const CONN*)effB8_conn_9_6, (const u16*)effB8_conn_9_7 },
-    { (const CONN*)effB8_conn_9_8, (const u16*)effB8_conn_9_9 }, { (const CONN*)effB8_conn_9_10, (const u16*)effB8_conn_9_11 },
+    { effB8_conn_9_0, effB8_conn_9_1 }, { effB8_conn_9_2, effB8_conn_9_3 },
+    { effB8_conn_9_4, effB8_conn_9_5 }, { (const CONN*)effB8_conn_9_6, effB8_conn_9_7 },
+    { effB8_conn_9_8, effB8_conn_9_9 }, { effB8_conn_9_10, effB8_conn_9_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_9_0[10] = {
-    0, 0xA086, 0x100000, 0xA08B, 0x200000, 0xA0AD, 0x300000, 0xA0A7,
-    0x400000, 0xA086,
+const CONN effB8_conn_9_0[5] = {
+    { 0, 0, 0, 0xA086 }, { 16, 0, 0, 0xA08B }, { 32, 0, 0, 0xA0AD }, { 48, 0, 0, 0xA0A7 },
+    { 64, 0, 0, 0xA086 },
 };
 
 /* provisional name */
-const u32 effB8_conn_9_2[12] = {
-    0, 0xA223, 0x100000, 0xA218, 0x900000, 0xA01D, 0xA00000, 0xA002,
-    0xB00000, 0xA045, 0xC00000, 0xA006,
+const CONN effB8_conn_9_2[6] = {
+    { 0, 0, 0, 0xA223 }, { 16, 0, 0, 0xA218 }, { 144, 0, 0, 0xA01D }, { 160, 0, 0, 0xA002 },
+    { 176, 0, 0, 0xA045 }, { 192, 0, 0, 0xA006 },
 };
 
 /* provisional name */
-const u32 effB8_conn_9_4[6] = {
-    0, 0xA265, 0x100000, 0xA26D, 0x200000, 0xA202,
+const CONN effB8_conn_9_4[3] = {
+    { 0, 0, 0, 0xA265 }, { 16, 0, 0, 0xA26D }, { 32, 0, 0, 0xA202 },
 };
 
 /* provisional name */
@@ -18216,18 +18216,18 @@ const u32 effB8_conn_9_6[26] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_9_8[28] = {
-    0, 0xA2E1, 0x100000, 0xA2E2, 0x200000, 0xA04B, 0x300000, 0xA110,
-    0x400000, 0xA04F, 0x500000, 0xA11A, 0x600000, 0xA1AD, 0x700000, 0xA001,
-    0x800000, 0xA10F, 0xA00000, 0xA02C, 0xB00000, 0xA2CF, 0xC00000, 0xA010,
-    0xD00000, 0xA106, 0xE00000, 0xA00C,
+const CONN effB8_conn_9_8[14] = {
+    { 0, 0, 0, 0xA2E1 }, { 16, 0, 0, 0xA2E2 }, { 32, 0, 0, 0xA04B }, { 48, 0, 0, 0xA110 },
+    { 64, 0, 0, 0xA04F }, { 80, 0, 0, 0xA11A }, { 96, 0, 0, 0xA1AD }, { 112, 0, 0, 0xA001 },
+    { 128, 0, 0, 0xA10F }, { 160, 0, 0, 0xA02C }, { 176, 0, 0, 0xA2CF }, { 192, 0, 0, 0xA010 },
+    { 208, 0, 0, 0xA106 }, { 224, 0, 0, 0xA00C },
 };
 
 /* provisional name */
-const u32 effB8_conn_9_10[24] = {
-    0, 0xA26D, 0x100000, 0xA202, 0x200000, 0xA018, 0x300000, 0xA2E3,
-    0x400000, 0xA1C2, 0xA00000, 0xA2F5, 0xB00000, 0xA296, 0xC00000, 0xA119,
-    0xD00000, 0xA02C, 0xE00000, 0xA26E, 0xF00000, 0xA2E4, 0xFFF0, 0xA039,
+const CONN effB8_conn_9_10[12] = {
+    { 0, 0, 0, 0xA26D }, { 16, 0, 0, 0xA202 }, { 32, 0, 0, 0xA018 }, { 48, 0, 0, 0xA2E3 },
+    { 64, 0, 0, 0xA1C2 }, { 160, 0, 0, 0xA2F5 }, { 176, 0, 0, 0xA296 }, { 192, 0, 0, 0xA119 },
+    { 208, 0, 0, 0xA02C }, { 224, 0, 0, 0xA26E }, { 240, 0, 0, 0xA2E4 }, { 0, -16, 0, 0xA039 },
 };
 
 /* provisional name */
@@ -18262,32 +18262,32 @@ const u16 effB8_conn_9_11[7] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_10[6] = {
-    { (const CONN*)effB8_conn_10_0, (const u16*)effB8_conn_10_1 }, { (const CONN*)effB8_conn_10_2, (const u16*)effB8_conn_10_3 },
-    { (const CONN*)effB8_conn_10_4, (const u16*)effB8_conn_10_5 }, { (const CONN*)effB8_conn_10_6, (const u16*)effB8_conn_10_7 },
-    { (const CONN*)effB8_conn_10_8, (const u16*)effB8_conn_10_9 }, { (const CONN*)effB8_conn_10_10, (const u16*)effB8_conn_10_11 },
+    { effB8_conn_10_0, effB8_conn_10_1 }, { effB8_conn_10_2, effB8_conn_10_3 },
+    { effB8_conn_10_4, effB8_conn_10_5 }, { effB8_conn_10_6, effB8_conn_10_7 },
+    { (const CONN*)effB8_conn_10_8, effB8_conn_10_9 }, { effB8_conn_10_10, effB8_conn_10_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_10_0[8] = {
-    0, 0xA110, 0x100000, 0xA2EA, 0x200000, 0xA2EB, 0x300000, 0xA280,
+const CONN effB8_conn_10_0[4] = {
+    { 0, 0, 0, 0xA110 }, { 16, 0, 0, 0xA2EA }, { 32, 0, 0, 0xA2EB }, { 48, 0, 0, 0xA280 },
 };
 
 /* provisional name */
-const u32 effB8_conn_10_2[8] = {
-    0, 0xA2EC, 0x100000, 0xA294, 0x200000, 0xA089, 0x300000, 0xA082,
+const CONN effB8_conn_10_2[4] = {
+    { 0, 0, 0, 0xA2EC }, { 16, 0, 0, 0xA294 }, { 32, 0, 0, 0xA089 }, { 48, 0, 0, 0xA082 },
 };
 
 /* provisional name */
-const u32 effB8_conn_10_4[8] = {
-    0, 0xA2CA, 0x100000, 0xA2ED, 0x200000, 0xA2EE, 0x300000, 0xA14D,
+const CONN effB8_conn_10_4[4] = {
+    { 0, 0, 0, 0xA2CA }, { 16, 0, 0, 0xA2ED }, { 32, 0, 0, 0xA2EE }, { 48, 0, 0, 0xA14D },
 };
 
 /* provisional name */
-const u32 effB8_conn_10_6[26] = {
-    0, 0xA2CE, 0x100000, 0xA217, 0x200000, 0xA015, 0x300000, 0xA012,
-    0x400000, 0xA280, 0x500000, 0xA027, 0x600000, 0xA015, 0x700000, 0xA025,
-    0x800000, 0xA028, 0xA00000, 0xA2EF, 0xB00000, 0xA2C6, 0xC00000, 0xA296,
-    0xD00000, 0xA039,
+const CONN effB8_conn_10_6[13] = {
+    { 0, 0, 0, 0xA2CE }, { 16, 0, 0, 0xA217 }, { 32, 0, 0, 0xA015 }, { 48, 0, 0, 0xA012 },
+    { 64, 0, 0, 0xA280 }, { 80, 0, 0, 0xA027 }, { 96, 0, 0, 0xA015 }, { 112, 0, 0, 0xA025 },
+    { 128, 0, 0, 0xA028 }, { 160, 0, 0, 0xA2EF }, { 176, 0, 0, 0xA2C6 }, { 192, 0, 0, 0xA296 },
+    { 208, 0, 0, 0xA039 },
 };
 
 /* provisional name */
@@ -18298,8 +18298,8 @@ const u32 effB8_conn_10_8[24] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_10_10[2] = {
-    0x100000, 0xA157,
+const CONN effB8_conn_10_10[1] = {
+    { 16, 0, 0, 0xA157 },
 };
 
 /* provisional name */
@@ -18334,19 +18334,19 @@ const u16 effB8_conn_10_11[4] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_11[6] = {
-    { (const CONN*)effB8_conn_11_0, (const u16*)effB8_conn_11_1 }, { (const CONN*)effB8_conn_11_2, (const u16*)effB8_conn_11_3 },
-    { (const CONN*)effB8_conn_11_4, (const u16*)effB8_conn_11_5 }, { (const CONN*)effB8_conn_11_6, (const u16*)effB8_conn_11_7 },
-    { (const CONN*)effB8_conn_11_8, (const u16*)effB8_conn_11_9 }, { (const CONN*)effB8_conn_11_10, (const u16*)effB8_conn_11_11 },
+    { effB8_conn_11_0, effB8_conn_11_1 }, { effB8_conn_11_2, effB8_conn_11_3 },
+    { (const CONN*)effB8_conn_11_4, effB8_conn_11_5 }, { effB8_conn_11_6, effB8_conn_11_7 },
+    { (const CONN*)effB8_conn_11_8, effB8_conn_11_9 }, { effB8_conn_11_10, effB8_conn_11_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_11_0[8] = {
-    0, 0xA1CD, 0x100000, 0xA1CE, 0x200000, 0xA28F, 0x300000, 0xA10B,
+const CONN effB8_conn_11_0[4] = {
+    { 0, 0, 0, 0xA1CD }, { 16, 0, 0, 0xA1CE }, { 32, 0, 0, 0xA28F }, { 48, 0, 0, 0xA10B },
 };
 
 /* provisional name */
-const u32 effB8_conn_11_2[6] = {
-    0, 0xA1C4, 0x100000, 0xA1CE, 0x200000, 0xA109,
+const CONN effB8_conn_11_2[3] = {
+    { 0, 0, 0, 0xA1C4 }, { 16, 0, 0, 0xA1CE }, { 32, 0, 0, 0xA109 },
 };
 
 /* provisional name */
@@ -18355,11 +18355,11 @@ const u32 effB8_conn_11_4[6] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_11_6[32] = {
-    0, 0xA1CD, 0x100000, 0xA1CE, 0x200000, 0xA109, 0x300000, 0xA02C,
-    0x400000, 0xA2C6, 0x500000, 0xA23F, 0x600000, 0xA00B, 0x700000, 0xA012,
-    0xA00000, 0xA105, 0xB00000, 0xA027, 0xC00000, 0xA106, 0xD00000, 0xA00C,
-    0xE00000, 0xA13A, 0xF00000, 0xA1CC, 0xFFF0, 0xA018, 0x10FFF0, 0xA10E,
+const CONN effB8_conn_11_6[16] = {
+    { 0, 0, 0, 0xA1CD }, { 16, 0, 0, 0xA1CE }, { 32, 0, 0, 0xA109 }, { 48, 0, 0, 0xA02C },
+    { 64, 0, 0, 0xA2C6 }, { 80, 0, 0, 0xA23F }, { 96, 0, 0, 0xA00B }, { 112, 0, 0, 0xA012 },
+    { 160, 0, 0, 0xA105 }, { 176, 0, 0, 0xA027 }, { 192, 0, 0, 0xA106 }, { 208, 0, 0, 0xA00C },
+    { 224, 0, 0, 0xA13A }, { 240, 0, 0, 0xA1CC }, { 0, -16, 0, 0xA018 }, { 16, -16, 0, 0xA10E },
 };
 
 /* provisional name */
@@ -18371,11 +18371,11 @@ const u32 effB8_conn_11_8[32] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_11_10[30] = {
-    0, 0xA124, 0x100000, 0xA2CF, 0x200000, 0xA018, 0x300000, 0xA081,
-    0x400000, 0xA0AD, 0x500000, 0xA0CC, 0x600000, 0xA087, 0x700000, 0xA093,
-    0x800000, 0xA015, 0xA00000, 0xA161, 0xB00000, 0xA296, 0xC00000, 0xA119,
-    0xD00000, 0xA02C, 0xE00000, 0xA169, 0xF00000, 0xA2A9,
+const CONN effB8_conn_11_10[15] = {
+    { 0, 0, 0, 0xA124 }, { 16, 0, 0, 0xA2CF }, { 32, 0, 0, 0xA018 }, { 48, 0, 0, 0xA081 },
+    { 64, 0, 0, 0xA0AD }, { 80, 0, 0, 0xA0CC }, { 96, 0, 0, 0xA087 }, { 112, 0, 0, 0xA093 },
+    { 128, 0, 0, 0xA015 }, { 160, 0, 0, 0xA161 }, { 176, 0, 0, 0xA296 }, { 192, 0, 0, 0xA119 },
+    { 208, 0, 0, 0xA02C }, { 224, 0, 0, 0xA169 }, { 240, 0, 0, 0xA2A9 },
 };
 
 /* provisional name */
@@ -18410,32 +18410,32 @@ const u16 effB8_conn_11_11[7] = {
 
 /* provisional name */
 const EFFB8_MESSAGE effB8_conn_12[6] = {
-    { (const CONN*)effB8_conn_12_0, (const u16*)effB8_conn_12_1 }, { (const CONN*)effB8_conn_12_2, (const u16*)effB8_conn_12_3 },
-    { (const CONN*)effB8_conn_12_4, (const u16*)effB8_conn_12_5 }, { (const CONN*)effB8_conn_12_6, (const u16*)effB8_conn_12_7 },
-    { (const CONN*)effB8_conn_12_8, (const u16*)effB8_conn_12_9 }, { (const CONN*)effB8_conn_12_10, (const u16*)effB8_conn_12_11 },
+    { effB8_conn_12_0, effB8_conn_12_1 }, { effB8_conn_12_2, effB8_conn_12_3 },
+    { effB8_conn_12_4, effB8_conn_12_5 }, { effB8_conn_12_6, effB8_conn_12_7 },
+    { (const CONN*)effB8_conn_12_8, effB8_conn_12_9 }, { effB8_conn_12_10, effB8_conn_12_11 },
 };
 
 /* provisional name */
-const u32 effB8_conn_12_0[8] = {
-    0, 0xA1CD, 0x100000, 0xA1CE, 0x200000, 0xA28F, 0x300000, 0xA10B,
+const CONN effB8_conn_12_0[4] = {
+    { 0, 0, 0, 0xA1CD }, { 16, 0, 0, 0xA1CE }, { 32, 0, 0, 0xA28F }, { 48, 0, 0, 0xA10B },
 };
 
 /* provisional name */
-const u32 effB8_conn_12_2[10] = {
-    0, 0xA2F7, 0x100000, 0xA2F8, 0x200000, 0xA292, 0x300000, 0xA1D8,
-    0x400000, 0xA1DD,
+const CONN effB8_conn_12_2[5] = {
+    { 0, 0, 0, 0xA2F7 }, { 16, 0, 0, 0xA2F8 }, { 32, 0, 0, 0xA292 }, { 48, 0, 0, 0xA1D8 },
+    { 64, 0, 0, 0xA1DD },
 };
 
 /* provisional name */
-const u32 effB8_conn_12_4[10] = {
-    0, 0xA17B, 0x100000, 0xA217, 0x200000, 0xA107, 0x300000, 0xA108,
-    0x400000, 0xA109,
+const CONN effB8_conn_12_4[5] = {
+    { 0, 0, 0, 0xA17B }, { 16, 0, 0, 0xA217 }, { 32, 0, 0, 0xA107 }, { 48, 0, 0, 0xA108 },
+    { 64, 0, 0, 0xA109 },
 };
 
 /* provisional name */
-const u32 effB8_conn_12_6[16] = {
-    0, 0xA088, 0x100000, 0xA0AD, 0x200000, 0xA182, 0x300000, 0xA187,
-    0x400000, 0xA018, 0x500000, 0xA13A, 0x600000, 0xA1CC, 0x700000, 0xA10E,
+const CONN effB8_conn_12_6[8] = {
+    { 0, 0, 0, 0xA088 }, { 16, 0, 0, 0xA0AD }, { 32, 0, 0, 0xA182 }, { 48, 0, 0, 0xA187 },
+    { 64, 0, 0, 0xA018 }, { 80, 0, 0, 0xA13A }, { 96, 0, 0, 0xA1CC }, { 112, 0, 0, 0xA10E },
 };
 
 /* provisional name */
@@ -18447,10 +18447,10 @@ const u32 effB8_conn_12_8[26] = {
 };
 
 /* provisional name */
-const u32 effB8_conn_12_10[18] = {
-    0, 0xA0A7, 0x100000, 0xA0B5, 0x200000, 0xA082, 0x300000, 0xA182,
-    0x400000, 0xA187, 0x500000, 0xA018, 0x600000, 0xA13A, 0x700000, 0xA1CC,
-    0x800000, 0xA10E,
+const CONN effB8_conn_12_10[9] = {
+    { 0, 0, 0, 0xA0A7 }, { 16, 0, 0, 0xA0B5 }, { 32, 0, 0, 0xA082 }, { 48, 0, 0, 0xA182 },
+    { 64, 0, 0, 0xA187 }, { 80, 0, 0, 0xA018 }, { 96, 0, 0, 0xA13A }, { 112, 0, 0, 0xA1CC },
+    { 128, 0, 0, 0xA10E },
 };
 
 /* provisional name */
@@ -18484,22 +18484,22 @@ const u16 effB8_conn_12_11[6] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_0[18] = {
-    { (const CONN*)effF9_mes_jp_0_0, (const u16*)effF9_mes_jp_0_1 }, { (const CONN*)effF9_mes_jp_0_0, (const u16*)effF9_mes_jp_0_3 },
-    { (const CONN*)effF9_mes_jp_0_4, (const u16*)effF9_mes_jp_0_5 }, { (const CONN*)effF9_mes_jp_0_6, (const u16*)effF9_mes_jp_0_7 },
-    { (const CONN*)effF9_mes_jp_0_8, (const u16*)effF9_mes_jp_0_9 }, { (const CONN*)effF9_mes_jp_0_10, (const u16*)effF9_mes_jp_0_11 },
-    { (const CONN*)effF9_mes_jp_0_12, (const u16*)effF9_mes_jp_0_13 }, { (const CONN*)effF9_mes_jp_0_14, (const u16*)effF9_mes_jp_0_15 },
-    { (const CONN*)effF9_mes_jp_0_16, (const u16*)effF9_mes_jp_0_17 }, { (const CONN*)effF9_mes_jp_0_18, (const u16*)effF9_mes_jp_0_19 },
-    { (const CONN*)effF9_mes_jp_0_20, (const u16*)effF9_mes_jp_0_21 }, { (const CONN*)effF9_mes_jp_0_22, (const u16*)effF9_mes_jp_0_23 },
-    { (const CONN*)effF9_mes_jp_0_24, (const u16*)effF9_mes_jp_0_25 }, { (const CONN*)effF9_mes_jp_0_26, (const u16*)effF9_mes_jp_0_27 },
-    { (const CONN*)effF9_mes_jp_0_28, (const u16*)effF9_mes_jp_0_29 }, { (const CONN*)effF9_mes_jp_0_30, (const u16*)effF9_mes_jp_0_31 },
-    { (const CONN*)effF9_mes_jp_0_32, (const u16*)effF9_mes_jp_0_33 }, { (const CONN*)effF9_mes_jp_0_34, (const u16*)effF9_mes_jp_0_35 },
+    { effF9_mes_jp_0_0, effF9_mes_jp_0_1 }, { effF9_mes_jp_0_0, effF9_mes_jp_0_3 },
+    { (const CONN*)effF9_mes_jp_0_4, effF9_mes_jp_0_5 }, { (const CONN*)effF9_mes_jp_0_6, effF9_mes_jp_0_7 },
+    { (const CONN*)effF9_mes_jp_0_8, effF9_mes_jp_0_9 }, { effF9_mes_jp_0_10, effF9_mes_jp_0_11 },
+    { (const CONN*)effF9_mes_jp_0_12, effF9_mes_jp_0_13 }, { (const CONN*)effF9_mes_jp_0_14, effF9_mes_jp_0_15 },
+    { (const CONN*)effF9_mes_jp_0_16, effF9_mes_jp_0_17 }, { effF9_mes_jp_0_18, effF9_mes_jp_0_19 },
+    { effF9_mes_jp_0_20, effF9_mes_jp_0_21 }, { effF9_mes_jp_0_22, effF9_mes_jp_0_23 },
+    { (const CONN*)effF9_mes_jp_0_24, effF9_mes_jp_0_25 }, { effF9_mes_jp_0_26, effF9_mes_jp_0_27 },
+    { (const CONN*)effF9_mes_jp_0_28, effF9_mes_jp_0_29 }, { (const CONN*)effF9_mes_jp_0_30, effF9_mes_jp_0_31 },
+    { (const CONN*)effF9_mes_jp_0_32, effF9_mes_jp_0_33 }, { (const CONN*)effF9_mes_jp_0_34, effF9_mes_jp_0_35 },
 };
 
-const u32 effF9_mes_jp_0_0[30] = {
-    0x480000, 0xA03A, 0x580000, 0xA000, 0x680000, 0xA018, 0x780000, 0xA216,
-    0x880000, 0xA02C, 0x980000, 0xA29B, 0xA80000, 0xA002, 0xB80000, 0xA011,
-    0xC80000, 0xA022, 0xD80000, 0xA027, 0xE80000, 0xA005, 0xF80000, 0xA03D,
-    0x1080000, 0xA03D, 0x1180000, 0xA03D, 0x1280000, 0xA03B,
+const CONN effF9_mes_jp_0_0[15] = {
+    { 72, 0, 0, 0xA03A }, { 88, 0, 0, 0xA000 }, { 104, 0, 0, 0xA018 }, { 120, 0, 0, 0xA216 },
+    { 136, 0, 0, 0xA02C }, { 152, 0, 0, 0xA29B }, { 168, 0, 0, 0xA002 }, { 184, 0, 0, 0xA011 },
+    { 200, 0, 0, 0xA022 }, { 216, 0, 0, 0xA027 }, { 232, 0, 0, 0xA005 }, { 248, 0, 0, 0xA03D },
+    { 264, 0, 0, 0xA03D }, { 280, 0, 0, 0xA03D }, { 296, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_0_4[44] = {
@@ -18530,14 +18530,14 @@ const u32 effF9_mes_jp_0_8[58] = {
     0x128FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_0_10[54] = {
-    0x480000, 0xA03A, 0x580000, 0xA03D, 0x680000, 0xA03D, 0x780000, 0xA03D,
-    0x880000, 0xA1B5, 0x980000, 0xA008, 0xA80000, 0xA025, 0xB80000, 0xA037,
-    0xC80000, 0xA080, 0xD80000, 0xA0A9, 0xE80000, 0xA0B3, 0xF80000, 0xA087,
-    0x1080000, 0xA08C, 0x58FFEA, 0xA000, 0x68FFEA, 0xA018, 0x78FFEA, 0xA216,
-    0x88FFEA, 0xA02C, 0x98FFEA, 0xA29B, 0xA8FFEA, 0xA002, 0xB8FFEA, 0xA014,
-    0xC8FFEA, 0xA026, 0xD8FFEA, 0xA29B, 0xE8FFEA, 0xA003, 0xF8FFEA, 0xA03D,
-    0x108FFEA, 0xA03D, 0x118FFEA, 0xA03D, 0x128FFEA, 0xA03B,
+const CONN effF9_mes_jp_0_10[27] = {
+    { 72, 0, 0, 0xA03A }, { 88, 0, 0, 0xA03D }, { 104, 0, 0, 0xA03D }, { 120, 0, 0, 0xA03D },
+    { 136, 0, 0, 0xA1B5 }, { 152, 0, 0, 0xA008 }, { 168, 0, 0, 0xA025 }, { 184, 0, 0, 0xA037 },
+    { 200, 0, 0, 0xA080 }, { 216, 0, 0, 0xA0A9 }, { 232, 0, 0, 0xA0B3 }, { 248, 0, 0, 0xA087 },
+    { 264, 0, 0, 0xA08C }, { 88, -22, 0, 0xA000 }, { 104, -22, 0, 0xA018 }, { 120, -22, 0, 0xA216 },
+    { 136, -22, 0, 0xA02C }, { 152, -22, 0, 0xA29B }, { 168, -22, 0, 0xA002 }, { 184, -22, 0, 0xA014 },
+    { 200, -22, 0, 0xA026 }, { 216, -22, 0, 0xA29B }, { 232, -22, 0, 0xA003 }, { 248, -22, 0, 0xA03D },
+    { 264, -22, 0, 0xA03D }, { 280, -22, 0, 0xA03D }, { 296, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_0_12[32] = {
@@ -18565,21 +18565,21 @@ const u32 effF9_mes_jp_0_16[56] = {
     0xE8FFEA, 0xA026, 0xF8FFEA, 0xA002, 0x108FFEA, 0xA025, 0x118FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_0_18[14] = {
-    0x880000, 0xA03A, 0x980000, 0xA0CC, 0xA80000, 0xA0CC, 0xB80000, 0xA313,
-    0xC80000, 0xA0B3, 0xD80000, 0xA039, 0xE80000, 0xA03B,
+const CONN effF9_mes_jp_0_18[7] = {
+    { 136, 0, 0, 0xA03A }, { 152, 0, 0, 0xA0CC }, { 168, 0, 0, 0xA0CC }, { 184, 0, 0, 0xA313 },
+    { 200, 0, 0, 0xA0B3 }, { 216, 0, 0, 0xA039 }, { 232, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_0_20[16] = {
-    0x800000, 0xA03A, 0x900000, 0xA080, 0xA00000, 0xA0A9, 0xB00000, 0xA0B3,
-    0xC00000, 0xA087, 0xD00000, 0xA08C, 0xE00000, 0xA039, 0xF00000, 0xA03B,
+const CONN effF9_mes_jp_0_20[8] = {
+    { 128, 0, 0, 0xA03A }, { 144, 0, 0, 0xA080 }, { 160, 0, 0, 0xA0A9 }, { 176, 0, 0, 0xA0B3 },
+    { 192, 0, 0, 0xA087 }, { 208, 0, 0, 0xA08C }, { 224, 0, 0, 0xA039 }, { 240, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_0_22[30] = {
-    0x480000, 0xA03A, 0x580000, 0xA080, 0x680000, 0xA0A9, 0x780000, 0xA0B3,
-    0x880000, 0xA087, 0x980000, 0xA08C, 0xA80000, 0xA037, 0xB80000, 0xA004,
-    0xC80000, 0xA201, 0xD80000, 0xA027, 0xE80000, 0xA014, 0xF80000, 0xA00A,
-    0x1080000, 0xA001, 0x1180000, 0xA039, 0x1280000, 0xA03B,
+const CONN effF9_mes_jp_0_22[15] = {
+    { 72, 0, 0, 0xA03A }, { 88, 0, 0, 0xA080 }, { 104, 0, 0, 0xA0A9 }, { 120, 0, 0, 0xA0B3 },
+    { 136, 0, 0, 0xA087 }, { 152, 0, 0, 0xA08C }, { 168, 0, 0, 0xA037 }, { 184, 0, 0, 0xA004 },
+    { 200, 0, 0, 0xA201 }, { 216, 0, 0, 0xA027 }, { 232, 0, 0, 0xA014 }, { 248, 0, 0, 0xA00A },
+    { 264, 0, 0, 0xA001 }, { 280, 0, 0, 0xA039 }, { 296, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_0_24[32] = {
@@ -18589,11 +18589,11 @@ const u32 effF9_mes_jp_0_24[32] = {
     0x1000000, 0xA006, 0x1100000, 0xA00F, 0x1200000, 0xA014, 0x1300000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_0_26[28] = {
-    0x480000, 0xA03A, 0x580000, 0xA093, 0x680000, 0xA0A0, 0x780000, 0xA039,
-    0x980000, 0xA022, 0xA80000, 0xA002, 0xB80000, 0xA1C1, 0xC80000, 0xA019,
-    0xD80000, 0xA001, 0xE80000, 0xA001, 0xF80000, 0xA018, 0x1080000, 0xA005,
-    0x1180000, 0xA001, 0x1280000, 0xA03B,
+const CONN effF9_mes_jp_0_26[14] = {
+    { 72, 0, 0, 0xA03A }, { 88, 0, 0, 0xA093 }, { 104, 0, 0, 0xA0A0 }, { 120, 0, 0, 0xA039 },
+    { 152, 0, 0, 0xA022 }, { 168, 0, 0, 0xA002 }, { 184, 0, 0, 0xA1C1 }, { 200, 0, 0, 0xA019 },
+    { 216, 0, 0, 0xA001 }, { 232, 0, 0, 0xA001 }, { 248, 0, 0, 0xA018 }, { 264, 0, 0, 0xA005 },
+    { 280, 0, 0, 0xA001 }, { 296, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_0_28[58] = {
@@ -18707,22 +18707,22 @@ const u16 effF9_mes_jp_0_35[6] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_2[11] = {
-    { (const CONN*)effF9_mes_jp_2_0, (const u16*)effF9_mes_jp_2_1 }, { (const CONN*)effF9_mes_jp_2_0, (const u16*)effF9_mes_jp_2_3 },
-    { (const CONN*)effF9_mes_jp_2_4, (const u16*)effF9_mes_jp_2_5 }, { (const CONN*)effF9_mes_jp_2_6, (const u16*)effF9_mes_jp_2_7 },
-    { (const CONN*)effF9_mes_jp_2_8, (const u16*)effF9_mes_jp_2_9 }, { (const CONN*)effF9_mes_jp_2_10, (const u16*)effF9_mes_jp_2_11 },
-    { (const CONN*)effF9_mes_jp_2_12, (const u16*)effF9_mes_jp_2_13 }, { (const CONN*)effF9_mes_jp_2_14, (const u16*)effF9_mes_jp_2_15 },
-    { (const CONN*)effF9_mes_jp_2_16, (const u16*)effF9_mes_jp_2_17 }, { (const CONN*)effF9_mes_jp_2_18, (const u16*)effF9_mes_jp_2_19 },
-    { (const CONN*)effF9_mes_jp_2_20, (const u16*)effF9_mes_jp_2_21 },
+    { effF9_mes_jp_2_0, effF9_mes_jp_2_1 }, { effF9_mes_jp_2_0, effF9_mes_jp_2_3 },
+    { (const CONN*)effF9_mes_jp_2_4, effF9_mes_jp_2_5 }, { effF9_mes_jp_2_6, effF9_mes_jp_2_7 },
+    { (const CONN*)effF9_mes_jp_2_8, effF9_mes_jp_2_9 }, { (const CONN*)effF9_mes_jp_2_10, effF9_mes_jp_2_11 },
+    { effF9_mes_jp_2_12, effF9_mes_jp_2_13 }, { (const CONN*)effF9_mes_jp_2_14, effF9_mes_jp_2_15 },
+    { (const CONN*)effF9_mes_jp_2_16, effF9_mes_jp_2_17 }, { effF9_mes_jp_2_18, effF9_mes_jp_2_19 },
+    { (const CONN*)effF9_mes_jp_2_20, effF9_mes_jp_2_21 },
 };
 
-const u32 effF9_mes_jp_2_0[56] = {
-    0x400000, 0xA03A, 0x500000, 0xA084, 0x600000, 0xA313, 0x700000, 0xA087,
-    0x800000, 0xA0A6, 0x900000, 0xA0AD, 0xA00000, 0xA0C6, 0xB00000, 0xA014,
-    0xC00000, 0xA026, 0xD00000, 0xA2A1, 0xE00000, 0xA048, 0xF00000, 0xA008,
-    0x1000000, 0xA04C, 0x50FFEA, 0xA009, 0x60FFEA, 0xA02D, 0x70FFEA, 0xA014,
-    0x80FFEA, 0xA197, 0x90FFEA, 0xA04B, 0xA0FFEA, 0xA338, 0xB0FFEA, 0xA02A,
-    0xC0FFEA, 0xA00B, 0xD0FFEA, 0xA012, 0xE0FFEA, 0xA001, 0xF0FFEA, 0xA001,
-    0x100FFEA, 0xA018, 0x110FFEA, 0xA005, 0x120FFEA, 0xA001, 0x130FFEA, 0xA03B,
+const CONN effF9_mes_jp_2_0[28] = {
+    { 64, 0, 0, 0xA03A }, { 80, 0, 0, 0xA084 }, { 96, 0, 0, 0xA313 }, { 112, 0, 0, 0xA087 },
+    { 128, 0, 0, 0xA0A6 }, { 144, 0, 0, 0xA0AD }, { 160, 0, 0, 0xA0C6 }, { 176, 0, 0, 0xA014 },
+    { 192, 0, 0, 0xA026 }, { 208, 0, 0, 0xA2A1 }, { 224, 0, 0, 0xA048 }, { 240, 0, 0, 0xA008 },
+    { 256, 0, 0, 0xA04C }, { 80, -22, 0, 0xA009 }, { 96, -22, 0, 0xA02D }, { 112, -22, 0, 0xA014 },
+    { 128, -22, 0, 0xA197 }, { 144, -22, 0, 0xA04B }, { 160, -22, 0, 0xA338 }, { 176, -22, 0, 0xA02A },
+    { 192, -22, 0, 0xA00B }, { 208, -22, 0, 0xA012 }, { 224, -22, 0, 0xA001 }, { 240, -22, 0, 0xA001 },
+    { 256, -22, 0, 0xA018 }, { 272, -22, 0, 0xA005 }, { 288, -22, 0, 0xA001 }, { 304, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_2_4[26] = {
@@ -18732,10 +18732,10 @@ const u32 effF9_mes_jp_2_4[26] = {
     0x1180000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_2_6[20] = {
-    0x700000, 0xA03A, 0x800000, 0xA000, 0x900000, 0xA02E, 0xA00000, 0xA037,
-    0xB00000, 0xA000, 0xC00000, 0xA027, 0xD00000, 0xA03E, 0xE00000, 0xA013,
-    0xF00000, 0xA002, 0x1000000, 0xA03B,
+const CONN effF9_mes_jp_2_6[10] = {
+    { 112, 0, 0, 0xA03A }, { 128, 0, 0, 0xA000 }, { 144, 0, 0, 0xA02E }, { 160, 0, 0, 0xA037 },
+    { 176, 0, 0, 0xA000 }, { 192, 0, 0, 0xA027 }, { 208, 0, 0, 0xA03E }, { 224, 0, 0, 0xA013 },
+    { 240, 0, 0, 0xA002 }, { 256, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_2_8[32] = {
@@ -18755,14 +18755,14 @@ const u32 effF9_mes_jp_2_10[56] = {
     0x100FFEA, 0xA164, 0x110FFEA, 0xA021, 0x120FFEA, 0xA012, 0x130FFEA, 0xA057,
 };
 
-const u32 effF9_mes_jp_2_12[52] = {
-    0x400000, 0xA12F, 0x500000, 0xA033, 0x600000, 0xA012, 0x700000, 0xA004,
-    0x800000, 0xA029, 0xA00000, 0xA289, 0xB00000, 0xA1BC, 0xC00000, 0xA11C,
-    0xD00000, 0xA00F, 0xE00000, 0xA010, 0xF00000, 0xA025, 0x1000000, 0xA039,
-    0x40FFEA, 0xA00F, 0x50FFEA, 0xA00F, 0x60FFEA, 0xA005, 0x70FFEA, 0xA004,
-    0x80FFEA, 0xA002, 0xA0FFEA, 0xA009, 0xB0FFEA, 0xA018, 0xC0FFEA, 0xA233,
-    0xE0FFEA, 0xA011, 0xF0FFEA, 0xA006, 0x100FFEA, 0xA028, 0x110FFEA, 0xA01E,
-    0x120FFEA, 0xA04B, 0x130FFEA, 0xA039,
+const CONN effF9_mes_jp_2_12[26] = {
+    { 64, 0, 0, 0xA12F }, { 80, 0, 0, 0xA033 }, { 96, 0, 0, 0xA012 }, { 112, 0, 0, 0xA004 },
+    { 128, 0, 0, 0xA029 }, { 160, 0, 0, 0xA289 }, { 176, 0, 0, 0xA1BC }, { 192, 0, 0, 0xA11C },
+    { 208, 0, 0, 0xA00F }, { 224, 0, 0, 0xA010 }, { 240, 0, 0, 0xA025 }, { 256, 0, 0, 0xA039 },
+    { 64, -22, 0, 0xA00F }, { 80, -22, 0, 0xA00F }, { 96, -22, 0, 0xA005 }, { 112, -22, 0, 0xA004 },
+    { 128, -22, 0, 0xA002 }, { 160, -22, 0, 0xA009 }, { 176, -22, 0, 0xA018 }, { 192, -22, 0, 0xA233 },
+    { 224, -22, 0, 0xA011 }, { 240, -22, 0, 0xA006 }, { 256, -22, 0, 0xA028 }, { 272, -22, 0, 0xA01E },
+    { 288, -22, 0, 0xA04B }, { 304, -22, 0, 0xA039 },
 };
 
 const u32 effF9_mes_jp_2_14[24] = {
@@ -18781,10 +18781,10 @@ const u32 effF9_mes_jp_2_16[56] = {
     0x100FFEA, 0xA164, 0x110FFEA, 0xA021, 0x120FFEA, 0xA012, 0x130FFEA, 0xA057,
 };
 
-const u32 effF9_mes_jp_2_18[24] = {
-    0x400000, 0xA12F, 0x500000, 0xA033, 0x600000, 0xA012, 0x700000, 0xA004,
-    0x800000, 0xA029, 0xA00000, 0xA289, 0xB00000, 0xA1BC, 0xC00000, 0xA11C,
-    0xD00000, 0xA00F, 0xE00000, 0xA010, 0xF00000, 0xA025, 0x1000000, 0xA039,
+const CONN effF9_mes_jp_2_18[12] = {
+    { 64, 0, 0, 0xA12F }, { 80, 0, 0, 0xA033 }, { 96, 0, 0, 0xA012 }, { 112, 0, 0, 0xA004 },
+    { 128, 0, 0, 0xA029 }, { 160, 0, 0, 0xA289 }, { 176, 0, 0, 0xA1BC }, { 192, 0, 0, 0xA11C },
+    { 208, 0, 0, 0xA00F }, { 224, 0, 0, 0xA010 }, { 240, 0, 0, 0xA025 }, { 256, 0, 0, 0xA039 },
 };
 
 const u32 effF9_mes_jp_2_20[52] = {
@@ -18842,29 +18842,29 @@ const u16 effF9_mes_jp_2_21[8] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_3[16] = {
-    { (const CONN*)effF9_mes_jp_3_0, (const u16*)effF9_mes_jp_3_1 }, { (const CONN*)effF9_mes_jp_3_0, (const u16*)effF9_mes_jp_3_3 },
-    { (const CONN*)effF9_mes_jp_3_4, (const u16*)effF9_mes_jp_3_5 }, { (const CONN*)effF9_mes_jp_3_6, (const u16*)effF9_mes_jp_3_7 },
-    { (const CONN*)effF9_mes_jp_3_8, (const u16*)effF9_mes_jp_3_9 }, { (const CONN*)effF9_mes_jp_3_10, (const u16*)effF9_mes_jp_3_11 },
-    { (const CONN*)effF9_mes_jp_3_12, (const u16*)effF9_mes_jp_3_13 }, { (const CONN*)effF9_mes_jp_3_14, (const u16*)effF9_mes_jp_3_15 },
-    { (const CONN*)effF9_mes_jp_3_16, (const u16*)effF9_mes_jp_3_17 }, { (const CONN*)effF9_mes_jp_3_18, (const u16*)effF9_mes_jp_3_19 },
-    { (const CONN*)effF9_mes_jp_3_20, (const u16*)effF9_mes_jp_3_21 }, { (const CONN*)effF9_mes_jp_3_22, (const u16*)effF9_mes_jp_3_23 },
-    { (const CONN*)effF9_mes_jp_3_24, (const u16*)effF9_mes_jp_3_25 }, { (const CONN*)effF9_mes_jp_3_26, (const u16*)effF9_mes_jp_3_27 },
-    { (const CONN*)effF9_mes_jp_3_28, (const u16*)effF9_mes_jp_3_29 }, { (const CONN*)effF9_mes_jp_3_30, (const u16*)effF9_mes_jp_3_31 },
+    { effF9_mes_jp_3_0, effF9_mes_jp_3_1 }, { effF9_mes_jp_3_0, effF9_mes_jp_3_3 },
+    { effF9_mes_jp_3_4, effF9_mes_jp_3_5 }, { effF9_mes_jp_3_6, effF9_mes_jp_3_7 },
+    { (const CONN*)effF9_mes_jp_3_8, effF9_mes_jp_3_9 }, { effF9_mes_jp_3_10, effF9_mes_jp_3_11 },
+    { effF9_mes_jp_3_12, effF9_mes_jp_3_13 }, { (const CONN*)effF9_mes_jp_3_14, effF9_mes_jp_3_15 },
+    { effF9_mes_jp_3_16, effF9_mes_jp_3_17 }, { effF9_mes_jp_3_18, effF9_mes_jp_3_19 },
+    { (const CONN*)effF9_mes_jp_3_20, effF9_mes_jp_3_21 }, { effF9_mes_jp_3_22, effF9_mes_jp_3_23 },
+    { (const CONN*)effF9_mes_jp_3_24, effF9_mes_jp_3_25 }, { effF9_mes_jp_3_26, effF9_mes_jp_3_27 },
+    { (const CONN*)effF9_mes_jp_3_28, effF9_mes_jp_3_29 }, { effF9_mes_jp_3_30, effF9_mes_jp_3_31 },
 };
 
-const u32 effF9_mes_jp_3_0[12] = {
-    0x900000, 0xA03A, 0xA00000, 0xA099, 0xB00000, 0xA099, 0xC00000, 0xA0B3,
-    0xD00000, 0xA039, 0xE00000, 0xA03B,
+const CONN effF9_mes_jp_3_0[6] = {
+    { 144, 0, 0, 0xA03A }, { 160, 0, 0, 0xA099 }, { 176, 0, 0, 0xA099 }, { 192, 0, 0, 0xA0B3 },
+    { 208, 0, 0, 0xA039 }, { 224, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_3_4[10] = {
-    0x980000, 0xA03A, 0xA80000, 0xA0A3, 0xB80000, 0xA0B3, 0xC80000, 0xA039,
-    0xD80000, 0xA03B,
+const CONN effF9_mes_jp_3_4[5] = {
+    { 152, 0, 0, 0xA03A }, { 168, 0, 0, 0xA0A3 }, { 184, 0, 0, 0xA0B3 }, { 200, 0, 0, 0xA039 },
+    { 216, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_3_6[10] = {
-    0x980000, 0xA03A, 0xA80000, 0xA004, 0xB80000, 0xA033, 0xC80000, 0xA039,
-    0xD80000, 0xA03B,
+const CONN effF9_mes_jp_3_6[5] = {
+    { 152, 0, 0, 0xA03A }, { 168, 0, 0, 0xA004 }, { 184, 0, 0, 0xA033 }, { 200, 0, 0, 0xA039 },
+    { 216, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_3_8[32] = {
@@ -18874,15 +18874,15 @@ const u32 effF9_mes_jp_3_8[32] = {
     0x1000000, 0xA001, 0x1100000, 0xA005, 0x1200000, 0xA039, 0x1300000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_3_10[20] = {
-    0x700000, 0xA03A, 0x800000, 0xA201, 0x900000, 0xA033, 0xA00000, 0xA012,
-    0xB00000, 0xA13C, 0xC00000, 0xA00F, 0xD00000, 0xA018, 0xE00000, 0xA017,
-    0xF00000, 0xA039, 0x1000000, 0xA03B,
+const CONN effF9_mes_jp_3_10[10] = {
+    { 112, 0, 0, 0xA03A }, { 128, 0, 0, 0xA201 }, { 144, 0, 0, 0xA033 }, { 160, 0, 0, 0xA012 },
+    { 176, 0, 0, 0xA13C }, { 192, 0, 0, 0xA00F }, { 208, 0, 0, 0xA018 }, { 224, 0, 0, 0xA017 },
+    { 240, 0, 0, 0xA039 }, { 256, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_3_12[10] = {
-    0x980000, 0xA03A, 0xA80000, 0xA025, 0xB80000, 0xA033, 0xC80000, 0xA039,
-    0xD80000, 0xA03B,
+const CONN effF9_mes_jp_3_12[5] = {
+    { 152, 0, 0, 0xA03A }, { 168, 0, 0, 0xA025 }, { 184, 0, 0, 0xA033 }, { 200, 0, 0, 0xA039 },
+    { 216, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_3_14[34] = {
@@ -18893,16 +18893,16 @@ const u32 effF9_mes_jp_3_14[34] = {
     0x98FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_3_16[26] = {
-    0x580000, 0xA03A, 0x680000, 0xA2A5, 0x780000, 0xA11A, 0x880000, 0xA184,
-    0x980000, 0xA001, 0xA80000, 0xA02D, 0xB80000, 0xA044, 0xC80000, 0xA034,
-    0xD80000, 0xA014, 0xE80000, 0xA001, 0xF80000, 0xA018, 0x1080000, 0xA03C,
-    0x1180000, 0xA03B,
+const CONN effF9_mes_jp_3_16[13] = {
+    { 88, 0, 0, 0xA03A }, { 104, 0, 0, 0xA2A5 }, { 120, 0, 0, 0xA11A }, { 136, 0, 0, 0xA184 },
+    { 152, 0, 0, 0xA001 }, { 168, 0, 0, 0xA02D }, { 184, 0, 0, 0xA044 }, { 200, 0, 0, 0xA034 },
+    { 216, 0, 0, 0xA014 }, { 232, 0, 0, 0xA001 }, { 248, 0, 0, 0xA018 }, { 264, 0, 0, 0xA03C },
+    { 280, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_3_18[16] = {
-    0x800000, 0xA03A, 0x900000, 0xA004, 0xA00000, 0xA150, 0xB00000, 0xA026,
-    0xC00000, 0xA009, 0xD00000, 0xA00E, 0xE00000, 0xA039, 0xF00000, 0xA03B,
+const CONN effF9_mes_jp_3_18[8] = {
+    { 128, 0, 0, 0xA03A }, { 144, 0, 0, 0xA004 }, { 160, 0, 0, 0xA150 }, { 176, 0, 0, 0xA026 },
+    { 192, 0, 0, 0xA009 }, { 208, 0, 0, 0xA00E }, { 224, 0, 0, 0xA039 }, { 240, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_3_20[40] = {
@@ -18913,9 +18913,9 @@ const u32 effF9_mes_jp_3_20[40] = {
     0x68FFEA, 0xA005, 0x78FFEA, 0xA025, 0x88FFEA, 0xA03C, 0x98FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_3_22[14] = {
-    0x880000, 0xA03A, 0x980000, 0xA081, 0xA80000, 0xA0A3, 0xB80000, 0xA313,
-    0xC80000, 0xA0B3, 0xD80000, 0xA039, 0xE80000, 0xA03B,
+const CONN effF9_mes_jp_3_22[7] = {
+    { 136, 0, 0, 0xA03A }, { 152, 0, 0, 0xA081 }, { 168, 0, 0, 0xA0A3 }, { 184, 0, 0, 0xA313 },
+    { 200, 0, 0, 0xA0B3 }, { 216, 0, 0, 0xA039 }, { 232, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_3_24[10] = {
@@ -18923,11 +18923,11 @@ const u32 effF9_mes_jp_3_24[10] = {
     0xD80000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_3_26[28] = {
-    0x500000, 0xA03A, 0x600000, 0xA002, 0x700000, 0xA02B, 0x800000, 0xA02B,
-    0x900000, 0xA033, 0xA00000, 0xA039, 0xB00000, 0xA014, 0xC00000, 0xA015,
-    0xD00000, 0xA00C, 0xE00000, 0xA028, 0xF00000, 0xA313, 0x1000000, 0xA033,
-    0x1100000, 0xA039, 0x1200000, 0xA03B,
+const CONN effF9_mes_jp_3_26[14] = {
+    { 80, 0, 0, 0xA03A }, { 96, 0, 0, 0xA002 }, { 112, 0, 0, 0xA02B }, { 128, 0, 0, 0xA02B },
+    { 144, 0, 0, 0xA033 }, { 160, 0, 0, 0xA039 }, { 176, 0, 0, 0xA014 }, { 192, 0, 0, 0xA015 },
+    { 208, 0, 0, 0xA00C }, { 224, 0, 0, 0xA028 }, { 240, 0, 0, 0xA313 }, { 256, 0, 0, 0xA033 },
+    { 272, 0, 0, 0xA039 }, { 288, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_3_28[48] = {
@@ -18939,11 +18939,11 @@ const u32 effF9_mes_jp_3_28[48] = {
     0xC0FFEA, 0xA00F, 0xD0FFEA, 0xA005, 0xE0FFEA, 0xA014, 0xF0FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_3_30[30] = {
-    0x480000, 0xA03A, 0x580000, 0xA177, 0x680000, 0xA103, 0x780000, 0xA018,
-    0x880000, 0xA087, 0x980000, 0xA0AD, 0xA80000, 0xA09B, 0xB80000, 0xA313,
-    0xC80000, 0xA019, 0xD80000, 0xA298, 0xE80000, 0xA17D, 0xF80000, 0xA048,
-    0x1080000, 0xA046, 0x1180000, 0xA039, 0x1280000, 0xA03B,
+const CONN effF9_mes_jp_3_30[15] = {
+    { 72, 0, 0, 0xA03A }, { 88, 0, 0, 0xA177 }, { 104, 0, 0, 0xA103 }, { 120, 0, 0, 0xA018 },
+    { 136, 0, 0, 0xA087 }, { 152, 0, 0, 0xA0AD }, { 168, 0, 0, 0xA09B }, { 184, 0, 0, 0xA313 },
+    { 200, 0, 0, 0xA019 }, { 216, 0, 0, 0xA298 }, { 232, 0, 0, 0xA17D }, { 248, 0, 0, 0xA048 },
+    { 264, 0, 0, 0xA046 }, { 280, 0, 0, 0xA039 }, { 296, 0, 0, 0xA03B },
 };
 
 const u16 effF9_mes_jp_3_1[2] = {
@@ -19011,19 +19011,19 @@ const u16 effF9_mes_jp_3_31[7] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_4[11] = {
-    { (const CONN*)effF9_mes_jp_4_0, (const u16*)effF9_mes_jp_4_1 }, { (const CONN*)effF9_mes_jp_4_0, (const u16*)effF9_mes_jp_4_3 },
-    { (const CONN*)effF9_mes_jp_4_4, (const u16*)effF9_mes_jp_4_5 }, { (const CONN*)effF9_mes_jp_4_6, (const u16*)effF9_mes_jp_4_7 },
-    { (const CONN*)effF9_mes_jp_4_8, (const u16*)effF9_mes_jp_4_9 }, { (const CONN*)effF9_mes_jp_4_10, (const u16*)effF9_mes_jp_4_11 },
-    { (const CONN*)effF9_mes_jp_4_12, (const u16*)effF9_mes_jp_4_13 }, { (const CONN*)effF9_mes_jp_4_14, (const u16*)effF9_mes_jp_4_15 },
-    { (const CONN*)effF9_mes_jp_4_16, (const u16*)effF9_mes_jp_4_17 }, { (const CONN*)effF9_mes_jp_4_18, (const u16*)effF9_mes_jp_4_19 },
-    { (const CONN*)effF9_mes_jp_4_20, (const u16*)effF9_mes_jp_4_21 },
+    { effF9_mes_jp_4_0, effF9_mes_jp_4_1 }, { effF9_mes_jp_4_0, effF9_mes_jp_4_3 },
+    { (const CONN*)effF9_mes_jp_4_4, effF9_mes_jp_4_5 }, { effF9_mes_jp_4_6, effF9_mes_jp_4_7 },
+    { (const CONN*)effF9_mes_jp_4_8, effF9_mes_jp_4_9 }, { effF9_mes_jp_4_10, effF9_mes_jp_4_11 },
+    { (const CONN*)effF9_mes_jp_4_12, effF9_mes_jp_4_13 }, { effF9_mes_jp_4_14, effF9_mes_jp_4_15 },
+    { (const CONN*)effF9_mes_jp_4_16, effF9_mes_jp_4_17 }, { effF9_mes_jp_4_18, effF9_mes_jp_4_19 },
+    { effF9_mes_jp_4_20, effF9_mes_jp_4_21 },
 };
 
-const u32 effF9_mes_jp_4_0[28] = {
-    0x500000, 0xA03A, 0x600000, 0xA004, 0x700000, 0xA150, 0x800000, 0xA018,
-    0x900000, 0xA174, 0xA00000, 0xA010, 0xB00000, 0xA048, 0xC00000, 0xA090,
-    0xD00000, 0xA0B4, 0xE00000, 0xA0AD, 0xF00000, 0xA0CD, 0x1000000, 0xA084,
-    0x1100000, 0xA0AD, 0x1200000, 0xA03B,
+const CONN effF9_mes_jp_4_0[14] = {
+    { 80, 0, 0, 0xA03A }, { 96, 0, 0, 0xA004 }, { 112, 0, 0, 0xA150 }, { 128, 0, 0, 0xA018 },
+    { 144, 0, 0, 0xA174 }, { 160, 0, 0, 0xA010 }, { 176, 0, 0, 0xA048 }, { 192, 0, 0, 0xA090 },
+    { 208, 0, 0, 0xA0B4 }, { 224, 0, 0, 0xA0AD }, { 240, 0, 0, 0xA0CD }, { 256, 0, 0, 0xA084 },
+    { 272, 0, 0, 0xA0AD }, { 288, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_4_4[46] = {
@@ -19035,9 +19035,9 @@ const u32 effF9_mes_jp_4_4[46] = {
     0x100FFEA, 0xA029, 0x110FFEA, 0xA039, 0x120FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_4_6[16] = {
-    0x800000, 0xA03A, 0x900000, 0xA02B, 0xA00000, 0xA005, 0xB00000, 0xA027,
-    0xC00000, 0xA01E, 0xD00000, 0xA00B, 0xE00000, 0xA00F, 0xF00000, 0xA03B,
+const CONN effF9_mes_jp_4_6[8] = {
+    { 128, 0, 0, 0xA03A }, { 144, 0, 0, 0xA02B }, { 160, 0, 0, 0xA005 }, { 176, 0, 0, 0xA027 },
+    { 192, 0, 0, 0xA01E }, { 208, 0, 0, 0xA00B }, { 224, 0, 0, 0xA00F }, { 240, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_4_8[24] = {
@@ -19046,11 +19046,11 @@ const u32 effF9_mes_jp_4_8[24] = {
     0xE00000, 0xA014, 0xF00000, 0xA00A, 0x1000000, 0xA001, 0x1100000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_4_10[32] = {
-    0x400000, 0xA03A, 0x500000, 0xA252, 0x600000, 0xA018, 0x700000, 0xA339,
-    0x800000, 0xA037, 0x900000, 0xA2AA, 0xA00000, 0xA005, 0xB00000, 0xA015,
-    0xC00000, 0xA26F, 0xD00000, 0xA00B, 0xE00000, 0xA012, 0xF00000, 0xA022,
-    0x1000000, 0xA026, 0x1100000, 0xA033, 0x1200000, 0xA00F, 0x1300000, 0xA03B,
+const CONN effF9_mes_jp_4_10[16] = {
+    { 64, 0, 0, 0xA03A }, { 80, 0, 0, 0xA252 }, { 96, 0, 0, 0xA018 }, { 112, 0, 0, 0xA339 },
+    { 128, 0, 0, 0xA037 }, { 144, 0, 0, 0xA2AA }, { 160, 0, 0, 0xA005 }, { 176, 0, 0, 0xA015 },
+    { 192, 0, 0, 0xA26F }, { 208, 0, 0, 0xA00B }, { 224, 0, 0, 0xA012 }, { 240, 0, 0, 0xA022 },
+    { 256, 0, 0, 0xA026 }, { 272, 0, 0, 0xA033 }, { 288, 0, 0, 0xA00F }, { 304, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_4_12[28] = {
@@ -19060,14 +19060,14 @@ const u32 effF9_mes_jp_4_12[28] = {
     0x1180000, 0xA044, 0x1280000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_4_14[50] = {
-    0x400000, 0xA03A, 0x500000, 0xA009, 0x600000, 0xA018, 0x700000, 0xA0CB,
-    0x800000, 0xA0C5, 0x900000, 0xA0AF, 0xA00000, 0xA0A6, 0xB00000, 0xA081,
-    0xC00000, 0xA0AD, 0xD00000, 0xA037, 0x50FFEA, 0xA083, 0x60FFEA, 0xA0AD,
-    0x70FFEA, 0xA0BE, 0x80FFEA, 0xA0AD, 0x90FFEA, 0xA018, 0xA0FFEA, 0xA2AB,
-    0xB0FFEA, 0xA04B, 0xC0FFEA, 0xA028, 0xD0FFEA, 0xA08B, 0xE0FFEA, 0xA0AD,
-    0xF0FFEA, 0xA09B, 0x100FFEA, 0xA0B2, 0x110FFEA, 0xA095, 0x120FFEA, 0xA313,
-    0x130FFEA, 0xA03B,
+const CONN effF9_mes_jp_4_14[25] = {
+    { 64, 0, 0, 0xA03A }, { 80, 0, 0, 0xA009 }, { 96, 0, 0, 0xA018 }, { 112, 0, 0, 0xA0CB },
+    { 128, 0, 0, 0xA0C5 }, { 144, 0, 0, 0xA0AF }, { 160, 0, 0, 0xA0A6 }, { 176, 0, 0, 0xA081 },
+    { 192, 0, 0, 0xA0AD }, { 208, 0, 0, 0xA037 }, { 80, -22, 0, 0xA083 }, { 96, -22, 0, 0xA0AD },
+    { 112, -22, 0, 0xA0BE }, { 128, -22, 0, 0xA0AD }, { 144, -22, 0, 0xA018 }, { 160, -22, 0, 0xA2AB },
+    { 176, -22, 0, 0xA04B }, { 192, -22, 0, 0xA028 }, { 208, -22, 0, 0xA08B }, { 224, -22, 0, 0xA0AD },
+    { 240, -22, 0, 0xA09B }, { 256, -22, 0, 0xA0B2 }, { 272, -22, 0, 0xA095 }, { 288, -22, 0, 0xA313 },
+    { 304, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_4_16[16] = {
@@ -19075,14 +19075,14 @@ const u32 effF9_mes_jp_4_16[16] = {
     0xC00000, 0xA025, 0xD00000, 0xA039, 0xE00000, 0xA039, 0xF00000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_4_18[12] = {
-    0x900000, 0xA03A, 0xA00000, 0xA004, 0xB00000, 0xA033, 0xC00000, 0xA013,
-    0xD00000, 0xA013, 0xE00000, 0xA03B,
+const CONN effF9_mes_jp_4_18[6] = {
+    { 144, 0, 0, 0xA03A }, { 160, 0, 0, 0xA004 }, { 176, 0, 0, 0xA033 }, { 192, 0, 0, 0xA013 },
+    { 208, 0, 0, 0xA013 }, { 224, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_4_20[16] = {
-    0x800000, 0xA03A, 0x900000, 0xA2AD, 0xA00000, 0xA2AE, 0xB00000, 0xA100,
-    0xC00000, 0xA179, 0xD00000, 0xA048, 0xE00000, 0xA039, 0xF00000, 0xA03B,
+const CONN effF9_mes_jp_4_20[8] = {
+    { 128, 0, 0, 0xA03A }, { 144, 0, 0, 0xA2AD }, { 160, 0, 0, 0xA2AE }, { 176, 0, 0, 0xA100 },
+    { 192, 0, 0, 0xA179 }, { 208, 0, 0, 0xA048 }, { 224, 0, 0, 0xA039 }, { 240, 0, 0, 0xA03B },
 };
 
 const u16 effF9_mes_jp_4_1[2] = {
@@ -19130,13 +19130,13 @@ const u16 effF9_mes_jp_4_21[6] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_5[13] = {
-    { (const CONN*)effF9_mes_jp_5_0, (const u16*)effF9_mes_jp_5_1 }, { (const CONN*)effF9_mes_jp_5_0, (const u16*)effF9_mes_jp_5_3 },
-    { (const CONN*)effF9_mes_jp_5_4, (const u16*)effF9_mes_jp_5_5 }, { (const CONN*)effF9_mes_jp_5_6, (const u16*)effF9_mes_jp_5_7 },
-    { (const CONN*)effF9_mes_jp_5_8, (const u16*)effF9_mes_jp_5_9 }, { (const CONN*)effF9_mes_jp_5_10, (const u16*)effF9_mes_jp_5_11 },
-    { (const CONN*)effF9_mes_jp_5_12, (const u16*)effF9_mes_jp_5_13 }, { (const CONN*)effF9_mes_jp_5_14, (const u16*)effF9_mes_jp_5_15 },
-    { (const CONN*)effF9_mes_jp_5_16, (const u16*)effF9_mes_jp_5_17 }, { (const CONN*)effF9_mes_jp_5_18, (const u16*)effF9_mes_jp_5_19 },
-    { (const CONN*)effF9_mes_jp_5_20, (const u16*)effF9_mes_jp_5_21 }, { (const CONN*)effF9_mes_jp_5_22, (const u16*)effF9_mes_jp_5_23 },
-    { (const CONN*)effF9_mes_jp_5_24, (const u16*)effF9_mes_jp_5_25 },
+    { (const CONN*)effF9_mes_jp_5_0, effF9_mes_jp_5_1 }, { (const CONN*)effF9_mes_jp_5_0, effF9_mes_jp_5_3 },
+    { (const CONN*)effF9_mes_jp_5_4, effF9_mes_jp_5_5 }, { (const CONN*)effF9_mes_jp_5_6, effF9_mes_jp_5_7 },
+    { (const CONN*)effF9_mes_jp_5_8, effF9_mes_jp_5_9 }, { effF9_mes_jp_5_10, effF9_mes_jp_5_11 },
+    { (const CONN*)effF9_mes_jp_5_12, effF9_mes_jp_5_13 }, { effF9_mes_jp_5_14, effF9_mes_jp_5_15 },
+    { (const CONN*)effF9_mes_jp_5_16, effF9_mes_jp_5_17 }, { effF9_mes_jp_5_18, effF9_mes_jp_5_19 },
+    { effF9_mes_jp_5_20, effF9_mes_jp_5_21 }, { effF9_mes_jp_5_22, effF9_mes_jp_5_23 },
+    { effF9_mes_jp_5_24, effF9_mes_jp_5_25 },
 };
 
 const u32 effF9_mes_jp_5_0[68] = {
@@ -19181,26 +19181,26 @@ const u32 effF9_mes_jp_5_8[54] = {
     0xE8FFEA, 0xA028, 0xF8FFEA, 0xA039, 0x108FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_5_10[58] = {
-    0x480000, 0xA262, 0x580000, 0xA2F6, 0x680000, 0x9F94, 0x780000, 0x9F93,
-    0x880000, 0xA34C, 0x980000, 0xA150, 0xA80000, 0xA037, 0xB80000, 0xA262,
-    0xC80000, 0xA2F6, 0xD80000, 0xA233, 0xE80000, 0xA34D, 0xF80000, 0xA231,
-    0x1080000, 0xA34E, 0x1180000, 0xA018, 0x48FFEA, 0xA1F1, 0x58FFEA, 0xA008,
-    0x68FFEA, 0xA224, 0x78FFEA, 0xA008, 0x88FFEA, 0xA019, 0x98FFEA, 0xA037,
-    0xA8FFEA, 0xA106, 0xB8FFEA, 0xA13C, 0xC8FFEA, 0xA014, 0xD8FFEA, 0xA007,
-    0xE8FFEA, 0xA014, 0xF8FFEA, 0xA027, 0x108FFEA, 0xA01E, 0x118FFEA, 0xA00B,
-    0x128FFEA, 0xA00F,
+const CONN effF9_mes_jp_5_10[29] = {
+    { 72, 0, 0, 0xA262 }, { 88, 0, 0, 0xA2F6 }, { 104, 0, 0, 0x9F94 }, { 120, 0, 0, 0x9F93 },
+    { 136, 0, 0, 0xA34C }, { 152, 0, 0, 0xA150 }, { 168, 0, 0, 0xA037 }, { 184, 0, 0, 0xA262 },
+    { 200, 0, 0, 0xA2F6 }, { 216, 0, 0, 0xA233 }, { 232, 0, 0, 0xA34D }, { 248, 0, 0, 0xA231 },
+    { 264, 0, 0, 0xA34E }, { 280, 0, 0, 0xA018 }, { 72, -22, 0, 0xA1F1 }, { 88, -22, 0, 0xA008 },
+    { 104, -22, 0, 0xA224 }, { 120, -22, 0, 0xA008 }, { 136, -22, 0, 0xA019 }, { 152, -22, 0, 0xA037 },
+    { 168, -22, 0, 0xA106 }, { 184, -22, 0, 0xA13C }, { 200, -22, 0, 0xA014 }, { 216, -22, 0, 0xA007 },
+    { 232, -22, 0, 0xA014 }, { 248, -22, 0, 0xA027 }, { 264, -22, 0, 0xA01E }, { 280, -22, 0, 0xA00B },
+    { 296, -22, 0, 0xA00F },
 };
 
 const u32 effF9_mes_jp_5_12[4] = {
     0xF00000, 0x9F94, 0x1000000, 0xA037,
 };
 
-const u32 effF9_mes_jp_5_14[32] = {
-    0x400000, 0xA03A, 0x500000, 0xA080, 0x600000, 0xA08F, 0x700000, 0xA08B,
-    0x800000, 0xA00F, 0x900000, 0xA010, 0xA00000, 0xA04C, 0xB00000, 0xA002,
-    0xC00000, 0xA014, 0xD00000, 0xA028, 0xE00000, 0xA018, 0xF00000, 0xA005,
-    0x1000000, 0xA00B, 0x1100000, 0xA026, 0x1200000, 0xA057, 0x1300000, 0xA03B,
+const CONN effF9_mes_jp_5_14[16] = {
+    { 64, 0, 0, 0xA03A }, { 80, 0, 0, 0xA080 }, { 96, 0, 0, 0xA08F }, { 112, 0, 0, 0xA08B },
+    { 128, 0, 0, 0xA00F }, { 144, 0, 0, 0xA010 }, { 160, 0, 0, 0xA04C }, { 176, 0, 0, 0xA002 },
+    { 192, 0, 0, 0xA014 }, { 208, 0, 0, 0xA028 }, { 224, 0, 0, 0xA018 }, { 240, 0, 0, 0xA005 },
+    { 256, 0, 0, 0xA00B }, { 272, 0, 0, 0xA026 }, { 288, 0, 0, 0xA057 }, { 304, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_5_16[58] = {
@@ -19214,20 +19214,20 @@ const u32 effF9_mes_jp_5_16[58] = {
     0x120FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_5_18[4] = {
-    0x700000, 0x9F98, 0x800000, 0xA037,
+const CONN effF9_mes_jp_5_18[2] = {
+    { 112, 0, 0, 0x9F98 }, { 128, 0, 0, 0xA037 },
 };
 
-const u32 effF9_mes_jp_5_20[4] = {
-    0x900000, 0x9F97, 0xA00000, 0xA037,
+const CONN effF9_mes_jp_5_20[2] = {
+    { 144, 0, 0, 0x9F97 }, { 160, 0, 0, 0xA037 },
 };
 
-const u32 effF9_mes_jp_5_22[4] = {
-    0xB00000, 0x9F96, 0xC00000, 0xA037,
+const CONN effF9_mes_jp_5_22[2] = {
+    { 176, 0, 0, 0x9F96 }, { 192, 0, 0, 0xA037 },
 };
 
-const u32 effF9_mes_jp_5_24[4] = {
-    0xD00000, 0x9F95, 0xE00000, 0xA037,
+const CONN effF9_mes_jp_5_24[2] = {
+    { 208, 0, 0, 0x9F95 }, { 224, 0, 0, 0xA037 },
 };
 
 const u16 effF9_mes_jp_5_1[2] = {
@@ -19285,26 +19285,26 @@ const u16 effF9_mes_jp_5_25[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_6[25] = {
-    { (const CONN*)effF9_mes_jp_6_0, (const u16*)effF9_mes_jp_6_1 }, { (const CONN*)effF9_mes_jp_6_0, (const u16*)effF9_mes_jp_6_3 },
-    { (const CONN*)effF9_mes_jp_6_4, (const u16*)effF9_mes_jp_6_5 }, { (const CONN*)effF9_mes_jp_6_6, (const u16*)effF9_mes_jp_6_7 },
-    { (const CONN*)effF9_mes_jp_6_8, (const u16*)effF9_mes_jp_6_9 }, { (const CONN*)effF9_mes_jp_6_10, (const u16*)effF9_mes_jp_6_11 },
-    { (const CONN*)effF9_mes_jp_6_12, (const u16*)effF9_mes_jp_6_13 }, { (const CONN*)effF9_mes_jp_6_14, (const u16*)effF9_mes_jp_6_15 },
-    { (const CONN*)effF9_mes_jp_6_16, (const u16*)effF9_mes_jp_6_17 }, { (const CONN*)effF9_mes_jp_6_18, (const u16*)effF9_mes_jp_6_19 },
-    { (const CONN*)effF9_mes_jp_6_20, (const u16*)effF9_mes_jp_6_21 }, { (const CONN*)effF9_mes_jp_6_22, (const u16*)effF9_mes_jp_6_23 },
-    { (const CONN*)effF9_mes_jp_6_24, (const u16*)effF9_mes_jp_6_25 }, { (const CONN*)effF9_mes_jp_6_26, (const u16*)effF9_mes_jp_6_27 },
-    { (const CONN*)effF9_mes_jp_6_28, (const u16*)effF9_mes_jp_6_29 }, { (const CONN*)effF9_mes_jp_6_30, (const u16*)effF9_mes_jp_6_31 },
-    { (const CONN*)effF9_mes_jp_6_32, (const u16*)effF9_mes_jp_6_33 }, { (const CONN*)effF9_mes_jp_6_34, (const u16*)effF9_mes_jp_6_35 },
-    { (const CONN*)effF9_mes_jp_6_36, (const u16*)effF9_mes_jp_6_37 }, { (const CONN*)effF9_mes_jp_6_38, (const u16*)effF9_mes_jp_6_39 },
-    { (const CONN*)effF9_mes_jp_6_40, (const u16*)effF9_mes_jp_6_41 }, { (const CONN*)effF9_mes_jp_6_42, (const u16*)effF9_mes_jp_6_43 },
-    { (const CONN*)effF9_mes_jp_6_44, (const u16*)effF9_mes_jp_6_45 }, { (const CONN*)effF9_mes_jp_6_46, (const u16*)effF9_mes_jp_6_47 },
-    { (const CONN*)effF9_mes_jp_6_48, (const u16*)effF9_mes_jp_6_49 },
+    { effF9_mes_jp_6_0, effF9_mes_jp_6_1 }, { effF9_mes_jp_6_0, effF9_mes_jp_6_3 },
+    { (const CONN*)effF9_mes_jp_6_4, effF9_mes_jp_6_5 }, { effF9_mes_jp_6_6, effF9_mes_jp_6_7 },
+    { (const CONN*)effF9_mes_jp_6_8, effF9_mes_jp_6_9 }, { (const CONN*)effF9_mes_jp_6_10, effF9_mes_jp_6_11 },
+    { effF9_mes_jp_6_12, effF9_mes_jp_6_13 }, { (const CONN*)effF9_mes_jp_6_14, effF9_mes_jp_6_15 },
+    { (const CONN*)effF9_mes_jp_6_16, effF9_mes_jp_6_17 }, { (const CONN*)effF9_mes_jp_6_18, effF9_mes_jp_6_19 },
+    { effF9_mes_jp_6_20, effF9_mes_jp_6_21 }, { (const CONN*)effF9_mes_jp_6_22, effF9_mes_jp_6_23 },
+    { effF9_mes_jp_6_24, effF9_mes_jp_6_25 }, { (const CONN*)effF9_mes_jp_6_26, effF9_mes_jp_6_27 },
+    { (const CONN*)effF9_mes_jp_6_28, effF9_mes_jp_6_29 }, { effF9_mes_jp_6_30, effF9_mes_jp_6_31 },
+    { (const CONN*)effF9_mes_jp_6_32, effF9_mes_jp_6_33 }, { effF9_mes_jp_6_34, effF9_mes_jp_6_35 },
+    { (const CONN*)effF9_mes_jp_6_36, effF9_mes_jp_6_37 }, { (const CONN*)effF9_mes_jp_6_38, effF9_mes_jp_6_39 },
+    { effF9_mes_jp_6_40, effF9_mes_jp_6_41 }, { (const CONN*)effF9_mes_jp_6_42, effF9_mes_jp_6_43 },
+    { (const CONN*)effF9_mes_jp_6_44, effF9_mes_jp_6_45 }, { effF9_mes_jp_6_46, effF9_mes_jp_6_47 },
+    { (const CONN*)effF9_mes_jp_6_48, effF9_mes_jp_6_49 },
 };
 
-const u32 effF9_mes_jp_6_0[30] = {
-    0x600000, 0xA03A, 0x700000, 0xA023, 0x800000, 0xA028, 0x900000, 0xA014,
-    0xA00000, 0xA039, 0x70FFEA, 0xA084, 0x80FFEA, 0xA09E, 0x90FFEA, 0xA083,
-    0xB0FFEA, 0xA006, 0xC0FFEA, 0xA015, 0xD0FFEA, 0xA001, 0xE0FFEA, 0xA033,
-    0xF0FFEA, 0xA00F, 0x100FFEA, 0xA039, 0x110FFEA, 0xA03B,
+const CONN effF9_mes_jp_6_0[15] = {
+    { 96, 0, 0, 0xA03A }, { 112, 0, 0, 0xA023 }, { 128, 0, 0, 0xA028 }, { 144, 0, 0, 0xA014 },
+    { 160, 0, 0, 0xA039 }, { 112, -22, 0, 0xA084 }, { 128, -22, 0, 0xA09E }, { 144, -22, 0, 0xA083 },
+    { 176, -22, 0, 0xA006 }, { 192, -22, 0, 0xA015 }, { 208, -22, 0, 0xA001 }, { 224, -22, 0, 0xA033 },
+    { 240, -22, 0, 0xA00F }, { 256, -22, 0, 0xA039 }, { 272, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_6_4[44] = {
@@ -19316,12 +19316,12 @@ const u32 effF9_mes_jp_6_4[44] = {
     0x120FFEA, 0xA039, 0x130FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_6_6[38] = {
-    0x400000, 0xA03A, 0x500000, 0xA014, 0x600000, 0xA02D, 0x700000, 0xA048,
-    0x50FFEA, 0xA009, 0x60FFEA, 0xA02D, 0x70FFEA, 0xA014, 0x80FFEA, 0xA018,
-    0x90FFEA, 0xA11A, 0xA0FFEA, 0xA015, 0xB0FFEA, 0xA1B2, 0xC0FFEA, 0xA033,
-    0xD0FFEA, 0xA010, 0xE0FFEA, 0xA034, 0xF0FFEA, 0xA033, 0x100FFEA, 0xA00F,
-    0x110FFEA, 0xA018, 0x120FFEA, 0xA03C, 0x130FFEA, 0xA03B,
+const CONN effF9_mes_jp_6_6[19] = {
+    { 64, 0, 0, 0xA03A }, { 80, 0, 0, 0xA014 }, { 96, 0, 0, 0xA02D }, { 112, 0, 0, 0xA048 },
+    { 80, -22, 0, 0xA009 }, { 96, -22, 0, 0xA02D }, { 112, -22, 0, 0xA014 }, { 128, -22, 0, 0xA018 },
+    { 144, -22, 0, 0xA11A }, { 160, -22, 0, 0xA015 }, { 176, -22, 0, 0xA1B2 }, { 192, -22, 0, 0xA033 },
+    { 208, -22, 0, 0xA010 }, { 224, -22, 0, 0xA034 }, { 240, -22, 0, 0xA033 }, { 256, -22, 0, 0xA00F },
+    { 272, -22, 0, 0xA018 }, { 288, -22, 0, 0xA03C }, { 304, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_6_8[28] = {
@@ -19339,12 +19339,12 @@ const u32 effF9_mes_jp_6_10[38] = {
     0x108FFEA, 0xA02D, 0x118FFEA, 0xA04B, 0x128FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_6_12[40] = {
-    0x680000, 0xA03A, 0x780000, 0xA08F, 0x880000, 0xA0B3, 0x980000, 0xA0BA,
-    0xA80000, 0xA093, 0xB80000, 0xA0B7, 0xC80000, 0xA094, 0xD80000, 0xA0A1,
-    0xE80000, 0xA0AD, 0xF80000, 0xA093, 0x1080000, 0xA015, 0x78FFEA, 0xA106,
-    0x88FFEA, 0xA3AA, 0x98FFEA, 0xA00B, 0xA8FFEA, 0xA012, 0xB8FFEA, 0xA022,
-    0xC8FFEA, 0xA026, 0xD8FFEA, 0xA002, 0xE8FFEA, 0xA02B, 0xF8FFEA, 0xA03B,
+const CONN effF9_mes_jp_6_12[20] = {
+    { 104, 0, 0, 0xA03A }, { 120, 0, 0, 0xA08F }, { 136, 0, 0, 0xA0B3 }, { 152, 0, 0, 0xA0BA },
+    { 168, 0, 0, 0xA093 }, { 184, 0, 0, 0xA0B7 }, { 200, 0, 0, 0xA094 }, { 216, 0, 0, 0xA0A1 },
+    { 232, 0, 0, 0xA0AD }, { 248, 0, 0, 0xA093 }, { 264, 0, 0, 0xA015 }, { 120, -22, 0, 0xA106 },
+    { 136, -22, 0, 0xA3AA }, { 152, -22, 0, 0xA00B }, { 168, -22, 0, 0xA012 }, { 184, -22, 0, 0xA022 },
+    { 200, -22, 0, 0xA026 }, { 216, -22, 0, 0xA002 }, { 232, -22, 0, 0xA02B }, { 248, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_6_14[40] = {
@@ -19375,12 +19375,12 @@ const u32 effF9_mes_jp_6_18[54] = {
     0xF0FFEA, 0xA0AD, 0x100FFEA, 0xA0BF, 0x110FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_6_20[40] = {
-    0x480000, 0xA03A, 0x580000, 0xA17C, 0x680000, 0xA032, 0x780000, 0xA089,
-    0x880000, 0xA0B7, 0x980000, 0xA094, 0xA80000, 0xA0B7, 0x58FFEA, 0xA1B6,
-    0x68FFEA, 0xA42E, 0x78FFEA, 0xA018, 0x88FFEA, 0xA1BD, 0x98FFEA, 0xA441,
-    0xA8FFEA, 0xA134, 0xC8FFEA, 0xA09A, 0xD8FFEA, 0xA0B5, 0xE8FFEA, 0xA0B7,
-    0xF8FFEA, 0xA0BC, 0x108FFEA, 0xA0B7, 0x118FFEA, 0xA3D2, 0x128FFEA, 0xA03B,
+const CONN effF9_mes_jp_6_20[20] = {
+    { 72, 0, 0, 0xA03A }, { 88, 0, 0, 0xA17C }, { 104, 0, 0, 0xA032 }, { 120, 0, 0, 0xA089 },
+    { 136, 0, 0, 0xA0B7 }, { 152, 0, 0, 0xA094 }, { 168, 0, 0, 0xA0B7 }, { 88, -22, 0, 0xA1B6 },
+    { 104, -22, 0, 0xA42E }, { 120, -22, 0, 0xA018 }, { 136, -22, 0, 0xA1BD }, { 152, -22, 0, 0xA441 },
+    { 168, -22, 0, 0xA134 }, { 200, -22, 0, 0xA09A }, { 216, -22, 0, 0xA0B5 }, { 232, -22, 0, 0xA0B7 },
+    { 248, -22, 0, 0xA0BC }, { 264, -22, 0, 0xA0B7 }, { 280, -22, 0, 0xA3D2 }, { 296, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_6_22[50] = {
@@ -19393,10 +19393,10 @@ const u32 effF9_mes_jp_6_22[50] = {
     0x128FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_6_24[20] = {
-    0x680000, 0xA03A, 0x780000, 0xA001, 0x880000, 0xA007, 0x980000, 0xA046,
-    0xB80000, 0xA000, 0xC80000, 0xA001, 0xD80000, 0xA051, 0xE80000, 0xA002,
-    0xF80000, 0xA039, 0x1080000, 0xA03B,
+const CONN effF9_mes_jp_6_24[10] = {
+    { 104, 0, 0, 0xA03A }, { 120, 0, 0, 0xA001 }, { 136, 0, 0, 0xA007 }, { 152, 0, 0, 0xA046 },
+    { 184, 0, 0, 0xA000 }, { 200, 0, 0, 0xA001 }, { 216, 0, 0, 0xA051 }, { 232, 0, 0, 0xA002 },
+    { 248, 0, 0, 0xA039 }, { 264, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_6_26[52] = {
@@ -19419,10 +19419,10 @@ const u32 effF9_mes_jp_6_28[52] = {
     0x108FFEA, 0xA039, 0x118FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_6_30[20] = {
-    0x680000, 0xA03A, 0x780000, 0xA001, 0x880000, 0xA007, 0x980000, 0xA046,
-    0xB80000, 0xA000, 0xC80000, 0xA001, 0xD80000, 0xA051, 0xE80000, 0xA002,
-    0xF80000, 0xA039, 0x1080000, 0xA03B,
+const CONN effF9_mes_jp_6_30[10] = {
+    { 104, 0, 0, 0xA03A }, { 120, 0, 0, 0xA001 }, { 136, 0, 0, 0xA007 }, { 152, 0, 0, 0xA046 },
+    { 184, 0, 0, 0xA000 }, { 200, 0, 0, 0xA001 }, { 216, 0, 0, 0xA051 }, { 232, 0, 0, 0xA002 },
+    { 248, 0, 0, 0xA039 }, { 264, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_6_32[10] = {
@@ -19430,14 +19430,14 @@ const u32 effF9_mes_jp_6_32[10] = {
     0xD80000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_6_34[50] = {
-    0x380000, 0xA03A, 0x480000, 0xA1BD, 0x580000, 0xA262, 0x680000, 0xA1D2,
-    0x780000, 0xA018, 0x880000, 0xA151, 0x980000, 0xA15F, 0xB80000, 0xA083,
-    0xC80000, 0xA0A9, 0xD80000, 0xA094, 0x48FFEA, 0xA457, 0x58FFEA, 0xA458,
-    0x78FFEA, 0xA0C8, 0x88FFEA, 0xA0B5, 0x98FFEA, 0xA0B7, 0xA8FFEA, 0xA092,
-    0xB8FFEA, 0xA0AF, 0xC8FFEA, 0xA0B7, 0xD8FFEA, 0xA3D2, 0xE8FFEA, 0xA0C8,
-    0xF8FFEA, 0xA0B7, 0x108FFEA, 0xA08C, 0x118FFEA, 0xA093, 0x128FFEA, 0xA039,
-    0x138FFEA, 0xA03B,
+const CONN effF9_mes_jp_6_34[25] = {
+    { 56, 0, 0, 0xA03A }, { 72, 0, 0, 0xA1BD }, { 88, 0, 0, 0xA262 }, { 104, 0, 0, 0xA1D2 },
+    { 120, 0, 0, 0xA018 }, { 136, 0, 0, 0xA151 }, { 152, 0, 0, 0xA15F }, { 184, 0, 0, 0xA083 },
+    { 200, 0, 0, 0xA0A9 }, { 216, 0, 0, 0xA094 }, { 72, -22, 0, 0xA457 }, { 88, -22, 0, 0xA458 },
+    { 120, -22, 0, 0xA0C8 }, { 136, -22, 0, 0xA0B5 }, { 152, -22, 0, 0xA0B7 }, { 168, -22, 0, 0xA092 },
+    { 184, -22, 0, 0xA0AF }, { 200, -22, 0, 0xA0B7 }, { 216, -22, 0, 0xA3D2 }, { 232, -22, 0, 0xA0C8 },
+    { 248, -22, 0, 0xA0B7 }, { 264, -22, 0, 0xA08C }, { 280, -22, 0, 0xA093 }, { 296, -22, 0, 0xA039 },
+    { 312, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_6_36[20] = {
@@ -19457,14 +19457,14 @@ const u32 effF9_mes_jp_6_38[58] = {
     0x110FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_6_40[52] = {
-    0x380000, 0xA03A, 0x480000, 0xA394, 0x580000, 0xA1D3, 0x680000, 0xA013,
-    0x780000, 0xA10B, 0x880000, 0xA1DE, 0x980000, 0xA018, 0xA80000, 0xA414,
-    0xB80000, 0xA409, 0xD80000, 0xA0B9, 0xE80000, 0xA0A8, 0x48FFEA, 0xA457,
-    0x58FFEA, 0xA458, 0x78FFEA, 0xA0A6, 0x88FFEA, 0xA0BA, 0x98FFEA, 0xA094,
-    0xA8FFEA, 0xA0AA, 0xB8FFEA, 0xA087, 0xC8FFEA, 0xA03D, 0xD8FFEA, 0xA082,
-    0xE8FFEA, 0xA0AF, 0xF8FFEA, 0xA094, 0x108FFEA, 0xA0B7, 0x118FFEA, 0xA0BF,
-    0x128FFEA, 0xA039, 0x138FFEA, 0xA03B,
+const CONN effF9_mes_jp_6_40[26] = {
+    { 56, 0, 0, 0xA03A }, { 72, 0, 0, 0xA394 }, { 88, 0, 0, 0xA1D3 }, { 104, 0, 0, 0xA013 },
+    { 120, 0, 0, 0xA10B }, { 136, 0, 0, 0xA1DE }, { 152, 0, 0, 0xA018 }, { 168, 0, 0, 0xA414 },
+    { 184, 0, 0, 0xA409 }, { 216, 0, 0, 0xA0B9 }, { 232, 0, 0, 0xA0A8 }, { 72, -22, 0, 0xA457 },
+    { 88, -22, 0, 0xA458 }, { 120, -22, 0, 0xA0A6 }, { 136, -22, 0, 0xA0BA }, { 152, -22, 0, 0xA094 },
+    { 168, -22, 0, 0xA0AA }, { 184, -22, 0, 0xA087 }, { 200, -22, 0, 0xA03D }, { 216, -22, 0, 0xA082 },
+    { 232, -22, 0, 0xA0AF }, { 248, -22, 0, 0xA094 }, { 264, -22, 0, 0xA0B7 }, { 280, -22, 0, 0xA0BF },
+    { 296, -22, 0, 0xA039 }, { 312, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_6_42[20] = {
@@ -19482,14 +19482,14 @@ const u32 effF9_mes_jp_6_44[46] = {
     0xF0FFEA, 0xA002, 0x100FFEA, 0xA039, 0x110FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_6_46[50] = {
-    0x480000, 0xA03A, 0x580000, 0xA43C, 0x680000, 0xA33F, 0x780000, 0xA43D,
-    0x880000, 0xA08F, 0x980000, 0xA0B3, 0xA80000, 0xA0BA, 0xB80000, 0xA030,
-    0xC80000, 0xA093, 0xD80000, 0xA0B7, 0xE80000, 0xA094, 0xF80000, 0xA0A1,
-    0x1080000, 0xA0AD, 0x1180000, 0xA093, 0x1280000, 0xA032, 0x58FFEA, 0xA43E,
-    0x68FFEA, 0xA194, 0x78FFEA, 0xA43F, 0x88FFEA, 0x9F94, 0x98FFEA, 0xA02F,
-    0xA8FFEA, 0xA1AC, 0xB8FFEA, 0xA1AD, 0xC8FFEA, 0xA02F, 0xD8FFEA, 0xA039,
-    0xE8FFEA, 0xA03B,
+const CONN effF9_mes_jp_6_46[25] = {
+    { 72, 0, 0, 0xA03A }, { 88, 0, 0, 0xA43C }, { 104, 0, 0, 0xA33F }, { 120, 0, 0, 0xA43D },
+    { 136, 0, 0, 0xA08F }, { 152, 0, 0, 0xA0B3 }, { 168, 0, 0, 0xA0BA }, { 184, 0, 0, 0xA030 },
+    { 200, 0, 0, 0xA093 }, { 216, 0, 0, 0xA0B7 }, { 232, 0, 0, 0xA094 }, { 248, 0, 0, 0xA0A1 },
+    { 264, 0, 0, 0xA0AD }, { 280, 0, 0, 0xA093 }, { 296, 0, 0, 0xA032 }, { 88, -22, 0, 0xA43E },
+    { 104, -22, 0, 0xA194 }, { 120, -22, 0, 0xA43F }, { 136, -22, 0, 0x9F94 }, { 152, -22, 0, 0xA02F },
+    { 168, -22, 0, 0xA1AC }, { 184, -22, 0, 0xA1AD }, { 200, -22, 0, 0xA02F }, { 216, -22, 0, 0xA039 },
+    { 232, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_6_48[54] = {
@@ -19604,26 +19604,26 @@ const u16 effF9_mes_jp_6_49[7] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_7[15] = {
-    { (const CONN*)effF9_mes_jp_7_0, (const u16*)effF9_mes_jp_7_1 }, { (const CONN*)effF9_mes_jp_7_0, (const u16*)effF9_mes_jp_7_3 },
-    { (const CONN*)effF9_mes_jp_7_4, (const u16*)effF9_mes_jp_7_5 }, { (const CONN*)effF9_mes_jp_7_6, (const u16*)effF9_mes_jp_7_7 },
-    { (const CONN*)effF9_mes_jp_7_8, (const u16*)effF9_mes_jp_7_9 }, { (const CONN*)effF9_mes_jp_7_10, (const u16*)effF9_mes_jp_7_11 },
-    { (const CONN*)effF9_mes_jp_7_12, (const u16*)effF9_mes_jp_7_13 }, { (const CONN*)effF9_mes_jp_7_14, (const u16*)effF9_mes_jp_7_15 },
-    { (const CONN*)effF9_mes_jp_7_16, (const u16*)effF9_mes_jp_7_17 }, { (const CONN*)effF9_mes_jp_7_18, (const u16*)effF9_mes_jp_7_19 },
-    { (const CONN*)effF9_mes_jp_7_20, (const u16*)effF9_mes_jp_7_21 }, { (const CONN*)effF9_mes_jp_7_22, (const u16*)effF9_mes_jp_7_23 },
-    { (const CONN*)effF9_mes_jp_7_24, (const u16*)effF9_mes_jp_7_25 }, { (const CONN*)effF9_mes_jp_7_26, (const u16*)effF9_mes_jp_7_27 },
-    { (const CONN*)effF9_mes_jp_7_28, (const u16*)effF9_mes_jp_7_29 },
+    { effF9_mes_jp_7_0, effF9_mes_jp_7_1 }, { effF9_mes_jp_7_0, effF9_mes_jp_7_3 },
+    { effF9_mes_jp_7_4, effF9_mes_jp_7_5 }, { (const CONN*)effF9_mes_jp_7_6, effF9_mes_jp_7_7 },
+    { (const CONN*)effF9_mes_jp_7_8, effF9_mes_jp_7_9 }, { effF9_mes_jp_7_10, effF9_mes_jp_7_11 },
+    { (const CONN*)effF9_mes_jp_7_12, effF9_mes_jp_7_13 }, { effF9_mes_jp_7_14, effF9_mes_jp_7_15 },
+    { (const CONN*)effF9_mes_jp_7_16, effF9_mes_jp_7_17 }, { effF9_mes_jp_7_18, effF9_mes_jp_7_19 },
+    { effF9_mes_jp_7_20, effF9_mes_jp_7_21 }, { (const CONN*)effF9_mes_jp_7_22, effF9_mes_jp_7_23 },
+    { effF9_mes_jp_7_24, effF9_mes_jp_7_25 }, { (const CONN*)effF9_mes_jp_7_26, effF9_mes_jp_7_27 },
+    { effF9_mes_jp_7_28, effF9_mes_jp_7_29 },
 };
 
-const u32 effF9_mes_jp_7_0[32] = {
-    0x400000, 0xA03A, 0x500000, 0xA04C, 0x600000, 0xA002, 0x700000, 0xA023,
-    0x800000, 0xA026, 0x900000, 0xA037, 0xA00000, 0xA12A, 0xB00000, 0xA018,
-    0xC00000, 0xA1A7, 0xD00000, 0xA008, 0xE00000, 0xA018, 0xF00000, 0xA025,
-    0x1000000, 0xA002, 0x1100000, 0xA048, 0x1200000, 0xA014, 0x1300000, 0xA03B,
+const CONN effF9_mes_jp_7_0[16] = {
+    { 64, 0, 0, 0xA03A }, { 80, 0, 0, 0xA04C }, { 96, 0, 0, 0xA002 }, { 112, 0, 0, 0xA023 },
+    { 128, 0, 0, 0xA026 }, { 144, 0, 0, 0xA037 }, { 160, 0, 0, 0xA12A }, { 176, 0, 0, 0xA018 },
+    { 192, 0, 0, 0xA1A7 }, { 208, 0, 0, 0xA008 }, { 224, 0, 0, 0xA018 }, { 240, 0, 0, 0xA025 },
+    { 256, 0, 0, 0xA002 }, { 272, 0, 0, 0xA048 }, { 288, 0, 0, 0xA014 }, { 304, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_7_4[12] = {
-    0x900000, 0xA03A, 0xA00000, 0xA2A9, 0xB00000, 0xA27B, 0xC00000, 0xA048,
-    0xD00000, 0xA039, 0xE00000, 0xA03B,
+const CONN effF9_mes_jp_7_4[6] = {
+    { 144, 0, 0, 0xA03A }, { 160, 0, 0, 0xA2A9 }, { 176, 0, 0, 0xA27B }, { 192, 0, 0, 0xA048 },
+    { 208, 0, 0, 0xA039 }, { 224, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_7_6[30] = {
@@ -19643,10 +19643,10 @@ const u32 effF9_mes_jp_7_8[52] = {
     0xD0FFEA, 0xA025, 0xE0FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_7_10[18] = {
-    0x780000, 0xA03A, 0x880000, 0xA12A, 0x980000, 0xA018, 0xA80000, 0xA262,
-    0xB80000, 0xA248, 0xC80000, 0xA154, 0xD80000, 0xA048, 0xE80000, 0xA039,
-    0xF80000, 0xA03B,
+const CONN effF9_mes_jp_7_10[9] = {
+    { 120, 0, 0, 0xA03A }, { 136, 0, 0, 0xA12A }, { 152, 0, 0, 0xA018 }, { 168, 0, 0, 0xA262 },
+    { 184, 0, 0, 0xA248 }, { 200, 0, 0, 0xA154 }, { 216, 0, 0, 0xA048 }, { 232, 0, 0, 0xA039 },
+    { 248, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_7_12[62] = {
@@ -19660,10 +19660,10 @@ const u32 effF9_mes_jp_7_12[62] = {
     0x110FFEA, 0xA02D, 0x120FFEA, 0xA039, 0x130FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_7_14[20] = {
-    0x700000, 0xA03A, 0x800000, 0xA099, 0x900000, 0xA0B3, 0xA00000, 0xA099,
-    0xB00000, 0xA099, 0xC00000, 0xA099, 0xD00000, 0xA099, 0xE00000, 0xA0B3,
-    0xF00000, 0xA039, 0x1000000, 0xA03B,
+const CONN effF9_mes_jp_7_14[10] = {
+    { 112, 0, 0, 0xA03A }, { 128, 0, 0, 0xA099 }, { 144, 0, 0, 0xA0B3 }, { 160, 0, 0, 0xA099 },
+    { 176, 0, 0, 0xA099 }, { 192, 0, 0, 0xA099 }, { 208, 0, 0, 0xA099 }, { 224, 0, 0, 0xA0B3 },
+    { 240, 0, 0, 0xA039 }, { 256, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_7_16[16] = {
@@ -19671,14 +19671,14 @@ const u32 effF9_mes_jp_7_16[16] = {
     0xC00000, 0xA1CC, 0xD00000, 0xA11A, 0xE00000, 0xA039, 0xF00000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_7_18[16] = {
-    0x800000, 0xA03A, 0x900000, 0xA099, 0xA00000, 0xA0B3, 0xB00000, 0xA037,
-    0xC00000, 0xA099, 0xD00000, 0xA0B3, 0xE00000, 0xA039, 0xF00000, 0xA03B,
+const CONN effF9_mes_jp_7_18[8] = {
+    { 128, 0, 0, 0xA03A }, { 144, 0, 0, 0xA099 }, { 160, 0, 0, 0xA0B3 }, { 176, 0, 0, 0xA037 },
+    { 192, 0, 0, 0xA099 }, { 208, 0, 0, 0xA0B3 }, { 224, 0, 0, 0xA039 }, { 240, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_7_20[12] = {
-    0x980000, 0xA03A, 0xA80000, 0xA086, 0xB80000, 0xA0B4, 0xC80000, 0xA313,
-    0xD80000, 0xA039, 0xE80000, 0xA03B,
+const CONN effF9_mes_jp_7_20[6] = {
+    { 152, 0, 0, 0xA03A }, { 168, 0, 0, 0xA086 }, { 184, 0, 0, 0xA0B4 }, { 200, 0, 0, 0xA313 },
+    { 216, 0, 0, 0xA039 }, { 232, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_7_22[30] = {
@@ -19688,13 +19688,13 @@ const u32 effF9_mes_jp_7_22[30] = {
     0x1100000, 0xA025, 0x1200000, 0xA039, 0x1300000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_7_24[42] = {
-    0x680000, 0xA03A, 0x780000, 0xA085, 0x880000, 0xA0C7, 0x980000, 0xA0AD,
-    0xA80000, 0xA019, 0xB80000, 0xA0BF, 0xC80000, 0xA0B3, 0xD80000, 0xA08F,
-    0xE80000, 0xA0BF, 0xF80000, 0xA08F, 0x1080000, 0xA039, 0x78FFEA, 0xA33B,
-    0x88FFEA, 0xA24B, 0x98FFEA, 0xA277, 0xA8FFEA, 0xA022, 0xB8FFEA, 0xA2B9,
-    0xC8FFEA, 0xA048, 0xD8FFEA, 0xA026, 0xE8FFEA, 0xA008, 0xF8FFEA, 0xA039,
-    0x108FFEA, 0xA03B,
+const CONN effF9_mes_jp_7_24[21] = {
+    { 104, 0, 0, 0xA03A }, { 120, 0, 0, 0xA085 }, { 136, 0, 0, 0xA0C7 }, { 152, 0, 0, 0xA0AD },
+    { 168, 0, 0, 0xA019 }, { 184, 0, 0, 0xA0BF }, { 200, 0, 0, 0xA0B3 }, { 216, 0, 0, 0xA08F },
+    { 232, 0, 0, 0xA0BF }, { 248, 0, 0, 0xA08F }, { 264, 0, 0, 0xA039 }, { 120, -22, 0, 0xA33B },
+    { 136, -22, 0, 0xA24B }, { 152, -22, 0, 0xA277 }, { 168, -22, 0, 0xA022 }, { 184, -22, 0, 0xA2B9 },
+    { 200, -22, 0, 0xA048 }, { 216, -22, 0, 0xA026 }, { 232, -22, 0, 0xA008 }, { 248, -22, 0, 0xA039 },
+    { 264, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_7_26[26] = {
@@ -19704,11 +19704,11 @@ const u32 effF9_mes_jp_7_26[26] = {
     0x1200000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_7_28[26] = {
-    0x580000, 0xA03A, 0x680000, 0xA01A, 0x780000, 0xA313, 0x880000, 0xA02D,
-    0x980000, 0xA037, 0xA80000, 0xA042, 0xB80000, 0xA021, 0xC80000, 0xA02D,
-    0xD80000, 0xA014, 0xE80000, 0xA00A, 0xF80000, 0xA001, 0x1080000, 0xA039,
-    0x1180000, 0xA03B,
+const CONN effF9_mes_jp_7_28[13] = {
+    { 88, 0, 0, 0xA03A }, { 104, 0, 0, 0xA01A }, { 120, 0, 0, 0xA313 }, { 136, 0, 0, 0xA02D },
+    { 152, 0, 0, 0xA037 }, { 168, 0, 0, 0xA042 }, { 184, 0, 0, 0xA021 }, { 200, 0, 0, 0xA02D },
+    { 216, 0, 0, 0xA014 }, { 232, 0, 0, 0xA00A }, { 248, 0, 0, 0xA001 }, { 264, 0, 0, 0xA039 },
+    { 280, 0, 0, 0xA03B },
 };
 
 const u16 effF9_mes_jp_7_1[2] = {
@@ -19772,18 +19772,18 @@ const u16 effF9_mes_jp_7_29[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_8[7] = {
-    { (const CONN*)effF9_mes_jp_8_0, (const u16*)effF9_mes_jp_8_1 }, { (const CONN*)effF9_mes_jp_8_0, (const u16*)effF9_mes_jp_8_3 },
-    { (const CONN*)effF9_mes_jp_8_4, (const u16*)effF9_mes_jp_8_5 }, { (const CONN*)effF9_mes_jp_8_6, (const u16*)effF9_mes_jp_8_7 },
-    { (const CONN*)effF9_mes_jp_8_8, (const u16*)effF9_mes_jp_8_9 }, { (const CONN*)effF9_mes_jp_8_10, (const u16*)effF9_mes_jp_8_11 },
-    { (const CONN*)effF9_mes_jp_8_12, (const u16*)effF9_mes_jp_8_13 },
+    { effF9_mes_jp_8_0, effF9_mes_jp_8_1 }, { effF9_mes_jp_8_0, effF9_mes_jp_8_3 },
+    { (const CONN*)effF9_mes_jp_8_4, effF9_mes_jp_8_5 }, { (const CONN*)effF9_mes_jp_8_6, effF9_mes_jp_8_7 },
+    { (const CONN*)effF9_mes_jp_8_8, effF9_mes_jp_8_9 }, { effF9_mes_jp_8_10, effF9_mes_jp_8_11 },
+    { (const CONN*)effF9_mes_jp_8_12, effF9_mes_jp_8_13 },
 };
 
-const u32 effF9_mes_jp_8_0[34] = {
-    0x300000, 0xA004, 0x400000, 0xA252, 0x500000, 0xA00A, 0x600000, 0xA02D,
-    0x700000, 0xA037, 0x800000, 0xA004, 0x900000, 0xA33C, 0xA00000, 0xA00A,
-    0xB00000, 0xA02D, 0xC00000, 0xA037, 0x30FFEA, 0xA004, 0x40FFEA, 0xA2A4,
-    0x50FFEA, 0xA11A, 0x60FFEA, 0xA04B, 0x70FFEA, 0xA00C, 0x80FFEA, 0xA005,
-    0x90FFEA, 0xA038,
+const CONN effF9_mes_jp_8_0[17] = {
+    { 48, 0, 0, 0xA004 }, { 64, 0, 0, 0xA252 }, { 80, 0, 0, 0xA00A }, { 96, 0, 0, 0xA02D },
+    { 112, 0, 0, 0xA037 }, { 128, 0, 0, 0xA004 }, { 144, 0, 0, 0xA33C }, { 160, 0, 0, 0xA00A },
+    { 176, 0, 0, 0xA02D }, { 192, 0, 0, 0xA037 }, { 48, -22, 0, 0xA004 }, { 64, -22, 0, 0xA2A4 },
+    { 80, -22, 0, 0xA11A }, { 96, -22, 0, 0xA04B }, { 112, -22, 0, 0xA00C }, { 128, -22, 0, 0xA005 },
+    { 144, -22, 0, 0xA038 },
 };
 
 const u32 effF9_mes_jp_8_4[70] = {
@@ -19820,10 +19820,10 @@ const u32 effF9_mes_jp_8_8[42] = {
     0xC0FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_8_10[18] = {
-    0x780000, 0xA03A, 0x880000, 0xA09C, 0x980000, 0xA313, 0xA80000, 0xA086,
-    0xB80000, 0xA037, 0xC80000, 0xA09C, 0xD80000, 0xA313, 0xE80000, 0xA086,
-    0xF80000, 0xA03B,
+const CONN effF9_mes_jp_8_10[9] = {
+    { 120, 0, 0, 0xA03A }, { 136, 0, 0, 0xA09C }, { 152, 0, 0, 0xA313 }, { 168, 0, 0, 0xA086 },
+    { 184, 0, 0, 0xA037 }, { 200, 0, 0, 0xA09C }, { 216, 0, 0, 0xA313 }, { 232, 0, 0, 0xA086 },
+    { 248, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_8_12[80] = {
@@ -19869,18 +19869,18 @@ const u16 effF9_mes_jp_8_13[9] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_9[6] = {
-    { (const CONN*)effF9_mes_jp_9_0, (const u16*)effF9_mes_jp_9_1 }, { (const CONN*)effF9_mes_jp_9_0, (const u16*)effF9_mes_jp_9_3 },
-    { (const CONN*)effF9_mes_jp_9_4, (const u16*)effF9_mes_jp_9_5 }, { (const CONN*)effF9_mes_jp_9_6, (const u16*)effF9_mes_jp_9_7 },
-    { (const CONN*)effF9_mes_jp_9_8, (const u16*)effF9_mes_jp_9_9 }, { (const CONN*)effF9_mes_jp_9_10, (const u16*)effF9_mes_jp_9_11 },
+    { effF9_mes_jp_9_0, effF9_mes_jp_9_1 }, { effF9_mes_jp_9_0, effF9_mes_jp_9_3 },
+    { (const CONN*)effF9_mes_jp_9_4, effF9_mes_jp_9_5 }, { (const CONN*)effF9_mes_jp_9_6, effF9_mes_jp_9_7 },
+    { effF9_mes_jp_9_8, effF9_mes_jp_9_9 }, { (const CONN*)effF9_mes_jp_9_10, effF9_mes_jp_9_11 },
 };
 
-const u32 effF9_mes_jp_9_0[46] = {
-    0x480000, 0xA03A, 0x580000, 0xA04C, 0x680000, 0xA001, 0x780000, 0xA011,
-    0x880000, 0xA022, 0x980000, 0xA037, 0xA80000, 0xA009, 0xB80000, 0xA001,
-    0xC80000, 0xA011, 0xD80000, 0xA022, 0xE80000, 0xA037, 0xF80000, 0xA000,
-    0x1080000, 0xA313, 0x1180000, 0xA002, 0x1280000, 0xA313, 0x58FFEA, 0xA2BE,
-    0x68FFEA, 0xA2BF, 0x78FFEA, 0xA03E, 0x88FFEA, 0xA015, 0x98FFEA, 0xA034,
-    0xA8FFEA, 0xA001, 0xB8FFEA, 0xA039, 0xC8FFEA, 0xA03B,
+const CONN effF9_mes_jp_9_0[23] = {
+    { 72, 0, 0, 0xA03A }, { 88, 0, 0, 0xA04C }, { 104, 0, 0, 0xA001 }, { 120, 0, 0, 0xA011 },
+    { 136, 0, 0, 0xA022 }, { 152, 0, 0, 0xA037 }, { 168, 0, 0, 0xA009 }, { 184, 0, 0, 0xA001 },
+    { 200, 0, 0, 0xA011 }, { 216, 0, 0, 0xA022 }, { 232, 0, 0, 0xA037 }, { 248, 0, 0, 0xA000 },
+    { 264, 0, 0, 0xA313 }, { 280, 0, 0, 0xA002 }, { 296, 0, 0, 0xA313 }, { 88, -22, 0, 0xA2BE },
+    { 104, -22, 0, 0xA2BF }, { 120, -22, 0, 0xA03E }, { 136, -22, 0, 0xA015 }, { 152, -22, 0, 0xA034 },
+    { 168, -22, 0, 0xA001 }, { 184, -22, 0, 0xA039 }, { 200, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_9_4[54] = {
@@ -19899,12 +19899,12 @@ const u32 effF9_mes_jp_9_6[24] = {
     0xE00000, 0xA047, 0xF00000, 0xA002, 0x1000000, 0xA039, 0x1100000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_9_8[40] = {
-    0x480000, 0xA03A, 0x580000, 0xA009, 0x680000, 0xA018, 0x780000, 0xA0AB,
-    0x880000, 0xA08B, 0x980000, 0xA03E, 0x58FFEA, 0xA124, 0x68FFEA, 0xA005,
-    0x78FFEA, 0xA026, 0x88FFEA, 0xA133, 0x98FFEA, 0xA003, 0xA8FFEA, 0xA014,
-    0xB8FFEA, 0xA004, 0xC8FFEA, 0xA00B, 0xD8FFEA, 0xA010, 0xE8FFEA, 0xA034,
-    0xF8FFEA, 0xA028, 0x108FFEA, 0xA02B, 0x118FFEA, 0xA039, 0x128FFEA, 0xA03B,
+const CONN effF9_mes_jp_9_8[20] = {
+    { 72, 0, 0, 0xA03A }, { 88, 0, 0, 0xA009 }, { 104, 0, 0, 0xA018 }, { 120, 0, 0, 0xA0AB },
+    { 136, 0, 0, 0xA08B }, { 152, 0, 0, 0xA03E }, { 88, -22, 0, 0xA124 }, { 104, -22, 0, 0xA005 },
+    { 120, -22, 0, 0xA026 }, { 136, -22, 0, 0xA133 }, { 152, -22, 0, 0xA003 }, { 168, -22, 0, 0xA014 },
+    { 184, -22, 0, 0xA004 }, { 200, -22, 0, 0xA00B }, { 216, -22, 0, 0xA010 }, { 232, -22, 0, 0xA034 },
+    { 248, -22, 0, 0xA028 }, { 264, -22, 0, 0xA02B }, { 280, -22, 0, 0xA039 }, { 296, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_9_10[52] = {
@@ -19942,29 +19942,29 @@ const u16 effF9_mes_jp_9_11[7] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_10[16] = {
-    { (const CONN*)effF9_mes_jp_10_0, (const u16*)effF9_mes_jp_10_1 }, { (const CONN*)effF9_mes_jp_10_0, (const u16*)effF9_mes_jp_10_3 },
-    { (const CONN*)effF9_mes_jp_10_4, (const u16*)effF9_mes_jp_10_5 }, { (const CONN*)effF9_mes_jp_10_6, (const u16*)effF9_mes_jp_10_7 },
-    { (const CONN*)effF9_mes_jp_10_8, (const u16*)effF9_mes_jp_10_9 }, { (const CONN*)effF9_mes_jp_10_10, (const u16*)effF9_mes_jp_10_11 },
-    { (const CONN*)effF9_mes_jp_10_12, (const u16*)effF9_mes_jp_10_13 }, { (const CONN*)effF9_mes_jp_10_14, (const u16*)effF9_mes_jp_10_15 },
-    { (const CONN*)effF9_mes_jp_10_16, (const u16*)effF9_mes_jp_10_17 }, { (const CONN*)effF9_mes_jp_10_18, (const u16*)effF9_mes_jp_10_19 },
-    { (const CONN*)effF9_mes_jp_10_20, (const u16*)effF9_mes_jp_10_21 }, { (const CONN*)effF9_mes_jp_10_22, (const u16*)effF9_mes_jp_10_23 },
-    { (const CONN*)effF9_mes_jp_10_24, (const u16*)effF9_mes_jp_10_25 }, { (const CONN*)effF9_mes_jp_10_26, (const u16*)effF9_mes_jp_10_27 },
-    { (const CONN*)effF9_mes_jp_10_28, (const u16*)effF9_mes_jp_10_29 }, { (const CONN*)effF9_mes_jp_10_30, (const u16*)effF9_mes_jp_10_31 },
+    { effF9_mes_jp_10_0, effF9_mes_jp_10_1 }, { effF9_mes_jp_10_0, effF9_mes_jp_10_3 },
+    { effF9_mes_jp_10_4, effF9_mes_jp_10_5 }, { effF9_mes_jp_10_6, effF9_mes_jp_10_7 },
+    { (const CONN*)effF9_mes_jp_10_8, effF9_mes_jp_10_9 }, { effF9_mes_jp_10_10, effF9_mes_jp_10_11 },
+    { (const CONN*)effF9_mes_jp_10_12, effF9_mes_jp_10_13 }, { effF9_mes_jp_10_14, effF9_mes_jp_10_15 },
+    { (const CONN*)effF9_mes_jp_10_16, effF9_mes_jp_10_17 }, { effF9_mes_jp_10_18, effF9_mes_jp_10_19 },
+    { (const CONN*)effF9_mes_jp_10_20, effF9_mes_jp_10_21 }, { effF9_mes_jp_10_22, effF9_mes_jp_10_23 },
+    { effF9_mes_jp_10_24, effF9_mes_jp_10_25 }, { (const CONN*)effF9_mes_jp_10_26, effF9_mes_jp_10_27 },
+    { (const CONN*)effF9_mes_jp_10_28, effF9_mes_jp_10_29 }, { effF9_mes_jp_10_30, effF9_mes_jp_10_31 },
 };
 
-const u32 effF9_mes_jp_10_0[10] = {
-    0x980000, 0xA03A, 0xA80000, 0xA0A3, 0xB80000, 0xA0B3, 0xC80000, 0xA039,
-    0xD80000, 0xA03B,
+const CONN effF9_mes_jp_10_0[5] = {
+    { 152, 0, 0, 0xA03A }, { 168, 0, 0, 0xA0A3 }, { 184, 0, 0, 0xA0B3 }, { 200, 0, 0, 0xA039 },
+    { 216, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_10_4[12] = {
-    0x900000, 0xA03A, 0xA00000, 0xA099, 0xB00000, 0xA099, 0xC00000, 0xA0B3,
-    0xD00000, 0xA039, 0xE00000, 0xA03B,
+const CONN effF9_mes_jp_10_4[6] = {
+    { 144, 0, 0, 0xA03A }, { 160, 0, 0, 0xA099 }, { 176, 0, 0, 0xA099 }, { 192, 0, 0, 0xA0B3 },
+    { 208, 0, 0, 0xA039 }, { 224, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_10_6[10] = {
-    0x980000, 0xA03A, 0xA80000, 0xA000, 0xB80000, 0xA033, 0xC80000, 0xA039,
-    0xD80000, 0xA03B,
+const CONN effF9_mes_jp_10_6[5] = {
+    { 152, 0, 0, 0xA03A }, { 168, 0, 0, 0xA000 }, { 184, 0, 0, 0xA033 }, { 200, 0, 0, 0xA039 },
+    { 216, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_10_8[34] = {
@@ -19975,10 +19975,10 @@ const u32 effF9_mes_jp_10_8[34] = {
     0xC8FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_10_10[20] = {
-    0x700000, 0xA03A, 0x800000, 0xA0A3, 0x900000, 0xA0AD, 0xA00000, 0xA039,
-    0xB00000, 0xA004, 0xC00000, 0xA005, 0xD00000, 0xA003, 0xE00000, 0xA027,
-    0xF00000, 0xA0B7, 0x1000000, 0xA03B,
+const CONN effF9_mes_jp_10_10[10] = {
+    { 112, 0, 0, 0xA03A }, { 128, 0, 0, 0xA0A3 }, { 144, 0, 0, 0xA0AD }, { 160, 0, 0, 0xA039 },
+    { 176, 0, 0, 0xA004 }, { 192, 0, 0, 0xA005 }, { 208, 0, 0, 0xA003 }, { 224, 0, 0, 0xA027 },
+    { 240, 0, 0, 0xA0B7 }, { 256, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_10_12[38] = {
@@ -19989,9 +19989,9 @@ const u32 effF9_mes_jp_10_12[38] = {
     0x110FFEA, 0xA025, 0x120FFEA, 0xA0B7, 0x130FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_10_14[12] = {
-    0x900000, 0xA03A, 0xA00000, 0xA09B, 0xB00000, 0xA09B, 0xC00000, 0xA0B3,
-    0xD00000, 0xA057, 0xE00000, 0xA03B,
+const CONN effF9_mes_jp_10_14[6] = {
+    { 144, 0, 0, 0xA03A }, { 160, 0, 0, 0xA09B }, { 176, 0, 0, 0xA09B }, { 192, 0, 0, 0xA0B3 },
+    { 208, 0, 0, 0xA057 }, { 224, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_10_16[38] = {
@@ -20002,10 +20002,10 @@ const u32 effF9_mes_jp_10_16[38] = {
     0xF0FFEA, 0xA005, 0x100FFEA, 0xA03C, 0x110FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_10_18[22] = {
-    0x680000, 0xA03A, 0x780000, 0xA025, 0x880000, 0xA008, 0x980000, 0xA001,
-    0xA80000, 0xA014, 0xB80000, 0xA004, 0xC80000, 0xA1B6, 0xD80000, 0xA159,
-    0xE80000, 0xA048, 0xF80000, 0xA039, 0x1080000, 0xA03B,
+const CONN effF9_mes_jp_10_18[11] = {
+    { 104, 0, 0, 0xA03A }, { 120, 0, 0, 0xA025 }, { 136, 0, 0, 0xA008 }, { 152, 0, 0, 0xA001 },
+    { 168, 0, 0, 0xA014 }, { 184, 0, 0, 0xA004 }, { 200, 0, 0, 0xA1B6 }, { 216, 0, 0, 0xA159 },
+    { 232, 0, 0, 0xA048 }, { 248, 0, 0, 0xA039 }, { 264, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_10_20[48] = {
@@ -20017,14 +20017,14 @@ const u32 effF9_mes_jp_10_20[48] = {
     0xD8FFEA, 0xA018, 0xE8FFEA, 0xA005, 0xF8FFEA, 0xA03C, 0x108FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_10_22[14] = {
-    0x880000, 0xA03A, 0x980000, 0xA081, 0xA80000, 0xA0A3, 0xB80000, 0xA313,
-    0xC80000, 0xA0B3, 0xD80000, 0xA039, 0xE80000, 0xA03B,
+const CONN effF9_mes_jp_10_22[7] = {
+    { 136, 0, 0, 0xA03A }, { 152, 0, 0, 0xA081 }, { 168, 0, 0, 0xA0A3 }, { 184, 0, 0, 0xA313 },
+    { 200, 0, 0, 0xA0B3 }, { 216, 0, 0, 0xA039 }, { 232, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_10_24[10] = {
-    0x980000, 0xA03A, 0xA80000, 0xA099, 0xB80000, 0xA0B3, 0xC80000, 0xA039,
-    0xD80000, 0xA03B,
+const CONN effF9_mes_jp_10_24[5] = {
+    { 152, 0, 0, 0xA03A }, { 168, 0, 0, 0xA099 }, { 184, 0, 0, 0xA0B3 }, { 200, 0, 0, 0xA039 },
+    { 216, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_10_26[48] = {
@@ -20044,10 +20044,10 @@ const u32 effF9_mes_jp_10_28[36] = {
     0x100FFEA, 0xA057, 0x110FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_10_30[20] = {
-    0x700000, 0xA03A, 0x800000, 0xA1B6, 0x900000, 0xA1B7, 0xA00000, 0xA298,
-    0xB00000, 0xA17D, 0xC00000, 0xA014, 0xD00000, 0xA018, 0xE00000, 0xA00A,
-    0xF00000, 0xA039, 0x1000000, 0xA03B,
+const CONN effF9_mes_jp_10_30[10] = {
+    { 112, 0, 0, 0xA03A }, { 128, 0, 0, 0xA1B6 }, { 144, 0, 0, 0xA1B7 }, { 160, 0, 0, 0xA298 },
+    { 176, 0, 0, 0xA17D }, { 192, 0, 0, 0xA014 }, { 208, 0, 0, 0xA018 }, { 224, 0, 0, 0xA00A },
+    { 240, 0, 0, 0xA039 }, { 256, 0, 0, 0xA03B },
 };
 
 const u16 effF9_mes_jp_10_1[2] = {
@@ -20115,22 +20115,22 @@ const u16 effF9_mes_jp_10_31[6] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_11[7] = {
-    { (const CONN*)effF9_mes_jp_11_0, (const u16*)effF9_mes_jp_11_1 }, { (const CONN*)effF9_mes_jp_11_0, (const u16*)effF9_mes_jp_11_3 },
-    { (const CONN*)effF9_mes_jp_11_4, (const u16*)effF9_mes_jp_11_5 }, { (const CONN*)effF9_mes_jp_11_6, (const u16*)effF9_mes_jp_11_7 },
-    { (const CONN*)effF9_mes_jp_11_8, (const u16*)effF9_mes_jp_11_9 }, { (const CONN*)effF9_mes_jp_11_10, (const u16*)effF9_mes_jp_11_11 },
-    { (const CONN*)effF9_mes_jp_11_12, (const u16*)effF9_mes_jp_11_13 },
+    { effF9_mes_jp_11_0, effF9_mes_jp_11_1 }, { effF9_mes_jp_11_0, effF9_mes_jp_11_3 },
+    { effF9_mes_jp_11_4, effF9_mes_jp_11_5 }, { (const CONN*)effF9_mes_jp_11_6, effF9_mes_jp_11_7 },
+    { effF9_mes_jp_11_8, effF9_mes_jp_11_9 }, { effF9_mes_jp_11_10, effF9_mes_jp_11_11 },
+    { (const CONN*)effF9_mes_jp_11_12, effF9_mes_jp_11_13 },
 };
 
-const u32 effF9_mes_jp_11_0[22] = {
-    0x600000, 0xA03A, 0x700000, 0xA00A, 0x800000, 0xA000, 0x900000, 0xA037,
-    0xA00000, 0xA13C, 0xB00000, 0xA001, 0xC00000, 0xA039, 0xE00000, 0xA0A1,
-    0xF00000, 0xA0A8, 0x1000000, 0xA039, 0x1100000, 0xA03B,
+const CONN effF9_mes_jp_11_0[11] = {
+    { 96, 0, 0, 0xA03A }, { 112, 0, 0, 0xA00A }, { 128, 0, 0, 0xA000 }, { 144, 0, 0, 0xA037 },
+    { 160, 0, 0, 0xA13C }, { 176, 0, 0, 0xA001 }, { 192, 0, 0, 0xA039 }, { 224, 0, 0, 0xA0A1 },
+    { 240, 0, 0, 0xA0A8 }, { 256, 0, 0, 0xA039 }, { 272, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_11_4[20] = {
-    0x700000, 0xA03A, 0x800000, 0xA004, 0x900000, 0xA022, 0xA00000, 0xA001,
-    0xB00000, 0xA033, 0xC00000, 0xA006, 0xD00000, 0xA027, 0xE00000, 0xA048,
-    0xF00000, 0xA039, 0x1000000, 0xA03B,
+const CONN effF9_mes_jp_11_4[10] = {
+    { 112, 0, 0, 0xA03A }, { 128, 0, 0, 0xA004 }, { 144, 0, 0, 0xA022 }, { 160, 0, 0, 0xA001 },
+    { 176, 0, 0, 0xA033 }, { 192, 0, 0, 0xA006 }, { 208, 0, 0, 0xA027 }, { 224, 0, 0, 0xA048 },
+    { 240, 0, 0, 0xA039 }, { 256, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_11_6[12] = {
@@ -20138,18 +20138,18 @@ const u32 effF9_mes_jp_11_6[12] = {
     0xD00000, 0xA039, 0xE00000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_11_8[18] = {
-    0x700000, 0xA03A, 0x800000, 0xA086, 0x900000, 0xA0B4, 0xA00000, 0xA313,
-    0xB00000, 0xA0B3, 0xC00000, 0xA039, 0xE00000, 0xA088, 0xF00000, 0xA0AD,
-    0x1000000, 0xA03B,
+const CONN effF9_mes_jp_11_8[9] = {
+    { 112, 0, 0, 0xA03A }, { 128, 0, 0, 0xA086 }, { 144, 0, 0, 0xA0B4 }, { 160, 0, 0, 0xA313 },
+    { 176, 0, 0, 0xA0B3 }, { 192, 0, 0, 0xA039 }, { 224, 0, 0, 0xA088 }, { 240, 0, 0, 0xA0AD },
+    { 256, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_11_10[38] = {
-    0x400000, 0xA03A, 0x500000, 0xA004, 0x600000, 0xA252, 0x700000, 0xA00A,
-    0x800000, 0xA02D, 0x900000, 0xA015, 0xB00000, 0xA014, 0xC00000, 0xA02D,
-    0xD00000, 0xA012, 0xE00000, 0xA009, 0xF00000, 0xA013, 0x1000000, 0xA00C,
-    0x1100000, 0xA028, 0x1200000, 0xA018, 0x1300000, 0xA039, 0x50FFEA, 0xA0A1,
-    0x60FFEA, 0xA0A8, 0x70FFEA, 0xA039, 0x80FFEA, 0xA03B,
+const CONN effF9_mes_jp_11_10[19] = {
+    { 64, 0, 0, 0xA03A }, { 80, 0, 0, 0xA004 }, { 96, 0, 0, 0xA252 }, { 112, 0, 0, 0xA00A },
+    { 128, 0, 0, 0xA02D }, { 144, 0, 0, 0xA015 }, { 176, 0, 0, 0xA014 }, { 192, 0, 0, 0xA02D },
+    { 208, 0, 0, 0xA012 }, { 224, 0, 0, 0xA009 }, { 240, 0, 0, 0xA013 }, { 256, 0, 0, 0xA00C },
+    { 272, 0, 0, 0xA028 }, { 288, 0, 0, 0xA018 }, { 304, 0, 0, 0xA039 }, { 80, -22, 0, 0xA0A1 },
+    { 96, -22, 0, 0xA0A8 }, { 112, -22, 0, 0xA039 }, { 128, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_11_12[24] = {
@@ -20187,23 +20187,23 @@ const u16 effF9_mes_jp_11_13[7] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_12[9] = {
-    { (const CONN*)effF9_mes_jp_12_0, (const u16*)effF9_mes_jp_12_1 }, { (const CONN*)effF9_mes_jp_12_0, (const u16*)effF9_mes_jp_12_3 },
-    { (const CONN*)effF9_mes_jp_12_4, (const u16*)effF9_mes_jp_12_5 }, { (const CONN*)effF9_mes_jp_12_6, (const u16*)effF9_mes_jp_12_7 },
-    { (const CONN*)effF9_mes_jp_12_8, (const u16*)effF9_mes_jp_12_9 }, { (const CONN*)effF9_mes_jp_12_10, (const u16*)effF9_mes_jp_12_11 },
-    { (const CONN*)effF9_mes_jp_12_12, (const u16*)effF9_mes_jp_12_13 }, { (const CONN*)effF9_mes_jp_12_14, (const u16*)effF9_mes_jp_12_15 },
-    { (const CONN*)effF9_mes_jp_12_16, (const u16*)effF9_mes_jp_12_17 },
+    { effF9_mes_jp_12_0, effF9_mes_jp_12_1 }, { effF9_mes_jp_12_0, effF9_mes_jp_12_3 },
+    { effF9_mes_jp_12_4, effF9_mes_jp_12_5 }, { (const CONN*)effF9_mes_jp_12_6, effF9_mes_jp_12_7 },
+    { (const CONN*)effF9_mes_jp_12_8, effF9_mes_jp_12_9 }, { effF9_mes_jp_12_10, effF9_mes_jp_12_11 },
+    { (const CONN*)effF9_mes_jp_12_12, effF9_mes_jp_12_13 }, { (const CONN*)effF9_mes_jp_12_14, effF9_mes_jp_12_15 },
+    { effF9_mes_jp_12_16, effF9_mes_jp_12_17 },
 };
 
-const u32 effF9_mes_jp_12_0[16] = {
-    0x800000, 0xA03A, 0x900000, 0xA002, 0xA00000, 0xA02B, 0xB00000, 0xA02E,
-    0xC00000, 0xA313, 0xD00000, 0xA033, 0xE00000, 0xA039, 0xF00000, 0xA03B,
+const CONN effF9_mes_jp_12_0[8] = {
+    { 128, 0, 0, 0xA03A }, { 144, 0, 0, 0xA002 }, { 160, 0, 0, 0xA02B }, { 176, 0, 0, 0xA02E },
+    { 192, 0, 0, 0xA313 }, { 208, 0, 0, 0xA033 }, { 224, 0, 0, 0xA039 }, { 240, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_12_4[30] = {
-    0x400000, 0xA03A, 0x500000, 0xA007, 0x600000, 0xA00E, 0x700000, 0xA313,
-    0x800000, 0xA033, 0x900000, 0xA039, 0xB00000, 0xA022, 0xC00000, 0xA002,
-    0xD00000, 0xA001, 0xE00000, 0xA033, 0xF00000, 0xA010, 0x1000000, 0xA036,
-    0x1100000, 0xA048, 0x1200000, 0xA039, 0x1300000, 0xA03B,
+const CONN effF9_mes_jp_12_4[15] = {
+    { 64, 0, 0, 0xA03A }, { 80, 0, 0, 0xA007 }, { 96, 0, 0, 0xA00E }, { 112, 0, 0, 0xA313 },
+    { 128, 0, 0, 0xA033 }, { 144, 0, 0, 0xA039 }, { 176, 0, 0, 0xA022 }, { 192, 0, 0, 0xA002 },
+    { 208, 0, 0, 0xA001 }, { 224, 0, 0, 0xA033 }, { 240, 0, 0, 0xA010 }, { 256, 0, 0, 0xA036 },
+    { 272, 0, 0, 0xA048 }, { 288, 0, 0, 0xA039 }, { 304, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_12_6[48] = {
@@ -20223,12 +20223,12 @@ const u32 effF9_mes_jp_12_8[34] = {
     0x100FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_12_10[36] = {
-    0x700000, 0xA03A, 0x800000, 0xA044, 0x900000, 0xA034, 0xA00000, 0xA037,
-    0xB00000, 0xA16D, 0xC00000, 0xA201, 0xD00000, 0xA028, 0xE00000, 0xA005,
-    0xF00000, 0xA026, 0x1000000, 0xA037, 0x80FFEA, 0xA2C1, 0x90FFEA, 0xA019,
-    0xA0FFEA, 0xA025, 0xB0FFEA, 0xA02A, 0xC0FFEA, 0xA00B, 0xD0FFEA, 0xA007,
-    0xE0FFEA, 0xA039, 0xF0FFEA, 0xA03B,
+const CONN effF9_mes_jp_12_10[18] = {
+    { 112, 0, 0, 0xA03A }, { 128, 0, 0, 0xA044 }, { 144, 0, 0, 0xA034 }, { 160, 0, 0, 0xA037 },
+    { 176, 0, 0, 0xA16D }, { 192, 0, 0, 0xA201 }, { 208, 0, 0, 0xA028 }, { 224, 0, 0, 0xA005 },
+    { 240, 0, 0, 0xA026 }, { 256, 0, 0, 0xA037 }, { 128, -22, 0, 0xA2C1 }, { 144, -22, 0, 0xA019 },
+    { 160, -22, 0, 0xA025 }, { 176, -22, 0, 0xA02A }, { 192, -22, 0, 0xA00B }, { 208, -22, 0, 0xA007 },
+    { 224, -22, 0, 0xA039 }, { 240, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_12_12[54] = {
@@ -20248,10 +20248,10 @@ const u32 effF9_mes_jp_12_14[28] = {
     0x1180000, 0xA039, 0x1280000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_12_16[22] = {
-    0x680000, 0xA03A, 0x780000, 0xA040, 0x880000, 0xA02B, 0x980000, 0xA033,
-    0xA80000, 0xA037, 0xB80000, 0xA0C2, 0xC80000, 0xA0A1, 0xD80000, 0xA005,
-    0xE80000, 0xA313, 0xF80000, 0xA033, 0x1080000, 0xA03B,
+const CONN effF9_mes_jp_12_16[11] = {
+    { 104, 0, 0, 0xA03A }, { 120, 0, 0, 0xA040 }, { 136, 0, 0, 0xA02B }, { 152, 0, 0, 0xA033 },
+    { 168, 0, 0, 0xA037 }, { 184, 0, 0, 0xA0C2 }, { 200, 0, 0, 0xA0A1 }, { 216, 0, 0, 0xA005 },
+    { 232, 0, 0, 0xA313 }, { 248, 0, 0, 0xA033 }, { 264, 0, 0, 0xA03B },
 };
 
 const u16 effF9_mes_jp_12_1[2] = {
@@ -20291,13 +20291,13 @@ const u16 effF9_mes_jp_12_17[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_13[14] = {
-    { (const CONN*)effF9_mes_jp_13_0, (const u16*)effF9_mes_jp_13_1 }, { (const CONN*)effF9_mes_jp_13_0, (const u16*)effF9_mes_jp_13_3 },
-    { (const CONN*)effF9_mes_jp_13_4, (const u16*)effF9_mes_jp_13_5 }, { (const CONN*)effF9_mes_jp_13_6, (const u16*)effF9_mes_jp_13_7 },
-    { (const CONN*)effF9_mes_jp_13_8, (const u16*)effF9_mes_jp_13_9 }, { (const CONN*)effF9_mes_jp_13_10, (const u16*)effF9_mes_jp_13_11 },
-    { (const CONN*)effF9_mes_jp_13_12, (const u16*)effF9_mes_jp_13_13 }, { (const CONN*)effF9_mes_jp_13_14, (const u16*)effF9_mes_jp_13_15 },
-    { (const CONN*)effF9_mes_jp_13_16, (const u16*)effF9_mes_jp_13_17 }, { (const CONN*)effF9_mes_jp_13_18, (const u16*)effF9_mes_jp_13_19 },
-    { (const CONN*)effF9_mes_jp_13_20, (const u16*)effF9_mes_jp_13_21 }, { (const CONN*)effF9_mes_jp_13_22, (const u16*)effF9_mes_jp_13_23 },
-    { (const CONN*)effF9_mes_jp_13_24, (const u16*)effF9_mes_jp_13_25 }, { (const CONN*)effF9_mes_jp_13_26, (const u16*)effF9_mes_jp_13_27 },
+    { (const CONN*)effF9_mes_jp_13_0, effF9_mes_jp_13_1 }, { (const CONN*)effF9_mes_jp_13_0, effF9_mes_jp_13_3 },
+    { effF9_mes_jp_13_4, effF9_mes_jp_13_5 }, { (const CONN*)effF9_mes_jp_13_6, effF9_mes_jp_13_7 },
+    { effF9_mes_jp_13_8, effF9_mes_jp_13_9 }, { (const CONN*)effF9_mes_jp_13_10, effF9_mes_jp_13_11 },
+    { effF9_mes_jp_13_12, effF9_mes_jp_13_13 }, { (const CONN*)effF9_mes_jp_13_14, effF9_mes_jp_13_15 },
+    { (const CONN*)effF9_mes_jp_13_16, effF9_mes_jp_13_17 }, { effF9_mes_jp_13_18, effF9_mes_jp_13_19 },
+    { (const CONN*)effF9_mes_jp_13_20, effF9_mes_jp_13_21 }, { effF9_mes_jp_13_22, effF9_mes_jp_13_23 },
+    { (const CONN*)effF9_mes_jp_13_24, effF9_mes_jp_13_25 }, { (const CONN*)effF9_mes_jp_13_26, effF9_mes_jp_13_27 },
 };
 
 const u32 effF9_mes_jp_13_0[54] = {
@@ -20310,12 +20310,12 @@ const u32 effF9_mes_jp_13_0[54] = {
     0x110FFEA, 0xA01E, 0x120FFEA, 0xA00C, 0x130FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_13_4[36] = {
-    0x500000, 0xA03A, 0x600000, 0xA1D1, 0x700000, 0xA1D2, 0x800000, 0xA048,
-    0x900000, 0xA057, 0x60FFEA, 0xA022, 0x70FFEA, 0xA019, 0x80FFEA, 0xA023,
-    0x90FFEA, 0xA3F9, 0xA0FFEA, 0xA018, 0xB0FFEA, 0xA39F, 0xC0FFEA, 0xA015,
-    0xD0FFEA, 0xA019, 0xE0FFEA, 0xA004, 0xF0FFEA, 0xA028, 0x100FFEA, 0xA01E,
-    0x110FFEA, 0xA001, 0x120FFEA, 0xA03B,
+const CONN effF9_mes_jp_13_4[18] = {
+    { 80, 0, 0, 0xA03A }, { 96, 0, 0, 0xA1D1 }, { 112, 0, 0, 0xA1D2 }, { 128, 0, 0, 0xA048 },
+    { 144, 0, 0, 0xA057 }, { 96, -22, 0, 0xA022 }, { 112, -22, 0, 0xA019 }, { 128, -22, 0, 0xA023 },
+    { 144, -22, 0, 0xA3F9 }, { 160, -22, 0, 0xA018 }, { 176, -22, 0, 0xA39F }, { 192, -22, 0, 0xA015 },
+    { 208, -22, 0, 0xA019 }, { 224, -22, 0, 0xA004 }, { 240, -22, 0, 0xA028 }, { 256, -22, 0, 0xA01E },
+    { 272, -22, 0, 0xA001 }, { 288, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_13_6[30] = {
@@ -20325,12 +20325,12 @@ const u32 effF9_mes_jp_13_6[30] = {
     0x1080000, 0xA019, 0x1180000, 0xA057, 0x1280000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_13_8[40] = {
-    0x500000, 0xA03A, 0x600000, 0xA300, 0x700000, 0xA429, 0x800000, 0xA42A,
-    0x900000, 0xA0A4, 0xA00000, 0xA0A7, 0xB00000, 0xA080, 0xC00000, 0xA0AD,
-    0xD00000, 0xA123, 0xE00000, 0xA018, 0xF00000, 0xA137, 0x1000000, 0xA459,
-    0x1100000, 0xA2DD, 0x1200000, 0xA015, 0x60FFEA, 0xA004, 0x70FFEA, 0xA005,
-    0x80FFEA, 0xA029, 0x90FFEA, 0xA01E, 0xA0FFEA, 0xA00C, 0xB0FFEA, 0xA03B,
+const CONN effF9_mes_jp_13_8[20] = {
+    { 80, 0, 0, 0xA03A }, { 96, 0, 0, 0xA300 }, { 112, 0, 0, 0xA429 }, { 128, 0, 0, 0xA42A },
+    { 144, 0, 0, 0xA0A4 }, { 160, 0, 0, 0xA0A7 }, { 176, 0, 0, 0xA080 }, { 192, 0, 0, 0xA0AD },
+    { 208, 0, 0, 0xA123 }, { 224, 0, 0, 0xA018 }, { 240, 0, 0, 0xA137 }, { 256, 0, 0, 0xA459 },
+    { 272, 0, 0, 0xA2DD }, { 288, 0, 0, 0xA015 }, { 96, -22, 0, 0xA004 }, { 112, -22, 0, 0xA005 },
+    { 128, -22, 0, 0xA029 }, { 144, -22, 0, 0xA01E }, { 160, -22, 0, 0xA00C }, { 176, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_13_10[38] = {
@@ -20341,10 +20341,10 @@ const u32 effF9_mes_jp_13_10[38] = {
     0xF8FFEA, 0xA01E, 0x108FFEA, 0xA00D, 0x118FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_13_12[20] = {
-    0x700000, 0xA03A, 0x800000, 0xA1AE, 0x900000, 0xA03C, 0xA00000, 0xA254,
-    0xB00000, 0xA414, 0xC00000, 0xA048, 0xD00000, 0xA013, 0xE00000, 0xA03C,
-    0xF00000, 0xA039, 0x1000000, 0xA03B,
+const CONN effF9_mes_jp_13_12[10] = {
+    { 112, 0, 0, 0xA03A }, { 128, 0, 0, 0xA1AE }, { 144, 0, 0, 0xA03C }, { 160, 0, 0, 0xA254 },
+    { 176, 0, 0, 0xA414 }, { 192, 0, 0, 0xA048 }, { 208, 0, 0, 0xA013 }, { 224, 0, 0, 0xA03C },
+    { 240, 0, 0, 0xA039 }, { 256, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_13_14[44] = {
@@ -20366,10 +20366,10 @@ const u32 effF9_mes_jp_13_16[50] = {
     0x130FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_13_18[22] = {
-    0x680000, 0xA03A, 0x780000, 0xA004, 0x880000, 0xA057, 0x980000, 0xA004,
-    0xA80000, 0xA150, 0xB80000, 0xA03E, 0xC80000, 0xA254, 0xD80000, 0xA414,
-    0xE80000, 0xA03C, 0xF80000, 0xA039, 0x1080000, 0xA03B,
+const CONN effF9_mes_jp_13_18[11] = {
+    { 104, 0, 0, 0xA03A }, { 120, 0, 0, 0xA004 }, { 136, 0, 0, 0xA057 }, { 152, 0, 0, 0xA004 },
+    { 168, 0, 0, 0xA150 }, { 184, 0, 0, 0xA03E }, { 200, 0, 0, 0xA254 }, { 216, 0, 0, 0xA414 },
+    { 232, 0, 0, 0xA03C }, { 248, 0, 0, 0xA039 }, { 264, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_13_20[32] = {
@@ -20379,13 +20379,13 @@ const u32 effF9_mes_jp_13_20[32] = {
     0xC8FFEA, 0xA42A, 0xD8FFEA, 0xA04C, 0xE8FFEA, 0xA018, 0xF8FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_13_22[42] = {
-    0x600000, 0xA03A, 0x700000, 0xA123, 0x800000, 0xA018, 0x900000, 0xA00C,
-    0xA00000, 0xA04D, 0xB00000, 0xA026, 0xC00000, 0xA00B, 0xD00000, 0xA001,
-    0xE00000, 0xA430, 0xF00000, 0xA2DA, 0x70FFEA, 0xA2AD, 0x80FFEA, 0xA005,
-    0x90FFEA, 0xA026, 0xA0FFEA, 0xA12E, 0xB0FFEA, 0xA12F, 0xC0FFEA, 0xA00B,
-    0xD0FFEA, 0xA012, 0xE0FFEA, 0xA001, 0xF0FFEA, 0xA028, 0x100FFEA, 0xA025,
-    0x110FFEA, 0xA03B,
+const CONN effF9_mes_jp_13_22[21] = {
+    { 96, 0, 0, 0xA03A }, { 112, 0, 0, 0xA123 }, { 128, 0, 0, 0xA018 }, { 144, 0, 0, 0xA00C },
+    { 160, 0, 0, 0xA04D }, { 176, 0, 0, 0xA026 }, { 192, 0, 0, 0xA00B }, { 208, 0, 0, 0xA001 },
+    { 224, 0, 0, 0xA430 }, { 240, 0, 0, 0xA2DA }, { 112, -22, 0, 0xA2AD }, { 128, -22, 0, 0xA005 },
+    { 144, -22, 0, 0xA026 }, { 160, -22, 0, 0xA12E }, { 176, -22, 0, 0xA12F }, { 192, -22, 0, 0xA00B },
+    { 208, -22, 0, 0xA012 }, { 224, -22, 0, 0xA001 }, { 240, -22, 0, 0xA028 }, { 256, -22, 0, 0xA025 },
+    { 272, -22, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_13_24[52] = {
@@ -20460,10 +20460,10 @@ const u16 effF9_mes_jp_13_27[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_14[8] = {
-    { (const CONN*)effF9_mes_jp_14_0, (const u16*)effF9_mes_jp_14_1 }, { (const CONN*)effF9_mes_jp_14_0, (const u16*)effF9_mes_jp_14_3 },
-    { (const CONN*)effF9_mes_jp_14_4, (const u16*)effF9_mes_jp_14_5 }, { (const CONN*)effF9_mes_jp_14_6, (const u16*)effF9_mes_jp_14_7 },
-    { (const CONN*)effF9_mes_jp_14_8, (const u16*)effF9_mes_jp_14_9 }, { (const CONN*)effF9_mes_jp_14_10, (const u16*)effF9_mes_jp_14_11 },
-    { (const CONN*)effF9_mes_jp_14_12, (const u16*)effF9_mes_jp_14_13 }, { (const CONN*)effF9_mes_jp_14_14, (const u16*)effF9_mes_jp_14_15 },
+    { (const CONN*)effF9_mes_jp_14_0, effF9_mes_jp_14_1 }, { (const CONN*)effF9_mes_jp_14_0, effF9_mes_jp_14_3 },
+    { (const CONN*)effF9_mes_jp_14_4, effF9_mes_jp_14_5 }, { effF9_mes_jp_14_6, effF9_mes_jp_14_7 },
+    { effF9_mes_jp_14_8, effF9_mes_jp_14_9 }, { (const CONN*)effF9_mes_jp_14_10, effF9_mes_jp_14_11 },
+    { effF9_mes_jp_14_12, effF9_mes_jp_14_13 }, { (const CONN*)effF9_mes_jp_14_14, effF9_mes_jp_14_15 },
 };
 
 const u32 effF9_mes_jp_14_0[58] = {
@@ -20482,17 +20482,17 @@ const u32 effF9_mes_jp_14_4[14] = {
     0xC80000, 0xA109, 0xD80000, 0xA057, 0xE80000, 0xA03B,
 };
 
-const u32 effF9_mes_jp_14_6[20] = {
-    0x680000, 0xA03A, 0x780000, 0xA18F, 0x980000, 0xA009, 0xA80000, 0xA009,
-    0xB80000, 0xA015, 0xC80000, 0xA434, 0xD80000, 0xA00A, 0xE80000, 0xA02D,
-    0xF80000, 0xA039, 0x1080000, 0xA03B,
+const CONN effF9_mes_jp_14_6[10] = {
+    { 104, 0, 0, 0xA03A }, { 120, 0, 0, 0xA18F }, { 152, 0, 0, 0xA009 }, { 168, 0, 0, 0xA009 },
+    { 184, 0, 0, 0xA015 }, { 200, 0, 0, 0xA434 }, { 216, 0, 0, 0xA00A }, { 232, 0, 0, 0xA02D },
+    { 248, 0, 0, 0xA039 }, { 264, 0, 0, 0xA03B },
 };
 
-const u32 effF9_mes_jp_14_8[26] = {
-    0x580000, 0xA03A, 0x680000, 0xA096, 0x780000, 0xA099, 0x880000, 0xA0AE,
-    0x980000, 0xA0B7, 0xA80000, 0xA0B7, 0xB80000, 0xA0B7, 0xC80000, 0xA0B7,
-    0xD80000, 0xA0B7, 0xE80000, 0xA0B7, 0xF80000, 0xA0B3, 0x1080000, 0xA039,
-    0x1180000, 0xA03B,
+const CONN effF9_mes_jp_14_8[13] = {
+    { 88, 0, 0, 0xA03A }, { 104, 0, 0, 0xA096 }, { 120, 0, 0, 0xA099 }, { 136, 0, 0, 0xA0AE },
+    { 152, 0, 0, 0xA0B7 }, { 168, 0, 0, 0xA0B7 }, { 184, 0, 0, 0xA0B7 }, { 200, 0, 0, 0xA0B7 },
+    { 216, 0, 0, 0xA0B7 }, { 232, 0, 0, 0xA0B7 }, { 248, 0, 0, 0xA0B3 }, { 264, 0, 0, 0xA039 },
+    { 280, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_14_10[18] = {
@@ -20501,11 +20501,11 @@ const u32 effF9_mes_jp_14_10[18] = {
     0xE8FFEA, 0xA03B,
 };
 
-const u32 effF9_mes_jp_14_12[26] = {
-    0x580000, 0xA03A, 0x680000, 0xA2A0, 0x780000, 0xA018, 0x880000, 0xA109,
-    0x980000, 0xA015, 0xA80000, 0xA2B5, 0xB80000, 0xA027, 0xC80000, 0xA00F,
-    0xD80000, 0xA028, 0xE80000, 0xA019, 0xF80000, 0xA254, 0x1080000, 0xA057,
-    0x1180000, 0xA03B,
+const CONN effF9_mes_jp_14_12[13] = {
+    { 88, 0, 0, 0xA03A }, { 104, 0, 0, 0xA2A0 }, { 120, 0, 0, 0xA018 }, { 136, 0, 0, 0xA109 },
+    { 152, 0, 0, 0xA015 }, { 168, 0, 0, 0xA2B5 }, { 184, 0, 0, 0xA027 }, { 200, 0, 0, 0xA00F },
+    { 216, 0, 0, 0xA028 }, { 232, 0, 0, 0xA019 }, { 248, 0, 0, 0xA254 }, { 264, 0, 0, 0xA057 },
+    { 280, 0, 0, 0xA03B },
 };
 
 const u32 effF9_mes_jp_14_14[38] = {
@@ -20550,25 +20550,25 @@ const u16 effF9_mes_jp_14_15[9] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_0[18] = {
-    { (const CONN*)effF9_mes_en_0_0, (const u16*)effF9_mes_en_0_1 }, { (const CONN*)effF9_mes_en_0_0, (const u16*)effF9_mes_en_0_3 },
-    { (const CONN*)effF9_mes_en_0_4, (const u16*)effF9_mes_en_0_5 }, { (const CONN*)effF9_mes_en_0_6, (const u16*)effF9_mes_en_0_7 },
-    { (const CONN*)effF9_mes_en_0_8, (const u16*)effF9_mes_en_0_9 }, { (const CONN*)effF9_mes_en_0_10, (const u16*)effF9_mes_en_0_11 },
-    { (const CONN*)effF9_mes_en_0_12, (const u16*)effF9_mes_en_0_13 }, { (const CONN*)effF9_mes_en_0_14, (const u16*)effF9_mes_en_0_15 },
-    { (const CONN*)effF9_mes_en_0_16, (const u16*)effF9_mes_en_0_17 }, { (const CONN*)effF9_mes_en_0_18, (const u16*)effF9_mes_en_0_19 },
-    { (const CONN*)effF9_mes_en_0_20, (const u16*)effF9_mes_en_0_21 }, { (const CONN*)effF9_mes_en_0_22, (const u16*)effF9_mes_en_0_23 },
-    { (const CONN*)effF9_mes_en_0_24, (const u16*)effF9_mes_en_0_25 }, { (const CONN*)effF9_mes_en_0_26, (const u16*)effF9_mes_en_0_27 },
-    { (const CONN*)effF9_mes_en_0_28, (const u16*)effF9_mes_en_0_29 }, { (const CONN*)effF9_mes_en_0_30, (const u16*)effF9_mes_en_0_31 },
-    { (const CONN*)effF9_mes_en_0_32, (const u16*)effF9_mes_en_0_33 }, { (const CONN*)effF9_mes_en_0_34, (const u16*)effF9_mes_en_0_35 },
+    { effF9_mes_en_0_0, effF9_mes_en_0_1 }, { effF9_mes_en_0_0, effF9_mes_en_0_3 },
+    { (const CONN*)effF9_mes_en_0_4, effF9_mes_en_0_5 }, { (const CONN*)effF9_mes_en_0_6, effF9_mes_en_0_7 },
+    { (const CONN*)effF9_mes_en_0_8, effF9_mes_en_0_9 }, { (const CONN*)effF9_mes_en_0_10, effF9_mes_en_0_11 },
+    { (const CONN*)effF9_mes_en_0_12, effF9_mes_en_0_13 }, { (const CONN*)effF9_mes_en_0_14, effF9_mes_en_0_15 },
+    { (const CONN*)effF9_mes_en_0_16, effF9_mes_en_0_17 }, { (const CONN*)effF9_mes_en_0_18, effF9_mes_en_0_19 },
+    { effF9_mes_en_0_20, effF9_mes_en_0_21 }, { effF9_mes_en_0_22, effF9_mes_en_0_23 },
+    { (const CONN*)effF9_mes_en_0_24, effF9_mes_en_0_25 }, { (const CONN*)effF9_mes_en_0_26, effF9_mes_en_0_27 },
+    { (const CONN*)effF9_mes_en_0_28, effF9_mes_en_0_29 }, { (const CONN*)effF9_mes_en_0_30, effF9_mes_en_0_31 },
+    { (const CONN*)effF9_mes_en_0_32, effF9_mes_en_0_33 }, { (const CONN*)effF9_mes_en_0_34, effF9_mes_en_0_35 },
 };
 
-const u32 effF9_mes_en_0_0[50] = {
-    0x400000, 0x9EA0, 0x480000, 0x9E91, 0x500000, 0x9E84, 0x600000, 0x9E98,
-    0x680000, 0x9E8E, 0x700000, 0x9E94, 0x800000, 0x9E86, 0x880000, 0x9E8E,
-    0x900000, 0x9E88, 0x980000, 0x9E8D, 0xA00000, 0x9E86, 0xB00000, 0x9E93,
-    0xB80000, 0x9E8E, 0xC80000, 0x9E87, 0xD00000, 0x9E94, 0xD80000, 0x9E8D,
-    0xE00000, 0x9E93, 0xF00000, 0x9E87, 0xF80000, 0x9E88, 0x1000000, 0x9E8C,
-    0x1100000, 0x9E83, 0x1180000, 0x9E8E, 0x1200000, 0x9E96, 0x1280000, 0x9E8D,
-    0x1300000, 0x9E9B,
+const CONN effF9_mes_en_0_0[25] = {
+    { 64, 0, 0, 0x9EA0 }, { 72, 0, 0, 0x9E91 }, { 80, 0, 0, 0x9E84 }, { 96, 0, 0, 0x9E98 },
+    { 104, 0, 0, 0x9E8E }, { 112, 0, 0, 0x9E94 }, { 128, 0, 0, 0x9E86 }, { 136, 0, 0, 0x9E8E },
+    { 144, 0, 0, 0x9E88 }, { 152, 0, 0, 0x9E8D }, { 160, 0, 0, 0x9E86 }, { 176, 0, 0, 0x9E93 },
+    { 184, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E87 }, { 208, 0, 0, 0x9E94 }, { 216, 0, 0, 0x9E8D },
+    { 224, 0, 0, 0x9E93 }, { 240, 0, 0, 0x9E87 }, { 248, 0, 0, 0x9E88 }, { 256, 0, 0, 0x9E8C },
+    { 272, 0, 0, 0x9E83 }, { 280, 0, 0, 0x9E8E }, { 288, 0, 0, 0x9E96 }, { 296, 0, 0, 0x9E8D },
+    { 304, 0, 0, 0x9E9B },
 };
 
 const u32 effF9_mes_en_0_4[98] = {
@@ -20675,17 +20675,17 @@ const u32 effF9_mes_en_0_18[46] = {
     0xE8FFF0, 0x9E9C, 0xF0FFF0, 0x9E9C, 0xF8FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_en_0_20[10] = {
-    0xA80000, 0x9EA0, 0xB00000, 0x9E8B, 0xB80000, 0x9E84, 0xC00000, 0x9E97,
-    0xC80000, 0x9E9A,
+const CONN effF9_mes_en_0_20[5] = {
+    { 168, 0, 0, 0x9EA0 }, { 176, 0, 0, 0x9E8B }, { 184, 0, 0, 0x9E84 }, { 192, 0, 0, 0x9E97 },
+    { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_en_0_22[34] = {
-    0x780000, 0x9EB6, 0x800000, 0x9E84, 0x880000, 0x9E8B, 0x900000, 0x9E82,
-    0x980000, 0x9E8E, 0xA00000, 0x9E8C, 0xA80000, 0x9E84, 0xB80000, 0x9E81,
-    0xC00000, 0x9E80, 0xC80000, 0x9E82, 0xD00000, 0x9E8A, 0xD80000, 0x9E9D,
-    0xE80000, 0x9EA0, 0xF00000, 0x9E8B, 0xF80000, 0x9E84, 0x1000000, 0x9E97,
-    0x1080000, 0x9E9A,
+const CONN effF9_mes_en_0_22[17] = {
+    { 120, 0, 0, 0x9EB6 }, { 128, 0, 0, 0x9E84 }, { 136, 0, 0, 0x9E8B }, { 144, 0, 0, 0x9E82 },
+    { 152, 0, 0, 0x9E8E }, { 160, 0, 0, 0x9E8C }, { 168, 0, 0, 0x9E84 }, { 184, 0, 0, 0x9E81 },
+    { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E82 }, { 208, 0, 0, 0x9E8A }, { 216, 0, 0, 0x9E9D },
+    { 232, 0, 0, 0x9EA0 }, { 240, 0, 0, 0x9E8B }, { 248, 0, 0, 0x9E84 }, { 256, 0, 0, 0x9E97 },
+    { 264, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_0_24[112] = {
@@ -20860,12 +20860,12 @@ const u16 effF9_mes_en_0_35[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_2[11] = {
-    { (const CONN*)effF9_mes_en_2_0, (const u16*)effF9_mes_en_2_1 }, { (const CONN*)effF9_mes_en_2_0, (const u16*)effF9_mes_en_2_3 },
-    { (const CONN*)effF9_mes_en_2_4, (const u16*)effF9_mes_en_2_5 }, { (const CONN*)effF9_mes_en_2_6, (const u16*)effF9_mes_en_2_7 },
-    { (const CONN*)effF9_mes_en_2_8, (const u16*)effF9_mes_en_2_9 }, { (const CONN*)effF9_mes_en_2_10, (const u16*)effF9_mes_en_2_11 },
-    { (const CONN*)effF9_mes_en_2_12, (const u16*)effF9_mes_en_2_13 }, { (const CONN*)effF9_mes_en_2_14, (const u16*)effF9_mes_en_2_15 },
-    { (const CONN*)effF9_mes_en_2_16, (const u16*)effF9_mes_en_2_17 }, { (const CONN*)effF9_mes_en_2_18, (const u16*)effF9_mes_en_2_19 },
-    { (const CONN*)effF9_mes_en_2_20, (const u16*)effF9_mes_en_2_21 },
+    { (const CONN*)effF9_mes_en_2_0, effF9_mes_en_2_1 }, { (const CONN*)effF9_mes_en_2_0, effF9_mes_en_2_3 },
+    { (const CONN*)effF9_mes_en_2_4, effF9_mes_en_2_5 }, { (const CONN*)effF9_mes_en_2_6, effF9_mes_en_2_7 },
+    { (const CONN*)effF9_mes_en_2_8, effF9_mes_en_2_9 }, { (const CONN*)effF9_mes_en_2_10, effF9_mes_en_2_11 },
+    { (const CONN*)effF9_mes_en_2_12, effF9_mes_en_2_13 }, { (const CONN*)effF9_mes_en_2_14, effF9_mes_en_2_15 },
+    { (const CONN*)effF9_mes_en_2_16, effF9_mes_en_2_17 }, { (const CONN*)effF9_mes_en_2_18, effF9_mes_en_2_19 },
+    { (const CONN*)effF9_mes_en_2_20, effF9_mes_en_2_21 },
 };
 
 const u32 effF9_mes_en_2_0[98] = {
@@ -21038,27 +21038,27 @@ const u16 effF9_mes_en_2_21[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_3[16] = {
-    { (const CONN*)effF9_mes_en_3_0, (const u16*)effF9_mes_en_3_1 }, { (const CONN*)effF9_mes_en_3_0, (const u16*)effF9_mes_en_3_3 },
-    { (const CONN*)effF9_mes_en_3_4, (const u16*)effF9_mes_en_3_5 }, { (const CONN*)effF9_mes_en_3_6, (const u16*)effF9_mes_en_3_7 },
-    { (const CONN*)effF9_mes_en_3_8, (const u16*)effF9_mes_en_3_9 }, { (const CONN*)effF9_mes_en_3_10, (const u16*)effF9_mes_en_3_11 },
-    { (const CONN*)effF9_mes_en_3_12, (const u16*)effF9_mes_en_3_13 }, { (const CONN*)effF9_mes_en_3_14, (const u16*)effF9_mes_en_3_15 },
-    { (const CONN*)effF9_mes_en_3_16, (const u16*)effF9_mes_en_3_17 }, { (const CONN*)effF9_mes_en_3_18, (const u16*)effF9_mes_en_3_19 },
-    { (const CONN*)effF9_mes_en_3_20, (const u16*)effF9_mes_en_3_21 }, { (const CONN*)effF9_mes_en_3_22, (const u16*)effF9_mes_en_3_23 },
-    { (const CONN*)effF9_mes_en_3_24, (const u16*)effF9_mes_en_3_25 }, { (const CONN*)effF9_mes_en_3_26, (const u16*)effF9_mes_en_3_27 },
-    { (const CONN*)effF9_mes_en_3_28, (const u16*)effF9_mes_en_3_29 }, { (const CONN*)effF9_mes_en_3_30, (const u16*)effF9_mes_en_3_31 },
+    { effF9_mes_en_3_0, effF9_mes_en_3_1 }, { effF9_mes_en_3_0, effF9_mes_en_3_3 },
+    { effF9_mes_en_3_4, effF9_mes_en_3_5 }, { effF9_mes_en_3_6, effF9_mes_en_3_7 },
+    { (const CONN*)effF9_mes_en_3_8, effF9_mes_en_3_9 }, { effF9_mes_en_3_10, effF9_mes_en_3_11 },
+    { (const CONN*)effF9_mes_en_3_12, effF9_mes_en_3_13 }, { effF9_mes_en_3_14, effF9_mes_en_3_15 },
+    { (const CONN*)effF9_mes_en_3_16, effF9_mes_en_3_17 }, { (const CONN*)effF9_mes_en_3_18, effF9_mes_en_3_19 },
+    { (const CONN*)effF9_mes_en_3_20, effF9_mes_en_3_21 }, { effF9_mes_en_3_22, effF9_mes_en_3_23 },
+    { (const CONN*)effF9_mes_en_3_24, effF9_mes_en_3_25 }, { (const CONN*)effF9_mes_en_3_26, effF9_mes_en_3_27 },
+    { (const CONN*)effF9_mes_en_3_28, effF9_mes_en_3_29 }, { (const CONN*)effF9_mes_en_3_30, effF9_mes_en_3_31 },
 };
 
-const u32 effF9_mes_en_3_0[6] = {
-    0xB80000, 0x9EA7, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_en_3_0[3] = {
+    { 184, 0, 0, 0x9EA7 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_en_3_4[6] = {
-    0xB80000, 0x9EB8, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_en_3_4[3] = {
+    { 184, 0, 0, 0x9EB8 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_en_3_6[10] = {
-    0xB00000, 0x9EAB, 0xB80000, 0x9E8E, 0xC00000, 0x9E8E, 0xC80000, 0x9E8A,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_en_3_6[5] = {
+    { 176, 0, 0, 0x9EAB }, { 184, 0, 0, 0x9E8E }, { 192, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E8A },
+    { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_3_8[46] = {
@@ -21070,10 +21070,10 @@ const u32 effF9_mes_en_3_8[46] = {
     0x1180000, 0x9E91, 0x1200000, 0x9E92, 0x1280000, 0x9E9A,
 };
 
-const u32 effF9_mes_en_3_10[24] = {
-    0x900000, 0x9EB3, 0x980000, 0x9E87, 0xA00000, 0x9E84, 0xA80000, 0x9E98,
-    0xB00000, 0x9E9F, 0xB80000, 0x9E91, 0xC00000, 0x9E84, 0xD00000, 0x9E81,
-    0xD80000, 0x9E80, 0xE00000, 0x9E82, 0xE80000, 0x9E8A, 0xF00000, 0x9E9A,
+const CONN effF9_mes_en_3_10[12] = {
+    { 144, 0, 0, 0x9EB3 }, { 152, 0, 0, 0x9E87 }, { 160, 0, 0, 0x9E84 }, { 168, 0, 0, 0x9E98 },
+    { 176, 0, 0, 0x9E9F }, { 184, 0, 0, 0x9E91 }, { 192, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E81 },
+    { 216, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E82 }, { 232, 0, 0, 0x9E8A }, { 240, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_3_12[20] = {
@@ -21082,15 +21082,15 @@ const u32 effF9_mes_en_3_12[20] = {
     0xE00000, 0x9E92, 0xE80000, 0x9E9A,
 };
 
-const u32 effF9_mes_en_3_14[60] = {
-    0x300000, 0x9EA7, 0x380000, 0x9E8E, 0x400000, 0x9E96, 0x500000, 0x9E87,
-    0x580000, 0x9E80, 0x600000, 0x9E95, 0x680000, 0x9E84, 0x780000, 0x9E98,
-    0x800000, 0x9E8E, 0x880000, 0x9E94, 0x980000, 0x9E81, 0xA00000, 0x9E84,
-    0xA80000, 0x9E84, 0xB00000, 0x9E8D, 0xB80000, 0x9E9B, 0xC80000, 0x9EA8,
-    0xD00000, 0x9E93, 0xD80000, 0x9E9F, 0xE00000, 0x9E92, 0xF00000, 0x9E81,
-    0xF80000, 0x9E84, 0x1000000, 0x9E84, 0x1080000, 0x9E8D, 0x1180000, 0x9E92,
-    0x1200000, 0x9E8E, 0x1300000, 0x9E8B, 0x1380000, 0x9E8E, 0x1400000, 0x9E8D,
-    0x1480000, 0x9E86, 0x1500000, 0x9E9A,
+const CONN effF9_mes_en_3_14[30] = {
+    { 48, 0, 0, 0x9EA7 }, { 56, 0, 0, 0x9E8E }, { 64, 0, 0, 0x9E96 }, { 80, 0, 0, 0x9E87 },
+    { 88, 0, 0, 0x9E80 }, { 96, 0, 0, 0x9E95 }, { 104, 0, 0, 0x9E84 }, { 120, 0, 0, 0x9E98 },
+    { 128, 0, 0, 0x9E8E }, { 136, 0, 0, 0x9E94 }, { 152, 0, 0, 0x9E81 }, { 160, 0, 0, 0x9E84 },
+    { 168, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E8D }, { 184, 0, 0, 0x9E9B }, { 200, 0, 0, 0x9EA8 },
+    { 208, 0, 0, 0x9E93 }, { 216, 0, 0, 0x9E9F }, { 224, 0, 0, 0x9E92 }, { 240, 0, 0, 0x9E81 },
+    { 248, 0, 0, 0x9E84 }, { 256, 0, 0, 0x9E84 }, { 264, 0, 0, 0x9E8D }, { 280, 0, 0, 0x9E92 },
+    { 288, 0, 0, 0x9E8E }, { 304, 0, 0, 0x9E8B }, { 312, 0, 0, 0x9E8E }, { 320, 0, 0, 0x9E8D },
+    { 328, 0, 0, 0x9E86 }, { 336, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_3_16[32] = {
@@ -21127,12 +21127,12 @@ const u32 effF9_mes_en_3_20[106] = {
     0xA8FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_en_3_22[38] = {
-    0x680000, 0x9EB8, 0x700000, 0x9E84, 0x780000, 0x9E80, 0x800000, 0x9E87,
-    0x900000, 0x9E91, 0x980000, 0x9E88, 0xA00000, 0x9E86, 0xA80000, 0x9E87,
-    0xB00000, 0x9E93, 0xB80000, 0x9E9A, 0xC80000, 0x9EA5, 0xD00000, 0x9E84,
-    0xD80000, 0x9E84, 0xE00000, 0x9E8B, 0xF00000, 0x9E93, 0xF80000, 0x9E87,
-    0x1000000, 0x9E88, 0x1080000, 0x9E92, 0x1100000, 0x9E9A,
+const CONN effF9_mes_en_3_22[19] = {
+    { 104, 0, 0, 0x9EB8 }, { 112, 0, 0, 0x9E84 }, { 120, 0, 0, 0x9E80 }, { 128, 0, 0, 0x9E87 },
+    { 144, 0, 0, 0x9E91 }, { 152, 0, 0, 0x9E88 }, { 160, 0, 0, 0x9E86 }, { 168, 0, 0, 0x9E87 },
+    { 176, 0, 0, 0x9E93 }, { 184, 0, 0, 0x9E9A }, { 200, 0, 0, 0x9EA5 }, { 208, 0, 0, 0x9E84 },
+    { 216, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E8B }, { 240, 0, 0, 0x9E93 }, { 248, 0, 0, 0x9E87 },
+    { 256, 0, 0, 0x9E88 }, { 264, 0, 0, 0x9E92 }, { 272, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_3_24[22] = {
@@ -21253,12 +21253,12 @@ const u16 effF9_mes_en_3_31[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_4[11] = {
-    { (const CONN*)effF9_mes_en_4_0, (const u16*)effF9_mes_en_4_1 }, { (const CONN*)effF9_mes_en_4_0, (const u16*)effF9_mes_en_4_3 },
-    { (const CONN*)effF9_mes_en_4_4, (const u16*)effF9_mes_en_4_5 }, { (const CONN*)effF9_mes_en_4_6, (const u16*)effF9_mes_en_4_7 },
-    { (const CONN*)effF9_mes_en_4_8, (const u16*)effF9_mes_en_4_9 }, { (const CONN*)effF9_mes_en_4_10, (const u16*)effF9_mes_en_4_11 },
-    { (const CONN*)effF9_mes_en_4_12, (const u16*)effF9_mes_en_4_13 }, { (const CONN*)effF9_mes_en_4_14, (const u16*)effF9_mes_en_4_15 },
-    { (const CONN*)effF9_mes_en_4_16, (const u16*)effF9_mes_en_4_17 }, { (const CONN*)effF9_mes_en_4_18, (const u16*)effF9_mes_en_4_19 },
-    { (const CONN*)effF9_mes_en_4_20, (const u16*)effF9_mes_en_4_21 },
+    { (const CONN*)effF9_mes_en_4_0, effF9_mes_en_4_1 }, { (const CONN*)effF9_mes_en_4_0, effF9_mes_en_4_3 },
+    { (const CONN*)effF9_mes_en_4_4, effF9_mes_en_4_5 }, { effF9_mes_en_4_6, effF9_mes_en_4_7 },
+    { (const CONN*)effF9_mes_en_4_8, effF9_mes_en_4_9 }, { (const CONN*)effF9_mes_en_4_10, effF9_mes_en_4_11 },
+    { (const CONN*)effF9_mes_en_4_12, effF9_mes_en_4_13 }, { (const CONN*)effF9_mes_en_4_14, effF9_mes_en_4_15 },
+    { effF9_mes_en_4_16, effF9_mes_en_4_17 }, { (const CONN*)effF9_mes_en_4_18, effF9_mes_en_4_19 },
+    { effF9_mes_en_4_20, effF9_mes_en_4_21 },
 };
 
 const u32 effF9_mes_en_4_0[106] = {
@@ -21291,9 +21291,9 @@ const u32 effF9_mes_en_4_4[78] = {
     0x58FFF0, 0x9E84, 0x60FFF0, 0x9E83, 0x68FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_en_4_6[14] = {
-    0xA00000, 0x9EB8, 0xA80000, 0x9E84, 0xB00000, 0x9E92, 0xC00000, 0x9E92,
-    0xC80000, 0x9E88, 0xD00000, 0x9E91, 0xD80000, 0x9E9C,
+const CONN effF9_mes_en_4_6[7] = {
+    { 160, 0, 0, 0x9EB8 }, { 168, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E92 }, { 192, 0, 0, 0x9E92 },
+    { 200, 0, 0, 0x9E88 }, { 208, 0, 0, 0x9E91 }, { 216, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_en_4_8[116] = {
@@ -21373,10 +21373,10 @@ const u32 effF9_mes_en_4_14[146] = {
     0x160FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_en_4_16[24] = {
-    0x900000, 0x9EA8, 0x980000, 0x9E93, 0xA00000, 0x9E9F, 0xA80000, 0x9E92,
-    0xB80000, 0x9E8F, 0xC00000, 0x9E84, 0xC80000, 0x9E91, 0xD00000, 0x9E85,
-    0xD80000, 0x9E84, 0xE00000, 0x9E82, 0xE80000, 0x9E93, 0xF00000, 0x9E9A,
+const CONN effF9_mes_en_4_16[12] = {
+    { 144, 0, 0, 0x9EA8 }, { 152, 0, 0, 0x9E93 }, { 160, 0, 0, 0x9E9F }, { 168, 0, 0, 0x9E92 },
+    { 184, 0, 0, 0x9E8F }, { 192, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E91 }, { 208, 0, 0, 0x9E85 },
+    { 216, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E82 }, { 232, 0, 0, 0x9E93 }, { 240, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_4_18[12] = {
@@ -21384,10 +21384,10 @@ const u32 effF9_mes_en_4_18[12] = {
     0xC80000, 0x9E92, 0xD00000, 0x9E9A,
 };
 
-const u32 effF9_mes_en_4_20[20] = {
-    0x980000, 0x9EAD, 0xA00000, 0x9E8E, 0xB00000, 0x9E8F, 0xB80000, 0x9E91,
-    0xC00000, 0x9E8E, 0xC80000, 0x9E81, 0xD00000, 0x9E8B, 0xD80000, 0x9E84,
-    0xE00000, 0x9E8C, 0xE80000, 0x9E9A,
+const CONN effF9_mes_en_4_20[10] = {
+    { 152, 0, 0, 0x9EAD }, { 160, 0, 0, 0x9E8E }, { 176, 0, 0, 0x9E8F }, { 184, 0, 0, 0x9E91 },
+    { 192, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E81 }, { 208, 0, 0, 0x9E8B }, { 216, 0, 0, 0x9E84 },
+    { 224, 0, 0, 0x9E8C }, { 232, 0, 0, 0x9E9A },
 };
 
 const u16 effF9_mes_en_4_1[2] = {
@@ -21435,13 +21435,13 @@ const u16 effF9_mes_en_4_21[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_5[13] = {
-    { (const CONN*)effF9_mes_en_5_0, (const u16*)effF9_mes_en_5_1 }, { (const CONN*)effF9_mes_en_5_0, (const u16*)effF9_mes_en_5_3 },
-    { (const CONN*)effF9_mes_en_5_4, (const u16*)effF9_mes_en_5_5 }, { (const CONN*)effF9_mes_en_5_6, (const u16*)effF9_mes_en_5_7 },
-    { (const CONN*)effF9_mes_en_5_8, (const u16*)effF9_mes_en_5_9 }, { (const CONN*)effF9_mes_en_5_10, (const u16*)effF9_mes_en_5_11 },
-    { (const CONN*)effF9_mes_en_5_12, (const u16*)effF9_mes_en_5_13 }, { (const CONN*)effF9_mes_en_5_14, (const u16*)effF9_mes_en_5_15 },
-    { (const CONN*)effF9_mes_en_5_16, (const u16*)effF9_mes_en_5_17 }, { (const CONN*)effF9_mes_en_5_18, (const u16*)effF9_mes_en_5_19 },
-    { (const CONN*)effF9_mes_en_5_20, (const u16*)effF9_mes_en_5_21 }, { (const CONN*)effF9_mes_en_5_22, (const u16*)effF9_mes_en_5_23 },
-    { (const CONN*)effF9_mes_en_5_24, (const u16*)effF9_mes_en_5_25 },
+    { (const CONN*)effF9_mes_en_5_0, effF9_mes_en_5_1 }, { (const CONN*)effF9_mes_en_5_0, effF9_mes_en_5_3 },
+    { (const CONN*)effF9_mes_en_5_4, effF9_mes_en_5_5 }, { (const CONN*)effF9_mes_en_5_6, effF9_mes_en_5_7 },
+    { effF9_mes_en_5_8, effF9_mes_en_5_9 }, { (const CONN*)effF9_mes_en_5_10, effF9_mes_en_5_11 },
+    { effF9_mes_en_5_12, effF9_mes_en_5_13 }, { (const CONN*)effF9_mes_en_5_14, effF9_mes_en_5_15 },
+    { (const CONN*)effF9_mes_en_5_16, effF9_mes_en_5_17 }, { effF9_mes_en_5_18, effF9_mes_en_5_19 },
+    { effF9_mes_en_5_20, effF9_mes_en_5_21 }, { effF9_mes_en_5_22, effF9_mes_en_5_23 },
+    { (const CONN*)effF9_mes_en_5_24, effF9_mes_en_5_25 },
 };
 
 const u32 effF9_mes_en_5_0[68] = {
@@ -21484,15 +21484,15 @@ const u32 effF9_mes_en_5_6[102] = {
     0xA0FFF0, 0x9E8B, 0xA8FFF0, 0x9E84, 0xB0FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_en_5_8[58] = {
-    0x380000, 0x9EAE, 0x400000, 0x9E87, 0x480000, 0x9E87, 0x500000, 0x9E9D,
-    0x600000, 0x9E8F, 0x680000, 0x9E8E, 0x700000, 0x9E8E, 0x780000, 0x9E91,
-    0x880000, 0x9EA8, 0x900000, 0x9EAB, 0x980000, 0x9EAB, 0xA00000, 0x9EA8,
-    0xA80000, 0x9EA0, 0xB00000, 0x9E9A, 0xC00000, 0x9EA8, 0xC80000, 0x9E9F,
-    0xD00000, 0x9E8B, 0xD80000, 0x9E8B, 0xE80000, 0x9E87, 0xF00000, 0x9E84,
-    0xF80000, 0x9E8B, 0x1000000, 0x9E8F, 0x1100000, 0x9E98, 0x1180000, 0x9E8E,
-    0x1200000, 0x9E94, 0x1300000, 0x9E8E, 0x1380000, 0x9E94, 0x1400000, 0x9E93,
-    0x1480000, 0x9E9A,
+const CONN effF9_mes_en_5_8[29] = {
+    { 56, 0, 0, 0x9EAE }, { 64, 0, 0, 0x9E87 }, { 72, 0, 0, 0x9E87 }, { 80, 0, 0, 0x9E9D },
+    { 96, 0, 0, 0x9E8F }, { 104, 0, 0, 0x9E8E }, { 112, 0, 0, 0x9E8E }, { 120, 0, 0, 0x9E91 },
+    { 136, 0, 0, 0x9EA8 }, { 144, 0, 0, 0x9EAB }, { 152, 0, 0, 0x9EAB }, { 160, 0, 0, 0x9EA8 },
+    { 168, 0, 0, 0x9EA0 }, { 176, 0, 0, 0x9E9A }, { 192, 0, 0, 0x9EA8 }, { 200, 0, 0, 0x9E9F },
+    { 208, 0, 0, 0x9E8B }, { 216, 0, 0, 0x9E8B }, { 232, 0, 0, 0x9E87 }, { 240, 0, 0, 0x9E84 },
+    { 248, 0, 0, 0x9E8B }, { 256, 0, 0, 0x9E8F }, { 272, 0, 0, 0x9E98 }, { 280, 0, 0, 0x9E8E },
+    { 288, 0, 0, 0x9E94 }, { 304, 0, 0, 0x9E8E }, { 312, 0, 0, 0x9E94 }, { 320, 0, 0, 0x9E93 },
+    { 328, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_5_10[102] = {
@@ -21511,8 +21511,8 @@ const u32 effF9_mes_en_5_10[102] = {
     0x50FFF0, 0x9E9C, 0x58FFF0, 0x9E9C, 0x60FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_en_5_12[4] = {
-    0xD80000, 0x9E52, 0xE00000, 0x9E9D,
+const CONN effF9_mes_en_5_12[2] = {
+    { 216, 0, 0, 0x9E52 }, { 224, 0, 0, 0x9E9D },
 };
 
 const u32 effF9_mes_en_5_14[62] = {
@@ -21545,16 +21545,16 @@ const u32 effF9_mes_en_5_16[124] = {
     0xF8FFF0, 0x9E9C, 0x100FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_en_5_18[4] = {
-    0x980000, 0x9E56, 0xA00000, 0x9E9D,
+const CONN effF9_mes_en_5_18[2] = {
+    { 152, 0, 0, 0x9E56 }, { 160, 0, 0, 0x9E9D },
 };
 
-const u32 effF9_mes_en_5_20[4] = {
-    0xA80000, 0x9E55, 0xB00000, 0x9E9D,
+const CONN effF9_mes_en_5_20[2] = {
+    { 168, 0, 0, 0x9E55 }, { 176, 0, 0, 0x9E9D },
 };
 
-const u32 effF9_mes_en_5_22[4] = {
-    0xB80000, 0x9E54, 0xC00000, 0x9E9D,
+const CONN effF9_mes_en_5_22[2] = {
+    { 184, 0, 0, 0x9E54 }, { 192, 0, 0, 0x9E9D },
 };
 
 const u32 effF9_mes_en_5_24[4] = {
@@ -21614,19 +21614,19 @@ const u16 effF9_mes_en_5_25[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_6[25] = {
-    { (const CONN*)effF9_mes_en_6_0, (const u16*)effF9_mes_en_6_1 }, { (const CONN*)effF9_mes_en_6_0, (const u16*)effF9_mes_en_6_3 },
-    { (const CONN*)effF9_mes_en_6_4, (const u16*)effF9_mes_en_6_5 }, { (const CONN*)effF9_mes_en_6_6, (const u16*)effF9_mes_en_6_7 },
-    { (const CONN*)effF9_mes_en_6_8, (const u16*)effF9_mes_en_6_9 }, { (const CONN*)effF9_mes_en_6_10, (const u16*)effF9_mes_en_6_11 },
-    { (const CONN*)effF9_mes_en_6_12, (const u16*)effF9_mes_en_6_13 }, { (const CONN*)effF9_mes_en_6_14, (const u16*)effF9_mes_en_6_15 },
-    { (const CONN*)effF9_mes_en_6_16, (const u16*)effF9_mes_en_6_17 }, { (const CONN*)effF9_mes_en_6_18, (const u16*)effF9_mes_en_6_19 },
-    { (const CONN*)effF9_mes_en_6_20, (const u16*)effF9_mes_en_6_21 }, { (const CONN*)effF9_mes_en_6_22, (const u16*)effF9_mes_en_6_23 },
-    { (const CONN*)effF9_mes_en_6_24, (const u16*)effF9_mes_en_6_25 }, { (const CONN*)effF9_mes_en_6_26, (const u16*)effF9_mes_en_6_27 },
-    { (const CONN*)effF9_mes_en_6_28, (const u16*)effF9_mes_en_6_29 }, { (const CONN*)effF9_mes_en_6_30, (const u16*)effF9_mes_en_6_31 },
-    { (const CONN*)effF9_mes_en_6_32, (const u16*)effF9_mes_en_6_33 }, { (const CONN*)effF9_mes_en_6_34, (const u16*)effF9_mes_en_6_35 },
-    { (const CONN*)effF9_mes_en_6_36, (const u16*)effF9_mes_en_6_37 }, { (const CONN*)effF9_mes_en_6_38, (const u16*)effF9_mes_en_6_39 },
-    { (const CONN*)effF9_mes_en_6_40, (const u16*)effF9_mes_en_6_41 }, { (const CONN*)effF9_mes_en_6_42, (const u16*)effF9_mes_en_6_43 },
-    { (const CONN*)effF9_mes_en_6_44, (const u16*)effF9_mes_en_6_45 }, { (const CONN*)effF9_mes_en_6_46, (const u16*)effF9_mes_en_6_47 },
-    { (const CONN*)effF9_mes_en_6_48, (const u16*)effF9_mes_en_6_49 },
+    { (const CONN*)effF9_mes_en_6_0, effF9_mes_en_6_1 }, { (const CONN*)effF9_mes_en_6_0, effF9_mes_en_6_3 },
+    { (const CONN*)effF9_mes_en_6_4, effF9_mes_en_6_5 }, { (const CONN*)effF9_mes_en_6_6, effF9_mes_en_6_7 },
+    { (const CONN*)effF9_mes_en_6_8, effF9_mes_en_6_9 }, { (const CONN*)effF9_mes_en_6_10, effF9_mes_en_6_11 },
+    { (const CONN*)effF9_mes_en_6_12, effF9_mes_en_6_13 }, { (const CONN*)effF9_mes_en_6_14, effF9_mes_en_6_15 },
+    { (const CONN*)effF9_mes_en_6_16, effF9_mes_en_6_17 }, { (const CONN*)effF9_mes_en_6_18, effF9_mes_en_6_19 },
+    { (const CONN*)effF9_mes_en_6_20, effF9_mes_en_6_21 }, { (const CONN*)effF9_mes_en_6_22, effF9_mes_en_6_23 },
+    { effF9_mes_en_6_24, effF9_mes_en_6_25 }, { (const CONN*)effF9_mes_en_6_26, effF9_mes_en_6_27 },
+    { (const CONN*)effF9_mes_en_6_28, effF9_mes_en_6_29 }, { (const CONN*)effF9_mes_en_6_30, effF9_mes_en_6_31 },
+    { effF9_mes_en_6_32, effF9_mes_en_6_33 }, { (const CONN*)effF9_mes_en_6_34, effF9_mes_en_6_35 },
+    { (const CONN*)effF9_mes_en_6_36, effF9_mes_en_6_37 }, { (const CONN*)effF9_mes_en_6_38, effF9_mes_en_6_39 },
+    { (const CONN*)effF9_mes_en_6_40, effF9_mes_en_6_41 }, { (const CONN*)effF9_mes_en_6_42, effF9_mes_en_6_43 },
+    { (const CONN*)effF9_mes_en_6_44, effF9_mes_en_6_45 }, { (const CONN*)effF9_mes_en_6_46, effF9_mes_en_6_47 },
+    { (const CONN*)effF9_mes_en_6_48, effF9_mes_en_6_49 },
 };
 
 const u32 effF9_mes_en_6_0[80] = {
@@ -21782,13 +21782,13 @@ const u32 effF9_mes_en_6_22[100] = {
     0x88FFF0, 0x9E93, 0x90FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_en_6_24[44] = {
-    0x600000, 0x9EA8, 0x680000, 0x9E93, 0x700000, 0x9E9F, 0x780000, 0x9E92,
-    0x880000, 0x9E8F, 0x900000, 0x9E80, 0x980000, 0x9E91, 0xA00000, 0x9E93,
-    0xA80000, 0x9E98, 0xB80000, 0x9E93, 0xC00000, 0x9E88, 0xC80000, 0x9E8C,
-    0xD00000, 0x9E84, 0xD80000, 0x9E9D, 0xE80000, 0x9E8F, 0xF00000, 0x9E80,
-    0xF80000, 0x9E91, 0x1000000, 0x9E93, 0x1080000, 0x9E8D, 0x1100000, 0x9E84,
-    0x1180000, 0x9E91, 0x1200000, 0x9E9A,
+const CONN effF9_mes_en_6_24[22] = {
+    { 96, 0, 0, 0x9EA8 }, { 104, 0, 0, 0x9E93 }, { 112, 0, 0, 0x9E9F }, { 120, 0, 0, 0x9E92 },
+    { 136, 0, 0, 0x9E8F }, { 144, 0, 0, 0x9E80 }, { 152, 0, 0, 0x9E91 }, { 160, 0, 0, 0x9E93 },
+    { 168, 0, 0, 0x9E98 }, { 184, 0, 0, 0x9E93 }, { 192, 0, 0, 0x9E88 }, { 200, 0, 0, 0x9E8C },
+    { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E9D }, { 232, 0, 0, 0x9E8F }, { 240, 0, 0, 0x9E80 },
+    { 248, 0, 0, 0x9E91 }, { 256, 0, 0, 0x9E93 }, { 264, 0, 0, 0x9E8D }, { 272, 0, 0, 0x9E84 },
+    { 280, 0, 0, 0x9E91 }, { 288, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_6_26[84] = {
@@ -21825,9 +21825,9 @@ const u32 effF9_mes_en_6_30[20] = {
     0xE00000, 0x9E93, 0xE80000, 0x9E9A,
 };
 
-const u32 effF9_mes_en_6_32[10] = {
-    0xB00000, 0x9EB8, 0xB80000, 0x9E84, 0xC00000, 0x9E80, 0xC80000, 0x9E87,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_en_6_32[5] = {
+    { 176, 0, 0, 0x9EB8 }, { 184, 0, 0, 0x9E84 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E87 },
+    { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_6_34[142] = {
@@ -22061,21 +22061,21 @@ const u16 effF9_mes_en_6_49[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_7[15] = {
-    { (const CONN*)effF9_mes_en_7_0, (const u16*)effF9_mes_en_7_1 }, { (const CONN*)effF9_mes_en_7_0, (const u16*)effF9_mes_en_7_3 },
-    { (const CONN*)effF9_mes_en_7_4, (const u16*)effF9_mes_en_7_5 }, { (const CONN*)effF9_mes_en_7_6, (const u16*)effF9_mes_en_7_7 },
-    { (const CONN*)effF9_mes_en_7_8, (const u16*)effF9_mes_en_7_9 }, { (const CONN*)effF9_mes_en_7_10, (const u16*)effF9_mes_en_7_11 },
-    { (const CONN*)effF9_mes_en_7_12, (const u16*)effF9_mes_en_7_13 }, { (const CONN*)effF9_mes_en_7_14, (const u16*)effF9_mes_en_7_15 },
-    { (const CONN*)effF9_mes_en_7_16, (const u16*)effF9_mes_en_7_17 }, { (const CONN*)effF9_mes_en_7_18, (const u16*)effF9_mes_en_7_19 },
-    { (const CONN*)effF9_mes_en_7_20, (const u16*)effF9_mes_en_7_21 }, { (const CONN*)effF9_mes_en_7_22, (const u16*)effF9_mes_en_7_23 },
-    { (const CONN*)effF9_mes_en_7_24, (const u16*)effF9_mes_en_7_25 }, { (const CONN*)effF9_mes_en_7_26, (const u16*)effF9_mes_en_7_27 },
-    { (const CONN*)effF9_mes_en_7_28, (const u16*)effF9_mes_en_7_29 },
+    { effF9_mes_en_7_0, effF9_mes_en_7_1 }, { effF9_mes_en_7_0, effF9_mes_en_7_3 },
+    { (const CONN*)effF9_mes_en_7_4, effF9_mes_en_7_5 }, { (const CONN*)effF9_mes_en_7_6, effF9_mes_en_7_7 },
+    { (const CONN*)effF9_mes_en_7_8, effF9_mes_en_7_9 }, { (const CONN*)effF9_mes_en_7_10, effF9_mes_en_7_11 },
+    { (const CONN*)effF9_mes_en_7_12, effF9_mes_en_7_13 }, { effF9_mes_en_7_14, effF9_mes_en_7_15 },
+    { (const CONN*)effF9_mes_en_7_16, effF9_mes_en_7_17 }, { effF9_mes_en_7_18, effF9_mes_en_7_19 },
+    { (const CONN*)effF9_mes_en_7_20, effF9_mes_en_7_21 }, { effF9_mes_en_7_22, effF9_mes_en_7_23 },
+    { (const CONN*)effF9_mes_en_7_24, effF9_mes_en_7_25 }, { (const CONN*)effF9_mes_en_7_26, effF9_mes_en_7_27 },
+    { effF9_mes_en_7_28, effF9_mes_en_7_29 },
 };
 
-const u32 effF9_mes_en_7_0[32] = {
-    0x780000, 0x9EA8, 0x800000, 0x9E93, 0x900000, 0x9E92, 0x980000, 0x9E84,
-    0xA00000, 0x9E84, 0xA80000, 0x9E8C, 0xB00000, 0x9E92, 0xC00000, 0x9EA8,
-    0xC80000, 0x9E9F, 0xD00000, 0x9E95, 0xD80000, 0x9E84, 0xE80000, 0x9E8B,
-    0xF00000, 0x9E8E, 0xF80000, 0x9E92, 0x1000000, 0x9E93, 0x1080000, 0x9E9C,
+const CONN effF9_mes_en_7_0[16] = {
+    { 120, 0, 0, 0x9EA8 }, { 128, 0, 0, 0x9E93 }, { 144, 0, 0, 0x9E92 }, { 152, 0, 0, 0x9E84 },
+    { 160, 0, 0, 0x9E84 }, { 168, 0, 0, 0x9E8C }, { 176, 0, 0, 0x9E92 }, { 192, 0, 0, 0x9EA8 },
+    { 200, 0, 0, 0x9E9F }, { 208, 0, 0, 0x9E95 }, { 216, 0, 0, 0x9E84 }, { 232, 0, 0, 0x9E8B },
+    { 240, 0, 0, 0x9E8E }, { 248, 0, 0, 0x9E92 }, { 256, 0, 0, 0x9E93 }, { 264, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_en_7_4[76] = {
@@ -22153,10 +22153,10 @@ const u32 effF9_mes_en_7_12[126] = {
     0x148FFF0, 0x9E84, 0x150FFF0, 0x9E91, 0x158FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_en_7_14[18] = {
-    0x900000, 0x9EA7, 0x980000, 0x9E80, 0xA80000, 0x9E87, 0xB00000, 0x9E80,
-    0xC00000, 0x9E87, 0xC80000, 0x9E80, 0xD80000, 0x9E87, 0xE00000, 0x9E80,
-    0xE80000, 0x9E9A,
+const CONN effF9_mes_en_7_14[9] = {
+    { 144, 0, 0, 0x9EA7 }, { 152, 0, 0, 0x9E80 }, { 168, 0, 0, 0x9E87 }, { 176, 0, 0, 0x9E80 },
+    { 192, 0, 0, 0x9E87 }, { 200, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9E87 }, { 224, 0, 0, 0x9E80 },
+    { 232, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_7_16[68] = {
@@ -22171,8 +22171,8 @@ const u32 effF9_mes_en_7_16[68] = {
     0x1500000, 0x9E9C, 0x1580000, 0x9E9C,
 };
 
-const u32 effF9_mes_en_7_18[6] = {
-    0xB00000, 0x9EB8, 0xB80000, 0x9E80, 0xC00000, 0x9E9A,
+const CONN effF9_mes_en_7_18[3] = {
+    { 176, 0, 0, 0x9EB8 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_7_20[16] = {
@@ -22180,10 +22180,10 @@ const u32 effF9_mes_en_7_20[16] = {
     0xC00000, 0x9E80, 0xC80000, 0x9E87, 0xD00000, 0x9E87, 0xD80000, 0x9E9A,
 };
 
-const u32 effF9_mes_en_7_22[24] = {
-    0x880000, 0x9EB6, 0x900000, 0x9E87, 0x980000, 0x9E80, 0xA00000, 0x9E93,
-    0xB00000, 0x9E93, 0xB80000, 0x9E87, 0xC00000, 0x9E84, 0xD00000, 0x9E87,
-    0xD80000, 0x9E84, 0xE00000, 0x9E8B, 0xE80000, 0x9E8B, 0xF00000, 0x9E9B,
+const CONN effF9_mes_en_7_22[12] = {
+    { 136, 0, 0, 0x9EB6 }, { 144, 0, 0, 0x9E87 }, { 152, 0, 0, 0x9E80 }, { 160, 0, 0, 0x9E93 },
+    { 176, 0, 0, 0x9E93 }, { 184, 0, 0, 0x9E87 }, { 192, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E87 },
+    { 216, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E8B }, { 232, 0, 0, 0x9E8B }, { 240, 0, 0, 0x9E9B },
 };
 
 const u32 effF9_mes_en_7_24[84] = {
@@ -22208,11 +22208,11 @@ const u32 effF9_mes_en_7_26[36] = {
     0x1080000, 0x9E9A, 0x1100000, 0x9E9B,
 };
 
-const u32 effF9_mes_en_7_28[32] = {
-    0x780000, 0x9EA8, 0x800000, 0x9E9F, 0x880000, 0x9E8C, 0x980000, 0x9E92,
-    0xA00000, 0x9E8E, 0xB00000, 0x9E92, 0xB80000, 0x9E8E, 0xC00000, 0x9E91,
-    0xC80000, 0x9E91, 0xD00000, 0x9E98, 0xE00000, 0x9EB2, 0xE80000, 0x9E80,
-    0xF00000, 0x9E91, 0xF80000, 0x9E80, 0x1000000, 0x9E88, 0x1080000, 0x9E9A,
+const CONN effF9_mes_en_7_28[16] = {
+    { 120, 0, 0, 0x9EA8 }, { 128, 0, 0, 0x9E9F }, { 136, 0, 0, 0x9E8C }, { 152, 0, 0, 0x9E92 },
+    { 160, 0, 0, 0x9E8E }, { 176, 0, 0, 0x9E92 }, { 184, 0, 0, 0x9E8E }, { 192, 0, 0, 0x9E91 },
+    { 200, 0, 0, 0x9E91 }, { 208, 0, 0, 0x9E98 }, { 224, 0, 0, 0x9EB2 }, { 232, 0, 0, 0x9E80 },
+    { 240, 0, 0, 0x9E91 }, { 248, 0, 0, 0x9E80 }, { 256, 0, 0, 0x9E88 }, { 264, 0, 0, 0x9E9A },
 };
 
 const u16 effF9_mes_en_7_1[2] = {
@@ -22276,10 +22276,10 @@ const u16 effF9_mes_en_7_29[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_8[7] = {
-    { (const CONN*)effF9_mes_en_8_0, (const u16*)effF9_mes_en_8_1 }, { (const CONN*)effF9_mes_en_8_0, (const u16*)effF9_mes_en_8_3 },
-    { (const CONN*)effF9_mes_en_8_4, (const u16*)effF9_mes_en_8_5 }, { (const CONN*)effF9_mes_en_8_6, (const u16*)effF9_mes_en_8_7 },
-    { (const CONN*)effF9_mes_en_8_8, (const u16*)effF9_mes_en_8_9 }, { (const CONN*)effF9_mes_en_8_10, (const u16*)effF9_mes_en_8_11 },
-    { (const CONN*)effF9_mes_en_8_12, (const u16*)effF9_mes_en_8_13 },
+    { (const CONN*)effF9_mes_en_8_0, effF9_mes_en_8_1 }, { (const CONN*)effF9_mes_en_8_0, effF9_mes_en_8_3 },
+    { (const CONN*)effF9_mes_en_8_4, effF9_mes_en_8_5 }, { (const CONN*)effF9_mes_en_8_6, effF9_mes_en_8_7 },
+    { (const CONN*)effF9_mes_en_8_8, effF9_mes_en_8_9 }, { (const CONN*)effF9_mes_en_8_10, effF9_mes_en_8_11 },
+    { (const CONN*)effF9_mes_en_8_12, effF9_mes_en_8_13 },
 };
 
 const u32 effF9_mes_en_8_0[58] = {
@@ -22402,9 +22402,9 @@ const u16 effF9_mes_en_8_13[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_9[6] = {
-    { (const CONN*)effF9_mes_en_9_0, (const u16*)effF9_mes_en_9_1 }, { (const CONN*)effF9_mes_en_9_0, (const u16*)effF9_mes_en_9_3 },
-    { (const CONN*)effF9_mes_en_9_4, (const u16*)effF9_mes_en_9_5 }, { (const CONN*)effF9_mes_en_9_6, (const u16*)effF9_mes_en_9_7 },
-    { (const CONN*)effF9_mes_en_9_8, (const u16*)effF9_mes_en_9_9 }, { (const CONN*)effF9_mes_en_9_10, (const u16*)effF9_mes_en_9_11 },
+    { (const CONN*)effF9_mes_en_9_0, effF9_mes_en_9_1 }, { (const CONN*)effF9_mes_en_9_0, effF9_mes_en_9_3 },
+    { (const CONN*)effF9_mes_en_9_4, effF9_mes_en_9_5 }, { effF9_mes_en_9_6, effF9_mes_en_9_7 },
+    { (const CONN*)effF9_mes_en_9_8, effF9_mes_en_9_9 }, { (const CONN*)effF9_mes_en_9_10, effF9_mes_en_9_11 },
 };
 
 const u32 effF9_mes_en_9_0[96] = {
@@ -22444,11 +22444,11 @@ const u32 effF9_mes_en_9_4[146] = {
     0x140FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_en_9_6[26] = {
-    0x800000, 0x9EB6, 0x880000, 0x9E80, 0x900000, 0x9E88, 0x980000, 0x9E93,
-    0xA80000, 0x9E85, 0xB00000, 0x9E8E, 0xB80000, 0x9E91, 0xC80000, 0x9E8C,
-    0xD00000, 0x9E84, 0xE00000, 0x9E8A, 0xE80000, 0x9E88, 0xF00000, 0x9E83,
-    0xF80000, 0x9E9A,
+const CONN effF9_mes_en_9_6[13] = {
+    { 128, 0, 0, 0x9EB6 }, { 136, 0, 0, 0x9E80 }, { 144, 0, 0, 0x9E88 }, { 152, 0, 0, 0x9E93 },
+    { 168, 0, 0, 0x9E85 }, { 176, 0, 0, 0x9E8E }, { 184, 0, 0, 0x9E91 }, { 200, 0, 0, 0x9E8C },
+    { 208, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E8A }, { 232, 0, 0, 0x9E88 }, { 240, 0, 0, 0x9E83 },
+    { 248, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_9_8[128] = {
@@ -22508,27 +22508,27 @@ const u16 effF9_mes_en_9_11[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_10[16] = {
-    { (const CONN*)effF9_mes_en_10_0, (const u16*)effF9_mes_en_10_1 }, { (const CONN*)effF9_mes_en_10_0, (const u16*)effF9_mes_en_10_3 },
-    { (const CONN*)effF9_mes_en_10_4, (const u16*)effF9_mes_en_10_5 }, { (const CONN*)effF9_mes_en_10_6, (const u16*)effF9_mes_en_10_7 },
-    { (const CONN*)effF9_mes_en_10_8, (const u16*)effF9_mes_en_10_9 }, { (const CONN*)effF9_mes_en_10_10, (const u16*)effF9_mes_en_10_11 },
-    { (const CONN*)effF9_mes_en_10_12, (const u16*)effF9_mes_en_10_13 }, { (const CONN*)effF9_mes_en_10_14, (const u16*)effF9_mes_en_10_15 },
-    { (const CONN*)effF9_mes_en_10_16, (const u16*)effF9_mes_en_10_17 }, { (const CONN*)effF9_mes_en_10_18, (const u16*)effF9_mes_en_10_19 },
-    { (const CONN*)effF9_mes_en_10_20, (const u16*)effF9_mes_en_10_21 }, { (const CONN*)effF9_mes_en_10_22, (const u16*)effF9_mes_en_10_23 },
-    { (const CONN*)effF9_mes_en_10_24, (const u16*)effF9_mes_en_10_25 }, { (const CONN*)effF9_mes_en_10_26, (const u16*)effF9_mes_en_10_27 },
-    { (const CONN*)effF9_mes_en_10_28, (const u16*)effF9_mes_en_10_29 }, { (const CONN*)effF9_mes_en_10_30, (const u16*)effF9_mes_en_10_31 },
+    { effF9_mes_en_10_0, effF9_mes_en_10_1 }, { effF9_mes_en_10_0, effF9_mes_en_10_3 },
+    { effF9_mes_en_10_4, effF9_mes_en_10_5 }, { effF9_mes_en_10_6, effF9_mes_en_10_7 },
+    { (const CONN*)effF9_mes_en_10_8, effF9_mes_en_10_9 }, { effF9_mes_en_10_10, effF9_mes_en_10_11 },
+    { (const CONN*)effF9_mes_en_10_12, effF9_mes_en_10_13 }, { effF9_mes_en_10_14, effF9_mes_en_10_15 },
+    { (const CONN*)effF9_mes_en_10_16, effF9_mes_en_10_17 }, { (const CONN*)effF9_mes_en_10_18, effF9_mes_en_10_19 },
+    { (const CONN*)effF9_mes_en_10_20, effF9_mes_en_10_21 }, { effF9_mes_en_10_22, effF9_mes_en_10_23 },
+    { (const CONN*)effF9_mes_en_10_24, effF9_mes_en_10_25 }, { (const CONN*)effF9_mes_en_10_26, effF9_mes_en_10_27 },
+    { (const CONN*)effF9_mes_en_10_28, effF9_mes_en_10_29 }, { (const CONN*)effF9_mes_en_10_30, effF9_mes_en_10_31 },
 };
 
-const u32 effF9_mes_en_10_0[6] = {
-    0xB80000, 0x9EA7, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_en_10_0[3] = {
+    { 184, 0, 0, 0x9EA7 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_en_10_4[6] = {
-    0xB80000, 0x9EB8, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_en_10_4[3] = {
+    { 184, 0, 0, 0x9EB8 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_en_10_6[10] = {
-    0xB00000, 0x9EAB, 0xB80000, 0x9E8E, 0xC00000, 0x9E8E, 0xC80000, 0x9E8A,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_en_10_6[5] = {
+    { 176, 0, 0, 0x9EAB }, { 184, 0, 0, 0x9E8E }, { 192, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E8A },
+    { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_10_8[46] = {
@@ -22540,10 +22540,10 @@ const u32 effF9_mes_en_10_8[46] = {
     0x1180000, 0x9E91, 0x1200000, 0x9E92, 0x1280000, 0x9E9A,
 };
 
-const u32 effF9_mes_en_10_10[24] = {
-    0x900000, 0x9EB3, 0x980000, 0x9E87, 0xA00000, 0x9E84, 0xA80000, 0x9E98,
-    0xB00000, 0x9E9F, 0xB80000, 0x9E91, 0xC00000, 0x9E84, 0xD00000, 0x9E81,
-    0xD80000, 0x9E80, 0xE00000, 0x9E82, 0xE80000, 0x9E8A, 0xF00000, 0x9E9A,
+const CONN effF9_mes_en_10_10[12] = {
+    { 144, 0, 0, 0x9EB3 }, { 152, 0, 0, 0x9E87 }, { 160, 0, 0, 0x9E84 }, { 168, 0, 0, 0x9E98 },
+    { 176, 0, 0, 0x9E9F }, { 184, 0, 0, 0x9E91 }, { 192, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E81 },
+    { 216, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E82 }, { 232, 0, 0, 0x9E8A }, { 240, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_10_12[20] = {
@@ -22552,15 +22552,15 @@ const u32 effF9_mes_en_10_12[20] = {
     0xE00000, 0x9E92, 0xE80000, 0x9E9A,
 };
 
-const u32 effF9_mes_en_10_14[60] = {
-    0x300000, 0x9EA7, 0x380000, 0x9E8E, 0x400000, 0x9E96, 0x500000, 0x9E87,
-    0x580000, 0x9E80, 0x600000, 0x9E95, 0x680000, 0x9E84, 0x780000, 0x9E98,
-    0x800000, 0x9E8E, 0x880000, 0x9E94, 0x980000, 0x9E81, 0xA00000, 0x9E84,
-    0xA80000, 0x9E84, 0xB00000, 0x9E8D, 0xB80000, 0x9E9B, 0xC80000, 0x9EA8,
-    0xD00000, 0x9E93, 0xD80000, 0x9E9F, 0xE00000, 0x9E92, 0xF00000, 0x9E81,
-    0xF80000, 0x9E84, 0x1000000, 0x9E84, 0x1080000, 0x9E8D, 0x1180000, 0x9E92,
-    0x1200000, 0x9E8E, 0x1300000, 0x9E8B, 0x1380000, 0x9E8E, 0x1400000, 0x9E8D,
-    0x1480000, 0x9E86, 0x1500000, 0x9E9A,
+const CONN effF9_mes_en_10_14[30] = {
+    { 48, 0, 0, 0x9EA7 }, { 56, 0, 0, 0x9E8E }, { 64, 0, 0, 0x9E96 }, { 80, 0, 0, 0x9E87 },
+    { 88, 0, 0, 0x9E80 }, { 96, 0, 0, 0x9E95 }, { 104, 0, 0, 0x9E84 }, { 120, 0, 0, 0x9E98 },
+    { 128, 0, 0, 0x9E8E }, { 136, 0, 0, 0x9E94 }, { 152, 0, 0, 0x9E81 }, { 160, 0, 0, 0x9E84 },
+    { 168, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E8D }, { 184, 0, 0, 0x9E9B }, { 200, 0, 0, 0x9EA8 },
+    { 208, 0, 0, 0x9E93 }, { 216, 0, 0, 0x9E9F }, { 224, 0, 0, 0x9E92 }, { 240, 0, 0, 0x9E81 },
+    { 248, 0, 0, 0x9E84 }, { 256, 0, 0, 0x9E84 }, { 264, 0, 0, 0x9E8D }, { 280, 0, 0, 0x9E92 },
+    { 288, 0, 0, 0x9E8E }, { 304, 0, 0, 0x9E8B }, { 312, 0, 0, 0x9E8E }, { 320, 0, 0, 0x9E8D },
+    { 328, 0, 0, 0x9E86 }, { 336, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_10_16[32] = {
@@ -22597,12 +22597,12 @@ const u32 effF9_mes_en_10_20[106] = {
     0xA8FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_en_10_22[38] = {
-    0x680000, 0x9EB8, 0x700000, 0x9E84, 0x780000, 0x9E80, 0x800000, 0x9E87,
-    0x900000, 0x9E91, 0x980000, 0x9E88, 0xA00000, 0x9E86, 0xA80000, 0x9E87,
-    0xB00000, 0x9E93, 0xB80000, 0x9E9A, 0xC80000, 0x9EA5, 0xD00000, 0x9E84,
-    0xD80000, 0x9E84, 0xE00000, 0x9E8B, 0xF00000, 0x9E93, 0xF80000, 0x9E87,
-    0x1000000, 0x9E88, 0x1080000, 0x9E92, 0x1100000, 0x9E9A,
+const CONN effF9_mes_en_10_22[19] = {
+    { 104, 0, 0, 0x9EB8 }, { 112, 0, 0, 0x9E84 }, { 120, 0, 0, 0x9E80 }, { 128, 0, 0, 0x9E87 },
+    { 144, 0, 0, 0x9E91 }, { 152, 0, 0, 0x9E88 }, { 160, 0, 0, 0x9E86 }, { 168, 0, 0, 0x9E87 },
+    { 176, 0, 0, 0x9E93 }, { 184, 0, 0, 0x9E9A }, { 200, 0, 0, 0x9EA5 }, { 208, 0, 0, 0x9E84 },
+    { 216, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E8B }, { 240, 0, 0, 0x9E93 }, { 248, 0, 0, 0x9E87 },
+    { 256, 0, 0, 0x9E88 }, { 264, 0, 0, 0x9E92 }, { 272, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_10_24[22] = {
@@ -22723,34 +22723,34 @@ const u16 effF9_mes_en_10_31[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_11[7] = {
-    { (const CONN*)effF9_mes_en_11_0, (const u16*)effF9_mes_en_11_1 }, { (const CONN*)effF9_mes_en_11_0, (const u16*)effF9_mes_en_11_3 },
-    { (const CONN*)effF9_mes_en_11_4, (const u16*)effF9_mes_en_11_5 }, { (const CONN*)effF9_mes_en_11_6, (const u16*)effF9_mes_en_11_7 },
-    { (const CONN*)effF9_mes_en_11_8, (const u16*)effF9_mes_en_11_9 }, { (const CONN*)effF9_mes_en_11_10, (const u16*)effF9_mes_en_11_11 },
-    { (const CONN*)effF9_mes_en_11_12, (const u16*)effF9_mes_en_11_13 },
+    { effF9_mes_en_11_0, effF9_mes_en_11_1 }, { effF9_mes_en_11_0, effF9_mes_en_11_3 },
+    { effF9_mes_en_11_4, effF9_mes_en_11_5 }, { effF9_mes_en_11_6, effF9_mes_en_11_7 },
+    { effF9_mes_en_11_8, effF9_mes_en_11_9 }, { (const CONN*)effF9_mes_en_11_10, effF9_mes_en_11_11 },
+    { effF9_mes_en_11_12, effF9_mes_en_11_13 },
 };
 
-const u32 effF9_mes_en_11_0[20] = {
-    0x900000, 0x9EA2, 0x980000, 0x9E8E, 0xA00000, 0x9E8C, 0xA80000, 0x9E84,
-    0xB80000, 0x9E8E, 0xC00000, 0x9E8D, 0xD00000, 0x9EAC, 0xD80000, 0x9E84,
-    0xE00000, 0x9E8B, 0xE80000, 0x9E9A,
+const CONN effF9_mes_en_11_0[10] = {
+    { 144, 0, 0, 0x9EA2 }, { 152, 0, 0, 0x9E8E }, { 160, 0, 0, 0x9E8C }, { 168, 0, 0, 0x9E84 },
+    { 184, 0, 0, 0x9E8E }, { 192, 0, 0, 0x9E8D }, { 208, 0, 0, 0x9EAC }, { 216, 0, 0, 0x9E84 },
+    { 224, 0, 0, 0x9E8B }, { 232, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_en_11_4[38] = {
-    0x680000, 0x9EA6, 0x700000, 0x9E88, 0x780000, 0x9E95, 0x800000, 0x9E84,
-    0x900000, 0x9E8C, 0x980000, 0x9E84, 0xA80000, 0x9E98, 0xB00000, 0x9E8E,
-    0xB80000, 0x9E94, 0xC00000, 0x9E91, 0xD00000, 0x9E81, 0xD80000, 0x9E84,
-    0xE00000, 0x9E92, 0xE80000, 0x9E93, 0xF80000, 0x9E92, 0x1000000, 0x9E87,
-    0x1080000, 0x9E8E, 0x1100000, 0x9E93, 0x1180000, 0x9E9A,
+const CONN effF9_mes_en_11_4[19] = {
+    { 104, 0, 0, 0x9EA6 }, { 112, 0, 0, 0x9E88 }, { 120, 0, 0, 0x9E95 }, { 128, 0, 0, 0x9E84 },
+    { 144, 0, 0, 0x9E8C }, { 152, 0, 0, 0x9E84 }, { 168, 0, 0, 0x9E98 }, { 176, 0, 0, 0x9E8E },
+    { 184, 0, 0, 0x9E94 }, { 192, 0, 0, 0x9E91 }, { 208, 0, 0, 0x9E81 }, { 216, 0, 0, 0x9E84 },
+    { 224, 0, 0, 0x9E92 }, { 232, 0, 0, 0x9E93 }, { 248, 0, 0, 0x9E92 }, { 256, 0, 0, 0x9E87 },
+    { 264, 0, 0, 0x9E8E }, { 272, 0, 0, 0x9E93 }, { 280, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_en_11_6[10] = {
-    0xB00000, 0x9EA6, 0xB80000, 0x9E94, 0xC00000, 0x9E87, 0xC80000, 0x9E80,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_en_11_6[5] = {
+    { 176, 0, 0, 0x9EA6 }, { 184, 0, 0, 0x9E94 }, { 192, 0, 0, 0x9E87 }, { 200, 0, 0, 0x9E80 },
+    { 208, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_en_11_8[16] = {
-    0xA00000, 0x9EAE, 0xA80000, 0x9E87, 0xB00000, 0x9E87, 0xB80000, 0x9E87,
-    0xC80000, 0x9EAA, 0xD00000, 0x9E84, 0xD80000, 0x9E8D, 0xE00000, 0x9E9A,
+const CONN effF9_mes_en_11_8[8] = {
+    { 160, 0, 0, 0x9EAE }, { 168, 0, 0, 0x9E87 }, { 176, 0, 0, 0x9E87 }, { 184, 0, 0, 0x9E87 },
+    { 200, 0, 0, 0x9EAA }, { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E8D }, { 224, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_11_10[78] = {
@@ -22766,11 +22766,11 @@ const u32 effF9_mes_en_11_10[78] = {
     0x20FFF0, 0x9E84, 0x28FFF0, 0x9E8B, 0x30FFF0, 0x9E9B,
 };
 
-const u32 effF9_mes_en_11_12[26] = {
-    0x880000, 0x9EAC, 0x900000, 0x9E84, 0x980000, 0x9E8B, 0xA00000, 0x9E9C,
-    0xA80000, 0x9E9C, 0xB00000, 0x9E9C, 0xB80000, 0x9E98, 0xC00000, 0x9E8E,
-    0xC80000, 0x9E94, 0xD80000, 0x9E96, 0xE00000, 0x9E88, 0xE80000, 0x9E8D,
-    0xF00000, 0x9E9A,
+const CONN effF9_mes_en_11_12[13] = {
+    { 136, 0, 0, 0x9EAC }, { 144, 0, 0, 0x9E84 }, { 152, 0, 0, 0x9E8B }, { 160, 0, 0, 0x9E9C },
+    { 168, 0, 0, 0x9E9C }, { 176, 0, 0, 0x9E9C }, { 184, 0, 0, 0x9E98 }, { 192, 0, 0, 0x9E8E },
+    { 200, 0, 0, 0x9E94 }, { 216, 0, 0, 0x9E96 }, { 224, 0, 0, 0x9E88 }, { 232, 0, 0, 0x9E8D },
+    { 240, 0, 0, 0x9E9A },
 };
 
 const u16 effF9_mes_en_11_1[2] = {
@@ -22802,16 +22802,16 @@ const u16 effF9_mes_en_11_13[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_12[9] = {
-    { (const CONN*)effF9_mes_en_12_0, (const u16*)effF9_mes_en_12_1 }, { (const CONN*)effF9_mes_en_12_0, (const u16*)effF9_mes_en_12_3 },
-    { (const CONN*)effF9_mes_en_12_4, (const u16*)effF9_mes_en_12_5 }, { (const CONN*)effF9_mes_en_12_6, (const u16*)effF9_mes_en_12_7 },
-    { (const CONN*)effF9_mes_en_12_8, (const u16*)effF9_mes_en_12_9 }, { (const CONN*)effF9_mes_en_12_10, (const u16*)effF9_mes_en_12_11 },
-    { (const CONN*)effF9_mes_en_12_12, (const u16*)effF9_mes_en_12_13 }, { (const CONN*)effF9_mes_en_12_14, (const u16*)effF9_mes_en_12_15 },
-    { (const CONN*)effF9_mes_en_12_16, (const u16*)effF9_mes_en_12_17 },
+    { effF9_mes_en_12_0, effF9_mes_en_12_1 }, { effF9_mes_en_12_0, effF9_mes_en_12_3 },
+    { (const CONN*)effF9_mes_en_12_4, effF9_mes_en_12_5 }, { (const CONN*)effF9_mes_en_12_6, effF9_mes_en_12_7 },
+    { (const CONN*)effF9_mes_en_12_8, effF9_mes_en_12_9 }, { effF9_mes_en_12_10, effF9_mes_en_12_11 },
+    { (const CONN*)effF9_mes_en_12_12, effF9_mes_en_12_13 }, { (const CONN*)effF9_mes_en_12_14, effF9_mes_en_12_15 },
+    { effF9_mes_en_12_16, effF9_mes_en_12_17 },
 };
 
-const u32 effF9_mes_en_12_0[14] = {
-    0xA80000, 0x9EB4, 0xB00000, 0x9E96, 0xB80000, 0x9E80, 0xC00000, 0x9E80,
-    0xC80000, 0x9E80, 0xD00000, 0x9E87, 0xD80000, 0x9E9A,
+const CONN effF9_mes_en_12_0[7] = {
+    { 168, 0, 0, 0x9EB4 }, { 176, 0, 0, 0x9E96 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E80 },
+    { 200, 0, 0, 0x9E80 }, { 208, 0, 0, 0x9E87 }, { 216, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_12_4[50] = {
@@ -22848,12 +22848,12 @@ const u32 effF9_mes_en_12_8[66] = {
     0x1580000, 0x9E9A,
 };
 
-const u32 effF9_mes_en_12_10[34] = {
-    0x700000, 0x9EA8, 0x800000, 0x9E8C, 0x880000, 0x9E94, 0x900000, 0x9E92,
-    0x980000, 0x9E93, 0xA80000, 0x9E86, 0xB00000, 0x9E8E, 0xB80000, 0x9E9C,
-    0xC80000, 0x9EA6, 0xD00000, 0x9E8E, 0xD80000, 0x9E8E, 0xE00000, 0x9E83,
-    0xF00000, 0x9E8B, 0xF80000, 0x9E94, 0x1000000, 0x9E82, 0x1080000, 0x9E8A,
-    0x1100000, 0x9E9A,
+const CONN effF9_mes_en_12_10[17] = {
+    { 112, 0, 0, 0x9EA8 }, { 128, 0, 0, 0x9E8C }, { 136, 0, 0, 0x9E94 }, { 144, 0, 0, 0x9E92 },
+    { 152, 0, 0, 0x9E93 }, { 168, 0, 0, 0x9E86 }, { 176, 0, 0, 0x9E8E }, { 184, 0, 0, 0x9E9C },
+    { 200, 0, 0, 0x9EA6 }, { 208, 0, 0, 0x9E8E }, { 216, 0, 0, 0x9E8E }, { 224, 0, 0, 0x9E83 },
+    { 240, 0, 0, 0x9E8B }, { 248, 0, 0, 0x9E94 }, { 256, 0, 0, 0x9E82 }, { 264, 0, 0, 0x9E8A },
+    { 272, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_12_12[114] = {
@@ -22881,13 +22881,13 @@ const u32 effF9_mes_en_12_14[30] = {
     0xF00000, 0x9E87, 0xF80000, 0x9E93, 0x1000000, 0x9E9A,
 };
 
-const u32 effF9_mes_en_12_16[44] = {
-    0x600000, 0x9EA6, 0x680000, 0x9E94, 0x700000, 0x9E96, 0x780000, 0x9E80,
-    0x800000, 0x9E87, 0x880000, 0x9E9A, 0x980000, 0x9EA7, 0xA00000, 0x9E84,
-    0xA80000, 0x9E9F, 0xB00000, 0x9E92, 0xC00000, 0x9E89, 0xC80000, 0x9E94,
-    0xD00000, 0x9E92, 0xD80000, 0x9E93, 0xE80000, 0x9E93, 0xF00000, 0x9E8E,
-    0xF80000, 0x9E8E, 0x1080000, 0x9E86, 0x1100000, 0x9E8E, 0x1180000, 0x9E8E,
-    0x1200000, 0x9E83, 0x1280000, 0x9E9A,
+const CONN effF9_mes_en_12_16[22] = {
+    { 96, 0, 0, 0x9EA6 }, { 104, 0, 0, 0x9E94 }, { 112, 0, 0, 0x9E96 }, { 120, 0, 0, 0x9E80 },
+    { 128, 0, 0, 0x9E87 }, { 136, 0, 0, 0x9E9A }, { 152, 0, 0, 0x9EA7 }, { 160, 0, 0, 0x9E84 },
+    { 168, 0, 0, 0x9E9F }, { 176, 0, 0, 0x9E92 }, { 192, 0, 0, 0x9E89 }, { 200, 0, 0, 0x9E94 },
+    { 208, 0, 0, 0x9E92 }, { 216, 0, 0, 0x9E93 }, { 232, 0, 0, 0x9E93 }, { 240, 0, 0, 0x9E8E },
+    { 248, 0, 0, 0x9E8E }, { 264, 0, 0, 0x9E86 }, { 272, 0, 0, 0x9E8E }, { 280, 0, 0, 0x9E8E },
+    { 288, 0, 0, 0x9E83 }, { 296, 0, 0, 0x9E9A },
 };
 
 const u16 effF9_mes_en_12_1[2] = {
@@ -22927,13 +22927,13 @@ const u16 effF9_mes_en_12_17[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_13[14] = {
-    { (const CONN*)effF9_mes_en_13_0, (const u16*)effF9_mes_en_13_1 }, { (const CONN*)effF9_mes_en_13_0, (const u16*)effF9_mes_en_13_3 },
-    { (const CONN*)effF9_mes_en_13_4, (const u16*)effF9_mes_en_13_5 }, { (const CONN*)effF9_mes_en_13_6, (const u16*)effF9_mes_en_13_7 },
-    { (const CONN*)effF9_mes_en_13_8, (const u16*)effF9_mes_en_13_9 }, { (const CONN*)effF9_mes_en_13_10, (const u16*)effF9_mes_en_13_11 },
-    { (const CONN*)effF9_mes_en_13_12, (const u16*)effF9_mes_en_13_13 }, { (const CONN*)effF9_mes_en_13_14, (const u16*)effF9_mes_en_13_15 },
-    { (const CONN*)effF9_mes_en_13_16, (const u16*)effF9_mes_en_13_17 }, { (const CONN*)effF9_mes_en_13_18, (const u16*)effF9_mes_en_13_19 },
-    { (const CONN*)effF9_mes_en_13_20, (const u16*)effF9_mes_en_13_21 }, { (const CONN*)effF9_mes_en_13_22, (const u16*)effF9_mes_en_13_23 },
-    { (const CONN*)effF9_mes_en_13_24, (const u16*)effF9_mes_en_13_25 }, { (const CONN*)effF9_mes_en_13_26, (const u16*)effF9_mes_en_13_27 },
+    { (const CONN*)effF9_mes_en_13_0, effF9_mes_en_13_1 }, { (const CONN*)effF9_mes_en_13_0, effF9_mes_en_13_3 },
+    { (const CONN*)effF9_mes_en_13_4, effF9_mes_en_13_5 }, { (const CONN*)effF9_mes_en_13_6, effF9_mes_en_13_7 },
+    { (const CONN*)effF9_mes_en_13_8, effF9_mes_en_13_9 }, { (const CONN*)effF9_mes_en_13_10, effF9_mes_en_13_11 },
+    { effF9_mes_en_13_12, effF9_mes_en_13_13 }, { (const CONN*)effF9_mes_en_13_14, effF9_mes_en_13_15 },
+    { (const CONN*)effF9_mes_en_13_16, effF9_mes_en_13_17 }, { (const CONN*)effF9_mes_en_13_18, effF9_mes_en_13_19 },
+    { (const CONN*)effF9_mes_en_13_20, effF9_mes_en_13_21 }, { (const CONN*)effF9_mes_en_13_22, effF9_mes_en_13_23 },
+    { (const CONN*)effF9_mes_en_13_24, effF9_mes_en_13_25 }, { (const CONN*)effF9_mes_en_13_26, effF9_mes_en_13_27 },
 };
 
 const u32 effF9_mes_en_13_0[80] = {
@@ -23008,12 +23008,12 @@ const u32 effF9_mes_en_13_10[82] = {
     0x88FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_en_13_12[34] = {
-    0x780000, 0x9EB6, 0x800000, 0x9E87, 0x880000, 0x9E80, 0x900000, 0x9E93,
-    0x980000, 0x9E9B, 0xA80000, 0x9EB3, 0xB00000, 0x9E87, 0xB80000, 0x9E84,
-    0xC80000, 0x9E84, 0xD00000, 0x9E8C, 0xD80000, 0x9E8F, 0xE00000, 0x9E84,
-    0xE80000, 0x9E91, 0xF00000, 0x9E8E, 0xF80000, 0x9E91, 0x1000000, 0x9E9B,
-    0x1080000, 0x9E9A,
+const CONN effF9_mes_en_13_12[17] = {
+    { 120, 0, 0, 0x9EB6 }, { 128, 0, 0, 0x9E87 }, { 136, 0, 0, 0x9E80 }, { 144, 0, 0, 0x9E93 },
+    { 152, 0, 0, 0x9E9B }, { 168, 0, 0, 0x9EB3 }, { 176, 0, 0, 0x9E87 }, { 184, 0, 0, 0x9E84 },
+    { 200, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E8C }, { 216, 0, 0, 0x9E8F }, { 224, 0, 0, 0x9E84 },
+    { 232, 0, 0, 0x9E91 }, { 240, 0, 0, 0x9E8E }, { 248, 0, 0, 0x9E91 }, { 256, 0, 0, 0x9E9B },
+    { 264, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_13_14[136] = {
@@ -23174,10 +23174,10 @@ const u16 effF9_mes_en_13_27[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_14[8] = {
-    { (const CONN*)effF9_mes_en_14_0, (const u16*)effF9_mes_en_14_1 }, { (const CONN*)effF9_mes_en_14_0, (const u16*)effF9_mes_en_14_3 },
-    { (const CONN*)effF9_mes_en_14_4, (const u16*)effF9_mes_en_14_5 }, { (const CONN*)effF9_mes_en_14_6, (const u16*)effF9_mes_en_14_7 },
-    { (const CONN*)effF9_mes_en_14_8, (const u16*)effF9_mes_en_14_9 }, { (const CONN*)effF9_mes_en_14_10, (const u16*)effF9_mes_en_14_11 },
-    { (const CONN*)effF9_mes_en_14_12, (const u16*)effF9_mes_en_14_13 }, { (const CONN*)effF9_mes_en_14_14, (const u16*)effF9_mes_en_14_15 },
+    { (const CONN*)effF9_mes_en_14_0, effF9_mes_en_14_1 }, { (const CONN*)effF9_mes_en_14_0, effF9_mes_en_14_3 },
+    { (const CONN*)effF9_mes_en_14_4, effF9_mes_en_14_5 }, { effF9_mes_en_14_6, effF9_mes_en_14_7 },
+    { (const CONN*)effF9_mes_en_14_8, effF9_mes_en_14_9 }, { (const CONN*)effF9_mes_en_14_10, effF9_mes_en_14_11 },
+    { (const CONN*)effF9_mes_en_14_12, effF9_mes_en_14_13 }, { (const CONN*)effF9_mes_en_14_14, effF9_mes_en_14_15 },
 };
 
 const u32 effF9_mes_en_14_0[78] = {
@@ -23202,9 +23202,9 @@ const u32 effF9_mes_en_14_4[42] = {
     0x1200000, 0x9E9C,
 };
 
-const u32 effF9_mes_en_14_6[14] = {
-    0xA80000, 0x9EA1, 0xB00000, 0x9E84, 0xB80000, 0x9E87, 0xC00000, 0x9E8E,
-    0xC80000, 0x9E8B, 0xD00000, 0x9E83, 0xD80000, 0x9E9A,
+const CONN effF9_mes_en_14_6[7] = {
+    { 168, 0, 0, 0x9EA1 }, { 176, 0, 0, 0x9E84 }, { 184, 0, 0, 0x9E87 }, { 192, 0, 0, 0x9E8E },
+    { 200, 0, 0, 0x9E8B }, { 208, 0, 0, 0x9E83 }, { 216, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_en_14_8[18] = {
@@ -23292,22 +23292,22 @@ const u16 effF9_mes_en_14_15[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_0[18] = {
-    { (const CONN*)effF9_mes_es_0_0, (const u16*)effF9_mes_es_0_1 }, { (const CONN*)effF9_mes_es_0_0, (const u16*)effF9_mes_es_0_3 },
-    { (const CONN*)effF9_mes_es_0_4, (const u16*)effF9_mes_es_0_5 }, { (const CONN*)effF9_mes_es_0_6, (const u16*)effF9_mes_es_0_7 },
-    { (const CONN*)effF9_mes_es_0_8, (const u16*)effF9_mes_es_0_9 }, { (const CONN*)effF9_mes_es_0_10, (const u16*)effF9_mes_es_0_11 },
-    { (const CONN*)effF9_mes_es_0_12, (const u16*)effF9_mes_es_0_13 }, { (const CONN*)effF9_mes_es_0_14, (const u16*)effF9_mes_es_0_15 },
-    { (const CONN*)effF9_mes_es_0_16, (const u16*)effF9_mes_es_0_17 }, { (const CONN*)effF9_mes_es_0_18, (const u16*)effF9_mes_es_0_19 },
-    { (const CONN*)effF9_mes_es_0_20, (const u16*)effF9_mes_es_0_21 }, { (const CONN*)effF9_mes_es_0_22, (const u16*)effF9_mes_es_0_23 },
-    { (const CONN*)effF9_mes_es_0_24, (const u16*)effF9_mes_es_0_25 }, { (const CONN*)effF9_mes_es_0_26, (const u16*)effF9_mes_es_0_27 },
-    { (const CONN*)effF9_mes_es_0_28, (const u16*)effF9_mes_es_0_29 }, { (const CONN*)effF9_mes_es_0_30, (const u16*)effF9_mes_es_0_31 },
-    { (const CONN*)effF9_mes_es_0_32, (const u16*)effF9_mes_es_0_33 }, { (const CONN*)effF9_mes_es_0_34, (const u16*)effF9_mes_es_0_35 },
+    { effF9_mes_es_0_0, effF9_mes_es_0_1 }, { effF9_mes_es_0_0, effF9_mes_es_0_3 },
+    { (const CONN*)effF9_mes_es_0_4, effF9_mes_es_0_5 }, { effF9_mes_es_0_6, effF9_mes_es_0_7 },
+    { (const CONN*)effF9_mes_es_0_8, effF9_mes_es_0_9 }, { (const CONN*)effF9_mes_es_0_10, effF9_mes_es_0_11 },
+    { (const CONN*)effF9_mes_es_0_12, effF9_mes_es_0_13 }, { (const CONN*)effF9_mes_es_0_14, effF9_mes_es_0_15 },
+    { (const CONN*)effF9_mes_es_0_16, effF9_mes_es_0_17 }, { (const CONN*)effF9_mes_es_0_18, effF9_mes_es_0_19 },
+    { effF9_mes_es_0_20, effF9_mes_es_0_21 }, { effF9_mes_es_0_22, effF9_mes_es_0_23 },
+    { (const CONN*)effF9_mes_es_0_24, effF9_mes_es_0_25 }, { (const CONN*)effF9_mes_es_0_26, effF9_mes_es_0_27 },
+    { (const CONN*)effF9_mes_es_0_28, effF9_mes_es_0_29 }, { (const CONN*)effF9_mes_es_0_30, effF9_mes_es_0_31 },
+    { (const CONN*)effF9_mes_es_0_32, effF9_mes_es_0_33 }, { (const CONN*)effF9_mes_es_0_34, effF9_mes_es_0_35 },
 };
 
-const u32 effF9_mes_es_0_0[26] = {
-    0x780000, 0x9EB5, 0x800000, 0x9E80, 0x880000, 0x9E92, 0x980000, 0x9E80,
-    0xA80000, 0x9E88, 0xB00000, 0x9E91, 0xC00000, 0x9E93, 0xC80000, 0x9E91,
-    0xD00000, 0x9E80, 0xD80000, 0x9E92, 0xE80000, 0x9F3B, 0xF00000, 0x9E8B,
-    0xF80000, 0x9E9B,
+const CONN effF9_mes_es_0_0[13] = {
+    { 120, 0, 0, 0x9EB5 }, { 128, 0, 0, 0x9E80 }, { 136, 0, 0, 0x9E92 }, { 152, 0, 0, 0x9E80 },
+    { 168, 0, 0, 0x9E88 }, { 176, 0, 0, 0x9E91 }, { 192, 0, 0, 0x9E93 }, { 200, 0, 0, 0x9E91 },
+    { 208, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9E92 }, { 232, 0, 0, 0x9F3B }, { 240, 0, 0, 0x9E8B },
+    { 248, 0, 0, 0x9E9B },
 };
 
 const u32 effF9_mes_es_0_4[88] = {
@@ -23324,11 +23324,11 @@ const u32 effF9_mes_es_0_4[88] = {
     0x38FFF0, 0x9E88, 0x40FFF0, 0x9E9C, 0x48FFF0, 0x9E9C, 0x50FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_es_0_6[32] = {
-    0x780000, 0x9EAD, 0x800000, 0x9E8E, 0x900000, 0x9E8B, 0x980000, 0x9E8E,
-    0xA80000, 0x9E84, 0xB00000, 0x9E8D, 0xB80000, 0x9E93, 0xC00000, 0x9E88,
-    0xC80000, 0x9E84, 0xD00000, 0x9E8D, 0xD80000, 0x9E83, 0xE00000, 0x9E84,
-    0xE80000, 0x9E92, 0xF00000, 0x9E9C, 0xF80000, 0x9E9C, 0x1000000, 0x9E9C,
+const CONN effF9_mes_es_0_6[16] = {
+    { 120, 0, 0, 0x9EAD }, { 128, 0, 0, 0x9E8E }, { 144, 0, 0, 0x9E8B }, { 152, 0, 0, 0x9E8E },
+    { 168, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E8D }, { 184, 0, 0, 0x9E93 }, { 192, 0, 0, 0x9E88 },
+    { 200, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E8D }, { 216, 0, 0, 0x9E83 }, { 224, 0, 0, 0x9E84 },
+    { 232, 0, 0, 0x9E92 }, { 240, 0, 0, 0x9E9C }, { 248, 0, 0, 0x9E9C }, { 256, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_es_0_8[72] = {
@@ -23409,16 +23409,16 @@ const u32 effF9_mes_es_0_18[50] = {
     0x1280000, 0x9E9C,
 };
 
-const u32 effF9_mes_es_0_20[10] = {
-    0xA80000, 0x9EA0, 0xB00000, 0x9E8B, 0xB80000, 0x9E84, 0xC00000, 0x9E97,
-    0xC80000, 0x9E9A,
+const CONN effF9_mes_es_0_20[5] = {
+    { 168, 0, 0, 0x9EA0 }, { 176, 0, 0, 0x9E8B }, { 184, 0, 0, 0x9E84 }, { 192, 0, 0, 0x9E97 },
+    { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_0_22[32] = {
-    0x800000, 0x9EA1, 0x880000, 0x9E88, 0x900000, 0x9E84, 0x980000, 0x9E8D,
-    0xA00000, 0x9E95, 0xA80000, 0x9E84, 0xB00000, 0x9E8D, 0xB80000, 0x9E88,
-    0xC00000, 0x9E83, 0xC80000, 0x9E8E, 0xD00000, 0x9E9D, 0xD80000, 0x9EA0,
-    0xE00000, 0x9E8B, 0xE80000, 0x9E84, 0xF00000, 0x9E97, 0xF80000, 0x9E9A,
+const CONN effF9_mes_es_0_22[16] = {
+    { 128, 0, 0, 0x9EA1 }, { 136, 0, 0, 0x9E88 }, { 144, 0, 0, 0x9E84 }, { 152, 0, 0, 0x9E8D },
+    { 160, 0, 0, 0x9E95 }, { 168, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E8D }, { 184, 0, 0, 0x9E88 },
+    { 192, 0, 0, 0x9E83 }, { 200, 0, 0, 0x9E8E }, { 208, 0, 0, 0x9E9D }, { 216, 0, 0, 0x9EA0 },
+    { 224, 0, 0, 0x9E8B }, { 232, 0, 0, 0x9E84 }, { 240, 0, 0, 0x9E97 }, { 248, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_0_24[100] = {
@@ -23591,12 +23591,12 @@ const u16 effF9_mes_es_0_35[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_2[11] = {
-    { (const CONN*)effF9_mes_es_2_0, (const u16*)effF9_mes_es_2_1 }, { (const CONN*)effF9_mes_es_2_0, (const u16*)effF9_mes_es_2_3 },
-    { (const CONN*)effF9_mes_es_2_4, (const u16*)effF9_mes_es_2_5 }, { (const CONN*)effF9_mes_es_2_6, (const u16*)effF9_mes_es_2_7 },
-    { (const CONN*)effF9_mes_es_2_8, (const u16*)effF9_mes_es_2_9 }, { (const CONN*)effF9_mes_es_2_10, (const u16*)effF9_mes_es_2_11 },
-    { (const CONN*)effF9_mes_es_2_12, (const u16*)effF9_mes_es_2_13 }, { (const CONN*)effF9_mes_es_2_14, (const u16*)effF9_mes_es_2_15 },
-    { (const CONN*)effF9_mes_es_2_16, (const u16*)effF9_mes_es_2_17 }, { (const CONN*)effF9_mes_es_2_18, (const u16*)effF9_mes_es_2_19 },
-    { (const CONN*)effF9_mes_es_2_20, (const u16*)effF9_mes_es_2_21 },
+    { (const CONN*)effF9_mes_es_2_0, effF9_mes_es_2_1 }, { (const CONN*)effF9_mes_es_2_0, effF9_mes_es_2_3 },
+    { (const CONN*)effF9_mes_es_2_4, effF9_mes_es_2_5 }, { (const CONN*)effF9_mes_es_2_6, effF9_mes_es_2_7 },
+    { (const CONN*)effF9_mes_es_2_8, effF9_mes_es_2_9 }, { (const CONN*)effF9_mes_es_2_10, effF9_mes_es_2_11 },
+    { (const CONN*)effF9_mes_es_2_12, effF9_mes_es_2_13 }, { (const CONN*)effF9_mes_es_2_14, effF9_mes_es_2_15 },
+    { (const CONN*)effF9_mes_es_2_16, effF9_mes_es_2_17 }, { effF9_mes_es_2_18, effF9_mes_es_2_19 },
+    { (const CONN*)effF9_mes_es_2_20, effF9_mes_es_2_21 },
 };
 
 const u32 effF9_mes_es_2_0[124] = {
@@ -23704,12 +23704,12 @@ const u32 effF9_mes_es_2_16[68] = {
     0x1480000, 0x9E9C, 0x1500000, 0x9E9C,
 };
 
-const u32 effF9_mes_es_2_18[40] = {
-    0x100000, 0x9EA0, 0x180000, 0x9E86, 0x200000, 0x9E94, 0x280000, 0x9E80,
-    0x300000, 0x9E91, 0x380000, 0x9E83, 0x400000, 0x9E84, 0x480000, 0x9E8D,
-    0x580000, 0x9E86, 0x600000, 0x9E94, 0x680000, 0x9E84, 0x700000, 0x9E91,
-    0x780000, 0x9E91, 0x800000, 0x9E84, 0x880000, 0x9E91, 0x900000, 0x9E8E,
-    0x980000, 0x9E92, 0xA00000, 0x9E9C, 0xA80000, 0x9E9C, 0xB00000, 0x9E9C,
+const CONN effF9_mes_es_2_18[20] = {
+    { 16, 0, 0, 0x9EA0 }, { 24, 0, 0, 0x9E86 }, { 32, 0, 0, 0x9E94 }, { 40, 0, 0, 0x9E80 },
+    { 48, 0, 0, 0x9E91 }, { 56, 0, 0, 0x9E83 }, { 64, 0, 0, 0x9E84 }, { 72, 0, 0, 0x9E8D },
+    { 88, 0, 0, 0x9E86 }, { 96, 0, 0, 0x9E94 }, { 104, 0, 0, 0x9E84 }, { 112, 0, 0, 0x9E91 },
+    { 120, 0, 0, 0x9E91 }, { 128, 0, 0, 0x9E84 }, { 136, 0, 0, 0x9E91 }, { 144, 0, 0, 0x9E8E },
+    { 152, 0, 0, 0x9E92 }, { 160, 0, 0, 0x9E9C }, { 168, 0, 0, 0x9E9C }, { 176, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_es_2_20[80] = {
@@ -23770,27 +23770,27 @@ const u16 effF9_mes_es_2_21[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_3[16] = {
-    { (const CONN*)effF9_mes_es_3_0, (const u16*)effF9_mes_es_3_1 }, { (const CONN*)effF9_mes_es_3_0, (const u16*)effF9_mes_es_3_3 },
-    { (const CONN*)effF9_mes_es_3_4, (const u16*)effF9_mes_es_3_5 }, { (const CONN*)effF9_mes_es_3_6, (const u16*)effF9_mes_es_3_7 },
-    { (const CONN*)effF9_mes_es_3_8, (const u16*)effF9_mes_es_3_9 }, { (const CONN*)effF9_mes_es_3_10, (const u16*)effF9_mes_es_3_11 },
-    { (const CONN*)effF9_mes_es_3_12, (const u16*)effF9_mes_es_3_13 }, { (const CONN*)effF9_mes_es_3_14, (const u16*)effF9_mes_es_3_15 },
-    { (const CONN*)effF9_mes_es_3_16, (const u16*)effF9_mes_es_3_17 }, { (const CONN*)effF9_mes_es_3_18, (const u16*)effF9_mes_es_3_19 },
-    { (const CONN*)effF9_mes_es_3_20, (const u16*)effF9_mes_es_3_21 }, { (const CONN*)effF9_mes_es_3_22, (const u16*)effF9_mes_es_3_23 },
-    { (const CONN*)effF9_mes_es_3_24, (const u16*)effF9_mes_es_3_25 }, { (const CONN*)effF9_mes_es_3_26, (const u16*)effF9_mes_es_3_27 },
-    { (const CONN*)effF9_mes_es_3_28, (const u16*)effF9_mes_es_3_29 }, { (const CONN*)effF9_mes_es_3_30, (const u16*)effF9_mes_es_3_31 },
+    { effF9_mes_es_3_0, effF9_mes_es_3_1 }, { effF9_mes_es_3_0, effF9_mes_es_3_3 },
+    { effF9_mes_es_3_4, effF9_mes_es_3_5 }, { effF9_mes_es_3_6, effF9_mes_es_3_7 },
+    { (const CONN*)effF9_mes_es_3_8, effF9_mes_es_3_9 }, { effF9_mes_es_3_10, effF9_mes_es_3_11 },
+    { (const CONN*)effF9_mes_es_3_12, effF9_mes_es_3_13 }, { (const CONN*)effF9_mes_es_3_14, effF9_mes_es_3_15 },
+    { effF9_mes_es_3_16, effF9_mes_es_3_17 }, { (const CONN*)effF9_mes_es_3_18, effF9_mes_es_3_19 },
+    { (const CONN*)effF9_mes_es_3_20, effF9_mes_es_3_21 }, { effF9_mes_es_3_22, effF9_mes_es_3_23 },
+    { (const CONN*)effF9_mes_es_3_24, effF9_mes_es_3_25 }, { (const CONN*)effF9_mes_es_3_26, effF9_mes_es_3_27 },
+    { (const CONN*)effF9_mes_es_3_28, effF9_mes_es_3_29 }, { (const CONN*)effF9_mes_es_3_30, effF9_mes_es_3_31 },
 };
 
-const u32 effF9_mes_es_3_0[6] = {
-    0xB80000, 0x9EA7, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_es_3_0[3] = {
+    { 184, 0, 0, 0x9EA7 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_3_4[6] = {
-    0xB80000, 0x9EB8, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_es_3_4[3] = {
+    { 184, 0, 0, 0x9EB8 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_3_6[10] = {
-    0xB00000, 0x9EAC, 0xB80000, 0x9E88, 0xC00000, 0x9E91, 0xC80000, 0x9E80,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_es_3_6[5] = {
+    { 176, 0, 0, 0x9EAC }, { 184, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E91 }, { 200, 0, 0, 0x9E80 },
+    { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_3_8[36] = {
@@ -23801,11 +23801,11 @@ const u32 effF9_mes_es_3_8[36] = {
     0x1080000, 0x9E84, 0x1100000, 0x9E9A,
 };
 
-const u32 effF9_mes_es_3_10[30] = {
-    0x800000, 0x9EA4, 0x880000, 0x9E92, 0x900000, 0x9E93, 0x980000, 0x9F33,
-    0xA00000, 0x9E8D, 0xB00000, 0x9E83, 0xB80000, 0x9E84, 0xC80000, 0x9E91,
-    0xD00000, 0x9E84, 0xD80000, 0x9E86, 0xE00000, 0x9E91, 0xE80000, 0x9E84,
-    0xF00000, 0x9E92, 0xF80000, 0x9E8E, 0x1000000, 0x9E9A,
+const CONN effF9_mes_es_3_10[15] = {
+    { 128, 0, 0, 0x9EA4 }, { 136, 0, 0, 0x9E92 }, { 144, 0, 0, 0x9E93 }, { 152, 0, 0, 0x9F33 },
+    { 160, 0, 0, 0x9E8D }, { 176, 0, 0, 0x9E83 }, { 184, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E91 },
+    { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E86 }, { 224, 0, 0, 0x9E91 }, { 232, 0, 0, 0x9E84 },
+    { 240, 0, 0, 0x9E92 }, { 248, 0, 0, 0x9E8E }, { 256, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_3_12[28] = {
@@ -23827,10 +23827,10 @@ const u32 effF9_mes_es_3_14[68] = {
     0x1500000, 0x9E8E, 0x1580000, 0x9E9A,
 };
 
-const u32 effF9_mes_es_3_16[24] = {
-    0x880000, 0x9EB0, 0x900000, 0x9E94, 0x980000, 0x9F3B, 0xA80000, 0x9E87,
-    0xB00000, 0x9E80, 0xC00000, 0x9E8F, 0xC80000, 0x9E80, 0xD00000, 0x9E92,
-    0xD80000, 0x9E80, 0xE00000, 0x9E83, 0xE80000, 0x9E8E, 0xF00000, 0x9E9B,
+const CONN effF9_mes_es_3_16[12] = {
+    { 136, 0, 0, 0x9EB0 }, { 144, 0, 0, 0x9E94 }, { 152, 0, 0, 0x9F3B }, { 168, 0, 0, 0x9E87 },
+    { 176, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E8F }, { 200, 0, 0, 0x9E80 }, { 208, 0, 0, 0x9E92 },
+    { 216, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E83 }, { 232, 0, 0, 0x9E8E }, { 240, 0, 0, 0x9E9B },
 };
 
 const u32 effF9_mes_es_3_18[68] = {
@@ -23859,13 +23859,13 @@ const u32 effF9_mes_es_3_20[82] = {
     0x58FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_es_3_22[42] = {
-    0x600000, 0x9EB2, 0x680000, 0x9E88, 0x700000, 0x9E9D, 0x800000, 0x9E92,
-    0x880000, 0x9E84, 0x900000, 0x9E86, 0x980000, 0x9E94, 0xA00000, 0x9E91,
-    0xA80000, 0x9E8E, 0xB00000, 0x9E9A, 0xC00000, 0x9EB2, 0xC80000, 0x9E88,
-    0xD00000, 0x9E84, 0xD80000, 0x9E8D, 0xE00000, 0x9E93, 0xE80000, 0x9E84,
-    0xF80000, 0x9F3B, 0x1000000, 0x9E92, 0x1080000, 0x9E93, 0x1100000, 0x9E8E,
-    0x1180000, 0x9E9A,
+const CONN effF9_mes_es_3_22[21] = {
+    { 96, 0, 0, 0x9EB2 }, { 104, 0, 0, 0x9E88 }, { 112, 0, 0, 0x9E9D }, { 128, 0, 0, 0x9E92 },
+    { 136, 0, 0, 0x9E84 }, { 144, 0, 0, 0x9E86 }, { 152, 0, 0, 0x9E94 }, { 160, 0, 0, 0x9E91 },
+    { 168, 0, 0, 0x9E8E }, { 176, 0, 0, 0x9E9A }, { 192, 0, 0, 0x9EB2 }, { 200, 0, 0, 0x9E88 },
+    { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E8D }, { 224, 0, 0, 0x9E93 }, { 232, 0, 0, 0x9E84 },
+    { 248, 0, 0, 0x9F3B }, { 256, 0, 0, 0x9E92 }, { 264, 0, 0, 0x9E93 }, { 272, 0, 0, 0x9E8E },
+    { 280, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_3_24[28] = {
@@ -23984,12 +23984,12 @@ const u16 effF9_mes_es_3_31[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_4[11] = {
-    { (const CONN*)effF9_mes_es_4_0, (const u16*)effF9_mes_es_4_1 }, { (const CONN*)effF9_mes_es_4_0, (const u16*)effF9_mes_es_4_3 },
-    { (const CONN*)effF9_mes_es_4_4, (const u16*)effF9_mes_es_4_5 }, { (const CONN*)effF9_mes_es_4_6, (const u16*)effF9_mes_es_4_7 },
-    { (const CONN*)effF9_mes_es_4_8, (const u16*)effF9_mes_es_4_9 }, { (const CONN*)effF9_mes_es_4_10, (const u16*)effF9_mes_es_4_11 },
-    { (const CONN*)effF9_mes_es_4_12, (const u16*)effF9_mes_es_4_13 }, { (const CONN*)effF9_mes_es_4_14, (const u16*)effF9_mes_es_4_15 },
-    { (const CONN*)effF9_mes_es_4_16, (const u16*)effF9_mes_es_4_17 }, { (const CONN*)effF9_mes_es_4_18, (const u16*)effF9_mes_es_4_19 },
-    { (const CONN*)effF9_mes_es_4_20, (const u16*)effF9_mes_es_4_21 },
+    { (const CONN*)effF9_mes_es_4_0, effF9_mes_es_4_1 }, { (const CONN*)effF9_mes_es_4_0, effF9_mes_es_4_3 },
+    { (const CONN*)effF9_mes_es_4_4, effF9_mes_es_4_5 }, { effF9_mes_es_4_6, effF9_mes_es_4_7 },
+    { (const CONN*)effF9_mes_es_4_8, effF9_mes_es_4_9 }, { (const CONN*)effF9_mes_es_4_10, effF9_mes_es_4_11 },
+    { (const CONN*)effF9_mes_es_4_12, effF9_mes_es_4_13 }, { (const CONN*)effF9_mes_es_4_14, effF9_mes_es_4_15 },
+    { effF9_mes_es_4_16, effF9_mes_es_4_17 }, { effF9_mes_es_4_18, effF9_mes_es_4_19 },
+    { (const CONN*)effF9_mes_es_4_20, effF9_mes_es_4_21 },
 };
 
 const u32 effF9_mes_es_4_0[108] = {
@@ -24024,9 +24024,9 @@ const u32 effF9_mes_es_4_4[94] = {
     0x50FFF0, 0x9E93, 0x58FFF0, 0x9F3F, 0x60FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_es_4_6[16] = {
-    0xA00000, 0x9EB2, 0xA80000, 0x9E88, 0xB80000, 0x9E92, 0xC00000, 0x9E84,
-    0xC80000, 0x9F42, 0xD00000, 0x9E8E, 0xD80000, 0x9E91, 0xE00000, 0x9E9C,
+const CONN effF9_mes_es_4_6[8] = {
+    { 160, 0, 0, 0x9EB2 }, { 168, 0, 0, 0x9E88 }, { 184, 0, 0, 0x9E92 }, { 192, 0, 0, 0x9E84 },
+    { 200, 0, 0, 0x9F42 }, { 208, 0, 0, 0x9E8E }, { 216, 0, 0, 0x9E91 }, { 224, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_es_4_8[96] = {
@@ -24100,15 +24100,15 @@ const u32 effF9_mes_es_4_14[142] = {
     0x110FFF0, 0x9E9C, 0x118FFF0, 0x9E9C, 0x120FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_es_4_16[22] = {
-    0x900000, 0x9EA4, 0x980000, 0x9E92, 0xA80000, 0x9E8F, 0xB00000, 0x9E84,
-    0xB80000, 0x9E91, 0xC00000, 0x9E85, 0xC80000, 0x9E84, 0xD00000, 0x9E82,
-    0xD80000, 0x9E93, 0xE00000, 0x9E8E, 0xE80000, 0x9E9A,
+const CONN effF9_mes_es_4_16[11] = {
+    { 144, 0, 0, 0x9EA4 }, { 152, 0, 0, 0x9E92 }, { 168, 0, 0, 0x9E8F }, { 176, 0, 0, 0x9E84 },
+    { 184, 0, 0, 0x9E91 }, { 192, 0, 0, 0x9E85 }, { 200, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E82 },
+    { 216, 0, 0, 0x9E93 }, { 224, 0, 0, 0x9E8E }, { 232, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_4_18[12] = {
-    0xA80000, 0x9EAE, 0xB00000, 0x9E8E, 0xB80000, 0x9E8E, 0xC00000, 0x9E8F,
-    0xC80000, 0x9E92, 0xD00000, 0x9E9A,
+const CONN effF9_mes_es_4_18[6] = {
+    { 168, 0, 0, 0x9EAE }, { 176, 0, 0, 0x9E8E }, { 184, 0, 0, 0x9E8E }, { 192, 0, 0, 0x9E8F },
+    { 200, 0, 0, 0x9E92 }, { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_4_20[28] = {
@@ -24163,13 +24163,13 @@ const u16 effF9_mes_es_4_21[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_5[13] = {
-    { (const CONN*)effF9_mes_es_5_0, (const u16*)effF9_mes_es_5_1 }, { (const CONN*)effF9_mes_es_5_0, (const u16*)effF9_mes_es_5_3 },
-    { (const CONN*)effF9_mes_es_5_4, (const u16*)effF9_mes_es_5_5 }, { (const CONN*)effF9_mes_es_5_6, (const u16*)effF9_mes_es_5_7 },
-    { (const CONN*)effF9_mes_es_5_8, (const u16*)effF9_mes_es_5_9 }, { (const CONN*)effF9_mes_es_5_10, (const u16*)effF9_mes_es_5_11 },
-    { (const CONN*)effF9_mes_es_5_12, (const u16*)effF9_mes_es_5_13 }, { (const CONN*)effF9_mes_es_5_14, (const u16*)effF9_mes_es_5_15 },
-    { (const CONN*)effF9_mes_es_5_16, (const u16*)effF9_mes_es_5_17 }, { (const CONN*)effF9_mes_es_5_18, (const u16*)effF9_mes_es_5_19 },
-    { (const CONN*)effF9_mes_es_5_20, (const u16*)effF9_mes_es_5_21 }, { (const CONN*)effF9_mes_es_5_22, (const u16*)effF9_mes_es_5_23 },
-    { (const CONN*)effF9_mes_es_5_24, (const u16*)effF9_mes_es_5_25 },
+    { (const CONN*)effF9_mes_es_5_0, effF9_mes_es_5_1 }, { (const CONN*)effF9_mes_es_5_0, effF9_mes_es_5_3 },
+    { (const CONN*)effF9_mes_es_5_4, effF9_mes_es_5_5 }, { (const CONN*)effF9_mes_es_5_6, effF9_mes_es_5_7 },
+    { (const CONN*)effF9_mes_es_5_8, effF9_mes_es_5_9 }, { (const CONN*)effF9_mes_es_5_10, effF9_mes_es_5_11 },
+    { effF9_mes_es_5_12, effF9_mes_es_5_13 }, { (const CONN*)effF9_mes_es_5_14, effF9_mes_es_5_15 },
+    { (const CONN*)effF9_mes_es_5_16, effF9_mes_es_5_17 }, { effF9_mes_es_5_18, effF9_mes_es_5_19 },
+    { effF9_mes_es_5_20, effF9_mes_es_5_21 }, { effF9_mes_es_5_22, effF9_mes_es_5_23 },
+    { effF9_mes_es_5_24, effF9_mes_es_5_25 },
 };
 
 const u32 effF9_mes_es_5_0[66] = {
@@ -24240,8 +24240,8 @@ const u32 effF9_mes_es_5_10[106] = {
     0x110FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_es_5_12[4] = {
-    0xD80000, 0x9E52, 0xE00000, 0x9E9D,
+const CONN effF9_mes_es_5_12[2] = {
+    { 216, 0, 0, 0x9E52 }, { 224, 0, 0, 0x9E9D },
 };
 
 const u32 effF9_mes_es_5_14[62] = {
@@ -24272,20 +24272,20 @@ const u32 effF9_mes_es_5_16[112] = {
     0xE8FFF0, 0x9E84, 0xF0FFF0, 0x9E9C, 0xF8FFF0, 0x9E9C, 0x100FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_es_5_18[4] = {
-    0x980000, 0x9E56, 0xA00000, 0x9E9D,
+const CONN effF9_mes_es_5_18[2] = {
+    { 152, 0, 0, 0x9E56 }, { 160, 0, 0, 0x9E9D },
 };
 
-const u32 effF9_mes_es_5_20[4] = {
-    0xA80000, 0x9E55, 0xB00000, 0x9E9D,
+const CONN effF9_mes_es_5_20[2] = {
+    { 168, 0, 0, 0x9E55 }, { 176, 0, 0, 0x9E9D },
 };
 
-const u32 effF9_mes_es_5_22[4] = {
-    0xB80000, 0x9E54, 0xC00000, 0x9E9D,
+const CONN effF9_mes_es_5_22[2] = {
+    { 184, 0, 0, 0x9E54 }, { 192, 0, 0, 0x9E9D },
 };
 
-const u32 effF9_mes_es_5_24[4] = {
-    0xC80000, 0x9E53, 0xD00000, 0x9E9D,
+const CONN effF9_mes_es_5_24[2] = {
+    { 200, 0, 0, 0x9E53 }, { 208, 0, 0, 0x9E9D },
 };
 
 const u16 effF9_mes_es_5_1[2] = {
@@ -24341,19 +24341,19 @@ const u16 effF9_mes_es_5_25[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_6[25] = {
-    { (const CONN*)effF9_mes_es_6_0, (const u16*)effF9_mes_es_6_1 }, { (const CONN*)effF9_mes_es_6_0, (const u16*)effF9_mes_es_6_3 },
-    { (const CONN*)effF9_mes_es_6_4, (const u16*)effF9_mes_es_6_5 }, { (const CONN*)effF9_mes_es_6_6, (const u16*)effF9_mes_es_6_7 },
-    { (const CONN*)effF9_mes_es_6_8, (const u16*)effF9_mes_es_6_9 }, { (const CONN*)effF9_mes_es_6_10, (const u16*)effF9_mes_es_6_11 },
-    { (const CONN*)effF9_mes_es_6_12, (const u16*)effF9_mes_es_6_13 }, { (const CONN*)effF9_mes_es_6_14, (const u16*)effF9_mes_es_6_15 },
-    { (const CONN*)effF9_mes_es_6_16, (const u16*)effF9_mes_es_6_17 }, { (const CONN*)effF9_mes_es_6_18, (const u16*)effF9_mes_es_6_19 },
-    { (const CONN*)effF9_mes_es_6_20, (const u16*)effF9_mes_es_6_21 }, { (const CONN*)effF9_mes_es_6_22, (const u16*)effF9_mes_es_6_23 },
-    { (const CONN*)effF9_mes_es_6_24, (const u16*)effF9_mes_es_6_25 }, { (const CONN*)effF9_mes_es_6_26, (const u16*)effF9_mes_es_6_27 },
-    { (const CONN*)effF9_mes_es_6_28, (const u16*)effF9_mes_es_6_29 }, { (const CONN*)effF9_mes_es_6_30, (const u16*)effF9_mes_es_6_31 },
-    { (const CONN*)effF9_mes_es_6_32, (const u16*)effF9_mes_es_6_33 }, { (const CONN*)effF9_mes_es_6_34, (const u16*)effF9_mes_es_6_35 },
-    { (const CONN*)effF9_mes_es_6_36, (const u16*)effF9_mes_es_6_37 }, { (const CONN*)effF9_mes_es_6_38, (const u16*)effF9_mes_es_6_39 },
-    { (const CONN*)effF9_mes_es_6_40, (const u16*)effF9_mes_es_6_41 }, { (const CONN*)effF9_mes_es_6_42, (const u16*)effF9_mes_es_6_43 },
-    { (const CONN*)effF9_mes_es_6_44, (const u16*)effF9_mes_es_6_45 }, { (const CONN*)effF9_mes_es_6_46, (const u16*)effF9_mes_es_6_47 },
-    { (const CONN*)effF9_mes_es_6_48, (const u16*)effF9_mes_es_6_49 },
+    { (const CONN*)effF9_mes_es_6_0, effF9_mes_es_6_1 }, { (const CONN*)effF9_mes_es_6_0, effF9_mes_es_6_3 },
+    { (const CONN*)effF9_mes_es_6_4, effF9_mes_es_6_5 }, { (const CONN*)effF9_mes_es_6_6, effF9_mes_es_6_7 },
+    { (const CONN*)effF9_mes_es_6_8, effF9_mes_es_6_9 }, { (const CONN*)effF9_mes_es_6_10, effF9_mes_es_6_11 },
+    { (const CONN*)effF9_mes_es_6_12, effF9_mes_es_6_13 }, { (const CONN*)effF9_mes_es_6_14, effF9_mes_es_6_15 },
+    { (const CONN*)effF9_mes_es_6_16, effF9_mes_es_6_17 }, { (const CONN*)effF9_mes_es_6_18, effF9_mes_es_6_19 },
+    { (const CONN*)effF9_mes_es_6_20, effF9_mes_es_6_21 }, { (const CONN*)effF9_mes_es_6_22, effF9_mes_es_6_23 },
+    { (const CONN*)effF9_mes_es_6_24, effF9_mes_es_6_25 }, { (const CONN*)effF9_mes_es_6_26, effF9_mes_es_6_27 },
+    { (const CONN*)effF9_mes_es_6_28, effF9_mes_es_6_29 }, { effF9_mes_es_6_30, effF9_mes_es_6_31 },
+    { effF9_mes_es_6_32, effF9_mes_es_6_33 }, { (const CONN*)effF9_mes_es_6_34, effF9_mes_es_6_35 },
+    { (const CONN*)effF9_mes_es_6_36, effF9_mes_es_6_37 }, { (const CONN*)effF9_mes_es_6_38, effF9_mes_es_6_39 },
+    { (const CONN*)effF9_mes_es_6_40, effF9_mes_es_6_41 }, { (const CONN*)effF9_mes_es_6_42, effF9_mes_es_6_43 },
+    { (const CONN*)effF9_mes_es_6_44, effF9_mes_es_6_45 }, { (const CONN*)effF9_mes_es_6_46, effF9_mes_es_6_47 },
+    { (const CONN*)effF9_mes_es_6_48, effF9_mes_es_6_49 },
 };
 
 const u32 effF9_mes_es_6_0[98] = {
@@ -24557,15 +24557,15 @@ const u32 effF9_mes_es_6_28[94] = {
     0x118FFF0, 0x9E8C, 0x120FFF0, 0x9E80, 0x128FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_es_6_30[20] = {
-    0x980000, 0x9EA7, 0xA00000, 0x9E80, 0xA80000, 0x9E86, 0xB00000, 0x9F33,
-    0xB80000, 0x9E8C, 0xC00000, 0x9E8E, 0xC80000, 0x9E92, 0xD00000, 0x9E8B,
-    0xD80000, 0x9E8E, 0xE00000, 0x9E9A,
+const CONN effF9_mes_es_6_30[10] = {
+    { 152, 0, 0, 0x9EA7 }, { 160, 0, 0, 0x9E80 }, { 168, 0, 0, 0x9E86 }, { 176, 0, 0, 0x9F33 },
+    { 184, 0, 0, 0x9E8C }, { 192, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E92 }, { 208, 0, 0, 0x9E8B },
+    { 216, 0, 0, 0x9E8E }, { 224, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_6_32[10] = {
-    0xB00000, 0x9EB8, 0xB80000, 0x9E84, 0xC00000, 0x9E80, 0xC80000, 0x9E87,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_es_6_32[5] = {
+    { 176, 0, 0, 0x9EB8 }, { 184, 0, 0, 0x9E84 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E87 },
+    { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_6_34[128] = {
@@ -24804,22 +24804,22 @@ const u16 effF9_mes_es_6_49[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_7[15] = {
-    { (const CONN*)effF9_mes_es_7_0, (const u16*)effF9_mes_es_7_1 }, { (const CONN*)effF9_mes_es_7_0, (const u16*)effF9_mes_es_7_3 },
-    { (const CONN*)effF9_mes_es_7_4, (const u16*)effF9_mes_es_7_5 }, { (const CONN*)effF9_mes_es_7_6, (const u16*)effF9_mes_es_7_7 },
-    { (const CONN*)effF9_mes_es_7_8, (const u16*)effF9_mes_es_7_9 }, { (const CONN*)effF9_mes_es_7_10, (const u16*)effF9_mes_es_7_11 },
-    { (const CONN*)effF9_mes_es_7_12, (const u16*)effF9_mes_es_7_13 }, { (const CONN*)effF9_mes_es_7_14, (const u16*)effF9_mes_es_7_15 },
-    { (const CONN*)effF9_mes_es_7_16, (const u16*)effF9_mes_es_7_17 }, { (const CONN*)effF9_mes_es_7_18, (const u16*)effF9_mes_es_7_19 },
-    { (const CONN*)effF9_mes_es_7_20, (const u16*)effF9_mes_es_7_21 }, { (const CONN*)effF9_mes_es_7_22, (const u16*)effF9_mes_es_7_23 },
-    { (const CONN*)effF9_mes_es_7_24, (const u16*)effF9_mes_es_7_25 }, { (const CONN*)effF9_mes_es_7_26, (const u16*)effF9_mes_es_7_27 },
-    { (const CONN*)effF9_mes_es_7_28, (const u16*)effF9_mes_es_7_29 },
+    { effF9_mes_es_7_0, effF9_mes_es_7_1 }, { effF9_mes_es_7_0, effF9_mes_es_7_3 },
+    { (const CONN*)effF9_mes_es_7_4, effF9_mes_es_7_5 }, { effF9_mes_es_7_6, effF9_mes_es_7_7 },
+    { (const CONN*)effF9_mes_es_7_8, effF9_mes_es_7_9 }, { (const CONN*)effF9_mes_es_7_10, effF9_mes_es_7_11 },
+    { (const CONN*)effF9_mes_es_7_12, effF9_mes_es_7_13 }, { (const CONN*)effF9_mes_es_7_14, effF9_mes_es_7_15 },
+    { (const CONN*)effF9_mes_es_7_16, effF9_mes_es_7_17 }, { effF9_mes_es_7_18, effF9_mes_es_7_19 },
+    { effF9_mes_es_7_20, effF9_mes_es_7_21 }, { effF9_mes_es_7_22, effF9_mes_es_7_23 },
+    { (const CONN*)effF9_mes_es_7_24, effF9_mes_es_7_25 }, { effF9_mes_es_7_26, effF9_mes_es_7_27 },
+    { (const CONN*)effF9_mes_es_7_28, effF9_mes_es_7_29 },
 };
 
-const u32 effF9_mes_es_7_0[38] = {
-    0x680000, 0x9EAF, 0x700000, 0x9E80, 0x780000, 0x9E91, 0x800000, 0x9E84,
-    0x880000, 0x9E82, 0x900000, 0x9E84, 0xA00000, 0x9E90, 0xA80000, 0x9E94,
-    0xB00000, 0x9E84, 0xC00000, 0x9E87, 0xC80000, 0x9E84, 0xD80000, 0x9E8F,
-    0xE00000, 0x9E84, 0xE80000, 0x9E91, 0xF00000, 0x9E83, 0xF80000, 0x9E88,
-    0x1000000, 0x9E83, 0x1080000, 0x9E8E, 0x1100000, 0x9E9C,
+const CONN effF9_mes_es_7_0[19] = {
+    { 104, 0, 0, 0x9EAF }, { 112, 0, 0, 0x9E80 }, { 120, 0, 0, 0x9E91 }, { 128, 0, 0, 0x9E84 },
+    { 136, 0, 0, 0x9E82 }, { 144, 0, 0, 0x9E84 }, { 160, 0, 0, 0x9E90 }, { 168, 0, 0, 0x9E94 },
+    { 176, 0, 0, 0x9E84 }, { 192, 0, 0, 0x9E87 }, { 200, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E8F },
+    { 224, 0, 0, 0x9E84 }, { 232, 0, 0, 0x9E91 }, { 240, 0, 0, 0x9E83 }, { 248, 0, 0, 0x9E88 },
+    { 256, 0, 0, 0x9E83 }, { 264, 0, 0, 0x9E8E }, { 272, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_es_7_4[80] = {
@@ -24835,13 +24835,13 @@ const u32 effF9_mes_es_7_4[80] = {
     0x1600000, 0x9E84, 0x1680000, 0x9E92, 0x1700000, 0x9E80, 0x1780000, 0x9E9C,
 };
 
-const u32 effF9_mes_es_7_6[44] = {
-    0x580000, 0x9EA0, 0x600000, 0x9E90, 0x680000, 0x9E94, 0x700000, 0x9F3F,
-    0x800000, 0x9E84, 0x880000, 0x9E92, 0x900000, 0x9E93, 0x980000, 0x9F33,
-    0xA80000, 0x9E84, 0xB00000, 0x9E8B, 0xC00000, 0x9E84, 0xC80000, 0x9E97,
-    0xD00000, 0x9E8F, 0xD80000, 0x9E84, 0xE00000, 0x9E83, 0xE80000, 0x9E88,
-    0xF00000, 0x9E84, 0xF80000, 0x9E8D, 0x1000000, 0x9E93, 0x1080000, 0x9E84,
-    0x1180000, 0x9EA6, 0x1200000, 0x9E9A,
+const CONN effF9_mes_es_7_6[22] = {
+    { 88, 0, 0, 0x9EA0 }, { 96, 0, 0, 0x9E90 }, { 104, 0, 0, 0x9E94 }, { 112, 0, 0, 0x9F3F },
+    { 128, 0, 0, 0x9E84 }, { 136, 0, 0, 0x9E92 }, { 144, 0, 0, 0x9E93 }, { 152, 0, 0, 0x9F33 },
+    { 168, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E8B }, { 192, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E97 },
+    { 208, 0, 0, 0x9E8F }, { 216, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E83 }, { 232, 0, 0, 0x9E88 },
+    { 240, 0, 0, 0x9E84 }, { 248, 0, 0, 0x9E8D }, { 256, 0, 0, 0x9E93 }, { 264, 0, 0, 0x9E84 },
+    { 280, 0, 0, 0x9EA6 }, { 288, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_7_8[118] = {
@@ -24917,19 +24917,19 @@ const u32 effF9_mes_es_7_16[68] = {
     0x1480000, 0x9E9C, 0x1500000, 0x9E9C,
 };
 
-const u32 effF9_mes_es_7_18[6] = {
-    0xB00000, 0x9EB8, 0xB80000, 0x9E80, 0xC00000, 0x9E9A,
+const CONN effF9_mes_es_7_18[3] = {
+    { 176, 0, 0, 0x9EB8 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_7_20[14] = {
-    0xA00000, 0x9EAA, 0xA80000, 0x9E98, 0xB00000, 0x9E80, 0xB80000, 0x9E80,
-    0xC00000, 0x9E87, 0xC80000, 0x9E87, 0xD00000, 0x9E9A,
+const CONN effF9_mes_es_7_20[7] = {
+    { 160, 0, 0, 0x9EAA }, { 168, 0, 0, 0x9E98 }, { 176, 0, 0, 0x9E80 }, { 184, 0, 0, 0x9E80 },
+    { 192, 0, 0, 0x9E87 }, { 200, 0, 0, 0x9E87 }, { 208, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_7_22[22] = {
-    0x900000, 0x9EB0, 0x980000, 0x9E94, 0xA00000, 0x9F3B, 0xB00000, 0x9E83,
-    0xB80000, 0x9E88, 0xC00000, 0x9E80, 0xC80000, 0x9E81, 0xD00000, 0x9E8B,
-    0xD80000, 0x9E8E, 0xE00000, 0x9E92, 0xE80000, 0x9E9B,
+const CONN effF9_mes_es_7_22[11] = {
+    { 144, 0, 0, 0x9EB0 }, { 152, 0, 0, 0x9E94 }, { 160, 0, 0, 0x9F3B }, { 176, 0, 0, 0x9E83 },
+    { 184, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E81 }, { 208, 0, 0, 0x9E8B },
+    { 216, 0, 0, 0x9E8E }, { 224, 0, 0, 0x9E92 }, { 232, 0, 0, 0x9E9B },
 };
 
 const u32 effF9_mes_es_7_24[92] = {
@@ -24947,11 +24947,11 @@ const u32 effF9_mes_es_7_24[92] = {
     0x50FFF0, 0x9E92, 0x58FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_es_7_26[30] = {
-    0x800000, 0x9EA4, 0x880000, 0x9E92, 0x900000, 0x9E93, 0x980000, 0x9F33,
-    0xA00000, 0x9E92, 0xB00000, 0x9E8B, 0xB80000, 0x9E8E, 0xC00000, 0x9E82,
-    0xC80000, 0x9E8E, 0xD80000, 0x9EA8, 0xE00000, 0x9E81, 0xE80000, 0x9E94,
-    0xF00000, 0x9E8A, 0xF80000, 0x9E88, 0x1000000, 0x9E9B,
+const CONN effF9_mes_es_7_26[15] = {
+    { 128, 0, 0, 0x9EA4 }, { 136, 0, 0, 0x9E92 }, { 144, 0, 0, 0x9E93 }, { 152, 0, 0, 0x9F33 },
+    { 160, 0, 0, 0x9E92 }, { 176, 0, 0, 0x9E8B }, { 184, 0, 0, 0x9E8E }, { 192, 0, 0, 0x9E82 },
+    { 200, 0, 0, 0x9E8E }, { 216, 0, 0, 0x9EA8 }, { 224, 0, 0, 0x9E81 }, { 232, 0, 0, 0x9E94 },
+    { 240, 0, 0, 0x9E8A }, { 248, 0, 0, 0x9E88 }, { 256, 0, 0, 0x9E9B },
 };
 
 const u32 effF9_mes_es_7_28[40] = {
@@ -25023,10 +25023,10 @@ const u16 effF9_mes_es_7_29[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_8[7] = {
-    { (const CONN*)effF9_mes_es_8_0, (const u16*)effF9_mes_es_8_1 }, { (const CONN*)effF9_mes_es_8_0, (const u16*)effF9_mes_es_8_3 },
-    { (const CONN*)effF9_mes_es_8_4, (const u16*)effF9_mes_es_8_5 }, { (const CONN*)effF9_mes_es_8_6, (const u16*)effF9_mes_es_8_7 },
-    { (const CONN*)effF9_mes_es_8_8, (const u16*)effF9_mes_es_8_9 }, { (const CONN*)effF9_mes_es_8_10, (const u16*)effF9_mes_es_8_11 },
-    { (const CONN*)effF9_mes_es_8_12, (const u16*)effF9_mes_es_8_13 },
+    { (const CONN*)effF9_mes_es_8_0, effF9_mes_es_8_1 }, { (const CONN*)effF9_mes_es_8_0, effF9_mes_es_8_3 },
+    { (const CONN*)effF9_mes_es_8_4, effF9_mes_es_8_5 }, { (const CONN*)effF9_mes_es_8_6, effF9_mes_es_8_7 },
+    { (const CONN*)effF9_mes_es_8_8, effF9_mes_es_8_9 }, { (const CONN*)effF9_mes_es_8_10, effF9_mes_es_8_11 },
+    { (const CONN*)effF9_mes_es_8_12, effF9_mes_es_8_13 },
 };
 
 const u32 effF9_mes_es_8_0[64] = {
@@ -25150,9 +25150,9 @@ const u16 effF9_mes_es_8_13[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_9[6] = {
-    { (const CONN*)effF9_mes_es_9_0, (const u16*)effF9_mes_es_9_1 }, { (const CONN*)effF9_mes_es_9_0, (const u16*)effF9_mes_es_9_3 },
-    { (const CONN*)effF9_mes_es_9_4, (const u16*)effF9_mes_es_9_5 }, { (const CONN*)effF9_mes_es_9_6, (const u16*)effF9_mes_es_9_7 },
-    { (const CONN*)effF9_mes_es_9_8, (const u16*)effF9_mes_es_9_9 }, { (const CONN*)effF9_mes_es_9_10, (const u16*)effF9_mes_es_9_11 },
+    { (const CONN*)effF9_mes_es_9_0, effF9_mes_es_9_1 }, { (const CONN*)effF9_mes_es_9_0, effF9_mes_es_9_3 },
+    { (const CONN*)effF9_mes_es_9_4, effF9_mes_es_9_5 }, { effF9_mes_es_9_6, effF9_mes_es_9_7 },
+    { (const CONN*)effF9_mes_es_9_8, effF9_mes_es_9_9 }, { (const CONN*)effF9_mes_es_9_10, effF9_mes_es_9_11 },
 };
 
 const u32 effF9_mes_es_9_0[132] = {
@@ -25196,11 +25196,11 @@ const u32 effF9_mes_es_9_4[144] = {
     0x158FFF0, 0x9E8B, 0x160FFF0, 0x9E9C, 0x168FFF0, 0x9E9C, 0x170FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_es_9_6[28] = {
-    0x880000, 0x9EA4, 0x900000, 0x9E92, 0x980000, 0x9E8F, 0xA00000, 0x9F3B,
-    0xA80000, 0x9E91, 0xB00000, 0x9E80, 0xB80000, 0x9E8C, 0xC00000, 0x9E84,
-    0xD00000, 0x9E82, 0xD80000, 0x9E87, 0xE00000, 0x9E88, 0xE80000, 0x9E82,
-    0xF00000, 0x9E8E, 0xF80000, 0x9E9A,
+const CONN effF9_mes_es_9_6[14] = {
+    { 136, 0, 0, 0x9EA4 }, { 144, 0, 0, 0x9E92 }, { 152, 0, 0, 0x9E8F }, { 160, 0, 0, 0x9F3B },
+    { 168, 0, 0, 0x9E91 }, { 176, 0, 0, 0x9E80 }, { 184, 0, 0, 0x9E8C }, { 192, 0, 0, 0x9E84 },
+    { 208, 0, 0, 0x9E82 }, { 216, 0, 0, 0x9E87 }, { 224, 0, 0, 0x9E88 }, { 232, 0, 0, 0x9E82 },
+    { 240, 0, 0, 0x9E8E }, { 248, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_9_8[100] = {
@@ -25256,27 +25256,27 @@ const u16 effF9_mes_es_9_11[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_10[16] = {
-    { (const CONN*)effF9_mes_es_10_0, (const u16*)effF9_mes_es_10_1 }, { (const CONN*)effF9_mes_es_10_0, (const u16*)effF9_mes_es_10_3 },
-    { (const CONN*)effF9_mes_es_10_4, (const u16*)effF9_mes_es_10_5 }, { (const CONN*)effF9_mes_es_10_6, (const u16*)effF9_mes_es_10_7 },
-    { (const CONN*)effF9_mes_es_10_8, (const u16*)effF9_mes_es_10_9 }, { (const CONN*)effF9_mes_es_10_10, (const u16*)effF9_mes_es_10_11 },
-    { (const CONN*)effF9_mes_es_10_12, (const u16*)effF9_mes_es_10_13 }, { (const CONN*)effF9_mes_es_10_14, (const u16*)effF9_mes_es_10_15 },
-    { (const CONN*)effF9_mes_es_10_16, (const u16*)effF9_mes_es_10_17 }, { (const CONN*)effF9_mes_es_10_18, (const u16*)effF9_mes_es_10_19 },
-    { (const CONN*)effF9_mes_es_10_20, (const u16*)effF9_mes_es_10_21 }, { (const CONN*)effF9_mes_es_10_22, (const u16*)effF9_mes_es_10_23 },
-    { (const CONN*)effF9_mes_es_10_24, (const u16*)effF9_mes_es_10_25 }, { (const CONN*)effF9_mes_es_10_26, (const u16*)effF9_mes_es_10_27 },
-    { (const CONN*)effF9_mes_es_10_28, (const u16*)effF9_mes_es_10_29 }, { (const CONN*)effF9_mes_es_10_30, (const u16*)effF9_mes_es_10_31 },
+    { effF9_mes_es_10_0, effF9_mes_es_10_1 }, { effF9_mes_es_10_0, effF9_mes_es_10_3 },
+    { effF9_mes_es_10_4, effF9_mes_es_10_5 }, { effF9_mes_es_10_6, effF9_mes_es_10_7 },
+    { (const CONN*)effF9_mes_es_10_8, effF9_mes_es_10_9 }, { effF9_mes_es_10_10, effF9_mes_es_10_11 },
+    { (const CONN*)effF9_mes_es_10_12, effF9_mes_es_10_13 }, { (const CONN*)effF9_mes_es_10_14, effF9_mes_es_10_15 },
+    { effF9_mes_es_10_16, effF9_mes_es_10_17 }, { (const CONN*)effF9_mes_es_10_18, effF9_mes_es_10_19 },
+    { (const CONN*)effF9_mes_es_10_20, effF9_mes_es_10_21 }, { effF9_mes_es_10_22, effF9_mes_es_10_23 },
+    { (const CONN*)effF9_mes_es_10_24, effF9_mes_es_10_25 }, { (const CONN*)effF9_mes_es_10_26, effF9_mes_es_10_27 },
+    { (const CONN*)effF9_mes_es_10_28, effF9_mes_es_10_29 }, { (const CONN*)effF9_mes_es_10_30, effF9_mes_es_10_31 },
 };
 
-const u32 effF9_mes_es_10_0[6] = {
-    0xB80000, 0x9EA7, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_es_10_0[3] = {
+    { 184, 0, 0, 0x9EA7 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_10_4[6] = {
-    0xB80000, 0x9EB8, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_es_10_4[3] = {
+    { 184, 0, 0, 0x9EB8 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_10_6[10] = {
-    0xB00000, 0x9EAC, 0xB80000, 0x9E88, 0xC00000, 0x9E91, 0xC80000, 0x9E80,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_es_10_6[5] = {
+    { 176, 0, 0, 0x9EAC }, { 184, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E91 }, { 200, 0, 0, 0x9E80 },
+    { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_10_8[36] = {
@@ -25287,11 +25287,11 @@ const u32 effF9_mes_es_10_8[36] = {
     0x1080000, 0x9E84, 0x1100000, 0x9E9A,
 };
 
-const u32 effF9_mes_es_10_10[30] = {
-    0x800000, 0x9EA4, 0x880000, 0x9E92, 0x900000, 0x9E93, 0x980000, 0x9F33,
-    0xA00000, 0x9E8D, 0xB00000, 0x9E83, 0xB80000, 0x9E84, 0xC80000, 0x9E91,
-    0xD00000, 0x9E84, 0xD80000, 0x9E86, 0xE00000, 0x9E91, 0xE80000, 0x9E84,
-    0xF00000, 0x9E92, 0xF80000, 0x9E8E, 0x1000000, 0x9E9A,
+const CONN effF9_mes_es_10_10[15] = {
+    { 128, 0, 0, 0x9EA4 }, { 136, 0, 0, 0x9E92 }, { 144, 0, 0, 0x9E93 }, { 152, 0, 0, 0x9F33 },
+    { 160, 0, 0, 0x9E8D }, { 176, 0, 0, 0x9E83 }, { 184, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E91 },
+    { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E86 }, { 224, 0, 0, 0x9E91 }, { 232, 0, 0, 0x9E84 },
+    { 240, 0, 0, 0x9E92 }, { 248, 0, 0, 0x9E8E }, { 256, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_10_12[28] = {
@@ -25313,10 +25313,10 @@ const u32 effF9_mes_es_10_14[68] = {
     0x1500000, 0x9E8E, 0x1580000, 0x9E9A,
 };
 
-const u32 effF9_mes_es_10_16[24] = {
-    0x880000, 0x9EB0, 0x900000, 0x9E94, 0x980000, 0x9F3B, 0xA80000, 0x9E87,
-    0xB00000, 0x9E80, 0xC00000, 0x9E8F, 0xC80000, 0x9E80, 0xD00000, 0x9E92,
-    0xD80000, 0x9E80, 0xE00000, 0x9E83, 0xE80000, 0x9E8E, 0xF00000, 0x9E9B,
+const CONN effF9_mes_es_10_16[12] = {
+    { 136, 0, 0, 0x9EB0 }, { 144, 0, 0, 0x9E94 }, { 152, 0, 0, 0x9F3B }, { 168, 0, 0, 0x9E87 },
+    { 176, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E8F }, { 200, 0, 0, 0x9E80 }, { 208, 0, 0, 0x9E92 },
+    { 216, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E83 }, { 232, 0, 0, 0x9E8E }, { 240, 0, 0, 0x9E9B },
 };
 
 const u32 effF9_mes_es_10_18[68] = {
@@ -25345,13 +25345,13 @@ const u32 effF9_mes_es_10_20[82] = {
     0x58FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_es_10_22[42] = {
-    0x600000, 0x9EB2, 0x680000, 0x9E88, 0x700000, 0x9E9D, 0x800000, 0x9E92,
-    0x880000, 0x9E84, 0x900000, 0x9E86, 0x980000, 0x9E94, 0xA00000, 0x9E91,
-    0xA80000, 0x9E8E, 0xB00000, 0x9E9A, 0xC00000, 0x9EB2, 0xC80000, 0x9E88,
-    0xD00000, 0x9E84, 0xD80000, 0x9E8D, 0xE00000, 0x9E93, 0xE80000, 0x9E84,
-    0xF80000, 0x9F3B, 0x1000000, 0x9E92, 0x1080000, 0x9E93, 0x1100000, 0x9E8E,
-    0x1180000, 0x9E9A,
+const CONN effF9_mes_es_10_22[21] = {
+    { 96, 0, 0, 0x9EB2 }, { 104, 0, 0, 0x9E88 }, { 112, 0, 0, 0x9E9D }, { 128, 0, 0, 0x9E92 },
+    { 136, 0, 0, 0x9E84 }, { 144, 0, 0, 0x9E86 }, { 152, 0, 0, 0x9E94 }, { 160, 0, 0, 0x9E91 },
+    { 168, 0, 0, 0x9E8E }, { 176, 0, 0, 0x9E9A }, { 192, 0, 0, 0x9EB2 }, { 200, 0, 0, 0x9E88 },
+    { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E8D }, { 224, 0, 0, 0x9E93 }, { 232, 0, 0, 0x9E84 },
+    { 248, 0, 0, 0x9F3B }, { 256, 0, 0, 0x9E92 }, { 264, 0, 0, 0x9E93 }, { 272, 0, 0, 0x9E8E },
+    { 280, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_10_24[28] = {
@@ -25470,34 +25470,34 @@ const u16 effF9_mes_es_10_31[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_11[7] = {
-    { (const CONN*)effF9_mes_es_11_0, (const u16*)effF9_mes_es_11_1 }, { (const CONN*)effF9_mes_es_11_0, (const u16*)effF9_mes_es_11_3 },
-    { (const CONN*)effF9_mes_es_11_4, (const u16*)effF9_mes_es_11_5 }, { (const CONN*)effF9_mes_es_11_6, (const u16*)effF9_mes_es_11_7 },
-    { (const CONN*)effF9_mes_es_11_8, (const u16*)effF9_mes_es_11_9 }, { (const CONN*)effF9_mes_es_11_10, (const u16*)effF9_mes_es_11_11 },
-    { (const CONN*)effF9_mes_es_11_12, (const u16*)effF9_mes_es_11_13 },
+    { effF9_mes_es_11_0, effF9_mes_es_11_1 }, { effF9_mes_es_11_0, effF9_mes_es_11_3 },
+    { effF9_mes_es_11_4, effF9_mes_es_11_5 }, { effF9_mes_es_11_6, effF9_mes_es_11_7 },
+    { effF9_mes_es_11_8, effF9_mes_es_11_9 }, { (const CONN*)effF9_mes_es_11_10, effF9_mes_es_11_11 },
+    { (const CONN*)effF9_mes_es_11_12, effF9_mes_es_11_13 },
 };
 
-const u32 effF9_mes_es_11_0[18] = {
-    0x980000, 0x9EB5, 0xA00000, 0x9E80, 0xA80000, 0x9E8C, 0xB00000, 0x9E8E,
-    0xB80000, 0x9E92, 0xC80000, 0x9EAC, 0xD00000, 0x9E84, 0xD80000, 0x9E8B,
-    0xE00000, 0x9E9A,
+const CONN effF9_mes_es_11_0[9] = {
+    { 152, 0, 0, 0x9EB5 }, { 160, 0, 0, 0x9E80 }, { 168, 0, 0, 0x9E8C }, { 176, 0, 0, 0x9E8E },
+    { 184, 0, 0, 0x9E92 }, { 200, 0, 0, 0x9EAC }, { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E8B },
+    { 224, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_11_4[34] = {
-    0x700000, 0x9EA3, 0x780000, 0x9E80, 0x800000, 0x9E8C, 0x880000, 0x9E84,
-    0x980000, 0x9E93, 0xA00000, 0x9E94, 0xB00000, 0x9E8C, 0xB80000, 0x9E84,
-    0xC00000, 0x9E89, 0xC80000, 0x9E8E, 0xD00000, 0x9E91, 0xE00000, 0x9E86,
-    0xE80000, 0x9E8E, 0xF00000, 0x9E8B, 0xF80000, 0x9E8F, 0x1000000, 0x9E84,
-    0x1080000, 0x9E9A,
+const CONN effF9_mes_es_11_4[17] = {
+    { 112, 0, 0, 0x9EA3 }, { 120, 0, 0, 0x9E80 }, { 128, 0, 0, 0x9E8C }, { 136, 0, 0, 0x9E84 },
+    { 152, 0, 0, 0x9E93 }, { 160, 0, 0, 0x9E94 }, { 176, 0, 0, 0x9E8C }, { 184, 0, 0, 0x9E84 },
+    { 192, 0, 0, 0x9E89 }, { 200, 0, 0, 0x9E8E }, { 208, 0, 0, 0x9E91 }, { 224, 0, 0, 0x9E86 },
+    { 232, 0, 0, 0x9E8E }, { 240, 0, 0, 0x9E8B }, { 248, 0, 0, 0x9E8F }, { 256, 0, 0, 0x9E84 },
+    { 264, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_11_6[10] = {
-    0xB00000, 0x9EA6, 0xB80000, 0x9E94, 0xC00000, 0x9E87, 0xC80000, 0x9E80,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_es_11_6[5] = {
+    { 176, 0, 0, 0x9EA6 }, { 184, 0, 0, 0x9E94 }, { 192, 0, 0, 0x9E87 }, { 200, 0, 0, 0x9E80 },
+    { 208, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_11_8[16] = {
-    0xA00000, 0x9EAE, 0xA80000, 0x9E87, 0xB00000, 0x9E87, 0xB80000, 0x9E87,
-    0xC80000, 0x9EAA, 0xD00000, 0x9E84, 0xD80000, 0x9E8D, 0xE00000, 0x9E9A,
+const CONN effF9_mes_es_11_8[8] = {
+    { 160, 0, 0, 0x9EAE }, { 168, 0, 0, 0x9E87 }, { 176, 0, 0, 0x9E87 }, { 184, 0, 0, 0x9E87 },
+    { 200, 0, 0, 0x9EAA }, { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E8D }, { 224, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_11_10[70] = {
@@ -25548,16 +25548,16 @@ const u16 effF9_mes_es_11_13[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_12[9] = {
-    { (const CONN*)effF9_mes_es_12_0, (const u16*)effF9_mes_es_12_1 }, { (const CONN*)effF9_mes_es_12_0, (const u16*)effF9_mes_es_12_3 },
-    { (const CONN*)effF9_mes_es_12_4, (const u16*)effF9_mes_es_12_5 }, { (const CONN*)effF9_mes_es_12_6, (const u16*)effF9_mes_es_12_7 },
-    { (const CONN*)effF9_mes_es_12_8, (const u16*)effF9_mes_es_12_9 }, { (const CONN*)effF9_mes_es_12_10, (const u16*)effF9_mes_es_12_11 },
-    { (const CONN*)effF9_mes_es_12_12, (const u16*)effF9_mes_es_12_13 }, { (const CONN*)effF9_mes_es_12_14, (const u16*)effF9_mes_es_12_15 },
-    { (const CONN*)effF9_mes_es_12_16, (const u16*)effF9_mes_es_12_17 },
+    { effF9_mes_es_12_0, effF9_mes_es_12_1 }, { effF9_mes_es_12_0, effF9_mes_es_12_3 },
+    { (const CONN*)effF9_mes_es_12_4, effF9_mes_es_12_5 }, { (const CONN*)effF9_mes_es_12_6, effF9_mes_es_12_7 },
+    { (const CONN*)effF9_mes_es_12_8, effF9_mes_es_12_9 }, { effF9_mes_es_12_10, effF9_mes_es_12_11 },
+    { (const CONN*)effF9_mes_es_12_12, effF9_mes_es_12_13 }, { (const CONN*)effF9_mes_es_12_14, effF9_mes_es_12_15 },
+    { effF9_mes_es_12_16, effF9_mes_es_12_17 },
 };
 
-const u32 effF9_mes_es_12_0[14] = {
-    0xA80000, 0x9EB4, 0xB00000, 0x9E96, 0xB80000, 0x9E80, 0xC00000, 0x9E80,
-    0xC80000, 0x9E80, 0xD00000, 0x9E87, 0xD80000, 0x9E9A,
+const CONN effF9_mes_es_12_0[7] = {
+    { 168, 0, 0, 0x9EB4 }, { 176, 0, 0, 0x9E96 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E80 },
+    { 200, 0, 0, 0x9E80 }, { 208, 0, 0, 0x9E87 }, { 216, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_12_4[70] = {
@@ -25595,12 +25595,12 @@ const u32 effF9_mes_es_12_8[66] = {
     0x1580000, 0x9E9A,
 };
 
-const u32 effF9_mes_es_12_10[38] = {
-    0x680000, 0x9EA3, 0x700000, 0x9E84, 0x780000, 0x9E81, 0x800000, 0x9E8E,
-    0x900000, 0x9E88, 0x980000, 0x9E91, 0xA00000, 0x9E9C, 0xB00000, 0x9EA1,
-    0xB80000, 0x9E94, 0xC00000, 0x9E84, 0xC80000, 0x9E8D, 0xD00000, 0x9E80,
-    0xE00000, 0x9E92, 0xE80000, 0x9E94, 0xF00000, 0x9E84, 0xF80000, 0x9E91,
-    0x1000000, 0x9E93, 0x1080000, 0x9E84, 0x1100000, 0x9E9A,
+const CONN effF9_mes_es_12_10[19] = {
+    { 104, 0, 0, 0x9EA3 }, { 112, 0, 0, 0x9E84 }, { 120, 0, 0, 0x9E81 }, { 128, 0, 0, 0x9E8E },
+    { 144, 0, 0, 0x9E88 }, { 152, 0, 0, 0x9E91 }, { 160, 0, 0, 0x9E9C }, { 176, 0, 0, 0x9EA1 },
+    { 184, 0, 0, 0x9E94 }, { 192, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E8D }, { 208, 0, 0, 0x9E80 },
+    { 224, 0, 0, 0x9E92 }, { 232, 0, 0, 0x9E94 }, { 240, 0, 0, 0x9E84 }, { 248, 0, 0, 0x9E91 },
+    { 256, 0, 0, 0x9E93 }, { 264, 0, 0, 0x9E84 }, { 272, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_12_12[116] = {
@@ -25628,13 +25628,13 @@ const u32 effF9_mes_es_12_14[28] = {
     0xF00000, 0x9E80, 0xF80000, 0x9E9A,
 };
 
-const u32 effF9_mes_es_12_16[46] = {
-    0x580000, 0x9EA6, 0x600000, 0x9E94, 0x680000, 0x9E96, 0x700000, 0x9E80,
-    0x780000, 0x9E87, 0x800000, 0x9E9A, 0x900000, 0x9EA4, 0x980000, 0x9E92,
-    0xA80000, 0x9E83, 0xB00000, 0x9E84, 0xB80000, 0x9E8C, 0xC00000, 0x9E80,
-    0xC80000, 0x9E92, 0xD00000, 0x9E88, 0xD80000, 0x9E80, 0xE00000, 0x9E83,
-    0xE80000, 0x9E8E, 0xF80000, 0x9E81, 0x1000000, 0x9E94, 0x1080000, 0x9E84,
-    0x1100000, 0x9E8D, 0x1180000, 0x9E8E, 0x1200000, 0x9E9A,
+const CONN effF9_mes_es_12_16[23] = {
+    { 88, 0, 0, 0x9EA6 }, { 96, 0, 0, 0x9E94 }, { 104, 0, 0, 0x9E96 }, { 112, 0, 0, 0x9E80 },
+    { 120, 0, 0, 0x9E87 }, { 128, 0, 0, 0x9E9A }, { 144, 0, 0, 0x9EA4 }, { 152, 0, 0, 0x9E92 },
+    { 168, 0, 0, 0x9E83 }, { 176, 0, 0, 0x9E84 }, { 184, 0, 0, 0x9E8C }, { 192, 0, 0, 0x9E80 },
+    { 200, 0, 0, 0x9E92 }, { 208, 0, 0, 0x9E88 }, { 216, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E83 },
+    { 232, 0, 0, 0x9E8E }, { 248, 0, 0, 0x9E81 }, { 256, 0, 0, 0x9E94 }, { 264, 0, 0, 0x9E84 },
+    { 272, 0, 0, 0x9E8D }, { 280, 0, 0, 0x9E8E }, { 288, 0, 0, 0x9E9A },
 };
 
 const u16 effF9_mes_es_12_1[2] = {
@@ -25674,13 +25674,13 @@ const u16 effF9_mes_es_12_17[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_13[14] = {
-    { (const CONN*)effF9_mes_es_13_0, (const u16*)effF9_mes_es_13_1 }, { (const CONN*)effF9_mes_es_13_0, (const u16*)effF9_mes_es_13_3 },
-    { (const CONN*)effF9_mes_es_13_4, (const u16*)effF9_mes_es_13_5 }, { (const CONN*)effF9_mes_es_13_6, (const u16*)effF9_mes_es_13_7 },
-    { (const CONN*)effF9_mes_es_13_8, (const u16*)effF9_mes_es_13_9 }, { (const CONN*)effF9_mes_es_13_10, (const u16*)effF9_mes_es_13_11 },
-    { (const CONN*)effF9_mes_es_13_12, (const u16*)effF9_mes_es_13_13 }, { (const CONN*)effF9_mes_es_13_14, (const u16*)effF9_mes_es_13_15 },
-    { (const CONN*)effF9_mes_es_13_16, (const u16*)effF9_mes_es_13_17 }, { (const CONN*)effF9_mes_es_13_18, (const u16*)effF9_mes_es_13_19 },
-    { (const CONN*)effF9_mes_es_13_20, (const u16*)effF9_mes_es_13_21 }, { (const CONN*)effF9_mes_es_13_22, (const u16*)effF9_mes_es_13_23 },
-    { (const CONN*)effF9_mes_es_13_24, (const u16*)effF9_mes_es_13_25 }, { (const CONN*)effF9_mes_es_13_26, (const u16*)effF9_mes_es_13_27 },
+    { (const CONN*)effF9_mes_es_13_0, effF9_mes_es_13_1 }, { (const CONN*)effF9_mes_es_13_0, effF9_mes_es_13_3 },
+    { (const CONN*)effF9_mes_es_13_4, effF9_mes_es_13_5 }, { (const CONN*)effF9_mes_es_13_6, effF9_mes_es_13_7 },
+    { (const CONN*)effF9_mes_es_13_8, effF9_mes_es_13_9 }, { (const CONN*)effF9_mes_es_13_10, effF9_mes_es_13_11 },
+    { effF9_mes_es_13_12, effF9_mes_es_13_13 }, { (const CONN*)effF9_mes_es_13_14, effF9_mes_es_13_15 },
+    { (const CONN*)effF9_mes_es_13_16, effF9_mes_es_13_17 }, { (const CONN*)effF9_mes_es_13_18, effF9_mes_es_13_19 },
+    { (const CONN*)effF9_mes_es_13_20, effF9_mes_es_13_21 }, { (const CONN*)effF9_mes_es_13_22, effF9_mes_es_13_23 },
+    { (const CONN*)effF9_mes_es_13_24, effF9_mes_es_13_25 }, { effF9_mes_es_13_26, effF9_mes_es_13_27 },
 };
 
 const u32 effF9_mes_es_13_0[112] = {
@@ -25761,12 +25761,12 @@ const u32 effF9_mes_es_13_10[96] = {
     0x60FFF0, 0x9E83, 0x68FFF0, 0x9E8E, 0x70FFF0, 0x9E91, 0x78FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_es_13_12[34] = {
-    0x780000, 0x9EB0, 0x800000, 0x9E94, 0x880000, 0x9F3B, 0x900000, 0x9E9B,
-    0xA00000, 0x9EA4, 0xA80000, 0x9E8B, 0xB80000, 0x9E84, 0xC00000, 0x9E8C,
-    0xC80000, 0x9E8F, 0xD00000, 0x9E84, 0xD80000, 0x9E91, 0xE00000, 0x9E80,
-    0xE80000, 0x9E83, 0xF00000, 0x9E8E, 0xF80000, 0x9E91, 0x1000000, 0x9E9B,
-    0x1080000, 0x9E9A,
+const CONN effF9_mes_es_13_12[17] = {
+    { 120, 0, 0, 0x9EB0 }, { 128, 0, 0, 0x9E94 }, { 136, 0, 0, 0x9F3B }, { 144, 0, 0, 0x9E9B },
+    { 160, 0, 0, 0x9EA4 }, { 168, 0, 0, 0x9E8B }, { 184, 0, 0, 0x9E84 }, { 192, 0, 0, 0x9E8C },
+    { 200, 0, 0, 0x9E8F }, { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E91 }, { 224, 0, 0, 0x9E80 },
+    { 232, 0, 0, 0x9E83 }, { 240, 0, 0, 0x9E8E }, { 248, 0, 0, 0x9E91 }, { 256, 0, 0, 0x9E9B },
+    { 264, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_13_14[140] = {
@@ -25864,11 +25864,11 @@ const u32 effF9_mes_es_13_24[78] = {
     0x38FFF0, 0x9E8B, 0x40FFF0, 0x9E8E, 0x48FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_es_13_26[26] = {
-    0x800000, 0x9EA9, 0x880000, 0x9E80, 0x980000, 0x9E89, 0xA00000, 0x9E80,
-    0xB00000, 0x9E89, 0xB80000, 0x9E80, 0xC80000, 0x9E89, 0xD00000, 0x9E80,
-    0xE00000, 0x9E89, 0xE80000, 0x9E80, 0xF00000, 0x9E9C, 0xF80000, 0x9E9C,
-    0x1000000, 0x9E9C,
+const CONN effF9_mes_es_13_26[13] = {
+    { 128, 0, 0, 0x9EA9 }, { 136, 0, 0, 0x9E80 }, { 152, 0, 0, 0x9E89 }, { 160, 0, 0, 0x9E80 },
+    { 176, 0, 0, 0x9E89 }, { 184, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E89 }, { 208, 0, 0, 0x9E80 },
+    { 224, 0, 0, 0x9E89 }, { 232, 0, 0, 0x9E80 }, { 240, 0, 0, 0x9E9C }, { 248, 0, 0, 0x9E9C },
+    { 256, 0, 0, 0x9E9C },
 };
 
 const u16 effF9_mes_es_13_1[2] = {
@@ -25928,23 +25928,23 @@ const u16 effF9_mes_es_13_27[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_es_14[8] = {
-    { (const CONN*)effF9_mes_es_14_0, (const u16*)effF9_mes_es_14_1 }, { (const CONN*)effF9_mes_es_14_0, (const u16*)effF9_mes_es_14_3 },
-    { (const CONN*)effF9_mes_es_14_4, (const u16*)effF9_mes_es_14_5 }, { (const CONN*)effF9_mes_es_14_6, (const u16*)effF9_mes_es_14_7 },
-    { (const CONN*)effF9_mes_es_14_8, (const u16*)effF9_mes_es_14_9 }, { (const CONN*)effF9_mes_es_14_10, (const u16*)effF9_mes_es_14_11 },
-    { (const CONN*)effF9_mes_es_14_12, (const u16*)effF9_mes_es_14_13 }, { (const CONN*)effF9_mes_es_14_14, (const u16*)effF9_mes_es_14_15 },
+    { effF9_mes_es_14_0, effF9_mes_es_14_1 }, { effF9_mes_es_14_0, effF9_mes_es_14_3 },
+    { (const CONN*)effF9_mes_es_14_4, effF9_mes_es_14_5 }, { effF9_mes_es_14_6, effF9_mes_es_14_7 },
+    { effF9_mes_es_14_8, effF9_mes_es_14_9 }, { (const CONN*)effF9_mes_es_14_10, effF9_mes_es_14_11 },
+    { (const CONN*)effF9_mes_es_14_12, effF9_mes_es_14_13 }, { (const CONN*)effF9_mes_es_14_14, effF9_mes_es_14_15 },
 };
 
-const u32 effF9_mes_es_14_0[76] = {
-    0x680000, 0x9EA5, 0x700000, 0x9E84, 0x780000, 0x9E81, 0x880000, 0x9E52,
-    0x900000, 0x9E52, 0x980000, 0x9E9D, 0xA80000, 0x9E52, 0xB00000, 0x9E5A,
-    0xB80000, 0x9E5A, 0xC00000, 0x9EB7, 0xC80000, 0x9E9C, 0xD80000, 0x9E57,
-    0xE00000, 0x9EEF, 0xE80000, 0x9E54, 0xF00000, 0x9E51, 0x1000000, 0x9EAF,
-    0x1080000, 0x9EEF, 0x1100000, 0x9EAC, 0x68FFF0, 0x9EA0, 0x70FFF0, 0x9E94,
-    0x78FFF0, 0x9E92, 0x80FFF0, 0x9E93, 0x88FFF0, 0x9E91, 0x90FFF0, 0x9E80,
-    0x98FFF0, 0x9E8B, 0xA0FFF0, 0x9E88, 0xA8FFF0, 0x9E80, 0xB0FFF0, 0x9E9D,
-    0xC0FFF0, 0x9EA0, 0xC8FFF0, 0x9E98, 0xD0FFF0, 0x9E84, 0xD8FFF0, 0x9E91,
-    0xE0FFF0, 0x9E92, 0xF0FFF0, 0x9EB1, 0xF8FFF0, 0x9E8E, 0x100FFF0, 0x9E82,
-    0x108FFF0, 0x9E8A, 0x110FFF0, 0x9E9C,
+const CONN effF9_mes_es_14_0[38] = {
+    { 104, 0, 0, 0x9EA5 }, { 112, 0, 0, 0x9E84 }, { 120, 0, 0, 0x9E81 }, { 136, 0, 0, 0x9E52 },
+    { 144, 0, 0, 0x9E52 }, { 152, 0, 0, 0x9E9D }, { 168, 0, 0, 0x9E52 }, { 176, 0, 0, 0x9E5A },
+    { 184, 0, 0, 0x9E5A }, { 192, 0, 0, 0x9EB7 }, { 200, 0, 0, 0x9E9C }, { 216, 0, 0, 0x9E57 },
+    { 224, 0, 0, 0x9EEF }, { 232, 0, 0, 0x9E54 }, { 240, 0, 0, 0x9E51 }, { 256, 0, 0, 0x9EAF },
+    { 264, 0, 0, 0x9EEF }, { 272, 0, 0, 0x9EAC }, { 104, -16, 0, 0x9EA0 }, { 112, -16, 0, 0x9E94 },
+    { 120, -16, 0, 0x9E92 }, { 128, -16, 0, 0x9E93 }, { 136, -16, 0, 0x9E91 }, { 144, -16, 0, 0x9E80 },
+    { 152, -16, 0, 0x9E8B }, { 160, -16, 0, 0x9E88 }, { 168, -16, 0, 0x9E80 }, { 176, -16, 0, 0x9E9D },
+    { 192, -16, 0, 0x9EA0 }, { 200, -16, 0, 0x9E98 }, { 208, -16, 0, 0x9E84 }, { 216, -16, 0, 0x9E91 },
+    { 224, -16, 0, 0x9E92 }, { 240, -16, 0, 0x9EB1 }, { 248, -16, 0, 0x9E8E }, { 256, -16, 0, 0x9E82 },
+    { 264, -16, 0, 0x9E8A }, { 272, -16, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_es_14_4[38] = {
@@ -25955,14 +25955,14 @@ const u32 effF9_mes_es_14_4[38] = {
     0x1000000, 0x9E9C, 0x1080000, 0x9E9C, 0x1100000, 0x9E9C,
 };
 
-const u32 effF9_mes_es_14_6[10] = {
-    0xB00000, 0x9EAC, 0xB80000, 0x9E88, 0xC00000, 0x9E91, 0xC80000, 0x9E80,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_es_14_6[5] = {
+    { 176, 0, 0, 0x9EAC }, { 184, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E91 }, { 200, 0, 0, 0x9E80 },
+    { 208, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_es_14_8[16] = {
-    0xA80000, 0x9EA7, 0xB00000, 0x9E98, 0xB80000, 0x9E80, 0xC00000, 0x9E87,
-    0xC80000, 0x9E87, 0xD00000, 0x9E87, 0xD80000, 0x9E87, 0xE00000, 0x9E9A,
+const CONN effF9_mes_es_14_8[8] = {
+    { 168, 0, 0, 0x9EA7 }, { 176, 0, 0, 0x9E98 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E87 },
+    { 200, 0, 0, 0x9E87 }, { 208, 0, 0, 0x9E87 }, { 216, 0, 0, 0x9E87 }, { 224, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_es_14_10[74] = {
@@ -26045,22 +26045,22 @@ const u16 effF9_mes_es_14_15[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_0[18] = {
-    { (const CONN*)effF9_mes_pt_0_0, (const u16*)effF9_mes_pt_0_1 }, { (const CONN*)effF9_mes_pt_0_0, (const u16*)effF9_mes_pt_0_3 },
-    { (const CONN*)effF9_mes_pt_0_4, (const u16*)effF9_mes_pt_0_5 }, { (const CONN*)effF9_mes_pt_0_6, (const u16*)effF9_mes_pt_0_7 },
-    { (const CONN*)effF9_mes_pt_0_8, (const u16*)effF9_mes_pt_0_9 }, { (const CONN*)effF9_mes_pt_0_10, (const u16*)effF9_mes_pt_0_11 },
-    { (const CONN*)effF9_mes_pt_0_12, (const u16*)effF9_mes_pt_0_13 }, { (const CONN*)effF9_mes_pt_0_14, (const u16*)effF9_mes_pt_0_15 },
-    { (const CONN*)effF9_mes_pt_0_16, (const u16*)effF9_mes_pt_0_17 }, { (const CONN*)effF9_mes_pt_0_18, (const u16*)effF9_mes_pt_0_19 },
-    { (const CONN*)effF9_mes_pt_0_20, (const u16*)effF9_mes_pt_0_21 }, { (const CONN*)effF9_mes_pt_0_22, (const u16*)effF9_mes_pt_0_23 },
-    { (const CONN*)effF9_mes_pt_0_24, (const u16*)effF9_mes_pt_0_25 }, { (const CONN*)effF9_mes_pt_0_26, (const u16*)effF9_mes_pt_0_27 },
-    { (const CONN*)effF9_mes_pt_0_28, (const u16*)effF9_mes_pt_0_29 }, { (const CONN*)effF9_mes_pt_0_30, (const u16*)effF9_mes_pt_0_31 },
-    { (const CONN*)effF9_mes_pt_0_32, (const u16*)effF9_mes_pt_0_33 }, { (const CONN*)effF9_mes_pt_0_34, (const u16*)effF9_mes_pt_0_35 },
+    { effF9_mes_pt_0_0, effF9_mes_pt_0_1 }, { effF9_mes_pt_0_0, effF9_mes_pt_0_3 },
+    { (const CONN*)effF9_mes_pt_0_4, effF9_mes_pt_0_5 }, { effF9_mes_pt_0_6, effF9_mes_pt_0_7 },
+    { (const CONN*)effF9_mes_pt_0_8, effF9_mes_pt_0_9 }, { (const CONN*)effF9_mes_pt_0_10, effF9_mes_pt_0_11 },
+    { (const CONN*)effF9_mes_pt_0_12, effF9_mes_pt_0_13 }, { (const CONN*)effF9_mes_pt_0_14, effF9_mes_pt_0_15 },
+    { (const CONN*)effF9_mes_pt_0_16, effF9_mes_pt_0_17 }, { (const CONN*)effF9_mes_pt_0_18, effF9_mes_pt_0_19 },
+    { effF9_mes_pt_0_20, effF9_mes_pt_0_21 }, { (const CONN*)effF9_mes_pt_0_22, effF9_mes_pt_0_23 },
+    { (const CONN*)effF9_mes_pt_0_24, effF9_mes_pt_0_25 }, { (const CONN*)effF9_mes_pt_0_26, effF9_mes_pt_0_27 },
+    { (const CONN*)effF9_mes_pt_0_28, effF9_mes_pt_0_29 }, { (const CONN*)effF9_mes_pt_0_30, effF9_mes_pt_0_31 },
+    { (const CONN*)effF9_mes_pt_0_32, effF9_mes_pt_0_33 }, { (const CONN*)effF9_mes_pt_0_34, effF9_mes_pt_0_35 },
 };
 
-const u32 effF9_mes_pt_0_0[30] = {
-    0x800000, 0x9EB5, 0x880000, 0x9E8E, 0x900000, 0x9E82, 0x980000, 0x9F3C,
-    0xA80000, 0x9E95, 0xB00000, 0x9E80, 0xB80000, 0x9E88, 0xC80000, 0x9E82,
-    0xD00000, 0x9E80, 0xD80000, 0x9F38, 0xE00000, 0x9F32, 0xE80000, 0x9E37,
-    0xF00000, 0x9E8B, 0xF80000, 0x9E8E, 0x1000000, 0x9E9B,
+const CONN effF9_mes_pt_0_0[15] = {
+    { 128, 0, 0, 0x9EB5 }, { 136, 0, 0, 0x9E8E }, { 144, 0, 0, 0x9E82 }, { 152, 0, 0, 0x9F3C },
+    { 168, 0, 0, 0x9E95 }, { 176, 0, 0, 0x9E80 }, { 184, 0, 0, 0x9E88 }, { 200, 0, 0, 0x9E82 },
+    { 208, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9F38 }, { 224, 0, 0, 0x9F32 }, { 232, 0, 0, 0x9E37 },
+    { 240, 0, 0, 0x9E8B }, { 248, 0, 0, 0x9E8E }, { 256, 0, 0, 0x9E9B },
 };
 
 const u32 effF9_mes_pt_0_4[104] = {
@@ -26079,12 +26079,12 @@ const u32 effF9_mes_pt_0_4[104] = {
     0x78FFF0, 0x9E86, 0x80FFF0, 0x9E80, 0x88FFF0, 0x9E91, 0x90FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_0_6[34] = {
-    0x780000, 0x9EB5, 0x800000, 0x9E8E, 0x880000, 0x9E82, 0x900000, 0x9F3C,
-    0xA00000, 0x9E8D, 0xA80000, 0x9F36, 0xB00000, 0x9E8E, 0xC00000, 0x9E84,
-    0xC80000, 0x9E8D, 0xD00000, 0x9E93, 0xD80000, 0x9E84, 0xE00000, 0x9E8D,
-    0xE80000, 0x9E83, 0xF00000, 0x9E84, 0xF80000, 0x9E9C, 0x1000000, 0x9E9C,
-    0x1080000, 0x9E9C,
+const CONN effF9_mes_pt_0_6[17] = {
+    { 120, 0, 0, 0x9EB5 }, { 128, 0, 0, 0x9E8E }, { 136, 0, 0, 0x9E82 }, { 144, 0, 0, 0x9F3C },
+    { 160, 0, 0, 0x9E8D }, { 168, 0, 0, 0x9F36 }, { 176, 0, 0, 0x9E8E }, { 192, 0, 0, 0x9E84 },
+    { 200, 0, 0, 0x9E8D }, { 208, 0, 0, 0x9E93 }, { 216, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E8D },
+    { 232, 0, 0, 0x9E83 }, { 240, 0, 0, 0x9E84 }, { 248, 0, 0, 0x9E9C }, { 256, 0, 0, 0x9E9C },
+    { 264, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_pt_0_8[80] = {
@@ -26171,9 +26171,9 @@ const u32 effF9_mes_pt_0_18[42] = {
     0xF0FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_0_20[10] = {
-    0xA80000, 0x9EA0, 0xB00000, 0x9E8B, 0xB80000, 0x9E84, 0xC00000, 0x9E97,
-    0xC80000, 0x9E9A,
+const CONN effF9_mes_pt_0_20[5] = {
+    { 168, 0, 0, 0x9EA0 }, { 176, 0, 0, 0x9E8B }, { 184, 0, 0, 0x9E84 }, { 192, 0, 0, 0x9E97 },
+    { 200, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_0_22[42] = {
@@ -26360,12 +26360,12 @@ const u16 effF9_mes_pt_0_35[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_2[11] = {
-    { (const CONN*)effF9_mes_pt_2_0, (const u16*)effF9_mes_pt_2_1 }, { (const CONN*)effF9_mes_pt_2_0, (const u16*)effF9_mes_pt_2_3 },
-    { (const CONN*)effF9_mes_pt_2_4, (const u16*)effF9_mes_pt_2_5 }, { (const CONN*)effF9_mes_pt_2_6, (const u16*)effF9_mes_pt_2_7 },
-    { (const CONN*)effF9_mes_pt_2_8, (const u16*)effF9_mes_pt_2_9 }, { (const CONN*)effF9_mes_pt_2_10, (const u16*)effF9_mes_pt_2_11 },
-    { (const CONN*)effF9_mes_pt_2_12, (const u16*)effF9_mes_pt_2_13 }, { (const CONN*)effF9_mes_pt_2_14, (const u16*)effF9_mes_pt_2_15 },
-    { (const CONN*)effF9_mes_pt_2_16, (const u16*)effF9_mes_pt_2_17 }, { (const CONN*)effF9_mes_pt_2_18, (const u16*)effF9_mes_pt_2_19 },
-    { (const CONN*)effF9_mes_pt_2_20, (const u16*)effF9_mes_pt_2_21 },
+    { (const CONN*)effF9_mes_pt_2_0, effF9_mes_pt_2_1 }, { (const CONN*)effF9_mes_pt_2_0, effF9_mes_pt_2_3 },
+    { (const CONN*)effF9_mes_pt_2_4, effF9_mes_pt_2_5 }, { (const CONN*)effF9_mes_pt_2_6, effF9_mes_pt_2_7 },
+    { (const CONN*)effF9_mes_pt_2_8, effF9_mes_pt_2_9 }, { (const CONN*)effF9_mes_pt_2_10, effF9_mes_pt_2_11 },
+    { (const CONN*)effF9_mes_pt_2_12, effF9_mes_pt_2_13 }, { (const CONN*)effF9_mes_pt_2_14, effF9_mes_pt_2_15 },
+    { (const CONN*)effF9_mes_pt_2_16, effF9_mes_pt_2_17 }, { effF9_mes_pt_2_18, effF9_mes_pt_2_19 },
+    { (const CONN*)effF9_mes_pt_2_20, effF9_mes_pt_2_21 },
 };
 
 const u32 effF9_mes_pt_2_0[98] = {
@@ -26472,14 +26472,14 @@ const u32 effF9_mes_pt_2_16[96] = {
     0x68FFF0, 0x9E8E, 0x70FFF0, 0x9E9C, 0x78FFF0, 0x9E9C, 0x80FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_2_18[52] = {
-    0x180000, 0x9EA4, 0x200000, 0x9E92, 0x280000, 0x9E8F, 0x300000, 0x9E84,
-    0x380000, 0x9E91, 0x400000, 0x9E84, 0x480000, 0x9E8C, 0x580000, 0x9E8F,
-    0x600000, 0x9E8E, 0x680000, 0x9E91, 0x780000, 0x9E8C, 0x800000, 0x9E88,
-    0x880000, 0x9E8C, 0x980000, 0x9E86, 0xA00000, 0x9E94, 0xA80000, 0x9E84,
-    0xB00000, 0x9E91, 0xB80000, 0x9E91, 0xC00000, 0x9E84, 0xC80000, 0x9E88,
-    0xD00000, 0x9E91, 0xD80000, 0x9E8E, 0xE00000, 0x9E92, 0xE80000, 0x9E9C,
-    0xF00000, 0x9E9C, 0xF80000, 0x9E9C,
+const CONN effF9_mes_pt_2_18[26] = {
+    { 24, 0, 0, 0x9EA4 }, { 32, 0, 0, 0x9E92 }, { 40, 0, 0, 0x9E8F }, { 48, 0, 0, 0x9E84 },
+    { 56, 0, 0, 0x9E91 }, { 64, 0, 0, 0x9E84 }, { 72, 0, 0, 0x9E8C }, { 88, 0, 0, 0x9E8F },
+    { 96, 0, 0, 0x9E8E }, { 104, 0, 0, 0x9E91 }, { 120, 0, 0, 0x9E8C }, { 128, 0, 0, 0x9E88 },
+    { 136, 0, 0, 0x9E8C }, { 152, 0, 0, 0x9E86 }, { 160, 0, 0, 0x9E94 }, { 168, 0, 0, 0x9E84 },
+    { 176, 0, 0, 0x9E91 }, { 184, 0, 0, 0x9E91 }, { 192, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E88 },
+    { 208, 0, 0, 0x9E91 }, { 216, 0, 0, 0x9E8E }, { 224, 0, 0, 0x9E92 }, { 232, 0, 0, 0x9E9C },
+    { 240, 0, 0, 0x9E9C }, { 248, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_pt_2_20[94] = {
@@ -26542,27 +26542,27 @@ const u16 effF9_mes_pt_2_21[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_3[16] = {
-    { (const CONN*)effF9_mes_pt_3_0, (const u16*)effF9_mes_pt_3_1 }, { (const CONN*)effF9_mes_pt_3_0, (const u16*)effF9_mes_pt_3_3 },
-    { (const CONN*)effF9_mes_pt_3_4, (const u16*)effF9_mes_pt_3_5 }, { (const CONN*)effF9_mes_pt_3_6, (const u16*)effF9_mes_pt_3_7 },
-    { (const CONN*)effF9_mes_pt_3_8, (const u16*)effF9_mes_pt_3_9 }, { (const CONN*)effF9_mes_pt_3_10, (const u16*)effF9_mes_pt_3_11 },
-    { (const CONN*)effF9_mes_pt_3_12, (const u16*)effF9_mes_pt_3_13 }, { (const CONN*)effF9_mes_pt_3_14, (const u16*)effF9_mes_pt_3_15 },
-    { (const CONN*)effF9_mes_pt_3_16, (const u16*)effF9_mes_pt_3_17 }, { (const CONN*)effF9_mes_pt_3_18, (const u16*)effF9_mes_pt_3_19 },
-    { (const CONN*)effF9_mes_pt_3_20, (const u16*)effF9_mes_pt_3_21 }, { (const CONN*)effF9_mes_pt_3_22, (const u16*)effF9_mes_pt_3_23 },
-    { (const CONN*)effF9_mes_pt_3_24, (const u16*)effF9_mes_pt_3_25 }, { (const CONN*)effF9_mes_pt_3_26, (const u16*)effF9_mes_pt_3_27 },
-    { (const CONN*)effF9_mes_pt_3_28, (const u16*)effF9_mes_pt_3_29 }, { (const CONN*)effF9_mes_pt_3_30, (const u16*)effF9_mes_pt_3_31 },
+    { effF9_mes_pt_3_0, effF9_mes_pt_3_1 }, { effF9_mes_pt_3_0, effF9_mes_pt_3_3 },
+    { effF9_mes_pt_3_4, effF9_mes_pt_3_5 }, { effF9_mes_pt_3_6, effF9_mes_pt_3_7 },
+    { (const CONN*)effF9_mes_pt_3_8, effF9_mes_pt_3_9 }, { effF9_mes_pt_3_10, effF9_mes_pt_3_11 },
+    { effF9_mes_pt_3_12, effF9_mes_pt_3_13 }, { (const CONN*)effF9_mes_pt_3_14, effF9_mes_pt_3_15 },
+    { (const CONN*)effF9_mes_pt_3_16, effF9_mes_pt_3_17 }, { (const CONN*)effF9_mes_pt_3_18, effF9_mes_pt_3_19 },
+    { (const CONN*)effF9_mes_pt_3_20, effF9_mes_pt_3_21 }, { effF9_mes_pt_3_22, effF9_mes_pt_3_23 },
+    { (const CONN*)effF9_mes_pt_3_24, effF9_mes_pt_3_25 }, { (const CONN*)effF9_mes_pt_3_26, effF9_mes_pt_3_27 },
+    { (const CONN*)effF9_mes_pt_3_28, effF9_mes_pt_3_29 }, { (const CONN*)effF9_mes_pt_3_30, effF9_mes_pt_3_31 },
 };
 
-const u32 effF9_mes_pt_3_0[6] = {
-    0xB80000, 0x9EA7, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_pt_3_0[3] = {
+    { 184, 0, 0, 0x9EA7 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_3_4[6] = {
-    0xB80000, 0x9EB8, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_pt_3_4[3] = {
+    { 184, 0, 0, 0x9EB8 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_3_6[10] = {
-    0xB00000, 0x9EAE, 0xB80000, 0x9E8B, 0xC00000, 0x9E87, 0xC80000, 0x9E84,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_pt_3_6[5] = {
+    { 176, 0, 0, 0x9EAE }, { 184, 0, 0, 0x9E8B }, { 192, 0, 0, 0x9E87 }, { 200, 0, 0, 0x9E84 },
+    { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_3_8[44] = {
@@ -26574,16 +26574,16 @@ const u32 effF9_mes_pt_3_8[44] = {
     0x1180000, 0x9E84, 0x1200000, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_3_10[24] = {
-    0x900000, 0x9EA4, 0x980000, 0x9E8B, 0xA00000, 0x9E84, 0xA80000, 0x9E92,
-    0xB80000, 0x9E95, 0xC00000, 0x9E8E, 0xC80000, 0x9E93, 0xD00000, 0x9E80,
-    0xD80000, 0x9E91, 0xE00000, 0x9E80, 0xE80000, 0x9E8C, 0xF00000, 0x9E9A,
+const CONN effF9_mes_pt_3_10[12] = {
+    { 144, 0, 0, 0x9EA4 }, { 152, 0, 0, 0x9E8B }, { 160, 0, 0, 0x9E84 }, { 168, 0, 0, 0x9E92 },
+    { 184, 0, 0, 0x9E95 }, { 192, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E93 }, { 208, 0, 0, 0x9E80 },
+    { 216, 0, 0, 0x9E91 }, { 224, 0, 0, 0x9E80 }, { 232, 0, 0, 0x9E8C }, { 240, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_3_12[18] = {
-    0x980000, 0x9EAE, 0xA00000, 0x9E88, 0xA80000, 0x9E9D, 0xB80000, 0x9E82,
-    0xC00000, 0x9E80, 0xC80000, 0x9E91, 0xD00000, 0x9E80, 0xD80000, 0x9E92,
-    0xE00000, 0x9E9A,
+const CONN effF9_mes_pt_3_12[9] = {
+    { 152, 0, 0, 0x9EAE }, { 160, 0, 0, 0x9E88 }, { 168, 0, 0, 0x9E9D }, { 184, 0, 0, 0x9E82 },
+    { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E91 }, { 208, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9E92 },
+    { 224, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_3_14[44] = {
@@ -26631,11 +26631,11 @@ const u32 effF9_mes_pt_3_20[114] = {
     0xC8FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_3_22[32] = {
-    0x780000, 0x9EA2, 0x800000, 0x9E84, 0x880000, 0x9E91, 0x900000, 0x9E93,
-    0x980000, 0x9E8E, 0xA00000, 0x9E9A, 0xB00000, 0x9EB2, 0xB80000, 0x9E88,
-    0xC00000, 0x9E8D, 0xC80000, 0x9E93, 0xD00000, 0x9E80, 0xE00000, 0x9E88,
-    0xE80000, 0x9E92, 0xF00000, 0x9E93, 0xF80000, 0x9E8E, 0x1000000, 0x9E9A,
+const CONN effF9_mes_pt_3_22[16] = {
+    { 120, 0, 0, 0x9EA2 }, { 128, 0, 0, 0x9E84 }, { 136, 0, 0, 0x9E91 }, { 144, 0, 0, 0x9E93 },
+    { 152, 0, 0, 0x9E8E }, { 160, 0, 0, 0x9E9A }, { 176, 0, 0, 0x9EB2 }, { 184, 0, 0, 0x9E88 },
+    { 192, 0, 0, 0x9E8D }, { 200, 0, 0, 0x9E93 }, { 208, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E88 },
+    { 232, 0, 0, 0x9E92 }, { 240, 0, 0, 0x9E93 }, { 248, 0, 0, 0x9E8E }, { 256, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_3_24[28] = {
@@ -26758,12 +26758,12 @@ const u16 effF9_mes_pt_3_31[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_4[11] = {
-    { (const CONN*)effF9_mes_pt_4_0, (const u16*)effF9_mes_pt_4_1 }, { (const CONN*)effF9_mes_pt_4_0, (const u16*)effF9_mes_pt_4_3 },
-    { (const CONN*)effF9_mes_pt_4_4, (const u16*)effF9_mes_pt_4_5 }, { (const CONN*)effF9_mes_pt_4_6, (const u16*)effF9_mes_pt_4_7 },
-    { (const CONN*)effF9_mes_pt_4_8, (const u16*)effF9_mes_pt_4_9 }, { (const CONN*)effF9_mes_pt_4_10, (const u16*)effF9_mes_pt_4_11 },
-    { (const CONN*)effF9_mes_pt_4_12, (const u16*)effF9_mes_pt_4_13 }, { (const CONN*)effF9_mes_pt_4_14, (const u16*)effF9_mes_pt_4_15 },
-    { (const CONN*)effF9_mes_pt_4_16, (const u16*)effF9_mes_pt_4_17 }, { (const CONN*)effF9_mes_pt_4_18, (const u16*)effF9_mes_pt_4_19 },
-    { (const CONN*)effF9_mes_pt_4_20, (const u16*)effF9_mes_pt_4_21 },
+    { (const CONN*)effF9_mes_pt_4_0, effF9_mes_pt_4_1 }, { (const CONN*)effF9_mes_pt_4_0, effF9_mes_pt_4_3 },
+    { (const CONN*)effF9_mes_pt_4_4, effF9_mes_pt_4_5 }, { effF9_mes_pt_4_6, effF9_mes_pt_4_7 },
+    { (const CONN*)effF9_mes_pt_4_8, effF9_mes_pt_4_9 }, { (const CONN*)effF9_mes_pt_4_10, effF9_mes_pt_4_11 },
+    { (const CONN*)effF9_mes_pt_4_12, effF9_mes_pt_4_13 }, { (const CONN*)effF9_mes_pt_4_14, effF9_mes_pt_4_15 },
+    { effF9_mes_pt_4_16, effF9_mes_pt_4_17 }, { effF9_mes_pt_4_18, effF9_mes_pt_4_19 },
+    { effF9_mes_pt_4_20, effF9_mes_pt_4_21 },
 };
 
 const u32 effF9_mes_pt_4_0[100] = {
@@ -26796,10 +26796,10 @@ const u32 effF9_mes_pt_4_4[84] = {
     0x50FFF0, 0x9E88, 0x58FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_4_6[20] = {
-    0x980000, 0x9EB2, 0xA00000, 0x9E88, 0xA80000, 0x9E8C, 0xB80000, 0x9E92,
-    0xC00000, 0x9E84, 0xC80000, 0x9E8D, 0xD00000, 0x9E87, 0xD80000, 0x9E8E,
-    0xE00000, 0x9E91, 0xE80000, 0x9E9C,
+const CONN effF9_mes_pt_4_6[10] = {
+    { 152, 0, 0, 0x9EB2 }, { 160, 0, 0, 0x9E88 }, { 168, 0, 0, 0x9E8C }, { 184, 0, 0, 0x9E92 },
+    { 192, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E8D }, { 208, 0, 0, 0x9E87 }, { 216, 0, 0, 0x9E8E },
+    { 224, 0, 0, 0x9E91 }, { 232, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_pt_4_8[100] = {
@@ -26875,20 +26875,20 @@ const u32 effF9_mes_pt_4_14[118] = {
     0xA8FFF0, 0x9E9C, 0xB0FFF0, 0x9E9C, 0xB8FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_4_16[20] = {
-    0x980000, 0x9F1D, 0xA80000, 0x9E8F, 0xB00000, 0x9E84, 0xB80000, 0x9E91,
-    0xC00000, 0x9E85, 0xC80000, 0x9E84, 0xD00000, 0x9E88, 0xD80000, 0x9E93,
-    0xE00000, 0x9E8E, 0xE80000, 0x9E9A,
+const CONN effF9_mes_pt_4_16[10] = {
+    { 152, 0, 0, 0x9F1D }, { 168, 0, 0, 0x9E8F }, { 176, 0, 0, 0x9E84 }, { 184, 0, 0, 0x9E91 },
+    { 192, 0, 0, 0x9E85 }, { 200, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E88 }, { 216, 0, 0, 0x9E93 },
+    { 224, 0, 0, 0x9E8E }, { 232, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_4_18[8] = {
-    0xB00000, 0x9EAE, 0xB80000, 0x9E8F, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_pt_4_18[4] = {
+    { 176, 0, 0, 0x9EAE }, { 184, 0, 0, 0x9E8F }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_4_20[24] = {
-    0x900000, 0x9EB2, 0x980000, 0x9E84, 0xA00000, 0x9E8C, 0xB00000, 0x9E8F,
-    0xB80000, 0x9E91, 0xC00000, 0x9E8E, 0xC80000, 0x9E81, 0xD00000, 0x9E8B,
-    0xD80000, 0x9E84, 0xE00000, 0x9E8C, 0xE80000, 0x9E80, 0xF00000, 0x9E9A,
+const CONN effF9_mes_pt_4_20[12] = {
+    { 144, 0, 0, 0x9EB2 }, { 152, 0, 0, 0x9E84 }, { 160, 0, 0, 0x9E8C }, { 176, 0, 0, 0x9E8F },
+    { 184, 0, 0, 0x9E91 }, { 192, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E81 }, { 208, 0, 0, 0x9E8B },
+    { 216, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E8C }, { 232, 0, 0, 0x9E80 }, { 240, 0, 0, 0x9E9A },
 };
 
 const u16 effF9_mes_pt_4_1[2] = {
@@ -26936,13 +26936,13 @@ const u16 effF9_mes_pt_4_21[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_5[13] = {
-    { (const CONN*)effF9_mes_pt_5_0, (const u16*)effF9_mes_pt_5_1 }, { (const CONN*)effF9_mes_pt_5_0, (const u16*)effF9_mes_pt_5_3 },
-    { (const CONN*)effF9_mes_pt_5_4, (const u16*)effF9_mes_pt_5_5 }, { (const CONN*)effF9_mes_pt_5_6, (const u16*)effF9_mes_pt_5_7 },
-    { (const CONN*)effF9_mes_pt_5_8, (const u16*)effF9_mes_pt_5_9 }, { (const CONN*)effF9_mes_pt_5_10, (const u16*)effF9_mes_pt_5_11 },
-    { (const CONN*)effF9_mes_pt_5_12, (const u16*)effF9_mes_pt_5_13 }, { (const CONN*)effF9_mes_pt_5_14, (const u16*)effF9_mes_pt_5_15 },
-    { (const CONN*)effF9_mes_pt_5_16, (const u16*)effF9_mes_pt_5_17 }, { (const CONN*)effF9_mes_pt_5_18, (const u16*)effF9_mes_pt_5_19 },
-    { (const CONN*)effF9_mes_pt_5_20, (const u16*)effF9_mes_pt_5_21 }, { (const CONN*)effF9_mes_pt_5_22, (const u16*)effF9_mes_pt_5_23 },
-    { (const CONN*)effF9_mes_pt_5_24, (const u16*)effF9_mes_pt_5_25 },
+    { (const CONN*)effF9_mes_pt_5_0, effF9_mes_pt_5_1 }, { (const CONN*)effF9_mes_pt_5_0, effF9_mes_pt_5_3 },
+    { (const CONN*)effF9_mes_pt_5_4, effF9_mes_pt_5_5 }, { (const CONN*)effF9_mes_pt_5_6, effF9_mes_pt_5_7 },
+    { (const CONN*)effF9_mes_pt_5_8, effF9_mes_pt_5_9 }, { (const CONN*)effF9_mes_pt_5_10, effF9_mes_pt_5_11 },
+    { effF9_mes_pt_5_12, effF9_mes_pt_5_13 }, { (const CONN*)effF9_mes_pt_5_14, effF9_mes_pt_5_15 },
+    { (const CONN*)effF9_mes_pt_5_16, effF9_mes_pt_5_17 }, { (const CONN*)effF9_mes_pt_5_18, effF9_mes_pt_5_19 },
+    { effF9_mes_pt_5_20, effF9_mes_pt_5_21 }, { effF9_mes_pt_5_22, effF9_mes_pt_5_23 },
+    { effF9_mes_pt_5_24, effF9_mes_pt_5_25 },
 };
 
 const u32 effF9_mes_pt_5_0[64] = {
@@ -27014,8 +27014,8 @@ const u32 effF9_mes_pt_5_10[110] = {
     0xF8FFF0, 0x9E9C, 0x100FFF0, 0x9E9C, 0x108FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_5_12[4] = {
-    0xD80000, 0x9E52, 0xE00000, 0x9E9D,
+const CONN effF9_mes_pt_5_12[2] = {
+    { 216, 0, 0, 0x9E52 }, { 224, 0, 0, 0x9E9D },
 };
 
 const u32 effF9_mes_pt_5_14[66] = {
@@ -27052,16 +27052,16 @@ const u32 effF9_mes_pt_5_18[4] = {
     0x980000, 0x9E56, 0xA00000, 0x9E9D,
 };
 
-const u32 effF9_mes_pt_5_20[4] = {
-    0xA80000, 0x9E55, 0xB00000, 0x9E9D,
+const CONN effF9_mes_pt_5_20[2] = {
+    { 168, 0, 0, 0x9E55 }, { 176, 0, 0, 0x9E9D },
 };
 
-const u32 effF9_mes_pt_5_22[4] = {
-    0xB80000, 0x9E54, 0xC00000, 0x9E9D,
+const CONN effF9_mes_pt_5_22[2] = {
+    { 184, 0, 0, 0x9E54 }, { 192, 0, 0, 0x9E9D },
 };
 
-const u32 effF9_mes_pt_5_24[4] = {
-    0xC80000, 0x9E53, 0xD00000, 0x9E9D,
+const CONN effF9_mes_pt_5_24[2] = {
+    { 200, 0, 0, 0x9E53 }, { 208, 0, 0, 0x9E9D },
 };
 
 const u16 effF9_mes_pt_5_1[2] = {
@@ -27117,19 +27117,19 @@ const u16 effF9_mes_pt_5_25[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_6[25] = {
-    { (const CONN*)effF9_mes_pt_6_0, (const u16*)effF9_mes_pt_6_1 }, { (const CONN*)effF9_mes_pt_6_0, (const u16*)effF9_mes_pt_6_3 },
-    { (const CONN*)effF9_mes_pt_6_4, (const u16*)effF9_mes_pt_6_5 }, { (const CONN*)effF9_mes_pt_6_6, (const u16*)effF9_mes_pt_6_7 },
-    { (const CONN*)effF9_mes_pt_6_8, (const u16*)effF9_mes_pt_6_9 }, { (const CONN*)effF9_mes_pt_6_10, (const u16*)effF9_mes_pt_6_11 },
-    { (const CONN*)effF9_mes_pt_6_12, (const u16*)effF9_mes_pt_6_13 }, { (const CONN*)effF9_mes_pt_6_14, (const u16*)effF9_mes_pt_6_15 },
-    { (const CONN*)effF9_mes_pt_6_16, (const u16*)effF9_mes_pt_6_17 }, { (const CONN*)effF9_mes_pt_6_18, (const u16*)effF9_mes_pt_6_19 },
-    { (const CONN*)effF9_mes_pt_6_20, (const u16*)effF9_mes_pt_6_21 }, { (const CONN*)effF9_mes_pt_6_22, (const u16*)effF9_mes_pt_6_23 },
-    { (const CONN*)effF9_mes_pt_6_24, (const u16*)effF9_mes_pt_6_25 }, { (const CONN*)effF9_mes_pt_6_26, (const u16*)effF9_mes_pt_6_27 },
-    { (const CONN*)effF9_mes_pt_6_28, (const u16*)effF9_mes_pt_6_29 }, { (const CONN*)effF9_mes_pt_6_30, (const u16*)effF9_mes_pt_6_31 },
-    { (const CONN*)effF9_mes_pt_6_32, (const u16*)effF9_mes_pt_6_33 }, { (const CONN*)effF9_mes_pt_6_34, (const u16*)effF9_mes_pt_6_35 },
-    { (const CONN*)effF9_mes_pt_6_36, (const u16*)effF9_mes_pt_6_37 }, { (const CONN*)effF9_mes_pt_6_38, (const u16*)effF9_mes_pt_6_39 },
-    { (const CONN*)effF9_mes_pt_6_40, (const u16*)effF9_mes_pt_6_41 }, { (const CONN*)effF9_mes_pt_6_42, (const u16*)effF9_mes_pt_6_43 },
-    { (const CONN*)effF9_mes_pt_6_44, (const u16*)effF9_mes_pt_6_45 }, { (const CONN*)effF9_mes_pt_6_46, (const u16*)effF9_mes_pt_6_47 },
-    { (const CONN*)effF9_mes_pt_6_48, (const u16*)effF9_mes_pt_6_49 },
+    { (const CONN*)effF9_mes_pt_6_0, effF9_mes_pt_6_1 }, { (const CONN*)effF9_mes_pt_6_0, effF9_mes_pt_6_3 },
+    { (const CONN*)effF9_mes_pt_6_4, effF9_mes_pt_6_5 }, { effF9_mes_pt_6_6, effF9_mes_pt_6_7 },
+    { (const CONN*)effF9_mes_pt_6_8, effF9_mes_pt_6_9 }, { (const CONN*)effF9_mes_pt_6_10, effF9_mes_pt_6_11 },
+    { (const CONN*)effF9_mes_pt_6_12, effF9_mes_pt_6_13 }, { (const CONN*)effF9_mes_pt_6_14, effF9_mes_pt_6_15 },
+    { (const CONN*)effF9_mes_pt_6_16, effF9_mes_pt_6_17 }, { (const CONN*)effF9_mes_pt_6_18, effF9_mes_pt_6_19 },
+    { (const CONN*)effF9_mes_pt_6_20, effF9_mes_pt_6_21 }, { (const CONN*)effF9_mes_pt_6_22, effF9_mes_pt_6_23 },
+    { (const CONN*)effF9_mes_pt_6_24, effF9_mes_pt_6_25 }, { (const CONN*)effF9_mes_pt_6_26, effF9_mes_pt_6_27 },
+    { (const CONN*)effF9_mes_pt_6_28, effF9_mes_pt_6_29 }, { effF9_mes_pt_6_30, effF9_mes_pt_6_31 },
+    { effF9_mes_pt_6_32, effF9_mes_pt_6_33 }, { (const CONN*)effF9_mes_pt_6_34, effF9_mes_pt_6_35 },
+    { (const CONN*)effF9_mes_pt_6_36, effF9_mes_pt_6_37 }, { (const CONN*)effF9_mes_pt_6_38, effF9_mes_pt_6_39 },
+    { (const CONN*)effF9_mes_pt_6_40, effF9_mes_pt_6_41 }, { (const CONN*)effF9_mes_pt_6_42, effF9_mes_pt_6_43 },
+    { (const CONN*)effF9_mes_pt_6_44, effF9_mes_pt_6_45 }, { (const CONN*)effF9_mes_pt_6_46, effF9_mes_pt_6_47 },
+    { (const CONN*)effF9_mes_pt_6_48, effF9_mes_pt_6_49 },
 };
 
 const u32 effF9_mes_pt_6_0[100] = {
@@ -27162,13 +27162,13 @@ const u32 effF9_mes_pt_6_4[88] = {
     0x138FFF0, 0x9E88, 0x140FFF0, 0x9E91, 0x148FFF0, 0x9E8E, 0x150FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_6_6[48] = {
-    0x600000, 0x9EAE, 0x680000, 0x9E87, 0x700000, 0x9E9B, 0x60FFF0, 0x9EA4,
-    0x68FFF0, 0x9E8D, 0x70FFF0, 0x9E93, 0x78FFF0, 0x9F36, 0x80FFF0, 0x9E8E,
-    0x90FFF0, 0x9E95, 0x98FFF0, 0x9E8E, 0xA0FFF0, 0x9E82, 0xA8FFF0, 0x9F3C,
-    0xB8FFF0, 0x9E92, 0xC0FFF0, 0x9E84, 0xD0FFF0, 0x9E83, 0xD8FFF0, 0x9E84,
-    0xE0FFF0, 0x9E82, 0xE8FFF0, 0x9E88, 0xF0FFF0, 0x9E83, 0xF8FFF0, 0x9E88,
-    0x100FFF0, 0x9E94, 0x110FFF0, 0x9E9C, 0x118FFF0, 0x9E9C, 0x120FFF0, 0x9E9C,
+const CONN effF9_mes_pt_6_6[24] = {
+    { 96, 0, 0, 0x9EAE }, { 104, 0, 0, 0x9E87 }, { 112, 0, 0, 0x9E9B }, { 96, -16, 0, 0x9EA4 },
+    { 104, -16, 0, 0x9E8D }, { 112, -16, 0, 0x9E93 }, { 120, -16, 0, 0x9F36 }, { 128, -16, 0, 0x9E8E },
+    { 144, -16, 0, 0x9E95 }, { 152, -16, 0, 0x9E8E }, { 160, -16, 0, 0x9E82 }, { 168, -16, 0, 0x9F3C },
+    { 184, -16, 0, 0x9E92 }, { 192, -16, 0, 0x9E84 }, { 208, -16, 0, 0x9E83 }, { 216, -16, 0, 0x9E84 },
+    { 224, -16, 0, 0x9E82 }, { 232, -16, 0, 0x9E88 }, { 240, -16, 0, 0x9E83 }, { 248, -16, 0, 0x9E88 },
+    { 256, -16, 0, 0x9E94 }, { 272, -16, 0, 0x9E9C }, { 280, -16, 0, 0x9E9C }, { 288, -16, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_pt_6_8[60] = {
@@ -27331,17 +27331,17 @@ const u32 effF9_mes_pt_6_28[88] = {
     0x108FFF0, 0x9E8E, 0x110FFF0, 0x9E92, 0x118FFF0, 0x9E9A, 0x120FFF0, 0x9EBA,
 };
 
-const u32 effF9_mes_pt_6_30[38] = {
-    0x680000, 0x9EB5, 0x700000, 0x9E80, 0x780000, 0x9E8C, 0x800000, 0x9E8E,
-    0x880000, 0x9E92, 0x980000, 0x9E80, 0xA00000, 0x9E82, 0xA80000, 0x9E80,
-    0xB00000, 0x9E81, 0xB80000, 0x9E80, 0xC00000, 0x9E91, 0xD00000, 0x9E82,
-    0xD80000, 0x9E8E, 0xE00000, 0x9E8C, 0xF00000, 0x9E88, 0xF80000, 0x9E92,
-    0x1000000, 0x9E92, 0x1080000, 0x9E8E, 0x1100000, 0x9E9A,
+const CONN effF9_mes_pt_6_30[19] = {
+    { 104, 0, 0, 0x9EB5 }, { 112, 0, 0, 0x9E80 }, { 120, 0, 0, 0x9E8C }, { 128, 0, 0, 0x9E8E },
+    { 136, 0, 0, 0x9E92 }, { 152, 0, 0, 0x9E80 }, { 160, 0, 0, 0x9E82 }, { 168, 0, 0, 0x9E80 },
+    { 176, 0, 0, 0x9E81 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E91 }, { 208, 0, 0, 0x9E82 },
+    { 216, 0, 0, 0x9E8E }, { 224, 0, 0, 0x9E8C }, { 240, 0, 0, 0x9E88 }, { 248, 0, 0, 0x9E92 },
+    { 256, 0, 0, 0x9E92 }, { 264, 0, 0, 0x9E8E }, { 272, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_6_32[16] = {
-    0x900000, 0x9F1D, 0xA00000, 0x9E88, 0xA80000, 0x9E92, 0xB00000, 0x9E92,
-    0xB80000, 0x9E8E, 0xC80000, 0x9E80, 0xD00000, 0x9F3E, 0xD80000, 0x9E9A,
+const CONN effF9_mes_pt_6_32[8] = {
+    { 144, 0, 0, 0x9F1D }, { 160, 0, 0, 0x9E88 }, { 168, 0, 0, 0x9E92 }, { 176, 0, 0, 0x9E92 },
+    { 184, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E80 }, { 208, 0, 0, 0x9F3E }, { 216, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_6_34[114] = {
@@ -27577,21 +27577,21 @@ const u16 effF9_mes_pt_6_49[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_7[15] = {
-    { (const CONN*)effF9_mes_pt_7_0, (const u16*)effF9_mes_pt_7_1 }, { (const CONN*)effF9_mes_pt_7_0, (const u16*)effF9_mes_pt_7_3 },
-    { (const CONN*)effF9_mes_pt_7_4, (const u16*)effF9_mes_pt_7_5 }, { (const CONN*)effF9_mes_pt_7_6, (const u16*)effF9_mes_pt_7_7 },
-    { (const CONN*)effF9_mes_pt_7_8, (const u16*)effF9_mes_pt_7_9 }, { (const CONN*)effF9_mes_pt_7_10, (const u16*)effF9_mes_pt_7_11 },
-    { (const CONN*)effF9_mes_pt_7_12, (const u16*)effF9_mes_pt_7_13 }, { (const CONN*)effF9_mes_pt_7_14, (const u16*)effF9_mes_pt_7_15 },
-    { (const CONN*)effF9_mes_pt_7_16, (const u16*)effF9_mes_pt_7_17 }, { (const CONN*)effF9_mes_pt_7_18, (const u16*)effF9_mes_pt_7_19 },
-    { (const CONN*)effF9_mes_pt_7_20, (const u16*)effF9_mes_pt_7_21 }, { (const CONN*)effF9_mes_pt_7_22, (const u16*)effF9_mes_pt_7_23 },
-    { (const CONN*)effF9_mes_pt_7_24, (const u16*)effF9_mes_pt_7_25 }, { (const CONN*)effF9_mes_pt_7_26, (const u16*)effF9_mes_pt_7_27 },
-    { (const CONN*)effF9_mes_pt_7_28, (const u16*)effF9_mes_pt_7_29 },
+    { effF9_mes_pt_7_0, effF9_mes_pt_7_1 }, { effF9_mes_pt_7_0, effF9_mes_pt_7_3 },
+    { (const CONN*)effF9_mes_pt_7_4, effF9_mes_pt_7_5 }, { effF9_mes_pt_7_6, effF9_mes_pt_7_7 },
+    { (const CONN*)effF9_mes_pt_7_8, effF9_mes_pt_7_9 }, { (const CONN*)effF9_mes_pt_7_10, effF9_mes_pt_7_11 },
+    { (const CONN*)effF9_mes_pt_7_12, effF9_mes_pt_7_13 }, { effF9_mes_pt_7_14, effF9_mes_pt_7_15 },
+    { (const CONN*)effF9_mes_pt_7_16, effF9_mes_pt_7_17 }, { effF9_mes_pt_7_18, effF9_mes_pt_7_19 },
+    { (const CONN*)effF9_mes_pt_7_20, effF9_mes_pt_7_21 }, { effF9_mes_pt_7_22, effF9_mes_pt_7_23 },
+    { (const CONN*)effF9_mes_pt_7_24, effF9_mes_pt_7_25 }, { effF9_mes_pt_7_26, effF9_mes_pt_7_27 },
+    { (const CONN*)effF9_mes_pt_7_28, effF9_mes_pt_7_29 },
 };
 
-const u32 effF9_mes_pt_7_0[26] = {
-    0x900000, 0x9EA0, 0x980000, 0x9E82, 0xA00000, 0x9E87, 0xA80000, 0x9E8E,
-    0xB80000, 0x9E90, 0xC00000, 0x9E94, 0xC80000, 0x9E84, 0xD80000, 0x9E8F,
-    0xE00000, 0x9E84, 0xE80000, 0x9E91, 0xF00000, 0x9E83, 0xF80000, 0x9E88,
-    0x1000000, 0x9E9C,
+const CONN effF9_mes_pt_7_0[13] = {
+    { 144, 0, 0, 0x9EA0 }, { 152, 0, 0, 0x9E82 }, { 160, 0, 0, 0x9E87 }, { 168, 0, 0, 0x9E8E },
+    { 184, 0, 0, 0x9E90 }, { 192, 0, 0, 0x9E94 }, { 200, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E8F },
+    { 224, 0, 0, 0x9E84 }, { 232, 0, 0, 0x9E91 }, { 240, 0, 0, 0x9E83 }, { 248, 0, 0, 0x9E88 },
+    { 256, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_pt_7_4[106] = {
@@ -27611,11 +27611,11 @@ const u32 effF9_mes_pt_7_4[106] = {
     0x90FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_7_6[32] = {
-    0x700000, 0x9EA2, 0x780000, 0x9F32, 0x880000, 0x9E84, 0x900000, 0x9E92,
-    0x980000, 0x9E93, 0xA00000, 0x9F32, 0xB00000, 0x9E8E, 0xC00000, 0x9EA0,
-    0xC80000, 0x9E91, 0xD00000, 0x9E90, 0xD80000, 0x9E94, 0xE00000, 0x9E88,
-    0xE80000, 0x9E95, 0xF00000, 0x9E8E, 0x1000000, 0x9EA6, 0x1080000, 0x9E9A,
+const CONN effF9_mes_pt_7_6[16] = {
+    { 112, 0, 0, 0x9EA2 }, { 120, 0, 0, 0x9F32 }, { 136, 0, 0, 0x9E84 }, { 144, 0, 0, 0x9E92 },
+    { 152, 0, 0, 0x9E93 }, { 160, 0, 0, 0x9F32 }, { 176, 0, 0, 0x9E8E }, { 192, 0, 0, 0x9EA0 },
+    { 200, 0, 0, 0x9E91 }, { 208, 0, 0, 0x9E90 }, { 216, 0, 0, 0x9E94 }, { 224, 0, 0, 0x9E88 },
+    { 232, 0, 0, 0x9E95 }, { 240, 0, 0, 0x9E8E }, { 256, 0, 0, 0x9EA6 }, { 264, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_7_8[112] = {
@@ -27669,10 +27669,10 @@ const u32 effF9_mes_pt_7_12[118] = {
     0xB0FFF0, 0x9E88, 0xB8FFF0, 0x9E80, 0xC0FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_7_14[18] = {
-    0x900000, 0x9EA7, 0x980000, 0x9E80, 0xA80000, 0x9E87, 0xB00000, 0x9E80,
-    0xC00000, 0x9E87, 0xC80000, 0x9E80, 0xD80000, 0x9E87, 0xE00000, 0x9E80,
-    0xE80000, 0x9E9A,
+const CONN effF9_mes_pt_7_14[9] = {
+    { 144, 0, 0, 0x9EA7 }, { 152, 0, 0, 0x9E80 }, { 168, 0, 0, 0x9E87 }, { 176, 0, 0, 0x9E80 },
+    { 192, 0, 0, 0x9E87 }, { 200, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9E87 }, { 224, 0, 0, 0x9E80 },
+    { 232, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_7_16[74] = {
@@ -27688,8 +27688,8 @@ const u32 effF9_mes_pt_7_16[74] = {
     0x1680000, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_7_18[6] = {
-    0xB00000, 0x9EB8, 0xB80000, 0x9E80, 0xC00000, 0x9E9A,
+const CONN effF9_mes_pt_7_18[3] = {
+    { 176, 0, 0, 0x9EB8 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_7_20[16] = {
@@ -27697,10 +27697,10 @@ const u32 effF9_mes_pt_7_20[16] = {
     0xC00000, 0x9E80, 0xC80000, 0x9E87, 0xD00000, 0x9E87, 0xD80000, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_7_22[22] = {
-    0x900000, 0x9EB0, 0x980000, 0x9E94, 0xA00000, 0x9E84, 0xB00000, 0x9E83,
-    0xB80000, 0x9E88, 0xC00000, 0x9E80, 0xC80000, 0x9E81, 0xD00000, 0x9E8E,
-    0xD80000, 0x9E92, 0xE00000, 0x9E9B, 0xE80000, 0x9E9A,
+const CONN effF9_mes_pt_7_22[11] = {
+    { 144, 0, 0, 0x9EB0 }, { 152, 0, 0, 0x9E94 }, { 160, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E83 },
+    { 184, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E81 }, { 208, 0, 0, 0x9E8E },
+    { 216, 0, 0, 0x9E92 }, { 224, 0, 0, 0x9E9B }, { 232, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_7_24[100] = {
@@ -27719,12 +27719,12 @@ const u32 effF9_mes_pt_7_24[100] = {
     0x88FFF0, 0x9E8E, 0x90FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_7_26[34] = {
-    0x700000, 0x9EB5, 0x780000, 0x9E8E, 0x800000, 0x9E82, 0x880000, 0x9F3C,
-    0x980000, 0x9F3A, 0xA80000, 0x9E8B, 0xB00000, 0x9E8E, 0xB80000, 0x9E94,
-    0xC00000, 0x9E82, 0xC80000, 0x9E80, 0xD00000, 0x9E9D, 0xE00000, 0x9EA8,
-    0xE80000, 0x9E81, 0xF00000, 0x9E94, 0xF80000, 0x9E8A, 0x1000000, 0x9E88,
-    0x1080000, 0x9E9B,
+const CONN effF9_mes_pt_7_26[17] = {
+    { 112, 0, 0, 0x9EB5 }, { 120, 0, 0, 0x9E8E }, { 128, 0, 0, 0x9E82 }, { 136, 0, 0, 0x9F3C },
+    { 152, 0, 0, 0x9F3A }, { 168, 0, 0, 0x9E8B }, { 176, 0, 0, 0x9E8E }, { 184, 0, 0, 0x9E94 },
+    { 192, 0, 0, 0x9E82 }, { 200, 0, 0, 0x9E80 }, { 208, 0, 0, 0x9E9D }, { 224, 0, 0, 0x9EA8 },
+    { 232, 0, 0, 0x9E81 }, { 240, 0, 0, 0x9E94 }, { 248, 0, 0, 0x9E8A }, { 256, 0, 0, 0x9E88 },
+    { 264, 0, 0, 0x9E9B },
 };
 
 const u32 effF9_mes_pt_7_28[34] = {
@@ -27796,10 +27796,10 @@ const u16 effF9_mes_pt_7_29[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_8[7] = {
-    { (const CONN*)effF9_mes_pt_8_0, (const u16*)effF9_mes_pt_8_1 }, { (const CONN*)effF9_mes_pt_8_0, (const u16*)effF9_mes_pt_8_3 },
-    { (const CONN*)effF9_mes_pt_8_4, (const u16*)effF9_mes_pt_8_5 }, { (const CONN*)effF9_mes_pt_8_6, (const u16*)effF9_mes_pt_8_7 },
-    { (const CONN*)effF9_mes_pt_8_8, (const u16*)effF9_mes_pt_8_9 }, { (const CONN*)effF9_mes_pt_8_10, (const u16*)effF9_mes_pt_8_11 },
-    { (const CONN*)effF9_mes_pt_8_12, (const u16*)effF9_mes_pt_8_13 },
+    { (const CONN*)effF9_mes_pt_8_0, effF9_mes_pt_8_1 }, { (const CONN*)effF9_mes_pt_8_0, effF9_mes_pt_8_3 },
+    { (const CONN*)effF9_mes_pt_8_4, effF9_mes_pt_8_5 }, { (const CONN*)effF9_mes_pt_8_6, effF9_mes_pt_8_7 },
+    { (const CONN*)effF9_mes_pt_8_8, effF9_mes_pt_8_9 }, { (const CONN*)effF9_mes_pt_8_10, effF9_mes_pt_8_11 },
+    { (const CONN*)effF9_mes_pt_8_12, effF9_mes_pt_8_13 },
 };
 
 const u32 effF9_mes_pt_8_0[74] = {
@@ -27924,9 +27924,9 @@ const u16 effF9_mes_pt_8_13[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_9[6] = {
-    { (const CONN*)effF9_mes_pt_9_0, (const u16*)effF9_mes_pt_9_1 }, { (const CONN*)effF9_mes_pt_9_0, (const u16*)effF9_mes_pt_9_3 },
-    { (const CONN*)effF9_mes_pt_9_4, (const u16*)effF9_mes_pt_9_5 }, { (const CONN*)effF9_mes_pt_9_6, (const u16*)effF9_mes_pt_9_7 },
-    { (const CONN*)effF9_mes_pt_9_8, (const u16*)effF9_mes_pt_9_9 }, { (const CONN*)effF9_mes_pt_9_10, (const u16*)effF9_mes_pt_9_11 },
+    { (const CONN*)effF9_mes_pt_9_0, effF9_mes_pt_9_1 }, { (const CONN*)effF9_mes_pt_9_0, effF9_mes_pt_9_3 },
+    { (const CONN*)effF9_mes_pt_9_4, effF9_mes_pt_9_5 }, { (const CONN*)effF9_mes_pt_9_6, effF9_mes_pt_9_7 },
+    { (const CONN*)effF9_mes_pt_9_8, effF9_mes_pt_9_9 }, { (const CONN*)effF9_mes_pt_9_10, effF9_mes_pt_9_11 },
 };
 
 const u32 effF9_mes_pt_9_0[110] = {
@@ -28027,27 +28027,27 @@ const u16 effF9_mes_pt_9_11[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_10[16] = {
-    { (const CONN*)effF9_mes_pt_10_0, (const u16*)effF9_mes_pt_10_1 }, { (const CONN*)effF9_mes_pt_10_0, (const u16*)effF9_mes_pt_10_3 },
-    { (const CONN*)effF9_mes_pt_10_4, (const u16*)effF9_mes_pt_10_5 }, { (const CONN*)effF9_mes_pt_10_6, (const u16*)effF9_mes_pt_10_7 },
-    { (const CONN*)effF9_mes_pt_10_8, (const u16*)effF9_mes_pt_10_9 }, { (const CONN*)effF9_mes_pt_10_10, (const u16*)effF9_mes_pt_10_11 },
-    { (const CONN*)effF9_mes_pt_10_12, (const u16*)effF9_mes_pt_10_13 }, { (const CONN*)effF9_mes_pt_10_14, (const u16*)effF9_mes_pt_10_15 },
-    { (const CONN*)effF9_mes_pt_10_16, (const u16*)effF9_mes_pt_10_17 }, { (const CONN*)effF9_mes_pt_10_18, (const u16*)effF9_mes_pt_10_19 },
-    { (const CONN*)effF9_mes_pt_10_20, (const u16*)effF9_mes_pt_10_21 }, { (const CONN*)effF9_mes_pt_10_22, (const u16*)effF9_mes_pt_10_23 },
-    { (const CONN*)effF9_mes_pt_10_24, (const u16*)effF9_mes_pt_10_25 }, { (const CONN*)effF9_mes_pt_10_26, (const u16*)effF9_mes_pt_10_27 },
-    { (const CONN*)effF9_mes_pt_10_28, (const u16*)effF9_mes_pt_10_29 }, { (const CONN*)effF9_mes_pt_10_30, (const u16*)effF9_mes_pt_10_31 },
+    { effF9_mes_pt_10_0, effF9_mes_pt_10_1 }, { effF9_mes_pt_10_0, effF9_mes_pt_10_3 },
+    { effF9_mes_pt_10_4, effF9_mes_pt_10_5 }, { effF9_mes_pt_10_6, effF9_mes_pt_10_7 },
+    { (const CONN*)effF9_mes_pt_10_8, effF9_mes_pt_10_9 }, { effF9_mes_pt_10_10, effF9_mes_pt_10_11 },
+    { effF9_mes_pt_10_12, effF9_mes_pt_10_13 }, { (const CONN*)effF9_mes_pt_10_14, effF9_mes_pt_10_15 },
+    { (const CONN*)effF9_mes_pt_10_16, effF9_mes_pt_10_17 }, { (const CONN*)effF9_mes_pt_10_18, effF9_mes_pt_10_19 },
+    { (const CONN*)effF9_mes_pt_10_20, effF9_mes_pt_10_21 }, { effF9_mes_pt_10_22, effF9_mes_pt_10_23 },
+    { (const CONN*)effF9_mes_pt_10_24, effF9_mes_pt_10_25 }, { (const CONN*)effF9_mes_pt_10_26, effF9_mes_pt_10_27 },
+    { (const CONN*)effF9_mes_pt_10_28, effF9_mes_pt_10_29 }, { (const CONN*)effF9_mes_pt_10_30, effF9_mes_pt_10_31 },
 };
 
-const u32 effF9_mes_pt_10_0[6] = {
-    0xB80000, 0x9EA7, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_pt_10_0[3] = {
+    { 184, 0, 0, 0x9EA7 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_10_4[6] = {
-    0xB80000, 0x9EB8, 0xC00000, 0x9E80, 0xC80000, 0x9E9A,
+const CONN effF9_mes_pt_10_4[3] = {
+    { 184, 0, 0, 0x9EB8 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_10_6[10] = {
-    0xB00000, 0x9EAE, 0xB80000, 0x9E8B, 0xC00000, 0x9E87, 0xC80000, 0x9E84,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_pt_10_6[5] = {
+    { 176, 0, 0, 0x9EAE }, { 184, 0, 0, 0x9E8B }, { 192, 0, 0, 0x9E87 }, { 200, 0, 0, 0x9E84 },
+    { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_10_8[44] = {
@@ -28059,16 +28059,16 @@ const u32 effF9_mes_pt_10_8[44] = {
     0x1180000, 0x9E84, 0x1200000, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_10_10[24] = {
-    0x900000, 0x9EA4, 0x980000, 0x9E8B, 0xA00000, 0x9E84, 0xA80000, 0x9E92,
-    0xB80000, 0x9E95, 0xC00000, 0x9E8E, 0xC80000, 0x9E93, 0xD00000, 0x9E80,
-    0xD80000, 0x9E91, 0xE00000, 0x9E80, 0xE80000, 0x9E8C, 0xF00000, 0x9E9A,
+const CONN effF9_mes_pt_10_10[12] = {
+    { 144, 0, 0, 0x9EA4 }, { 152, 0, 0, 0x9E8B }, { 160, 0, 0, 0x9E84 }, { 168, 0, 0, 0x9E92 },
+    { 184, 0, 0, 0x9E95 }, { 192, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E93 }, { 208, 0, 0, 0x9E80 },
+    { 216, 0, 0, 0x9E91 }, { 224, 0, 0, 0x9E80 }, { 232, 0, 0, 0x9E8C }, { 240, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_10_12[18] = {
-    0x980000, 0x9EAE, 0xA00000, 0x9E88, 0xA80000, 0x9E9D, 0xB80000, 0x9E82,
-    0xC00000, 0x9E80, 0xC80000, 0x9E91, 0xD00000, 0x9E80, 0xD80000, 0x9E92,
-    0xE00000, 0x9E9A,
+const CONN effF9_mes_pt_10_12[9] = {
+    { 152, 0, 0, 0x9EAE }, { 160, 0, 0, 0x9E88 }, { 168, 0, 0, 0x9E9D }, { 184, 0, 0, 0x9E82 },
+    { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E91 }, { 208, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9E92 },
+    { 224, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_10_14[44] = {
@@ -28116,11 +28116,11 @@ const u32 effF9_mes_pt_10_20[114] = {
     0xC8FFF0, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_10_22[32] = {
-    0x780000, 0x9EA2, 0x800000, 0x9E84, 0x880000, 0x9E91, 0x900000, 0x9E93,
-    0x980000, 0x9E8E, 0xA00000, 0x9E9A, 0xB00000, 0x9EB2, 0xB80000, 0x9E88,
-    0xC00000, 0x9E8D, 0xC80000, 0x9E93, 0xD00000, 0x9E80, 0xE00000, 0x9E88,
-    0xE80000, 0x9E92, 0xF00000, 0x9E93, 0xF80000, 0x9E8E, 0x1000000, 0x9E9A,
+const CONN effF9_mes_pt_10_22[16] = {
+    { 120, 0, 0, 0x9EA2 }, { 128, 0, 0, 0x9E84 }, { 136, 0, 0, 0x9E91 }, { 144, 0, 0, 0x9E93 },
+    { 152, 0, 0, 0x9E8E }, { 160, 0, 0, 0x9E9A }, { 176, 0, 0, 0x9EB2 }, { 184, 0, 0, 0x9E88 },
+    { 192, 0, 0, 0x9E8D }, { 200, 0, 0, 0x9E93 }, { 208, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E88 },
+    { 232, 0, 0, 0x9E92 }, { 240, 0, 0, 0x9E93 }, { 248, 0, 0, 0x9E8E }, { 256, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_10_24[28] = {
@@ -28243,10 +28243,10 @@ const u16 effF9_mes_pt_10_31[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_11[7] = {
-    { (const CONN*)effF9_mes_pt_11_0, (const u16*)effF9_mes_pt_11_1 }, { (const CONN*)effF9_mes_pt_11_0, (const u16*)effF9_mes_pt_11_3 },
-    { (const CONN*)effF9_mes_pt_11_4, (const u16*)effF9_mes_pt_11_5 }, { (const CONN*)effF9_mes_pt_11_6, (const u16*)effF9_mes_pt_11_7 },
-    { (const CONN*)effF9_mes_pt_11_8, (const u16*)effF9_mes_pt_11_9 }, { (const CONN*)effF9_mes_pt_11_10, (const u16*)effF9_mes_pt_11_11 },
-    { (const CONN*)effF9_mes_pt_11_12, (const u16*)effF9_mes_pt_11_13 },
+    { (const CONN*)effF9_mes_pt_11_0, effF9_mes_pt_11_1 }, { (const CONN*)effF9_mes_pt_11_0, effF9_mes_pt_11_3 },
+    { effF9_mes_pt_11_4, effF9_mes_pt_11_5 }, { effF9_mes_pt_11_6, effF9_mes_pt_11_7 },
+    { (const CONN*)effF9_mes_pt_11_8, effF9_mes_pt_11_9 }, { (const CONN*)effF9_mes_pt_11_10, effF9_mes_pt_11_11 },
+    { effF9_mes_pt_11_12, effF9_mes_pt_11_13 },
 };
 
 const u32 effF9_mes_pt_11_0[18] = {
@@ -28255,17 +28255,17 @@ const u32 effF9_mes_pt_11_0[18] = {
     0xE00000, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_11_4[38] = {
-    0x680000, 0x9EA3, 0x700000, 0x9F3C, 0x780000, 0x9E37, 0x800000, 0x9E8C,
-    0x880000, 0x9E84, 0x980000, 0x9E92, 0xA00000, 0x9E84, 0xA80000, 0x9E94,
-    0xB80000, 0x9E8C, 0xC00000, 0x9E84, 0xC80000, 0x9E8B, 0xD00000, 0x9E87,
-    0xD80000, 0x9E8E, 0xE00000, 0x9E91, 0xF00000, 0x9E92, 0xF80000, 0x9E8E,
-    0x1000000, 0x9E82, 0x1080000, 0x9E8E, 0x1100000, 0x9E9A,
+const CONN effF9_mes_pt_11_4[19] = {
+    { 104, 0, 0, 0x9EA3 }, { 112, 0, 0, 0x9F3C }, { 120, 0, 0, 0x9E37 }, { 128, 0, 0, 0x9E8C },
+    { 136, 0, 0, 0x9E84 }, { 152, 0, 0, 0x9E92 }, { 160, 0, 0, 0x9E84 }, { 168, 0, 0, 0x9E94 },
+    { 184, 0, 0, 0x9E8C }, { 192, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E8B }, { 208, 0, 0, 0x9E87 },
+    { 216, 0, 0, 0x9E8E }, { 224, 0, 0, 0x9E91 }, { 240, 0, 0, 0x9E92 }, { 248, 0, 0, 0x9E8E },
+    { 256, 0, 0, 0x9E82 }, { 264, 0, 0, 0x9E8E }, { 272, 0, 0, 0x9E9A },
 };
 
-const u32 effF9_mes_pt_11_6[10] = {
-    0xB00000, 0x9EA6, 0xB80000, 0x9E94, 0xC00000, 0x9E87, 0xC80000, 0x9E80,
-    0xD00000, 0x9E9A,
+const CONN effF9_mes_pt_11_6[5] = {
+    { 176, 0, 0, 0x9EA6 }, { 184, 0, 0, 0x9E94 }, { 192, 0, 0, 0x9E87 }, { 200, 0, 0, 0x9E80 },
+    { 208, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_11_8[14] = {
@@ -28285,11 +28285,11 @@ const u32 effF9_mes_pt_11_10[72] = {
     0x1580000, 0x9EAC, 0x1600000, 0x9E84, 0x1680000, 0x9E8B, 0x1700000, 0x9E9B,
 };
 
-const u32 effF9_mes_pt_11_12[26] = {
-    0x880000, 0x9EAC, 0x900000, 0x9E84, 0x980000, 0x9E8B, 0xA00000, 0x9E9C,
-    0xA80000, 0x9E9C, 0xB00000, 0x9E9C, 0xB80000, 0x9E98, 0xC00000, 0x9E8E,
-    0xC80000, 0x9E94, 0xD80000, 0x9E96, 0xE00000, 0x9E88, 0xE80000, 0x9E8D,
-    0xF00000, 0x9E9A,
+const CONN effF9_mes_pt_11_12[13] = {
+    { 136, 0, 0, 0x9EAC }, { 144, 0, 0, 0x9E84 }, { 152, 0, 0, 0x9E8B }, { 160, 0, 0, 0x9E9C },
+    { 168, 0, 0, 0x9E9C }, { 176, 0, 0, 0x9E9C }, { 184, 0, 0, 0x9E98 }, { 192, 0, 0, 0x9E8E },
+    { 200, 0, 0, 0x9E94 }, { 216, 0, 0, 0x9E96 }, { 224, 0, 0, 0x9E88 }, { 232, 0, 0, 0x9E8D },
+    { 240, 0, 0, 0x9E9A },
 };
 
 const u16 effF9_mes_pt_11_1[2] = {
@@ -28321,16 +28321,16 @@ const u16 effF9_mes_pt_11_13[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_12[9] = {
-    { (const CONN*)effF9_mes_pt_12_0, (const u16*)effF9_mes_pt_12_1 }, { (const CONN*)effF9_mes_pt_12_0, (const u16*)effF9_mes_pt_12_3 },
-    { (const CONN*)effF9_mes_pt_12_4, (const u16*)effF9_mes_pt_12_5 }, { (const CONN*)effF9_mes_pt_12_6, (const u16*)effF9_mes_pt_12_7 },
-    { (const CONN*)effF9_mes_pt_12_8, (const u16*)effF9_mes_pt_12_9 }, { (const CONN*)effF9_mes_pt_12_10, (const u16*)effF9_mes_pt_12_11 },
-    { (const CONN*)effF9_mes_pt_12_12, (const u16*)effF9_mes_pt_12_13 }, { (const CONN*)effF9_mes_pt_12_14, (const u16*)effF9_mes_pt_12_15 },
-    { (const CONN*)effF9_mes_pt_12_16, (const u16*)effF9_mes_pt_12_17 },
+    { effF9_mes_pt_12_0, effF9_mes_pt_12_1 }, { effF9_mes_pt_12_0, effF9_mes_pt_12_3 },
+    { (const CONN*)effF9_mes_pt_12_4, effF9_mes_pt_12_5 }, { (const CONN*)effF9_mes_pt_12_6, effF9_mes_pt_12_7 },
+    { (const CONN*)effF9_mes_pt_12_8, effF9_mes_pt_12_9 }, { effF9_mes_pt_12_10, effF9_mes_pt_12_11 },
+    { (const CONN*)effF9_mes_pt_12_12, effF9_mes_pt_12_13 }, { (const CONN*)effF9_mes_pt_12_14, effF9_mes_pt_12_15 },
+    { effF9_mes_pt_12_16, effF9_mes_pt_12_17 },
 };
 
-const u32 effF9_mes_pt_12_0[14] = {
-    0xA80000, 0x9EB4, 0xB00000, 0x9E96, 0xB80000, 0x9E80, 0xC00000, 0x9E80,
-    0xC80000, 0x9E80, 0xD00000, 0x9E87, 0xD80000, 0x9E9A,
+const CONN effF9_mes_pt_12_0[7] = {
+    { 168, 0, 0, 0x9EB4 }, { 176, 0, 0, 0x9E96 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E80 },
+    { 200, 0, 0, 0x9E80 }, { 208, 0, 0, 0x9E87 }, { 216, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_12_4[54] = {
@@ -28365,13 +28365,13 @@ const u32 effF9_mes_pt_12_8[50] = {
     0x1300000, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_12_10[42] = {
-    0x600000, 0x9EA4, 0x680000, 0x9E94, 0x780000, 0x9E8F, 0x800000, 0x9E91,
-    0x880000, 0x9E84, 0x900000, 0x9E82, 0x980000, 0x9E88, 0xA00000, 0x9E92,
-    0xA80000, 0x9E8E, 0xB80000, 0x9E88, 0xC00000, 0x9E91, 0xC80000, 0x9E9C,
-    0xD80000, 0x9EA1, 0xE00000, 0x9E8E, 0xE80000, 0x9E80, 0xF80000, 0x9E92,
-    0x1000000, 0x9E8E, 0x1080000, 0x9E91, 0x1100000, 0x9E93, 0x1180000, 0x9E84,
-    0x1200000, 0x9E9A,
+const CONN effF9_mes_pt_12_10[21] = {
+    { 96, 0, 0, 0x9EA4 }, { 104, 0, 0, 0x9E94 }, { 120, 0, 0, 0x9E8F }, { 128, 0, 0, 0x9E91 },
+    { 136, 0, 0, 0x9E84 }, { 144, 0, 0, 0x9E82 }, { 152, 0, 0, 0x9E88 }, { 160, 0, 0, 0x9E92 },
+    { 168, 0, 0, 0x9E8E }, { 184, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E91 }, { 200, 0, 0, 0x9E9C },
+    { 216, 0, 0, 0x9EA1 }, { 224, 0, 0, 0x9E8E }, { 232, 0, 0, 0x9E80 }, { 248, 0, 0, 0x9E92 },
+    { 256, 0, 0, 0x9E8E }, { 264, 0, 0, 0x9E91 }, { 272, 0, 0, 0x9E93 }, { 280, 0, 0, 0x9E84 },
+    { 288, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_12_12[120] = {
@@ -28399,12 +28399,12 @@ const u32 effF9_mes_pt_12_14[30] = {
     0xF80000, 0x9E93, 0x1000000, 0x9E84, 0x1080000, 0x9E9A,
 };
 
-const u32 effF9_mes_pt_12_16[40] = {
-    0x600000, 0x9EA6, 0x680000, 0x9E94, 0x700000, 0x9E96, 0x780000, 0x9E80,
-    0x800000, 0x9E87, 0x880000, 0x9E9A, 0x980000, 0x9EA4, 0xA00000, 0x9E8B,
-    0xA80000, 0x9E84, 0xB80000, 0x9F3A, 0xC80000, 0x9E81, 0xD00000, 0x9E8E,
-    0xD80000, 0x9E8C, 0xE80000, 0x9E83, 0xF00000, 0x9E84, 0xF80000, 0x9E8C,
-    0x1000000, 0x9E80, 0x1080000, 0x9E88, 0x1100000, 0x9E92, 0x1180000, 0x9E9A,
+const CONN effF9_mes_pt_12_16[20] = {
+    { 96, 0, 0, 0x9EA6 }, { 104, 0, 0, 0x9E94 }, { 112, 0, 0, 0x9E96 }, { 120, 0, 0, 0x9E80 },
+    { 128, 0, 0, 0x9E87 }, { 136, 0, 0, 0x9E9A }, { 152, 0, 0, 0x9EA4 }, { 160, 0, 0, 0x9E8B },
+    { 168, 0, 0, 0x9E84 }, { 184, 0, 0, 0x9F3A }, { 200, 0, 0, 0x9E81 }, { 208, 0, 0, 0x9E8E },
+    { 216, 0, 0, 0x9E8C }, { 232, 0, 0, 0x9E83 }, { 240, 0, 0, 0x9E84 }, { 248, 0, 0, 0x9E8C },
+    { 256, 0, 0, 0x9E80 }, { 264, 0, 0, 0x9E88 }, { 272, 0, 0, 0x9E92 }, { 280, 0, 0, 0x9E9A },
 };
 
 const u16 effF9_mes_pt_12_1[2] = {
@@ -28444,13 +28444,13 @@ const u16 effF9_mes_pt_12_17[5] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_13[14] = {
-    { (const CONN*)effF9_mes_pt_13_0, (const u16*)effF9_mes_pt_13_1 }, { (const CONN*)effF9_mes_pt_13_0, (const u16*)effF9_mes_pt_13_3 },
-    { (const CONN*)effF9_mes_pt_13_4, (const u16*)effF9_mes_pt_13_5 }, { (const CONN*)effF9_mes_pt_13_6, (const u16*)effF9_mes_pt_13_7 },
-    { (const CONN*)effF9_mes_pt_13_8, (const u16*)effF9_mes_pt_13_9 }, { (const CONN*)effF9_mes_pt_13_10, (const u16*)effF9_mes_pt_13_11 },
-    { (const CONN*)effF9_mes_pt_13_12, (const u16*)effF9_mes_pt_13_13 }, { (const CONN*)effF9_mes_pt_13_14, (const u16*)effF9_mes_pt_13_15 },
-    { (const CONN*)effF9_mes_pt_13_16, (const u16*)effF9_mes_pt_13_17 }, { (const CONN*)effF9_mes_pt_13_18, (const u16*)effF9_mes_pt_13_19 },
-    { (const CONN*)effF9_mes_pt_13_20, (const u16*)effF9_mes_pt_13_21 }, { (const CONN*)effF9_mes_pt_13_22, (const u16*)effF9_mes_pt_13_23 },
-    { (const CONN*)effF9_mes_pt_13_24, (const u16*)effF9_mes_pt_13_25 }, { (const CONN*)effF9_mes_pt_13_26, (const u16*)effF9_mes_pt_13_27 },
+    { (const CONN*)effF9_mes_pt_13_0, effF9_mes_pt_13_1 }, { (const CONN*)effF9_mes_pt_13_0, effF9_mes_pt_13_3 },
+    { (const CONN*)effF9_mes_pt_13_4, effF9_mes_pt_13_5 }, { (const CONN*)effF9_mes_pt_13_6, effF9_mes_pt_13_7 },
+    { (const CONN*)effF9_mes_pt_13_8, effF9_mes_pt_13_9 }, { (const CONN*)effF9_mes_pt_13_10, effF9_mes_pt_13_11 },
+    { effF9_mes_pt_13_12, effF9_mes_pt_13_13 }, { (const CONN*)effF9_mes_pt_13_14, effF9_mes_pt_13_15 },
+    { (const CONN*)effF9_mes_pt_13_16, effF9_mes_pt_13_17 }, { (const CONN*)effF9_mes_pt_13_18, effF9_mes_pt_13_19 },
+    { (const CONN*)effF9_mes_pt_13_20, effF9_mes_pt_13_21 }, { (const CONN*)effF9_mes_pt_13_22, effF9_mes_pt_13_23 },
+    { (const CONN*)effF9_mes_pt_13_24, effF9_mes_pt_13_25 }, { (const CONN*)effF9_mes_pt_13_26, effF9_mes_pt_13_27 },
 };
 
 const u32 effF9_mes_pt_13_0[116] = {
@@ -28540,12 +28540,12 @@ const u32 effF9_mes_pt_13_10[110] = {
     0xD8FFF0, 0x9E8E, 0xE0FFF0, 0x9E91, 0xE8FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_13_12[34] = {
-    0x700000, 0x9EAE, 0x800000, 0x9E90, 0x880000, 0x9E94, 0x900000, 0x9E84,
-    0x980000, 0x9E9B, 0xA80000, 0x9EAE, 0xB80000, 0x9E88, 0xC00000, 0x9E8C,
-    0xC80000, 0x9E8F, 0xD00000, 0x9E84, 0xD80000, 0x9E91, 0xE00000, 0x9E80,
-    0xE80000, 0x9E83, 0xF00000, 0x9E8E, 0xF80000, 0x9E91, 0x1000000, 0x9E9B,
-    0x1080000, 0x9E9A,
+const CONN effF9_mes_pt_13_12[17] = {
+    { 112, 0, 0, 0x9EAE }, { 128, 0, 0, 0x9E90 }, { 136, 0, 0, 0x9E94 }, { 144, 0, 0, 0x9E84 },
+    { 152, 0, 0, 0x9E9B }, { 168, 0, 0, 0x9EAE }, { 184, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E8C },
+    { 200, 0, 0, 0x9E8F }, { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E91 }, { 224, 0, 0, 0x9E80 },
+    { 232, 0, 0, 0x9E83 }, { 240, 0, 0, 0x9E8E }, { 248, 0, 0, 0x9E91 }, { 256, 0, 0, 0x9E9B },
+    { 264, 0, 0, 0x9E9A },
 };
 
 const u32 effF9_mes_pt_13_14[118] = {
@@ -28709,10 +28709,10 @@ const u16 effF9_mes_pt_13_27[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_pt_14[8] = {
-    { (const CONN*)effF9_mes_pt_14_0, (const u16*)effF9_mes_pt_14_1 }, { (const CONN*)effF9_mes_pt_14_0, (const u16*)effF9_mes_pt_14_3 },
-    { (const CONN*)effF9_mes_pt_14_4, (const u16*)effF9_mes_pt_14_5 }, { (const CONN*)effF9_mes_pt_14_6, (const u16*)effF9_mes_pt_14_7 },
-    { (const CONN*)effF9_mes_pt_14_8, (const u16*)effF9_mes_pt_14_9 }, { (const CONN*)effF9_mes_pt_14_10, (const u16*)effF9_mes_pt_14_11 },
-    { (const CONN*)effF9_mes_pt_14_12, (const u16*)effF9_mes_pt_14_13 }, { (const CONN*)effF9_mes_pt_14_14, (const u16*)effF9_mes_pt_14_15 },
+    { (const CONN*)effF9_mes_pt_14_0, effF9_mes_pt_14_1 }, { (const CONN*)effF9_mes_pt_14_0, effF9_mes_pt_14_3 },
+    { effF9_mes_pt_14_4, effF9_mes_pt_14_5 }, { (const CONN*)effF9_mes_pt_14_6, effF9_mes_pt_14_7 },
+    { (const CONN*)effF9_mes_pt_14_8, effF9_mes_pt_14_9 }, { (const CONN*)effF9_mes_pt_14_10, effF9_mes_pt_14_11 },
+    { (const CONN*)effF9_mes_pt_14_12, effF9_mes_pt_14_13 }, { (const CONN*)effF9_mes_pt_14_14, effF9_mes_pt_14_15 },
 };
 
 const u32 effF9_mes_pt_14_0[74] = {
@@ -28728,13 +28728,13 @@ const u32 effF9_mes_pt_14_0[74] = {
     0x110FFF0, 0x9E9C,
 };
 
-const u32 effF9_mes_pt_14_4[44] = {
-    0x600000, 0x9EAE, 0x700000, 0x9E8F, 0x780000, 0x9E91, 0x800000, 0x9E88,
-    0x880000, 0x9E8C, 0x900000, 0x9E84, 0x980000, 0x9E88, 0xA00000, 0x9E91,
-    0xA80000, 0x9E8E, 0xB80000, 0x9E83, 0xC00000, 0x9E8E, 0xC80000, 0x9E92,
-    0xD80000, 0x9EAC, 0xE00000, 0x9E84, 0xE80000, 0x9E92, 0xF00000, 0x9E93,
-    0xF80000, 0x9E91, 0x1000000, 0x9E84, 0x1080000, 0x9E92, 0x1100000, 0x9E9C,
-    0x1180000, 0x9E9C, 0x1200000, 0x9E9C,
+const CONN effF9_mes_pt_14_4[22] = {
+    { 96, 0, 0, 0x9EAE }, { 112, 0, 0, 0x9E8F }, { 120, 0, 0, 0x9E91 }, { 128, 0, 0, 0x9E88 },
+    { 136, 0, 0, 0x9E8C }, { 144, 0, 0, 0x9E84 }, { 152, 0, 0, 0x9E88 }, { 160, 0, 0, 0x9E91 },
+    { 168, 0, 0, 0x9E8E }, { 184, 0, 0, 0x9E83 }, { 192, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E92 },
+    { 216, 0, 0, 0x9EAC }, { 224, 0, 0, 0x9E84 }, { 232, 0, 0, 0x9E92 }, { 240, 0, 0, 0x9E93 },
+    { 248, 0, 0, 0x9E91 }, { 256, 0, 0, 0x9E84 }, { 264, 0, 0, 0x9E92 }, { 272, 0, 0, 0x9E9C },
+    { 280, 0, 0, 0x9E9C }, { 288, 0, 0, 0x9E9C },
 };
 
 const u32 effF9_mes_pt_14_6[42] = {
@@ -28828,21 +28828,21 @@ const u16 effF9_mes_pt_14_15[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_0[30] = {
-    { (const CONN*)effB8_mes_jp_0_0, (const u16*)effB8_mes_jp_0_1 }, { (const CONN*)effB8_mes_jp_0_0, (const u16*)effB8_mes_jp_0_3 },
-    { (const CONN*)effB8_mes_jp_0_4, (const u16*)effB8_mes_jp_0_5 }, { (const CONN*)effB8_mes_jp_0_6, (const u16*)effB8_mes_jp_0_7 },
-    { (const CONN*)effB8_mes_jp_0_8, (const u16*)effB8_mes_jp_0_9 }, { (const CONN*)effB8_mes_jp_0_10, (const u16*)effB8_mes_jp_0_11 },
-    { (const CONN*)effB8_mes_jp_0_12, (const u16*)effB8_mes_jp_0_13 }, { (const CONN*)effB8_mes_jp_0_14, (const u16*)effB8_mes_jp_0_15 },
-    { (const CONN*)effB8_mes_jp_0_16, (const u16*)effB8_mes_jp_0_17 }, { (const CONN*)effB8_mes_jp_0_18, (const u16*)effB8_mes_jp_0_19 },
-    { (const CONN*)effB8_mes_jp_0_20, (const u16*)effB8_mes_jp_0_21 }, { (const CONN*)effB8_mes_jp_0_22, (const u16*)effB8_mes_jp_0_23 },
-    { (const CONN*)effB8_mes_jp_0_24, (const u16*)effB8_mes_jp_0_25 }, { (const CONN*)effB8_mes_jp_0_26, (const u16*)effB8_mes_jp_0_27 },
-    { (const CONN*)effB8_mes_jp_0_28, (const u16*)effB8_mes_jp_0_29 }, { (const CONN*)effB8_mes_jp_0_30, (const u16*)effB8_mes_jp_0_31 },
-    { (const CONN*)effB8_mes_jp_0_32, (const u16*)effB8_mes_jp_0_33 }, { (const CONN*)effB8_mes_jp_0_34, (const u16*)effB8_mes_jp_0_35 },
-    { (const CONN*)effB8_mes_jp_0_36, (const u16*)effB8_mes_jp_0_37 }, { (const CONN*)effB8_mes_jp_0_38, (const u16*)effB8_mes_jp_0_39 },
-    { (const CONN*)effB8_mes_jp_0_40, (const u16*)effB8_mes_jp_0_41 }, { (const CONN*)effB8_mes_jp_0_42, (const u16*)effB8_mes_jp_0_43 },
-    { (const CONN*)effB8_mes_jp_0_44, (const u16*)effB8_mes_jp_0_45 }, { (const CONN*)effB8_mes_jp_0_46, (const u16*)effB8_mes_jp_0_47 },
-    { (const CONN*)effB8_mes_jp_0_48, (const u16*)effB8_mes_jp_0_49 }, { (const CONN*)effB8_mes_jp_0_50, (const u16*)effB8_mes_jp_0_51 },
-    { (const CONN*)effB8_mes_jp_0_52, (const u16*)effB8_mes_jp_0_53 }, { (const CONN*)effB8_mes_jp_0_54, (const u16*)effB8_mes_jp_0_55 },
-    { (const CONN*)effB8_mes_jp_0_56, (const u16*)effB8_mes_jp_0_57 }, { (const CONN*)effB8_mes_jp_0_58, (const u16*)effB8_mes_jp_0_59 },
+    { (const CONN*)effB8_mes_jp_0_0, effB8_mes_jp_0_1 }, { (const CONN*)effB8_mes_jp_0_0, effB8_mes_jp_0_3 },
+    { effB8_mes_jp_0_4, effB8_mes_jp_0_5 }, { (const CONN*)effB8_mes_jp_0_6, effB8_mes_jp_0_7 },
+    { (const CONN*)effB8_mes_jp_0_8, effB8_mes_jp_0_9 }, { (const CONN*)effB8_mes_jp_0_10, effB8_mes_jp_0_11 },
+    { effB8_mes_jp_0_12, effB8_mes_jp_0_13 }, { (const CONN*)effB8_mes_jp_0_14, effB8_mes_jp_0_15 },
+    { (const CONN*)effB8_mes_jp_0_16, effB8_mes_jp_0_17 }, { (const CONN*)effB8_mes_jp_0_18, effB8_mes_jp_0_19 },
+    { (const CONN*)effB8_mes_jp_0_20, effB8_mes_jp_0_21 }, { (const CONN*)effB8_mes_jp_0_22, effB8_mes_jp_0_23 },
+    { effB8_mes_jp_0_24, effB8_mes_jp_0_25 }, { (const CONN*)effB8_mes_jp_0_26, effB8_mes_jp_0_27 },
+    { (const CONN*)effB8_mes_jp_0_28, effB8_mes_jp_0_29 }, { effB8_mes_jp_0_30, effB8_mes_jp_0_31 },
+    { (const CONN*)effB8_mes_jp_0_32, effB8_mes_jp_0_33 }, { (const CONN*)effB8_mes_jp_0_34, effB8_mes_jp_0_35 },
+    { effB8_mes_jp_0_36, effB8_mes_jp_0_37 }, { (const CONN*)effB8_mes_jp_0_38, effB8_mes_jp_0_39 },
+    { (const CONN*)effB8_mes_jp_0_40, effB8_mes_jp_0_41 }, { effB8_mes_jp_0_42, effB8_mes_jp_0_43 },
+    { (const CONN*)effB8_mes_jp_0_44, effB8_mes_jp_0_45 }, { (const CONN*)effB8_mes_jp_0_46, effB8_mes_jp_0_47 },
+    { effB8_mes_jp_0_48, effB8_mes_jp_0_49 }, { effB8_mes_jp_0_50, effB8_mes_jp_0_51 },
+    { (const CONN*)effB8_mes_jp_0_52, effB8_mes_jp_0_53 }, { (const CONN*)effB8_mes_jp_0_54, effB8_mes_jp_0_55 },
+    { effB8_mes_jp_0_56, effB8_mes_jp_0_57 }, { (const CONN*)effB8_mes_jp_0_58, effB8_mes_jp_0_59 },
 };
 
 const u32 effB8_mes_jp_0_0[46] = {
@@ -28854,13 +28854,13 @@ const u32 effB8_mes_jp_0_0[46] = {
     0xD8FFEA, 0xA381, 0xE8FFEA, 0xA276, 0xF8FFEA, 0xA057,
 };
 
-const u32 effB8_mes_jp_0_4[48] = {
-    0x400000, 0xA009, 0x500000, 0xA018, 0x600000, 0xA12A, 0x700000, 0xA025,
-    0x800000, 0xA027, 0x900000, 0xA10C, 0xA00000, 0xA026, 0xB00000, 0xA029,
-    0xC00000, 0xA028, 0xD00000, 0xA022, 0xE00000, 0xA018, 0x1000000, 0xA00F,
-    0x1100000, 0xA048, 0x1200000, 0x9F94, 0x1300000, 0xA011, 0x40FFEA, 0xA00A,
-    0x50FFEA, 0xA000, 0x70FFEA, 0xA2C3, 0x80FFEA, 0xA003, 0x90FFEA, 0xA028,
-    0xA0FFEA, 0xA03E, 0xB0FFEA, 0xA025, 0xC0FFEA, 0xA001, 0xD0FFEA, 0xA039,
+const CONN effB8_mes_jp_0_4[24] = {
+    { 64, 0, 0, 0xA009 }, { 80, 0, 0, 0xA018 }, { 96, 0, 0, 0xA12A }, { 112, 0, 0, 0xA025 },
+    { 128, 0, 0, 0xA027 }, { 144, 0, 0, 0xA10C }, { 160, 0, 0, 0xA026 }, { 176, 0, 0, 0xA029 },
+    { 192, 0, 0, 0xA028 }, { 208, 0, 0, 0xA022 }, { 224, 0, 0, 0xA018 }, { 256, 0, 0, 0xA00F },
+    { 272, 0, 0, 0xA048 }, { 288, 0, 0, 0x9F94 }, { 304, 0, 0, 0xA011 }, { 64, -22, 0, 0xA00A },
+    { 80, -22, 0, 0xA000 }, { 112, -22, 0, 0xA2C3 }, { 128, -22, 0, 0xA003 }, { 144, -22, 0, 0xA028 },
+    { 160, -22, 0, 0xA03E }, { 176, -22, 0, 0xA025 }, { 192, -22, 0, 0xA001 }, { 208, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_0_6[36] = {
@@ -28890,13 +28890,13 @@ const u32 effB8_mes_jp_0_10[54] = {
     0xF0FFEA, 0xA018, 0x100FFEA, 0xA048, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_0_12[46] = {
-    0x400000, 0xA316, 0x500000, 0xA143, 0x600000, 0xA10E, 0x700000, 0xA018,
-    0x800000, 0xA386, 0x900000, 0xA387, 0xA00000, 0xA02C, 0xC00000, 0xA1BD,
-    0xD00000, 0xA001, 0xE00000, 0xA015, 0xF00000, 0xA202, 0x1000000, 0xA02C,
-    0x1100000, 0xA022, 0x1200000, 0xA033, 0x1300000, 0xA012, 0x40FFEA, 0xA176,
-    0x50FFEA, 0xA027, 0x60FFEA, 0xA388, 0x70FFEA, 0xA007, 0x80FFEA, 0xA00B,
-    0x90FFEA, 0xA00F, 0xA0FFEA, 0xA01E, 0xB0FFEA, 0xA003,
+const CONN effB8_mes_jp_0_12[23] = {
+    { 64, 0, 0, 0xA316 }, { 80, 0, 0, 0xA143 }, { 96, 0, 0, 0xA10E }, { 112, 0, 0, 0xA018 },
+    { 128, 0, 0, 0xA386 }, { 144, 0, 0, 0xA387 }, { 160, 0, 0, 0xA02C }, { 192, 0, 0, 0xA1BD },
+    { 208, 0, 0, 0xA001 }, { 224, 0, 0, 0xA015 }, { 240, 0, 0, 0xA202 }, { 256, 0, 0, 0xA02C },
+    { 272, 0, 0, 0xA022 }, { 288, 0, 0, 0xA033 }, { 304, 0, 0, 0xA012 }, { 64, -22, 0, 0xA176 },
+    { 80, -22, 0, 0xA027 }, { 96, -22, 0, 0xA388 }, { 112, -22, 0, 0xA007 }, { 128, -22, 0, 0xA00B },
+    { 144, -22, 0, 0xA00F }, { 160, -22, 0, 0xA01E }, { 176, -22, 0, 0xA003 },
 };
 
 const u32 effB8_mes_jp_0_14[58] = {
@@ -28949,12 +28949,12 @@ const u32 effB8_mes_jp_0_22[54] = {
     0xF8FFEA, 0xA025, 0x108FFEA, 0xA002, 0x118FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_0_24[40] = {
-    0x600000, 0xA397, 0x700000, 0xA398, 0x800000, 0xA18B, 0x900000, 0xA1D3,
-    0xA00000, 0xA00B, 0xB00000, 0xA025, 0xC00000, 0xA002, 0xD00000, 0xA03E,
-    0x60FFEA, 0xA12A, 0x70FFEA, 0xA015, 0x80FFEA, 0xA174, 0x90FFEA, 0xA011,
-    0xA0FFEA, 0xA009, 0xB0FFEA, 0xA013, 0xC0FFEA, 0xA019, 0xD0FFEA, 0xA005,
-    0xE0FFEA, 0xA014, 0xF0FFEA, 0xA02B, 0x100FFEA, 0xA016, 0x110FFEA, 0xA039,
+const CONN effB8_mes_jp_0_24[20] = {
+    { 96, 0, 0, 0xA397 }, { 112, 0, 0, 0xA398 }, { 128, 0, 0, 0xA18B }, { 144, 0, 0, 0xA1D3 },
+    { 160, 0, 0, 0xA00B }, { 176, 0, 0, 0xA025 }, { 192, 0, 0, 0xA002 }, { 208, 0, 0, 0xA03E },
+    { 96, -22, 0, 0xA12A }, { 112, -22, 0, 0xA015 }, { 128, -22, 0, 0xA174 }, { 144, -22, 0, 0xA011 },
+    { 160, -22, 0, 0xA009 }, { 176, -22, 0, 0xA013 }, { 192, -22, 0, 0xA019 }, { 208, -22, 0, 0xA005 },
+    { 224, -22, 0, 0xA014 }, { 240, -22, 0, 0xA02B }, { 256, -22, 0, 0xA016 }, { 272, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_0_26[34] = {
@@ -28974,13 +28974,13 @@ const u32 effB8_mes_jp_0_28[46] = {
     0xF0FFEA, 0xA018, 0x100FFEA, 0xA048, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_0_30[44] = {
-    0x500000, 0xA12A, 0x600000, 0xA02C, 0x700000, 0xA14A, 0x800000, 0xA00C,
-    0x900000, 0xA009, 0xA00000, 0xA013, 0xB00000, 0xA019, 0xC00000, 0xA1B6,
-    0xD00000, 0xA1B7, 0xE00000, 0xA02C, 0xF00000, 0xA14A, 0x1000000, 0xA00C,
-    0x1100000, 0xA009, 0x1200000, 0xA013, 0x50FFEA, 0xA1C4, 0x60FFEA, 0xA30B,
-    0x70FFEA, 0xA019, 0x80FFEA, 0xA1D1, 0x90FFEA, 0xA1D2, 0xA0FFEA, 0xA014,
-    0xB0FFEA, 0xA018, 0xC0FFEA, 0xA048,
+const CONN effB8_mes_jp_0_30[22] = {
+    { 80, 0, 0, 0xA12A }, { 96, 0, 0, 0xA02C }, { 112, 0, 0, 0xA14A }, { 128, 0, 0, 0xA00C },
+    { 144, 0, 0, 0xA009 }, { 160, 0, 0, 0xA013 }, { 176, 0, 0, 0xA019 }, { 192, 0, 0, 0xA1B6 },
+    { 208, 0, 0, 0xA1B7 }, { 224, 0, 0, 0xA02C }, { 240, 0, 0, 0xA14A }, { 256, 0, 0, 0xA00C },
+    { 272, 0, 0, 0xA009 }, { 288, 0, 0, 0xA013 }, { 80, -22, 0, 0xA1C4 }, { 96, -22, 0, 0xA30B },
+    { 112, -22, 0, 0xA019 }, { 128, -22, 0, 0xA1D1 }, { 144, -22, 0, 0xA1D2 }, { 160, -22, 0, 0xA014 },
+    { 176, -22, 0, 0xA018 }, { 192, -22, 0, 0xA048 },
 };
 
 const u32 effB8_mes_jp_0_32[38] = {
@@ -29000,12 +29000,12 @@ const u32 effB8_mes_jp_0_34[44] = {
     0xB0FFEA, 0xA018, 0xC0FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_0_36[38] = {
-    0x700000, 0xA009, 0x800000, 0xA029, 0x900000, 0xA019, 0xA00000, 0xA10B,
-    0xB00000, 0xA1DE, 0xC00000, 0xA04B, 0xD00000, 0xA019, 0xE00000, 0xA014,
-    0xF00000, 0xA001, 0x70FFEA, 0xA394, 0x80FFEA, 0xA1D3, 0x90FFEA, 0xA01C,
-    0xA0FFEA, 0xA018, 0xB0FFEA, 0xA39B, 0xC0FFEA, 0xA39C, 0xD0FFEA, 0xA015,
-    0xE0FFEA, 0xA00C, 0xF0FFEA, 0xA03F, 0x100FFEA, 0xA016,
+const CONN effB8_mes_jp_0_36[19] = {
+    { 112, 0, 0, 0xA009 }, { 128, 0, 0, 0xA029 }, { 144, 0, 0, 0xA019 }, { 160, 0, 0, 0xA10B },
+    { 176, 0, 0, 0xA1DE }, { 192, 0, 0, 0xA04B }, { 208, 0, 0, 0xA019 }, { 224, 0, 0, 0xA014 },
+    { 240, 0, 0, 0xA001 }, { 112, -22, 0, 0xA394 }, { 128, -22, 0, 0xA1D3 }, { 144, -22, 0, 0xA01C },
+    { 160, -22, 0, 0xA018 }, { 176, -22, 0, 0xA39B }, { 192, -22, 0, 0xA39C }, { 208, -22, 0, 0xA015 },
+    { 224, -22, 0, 0xA00C }, { 240, -22, 0, 0xA03F }, { 256, -22, 0, 0xA016 },
 };
 
 const u32 effB8_mes_jp_0_38[44] = {
@@ -29025,13 +29025,13 @@ const u32 effB8_mes_jp_0_40[38] = {
     0xE0FFEA, 0xA00C, 0xF0FFEA, 0xA03F, 0x100FFEA, 0xA016,
 };
 
-const u32 effB8_mes_jp_0_42[44] = {
-    0x500000, 0xA12A, 0x600000, 0xA02C, 0x700000, 0xA14A, 0x800000, 0xA00C,
-    0x900000, 0xA009, 0xA00000, 0xA013, 0xB00000, 0xA019, 0xC00000, 0xA1B6,
-    0xD00000, 0xA1B7, 0xE00000, 0xA02C, 0xF00000, 0xA14A, 0x1000000, 0xA00C,
-    0x1100000, 0xA009, 0x1200000, 0xA013, 0x50FFEA, 0xA1C4, 0x60FFEA, 0xA30B,
-    0x70FFEA, 0xA019, 0x80FFEA, 0xA1D1, 0x90FFEA, 0xA1D2, 0xA0FFEA, 0xA014,
-    0xB0FFEA, 0xA018, 0xC0FFEA, 0xA048,
+const CONN effB8_mes_jp_0_42[22] = {
+    { 80, 0, 0, 0xA12A }, { 96, 0, 0, 0xA02C }, { 112, 0, 0, 0xA14A }, { 128, 0, 0, 0xA00C },
+    { 144, 0, 0, 0xA009 }, { 160, 0, 0, 0xA013 }, { 176, 0, 0, 0xA019 }, { 192, 0, 0, 0xA1B6 },
+    { 208, 0, 0, 0xA1B7 }, { 224, 0, 0, 0xA02C }, { 240, 0, 0, 0xA14A }, { 256, 0, 0, 0xA00C },
+    { 272, 0, 0, 0xA009 }, { 288, 0, 0, 0xA013 }, { 80, -22, 0, 0xA1C4 }, { 96, -22, 0, 0xA30B },
+    { 112, -22, 0, 0xA019 }, { 128, -22, 0, 0xA1D1 }, { 144, -22, 0, 0xA1D2 }, { 160, -22, 0, 0xA014 },
+    { 176, -22, 0, 0xA018 }, { 192, -22, 0, 0xA048 },
 };
 
 const u32 effB8_mes_jp_0_44[38] = {
@@ -29050,17 +29050,17 @@ const u32 effB8_mes_jp_0_46[36] = {
     0xF8FFEA, 0xA03E, 0x108FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_0_48[12] = {
-    0x900000, 0xA17F, 0xA00000, 0xA001, 0xB00000, 0xA30A, 0xC00000, 0xA021,
-    0xD00000, 0xA025, 0xE00000, 0xA039,
+const CONN effB8_mes_jp_0_48[6] = {
+    { 144, 0, 0, 0xA17F }, { 160, 0, 0, 0xA001 }, { 176, 0, 0, 0xA30A }, { 192, 0, 0, 0xA021 },
+    { 208, 0, 0, 0xA025 }, { 224, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_0_50[36] = {
-    0x600000, 0xA254, 0x700000, 0xA015, 0x800000, 0xA1CD, 0x900000, 0xA028,
-    0xA00000, 0xA005, 0xC00000, 0xA102, 0xD00000, 0xA015, 0xE00000, 0xA27C,
-    0xF00000, 0xA010, 0x1000000, 0xA028, 0x1100000, 0xA005, 0x60FFEA, 0xA123,
-    0x70FFEA, 0xA015, 0x80FFEA, 0xA194, 0x90FFEA, 0xA04D, 0xA0FFEA, 0xA00D,
-    0xB0FFEA, 0xA025, 0xC0FFEA, 0xA002,
+const CONN effB8_mes_jp_0_50[18] = {
+    { 96, 0, 0, 0xA254 }, { 112, 0, 0, 0xA015 }, { 128, 0, 0, 0xA1CD }, { 144, 0, 0, 0xA028 },
+    { 160, 0, 0, 0xA005 }, { 192, 0, 0, 0xA102 }, { 208, 0, 0, 0xA015 }, { 224, 0, 0, 0xA27C },
+    { 240, 0, 0, 0xA010 }, { 256, 0, 0, 0xA028 }, { 272, 0, 0, 0xA005 }, { 96, -22, 0, 0xA123 },
+    { 112, -22, 0, 0xA015 }, { 128, -22, 0, 0xA194 }, { 144, -22, 0, 0xA04D }, { 160, -22, 0, 0xA00D },
+    { 176, -22, 0, 0xA025 }, { 192, -22, 0, 0xA002 },
 };
 
 const u32 effB8_mes_jp_0_52[34] = {
@@ -29080,10 +29080,10 @@ const u32 effB8_mes_jp_0_54[42] = {
     0x120FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_0_56[24] = {
-    0x580000, 0xA11B, 0x680000, 0xA005, 0x780000, 0xA139, 0x880000, 0xA015,
-    0xA80000, 0xA1D3, 0xB80000, 0xA006, 0xC80000, 0xA028, 0xD80000, 0xA309,
-    0xE80000, 0xA206, 0xF80000, 0xA019, 0x1080000, 0xA014, 0x1180000, 0xA001,
+const CONN effB8_mes_jp_0_56[12] = {
+    { 88, 0, 0, 0xA11B }, { 104, 0, 0, 0xA005 }, { 120, 0, 0, 0xA139 }, { 136, 0, 0, 0xA015 },
+    { 168, 0, 0, 0xA1D3 }, { 184, 0, 0, 0xA006 }, { 200, 0, 0, 0xA028 }, { 216, 0, 0, 0xA309 },
+    { 232, 0, 0, 0xA206 }, { 248, 0, 0, 0xA019 }, { 264, 0, 0, 0xA014 }, { 280, 0, 0, 0xA001 },
 };
 
 const u32 effB8_mes_jp_0_58[40] = {
@@ -29216,30 +29216,30 @@ const u16 effB8_mes_jp_0_59[6] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_1[30] = {
-    { (const CONN*)effB8_mes_jp_1_0, (const u16*)effB8_mes_jp_1_1 }, { (const CONN*)effB8_mes_jp_1_0, (const u16*)effB8_mes_jp_1_3 },
-    { (const CONN*)effB8_mes_jp_1_4, (const u16*)effB8_mes_jp_1_5 }, { (const CONN*)effB8_mes_jp_1_6, (const u16*)effB8_mes_jp_1_7 },
-    { (const CONN*)effB8_mes_jp_1_8, (const u16*)effB8_mes_jp_1_9 }, { (const CONN*)effB8_mes_jp_1_10, (const u16*)effB8_mes_jp_1_11 },
-    { (const CONN*)effB8_mes_jp_1_12, (const u16*)effB8_mes_jp_1_13 }, { (const CONN*)effB8_mes_jp_1_14, (const u16*)effB8_mes_jp_1_15 },
-    { (const CONN*)effB8_mes_jp_1_16, (const u16*)effB8_mes_jp_1_17 }, { (const CONN*)effB8_mes_jp_1_18, (const u16*)effB8_mes_jp_1_19 },
-    { (const CONN*)effB8_mes_jp_1_20, (const u16*)effB8_mes_jp_1_21 }, { (const CONN*)effB8_mes_jp_1_22, (const u16*)effB8_mes_jp_1_23 },
-    { (const CONN*)effB8_mes_jp_1_24, (const u16*)effB8_mes_jp_1_25 }, { (const CONN*)effB8_mes_jp_1_26, (const u16*)effB8_mes_jp_1_27 },
-    { (const CONN*)effB8_mes_jp_1_28, (const u16*)effB8_mes_jp_1_29 }, { (const CONN*)effB8_mes_jp_1_30, (const u16*)effB8_mes_jp_1_31 },
-    { (const CONN*)effB8_mes_jp_1_32, (const u16*)effB8_mes_jp_1_33 }, { (const CONN*)effB8_mes_jp_1_34, (const u16*)effB8_mes_jp_1_35 },
-    { (const CONN*)effB8_mes_jp_1_36, (const u16*)effB8_mes_jp_1_37 }, { (const CONN*)effB8_mes_jp_1_38, (const u16*)effB8_mes_jp_1_39 },
-    { (const CONN*)effB8_mes_jp_1_40, (const u16*)effB8_mes_jp_1_41 }, { (const CONN*)effB8_mes_jp_1_42, (const u16*)effB8_mes_jp_1_43 },
-    { (const CONN*)effB8_mes_jp_1_42, (const u16*)effB8_mes_jp_1_45 }, { (const CONN*)effB8_mes_jp_1_42, (const u16*)effB8_mes_jp_1_47 },
-    { (const CONN*)effB8_mes_jp_1_48, (const u16*)effB8_mes_jp_1_49 }, { (const CONN*)effB8_mes_jp_1_50, (const u16*)effB8_mes_jp_1_51 },
-    { (const CONN*)effB8_mes_jp_1_52, (const u16*)effB8_mes_jp_1_53 }, { (const CONN*)effB8_mes_jp_1_54, (const u16*)effB8_mes_jp_1_55 },
-    { (const CONN*)effB8_mes_jp_1_56, (const u16*)effB8_mes_jp_1_57 }, { (const CONN*)effB8_mes_jp_1_58, (const u16*)effB8_mes_jp_1_59 },
+    { effB8_mes_jp_1_0, effB8_mes_jp_1_1 }, { effB8_mes_jp_1_0, effB8_mes_jp_1_3 },
+    { (const CONN*)effB8_mes_jp_1_4, effB8_mes_jp_1_5 }, { (const CONN*)effB8_mes_jp_1_6, effB8_mes_jp_1_7 },
+    { (const CONN*)effB8_mes_jp_1_8, effB8_mes_jp_1_9 }, { effB8_mes_jp_1_10, effB8_mes_jp_1_11 },
+    { (const CONN*)effB8_mes_jp_1_12, effB8_mes_jp_1_13 }, { (const CONN*)effB8_mes_jp_1_14, effB8_mes_jp_1_15 },
+    { (const CONN*)effB8_mes_jp_1_16, effB8_mes_jp_1_17 }, { effB8_mes_jp_1_18, effB8_mes_jp_1_19 },
+    { (const CONN*)effB8_mes_jp_1_20, effB8_mes_jp_1_21 }, { (const CONN*)effB8_mes_jp_1_22, effB8_mes_jp_1_23 },
+    { effB8_mes_jp_1_24, effB8_mes_jp_1_25 }, { (const CONN*)effB8_mes_jp_1_26, effB8_mes_jp_1_27 },
+    { effB8_mes_jp_1_28, effB8_mes_jp_1_29 }, { (const CONN*)effB8_mes_jp_1_30, effB8_mes_jp_1_31 },
+    { (const CONN*)effB8_mes_jp_1_32, effB8_mes_jp_1_33 }, { effB8_mes_jp_1_34, effB8_mes_jp_1_35 },
+    { (const CONN*)effB8_mes_jp_1_36, effB8_mes_jp_1_37 }, { (const CONN*)effB8_mes_jp_1_38, effB8_mes_jp_1_39 },
+    { effB8_mes_jp_1_40, effB8_mes_jp_1_41 }, { (const CONN*)effB8_mes_jp_1_42, effB8_mes_jp_1_43 },
+    { (const CONN*)effB8_mes_jp_1_42, effB8_mes_jp_1_45 }, { (const CONN*)effB8_mes_jp_1_42, effB8_mes_jp_1_47 },
+    { (const CONN*)effB8_mes_jp_1_48, effB8_mes_jp_1_49 }, { effB8_mes_jp_1_50, effB8_mes_jp_1_51 },
+    { (const CONN*)effB8_mes_jp_1_52, effB8_mes_jp_1_53 }, { (const CONN*)effB8_mes_jp_1_54, effB8_mes_jp_1_55 },
+    { (const CONN*)effB8_mes_jp_1_56, effB8_mes_jp_1_57 }, { effB8_mes_jp_1_58, effB8_mes_jp_1_59 },
 };
 
-const u32 effB8_mes_jp_1_0[42] = {
-    0x580000, 0xA1DB, 0x680000, 0xA044, 0x780000, 0xA316, 0x880000, 0xA143,
-    0x980000, 0xA08C, 0xA80000, 0xA08F, 0xB80000, 0xA081, 0xC80000, 0xA0A8,
-    0xD80000, 0xA04B, 0xE80000, 0xA007, 0xF80000, 0xA028, 0x1080000, 0xA014,
-    0x1180000, 0xA026, 0x58FFEA, 0xA084, 0x68FFEA, 0xA0A9, 0x78FFEA, 0xA015,
-    0x88FFEA, 0xA174, 0x98FFEA, 0xA012, 0xA8FFEA, 0xA014, 0xB8FFEA, 0xA001,
-    0xC8FFEA, 0xA046,
+const CONN effB8_mes_jp_1_0[21] = {
+    { 88, 0, 0, 0xA1DB }, { 104, 0, 0, 0xA044 }, { 120, 0, 0, 0xA316 }, { 136, 0, 0, 0xA143 },
+    { 152, 0, 0, 0xA08C }, { 168, 0, 0, 0xA08F }, { 184, 0, 0, 0xA081 }, { 200, 0, 0, 0xA0A8 },
+    { 216, 0, 0, 0xA04B }, { 232, 0, 0, 0xA007 }, { 248, 0, 0, 0xA028 }, { 264, 0, 0, 0xA014 },
+    { 280, 0, 0, 0xA026 }, { 88, -22, 0, 0xA084 }, { 104, -22, 0, 0xA0A9 }, { 120, -22, 0, 0xA015 },
+    { 136, -22, 0, 0xA174 }, { 152, -22, 0, 0xA012 }, { 168, -22, 0, 0xA014 }, { 184, -22, 0, 0xA001 },
+    { 200, -22, 0, 0xA046 },
 };
 
 const u32 effB8_mes_jp_1_4[40] = {
@@ -29268,14 +29268,14 @@ const u32 effB8_mes_jp_1_8[48] = {
     0xE0FFEA, 0xA002, 0xF0FFEA, 0xA048, 0x100FFEA, 0xA014, 0x110FFEA, 0xA057,
 };
 
-const u32 effB8_mes_jp_1_10[50] = {
-    0x500000, 0xA084, 0x600000, 0xA0A9, 0x700000, 0xA02C, 0x800000, 0xA14A,
-    0x900000, 0xA00D, 0xA00000, 0xA014, 0xB00000, 0xA001, 0xC00000, 0xA025,
-    0xD00000, 0xA002, 0xE00000, 0xA044, 0xF00000, 0xA034, 0x50FFEA, 0xA262,
-    0x60FFEA, 0xA2B0, 0x70FFEA, 0xA014, 0x80FFEA, 0xA02D, 0x90FFEA, 0xA012,
-    0xA0FFEA, 0xA16D, 0xB0FFEA, 0xA018, 0xC0FFEA, 0xA159, 0xD0FFEA, 0xA044,
-    0xE0FFEA, 0xA034, 0xF0FFEA, 0xA014, 0x100FFEA, 0xA001, 0x110FFEA, 0xA018,
-    0x120FFEA, 0xA005,
+const CONN effB8_mes_jp_1_10[25] = {
+    { 80, 0, 0, 0xA084 }, { 96, 0, 0, 0xA0A9 }, { 112, 0, 0, 0xA02C }, { 128, 0, 0, 0xA14A },
+    { 144, 0, 0, 0xA00D }, { 160, 0, 0, 0xA014 }, { 176, 0, 0, 0xA001 }, { 192, 0, 0, 0xA025 },
+    { 208, 0, 0, 0xA002 }, { 224, 0, 0, 0xA044 }, { 240, 0, 0, 0xA034 }, { 80, -22, 0, 0xA262 },
+    { 96, -22, 0, 0xA2B0 }, { 112, -22, 0, 0xA014 }, { 128, -22, 0, 0xA02D }, { 144, -22, 0, 0xA012 },
+    { 160, -22, 0, 0xA16D }, { 176, -22, 0, 0xA018 }, { 192, -22, 0, 0xA159 }, { 208, -22, 0, 0xA044 },
+    { 224, -22, 0, 0xA034 }, { 240, -22, 0, 0xA014 }, { 256, -22, 0, 0xA001 }, { 272, -22, 0, 0xA018 },
+    { 288, -22, 0, 0xA005 },
 };
 
 const u32 effB8_mes_jp_1_12[46] = {
@@ -29306,13 +29306,13 @@ const u32 effB8_mes_jp_1_16[50] = {
     0x118FFEA, 0xA057,
 };
 
-const u32 effB8_mes_jp_1_18[42] = {
-    0x500000, 0xA084, 0x600000, 0xA0A9, 0x700000, 0xA02C, 0x800000, 0xA23C,
-    0x900000, 0xA007, 0xA00000, 0xA01F, 0xB00000, 0xA028, 0xC00000, 0xA013,
-    0x50FFEA, 0xA254, 0x60FFEA, 0xA14C, 0x70FFEA, 0xA03E, 0x80FFEA, 0xA267,
-    0x90FFEA, 0xA007, 0xA0FFEA, 0xA014, 0xB0FFEA, 0xA028, 0xC0FFEA, 0xA046,
-    0xE0FFEA, 0xA044, 0xF0FFEA, 0xA001, 0x100FFEA, 0xA00A, 0x110FFEA, 0xA02D,
-    0x120FFEA, 0xA039,
+const CONN effB8_mes_jp_1_18[21] = {
+    { 80, 0, 0, 0xA084 }, { 96, 0, 0, 0xA0A9 }, { 112, 0, 0, 0xA02C }, { 128, 0, 0, 0xA23C },
+    { 144, 0, 0, 0xA007 }, { 160, 0, 0, 0xA01F }, { 176, 0, 0, 0xA028 }, { 192, 0, 0, 0xA013 },
+    { 80, -22, 0, 0xA254 }, { 96, -22, 0, 0xA14C }, { 112, -22, 0, 0xA03E }, { 128, -22, 0, 0xA267 },
+    { 144, -22, 0, 0xA007 }, { 160, -22, 0, 0xA014 }, { 176, -22, 0, 0xA028 }, { 192, -22, 0, 0xA046 },
+    { 224, -22, 0, 0xA044 }, { 240, -22, 0, 0xA001 }, { 256, -22, 0, 0xA00A }, { 272, -22, 0, 0xA02D },
+    { 288, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_1_20[38] = {
@@ -29331,12 +29331,12 @@ const u32 effB8_mes_jp_1_22[38] = {
     0xB0FFEA, 0xA033, 0xC0FFEA, 0xA00F, 0xD0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_1_24[40] = {
-    0x700000, 0xA084, 0x800000, 0xA09E, 0x900000, 0xA083, 0xA00000, 0xA018,
-    0xB00000, 0xA1BF, 0xC00000, 0xA119, 0xD00000, 0xA044, 0xE00000, 0xA034,
-    0xF00000, 0xA057, 0x70FFEA, 0xA00E, 0x80FFEA, 0xA018, 0x90FFEA, 0xA002,
-    0xA0FFEA, 0xA010, 0xB0FFEA, 0xA233, 0xC0FFEA, 0xA02C, 0xD0FFEA, 0xA27C,
-    0xE0FFEA, 0xA013, 0xF0FFEA, 0xA00C, 0x100FFEA, 0xA046, 0x110FFEA, 0xA039,
+const CONN effB8_mes_jp_1_24[20] = {
+    { 112, 0, 0, 0xA084 }, { 128, 0, 0, 0xA09E }, { 144, 0, 0, 0xA083 }, { 160, 0, 0, 0xA018 },
+    { 176, 0, 0, 0xA1BF }, { 192, 0, 0, 0xA119 }, { 208, 0, 0, 0xA044 }, { 224, 0, 0, 0xA034 },
+    { 240, 0, 0, 0xA057 }, { 112, -22, 0, 0xA00E }, { 128, -22, 0, 0xA018 }, { 144, -22, 0, 0xA002 },
+    { 160, -22, 0, 0xA010 }, { 176, -22, 0, 0xA233 }, { 192, -22, 0, 0xA02C }, { 208, -22, 0, 0xA27C },
+    { 224, -22, 0, 0xA013 }, { 240, -22, 0, 0xA00C }, { 256, -22, 0, 0xA046 }, { 272, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_1_26[24] = {
@@ -29345,13 +29345,13 @@ const u32 effB8_mes_jp_1_26[24] = {
     0xE80000, 0xA033, 0xF80000, 0xA00F, 0x1080000, 0xA005, 0x1180000, 0xA057,
 };
 
-const u32 effB8_mes_jp_1_28[46] = {
-    0x500000, 0xA001, 0x600000, 0xA007, 0x700000, 0xA026, 0x800000, 0xA109,
-    0x900000, 0xA02C, 0xA00000, 0xA166, 0xB00000, 0xA021, 0xC00000, 0xA012,
-    0xD00000, 0xA022, 0x50FFEA, 0xA16D, 0x60FFEA, 0xA015, 0x70FFEA, 0xA0C2,
-    0x80FFEA, 0xA082, 0x90FFEA, 0xA0AD, 0xA0FFEA, 0xA00B, 0xB0FFEA, 0xA00F,
-    0xC0FFEA, 0xA026, 0xD0FFEA, 0xA10D, 0xE0FFEA, 0xA285, 0xF0FFEA, 0xA014,
-    0x100FFEA, 0xA001, 0x110FFEA, 0xA046, 0x120FFEA, 0xA039,
+const CONN effB8_mes_jp_1_28[23] = {
+    { 80, 0, 0, 0xA001 }, { 96, 0, 0, 0xA007 }, { 112, 0, 0, 0xA026 }, { 128, 0, 0, 0xA109 },
+    { 144, 0, 0, 0xA02C }, { 160, 0, 0, 0xA166 }, { 176, 0, 0, 0xA021 }, { 192, 0, 0, 0xA012 },
+    { 208, 0, 0, 0xA022 }, { 80, -22, 0, 0xA16D }, { 96, -22, 0, 0xA015 }, { 112, -22, 0, 0xA0C2 },
+    { 128, -22, 0, 0xA082 }, { 144, -22, 0, 0xA0AD }, { 160, -22, 0, 0xA00B }, { 176, -22, 0, 0xA00F },
+    { 192, -22, 0, 0xA026 }, { 208, -22, 0, 0xA10D }, { 224, -22, 0, 0xA285 }, { 240, -22, 0, 0xA014 },
+    { 256, -22, 0, 0xA001 }, { 272, -22, 0, 0xA046 }, { 288, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_1_30[34] = {
@@ -29370,12 +29370,12 @@ const u32 effB8_mes_jp_1_32[38] = {
     0xE0FFEA, 0xA0CB, 0xF0FFEA, 0xA0A0, 0x100FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_1_34[34] = {
-    0x780000, 0xA0C9, 0x880000, 0xA0B7, 0x980000, 0xA0A1, 0xA80000, 0xA0A6,
-    0xB80000, 0xA0AD, 0xC80000, 0xA0A9, 0xD80000, 0xA081, 0xE80000, 0xA0C6,
-    0xF80000, 0xA019, 0x78FFEA, 0xA21E, 0x88FFEA, 0xA21F, 0x98FFEA, 0xA015,
-    0xA8FFEA, 0xA3A6, 0xB8FFEA, 0xA041, 0xC8FFEA, 0xA014, 0xD8FFEA, 0xA001,
-    0xE8FFEA, 0xA046,
+const CONN effB8_mes_jp_1_34[17] = {
+    { 120, 0, 0, 0xA0C9 }, { 136, 0, 0, 0xA0B7 }, { 152, 0, 0, 0xA0A1 }, { 168, 0, 0, 0xA0A6 },
+    { 184, 0, 0, 0xA0AD }, { 200, 0, 0, 0xA0A9 }, { 216, 0, 0, 0xA081 }, { 232, 0, 0, 0xA0C6 },
+    { 248, 0, 0, 0xA019 }, { 120, -22, 0, 0xA21E }, { 136, -22, 0, 0xA21F }, { 152, -22, 0, 0xA015 },
+    { 168, -22, 0, 0xA3A6 }, { 184, -22, 0, 0xA041 }, { 200, -22, 0, 0xA014 }, { 216, -22, 0, 0xA001 },
+    { 232, -22, 0, 0xA046 },
 };
 
 const u32 effB8_mes_jp_1_36[40] = {
@@ -29395,13 +29395,13 @@ const u32 effB8_mes_jp_1_38[46] = {
     0xF8FFEA, 0xA16A, 0x108FFEA, 0xA119, 0x118FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_1_40[42] = {
-    0x600000, 0xA084, 0x700000, 0xA0A9, 0x800000, 0xA018, 0x900000, 0xA08C,
-    0xA00000, 0xA08F, 0xB00000, 0xA0AD, 0xC00000, 0xA0B8, 0xD00000, 0xA0AD,
-    0xE00000, 0xA015, 0x60FFEA, 0xA3A7, 0x70FFEA, 0xA003, 0x80FFEA, 0xA1AB,
-    0x90FFEA, 0xA029, 0xA0FFEA, 0xA028, 0xB0FFEA, 0xA0A3, 0xC0FFEA, 0xA091,
-    0xD0FFEA, 0xA014, 0xE0FFEA, 0xA04C, 0xF0FFEA, 0xA001, 0x100FFEA, 0xA014,
-    0x110FFEA, 0xA001,
+const CONN effB8_mes_jp_1_40[21] = {
+    { 96, 0, 0, 0xA084 }, { 112, 0, 0, 0xA0A9 }, { 128, 0, 0, 0xA018 }, { 144, 0, 0, 0xA08C },
+    { 160, 0, 0, 0xA08F }, { 176, 0, 0, 0xA0AD }, { 192, 0, 0, 0xA0B8 }, { 208, 0, 0, 0xA0AD },
+    { 224, 0, 0, 0xA015 }, { 96, -22, 0, 0xA3A7 }, { 112, -22, 0, 0xA003 }, { 128, -22, 0, 0xA1AB },
+    { 144, -22, 0, 0xA029 }, { 160, -22, 0, 0xA028 }, { 176, -22, 0, 0xA0A3 }, { 192, -22, 0, 0xA091 },
+    { 208, -22, 0, 0xA014 }, { 224, -22, 0, 0xA04C }, { 240, -22, 0, 0xA001 }, { 256, -22, 0, 0xA014 },
+    { 272, -22, 0, 0xA001 },
 };
 
 const u32 effB8_mes_jp_1_42[42] = {
@@ -29422,13 +29422,13 @@ const u32 effB8_mes_jp_1_48[48] = {
     0xF8FFEA, 0xA00C, 0x108FFEA, 0xA009, 0x118FFEA, 0xA013, 0x128FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_1_50[42] = {
-    0x600000, 0xA1A7, 0x700000, 0xA008, 0x800000, 0xA026, 0x900000, 0xA029,
-    0xA00000, 0xA014, 0xB00000, 0xA001, 0xC00000, 0xA02D, 0xD00000, 0xA048,
-    0xE00000, 0xA057, 0x60FFEA, 0xA084, 0x70FFEA, 0xA0A9, 0x80FFEA, 0xA014,
-    0x90FFEA, 0xA027, 0xA0FFEA, 0xA018, 0xB0FFEA, 0xA13D, 0xC0FFEA, 0xA2B0,
-    0xD0FFEA, 0xA03E, 0xE0FFEA, 0xA000, 0xF0FFEA, 0xA028, 0x100FFEA, 0xA018,
-    0x110FFEA, 0xA00A,
+const CONN effB8_mes_jp_1_50[21] = {
+    { 96, 0, 0, 0xA1A7 }, { 112, 0, 0, 0xA008 }, { 128, 0, 0, 0xA026 }, { 144, 0, 0, 0xA029 },
+    { 160, 0, 0, 0xA014 }, { 176, 0, 0, 0xA001 }, { 192, 0, 0, 0xA02D }, { 208, 0, 0, 0xA048 },
+    { 224, 0, 0, 0xA057 }, { 96, -22, 0, 0xA084 }, { 112, -22, 0, 0xA0A9 }, { 128, -22, 0, 0xA014 },
+    { 144, -22, 0, 0xA027 }, { 160, -22, 0, 0xA018 }, { 176, -22, 0, 0xA13D }, { 192, -22, 0, 0xA2B0 },
+    { 208, -22, 0, 0xA03E }, { 224, -22, 0, 0xA000 }, { 240, -22, 0, 0xA028 }, { 256, -22, 0, 0xA018 },
+    { 272, -22, 0, 0xA00A },
 };
 
 const u32 effB8_mes_jp_1_52[42] = {
@@ -29458,11 +29458,11 @@ const u32 effB8_mes_jp_1_56[44] = {
     0x100FFEA, 0xA048, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_1_58[32] = {
-    0x780000, 0xA022, 0x880000, 0xA002, 0x980000, 0xA11F, 0xA80000, 0xA012,
-    0xB80000, 0xA014, 0xC80000, 0xA001, 0xD80000, 0xA018, 0xE80000, 0xA005,
-    0xF80000, 0xA03C, 0x78FFEA, 0xA12E, 0x88FFEA, 0xA12F, 0x98FFEA, 0xA130,
-    0xA8FFEA, 0xA029, 0xB8FFEA, 0xA048, 0xC8FFEA, 0xA014, 0xD8FFEA, 0xA057,
+const CONN effB8_mes_jp_1_58[16] = {
+    { 120, 0, 0, 0xA022 }, { 136, 0, 0, 0xA002 }, { 152, 0, 0, 0xA11F }, { 168, 0, 0, 0xA012 },
+    { 184, 0, 0, 0xA014 }, { 200, 0, 0, 0xA001 }, { 216, 0, 0, 0xA018 }, { 232, 0, 0, 0xA005 },
+    { 248, 0, 0, 0xA03C }, { 120, -22, 0, 0xA12E }, { 136, -22, 0, 0xA12F }, { 152, -22, 0, 0xA130 },
+    { 168, -22, 0, 0xA029 }, { 184, -22, 0, 0xA048 }, { 200, -22, 0, 0xA014 }, { 216, -22, 0, 0xA057 },
 };
 
 const u16 effB8_mes_jp_1_1[2] = {
@@ -29587,21 +29587,21 @@ const u16 effB8_mes_jp_1_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_2[30] = {
-    { (const CONN*)effB8_mes_jp_2_0, (const u16*)effB8_mes_jp_2_1 }, { (const CONN*)effB8_mes_jp_2_2, (const u16*)effB8_mes_jp_2_3 },
-    { (const CONN*)effB8_mes_jp_2_4, (const u16*)effB8_mes_jp_2_5 }, { (const CONN*)effB8_mes_jp_2_6, (const u16*)effB8_mes_jp_2_7 },
-    { (const CONN*)effB8_mes_jp_2_8, (const u16*)effB8_mes_jp_2_9 }, { (const CONN*)effB8_mes_jp_2_10, (const u16*)effB8_mes_jp_2_11 },
-    { (const CONN*)effB8_mes_jp_2_12, (const u16*)effB8_mes_jp_2_13 }, { (const CONN*)effB8_mes_jp_2_14, (const u16*)effB8_mes_jp_2_15 },
-    { (const CONN*)effB8_mes_jp_2_16, (const u16*)effB8_mes_jp_2_17 }, { (const CONN*)effB8_mes_jp_2_18, (const u16*)effB8_mes_jp_2_19 },
-    { (const CONN*)effB8_mes_jp_2_20, (const u16*)effB8_mes_jp_2_21 }, { (const CONN*)effB8_mes_jp_2_22, (const u16*)effB8_mes_jp_2_23 },
-    { (const CONN*)effB8_mes_jp_2_24, (const u16*)effB8_mes_jp_2_25 }, { (const CONN*)effB8_mes_jp_2_26, (const u16*)effB8_mes_jp_2_27 },
-    { (const CONN*)effB8_mes_jp_2_28, (const u16*)effB8_mes_jp_2_29 }, { (const CONN*)effB8_mes_jp_2_30, (const u16*)effB8_mes_jp_2_31 },
-    { (const CONN*)effB8_mes_jp_2_32, (const u16*)effB8_mes_jp_2_33 }, { (const CONN*)effB8_mes_jp_2_34, (const u16*)effB8_mes_jp_2_35 },
-    { (const CONN*)effB8_mes_jp_2_36, (const u16*)effB8_mes_jp_2_37 }, { (const CONN*)effB8_mes_jp_2_38, (const u16*)effB8_mes_jp_2_39 },
-    { (const CONN*)effB8_mes_jp_2_40, (const u16*)effB8_mes_jp_2_41 }, { (const CONN*)effB8_mes_jp_2_42, (const u16*)effB8_mes_jp_2_43 },
-    { (const CONN*)effB8_mes_jp_2_42, (const u16*)effB8_mes_jp_2_45 }, { (const CONN*)effB8_mes_jp_2_42, (const u16*)effB8_mes_jp_2_47 },
-    { (const CONN*)effB8_mes_jp_2_48, (const u16*)effB8_mes_jp_2_49 }, { (const CONN*)effB8_mes_jp_2_50, (const u16*)effB8_mes_jp_2_51 },
-    { (const CONN*)effB8_mes_jp_2_52, (const u16*)effB8_mes_jp_2_53 }, { (const CONN*)effB8_mes_jp_2_54, (const u16*)effB8_mes_jp_2_55 },
-    { (const CONN*)effB8_mes_jp_2_56, (const u16*)effB8_mes_jp_2_57 }, { (const CONN*)effB8_mes_jp_2_58, (const u16*)effB8_mes_jp_2_59 },
+    { (const CONN*)effB8_mes_jp_2_0, effB8_mes_jp_2_1 }, { effB8_mes_jp_2_2, effB8_mes_jp_2_3 },
+    { (const CONN*)effB8_mes_jp_2_4, effB8_mes_jp_2_5 }, { (const CONN*)effB8_mes_jp_2_6, effB8_mes_jp_2_7 },
+    { effB8_mes_jp_2_8, effB8_mes_jp_2_9 }, { (const CONN*)effB8_mes_jp_2_10, effB8_mes_jp_2_11 },
+    { effB8_mes_jp_2_12, effB8_mes_jp_2_13 }, { (const CONN*)effB8_mes_jp_2_14, effB8_mes_jp_2_15 },
+    { (const CONN*)effB8_mes_jp_2_16, effB8_mes_jp_2_17 }, { (const CONN*)effB8_mes_jp_2_18, effB8_mes_jp_2_19 },
+    { effB8_mes_jp_2_20, effB8_mes_jp_2_21 }, { (const CONN*)effB8_mes_jp_2_22, effB8_mes_jp_2_23 },
+    { effB8_mes_jp_2_24, effB8_mes_jp_2_25 }, { (const CONN*)effB8_mes_jp_2_26, effB8_mes_jp_2_27 },
+    { (const CONN*)effB8_mes_jp_2_28, effB8_mes_jp_2_29 }, { effB8_mes_jp_2_30, effB8_mes_jp_2_31 },
+    { (const CONN*)effB8_mes_jp_2_32, effB8_mes_jp_2_33 }, { effB8_mes_jp_2_34, effB8_mes_jp_2_35 },
+    { effB8_mes_jp_2_36, effB8_mes_jp_2_37 }, { (const CONN*)effB8_mes_jp_2_38, effB8_mes_jp_2_39 },
+    { effB8_mes_jp_2_40, effB8_mes_jp_2_41 }, { (const CONN*)effB8_mes_jp_2_42, effB8_mes_jp_2_43 },
+    { (const CONN*)effB8_mes_jp_2_42, effB8_mes_jp_2_45 }, { (const CONN*)effB8_mes_jp_2_42, effB8_mes_jp_2_47 },
+    { effB8_mes_jp_2_48, effB8_mes_jp_2_49 }, { (const CONN*)effB8_mes_jp_2_50, effB8_mes_jp_2_51 },
+    { effB8_mes_jp_2_52, effB8_mes_jp_2_53 }, { (const CONN*)effB8_mes_jp_2_54, effB8_mes_jp_2_55 },
+    { (const CONN*)effB8_mes_jp_2_56, effB8_mes_jp_2_57 }, { effB8_mes_jp_2_58, effB8_mes_jp_2_59 },
 };
 
 const u32 effB8_mes_jp_2_0[46] = {
@@ -29613,12 +29613,12 @@ const u32 effB8_mes_jp_2_0[46] = {
     0xA8FFEA, 0xA002, 0xB8FFEA, 0xA005, 0xC8FFEA, 0xA057,
 };
 
-const u32 effB8_mes_jp_2_2[36] = {
-    0x600000, 0xA001, 0x700000, 0xA001, 0x800000, 0xA143, 0x900000, 0xA147,
-    0xA00000, 0xA048, 0xB00000, 0xA033, 0xC00000, 0xA00F, 0x60FFEA, 0xA01E,
-    0x70FFEA, 0xA00F, 0x80FFEA, 0xA177, 0x90FFEA, 0xA013, 0xA0FFEA, 0xA151,
-    0xB0FFEA, 0xA004, 0xC0FFEA, 0xA002, 0xE0FFEA, 0xA2A9, 0xF0FFEA, 0xA27B,
-    0x100FFEA, 0xA048, 0x110FFEA, 0xA039,
+const CONN effB8_mes_jp_2_2[18] = {
+    { 96, 0, 0, 0xA001 }, { 112, 0, 0, 0xA001 }, { 128, 0, 0, 0xA143 }, { 144, 0, 0, 0xA147 },
+    { 160, 0, 0, 0xA048 }, { 176, 0, 0, 0xA033 }, { 192, 0, 0, 0xA00F }, { 96, -22, 0, 0xA01E },
+    { 112, -22, 0, 0xA00F }, { 128, -22, 0, 0xA177 }, { 144, -22, 0, 0xA013 }, { 160, -22, 0, 0xA151 },
+    { 176, -22, 0, 0xA004 }, { 192, -22, 0, 0xA002 }, { 224, -22, 0, 0xA2A9 }, { 240, -22, 0, 0xA27B },
+    { 256, -22, 0, 0xA048 }, { 272, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_2_4[48] = {
@@ -29638,12 +29638,12 @@ const u32 effB8_mes_jp_2_6[36] = {
     0x100FFEA, 0xA00C, 0x110FFEA, 0xA014,
 };
 
-const u32 effB8_mes_jp_2_8[40] = {
-    0x700000, 0xA109, 0x800000, 0xA143, 0x900000, 0xA15F, 0xA00000, 0xA013,
-    0xB00000, 0xA00B, 0xC00000, 0xA012, 0xD00000, 0xA018, 0xE00000, 0xA39E,
-    0xF00000, 0xA027, 0x1000000, 0xA057, 0x70FFEA, 0xA1AE, 0x80FFEA, 0xA005,
-    0x90FFEA, 0xA02C, 0xA0FFEA, 0xA10C, 0xB0FFEA, 0xA00F, 0xC0FFEA, 0xA11A,
-    0xD0FFEA, 0xA03E, 0xE0FFEA, 0xA00C, 0xF0FFEA, 0xA028, 0x100FFEA, 0xA057,
+const CONN effB8_mes_jp_2_8[20] = {
+    { 112, 0, 0, 0xA109 }, { 128, 0, 0, 0xA143 }, { 144, 0, 0, 0xA15F }, { 160, 0, 0, 0xA013 },
+    { 176, 0, 0, 0xA00B }, { 192, 0, 0, 0xA012 }, { 208, 0, 0, 0xA018 }, { 224, 0, 0, 0xA39E },
+    { 240, 0, 0, 0xA027 }, { 256, 0, 0, 0xA057 }, { 112, -22, 0, 0xA1AE }, { 128, -22, 0, 0xA005 },
+    { 144, -22, 0, 0xA02C }, { 160, -22, 0, 0xA10C }, { 176, -22, 0, 0xA00F }, { 192, -22, 0, 0xA11A },
+    { 208, -22, 0, 0xA03E }, { 224, -22, 0, 0xA00C }, { 240, -22, 0, 0xA028 }, { 256, -22, 0, 0xA057 },
 };
 
 const u32 effB8_mes_jp_2_10[38] = {
@@ -29654,13 +29654,13 @@ const u32 effB8_mes_jp_2_10[38] = {
     0xF0FFEA, 0xA13D, 0x100FFEA, 0xA048, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_2_12[42] = {
-    0x600000, 0xA00C, 0x700000, 0xA04D, 0x800000, 0xA026, 0x900000, 0xA00B,
-    0xA00000, 0xA001, 0xB00000, 0xA0CC, 0xC00000, 0xA0AB, 0xD00000, 0xA0B7,
-    0xE00000, 0xA048, 0x60FFEA, 0xA000, 0x70FFEA, 0xA013, 0x80FFEA, 0xA019,
-    0x90FFEA, 0xA10E, 0xA0FFEA, 0xA013, 0xB0FFEA, 0xA2AD, 0xC0FFEA, 0xA02C,
-    0xD0FFEA, 0xA133, 0xE0FFEA, 0xA003, 0xF0FFEA, 0xA028, 0x100FFEA, 0xA02D,
-    0x110FFEA, 0xA048,
+const CONN effB8_mes_jp_2_12[21] = {
+    { 96, 0, 0, 0xA00C }, { 112, 0, 0, 0xA04D }, { 128, 0, 0, 0xA026 }, { 144, 0, 0, 0xA00B },
+    { 160, 0, 0, 0xA001 }, { 176, 0, 0, 0xA0CC }, { 192, 0, 0, 0xA0AB }, { 208, 0, 0, 0xA0B7 },
+    { 224, 0, 0, 0xA048 }, { 96, -22, 0, 0xA000 }, { 112, -22, 0, 0xA013 }, { 128, -22, 0, 0xA019 },
+    { 144, -22, 0, 0xA10E }, { 160, -22, 0, 0xA013 }, { 176, -22, 0, 0xA2AD }, { 192, -22, 0, 0xA02C },
+    { 208, -22, 0, 0xA133 }, { 224, -22, 0, 0xA003 }, { 240, -22, 0, 0xA028 }, { 256, -22, 0, 0xA02D },
+    { 272, -22, 0, 0xA048 },
 };
 
 const u32 effB8_mes_jp_2_14[38] = {
@@ -29690,12 +29690,12 @@ const u32 effB8_mes_jp_2_18[50] = {
     0x118FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_2_20[34] = {
-    0x780000, 0xA00A, 0x880000, 0xA00C, 0x980000, 0xA03E, 0xA80000, 0xA14B,
-    0xB80000, 0xA14C, 0xC80000, 0xA109, 0xD80000, 0xA14D, 0xE80000, 0xA057,
-    0x78FFEA, 0xA10C, 0x88FFEA, 0xA028, 0x98FFEA, 0xA009, 0xA8FFEA, 0xA013,
-    0xB8FFEA, 0xA03E, 0xC8FFEA, 0xA388, 0xD8FFEA, 0xA006, 0xE8FFEA, 0xA014,
-    0xF8FFEA, 0xA001,
+const CONN effB8_mes_jp_2_20[17] = {
+    { 120, 0, 0, 0xA00A }, { 136, 0, 0, 0xA00C }, { 152, 0, 0, 0xA03E }, { 168, 0, 0, 0xA14B },
+    { 184, 0, 0, 0xA14C }, { 200, 0, 0, 0xA109 }, { 216, 0, 0, 0xA14D }, { 232, 0, 0, 0xA057 },
+    { 120, -22, 0, 0xA10C }, { 136, -22, 0, 0xA028 }, { 152, -22, 0, 0xA009 }, { 168, -22, 0, 0xA013 },
+    { 184, -22, 0, 0xA03E }, { 200, -22, 0, 0xA388 }, { 216, -22, 0, 0xA006 }, { 232, -22, 0, 0xA014 },
+    { 248, -22, 0, 0xA001 },
 };
 
 const u32 effB8_mes_jp_2_22[26] = {
@@ -29705,13 +29705,13 @@ const u32 effB8_mes_jp_2_22[26] = {
     0xE8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_2_24[46] = {
-    0x580000, 0xA177, 0x680000, 0xA019, 0x780000, 0xA1AE, 0x880000, 0xA022,
-    0x980000, 0xA33B, 0xA80000, 0xA003, 0xB80000, 0xA028, 0xC80000, 0xA011,
-    0xD80000, 0xA022, 0xE80000, 0xA027, 0xF80000, 0xA019, 0x1080000, 0xA014,
-    0x1180000, 0xA001, 0x58FFEA, 0xA151, 0x68FFEA, 0xA001, 0x78FFEA, 0xA018,
-    0x88FFEA, 0xA14B, 0x98FFEA, 0xA04B, 0xA8FFEA, 0xA2B7, 0xB8FFEA, 0xA04F,
-    0xC8FFEA, 0xA02D, 0xD8FFEA, 0xA048, 0xE8FFEA, 0xA039,
+const CONN effB8_mes_jp_2_24[23] = {
+    { 88, 0, 0, 0xA177 }, { 104, 0, 0, 0xA019 }, { 120, 0, 0, 0xA1AE }, { 136, 0, 0, 0xA022 },
+    { 152, 0, 0, 0xA33B }, { 168, 0, 0, 0xA003 }, { 184, 0, 0, 0xA028 }, { 200, 0, 0, 0xA011 },
+    { 216, 0, 0, 0xA022 }, { 232, 0, 0, 0xA027 }, { 248, 0, 0, 0xA019 }, { 264, 0, 0, 0xA014 },
+    { 280, 0, 0, 0xA001 }, { 88, -22, 0, 0xA151 }, { 104, -22, 0, 0xA001 }, { 120, -22, 0, 0xA018 },
+    { 136, -22, 0, 0xA14B }, { 152, -22, 0, 0xA04B }, { 168, -22, 0, 0xA2B7 }, { 184, -22, 0, 0xA04F },
+    { 200, -22, 0, 0xA02D }, { 216, -22, 0, 0xA048 }, { 232, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_2_26[30] = {
@@ -29731,11 +29731,11 @@ const u32 effB8_mes_jp_2_28[54] = {
     0x108FFEA, 0xA015, 0x118FFEA, 0xA019, 0x128FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_2_30[28] = {
-    0x500000, 0xA107, 0x600000, 0xA108, 0x700000, 0xA022, 0x800000, 0xA165,
-    0x900000, 0xA021, 0xA00000, 0xA029, 0xB00000, 0xA04D, 0xC00000, 0xA037,
-    0xD00000, 0xA17B, 0xE00000, 0xA217, 0xF00000, 0xA013, 0x1000000, 0xA3AB,
-    0x1100000, 0xA00C, 0x1200000, 0xA039,
+const CONN effB8_mes_jp_2_30[14] = {
+    { 80, 0, 0, 0xA107 }, { 96, 0, 0, 0xA108 }, { 112, 0, 0, 0xA022 }, { 128, 0, 0, 0xA165 },
+    { 144, 0, 0, 0xA021 }, { 160, 0, 0, 0xA029 }, { 176, 0, 0, 0xA04D }, { 192, 0, 0, 0xA037 },
+    { 208, 0, 0, 0xA17B }, { 224, 0, 0, 0xA217 }, { 240, 0, 0, 0xA013 }, { 256, 0, 0, 0xA3AB },
+    { 272, 0, 0, 0xA00C }, { 288, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_2_32[22] = {
@@ -29744,16 +29744,16 @@ const u32 effB8_mes_jp_2_32[22] = {
     0xF00000, 0xA108, 0x1000000, 0xA109, 0x1100000, 0xA039,
 };
 
-const u32 effB8_mes_jp_2_34[18] = {
-    0x780000, 0xA009, 0x880000, 0xA029, 0x980000, 0xA047, 0xA80000, 0xA17B,
-    0xB80000, 0xA03D, 0xC80000, 0xA1CD, 0xD80000, 0xA1CE, 0xE80000, 0xA109,
-    0xF80000, 0xA039,
+const CONN effB8_mes_jp_2_34[9] = {
+    { 120, 0, 0, 0xA009 }, { 136, 0, 0, 0xA029 }, { 152, 0, 0, 0xA047 }, { 168, 0, 0, 0xA17B },
+    { 184, 0, 0, 0xA03D }, { 200, 0, 0, 0xA1CD }, { 216, 0, 0, 0xA1CE }, { 232, 0, 0, 0xA109 },
+    { 248, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_2_36[20] = {
-    0x700000, 0xA009, 0x800000, 0xA018, 0x900000, 0xA119, 0xB00000, 0xA294,
-    0xC00000, 0xA02C, 0xD00000, 0xA022, 0xE00000, 0xA3AE, 0xF00000, 0xA005,
-    0x1000000, 0xA00C, 0x1100000, 0xA039,
+const CONN effB8_mes_jp_2_36[10] = {
+    { 112, 0, 0, 0xA009 }, { 128, 0, 0, 0xA018 }, { 144, 0, 0, 0xA119 }, { 176, 0, 0, 0xA294 },
+    { 192, 0, 0, 0xA02C }, { 208, 0, 0, 0xA022 }, { 224, 0, 0, 0xA3AE }, { 240, 0, 0, 0xA005 },
+    { 256, 0, 0, 0xA00C }, { 272, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_2_38[28] = {
@@ -29763,10 +29763,10 @@ const u32 effB8_mes_jp_2_38[28] = {
     0x1200000, 0xA108, 0x1300000, 0xA039,
 };
 
-const u32 effB8_mes_jp_2_40[22] = {
-    0x600000, 0xA2D5, 0x700000, 0xA2E9, 0x900000, 0xA3AF, 0xA00000, 0xA01E,
-    0xB00000, 0xA044, 0xC00000, 0xA006, 0xD00000, 0xA3B0, 0xE00000, 0xA1C4,
-    0xF00000, 0xA018, 0x1000000, 0xA119, 0x1100000, 0xA039,
+const CONN effB8_mes_jp_2_40[11] = {
+    { 96, 0, 0, 0xA2D5 }, { 112, 0, 0, 0xA2E9 }, { 144, 0, 0, 0xA3AF }, { 160, 0, 0, 0xA01E },
+    { 176, 0, 0, 0xA044 }, { 192, 0, 0, 0xA006 }, { 208, 0, 0, 0xA3B0 }, { 224, 0, 0, 0xA1C4 },
+    { 240, 0, 0, 0xA018 }, { 256, 0, 0, 0xA119 }, { 272, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_2_42[40] = {
@@ -29777,11 +29777,11 @@ const u32 effB8_mes_jp_2_42[40] = {
     0xD8FFEA, 0xA1A9, 0xE8FFEA, 0xA00B, 0xF8FFEA, 0xA01F, 0x108FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_2_48[32] = {
-    0x780000, 0xA177, 0x880000, 0xA015, 0x980000, 0xA019, 0xA80000, 0xA009,
-    0xB80000, 0xA018, 0xC80000, 0xA109, 0xD80000, 0xA048, 0xE80000, 0xA008,
-    0xF80000, 0xA03E, 0x78FFEA, 0xA00C, 0x88FFEA, 0xA050, 0x98FFEA, 0xA012,
-    0xA8FFEA, 0xA014, 0xB8FFEA, 0xA02D, 0xC8FFEA, 0xA048, 0xD8FFEA, 0xA039,
+const CONN effB8_mes_jp_2_48[16] = {
+    { 120, 0, 0, 0xA177 }, { 136, 0, 0, 0xA015 }, { 152, 0, 0, 0xA019 }, { 168, 0, 0, 0xA009 },
+    { 184, 0, 0, 0xA018 }, { 200, 0, 0, 0xA109 }, { 216, 0, 0, 0xA048 }, { 232, 0, 0, 0xA008 },
+    { 248, 0, 0, 0xA03E }, { 120, -22, 0, 0xA00C }, { 136, -22, 0, 0xA050 }, { 152, -22, 0, 0xA012 },
+    { 168, -22, 0, 0xA014 }, { 184, -22, 0, 0xA02D }, { 200, -22, 0, 0xA048 }, { 216, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_2_50[36] = {
@@ -29792,12 +29792,12 @@ const u32 effB8_mes_jp_2_50[36] = {
     0xF8FFEA, 0xA029, 0x108FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_2_52[38] = {
-    0x580000, 0xA1B6, 0x680000, 0xA1B7, 0x780000, 0xA019, 0x880000, 0xA1B8,
-    0x980000, 0xA001, 0xA80000, 0xA039, 0x58FFEA, 0xA134, 0x68FFEA, 0xA018,
-    0x78FFEA, 0xA17D, 0x88FFEA, 0xA00A, 0x98FFEA, 0xA015, 0xA8FFEA, 0xA1B9,
-    0xB8FFEA, 0xA027, 0xC8FFEA, 0xA019, 0xD8FFEA, 0xA014, 0xE8FFEA, 0xA001,
-    0xF8FFEA, 0xA018, 0x108FFEA, 0xA005, 0x118FFEA, 0xA057,
+const CONN effB8_mes_jp_2_52[19] = {
+    { 88, 0, 0, 0xA1B6 }, { 104, 0, 0, 0xA1B7 }, { 120, 0, 0, 0xA019 }, { 136, 0, 0, 0xA1B8 },
+    { 152, 0, 0, 0xA001 }, { 168, 0, 0, 0xA039 }, { 88, -22, 0, 0xA134 }, { 104, -22, 0, 0xA018 },
+    { 120, -22, 0, 0xA17D }, { 136, -22, 0, 0xA00A }, { 152, -22, 0, 0xA015 }, { 168, -22, 0, 0xA1B9 },
+    { 184, -22, 0, 0xA027 }, { 200, -22, 0, 0xA019 }, { 216, -22, 0, 0xA014 }, { 232, -22, 0, 0xA001 },
+    { 248, -22, 0, 0xA018 }, { 264, -22, 0, 0xA005 }, { 280, -22, 0, 0xA057 },
 };
 
 const u32 effB8_mes_jp_2_54[54] = {
@@ -29818,10 +29818,10 @@ const u32 effB8_mes_jp_2_56[38] = {
     0x100FFEA, 0xA00C, 0x110FFEA, 0xA028, 0x120FFEA, 0xA057,
 };
 
-const u32 effB8_mes_jp_2_58[24] = {
-    0x600000, 0xA00C, 0x700000, 0xA050, 0x800000, 0xA012, 0x900000, 0xA02C,
-    0xA00000, 0xA109, 0xB00000, 0xA015, 0xC00000, 0xA1AA, 0xD00000, 0xA021,
-    0xE00000, 0xA012, 0xF00000, 0xA13C, 0x1000000, 0xA001, 0x1100000, 0xA039,
+const CONN effB8_mes_jp_2_58[12] = {
+    { 96, 0, 0, 0xA00C }, { 112, 0, 0, 0xA050 }, { 128, 0, 0, 0xA012 }, { 144, 0, 0, 0xA02C },
+    { 160, 0, 0, 0xA109 }, { 176, 0, 0, 0xA015 }, { 192, 0, 0, 0xA1AA }, { 208, 0, 0, 0xA021 },
+    { 224, 0, 0, 0xA012 }, { 240, 0, 0, 0xA13C }, { 256, 0, 0, 0xA001 }, { 272, 0, 0, 0xA039 },
 };
 
 const u16 effB8_mes_jp_2_1[5] = {
@@ -29945,29 +29945,29 @@ const u16 effB8_mes_jp_2_59[6] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_3[30] = {
-    { (const CONN*)effB8_mes_jp_3_0, (const u16*)effB8_mes_jp_3_1 }, { (const CONN*)effB8_mes_jp_3_2, (const u16*)effB8_mes_jp_3_3 },
-    { (const CONN*)effB8_mes_jp_3_4, (const u16*)effB8_mes_jp_3_5 }, { (const CONN*)effB8_mes_jp_3_6, (const u16*)effB8_mes_jp_3_7 },
-    { (const CONN*)effB8_mes_jp_3_8, (const u16*)effB8_mes_jp_3_9 }, { (const CONN*)effB8_mes_jp_3_10, (const u16*)effB8_mes_jp_3_11 },
-    { (const CONN*)effB8_mes_jp_3_12, (const u16*)effB8_mes_jp_3_13 }, { (const CONN*)effB8_mes_jp_3_14, (const u16*)effB8_mes_jp_3_15 },
-    { (const CONN*)effB8_mes_jp_3_16, (const u16*)effB8_mes_jp_3_17 }, { (const CONN*)effB8_mes_jp_3_18, (const u16*)effB8_mes_jp_3_19 },
-    { (const CONN*)effB8_mes_jp_3_20, (const u16*)effB8_mes_jp_3_21 }, { (const CONN*)effB8_mes_jp_3_22, (const u16*)effB8_mes_jp_3_23 },
-    { (const CONN*)effB8_mes_jp_3_24, (const u16*)effB8_mes_jp_3_25 }, { (const CONN*)effB8_mes_jp_3_26, (const u16*)effB8_mes_jp_3_27 },
-    { (const CONN*)effB8_mes_jp_3_28, (const u16*)effB8_mes_jp_3_29 }, { (const CONN*)effB8_mes_jp_3_30, (const u16*)effB8_mes_jp_3_31 },
-    { (const CONN*)effB8_mes_jp_3_32, (const u16*)effB8_mes_jp_3_33 }, { (const CONN*)effB8_mes_jp_3_34, (const u16*)effB8_mes_jp_3_35 },
-    { (const CONN*)effB8_mes_jp_3_36, (const u16*)effB8_mes_jp_3_37 }, { (const CONN*)effB8_mes_jp_3_38, (const u16*)effB8_mes_jp_3_39 },
-    { (const CONN*)effB8_mes_jp_3_40, (const u16*)effB8_mes_jp_3_41 }, { (const CONN*)effB8_mes_jp_3_42, (const u16*)effB8_mes_jp_3_43 },
-    { (const CONN*)effB8_mes_jp_3_42, (const u16*)effB8_mes_jp_3_45 }, { (const CONN*)effB8_mes_jp_3_42, (const u16*)effB8_mes_jp_3_47 },
-    { (const CONN*)effB8_mes_jp_3_48, (const u16*)effB8_mes_jp_3_49 }, { (const CONN*)effB8_mes_jp_3_50, (const u16*)effB8_mes_jp_3_51 },
-    { (const CONN*)effB8_mes_jp_3_52, (const u16*)effB8_mes_jp_3_53 }, { (const CONN*)effB8_mes_jp_3_54, (const u16*)effB8_mes_jp_3_55 },
-    { (const CONN*)effB8_mes_jp_3_56, (const u16*)effB8_mes_jp_3_57 }, { (const CONN*)effB8_mes_jp_3_58, (const u16*)effB8_mes_jp_3_59 },
+    { effB8_mes_jp_3_0, effB8_mes_jp_3_1 }, { (const CONN*)effB8_mes_jp_3_2, effB8_mes_jp_3_3 },
+    { (const CONN*)effB8_mes_jp_3_4, effB8_mes_jp_3_5 }, { effB8_mes_jp_3_6, effB8_mes_jp_3_7 },
+    { (const CONN*)effB8_mes_jp_3_8, effB8_mes_jp_3_9 }, { (const CONN*)effB8_mes_jp_3_10, effB8_mes_jp_3_11 },
+    { (const CONN*)effB8_mes_jp_3_12, effB8_mes_jp_3_13 }, { (const CONN*)effB8_mes_jp_3_14, effB8_mes_jp_3_15 },
+    { effB8_mes_jp_3_16, effB8_mes_jp_3_17 }, { (const CONN*)effB8_mes_jp_3_18, effB8_mes_jp_3_19 },
+    { (const CONN*)effB8_mes_jp_3_20, effB8_mes_jp_3_21 }, { effB8_mes_jp_3_22, effB8_mes_jp_3_23 },
+    { (const CONN*)effB8_mes_jp_3_24, effB8_mes_jp_3_25 }, { (const CONN*)effB8_mes_jp_3_26, effB8_mes_jp_3_27 },
+    { effB8_mes_jp_3_28, effB8_mes_jp_3_29 }, { (const CONN*)effB8_mes_jp_3_30, effB8_mes_jp_3_31 },
+    { effB8_mes_jp_3_32, effB8_mes_jp_3_33 }, { (const CONN*)effB8_mes_jp_3_34, effB8_mes_jp_3_35 },
+    { effB8_mes_jp_3_36, effB8_mes_jp_3_37 }, { (const CONN*)effB8_mes_jp_3_38, effB8_mes_jp_3_39 },
+    { (const CONN*)effB8_mes_jp_3_40, effB8_mes_jp_3_41 }, { effB8_mes_jp_3_42, effB8_mes_jp_3_43 },
+    { effB8_mes_jp_3_42, effB8_mes_jp_3_45 }, { effB8_mes_jp_3_42, effB8_mes_jp_3_47 },
+    { (const CONN*)effB8_mes_jp_3_48, effB8_mes_jp_3_49 }, { effB8_mes_jp_3_50, effB8_mes_jp_3_51 },
+    { (const CONN*)effB8_mes_jp_3_52, effB8_mes_jp_3_53 }, { effB8_mes_jp_3_54, effB8_mes_jp_3_55 },
+    { (const CONN*)effB8_mes_jp_3_56, effB8_mes_jp_3_57 }, { (const CONN*)effB8_mes_jp_3_58, effB8_mes_jp_3_59 },
 };
 
-const u32 effB8_mes_jp_3_0[36] = {
-    0x680000, 0xA00E, 0x780000, 0xA018, 0x880000, 0xA202, 0x980000, 0xA1C1,
-    0xB80000, 0xA184, 0xC80000, 0xA3B1, 0xD80000, 0xA285, 0xE80000, 0xA048,
-    0xF80000, 0xA046, 0x1080000, 0xA039, 0x68FFEA, 0xA08D, 0x78FFEA, 0xA0AD,
-    0x88FFEA, 0xA08C, 0x98FFEA, 0xA3B2, 0xA8FFEA, 0xA002, 0xB8FFEA, 0xA014,
-    0xC8FFEA, 0xA000, 0xD8FFEA, 0xA057,
+const CONN effB8_mes_jp_3_0[18] = {
+    { 104, 0, 0, 0xA00E }, { 120, 0, 0, 0xA018 }, { 136, 0, 0, 0xA202 }, { 152, 0, 0, 0xA1C1 },
+    { 184, 0, 0, 0xA184 }, { 200, 0, 0, 0xA3B1 }, { 216, 0, 0, 0xA285 }, { 232, 0, 0, 0xA048 },
+    { 248, 0, 0, 0xA046 }, { 264, 0, 0, 0xA039 }, { 104, -22, 0, 0xA08D }, { 120, -22, 0, 0xA0AD },
+    { 136, -22, 0, 0xA08C }, { 152, -22, 0, 0xA3B2 }, { 168, -22, 0, 0xA002 }, { 184, -22, 0, 0xA014 },
+    { 200, -22, 0, 0xA000 }, { 216, -22, 0, 0xA057 },
 };
 
 const u32 effB8_mes_jp_3_2[50] = {
@@ -29988,11 +29988,11 @@ const u32 effB8_mes_jp_3_4[38] = {
     0xD8FFEA, 0xA048, 0xE8FFEA, 0xA017, 0xF8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_3_6[28] = {
-    0x500000, 0xA145, 0x600000, 0xA019, 0x700000, 0xA08C, 0x800000, 0xA088,
-    0x900000, 0xA0CB, 0xA00000, 0xA0B7, 0xB00000, 0xA04B, 0xC00000, 0xA174,
-    0xD00000, 0xA1A7, 0xE00000, 0xA00C, 0xF00000, 0xA028, 0x1000000, 0xA005,
-    0x1100000, 0xA001, 0x1200000, 0xA03C,
+const CONN effB8_mes_jp_3_6[14] = {
+    { 80, 0, 0, 0xA145 }, { 96, 0, 0, 0xA019 }, { 112, 0, 0, 0xA08C }, { 128, 0, 0, 0xA088 },
+    { 144, 0, 0, 0xA0CB }, { 160, 0, 0, 0xA0B7 }, { 176, 0, 0, 0xA04B }, { 192, 0, 0, 0xA174 },
+    { 208, 0, 0, 0xA1A7 }, { 224, 0, 0, 0xA00C }, { 240, 0, 0, 0xA028 }, { 256, 0, 0, 0xA005 },
+    { 272, 0, 0, 0xA001 }, { 288, 0, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_3_8[46] = {
@@ -30033,11 +30033,11 @@ const u32 effB8_mes_jp_3_14[54] = {
     0x108FFEA, 0xA003, 0x118FFEA, 0xA014, 0x128FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_3_16[32] = {
-    0x780000, 0xA01D, 0x880000, 0xA026, 0x980000, 0xA11F, 0xA80000, 0xA010,
-    0xB80000, 0xA014, 0xC80000, 0xA025, 0xD80000, 0xA057, 0x78FFEA, 0xA23B,
-    0x88FFEA, 0xA103, 0x98FFEA, 0xA015, 0xA8FFEA, 0xA014, 0xB8FFEA, 0xA028,
-    0xC8FFEA, 0xA02D, 0xD8FFEA, 0xA048, 0xE8FFEA, 0xA02A, 0xF8FFEA, 0xA03C,
+const CONN effB8_mes_jp_3_16[16] = {
+    { 120, 0, 0, 0xA01D }, { 136, 0, 0, 0xA026 }, { 152, 0, 0, 0xA11F }, { 168, 0, 0, 0xA010 },
+    { 184, 0, 0, 0xA014 }, { 200, 0, 0, 0xA025 }, { 216, 0, 0, 0xA057 }, { 120, -22, 0, 0xA23B },
+    { 136, -22, 0, 0xA103 }, { 152, -22, 0, 0xA015 }, { 168, -22, 0, 0xA014 }, { 184, -22, 0, 0xA028 },
+    { 200, -22, 0, 0xA02D }, { 216, -22, 0, 0xA048 }, { 232, -22, 0, 0xA02A }, { 248, -22, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_3_18[50] = {
@@ -30060,11 +30060,11 @@ const u32 effB8_mes_jp_3_20[50] = {
     0x118FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_3_22[30] = {
-    0x400000, 0xA141, 0x500000, 0xA1BE, 0x600000, 0xA018, 0x700000, 0xA1CE,
-    0x800000, 0xA013, 0x900000, 0xA019, 0xB00000, 0xA177, 0xC00000, 0xA00F,
-    0xD00000, 0xA010, 0xE00000, 0xA018, 0xF00000, 0xA009, 0x1000000, 0xA013,
-    0x1100000, 0xA048, 0x1200000, 0xA046, 0x1300000, 0xA039,
+const CONN effB8_mes_jp_3_22[15] = {
+    { 64, 0, 0, 0xA141 }, { 80, 0, 0, 0xA1BE }, { 96, 0, 0, 0xA018 }, { 112, 0, 0, 0xA1CE },
+    { 128, 0, 0, 0xA013 }, { 144, 0, 0, 0xA019 }, { 176, 0, 0, 0xA177 }, { 192, 0, 0, 0xA00F },
+    { 208, 0, 0, 0xA010 }, { 224, 0, 0, 0xA018 }, { 240, 0, 0, 0xA009 }, { 256, 0, 0, 0xA013 },
+    { 272, 0, 0, 0xA048 }, { 288, 0, 0, 0xA046 }, { 304, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_3_24[48] = {
@@ -30085,11 +30085,11 @@ const u32 effB8_mes_jp_3_26[46] = {
     0xF0FFEA, 0xA134, 0x100FFEA, 0xA03B, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_3_28[30] = {
-    0x680000, 0xA08C, 0x780000, 0xA0BB, 0x880000, 0xA031, 0x980000, 0xA057,
-    0x68FFEA, 0xA01E, 0x78FFEA, 0xA028, 0x88FFEA, 0xA04B, 0x98FFEA, 0xA3BB,
-    0xA8FFEA, 0xA3BC, 0xB8FFEA, 0xA01F, 0xC8FFEA, 0xA00F, 0xD8FFEA, 0xA001,
-    0xE8FFEA, 0xA048, 0xF8FFEA, 0xA046, 0x108FFEA, 0xA039,
+const CONN effB8_mes_jp_3_28[15] = {
+    { 104, 0, 0, 0xA08C }, { 120, 0, 0, 0xA0BB }, { 136, 0, 0, 0xA031 }, { 152, 0, 0, 0xA057 },
+    { 104, -22, 0, 0xA01E }, { 120, -22, 0, 0xA028 }, { 136, -22, 0, 0xA04B }, { 152, -22, 0, 0xA3BB },
+    { 168, -22, 0, 0xA3BC }, { 184, -22, 0, 0xA01F }, { 200, -22, 0, 0xA00F }, { 216, -22, 0, 0xA001 },
+    { 232, -22, 0, 0xA048 }, { 248, -22, 0, 0xA046 }, { 264, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_3_30[28] = {
@@ -30099,12 +30099,12 @@ const u32 effB8_mes_jp_3_30[28] = {
     0x1100000, 0xA001, 0x1200000, 0xA03C,
 };
 
-const u32 effB8_mes_jp_3_32[40] = {
-    0x600000, 0xA3BF, 0x700000, 0xA3C0, 0x800000, 0x9F94, 0x900000, 0xA269,
-    0xA00000, 0xA04B, 0xB00000, 0xA0C6, 0xC00000, 0xA0B7, 0xD00000, 0xA0AD,
-    0xE00000, 0xA013, 0xF00000, 0xA314, 0x1000000, 0xA315, 0x1100000, 0xA039,
-    0x60FFEA, 0xA08C, 0x70FFEA, 0xA085, 0x80FFEA, 0xA0B3, 0x90FFEA, 0xA013,
-    0xA0FFEA, 0xA00C, 0xB0FFEA, 0xA028, 0xC0FFEA, 0xA046, 0xD0FFEA, 0xA039,
+const CONN effB8_mes_jp_3_32[20] = {
+    { 96, 0, 0, 0xA3BF }, { 112, 0, 0, 0xA3C0 }, { 128, 0, 0, 0x9F94 }, { 144, 0, 0, 0xA269 },
+    { 160, 0, 0, 0xA04B }, { 176, 0, 0, 0xA0C6 }, { 192, 0, 0, 0xA0B7 }, { 208, 0, 0, 0xA0AD },
+    { 224, 0, 0, 0xA013 }, { 240, 0, 0, 0xA314 }, { 256, 0, 0, 0xA315 }, { 272, 0, 0, 0xA039 },
+    { 96, -22, 0, 0xA08C }, { 112, -22, 0, 0xA085 }, { 128, -22, 0, 0xA0B3 }, { 144, -22, 0, 0xA013 },
+    { 160, -22, 0, 0xA00C }, { 176, -22, 0, 0xA028 }, { 192, -22, 0, 0xA046 }, { 208, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_3_34[32] = {
@@ -30114,10 +30114,10 @@ const u32 effB8_mes_jp_3_34[32] = {
     0xC8FFEA, 0xA10E, 0xD8FFEA, 0xA048, 0xE8FFEA, 0xA02A, 0xF8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_3_36[22] = {
-    0x680000, 0xA254, 0x780000, 0xA2DD, 0x880000, 0xA100, 0x980000, 0xA3BE,
-    0xA80000, 0xA018, 0xB80000, 0xA3BD, 0xC80000, 0xA3B0, 0xD80000, 0xA2C6,
-    0xE80000, 0xA296, 0xF80000, 0xA048, 0x1080000, 0xA039,
+const CONN effB8_mes_jp_3_36[11] = {
+    { 104, 0, 0, 0xA254 }, { 120, 0, 0, 0xA2DD }, { 136, 0, 0, 0xA100 }, { 152, 0, 0, 0xA3BE },
+    { 168, 0, 0, 0xA018 }, { 184, 0, 0, 0xA3BD }, { 200, 0, 0, 0xA3B0 }, { 216, 0, 0, 0xA2C6 },
+    { 232, 0, 0, 0xA296 }, { 248, 0, 0, 0xA048 }, { 264, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_3_38[38] = {
@@ -30136,10 +30136,10 @@ const u32 effB8_mes_jp_3_40[38] = {
     0xF0FFEA, 0xA001, 0x100FFEA, 0xA046, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_3_42[20] = {
-    0x680000, 0xA004, 0x780000, 0xA313, 0x880000, 0xA001, 0xA80000, 0xA1D3,
-    0xB80000, 0xA006, 0xC80000, 0xA012, 0xD80000, 0xA028, 0xE80000, 0xA005,
-    0xF80000, 0xA001, 0x1080000, 0xA03C,
+const CONN effB8_mes_jp_3_42[10] = {
+    { 104, 0, 0, 0xA004 }, { 120, 0, 0, 0xA313 }, { 136, 0, 0, 0xA001 }, { 168, 0, 0, 0xA1D3 },
+    { 184, 0, 0, 0xA006 }, { 200, 0, 0, 0xA012 }, { 216, 0, 0, 0xA028 }, { 232, 0, 0, 0xA005 },
+    { 248, 0, 0, 0xA001 }, { 264, 0, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_3_48[42] = {
@@ -30151,13 +30151,13 @@ const u32 effB8_mes_jp_3_48[42] = {
     0xB0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_3_50[48] = {
-    0x580000, 0xA000, 0x680000, 0xA029, 0x880000, 0xA01A, 0x980000, 0xA036,
-    0xA80000, 0xA033, 0xB80000, 0xA013, 0xC80000, 0xA00B, 0xD80000, 0xA012,
-    0xE80000, 0xA080, 0xF80000, 0xA0AD, 0x1080000, 0xA08F, 0x58FFEA, 0xA174,
-    0x68FFEA, 0xA012, 0x78FFEA, 0xA028, 0x88FFEA, 0xA005, 0x98FFEA, 0xA014,
-    0xA8FFEA, 0xA033, 0xB8FFEA, 0xA012, 0xC8FFEA, 0xA037, 0xD8FFEA, 0xA146,
-    0xE8FFEA, 0xA033, 0xF8FFEA, 0xA012, 0x108FFEA, 0xA00F, 0x118FFEA, 0xA03C,
+const CONN effB8_mes_jp_3_50[24] = {
+    { 88, 0, 0, 0xA000 }, { 104, 0, 0, 0xA029 }, { 136, 0, 0, 0xA01A }, { 152, 0, 0, 0xA036 },
+    { 168, 0, 0, 0xA033 }, { 184, 0, 0, 0xA013 }, { 200, 0, 0, 0xA00B }, { 216, 0, 0, 0xA012 },
+    { 232, 0, 0, 0xA080 }, { 248, 0, 0, 0xA0AD }, { 264, 0, 0, 0xA08F }, { 88, -22, 0, 0xA174 },
+    { 104, -22, 0, 0xA012 }, { 120, -22, 0, 0xA028 }, { 136, -22, 0, 0xA005 }, { 152, -22, 0, 0xA014 },
+    { 168, -22, 0, 0xA033 }, { 184, -22, 0, 0xA012 }, { 200, -22, 0, 0xA037 }, { 216, -22, 0, 0xA146 },
+    { 232, -22, 0, 0xA033 }, { 248, -22, 0, 0xA012 }, { 264, -22, 0, 0xA00F }, { 280, -22, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_3_52[30] = {
@@ -30167,11 +30167,11 @@ const u32 effB8_mes_jp_3_52[30] = {
     0x1100000, 0xA028, 0x1200000, 0xA014, 0x1300000, 0xA025,
 };
 
-const u32 effB8_mes_jp_3_54[30] = {
-    0x400000, 0xA01D, 0x500000, 0xA026, 0x600000, 0xA01D, 0x700000, 0xA026,
-    0x900000, 0xA022, 0xA00000, 0xA033, 0xB00000, 0xA013, 0xC00000, 0xA17D,
-    0xD00000, 0xA11A, 0xE00000, 0xA04B, 0xF00000, 0xA001, 0x1000000, 0xA009,
-    0x1100000, 0xA002, 0x1200000, 0xA046, 0x1300000, 0xA039,
+const CONN effB8_mes_jp_3_54[15] = {
+    { 64, 0, 0, 0xA01D }, { 80, 0, 0, 0xA026 }, { 96, 0, 0, 0xA01D }, { 112, 0, 0, 0xA026 },
+    { 144, 0, 0, 0xA022 }, { 160, 0, 0, 0xA033 }, { 176, 0, 0, 0xA013 }, { 192, 0, 0, 0xA17D },
+    { 208, 0, 0, 0xA11A }, { 224, 0, 0, 0xA04B }, { 240, 0, 0, 0xA001 }, { 256, 0, 0, 0xA009 },
+    { 272, 0, 0, 0xA002 }, { 288, 0, 0, 0xA046 }, { 304, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_3_56[46] = {
@@ -30312,21 +30312,21 @@ const u16 effB8_mes_jp_3_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_4[30] = {
-    { (const CONN*)effB8_mes_jp_4_0, (const u16*)effB8_mes_jp_4_1 }, { (const CONN*)effB8_mes_jp_4_0, (const u16*)effB8_mes_jp_4_3 },
-    { (const CONN*)effB8_mes_jp_4_4, (const u16*)effB8_mes_jp_4_5 }, { (const CONN*)effB8_mes_jp_4_6, (const u16*)effB8_mes_jp_4_7 },
-    { (const CONN*)effB8_mes_jp_4_8, (const u16*)effB8_mes_jp_4_9 }, { (const CONN*)effB8_mes_jp_4_10, (const u16*)effB8_mes_jp_4_11 },
-    { (const CONN*)effB8_mes_jp_4_12, (const u16*)effB8_mes_jp_4_13 }, { (const CONN*)effB8_mes_jp_4_14, (const u16*)effB8_mes_jp_4_15 },
-    { (const CONN*)effB8_mes_jp_4_16, (const u16*)effB8_mes_jp_4_17 }, { (const CONN*)effB8_mes_jp_4_18, (const u16*)effB8_mes_jp_4_19 },
-    { (const CONN*)effB8_mes_jp_4_20, (const u16*)effB8_mes_jp_4_21 }, { (const CONN*)effB8_mes_jp_4_22, (const u16*)effB8_mes_jp_4_23 },
-    { (const CONN*)effB8_mes_jp_4_24, (const u16*)effB8_mes_jp_4_25 }, { (const CONN*)effB8_mes_jp_4_26, (const u16*)effB8_mes_jp_4_27 },
-    { (const CONN*)effB8_mes_jp_4_28, (const u16*)effB8_mes_jp_4_29 }, { (const CONN*)effB8_mes_jp_4_30, (const u16*)effB8_mes_jp_4_31 },
-    { (const CONN*)effB8_mes_jp_4_32, (const u16*)effB8_mes_jp_4_33 }, { (const CONN*)effB8_mes_jp_4_34, (const u16*)effB8_mes_jp_4_35 },
-    { (const CONN*)effB8_mes_jp_4_36, (const u16*)effB8_mes_jp_4_37 }, { (const CONN*)effB8_mes_jp_4_38, (const u16*)effB8_mes_jp_4_39 },
-    { (const CONN*)effB8_mes_jp_4_40, (const u16*)effB8_mes_jp_4_41 }, { (const CONN*)effB8_mes_jp_4_42, (const u16*)effB8_mes_jp_4_43 },
-    { (const CONN*)effB8_mes_jp_4_42, (const u16*)effB8_mes_jp_4_45 }, { (const CONN*)effB8_mes_jp_4_42, (const u16*)effB8_mes_jp_4_47 },
-    { (const CONN*)effB8_mes_jp_4_48, (const u16*)effB8_mes_jp_4_49 }, { (const CONN*)effB8_mes_jp_4_50, (const u16*)effB8_mes_jp_4_51 },
-    { (const CONN*)effB8_mes_jp_4_52, (const u16*)effB8_mes_jp_4_53 }, { (const CONN*)effB8_mes_jp_4_54, (const u16*)effB8_mes_jp_4_55 },
-    { (const CONN*)effB8_mes_jp_4_56, (const u16*)effB8_mes_jp_4_57 }, { (const CONN*)effB8_mes_jp_4_58, (const u16*)effB8_mes_jp_4_59 },
+    { (const CONN*)effB8_mes_jp_4_0, effB8_mes_jp_4_1 }, { (const CONN*)effB8_mes_jp_4_0, effB8_mes_jp_4_3 },
+    { effB8_mes_jp_4_4, effB8_mes_jp_4_5 }, { (const CONN*)effB8_mes_jp_4_6, effB8_mes_jp_4_7 },
+    { (const CONN*)effB8_mes_jp_4_8, effB8_mes_jp_4_9 }, { (const CONN*)effB8_mes_jp_4_10, effB8_mes_jp_4_11 },
+    { (const CONN*)effB8_mes_jp_4_12, effB8_mes_jp_4_13 }, { (const CONN*)effB8_mes_jp_4_14, effB8_mes_jp_4_15 },
+    { (const CONN*)effB8_mes_jp_4_16, effB8_mes_jp_4_17 }, { effB8_mes_jp_4_18, effB8_mes_jp_4_19 },
+    { (const CONN*)effB8_mes_jp_4_20, effB8_mes_jp_4_21 }, { effB8_mes_jp_4_22, effB8_mes_jp_4_23 },
+    { (const CONN*)effB8_mes_jp_4_24, effB8_mes_jp_4_25 }, { effB8_mes_jp_4_26, effB8_mes_jp_4_27 },
+    { (const CONN*)effB8_mes_jp_4_28, effB8_mes_jp_4_29 }, { (const CONN*)effB8_mes_jp_4_30, effB8_mes_jp_4_31 },
+    { effB8_mes_jp_4_32, effB8_mes_jp_4_33 }, { (const CONN*)effB8_mes_jp_4_34, effB8_mes_jp_4_35 },
+    { (const CONN*)effB8_mes_jp_4_36, effB8_mes_jp_4_37 }, { (const CONN*)effB8_mes_jp_4_38, effB8_mes_jp_4_39 },
+    { effB8_mes_jp_4_40, effB8_mes_jp_4_41 }, { (const CONN*)effB8_mes_jp_4_42, effB8_mes_jp_4_43 },
+    { (const CONN*)effB8_mes_jp_4_42, effB8_mes_jp_4_45 }, { (const CONN*)effB8_mes_jp_4_42, effB8_mes_jp_4_47 },
+    { effB8_mes_jp_4_48, effB8_mes_jp_4_49 }, { (const CONN*)effB8_mes_jp_4_50, effB8_mes_jp_4_51 },
+    { (const CONN*)effB8_mes_jp_4_52, effB8_mes_jp_4_53 }, { effB8_mes_jp_4_54, effB8_mes_jp_4_55 },
+    { (const CONN*)effB8_mes_jp_4_56, effB8_mes_jp_4_57 }, { effB8_mes_jp_4_58, effB8_mes_jp_4_59 },
 };
 
 const u32 effB8_mes_jp_4_0[44] = {
@@ -30338,14 +30338,14 @@ const u32 effB8_mes_jp_4_0[44] = {
     0x108FFEA, 0xA018, 0x118FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_4_4[50] = {
-    0x400000, 0xA125, 0x500000, 0xA141, 0x600000, 0xA018, 0x700000, 0xA0C9,
-    0x800000, 0xA08B, 0x900000, 0xA0C6, 0xA00000, 0xA313, 0xB00000, 0xA026,
-    0xC00000, 0xA00B, 0xD00000, 0xA001, 0x40FFEA, 0xA001, 0x50FFEA, 0xA00A,
-    0x60FFEA, 0xA03F, 0x70FFEA, 0xA025, 0x80FFEA, 0xA001, 0x90FFEA, 0xA151,
-    0xA0FFEA, 0xA001, 0xB0FFEA, 0xA18E, 0xD0FFEA, 0xA005, 0xE0FFEA, 0xA007,
-    0xF0FFEA, 0xA000, 0x100FFEA, 0xA028, 0x110FFEA, 0xA050, 0x120FFEA, 0xA006,
-    0x130FFEA, 0xA048,
+const CONN effB8_mes_jp_4_4[25] = {
+    { 64, 0, 0, 0xA125 }, { 80, 0, 0, 0xA141 }, { 96, 0, 0, 0xA018 }, { 112, 0, 0, 0xA0C9 },
+    { 128, 0, 0, 0xA08B }, { 144, 0, 0, 0xA0C6 }, { 160, 0, 0, 0xA313 }, { 176, 0, 0, 0xA026 },
+    { 192, 0, 0, 0xA00B }, { 208, 0, 0, 0xA001 }, { 64, -22, 0, 0xA001 }, { 80, -22, 0, 0xA00A },
+    { 96, -22, 0, 0xA03F }, { 112, -22, 0, 0xA025 }, { 128, -22, 0, 0xA001 }, { 144, -22, 0, 0xA151 },
+    { 160, -22, 0, 0xA001 }, { 176, -22, 0, 0xA18E }, { 208, -22, 0, 0xA005 }, { 224, -22, 0, 0xA007 },
+    { 240, -22, 0, 0xA000 }, { 256, -22, 0, 0xA028 }, { 272, -22, 0, 0xA050 }, { 288, -22, 0, 0xA006 },
+    { 304, -22, 0, 0xA048 },
 };
 
 const u32 effB8_mes_jp_4_6[58] = {
@@ -30409,11 +30409,11 @@ const u32 effB8_mes_jp_4_16[52] = {
     0xD8FFEA, 0xA21B, 0xE8FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_4_18[30] = {
-    0x400000, 0xA1AF, 0x500000, 0xA17E, 0x600000, 0xA014, 0x700000, 0xA143,
-    0x800000, 0xA001, 0x900000, 0xA04F, 0xA00000, 0xA027, 0xC00000, 0xA192,
-    0xD00000, 0xA31B, 0xE00000, 0xA001, 0xF00000, 0xA00F, 0x1000000, 0xA00B,
-    0x1100000, 0xA01E, 0x1200000, 0xA00B, 0x1300000, 0xA00F,
+const CONN effB8_mes_jp_4_18[15] = {
+    { 64, 0, 0, 0xA1AF }, { 80, 0, 0, 0xA17E }, { 96, 0, 0, 0xA014 }, { 112, 0, 0, 0xA143 },
+    { 128, 0, 0, 0xA001 }, { 144, 0, 0, 0xA04F }, { 160, 0, 0, 0xA027 }, { 192, 0, 0, 0xA192 },
+    { 208, 0, 0, 0xA31B }, { 224, 0, 0, 0xA001 }, { 240, 0, 0, 0xA00F }, { 256, 0, 0, 0xA00B },
+    { 272, 0, 0, 0xA01E }, { 288, 0, 0, 0xA00B }, { 304, 0, 0, 0xA00F },
 };
 
 const u32 effB8_mes_jp_4_20[48] = {
@@ -30425,11 +30425,11 @@ const u32 effB8_mes_jp_4_20[48] = {
     0xA8FFEA, 0xA028, 0xB8FFEA, 0xA022, 0xC8FFEA, 0xA018, 0xD8FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_4_22[30] = {
-    0x400000, 0xA316, 0x500000, 0xA289, 0x600000, 0xA025, 0x700000, 0xA007,
-    0x800000, 0xA174, 0x900000, 0xA011, 0xA00000, 0xA013, 0xB00000, 0xA019,
-    0xD00000, 0xA009, 0xE00000, 0xA002, 0xF00000, 0xA001, 0x1000000, 0xA002,
-    0x1100000, 0xA17E, 0x1200000, 0xA048, 0x1300000, 0xA025,
+const CONN effB8_mes_jp_4_22[15] = {
+    { 64, 0, 0, 0xA316 }, { 80, 0, 0, 0xA289 }, { 96, 0, 0, 0xA025 }, { 112, 0, 0, 0xA007 },
+    { 128, 0, 0, 0xA174 }, { 144, 0, 0, 0xA011 }, { 160, 0, 0, 0xA013 }, { 176, 0, 0, 0xA019 },
+    { 208, 0, 0, 0xA009 }, { 224, 0, 0, 0xA002 }, { 240, 0, 0, 0xA001 }, { 256, 0, 0, 0xA002 },
+    { 272, 0, 0, 0xA17E }, { 288, 0, 0, 0xA048 }, { 304, 0, 0, 0xA025 },
 };
 
 const u32 effB8_mes_jp_4_24[26] = {
@@ -30439,10 +30439,10 @@ const u32 effB8_mes_jp_4_24[26] = {
     0x1200000, 0xA048,
 };
 
-const u32 effB8_mes_jp_4_26[22] = {
-    0x600000, 0xA12A, 0x700000, 0xA018, 0x800000, 0xA109, 0x900000, 0xA019,
-    0xB00000, 0xA3B9, 0xC00000, 0xA2EC, 0xD00000, 0xA02C, 0xE00000, 0xA022,
-    0xF00000, 0xA3AD, 0x1000000, 0xA007, 0x1100000, 0xA039,
+const CONN effB8_mes_jp_4_26[11] = {
+    { 96, 0, 0, 0xA12A }, { 112, 0, 0, 0xA018 }, { 128, 0, 0, 0xA109 }, { 144, 0, 0, 0xA019 },
+    { 176, 0, 0, 0xA3B9 }, { 192, 0, 0, 0xA2EC }, { 208, 0, 0, 0xA02C }, { 224, 0, 0, 0xA022 },
+    { 240, 0, 0, 0xA3AD }, { 256, 0, 0, 0xA007 }, { 272, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_4_28[60] = {
@@ -30466,11 +30466,11 @@ const u32 effB8_mes_jp_4_30[50] = {
     0x118FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_4_32[26] = {
-    0x500000, 0xA0AA, 0x600000, 0xA088, 0x700000, 0xA0B3, 0x800000, 0xA093,
-    0x900000, 0xA080, 0xA00000, 0xA0B3, 0xB00000, 0xA0CC, 0xC00000, 0xA0B7,
-    0xD00000, 0xA019, 0xF00000, 0xA100, 0x1000000, 0xA1BC, 0x1100000, 0xA048,
-    0x1200000, 0xA039,
+const CONN effB8_mes_jp_4_32[13] = {
+    { 80, 0, 0, 0xA0AA }, { 96, 0, 0, 0xA088 }, { 112, 0, 0, 0xA0B3 }, { 128, 0, 0, 0xA093 },
+    { 144, 0, 0, 0xA080 }, { 160, 0, 0, 0xA0B3 }, { 176, 0, 0, 0xA0CC }, { 192, 0, 0, 0xA0B7 },
+    { 208, 0, 0, 0xA019 }, { 240, 0, 0, 0xA100 }, { 256, 0, 0, 0xA1BC }, { 272, 0, 0, 0xA048 },
+    { 288, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_4_34[46] = {
@@ -30501,13 +30501,13 @@ const u32 effB8_mes_jp_4_38[44] = {
     0xE0FFEA, 0xA119, 0xF0FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_4_40[44] = {
-    0x580000, 0xA1FF, 0x680000, 0xA02C, 0x780000, 0xA009, 0x880000, 0xA021,
-    0x980000, 0xA00F, 0xA80000, 0xA089, 0xB80000, 0xA0B7, 0xC80000, 0xA087,
-    0xD80000, 0xA08C, 0xE80000, 0xA087, 0xF80000, 0xA0A7, 0x1080000, 0xA0B5,
-    0x1180000, 0xA0B7, 0x58FFEA, 0xA123, 0x68FFEA, 0xA015, 0x78FFEA, 0xA019,
-    0x88FFEA, 0xA1F1, 0x98FFEA, 0xA008, 0xA8FFEA, 0xA006, 0xB8FFEA, 0xA029,
-    0xC8FFEA, 0xA01E, 0xD8FFEA, 0xA001,
+const CONN effB8_mes_jp_4_40[22] = {
+    { 88, 0, 0, 0xA1FF }, { 104, 0, 0, 0xA02C }, { 120, 0, 0, 0xA009 }, { 136, 0, 0, 0xA021 },
+    { 152, 0, 0, 0xA00F }, { 168, 0, 0, 0xA089 }, { 184, 0, 0, 0xA0B7 }, { 200, 0, 0, 0xA087 },
+    { 216, 0, 0, 0xA08C }, { 232, 0, 0, 0xA087 }, { 248, 0, 0, 0xA0A7 }, { 264, 0, 0, 0xA0B5 },
+    { 280, 0, 0, 0xA0B7 }, { 88, -22, 0, 0xA123 }, { 104, -22, 0, 0xA015 }, { 120, -22, 0, 0xA019 },
+    { 136, -22, 0, 0xA1F1 }, { 152, -22, 0, 0xA008 }, { 168, -22, 0, 0xA006 }, { 184, -22, 0, 0xA029 },
+    { 200, -22, 0, 0xA01E }, { 216, -22, 0, 0xA001 },
 };
 
 const u32 effB8_mes_jp_4_42[28] = {
@@ -30517,11 +30517,11 @@ const u32 effB8_mes_jp_4_42[28] = {
     0x1180000, 0xA013, 0x1280000, 0xA002,
 };
 
-const u32 effB8_mes_jp_4_48[32] = {
-    0x680000, 0xA31D, 0x780000, 0xA1EB, 0x880000, 0xA1EC, 0x980000, 0xA139,
-    0xA80000, 0xA019, 0xB80000, 0xA1AE, 0xC80000, 0xA132, 0xD80000, 0xA022,
-    0xE80000, 0xA1ED, 0xF80000, 0xA016, 0x1080000, 0xA31E, 0x68FFEA, 0xA1C6,
-    0x78FFEA, 0xA002, 0x88FFEA, 0xA005, 0x98FFEA, 0xA017, 0xA8FFEA, 0xA03C,
+const CONN effB8_mes_jp_4_48[16] = {
+    { 104, 0, 0, 0xA31D }, { 120, 0, 0, 0xA1EB }, { 136, 0, 0, 0xA1EC }, { 152, 0, 0, 0xA139 },
+    { 168, 0, 0, 0xA019 }, { 184, 0, 0, 0xA1AE }, { 200, 0, 0, 0xA132 }, { 216, 0, 0, 0xA022 },
+    { 232, 0, 0, 0xA1ED }, { 248, 0, 0, 0xA016 }, { 264, 0, 0, 0xA31E }, { 104, -22, 0, 0xA1C6 },
+    { 120, -22, 0, 0xA002 }, { 136, -22, 0, 0xA005 }, { 152, -22, 0, 0xA017 }, { 168, -22, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_4_50[30] = {
@@ -30540,12 +30540,12 @@ const u32 effB8_mes_jp_4_52[44] = {
     0xB0FFEA, 0xA002, 0xC0FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_4_54[38] = {
-    0x600000, 0xA092, 0x700000, 0xA0A0, 0x800000, 0xA0BF, 0x900000, 0xA1EE,
-    0xA00000, 0xA018, 0xB00000, 0xA1EF, 0xC00000, 0xA04B, 0x60FFEA, 0xA1A8,
-    0x70FFEA, 0xA02C, 0x80FFEA, 0xA1F0, 0x90FFEA, 0xA01E, 0xA0FFEA, 0xA00B,
-    0xB0FFEA, 0xA012, 0xC0FFEA, 0xA019, 0xD0FFEA, 0xA04C, 0xE0FFEA, 0xA002,
-    0xF0FFEA, 0xA005, 0x100FFEA, 0xA014, 0x110FFEA, 0xA03C,
+const CONN effB8_mes_jp_4_54[19] = {
+    { 96, 0, 0, 0xA092 }, { 112, 0, 0, 0xA0A0 }, { 128, 0, 0, 0xA0BF }, { 144, 0, 0, 0xA1EE },
+    { 160, 0, 0, 0xA018 }, { 176, 0, 0, 0xA1EF }, { 192, 0, 0, 0xA04B }, { 96, -22, 0, 0xA1A8 },
+    { 112, -22, 0, 0xA02C }, { 128, -22, 0, 0xA1F0 }, { 144, -22, 0, 0xA01E }, { 160, -22, 0, 0xA00B },
+    { 176, -22, 0, 0xA012 }, { 192, -22, 0, 0xA019 }, { 208, -22, 0, 0xA04C }, { 224, -22, 0, 0xA002 },
+    { 240, -22, 0, 0xA005 }, { 256, -22, 0, 0xA014 }, { 272, -22, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_4_56[36] = {
@@ -30556,11 +30556,11 @@ const u32 effB8_mes_jp_4_56[36] = {
     0xE8FFEA, 0xA014, 0xF8FFEA, 0xA001,
 };
 
-const u32 effB8_mes_jp_4_58[30] = {
-    0x400000, 0xA009, 0x500000, 0xA018, 0x600000, 0xA1C9, 0x700000, 0xA1FD,
-    0x800000, 0xA018, 0x900000, 0xA1FE, 0xA00000, 0xA1C4, 0xB00000, 0xA009,
-    0xC00000, 0xA00E, 0xE00000, 0xA0C9, 0xF00000, 0xA0A7, 0x1000000, 0xA092,
-    0x1100000, 0xA0AD, 0x1200000, 0xA1FF, 0x1300000, 0xA039,
+const CONN effB8_mes_jp_4_58[15] = {
+    { 64, 0, 0, 0xA009 }, { 80, 0, 0, 0xA018 }, { 96, 0, 0, 0xA1C9 }, { 112, 0, 0, 0xA1FD },
+    { 128, 0, 0, 0xA018 }, { 144, 0, 0, 0xA1FE }, { 160, 0, 0, 0xA1C4 }, { 176, 0, 0, 0xA009 },
+    { 192, 0, 0, 0xA00E }, { 224, 0, 0, 0xA0C9 }, { 240, 0, 0, 0xA0A7 }, { 256, 0, 0, 0xA092 },
+    { 272, 0, 0, 0xA0AD }, { 288, 0, 0, 0xA1FF }, { 304, 0, 0, 0xA039 },
 };
 
 const u16 effB8_mes_jp_4_1[2] = {
@@ -30684,30 +30684,30 @@ const u16 effB8_mes_jp_4_59[6] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_5[30] = {
-    { (const CONN*)effB8_mes_jp_5_0, (const u16*)effB8_mes_jp_5_1 }, { (const CONN*)effB8_mes_jp_5_0, (const u16*)effB8_mes_jp_5_3 },
-    { (const CONN*)effB8_mes_jp_5_4, (const u16*)effB8_mes_jp_5_5 }, { (const CONN*)effB8_mes_jp_5_6, (const u16*)effB8_mes_jp_5_7 },
-    { (const CONN*)effB8_mes_jp_5_8, (const u16*)effB8_mes_jp_5_9 }, { (const CONN*)effB8_mes_jp_5_10, (const u16*)effB8_mes_jp_5_11 },
-    { (const CONN*)effB8_mes_jp_5_12, (const u16*)effB8_mes_jp_5_13 }, { (const CONN*)effB8_mes_jp_5_14, (const u16*)effB8_mes_jp_5_15 },
-    { (const CONN*)effB8_mes_jp_5_16, (const u16*)effB8_mes_jp_5_17 }, { (const CONN*)effB8_mes_jp_5_18, (const u16*)effB8_mes_jp_5_19 },
-    { (const CONN*)effB8_mes_jp_5_20, (const u16*)effB8_mes_jp_5_21 }, { (const CONN*)effB8_mes_jp_5_22, (const u16*)effB8_mes_jp_5_23 },
-    { (const CONN*)effB8_mes_jp_5_24, (const u16*)effB8_mes_jp_5_25 }, { (const CONN*)effB8_mes_jp_5_26, (const u16*)effB8_mes_jp_5_27 },
-    { (const CONN*)effB8_mes_jp_5_28, (const u16*)effB8_mes_jp_5_29 }, { (const CONN*)effB8_mes_jp_5_30, (const u16*)effB8_mes_jp_5_31 },
-    { (const CONN*)effB8_mes_jp_5_32, (const u16*)effB8_mes_jp_5_33 }, { (const CONN*)effB8_mes_jp_5_34, (const u16*)effB8_mes_jp_5_35 },
-    { (const CONN*)effB8_mes_jp_5_36, (const u16*)effB8_mes_jp_5_37 }, { (const CONN*)effB8_mes_jp_5_38, (const u16*)effB8_mes_jp_5_39 },
-    { (const CONN*)effB8_mes_jp_5_40, (const u16*)effB8_mes_jp_5_41 }, { (const CONN*)effB8_mes_jp_5_42, (const u16*)effB8_mes_jp_5_43 },
-    { (const CONN*)effB8_mes_jp_5_42, (const u16*)effB8_mes_jp_5_45 }, { (const CONN*)effB8_mes_jp_5_42, (const u16*)effB8_mes_jp_5_47 },
-    { (const CONN*)effB8_mes_jp_5_48, (const u16*)effB8_mes_jp_5_49 }, { (const CONN*)effB8_mes_jp_5_50, (const u16*)effB8_mes_jp_5_51 },
-    { (const CONN*)effB8_mes_jp_5_52, (const u16*)effB8_mes_jp_5_53 }, { (const CONN*)effB8_mes_jp_5_54, (const u16*)effB8_mes_jp_5_55 },
-    { (const CONN*)effB8_mes_jp_5_56, (const u16*)effB8_mes_jp_5_57 }, { (const CONN*)effB8_mes_jp_5_58, (const u16*)effB8_mes_jp_5_59 },
+    { effB8_mes_jp_5_0, effB8_mes_jp_5_1 }, { effB8_mes_jp_5_0, effB8_mes_jp_5_3 },
+    { (const CONN*)effB8_mes_jp_5_4, effB8_mes_jp_5_5 }, { (const CONN*)effB8_mes_jp_5_6, effB8_mes_jp_5_7 },
+    { effB8_mes_jp_5_8, effB8_mes_jp_5_9 }, { (const CONN*)effB8_mes_jp_5_10, effB8_mes_jp_5_11 },
+    { (const CONN*)effB8_mes_jp_5_12, effB8_mes_jp_5_13 }, { effB8_mes_jp_5_14, effB8_mes_jp_5_15 },
+    { (const CONN*)effB8_mes_jp_5_16, effB8_mes_jp_5_17 }, { (const CONN*)effB8_mes_jp_5_18, effB8_mes_jp_5_19 },
+    { effB8_mes_jp_5_20, effB8_mes_jp_5_21 }, { (const CONN*)effB8_mes_jp_5_22, effB8_mes_jp_5_23 },
+    { (const CONN*)effB8_mes_jp_5_24, effB8_mes_jp_5_25 }, { (const CONN*)effB8_mes_jp_5_26, effB8_mes_jp_5_27 },
+    { effB8_mes_jp_5_28, effB8_mes_jp_5_29 }, { (const CONN*)effB8_mes_jp_5_30, effB8_mes_jp_5_31 },
+    { effB8_mes_jp_5_32, effB8_mes_jp_5_33 }, { (const CONN*)effB8_mes_jp_5_34, effB8_mes_jp_5_35 },
+    { (const CONN*)effB8_mes_jp_5_36, effB8_mes_jp_5_37 }, { (const CONN*)effB8_mes_jp_5_38, effB8_mes_jp_5_39 },
+    { effB8_mes_jp_5_40, effB8_mes_jp_5_41 }, { (const CONN*)effB8_mes_jp_5_42, effB8_mes_jp_5_43 },
+    { (const CONN*)effB8_mes_jp_5_42, effB8_mes_jp_5_45 }, { (const CONN*)effB8_mes_jp_5_42, effB8_mes_jp_5_47 },
+    { effB8_mes_jp_5_48, effB8_mes_jp_5_49 }, { (const CONN*)effB8_mes_jp_5_50, effB8_mes_jp_5_51 },
+    { effB8_mes_jp_5_52, effB8_mes_jp_5_53 }, { (const CONN*)effB8_mes_jp_5_54, effB8_mes_jp_5_55 },
+    { (const CONN*)effB8_mes_jp_5_56, effB8_mes_jp_5_57 }, { effB8_mes_jp_5_58, effB8_mes_jp_5_59 },
 };
 
-const u32 effB8_mes_jp_5_0[42] = {
-    0x680000, 0xA0A1, 0x780000, 0xA090, 0x880000, 0xA0B4, 0x980000, 0xA133,
-    0xA80000, 0xA003, 0xB80000, 0xA012, 0xC80000, 0xA00E, 0xD80000, 0xA0B2,
-    0xE80000, 0xA048, 0xF80000, 0xA008, 0x1080000, 0xA04C, 0x68FFEA, 0xA2D5,
-    0x78FFEA, 0xA2D6, 0x88FFEA, 0xA119, 0x98FFEA, 0xA015, 0xA8FFEA, 0xA034,
-    0xB8FFEA, 0xA27D, 0xC8FFEA, 0xA27E, 0xD8FFEA, 0xA017, 0xE8FFEA, 0xA0B1,
-    0xF8FFEA, 0xA039,
+const CONN effB8_mes_jp_5_0[21] = {
+    { 104, 0, 0, 0xA0A1 }, { 120, 0, 0, 0xA090 }, { 136, 0, 0, 0xA0B4 }, { 152, 0, 0, 0xA133 },
+    { 168, 0, 0, 0xA003 }, { 184, 0, 0, 0xA012 }, { 200, 0, 0, 0xA00E }, { 216, 0, 0, 0xA0B2 },
+    { 232, 0, 0, 0xA048 }, { 248, 0, 0, 0xA008 }, { 264, 0, 0, 0xA04C }, { 104, -22, 0, 0xA2D5 },
+    { 120, -22, 0, 0xA2D6 }, { 136, -22, 0, 0xA119 }, { 152, -22, 0, 0xA015 }, { 168, -22, 0, 0xA034 },
+    { 184, -22, 0, 0xA27D }, { 200, -22, 0, 0xA27E }, { 216, -22, 0, 0xA017 }, { 232, -22, 0, 0xA0B1 },
+    { 248, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_5_4[46] = {
@@ -30726,12 +30726,12 @@ const u32 effB8_mes_jp_5_6[32] = {
     0xD0FFEA, 0xA014, 0xE0FFEA, 0xA025, 0xF0FFEA, 0xA0B2, 0x100FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_5_8[38] = {
-    0x680000, 0xA09C, 0x780000, 0xA081, 0x980000, 0xA0BE, 0xA80000, 0xA0B1,
-    0xB80000, 0xA0AD, 0xC80000, 0xA093, 0xD80000, 0xA0A8, 0xE80000, 0xA09E,
-    0xF80000, 0xA0AD, 0x1080000, 0xA039, 0x68FFEA, 0xA042, 0x78FFEA, 0xA010,
-    0x88FFEA, 0xA00E, 0x98FFEA, 0xA002, 0xA8FFEA, 0xA00A, 0xB8FFEA, 0xA01E,
-    0xC8FFEA, 0xA048, 0xD8FFEA, 0xA0AE, 0xE8FFEA, 0xA039,
+const CONN effB8_mes_jp_5_8[19] = {
+    { 104, 0, 0, 0xA09C }, { 120, 0, 0, 0xA081 }, { 152, 0, 0, 0xA0BE }, { 168, 0, 0, 0xA0B1 },
+    { 184, 0, 0, 0xA0AD }, { 200, 0, 0, 0xA093 }, { 216, 0, 0, 0xA0A8 }, { 232, 0, 0, 0xA09E },
+    { 248, 0, 0, 0xA0AD }, { 264, 0, 0, 0xA039 }, { 104, -22, 0, 0xA042 }, { 120, -22, 0, 0xA010 },
+    { 136, -22, 0, 0xA00E }, { 152, -22, 0, 0xA002 }, { 168, -22, 0, 0xA00A }, { 184, -22, 0, 0xA01E },
+    { 200, -22, 0, 0xA048 }, { 216, -22, 0, 0xA0AE }, { 232, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_5_10[50] = {
@@ -30750,14 +30750,14 @@ const u32 effB8_mes_jp_5_12[22] = {
     0xF00000, 0xA028, 0x1000000, 0xA046, 0x1100000, 0xA039,
 };
 
-const u32 effB8_mes_jp_5_14[50] = {
-    0x500000, 0xA00E, 0x600000, 0xA002, 0x700000, 0xA3CD, 0x800000, 0xA020,
-    0x900000, 0xA014, 0xA00000, 0xA0B3, 0xB00000, 0xA012, 0xD00000, 0xA084,
-    0xE00000, 0xA0A9, 0xF00000, 0xA015, 0x1000000, 0xA019, 0x50FFEA, 0xA03A,
-    0x60FFEA, 0xA262, 0x70FFEA, 0xA2B0, 0x80FFEA, 0xA03B, 0x90FFEA, 0xA03E,
-    0xA0FFEA, 0xA005, 0xB0FFEA, 0xA005, 0xC0FFEA, 0xA033, 0xD0FFEA, 0xA012,
-    0xE0FFEA, 0xA02D, 0xF0FFEA, 0xA048, 0x100FFEA, 0xA046, 0x110FFEA, 0xA0B1,
-    0x120FFEA, 0xA039,
+const CONN effB8_mes_jp_5_14[25] = {
+    { 80, 0, 0, 0xA00E }, { 96, 0, 0, 0xA002 }, { 112, 0, 0, 0xA3CD }, { 128, 0, 0, 0xA020 },
+    { 144, 0, 0, 0xA014 }, { 160, 0, 0, 0xA0B3 }, { 176, 0, 0, 0xA012 }, { 208, 0, 0, 0xA084 },
+    { 224, 0, 0, 0xA0A9 }, { 240, 0, 0, 0xA015 }, { 256, 0, 0, 0xA019 }, { 80, -22, 0, 0xA03A },
+    { 96, -22, 0, 0xA262 }, { 112, -22, 0, 0xA2B0 }, { 128, -22, 0, 0xA03B }, { 144, -22, 0, 0xA03E },
+    { 160, -22, 0, 0xA005 }, { 176, -22, 0, 0xA005 }, { 192, -22, 0, 0xA033 }, { 208, -22, 0, 0xA012 },
+    { 224, -22, 0, 0xA02D }, { 240, -22, 0, 0xA048 }, { 256, -22, 0, 0xA046 }, { 272, -22, 0, 0xA0B1 },
+    { 288, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_5_16[48] = {
@@ -30777,12 +30777,12 @@ const u32 effB8_mes_jp_5_18[38] = {
     0x110FFEA, 0xA014, 0x120FFEA, 0xA0AE, 0x130FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_5_20[34] = {
-    0x680000, 0xA10F, 0x780000, 0xA008, 0x880000, 0xA033, 0x980000, 0xA054,
-    0xA80000, 0xA027, 0xB80000, 0xA03E, 0xC80000, 0xA00F, 0xD80000, 0xA027,
-    0xE80000, 0xA017, 0xF80000, 0xA0B1, 0x1080000, 0xA046, 0x68FFEA, 0xA0B8,
-    0x78FFEA, 0xA086, 0x88FFEA, 0xA02D, 0x98FFEA, 0xA010, 0xA8FFEA, 0xA0B6,
-    0xB8FFEA, 0xA039,
+const CONN effB8_mes_jp_5_20[17] = {
+    { 104, 0, 0, 0xA10F }, { 120, 0, 0, 0xA008 }, { 136, 0, 0, 0xA033 }, { 152, 0, 0, 0xA054 },
+    { 168, 0, 0, 0xA027 }, { 184, 0, 0, 0xA03E }, { 200, 0, 0, 0xA00F }, { 216, 0, 0, 0xA027 },
+    { 232, 0, 0, 0xA017 }, { 248, 0, 0, 0xA0B1 }, { 264, 0, 0, 0xA046 }, { 104, -22, 0, 0xA0B8 },
+    { 120, -22, 0, 0xA086 }, { 136, -22, 0, 0xA02D }, { 152, -22, 0, 0xA010 }, { 168, -22, 0, 0xA0B6 },
+    { 184, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_5_22[34] = {
@@ -30813,12 +30813,12 @@ const u32 effB8_mes_jp_5_26[50] = {
     0xD0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_5_28[40] = {
-    0x680000, 0xA004, 0x780000, 0xA033, 0x880000, 0xA005, 0x980000, 0xA017,
-    0xA80000, 0xA0B1, 0xB80000, 0xA014, 0xD80000, 0xA141, 0xE80000, 0xA11A,
-    0xF80000, 0xA005, 0x1080000, 0xA025, 0x68FFEA, 0xA224, 0x78FFEA, 0xA006,
-    0x88FFEA, 0xA1AD, 0x98FFEA, 0xA001, 0xA8FFEA, 0xA006, 0xB8FFEA, 0xA029,
-    0xC8FFEA, 0xA017, 0xD8FFEA, 0xA0B1, 0xE8FFEA, 0xA046, 0xF8FFEA, 0xA039,
+const CONN effB8_mes_jp_5_28[20] = {
+    { 104, 0, 0, 0xA004 }, { 120, 0, 0, 0xA033 }, { 136, 0, 0, 0xA005 }, { 152, 0, 0, 0xA017 },
+    { 168, 0, 0, 0xA0B1 }, { 184, 0, 0, 0xA014 }, { 216, 0, 0, 0xA141 }, { 232, 0, 0, 0xA11A },
+    { 248, 0, 0, 0xA005 }, { 264, 0, 0, 0xA025 }, { 104, -22, 0, 0xA224 }, { 120, -22, 0, 0xA006 },
+    { 136, -22, 0, 0xA1AD }, { 152, -22, 0, 0xA001 }, { 168, -22, 0, 0xA006 }, { 184, -22, 0, 0xA029 },
+    { 200, -22, 0, 0xA017 }, { 216, -22, 0, 0xA0B1 }, { 232, -22, 0, 0xA046 }, { 248, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_5_30[32] = {
@@ -30828,12 +30828,12 @@ const u32 effB8_mes_jp_5_30[32] = {
     0xC0FFEA, 0xA093, 0xD0FFEA, 0xA0B7, 0xE0FFEA, 0xA0A0, 0xF0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_5_32[38] = {
-    0x700000, 0xA2D1, 0x800000, 0xA02C, 0x900000, 0xA025, 0xA00000, 0xA0B7,
-    0xB00000, 0xA04F, 0xC00000, 0xA0B7, 0xD00000, 0xA046, 0xE00000, 0xA0B7,
-    0xF00000, 0xA0B1, 0x70FFEA, 0xA2D5, 0x80FFEA, 0xA2D6, 0x90FFEA, 0xA107,
-    0xA0FFEA, 0xA044, 0xB0FFEA, 0xA0B7, 0xC0FFEA, 0xA042, 0xD0FFEA, 0xA0B7,
-    0xE0FFEA, 0xA007, 0xF0FFEA, 0xA0B7, 0x100FFEA, 0xA0B0,
+const CONN effB8_mes_jp_5_32[19] = {
+    { 112, 0, 0, 0xA2D1 }, { 128, 0, 0, 0xA02C }, { 144, 0, 0, 0xA025 }, { 160, 0, 0, 0xA0B7 },
+    { 176, 0, 0, 0xA04F }, { 192, 0, 0, 0xA0B7 }, { 208, 0, 0, 0xA046 }, { 224, 0, 0, 0xA0B7 },
+    { 240, 0, 0, 0xA0B1 }, { 112, -22, 0, 0xA2D5 }, { 128, -22, 0, 0xA2D6 }, { 144, -22, 0, 0xA107 },
+    { 160, -22, 0, 0xA044 }, { 176, -22, 0, 0xA0B7 }, { 192, -22, 0, 0xA042 }, { 208, -22, 0, 0xA0B7 },
+    { 224, -22, 0, 0xA007 }, { 240, -22, 0, 0xA0B7 }, { 256, -22, 0, 0xA0B0 },
 };
 
 const u32 effB8_mes_jp_5_34[50] = {
@@ -30864,11 +30864,11 @@ const u32 effB8_mes_jp_5_38[42] = {
     0x108FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_5_40[30] = {
-    0x780000, 0xA2D5, 0x880000, 0xA296, 0x980000, 0xA09B, 0xA80000, 0xA0AF,
-    0xB80000, 0xA095, 0xC80000, 0xA0B3, 0xD80000, 0xA08B, 0xE80000, 0xA0B5,
-    0xF80000, 0xA039, 0x78FFEA, 0xA298, 0x88FFEA, 0xA299, 0x98FFEA, 0xA048,
-    0xA8FFEA, 0xA046, 0xB8FFEA, 0xA0B1, 0xC8FFEA, 0xA039,
+const CONN effB8_mes_jp_5_40[15] = {
+    { 120, 0, 0, 0xA2D5 }, { 136, 0, 0, 0xA296 }, { 152, 0, 0, 0xA09B }, { 168, 0, 0, 0xA0AF },
+    { 184, 0, 0, 0xA095 }, { 200, 0, 0, 0xA0B3 }, { 216, 0, 0, 0xA08B }, { 232, 0, 0, 0xA0B5 },
+    { 248, 0, 0, 0xA039 }, { 120, -22, 0, 0xA298 }, { 136, -22, 0, 0xA299 }, { 152, -22, 0, 0xA048 },
+    { 168, -22, 0, 0xA046 }, { 184, -22, 0, 0xA0B1 }, { 200, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_5_42[26] = {
@@ -30878,12 +30878,12 @@ const u32 effB8_mes_jp_5_42[26] = {
     0x1200000, 0xA039,
 };
 
-const u32 effB8_mes_jp_5_48[40] = {
-    0x700000, 0xA023, 0x800000, 0xA028, 0x900000, 0xA00B, 0xA00000, 0xA005,
-    0xB00000, 0xA017, 0xC00000, 0xA0B1, 0xD00000, 0xA02D, 0xE00000, 0xA048,
-    0xF00000, 0xA025, 0x1000000, 0xA0B2, 0x70FFEA, 0xA1D3, 0x80FFEA, 0xA006,
-    0x90FFEA, 0xA012, 0xA0FFEA, 0xA001, 0xB0FFEA, 0xA007, 0xC0FFEA, 0xA015,
-    0xD0FFEA, 0xA019, 0xE0FFEA, 0xA014, 0xF0FFEA, 0xA0AE, 0x100FFEA, 0xA039,
+const CONN effB8_mes_jp_5_48[20] = {
+    { 112, 0, 0, 0xA023 }, { 128, 0, 0, 0xA028 }, { 144, 0, 0, 0xA00B }, { 160, 0, 0, 0xA005 },
+    { 176, 0, 0, 0xA017 }, { 192, 0, 0, 0xA0B1 }, { 208, 0, 0, 0xA02D }, { 224, 0, 0, 0xA048 },
+    { 240, 0, 0, 0xA025 }, { 256, 0, 0, 0xA0B2 }, { 112, -22, 0, 0xA1D3 }, { 128, -22, 0, 0xA006 },
+    { 144, -22, 0, 0xA012 }, { 160, -22, 0, 0xA001 }, { 176, -22, 0, 0xA007 }, { 192, -22, 0, 0xA015 },
+    { 208, -22, 0, 0xA019 }, { 224, -22, 0, 0xA014 }, { 240, -22, 0, 0xA0AE }, { 256, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_5_50[40] = {
@@ -30894,12 +30894,12 @@ const u32 effB8_mes_jp_5_50[40] = {
     0xD0FFEA, 0xA048, 0xE0FFEA, 0xA046, 0xF0FFEA, 0xA0B1, 0x100FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_5_52[38] = {
-    0x580000, 0xA000, 0x680000, 0xA02D, 0x780000, 0xA048, 0x880000, 0xA025,
-    0x980000, 0xA0B2, 0xA80000, 0xA039, 0x58FFEA, 0xA084, 0x68FFEA, 0xA0A9,
-    0x78FFEA, 0xA03E, 0x88FFEA, 0xA081, 0x98FFEA, 0xA0AD, 0xA8FFEA, 0xA090,
-    0xB8FFEA, 0xA086, 0xC8FFEA, 0xA00B, 0xD8FFEA, 0xA00F, 0xE8FFEA, 0xA033,
-    0xF8FFEA, 0xA012, 0x108FFEA, 0xA005, 0x118FFEA, 0xA039,
+const CONN effB8_mes_jp_5_52[19] = {
+    { 88, 0, 0, 0xA000 }, { 104, 0, 0, 0xA02D }, { 120, 0, 0, 0xA048 }, { 136, 0, 0, 0xA025 },
+    { 152, 0, 0, 0xA0B2 }, { 168, 0, 0, 0xA039 }, { 88, -22, 0, 0xA084 }, { 104, -22, 0, 0xA0A9 },
+    { 120, -22, 0, 0xA03E }, { 136, -22, 0, 0xA081 }, { 152, -22, 0, 0xA0AD }, { 168, -22, 0, 0xA090 },
+    { 184, -22, 0, 0xA086 }, { 200, -22, 0, 0xA00B }, { 216, -22, 0, 0xA00F }, { 232, -22, 0, 0xA033 },
+    { 248, -22, 0, 0xA012 }, { 264, -22, 0, 0xA005 }, { 280, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_5_54[24] = {
@@ -30916,9 +30916,9 @@ const u32 effB8_mes_jp_5_56[40] = {
     0xD0FFEA, 0xA033, 0xE0FFEA, 0xA012, 0xF0FFEA, 0xA014, 0x100FFEA, 0xA0AE,
 };
 
-const u32 effB8_mes_jp_5_58[14] = {
-    0x880000, 0xA08B, 0x980000, 0xA0C8, 0xA80000, 0xA029, 0xB80000, 0xA028,
-    0xC80000, 0xA046, 0xD80000, 0xA0B1, 0xE80000, 0xA039,
+const CONN effB8_mes_jp_5_58[7] = {
+    { 136, 0, 0, 0xA08B }, { 152, 0, 0, 0xA0C8 }, { 168, 0, 0, 0xA029 }, { 184, 0, 0, 0xA028 },
+    { 200, 0, 0, 0xA046 }, { 216, 0, 0, 0xA0B1 }, { 232, 0, 0, 0xA039 },
 };
 
 const u16 effB8_mes_jp_5_1[2] = {
@@ -31043,21 +31043,21 @@ const u16 effB8_mes_jp_5_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_6[30] = {
-    { (const CONN*)effB8_mes_jp_6_0, (const u16*)effB8_mes_jp_6_1 }, { (const CONN*)effB8_mes_jp_6_2, (const u16*)effB8_mes_jp_6_3 },
-    { (const CONN*)effB8_mes_jp_6_4, (const u16*)effB8_mes_jp_6_5 }, { (const CONN*)effB8_mes_jp_6_6, (const u16*)effB8_mes_jp_6_7 },
-    { (const CONN*)effB8_mes_jp_6_8, (const u16*)effB8_mes_jp_6_9 }, { (const CONN*)effB8_mes_jp_6_10, (const u16*)effB8_mes_jp_6_11 },
-    { (const CONN*)effB8_mes_jp_6_12, (const u16*)effB8_mes_jp_6_13 }, { (const CONN*)effB8_mes_jp_6_14, (const u16*)effB8_mes_jp_6_15 },
-    { (const CONN*)effB8_mes_jp_6_16, (const u16*)effB8_mes_jp_6_17 }, { (const CONN*)effB8_mes_jp_6_18, (const u16*)effB8_mes_jp_6_19 },
-    { (const CONN*)effB8_mes_jp_6_20, (const u16*)effB8_mes_jp_6_21 }, { (const CONN*)effB8_mes_jp_6_22, (const u16*)effB8_mes_jp_6_23 },
-    { (const CONN*)effB8_mes_jp_6_24, (const u16*)effB8_mes_jp_6_25 }, { (const CONN*)effB8_mes_jp_6_26, (const u16*)effB8_mes_jp_6_27 },
-    { (const CONN*)effB8_mes_jp_6_28, (const u16*)effB8_mes_jp_6_29 }, { (const CONN*)effB8_mes_jp_6_30, (const u16*)effB8_mes_jp_6_31 },
-    { (const CONN*)effB8_mes_jp_6_32, (const u16*)effB8_mes_jp_6_33 }, { (const CONN*)effB8_mes_jp_6_34, (const u16*)effB8_mes_jp_6_35 },
-    { (const CONN*)effB8_mes_jp_6_36, (const u16*)effB8_mes_jp_6_37 }, { (const CONN*)effB8_mes_jp_6_38, (const u16*)effB8_mes_jp_6_39 },
-    { (const CONN*)effB8_mes_jp_6_40, (const u16*)effB8_mes_jp_6_41 }, { (const CONN*)effB8_mes_jp_6_42, (const u16*)effB8_mes_jp_6_43 },
-    { (const CONN*)effB8_mes_jp_6_42, (const u16*)effB8_mes_jp_6_45 }, { (const CONN*)effB8_mes_jp_6_42, (const u16*)effB8_mes_jp_6_47 },
-    { (const CONN*)effB8_mes_jp_6_48, (const u16*)effB8_mes_jp_6_49 }, { (const CONN*)effB8_mes_jp_6_50, (const u16*)effB8_mes_jp_6_51 },
-    { (const CONN*)effB8_mes_jp_6_52, (const u16*)effB8_mes_jp_6_53 }, { (const CONN*)effB8_mes_jp_6_54, (const u16*)effB8_mes_jp_6_55 },
-    { (const CONN*)effB8_mes_jp_6_56, (const u16*)effB8_mes_jp_6_57 }, { (const CONN*)effB8_mes_jp_6_58, (const u16*)effB8_mes_jp_6_59 },
+    { (const CONN*)effB8_mes_jp_6_0, effB8_mes_jp_6_1 }, { effB8_mes_jp_6_2, effB8_mes_jp_6_3 },
+    { (const CONN*)effB8_mes_jp_6_4, effB8_mes_jp_6_5 }, { (const CONN*)effB8_mes_jp_6_6, effB8_mes_jp_6_7 },
+    { effB8_mes_jp_6_8, effB8_mes_jp_6_9 }, { (const CONN*)effB8_mes_jp_6_10, effB8_mes_jp_6_11 },
+    { (const CONN*)effB8_mes_jp_6_12, effB8_mes_jp_6_13 }, { effB8_mes_jp_6_14, effB8_mes_jp_6_15 },
+    { (const CONN*)effB8_mes_jp_6_16, effB8_mes_jp_6_17 }, { (const CONN*)effB8_mes_jp_6_18, effB8_mes_jp_6_19 },
+    { (const CONN*)effB8_mes_jp_6_20, effB8_mes_jp_6_21 }, { effB8_mes_jp_6_22, effB8_mes_jp_6_23 },
+    { (const CONN*)effB8_mes_jp_6_24, effB8_mes_jp_6_25 }, { (const CONN*)effB8_mes_jp_6_26, effB8_mes_jp_6_27 },
+    { (const CONN*)effB8_mes_jp_6_28, effB8_mes_jp_6_29 }, { effB8_mes_jp_6_30, effB8_mes_jp_6_31 },
+    { (const CONN*)effB8_mes_jp_6_32, effB8_mes_jp_6_33 }, { effB8_mes_jp_6_34, effB8_mes_jp_6_35 },
+    { (const CONN*)effB8_mes_jp_6_36, effB8_mes_jp_6_37 }, { effB8_mes_jp_6_38, effB8_mes_jp_6_39 },
+    { effB8_mes_jp_6_40, effB8_mes_jp_6_41 }, { (const CONN*)effB8_mes_jp_6_42, effB8_mes_jp_6_43 },
+    { (const CONN*)effB8_mes_jp_6_42, effB8_mes_jp_6_45 }, { (const CONN*)effB8_mes_jp_6_42, effB8_mes_jp_6_47 },
+    { (const CONN*)effB8_mes_jp_6_48, effB8_mes_jp_6_49 }, { effB8_mes_jp_6_50, effB8_mes_jp_6_51 },
+    { (const CONN*)effB8_mes_jp_6_52, effB8_mes_jp_6_53 }, { (const CONN*)effB8_mes_jp_6_54, effB8_mes_jp_6_55 },
+    { (const CONN*)effB8_mes_jp_6_56, effB8_mes_jp_6_57 }, { effB8_mes_jp_6_58, effB8_mes_jp_6_59 },
 };
 
 const u32 effB8_mes_jp_6_0[50] = {
@@ -31070,13 +31070,13 @@ const u32 effB8_mes_jp_6_0[50] = {
     0x100FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_6_2[48] = {
-    0x500000, 0xA006, 0x600000, 0xA000, 0x700000, 0xA001, 0x800000, 0xA019,
-    0x900000, 0xA001, 0xA00000, 0xA033, 0xB00000, 0xA012, 0xC00000, 0xA028,
-    0xD00000, 0xA044, 0xE00000, 0xA034, 0xF00000, 0xA017, 0x1000000, 0xA003,
-    0x1100000, 0xA005, 0x1200000, 0xA039, 0x50FFEA, 0xA00F, 0x60FFEA, 0xA018,
-    0x70FFEA, 0xA00B, 0x80FFEA, 0xA02D, 0x90FFEA, 0xA048, 0xA0FFEA, 0xA046,
-    0xC0FFEA, 0xA0C2, 0xD0FFEA, 0xA0AD, 0xE0FFEA, 0xA088, 0xF0FFEA, 0xA039,
+const CONN effB8_mes_jp_6_2[24] = {
+    { 80, 0, 0, 0xA006 }, { 96, 0, 0, 0xA000 }, { 112, 0, 0, 0xA001 }, { 128, 0, 0, 0xA019 },
+    { 144, 0, 0, 0xA001 }, { 160, 0, 0, 0xA033 }, { 176, 0, 0, 0xA012 }, { 192, 0, 0, 0xA028 },
+    { 208, 0, 0, 0xA044 }, { 224, 0, 0, 0xA034 }, { 240, 0, 0, 0xA017 }, { 256, 0, 0, 0xA003 },
+    { 272, 0, 0, 0xA005 }, { 288, 0, 0, 0xA039 }, { 80, -22, 0, 0xA00F }, { 96, -22, 0, 0xA018 },
+    { 112, -22, 0, 0xA00B }, { 128, -22, 0, 0xA02D }, { 144, -22, 0, 0xA048 }, { 160, -22, 0, 0xA046 },
+    { 192, -22, 0, 0xA0C2 }, { 208, -22, 0, 0xA0AD }, { 224, -22, 0, 0xA088 }, { 240, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_6_4[56] = {
@@ -31096,12 +31096,12 @@ const u32 effB8_mes_jp_6_6[30] = {
     0x1100000, 0xA00C, 0x1200000, 0xA046, 0x1300000, 0xA039,
 };
 
-const u32 effB8_mes_jp_6_8[40] = {
-    0x680000, 0xA084, 0x780000, 0xA0A9, 0x880000, 0xA019, 0x980000, 0xA0CE,
-    0xA80000, 0xA0AA, 0xB80000, 0xA0A9, 0xC80000, 0xA08C, 0xD80000, 0xA0A6,
-    0xE80000, 0xA0B7, 0x68FFEA, 0xA00E, 0x78FFEA, 0xA02D, 0x88FFEA, 0xA014,
-    0x98FFEA, 0xA0CC, 0xA8FFEA, 0xA0AD, 0xB8FFEA, 0xA090, 0xC8FFEA, 0xA006,
-    0xD8FFEA, 0xA005, 0xE8FFEA, 0xA017, 0xF8FFEA, 0xA003, 0x108FFEA, 0xA039,
+const CONN effB8_mes_jp_6_8[20] = {
+    { 104, 0, 0, 0xA084 }, { 120, 0, 0, 0xA0A9 }, { 136, 0, 0, 0xA019 }, { 152, 0, 0, 0xA0CE },
+    { 168, 0, 0, 0xA0AA }, { 184, 0, 0, 0xA0A9 }, { 200, 0, 0, 0xA08C }, { 216, 0, 0, 0xA0A6 },
+    { 232, 0, 0, 0xA0B7 }, { 104, -22, 0, 0xA00E }, { 120, -22, 0, 0xA02D }, { 136, -22, 0, 0xA014 },
+    { 152, -22, 0, 0xA0CC }, { 168, -22, 0, 0xA0AD }, { 184, -22, 0, 0xA090 }, { 200, -22, 0, 0xA006 },
+    { 216, -22, 0, 0xA005 }, { 232, -22, 0, 0xA017 }, { 248, -22, 0, 0xA003 }, { 264, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_6_10[28] = {
@@ -31120,13 +31120,13 @@ const u32 effB8_mes_jp_6_12[48] = {
     0x100FFEA, 0xA01D, 0x110FFEA, 0xA02D, 0x120FFEA, 0xA022, 0x130FFEA, 0xA018,
 };
 
-const u32 effB8_mes_jp_6_14[44] = {
-    0x600000, 0xA014, 0x700000, 0xA000, 0x800000, 0xA02D, 0x900000, 0xA005,
-    0xA00000, 0xA00A, 0xB00000, 0xA00A, 0xC00000, 0xA033, 0xD00000, 0xA00F,
-    0xE00000, 0xA008, 0xF00000, 0xA04C, 0x1000000, 0xA025, 0x1100000, 0xA057,
-    0x60FFEA, 0xA023, 0x70FFEA, 0xA033, 0x80FFEA, 0xA052, 0xA0FFEA, 0xA006,
-    0xB0FFEA, 0xA018, 0xC0FFEA, 0xA00D, 0xD0FFEA, 0xA001, 0xE0FFEA, 0xA005,
-    0xF0FFEA, 0xA000, 0x100FFEA, 0xA03C,
+const CONN effB8_mes_jp_6_14[22] = {
+    { 96, 0, 0, 0xA014 }, { 112, 0, 0, 0xA000 }, { 128, 0, 0, 0xA02D }, { 144, 0, 0, 0xA005 },
+    { 160, 0, 0, 0xA00A }, { 176, 0, 0, 0xA00A }, { 192, 0, 0, 0xA033 }, { 208, 0, 0, 0xA00F },
+    { 224, 0, 0, 0xA008 }, { 240, 0, 0, 0xA04C }, { 256, 0, 0, 0xA025 }, { 272, 0, 0, 0xA057 },
+    { 96, -22, 0, 0xA023 }, { 112, -22, 0, 0xA033 }, { 128, -22, 0, 0xA052 }, { 160, -22, 0, 0xA006 },
+    { 176, -22, 0, 0xA018 }, { 192, -22, 0, 0xA00D }, { 208, -22, 0, 0xA001 }, { 224, -22, 0, 0xA005 },
+    { 240, -22, 0, 0xA000 }, { 256, -22, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_6_16[56] = {
@@ -31157,12 +31157,12 @@ const u32 effB8_mes_jp_6_20[40] = {
     0xE0FFEA, 0xA01F, 0xF0FFEA, 0xA028, 0x100FFEA, 0xA046, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_6_22[40] = {
-    0x500000, 0xA0C9, 0x600000, 0xA0A6, 0x700000, 0xA0B7, 0x800000, 0xA3D0,
-    0x900000, 0xA0B2, 0xA00000, 0xA039, 0x50FFEA, 0xA029, 0x60FFEA, 0xA02D,
-    0x70FFEA, 0xA00B, 0x80FFEA, 0xA035, 0x90FFEA, 0xA002, 0xA0FFEA, 0xA000,
-    0xB0FFEA, 0xA001, 0xC0FFEA, 0xA012, 0xD0FFEA, 0xA015, 0xE0FFEA, 0xA020,
-    0xF0FFEA, 0xA001, 0x100FFEA, 0xA012, 0x110FFEA, 0xA028, 0x120FFEA, 0xA046,
+const CONN effB8_mes_jp_6_22[20] = {
+    { 80, 0, 0, 0xA0C9 }, { 96, 0, 0, 0xA0A6 }, { 112, 0, 0, 0xA0B7 }, { 128, 0, 0, 0xA3D0 },
+    { 144, 0, 0, 0xA0B2 }, { 160, 0, 0, 0xA039 }, { 80, -22, 0, 0xA029 }, { 96, -22, 0, 0xA02D },
+    { 112, -22, 0, 0xA00B }, { 128, -22, 0, 0xA035 }, { 144, -22, 0, 0xA002 }, { 160, -22, 0, 0xA000 },
+    { 176, -22, 0, 0xA001 }, { 192, -22, 0, 0xA012 }, { 208, -22, 0, 0xA015 }, { 224, -22, 0, 0xA020 },
+    { 240, -22, 0, 0xA001 }, { 256, -22, 0, 0xA012 }, { 272, -22, 0, 0xA028 }, { 288, -22, 0, 0xA046 },
 };
 
 const u32 effB8_mes_jp_6_24[42] = {
@@ -31194,9 +31194,9 @@ const u32 effB8_mes_jp_6_28[54] = {
     0x108FFEA, 0xA004, 0x118FFEA, 0xA005, 0x128FFEA, 0xA057,
 };
 
-const u32 effB8_mes_jp_6_30[14] = {
-    0xA00000, 0xA00D, 0xB00000, 0xA051, 0xC00000, 0xA017, 0xD00000, 0xA02C,
-    0xA0FFEA, 0xA004, 0xB0FFEA, 0xA028, 0xC0FFEA, 0xA039,
+const CONN effB8_mes_jp_6_30[7] = {
+    { 160, 0, 0, 0xA00D }, { 176, 0, 0, 0xA051 }, { 192, 0, 0, 0xA017 }, { 208, 0, 0, 0xA02C },
+    { 160, -22, 0, 0xA004 }, { 176, -22, 0, 0xA028 }, { 192, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_6_32[28] = {
@@ -31206,11 +31206,11 @@ const u32 effB8_mes_jp_6_32[28] = {
     0x1100000, 0xA0B5, 0x1200000, 0xA039,
 };
 
-const u32 effB8_mes_jp_6_34[28] = {
-    0x500000, 0xA0CE, 0x600000, 0xA0A9, 0x700000, 0xA0B7, 0x800000, 0xA0B7,
-    0x900000, 0xA0B7, 0xA00000, 0xA0B7, 0xB00000, 0xA0B7, 0xC00000, 0xA0B7,
-    0xD00000, 0xA0B7, 0xE00000, 0xA0B7, 0xF00000, 0xA0B7, 0x1000000, 0xA0B7,
-    0x1100000, 0xA08C, 0x1200000, 0xA039,
+const CONN effB8_mes_jp_6_34[14] = {
+    { 80, 0, 0, 0xA0CE }, { 96, 0, 0, 0xA0A9 }, { 112, 0, 0, 0xA0B7 }, { 128, 0, 0, 0xA0B7 },
+    { 144, 0, 0, 0xA0B7 }, { 160, 0, 0, 0xA0B7 }, { 176, 0, 0, 0xA0B7 }, { 192, 0, 0, 0xA0B7 },
+    { 208, 0, 0, 0xA0B7 }, { 224, 0, 0, 0xA0B7 }, { 240, 0, 0, 0xA0B7 }, { 256, 0, 0, 0xA0B7 },
+    { 272, 0, 0, 0xA08C }, { 288, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_6_36[32] = {
@@ -31220,17 +31220,17 @@ const u32 effB8_mes_jp_6_36[32] = {
     0xC0FFEA, 0xA006, 0xD0FFEA, 0xA035, 0xE0FFEA, 0xA002, 0xF0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_6_38[28] = {
-    0x500000, 0xA087, 0x600000, 0xA0A6, 0x700000, 0xA0B7, 0x800000, 0xA0B7,
-    0x900000, 0xA0B7, 0xA00000, 0xA0B7, 0xB00000, 0xA0B7, 0xC00000, 0xA0B7,
-    0xD00000, 0xA0B7, 0xE00000, 0xA0B7, 0xF00000, 0xA0B3, 0x1000000, 0xA08B,
-    0x1100000, 0xA0B5, 0x1200000, 0xA039,
+const CONN effB8_mes_jp_6_38[14] = {
+    { 80, 0, 0, 0xA087 }, { 96, 0, 0, 0xA0A6 }, { 112, 0, 0, 0xA0B7 }, { 128, 0, 0, 0xA0B7 },
+    { 144, 0, 0, 0xA0B7 }, { 160, 0, 0, 0xA0B7 }, { 176, 0, 0, 0xA0B7 }, { 192, 0, 0, 0xA0B7 },
+    { 208, 0, 0, 0xA0B7 }, { 224, 0, 0, 0xA0B7 }, { 240, 0, 0, 0xA0B3 }, { 256, 0, 0, 0xA08B },
+    { 272, 0, 0, 0xA0B5 }, { 288, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_6_40[24] = {
-    0x880000, 0xA04C, 0x980000, 0xA002, 0xA80000, 0xA048, 0xC80000, 0xA084,
-    0xD80000, 0xA0A9, 0xE80000, 0xA018, 0x88FFEA, 0xA00E, 0x98FFEA, 0xA009,
-    0xA8FFEA, 0xA049, 0xB8FFEA, 0xA005, 0xC8FFEA, 0xA026, 0xD8FFEA, 0xA039,
+const CONN effB8_mes_jp_6_40[12] = {
+    { 136, 0, 0, 0xA04C }, { 152, 0, 0, 0xA002 }, { 168, 0, 0, 0xA048 }, { 200, 0, 0, 0xA084 },
+    { 216, 0, 0, 0xA0A9 }, { 232, 0, 0, 0xA018 }, { 136, -22, 0, 0xA00E }, { 152, -22, 0, 0xA009 },
+    { 168, -22, 0, 0xA049 }, { 184, -22, 0, 0xA005 }, { 200, -22, 0, 0xA026 }, { 216, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_6_42[42] = {
@@ -31249,14 +31249,14 @@ const u32 effB8_mes_jp_6_48[30] = {
     0x68FFEA, 0xA0AD, 0x78FFEA, 0xA0C5, 0x88FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_6_50[52] = {
-    0x480000, 0xA001, 0x580000, 0xA011, 0x680000, 0xA04B, 0x780000, 0xA022,
-    0x880000, 0xA000, 0x980000, 0xA001, 0xA80000, 0xA012, 0xB80000, 0xA00B,
-    0xC80000, 0xA012, 0xD80000, 0xA023, 0xE80000, 0xA028, 0x48FFEA, 0xA3D0,
-    0x58FFEA, 0xA0AF, 0x68FFEA, 0xA0B7, 0x78FFEA, 0xA0C2, 0x88FFEA, 0xA0B7,
-    0x98FFEA, 0xA0C0, 0xA8FFEA, 0xA0B7, 0xB8FFEA, 0xA083, 0xC8FFEA, 0xA0AD,
-    0xD8FFEA, 0xA349, 0xE8FFEA, 0xA000, 0xF8FFEA, 0xA04D, 0x108FFEA, 0xA025,
-    0x118FFEA, 0xA34A, 0x128FFEA, 0xA039,
+const CONN effB8_mes_jp_6_50[26] = {
+    { 72, 0, 0, 0xA001 }, { 88, 0, 0, 0xA011 }, { 104, 0, 0, 0xA04B }, { 120, 0, 0, 0xA022 },
+    { 136, 0, 0, 0xA000 }, { 152, 0, 0, 0xA001 }, { 168, 0, 0, 0xA012 }, { 184, 0, 0, 0xA00B },
+    { 200, 0, 0, 0xA012 }, { 216, 0, 0, 0xA023 }, { 232, 0, 0, 0xA028 }, { 72, -22, 0, 0xA3D0 },
+    { 88, -22, 0, 0xA0AF }, { 104, -22, 0, 0xA0B7 }, { 120, -22, 0, 0xA0C2 }, { 136, -22, 0, 0xA0B7 },
+    { 152, -22, 0, 0xA0C0 }, { 168, -22, 0, 0xA0B7 }, { 184, -22, 0, 0xA083 }, { 200, -22, 0, 0xA0AD },
+    { 216, -22, 0, 0xA349 }, { 232, -22, 0, 0xA000 }, { 248, -22, 0, 0xA04D }, { 264, -22, 0, 0xA025 },
+    { 280, -22, 0, 0xA34A }, { 296, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_6_52[48] = {
@@ -31285,13 +31285,13 @@ const u32 effB8_mes_jp_6_56[22] = {
     0xE80000, 0xA026, 0xF80000, 0xA017, 0x1080000, 0xA003,
 };
 
-const u32 effB8_mes_jp_6_58[44] = {
-    0x580000, 0xA048, 0x680000, 0xA029, 0x780000, 0xA015, 0x880000, 0xA04B,
-    0x980000, 0xA022, 0xA80000, 0xA005, 0xB80000, 0xA011, 0xC80000, 0xA009,
-    0xD80000, 0xA013, 0x58FFEA, 0xA084, 0x68FFEA, 0xA0A9, 0x78FFEA, 0xA018,
-    0x88FFEA, 0xA09B, 0x98FFEA, 0xA0AA, 0xA8FFEA, 0xA081, 0xB8FFEA, 0xA0C5,
-    0xC8FFEA, 0xA349, 0xD8FFEA, 0xA3D3, 0xE8FFEA, 0xA04E, 0xF8FFEA, 0xA34A,
-    0x108FFEA, 0xA048, 0x118FFEA, 0xA039,
+const CONN effB8_mes_jp_6_58[22] = {
+    { 88, 0, 0, 0xA048 }, { 104, 0, 0, 0xA029 }, { 120, 0, 0, 0xA015 }, { 136, 0, 0, 0xA04B },
+    { 152, 0, 0, 0xA022 }, { 168, 0, 0, 0xA005 }, { 184, 0, 0, 0xA011 }, { 200, 0, 0, 0xA009 },
+    { 216, 0, 0, 0xA013 }, { 88, -22, 0, 0xA084 }, { 104, -22, 0, 0xA0A9 }, { 120, -22, 0, 0xA018 },
+    { 136, -22, 0, 0xA09B }, { 152, -22, 0, 0xA0AA }, { 168, -22, 0, 0xA081 }, { 184, -22, 0, 0xA0C5 },
+    { 200, -22, 0, 0xA349 }, { 216, -22, 0, 0xA3D3 }, { 232, -22, 0, 0xA04E }, { 248, -22, 0, 0xA34A },
+    { 264, -22, 0, 0xA048 }, { 280, -22, 0, 0xA039 },
 };
 
 const u16 effB8_mes_jp_6_1[4] = {
@@ -31415,21 +31415,21 @@ const u16 effB8_mes_jp_6_59[7] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_7[30] = {
-    { (const CONN*)effB8_mes_jp_7_0, (const u16*)effB8_mes_jp_7_1 }, { (const CONN*)effB8_mes_jp_7_0, (const u16*)effB8_mes_jp_7_3 },
-    { (const CONN*)effB8_mes_jp_7_4, (const u16*)effB8_mes_jp_7_5 }, { (const CONN*)effB8_mes_jp_7_6, (const u16*)effB8_mes_jp_7_7 },
-    { (const CONN*)effB8_mes_jp_7_8, (const u16*)effB8_mes_jp_7_9 }, { (const CONN*)effB8_mes_jp_7_10, (const u16*)effB8_mes_jp_7_11 },
-    { (const CONN*)effB8_mes_jp_7_12, (const u16*)effB8_mes_jp_7_13 }, { (const CONN*)effB8_mes_jp_7_14, (const u16*)effB8_mes_jp_7_15 },
-    { (const CONN*)effB8_mes_jp_7_16, (const u16*)effB8_mes_jp_7_17 }, { (const CONN*)effB8_mes_jp_7_18, (const u16*)effB8_mes_jp_7_19 },
-    { (const CONN*)effB8_mes_jp_7_20, (const u16*)effB8_mes_jp_7_21 }, { (const CONN*)effB8_mes_jp_7_22, (const u16*)effB8_mes_jp_7_23 },
-    { (const CONN*)effB8_mes_jp_7_24, (const u16*)effB8_mes_jp_7_25 }, { (const CONN*)effB8_mes_jp_7_26, (const u16*)effB8_mes_jp_7_27 },
-    { (const CONN*)effB8_mes_jp_7_28, (const u16*)effB8_mes_jp_7_29 }, { (const CONN*)effB8_mes_jp_7_30, (const u16*)effB8_mes_jp_7_31 },
-    { (const CONN*)effB8_mes_jp_7_32, (const u16*)effB8_mes_jp_7_33 }, { (const CONN*)effB8_mes_jp_7_34, (const u16*)effB8_mes_jp_7_35 },
-    { (const CONN*)effB8_mes_jp_7_36, (const u16*)effB8_mes_jp_7_37 }, { (const CONN*)effB8_mes_jp_7_38, (const u16*)effB8_mes_jp_7_39 },
-    { (const CONN*)effB8_mes_jp_7_40, (const u16*)effB8_mes_jp_7_41 }, { (const CONN*)effB8_mes_jp_7_42, (const u16*)effB8_mes_jp_7_43 },
-    { (const CONN*)effB8_mes_jp_7_42, (const u16*)effB8_mes_jp_7_45 }, { (const CONN*)effB8_mes_jp_7_42, (const u16*)effB8_mes_jp_7_47 },
-    { (const CONN*)effB8_mes_jp_7_48, (const u16*)effB8_mes_jp_7_49 }, { (const CONN*)effB8_mes_jp_7_50, (const u16*)effB8_mes_jp_7_51 },
-    { (const CONN*)effB8_mes_jp_7_52, (const u16*)effB8_mes_jp_7_53 }, { (const CONN*)effB8_mes_jp_7_54, (const u16*)effB8_mes_jp_7_55 },
-    { (const CONN*)effB8_mes_jp_7_56, (const u16*)effB8_mes_jp_7_57 }, { (const CONN*)effB8_mes_jp_7_58, (const u16*)effB8_mes_jp_7_59 },
+    { (const CONN*)effB8_mes_jp_7_0, effB8_mes_jp_7_1 }, { (const CONN*)effB8_mes_jp_7_0, effB8_mes_jp_7_3 },
+    { effB8_mes_jp_7_4, effB8_mes_jp_7_5 }, { (const CONN*)effB8_mes_jp_7_6, effB8_mes_jp_7_7 },
+    { (const CONN*)effB8_mes_jp_7_8, effB8_mes_jp_7_9 }, { (const CONN*)effB8_mes_jp_7_10, effB8_mes_jp_7_11 },
+    { effB8_mes_jp_7_12, effB8_mes_jp_7_13 }, { (const CONN*)effB8_mes_jp_7_14, effB8_mes_jp_7_15 },
+    { (const CONN*)effB8_mes_jp_7_16, effB8_mes_jp_7_17 }, { effB8_mes_jp_7_18, effB8_mes_jp_7_19 },
+    { (const CONN*)effB8_mes_jp_7_20, effB8_mes_jp_7_21 }, { (const CONN*)effB8_mes_jp_7_22, effB8_mes_jp_7_23 },
+    { effB8_mes_jp_7_24, effB8_mes_jp_7_25 }, { (const CONN*)effB8_mes_jp_7_26, effB8_mes_jp_7_27 },
+    { (const CONN*)effB8_mes_jp_7_28, effB8_mes_jp_7_29 }, { effB8_mes_jp_7_30, effB8_mes_jp_7_31 },
+    { effB8_mes_jp_7_32, effB8_mes_jp_7_33 }, { (const CONN*)effB8_mes_jp_7_34, effB8_mes_jp_7_35 },
+    { effB8_mes_jp_7_36, effB8_mes_jp_7_37 }, { effB8_mes_jp_7_38, effB8_mes_jp_7_39 },
+    { (const CONN*)effB8_mes_jp_7_40, effB8_mes_jp_7_41 }, { effB8_mes_jp_7_42, effB8_mes_jp_7_43 },
+    { effB8_mes_jp_7_42, effB8_mes_jp_7_45 }, { effB8_mes_jp_7_42, effB8_mes_jp_7_47 },
+    { (const CONN*)effB8_mes_jp_7_48, effB8_mes_jp_7_49 }, { (const CONN*)effB8_mes_jp_7_50, effB8_mes_jp_7_51 },
+    { effB8_mes_jp_7_52, effB8_mes_jp_7_53 }, { effB8_mes_jp_7_54, effB8_mes_jp_7_55 },
+    { (const CONN*)effB8_mes_jp_7_56, effB8_mes_jp_7_57 }, { effB8_mes_jp_7_58, effB8_mes_jp_7_59 },
 };
 
 const u32 effB8_mes_jp_7_0[46] = {
@@ -31441,13 +31441,13 @@ const u32 effB8_mes_jp_7_0[46] = {
     0xC0FFEA, 0xA001, 0xD0FFEA, 0xA018, 0xE0FFEA, 0xA025,
 };
 
-const u32 effB8_mes_jp_7_4[44] = {
-    0x500000, 0xA17D, 0x600000, 0xA001, 0x700000, 0xA134, 0x800000, 0xA287,
-    0x900000, 0xA00B, 0xA00000, 0xA012, 0xB00000, 0xA028, 0xC00000, 0xA018,
-    0xD00000, 0xA03C, 0x50FFEA, 0xA000, 0x60FFEA, 0xA00F, 0x70FFEA, 0xA00B,
-    0x80FFEA, 0xA018, 0x90FFEA, 0xA16D, 0xA0FFEA, 0xA1D3, 0xC0FFEA, 0xA2BC,
-    0xD0FFEA, 0xA2BD, 0xE0FFEA, 0xA00B, 0xF0FFEA, 0xA025, 0x100FFEA, 0xA0B7,
-    0x110FFEA, 0xA005, 0x120FFEA, 0xA03C,
+const CONN effB8_mes_jp_7_4[22] = {
+    { 80, 0, 0, 0xA17D }, { 96, 0, 0, 0xA001 }, { 112, 0, 0, 0xA134 }, { 128, 0, 0, 0xA287 },
+    { 144, 0, 0, 0xA00B }, { 160, 0, 0, 0xA012 }, { 176, 0, 0, 0xA028 }, { 192, 0, 0, 0xA018 },
+    { 208, 0, 0, 0xA03C }, { 80, -22, 0, 0xA000 }, { 96, -22, 0, 0xA00F }, { 112, -22, 0, 0xA00B },
+    { 128, -22, 0, 0xA018 }, { 144, -22, 0, 0xA16D }, { 160, -22, 0, 0xA1D3 }, { 192, -22, 0, 0xA2BC },
+    { 208, -22, 0, 0xA2BD }, { 224, -22, 0, 0xA00B }, { 240, -22, 0, 0xA025 }, { 256, -22, 0, 0xA0B7 },
+    { 272, -22, 0, 0xA005 }, { 288, -22, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_7_6[50] = {
@@ -31479,13 +31479,13 @@ const u32 effB8_mes_jp_7_10[42] = {
     0xD8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_7_12[48] = {
-    0x400000, 0xA001, 0x500000, 0xA007, 0x600000, 0xA026, 0x700000, 0xA0C5,
-    0x800000, 0xA085, 0x900000, 0xA007, 0xA00000, 0xA012, 0xB00000, 0xA022,
-    0x40FFEA, 0xA134, 0x50FFEA, 0xA1F5, 0x60FFEA, 0xA186, 0x70FFEA, 0xA11C,
-    0x80FFEA, 0xA014, 0x90FFEA, 0xA026, 0xA0FFEA, 0xA129, 0xB0FFEA, 0xA387,
-    0xC0FFEA, 0xA019, 0xD0FFEA, 0xA1DF, 0xE0FFEA, 0xA02B, 0xF0FFEA, 0xA026,
-    0x100FFEA, 0xA014, 0x110FFEA, 0xA001, 0x120FFEA, 0xA02B, 0x130FFEA, 0xA039,
+const CONN effB8_mes_jp_7_12[24] = {
+    { 64, 0, 0, 0xA001 }, { 80, 0, 0, 0xA007 }, { 96, 0, 0, 0xA026 }, { 112, 0, 0, 0xA0C5 },
+    { 128, 0, 0, 0xA085 }, { 144, 0, 0, 0xA007 }, { 160, 0, 0, 0xA012 }, { 176, 0, 0, 0xA022 },
+    { 64, -22, 0, 0xA134 }, { 80, -22, 0, 0xA1F5 }, { 96, -22, 0, 0xA186 }, { 112, -22, 0, 0xA11C },
+    { 128, -22, 0, 0xA014 }, { 144, -22, 0, 0xA026 }, { 160, -22, 0, 0xA129 }, { 176, -22, 0, 0xA387 },
+    { 192, -22, 0, 0xA019 }, { 208, -22, 0, 0xA1DF }, { 224, -22, 0, 0xA02B }, { 240, -22, 0, 0xA026 },
+    { 256, -22, 0, 0xA014 }, { 272, -22, 0, 0xA001 }, { 288, -22, 0, 0xA02B }, { 304, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_7_14[50] = {
@@ -31507,9 +31507,9 @@ const u32 effB8_mes_jp_7_16[46] = {
     0x80FFEA, 0xA0B7, 0x90FFEA, 0xA057, 0xA0FFEA, 0xA057,
 };
 
-const u32 effB8_mes_jp_7_18[16] = {
-    0x800000, 0xA057, 0x900000, 0xA001, 0xA00000, 0xA037, 0xB00000, 0xA1D3,
-    0xC00000, 0xA006, 0xD00000, 0xA012, 0xE00000, 0xA028, 0xF00000, 0xA03C,
+const CONN effB8_mes_jp_7_18[8] = {
+    { 128, 0, 0, 0xA057 }, { 144, 0, 0, 0xA001 }, { 160, 0, 0, 0xA037 }, { 176, 0, 0, 0xA1D3 },
+    { 192, 0, 0, 0xA006 }, { 208, 0, 0, 0xA012 }, { 224, 0, 0, 0xA028 }, { 240, 0, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_7_20[40] = {
@@ -31529,12 +31529,12 @@ const u32 effB8_mes_jp_7_22[46] = {
     0x98FFEA, 0xA00D, 0xA8FFEA, 0xA001, 0xB8FFEA, 0xA03C,
 };
 
-const u32 effB8_mes_jp_7_24[38] = {
-    0x700000, 0xA003, 0x800000, 0xA0B7, 0xA00000, 0xA01E, 0xB00000, 0xA048,
-    0xC00000, 0xA023, 0xD00000, 0xA028, 0xE00000, 0xA11A, 0xF00000, 0xA02F,
-    0x1000000, 0xA03C, 0x70FFEA, 0xA01E, 0x80FFEA, 0xA00F, 0x90FFEA, 0xA18F,
-    0xA0FFEA, 0xA132, 0xB0FFEA, 0xA015, 0xC0FFEA, 0xA00B, 0xD0FFEA, 0xA012,
-    0xE0FFEA, 0xA025, 0xF0FFEA, 0xA017, 0x100FFEA, 0xA039,
+const CONN effB8_mes_jp_7_24[19] = {
+    { 112, 0, 0, 0xA003 }, { 128, 0, 0, 0xA0B7 }, { 160, 0, 0, 0xA01E }, { 176, 0, 0, 0xA048 },
+    { 192, 0, 0, 0xA023 }, { 208, 0, 0, 0xA028 }, { 224, 0, 0, 0xA11A }, { 240, 0, 0, 0xA02F },
+    { 256, 0, 0, 0xA03C }, { 112, -22, 0, 0xA01E }, { 128, -22, 0, 0xA00F }, { 144, -22, 0, 0xA18F },
+    { 160, -22, 0, 0xA132 }, { 176, -22, 0, 0xA015 }, { 192, -22, 0, 0xA00B }, { 208, -22, 0, 0xA012 },
+    { 224, -22, 0, 0xA025 }, { 240, -22, 0, 0xA017 }, { 256, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_7_26[42] = {
@@ -31554,17 +31554,17 @@ const u32 effB8_mes_jp_7_28[38] = {
     0x90FFEA, 0xA001, 0xA0FFEA, 0xA016, 0xB0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_7_30[12] = {
-    0x880000, 0xA155, 0x980000, 0xA14D, 0xB80000, 0xA3D4, 0xC80000, 0xA3D5,
-    0xD80000, 0xA3D6, 0xE80000, 0xA039,
+const CONN effB8_mes_jp_7_30[6] = {
+    { 136, 0, 0, 0xA155 }, { 152, 0, 0, 0xA14D }, { 184, 0, 0, 0xA3D4 }, { 200, 0, 0, 0xA3D5 },
+    { 216, 0, 0, 0xA3D6 }, { 232, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_7_32[38] = {
-    0x700000, 0xA023, 0x800000, 0xA033, 0x900000, 0xA052, 0xA00000, 0xA027,
-    0xB00000, 0xA1E2, 0xC00000, 0xA028, 0xD00000, 0xA280, 0xE00000, 0xA028,
-    0xF00000, 0xA025, 0x1000000, 0xA027, 0x70FFEA, 0xA11C, 0x80FFEA, 0xA2D8,
-    0x90FFEA, 0xA22A, 0xA0FFEA, 0xA03E, 0xB0FFEA, 0xA086, 0xC0FFEA, 0xA0A1,
-    0xD0FFEA, 0xA092, 0xE0FFEA, 0xA025, 0xF0FFEA, 0xA017,
+const CONN effB8_mes_jp_7_32[19] = {
+    { 112, 0, 0, 0xA023 }, { 128, 0, 0, 0xA033 }, { 144, 0, 0, 0xA052 }, { 160, 0, 0, 0xA027 },
+    { 176, 0, 0, 0xA1E2 }, { 192, 0, 0, 0xA028 }, { 208, 0, 0, 0xA280 }, { 224, 0, 0, 0xA028 },
+    { 240, 0, 0, 0xA025 }, { 256, 0, 0, 0xA027 }, { 112, -22, 0, 0xA11C }, { 128, -22, 0, 0xA2D8 },
+    { 144, -22, 0, 0xA22A }, { 160, -22, 0, 0xA03E }, { 176, -22, 0, 0xA086 }, { 192, -22, 0, 0xA0A1 },
+    { 208, -22, 0, 0xA092 }, { 224, -22, 0, 0xA025 }, { 240, -22, 0, 0xA017 },
 };
 
 const u32 effB8_mes_jp_7_34[12] = {
@@ -31572,16 +31572,16 @@ const u32 effB8_mes_jp_7_34[12] = {
     0xD80000, 0xA00B, 0xE80000, 0xA039,
 };
 
-const u32 effB8_mes_jp_7_36[24] = {
-    0x600000, 0xA009, 0x700000, 0xA029, 0x800000, 0xA03E, 0x900000, 0xA081,
-    0xA00000, 0xA0C9, 0xB00000, 0xA086, 0xC00000, 0xA018, 0xD00000, 0xA2F0,
-    0xE00000, 0xA161, 0xF00000, 0xA296, 0x1000000, 0xA119, 0x1100000, 0xA039,
+const CONN effB8_mes_jp_7_36[12] = {
+    { 96, 0, 0, 0xA009 }, { 112, 0, 0, 0xA029 }, { 128, 0, 0, 0xA03E }, { 144, 0, 0, 0xA081 },
+    { 160, 0, 0, 0xA0C9 }, { 176, 0, 0, 0xA086 }, { 192, 0, 0, 0xA018 }, { 208, 0, 0, 0xA2F0 },
+    { 224, 0, 0, 0xA161 }, { 240, 0, 0, 0xA296 }, { 256, 0, 0, 0xA119 }, { 272, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_7_38[20] = {
-    0x600000, 0xA1C4, 0x700000, 0xA2E2, 0x900000, 0xA10B, 0xA00000, 0xA2AD,
-    0xB00000, 0xA161, 0xC00000, 0xA039, 0xE00000, 0xA04C, 0xF00000, 0xA002,
-    0x1000000, 0xA048, 0x1100000, 0xA039,
+const CONN effB8_mes_jp_7_38[10] = {
+    { 96, 0, 0, 0xA1C4 }, { 112, 0, 0, 0xA2E2 }, { 144, 0, 0, 0xA10B }, { 160, 0, 0, 0xA2AD },
+    { 176, 0, 0, 0xA161 }, { 192, 0, 0, 0xA039 }, { 224, 0, 0, 0xA04C }, { 240, 0, 0, 0xA002 },
+    { 256, 0, 0, 0xA048 }, { 272, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_7_40[36] = {
@@ -31592,9 +31592,9 @@ const u32 effB8_mes_jp_7_40[36] = {
     0xD0FFEA, 0xA017, 0xE0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_7_42[16] = {
-    0x800000, 0xA1FE, 0x900000, 0xA22E, 0xA00000, 0xA00B, 0xB00000, 0xA014,
-    0xC00000, 0xA025, 0xD00000, 0xA033, 0xE00000, 0xA039, 0xF00000, 0xA039,
+const CONN effB8_mes_jp_7_42[8] = {
+    { 128, 0, 0, 0xA1FE }, { 144, 0, 0, 0xA22E }, { 160, 0, 0, 0xA00B }, { 176, 0, 0, 0xA014 },
+    { 192, 0, 0, 0xA025 }, { 208, 0, 0, 0xA033 }, { 224, 0, 0, 0xA039 }, { 240, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_7_48[44] = {
@@ -31615,16 +31615,16 @@ const u32 effB8_mes_jp_7_50[46] = {
     0xF0FFEA, 0xA048, 0x100FFEA, 0xA025, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_7_52[20] = {
-    0x700000, 0xA00A, 0x800000, 0xA313, 0x900000, 0xA012, 0xA00000, 0xA037,
-    0xB00000, 0xA145, 0xC00000, 0xA037, 0xD00000, 0xA145, 0xE00000, 0xA033,
-    0xF00000, 0xA013, 0x1000000, 0xA039,
+const CONN effB8_mes_jp_7_52[10] = {
+    { 112, 0, 0, 0xA00A }, { 128, 0, 0, 0xA313 }, { 144, 0, 0, 0xA012 }, { 160, 0, 0, 0xA037 },
+    { 176, 0, 0, 0xA145 }, { 192, 0, 0, 0xA037 }, { 208, 0, 0, 0xA145 }, { 224, 0, 0, 0xA033 },
+    { 240, 0, 0, 0xA013 }, { 256, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_7_54[24] = {
-    0x580000, 0xA01E, 0x680000, 0xA037, 0x780000, 0xA1D1, 0x880000, 0xA313,
-    0x980000, 0xA032, 0xA80000, 0xA1D2, 0xB80000, 0xA039, 0xD80000, 0xA033,
-    0xE80000, 0xA012, 0xF80000, 0xA013, 0x1080000, 0xA009, 0x1180000, 0xA017,
+const CONN effB8_mes_jp_7_54[12] = {
+    { 88, 0, 0, 0xA01E }, { 104, 0, 0, 0xA037 }, { 120, 0, 0, 0xA1D1 }, { 136, 0, 0, 0xA313 },
+    { 152, 0, 0, 0xA032 }, { 168, 0, 0, 0xA1D2 }, { 184, 0, 0, 0xA039 }, { 216, 0, 0, 0xA033 },
+    { 232, 0, 0, 0xA012 }, { 248, 0, 0, 0xA013 }, { 264, 0, 0, 0xA009 }, { 280, 0, 0, 0xA017 },
 };
 
 const u32 effB8_mes_jp_7_56[18] = {
@@ -31633,11 +31633,11 @@ const u32 effB8_mes_jp_7_56[18] = {
     0xF80000, 0xA057,
 };
 
-const u32 effB8_mes_jp_7_58[32] = {
-    0x780000, 0xA1F0, 0x880000, 0xA003, 0x980000, 0xA012, 0xA80000, 0xA004,
-    0xB80000, 0xA001, 0xC80000, 0xA012, 0xD80000, 0xA039, 0x78FFEA, 0xA009,
-    0x88FFEA, 0xA029, 0x98FFEA, 0xA03E, 0xA8FFEA, 0xA081, 0xB8FFEA, 0xA0C9,
-    0xC8FFEA, 0xA086, 0xD8FFEA, 0xA025, 0xE8FFEA, 0xA033, 0xF8FFEA, 0xA039,
+const CONN effB8_mes_jp_7_58[16] = {
+    { 120, 0, 0, 0xA1F0 }, { 136, 0, 0, 0xA003 }, { 152, 0, 0, 0xA012 }, { 168, 0, 0, 0xA004 },
+    { 184, 0, 0, 0xA001 }, { 200, 0, 0, 0xA012 }, { 216, 0, 0, 0xA039 }, { 120, -22, 0, 0xA009 },
+    { 136, -22, 0, 0xA029 }, { 152, -22, 0, 0xA03E }, { 168, -22, 0, 0xA081 }, { 184, -22, 0, 0xA0C9 },
+    { 200, -22, 0, 0xA086 }, { 216, -22, 0, 0xA025 }, { 232, -22, 0, 0xA033 }, { 248, -22, 0, 0xA039 },
 };
 
 const u16 effB8_mes_jp_7_1[2] = {
@@ -31763,29 +31763,29 @@ const u16 effB8_mes_jp_7_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_8[30] = {
-    { (const CONN*)effB8_mes_jp_8_0, (const u16*)effB8_mes_jp_8_1 }, { (const CONN*)effB8_mes_jp_8_0, (const u16*)effB8_mes_jp_8_3 },
-    { (const CONN*)effB8_mes_jp_8_4, (const u16*)effB8_mes_jp_8_5 }, { (const CONN*)effB8_mes_jp_8_6, (const u16*)effB8_mes_jp_8_7 },
-    { (const CONN*)effB8_mes_jp_8_8, (const u16*)effB8_mes_jp_8_9 }, { (const CONN*)effB8_mes_jp_8_10, (const u16*)effB8_mes_jp_8_11 },
-    { (const CONN*)effB8_mes_jp_8_12, (const u16*)effB8_mes_jp_8_13 }, { (const CONN*)effB8_mes_jp_8_14, (const u16*)effB8_mes_jp_8_15 },
-    { (const CONN*)effB8_mes_jp_8_16, (const u16*)effB8_mes_jp_8_17 }, { (const CONN*)effB8_mes_jp_8_18, (const u16*)effB8_mes_jp_8_19 },
-    { (const CONN*)effB8_mes_jp_8_20, (const u16*)effB8_mes_jp_8_21 }, { (const CONN*)effB8_mes_jp_8_22, (const u16*)effB8_mes_jp_8_23 },
-    { (const CONN*)effB8_mes_jp_8_24, (const u16*)effB8_mes_jp_8_25 }, { (const CONN*)effB8_mes_jp_8_26, (const u16*)effB8_mes_jp_8_27 },
-    { (const CONN*)effB8_mes_jp_8_28, (const u16*)effB8_mes_jp_8_29 }, { (const CONN*)effB8_mes_jp_8_30, (const u16*)effB8_mes_jp_8_31 },
-    { (const CONN*)effB8_mes_jp_8_32, (const u16*)effB8_mes_jp_8_33 }, { (const CONN*)effB8_mes_jp_8_34, (const u16*)effB8_mes_jp_8_35 },
-    { (const CONN*)effB8_mes_jp_8_36, (const u16*)effB8_mes_jp_8_37 }, { (const CONN*)effB8_mes_jp_8_38, (const u16*)effB8_mes_jp_8_39 },
-    { (const CONN*)effB8_mes_jp_8_38, (const u16*)effB8_mes_jp_8_41 }, { (const CONN*)effB8_mes_jp_8_38, (const u16*)effB8_mes_jp_8_43 },
-    { (const CONN*)effB8_mes_jp_8_38, (const u16*)effB8_mes_jp_8_45 }, { (const CONN*)effB8_mes_jp_8_38, (const u16*)effB8_mes_jp_8_47 },
-    { (const CONN*)effB8_mes_jp_8_48, (const u16*)effB8_mes_jp_8_49 }, { (const CONN*)effB8_mes_jp_8_50, (const u16*)effB8_mes_jp_8_51 },
-    { (const CONN*)effB8_mes_jp_8_52, (const u16*)effB8_mes_jp_8_53 }, { (const CONN*)effB8_mes_jp_8_54, (const u16*)effB8_mes_jp_8_55 },
-    { (const CONN*)effB8_mes_jp_8_56, (const u16*)effB8_mes_jp_8_57 }, { (const CONN*)effB8_mes_jp_8_58, (const u16*)effB8_mes_jp_8_59 },
+    { effB8_mes_jp_8_0, effB8_mes_jp_8_1 }, { effB8_mes_jp_8_0, effB8_mes_jp_8_3 },
+    { (const CONN*)effB8_mes_jp_8_4, effB8_mes_jp_8_5 }, { (const CONN*)effB8_mes_jp_8_6, effB8_mes_jp_8_7 },
+    { (const CONN*)effB8_mes_jp_8_8, effB8_mes_jp_8_9 }, { effB8_mes_jp_8_10, effB8_mes_jp_8_11 },
+    { (const CONN*)effB8_mes_jp_8_12, effB8_mes_jp_8_13 }, { effB8_mes_jp_8_14, effB8_mes_jp_8_15 },
+    { (const CONN*)effB8_mes_jp_8_16, effB8_mes_jp_8_17 }, { effB8_mes_jp_8_18, effB8_mes_jp_8_19 },
+    { (const CONN*)effB8_mes_jp_8_20, effB8_mes_jp_8_21 }, { (const CONN*)effB8_mes_jp_8_22, effB8_mes_jp_8_23 },
+    { (const CONN*)effB8_mes_jp_8_24, effB8_mes_jp_8_25 }, { (const CONN*)effB8_mes_jp_8_26, effB8_mes_jp_8_27 },
+    { (const CONN*)effB8_mes_jp_8_28, effB8_mes_jp_8_29 }, { effB8_mes_jp_8_30, effB8_mes_jp_8_31 },
+    { (const CONN*)effB8_mes_jp_8_32, effB8_mes_jp_8_33 }, { (const CONN*)effB8_mes_jp_8_34, effB8_mes_jp_8_35 },
+    { (const CONN*)effB8_mes_jp_8_36, effB8_mes_jp_8_37 }, { (const CONN*)effB8_mes_jp_8_38, effB8_mes_jp_8_39 },
+    { (const CONN*)effB8_mes_jp_8_38, effB8_mes_jp_8_41 }, { (const CONN*)effB8_mes_jp_8_38, effB8_mes_jp_8_43 },
+    { (const CONN*)effB8_mes_jp_8_38, effB8_mes_jp_8_45 }, { (const CONN*)effB8_mes_jp_8_38, effB8_mes_jp_8_47 },
+    { (const CONN*)effB8_mes_jp_8_48, effB8_mes_jp_8_49 }, { effB8_mes_jp_8_50, effB8_mes_jp_8_51 },
+    { (const CONN*)effB8_mes_jp_8_52, effB8_mes_jp_8_53 }, { effB8_mes_jp_8_54, effB8_mes_jp_8_55 },
+    { (const CONN*)effB8_mes_jp_8_56, effB8_mes_jp_8_57 }, { (const CONN*)effB8_mes_jp_8_58, effB8_mes_jp_8_59 },
 };
 
-const u32 effB8_mes_jp_8_0[36] = {
-    0x780000, 0xA243, 0x880000, 0xA190, 0x980000, 0xA015, 0xA80000, 0xA022,
-    0xB80000, 0xA1A3, 0xC80000, 0xA1D3, 0xD80000, 0xA018, 0xE80000, 0xA244,
-    0xF80000, 0xA02C, 0x78FFEA, 0xA14F, 0x88FFEA, 0xA011, 0x98FFEA, 0xA134,
-    0xA8FFEA, 0xA03E, 0xB8FFEA, 0xA001, 0xC8FFEA, 0xA028, 0xD8FFEA, 0xA018,
-    0xE8FFEA, 0xA017, 0xF8FFEA, 0xA039,
+const CONN effB8_mes_jp_8_0[18] = {
+    { 120, 0, 0, 0xA243 }, { 136, 0, 0, 0xA190 }, { 152, 0, 0, 0xA015 }, { 168, 0, 0, 0xA022 },
+    { 184, 0, 0, 0xA1A3 }, { 200, 0, 0, 0xA1D3 }, { 216, 0, 0, 0xA018 }, { 232, 0, 0, 0xA244 },
+    { 248, 0, 0, 0xA02C }, { 120, -22, 0, 0xA14F }, { 136, -22, 0, 0xA011 }, { 152, -22, 0, 0xA134 },
+    { 168, -22, 0, 0xA03E }, { 184, -22, 0, 0xA001 }, { 200, -22, 0, 0xA028 }, { 216, -22, 0, 0xA018 },
+    { 232, -22, 0, 0xA017 }, { 248, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_8_4[52] = {
@@ -31814,13 +31814,13 @@ const u32 effB8_mes_jp_8_8[32] = {
     0x90FFEA, 0xA0B8, 0xA0FFEA, 0xA0AD, 0xB0FFEA, 0xA089, 0xC0FFEA, 0xA017,
 };
 
-const u32 effB8_mes_jp_8_10[42] = {
-    0x680000, 0xA1BD, 0x780000, 0xA102, 0x880000, 0xA018, 0x980000, 0xA3DA,
-    0xA80000, 0xA108, 0xC80000, 0xA1D8, 0xD80000, 0xA018, 0xE80000, 0xA01A,
-    0xF80000, 0xA04E, 0x1080000, 0xA006, 0x68FFEA, 0xA000, 0x78FFEA, 0xA014,
-    0x88FFEA, 0xA00F, 0x98FFEA, 0xA015, 0xA8FFEA, 0xA022, 0xB8FFEA, 0xA02B,
-    0xC8FFEA, 0xA005, 0xD8FFEA, 0xA028, 0xE8FFEA, 0xA019, 0xF8FFEA, 0xA045,
-    0x108FFEA, 0xA025,
+const CONN effB8_mes_jp_8_10[21] = {
+    { 104, 0, 0, 0xA1BD }, { 120, 0, 0, 0xA102 }, { 136, 0, 0, 0xA018 }, { 152, 0, 0, 0xA3DA },
+    { 168, 0, 0, 0xA108 }, { 200, 0, 0, 0xA1D8 }, { 216, 0, 0, 0xA018 }, { 232, 0, 0, 0xA01A },
+    { 248, 0, 0, 0xA04E }, { 264, 0, 0, 0xA006 }, { 104, -22, 0, 0xA000 }, { 120, -22, 0, 0xA014 },
+    { 136, -22, 0, 0xA00F }, { 152, -22, 0, 0xA015 }, { 168, -22, 0, 0xA022 }, { 184, -22, 0, 0xA02B },
+    { 200, -22, 0, 0xA005 }, { 216, -22, 0, 0xA028 }, { 232, -22, 0, 0xA019 }, { 248, -22, 0, 0xA045 },
+    { 264, -22, 0, 0xA025 },
 };
 
 const u32 effB8_mes_jp_8_12[34] = {
@@ -31831,11 +31831,11 @@ const u32 effB8_mes_jp_8_12[34] = {
     0xD0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_8_14[30] = {
-    0x480000, 0xA0A7, 0x580000, 0xA0BF, 0x680000, 0xA0A0, 0x780000, 0xA015,
-    0x880000, 0xA1D4, 0x980000, 0xA029, 0xA80000, 0xA012, 0xB80000, 0xA014,
-    0xC80000, 0xA001, 0xD80000, 0xA02D, 0xE80000, 0xA044, 0xF80000, 0xA034,
-    0x1080000, 0xA014, 0x1180000, 0xA001, 0x1280000, 0xA03C,
+const CONN effB8_mes_jp_8_14[15] = {
+    { 72, 0, 0, 0xA0A7 }, { 88, 0, 0, 0xA0BF }, { 104, 0, 0, 0xA0A0 }, { 120, 0, 0, 0xA015 },
+    { 136, 0, 0, 0xA1D4 }, { 152, 0, 0, 0xA029 }, { 168, 0, 0, 0xA012 }, { 184, 0, 0, 0xA014 },
+    { 200, 0, 0, 0xA001 }, { 216, 0, 0, 0xA02D }, { 232, 0, 0, 0xA044 }, { 248, 0, 0, 0xA034 },
+    { 264, 0, 0, 0xA014 }, { 280, 0, 0, 0xA001 }, { 296, 0, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_8_16[46] = {
@@ -31847,11 +31847,11 @@ const u32 effB8_mes_jp_8_16[46] = {
     0xC8FFEA, 0xA036, 0xD8FFEA, 0xA002, 0xE8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_8_18[30] = {
-    0x400000, 0xA004, 0x500000, 0xA044, 0x600000, 0xA001, 0x700000, 0xA00A,
-    0x800000, 0xA02D, 0x900000, 0xA1BD, 0xA00000, 0xA189, 0xB00000, 0xA24D,
-    0xC00000, 0xA03C, 0xE00000, 0xA088, 0xF00000, 0xA0B8, 0x1000000, 0xA019,
-    0x1100000, 0xA014, 0x1200000, 0xA001, 0x1300000, 0xA03C,
+const CONN effB8_mes_jp_8_18[15] = {
+    { 64, 0, 0, 0xA004 }, { 80, 0, 0, 0xA044 }, { 96, 0, 0, 0xA001 }, { 112, 0, 0, 0xA00A },
+    { 128, 0, 0, 0xA02D }, { 144, 0, 0, 0xA1BD }, { 160, 0, 0, 0xA189 }, { 176, 0, 0, 0xA24D },
+    { 192, 0, 0, 0xA03C }, { 224, 0, 0, 0xA088 }, { 240, 0, 0, 0xA0B8 }, { 256, 0, 0, 0xA019 },
+    { 272, 0, 0, 0xA014 }, { 288, 0, 0, 0xA001 }, { 304, 0, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_8_20[50] = {
@@ -31903,14 +31903,14 @@ const u32 effB8_mes_jp_8_28[48] = {
     0xE8FFEA, 0xA00B, 0xF8FFEA, 0xA036, 0x108FFEA, 0xA002, 0x118FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_8_30[50] = {
-    0x480000, 0xA08C, 0x580000, 0xA0CD, 0x680000, 0xA095, 0x780000, 0xA0AD,
-    0x880000, 0xA0BA, 0x980000, 0xA0C8, 0xA80000, 0xA0B7, 0xB80000, 0xA093,
-    0xC80000, 0xA04B, 0xD80000, 0xA174, 0xE80000, 0xA012, 0xF80000, 0xA028,
-    0x1080000, 0xA014, 0x1180000, 0xA02D, 0x1280000, 0xA012, 0x48FFEA, 0xA00C,
-    0x58FFEA, 0xA04D, 0x68FFEA, 0xA026, 0x78FFEA, 0xA00B, 0x88FFEA, 0xA001,
-    0x98FFEA, 0xA151, 0xA8FFEA, 0xA001, 0xB8FFEA, 0xA048, 0xC8FFEA, 0xA02B,
-    0xD8FFEA, 0xA039,
+const CONN effB8_mes_jp_8_30[25] = {
+    { 72, 0, 0, 0xA08C }, { 88, 0, 0, 0xA0CD }, { 104, 0, 0, 0xA095 }, { 120, 0, 0, 0xA0AD },
+    { 136, 0, 0, 0xA0BA }, { 152, 0, 0, 0xA0C8 }, { 168, 0, 0, 0xA0B7 }, { 184, 0, 0, 0xA093 },
+    { 200, 0, 0, 0xA04B }, { 216, 0, 0, 0xA174 }, { 232, 0, 0, 0xA012 }, { 248, 0, 0, 0xA028 },
+    { 264, 0, 0, 0xA014 }, { 280, 0, 0, 0xA02D }, { 296, 0, 0, 0xA012 }, { 72, -22, 0, 0xA00C },
+    { 88, -22, 0, 0xA04D }, { 104, -22, 0, 0xA026 }, { 120, -22, 0, 0xA00B }, { 136, -22, 0, 0xA001 },
+    { 152, -22, 0, 0xA151 }, { 168, -22, 0, 0xA001 }, { 184, -22, 0, 0xA048 }, { 200, -22, 0, 0xA02B },
+    { 216, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_8_32[46] = {
@@ -31961,13 +31961,13 @@ const u32 effB8_mes_jp_8_48[44] = {
     0xF8FFEA, 0xA00B, 0x108FFEA, 0xA036,
 };
 
-const u32 effB8_mes_jp_8_50[48] = {
-    0x500000, 0xA002, 0x600000, 0xA029, 0x700000, 0xA00B, 0x800000, 0xA001,
-    0x900000, 0xA02B, 0xA00000, 0xA039, 0xC00000, 0xA000, 0xD00000, 0xA014,
-    0xE00000, 0xA00F, 0xF00000, 0xA01F, 0x1000000, 0xA00F, 0x1100000, 0xA001,
-    0x1200000, 0xA014, 0x50FFEA, 0xA17D, 0x60FFEA, 0xA001, 0x70FFEA, 0xA134,
-    0x80FFEA, 0xA013, 0x90FFEA, 0xA151, 0xA0FFEA, 0xA003, 0xB0FFEA, 0xA028,
-    0xC0FFEA, 0xA014, 0xD0FFEA, 0xA02D, 0xE0FFEA, 0xA012, 0xF0FFEA, 0xA039,
+const CONN effB8_mes_jp_8_50[24] = {
+    { 80, 0, 0, 0xA002 }, { 96, 0, 0, 0xA029 }, { 112, 0, 0, 0xA00B }, { 128, 0, 0, 0xA001 },
+    { 144, 0, 0, 0xA02B }, { 160, 0, 0, 0xA039 }, { 192, 0, 0, 0xA000 }, { 208, 0, 0, 0xA014 },
+    { 224, 0, 0, 0xA00F }, { 240, 0, 0, 0xA01F }, { 256, 0, 0, 0xA00F }, { 272, 0, 0, 0xA001 },
+    { 288, 0, 0, 0xA014 }, { 80, -22, 0, 0xA17D }, { 96, -22, 0, 0xA001 }, { 112, -22, 0, 0xA134 },
+    { 128, -22, 0, 0xA013 }, { 144, -22, 0, 0xA151 }, { 160, -22, 0, 0xA003 }, { 176, -22, 0, 0xA028 },
+    { 192, -22, 0, 0xA014 }, { 208, -22, 0, 0xA02D }, { 224, -22, 0, 0xA012 }, { 240, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_8_52[44] = {
@@ -31979,11 +31979,11 @@ const u32 effB8_mes_jp_8_52[44] = {
     0x80FFEA, 0xA036, 0x90FFEA, 0xA03C,
 };
 
-const u32 effB8_mes_jp_8_54[26] = {
-    0x500000, 0xA18F, 0x600000, 0xA125, 0x700000, 0xA018, 0x800000, 0xA151,
-    0x900000, 0xA001, 0xB00000, 0xA1D6, 0xC00000, 0xA00B, 0xD00000, 0xA012,
-    0xE00000, 0xA242, 0xF00000, 0xA029, 0x1000000, 0xA014, 0x1100000, 0xA001,
-    0x1200000, 0xA039,
+const CONN effB8_mes_jp_8_54[13] = {
+    { 80, 0, 0, 0xA18F }, { 96, 0, 0, 0xA125 }, { 112, 0, 0, 0xA018 }, { 128, 0, 0, 0xA151 },
+    { 144, 0, 0, 0xA001 }, { 176, 0, 0, 0xA1D6 }, { 192, 0, 0, 0xA00B }, { 208, 0, 0, 0xA012 },
+    { 224, 0, 0, 0xA242 }, { 240, 0, 0, 0xA029 }, { 256, 0, 0, 0xA014 }, { 272, 0, 0, 0xA001 },
+    { 288, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_8_56[38] = {
@@ -32124,21 +32124,21 @@ const u16 effB8_mes_jp_8_59[6] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_9[30] = {
-    { (const CONN*)effB8_mes_jp_9_0, (const u16*)effB8_mes_jp_9_1 }, { (const CONN*)effB8_mes_jp_9_0, (const u16*)effB8_mes_jp_9_3 },
-    { (const CONN*)effB8_mes_jp_9_4, (const u16*)effB8_mes_jp_9_5 }, { (const CONN*)effB8_mes_jp_9_6, (const u16*)effB8_mes_jp_9_7 },
-    { (const CONN*)effB8_mes_jp_9_8, (const u16*)effB8_mes_jp_9_9 }, { (const CONN*)effB8_mes_jp_9_10, (const u16*)effB8_mes_jp_9_11 },
-    { (const CONN*)effB8_mes_jp_9_12, (const u16*)effB8_mes_jp_9_13 }, { (const CONN*)effB8_mes_jp_9_14, (const u16*)effB8_mes_jp_9_15 },
-    { (const CONN*)effB8_mes_jp_9_16, (const u16*)effB8_mes_jp_9_17 }, { (const CONN*)effB8_mes_jp_9_18, (const u16*)effB8_mes_jp_9_19 },
-    { (const CONN*)effB8_mes_jp_9_20, (const u16*)effB8_mes_jp_9_21 }, { (const CONN*)effB8_mes_jp_9_22, (const u16*)effB8_mes_jp_9_23 },
-    { (const CONN*)effB8_mes_jp_9_24, (const u16*)effB8_mes_jp_9_25 }, { (const CONN*)effB8_mes_jp_9_26, (const u16*)effB8_mes_jp_9_27 },
-    { (const CONN*)effB8_mes_jp_9_28, (const u16*)effB8_mes_jp_9_29 }, { (const CONN*)effB8_mes_jp_9_30, (const u16*)effB8_mes_jp_9_31 },
-    { (const CONN*)effB8_mes_jp_9_32, (const u16*)effB8_mes_jp_9_33 }, { (const CONN*)effB8_mes_jp_9_34, (const u16*)effB8_mes_jp_9_35 },
-    { (const CONN*)effB8_mes_jp_9_36, (const u16*)effB8_mes_jp_9_37 }, { (const CONN*)effB8_mes_jp_9_38, (const u16*)effB8_mes_jp_9_39 },
-    { (const CONN*)effB8_mes_jp_9_40, (const u16*)effB8_mes_jp_9_41 }, { (const CONN*)effB8_mes_jp_9_42, (const u16*)effB8_mes_jp_9_43 },
-    { (const CONN*)effB8_mes_jp_9_42, (const u16*)effB8_mes_jp_9_45 }, { (const CONN*)effB8_mes_jp_9_42, (const u16*)effB8_mes_jp_9_47 },
-    { (const CONN*)effB8_mes_jp_9_48, (const u16*)effB8_mes_jp_9_49 }, { (const CONN*)effB8_mes_jp_9_50, (const u16*)effB8_mes_jp_9_51 },
-    { (const CONN*)effB8_mes_jp_9_52, (const u16*)effB8_mes_jp_9_53 }, { (const CONN*)effB8_mes_jp_9_54, (const u16*)effB8_mes_jp_9_55 },
-    { (const CONN*)effB8_mes_jp_9_56, (const u16*)effB8_mes_jp_9_57 }, { (const CONN*)effB8_mes_jp_9_58, (const u16*)effB8_mes_jp_9_59 },
+    { (const CONN*)effB8_mes_jp_9_0, effB8_mes_jp_9_1 }, { (const CONN*)effB8_mes_jp_9_0, effB8_mes_jp_9_3 },
+    { (const CONN*)effB8_mes_jp_9_4, effB8_mes_jp_9_5 }, { effB8_mes_jp_9_6, effB8_mes_jp_9_7 },
+    { (const CONN*)effB8_mes_jp_9_8, effB8_mes_jp_9_9 }, { effB8_mes_jp_9_10, effB8_mes_jp_9_11 },
+    { (const CONN*)effB8_mes_jp_9_12, effB8_mes_jp_9_13 }, { (const CONN*)effB8_mes_jp_9_14, effB8_mes_jp_9_15 },
+    { effB8_mes_jp_9_16, effB8_mes_jp_9_17 }, { (const CONN*)effB8_mes_jp_9_18, effB8_mes_jp_9_19 },
+    { (const CONN*)effB8_mes_jp_9_20, effB8_mes_jp_9_21 }, { (const CONN*)effB8_mes_jp_9_22, effB8_mes_jp_9_23 },
+    { effB8_mes_jp_9_24, effB8_mes_jp_9_25 }, { (const CONN*)effB8_mes_jp_9_26, effB8_mes_jp_9_27 },
+    { (const CONN*)effB8_mes_jp_9_28, effB8_mes_jp_9_29 }, { effB8_mes_jp_9_30, effB8_mes_jp_9_31 },
+    { (const CONN*)effB8_mes_jp_9_32, effB8_mes_jp_9_33 }, { (const CONN*)effB8_mes_jp_9_34, effB8_mes_jp_9_35 },
+    { effB8_mes_jp_9_36, effB8_mes_jp_9_37 }, { (const CONN*)effB8_mes_jp_9_38, effB8_mes_jp_9_39 },
+    { effB8_mes_jp_9_40, effB8_mes_jp_9_41 }, { (const CONN*)effB8_mes_jp_9_42, effB8_mes_jp_9_43 },
+    { (const CONN*)effB8_mes_jp_9_42, effB8_mes_jp_9_45 }, { (const CONN*)effB8_mes_jp_9_42, effB8_mes_jp_9_47 },
+    { (const CONN*)effB8_mes_jp_9_48, effB8_mes_jp_9_49 }, { effB8_mes_jp_9_50, effB8_mes_jp_9_51 },
+    { (const CONN*)effB8_mes_jp_9_52, effB8_mes_jp_9_53 }, { effB8_mes_jp_9_54, effB8_mes_jp_9_55 },
+    { (const CONN*)effB8_mes_jp_9_56, effB8_mes_jp_9_57 }, { (const CONN*)effB8_mes_jp_9_58, effB8_mes_jp_9_59 },
 };
 
 const u32 effB8_mes_jp_9_0[58] = {
@@ -32162,12 +32162,12 @@ const u32 effB8_mes_jp_9_4[56] = {
     0x100FFEA, 0xA00F, 0x110FFEA, 0xA018, 0x120FFEA, 0xA030, 0x130FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_9_6[34] = {
-    0x780000, 0xA0AB, 0x880000, 0xA08B, 0x980000, 0xA019, 0xA80000, 0xA1D7,
-    0xB80000, 0xA11C, 0xC80000, 0xA044, 0xD80000, 0xA034, 0xE80000, 0xA018,
-    0xF80000, 0xA0B7, 0x78FFEA, 0xA16E, 0x88FFEA, 0xA16F, 0x98FFEA, 0xA018,
-    0xA8FFEA, 0xA004, 0xB8FFEA, 0xA3E3, 0xC8FFEA, 0xA027, 0xD8FFEA, 0xA019,
-    0xE8FFEA, 0xA057,
+const CONN effB8_mes_jp_9_6[17] = {
+    { 120, 0, 0, 0xA0AB }, { 136, 0, 0, 0xA08B }, { 152, 0, 0, 0xA019 }, { 168, 0, 0, 0xA1D7 },
+    { 184, 0, 0, 0xA11C }, { 200, 0, 0, 0xA044 }, { 216, 0, 0, 0xA034 }, { 232, 0, 0, 0xA018 },
+    { 248, 0, 0, 0xA0B7 }, { 120, -22, 0, 0xA16E }, { 136, -22, 0, 0xA16F }, { 152, -22, 0, 0xA018 },
+    { 168, -22, 0, 0xA004 }, { 184, -22, 0, 0xA3E3 }, { 200, -22, 0, 0xA027 }, { 216, -22, 0, 0xA019 },
+    { 232, -22, 0, 0xA057 },
 };
 
 const u32 effB8_mes_jp_9_8[42] = {
@@ -32179,11 +32179,11 @@ const u32 effB8_mes_jp_9_8[42] = {
     0x120FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_9_10[30] = {
-    0x480000, 0xA004, 0x580000, 0xA016, 0x680000, 0xA00B, 0x780000, 0xA057,
-    0x880000, 0xA0AB, 0x980000, 0xA08B, 0xA80000, 0xA025, 0xB80000, 0xA027,
-    0xC80000, 0xA3E4, 0xD80000, 0xA03E, 0xE80000, 0xA014, 0xF80000, 0xA001,
-    0x1080000, 0xA018, 0x1180000, 0xA030, 0x1280000, 0xA039,
+const CONN effB8_mes_jp_9_10[15] = {
+    { 72, 0, 0, 0xA004 }, { 88, 0, 0, 0xA016 }, { 104, 0, 0, 0xA00B }, { 120, 0, 0, 0xA057 },
+    { 136, 0, 0, 0xA0AB }, { 152, 0, 0, 0xA08B }, { 168, 0, 0, 0xA025 }, { 184, 0, 0, 0xA027 },
+    { 200, 0, 0, 0xA3E4 }, { 216, 0, 0, 0xA03E }, { 232, 0, 0, 0xA014 }, { 248, 0, 0, 0xA001 },
+    { 264, 0, 0, 0xA018 }, { 280, 0, 0, 0xA030 }, { 296, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_9_12[36] = {
@@ -32203,13 +32203,13 @@ const u32 effB8_mes_jp_9_14[48] = {
     0xE8FFEA, 0xA008, 0xF8FFEA, 0xA02D, 0x108FFEA, 0xA02B, 0x118FFEA, 0xA001,
 };
 
-const u32 effB8_mes_jp_9_16[44] = {
-    0x600000, 0xA1AF, 0x700000, 0xA1AA, 0x800000, 0xA01F, 0x900000, 0xA03E,
-    0xA00000, 0xA000, 0xB00000, 0xA027, 0xC00000, 0xA00E, 0xD00000, 0xA002,
-    0xE00000, 0xA014, 0xF00000, 0xA268, 0x1000000, 0xA044, 0x1100000, 0xA034,
-    0x60FFEA, 0xA009, 0x70FFEA, 0xA033, 0x80FFEA, 0xA010, 0x90FFEA, 0xA01C,
-    0xA0FFEA, 0xA006, 0xB0FFEA, 0xA02D, 0xC0FFEA, 0xA00B, 0xD0FFEA, 0xA034,
-    0xE0FFEA, 0xA001, 0xF0FFEA, 0xA039,
+const CONN effB8_mes_jp_9_16[22] = {
+    { 96, 0, 0, 0xA1AF }, { 112, 0, 0, 0xA1AA }, { 128, 0, 0, 0xA01F }, { 144, 0, 0, 0xA03E },
+    { 160, 0, 0, 0xA000 }, { 176, 0, 0, 0xA027 }, { 192, 0, 0, 0xA00E }, { 208, 0, 0, 0xA002 },
+    { 224, 0, 0, 0xA014 }, { 240, 0, 0, 0xA268 }, { 256, 0, 0, 0xA044 }, { 272, 0, 0, 0xA034 },
+    { 96, -22, 0, 0xA009 }, { 112, -22, 0, 0xA033 }, { 128, -22, 0, 0xA010 }, { 144, -22, 0, 0xA01C },
+    { 160, -22, 0, 0xA006 }, { 176, -22, 0, 0xA02D }, { 192, -22, 0, 0xA00B }, { 208, -22, 0, 0xA034 },
+    { 224, -22, 0, 0xA001 }, { 240, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_9_18[40] = {
@@ -32237,11 +32237,11 @@ const u32 effB8_mes_jp_9_22[40] = {
     0xD0FFEA, 0xA028, 0xE0FFEA, 0xA018, 0xF0FFEA, 0xA030, 0x100FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_9_24[26] = {
-    0x500000, 0xA004, 0x600000, 0xA016, 0x700000, 0xA00B, 0x800000, 0xA246,
-    0x900000, 0xA001, 0xA00000, 0xA018, 0xB00000, 0xA030, 0xD00000, 0xA057,
-    0xE00000, 0xA003, 0xF00000, 0xA003, 0x1000000, 0xA018, 0x1100000, 0xA030,
-    0x1200000, 0xA039,
+const CONN effB8_mes_jp_9_24[13] = {
+    { 80, 0, 0, 0xA004 }, { 96, 0, 0, 0xA016 }, { 112, 0, 0, 0xA00B }, { 128, 0, 0, 0xA246 },
+    { 144, 0, 0, 0xA001 }, { 160, 0, 0, 0xA018 }, { 176, 0, 0, 0xA030 }, { 208, 0, 0, 0xA057 },
+    { 224, 0, 0, 0xA003 }, { 240, 0, 0, 0xA003 }, { 256, 0, 0, 0xA018 }, { 272, 0, 0, 0xA030 },
+    { 288, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_9_26[50] = {
@@ -32264,12 +32264,12 @@ const u32 effB8_mes_jp_9_28[50] = {
     0x110FFEA, 0xA03C,
 };
 
-const u32 effB8_mes_jp_9_30[38] = {
-    0x580000, 0xA09B, 0x680000, 0xA0B4, 0x780000, 0xA09B, 0x880000, 0xA0B4,
-    0x980000, 0xA09B, 0xA80000, 0xA0B4, 0x58FFEA, 0xA223, 0x68FFEA, 0xA1C4,
-    0x78FFEA, 0xA119, 0x88FFEA, 0xA04B, 0x98FFEA, 0xA01A, 0xA8FFEA, 0xA013,
-    0xB8FFEA, 0xA01A, 0xC8FFEA, 0xA017, 0xD8FFEA, 0xA027, 0xE8FFEA, 0xA044,
-    0xF8FFEA, 0xA034, 0x108FFEA, 0xA02B, 0x118FFEA, 0xA001,
+const CONN effB8_mes_jp_9_30[19] = {
+    { 88, 0, 0, 0xA09B }, { 104, 0, 0, 0xA0B4 }, { 120, 0, 0, 0xA09B }, { 136, 0, 0, 0xA0B4 },
+    { 152, 0, 0, 0xA09B }, { 168, 0, 0, 0xA0B4 }, { 88, -22, 0, 0xA223 }, { 104, -22, 0, 0xA1C4 },
+    { 120, -22, 0, 0xA119 }, { 136, -22, 0, 0xA04B }, { 152, -22, 0, 0xA01A }, { 168, -22, 0, 0xA013 },
+    { 184, -22, 0, 0xA01A }, { 200, -22, 0, 0xA017 }, { 216, -22, 0, 0xA027 }, { 232, -22, 0, 0xA044 },
+    { 248, -22, 0, 0xA034 }, { 264, -22, 0, 0xA02B }, { 280, -22, 0, 0xA001 },
 };
 
 const u32 effB8_mes_jp_9_32[44] = {
@@ -32289,13 +32289,13 @@ const u32 effB8_mes_jp_9_34[34] = {
     0xF0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_9_36[44] = {
-    0x480000, 0xA004, 0x580000, 0xA016, 0x680000, 0xA00B, 0x780000, 0xA015,
-    0x880000, 0xA1D1, 0x980000, 0xA012, 0xA80000, 0xA045, 0xC80000, 0xA004,
-    0xD80000, 0xA016, 0xE80000, 0xA00B, 0xF80000, 0xA03E, 0x1080000, 0xA1D1,
-    0x1180000, 0xA00F, 0x1280000, 0xA028, 0x48FFEA, 0xA3E6, 0x58FFEA, 0xA1B5,
-    0x68FFEA, 0xA1FF, 0x78FFEA, 0xA018, 0x88FFEA, 0xA166, 0x98FFEA, 0xA10D,
-    0xA8FFEA, 0xA044, 0xB8FFEA, 0xA034,
+const CONN effB8_mes_jp_9_36[22] = {
+    { 72, 0, 0, 0xA004 }, { 88, 0, 0, 0xA016 }, { 104, 0, 0, 0xA00B }, { 120, 0, 0, 0xA015 },
+    { 136, 0, 0, 0xA1D1 }, { 152, 0, 0, 0xA012 }, { 168, 0, 0, 0xA045 }, { 200, 0, 0, 0xA004 },
+    { 216, 0, 0, 0xA016 }, { 232, 0, 0, 0xA00B }, { 248, 0, 0, 0xA03E }, { 264, 0, 0, 0xA1D1 },
+    { 280, 0, 0, 0xA00F }, { 296, 0, 0, 0xA028 }, { 72, -22, 0, 0xA3E6 }, { 88, -22, 0, 0xA1B5 },
+    { 104, -22, 0, 0xA1FF }, { 120, -22, 0, 0xA018 }, { 136, -22, 0, 0xA166 }, { 152, -22, 0, 0xA10D },
+    { 168, -22, 0, 0xA044 }, { 184, -22, 0, 0xA034 },
 };
 
 const u32 effB8_mes_jp_9_38[26] = {
@@ -32305,13 +32305,13 @@ const u32 effB8_mes_jp_9_38[26] = {
     0x1180000, 0xA034,
 };
 
-const u32 effB8_mes_jp_9_40[46] = {
-    0x580000, 0xA3E8, 0x680000, 0xA3E9, 0x780000, 0xA044, 0x880000, 0xA034,
-    0x980000, 0xA013, 0xA80000, 0xA03C, 0xC80000, 0xA01D, 0xD80000, 0xA004,
-    0xF80000, 0xA004, 0x1080000, 0xA016, 0x1180000, 0xA00B, 0x58FFEA, 0xA254,
-    0x68FFEA, 0xA3E7, 0x78FFEA, 0xA3C7, 0x88FFEA, 0xA015, 0x98FFEA, 0xA219,
-    0xA8FFEA, 0xA21A, 0xB8FFEA, 0xA001, 0xC8FFEA, 0xA002, 0xD8FFEA, 0xA005,
-    0xE8FFEA, 0xA018, 0xF8FFEA, 0xA030, 0x108FFEA, 0xA03C,
+const CONN effB8_mes_jp_9_40[23] = {
+    { 88, 0, 0, 0xA3E8 }, { 104, 0, 0, 0xA3E9 }, { 120, 0, 0, 0xA044 }, { 136, 0, 0, 0xA034 },
+    { 152, 0, 0, 0xA013 }, { 168, 0, 0, 0xA03C }, { 200, 0, 0, 0xA01D }, { 216, 0, 0, 0xA004 },
+    { 248, 0, 0, 0xA004 }, { 264, 0, 0, 0xA016 }, { 280, 0, 0, 0xA00B }, { 88, -22, 0, 0xA254 },
+    { 104, -22, 0, 0xA3E7 }, { 120, -22, 0, 0xA3C7 }, { 136, -22, 0, 0xA015 }, { 152, -22, 0, 0xA219 },
+    { 168, -22, 0, 0xA21A }, { 184, -22, 0, 0xA001 }, { 200, -22, 0, 0xA002 }, { 216, -22, 0, 0xA005 },
+    { 232, -22, 0, 0xA018 }, { 248, -22, 0, 0xA030 }, { 264, -22, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_9_42[38] = {
@@ -32330,11 +32330,11 @@ const u32 effB8_mes_jp_9_48[36] = {
     0x108FFEA, 0xA018, 0x118FFEA, 0xA313,
 };
 
-const u32 effB8_mes_jp_9_50[28] = {
-    0x480000, 0xA02B, 0x580000, 0xA00B, 0x680000, 0xA019, 0x780000, 0xA17D,
-    0x880000, 0xA001, 0x980000, 0xA018, 0xA80000, 0xA030, 0xC80000, 0xA014,
-    0xD80000, 0xA02D, 0xE80000, 0xA04B, 0xF80000, 0xA044, 0x1080000, 0xA034,
-    0x1180000, 0xA02A, 0x1280000, 0xA039,
+const CONN effB8_mes_jp_9_50[14] = {
+    { 72, 0, 0, 0xA02B }, { 88, 0, 0, 0xA00B }, { 104, 0, 0, 0xA019 }, { 120, 0, 0, 0xA17D },
+    { 136, 0, 0, 0xA001 }, { 152, 0, 0, 0xA018 }, { 168, 0, 0, 0xA030 }, { 200, 0, 0, 0xA014 },
+    { 216, 0, 0, 0xA02D }, { 232, 0, 0, 0xA04B }, { 248, 0, 0, 0xA044 }, { 264, 0, 0, 0xA034 },
+    { 280, 0, 0, 0xA02A }, { 296, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_9_52[32] = {
@@ -32344,11 +32344,11 @@ const u32 effB8_mes_jp_9_52[32] = {
     0xC0FFEA, 0xA023, 0xD0FFEA, 0xA028, 0xE0FFEA, 0xA005, 0xF0FFEA, 0xA03C,
 };
 
-const u32 effB8_mes_jp_9_54[32] = {
-    0x580000, 0xA004, 0x680000, 0xA033, 0x780000, 0xA01D, 0x58FFEA, 0xA001,
-    0x68FFEA, 0xA011, 0x78FFEA, 0xA018, 0x88FFEA, 0xA1F5, 0x98FFEA, 0xA015,
-    0xA8FFEA, 0xA005, 0xB8FFEA, 0xA14A, 0xC8FFEA, 0xA029, 0xD8FFEA, 0xA013,
-    0xE8FFEA, 0xA028, 0xF8FFEA, 0xA02B, 0x108FFEA, 0xA001, 0x118FFEA, 0xA039,
+const CONN effB8_mes_jp_9_54[16] = {
+    { 88, 0, 0, 0xA004 }, { 104, 0, 0, 0xA033 }, { 120, 0, 0, 0xA01D }, { 88, -22, 0, 0xA001 },
+    { 104, -22, 0, 0xA011 }, { 120, -22, 0, 0xA018 }, { 136, -22, 0, 0xA1F5 }, { 152, -22, 0, 0xA015 },
+    { 168, -22, 0, 0xA005 }, { 184, -22, 0, 0xA14A }, { 200, -22, 0, 0xA029 }, { 216, -22, 0, 0xA013 },
+    { 232, -22, 0, 0xA028 }, { 248, -22, 0, 0xA02B }, { 264, -22, 0, 0xA001 }, { 280, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_9_56[54] = {
@@ -32490,29 +32490,29 @@ const u16 effB8_mes_jp_9_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_10[30] = {
-    { (const CONN*)effB8_mes_jp_10_0, (const u16*)effB8_mes_jp_10_1 }, { (const CONN*)effB8_mes_jp_10_2, (const u16*)effB8_mes_jp_10_3 },
-    { (const CONN*)effB8_mes_jp_10_4, (const u16*)effB8_mes_jp_10_5 }, { (const CONN*)effB8_mes_jp_10_6, (const u16*)effB8_mes_jp_10_7 },
-    { (const CONN*)effB8_mes_jp_10_8, (const u16*)effB8_mes_jp_10_9 }, { (const CONN*)effB8_mes_jp_10_10, (const u16*)effB8_mes_jp_10_11 },
-    { (const CONN*)effB8_mes_jp_10_12, (const u16*)effB8_mes_jp_10_13 }, { (const CONN*)effB8_mes_jp_10_14, (const u16*)effB8_mes_jp_10_15 },
-    { (const CONN*)effB8_mes_jp_10_16, (const u16*)effB8_mes_jp_10_17 }, { (const CONN*)effB8_mes_jp_10_18, (const u16*)effB8_mes_jp_10_19 },
-    { (const CONN*)effB8_mes_jp_10_20, (const u16*)effB8_mes_jp_10_21 }, { (const CONN*)effB8_mes_jp_10_22, (const u16*)effB8_mes_jp_10_23 },
-    { (const CONN*)effB8_mes_jp_10_24, (const u16*)effB8_mes_jp_10_25 }, { (const CONN*)effB8_mes_jp_10_26, (const u16*)effB8_mes_jp_10_27 },
-    { (const CONN*)effB8_mes_jp_10_28, (const u16*)effB8_mes_jp_10_29 }, { (const CONN*)effB8_mes_jp_10_30, (const u16*)effB8_mes_jp_10_31 },
-    { (const CONN*)effB8_mes_jp_10_32, (const u16*)effB8_mes_jp_10_33 }, { (const CONN*)effB8_mes_jp_10_34, (const u16*)effB8_mes_jp_10_35 },
-    { (const CONN*)effB8_mes_jp_10_36, (const u16*)effB8_mes_jp_10_37 }, { (const CONN*)effB8_mes_jp_10_38, (const u16*)effB8_mes_jp_10_39 },
-    { (const CONN*)effB8_mes_jp_10_40, (const u16*)effB8_mes_jp_10_41 }, { (const CONN*)effB8_mes_jp_10_42, (const u16*)effB8_mes_jp_10_43 },
-    { (const CONN*)effB8_mes_jp_10_42, (const u16*)effB8_mes_jp_10_45 }, { (const CONN*)effB8_mes_jp_10_42, (const u16*)effB8_mes_jp_10_47 },
-    { (const CONN*)effB8_mes_jp_10_48, (const u16*)effB8_mes_jp_10_49 }, { (const CONN*)effB8_mes_jp_10_50, (const u16*)effB8_mes_jp_10_51 },
-    { (const CONN*)effB8_mes_jp_10_52, (const u16*)effB8_mes_jp_10_53 }, { (const CONN*)effB8_mes_jp_10_54, (const u16*)effB8_mes_jp_10_55 },
-    { (const CONN*)effB8_mes_jp_10_56, (const u16*)effB8_mes_jp_10_57 }, { (const CONN*)effB8_mes_jp_10_58, (const u16*)effB8_mes_jp_10_59 },
+    { effB8_mes_jp_10_0, effB8_mes_jp_10_1 }, { (const CONN*)effB8_mes_jp_10_2, effB8_mes_jp_10_3 },
+    { (const CONN*)effB8_mes_jp_10_4, effB8_mes_jp_10_5 }, { effB8_mes_jp_10_6, effB8_mes_jp_10_7 },
+    { (const CONN*)effB8_mes_jp_10_8, effB8_mes_jp_10_9 }, { (const CONN*)effB8_mes_jp_10_10, effB8_mes_jp_10_11 },
+    { effB8_mes_jp_10_12, effB8_mes_jp_10_13 }, { (const CONN*)effB8_mes_jp_10_14, effB8_mes_jp_10_15 },
+    { (const CONN*)effB8_mes_jp_10_16, effB8_mes_jp_10_17 }, { effB8_mes_jp_10_18, effB8_mes_jp_10_19 },
+    { (const CONN*)effB8_mes_jp_10_20, effB8_mes_jp_10_21 }, { (const CONN*)effB8_mes_jp_10_22, effB8_mes_jp_10_23 },
+    { effB8_mes_jp_10_24, effB8_mes_jp_10_25 }, { (const CONN*)effB8_mes_jp_10_26, effB8_mes_jp_10_27 },
+    { (const CONN*)effB8_mes_jp_10_28, effB8_mes_jp_10_29 }, { (const CONN*)effB8_mes_jp_10_30, effB8_mes_jp_10_31 },
+    { effB8_mes_jp_10_32, effB8_mes_jp_10_33 }, { (const CONN*)effB8_mes_jp_10_34, effB8_mes_jp_10_35 },
+    { (const CONN*)effB8_mes_jp_10_36, effB8_mes_jp_10_37 }, { effB8_mes_jp_10_38, effB8_mes_jp_10_39 },
+    { (const CONN*)effB8_mes_jp_10_40, effB8_mes_jp_10_41 }, { effB8_mes_jp_10_42, effB8_mes_jp_10_43 },
+    { effB8_mes_jp_10_42, effB8_mes_jp_10_45 }, { effB8_mes_jp_10_42, effB8_mes_jp_10_47 },
+    { (const CONN*)effB8_mes_jp_10_48, effB8_mes_jp_10_49 }, { (const CONN*)effB8_mes_jp_10_50, effB8_mes_jp_10_51 },
+    { effB8_mes_jp_10_52, effB8_mes_jp_10_53 }, { (const CONN*)effB8_mes_jp_10_54, effB8_mes_jp_10_55 },
+    { (const CONN*)effB8_mes_jp_10_56, effB8_mes_jp_10_57 }, { effB8_mes_jp_10_58, effB8_mes_jp_10_59 },
 };
 
-const u32 effB8_mes_jp_10_0[36] = {
-    0x700000, 0xA220, 0x800000, 0xA221, 0x900000, 0xA014, 0xA00000, 0xA001,
-    0xB00000, 0xA2F5, 0xC00000, 0xA021, 0xD00000, 0xA048, 0xE00000, 0xA033,
-    0xF00000, 0xA00F, 0x1000000, 0xA057, 0x70FFEA, 0xA391, 0x80FFEA, 0xA273,
-    0x90FFEA, 0xA119, 0xA0FFEA, 0xA018, 0xB0FFEA, 0xA174, 0xC0FFEA, 0xA1F3,
-    0xD0FFEA, 0xA048, 0xE0FFEA, 0xA014,
+const CONN effB8_mes_jp_10_0[18] = {
+    { 112, 0, 0, 0xA220 }, { 128, 0, 0, 0xA221 }, { 144, 0, 0, 0xA014 }, { 160, 0, 0, 0xA001 },
+    { 176, 0, 0, 0xA2F5 }, { 192, 0, 0, 0xA021 }, { 208, 0, 0, 0xA048 }, { 224, 0, 0, 0xA033 },
+    { 240, 0, 0, 0xA00F }, { 256, 0, 0, 0xA057 }, { 112, -22, 0, 0xA391 }, { 128, -22, 0, 0xA273 },
+    { 144, -22, 0, 0xA119 }, { 160, -22, 0, 0xA018 }, { 176, -22, 0, 0xA174 }, { 192, -22, 0, 0xA1F3 },
+    { 208, -22, 0, 0xA048 }, { 224, -22, 0, 0xA014 },
 };
 
 const u32 effB8_mes_jp_10_2[38] = {
@@ -32533,11 +32533,11 @@ const u32 effB8_mes_jp_10_4[50] = {
     0xE8FFEA, 0xA048,
 };
 
-const u32 effB8_mes_jp_10_6[32] = {
-    0x800000, 0xA174, 0x900000, 0xA114, 0xA00000, 0xA015, 0xB00000, 0xA167,
-    0xC00000, 0xA19F, 0xD00000, 0xA27D, 0xE00000, 0xA27E, 0xF00000, 0xA019,
-    0x80FFEA, 0xA094, 0x90FFEA, 0xA0AD, 0xA0FFEA, 0xA08D, 0xB0FFEA, 0xA0AD,
-    0xC0FFEA, 0xA08C, 0xD0FFEA, 0xA048, 0xE0FFEA, 0xA025, 0xF0FFEA, 0xA014,
+const CONN effB8_mes_jp_10_6[16] = {
+    { 128, 0, 0, 0xA174 }, { 144, 0, 0, 0xA114 }, { 160, 0, 0, 0xA015 }, { 176, 0, 0, 0xA167 },
+    { 192, 0, 0, 0xA19F }, { 208, 0, 0, 0xA27D }, { 224, 0, 0, 0xA27E }, { 240, 0, 0, 0xA019 },
+    { 128, -22, 0, 0xA094 }, { 144, -22, 0, 0xA0AD }, { 160, -22, 0, 0xA08D }, { 176, -22, 0, 0xA0AD },
+    { 192, -22, 0, 0xA08C }, { 208, -22, 0, 0xA048 }, { 224, -22, 0, 0xA025 }, { 240, -22, 0, 0xA014 },
 };
 
 const u32 effB8_mes_jp_10_8[40] = {
@@ -32557,12 +32557,12 @@ const u32 effB8_mes_jp_10_10[44] = {
     0xF8FFEA, 0xA00F, 0x108FFEA, 0xA014,
 };
 
-const u32 effB8_mes_jp_10_12[38] = {
-    0x600000, 0xA0C5, 0x700000, 0xA085, 0x800000, 0xA00A, 0x900000, 0xA015,
-    0xA00000, 0xA022, 0xB00000, 0xA1B9, 0xC00000, 0xA132, 0xD00000, 0xA033,
-    0xE00000, 0xA012, 0xF00000, 0xA022, 0x1000000, 0xA018, 0x1100000, 0xA03E,
-    0x60FFEA, 0xA000, 0x70FFEA, 0xA028, 0x80FFEA, 0xA046, 0xA0FFEA, 0xA002,
-    0xB0FFEA, 0xA00C, 0xC0FFEA, 0xA018, 0xD0FFEA, 0xA02A,
+const CONN effB8_mes_jp_10_12[19] = {
+    { 96, 0, 0, 0xA0C5 }, { 112, 0, 0, 0xA085 }, { 128, 0, 0, 0xA00A }, { 144, 0, 0, 0xA015 },
+    { 160, 0, 0, 0xA022 }, { 176, 0, 0, 0xA1B9 }, { 192, 0, 0, 0xA132 }, { 208, 0, 0, 0xA033 },
+    { 224, 0, 0, 0xA012 }, { 240, 0, 0, 0xA022 }, { 256, 0, 0, 0xA018 }, { 272, 0, 0, 0xA03E },
+    { 96, -22, 0, 0xA000 }, { 112, -22, 0, 0xA028 }, { 128, -22, 0, 0xA046 }, { 160, -22, 0, 0xA002 },
+    { 176, -22, 0, 0xA00C }, { 192, -22, 0, 0xA018 }, { 208, -22, 0, 0xA02A },
 };
 
 const u32 effB8_mes_jp_10_14[36] = {
@@ -32582,13 +32582,13 @@ const u32 effB8_mes_jp_10_16[42] = {
     0x120FFEA, 0xA046,
 };
 
-const u32 effB8_mes_jp_10_18[44] = {
-    0x500000, 0xA01B, 0x600000, 0xA043, 0x700000, 0xA008, 0x800000, 0xA00F,
-    0x900000, 0xA19E, 0xA00000, 0xA00A, 0xB00000, 0xA02D, 0xC00000, 0xA048,
-    0x50FFEA, 0xA006, 0x60FFEA, 0xA033, 0x70FFEA, 0xA010, 0x80FFEA, 0xA027,
-    0x90FFEA, 0xA143, 0xA0FFEA, 0xA02B, 0xB0FFEA, 0xA014, 0xC0FFEA, 0xA001,
-    0xD0FFEA, 0xA013, 0xE0FFEA, 0xA174, 0xF0FFEA, 0xA012, 0x100FFEA, 0xA014,
-    0x110FFEA, 0xA001, 0x120FFEA, 0xA046,
+const CONN effB8_mes_jp_10_18[22] = {
+    { 80, 0, 0, 0xA01B }, { 96, 0, 0, 0xA043 }, { 112, 0, 0, 0xA008 }, { 128, 0, 0, 0xA00F },
+    { 144, 0, 0, 0xA19E }, { 160, 0, 0, 0xA00A }, { 176, 0, 0, 0xA02D }, { 192, 0, 0, 0xA048 },
+    { 80, -22, 0, 0xA006 }, { 96, -22, 0, 0xA033 }, { 112, -22, 0, 0xA010 }, { 128, -22, 0, 0xA027 },
+    { 144, -22, 0, 0xA143 }, { 160, -22, 0, 0xA02B }, { 176, -22, 0, 0xA014 }, { 192, -22, 0, 0xA001 },
+    { 208, -22, 0, 0xA013 }, { 224, -22, 0, 0xA174 }, { 240, -22, 0, 0xA012 }, { 256, -22, 0, 0xA014 },
+    { 272, -22, 0, 0xA001 }, { 288, -22, 0, 0xA046 },
 };
 
 const u32 effB8_mes_jp_10_20[44] = {
@@ -32609,10 +32609,10 @@ const u32 effB8_mes_jp_10_22[48] = {
     0x98FFEA, 0xA00C, 0xA8FFEA, 0xA03F, 0xB8FFEA, 0xA028, 0xC8FFEA, 0xA057,
 };
 
-const u32 effB8_mes_jp_10_24[24] = {
-    0x880000, 0xA01E, 0x980000, 0xA048, 0xA80000, 0xA023, 0xB80000, 0xA028,
-    0xC80000, 0xA11A, 0xD80000, 0xA005, 0xE80000, 0xA03C, 0x88FFEA, 0xA129,
-    0x98FFEA, 0xA001, 0xA8FFEA, 0xA018, 0xB8FFEA, 0xA015, 0xC8FFEA, 0xA057,
+const CONN effB8_mes_jp_10_24[12] = {
+    { 136, 0, 0, 0xA01E }, { 152, 0, 0, 0xA048 }, { 168, 0, 0, 0xA023 }, { 184, 0, 0, 0xA028 },
+    { 200, 0, 0, 0xA11A }, { 216, 0, 0, 0xA005 }, { 232, 0, 0, 0xA03C }, { 136, -22, 0, 0xA129 },
+    { 152, -22, 0, 0xA001 }, { 168, -22, 0, 0xA018 }, { 184, -22, 0, 0xA015 }, { 200, -22, 0, 0xA057 },
 };
 
 const u32 effB8_mes_jp_10_26[50] = {
@@ -32644,12 +32644,12 @@ const u32 effB8_mes_jp_10_30[42] = {
     0x110FFEA, 0xA014,
 };
 
-const u32 effB8_mes_jp_10_32[40] = {
-    0x680000, 0xA3EF, 0x780000, 0xA151, 0x880000, 0xA013, 0x980000, 0xA146,
-    0xA80000, 0xA033, 0xB80000, 0xA00F, 0xC80000, 0xA018, 0xD80000, 0xA005,
-    0xE80000, 0xA03C, 0x68FFEA, 0xA3B0, 0x78FFEA, 0xA456, 0x88FFEA, 0xA3BA,
-    0x98FFEA, 0xA10B, 0xA8FFEA, 0xA109, 0xB8FFEA, 0xA04B, 0xC8FFEA, 0xA232,
-    0xD8FFEA, 0xA019, 0xE8FFEA, 0xA250, 0xF8FFEA, 0xA1D2, 0x108FFEA, 0xA048,
+const CONN effB8_mes_jp_10_32[20] = {
+    { 104, 0, 0, 0xA3EF }, { 120, 0, 0, 0xA151 }, { 136, 0, 0, 0xA013 }, { 152, 0, 0, 0xA146 },
+    { 168, 0, 0, 0xA033 }, { 184, 0, 0, 0xA00F }, { 200, 0, 0, 0xA018 }, { 216, 0, 0, 0xA005 },
+    { 232, 0, 0, 0xA03C }, { 104, -22, 0, 0xA3B0 }, { 120, -22, 0, 0xA456 }, { 136, -22, 0, 0xA3BA },
+    { 152, -22, 0, 0xA10B }, { 168, -22, 0, 0xA109 }, { 184, -22, 0, 0xA04B }, { 200, -22, 0, 0xA232 },
+    { 216, -22, 0, 0xA019 }, { 232, -22, 0, 0xA250 }, { 248, -22, 0, 0xA1D2 }, { 264, -22, 0, 0xA048 },
 };
 
 const u32 effB8_mes_jp_10_34[44] = {
@@ -32670,11 +32670,11 @@ const u32 effB8_mes_jp_10_36[44] = {
     0xF8FFEA, 0xA001, 0x108FFEA, 0xA046,
 };
 
-const u32 effB8_mes_jp_10_38[30] = {
-    0x400000, 0xA23C, 0x500000, 0xA001, 0x600000, 0xA014, 0x800000, 0xA454,
-    0x900000, 0xA3C2, 0xA00000, 0xA455, 0xB00000, 0xA3DE, 0xC00000, 0xA04B,
-    0xD00000, 0xA1A5, 0xE00000, 0xA02B, 0xF00000, 0xA00A, 0x1000000, 0xA029,
-    0x1100000, 0xA028, 0x1200000, 0xA013, 0x1300000, 0xA019,
+const CONN effB8_mes_jp_10_38[15] = {
+    { 64, 0, 0, 0xA23C }, { 80, 0, 0, 0xA001 }, { 96, 0, 0, 0xA014 }, { 128, 0, 0, 0xA454 },
+    { 144, 0, 0, 0xA3C2 }, { 160, 0, 0, 0xA455 }, { 176, 0, 0, 0xA3DE }, { 192, 0, 0, 0xA04B },
+    { 208, 0, 0, 0xA1A5 }, { 224, 0, 0, 0xA02B }, { 240, 0, 0, 0xA00A }, { 256, 0, 0, 0xA029 },
+    { 272, 0, 0, 0xA028 }, { 288, 0, 0, 0xA013 }, { 304, 0, 0, 0xA019 },
 };
 
 const u32 effB8_mes_jp_10_40[42] = {
@@ -32686,11 +32686,11 @@ const u32 effB8_mes_jp_10_40[42] = {
     0xF0FFEA, 0xA014,
 };
 
-const u32 effB8_mes_jp_10_42[30] = {
-    0x800000, 0xA10E, 0x900000, 0xA03E, 0xA00000, 0xA086, 0xB00000, 0xA0A9,
-    0xC00000, 0xA012, 0xD00000, 0xA012, 0xE00000, 0xA022, 0x80FFEA, 0xA151,
-    0x90FFEA, 0xA001, 0xA0FFEA, 0xA18E, 0xB0FFEA, 0xA019, 0xC0FFEA, 0xA32E,
-    0xD0FFEA, 0xA32F, 0xE0FFEA, 0xA048, 0xF0FFEA, 0xA014,
+const CONN effB8_mes_jp_10_42[15] = {
+    { 128, 0, 0, 0xA10E }, { 144, 0, 0, 0xA03E }, { 160, 0, 0, 0xA086 }, { 176, 0, 0, 0xA0A9 },
+    { 192, 0, 0, 0xA012 }, { 208, 0, 0, 0xA012 }, { 224, 0, 0, 0xA022 }, { 128, -22, 0, 0xA151 },
+    { 144, -22, 0, 0xA001 }, { 160, -22, 0, 0xA18E }, { 176, -22, 0, 0xA019 }, { 192, -22, 0, 0xA32E },
+    { 208, -22, 0, 0xA32F }, { 224, -22, 0, 0xA048 }, { 240, -22, 0, 0xA014 },
 };
 
 const u32 effB8_mes_jp_10_48[42] = {
@@ -32710,13 +32710,13 @@ const u32 effB8_mes_jp_10_50[40] = {
     0xA0FFEA, 0xA014, 0xB0FFEA, 0xA02D, 0xC0FFEA, 0xA048, 0xD0FFEA, 0xA046,
 };
 
-const u32 effB8_mes_jp_10_52[44] = {
-    0x500000, 0xA009, 0x600000, 0xA029, 0x700000, 0xA319, 0x800000, 0xA112,
-    0x900000, 0xA023, 0xA00000, 0xA033, 0xB00000, 0xA012, 0xC00000, 0xA022,
-    0x50FFEA, 0xA004, 0x60FFEA, 0xA00F, 0x70FFEA, 0xA03E, 0x80FFEA, 0xA001,
-    0x90FFEA, 0xA1C1, 0xA0FFEA, 0xA119, 0xB0FFEA, 0xA018, 0xC0FFEA, 0xA0A0,
-    0xD0FFEA, 0xA0C2, 0xE0FFEA, 0xA048, 0xF0FFEA, 0xA008, 0x100FFEA, 0xA04C,
-    0x110FFEA, 0xA014, 0x120FFEA, 0xA057,
+const CONN effB8_mes_jp_10_52[22] = {
+    { 80, 0, 0, 0xA009 }, { 96, 0, 0, 0xA029 }, { 112, 0, 0, 0xA319 }, { 128, 0, 0, 0xA112 },
+    { 144, 0, 0, 0xA023 }, { 160, 0, 0, 0xA033 }, { 176, 0, 0, 0xA012 }, { 192, 0, 0, 0xA022 },
+    { 80, -22, 0, 0xA004 }, { 96, -22, 0, 0xA00F }, { 112, -22, 0, 0xA03E }, { 128, -22, 0, 0xA001 },
+    { 144, -22, 0, 0xA1C1 }, { 160, -22, 0, 0xA119 }, { 176, -22, 0, 0xA018 }, { 192, -22, 0, 0xA0A0 },
+    { 208, -22, 0, 0xA0C2 }, { 224, -22, 0, 0xA048 }, { 240, -22, 0, 0xA008 }, { 256, -22, 0, 0xA04C },
+    { 272, -22, 0, 0xA014 }, { 288, -22, 0, 0xA057 },
 };
 
 const u32 effB8_mes_jp_10_54[30] = {
@@ -32735,11 +32735,11 @@ const u32 effB8_mes_jp_10_56[44] = {
     0xE0FFEA, 0xA1B2, 0xF0FFEA, 0xA028,
 };
 
-const u32 effB8_mes_jp_10_58[30] = {
-    0x400000, 0xA084, 0x500000, 0xA0A9, 0x600000, 0xA019, 0x700000, 0xA17D,
-    0x800000, 0xA001, 0x900000, 0xA033, 0xA00000, 0xA012, 0xC00000, 0xA253,
-    0xD00000, 0xA02B, 0xE00000, 0xA014, 0xF00000, 0xA005, 0x1000000, 0xA033,
-    0x1100000, 0xA00F, 0x1200000, 0xA005, 0x1300000, 0xA03C,
+const CONN effB8_mes_jp_10_58[15] = {
+    { 64, 0, 0, 0xA084 }, { 80, 0, 0, 0xA0A9 }, { 96, 0, 0, 0xA019 }, { 112, 0, 0, 0xA17D },
+    { 128, 0, 0, 0xA001 }, { 144, 0, 0, 0xA033 }, { 160, 0, 0, 0xA012 }, { 192, 0, 0, 0xA253 },
+    { 208, 0, 0, 0xA02B }, { 224, 0, 0, 0xA014 }, { 240, 0, 0, 0xA005 }, { 256, 0, 0, 0xA033 },
+    { 272, 0, 0, 0xA00F }, { 288, 0, 0, 0xA005 }, { 304, 0, 0, 0xA03C },
 };
 
 const u16 effB8_mes_jp_10_1[8] = {
@@ -32864,28 +32864,28 @@ const u16 effB8_mes_jp_10_59[7] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_11[30] = {
-    { (const CONN*)effB8_mes_jp_11_0, (const u16*)effB8_mes_jp_11_1 }, { (const CONN*)effB8_mes_jp_11_2, (const u16*)effB8_mes_jp_11_3 },
-    { (const CONN*)effB8_mes_jp_11_4, (const u16*)effB8_mes_jp_11_5 }, { (const CONN*)effB8_mes_jp_11_6, (const u16*)effB8_mes_jp_11_7 },
-    { (const CONN*)effB8_mes_jp_11_8, (const u16*)effB8_mes_jp_11_9 }, { (const CONN*)effB8_mes_jp_11_10, (const u16*)effB8_mes_jp_11_11 },
-    { (const CONN*)effB8_mes_jp_11_12, (const u16*)effB8_mes_jp_11_13 }, { (const CONN*)effB8_mes_jp_11_14, (const u16*)effB8_mes_jp_11_15 },
-    { (const CONN*)effB8_mes_jp_11_16, (const u16*)effB8_mes_jp_11_17 }, { (const CONN*)effB8_mes_jp_11_18, (const u16*)effB8_mes_jp_11_19 },
-    { (const CONN*)effB8_mes_jp_11_20, (const u16*)effB8_mes_jp_11_21 }, { (const CONN*)effB8_mes_jp_11_22, (const u16*)effB8_mes_jp_11_23 },
-    { (const CONN*)effB8_mes_jp_11_24, (const u16*)effB8_mes_jp_11_25 }, { (const CONN*)effB8_mes_jp_11_26, (const u16*)effB8_mes_jp_11_27 },
-    { (const CONN*)effB8_mes_jp_11_28, (const u16*)effB8_mes_jp_11_29 }, { (const CONN*)effB8_mes_jp_11_30, (const u16*)effB8_mes_jp_11_31 },
-    { (const CONN*)effB8_mes_jp_11_32, (const u16*)effB8_mes_jp_11_33 }, { (const CONN*)effB8_mes_jp_11_34, (const u16*)effB8_mes_jp_11_35 },
-    { (const CONN*)effB8_mes_jp_11_36, (const u16*)effB8_mes_jp_11_37 }, { (const CONN*)effB8_mes_jp_11_38, (const u16*)effB8_mes_jp_11_39 },
-    { (const CONN*)effB8_mes_jp_11_40, (const u16*)effB8_mes_jp_11_41 }, { (const CONN*)effB8_mes_jp_11_42, (const u16*)effB8_mes_jp_11_43 },
-    { (const CONN*)effB8_mes_jp_11_42, (const u16*)effB8_mes_jp_11_45 }, { (const CONN*)effB8_mes_jp_11_42, (const u16*)effB8_mes_jp_11_47 },
-    { (const CONN*)effB8_mes_jp_11_48, (const u16*)effB8_mes_jp_11_49 }, { (const CONN*)effB8_mes_jp_11_50, (const u16*)effB8_mes_jp_11_51 },
-    { (const CONN*)effB8_mes_jp_11_52, (const u16*)effB8_mes_jp_11_53 }, { (const CONN*)effB8_mes_jp_11_54, (const u16*)effB8_mes_jp_11_55 },
-    { (const CONN*)effB8_mes_jp_11_56, (const u16*)effB8_mes_jp_11_57 }, { (const CONN*)effB8_mes_jp_11_58, (const u16*)effB8_mes_jp_11_59 },
+    { effB8_mes_jp_11_0, effB8_mes_jp_11_1 }, { (const CONN*)effB8_mes_jp_11_2, effB8_mes_jp_11_3 },
+    { effB8_mes_jp_11_4, effB8_mes_jp_11_5 }, { (const CONN*)effB8_mes_jp_11_6, effB8_mes_jp_11_7 },
+    { (const CONN*)effB8_mes_jp_11_8, effB8_mes_jp_11_9 }, { effB8_mes_jp_11_10, effB8_mes_jp_11_11 },
+    { (const CONN*)effB8_mes_jp_11_12, effB8_mes_jp_11_13 }, { (const CONN*)effB8_mes_jp_11_14, effB8_mes_jp_11_15 },
+    { effB8_mes_jp_11_16, effB8_mes_jp_11_17 }, { (const CONN*)effB8_mes_jp_11_18, effB8_mes_jp_11_19 },
+    { (const CONN*)effB8_mes_jp_11_20, effB8_mes_jp_11_21 }, { effB8_mes_jp_11_22, effB8_mes_jp_11_23 },
+    { (const CONN*)effB8_mes_jp_11_24, effB8_mes_jp_11_25 }, { (const CONN*)effB8_mes_jp_11_26, effB8_mes_jp_11_27 },
+    { effB8_mes_jp_11_28, effB8_mes_jp_11_29 }, { (const CONN*)effB8_mes_jp_11_30, effB8_mes_jp_11_31 },
+    { effB8_mes_jp_11_32, effB8_mes_jp_11_33 }, { (const CONN*)effB8_mes_jp_11_34, effB8_mes_jp_11_35 },
+    { (const CONN*)effB8_mes_jp_11_36, effB8_mes_jp_11_37 }, { effB8_mes_jp_11_38, effB8_mes_jp_11_39 },
+    { (const CONN*)effB8_mes_jp_11_40, effB8_mes_jp_11_41 }, { effB8_mes_jp_11_42, effB8_mes_jp_11_43 },
+    { effB8_mes_jp_11_42, effB8_mes_jp_11_45 }, { effB8_mes_jp_11_42, effB8_mes_jp_11_47 },
+    { (const CONN*)effB8_mes_jp_11_48, effB8_mes_jp_11_49 }, { effB8_mes_jp_11_50, effB8_mes_jp_11_51 },
+    { (const CONN*)effB8_mes_jp_11_52, effB8_mes_jp_11_53 }, { (const CONN*)effB8_mes_jp_11_54, effB8_mes_jp_11_55 },
+    { effB8_mes_jp_11_56, effB8_mes_jp_11_57 }, { (const CONN*)effB8_mes_jp_11_58, effB8_mes_jp_11_59 },
 };
 
-const u32 effB8_mes_jp_11_0[30] = {
-    0x400000, 0xA393, 0x500000, 0xA03E, 0x600000, 0xA3F3, 0x700000, 0xA1AD,
-    0x800000, 0xA002, 0x900000, 0xA216, 0xA00000, 0xA019, 0xC00000, 0xA177,
-    0xD00000, 0xA00B, 0xE00000, 0xA005, 0xF00000, 0xA001, 0x1000000, 0xA014,
-    0x1100000, 0xA001, 0x1200000, 0xA046, 0x1300000, 0xA039,
+const CONN effB8_mes_jp_11_0[15] = {
+    { 64, 0, 0, 0xA393 }, { 80, 0, 0, 0xA03E }, { 96, 0, 0, 0xA3F3 }, { 112, 0, 0, 0xA1AD },
+    { 128, 0, 0, 0xA002 }, { 144, 0, 0, 0xA216 }, { 160, 0, 0, 0xA019 }, { 192, 0, 0, 0xA177 },
+    { 208, 0, 0, 0xA00B }, { 224, 0, 0, 0xA005 }, { 240, 0, 0, 0xA001 }, { 256, 0, 0, 0xA014 },
+    { 272, 0, 0, 0xA001 }, { 288, 0, 0, 0xA046 }, { 304, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_11_2[30] = {
@@ -32895,11 +32895,11 @@ const u32 effB8_mes_jp_11_2[30] = {
     0xE0FFEA, 0xA014, 0xF0FFEA, 0xA025, 0x100FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_11_4[32] = {
-    0x700000, 0xA00E, 0x800000, 0xA02A, 0x900000, 0xA00E, 0xA00000, 0xA02A,
-    0xB00000, 0xA202, 0xC00000, 0xA02C, 0x70FFEA, 0xA085, 0x80FFEA, 0xA08F,
-    0x90FFEA, 0xA021, 0xA0FFEA, 0xA00F, 0xB0FFEA, 0xA026, 0xC0FFEA, 0xA04C,
-    0xD0FFEA, 0xA002, 0xE0FFEA, 0xA048, 0xF0FFEA, 0xA001, 0x100FFEA, 0xA03C,
+const CONN effB8_mes_jp_11_4[16] = {
+    { 112, 0, 0, 0xA00E }, { 128, 0, 0, 0xA02A }, { 144, 0, 0, 0xA00E }, { 160, 0, 0, 0xA02A },
+    { 176, 0, 0, 0xA202 }, { 192, 0, 0, 0xA02C }, { 112, -22, 0, 0xA085 }, { 128, -22, 0, 0xA08F },
+    { 144, -22, 0, 0xA021 }, { 160, -22, 0, 0xA00F }, { 176, -22, 0, 0xA026 }, { 192, -22, 0, 0xA04C },
+    { 208, -22, 0, 0xA002 }, { 224, -22, 0, 0xA048 }, { 240, -22, 0, 0xA001 }, { 256, -22, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_11_6[34] = {
@@ -32919,14 +32919,14 @@ const u32 effB8_mes_jp_11_8[46] = {
     0x100FFEA, 0xA031, 0x110FFEA, 0xA046, 0x120FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_11_10[50] = {
-    0x500000, 0xA001, 0x600000, 0xA011, 0x700000, 0xA04B, 0x800000, 0xA022,
-    0x900000, 0xA005, 0xA00000, 0xA005, 0xB00000, 0xA033, 0xC00000, 0xA012,
-    0xD00000, 0xA006, 0xE00000, 0xA014, 0xF00000, 0xA039, 0x50FFEA, 0xA14A,
-    0x60FFEA, 0xA00B, 0x70FFEA, 0xA03E, 0x80FFEA, 0xA001, 0x90FFEA, 0xA000,
-    0xA0FFEA, 0xA028, 0xB0FFEA, 0xA023, 0xC0FFEA, 0xA011, 0xD0FFEA, 0xA019,
-    0xE0FFEA, 0xA289, 0xF0FFEA, 0xA006, 0x100FFEA, 0xA048, 0x110FFEA, 0xA046,
-    0x120FFEA, 0xA039,
+const CONN effB8_mes_jp_11_10[25] = {
+    { 80, 0, 0, 0xA001 }, { 96, 0, 0, 0xA011 }, { 112, 0, 0, 0xA04B }, { 128, 0, 0, 0xA022 },
+    { 144, 0, 0, 0xA005 }, { 160, 0, 0, 0xA005 }, { 176, 0, 0, 0xA033 }, { 192, 0, 0, 0xA012 },
+    { 208, 0, 0, 0xA006 }, { 224, 0, 0, 0xA014 }, { 240, 0, 0, 0xA039 }, { 80, -22, 0, 0xA14A },
+    { 96, -22, 0, 0xA00B }, { 112, -22, 0, 0xA03E }, { 128, -22, 0, 0xA001 }, { 144, -22, 0, 0xA000 },
+    { 160, -22, 0, 0xA028 }, { 176, -22, 0, 0xA023 }, { 192, -22, 0, 0xA011 }, { 208, -22, 0, 0xA019 },
+    { 224, -22, 0, 0xA289 }, { 240, -22, 0, 0xA006 }, { 256, -22, 0, 0xA048 }, { 272, -22, 0, 0xA046 },
+    { 288, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_11_12[26] = {
@@ -32945,12 +32945,12 @@ const u32 effB8_mes_jp_11_14[42] = {
     0xF8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_11_16[40] = {
-    0x580000, 0xA009, 0x680000, 0xA029, 0x780000, 0xA319, 0x880000, 0xA112,
-    0x980000, 0xA023, 0xA80000, 0xA028, 0xB80000, 0xA013, 0x58FFEA, 0xA08C,
-    0x68FFEA, 0xA0A7, 0x78FFEA, 0xA3A8, 0x88FFEA, 0xA048, 0x98FFEA, 0xA008,
-    0xA8FFEA, 0xA044, 0xB8FFEA, 0xA034, 0xC8FFEA, 0xA00C, 0xD8FFEA, 0xA01E,
-    0xE8FFEA, 0xA014, 0xF8FFEA, 0xA001, 0x108FFEA, 0xA046, 0x118FFEA, 0xA039,
+const CONN effB8_mes_jp_11_16[20] = {
+    { 88, 0, 0, 0xA009 }, { 104, 0, 0, 0xA029 }, { 120, 0, 0, 0xA319 }, { 136, 0, 0, 0xA112 },
+    { 152, 0, 0, 0xA023 }, { 168, 0, 0, 0xA028 }, { 184, 0, 0, 0xA013 }, { 88, -22, 0, 0xA08C },
+    { 104, -22, 0, 0xA0A7 }, { 120, -22, 0, 0xA3A8 }, { 136, -22, 0, 0xA048 }, { 152, -22, 0, 0xA008 },
+    { 168, -22, 0, 0xA044 }, { 184, -22, 0, 0xA034 }, { 200, -22, 0, 0xA00C }, { 216, -22, 0, 0xA01E },
+    { 232, -22, 0, 0xA014 }, { 248, -22, 0, 0xA001 }, { 264, -22, 0, 0xA046 }, { 280, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_11_18[52] = {
@@ -32972,12 +32972,12 @@ const u32 effB8_mes_jp_11_20[48] = {
     0xF0FFEA, 0xA012, 0x100FFEA, 0xA006, 0x110FFEA, 0xA014, 0x120FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_11_22[40] = {
-    0x600000, 0xA177, 0x700000, 0xA018, 0x800000, 0xA085, 0x900000, 0xA0B3,
-    0xA00000, 0xA089, 0xB00000, 0xA025, 0xC00000, 0xA00A, 0xD00000, 0xA019,
-    0x60FFEA, 0xA185, 0x70FFEA, 0xA015, 0x80FFEA, 0xA022, 0x90FFEA, 0xA09E,
-    0xA0FFEA, 0xA097, 0xB0FFEA, 0xA04B, 0xC0FFEA, 0xA006, 0xD0FFEA, 0xA014,
-    0xE0FFEA, 0xA001, 0xF0FFEA, 0xA018, 0x100FFEA, 0xA00A, 0x110FFEA, 0xA039,
+const CONN effB8_mes_jp_11_22[20] = {
+    { 96, 0, 0, 0xA177 }, { 112, 0, 0, 0xA018 }, { 128, 0, 0, 0xA085 }, { 144, 0, 0, 0xA0B3 },
+    { 160, 0, 0, 0xA089 }, { 176, 0, 0, 0xA025 }, { 192, 0, 0, 0xA00A }, { 208, 0, 0, 0xA019 },
+    { 96, -22, 0, 0xA185 }, { 112, -22, 0, 0xA015 }, { 128, -22, 0, 0xA022 }, { 144, -22, 0, 0xA09E },
+    { 160, -22, 0, 0xA097 }, { 176, -22, 0, 0xA04B }, { 192, -22, 0, 0xA006 }, { 208, -22, 0, 0xA014 },
+    { 224, -22, 0, 0xA001 }, { 240, -22, 0, 0xA018 }, { 256, -22, 0, 0xA00A }, { 272, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_11_24[46] = {
@@ -32998,11 +32998,11 @@ const u32 effB8_mes_jp_11_26[42] = {
     0x98FFEA, 0xA046,
 };
 
-const u32 effB8_mes_jp_11_28[28] = {
-    0x480000, 0xA000, 0x580000, 0xA02D, 0x680000, 0xA00F, 0x880000, 0xA177,
-    0x980000, 0xA018, 0xA80000, 0xA3F4, 0xB80000, 0xA23B, 0xC80000, 0xA01D,
-    0xD80000, 0xA04C, 0xE80000, 0xA17D, 0xF80000, 0xA007, 0x1080000, 0xA014,
-    0x1180000, 0xA001, 0x1280000, 0xA014,
+const CONN effB8_mes_jp_11_28[14] = {
+    { 72, 0, 0, 0xA000 }, { 88, 0, 0, 0xA02D }, { 104, 0, 0, 0xA00F }, { 136, 0, 0, 0xA177 },
+    { 152, 0, 0, 0xA018 }, { 168, 0, 0, 0xA3F4 }, { 184, 0, 0, 0xA23B }, { 200, 0, 0, 0xA01D },
+    { 216, 0, 0, 0xA04C }, { 232, 0, 0, 0xA17D }, { 248, 0, 0, 0xA007 }, { 264, 0, 0, 0xA014 },
+    { 280, 0, 0, 0xA001 }, { 296, 0, 0, 0xA014 },
 };
 
 const u32 effB8_mes_jp_11_30[24] = {
@@ -33011,13 +33011,13 @@ const u32 effB8_mes_jp_11_30[24] = {
     0xE00000, 0xA01E, 0xF00000, 0xA001, 0x1000000, 0xA014, 0x1100000, 0xA039,
 };
 
-const u32 effB8_mes_jp_11_32[42] = {
-    0x680000, 0xA165, 0x780000, 0xA166, 0x880000, 0xA089, 0x980000, 0xA0AD,
-    0xA80000, 0xA0C8, 0xB80000, 0xA097, 0xC80000, 0xA0B7, 0xD80000, 0xA08B,
-    0xE80000, 0xA0B6, 0xF80000, 0xA0AD, 0x1080000, 0xA039, 0x68FFEA, 0xA009,
-    0x78FFEA, 0xA029, 0x88FFEA, 0xA03E, 0x98FFEA, 0xA1CD, 0xA8FFEA, 0xA1CE,
-    0xB8FFEA, 0xA28F, 0xC8FFEA, 0xA10B, 0xD8FFEA, 0xA048, 0xE8FFEA, 0xA046,
-    0xF8FFEA, 0xA039,
+const CONN effB8_mes_jp_11_32[21] = {
+    { 104, 0, 0, 0xA165 }, { 120, 0, 0, 0xA166 }, { 136, 0, 0, 0xA089 }, { 152, 0, 0, 0xA0AD },
+    { 168, 0, 0, 0xA0C8 }, { 184, 0, 0, 0xA097 }, { 200, 0, 0, 0xA0B7 }, { 216, 0, 0, 0xA08B },
+    { 232, 0, 0, 0xA0B6 }, { 248, 0, 0, 0xA0AD }, { 264, 0, 0, 0xA039 }, { 104, -22, 0, 0xA009 },
+    { 120, -22, 0, 0xA029 }, { 136, -22, 0, 0xA03E }, { 152, -22, 0, 0xA1CD }, { 168, -22, 0, 0xA1CE },
+    { 184, -22, 0, 0xA28F }, { 200, -22, 0, 0xA10B }, { 216, -22, 0, 0xA048 }, { 232, -22, 0, 0xA046 },
+    { 248, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_11_34[28] = {
@@ -33036,11 +33036,11 @@ const u32 effB8_mes_jp_11_36[42] = {
     0xF8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_11_38[32] = {
-    0x780000, 0xA1D8, 0x880000, 0xA025, 0x980000, 0xA027, 0xA80000, 0xA2E2,
-    0xB80000, 0xA001, 0xC80000, 0xA046, 0xD80000, 0xA039, 0x78FFEA, 0xA084,
-    0x88FFEA, 0xA0A9, 0x98FFEA, 0xA018, 0xA8FFEA, 0xA292, 0xB8FFEA, 0xA1D8,
-    0xC8FFEA, 0xA3F5, 0xD8FFEA, 0xA3B0, 0xE8FFEA, 0xA1DD, 0xF8FFEA, 0xA039,
+const CONN effB8_mes_jp_11_38[16] = {
+    { 120, 0, 0, 0xA1D8 }, { 136, 0, 0, 0xA025 }, { 152, 0, 0, 0xA027 }, { 168, 0, 0, 0xA2E2 },
+    { 184, 0, 0, 0xA001 }, { 200, 0, 0, 0xA046 }, { 216, 0, 0, 0xA039 }, { 120, -22, 0, 0xA084 },
+    { 136, -22, 0, 0xA0A9 }, { 152, -22, 0, 0xA018 }, { 168, -22, 0, 0xA292 }, { 184, -22, 0, 0xA1D8 },
+    { 200, -22, 0, 0xA3F5 }, { 216, -22, 0, 0xA3B0 }, { 232, -22, 0, 0xA1DD }, { 248, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_11_40[38] = {
@@ -33051,11 +33051,11 @@ const u32 effB8_mes_jp_11_40[38] = {
     0x108FFEA, 0xA048, 0x118FFEA, 0xA046, 0x128FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_11_42[28] = {
-    0x500000, 0xA083, 0x600000, 0xA0AD, 0x700000, 0xA0BE, 0x800000, 0xA0AD,
-    0x900000, 0xA015, 0xA00000, 0xA284, 0xB00000, 0xA03E, 0xC00000, 0xA011,
-    0xD00000, 0xA001, 0xE00000, 0xA012, 0xF00000, 0xA006, 0x1000000, 0xA00F,
-    0x1100000, 0xA046, 0x1200000, 0xA039,
+const CONN effB8_mes_jp_11_42[14] = {
+    { 80, 0, 0, 0xA083 }, { 96, 0, 0, 0xA0AD }, { 112, 0, 0, 0xA0BE }, { 128, 0, 0, 0xA0AD },
+    { 144, 0, 0, 0xA015 }, { 160, 0, 0, 0xA284 }, { 176, 0, 0, 0xA03E }, { 192, 0, 0, 0xA011 },
+    { 208, 0, 0, 0xA001 }, { 224, 0, 0, 0xA012 }, { 240, 0, 0, 0xA006 }, { 256, 0, 0, 0xA00F },
+    { 272, 0, 0, 0xA046 }, { 288, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_11_48[26] = {
@@ -33065,14 +33065,14 @@ const u32 effB8_mes_jp_11_48[26] = {
     0x1180000, 0xA039,
 };
 
-const u32 effB8_mes_jp_11_50[50] = {
-    0x400000, 0xA08D, 0x500000, 0xA0AD, 0x600000, 0xA08C, 0x700000, 0xA048,
-    0x800000, 0xA025, 0x900000, 0xA08D, 0xA00000, 0xA0AD, 0xB00000, 0xA08C,
-    0xC00000, 0xA039, 0x40FFEA, 0xA0C9, 0x50FFEA, 0xA0A6, 0x60FFEA, 0xA0AD,
-    0x70FFEA, 0xA087, 0x80FFEA, 0xA014, 0x90FFEA, 0xA02D, 0xA0FFEA, 0xA012,
-    0xB0FFEA, 0xA177, 0xC0FFEA, 0xA015, 0xD0FFEA, 0xA019, 0xE0FFEA, 0xA27D,
-    0xF0FFEA, 0xA27E, 0x100FFEA, 0xA014, 0x110FFEA, 0xA001, 0x120FFEA, 0xA00A,
-    0x130FFEA, 0xA039,
+const CONN effB8_mes_jp_11_50[25] = {
+    { 64, 0, 0, 0xA08D }, { 80, 0, 0, 0xA0AD }, { 96, 0, 0, 0xA08C }, { 112, 0, 0, 0xA048 },
+    { 128, 0, 0, 0xA025 }, { 144, 0, 0, 0xA08D }, { 160, 0, 0, 0xA0AD }, { 176, 0, 0, 0xA08C },
+    { 192, 0, 0, 0xA039 }, { 64, -22, 0, 0xA0C9 }, { 80, -22, 0, 0xA0A6 }, { 96, -22, 0, 0xA0AD },
+    { 112, -22, 0, 0xA087 }, { 128, -22, 0, 0xA014 }, { 144, -22, 0, 0xA02D }, { 160, -22, 0, 0xA012 },
+    { 176, -22, 0, 0xA177 }, { 192, -22, 0, 0xA015 }, { 208, -22, 0, 0xA019 }, { 224, -22, 0, 0xA27D },
+    { 240, -22, 0, 0xA27E }, { 256, -22, 0, 0xA014 }, { 272, -22, 0, 0xA001 }, { 288, -22, 0, 0xA00A },
+    { 304, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_11_52[24] = {
@@ -33090,13 +33090,13 @@ const u32 effB8_mes_jp_11_54[44] = {
     0xD8FFEA, 0xA005, 0xE8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_11_56[42] = {
-    0x480000, 0xA084, 0x580000, 0xA0A9, 0x680000, 0xA018, 0x780000, 0xA393,
-    0x880000, 0xA018, 0x980000, 0xA109, 0xA80000, 0xA019, 0x48FFEA, 0xA00E,
-    0x58FFEA, 0xA002, 0x68FFEA, 0xA21E, 0x78FFEA, 0xA21F, 0x88FFEA, 0xA015,
-    0x98FFEA, 0xA034, 0xB8FFEA, 0xA310, 0xC8FFEA, 0xA00D, 0xD8FFEA, 0xA019,
-    0xE8FFEA, 0xA00B, 0xF8FFEA, 0xA014, 0x108FFEA, 0xA001, 0x118FFEA, 0xA046,
-    0x128FFEA, 0xA039,
+const CONN effB8_mes_jp_11_56[21] = {
+    { 72, 0, 0, 0xA084 }, { 88, 0, 0, 0xA0A9 }, { 104, 0, 0, 0xA018 }, { 120, 0, 0, 0xA393 },
+    { 136, 0, 0, 0xA018 }, { 152, 0, 0, 0xA109 }, { 168, 0, 0, 0xA019 }, { 72, -22, 0, 0xA00E },
+    { 88, -22, 0, 0xA002 }, { 104, -22, 0, 0xA21E }, { 120, -22, 0, 0xA21F }, { 136, -22, 0, 0xA015 },
+    { 152, -22, 0, 0xA034 }, { 184, -22, 0, 0xA310 }, { 200, -22, 0, 0xA00D }, { 216, -22, 0, 0xA019 },
+    { 232, -22, 0, 0xA00B }, { 248, -22, 0, 0xA014 }, { 264, -22, 0, 0xA001 }, { 280, -22, 0, 0xA046 },
+    { 296, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_11_58[42] = {
@@ -33229,30 +33229,30 @@ const u16 effB8_mes_jp_11_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_12[30] = {
-    { (const CONN*)effB8_mes_jp_12_0, (const u16*)effB8_mes_jp_12_1 }, { (const CONN*)effB8_mes_jp_12_2, (const u16*)effB8_mes_jp_12_3 },
-    { (const CONN*)effB8_mes_jp_12_4, (const u16*)effB8_mes_jp_12_5 }, { (const CONN*)effB8_mes_jp_12_6, (const u16*)effB8_mes_jp_12_7 },
-    { (const CONN*)effB8_mes_jp_12_8, (const u16*)effB8_mes_jp_12_9 }, { (const CONN*)effB8_mes_jp_12_10, (const u16*)effB8_mes_jp_12_11 },
-    { (const CONN*)effB8_mes_jp_12_12, (const u16*)effB8_mes_jp_12_13 }, { (const CONN*)effB8_mes_jp_12_14, (const u16*)effB8_mes_jp_12_15 },
-    { (const CONN*)effB8_mes_jp_12_16, (const u16*)effB8_mes_jp_12_17 }, { (const CONN*)effB8_mes_jp_12_18, (const u16*)effB8_mes_jp_12_19 },
-    { (const CONN*)effB8_mes_jp_12_20, (const u16*)effB8_mes_jp_12_21 }, { (const CONN*)effB8_mes_jp_12_22, (const u16*)effB8_mes_jp_12_23 },
-    { (const CONN*)effB8_mes_jp_12_24, (const u16*)effB8_mes_jp_12_25 }, { (const CONN*)effB8_mes_jp_12_26, (const u16*)effB8_mes_jp_12_27 },
-    { (const CONN*)effB8_mes_jp_12_28, (const u16*)effB8_mes_jp_12_29 }, { (const CONN*)effB8_mes_jp_12_30, (const u16*)effB8_mes_jp_12_31 },
-    { (const CONN*)effB8_mes_jp_12_32, (const u16*)effB8_mes_jp_12_33 }, { (const CONN*)effB8_mes_jp_12_34, (const u16*)effB8_mes_jp_12_35 },
-    { (const CONN*)effB8_mes_jp_12_36, (const u16*)effB8_mes_jp_12_37 }, { (const CONN*)effB8_mes_jp_12_38, (const u16*)effB8_mes_jp_12_39 },
-    { (const CONN*)effB8_mes_jp_12_40, (const u16*)effB8_mes_jp_12_41 }, { (const CONN*)effB8_mes_jp_12_42, (const u16*)effB8_mes_jp_12_43 },
-    { (const CONN*)effB8_mes_jp_12_42, (const u16*)effB8_mes_jp_12_45 }, { (const CONN*)effB8_mes_jp_12_42, (const u16*)effB8_mes_jp_12_47 },
-    { (const CONN*)effB8_mes_jp_12_48, (const u16*)effB8_mes_jp_12_49 }, { (const CONN*)effB8_mes_jp_12_50, (const u16*)effB8_mes_jp_12_51 },
-    { (const CONN*)effB8_mes_jp_12_52, (const u16*)effB8_mes_jp_12_53 }, { (const CONN*)effB8_mes_jp_12_54, (const u16*)effB8_mes_jp_12_55 },
-    { (const CONN*)effB8_mes_jp_12_56, (const u16*)effB8_mes_jp_12_57 }, { (const CONN*)effB8_mes_jp_12_58, (const u16*)effB8_mes_jp_12_59 },
+    { effB8_mes_jp_12_0, effB8_mes_jp_12_1 }, { (const CONN*)effB8_mes_jp_12_2, effB8_mes_jp_12_3 },
+    { (const CONN*)effB8_mes_jp_12_4, effB8_mes_jp_12_5 }, { (const CONN*)effB8_mes_jp_12_6, effB8_mes_jp_12_7 },
+    { effB8_mes_jp_12_8, effB8_mes_jp_12_9 }, { (const CONN*)effB8_mes_jp_12_10, effB8_mes_jp_12_11 },
+    { effB8_mes_jp_12_12, effB8_mes_jp_12_13 }, { (const CONN*)effB8_mes_jp_12_14, effB8_mes_jp_12_15 },
+    { (const CONN*)effB8_mes_jp_12_16, effB8_mes_jp_12_17 }, { effB8_mes_jp_12_18, effB8_mes_jp_12_19 },
+    { (const CONN*)effB8_mes_jp_12_20, effB8_mes_jp_12_21 }, { effB8_mes_jp_12_22, effB8_mes_jp_12_23 },
+    { (const CONN*)effB8_mes_jp_12_24, effB8_mes_jp_12_25 }, { (const CONN*)effB8_mes_jp_12_26, effB8_mes_jp_12_27 },
+    { (const CONN*)effB8_mes_jp_12_28, effB8_mes_jp_12_29 }, { effB8_mes_jp_12_30, effB8_mes_jp_12_31 },
+    { effB8_mes_jp_12_32, effB8_mes_jp_12_33 }, { (const CONN*)effB8_mes_jp_12_34, effB8_mes_jp_12_35 },
+    { effB8_mes_jp_12_36, effB8_mes_jp_12_37 }, { (const CONN*)effB8_mes_jp_12_38, effB8_mes_jp_12_39 },
+    { (const CONN*)effB8_mes_jp_12_40, effB8_mes_jp_12_41 }, { effB8_mes_jp_12_42, effB8_mes_jp_12_43 },
+    { effB8_mes_jp_12_42, effB8_mes_jp_12_45 }, { effB8_mes_jp_12_42, effB8_mes_jp_12_47 },
+    { (const CONN*)effB8_mes_jp_12_48, effB8_mes_jp_12_49 }, { effB8_mes_jp_12_50, effB8_mes_jp_12_51 },
+    { (const CONN*)effB8_mes_jp_12_52, effB8_mes_jp_12_53 }, { (const CONN*)effB8_mes_jp_12_54, effB8_mes_jp_12_55 },
+    { effB8_mes_jp_12_56, effB8_mes_jp_12_57 }, { effB8_mes_jp_12_58, effB8_mes_jp_12_59 },
 };
 
-const u32 effB8_mes_jp_12_0[42] = {
-    0x600000, 0xA177, 0x700000, 0xA048, 0x800000, 0xA033, 0x900000, 0xA012,
-    0xA00000, 0xA001, 0xB00000, 0xA011, 0xC00000, 0xA005, 0xD00000, 0xA019,
-    0xE00000, 0xA057, 0x60FFEA, 0xA393, 0x70FFEA, 0xA022, 0x80FFEA, 0xA3F6,
-    0x90FFEA, 0xA022, 0xA0FFEA, 0xA057, 0xB0FFEA, 0xA106, 0xC0FFEA, 0xA00B,
-    0xD0FFEA, 0xA012, 0xE0FFEA, 0xA023, 0xF0FFEA, 0xA028, 0x100FFEA, 0xA033,
-    0x110FFEA, 0xA039,
+const CONN effB8_mes_jp_12_0[21] = {
+    { 96, 0, 0, 0xA177 }, { 112, 0, 0, 0xA048 }, { 128, 0, 0, 0xA033 }, { 144, 0, 0, 0xA012 },
+    { 160, 0, 0, 0xA001 }, { 176, 0, 0, 0xA011 }, { 192, 0, 0, 0xA005 }, { 208, 0, 0, 0xA019 },
+    { 224, 0, 0, 0xA057 }, { 96, -22, 0, 0xA393 }, { 112, -22, 0, 0xA022 }, { 128, -22, 0, 0xA3F6 },
+    { 144, -22, 0, 0xA022 }, { 160, -22, 0, 0xA057 }, { 176, -22, 0, 0xA106 }, { 192, -22, 0, 0xA00B },
+    { 208, -22, 0, 0xA012 }, { 224, -22, 0, 0xA023 }, { 240, -22, 0, 0xA028 }, { 256, -22, 0, 0xA033 },
+    { 272, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_12_2[52] = {
@@ -33281,12 +33281,12 @@ const u32 effB8_mes_jp_12_6[26] = {
     0x1180000, 0xA033,
 };
 
-const u32 effB8_mes_jp_12_8[36] = {
-    0x680000, 0xA17B, 0x780000, 0xA22A, 0x880000, 0xA174, 0x980000, 0xA1A7,
-    0xA80000, 0xA048, 0xB80000, 0xA033, 0xC80000, 0xA039, 0x68FFEA, 0xA0BA,
-    0x78FFEA, 0xA0AA, 0x88FFEA, 0xA0B7, 0x98FFEA, 0xA0C9, 0xA8FFEA, 0xA014,
-    0xB8FFEA, 0xA02D, 0xC8FFEA, 0xA012, 0xD8FFEA, 0xA130, 0xE8FFEA, 0xA00D,
-    0xF8FFEA, 0xA033, 0x108FFEA, 0xA039,
+const CONN effB8_mes_jp_12_8[18] = {
+    { 104, 0, 0, 0xA17B }, { 120, 0, 0, 0xA22A }, { 136, 0, 0, 0xA174 }, { 152, 0, 0, 0xA1A7 },
+    { 168, 0, 0, 0xA048 }, { 184, 0, 0, 0xA033 }, { 200, 0, 0, 0xA039 }, { 104, -22, 0, 0xA0BA },
+    { 120, -22, 0, 0xA0AA }, { 136, -22, 0, 0xA0B7 }, { 152, -22, 0, 0xA0C9 }, { 168, -22, 0, 0xA014 },
+    { 184, -22, 0, 0xA02D }, { 200, -22, 0, 0xA012 }, { 216, -22, 0, 0xA130 }, { 232, -22, 0, 0xA00D },
+    { 248, -22, 0, 0xA033 }, { 264, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_12_10[44] = {
@@ -33298,11 +33298,11 @@ const u32 effB8_mes_jp_12_10[44] = {
     0xF8FFEA, 0xA033, 0x108FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_12_12[32] = {
-    0x400000, 0xA0C5, 0x500000, 0xA085, 0x600000, 0xA001, 0x700000, 0xA005,
-    0x800000, 0xA026, 0x900000, 0xA033, 0xA00000, 0xA012, 0xB00000, 0xA1AE,
-    0xC00000, 0xA227, 0xD00000, 0xA018, 0xE00000, 0xA011, 0xF00000, 0xA022,
-    0x1000000, 0xA027, 0x1100000, 0xA048, 0x1200000, 0xA033, 0x1300000, 0xA039,
+const CONN effB8_mes_jp_12_12[16] = {
+    { 64, 0, 0, 0xA0C5 }, { 80, 0, 0, 0xA085 }, { 96, 0, 0, 0xA001 }, { 112, 0, 0, 0xA005 },
+    { 128, 0, 0, 0xA026 }, { 144, 0, 0, 0xA033 }, { 160, 0, 0, 0xA012 }, { 176, 0, 0, 0xA1AE },
+    { 192, 0, 0, 0xA227 }, { 208, 0, 0, 0xA018 }, { 224, 0, 0, 0xA011 }, { 240, 0, 0, 0xA022 },
+    { 256, 0, 0, 0xA027 }, { 272, 0, 0, 0xA048 }, { 288, 0, 0, 0xA033 }, { 304, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_12_14[44] = {
@@ -33321,13 +33321,13 @@ const u32 effB8_mes_jp_12_16[28] = {
     0x1100000, 0xA033, 0x1200000, 0xA039,
 };
 
-const u32 effB8_mes_jp_12_18[42] = {
-    0x480000, 0xA044, 0x580000, 0xA001, 0x680000, 0xA00A, 0x780000, 0xA02D,
-    0x880000, 0xA033, 0x980000, 0xA039, 0x48FFEA, 0xA177, 0x58FFEA, 0xA018,
-    0x68FFEA, 0xA267, 0x78FFEA, 0xA197, 0x88FFEA, 0xA015, 0x98FFEA, 0xA3F7,
-    0xA8FFEA, 0xA02D, 0xB8FFEA, 0xA04B, 0xC8FFEA, 0xA014, 0xD8FFEA, 0xA005,
-    0xE8FFEA, 0xA033, 0xF8FFEA, 0xA00F, 0x108FFEA, 0xA005, 0x118FFEA, 0xA033,
-    0x128FFEA, 0xA039,
+const CONN effB8_mes_jp_12_18[21] = {
+    { 72, 0, 0, 0xA044 }, { 88, 0, 0, 0xA001 }, { 104, 0, 0, 0xA00A }, { 120, 0, 0, 0xA02D },
+    { 136, 0, 0, 0xA033 }, { 152, 0, 0, 0xA039 }, { 72, -22, 0, 0xA177 }, { 88, -22, 0, 0xA018 },
+    { 104, -22, 0, 0xA267 }, { 120, -22, 0, 0xA197 }, { 136, -22, 0, 0xA015 }, { 152, -22, 0, 0xA3F7 },
+    { 168, -22, 0, 0xA02D }, { 184, -22, 0, 0xA04B }, { 200, -22, 0, 0xA014 }, { 216, -22, 0, 0xA005 },
+    { 232, -22, 0, 0xA033 }, { 248, -22, 0, 0xA00F }, { 264, -22, 0, 0xA005 }, { 280, -22, 0, 0xA033 },
+    { 296, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_12_20[22] = {
@@ -33336,12 +33336,12 @@ const u32 effB8_mes_jp_12_20[22] = {
     0xE80000, 0xA014, 0xF80000, 0xA033, 0x1080000, 0xA039,
 };
 
-const u32 effB8_mes_jp_12_22[38] = {
-    0x600000, 0xA004, 0x700000, 0xA28D, 0x800000, 0xA28E, 0x900000, 0xA00A,
-    0xA00000, 0xA01E, 0xB00000, 0xA033, 0xC00000, 0xA039, 0x60FFEA, 0xA177,
-    0x70FFEA, 0xA019, 0x80FFEA, 0xA01E, 0x90FFEA, 0xA048, 0xA0FFEA, 0xA01E,
-    0xB0FFEA, 0xA048, 0xC0FFEA, 0xA023, 0xD0FFEA, 0xA029, 0xE0FFEA, 0xA01E,
-    0xF0FFEA, 0xA00C, 0x100FFEA, 0xA033, 0x110FFEA, 0xA039,
+const CONN effB8_mes_jp_12_22[19] = {
+    { 96, 0, 0, 0xA004 }, { 112, 0, 0, 0xA28D }, { 128, 0, 0, 0xA28E }, { 144, 0, 0, 0xA00A },
+    { 160, 0, 0, 0xA01E }, { 176, 0, 0, 0xA033 }, { 192, 0, 0, 0xA039 }, { 96, -22, 0, 0xA177 },
+    { 112, -22, 0, 0xA019 }, { 128, -22, 0, 0xA01E }, { 144, -22, 0, 0xA048 }, { 160, -22, 0, 0xA01E },
+    { 176, -22, 0, 0xA048 }, { 192, -22, 0, 0xA023 }, { 208, -22, 0, 0xA029 }, { 224, -22, 0, 0xA01E },
+    { 240, -22, 0, 0xA00C }, { 256, -22, 0, 0xA033 }, { 272, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_12_24[40] = {
@@ -33372,17 +33372,17 @@ const u32 effB8_mes_jp_12_28[56] = {
     0xD0FFEA, 0xA034, 0xE0FFEA, 0xA014, 0xF0FFEA, 0xA001, 0x100FFEA, 0xA033,
 };
 
-const u32 effB8_mes_jp_12_30[26] = {
-    0x800000, 0xA099, 0x900000, 0xA0C6, 0xA00000, 0xA082, 0xB00000, 0xA0C7,
-    0xC00000, 0xA0B7, 0xD00000, 0xA08C, 0xE00000, 0xA093, 0xF00000, 0xA039,
-    0x80FFEA, 0xA002, 0x90FFEA, 0xA004, 0xA0FFEA, 0xA0B7, 0xB0FFEA, 0xA033,
-    0xC0FFEA, 0xA039,
+const CONN effB8_mes_jp_12_30[13] = {
+    { 128, 0, 0, 0xA099 }, { 144, 0, 0, 0xA0C6 }, { 160, 0, 0, 0xA082 }, { 176, 0, 0, 0xA0C7 },
+    { 192, 0, 0, 0xA0B7 }, { 208, 0, 0, 0xA08C }, { 224, 0, 0, 0xA093 }, { 240, 0, 0, 0xA039 },
+    { 128, -22, 0, 0xA002 }, { 144, -22, 0, 0xA004 }, { 160, -22, 0, 0xA0B7 }, { 176, -22, 0, 0xA033 },
+    { 192, -22, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_12_32[24] = {
-    0x800000, 0xA099, 0x900000, 0xA0C6, 0xA00000, 0xA082, 0xB00000, 0xA0C7,
-    0xC00000, 0xA0B7, 0xD00000, 0xA08C, 0xE00000, 0xA093, 0xF00000, 0xA039,
-    0x80FFEA, 0xA081, 0x90FFEA, 0xA0B1, 0xA0FFEA, 0xA081, 0xB0FFEA, 0xA039,
+const CONN effB8_mes_jp_12_32[12] = {
+    { 128, 0, 0, 0xA099 }, { 144, 0, 0, 0xA0C6 }, { 160, 0, 0, 0xA082 }, { 176, 0, 0, 0xA0C7 },
+    { 192, 0, 0, 0xA0B7 }, { 208, 0, 0, 0xA08C }, { 224, 0, 0, 0xA093 }, { 240, 0, 0, 0xA039 },
+    { 128, -22, 0, 0xA081 }, { 144, -22, 0, 0xA0B1 }, { 160, -22, 0, 0xA081 }, { 176, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_12_34[34] = {
@@ -33393,11 +33393,11 @@ const u32 effB8_mes_jp_12_34[34] = {
     0xB8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_12_36[30] = {
-    0x680000, 0xA08B, 0x780000, 0xA0B6, 0x880000, 0xA082, 0x980000, 0xA0A7,
-    0xA80000, 0xA0B5, 0xB80000, 0xA082, 0xC80000, 0xA086, 0xD80000, 0xA0B4,
-    0xE80000, 0xA098, 0xF80000, 0xA0AD, 0x1080000, 0xA039, 0x68FFEA, 0xA081,
-    0x78FFEA, 0xA083, 0x88FFEA, 0xA08C, 0x98FFEA, 0xA039,
+const CONN effB8_mes_jp_12_36[15] = {
+    { 104, 0, 0, 0xA08B }, { 120, 0, 0, 0xA0B6 }, { 136, 0, 0, 0xA082 }, { 152, 0, 0, 0xA0A7 },
+    { 168, 0, 0, 0xA0B5 }, { 184, 0, 0, 0xA082 }, { 200, 0, 0, 0xA086 }, { 216, 0, 0, 0xA0B4 },
+    { 232, 0, 0, 0xA098 }, { 248, 0, 0, 0xA0AD }, { 264, 0, 0, 0xA039 }, { 104, -22, 0, 0xA081 },
+    { 120, -22, 0, 0xA083 }, { 136, -22, 0, 0xA08C }, { 152, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_12_38[32] = {
@@ -33414,12 +33414,12 @@ const u32 effB8_mes_jp_12_40[32] = {
     0x90FFEA, 0xA00F, 0xA0FFEA, 0xA046, 0xB0FFEA, 0xA033, 0xC0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_12_42[36] = {
-    0x700000, 0xA177, 0x800000, 0xA019, 0x900000, 0xA1A7, 0xA00000, 0xA008,
-    0xB00000, 0xA017, 0xC00000, 0xA031, 0xD00000, 0xA033, 0xE00000, 0xA039,
-    0x70FFEA, 0xA1CD, 0x80FFEA, 0xA1CE, 0x90FFEA, 0xA018, 0xA0FFEA, 0xA214,
-    0xB0FFEA, 0xA015, 0xC0FFEA, 0xA005, 0xD0FFEA, 0xA008, 0xE0FFEA, 0xA012,
-    0xF0FFEA, 0xA033, 0x100FFEA, 0xA039,
+const CONN effB8_mes_jp_12_42[18] = {
+    { 112, 0, 0, 0xA177 }, { 128, 0, 0, 0xA019 }, { 144, 0, 0, 0xA1A7 }, { 160, 0, 0, 0xA008 },
+    { 176, 0, 0, 0xA017 }, { 192, 0, 0, 0xA031 }, { 208, 0, 0, 0xA033 }, { 224, 0, 0, 0xA039 },
+    { 112, -22, 0, 0xA1CD }, { 128, -22, 0, 0xA1CE }, { 144, -22, 0, 0xA018 }, { 160, -22, 0, 0xA214 },
+    { 176, -22, 0, 0xA015 }, { 192, -22, 0, 0xA005 }, { 208, -22, 0, 0xA008 }, { 224, -22, 0, 0xA012 },
+    { 240, -22, 0, 0xA033 }, { 256, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_12_48[42] = {
@@ -33431,12 +33431,12 @@ const u32 effB8_mes_jp_12_48[42] = {
     0x118FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_12_50[36] = {
-    0x600000, 0xA1CD, 0x700000, 0xA1CE, 0x800000, 0xA28F, 0x900000, 0xA10B,
-    0xA00000, 0xA033, 0xB00000, 0xA039, 0x60FFEA, 0xA145, 0x70FFEA, 0xA009,
-    0x80FFEA, 0xA00E, 0x90FFEA, 0xA290, 0xA0FFEA, 0xA291, 0xB0FFEA, 0xA00A,
-    0xC0FFEA, 0xA00D, 0xD0FFEA, 0xA012, 0xE0FFEA, 0xA023, 0xF0FFEA, 0xA028,
-    0x100FFEA, 0xA033, 0x110FFEA, 0xA039,
+const CONN effB8_mes_jp_12_50[18] = {
+    { 96, 0, 0, 0xA1CD }, { 112, 0, 0, 0xA1CE }, { 128, 0, 0, 0xA28F }, { 144, 0, 0, 0xA10B },
+    { 160, 0, 0, 0xA033 }, { 176, 0, 0, 0xA039 }, { 96, -22, 0, 0xA145 }, { 112, -22, 0, 0xA009 },
+    { 128, -22, 0, 0xA00E }, { 144, -22, 0, 0xA290 }, { 160, -22, 0, 0xA291 }, { 176, -22, 0, 0xA00A },
+    { 192, -22, 0, 0xA00D }, { 208, -22, 0, 0xA012 }, { 224, -22, 0, 0xA023 }, { 240, -22, 0, 0xA028 },
+    { 256, -22, 0, 0xA033 }, { 272, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_12_52[38] = {
@@ -33455,16 +33455,16 @@ const u32 effB8_mes_jp_12_54[34] = {
     0x118FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_12_56[12] = {
-    0x900000, 0xA118, 0xA00000, 0xA015, 0xB00000, 0xA174, 0xC00000, 0xA011,
-    0xD00000, 0xA033, 0xE00000, 0xA039,
+const CONN effB8_mes_jp_12_56[6] = {
+    { 144, 0, 0, 0xA118 }, { 160, 0, 0, 0xA015 }, { 176, 0, 0, 0xA174 }, { 192, 0, 0, 0xA011 },
+    { 208, 0, 0, 0xA033 }, { 224, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_12_58[26] = {
-    0x580000, 0xA022, 0x680000, 0xA033, 0x780000, 0xA013, 0x880000, 0xA1C1,
-    0x980000, 0xA04B, 0xA80000, 0xA1F0, 0xB80000, 0xA003, 0xC80000, 0xA014,
-    0xD80000, 0xA008, 0xE80000, 0xA029, 0xF80000, 0xA04D, 0x1080000, 0xA033,
-    0x1180000, 0xA039,
+const CONN effB8_mes_jp_12_58[13] = {
+    { 88, 0, 0, 0xA022 }, { 104, 0, 0, 0xA033 }, { 120, 0, 0, 0xA013 }, { 136, 0, 0, 0xA1C1 },
+    { 152, 0, 0, 0xA04B }, { 168, 0, 0, 0xA1F0 }, { 184, 0, 0, 0xA003 }, { 200, 0, 0, 0xA014 },
+    { 216, 0, 0, 0xA008 }, { 232, 0, 0, 0xA029 }, { 248, 0, 0, 0xA04D }, { 264, 0, 0, 0xA033 },
+    { 280, 0, 0, 0xA039 },
 };
 
 const u16 effB8_mes_jp_12_1[5] = {
@@ -33588,21 +33588,21 @@ const u16 effB8_mes_jp_12_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_13[30] = {
-    { (const CONN*)effB8_mes_jp_13_0, (const u16*)effB8_mes_jp_13_1 }, { (const CONN*)effB8_mes_jp_13_0, (const u16*)effB8_mes_jp_13_3 },
-    { (const CONN*)effB8_mes_jp_13_4, (const u16*)effB8_mes_jp_13_5 }, { (const CONN*)effB8_mes_jp_13_6, (const u16*)effB8_mes_jp_13_7 },
-    { (const CONN*)effB8_mes_jp_13_8, (const u16*)effB8_mes_jp_13_9 }, { (const CONN*)effB8_mes_jp_13_10, (const u16*)effB8_mes_jp_13_11 },
-    { (const CONN*)effB8_mes_jp_13_12, (const u16*)effB8_mes_jp_13_13 }, { (const CONN*)effB8_mes_jp_13_14, (const u16*)effB8_mes_jp_13_15 },
-    { (const CONN*)effB8_mes_jp_13_16, (const u16*)effB8_mes_jp_13_17 }, { (const CONN*)effB8_mes_jp_13_18, (const u16*)effB8_mes_jp_13_19 },
-    { (const CONN*)effB8_mes_jp_13_20, (const u16*)effB8_mes_jp_13_21 }, { (const CONN*)effB8_mes_jp_13_22, (const u16*)effB8_mes_jp_13_23 },
-    { (const CONN*)effB8_mes_jp_13_24, (const u16*)effB8_mes_jp_13_25 }, { (const CONN*)effB8_mes_jp_13_26, (const u16*)effB8_mes_jp_13_27 },
-    { (const CONN*)effB8_mes_jp_13_28, (const u16*)effB8_mes_jp_13_29 }, { (const CONN*)effB8_mes_jp_13_30, (const u16*)effB8_mes_jp_13_31 },
-    { (const CONN*)effB8_mes_jp_13_32, (const u16*)effB8_mes_jp_13_33 }, { (const CONN*)effB8_mes_jp_13_34, (const u16*)effB8_mes_jp_13_35 },
-    { (const CONN*)effB8_mes_jp_13_36, (const u16*)effB8_mes_jp_13_37 }, { (const CONN*)effB8_mes_jp_13_38, (const u16*)effB8_mes_jp_13_39 },
-    { (const CONN*)effB8_mes_jp_13_40, (const u16*)effB8_mes_jp_13_41 }, { (const CONN*)effB8_mes_jp_13_42, (const u16*)effB8_mes_jp_13_43 },
-    { (const CONN*)effB8_mes_jp_13_42, (const u16*)effB8_mes_jp_13_45 }, { (const CONN*)effB8_mes_jp_13_42, (const u16*)effB8_mes_jp_13_47 },
-    { (const CONN*)effB8_mes_jp_13_48, (const u16*)effB8_mes_jp_13_49 }, { (const CONN*)effB8_mes_jp_13_50, (const u16*)effB8_mes_jp_13_51 },
-    { (const CONN*)effB8_mes_jp_13_52, (const u16*)effB8_mes_jp_13_53 }, { (const CONN*)effB8_mes_jp_13_54, (const u16*)effB8_mes_jp_13_55 },
-    { (const CONN*)effB8_mes_jp_13_56, (const u16*)effB8_mes_jp_13_57 }, { (const CONN*)effB8_mes_jp_13_58, (const u16*)effB8_mes_jp_13_59 },
+    { (const CONN*)effB8_mes_jp_13_0, effB8_mes_jp_13_1 }, { (const CONN*)effB8_mes_jp_13_0, effB8_mes_jp_13_3 },
+    { effB8_mes_jp_13_4, effB8_mes_jp_13_5 }, { (const CONN*)effB8_mes_jp_13_6, effB8_mes_jp_13_7 },
+    { effB8_mes_jp_13_8, effB8_mes_jp_13_9 }, { (const CONN*)effB8_mes_jp_13_10, effB8_mes_jp_13_11 },
+    { (const CONN*)effB8_mes_jp_13_12, effB8_mes_jp_13_13 }, { effB8_mes_jp_13_14, effB8_mes_jp_13_15 },
+    { (const CONN*)effB8_mes_jp_13_16, effB8_mes_jp_13_17 }, { (const CONN*)effB8_mes_jp_13_18, effB8_mes_jp_13_19 },
+    { (const CONN*)effB8_mes_jp_13_20, effB8_mes_jp_13_21 }, { (const CONN*)effB8_mes_jp_13_22, effB8_mes_jp_13_23 },
+    { effB8_mes_jp_13_24, effB8_mes_jp_13_25 }, { (const CONN*)effB8_mes_jp_13_26, effB8_mes_jp_13_27 },
+    { (const CONN*)effB8_mes_jp_13_28, effB8_mes_jp_13_29 }, { (const CONN*)effB8_mes_jp_13_30, effB8_mes_jp_13_31 },
+    { (const CONN*)effB8_mes_jp_13_32, effB8_mes_jp_13_33 }, { effB8_mes_jp_13_34, effB8_mes_jp_13_35 },
+    { (const CONN*)effB8_mes_jp_13_36, effB8_mes_jp_13_37 }, { (const CONN*)effB8_mes_jp_13_38, effB8_mes_jp_13_39 },
+    { effB8_mes_jp_13_40, effB8_mes_jp_13_41 }, { (const CONN*)effB8_mes_jp_13_42, effB8_mes_jp_13_43 },
+    { (const CONN*)effB8_mes_jp_13_42, effB8_mes_jp_13_45 }, { (const CONN*)effB8_mes_jp_13_42, effB8_mes_jp_13_47 },
+    { (const CONN*)effB8_mes_jp_13_48, effB8_mes_jp_13_49 }, { effB8_mes_jp_13_50, effB8_mes_jp_13_51 },
+    { (const CONN*)effB8_mes_jp_13_52, effB8_mes_jp_13_53 }, { (const CONN*)effB8_mes_jp_13_54, effB8_mes_jp_13_55 },
+    { effB8_mes_jp_13_56, effB8_mes_jp_13_57 }, { (const CONN*)effB8_mes_jp_13_58, effB8_mes_jp_13_59 },
 };
 
 const u32 effB8_mes_jp_13_0[50] = {
@@ -33615,13 +33615,13 @@ const u32 effB8_mes_jp_13_0[50] = {
     0x118FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_13_4[44] = {
-    0x500000, 0xA17D, 0x600000, 0xA139, 0x700000, 0xA019, 0x800000, 0xA1F8,
-    0x900000, 0xA015, 0xA00000, 0xA124, 0xB00000, 0xA134, 0xC00000, 0xA039,
-    0x50FFEA, 0xA298, 0x60FFEA, 0xA17D, 0x70FFEA, 0xA02C, 0x80FFEA, 0xA3FB,
-    0x90FFEA, 0xA028, 0xA0FFEA, 0xA139, 0xB0FFEA, 0xA019, 0xC0FFEA, 0xA220,
-    0xD0FFEA, 0xA221, 0xE0FFEA, 0xA100, 0xF0FFEA, 0xA007, 0x100FFEA, 0xA3FC,
-    0x110FFEA, 0xA00C, 0x120FFEA, 0xA039,
+const CONN effB8_mes_jp_13_4[22] = {
+    { 80, 0, 0, 0xA17D }, { 96, 0, 0, 0xA139 }, { 112, 0, 0, 0xA019 }, { 128, 0, 0, 0xA1F8 },
+    { 144, 0, 0, 0xA015 }, { 160, 0, 0, 0xA124 }, { 176, 0, 0, 0xA134 }, { 192, 0, 0, 0xA039 },
+    { 80, -22, 0, 0xA298 }, { 96, -22, 0, 0xA17D }, { 112, -22, 0, 0xA02C }, { 128, -22, 0, 0xA3FB },
+    { 144, -22, 0, 0xA028 }, { 160, -22, 0, 0xA139 }, { 176, -22, 0, 0xA019 }, { 192, -22, 0, 0xA220 },
+    { 208, -22, 0, 0xA221 }, { 224, -22, 0, 0xA100 }, { 240, -22, 0, 0xA007 }, { 256, -22, 0, 0xA3FC },
+    { 272, -22, 0, 0xA00C }, { 288, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_13_6[32] = {
@@ -33631,11 +33631,11 @@ const u32 effB8_mes_jp_13_6[32] = {
     0xB8FFEA, 0xA015, 0xC8FFEA, 0xA400, 0xD8FFEA, 0xA028, 0xE8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_13_8[32] = {
-    0x700000, 0xA401, 0x800000, 0xA018, 0x900000, 0xA18E, 0xB00000, 0xA402,
-    0xC00000, 0xA403, 0xD00000, 0xA139, 0xE00000, 0xA04B, 0xF00000, 0xA000,
-    0x1000000, 0xA028, 0x70FFEA, 0xA173, 0x80FFEA, 0xA1ED, 0x90FFEA, 0xA015,
-    0xA0FFEA, 0xA206, 0xB0FFEA, 0xA00C, 0xC0FFEA, 0xA028, 0xD0FFEA, 0xA039,
+const CONN effB8_mes_jp_13_8[16] = {
+    { 112, 0, 0, 0xA401 }, { 128, 0, 0, 0xA018 }, { 144, 0, 0, 0xA18E }, { 176, 0, 0, 0xA402 },
+    { 192, 0, 0, 0xA403 }, { 208, 0, 0, 0xA139 }, { 224, 0, 0, 0xA04B }, { 240, 0, 0, 0xA000 },
+    { 256, 0, 0, 0xA028 }, { 112, -22, 0, 0xA173 }, { 128, -22, 0, 0xA1ED }, { 144, -22, 0, 0xA015 },
+    { 160, -22, 0, 0xA206 }, { 176, -22, 0, 0xA00C }, { 192, -22, 0, 0xA028 }, { 208, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_13_10[38] = {
@@ -33655,12 +33655,12 @@ const u32 effB8_mes_jp_13_12[46] = {
     0xF0FFEA, 0xA014, 0x100FFEA, 0xA027, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_13_14[34] = {
-    0x600000, 0xA157, 0x700000, 0xA13C, 0x800000, 0xA407, 0x900000, 0xA408,
-    0xB00000, 0xA401, 0xC00000, 0xA018, 0xD00000, 0xA18E, 0xE00000, 0xA042,
-    0xF00000, 0xA013, 0x1000000, 0xA006, 0x1100000, 0xA015, 0x60FFEA, 0xA3F9,
-    0x70FFEA, 0xA019, 0x80FFEA, 0xA14A, 0x90FFEA, 0xA00D, 0xA0FFEA, 0xA016,
-    0xB0FFEA, 0xA039,
+const CONN effB8_mes_jp_13_14[17] = {
+    { 96, 0, 0, 0xA157 }, { 112, 0, 0, 0xA13C }, { 128, 0, 0, 0xA407 }, { 144, 0, 0, 0xA408 },
+    { 176, 0, 0, 0xA401 }, { 192, 0, 0, 0xA018 }, { 208, 0, 0, 0xA18E }, { 224, 0, 0, 0xA042 },
+    { 240, 0, 0, 0xA013 }, { 256, 0, 0, 0xA006 }, { 272, 0, 0, 0xA015 }, { 96, -22, 0, 0xA3F9 },
+    { 112, -22, 0, 0xA019 }, { 128, -22, 0, 0xA14A }, { 144, -22, 0, 0xA00D }, { 160, -22, 0, 0xA016 },
+    { 176, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_13_16[56] = {
@@ -33701,14 +33701,14 @@ const u32 effB8_mes_jp_13_22[50] = {
     0x120FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_13_24[52] = {
-    0x500000, 0xA1C9, 0x600000, 0xA40C, 0x700000, 0xA40D, 0x800000, 0xA014,
-    0x900000, 0xA027, 0xA00000, 0xA039, 0xC00000, 0xA249, 0xD00000, 0xA1BE,
-    0xE00000, 0xA042, 0xF00000, 0xA013, 0x1000000, 0xA006, 0x1100000, 0xA03E,
-    0x50FFEA, 0xA3F9, 0x60FFEA, 0xA015, 0x70FFEA, 0xA100, 0x80FFEA, 0xA40E,
-    0x90FFEA, 0xA014, 0xA0FFEA, 0xA151, 0xB0FFEA, 0xA001, 0xC0FFEA, 0xA02C,
-    0xD0FFEA, 0xA00A, 0xE0FFEA, 0xA00D, 0xF0FFEA, 0xA028, 0x100FFEA, 0xA013,
-    0x110FFEA, 0xA019, 0x120FFEA, 0xA039,
+const CONN effB8_mes_jp_13_24[26] = {
+    { 80, 0, 0, 0xA1C9 }, { 96, 0, 0, 0xA40C }, { 112, 0, 0, 0xA40D }, { 128, 0, 0, 0xA014 },
+    { 144, 0, 0, 0xA027 }, { 160, 0, 0, 0xA039 }, { 192, 0, 0, 0xA249 }, { 208, 0, 0, 0xA1BE },
+    { 224, 0, 0, 0xA042 }, { 240, 0, 0, 0xA013 }, { 256, 0, 0, 0xA006 }, { 272, 0, 0, 0xA03E },
+    { 80, -22, 0, 0xA3F9 }, { 96, -22, 0, 0xA015 }, { 112, -22, 0, 0xA100 }, { 128, -22, 0, 0xA40E },
+    { 144, -22, 0, 0xA014 }, { 160, -22, 0, 0xA151 }, { 176, -22, 0, 0xA001 }, { 192, -22, 0, 0xA02C },
+    { 208, -22, 0, 0xA00A }, { 224, -22, 0, 0xA00D }, { 240, -22, 0, 0xA028 }, { 256, -22, 0, 0xA013 },
+    { 272, -22, 0, 0xA019 }, { 288, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_13_26[52] = {
@@ -33749,12 +33749,12 @@ const u32 effB8_mes_jp_13_32[58] = {
     0x130FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_13_34[40] = {
-    0x700000, 0xA3F9, 0x800000, 0xA018, 0x900000, 0xA17D, 0xA00000, 0xA1BD,
-    0xB00000, 0xA014, 0xC00000, 0xA028, 0xD00000, 0xA119, 0xE00000, 0xA005,
-    0xF00000, 0xA026, 0x1000000, 0xA019, 0x70FFEA, 0xA2D2, 0x80FFEA, 0xA041,
-    0x90FFEA, 0xA028, 0xA0FFEA, 0xA009, 0xB0FFEA, 0xA013, 0xC0FFEA, 0xA022,
-    0xD0FFEA, 0xA212, 0xE0FFEA, 0xA00A, 0xF0FFEA, 0xA016, 0x100FFEA, 0xA039,
+const CONN effB8_mes_jp_13_34[20] = {
+    { 112, 0, 0, 0xA3F9 }, { 128, 0, 0, 0xA018 }, { 144, 0, 0, 0xA17D }, { 160, 0, 0, 0xA1BD },
+    { 176, 0, 0, 0xA014 }, { 192, 0, 0, 0xA028 }, { 208, 0, 0, 0xA119 }, { 224, 0, 0, 0xA005 },
+    { 240, 0, 0, 0xA026 }, { 256, 0, 0, 0xA019 }, { 112, -22, 0, 0xA2D2 }, { 128, -22, 0, 0xA041 },
+    { 144, -22, 0, 0xA028 }, { 160, -22, 0, 0xA009 }, { 176, -22, 0, 0xA013 }, { 192, -22, 0, 0xA022 },
+    { 208, -22, 0, 0xA212 }, { 224, -22, 0, 0xA00A }, { 240, -22, 0, 0xA016 }, { 256, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_13_36[38] = {
@@ -33774,12 +33774,12 @@ const u32 effB8_mes_jp_13_38[44] = {
     0xE0FFEA, 0xA048, 0xF0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_13_40[40] = {
-    0x600000, 0xA3F9, 0x700000, 0xA018, 0x800000, 0xA410, 0x900000, 0xA411,
-    0xA00000, 0xA014, 0xB00000, 0xA028, 0xC00000, 0xA3A6, 0xD00000, 0xA412,
-    0x60FFEA, 0xA1AE, 0x70FFEA, 0xA134, 0x80FFEA, 0xA022, 0x90FFEA, 0xA413,
-    0xA0FFEA, 0xA00C, 0xB0FFEA, 0xA009, 0xC0FFEA, 0xA013, 0xD0FFEA, 0xA005,
-    0xE0FFEA, 0xA014, 0xF0FFEA, 0xA02B, 0x100FFEA, 0xA016, 0x110FFEA, 0xA039,
+const CONN effB8_mes_jp_13_40[20] = {
+    { 96, 0, 0, 0xA3F9 }, { 112, 0, 0, 0xA018 }, { 128, 0, 0, 0xA410 }, { 144, 0, 0, 0xA411 },
+    { 160, 0, 0, 0xA014 }, { 176, 0, 0, 0xA028 }, { 192, 0, 0, 0xA3A6 }, { 208, 0, 0, 0xA412 },
+    { 96, -22, 0, 0xA1AE }, { 112, -22, 0, 0xA134 }, { 128, -22, 0, 0xA022 }, { 144, -22, 0, 0xA413 },
+    { 160, -22, 0, 0xA00C }, { 176, -22, 0, 0xA009 }, { 192, -22, 0, 0xA013 }, { 208, -22, 0, 0xA005 },
+    { 224, -22, 0, 0xA014 }, { 240, -22, 0, 0xA02B }, { 256, -22, 0, 0xA016 }, { 272, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_13_42[46] = {
@@ -33798,12 +33798,12 @@ const u32 effB8_mes_jp_13_48[30] = {
     0x1100000, 0xA00A, 0x1200000, 0xA016, 0x1300000, 0xA039,
 };
 
-const u32 effB8_mes_jp_13_50[38] = {
-    0x680000, 0xA018, 0x780000, 0xA00F, 0x880000, 0xA002, 0x980000, 0xA010,
-    0xA80000, 0xA01E, 0xB80000, 0xA02B, 0xC80000, 0xA029, 0xD80000, 0xA039,
-    0x68FFEA, 0xA401, 0x78FFEA, 0xA029, 0x88FFEA, 0xA03E, 0x98FFEA, 0xA114,
-    0xA8FFEA, 0xA115, 0xB8FFEA, 0xA139, 0xC8FFEA, 0xA018, 0xD8FFEA, 0xA32B,
-    0xE8FFEA, 0xA027, 0xF8FFEA, 0xA048, 0x108FFEA, 0xA039,
+const CONN effB8_mes_jp_13_50[19] = {
+    { 104, 0, 0, 0xA018 }, { 120, 0, 0, 0xA00F }, { 136, 0, 0, 0xA002 }, { 152, 0, 0, 0xA010 },
+    { 168, 0, 0, 0xA01E }, { 184, 0, 0, 0xA02B }, { 200, 0, 0, 0xA029 }, { 216, 0, 0, 0xA039 },
+    { 104, -22, 0, 0xA401 }, { 120, -22, 0, 0xA029 }, { 136, -22, 0, 0xA03E }, { 152, -22, 0, 0xA114 },
+    { 168, -22, 0, 0xA115 }, { 184, -22, 0, 0xA139 }, { 200, -22, 0, 0xA018 }, { 216, -22, 0, 0xA32B },
+    { 232, -22, 0, 0xA027 }, { 248, -22, 0, 0xA048 }, { 264, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_13_52[54] = {
@@ -33824,13 +33824,13 @@ const u32 effB8_mes_jp_13_54[36] = {
     0xF0FFEA, 0xA048, 0x100FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_13_56[46] = {
-    0x500000, 0xA3F9, 0x600000, 0xA03E, 0x700000, 0xA1B6, 0x800000, 0xA1B7,
-    0x900000, 0xA02C, 0xA00000, 0xA302, 0xB00000, 0xA2AE, 0xC00000, 0xA00C,
-    0xD00000, 0xA028, 0xE00000, 0xA039, 0x50FFEA, 0xA3F9, 0x60FFEA, 0xA015,
-    0x70FFEA, 0xA330, 0x80FFEA, 0xA020, 0x90FFEA, 0xA022, 0xA0FFEA, 0xA018,
-    0xC0FFEA, 0xA312, 0xD0FFEA, 0xA012, 0xE0FFEA, 0xA41B, 0xF0FFEA, 0xA34E,
-    0x100FFEA, 0xA00C, 0x110FFEA, 0xA028, 0x120FFEA, 0xA039,
+const CONN effB8_mes_jp_13_56[23] = {
+    { 80, 0, 0, 0xA3F9 }, { 96, 0, 0, 0xA03E }, { 112, 0, 0, 0xA1B6 }, { 128, 0, 0, 0xA1B7 },
+    { 144, 0, 0, 0xA02C }, { 160, 0, 0, 0xA302 }, { 176, 0, 0, 0xA2AE }, { 192, 0, 0, 0xA00C },
+    { 208, 0, 0, 0xA028 }, { 224, 0, 0, 0xA039 }, { 80, -22, 0, 0xA3F9 }, { 96, -22, 0, 0xA015 },
+    { 112, -22, 0, 0xA330 }, { 128, -22, 0, 0xA020 }, { 144, -22, 0, 0xA022 }, { 160, -22, 0, 0xA018 },
+    { 192, -22, 0, 0xA312 }, { 208, -22, 0, 0xA012 }, { 224, -22, 0, 0xA41B }, { 240, -22, 0, 0xA34E },
+    { 256, -22, 0, 0xA00C }, { 272, -22, 0, 0xA028 }, { 288, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_13_58[44] = {
@@ -33968,33 +33968,33 @@ const u16 effB8_mes_jp_13_59[10] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_jp_14[30] = {
-    { (const CONN*)effB8_mes_jp_14_0, (const u16*)effB8_mes_jp_14_1 }, { (const CONN*)effB8_mes_jp_14_2, (const u16*)effB8_mes_jp_14_3 },
-    { (const CONN*)effB8_mes_jp_14_4, (const u16*)effB8_mes_jp_14_5 }, { (const CONN*)effB8_mes_jp_14_6, (const u16*)effB8_mes_jp_14_7 },
-    { (const CONN*)effB8_mes_jp_14_8, (const u16*)effB8_mes_jp_14_9 }, { (const CONN*)effB8_mes_jp_14_10, (const u16*)effB8_mes_jp_14_11 },
-    { (const CONN*)effB8_mes_jp_14_12, (const u16*)effB8_mes_jp_14_13 }, { (const CONN*)effB8_mes_jp_14_14, (const u16*)effB8_mes_jp_14_15 },
-    { (const CONN*)effB8_mes_jp_14_16, (const u16*)effB8_mes_jp_14_17 }, { (const CONN*)effB8_mes_jp_14_18, (const u16*)effB8_mes_jp_14_19 },
-    { (const CONN*)effB8_mes_jp_14_20, (const u16*)effB8_mes_jp_14_21 }, { (const CONN*)effB8_mes_jp_14_22, (const u16*)effB8_mes_jp_14_23 },
-    { (const CONN*)effB8_mes_jp_14_24, (const u16*)effB8_mes_jp_14_25 }, { (const CONN*)effB8_mes_jp_14_26, (const u16*)effB8_mes_jp_14_27 },
-    { (const CONN*)effB8_mes_jp_14_28, (const u16*)effB8_mes_jp_14_29 }, { (const CONN*)effB8_mes_jp_14_30, (const u16*)effB8_mes_jp_14_31 },
-    { (const CONN*)effB8_mes_jp_14_32, (const u16*)effB8_mes_jp_14_33 }, { (const CONN*)effB8_mes_jp_14_34, (const u16*)effB8_mes_jp_14_35 },
-    { (const CONN*)effB8_mes_jp_14_36, (const u16*)effB8_mes_jp_14_37 }, { (const CONN*)effB8_mes_jp_14_38, (const u16*)effB8_mes_jp_14_39 },
-    { (const CONN*)effB8_mes_jp_14_40, (const u16*)effB8_mes_jp_14_41 }, { (const CONN*)effB8_mes_jp_14_42, (const u16*)effB8_mes_jp_14_43 },
-    { (const CONN*)effB8_mes_jp_14_44, (const u16*)effB8_mes_jp_14_45 }, { (const CONN*)effB8_mes_jp_14_46, (const u16*)effB8_mes_jp_14_47 },
-    { (const CONN*)effB8_mes_jp_14_48, (const u16*)effB8_mes_jp_14_49 }, { (const CONN*)effB8_mes_jp_14_50, (const u16*)effB8_mes_jp_14_51 },
-    { (const CONN*)effB8_mes_jp_14_52, (const u16*)effB8_mes_jp_14_53 }, { (const CONN*)effB8_mes_jp_14_54, (const u16*)effB8_mes_jp_14_55 },
-    { (const CONN*)effB8_mes_jp_14_56, (const u16*)effB8_mes_jp_14_57 }, { (const CONN*)effB8_mes_jp_14_58, (const u16*)effB8_mes_jp_14_59 },
+    { effB8_mes_jp_14_0, effB8_mes_jp_14_1 }, { effB8_mes_jp_14_2, effB8_mes_jp_14_3 },
+    { (const CONN*)effB8_mes_jp_14_4, effB8_mes_jp_14_5 }, { (const CONN*)effB8_mes_jp_14_6, effB8_mes_jp_14_7 },
+    { effB8_mes_jp_14_8, effB8_mes_jp_14_9 }, { effB8_mes_jp_14_10, effB8_mes_jp_14_11 },
+    { (const CONN*)effB8_mes_jp_14_12, effB8_mes_jp_14_13 }, { effB8_mes_jp_14_14, effB8_mes_jp_14_15 },
+    { (const CONN*)effB8_mes_jp_14_16, effB8_mes_jp_14_17 }, { effB8_mes_jp_14_18, effB8_mes_jp_14_19 },
+    { (const CONN*)effB8_mes_jp_14_20, effB8_mes_jp_14_21 }, { effB8_mes_jp_14_22, effB8_mes_jp_14_23 },
+    { (const CONN*)effB8_mes_jp_14_24, effB8_mes_jp_14_25 }, { effB8_mes_jp_14_26, effB8_mes_jp_14_27 },
+    { (const CONN*)effB8_mes_jp_14_28, effB8_mes_jp_14_29 }, { effB8_mes_jp_14_30, effB8_mes_jp_14_31 },
+    { (const CONN*)effB8_mes_jp_14_32, effB8_mes_jp_14_33 }, { effB8_mes_jp_14_34, effB8_mes_jp_14_35 },
+    { (const CONN*)effB8_mes_jp_14_36, effB8_mes_jp_14_37 }, { effB8_mes_jp_14_38, effB8_mes_jp_14_39 },
+    { (const CONN*)effB8_mes_jp_14_40, effB8_mes_jp_14_41 }, { effB8_mes_jp_14_42, effB8_mes_jp_14_43 },
+    { effB8_mes_jp_14_44, effB8_mes_jp_14_45 }, { (const CONN*)effB8_mes_jp_14_46, effB8_mes_jp_14_47 },
+    { effB8_mes_jp_14_48, effB8_mes_jp_14_49 }, { (const CONN*)effB8_mes_jp_14_50, effB8_mes_jp_14_51 },
+    { effB8_mes_jp_14_52, effB8_mes_jp_14_53 }, { effB8_mes_jp_14_54, effB8_mes_jp_14_55 },
+    { (const CONN*)effB8_mes_jp_14_56, effB8_mes_jp_14_57 }, { effB8_mes_jp_14_58, effB8_mes_jp_14_59 },
 };
 
-const u32 effB8_mes_jp_14_0[24] = {
-    0x580000, 0xA02B, 0x680000, 0xA03E, 0x780000, 0xA298, 0x880000, 0xA17D,
-    0x980000, 0xA018, 0xA80000, 0xA109, 0xC80000, 0xA00B, 0xD80000, 0xA005,
-    0xE80000, 0xA013, 0xF80000, 0xA1AF, 0x1080000, 0xA025, 0x1180000, 0xA039,
+const CONN effB8_mes_jp_14_0[12] = {
+    { 88, 0, 0, 0xA02B }, { 104, 0, 0, 0xA03E }, { 120, 0, 0, 0xA298 }, { 136, 0, 0, 0xA17D },
+    { 152, 0, 0, 0xA018 }, { 168, 0, 0, 0xA109 }, { 200, 0, 0, 0xA00B }, { 216, 0, 0, 0xA005 },
+    { 232, 0, 0, 0xA013 }, { 248, 0, 0, 0xA1AF }, { 264, 0, 0, 0xA025 }, { 280, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_14_2[18] = {
-    0x780000, 0xA016, 0x880000, 0xA00B, 0x980000, 0xA037, 0xA80000, 0xA41D,
-    0xB80000, 0xA19C, 0xC80000, 0xA027, 0xD80000, 0xA003, 0xE80000, 0xA02D,
-    0xF80000, 0xA039,
+const CONN effB8_mes_jp_14_2[9] = {
+    { 120, 0, 0, 0xA016 }, { 136, 0, 0, 0xA00B }, { 152, 0, 0, 0xA037 }, { 168, 0, 0, 0xA41D },
+    { 184, 0, 0, 0xA19C }, { 200, 0, 0, 0xA027 }, { 216, 0, 0, 0xA003 }, { 232, 0, 0, 0xA02D },
+    { 248, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_14_4[34] = {
@@ -34012,18 +34012,18 @@ const u32 effB8_mes_jp_14_6[30] = {
     0x1100000, 0xA029, 0x1200000, 0xA014, 0x1300000, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_8[26] = {
-    0x580000, 0xA002, 0x680000, 0xA016, 0x780000, 0xA018, 0x880000, 0xA109,
-    0x980000, 0xA015, 0xA80000, 0xA124, 0xB80000, 0xA219, 0xC80000, 0xA018,
-    0xD80000, 0xA309, 0xE80000, 0xA206, 0xF80000, 0xA100, 0x1080000, 0xA00B,
-    0x1180000, 0xA039,
+const CONN effB8_mes_jp_14_8[13] = {
+    { 88, 0, 0, 0xA002 }, { 104, 0, 0, 0xA016 }, { 120, 0, 0, 0xA018 }, { 136, 0, 0, 0xA109 },
+    { 152, 0, 0, 0xA015 }, { 168, 0, 0, 0xA124 }, { 184, 0, 0, 0xA219 }, { 200, 0, 0, 0xA018 },
+    { 216, 0, 0, 0xA309 }, { 232, 0, 0, 0xA206 }, { 248, 0, 0, 0xA100 }, { 264, 0, 0, 0xA00B },
+    { 280, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_14_10[32] = {
-    0x400000, 0xA016, 0x500000, 0xA00B, 0x600000, 0xA018, 0x700000, 0xA119,
-    0x800000, 0xA009, 0x900000, 0xA029, 0xA00000, 0xA03E, 0xB00000, 0xA166,
-    0xC00000, 0xA1B9, 0xD00000, 0xA013, 0xE00000, 0xA001, 0xF00000, 0xA002,
-    0x1000000, 0xA01E, 0x1100000, 0xA001, 0x1200000, 0xA014, 0x1300000, 0xA03C,
+const CONN effB8_mes_jp_14_10[16] = {
+    { 64, 0, 0, 0xA016 }, { 80, 0, 0, 0xA00B }, { 96, 0, 0, 0xA018 }, { 112, 0, 0, 0xA119 },
+    { 128, 0, 0, 0xA009 }, { 144, 0, 0, 0xA029 }, { 160, 0, 0, 0xA03E }, { 176, 0, 0, 0xA166 },
+    { 192, 0, 0, 0xA1B9 }, { 208, 0, 0, 0xA013 }, { 224, 0, 0, 0xA001 }, { 240, 0, 0, 0xA002 },
+    { 256, 0, 0, 0xA01E }, { 272, 0, 0, 0xA001 }, { 288, 0, 0, 0xA014 }, { 304, 0, 0, 0xA03C },
 };
 
 const u32 effB8_mes_jp_14_12[20] = {
@@ -34032,12 +34032,12 @@ const u32 effB8_mes_jp_14_12[20] = {
     0xF80000, 0xA02A, 0x1080000, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_14[36] = {
-    0x580000, 0xA016, 0x680000, 0xA00B, 0x780000, 0xA018, 0x880000, 0xA109,
-    0xA80000, 0xA1CC, 0xB80000, 0xA11A, 0xC80000, 0xA02C, 0xD80000, 0xA192,
-    0xE80000, 0xA044, 0xF80000, 0xA003, 0x1080000, 0xA016, 0x1180000, 0xA039,
-    0x58FFEA, 0xA275, 0x68FFEA, 0xA013, 0x78FFEA, 0xA176, 0x88FFEA, 0xA029,
-    0x98FFEA, 0xA0AF, 0xA8FFEA, 0xA039,
+const CONN effB8_mes_jp_14_14[18] = {
+    { 88, 0, 0, 0xA016 }, { 104, 0, 0, 0xA00B }, { 120, 0, 0, 0xA018 }, { 136, 0, 0, 0xA109 },
+    { 168, 0, 0, 0xA1CC }, { 184, 0, 0, 0xA11A }, { 200, 0, 0, 0xA02C }, { 216, 0, 0, 0xA192 },
+    { 232, 0, 0, 0xA044 }, { 248, 0, 0, 0xA003 }, { 264, 0, 0, 0xA016 }, { 280, 0, 0, 0xA039 },
+    { 88, -22, 0, 0xA275 }, { 104, -22, 0, 0xA013 }, { 120, -22, 0, 0xA176 }, { 136, -22, 0, 0xA029 },
+    { 152, -22, 0, 0xA0AF }, { 168, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_14_16[26] = {
@@ -34047,11 +34047,11 @@ const u32 effB8_mes_jp_14_16[26] = {
     0x1200000, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_18[32] = {
-    0x580000, 0xA288, 0x680000, 0xA264, 0x780000, 0xA039, 0x58FFEA, 0xA257,
-    0x68FFEA, 0xA11A, 0x78FFEA, 0xA00F, 0x88FFEA, 0xA048, 0x98FFEA, 0xA1CB,
-    0xA8FFEA, 0xA41F, 0xB8FFEA, 0xA018, 0xC8FFEA, 0xA19C, 0xD8FFEA, 0xA00B,
-    0xE8FFEA, 0xA018, 0xF8FFEA, 0xA01F, 0x108FFEA, 0xA005, 0x118FFEA, 0xA039,
+const CONN effB8_mes_jp_14_18[16] = {
+    { 88, 0, 0, 0xA288 }, { 104, 0, 0, 0xA264 }, { 120, 0, 0, 0xA039 }, { 88, -22, 0, 0xA257 },
+    { 104, -22, 0, 0xA11A }, { 120, -22, 0, 0xA00F }, { 136, -22, 0, 0xA048 }, { 152, -22, 0, 0xA1CB },
+    { 168, -22, 0, 0xA41F }, { 184, -22, 0, 0xA018 }, { 200, -22, 0, 0xA19C }, { 216, -22, 0, 0xA00B },
+    { 232, -22, 0, 0xA018 }, { 248, -22, 0, 0xA01F }, { 264, -22, 0, 0xA005 }, { 280, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_14_20[26] = {
@@ -34061,12 +34061,12 @@ const u32 effB8_mes_jp_14_20[26] = {
     0x1200000, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_22[34] = {
-    0x600000, 0xA1CC, 0x700000, 0xA10D, 0x800000, 0xA014, 0x900000, 0xA006,
-    0xA00000, 0xA139, 0x60FFEA, 0xA2A0, 0x70FFEA, 0xA02C, 0x80FFEA, 0xA336,
-    0x90FFEA, 0xA005, 0xA0FFEA, 0xA00C, 0xB0FFEA, 0xA009, 0xC0FFEA, 0xA013,
-    0xD0FFEA, 0xA005, 0xE0FFEA, 0xA014, 0xF0FFEA, 0xA02B, 0x100FFEA, 0xA016,
-    0x110FFEA, 0xA039,
+const CONN effB8_mes_jp_14_22[17] = {
+    { 96, 0, 0, 0xA1CC }, { 112, 0, 0, 0xA10D }, { 128, 0, 0, 0xA014 }, { 144, 0, 0, 0xA006 },
+    { 160, 0, 0, 0xA139 }, { 96, -22, 0, 0xA2A0 }, { 112, -22, 0, 0xA02C }, { 128, -22, 0, 0xA336 },
+    { 144, -22, 0, 0xA005 }, { 160, -22, 0, 0xA00C }, { 176, -22, 0, 0xA009 }, { 192, -22, 0, 0xA013 },
+    { 208, -22, 0, 0xA005 }, { 224, -22, 0, 0xA014 }, { 240, -22, 0, 0xA02B }, { 256, -22, 0, 0xA016 },
+    { 272, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_14_24[32] = {
@@ -34076,11 +34076,11 @@ const u32 effB8_mes_jp_14_24[32] = {
     0x1000000, 0xA008, 0x1100000, 0xA012, 0x1200000, 0xA01F, 0x1300000, 0xA025,
 };
 
-const u32 effB8_mes_jp_14_26[28] = {
-    0x480000, 0xA00E, 0x580000, 0xA018, 0x680000, 0xA131, 0x780000, 0xA132,
-    0x980000, 0xA423, 0xA80000, 0xA202, 0xB80000, 0xA018, 0xC80000, 0xA1CC,
-    0xD80000, 0xA10D, 0xE80000, 0xA013, 0xF80000, 0xA3FB, 0x1080000, 0xA028,
-    0x1180000, 0xA005, 0x1280000, 0xA039,
+const CONN effB8_mes_jp_14_26[14] = {
+    { 72, 0, 0, 0xA00E }, { 88, 0, 0, 0xA018 }, { 104, 0, 0, 0xA131 }, { 120, 0, 0, 0xA132 },
+    { 152, 0, 0, 0xA423 }, { 168, 0, 0, 0xA202 }, { 184, 0, 0, 0xA018 }, { 200, 0, 0, 0xA1CC },
+    { 216, 0, 0, 0xA10D }, { 232, 0, 0, 0xA013 }, { 248, 0, 0, 0xA3FB }, { 264, 0, 0, 0xA028 },
+    { 280, 0, 0, 0xA005 }, { 296, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_14_28[32] = {
@@ -34090,12 +34090,12 @@ const u32 effB8_mes_jp_14_28[32] = {
     0xC0FFEA, 0xA029, 0xD0FFEA, 0xA028, 0xE0FFEA, 0xA0AB, 0xF0FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_30[36] = {
-    0x680000, 0xA002, 0x780000, 0xA016, 0x880000, 0xA018, 0x980000, 0xA119,
-    0xB80000, 0xA208, 0xC80000, 0xA1CC, 0xD80000, 0xA018, 0xE80000, 0xA107,
-    0xF80000, 0xA108, 0x1080000, 0xA015, 0x68FFEA, 0xA424, 0x78FFEA, 0xA425,
-    0x88FFEA, 0xA022, 0x98FFEA, 0xA226, 0xA8FFEA, 0xA00F, 0xB8FFEA, 0xA016,
-    0xC8FFEA, 0xA02B, 0xD8FFEA, 0xA039,
+const CONN effB8_mes_jp_14_30[18] = {
+    { 104, 0, 0, 0xA002 }, { 120, 0, 0, 0xA016 }, { 136, 0, 0, 0xA018 }, { 152, 0, 0, 0xA119 },
+    { 184, 0, 0, 0xA208 }, { 200, 0, 0, 0xA1CC }, { 216, 0, 0, 0xA018 }, { 232, 0, 0, 0xA107 },
+    { 248, 0, 0, 0xA108 }, { 264, 0, 0, 0xA015 }, { 104, -22, 0, 0xA424 }, { 120, -22, 0, 0xA425 },
+    { 136, -22, 0, 0xA022 }, { 152, -22, 0, 0xA226 }, { 168, -22, 0, 0xA00F }, { 184, -22, 0, 0xA016 },
+    { 200, -22, 0, 0xA02B }, { 216, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_14_32[30] = {
@@ -34105,10 +34105,10 @@ const u32 effB8_mes_jp_14_32[30] = {
     0xF0FFEA, 0xA016, 0x100FFEA, 0xA005, 0x110FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_34[24] = {
-    0x600000, 0xA208, 0x700000, 0xA1CC, 0x800000, 0xA018, 0x900000, 0xA1CD,
-    0xA00000, 0xA1CE, 0xB00000, 0xA015, 0xC00000, 0xA3AD, 0xD00000, 0xA008,
-    0xE00000, 0xA426, 0xF00000, 0xA029, 0x1000000, 0xA001, 0x1100000, 0xA039,
+const CONN effB8_mes_jp_14_34[12] = {
+    { 96, 0, 0, 0xA208 }, { 112, 0, 0, 0xA1CC }, { 128, 0, 0, 0xA018 }, { 144, 0, 0, 0xA1CD },
+    { 160, 0, 0, 0xA1CE }, { 176, 0, 0, 0xA015 }, { 192, 0, 0, 0xA3AD }, { 208, 0, 0, 0xA008 },
+    { 224, 0, 0, 0xA426 }, { 240, 0, 0, 0xA029 }, { 256, 0, 0, 0xA001 }, { 272, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_14_36[20] = {
@@ -34117,12 +34117,12 @@ const u32 effB8_mes_jp_14_36[20] = {
     0xF80000, 0xA001, 0x1080000, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_38[34] = {
-    0x500000, 0xA208, 0x600000, 0xA1CC, 0x700000, 0xA039, 0x50FFEA, 0xA2A0,
-    0x60FFEA, 0xA03E, 0x70FFEA, 0xA10E, 0x80FFEA, 0xA015, 0x90FFEA, 0xA11F,
-    0xA0FFEA, 0xA010, 0xB0FFEA, 0xA112, 0xC0FFEA, 0xA03E, 0xD0FFEA, 0xA028,
-    0xE0FFEA, 0xA17D, 0xF0FFEA, 0xA139, 0x100FFEA, 0xA014, 0x110FFEA, 0xA00B,
-    0x120FFEA, 0xA039,
+const CONN effB8_mes_jp_14_38[17] = {
+    { 80, 0, 0, 0xA208 }, { 96, 0, 0, 0xA1CC }, { 112, 0, 0, 0xA039 }, { 80, -22, 0, 0xA2A0 },
+    { 96, -22, 0, 0xA03E }, { 112, -22, 0, 0xA10E }, { 128, -22, 0, 0xA015 }, { 144, -22, 0, 0xA11F },
+    { 160, -22, 0, 0xA010 }, { 176, -22, 0, 0xA112 }, { 192, -22, 0, 0xA03E }, { 208, -22, 0, 0xA028 },
+    { 224, -22, 0, 0xA17D }, { 240, -22, 0, 0xA139 }, { 256, -22, 0, 0xA014 }, { 272, -22, 0, 0xA00B },
+    { 288, -22, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_14_40[24] = {
@@ -34131,16 +34131,16 @@ const u32 effB8_mes_jp_14_40[24] = {
     0xE80000, 0xA013, 0xF80000, 0xA014, 0x1080000, 0xA00B, 0x1180000, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_42[28] = {
-    0x480000, 0xA002, 0x580000, 0xA016, 0x680000, 0xA02C, 0x780000, 0xA14A,
-    0x880000, 0xA00C, 0x980000, 0xA015, 0xA80000, 0xA019, 0xC80000, 0xA124,
-    0xD80000, 0xA140, 0xE80000, 0xA00C, 0xF80000, 0xA026, 0x1080000, 0xA1CB,
-    0x1180000, 0xA001, 0x1280000, 0xA039,
+const CONN effB8_mes_jp_14_42[14] = {
+    { 72, 0, 0, 0xA002 }, { 88, 0, 0, 0xA016 }, { 104, 0, 0, 0xA02C }, { 120, 0, 0, 0xA14A },
+    { 136, 0, 0, 0xA00C }, { 152, 0, 0, 0xA015 }, { 168, 0, 0, 0xA019 }, { 200, 0, 0, 0xA124 },
+    { 216, 0, 0, 0xA140 }, { 232, 0, 0, 0xA00C }, { 248, 0, 0, 0xA026 }, { 264, 0, 0, 0xA1CB },
+    { 280, 0, 0, 0xA001 }, { 296, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_14_44[16] = {
-    0x800000, 0xA057, 0x900000, 0xA057, 0xA00000, 0xA057, 0xB00000, 0xA057,
-    0xC00000, 0xA057, 0xD00000, 0xA057, 0xE00000, 0xA057, 0xF00000, 0xA057,
+const CONN effB8_mes_jp_14_44[8] = {
+    { 128, 0, 0, 0xA057 }, { 144, 0, 0, 0xA057 }, { 160, 0, 0, 0xA057 }, { 176, 0, 0, 0xA057 },
+    { 192, 0, 0, 0xA057 }, { 208, 0, 0, 0xA057 }, { 224, 0, 0, 0xA057 }, { 240, 0, 0, 0xA057 },
 };
 
 const u32 effB8_mes_jp_14_46[34] = {
@@ -34151,11 +34151,11 @@ const u32 effB8_mes_jp_14_46[34] = {
     0xF8FFEA, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_48[26] = {
-    0x500000, 0xA016, 0x600000, 0xA00B, 0x700000, 0xA018, 0x800000, 0xA119,
-    0x900000, 0xA04B, 0xB00000, 0xA2A0, 0xC00000, 0xA03E, 0xD00000, 0xA109,
-    0xE00000, 0xA019, 0xF00000, 0xA3AD, 0x1000000, 0xA008, 0x1100000, 0xA016,
-    0x1200000, 0xA039,
+const CONN effB8_mes_jp_14_48[13] = {
+    { 80, 0, 0, 0xA016 }, { 96, 0, 0, 0xA00B }, { 112, 0, 0, 0xA018 }, { 128, 0, 0, 0xA119 },
+    { 144, 0, 0, 0xA04B }, { 176, 0, 0, 0xA2A0 }, { 192, 0, 0, 0xA03E }, { 208, 0, 0, 0xA109 },
+    { 224, 0, 0, 0xA019 }, { 240, 0, 0, 0xA3AD }, { 256, 0, 0, 0xA008 }, { 272, 0, 0, 0xA016 },
+    { 288, 0, 0, 0xA039 },
 };
 
 const u32 effB8_mes_jp_14_50[20] = {
@@ -34164,16 +34164,16 @@ const u32 effB8_mes_jp_14_50[20] = {
     0xF80000, 0xA0AB, 0x1080000, 0xA039,
 };
 
-const u32 effB8_mes_jp_14_52[24] = {
-    0x580000, 0xA2A0, 0x680000, 0xA03E, 0x780000, 0xA109, 0x880000, 0xA015,
-    0xA80000, 0xA424, 0xB80000, 0xA425, 0xC80000, 0xA018, 0xD80000, 0xA1ED,
-    0xE80000, 0xA1DA, 0xF80000, 0xA014, 0x1080000, 0xA00B, 0x1180000, 0xA039,
+const CONN effB8_mes_jp_14_52[12] = {
+    { 88, 0, 0, 0xA2A0 }, { 104, 0, 0, 0xA03E }, { 120, 0, 0, 0xA109 }, { 136, 0, 0, 0xA015 },
+    { 168, 0, 0, 0xA424 }, { 184, 0, 0, 0xA425 }, { 200, 0, 0, 0xA018 }, { 216, 0, 0, 0xA1ED },
+    { 232, 0, 0, 0xA1DA }, { 248, 0, 0, 0xA014 }, { 264, 0, 0, 0xA00B }, { 280, 0, 0, 0xA039 },
 };
 
-const u32 effB8_mes_jp_14_54[24] = {
-    0x600000, 0xA2A0, 0x700000, 0xA02C, 0x800000, 0xA226, 0x900000, 0xA00F,
-    0xA00000, 0xA00C, 0xB00000, 0xA139, 0xC00000, 0xA019, 0xD00000, 0xA001,
-    0xE00000, 0xA045, 0xF00000, 0xA009, 0x1000000, 0xA015, 0x1100000, 0xA057,
+const CONN effB8_mes_jp_14_54[12] = {
+    { 96, 0, 0, 0xA2A0 }, { 112, 0, 0, 0xA02C }, { 128, 0, 0, 0xA226 }, { 144, 0, 0, 0xA00F },
+    { 160, 0, 0, 0xA00C }, { 176, 0, 0, 0xA139 }, { 192, 0, 0, 0xA019 }, { 208, 0, 0, 0xA001 },
+    { 224, 0, 0, 0xA045 }, { 240, 0, 0, 0xA009 }, { 256, 0, 0, 0xA015 }, { 272, 0, 0, 0xA057 },
 };
 
 const u32 effB8_mes_jp_14_56[40] = {
@@ -34184,10 +34184,10 @@ const u32 effB8_mes_jp_14_56[40] = {
     0x70FFEA, 0xA01E, 0x80FFEA, 0xA001, 0x90FFEA, 0xA014, 0xA0FFEA, 0xA03C,
 };
 
-const u32 effB8_mes_jp_14_58[18] = {
-    0x780000, 0xA129, 0x880000, 0xA00A, 0x980000, 0xA019, 0xA80000, 0xA275,
-    0xB80000, 0xA013, 0xC80000, 0xA176, 0xD80000, 0xA029, 0xE80000, 0xA0AF,
-    0xF80000, 0xA039,
+const CONN effB8_mes_jp_14_58[9] = {
+    { 120, 0, 0, 0xA129 }, { 136, 0, 0, 0xA00A }, { 152, 0, 0, 0xA019 }, { 168, 0, 0, 0xA275 },
+    { 184, 0, 0, 0xA013 }, { 200, 0, 0, 0xA176 }, { 216, 0, 0, 0xA029 }, { 232, 0, 0, 0xA0AF },
+    { 248, 0, 0, 0xA039 },
 };
 
 const u16 effB8_mes_jp_14_1[6] = {
@@ -34311,21 +34311,21 @@ const u16 effB8_mes_jp_14_59[6] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_0[30] = {
-    { (const CONN*)effB8_mes_en_0_0, (const u16*)effB8_mes_en_0_1 }, { (const CONN*)effB8_mes_en_0_2, (const u16*)effB8_mes_en_0_3 },
-    { (const CONN*)effB8_mes_en_0_4, (const u16*)effB8_mes_en_0_5 }, { (const CONN*)effB8_mes_en_0_6, (const u16*)effB8_mes_en_0_7 },
-    { (const CONN*)effB8_mes_en_0_8, (const u16*)effB8_mes_en_0_9 }, { (const CONN*)effB8_mes_en_0_10, (const u16*)effB8_mes_en_0_11 },
-    { (const CONN*)effB8_mes_en_0_12, (const u16*)effB8_mes_en_0_13 }, { (const CONN*)effB8_mes_en_0_14, (const u16*)effB8_mes_en_0_15 },
-    { (const CONN*)effB8_mes_en_0_16, (const u16*)effB8_mes_en_0_17 }, { (const CONN*)effB8_mes_en_0_18, (const u16*)effB8_mes_en_0_19 },
-    { (const CONN*)effB8_mes_en_0_20, (const u16*)effB8_mes_en_0_21 }, { (const CONN*)effB8_mes_en_0_22, (const u16*)effB8_mes_en_0_23 },
-    { (const CONN*)effB8_mes_en_0_24, (const u16*)effB8_mes_en_0_25 }, { (const CONN*)effB8_mes_en_0_26, (const u16*)effB8_mes_en_0_27 },
-    { (const CONN*)effB8_mes_en_0_28, (const u16*)effB8_mes_en_0_29 }, { (const CONN*)effB8_mes_en_0_30, (const u16*)effB8_mes_en_0_31 },
-    { (const CONN*)effB8_mes_en_0_30, (const u16*)effB8_mes_en_0_33 }, { (const CONN*)effB8_mes_en_0_30, (const u16*)effB8_mes_en_0_35 },
-    { (const CONN*)effB8_mes_en_0_36, (const u16*)effB8_mes_en_0_37 }, { (const CONN*)effB8_mes_en_0_38, (const u16*)effB8_mes_en_0_39 },
-    { (const CONN*)effB8_mes_en_0_38, (const u16*)effB8_mes_en_0_41 }, { (const CONN*)effB8_mes_en_0_38, (const u16*)effB8_mes_en_0_43 },
-    { (const CONN*)effB8_mes_en_0_38, (const u16*)effB8_mes_en_0_45 }, { (const CONN*)effB8_mes_en_0_38, (const u16*)effB8_mes_en_0_47 },
-    { (const CONN*)effB8_mes_en_0_48, (const u16*)effB8_mes_en_0_49 }, { (const CONN*)effB8_mes_en_0_50, (const u16*)effB8_mes_en_0_51 },
-    { (const CONN*)effB8_mes_en_0_52, (const u16*)effB8_mes_en_0_53 }, { (const CONN*)effB8_mes_en_0_54, (const u16*)effB8_mes_en_0_55 },
-    { (const CONN*)effB8_mes_en_0_56, (const u16*)effB8_mes_en_0_57 }, { (const CONN*)effB8_mes_en_0_58, (const u16*)effB8_mes_en_0_59 },
+    { (const CONN*)effB8_mes_en_0_0, effB8_mes_en_0_1 }, { (const CONN*)effB8_mes_en_0_2, effB8_mes_en_0_3 },
+    { (const CONN*)effB8_mes_en_0_4, effB8_mes_en_0_5 }, { (const CONN*)effB8_mes_en_0_6, effB8_mes_en_0_7 },
+    { (const CONN*)effB8_mes_en_0_8, effB8_mes_en_0_9 }, { (const CONN*)effB8_mes_en_0_10, effB8_mes_en_0_11 },
+    { (const CONN*)effB8_mes_en_0_12, effB8_mes_en_0_13 }, { (const CONN*)effB8_mes_en_0_14, effB8_mes_en_0_15 },
+    { (const CONN*)effB8_mes_en_0_16, effB8_mes_en_0_17 }, { (const CONN*)effB8_mes_en_0_18, effB8_mes_en_0_19 },
+    { (const CONN*)effB8_mes_en_0_20, effB8_mes_en_0_21 }, { (const CONN*)effB8_mes_en_0_22, effB8_mes_en_0_23 },
+    { (const CONN*)effB8_mes_en_0_24, effB8_mes_en_0_25 }, { (const CONN*)effB8_mes_en_0_26, effB8_mes_en_0_27 },
+    { (const CONN*)effB8_mes_en_0_28, effB8_mes_en_0_29 }, { (const CONN*)effB8_mes_en_0_30, effB8_mes_en_0_31 },
+    { (const CONN*)effB8_mes_en_0_30, effB8_mes_en_0_33 }, { (const CONN*)effB8_mes_en_0_30, effB8_mes_en_0_35 },
+    { (const CONN*)effB8_mes_en_0_36, effB8_mes_en_0_37 }, { (const CONN*)effB8_mes_en_0_38, effB8_mes_en_0_39 },
+    { (const CONN*)effB8_mes_en_0_38, effB8_mes_en_0_41 }, { (const CONN*)effB8_mes_en_0_38, effB8_mes_en_0_43 },
+    { (const CONN*)effB8_mes_en_0_38, effB8_mes_en_0_45 }, { (const CONN*)effB8_mes_en_0_38, effB8_mes_en_0_47 },
+    { (const CONN*)effB8_mes_en_0_48, effB8_mes_en_0_49 }, { (const CONN*)effB8_mes_en_0_50, effB8_mes_en_0_51 },
+    { (const CONN*)effB8_mes_en_0_52, effB8_mes_en_0_53 }, { (const CONN*)effB8_mes_en_0_54, effB8_mes_en_0_55 },
+    { (const CONN*)effB8_mes_en_0_56, effB8_mes_en_0_57 }, { (const CONN*)effB8_mes_en_0_58, effB8_mes_en_0_59 },
 };
 
 const u32 effB8_mes_en_0_0[104] = {
@@ -34907,21 +34907,21 @@ const u16 effB8_mes_en_0_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_1[30] = {
-    { (const CONN*)effB8_mes_en_1_0, (const u16*)effB8_mes_en_1_1 }, { (const CONN*)effB8_mes_en_1_2, (const u16*)effB8_mes_en_1_3 },
-    { (const CONN*)effB8_mes_en_1_4, (const u16*)effB8_mes_en_1_5 }, { (const CONN*)effB8_mes_en_1_6, (const u16*)effB8_mes_en_1_7 },
-    { (const CONN*)effB8_mes_en_1_8, (const u16*)effB8_mes_en_1_9 }, { (const CONN*)effB8_mes_en_1_10, (const u16*)effB8_mes_en_1_11 },
-    { (const CONN*)effB8_mes_en_1_12, (const u16*)effB8_mes_en_1_13 }, { (const CONN*)effB8_mes_en_1_14, (const u16*)effB8_mes_en_1_15 },
-    { (const CONN*)effB8_mes_en_1_16, (const u16*)effB8_mes_en_1_17 }, { (const CONN*)effB8_mes_en_1_18, (const u16*)effB8_mes_en_1_19 },
-    { (const CONN*)effB8_mes_en_1_20, (const u16*)effB8_mes_en_1_21 }, { (const CONN*)effB8_mes_en_1_22, (const u16*)effB8_mes_en_1_23 },
-    { (const CONN*)effB8_mes_en_1_24, (const u16*)effB8_mes_en_1_25 }, { (const CONN*)effB8_mes_en_1_26, (const u16*)effB8_mes_en_1_27 },
-    { (const CONN*)effB8_mes_en_1_28, (const u16*)effB8_mes_en_1_29 }, { (const CONN*)effB8_mes_en_1_30, (const u16*)effB8_mes_en_1_31 },
-    { (const CONN*)effB8_mes_en_1_32, (const u16*)effB8_mes_en_1_33 }, { (const CONN*)effB8_mes_en_1_34, (const u16*)effB8_mes_en_1_35 },
-    { (const CONN*)effB8_mes_en_1_36, (const u16*)effB8_mes_en_1_37 }, { (const CONN*)effB8_mes_en_1_38, (const u16*)effB8_mes_en_1_39 },
-    { (const CONN*)effB8_mes_en_1_40, (const u16*)effB8_mes_en_1_41 }, { (const CONN*)effB8_mes_en_1_42, (const u16*)effB8_mes_en_1_43 },
-    { (const CONN*)effB8_mes_en_1_42, (const u16*)effB8_mes_en_1_45 }, { (const CONN*)effB8_mes_en_1_42, (const u16*)effB8_mes_en_1_47 },
-    { (const CONN*)effB8_mes_en_1_48, (const u16*)effB8_mes_en_1_49 }, { (const CONN*)effB8_mes_en_1_50, (const u16*)effB8_mes_en_1_51 },
-    { (const CONN*)effB8_mes_en_1_52, (const u16*)effB8_mes_en_1_53 }, { (const CONN*)effB8_mes_en_1_54, (const u16*)effB8_mes_en_1_55 },
-    { (const CONN*)effB8_mes_en_1_56, (const u16*)effB8_mes_en_1_57 }, { (const CONN*)effB8_mes_en_1_58, (const u16*)effB8_mes_en_1_59 },
+    { (const CONN*)effB8_mes_en_1_0, effB8_mes_en_1_1 }, { (const CONN*)effB8_mes_en_1_2, effB8_mes_en_1_3 },
+    { (const CONN*)effB8_mes_en_1_4, effB8_mes_en_1_5 }, { (const CONN*)effB8_mes_en_1_6, effB8_mes_en_1_7 },
+    { (const CONN*)effB8_mes_en_1_8, effB8_mes_en_1_9 }, { (const CONN*)effB8_mes_en_1_10, effB8_mes_en_1_11 },
+    { (const CONN*)effB8_mes_en_1_12, effB8_mes_en_1_13 }, { (const CONN*)effB8_mes_en_1_14, effB8_mes_en_1_15 },
+    { (const CONN*)effB8_mes_en_1_16, effB8_mes_en_1_17 }, { (const CONN*)effB8_mes_en_1_18, effB8_mes_en_1_19 },
+    { (const CONN*)effB8_mes_en_1_20, effB8_mes_en_1_21 }, { (const CONN*)effB8_mes_en_1_22, effB8_mes_en_1_23 },
+    { (const CONN*)effB8_mes_en_1_24, effB8_mes_en_1_25 }, { (const CONN*)effB8_mes_en_1_26, effB8_mes_en_1_27 },
+    { (const CONN*)effB8_mes_en_1_28, effB8_mes_en_1_29 }, { (const CONN*)effB8_mes_en_1_30, effB8_mes_en_1_31 },
+    { (const CONN*)effB8_mes_en_1_32, effB8_mes_en_1_33 }, { (const CONN*)effB8_mes_en_1_34, effB8_mes_en_1_35 },
+    { (const CONN*)effB8_mes_en_1_36, effB8_mes_en_1_37 }, { (const CONN*)effB8_mes_en_1_38, effB8_mes_en_1_39 },
+    { (const CONN*)effB8_mes_en_1_40, effB8_mes_en_1_41 }, { (const CONN*)effB8_mes_en_1_42, effB8_mes_en_1_43 },
+    { (const CONN*)effB8_mes_en_1_42, effB8_mes_en_1_45 }, { (const CONN*)effB8_mes_en_1_42, effB8_mes_en_1_47 },
+    { (const CONN*)effB8_mes_en_1_48, effB8_mes_en_1_49 }, { (const CONN*)effB8_mes_en_1_50, effB8_mes_en_1_51 },
+    { (const CONN*)effB8_mes_en_1_52, effB8_mes_en_1_53 }, { (const CONN*)effB8_mes_en_1_54, effB8_mes_en_1_55 },
+    { (const CONN*)effB8_mes_en_1_56, effB8_mes_en_1_57 }, { (const CONN*)effB8_mes_en_1_58, effB8_mes_en_1_59 },
 };
 
 const u32 effB8_mes_en_1_0[136] = {
@@ -35535,21 +35535,21 @@ const u16 effB8_mes_en_1_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_2[30] = {
-    { (const CONN*)effB8_mes_en_2_0, (const u16*)effB8_mes_en_2_1 }, { (const CONN*)effB8_mes_en_2_2, (const u16*)effB8_mes_en_2_3 },
-    { (const CONN*)effB8_mes_en_2_4, (const u16*)effB8_mes_en_2_5 }, { (const CONN*)effB8_mes_en_2_6, (const u16*)effB8_mes_en_2_7 },
-    { (const CONN*)effB8_mes_en_2_8, (const u16*)effB8_mes_en_2_9 }, { (const CONN*)effB8_mes_en_2_10, (const u16*)effB8_mes_en_2_11 },
-    { (const CONN*)effB8_mes_en_2_12, (const u16*)effB8_mes_en_2_13 }, { (const CONN*)effB8_mes_en_2_14, (const u16*)effB8_mes_en_2_15 },
-    { (const CONN*)effB8_mes_en_2_16, (const u16*)effB8_mes_en_2_17 }, { (const CONN*)effB8_mes_en_2_18, (const u16*)effB8_mes_en_2_19 },
-    { (const CONN*)effB8_mes_en_2_20, (const u16*)effB8_mes_en_2_21 }, { (const CONN*)effB8_mes_en_2_22, (const u16*)effB8_mes_en_2_23 },
-    { (const CONN*)effB8_mes_en_2_24, (const u16*)effB8_mes_en_2_25 }, { (const CONN*)effB8_mes_en_2_26, (const u16*)effB8_mes_en_2_27 },
-    { (const CONN*)effB8_mes_en_2_28, (const u16*)effB8_mes_en_2_29 }, { (const CONN*)effB8_mes_en_2_30, (const u16*)effB8_mes_en_2_31 },
-    { (const CONN*)effB8_mes_en_2_32, (const u16*)effB8_mes_en_2_33 }, { (const CONN*)effB8_mes_en_2_34, (const u16*)effB8_mes_en_2_35 },
-    { (const CONN*)effB8_mes_en_2_36, (const u16*)effB8_mes_en_2_37 }, { (const CONN*)effB8_mes_en_2_38, (const u16*)effB8_mes_en_2_39 },
-    { (const CONN*)effB8_mes_en_2_40, (const u16*)effB8_mes_en_2_41 }, { (const CONN*)effB8_mes_en_2_42, (const u16*)effB8_mes_en_2_43 },
-    { (const CONN*)effB8_mes_en_2_42, (const u16*)effB8_mes_en_2_45 }, { (const CONN*)effB8_mes_en_2_42, (const u16*)effB8_mes_en_2_47 },
-    { (const CONN*)effB8_mes_en_2_48, (const u16*)effB8_mes_en_2_49 }, { (const CONN*)effB8_mes_en_2_50, (const u16*)effB8_mes_en_2_51 },
-    { (const CONN*)effB8_mes_en_2_52, (const u16*)effB8_mes_en_2_53 }, { (const CONN*)effB8_mes_en_2_54, (const u16*)effB8_mes_en_2_55 },
-    { (const CONN*)effB8_mes_en_2_56, (const u16*)effB8_mes_en_2_57 }, { (const CONN*)effB8_mes_en_2_58, (const u16*)effB8_mes_en_2_59 },
+    { (const CONN*)effB8_mes_en_2_0, effB8_mes_en_2_1 }, { (const CONN*)effB8_mes_en_2_2, effB8_mes_en_2_3 },
+    { (const CONN*)effB8_mes_en_2_4, effB8_mes_en_2_5 }, { (const CONN*)effB8_mes_en_2_6, effB8_mes_en_2_7 },
+    { (const CONN*)effB8_mes_en_2_8, effB8_mes_en_2_9 }, { (const CONN*)effB8_mes_en_2_10, effB8_mes_en_2_11 },
+    { (const CONN*)effB8_mes_en_2_12, effB8_mes_en_2_13 }, { (const CONN*)effB8_mes_en_2_14, effB8_mes_en_2_15 },
+    { (const CONN*)effB8_mes_en_2_16, effB8_mes_en_2_17 }, { (const CONN*)effB8_mes_en_2_18, effB8_mes_en_2_19 },
+    { (const CONN*)effB8_mes_en_2_20, effB8_mes_en_2_21 }, { (const CONN*)effB8_mes_en_2_22, effB8_mes_en_2_23 },
+    { (const CONN*)effB8_mes_en_2_24, effB8_mes_en_2_25 }, { (const CONN*)effB8_mes_en_2_26, effB8_mes_en_2_27 },
+    { (const CONN*)effB8_mes_en_2_28, effB8_mes_en_2_29 }, { (const CONN*)effB8_mes_en_2_30, effB8_mes_en_2_31 },
+    { (const CONN*)effB8_mes_en_2_32, effB8_mes_en_2_33 }, { (const CONN*)effB8_mes_en_2_34, effB8_mes_en_2_35 },
+    { (const CONN*)effB8_mes_en_2_36, effB8_mes_en_2_37 }, { (const CONN*)effB8_mes_en_2_38, effB8_mes_en_2_39 },
+    { (const CONN*)effB8_mes_en_2_40, effB8_mes_en_2_41 }, { (const CONN*)effB8_mes_en_2_42, effB8_mes_en_2_43 },
+    { (const CONN*)effB8_mes_en_2_42, effB8_mes_en_2_45 }, { (const CONN*)effB8_mes_en_2_42, effB8_mes_en_2_47 },
+    { (const CONN*)effB8_mes_en_2_48, effB8_mes_en_2_49 }, { (const CONN*)effB8_mes_en_2_50, effB8_mes_en_2_51 },
+    { (const CONN*)effB8_mes_en_2_52, effB8_mes_en_2_53 }, { (const CONN*)effB8_mes_en_2_54, effB8_mes_en_2_55 },
+    { (const CONN*)effB8_mes_en_2_56, effB8_mes_en_2_57 }, { (const CONN*)effB8_mes_en_2_58, effB8_mes_en_2_59 },
 };
 
 const u32 effB8_mes_en_2_0[94] = {
@@ -36193,21 +36193,21 @@ const u16 effB8_mes_en_2_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_3[30] = {
-    { (const CONN*)effB8_mes_en_3_0, (const u16*)effB8_mes_en_3_1 }, { (const CONN*)effB8_mes_en_3_2, (const u16*)effB8_mes_en_3_3 },
-    { (const CONN*)effB8_mes_en_3_4, (const u16*)effB8_mes_en_3_5 }, { (const CONN*)effB8_mes_en_3_6, (const u16*)effB8_mes_en_3_7 },
-    { (const CONN*)effB8_mes_en_3_8, (const u16*)effB8_mes_en_3_9 }, { (const CONN*)effB8_mes_en_3_10, (const u16*)effB8_mes_en_3_11 },
-    { (const CONN*)effB8_mes_en_3_12, (const u16*)effB8_mes_en_3_13 }, { (const CONN*)effB8_mes_en_3_14, (const u16*)effB8_mes_en_3_15 },
-    { (const CONN*)effB8_mes_en_3_16, (const u16*)effB8_mes_en_3_17 }, { (const CONN*)effB8_mes_en_3_18, (const u16*)effB8_mes_en_3_19 },
-    { (const CONN*)effB8_mes_en_3_20, (const u16*)effB8_mes_en_3_21 }, { (const CONN*)effB8_mes_en_3_22, (const u16*)effB8_mes_en_3_23 },
-    { (const CONN*)effB8_mes_en_3_24, (const u16*)effB8_mes_en_3_25 }, { (const CONN*)effB8_mes_en_3_26, (const u16*)effB8_mes_en_3_27 },
-    { (const CONN*)effB8_mes_en_3_28, (const u16*)effB8_mes_en_3_29 }, { (const CONN*)effB8_mes_en_3_30, (const u16*)effB8_mes_en_3_31 },
-    { (const CONN*)effB8_mes_en_3_32, (const u16*)effB8_mes_en_3_33 }, { (const CONN*)effB8_mes_en_3_34, (const u16*)effB8_mes_en_3_35 },
-    { (const CONN*)effB8_mes_en_3_36, (const u16*)effB8_mes_en_3_37 }, { (const CONN*)effB8_mes_en_3_38, (const u16*)effB8_mes_en_3_39 },
-    { (const CONN*)effB8_mes_en_3_40, (const u16*)effB8_mes_en_3_41 }, { (const CONN*)effB8_mes_en_3_42, (const u16*)effB8_mes_en_3_43 },
-    { (const CONN*)effB8_mes_en_3_42, (const u16*)effB8_mes_en_3_45 }, { (const CONN*)effB8_mes_en_3_42, (const u16*)effB8_mes_en_3_47 },
-    { (const CONN*)effB8_mes_en_3_48, (const u16*)effB8_mes_en_3_49 }, { (const CONN*)effB8_mes_en_3_50, (const u16*)effB8_mes_en_3_51 },
-    { (const CONN*)effB8_mes_en_3_52, (const u16*)effB8_mes_en_3_53 }, { (const CONN*)effB8_mes_en_3_54, (const u16*)effB8_mes_en_3_55 },
-    { (const CONN*)effB8_mes_en_3_56, (const u16*)effB8_mes_en_3_57 }, { (const CONN*)effB8_mes_en_3_58, (const u16*)effB8_mes_en_3_59 },
+    { (const CONN*)effB8_mes_en_3_0, effB8_mes_en_3_1 }, { (const CONN*)effB8_mes_en_3_2, effB8_mes_en_3_3 },
+    { (const CONN*)effB8_mes_en_3_4, effB8_mes_en_3_5 }, { (const CONN*)effB8_mes_en_3_6, effB8_mes_en_3_7 },
+    { (const CONN*)effB8_mes_en_3_8, effB8_mes_en_3_9 }, { (const CONN*)effB8_mes_en_3_10, effB8_mes_en_3_11 },
+    { (const CONN*)effB8_mes_en_3_12, effB8_mes_en_3_13 }, { (const CONN*)effB8_mes_en_3_14, effB8_mes_en_3_15 },
+    { (const CONN*)effB8_mes_en_3_16, effB8_mes_en_3_17 }, { (const CONN*)effB8_mes_en_3_18, effB8_mes_en_3_19 },
+    { (const CONN*)effB8_mes_en_3_20, effB8_mes_en_3_21 }, { (const CONN*)effB8_mes_en_3_22, effB8_mes_en_3_23 },
+    { (const CONN*)effB8_mes_en_3_24, effB8_mes_en_3_25 }, { (const CONN*)effB8_mes_en_3_26, effB8_mes_en_3_27 },
+    { (const CONN*)effB8_mes_en_3_28, effB8_mes_en_3_29 }, { (const CONN*)effB8_mes_en_3_30, effB8_mes_en_3_31 },
+    { (const CONN*)effB8_mes_en_3_32, effB8_mes_en_3_33 }, { (const CONN*)effB8_mes_en_3_34, effB8_mes_en_3_35 },
+    { (const CONN*)effB8_mes_en_3_36, effB8_mes_en_3_37 }, { (const CONN*)effB8_mes_en_3_38, effB8_mes_en_3_39 },
+    { (const CONN*)effB8_mes_en_3_40, effB8_mes_en_3_41 }, { (const CONN*)effB8_mes_en_3_42, effB8_mes_en_3_43 },
+    { (const CONN*)effB8_mes_en_3_42, effB8_mes_en_3_45 }, { (const CONN*)effB8_mes_en_3_42, effB8_mes_en_3_47 },
+    { (const CONN*)effB8_mes_en_3_48, effB8_mes_en_3_49 }, { (const CONN*)effB8_mes_en_3_50, effB8_mes_en_3_51 },
+    { (const CONN*)effB8_mes_en_3_52, effB8_mes_en_3_53 }, { (const CONN*)effB8_mes_en_3_54, effB8_mes_en_3_55 },
+    { (const CONN*)effB8_mes_en_3_56, effB8_mes_en_3_57 }, { (const CONN*)effB8_mes_en_3_58, effB8_mes_en_3_59 },
 };
 
 const u32 effB8_mes_en_3_0[104] = {
@@ -36772,21 +36772,21 @@ const u16 effB8_mes_en_3_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_4[30] = {
-    { (const CONN*)effB8_mes_en_4_0, (const u16*)effB8_mes_en_4_1 }, { (const CONN*)effB8_mes_en_4_2, (const u16*)effB8_mes_en_4_3 },
-    { (const CONN*)effB8_mes_en_4_4, (const u16*)effB8_mes_en_4_5 }, { (const CONN*)effB8_mes_en_4_6, (const u16*)effB8_mes_en_4_7 },
-    { (const CONN*)effB8_mes_en_4_8, (const u16*)effB8_mes_en_4_9 }, { (const CONN*)effB8_mes_en_4_10, (const u16*)effB8_mes_en_4_11 },
-    { (const CONN*)effB8_mes_en_4_12, (const u16*)effB8_mes_en_4_13 }, { (const CONN*)effB8_mes_en_4_14, (const u16*)effB8_mes_en_4_15 },
-    { (const CONN*)effB8_mes_en_4_16, (const u16*)effB8_mes_en_4_17 }, { (const CONN*)effB8_mes_en_4_18, (const u16*)effB8_mes_en_4_19 },
-    { (const CONN*)effB8_mes_en_4_20, (const u16*)effB8_mes_en_4_21 }, { (const CONN*)effB8_mes_en_4_22, (const u16*)effB8_mes_en_4_23 },
-    { (const CONN*)effB8_mes_en_4_24, (const u16*)effB8_mes_en_4_25 }, { (const CONN*)effB8_mes_en_4_26, (const u16*)effB8_mes_en_4_27 },
-    { (const CONN*)effB8_mes_en_4_28, (const u16*)effB8_mes_en_4_29 }, { (const CONN*)effB8_mes_en_4_30, (const u16*)effB8_mes_en_4_31 },
-    { (const CONN*)effB8_mes_en_4_32, (const u16*)effB8_mes_en_4_33 }, { (const CONN*)effB8_mes_en_4_34, (const u16*)effB8_mes_en_4_35 },
-    { (const CONN*)effB8_mes_en_4_36, (const u16*)effB8_mes_en_4_37 }, { (const CONN*)effB8_mes_en_4_38, (const u16*)effB8_mes_en_4_39 },
-    { (const CONN*)effB8_mes_en_4_40, (const u16*)effB8_mes_en_4_41 }, { (const CONN*)effB8_mes_en_4_42, (const u16*)effB8_mes_en_4_43 },
-    { (const CONN*)effB8_mes_en_4_42, (const u16*)effB8_mes_en_4_45 }, { (const CONN*)effB8_mes_en_4_42, (const u16*)effB8_mes_en_4_47 },
-    { (const CONN*)effB8_mes_en_4_48, (const u16*)effB8_mes_en_4_49 }, { (const CONN*)effB8_mes_en_4_50, (const u16*)effB8_mes_en_4_51 },
-    { (const CONN*)effB8_mes_en_4_52, (const u16*)effB8_mes_en_4_53 }, { (const CONN*)effB8_mes_en_4_54, (const u16*)effB8_mes_en_4_55 },
-    { (const CONN*)effB8_mes_en_4_56, (const u16*)effB8_mes_en_4_57 }, { (const CONN*)effB8_mes_en_4_58, (const u16*)effB8_mes_en_4_59 },
+    { (const CONN*)effB8_mes_en_4_0, effB8_mes_en_4_1 }, { (const CONN*)effB8_mes_en_4_2, effB8_mes_en_4_3 },
+    { (const CONN*)effB8_mes_en_4_4, effB8_mes_en_4_5 }, { (const CONN*)effB8_mes_en_4_6, effB8_mes_en_4_7 },
+    { (const CONN*)effB8_mes_en_4_8, effB8_mes_en_4_9 }, { (const CONN*)effB8_mes_en_4_10, effB8_mes_en_4_11 },
+    { (const CONN*)effB8_mes_en_4_12, effB8_mes_en_4_13 }, { (const CONN*)effB8_mes_en_4_14, effB8_mes_en_4_15 },
+    { (const CONN*)effB8_mes_en_4_16, effB8_mes_en_4_17 }, { (const CONN*)effB8_mes_en_4_18, effB8_mes_en_4_19 },
+    { (const CONN*)effB8_mes_en_4_20, effB8_mes_en_4_21 }, { (const CONN*)effB8_mes_en_4_22, effB8_mes_en_4_23 },
+    { (const CONN*)effB8_mes_en_4_24, effB8_mes_en_4_25 }, { (const CONN*)effB8_mes_en_4_26, effB8_mes_en_4_27 },
+    { (const CONN*)effB8_mes_en_4_28, effB8_mes_en_4_29 }, { (const CONN*)effB8_mes_en_4_30, effB8_mes_en_4_31 },
+    { (const CONN*)effB8_mes_en_4_32, effB8_mes_en_4_33 }, { (const CONN*)effB8_mes_en_4_34, effB8_mes_en_4_35 },
+    { (const CONN*)effB8_mes_en_4_36, effB8_mes_en_4_37 }, { (const CONN*)effB8_mes_en_4_38, effB8_mes_en_4_39 },
+    { (const CONN*)effB8_mes_en_4_40, effB8_mes_en_4_41 }, { effB8_mes_en_4_42, effB8_mes_en_4_43 },
+    { effB8_mes_en_4_42, effB8_mes_en_4_45 }, { effB8_mes_en_4_42, effB8_mes_en_4_47 },
+    { (const CONN*)effB8_mes_en_4_48, effB8_mes_en_4_49 }, { (const CONN*)effB8_mes_en_4_50, effB8_mes_en_4_51 },
+    { (const CONN*)effB8_mes_en_4_52, effB8_mes_en_4_53 }, { (const CONN*)effB8_mes_en_4_54, effB8_mes_en_4_55 },
+    { (const CONN*)effB8_mes_en_4_56, effB8_mes_en_4_57 }, { (const CONN*)effB8_mes_en_4_58, effB8_mes_en_4_59 },
 };
 
 const u32 effB8_mes_en_4_0[134] = {
@@ -37179,12 +37179,12 @@ const u32 effB8_mes_en_4_40[132] = {
     0x108FFF0, 0x9E93, 0x110FFF0, 0x9E9A,
 };
 
-const u32 effB8_mes_en_4_42[40] = {
-    0x600000, 0x9EB3, 0x680000, 0x9E87, 0x700000, 0x9E88, 0x780000, 0x9E92,
-    0x880000, 0x9E96, 0x900000, 0x9E80, 0x980000, 0x9E92, 0xA80000, 0x9E8C,
-    0xB00000, 0x9E98, 0xC00000, 0x9E85, 0xC80000, 0x9E88, 0xD00000, 0x9E8D,
-    0xD80000, 0x9E84, 0xE00000, 0x9E92, 0xE80000, 0x9E93, 0xF80000, 0x9E87,
-    0x1000000, 0x9E8E, 0x1080000, 0x9E94, 0x1100000, 0x9E91, 0x1180000, 0x9E9A,
+const CONN effB8_mes_en_4_42[20] = {
+    { 96, 0, 0, 0x9EB3 }, { 104, 0, 0, 0x9E87 }, { 112, 0, 0, 0x9E88 }, { 120, 0, 0, 0x9E92 },
+    { 136, 0, 0, 0x9E96 }, { 144, 0, 0, 0x9E80 }, { 152, 0, 0, 0x9E92 }, { 168, 0, 0, 0x9E8C },
+    { 176, 0, 0, 0x9E98 }, { 192, 0, 0, 0x9E85 }, { 200, 0, 0, 0x9E88 }, { 208, 0, 0, 0x9E8D },
+    { 216, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E92 }, { 232, 0, 0, 0x9E93 }, { 248, 0, 0, 0x9E87 },
+    { 256, 0, 0, 0x9E8E }, { 264, 0, 0, 0x9E94 }, { 272, 0, 0, 0x9E91 }, { 280, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_en_4_48[62] = {
@@ -37393,21 +37393,21 @@ const u16 effB8_mes_en_4_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_5[30] = {
-    { (const CONN*)effB8_mes_en_5_0, (const u16*)effB8_mes_en_5_1 }, { (const CONN*)effB8_mes_en_5_2, (const u16*)effB8_mes_en_5_3 },
-    { (const CONN*)effB8_mes_en_5_4, (const u16*)effB8_mes_en_5_5 }, { (const CONN*)effB8_mes_en_5_6, (const u16*)effB8_mes_en_5_7 },
-    { (const CONN*)effB8_mes_en_5_8, (const u16*)effB8_mes_en_5_9 }, { (const CONN*)effB8_mes_en_5_10, (const u16*)effB8_mes_en_5_11 },
-    { (const CONN*)effB8_mes_en_5_12, (const u16*)effB8_mes_en_5_13 }, { (const CONN*)effB8_mes_en_5_14, (const u16*)effB8_mes_en_5_15 },
-    { (const CONN*)effB8_mes_en_5_16, (const u16*)effB8_mes_en_5_17 }, { (const CONN*)effB8_mes_en_5_18, (const u16*)effB8_mes_en_5_19 },
-    { (const CONN*)effB8_mes_en_5_20, (const u16*)effB8_mes_en_5_21 }, { (const CONN*)effB8_mes_en_5_22, (const u16*)effB8_mes_en_5_23 },
-    { (const CONN*)effB8_mes_en_5_24, (const u16*)effB8_mes_en_5_25 }, { (const CONN*)effB8_mes_en_5_26, (const u16*)effB8_mes_en_5_27 },
-    { (const CONN*)effB8_mes_en_5_28, (const u16*)effB8_mes_en_5_29 }, { (const CONN*)effB8_mes_en_5_30, (const u16*)effB8_mes_en_5_31 },
-    { (const CONN*)effB8_mes_en_5_32, (const u16*)effB8_mes_en_5_33 }, { (const CONN*)effB8_mes_en_5_34, (const u16*)effB8_mes_en_5_35 },
-    { (const CONN*)effB8_mes_en_5_36, (const u16*)effB8_mes_en_5_37 }, { (const CONN*)effB8_mes_en_5_38, (const u16*)effB8_mes_en_5_39 },
-    { (const CONN*)effB8_mes_en_5_40, (const u16*)effB8_mes_en_5_41 }, { (const CONN*)effB8_mes_en_5_42, (const u16*)effB8_mes_en_5_43 },
-    { (const CONN*)effB8_mes_en_5_42, (const u16*)effB8_mes_en_5_45 }, { (const CONN*)effB8_mes_en_5_42, (const u16*)effB8_mes_en_5_47 },
-    { (const CONN*)effB8_mes_en_5_48, (const u16*)effB8_mes_en_5_49 }, { (const CONN*)effB8_mes_en_5_50, (const u16*)effB8_mes_en_5_51 },
-    { (const CONN*)effB8_mes_en_5_52, (const u16*)effB8_mes_en_5_53 }, { (const CONN*)effB8_mes_en_5_54, (const u16*)effB8_mes_en_5_55 },
-    { (const CONN*)effB8_mes_en_5_56, (const u16*)effB8_mes_en_5_57 }, { (const CONN*)effB8_mes_en_5_58, (const u16*)effB8_mes_en_5_59 },
+    { (const CONN*)effB8_mes_en_5_0, effB8_mes_en_5_1 }, { (const CONN*)effB8_mes_en_5_2, effB8_mes_en_5_3 },
+    { (const CONN*)effB8_mes_en_5_4, effB8_mes_en_5_5 }, { (const CONN*)effB8_mes_en_5_6, effB8_mes_en_5_7 },
+    { (const CONN*)effB8_mes_en_5_8, effB8_mes_en_5_9 }, { (const CONN*)effB8_mes_en_5_10, effB8_mes_en_5_11 },
+    { (const CONN*)effB8_mes_en_5_12, effB8_mes_en_5_13 }, { (const CONN*)effB8_mes_en_5_14, effB8_mes_en_5_15 },
+    { (const CONN*)effB8_mes_en_5_16, effB8_mes_en_5_17 }, { (const CONN*)effB8_mes_en_5_18, effB8_mes_en_5_19 },
+    { (const CONN*)effB8_mes_en_5_20, effB8_mes_en_5_21 }, { (const CONN*)effB8_mes_en_5_22, effB8_mes_en_5_23 },
+    { (const CONN*)effB8_mes_en_5_24, effB8_mes_en_5_25 }, { (const CONN*)effB8_mes_en_5_26, effB8_mes_en_5_27 },
+    { (const CONN*)effB8_mes_en_5_28, effB8_mes_en_5_29 }, { (const CONN*)effB8_mes_en_5_30, effB8_mes_en_5_31 },
+    { (const CONN*)effB8_mes_en_5_32, effB8_mes_en_5_33 }, { (const CONN*)effB8_mes_en_5_34, effB8_mes_en_5_35 },
+    { (const CONN*)effB8_mes_en_5_36, effB8_mes_en_5_37 }, { (const CONN*)effB8_mes_en_5_38, effB8_mes_en_5_39 },
+    { (const CONN*)effB8_mes_en_5_40, effB8_mes_en_5_41 }, { (const CONN*)effB8_mes_en_5_42, effB8_mes_en_5_43 },
+    { (const CONN*)effB8_mes_en_5_42, effB8_mes_en_5_45 }, { (const CONN*)effB8_mes_en_5_42, effB8_mes_en_5_47 },
+    { (const CONN*)effB8_mes_en_5_48, effB8_mes_en_5_49 }, { (const CONN*)effB8_mes_en_5_50, effB8_mes_en_5_51 },
+    { (const CONN*)effB8_mes_en_5_52, effB8_mes_en_5_53 }, { (const CONN*)effB8_mes_en_5_54, effB8_mes_en_5_55 },
+    { (const CONN*)effB8_mes_en_5_56, effB8_mes_en_5_57 }, { (const CONN*)effB8_mes_en_5_58, effB8_mes_en_5_59 },
 };
 
 const u32 effB8_mes_en_5_0[102] = {
@@ -38007,21 +38007,21 @@ const u16 effB8_mes_en_5_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_6[30] = {
-    { (const CONN*)effB8_mes_en_6_0, (const u16*)effB8_mes_en_6_1 }, { (const CONN*)effB8_mes_en_6_2, (const u16*)effB8_mes_en_6_3 },
-    { (const CONN*)effB8_mes_en_6_4, (const u16*)effB8_mes_en_6_5 }, { (const CONN*)effB8_mes_en_6_6, (const u16*)effB8_mes_en_6_7 },
-    { (const CONN*)effB8_mes_en_6_8, (const u16*)effB8_mes_en_6_9 }, { (const CONN*)effB8_mes_en_6_10, (const u16*)effB8_mes_en_6_11 },
-    { (const CONN*)effB8_mes_en_6_12, (const u16*)effB8_mes_en_6_13 }, { (const CONN*)effB8_mes_en_6_14, (const u16*)effB8_mes_en_6_15 },
-    { (const CONN*)effB8_mes_en_6_16, (const u16*)effB8_mes_en_6_17 }, { (const CONN*)effB8_mes_en_6_18, (const u16*)effB8_mes_en_6_19 },
-    { (const CONN*)effB8_mes_en_6_20, (const u16*)effB8_mes_en_6_21 }, { (const CONN*)effB8_mes_en_6_22, (const u16*)effB8_mes_en_6_23 },
-    { (const CONN*)effB8_mes_en_6_24, (const u16*)effB8_mes_en_6_25 }, { (const CONN*)effB8_mes_en_6_26, (const u16*)effB8_mes_en_6_27 },
-    { (const CONN*)effB8_mes_en_6_28, (const u16*)effB8_mes_en_6_29 }, { (const CONN*)effB8_mes_en_6_30, (const u16*)effB8_mes_en_6_31 },
-    { (const CONN*)effB8_mes_en_6_32, (const u16*)effB8_mes_en_6_33 }, { (const CONN*)effB8_mes_en_6_34, (const u16*)effB8_mes_en_6_35 },
-    { (const CONN*)effB8_mes_en_6_36, (const u16*)effB8_mes_en_6_37 }, { (const CONN*)effB8_mes_en_6_38, (const u16*)effB8_mes_en_6_39 },
-    { (const CONN*)effB8_mes_en_6_40, (const u16*)effB8_mes_en_6_41 }, { (const CONN*)effB8_mes_en_6_42, (const u16*)effB8_mes_en_6_43 },
-    { (const CONN*)effB8_mes_en_6_42, (const u16*)effB8_mes_en_6_45 }, { (const CONN*)effB8_mes_en_6_42, (const u16*)effB8_mes_en_6_47 },
-    { (const CONN*)effB8_mes_en_6_48, (const u16*)effB8_mes_en_6_49 }, { (const CONN*)effB8_mes_en_6_50, (const u16*)effB8_mes_en_6_51 },
-    { (const CONN*)effB8_mes_en_6_52, (const u16*)effB8_mes_en_6_53 }, { (const CONN*)effB8_mes_en_6_54, (const u16*)effB8_mes_en_6_55 },
-    { (const CONN*)effB8_mes_en_6_56, (const u16*)effB8_mes_en_6_57 }, { (const CONN*)effB8_mes_en_6_58, (const u16*)effB8_mes_en_6_59 },
+    { (const CONN*)effB8_mes_en_6_0, effB8_mes_en_6_1 }, { (const CONN*)effB8_mes_en_6_2, effB8_mes_en_6_3 },
+    { (const CONN*)effB8_mes_en_6_4, effB8_mes_en_6_5 }, { (const CONN*)effB8_mes_en_6_6, effB8_mes_en_6_7 },
+    { (const CONN*)effB8_mes_en_6_8, effB8_mes_en_6_9 }, { (const CONN*)effB8_mes_en_6_10, effB8_mes_en_6_11 },
+    { (const CONN*)effB8_mes_en_6_12, effB8_mes_en_6_13 }, { (const CONN*)effB8_mes_en_6_14, effB8_mes_en_6_15 },
+    { (const CONN*)effB8_mes_en_6_16, effB8_mes_en_6_17 }, { (const CONN*)effB8_mes_en_6_18, effB8_mes_en_6_19 },
+    { (const CONN*)effB8_mes_en_6_20, effB8_mes_en_6_21 }, { (const CONN*)effB8_mes_en_6_22, effB8_mes_en_6_23 },
+    { (const CONN*)effB8_mes_en_6_24, effB8_mes_en_6_25 }, { (const CONN*)effB8_mes_en_6_26, effB8_mes_en_6_27 },
+    { (const CONN*)effB8_mes_en_6_28, effB8_mes_en_6_29 }, { (const CONN*)effB8_mes_en_6_30, effB8_mes_en_6_31 },
+    { effB8_mes_en_6_32, effB8_mes_en_6_33 }, { effB8_mes_en_6_34, effB8_mes_en_6_35 },
+    { (const CONN*)effB8_mes_en_6_36, effB8_mes_en_6_37 }, { (const CONN*)effB8_mes_en_6_38, effB8_mes_en_6_39 },
+    { effB8_mes_en_6_40, effB8_mes_en_6_41 }, { (const CONN*)effB8_mes_en_6_42, effB8_mes_en_6_43 },
+    { (const CONN*)effB8_mes_en_6_42, effB8_mes_en_6_45 }, { (const CONN*)effB8_mes_en_6_42, effB8_mes_en_6_47 },
+    { (const CONN*)effB8_mes_en_6_48, effB8_mes_en_6_49 }, { (const CONN*)effB8_mes_en_6_50, effB8_mes_en_6_51 },
+    { (const CONN*)effB8_mes_en_6_52, effB8_mes_en_6_53 }, { (const CONN*)effB8_mes_en_6_54, effB8_mes_en_6_55 },
+    { (const CONN*)effB8_mes_en_6_56, effB8_mes_en_6_57 }, { (const CONN*)effB8_mes_en_6_58, effB8_mes_en_6_59 },
 };
 
 const u32 effB8_mes_en_6_0[114] = {
@@ -38298,16 +38298,16 @@ const u32 effB8_mes_en_6_30[50] = {
     0x1300000, 0x9E9B,
 };
 
-const u32 effB8_mes_en_6_32[24] = {
-    0x900000, 0x9EA5, 0x980000, 0x9E88, 0xA00000, 0x9E8D, 0xA80000, 0x9E88,
-    0xB00000, 0x9E88, 0xB80000, 0x9E88, 0xC00000, 0x9E88, 0xC80000, 0x9E88,
-    0xD00000, 0x9E88, 0xD80000, 0x9E92, 0xE00000, 0x9E87, 0xE80000, 0x9E9A,
+const CONN effB8_mes_en_6_32[12] = {
+    { 144, 0, 0, 0x9EA5 }, { 152, 0, 0, 0x9E88 }, { 160, 0, 0, 0x9E8D }, { 168, 0, 0, 0x9E88 },
+    { 176, 0, 0, 0x9E88 }, { 184, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E88 }, { 200, 0, 0, 0x9E88 },
+    { 208, 0, 0, 0x9E88 }, { 216, 0, 0, 0x9E92 }, { 224, 0, 0, 0x9E87 }, { 232, 0, 0, 0x9E9A },
 };
 
-const u32 effB8_mes_en_6_34[22] = {
-    0x980000, 0x9EAF, 0xA00000, 0x9E91, 0xA80000, 0x9E84, 0xB00000, 0x9E84,
-    0xB80000, 0x9E84, 0xC00000, 0x9E84, 0xC80000, 0x9E84, 0xD00000, 0x9E84,
-    0xD80000, 0x9E92, 0xE00000, 0x9E92, 0xE80000, 0x9E9A,
+const CONN effB8_mes_en_6_34[11] = {
+    { 152, 0, 0, 0x9EAF }, { 160, 0, 0, 0x9E91 }, { 168, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E84 },
+    { 184, 0, 0, 0x9E84 }, { 192, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E84 },
+    { 216, 0, 0, 0x9E92 }, { 224, 0, 0, 0x9E92 }, { 232, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_en_6_36[48] = {
@@ -38325,12 +38325,12 @@ const u32 effB8_mes_en_6_38[20] = {
     0xD80000, 0x9E87, 0xE00000, 0x9E9A,
 };
 
-const u32 effB8_mes_en_6_40[36] = {
-    0x700000, 0x9EA1, 0x780000, 0x9E84, 0x800000, 0x9E87, 0x880000, 0x9E8E,
-    0x900000, 0x9E8B, 0x980000, 0x9E83, 0xA80000, 0x9E8C, 0xB00000, 0x9E98,
-    0xC00000, 0x9E91, 0xC80000, 0x9E84, 0xD00000, 0x9E80, 0xD80000, 0x9E8B,
-    0xE80000, 0x9E8F, 0xF00000, 0x9E8E, 0xF80000, 0x9E96, 0x1000000, 0x9E84,
-    0x1080000, 0x9E91, 0x1100000, 0x9E9A,
+const CONN effB8_mes_en_6_40[18] = {
+    { 112, 0, 0, 0x9EA1 }, { 120, 0, 0, 0x9E84 }, { 128, 0, 0, 0x9E87 }, { 136, 0, 0, 0x9E8E },
+    { 144, 0, 0, 0x9E8B }, { 152, 0, 0, 0x9E83 }, { 168, 0, 0, 0x9E8C }, { 176, 0, 0, 0x9E98 },
+    { 192, 0, 0, 0x9E91 }, { 200, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9E8B },
+    { 232, 0, 0, 0x9E8F }, { 240, 0, 0, 0x9E8E }, { 248, 0, 0, 0x9E96 }, { 256, 0, 0, 0x9E84 },
+    { 264, 0, 0, 0x9E91 }, { 272, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_en_6_42[62] = {
@@ -38535,21 +38535,21 @@ const u16 effB8_mes_en_6_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_7[30] = {
-    { (const CONN*)effB8_mes_en_7_0, (const u16*)effB8_mes_en_7_1 }, { (const CONN*)effB8_mes_en_7_2, (const u16*)effB8_mes_en_7_3 },
-    { (const CONN*)effB8_mes_en_7_4, (const u16*)effB8_mes_en_7_5 }, { (const CONN*)effB8_mes_en_7_6, (const u16*)effB8_mes_en_7_7 },
-    { (const CONN*)effB8_mes_en_7_8, (const u16*)effB8_mes_en_7_9 }, { (const CONN*)effB8_mes_en_7_10, (const u16*)effB8_mes_en_7_11 },
-    { (const CONN*)effB8_mes_en_7_12, (const u16*)effB8_mes_en_7_13 }, { (const CONN*)effB8_mes_en_7_14, (const u16*)effB8_mes_en_7_15 },
-    { (const CONN*)effB8_mes_en_7_16, (const u16*)effB8_mes_en_7_17 }, { (const CONN*)effB8_mes_en_7_18, (const u16*)effB8_mes_en_7_19 },
-    { (const CONN*)effB8_mes_en_7_20, (const u16*)effB8_mes_en_7_21 }, { (const CONN*)effB8_mes_en_7_22, (const u16*)effB8_mes_en_7_23 },
-    { (const CONN*)effB8_mes_en_7_24, (const u16*)effB8_mes_en_7_25 }, { (const CONN*)effB8_mes_en_7_26, (const u16*)effB8_mes_en_7_27 },
-    { (const CONN*)effB8_mes_en_7_28, (const u16*)effB8_mes_en_7_29 }, { (const CONN*)effB8_mes_en_7_30, (const u16*)effB8_mes_en_7_31 },
-    { (const CONN*)effB8_mes_en_7_32, (const u16*)effB8_mes_en_7_33 }, { (const CONN*)effB8_mes_en_7_34, (const u16*)effB8_mes_en_7_35 },
-    { (const CONN*)effB8_mes_en_7_36, (const u16*)effB8_mes_en_7_37 }, { (const CONN*)effB8_mes_en_7_38, (const u16*)effB8_mes_en_7_39 },
-    { (const CONN*)effB8_mes_en_7_40, (const u16*)effB8_mes_en_7_41 }, { (const CONN*)effB8_mes_en_7_42, (const u16*)effB8_mes_en_7_43 },
-    { (const CONN*)effB8_mes_en_7_42, (const u16*)effB8_mes_en_7_45 }, { (const CONN*)effB8_mes_en_7_42, (const u16*)effB8_mes_en_7_47 },
-    { (const CONN*)effB8_mes_en_7_48, (const u16*)effB8_mes_en_7_49 }, { (const CONN*)effB8_mes_en_7_50, (const u16*)effB8_mes_en_7_51 },
-    { (const CONN*)effB8_mes_en_7_52, (const u16*)effB8_mes_en_7_53 }, { (const CONN*)effB8_mes_en_7_54, (const u16*)effB8_mes_en_7_55 },
-    { (const CONN*)effB8_mes_en_7_56, (const u16*)effB8_mes_en_7_57 }, { (const CONN*)effB8_mes_en_7_58, (const u16*)effB8_mes_en_7_59 },
+    { (const CONN*)effB8_mes_en_7_0, effB8_mes_en_7_1 }, { (const CONN*)effB8_mes_en_7_2, effB8_mes_en_7_3 },
+    { (const CONN*)effB8_mes_en_7_4, effB8_mes_en_7_5 }, { (const CONN*)effB8_mes_en_7_6, effB8_mes_en_7_7 },
+    { (const CONN*)effB8_mes_en_7_8, effB8_mes_en_7_9 }, { (const CONN*)effB8_mes_en_7_10, effB8_mes_en_7_11 },
+    { (const CONN*)effB8_mes_en_7_12, effB8_mes_en_7_13 }, { (const CONN*)effB8_mes_en_7_14, effB8_mes_en_7_15 },
+    { (const CONN*)effB8_mes_en_7_16, effB8_mes_en_7_17 }, { (const CONN*)effB8_mes_en_7_18, effB8_mes_en_7_19 },
+    { (const CONN*)effB8_mes_en_7_20, effB8_mes_en_7_21 }, { (const CONN*)effB8_mes_en_7_22, effB8_mes_en_7_23 },
+    { (const CONN*)effB8_mes_en_7_24, effB8_mes_en_7_25 }, { (const CONN*)effB8_mes_en_7_26, effB8_mes_en_7_27 },
+    { (const CONN*)effB8_mes_en_7_28, effB8_mes_en_7_29 }, { (const CONN*)effB8_mes_en_7_30, effB8_mes_en_7_31 },
+    { (const CONN*)effB8_mes_en_7_32, effB8_mes_en_7_33 }, { (const CONN*)effB8_mes_en_7_34, effB8_mes_en_7_35 },
+    { (const CONN*)effB8_mes_en_7_36, effB8_mes_en_7_37 }, { (const CONN*)effB8_mes_en_7_38, effB8_mes_en_7_39 },
+    { (const CONN*)effB8_mes_en_7_40, effB8_mes_en_7_41 }, { (const CONN*)effB8_mes_en_7_42, effB8_mes_en_7_43 },
+    { (const CONN*)effB8_mes_en_7_42, effB8_mes_en_7_45 }, { (const CONN*)effB8_mes_en_7_42, effB8_mes_en_7_47 },
+    { (const CONN*)effB8_mes_en_7_48, effB8_mes_en_7_49 }, { (const CONN*)effB8_mes_en_7_50, effB8_mes_en_7_51 },
+    { effB8_mes_en_7_52, effB8_mes_en_7_53 }, { (const CONN*)effB8_mes_en_7_54, effB8_mes_en_7_55 },
+    { (const CONN*)effB8_mes_en_7_56, effB8_mes_en_7_57 }, { (const CONN*)effB8_mes_en_7_58, effB8_mes_en_7_59 },
 };
 
 const u32 effB8_mes_en_7_0[86] = {
@@ -38922,13 +38922,13 @@ const u32 effB8_mes_en_7_50[58] = {
     0x1480000, 0x9E9A,
 };
 
-const u32 effB8_mes_en_7_52[44] = {
-    0x500000, 0x9EAD, 0x580000, 0x9E8E, 0x600000, 0x9E96, 0x700000, 0x9E8B,
-    0x780000, 0x9E84, 0x800000, 0x9E93, 0x880000, 0x9E9F, 0x900000, 0x9E92,
-    0xA00000, 0x9E86, 0xA80000, 0x9E8E, 0xB80000, 0x9E8E, 0xC00000, 0x9E8D,
-    0xD00000, 0x9E93, 0xD80000, 0x9E8E, 0xE80000, 0x9E93, 0xF00000, 0x9E87,
-    0xF80000, 0x9E84, 0x1080000, 0x9E8D, 0x1100000, 0x9E84, 0x1180000, 0x9E97,
-    0x1200000, 0x9E93, 0x1280000, 0x9E9A,
+const CONN effB8_mes_en_7_52[22] = {
+    { 80, 0, 0, 0x9EAD }, { 88, 0, 0, 0x9E8E }, { 96, 0, 0, 0x9E96 }, { 112, 0, 0, 0x9E8B },
+    { 120, 0, 0, 0x9E84 }, { 128, 0, 0, 0x9E93 }, { 136, 0, 0, 0x9E9F }, { 144, 0, 0, 0x9E92 },
+    { 160, 0, 0, 0x9E86 }, { 168, 0, 0, 0x9E8E }, { 184, 0, 0, 0x9E8E }, { 192, 0, 0, 0x9E8D },
+    { 208, 0, 0, 0x9E93 }, { 216, 0, 0, 0x9E8E }, { 232, 0, 0, 0x9E93 }, { 240, 0, 0, 0x9E87 },
+    { 248, 0, 0, 0x9E84 }, { 264, 0, 0, 0x9E8D }, { 272, 0, 0, 0x9E84 }, { 280, 0, 0, 0x9E97 },
+    { 288, 0, 0, 0x9E93 }, { 296, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_en_7_54[40] = {
@@ -39085,21 +39085,21 @@ const u16 effB8_mes_en_7_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_8[30] = {
-    { (const CONN*)effB8_mes_en_8_0, (const u16*)effB8_mes_en_8_1 }, { (const CONN*)effB8_mes_en_8_2, (const u16*)effB8_mes_en_8_3 },
-    { (const CONN*)effB8_mes_en_8_4, (const u16*)effB8_mes_en_8_5 }, { (const CONN*)effB8_mes_en_8_6, (const u16*)effB8_mes_en_8_7 },
-    { (const CONN*)effB8_mes_en_8_8, (const u16*)effB8_mes_en_8_9 }, { (const CONN*)effB8_mes_en_8_10, (const u16*)effB8_mes_en_8_11 },
-    { (const CONN*)effB8_mes_en_8_12, (const u16*)effB8_mes_en_8_13 }, { (const CONN*)effB8_mes_en_8_14, (const u16*)effB8_mes_en_8_15 },
-    { (const CONN*)effB8_mes_en_8_16, (const u16*)effB8_mes_en_8_17 }, { (const CONN*)effB8_mes_en_8_18, (const u16*)effB8_mes_en_8_19 },
-    { (const CONN*)effB8_mes_en_8_20, (const u16*)effB8_mes_en_8_21 }, { (const CONN*)effB8_mes_en_8_22, (const u16*)effB8_mes_en_8_23 },
-    { (const CONN*)effB8_mes_en_8_24, (const u16*)effB8_mes_en_8_25 }, { (const CONN*)effB8_mes_en_8_26, (const u16*)effB8_mes_en_8_27 },
-    { (const CONN*)effB8_mes_en_8_28, (const u16*)effB8_mes_en_8_29 }, { (const CONN*)effB8_mes_en_8_30, (const u16*)effB8_mes_en_8_31 },
-    { (const CONN*)effB8_mes_en_8_32, (const u16*)effB8_mes_en_8_33 }, { (const CONN*)effB8_mes_en_8_34, (const u16*)effB8_mes_en_8_35 },
-    { (const CONN*)effB8_mes_en_8_36, (const u16*)effB8_mes_en_8_37 }, { (const CONN*)effB8_mes_en_8_38, (const u16*)effB8_mes_en_8_39 },
-    { (const CONN*)effB8_mes_en_8_40, (const u16*)effB8_mes_en_8_41 }, { (const CONN*)effB8_mes_en_8_42, (const u16*)effB8_mes_en_8_43 },
-    { (const CONN*)effB8_mes_en_8_42, (const u16*)effB8_mes_en_8_45 }, { (const CONN*)effB8_mes_en_8_42, (const u16*)effB8_mes_en_8_47 },
-    { (const CONN*)effB8_mes_en_8_48, (const u16*)effB8_mes_en_8_49 }, { (const CONN*)effB8_mes_en_8_50, (const u16*)effB8_mes_en_8_51 },
-    { (const CONN*)effB8_mes_en_8_52, (const u16*)effB8_mes_en_8_53 }, { (const CONN*)effB8_mes_en_8_54, (const u16*)effB8_mes_en_8_55 },
-    { (const CONN*)effB8_mes_en_8_56, (const u16*)effB8_mes_en_8_57 }, { (const CONN*)effB8_mes_en_8_58, (const u16*)effB8_mes_en_8_59 },
+    { (const CONN*)effB8_mes_en_8_0, effB8_mes_en_8_1 }, { (const CONN*)effB8_mes_en_8_2, effB8_mes_en_8_3 },
+    { (const CONN*)effB8_mes_en_8_4, effB8_mes_en_8_5 }, { (const CONN*)effB8_mes_en_8_6, effB8_mes_en_8_7 },
+    { (const CONN*)effB8_mes_en_8_8, effB8_mes_en_8_9 }, { (const CONN*)effB8_mes_en_8_10, effB8_mes_en_8_11 },
+    { (const CONN*)effB8_mes_en_8_12, effB8_mes_en_8_13 }, { (const CONN*)effB8_mes_en_8_14, effB8_mes_en_8_15 },
+    { (const CONN*)effB8_mes_en_8_16, effB8_mes_en_8_17 }, { (const CONN*)effB8_mes_en_8_18, effB8_mes_en_8_19 },
+    { (const CONN*)effB8_mes_en_8_20, effB8_mes_en_8_21 }, { (const CONN*)effB8_mes_en_8_22, effB8_mes_en_8_23 },
+    { (const CONN*)effB8_mes_en_8_24, effB8_mes_en_8_25 }, { (const CONN*)effB8_mes_en_8_26, effB8_mes_en_8_27 },
+    { (const CONN*)effB8_mes_en_8_28, effB8_mes_en_8_29 }, { (const CONN*)effB8_mes_en_8_30, effB8_mes_en_8_31 },
+    { (const CONN*)effB8_mes_en_8_32, effB8_mes_en_8_33 }, { (const CONN*)effB8_mes_en_8_34, effB8_mes_en_8_35 },
+    { (const CONN*)effB8_mes_en_8_36, effB8_mes_en_8_37 }, { (const CONN*)effB8_mes_en_8_38, effB8_mes_en_8_39 },
+    { (const CONN*)effB8_mes_en_8_40, effB8_mes_en_8_41 }, { (const CONN*)effB8_mes_en_8_42, effB8_mes_en_8_43 },
+    { (const CONN*)effB8_mes_en_8_42, effB8_mes_en_8_45 }, { (const CONN*)effB8_mes_en_8_42, effB8_mes_en_8_47 },
+    { (const CONN*)effB8_mes_en_8_48, effB8_mes_en_8_49 }, { (const CONN*)effB8_mes_en_8_50, effB8_mes_en_8_51 },
+    { (const CONN*)effB8_mes_en_8_52, effB8_mes_en_8_53 }, { (const CONN*)effB8_mes_en_8_54, effB8_mes_en_8_55 },
+    { (const CONN*)effB8_mes_en_8_56, effB8_mes_en_8_57 }, { (const CONN*)effB8_mes_en_8_58, effB8_mes_en_8_59 },
 };
 
 const u32 effB8_mes_en_8_0[144] = {
@@ -39676,21 +39676,21 @@ const u16 effB8_mes_en_8_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_9[30] = {
-    { (const CONN*)effB8_mes_en_9_0, (const u16*)effB8_mes_en_9_1 }, { (const CONN*)effB8_mes_en_9_2, (const u16*)effB8_mes_en_9_3 },
-    { (const CONN*)effB8_mes_en_9_4, (const u16*)effB8_mes_en_9_5 }, { (const CONN*)effB8_mes_en_9_6, (const u16*)effB8_mes_en_9_7 },
-    { (const CONN*)effB8_mes_en_9_8, (const u16*)effB8_mes_en_9_9 }, { (const CONN*)effB8_mes_en_9_10, (const u16*)effB8_mes_en_9_11 },
-    { (const CONN*)effB8_mes_en_9_12, (const u16*)effB8_mes_en_9_13 }, { (const CONN*)effB8_mes_en_9_14, (const u16*)effB8_mes_en_9_15 },
-    { (const CONN*)effB8_mes_en_9_16, (const u16*)effB8_mes_en_9_17 }, { (const CONN*)effB8_mes_en_9_18, (const u16*)effB8_mes_en_9_19 },
-    { (const CONN*)effB8_mes_en_9_20, (const u16*)effB8_mes_en_9_21 }, { (const CONN*)effB8_mes_en_9_22, (const u16*)effB8_mes_en_9_23 },
-    { (const CONN*)effB8_mes_en_9_24, (const u16*)effB8_mes_en_9_25 }, { (const CONN*)effB8_mes_en_9_26, (const u16*)effB8_mes_en_9_27 },
-    { (const CONN*)effB8_mes_en_9_28, (const u16*)effB8_mes_en_9_29 }, { (const CONN*)effB8_mes_en_9_30, (const u16*)effB8_mes_en_9_31 },
-    { (const CONN*)effB8_mes_en_9_32, (const u16*)effB8_mes_en_9_33 }, { (const CONN*)effB8_mes_en_9_34, (const u16*)effB8_mes_en_9_35 },
-    { (const CONN*)effB8_mes_en_9_36, (const u16*)effB8_mes_en_9_37 }, { (const CONN*)effB8_mes_en_9_38, (const u16*)effB8_mes_en_9_39 },
-    { (const CONN*)effB8_mes_en_9_40, (const u16*)effB8_mes_en_9_41 }, { (const CONN*)effB8_mes_en_9_42, (const u16*)effB8_mes_en_9_43 },
-    { (const CONN*)effB8_mes_en_9_42, (const u16*)effB8_mes_en_9_45 }, { (const CONN*)effB8_mes_en_9_42, (const u16*)effB8_mes_en_9_47 },
-    { (const CONN*)effB8_mes_en_9_48, (const u16*)effB8_mes_en_9_49 }, { (const CONN*)effB8_mes_en_9_50, (const u16*)effB8_mes_en_9_51 },
-    { (const CONN*)effB8_mes_en_9_52, (const u16*)effB8_mes_en_9_53 }, { (const CONN*)effB8_mes_en_9_54, (const u16*)effB8_mes_en_9_55 },
-    { (const CONN*)effB8_mes_en_9_56, (const u16*)effB8_mes_en_9_57 }, { (const CONN*)effB8_mes_en_9_58, (const u16*)effB8_mes_en_9_59 },
+    { (const CONN*)effB8_mes_en_9_0, effB8_mes_en_9_1 }, { (const CONN*)effB8_mes_en_9_2, effB8_mes_en_9_3 },
+    { (const CONN*)effB8_mes_en_9_4, effB8_mes_en_9_5 }, { (const CONN*)effB8_mes_en_9_6, effB8_mes_en_9_7 },
+    { (const CONN*)effB8_mes_en_9_8, effB8_mes_en_9_9 }, { (const CONN*)effB8_mes_en_9_10, effB8_mes_en_9_11 },
+    { (const CONN*)effB8_mes_en_9_12, effB8_mes_en_9_13 }, { (const CONN*)effB8_mes_en_9_14, effB8_mes_en_9_15 },
+    { (const CONN*)effB8_mes_en_9_16, effB8_mes_en_9_17 }, { (const CONN*)effB8_mes_en_9_18, effB8_mes_en_9_19 },
+    { (const CONN*)effB8_mes_en_9_20, effB8_mes_en_9_21 }, { (const CONN*)effB8_mes_en_9_22, effB8_mes_en_9_23 },
+    { (const CONN*)effB8_mes_en_9_24, effB8_mes_en_9_25 }, { (const CONN*)effB8_mes_en_9_26, effB8_mes_en_9_27 },
+    { (const CONN*)effB8_mes_en_9_28, effB8_mes_en_9_29 }, { (const CONN*)effB8_mes_en_9_30, effB8_mes_en_9_31 },
+    { (const CONN*)effB8_mes_en_9_32, effB8_mes_en_9_33 }, { (const CONN*)effB8_mes_en_9_34, effB8_mes_en_9_35 },
+    { (const CONN*)effB8_mes_en_9_36, effB8_mes_en_9_37 }, { (const CONN*)effB8_mes_en_9_38, effB8_mes_en_9_39 },
+    { (const CONN*)effB8_mes_en_9_40, effB8_mes_en_9_41 }, { (const CONN*)effB8_mes_en_9_42, effB8_mes_en_9_43 },
+    { (const CONN*)effB8_mes_en_9_42, effB8_mes_en_9_45 }, { (const CONN*)effB8_mes_en_9_42, effB8_mes_en_9_47 },
+    { (const CONN*)effB8_mes_en_9_48, effB8_mes_en_9_49 }, { (const CONN*)effB8_mes_en_9_50, effB8_mes_en_9_51 },
+    { (const CONN*)effB8_mes_en_9_52, effB8_mes_en_9_53 }, { (const CONN*)effB8_mes_en_9_54, effB8_mes_en_9_55 },
+    { (const CONN*)effB8_mes_en_9_56, effB8_mes_en_9_57 }, { (const CONN*)effB8_mes_en_9_58, effB8_mes_en_9_59 },
 };
 
 const u32 effB8_mes_en_9_0[134] = {
@@ -40311,21 +40311,21 @@ const u16 effB8_mes_en_9_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_10[30] = {
-    { (const CONN*)effB8_mes_en_10_0, (const u16*)effB8_mes_en_10_1 }, { (const CONN*)effB8_mes_en_10_2, (const u16*)effB8_mes_en_10_3 },
-    { (const CONN*)effB8_mes_en_10_4, (const u16*)effB8_mes_en_10_5 }, { (const CONN*)effB8_mes_en_10_6, (const u16*)effB8_mes_en_10_7 },
-    { (const CONN*)effB8_mes_en_10_8, (const u16*)effB8_mes_en_10_9 }, { (const CONN*)effB8_mes_en_10_10, (const u16*)effB8_mes_en_10_11 },
-    { (const CONN*)effB8_mes_en_10_12, (const u16*)effB8_mes_en_10_13 }, { (const CONN*)effB8_mes_en_10_14, (const u16*)effB8_mes_en_10_15 },
-    { (const CONN*)effB8_mes_en_10_16, (const u16*)effB8_mes_en_10_17 }, { (const CONN*)effB8_mes_en_10_18, (const u16*)effB8_mes_en_10_19 },
-    { (const CONN*)effB8_mes_en_10_20, (const u16*)effB8_mes_en_10_21 }, { (const CONN*)effB8_mes_en_10_22, (const u16*)effB8_mes_en_10_23 },
-    { (const CONN*)effB8_mes_en_10_24, (const u16*)effB8_mes_en_10_25 }, { (const CONN*)effB8_mes_en_10_26, (const u16*)effB8_mes_en_10_27 },
-    { (const CONN*)effB8_mes_en_10_28, (const u16*)effB8_mes_en_10_29 }, { (const CONN*)effB8_mes_en_10_30, (const u16*)effB8_mes_en_10_31 },
-    { (const CONN*)effB8_mes_en_10_32, (const u16*)effB8_mes_en_10_33 }, { (const CONN*)effB8_mes_en_10_34, (const u16*)effB8_mes_en_10_35 },
-    { (const CONN*)effB8_mes_en_10_36, (const u16*)effB8_mes_en_10_37 }, { (const CONN*)effB8_mes_en_10_38, (const u16*)effB8_mes_en_10_39 },
-    { (const CONN*)effB8_mes_en_10_40, (const u16*)effB8_mes_en_10_41 }, { (const CONN*)effB8_mes_en_10_42, (const u16*)effB8_mes_en_10_43 },
-    { (const CONN*)effB8_mes_en_10_42, (const u16*)effB8_mes_en_10_45 }, { (const CONN*)effB8_mes_en_10_42, (const u16*)effB8_mes_en_10_47 },
-    { (const CONN*)effB8_mes_en_10_48, (const u16*)effB8_mes_en_10_49 }, { (const CONN*)effB8_mes_en_10_50, (const u16*)effB8_mes_en_10_51 },
-    { (const CONN*)effB8_mes_en_10_52, (const u16*)effB8_mes_en_10_53 }, { (const CONN*)effB8_mes_en_10_54, (const u16*)effB8_mes_en_10_55 },
-    { (const CONN*)effB8_mes_en_10_56, (const u16*)effB8_mes_en_10_57 }, { (const CONN*)effB8_mes_en_10_58, (const u16*)effB8_mes_en_10_59 },
+    { (const CONN*)effB8_mes_en_10_0, effB8_mes_en_10_1 }, { (const CONN*)effB8_mes_en_10_2, effB8_mes_en_10_3 },
+    { (const CONN*)effB8_mes_en_10_4, effB8_mes_en_10_5 }, { (const CONN*)effB8_mes_en_10_6, effB8_mes_en_10_7 },
+    { (const CONN*)effB8_mes_en_10_8, effB8_mes_en_10_9 }, { (const CONN*)effB8_mes_en_10_10, effB8_mes_en_10_11 },
+    { (const CONN*)effB8_mes_en_10_12, effB8_mes_en_10_13 }, { (const CONN*)effB8_mes_en_10_14, effB8_mes_en_10_15 },
+    { (const CONN*)effB8_mes_en_10_16, effB8_mes_en_10_17 }, { (const CONN*)effB8_mes_en_10_18, effB8_mes_en_10_19 },
+    { (const CONN*)effB8_mes_en_10_20, effB8_mes_en_10_21 }, { (const CONN*)effB8_mes_en_10_22, effB8_mes_en_10_23 },
+    { (const CONN*)effB8_mes_en_10_24, effB8_mes_en_10_25 }, { (const CONN*)effB8_mes_en_10_26, effB8_mes_en_10_27 },
+    { (const CONN*)effB8_mes_en_10_28, effB8_mes_en_10_29 }, { (const CONN*)effB8_mes_en_10_30, effB8_mes_en_10_31 },
+    { (const CONN*)effB8_mes_en_10_32, effB8_mes_en_10_33 }, { (const CONN*)effB8_mes_en_10_34, effB8_mes_en_10_35 },
+    { (const CONN*)effB8_mes_en_10_36, effB8_mes_en_10_37 }, { (const CONN*)effB8_mes_en_10_38, effB8_mes_en_10_39 },
+    { (const CONN*)effB8_mes_en_10_40, effB8_mes_en_10_41 }, { (const CONN*)effB8_mes_en_10_42, effB8_mes_en_10_43 },
+    { (const CONN*)effB8_mes_en_10_42, effB8_mes_en_10_45 }, { (const CONN*)effB8_mes_en_10_42, effB8_mes_en_10_47 },
+    { (const CONN*)effB8_mes_en_10_48, effB8_mes_en_10_49 }, { (const CONN*)effB8_mes_en_10_50, effB8_mes_en_10_51 },
+    { (const CONN*)effB8_mes_en_10_52, effB8_mes_en_10_53 }, { (const CONN*)effB8_mes_en_10_54, effB8_mes_en_10_55 },
+    { (const CONN*)effB8_mes_en_10_56, effB8_mes_en_10_57 }, { (const CONN*)effB8_mes_en_10_58, effB8_mes_en_10_59 },
 };
 
 const u32 effB8_mes_en_10_0[136] = {
@@ -40945,21 +40945,21 @@ const u16 effB8_mes_en_10_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_11[30] = {
-    { (const CONN*)effB8_mes_en_11_0, (const u16*)effB8_mes_en_11_1 }, { (const CONN*)effB8_mes_en_11_2, (const u16*)effB8_mes_en_11_3 },
-    { (const CONN*)effB8_mes_en_11_4, (const u16*)effB8_mes_en_11_5 }, { (const CONN*)effB8_mes_en_11_6, (const u16*)effB8_mes_en_11_7 },
-    { (const CONN*)effB8_mes_en_11_8, (const u16*)effB8_mes_en_11_9 }, { (const CONN*)effB8_mes_en_11_10, (const u16*)effB8_mes_en_11_11 },
-    { (const CONN*)effB8_mes_en_11_12, (const u16*)effB8_mes_en_11_13 }, { (const CONN*)effB8_mes_en_11_14, (const u16*)effB8_mes_en_11_15 },
-    { (const CONN*)effB8_mes_en_11_16, (const u16*)effB8_mes_en_11_17 }, { (const CONN*)effB8_mes_en_11_18, (const u16*)effB8_mes_en_11_19 },
-    { (const CONN*)effB8_mes_en_11_20, (const u16*)effB8_mes_en_11_21 }, { (const CONN*)effB8_mes_en_11_22, (const u16*)effB8_mes_en_11_23 },
-    { (const CONN*)effB8_mes_en_11_24, (const u16*)effB8_mes_en_11_25 }, { (const CONN*)effB8_mes_en_11_26, (const u16*)effB8_mes_en_11_27 },
-    { (const CONN*)effB8_mes_en_11_28, (const u16*)effB8_mes_en_11_29 }, { (const CONN*)effB8_mes_en_11_30, (const u16*)effB8_mes_en_11_31 },
-    { (const CONN*)effB8_mes_en_11_32, (const u16*)effB8_mes_en_11_33 }, { (const CONN*)effB8_mes_en_11_34, (const u16*)effB8_mes_en_11_35 },
-    { (const CONN*)effB8_mes_en_11_36, (const u16*)effB8_mes_en_11_37 }, { (const CONN*)effB8_mes_en_11_38, (const u16*)effB8_mes_en_11_39 },
-    { (const CONN*)effB8_mes_en_11_40, (const u16*)effB8_mes_en_11_41 }, { (const CONN*)effB8_mes_en_11_42, (const u16*)effB8_mes_en_11_43 },
-    { (const CONN*)effB8_mes_en_11_42, (const u16*)effB8_mes_en_11_45 }, { (const CONN*)effB8_mes_en_11_42, (const u16*)effB8_mes_en_11_47 },
-    { (const CONN*)effB8_mes_en_11_48, (const u16*)effB8_mes_en_11_49 }, { (const CONN*)effB8_mes_en_11_50, (const u16*)effB8_mes_en_11_51 },
-    { (const CONN*)effB8_mes_en_11_52, (const u16*)effB8_mes_en_11_53 }, { (const CONN*)effB8_mes_en_11_54, (const u16*)effB8_mes_en_11_55 },
-    { (const CONN*)effB8_mes_en_11_56, (const u16*)effB8_mes_en_11_57 }, { (const CONN*)effB8_mes_en_11_58, (const u16*)effB8_mes_en_11_59 },
+    { (const CONN*)effB8_mes_en_11_0, effB8_mes_en_11_1 }, { (const CONN*)effB8_mes_en_11_2, effB8_mes_en_11_3 },
+    { (const CONN*)effB8_mes_en_11_4, effB8_mes_en_11_5 }, { (const CONN*)effB8_mes_en_11_6, effB8_mes_en_11_7 },
+    { (const CONN*)effB8_mes_en_11_8, effB8_mes_en_11_9 }, { (const CONN*)effB8_mes_en_11_10, effB8_mes_en_11_11 },
+    { (const CONN*)effB8_mes_en_11_12, effB8_mes_en_11_13 }, { (const CONN*)effB8_mes_en_11_14, effB8_mes_en_11_15 },
+    { (const CONN*)effB8_mes_en_11_16, effB8_mes_en_11_17 }, { (const CONN*)effB8_mes_en_11_18, effB8_mes_en_11_19 },
+    { (const CONN*)effB8_mes_en_11_20, effB8_mes_en_11_21 }, { (const CONN*)effB8_mes_en_11_22, effB8_mes_en_11_23 },
+    { (const CONN*)effB8_mes_en_11_24, effB8_mes_en_11_25 }, { (const CONN*)effB8_mes_en_11_26, effB8_mes_en_11_27 },
+    { (const CONN*)effB8_mes_en_11_28, effB8_mes_en_11_29 }, { (const CONN*)effB8_mes_en_11_30, effB8_mes_en_11_31 },
+    { (const CONN*)effB8_mes_en_11_32, effB8_mes_en_11_33 }, { (const CONN*)effB8_mes_en_11_34, effB8_mes_en_11_35 },
+    { (const CONN*)effB8_mes_en_11_36, effB8_mes_en_11_37 }, { (const CONN*)effB8_mes_en_11_38, effB8_mes_en_11_39 },
+    { (const CONN*)effB8_mes_en_11_40, effB8_mes_en_11_41 }, { (const CONN*)effB8_mes_en_11_42, effB8_mes_en_11_43 },
+    { (const CONN*)effB8_mes_en_11_42, effB8_mes_en_11_45 }, { (const CONN*)effB8_mes_en_11_42, effB8_mes_en_11_47 },
+    { (const CONN*)effB8_mes_en_11_48, effB8_mes_en_11_49 }, { (const CONN*)effB8_mes_en_11_50, effB8_mes_en_11_51 },
+    { (const CONN*)effB8_mes_en_11_52, effB8_mes_en_11_53 }, { (const CONN*)effB8_mes_en_11_54, effB8_mes_en_11_55 },
+    { (const CONN*)effB8_mes_en_11_56, effB8_mes_en_11_57 }, { (const CONN*)effB8_mes_en_11_58, effB8_mes_en_11_59 },
 };
 
 const u32 effB8_mes_en_11_0[126] = {
@@ -41522,21 +41522,21 @@ const u16 effB8_mes_en_11_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_12[30] = {
-    { (const CONN*)effB8_mes_en_12_0, (const u16*)effB8_mes_en_12_1 }, { (const CONN*)effB8_mes_en_12_2, (const u16*)effB8_mes_en_12_3 },
-    { (const CONN*)effB8_mes_en_12_4, (const u16*)effB8_mes_en_12_5 }, { (const CONN*)effB8_mes_en_12_6, (const u16*)effB8_mes_en_12_7 },
-    { (const CONN*)effB8_mes_en_12_8, (const u16*)effB8_mes_en_12_9 }, { (const CONN*)effB8_mes_en_12_10, (const u16*)effB8_mes_en_12_11 },
-    { (const CONN*)effB8_mes_en_12_12, (const u16*)effB8_mes_en_12_13 }, { (const CONN*)effB8_mes_en_12_14, (const u16*)effB8_mes_en_12_15 },
-    { (const CONN*)effB8_mes_en_12_16, (const u16*)effB8_mes_en_12_17 }, { (const CONN*)effB8_mes_en_12_18, (const u16*)effB8_mes_en_12_19 },
-    { (const CONN*)effB8_mes_en_12_20, (const u16*)effB8_mes_en_12_21 }, { (const CONN*)effB8_mes_en_12_22, (const u16*)effB8_mes_en_12_23 },
-    { (const CONN*)effB8_mes_en_12_24, (const u16*)effB8_mes_en_12_25 }, { (const CONN*)effB8_mes_en_12_26, (const u16*)effB8_mes_en_12_27 },
-    { (const CONN*)effB8_mes_en_12_28, (const u16*)effB8_mes_en_12_29 }, { (const CONN*)effB8_mes_en_12_30, (const u16*)effB8_mes_en_12_31 },
-    { (const CONN*)effB8_mes_en_12_32, (const u16*)effB8_mes_en_12_33 }, { (const CONN*)effB8_mes_en_12_34, (const u16*)effB8_mes_en_12_35 },
-    { (const CONN*)effB8_mes_en_12_36, (const u16*)effB8_mes_en_12_37 }, { (const CONN*)effB8_mes_en_12_38, (const u16*)effB8_mes_en_12_39 },
-    { (const CONN*)effB8_mes_en_12_40, (const u16*)effB8_mes_en_12_41 }, { (const CONN*)effB8_mes_en_12_42, (const u16*)effB8_mes_en_12_43 },
-    { (const CONN*)effB8_mes_en_12_42, (const u16*)effB8_mes_en_12_45 }, { (const CONN*)effB8_mes_en_12_42, (const u16*)effB8_mes_en_12_47 },
-    { (const CONN*)effB8_mes_en_12_48, (const u16*)effB8_mes_en_12_49 }, { (const CONN*)effB8_mes_en_12_50, (const u16*)effB8_mes_en_12_51 },
-    { (const CONN*)effB8_mes_en_12_52, (const u16*)effB8_mes_en_12_53 }, { (const CONN*)effB8_mes_en_12_54, (const u16*)effB8_mes_en_12_55 },
-    { (const CONN*)effB8_mes_en_12_56, (const u16*)effB8_mes_en_12_57 }, { (const CONN*)effB8_mes_en_12_58, (const u16*)effB8_mes_en_12_59 },
+    { (const CONN*)effB8_mes_en_12_0, effB8_mes_en_12_1 }, { (const CONN*)effB8_mes_en_12_2, effB8_mes_en_12_3 },
+    { (const CONN*)effB8_mes_en_12_4, effB8_mes_en_12_5 }, { (const CONN*)effB8_mes_en_12_6, effB8_mes_en_12_7 },
+    { (const CONN*)effB8_mes_en_12_8, effB8_mes_en_12_9 }, { (const CONN*)effB8_mes_en_12_10, effB8_mes_en_12_11 },
+    { (const CONN*)effB8_mes_en_12_12, effB8_mes_en_12_13 }, { (const CONN*)effB8_mes_en_12_14, effB8_mes_en_12_15 },
+    { (const CONN*)effB8_mes_en_12_16, effB8_mes_en_12_17 }, { (const CONN*)effB8_mes_en_12_18, effB8_mes_en_12_19 },
+    { (const CONN*)effB8_mes_en_12_20, effB8_mes_en_12_21 }, { (const CONN*)effB8_mes_en_12_22, effB8_mes_en_12_23 },
+    { (const CONN*)effB8_mes_en_12_24, effB8_mes_en_12_25 }, { (const CONN*)effB8_mes_en_12_26, effB8_mes_en_12_27 },
+    { (const CONN*)effB8_mes_en_12_28, effB8_mes_en_12_29 }, { (const CONN*)effB8_mes_en_12_30, effB8_mes_en_12_31 },
+    { effB8_mes_en_12_32, effB8_mes_en_12_33 }, { (const CONN*)effB8_mes_en_12_34, effB8_mes_en_12_35 },
+    { effB8_mes_en_12_36, effB8_mes_en_12_37 }, { (const CONN*)effB8_mes_en_12_38, effB8_mes_en_12_39 },
+    { (const CONN*)effB8_mes_en_12_40, effB8_mes_en_12_41 }, { (const CONN*)effB8_mes_en_12_42, effB8_mes_en_12_43 },
+    { (const CONN*)effB8_mes_en_12_42, effB8_mes_en_12_45 }, { (const CONN*)effB8_mes_en_12_42, effB8_mes_en_12_47 },
+    { (const CONN*)effB8_mes_en_12_48, effB8_mes_en_12_49 }, { (const CONN*)effB8_mes_en_12_50, effB8_mes_en_12_51 },
+    { (const CONN*)effB8_mes_en_12_52, effB8_mes_en_12_53 }, { (const CONN*)effB8_mes_en_12_54, effB8_mes_en_12_55 },
+    { (const CONN*)effB8_mes_en_12_56, effB8_mes_en_12_57 }, { (const CONN*)effB8_mes_en_12_58, effB8_mes_en_12_59 },
 };
 
 const u32 effB8_mes_en_12_0[74] = {
@@ -41759,14 +41759,14 @@ const u32 effB8_mes_en_12_30[46] = {
     0x1080000, 0x9E9A, 0x1100000, 0x9E9A, 0x1180000, 0x9E9A,
 };
 
-const u32 effB8_mes_en_12_32[54] = {
-    0x480000, 0x9EB6, 0x500000, 0x9E80, 0x580000, 0x9E95, 0x600000, 0x9E84,
-    0x700000, 0x9EAC, 0x780000, 0x9E8E, 0x800000, 0x9E93, 0x880000, 0x9E88,
-    0x900000, 0x9E8E, 0x980000, 0x9E8D, 0xA80000, 0x9EA1, 0xB00000, 0x9E94,
-    0xB80000, 0x9E91, 0xC00000, 0x9E92, 0xC80000, 0x9E93, 0xD00000, 0x9E9A,
-    0xD80000, 0x9E9A, 0xE80000, 0x9EB3, 0xF00000, 0x9E87, 0xF80000, 0x9E88,
-    0x1000000, 0x9E92, 0x1100000, 0x9E91, 0x1180000, 0x9E8E, 0x1200000, 0x9E82,
-    0x1280000, 0x9E8A, 0x1300000, 0x9E92, 0x1380000, 0x9E9A,
+const CONN effB8_mes_en_12_32[27] = {
+    { 72, 0, 0, 0x9EB6 }, { 80, 0, 0, 0x9E80 }, { 88, 0, 0, 0x9E95 }, { 96, 0, 0, 0x9E84 },
+    { 112, 0, 0, 0x9EAC }, { 120, 0, 0, 0x9E8E }, { 128, 0, 0, 0x9E93 }, { 136, 0, 0, 0x9E88 },
+    { 144, 0, 0, 0x9E8E }, { 152, 0, 0, 0x9E8D }, { 168, 0, 0, 0x9EA1 }, { 176, 0, 0, 0x9E94 },
+    { 184, 0, 0, 0x9E91 }, { 192, 0, 0, 0x9E92 }, { 200, 0, 0, 0x9E93 }, { 208, 0, 0, 0x9E9A },
+    { 216, 0, 0, 0x9E9A }, { 232, 0, 0, 0x9EB3 }, { 240, 0, 0, 0x9E87 }, { 248, 0, 0, 0x9E88 },
+    { 256, 0, 0, 0x9E92 }, { 272, 0, 0, 0x9E91 }, { 280, 0, 0, 0x9E8E }, { 288, 0, 0, 0x9E82 },
+    { 296, 0, 0, 0x9E8A }, { 304, 0, 0, 0x9E92 }, { 312, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_en_12_34[70] = {
@@ -41781,14 +41781,14 @@ const u32 effB8_mes_en_12_34[70] = {
     0x1500000, 0x9E92, 0x1580000, 0x9E93, 0x1600000, 0x9E9A,
 };
 
-const u32 effB8_mes_en_12_36[56] = {
-    0x400000, 0x9EB8, 0x480000, 0x9E84, 0x500000, 0x9E92, 0x580000, 0x9E9A,
-    0x680000, 0x9EAC, 0x700000, 0x9E98, 0x800000, 0x9EB2, 0x880000, 0x9E87,
-    0x900000, 0x9E8E, 0x980000, 0x9E91, 0xA00000, 0x9E98, 0xA80000, 0x9E94,
-    0xB00000, 0x9E37, 0xB80000, 0x9EA2, 0xC00000, 0x9E80, 0xC80000, 0x9E8D,
-    0xD00000, 0x9E8D, 0xD80000, 0x9E8E, 0xE00000, 0x9E8D, 0xF00000, 0x9E91,
-    0xF80000, 0x9E94, 0x1000000, 0x9E8B, 0x1080000, 0x9E84, 0x1100000, 0x9E92,
-    0x1200000, 0x9E80, 0x1280000, 0x9E8B, 0x1300000, 0x9E8B, 0x1380000, 0x9E9A,
+const CONN effB8_mes_en_12_36[28] = {
+    { 64, 0, 0, 0x9EB8 }, { 72, 0, 0, 0x9E84 }, { 80, 0, 0, 0x9E92 }, { 88, 0, 0, 0x9E9A },
+    { 104, 0, 0, 0x9EAC }, { 112, 0, 0, 0x9E98 }, { 128, 0, 0, 0x9EB2 }, { 136, 0, 0, 0x9E87 },
+    { 144, 0, 0, 0x9E8E }, { 152, 0, 0, 0x9E91 }, { 160, 0, 0, 0x9E98 }, { 168, 0, 0, 0x9E94 },
+    { 176, 0, 0, 0x9E37 }, { 184, 0, 0, 0x9EA2 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E8D },
+    { 208, 0, 0, 0x9E8D }, { 216, 0, 0, 0x9E8E }, { 224, 0, 0, 0x9E8D }, { 240, 0, 0, 0x9E91 },
+    { 248, 0, 0, 0x9E94 }, { 256, 0, 0, 0x9E8B }, { 264, 0, 0, 0x9E84 }, { 272, 0, 0, 0x9E92 },
+    { 288, 0, 0, 0x9E80 }, { 296, 0, 0, 0x9E8B }, { 304, 0, 0, 0x9E8B }, { 312, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_en_12_38[62] = {
@@ -42014,21 +42014,21 @@ const u16 effB8_mes_en_12_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_13[30] = {
-    { (const CONN*)effB8_mes_en_13_0, (const u16*)effB8_mes_en_13_1 }, { (const CONN*)effB8_mes_en_13_2, (const u16*)effB8_mes_en_13_3 },
-    { (const CONN*)effB8_mes_en_13_4, (const u16*)effB8_mes_en_13_5 }, { (const CONN*)effB8_mes_en_13_6, (const u16*)effB8_mes_en_13_7 },
-    { (const CONN*)effB8_mes_en_13_8, (const u16*)effB8_mes_en_13_9 }, { (const CONN*)effB8_mes_en_13_10, (const u16*)effB8_mes_en_13_11 },
-    { (const CONN*)effB8_mes_en_13_12, (const u16*)effB8_mes_en_13_13 }, { (const CONN*)effB8_mes_en_13_14, (const u16*)effB8_mes_en_13_15 },
-    { (const CONN*)effB8_mes_en_13_16, (const u16*)effB8_mes_en_13_17 }, { (const CONN*)effB8_mes_en_13_18, (const u16*)effB8_mes_en_13_19 },
-    { (const CONN*)effB8_mes_en_13_20, (const u16*)effB8_mes_en_13_21 }, { (const CONN*)effB8_mes_en_13_22, (const u16*)effB8_mes_en_13_23 },
-    { (const CONN*)effB8_mes_en_13_24, (const u16*)effB8_mes_en_13_25 }, { (const CONN*)effB8_mes_en_13_26, (const u16*)effB8_mes_en_13_27 },
-    { (const CONN*)effB8_mes_en_13_28, (const u16*)effB8_mes_en_13_29 }, { (const CONN*)effB8_mes_en_13_30, (const u16*)effB8_mes_en_13_31 },
-    { (const CONN*)effB8_mes_en_13_32, (const u16*)effB8_mes_en_13_33 }, { (const CONN*)effB8_mes_en_13_34, (const u16*)effB8_mes_en_13_35 },
-    { (const CONN*)effB8_mes_en_13_36, (const u16*)effB8_mes_en_13_37 }, { (const CONN*)effB8_mes_en_13_38, (const u16*)effB8_mes_en_13_39 },
-    { (const CONN*)effB8_mes_en_13_40, (const u16*)effB8_mes_en_13_41 }, { (const CONN*)effB8_mes_en_13_42, (const u16*)effB8_mes_en_13_43 },
-    { (const CONN*)effB8_mes_en_13_42, (const u16*)effB8_mes_en_13_45 }, { (const CONN*)effB8_mes_en_13_42, (const u16*)effB8_mes_en_13_47 },
-    { (const CONN*)effB8_mes_en_13_48, (const u16*)effB8_mes_en_13_49 }, { (const CONN*)effB8_mes_en_13_50, (const u16*)effB8_mes_en_13_51 },
-    { (const CONN*)effB8_mes_en_13_52, (const u16*)effB8_mes_en_13_53 }, { (const CONN*)effB8_mes_en_13_54, (const u16*)effB8_mes_en_13_55 },
-    { (const CONN*)effB8_mes_en_13_56, (const u16*)effB8_mes_en_13_57 }, { (const CONN*)effB8_mes_en_13_58, (const u16*)effB8_mes_en_13_59 },
+    { (const CONN*)effB8_mes_en_13_0, effB8_mes_en_13_1 }, { (const CONN*)effB8_mes_en_13_2, effB8_mes_en_13_3 },
+    { (const CONN*)effB8_mes_en_13_4, effB8_mes_en_13_5 }, { (const CONN*)effB8_mes_en_13_6, effB8_mes_en_13_7 },
+    { (const CONN*)effB8_mes_en_13_8, effB8_mes_en_13_9 }, { (const CONN*)effB8_mes_en_13_10, effB8_mes_en_13_11 },
+    { (const CONN*)effB8_mes_en_13_12, effB8_mes_en_13_13 }, { (const CONN*)effB8_mes_en_13_14, effB8_mes_en_13_15 },
+    { (const CONN*)effB8_mes_en_13_16, effB8_mes_en_13_17 }, { (const CONN*)effB8_mes_en_13_18, effB8_mes_en_13_19 },
+    { (const CONN*)effB8_mes_en_13_20, effB8_mes_en_13_21 }, { (const CONN*)effB8_mes_en_13_22, effB8_mes_en_13_23 },
+    { (const CONN*)effB8_mes_en_13_24, effB8_mes_en_13_25 }, { (const CONN*)effB8_mes_en_13_26, effB8_mes_en_13_27 },
+    { (const CONN*)effB8_mes_en_13_28, effB8_mes_en_13_29 }, { (const CONN*)effB8_mes_en_13_30, effB8_mes_en_13_31 },
+    { (const CONN*)effB8_mes_en_13_32, effB8_mes_en_13_33 }, { (const CONN*)effB8_mes_en_13_34, effB8_mes_en_13_35 },
+    { (const CONN*)effB8_mes_en_13_36, effB8_mes_en_13_37 }, { (const CONN*)effB8_mes_en_13_38, effB8_mes_en_13_39 },
+    { (const CONN*)effB8_mes_en_13_40, effB8_mes_en_13_41 }, { (const CONN*)effB8_mes_en_13_42, effB8_mes_en_13_43 },
+    { (const CONN*)effB8_mes_en_13_42, effB8_mes_en_13_45 }, { (const CONN*)effB8_mes_en_13_42, effB8_mes_en_13_47 },
+    { (const CONN*)effB8_mes_en_13_48, effB8_mes_en_13_49 }, { (const CONN*)effB8_mes_en_13_50, effB8_mes_en_13_51 },
+    { (const CONN*)effB8_mes_en_13_52, effB8_mes_en_13_53 }, { (const CONN*)effB8_mes_en_13_54, effB8_mes_en_13_55 },
+    { (const CONN*)effB8_mes_en_13_56, effB8_mes_en_13_57 }, { (const CONN*)effB8_mes_en_13_58, effB8_mes_en_13_59 },
 };
 
 const u32 effB8_mes_en_13_0[94] = {
@@ -42599,21 +42599,21 @@ const u16 effB8_mes_en_13_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_en_14[30] = {
-    { (const CONN*)effB8_mes_en_14_0, (const u16*)effB8_mes_en_14_1 }, { (const CONN*)effB8_mes_en_14_2, (const u16*)effB8_mes_en_14_3 },
-    { (const CONN*)effB8_mes_en_14_4, (const u16*)effB8_mes_en_14_5 }, { (const CONN*)effB8_mes_en_14_6, (const u16*)effB8_mes_en_14_7 },
-    { (const CONN*)effB8_mes_en_14_8, (const u16*)effB8_mes_en_14_9 }, { (const CONN*)effB8_mes_en_14_10, (const u16*)effB8_mes_en_14_11 },
-    { (const CONN*)effB8_mes_en_14_12, (const u16*)effB8_mes_en_14_13 }, { (const CONN*)effB8_mes_en_14_14, (const u16*)effB8_mes_en_14_15 },
-    { (const CONN*)effB8_mes_en_14_16, (const u16*)effB8_mes_en_14_17 }, { (const CONN*)effB8_mes_en_14_18, (const u16*)effB8_mes_en_14_19 },
-    { (const CONN*)effB8_mes_en_14_20, (const u16*)effB8_mes_en_14_21 }, { (const CONN*)effB8_mes_en_14_22, (const u16*)effB8_mes_en_14_23 },
-    { (const CONN*)effB8_mes_en_14_24, (const u16*)effB8_mes_en_14_25 }, { (const CONN*)effB8_mes_en_14_26, (const u16*)effB8_mes_en_14_27 },
-    { (const CONN*)effB8_mes_en_14_28, (const u16*)effB8_mes_en_14_29 }, { (const CONN*)effB8_mes_en_14_30, (const u16*)effB8_mes_en_14_31 },
-    { (const CONN*)effB8_mes_en_14_32, (const u16*)effB8_mes_en_14_33 }, { (const CONN*)effB8_mes_en_14_34, (const u16*)effB8_mes_en_14_35 },
-    { (const CONN*)effB8_mes_en_14_36, (const u16*)effB8_mes_en_14_37 }, { (const CONN*)effB8_mes_en_14_38, (const u16*)effB8_mes_en_14_39 },
-    { (const CONN*)effB8_mes_en_14_40, (const u16*)effB8_mes_en_14_41 }, { (const CONN*)effB8_mes_en_14_42, (const u16*)effB8_mes_en_14_43 },
-    { (const CONN*)effB8_mes_en_14_44, (const u16*)effB8_mes_en_14_45 }, { (const CONN*)effB8_mes_en_14_46, (const u16*)effB8_mes_en_14_47 },
-    { (const CONN*)effB8_mes_en_14_48, (const u16*)effB8_mes_en_14_49 }, { (const CONN*)effB8_mes_en_14_50, (const u16*)effB8_mes_en_14_51 },
-    { (const CONN*)effB8_mes_en_14_52, (const u16*)effB8_mes_en_14_53 }, { (const CONN*)effB8_mes_en_14_54, (const u16*)effB8_mes_en_14_55 },
-    { (const CONN*)effB8_mes_en_14_56, (const u16*)effB8_mes_en_14_57 }, { (const CONN*)effB8_mes_en_14_58, (const u16*)effB8_mes_en_14_59 },
+    { (const CONN*)effB8_mes_en_14_0, effB8_mes_en_14_1 }, { (const CONN*)effB8_mes_en_14_2, effB8_mes_en_14_3 },
+    { (const CONN*)effB8_mes_en_14_4, effB8_mes_en_14_5 }, { (const CONN*)effB8_mes_en_14_6, effB8_mes_en_14_7 },
+    { (const CONN*)effB8_mes_en_14_8, effB8_mes_en_14_9 }, { (const CONN*)effB8_mes_en_14_10, effB8_mes_en_14_11 },
+    { effB8_mes_en_14_12, effB8_mes_en_14_13 }, { (const CONN*)effB8_mes_en_14_14, effB8_mes_en_14_15 },
+    { (const CONN*)effB8_mes_en_14_16, effB8_mes_en_14_17 }, { (const CONN*)effB8_mes_en_14_18, effB8_mes_en_14_19 },
+    { (const CONN*)effB8_mes_en_14_20, effB8_mes_en_14_21 }, { (const CONN*)effB8_mes_en_14_22, effB8_mes_en_14_23 },
+    { (const CONN*)effB8_mes_en_14_24, effB8_mes_en_14_25 }, { (const CONN*)effB8_mes_en_14_26, effB8_mes_en_14_27 },
+    { (const CONN*)effB8_mes_en_14_28, effB8_mes_en_14_29 }, { (const CONN*)effB8_mes_en_14_30, effB8_mes_en_14_31 },
+    { (const CONN*)effB8_mes_en_14_32, effB8_mes_en_14_33 }, { (const CONN*)effB8_mes_en_14_34, effB8_mes_en_14_35 },
+    { (const CONN*)effB8_mes_en_14_36, effB8_mes_en_14_37 }, { (const CONN*)effB8_mes_en_14_38, effB8_mes_en_14_39 },
+    { (const CONN*)effB8_mes_en_14_40, effB8_mes_en_14_41 }, { (const CONN*)effB8_mes_en_14_42, effB8_mes_en_14_43 },
+    { (const CONN*)effB8_mes_en_14_44, effB8_mes_en_14_45 }, { (const CONN*)effB8_mes_en_14_46, effB8_mes_en_14_47 },
+    { (const CONN*)effB8_mes_en_14_48, effB8_mes_en_14_49 }, { (const CONN*)effB8_mes_en_14_50, effB8_mes_en_14_51 },
+    { (const CONN*)effB8_mes_en_14_52, effB8_mes_en_14_53 }, { (const CONN*)effB8_mes_en_14_54, effB8_mes_en_14_55 },
+    { (const CONN*)effB8_mes_en_14_56, effB8_mes_en_14_57 }, { (const CONN*)effB8_mes_en_14_58, effB8_mes_en_14_59 },
 };
 
 const u32 effB8_mes_en_14_0[56] = {
@@ -42697,12 +42697,12 @@ const u32 effB8_mes_en_14_10[72] = {
     0x1580000, 0x9E94, 0x1600000, 0x9E92, 0x1680000, 0x9E93, 0x1700000, 0x9E9C,
 };
 
-const u32 effB8_mes_en_14_12[36] = {
-    0x700000, 0x9EA1, 0x780000, 0x9E8E, 0x800000, 0x9E91, 0x880000, 0x9E88,
-    0x900000, 0x9E8D, 0x980000, 0x9E86, 0xA00000, 0x9E9C, 0xA80000, 0x9E9C,
-    0xB00000, 0x9E9C, 0xC00000, 0x9E8D, 0xC80000, 0x9E8E, 0xD00000, 0x9E96,
-    0xE00000, 0x9E8B, 0xE80000, 0x9E84, 0xF00000, 0x9E80, 0xF80000, 0x9E95,
-    0x1000000, 0x9E84, 0x1080000, 0x9E9A,
+const CONN effB8_mes_en_14_12[18] = {
+    { 112, 0, 0, 0x9EA1 }, { 120, 0, 0, 0x9E8E }, { 128, 0, 0, 0x9E91 }, { 136, 0, 0, 0x9E88 },
+    { 144, 0, 0, 0x9E8D }, { 152, 0, 0, 0x9E86 }, { 160, 0, 0, 0x9E9C }, { 168, 0, 0, 0x9E9C },
+    { 176, 0, 0, 0x9E9C }, { 192, 0, 0, 0x9E8D }, { 200, 0, 0, 0x9E8E }, { 208, 0, 0, 0x9E96 },
+    { 224, 0, 0, 0x9E8B }, { 232, 0, 0, 0x9E84 }, { 240, 0, 0, 0x9E80 }, { 248, 0, 0, 0x9E95 },
+    { 256, 0, 0, 0x9E84 }, { 264, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_en_14_14[104] = {
@@ -43155,21 +43155,21 @@ const u16 effB8_mes_en_14_59[3] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_0[30] = {
-    { (const CONN*)effB8_mes_pt_0_0, (const u16*)effB8_mes_pt_0_1 }, { (const CONN*)effB8_mes_pt_0_2, (const u16*)effB8_mes_pt_0_3 },
-    { (const CONN*)effB8_mes_pt_0_4, (const u16*)effB8_mes_pt_0_5 }, { (const CONN*)effB8_mes_pt_0_6, (const u16*)effB8_mes_pt_0_7 },
-    { (const CONN*)effB8_mes_pt_0_8, (const u16*)effB8_mes_pt_0_9 }, { (const CONN*)effB8_mes_pt_0_10, (const u16*)effB8_mes_pt_0_11 },
-    { (const CONN*)effB8_mes_pt_0_12, (const u16*)effB8_mes_pt_0_13 }, { (const CONN*)effB8_mes_pt_0_14, (const u16*)effB8_mes_pt_0_15 },
-    { (const CONN*)effB8_mes_pt_0_16, (const u16*)effB8_mes_pt_0_17 }, { (const CONN*)effB8_mes_pt_0_18, (const u16*)effB8_mes_pt_0_19 },
-    { (const CONN*)effB8_mes_pt_0_20, (const u16*)effB8_mes_pt_0_21 }, { (const CONN*)effB8_mes_pt_0_22, (const u16*)effB8_mes_pt_0_23 },
-    { (const CONN*)effB8_mes_pt_0_24, (const u16*)effB8_mes_pt_0_25 }, { (const CONN*)effB8_mes_pt_0_26, (const u16*)effB8_mes_pt_0_27 },
-    { (const CONN*)effB8_mes_pt_0_28, (const u16*)effB8_mes_pt_0_29 }, { (const CONN*)effB8_mes_pt_0_30, (const u16*)effB8_mes_pt_0_31 },
-    { (const CONN*)effB8_mes_pt_0_32, (const u16*)effB8_mes_pt_0_33 }, { (const CONN*)effB8_mes_pt_0_34, (const u16*)effB8_mes_pt_0_35 },
-    { (const CONN*)effB8_mes_pt_0_36, (const u16*)effB8_mes_pt_0_37 }, { (const CONN*)effB8_mes_pt_0_38, (const u16*)effB8_mes_pt_0_39 },
-    { (const CONN*)effB8_mes_pt_0_40, (const u16*)effB8_mes_pt_0_41 }, { (const CONN*)effB8_mes_pt_0_42, (const u16*)effB8_mes_pt_0_43 },
-    { (const CONN*)effB8_mes_pt_0_44, (const u16*)effB8_mes_pt_0_45 }, { (const CONN*)effB8_mes_pt_0_46, (const u16*)effB8_mes_pt_0_47 },
-    { (const CONN*)effB8_mes_pt_0_48, (const u16*)effB8_mes_pt_0_49 }, { (const CONN*)effB8_mes_pt_0_50, (const u16*)effB8_mes_pt_0_51 },
-    { (const CONN*)effB8_mes_pt_0_52, (const u16*)effB8_mes_pt_0_53 }, { (const CONN*)effB8_mes_pt_0_54, (const u16*)effB8_mes_pt_0_55 },
-    { (const CONN*)effB8_mes_pt_0_56, (const u16*)effB8_mes_pt_0_57 }, { (const CONN*)effB8_mes_pt_0_58, (const u16*)effB8_mes_pt_0_59 },
+    { (const CONN*)effB8_mes_pt_0_0, effB8_mes_pt_0_1 }, { (const CONN*)effB8_mes_pt_0_2, effB8_mes_pt_0_3 },
+    { (const CONN*)effB8_mes_pt_0_4, effB8_mes_pt_0_5 }, { (const CONN*)effB8_mes_pt_0_6, effB8_mes_pt_0_7 },
+    { (const CONN*)effB8_mes_pt_0_8, effB8_mes_pt_0_9 }, { (const CONN*)effB8_mes_pt_0_10, effB8_mes_pt_0_11 },
+    { (const CONN*)effB8_mes_pt_0_12, effB8_mes_pt_0_13 }, { (const CONN*)effB8_mes_pt_0_14, effB8_mes_pt_0_15 },
+    { (const CONN*)effB8_mes_pt_0_16, effB8_mes_pt_0_17 }, { (const CONN*)effB8_mes_pt_0_18, effB8_mes_pt_0_19 },
+    { (const CONN*)effB8_mes_pt_0_20, effB8_mes_pt_0_21 }, { (const CONN*)effB8_mes_pt_0_22, effB8_mes_pt_0_23 },
+    { (const CONN*)effB8_mes_pt_0_24, effB8_mes_pt_0_25 }, { (const CONN*)effB8_mes_pt_0_26, effB8_mes_pt_0_27 },
+    { (const CONN*)effB8_mes_pt_0_28, effB8_mes_pt_0_29 }, { (const CONN*)effB8_mes_pt_0_30, effB8_mes_pt_0_31 },
+    { (const CONN*)effB8_mes_pt_0_32, effB8_mes_pt_0_33 }, { (const CONN*)effB8_mes_pt_0_34, effB8_mes_pt_0_35 },
+    { (const CONN*)effB8_mes_pt_0_36, effB8_mes_pt_0_37 }, { (const CONN*)effB8_mes_pt_0_38, effB8_mes_pt_0_39 },
+    { (const CONN*)effB8_mes_pt_0_40, effB8_mes_pt_0_41 }, { (const CONN*)effB8_mes_pt_0_42, effB8_mes_pt_0_43 },
+    { (const CONN*)effB8_mes_pt_0_44, effB8_mes_pt_0_45 }, { (const CONN*)effB8_mes_pt_0_46, effB8_mes_pt_0_47 },
+    { (const CONN*)effB8_mes_pt_0_48, effB8_mes_pt_0_49 }, { (const CONN*)effB8_mes_pt_0_50, effB8_mes_pt_0_51 },
+    { (const CONN*)effB8_mes_pt_0_52, effB8_mes_pt_0_53 }, { (const CONN*)effB8_mes_pt_0_54, effB8_mes_pt_0_55 },
+    { (const CONN*)effB8_mes_pt_0_56, effB8_mes_pt_0_57 }, { (const CONN*)effB8_mes_pt_0_58, effB8_mes_pt_0_59 },
 };
 
 const u32 effB8_mes_pt_0_0[112] = {
@@ -43881,21 +43881,21 @@ const u16 effB8_mes_pt_0_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_1[30] = {
-    { (const CONN*)effB8_mes_pt_1_0, (const u16*)effB8_mes_pt_1_1 }, { (const CONN*)effB8_mes_pt_1_2, (const u16*)effB8_mes_pt_1_3 },
-    { (const CONN*)effB8_mes_pt_1_4, (const u16*)effB8_mes_pt_1_5 }, { (const CONN*)effB8_mes_pt_1_6, (const u16*)effB8_mes_pt_1_7 },
-    { (const CONN*)effB8_mes_pt_1_8, (const u16*)effB8_mes_pt_1_9 }, { (const CONN*)effB8_mes_pt_1_10, (const u16*)effB8_mes_pt_1_11 },
-    { (const CONN*)effB8_mes_pt_1_12, (const u16*)effB8_mes_pt_1_13 }, { (const CONN*)effB8_mes_pt_1_14, (const u16*)effB8_mes_pt_1_15 },
-    { (const CONN*)effB8_mes_pt_1_16, (const u16*)effB8_mes_pt_1_17 }, { (const CONN*)effB8_mes_pt_1_18, (const u16*)effB8_mes_pt_1_19 },
-    { (const CONN*)effB8_mes_pt_1_20, (const u16*)effB8_mes_pt_1_21 }, { (const CONN*)effB8_mes_pt_1_22, (const u16*)effB8_mes_pt_1_23 },
-    { (const CONN*)effB8_mes_pt_1_24, (const u16*)effB8_mes_pt_1_25 }, { (const CONN*)effB8_mes_pt_1_26, (const u16*)effB8_mes_pt_1_27 },
-    { (const CONN*)effB8_mes_pt_1_28, (const u16*)effB8_mes_pt_1_29 }, { (const CONN*)effB8_mes_pt_1_30, (const u16*)effB8_mes_pt_1_31 },
-    { (const CONN*)effB8_mes_pt_1_32, (const u16*)effB8_mes_pt_1_33 }, { (const CONN*)effB8_mes_pt_1_34, (const u16*)effB8_mes_pt_1_35 },
-    { (const CONN*)effB8_mes_pt_1_36, (const u16*)effB8_mes_pt_1_37 }, { (const CONN*)effB8_mes_pt_1_38, (const u16*)effB8_mes_pt_1_39 },
-    { (const CONN*)effB8_mes_pt_1_40, (const u16*)effB8_mes_pt_1_41 }, { (const CONN*)effB8_mes_pt_1_42, (const u16*)effB8_mes_pt_1_43 },
-    { (const CONN*)effB8_mes_pt_1_42, (const u16*)effB8_mes_pt_1_45 }, { (const CONN*)effB8_mes_pt_1_42, (const u16*)effB8_mes_pt_1_47 },
-    { (const CONN*)effB8_mes_pt_1_48, (const u16*)effB8_mes_pt_1_49 }, { (const CONN*)effB8_mes_pt_1_50, (const u16*)effB8_mes_pt_1_51 },
-    { (const CONN*)effB8_mes_pt_1_52, (const u16*)effB8_mes_pt_1_53 }, { (const CONN*)effB8_mes_pt_1_54, (const u16*)effB8_mes_pt_1_55 },
-    { (const CONN*)effB8_mes_pt_1_56, (const u16*)effB8_mes_pt_1_57 }, { (const CONN*)effB8_mes_pt_1_58, (const u16*)effB8_mes_pt_1_59 },
+    { (const CONN*)effB8_mes_pt_1_0, effB8_mes_pt_1_1 }, { (const CONN*)effB8_mes_pt_1_2, effB8_mes_pt_1_3 },
+    { (const CONN*)effB8_mes_pt_1_4, effB8_mes_pt_1_5 }, { (const CONN*)effB8_mes_pt_1_6, effB8_mes_pt_1_7 },
+    { (const CONN*)effB8_mes_pt_1_8, effB8_mes_pt_1_9 }, { (const CONN*)effB8_mes_pt_1_10, effB8_mes_pt_1_11 },
+    { (const CONN*)effB8_mes_pt_1_12, effB8_mes_pt_1_13 }, { (const CONN*)effB8_mes_pt_1_14, effB8_mes_pt_1_15 },
+    { (const CONN*)effB8_mes_pt_1_16, effB8_mes_pt_1_17 }, { (const CONN*)effB8_mes_pt_1_18, effB8_mes_pt_1_19 },
+    { (const CONN*)effB8_mes_pt_1_20, effB8_mes_pt_1_21 }, { (const CONN*)effB8_mes_pt_1_22, effB8_mes_pt_1_23 },
+    { (const CONN*)effB8_mes_pt_1_24, effB8_mes_pt_1_25 }, { (const CONN*)effB8_mes_pt_1_26, effB8_mes_pt_1_27 },
+    { (const CONN*)effB8_mes_pt_1_28, effB8_mes_pt_1_29 }, { (const CONN*)effB8_mes_pt_1_30, effB8_mes_pt_1_31 },
+    { (const CONN*)effB8_mes_pt_1_32, effB8_mes_pt_1_33 }, { (const CONN*)effB8_mes_pt_1_34, effB8_mes_pt_1_35 },
+    { (const CONN*)effB8_mes_pt_1_36, effB8_mes_pt_1_37 }, { (const CONN*)effB8_mes_pt_1_38, effB8_mes_pt_1_39 },
+    { (const CONN*)effB8_mes_pt_1_40, effB8_mes_pt_1_41 }, { (const CONN*)effB8_mes_pt_1_42, effB8_mes_pt_1_43 },
+    { (const CONN*)effB8_mes_pt_1_42, effB8_mes_pt_1_45 }, { (const CONN*)effB8_mes_pt_1_42, effB8_mes_pt_1_47 },
+    { (const CONN*)effB8_mes_pt_1_48, effB8_mes_pt_1_49 }, { (const CONN*)effB8_mes_pt_1_50, effB8_mes_pt_1_51 },
+    { (const CONN*)effB8_mes_pt_1_52, effB8_mes_pt_1_53 }, { (const CONN*)effB8_mes_pt_1_54, effB8_mes_pt_1_55 },
+    { (const CONN*)effB8_mes_pt_1_56, effB8_mes_pt_1_57 }, { (const CONN*)effB8_mes_pt_1_58, effB8_mes_pt_1_59 },
 };
 
 const u32 effB8_mes_pt_1_0[134] = {
@@ -44529,21 +44529,21 @@ const u16 effB8_mes_pt_1_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_2[30] = {
-    { (const CONN*)effB8_mes_pt_2_0, (const u16*)effB8_mes_pt_2_1 }, { (const CONN*)effB8_mes_pt_2_2, (const u16*)effB8_mes_pt_2_3 },
-    { (const CONN*)effB8_mes_pt_2_4, (const u16*)effB8_mes_pt_2_5 }, { (const CONN*)effB8_mes_pt_2_6, (const u16*)effB8_mes_pt_2_7 },
-    { (const CONN*)effB8_mes_pt_2_8, (const u16*)effB8_mes_pt_2_9 }, { (const CONN*)effB8_mes_pt_2_10, (const u16*)effB8_mes_pt_2_11 },
-    { (const CONN*)effB8_mes_pt_2_12, (const u16*)effB8_mes_pt_2_13 }, { (const CONN*)effB8_mes_pt_2_14, (const u16*)effB8_mes_pt_2_15 },
-    { (const CONN*)effB8_mes_pt_2_16, (const u16*)effB8_mes_pt_2_17 }, { (const CONN*)effB8_mes_pt_2_18, (const u16*)effB8_mes_pt_2_19 },
-    { (const CONN*)effB8_mes_pt_2_20, (const u16*)effB8_mes_pt_2_21 }, { (const CONN*)effB8_mes_pt_2_22, (const u16*)effB8_mes_pt_2_23 },
-    { (const CONN*)effB8_mes_pt_2_24, (const u16*)effB8_mes_pt_2_25 }, { (const CONN*)effB8_mes_pt_2_26, (const u16*)effB8_mes_pt_2_27 },
-    { (const CONN*)effB8_mes_pt_2_28, (const u16*)effB8_mes_pt_2_29 }, { (const CONN*)effB8_mes_pt_2_30, (const u16*)effB8_mes_pt_2_31 },
-    { (const CONN*)effB8_mes_pt_2_32, (const u16*)effB8_mes_pt_2_33 }, { (const CONN*)effB8_mes_pt_2_34, (const u16*)effB8_mes_pt_2_35 },
-    { (const CONN*)effB8_mes_pt_2_36, (const u16*)effB8_mes_pt_2_37 }, { (const CONN*)effB8_mes_pt_2_38, (const u16*)effB8_mes_pt_2_39 },
-    { (const CONN*)effB8_mes_pt_2_40, (const u16*)effB8_mes_pt_2_41 }, { (const CONN*)effB8_mes_pt_2_42, (const u16*)effB8_mes_pt_2_43 },
-    { (const CONN*)effB8_mes_pt_2_42, (const u16*)effB8_mes_pt_2_45 }, { (const CONN*)effB8_mes_pt_2_42, (const u16*)effB8_mes_pt_2_47 },
-    { (const CONN*)effB8_mes_pt_2_48, (const u16*)effB8_mes_pt_2_49 }, { (const CONN*)effB8_mes_pt_2_50, (const u16*)effB8_mes_pt_2_51 },
-    { (const CONN*)effB8_mes_pt_2_52, (const u16*)effB8_mes_pt_2_53 }, { (const CONN*)effB8_mes_pt_2_54, (const u16*)effB8_mes_pt_2_55 },
-    { (const CONN*)effB8_mes_pt_2_56, (const u16*)effB8_mes_pt_2_57 }, { (const CONN*)effB8_mes_pt_2_58, (const u16*)effB8_mes_pt_2_59 },
+    { (const CONN*)effB8_mes_pt_2_0, effB8_mes_pt_2_1 }, { (const CONN*)effB8_mes_pt_2_2, effB8_mes_pt_2_3 },
+    { (const CONN*)effB8_mes_pt_2_4, effB8_mes_pt_2_5 }, { (const CONN*)effB8_mes_pt_2_6, effB8_mes_pt_2_7 },
+    { (const CONN*)effB8_mes_pt_2_8, effB8_mes_pt_2_9 }, { (const CONN*)effB8_mes_pt_2_10, effB8_mes_pt_2_11 },
+    { (const CONN*)effB8_mes_pt_2_12, effB8_mes_pt_2_13 }, { (const CONN*)effB8_mes_pt_2_14, effB8_mes_pt_2_15 },
+    { (const CONN*)effB8_mes_pt_2_16, effB8_mes_pt_2_17 }, { (const CONN*)effB8_mes_pt_2_18, effB8_mes_pt_2_19 },
+    { (const CONN*)effB8_mes_pt_2_20, effB8_mes_pt_2_21 }, { (const CONN*)effB8_mes_pt_2_22, effB8_mes_pt_2_23 },
+    { (const CONN*)effB8_mes_pt_2_24, effB8_mes_pt_2_25 }, { (const CONN*)effB8_mes_pt_2_26, effB8_mes_pt_2_27 },
+    { (const CONN*)effB8_mes_pt_2_28, effB8_mes_pt_2_29 }, { (const CONN*)effB8_mes_pt_2_30, effB8_mes_pt_2_31 },
+    { (const CONN*)effB8_mes_pt_2_32, effB8_mes_pt_2_33 }, { (const CONN*)effB8_mes_pt_2_34, effB8_mes_pt_2_35 },
+    { (const CONN*)effB8_mes_pt_2_36, effB8_mes_pt_2_37 }, { (const CONN*)effB8_mes_pt_2_38, effB8_mes_pt_2_39 },
+    { (const CONN*)effB8_mes_pt_2_40, effB8_mes_pt_2_41 }, { (const CONN*)effB8_mes_pt_2_42, effB8_mes_pt_2_43 },
+    { (const CONN*)effB8_mes_pt_2_42, effB8_mes_pt_2_45 }, { (const CONN*)effB8_mes_pt_2_42, effB8_mes_pt_2_47 },
+    { (const CONN*)effB8_mes_pt_2_48, effB8_mes_pt_2_49 }, { (const CONN*)effB8_mes_pt_2_50, effB8_mes_pt_2_51 },
+    { (const CONN*)effB8_mes_pt_2_52, effB8_mes_pt_2_53 }, { (const CONN*)effB8_mes_pt_2_54, effB8_mes_pt_2_55 },
+    { (const CONN*)effB8_mes_pt_2_56, effB8_mes_pt_2_57 }, { (const CONN*)effB8_mes_pt_2_58, effB8_mes_pt_2_59 },
 };
 
 const u32 effB8_mes_pt_2_0[106] = {
@@ -45206,21 +45206,21 @@ const u16 effB8_mes_pt_2_59[6] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_3[30] = {
-    { (const CONN*)effB8_mes_pt_3_0, (const u16*)effB8_mes_pt_3_1 }, { (const CONN*)effB8_mes_pt_3_2, (const u16*)effB8_mes_pt_3_3 },
-    { (const CONN*)effB8_mes_pt_3_4, (const u16*)effB8_mes_pt_3_5 }, { (const CONN*)effB8_mes_pt_3_6, (const u16*)effB8_mes_pt_3_7 },
-    { (const CONN*)effB8_mes_pt_3_8, (const u16*)effB8_mes_pt_3_9 }, { (const CONN*)effB8_mes_pt_3_10, (const u16*)effB8_mes_pt_3_11 },
-    { (const CONN*)effB8_mes_pt_3_12, (const u16*)effB8_mes_pt_3_13 }, { (const CONN*)effB8_mes_pt_3_14, (const u16*)effB8_mes_pt_3_15 },
-    { (const CONN*)effB8_mes_pt_3_16, (const u16*)effB8_mes_pt_3_17 }, { (const CONN*)effB8_mes_pt_3_18, (const u16*)effB8_mes_pt_3_19 },
-    { (const CONN*)effB8_mes_pt_3_20, (const u16*)effB8_mes_pt_3_21 }, { (const CONN*)effB8_mes_pt_3_22, (const u16*)effB8_mes_pt_3_23 },
-    { (const CONN*)effB8_mes_pt_3_24, (const u16*)effB8_mes_pt_3_25 }, { (const CONN*)effB8_mes_pt_3_26, (const u16*)effB8_mes_pt_3_27 },
-    { (const CONN*)effB8_mes_pt_3_28, (const u16*)effB8_mes_pt_3_29 }, { (const CONN*)effB8_mes_pt_3_30, (const u16*)effB8_mes_pt_3_31 },
-    { (const CONN*)effB8_mes_pt_3_32, (const u16*)effB8_mes_pt_3_33 }, { (const CONN*)effB8_mes_pt_3_34, (const u16*)effB8_mes_pt_3_35 },
-    { (const CONN*)effB8_mes_pt_3_36, (const u16*)effB8_mes_pt_3_37 }, { (const CONN*)effB8_mes_pt_3_38, (const u16*)effB8_mes_pt_3_39 },
-    { (const CONN*)effB8_mes_pt_3_40, (const u16*)effB8_mes_pt_3_41 }, { (const CONN*)effB8_mes_pt_3_42, (const u16*)effB8_mes_pt_3_43 },
-    { (const CONN*)effB8_mes_pt_3_42, (const u16*)effB8_mes_pt_3_45 }, { (const CONN*)effB8_mes_pt_3_42, (const u16*)effB8_mes_pt_3_47 },
-    { (const CONN*)effB8_mes_pt_3_48, (const u16*)effB8_mes_pt_3_49 }, { (const CONN*)effB8_mes_pt_3_50, (const u16*)effB8_mes_pt_3_51 },
-    { (const CONN*)effB8_mes_pt_3_52, (const u16*)effB8_mes_pt_3_53 }, { (const CONN*)effB8_mes_pt_3_54, (const u16*)effB8_mes_pt_3_55 },
-    { (const CONN*)effB8_mes_pt_3_56, (const u16*)effB8_mes_pt_3_57 }, { (const CONN*)effB8_mes_pt_3_58, (const u16*)effB8_mes_pt_3_59 },
+    { (const CONN*)effB8_mes_pt_3_0, effB8_mes_pt_3_1 }, { (const CONN*)effB8_mes_pt_3_2, effB8_mes_pt_3_3 },
+    { (const CONN*)effB8_mes_pt_3_4, effB8_mes_pt_3_5 }, { (const CONN*)effB8_mes_pt_3_6, effB8_mes_pt_3_7 },
+    { (const CONN*)effB8_mes_pt_3_8, effB8_mes_pt_3_9 }, { (const CONN*)effB8_mes_pt_3_10, effB8_mes_pt_3_11 },
+    { (const CONN*)effB8_mes_pt_3_12, effB8_mes_pt_3_13 }, { (const CONN*)effB8_mes_pt_3_14, effB8_mes_pt_3_15 },
+    { (const CONN*)effB8_mes_pt_3_16, effB8_mes_pt_3_17 }, { (const CONN*)effB8_mes_pt_3_18, effB8_mes_pt_3_19 },
+    { (const CONN*)effB8_mes_pt_3_20, effB8_mes_pt_3_21 }, { (const CONN*)effB8_mes_pt_3_22, effB8_mes_pt_3_23 },
+    { (const CONN*)effB8_mes_pt_3_24, effB8_mes_pt_3_25 }, { (const CONN*)effB8_mes_pt_3_26, effB8_mes_pt_3_27 },
+    { (const CONN*)effB8_mes_pt_3_28, effB8_mes_pt_3_29 }, { (const CONN*)effB8_mes_pt_3_30, effB8_mes_pt_3_31 },
+    { (const CONN*)effB8_mes_pt_3_32, effB8_mes_pt_3_33 }, { (const CONN*)effB8_mes_pt_3_34, effB8_mes_pt_3_35 },
+    { (const CONN*)effB8_mes_pt_3_36, effB8_mes_pt_3_37 }, { (const CONN*)effB8_mes_pt_3_38, effB8_mes_pt_3_39 },
+    { (const CONN*)effB8_mes_pt_3_40, effB8_mes_pt_3_41 }, { (const CONN*)effB8_mes_pt_3_42, effB8_mes_pt_3_43 },
+    { (const CONN*)effB8_mes_pt_3_42, effB8_mes_pt_3_45 }, { (const CONN*)effB8_mes_pt_3_42, effB8_mes_pt_3_47 },
+    { (const CONN*)effB8_mes_pt_3_48, effB8_mes_pt_3_49 }, { (const CONN*)effB8_mes_pt_3_50, effB8_mes_pt_3_51 },
+    { (const CONN*)effB8_mes_pt_3_52, effB8_mes_pt_3_53 }, { (const CONN*)effB8_mes_pt_3_54, effB8_mes_pt_3_55 },
+    { (const CONN*)effB8_mes_pt_3_56, effB8_mes_pt_3_57 }, { (const CONN*)effB8_mes_pt_3_58, effB8_mes_pt_3_59 },
 };
 
 const u32 effB8_mes_pt_3_0[94] = {
@@ -45799,21 +45799,21 @@ const u16 effB8_mes_pt_3_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_4[30] = {
-    { (const CONN*)effB8_mes_pt_4_0, (const u16*)effB8_mes_pt_4_1 }, { (const CONN*)effB8_mes_pt_4_2, (const u16*)effB8_mes_pt_4_3 },
-    { (const CONN*)effB8_mes_pt_4_4, (const u16*)effB8_mes_pt_4_5 }, { (const CONN*)effB8_mes_pt_4_6, (const u16*)effB8_mes_pt_4_7 },
-    { (const CONN*)effB8_mes_pt_4_8, (const u16*)effB8_mes_pt_4_9 }, { (const CONN*)effB8_mes_pt_4_10, (const u16*)effB8_mes_pt_4_11 },
-    { (const CONN*)effB8_mes_pt_4_12, (const u16*)effB8_mes_pt_4_13 }, { (const CONN*)effB8_mes_pt_4_14, (const u16*)effB8_mes_pt_4_15 },
-    { (const CONN*)effB8_mes_pt_4_16, (const u16*)effB8_mes_pt_4_17 }, { (const CONN*)effB8_mes_pt_4_18, (const u16*)effB8_mes_pt_4_19 },
-    { (const CONN*)effB8_mes_pt_4_20, (const u16*)effB8_mes_pt_4_21 }, { (const CONN*)effB8_mes_pt_4_22, (const u16*)effB8_mes_pt_4_23 },
-    { (const CONN*)effB8_mes_pt_4_24, (const u16*)effB8_mes_pt_4_25 }, { (const CONN*)effB8_mes_pt_4_26, (const u16*)effB8_mes_pt_4_27 },
-    { (const CONN*)effB8_mes_pt_4_28, (const u16*)effB8_mes_pt_4_29 }, { (const CONN*)effB8_mes_pt_4_30, (const u16*)effB8_mes_pt_4_31 },
-    { (const CONN*)effB8_mes_pt_4_32, (const u16*)effB8_mes_pt_4_33 }, { (const CONN*)effB8_mes_pt_4_34, (const u16*)effB8_mes_pt_4_35 },
-    { (const CONN*)effB8_mes_pt_4_36, (const u16*)effB8_mes_pt_4_37 }, { (const CONN*)effB8_mes_pt_4_38, (const u16*)effB8_mes_pt_4_39 },
-    { (const CONN*)effB8_mes_pt_4_40, (const u16*)effB8_mes_pt_4_41 }, { (const CONN*)effB8_mes_pt_4_42, (const u16*)effB8_mes_pt_4_43 },
-    { (const CONN*)effB8_mes_pt_4_42, (const u16*)effB8_mes_pt_4_45 }, { (const CONN*)effB8_mes_pt_4_42, (const u16*)effB8_mes_pt_4_47 },
-    { (const CONN*)effB8_mes_pt_4_48, (const u16*)effB8_mes_pt_4_49 }, { (const CONN*)effB8_mes_pt_4_50, (const u16*)effB8_mes_pt_4_51 },
-    { (const CONN*)effB8_mes_pt_4_52, (const u16*)effB8_mes_pt_4_53 }, { (const CONN*)effB8_mes_pt_4_54, (const u16*)effB8_mes_pt_4_55 },
-    { (const CONN*)effB8_mes_pt_4_56, (const u16*)effB8_mes_pt_4_57 }, { (const CONN*)effB8_mes_pt_4_58, (const u16*)effB8_mes_pt_4_59 },
+    { (const CONN*)effB8_mes_pt_4_0, effB8_mes_pt_4_1 }, { (const CONN*)effB8_mes_pt_4_2, effB8_mes_pt_4_3 },
+    { (const CONN*)effB8_mes_pt_4_4, effB8_mes_pt_4_5 }, { (const CONN*)effB8_mes_pt_4_6, effB8_mes_pt_4_7 },
+    { (const CONN*)effB8_mes_pt_4_8, effB8_mes_pt_4_9 }, { (const CONN*)effB8_mes_pt_4_10, effB8_mes_pt_4_11 },
+    { (const CONN*)effB8_mes_pt_4_12, effB8_mes_pt_4_13 }, { (const CONN*)effB8_mes_pt_4_14, effB8_mes_pt_4_15 },
+    { (const CONN*)effB8_mes_pt_4_16, effB8_mes_pt_4_17 }, { (const CONN*)effB8_mes_pt_4_18, effB8_mes_pt_4_19 },
+    { (const CONN*)effB8_mes_pt_4_20, effB8_mes_pt_4_21 }, { (const CONN*)effB8_mes_pt_4_22, effB8_mes_pt_4_23 },
+    { (const CONN*)effB8_mes_pt_4_24, effB8_mes_pt_4_25 }, { (const CONN*)effB8_mes_pt_4_26, effB8_mes_pt_4_27 },
+    { (const CONN*)effB8_mes_pt_4_28, effB8_mes_pt_4_29 }, { (const CONN*)effB8_mes_pt_4_30, effB8_mes_pt_4_31 },
+    { (const CONN*)effB8_mes_pt_4_32, effB8_mes_pt_4_33 }, { (const CONN*)effB8_mes_pt_4_34, effB8_mes_pt_4_35 },
+    { (const CONN*)effB8_mes_pt_4_36, effB8_mes_pt_4_37 }, { (const CONN*)effB8_mes_pt_4_38, effB8_mes_pt_4_39 },
+    { (const CONN*)effB8_mes_pt_4_40, effB8_mes_pt_4_41 }, { (const CONN*)effB8_mes_pt_4_42, effB8_mes_pt_4_43 },
+    { (const CONN*)effB8_mes_pt_4_42, effB8_mes_pt_4_45 }, { (const CONN*)effB8_mes_pt_4_42, effB8_mes_pt_4_47 },
+    { (const CONN*)effB8_mes_pt_4_48, effB8_mes_pt_4_49 }, { (const CONN*)effB8_mes_pt_4_50, effB8_mes_pt_4_51 },
+    { (const CONN*)effB8_mes_pt_4_52, effB8_mes_pt_4_53 }, { (const CONN*)effB8_mes_pt_4_54, effB8_mes_pt_4_55 },
+    { (const CONN*)effB8_mes_pt_4_56, effB8_mes_pt_4_57 }, { (const CONN*)effB8_mes_pt_4_58, effB8_mes_pt_4_59 },
 };
 
 const u32 effB8_mes_pt_4_0[148] = {
@@ -46447,21 +46447,21 @@ const u16 effB8_mes_pt_4_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_5[30] = {
-    { (const CONN*)effB8_mes_pt_5_0, (const u16*)effB8_mes_pt_5_1 }, { (const CONN*)effB8_mes_pt_5_2, (const u16*)effB8_mes_pt_5_3 },
-    { (const CONN*)effB8_mes_pt_5_4, (const u16*)effB8_mes_pt_5_5 }, { (const CONN*)effB8_mes_pt_5_6, (const u16*)effB8_mes_pt_5_7 },
-    { (const CONN*)effB8_mes_pt_5_8, (const u16*)effB8_mes_pt_5_9 }, { (const CONN*)effB8_mes_pt_5_10, (const u16*)effB8_mes_pt_5_11 },
-    { (const CONN*)effB8_mes_pt_5_12, (const u16*)effB8_mes_pt_5_13 }, { (const CONN*)effB8_mes_pt_5_14, (const u16*)effB8_mes_pt_5_15 },
-    { (const CONN*)effB8_mes_pt_5_16, (const u16*)effB8_mes_pt_5_17 }, { (const CONN*)effB8_mes_pt_5_18, (const u16*)effB8_mes_pt_5_19 },
-    { (const CONN*)effB8_mes_pt_5_20, (const u16*)effB8_mes_pt_5_21 }, { (const CONN*)effB8_mes_pt_5_22, (const u16*)effB8_mes_pt_5_23 },
-    { (const CONN*)effB8_mes_pt_5_24, (const u16*)effB8_mes_pt_5_25 }, { (const CONN*)effB8_mes_pt_5_26, (const u16*)effB8_mes_pt_5_27 },
-    { (const CONN*)effB8_mes_pt_5_28, (const u16*)effB8_mes_pt_5_29 }, { (const CONN*)effB8_mes_pt_5_30, (const u16*)effB8_mes_pt_5_31 },
-    { (const CONN*)effB8_mes_pt_5_32, (const u16*)effB8_mes_pt_5_33 }, { (const CONN*)effB8_mes_pt_5_34, (const u16*)effB8_mes_pt_5_35 },
-    { (const CONN*)effB8_mes_pt_5_36, (const u16*)effB8_mes_pt_5_37 }, { (const CONN*)effB8_mes_pt_5_38, (const u16*)effB8_mes_pt_5_39 },
-    { (const CONN*)effB8_mes_pt_5_40, (const u16*)effB8_mes_pt_5_41 }, { (const CONN*)effB8_mes_pt_5_42, (const u16*)effB8_mes_pt_5_43 },
-    { (const CONN*)effB8_mes_pt_5_42, (const u16*)effB8_mes_pt_5_45 }, { (const CONN*)effB8_mes_pt_5_42, (const u16*)effB8_mes_pt_5_47 },
-    { (const CONN*)effB8_mes_pt_5_48, (const u16*)effB8_mes_pt_5_49 }, { (const CONN*)effB8_mes_pt_5_50, (const u16*)effB8_mes_pt_5_51 },
-    { (const CONN*)effB8_mes_pt_5_52, (const u16*)effB8_mes_pt_5_53 }, { (const CONN*)effB8_mes_pt_5_54, (const u16*)effB8_mes_pt_5_55 },
-    { (const CONN*)effB8_mes_pt_5_56, (const u16*)effB8_mes_pt_5_57 }, { (const CONN*)effB8_mes_pt_5_58, (const u16*)effB8_mes_pt_5_59 },
+    { (const CONN*)effB8_mes_pt_5_0, effB8_mes_pt_5_1 }, { (const CONN*)effB8_mes_pt_5_2, effB8_mes_pt_5_3 },
+    { (const CONN*)effB8_mes_pt_5_4, effB8_mes_pt_5_5 }, { (const CONN*)effB8_mes_pt_5_6, effB8_mes_pt_5_7 },
+    { (const CONN*)effB8_mes_pt_5_8, effB8_mes_pt_5_9 }, { (const CONN*)effB8_mes_pt_5_10, effB8_mes_pt_5_11 },
+    { effB8_mes_pt_5_12, effB8_mes_pt_5_13 }, { (const CONN*)effB8_mes_pt_5_14, effB8_mes_pt_5_15 },
+    { (const CONN*)effB8_mes_pt_5_16, effB8_mes_pt_5_17 }, { (const CONN*)effB8_mes_pt_5_18, effB8_mes_pt_5_19 },
+    { (const CONN*)effB8_mes_pt_5_20, effB8_mes_pt_5_21 }, { (const CONN*)effB8_mes_pt_5_22, effB8_mes_pt_5_23 },
+    { (const CONN*)effB8_mes_pt_5_24, effB8_mes_pt_5_25 }, { (const CONN*)effB8_mes_pt_5_26, effB8_mes_pt_5_27 },
+    { (const CONN*)effB8_mes_pt_5_28, effB8_mes_pt_5_29 }, { (const CONN*)effB8_mes_pt_5_30, effB8_mes_pt_5_31 },
+    { (const CONN*)effB8_mes_pt_5_32, effB8_mes_pt_5_33 }, { (const CONN*)effB8_mes_pt_5_34, effB8_mes_pt_5_35 },
+    { (const CONN*)effB8_mes_pt_5_36, effB8_mes_pt_5_37 }, { (const CONN*)effB8_mes_pt_5_38, effB8_mes_pt_5_39 },
+    { (const CONN*)effB8_mes_pt_5_40, effB8_mes_pt_5_41 }, { (const CONN*)effB8_mes_pt_5_42, effB8_mes_pt_5_43 },
+    { (const CONN*)effB8_mes_pt_5_42, effB8_mes_pt_5_45 }, { (const CONN*)effB8_mes_pt_5_42, effB8_mes_pt_5_47 },
+    { (const CONN*)effB8_mes_pt_5_48, effB8_mes_pt_5_49 }, { (const CONN*)effB8_mes_pt_5_50, effB8_mes_pt_5_51 },
+    { (const CONN*)effB8_mes_pt_5_52, effB8_mes_pt_5_53 }, { (const CONN*)effB8_mes_pt_5_54, effB8_mes_pt_5_55 },
+    { (const CONN*)effB8_mes_pt_5_56, effB8_mes_pt_5_57 }, { (const CONN*)effB8_mes_pt_5_58, effB8_mes_pt_5_59 },
 };
 
 const u32 effB8_mes_pt_5_0[114] = {
@@ -46566,11 +46566,11 @@ const u32 effB8_mes_pt_5_10[120] = {
     0xE0FFF0, 0x9E9D, 0xF0FFF0, 0x9E84, 0xF8FFF0, 0x9E94, 0x100FFF0, 0x9E9A,
 };
 
-const u32 effB8_mes_pt_5_12[30] = {
-    0x780000, 0x9EA4, 0x800000, 0x9E88, 0x880000, 0x9E9A, 0x980000, 0x9EB5,
-    0xA00000, 0x9E8E, 0xA80000, 0x9E82, 0xB00000, 0x9F3C, 0xC00000, 0x9F3A,
-    0xD00000, 0x9E84, 0xD80000, 0x9E8D, 0xE00000, 0x9E8E, 0xE80000, 0x9E91,
-    0xF00000, 0x9E8C, 0xF80000, 0x9E84, 0x1000000, 0x9E9A,
+const CONN effB8_mes_pt_5_12[15] = {
+    { 120, 0, 0, 0x9EA4 }, { 128, 0, 0, 0x9E88 }, { 136, 0, 0, 0x9E9A }, { 152, 0, 0, 0x9EB5 },
+    { 160, 0, 0, 0x9E8E }, { 168, 0, 0, 0x9E82 }, { 176, 0, 0, 0x9F3C }, { 192, 0, 0, 0x9F3A },
+    { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E8D }, { 224, 0, 0, 0x9E8E }, { 232, 0, 0, 0x9E91 },
+    { 240, 0, 0, 0x9E8C }, { 248, 0, 0, 0x9E84 }, { 256, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_pt_5_14[144] = {
@@ -47079,21 +47079,21 @@ const u16 effB8_mes_pt_5_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_6[30] = {
-    { (const CONN*)effB8_mes_pt_6_0, (const u16*)effB8_mes_pt_6_1 }, { (const CONN*)effB8_mes_pt_6_2, (const u16*)effB8_mes_pt_6_3 },
-    { (const CONN*)effB8_mes_pt_6_4, (const u16*)effB8_mes_pt_6_5 }, { (const CONN*)effB8_mes_pt_6_6, (const u16*)effB8_mes_pt_6_7 },
-    { (const CONN*)effB8_mes_pt_6_8, (const u16*)effB8_mes_pt_6_9 }, { (const CONN*)effB8_mes_pt_6_10, (const u16*)effB8_mes_pt_6_11 },
-    { (const CONN*)effB8_mes_pt_6_12, (const u16*)effB8_mes_pt_6_13 }, { (const CONN*)effB8_mes_pt_6_14, (const u16*)effB8_mes_pt_6_15 },
-    { (const CONN*)effB8_mes_pt_6_16, (const u16*)effB8_mes_pt_6_17 }, { (const CONN*)effB8_mes_pt_6_18, (const u16*)effB8_mes_pt_6_19 },
-    { (const CONN*)effB8_mes_pt_6_20, (const u16*)effB8_mes_pt_6_21 }, { (const CONN*)effB8_mes_pt_6_22, (const u16*)effB8_mes_pt_6_23 },
-    { (const CONN*)effB8_mes_pt_6_24, (const u16*)effB8_mes_pt_6_25 }, { (const CONN*)effB8_mes_pt_6_26, (const u16*)effB8_mes_pt_6_27 },
-    { (const CONN*)effB8_mes_pt_6_28, (const u16*)effB8_mes_pt_6_29 }, { (const CONN*)effB8_mes_pt_6_30, (const u16*)effB8_mes_pt_6_31 },
-    { (const CONN*)effB8_mes_pt_6_32, (const u16*)effB8_mes_pt_6_33 }, { (const CONN*)effB8_mes_pt_6_34, (const u16*)effB8_mes_pt_6_35 },
-    { (const CONN*)effB8_mes_pt_6_36, (const u16*)effB8_mes_pt_6_37 }, { (const CONN*)effB8_mes_pt_6_38, (const u16*)effB8_mes_pt_6_39 },
-    { (const CONN*)effB8_mes_pt_6_40, (const u16*)effB8_mes_pt_6_41 }, { (const CONN*)effB8_mes_pt_6_42, (const u16*)effB8_mes_pt_6_43 },
-    { (const CONN*)effB8_mes_pt_6_42, (const u16*)effB8_mes_pt_6_45 }, { (const CONN*)effB8_mes_pt_6_42, (const u16*)effB8_mes_pt_6_47 },
-    { (const CONN*)effB8_mes_pt_6_48, (const u16*)effB8_mes_pt_6_49 }, { (const CONN*)effB8_mes_pt_6_50, (const u16*)effB8_mes_pt_6_51 },
-    { (const CONN*)effB8_mes_pt_6_52, (const u16*)effB8_mes_pt_6_53 }, { (const CONN*)effB8_mes_pt_6_54, (const u16*)effB8_mes_pt_6_55 },
-    { (const CONN*)effB8_mes_pt_6_56, (const u16*)effB8_mes_pt_6_57 }, { (const CONN*)effB8_mes_pt_6_58, (const u16*)effB8_mes_pt_6_59 },
+    { (const CONN*)effB8_mes_pt_6_0, effB8_mes_pt_6_1 }, { (const CONN*)effB8_mes_pt_6_2, effB8_mes_pt_6_3 },
+    { (const CONN*)effB8_mes_pt_6_4, effB8_mes_pt_6_5 }, { (const CONN*)effB8_mes_pt_6_6, effB8_mes_pt_6_7 },
+    { (const CONN*)effB8_mes_pt_6_8, effB8_mes_pt_6_9 }, { (const CONN*)effB8_mes_pt_6_10, effB8_mes_pt_6_11 },
+    { (const CONN*)effB8_mes_pt_6_12, effB8_mes_pt_6_13 }, { (const CONN*)effB8_mes_pt_6_14, effB8_mes_pt_6_15 },
+    { (const CONN*)effB8_mes_pt_6_16, effB8_mes_pt_6_17 }, { (const CONN*)effB8_mes_pt_6_18, effB8_mes_pt_6_19 },
+    { (const CONN*)effB8_mes_pt_6_20, effB8_mes_pt_6_21 }, { (const CONN*)effB8_mes_pt_6_22, effB8_mes_pt_6_23 },
+    { (const CONN*)effB8_mes_pt_6_24, effB8_mes_pt_6_25 }, { (const CONN*)effB8_mes_pt_6_26, effB8_mes_pt_6_27 },
+    { (const CONN*)effB8_mes_pt_6_28, effB8_mes_pt_6_29 }, { (const CONN*)effB8_mes_pt_6_30, effB8_mes_pt_6_31 },
+    { effB8_mes_pt_6_32, effB8_mes_pt_6_33 }, { effB8_mes_pt_6_34, effB8_mes_pt_6_35 },
+    { (const CONN*)effB8_mes_pt_6_36, effB8_mes_pt_6_37 }, { effB8_mes_pt_6_38, effB8_mes_pt_6_39 },
+    { (const CONN*)effB8_mes_pt_6_40, effB8_mes_pt_6_41 }, { (const CONN*)effB8_mes_pt_6_42, effB8_mes_pt_6_43 },
+    { (const CONN*)effB8_mes_pt_6_42, effB8_mes_pt_6_45 }, { (const CONN*)effB8_mes_pt_6_42, effB8_mes_pt_6_47 },
+    { (const CONN*)effB8_mes_pt_6_48, effB8_mes_pt_6_49 }, { (const CONN*)effB8_mes_pt_6_50, effB8_mes_pt_6_51 },
+    { effB8_mes_pt_6_52, effB8_mes_pt_6_53 }, { (const CONN*)effB8_mes_pt_6_54, effB8_mes_pt_6_55 },
+    { (const CONN*)effB8_mes_pt_6_56, effB8_mes_pt_6_57 }, { (const CONN*)effB8_mes_pt_6_58, effB8_mes_pt_6_59 },
 };
 
 const u32 effB8_mes_pt_6_0[124] = {
@@ -47380,17 +47380,17 @@ const u32 effB8_mes_pt_6_30[54] = {
     0x1280000, 0x9E80, 0x1300000, 0x9E92, 0x1380000, 0x9E9B,
 };
 
-const u32 effB8_mes_pt_6_32[18] = {
-    0xA00000, 0x9EA5, 0xA80000, 0x9E88, 0xB00000, 0x9E8C, 0xB80000, 0x9E8C,
-    0xC00000, 0x9E8C, 0xC80000, 0x9E8C, 0xD00000, 0x9E8C, 0xD80000, 0x9E8C,
-    0xE00000, 0x9E9A,
+const CONN effB8_mes_pt_6_32[9] = {
+    { 160, 0, 0, 0x9EA5 }, { 168, 0, 0, 0x9E88 }, { 176, 0, 0, 0x9E8C }, { 184, 0, 0, 0x9E8C },
+    { 192, 0, 0, 0x9E8C }, { 200, 0, 0, 0x9E8C }, { 208, 0, 0, 0x9E8C }, { 216, 0, 0, 0x9E8C },
+    { 224, 0, 0, 0x9E9A },
 };
 
-const u32 effB8_mes_pt_6_34[26] = {
-    0x900000, 0x9EA0, 0x980000, 0x9E8F, 0xA00000, 0x9E84, 0xA80000, 0x9E91,
-    0xB00000, 0x9E93, 0xB80000, 0x9E80, 0xC00000, 0x9E80, 0xC80000, 0x9E80,
-    0xD00000, 0x9E80, 0xD80000, 0x9E80, 0xE00000, 0x9E80, 0xE80000, 0x9E91,
-    0xF00000, 0x9E9A,
+const CONN effB8_mes_pt_6_34[13] = {
+    { 144, 0, 0, 0x9EA0 }, { 152, 0, 0, 0x9E8F }, { 160, 0, 0, 0x9E84 }, { 168, 0, 0, 0x9E91 },
+    { 176, 0, 0, 0x9E93 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E80 },
+    { 208, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E80 }, { 232, 0, 0, 0x9E91 },
+    { 240, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_pt_6_36[46] = {
@@ -47402,10 +47402,10 @@ const u32 effB8_mes_pt_6_36[46] = {
     0x1180000, 0x9E8E, 0x1200000, 0x9E8D, 0x1280000, 0x9E9A,
 };
 
-const u32 effB8_mes_pt_6_38[24] = {
-    0x900000, 0x9EA2, 0x980000, 0x9E91, 0xA00000, 0x9E80, 0xA80000, 0x9E92,
-    0xB00000, 0x9E92, 0xB80000, 0x9E92, 0xC00000, 0x9E92, 0xC80000, 0x9E87,
-    0xD00000, 0x9E87, 0xD80000, 0x9E87, 0xE00000, 0x9E87, 0xE80000, 0x9E9A,
+const CONN effB8_mes_pt_6_38[12] = {
+    { 144, 0, 0, 0x9EA2 }, { 152, 0, 0, 0x9E91 }, { 160, 0, 0, 0x9E80 }, { 168, 0, 0, 0x9E92 },
+    { 176, 0, 0, 0x9E92 }, { 184, 0, 0, 0x9E92 }, { 192, 0, 0, 0x9E92 }, { 200, 0, 0, 0x9E87 },
+    { 208, 0, 0, 0x9E87 }, { 216, 0, 0, 0x9E87 }, { 224, 0, 0, 0x9E87 }, { 232, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_pt_6_40[42] = {
@@ -47453,14 +47453,14 @@ const u32 effB8_mes_pt_6_50[116] = {
     0x138FFF0, 0x9E8D, 0x140FFF0, 0x9E9A,
 };
 
-const u32 effB8_mes_pt_6_52[52] = {
-    0x780000, 0x9EB2, 0x800000, 0x9E8E, 0x880000, 0x9E94, 0x980000, 0x9E8E,
-    0xA80000, 0x9E8C, 0xB00000, 0x9E80, 0xB80000, 0x9E88, 0xC00000, 0x9E92,
-    0xD00000, 0x9E85, 0xD80000, 0x9E8E, 0xE00000, 0x9E91, 0xE80000, 0x9E93,
-    0xF00000, 0x9E84, 0xF80000, 0x9E9A, 0x78FFF0, 0x9EAF, 0x80FFF0, 0x9E84,
-    0x88FFF0, 0x9E91, 0x90FFF0, 0x9E94, 0x98FFF0, 0x9E85, 0xA0FFF0, 0x9E84,
-    0xA8FFF0, 0x9E82, 0xB0FFF0, 0x9E99, 0xB8FFF0, 0x9E88, 0xC0FFF0, 0x9E8E,
-    0xC8FFF0, 0x9E8D, 0xD0FFF0, 0x9E9A,
+const CONN effB8_mes_pt_6_52[26] = {
+    { 120, 0, 0, 0x9EB2 }, { 128, 0, 0, 0x9E8E }, { 136, 0, 0, 0x9E94 }, { 152, 0, 0, 0x9E8E },
+    { 168, 0, 0, 0x9E8C }, { 176, 0, 0, 0x9E80 }, { 184, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E92 },
+    { 208, 0, 0, 0x9E85 }, { 216, 0, 0, 0x9E8E }, { 224, 0, 0, 0x9E91 }, { 232, 0, 0, 0x9E93 },
+    { 240, 0, 0, 0x9E84 }, { 248, 0, 0, 0x9E9A }, { 120, -16, 0, 0x9EAF }, { 128, -16, 0, 0x9E84 },
+    { 136, -16, 0, 0x9E91 }, { 144, -16, 0, 0x9E94 }, { 152, -16, 0, 0x9E85 }, { 160, -16, 0, 0x9E84 },
+    { 168, -16, 0, 0x9E82 }, { 176, -16, 0, 0x9E99 }, { 184, -16, 0, 0x9E88 }, { 192, -16, 0, 0x9E8E },
+    { 200, -16, 0, 0x9E8D }, { 208, -16, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_pt_6_54[76] = {
@@ -47621,21 +47621,21 @@ const u16 effB8_mes_pt_6_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_7[30] = {
-    { (const CONN*)effB8_mes_pt_7_0, (const u16*)effB8_mes_pt_7_1 }, { (const CONN*)effB8_mes_pt_7_2, (const u16*)effB8_mes_pt_7_3 },
-    { (const CONN*)effB8_mes_pt_7_4, (const u16*)effB8_mes_pt_7_5 }, { (const CONN*)effB8_mes_pt_7_6, (const u16*)effB8_mes_pt_7_7 },
-    { (const CONN*)effB8_mes_pt_7_8, (const u16*)effB8_mes_pt_7_9 }, { (const CONN*)effB8_mes_pt_7_10, (const u16*)effB8_mes_pt_7_11 },
-    { (const CONN*)effB8_mes_pt_7_12, (const u16*)effB8_mes_pt_7_13 }, { (const CONN*)effB8_mes_pt_7_14, (const u16*)effB8_mes_pt_7_15 },
-    { (const CONN*)effB8_mes_pt_7_16, (const u16*)effB8_mes_pt_7_17 }, { (const CONN*)effB8_mes_pt_7_18, (const u16*)effB8_mes_pt_7_19 },
-    { (const CONN*)effB8_mes_pt_7_20, (const u16*)effB8_mes_pt_7_21 }, { (const CONN*)effB8_mes_pt_7_22, (const u16*)effB8_mes_pt_7_23 },
-    { (const CONN*)effB8_mes_pt_7_24, (const u16*)effB8_mes_pt_7_25 }, { (const CONN*)effB8_mes_pt_7_26, (const u16*)effB8_mes_pt_7_27 },
-    { (const CONN*)effB8_mes_pt_7_28, (const u16*)effB8_mes_pt_7_29 }, { (const CONN*)effB8_mes_pt_7_30, (const u16*)effB8_mes_pt_7_31 },
-    { (const CONN*)effB8_mes_pt_7_32, (const u16*)effB8_mes_pt_7_33 }, { (const CONN*)effB8_mes_pt_7_34, (const u16*)effB8_mes_pt_7_35 },
-    { (const CONN*)effB8_mes_pt_7_36, (const u16*)effB8_mes_pt_7_37 }, { (const CONN*)effB8_mes_pt_7_38, (const u16*)effB8_mes_pt_7_39 },
-    { (const CONN*)effB8_mes_pt_7_40, (const u16*)effB8_mes_pt_7_41 }, { (const CONN*)effB8_mes_pt_7_42, (const u16*)effB8_mes_pt_7_43 },
-    { (const CONN*)effB8_mes_pt_7_42, (const u16*)effB8_mes_pt_7_45 }, { (const CONN*)effB8_mes_pt_7_42, (const u16*)effB8_mes_pt_7_47 },
-    { (const CONN*)effB8_mes_pt_7_48, (const u16*)effB8_mes_pt_7_49 }, { (const CONN*)effB8_mes_pt_7_50, (const u16*)effB8_mes_pt_7_51 },
-    { (const CONN*)effB8_mes_pt_7_52, (const u16*)effB8_mes_pt_7_53 }, { (const CONN*)effB8_mes_pt_7_54, (const u16*)effB8_mes_pt_7_55 },
-    { (const CONN*)effB8_mes_pt_7_56, (const u16*)effB8_mes_pt_7_57 }, { (const CONN*)effB8_mes_pt_7_58, (const u16*)effB8_mes_pt_7_59 },
+    { (const CONN*)effB8_mes_pt_7_0, effB8_mes_pt_7_1 }, { (const CONN*)effB8_mes_pt_7_2, effB8_mes_pt_7_3 },
+    { (const CONN*)effB8_mes_pt_7_4, effB8_mes_pt_7_5 }, { (const CONN*)effB8_mes_pt_7_6, effB8_mes_pt_7_7 },
+    { (const CONN*)effB8_mes_pt_7_8, effB8_mes_pt_7_9 }, { (const CONN*)effB8_mes_pt_7_10, effB8_mes_pt_7_11 },
+    { (const CONN*)effB8_mes_pt_7_12, effB8_mes_pt_7_13 }, { (const CONN*)effB8_mes_pt_7_14, effB8_mes_pt_7_15 },
+    { (const CONN*)effB8_mes_pt_7_16, effB8_mes_pt_7_17 }, { (const CONN*)effB8_mes_pt_7_18, effB8_mes_pt_7_19 },
+    { (const CONN*)effB8_mes_pt_7_20, effB8_mes_pt_7_21 }, { (const CONN*)effB8_mes_pt_7_22, effB8_mes_pt_7_23 },
+    { (const CONN*)effB8_mes_pt_7_24, effB8_mes_pt_7_25 }, { (const CONN*)effB8_mes_pt_7_26, effB8_mes_pt_7_27 },
+    { (const CONN*)effB8_mes_pt_7_28, effB8_mes_pt_7_29 }, { (const CONN*)effB8_mes_pt_7_30, effB8_mes_pt_7_31 },
+    { (const CONN*)effB8_mes_pt_7_32, effB8_mes_pt_7_33 }, { (const CONN*)effB8_mes_pt_7_34, effB8_mes_pt_7_35 },
+    { (const CONN*)effB8_mes_pt_7_36, effB8_mes_pt_7_37 }, { (const CONN*)effB8_mes_pt_7_38, effB8_mes_pt_7_39 },
+    { (const CONN*)effB8_mes_pt_7_40, effB8_mes_pt_7_41 }, { (const CONN*)effB8_mes_pt_7_42, effB8_mes_pt_7_43 },
+    { (const CONN*)effB8_mes_pt_7_42, effB8_mes_pt_7_45 }, { (const CONN*)effB8_mes_pt_7_42, effB8_mes_pt_7_47 },
+    { (const CONN*)effB8_mes_pt_7_48, effB8_mes_pt_7_49 }, { (const CONN*)effB8_mes_pt_7_50, effB8_mes_pt_7_51 },
+    { (const CONN*)effB8_mes_pt_7_52, effB8_mes_pt_7_53 }, { (const CONN*)effB8_mes_pt_7_54, effB8_mes_pt_7_55 },
+    { (const CONN*)effB8_mes_pt_7_56, effB8_mes_pt_7_57 }, { (const CONN*)effB8_mes_pt_7_58, effB8_mes_pt_7_59 },
 };
 
 const u32 effB8_mes_pt_7_0[114] = {
@@ -48202,21 +48202,21 @@ const u16 effB8_mes_pt_7_59[6] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_8[30] = {
-    { (const CONN*)effB8_mes_pt_8_0, (const u16*)effB8_mes_pt_8_1 }, { (const CONN*)effB8_mes_pt_8_2, (const u16*)effB8_mes_pt_8_3 },
-    { (const CONN*)effB8_mes_pt_8_4, (const u16*)effB8_mes_pt_8_5 }, { (const CONN*)effB8_mes_pt_8_6, (const u16*)effB8_mes_pt_8_7 },
-    { (const CONN*)effB8_mes_pt_8_8, (const u16*)effB8_mes_pt_8_9 }, { (const CONN*)effB8_mes_pt_8_10, (const u16*)effB8_mes_pt_8_11 },
-    { (const CONN*)effB8_mes_pt_8_12, (const u16*)effB8_mes_pt_8_13 }, { (const CONN*)effB8_mes_pt_8_14, (const u16*)effB8_mes_pt_8_15 },
-    { (const CONN*)effB8_mes_pt_8_16, (const u16*)effB8_mes_pt_8_17 }, { (const CONN*)effB8_mes_pt_8_18, (const u16*)effB8_mes_pt_8_19 },
-    { (const CONN*)effB8_mes_pt_8_20, (const u16*)effB8_mes_pt_8_21 }, { (const CONN*)effB8_mes_pt_8_22, (const u16*)effB8_mes_pt_8_23 },
-    { (const CONN*)effB8_mes_pt_8_24, (const u16*)effB8_mes_pt_8_25 }, { (const CONN*)effB8_mes_pt_8_26, (const u16*)effB8_mes_pt_8_27 },
-    { (const CONN*)effB8_mes_pt_8_28, (const u16*)effB8_mes_pt_8_29 }, { (const CONN*)effB8_mes_pt_8_30, (const u16*)effB8_mes_pt_8_31 },
-    { (const CONN*)effB8_mes_pt_8_32, (const u16*)effB8_mes_pt_8_33 }, { (const CONN*)effB8_mes_pt_8_34, (const u16*)effB8_mes_pt_8_35 },
-    { (const CONN*)effB8_mes_pt_8_36, (const u16*)effB8_mes_pt_8_37 }, { (const CONN*)effB8_mes_pt_8_38, (const u16*)effB8_mes_pt_8_39 },
-    { (const CONN*)effB8_mes_pt_8_40, (const u16*)effB8_mes_pt_8_41 }, { (const CONN*)effB8_mes_pt_8_42, (const u16*)effB8_mes_pt_8_43 },
-    { (const CONN*)effB8_mes_pt_8_42, (const u16*)effB8_mes_pt_8_45 }, { (const CONN*)effB8_mes_pt_8_42, (const u16*)effB8_mes_pt_8_47 },
-    { (const CONN*)effB8_mes_pt_8_48, (const u16*)effB8_mes_pt_8_49 }, { (const CONN*)effB8_mes_pt_8_50, (const u16*)effB8_mes_pt_8_51 },
-    { (const CONN*)effB8_mes_pt_8_52, (const u16*)effB8_mes_pt_8_53 }, { (const CONN*)effB8_mes_pt_8_54, (const u16*)effB8_mes_pt_8_55 },
-    { (const CONN*)effB8_mes_pt_8_56, (const u16*)effB8_mes_pt_8_57 }, { (const CONN*)effB8_mes_pt_8_58, (const u16*)effB8_mes_pt_8_59 },
+    { (const CONN*)effB8_mes_pt_8_0, effB8_mes_pt_8_1 }, { (const CONN*)effB8_mes_pt_8_2, effB8_mes_pt_8_3 },
+    { (const CONN*)effB8_mes_pt_8_4, effB8_mes_pt_8_5 }, { (const CONN*)effB8_mes_pt_8_6, effB8_mes_pt_8_7 },
+    { (const CONN*)effB8_mes_pt_8_8, effB8_mes_pt_8_9 }, { (const CONN*)effB8_mes_pt_8_10, effB8_mes_pt_8_11 },
+    { (const CONN*)effB8_mes_pt_8_12, effB8_mes_pt_8_13 }, { (const CONN*)effB8_mes_pt_8_14, effB8_mes_pt_8_15 },
+    { (const CONN*)effB8_mes_pt_8_16, effB8_mes_pt_8_17 }, { (const CONN*)effB8_mes_pt_8_18, effB8_mes_pt_8_19 },
+    { (const CONN*)effB8_mes_pt_8_20, effB8_mes_pt_8_21 }, { (const CONN*)effB8_mes_pt_8_22, effB8_mes_pt_8_23 },
+    { (const CONN*)effB8_mes_pt_8_24, effB8_mes_pt_8_25 }, { (const CONN*)effB8_mes_pt_8_26, effB8_mes_pt_8_27 },
+    { (const CONN*)effB8_mes_pt_8_28, effB8_mes_pt_8_29 }, { (const CONN*)effB8_mes_pt_8_30, effB8_mes_pt_8_31 },
+    { (const CONN*)effB8_mes_pt_8_32, effB8_mes_pt_8_33 }, { (const CONN*)effB8_mes_pt_8_34, effB8_mes_pt_8_35 },
+    { (const CONN*)effB8_mes_pt_8_36, effB8_mes_pt_8_37 }, { (const CONN*)effB8_mes_pt_8_38, effB8_mes_pt_8_39 },
+    { (const CONN*)effB8_mes_pt_8_40, effB8_mes_pt_8_41 }, { (const CONN*)effB8_mes_pt_8_42, effB8_mes_pt_8_43 },
+    { (const CONN*)effB8_mes_pt_8_42, effB8_mes_pt_8_45 }, { (const CONN*)effB8_mes_pt_8_42, effB8_mes_pt_8_47 },
+    { (const CONN*)effB8_mes_pt_8_48, effB8_mes_pt_8_49 }, { effB8_mes_pt_8_50, effB8_mes_pt_8_51 },
+    { (const CONN*)effB8_mes_pt_8_52, effB8_mes_pt_8_53 }, { (const CONN*)effB8_mes_pt_8_54, effB8_mes_pt_8_55 },
+    { (const CONN*)effB8_mes_pt_8_56, effB8_mes_pt_8_57 }, { (const CONN*)effB8_mes_pt_8_58, effB8_mes_pt_8_59 },
 };
 
 const u32 effB8_mes_pt_8_0[136] = {
@@ -48636,13 +48636,13 @@ const u32 effB8_mes_pt_8_48[100] = {
     0x88FFF0, 0x9F3A, 0x90FFF0, 0x9E9B,
 };
 
-const u32 effB8_mes_pt_8_50[44] = {
-    0x580000, 0x9EA5, 0x600000, 0x9E8E, 0x680000, 0x9E88, 0x780000, 0x9E93,
-    0x800000, 0x9F36, 0x880000, 0x9E8E, 0x980000, 0x9E81, 0xA00000, 0x9E8E,
-    0xA80000, 0x9E8C, 0xB80000, 0x9E8B, 0xC00000, 0x9E94, 0xC80000, 0x9E93,
-    0xD00000, 0x9E80, 0xD80000, 0x9E91, 0xE80000, 0x9E82, 0xF00000, 0x9E8E,
-    0xF80000, 0x9E8C, 0x1080000, 0x9E95, 0x1100000, 0x9E8E, 0x1180000, 0x9E82,
-    0x1200000, 0x9F3C, 0x1280000, 0x9E9A,
+const CONN effB8_mes_pt_8_50[22] = {
+    { 88, 0, 0, 0x9EA5 }, { 96, 0, 0, 0x9E8E }, { 104, 0, 0, 0x9E88 }, { 120, 0, 0, 0x9E93 },
+    { 128, 0, 0, 0x9F36 }, { 136, 0, 0, 0x9E8E }, { 152, 0, 0, 0x9E81 }, { 160, 0, 0, 0x9E8E },
+    { 168, 0, 0, 0x9E8C }, { 184, 0, 0, 0x9E8B }, { 192, 0, 0, 0x9E94 }, { 200, 0, 0, 0x9E93 },
+    { 208, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9E91 }, { 232, 0, 0, 0x9E82 }, { 240, 0, 0, 0x9E8E },
+    { 248, 0, 0, 0x9E8C }, { 264, 0, 0, 0x9E95 }, { 272, 0, 0, 0x9E8E }, { 280, 0, 0, 0x9E82 },
+    { 288, 0, 0, 0x9F3C }, { 296, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_pt_8_52[82] = {
@@ -48824,21 +48824,21 @@ const u16 effB8_mes_pt_8_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_9[30] = {
-    { (const CONN*)effB8_mes_pt_9_0, (const u16*)effB8_mes_pt_9_1 }, { (const CONN*)effB8_mes_pt_9_2, (const u16*)effB8_mes_pt_9_3 },
-    { (const CONN*)effB8_mes_pt_9_4, (const u16*)effB8_mes_pt_9_5 }, { (const CONN*)effB8_mes_pt_9_6, (const u16*)effB8_mes_pt_9_7 },
-    { (const CONN*)effB8_mes_pt_9_8, (const u16*)effB8_mes_pt_9_9 }, { (const CONN*)effB8_mes_pt_9_10, (const u16*)effB8_mes_pt_9_11 },
-    { (const CONN*)effB8_mes_pt_9_12, (const u16*)effB8_mes_pt_9_13 }, { (const CONN*)effB8_mes_pt_9_14, (const u16*)effB8_mes_pt_9_15 },
-    { (const CONN*)effB8_mes_pt_9_16, (const u16*)effB8_mes_pt_9_17 }, { (const CONN*)effB8_mes_pt_9_18, (const u16*)effB8_mes_pt_9_19 },
-    { (const CONN*)effB8_mes_pt_9_20, (const u16*)effB8_mes_pt_9_21 }, { (const CONN*)effB8_mes_pt_9_22, (const u16*)effB8_mes_pt_9_23 },
-    { (const CONN*)effB8_mes_pt_9_24, (const u16*)effB8_mes_pt_9_25 }, { (const CONN*)effB8_mes_pt_9_26, (const u16*)effB8_mes_pt_9_27 },
-    { (const CONN*)effB8_mes_pt_9_28, (const u16*)effB8_mes_pt_9_29 }, { (const CONN*)effB8_mes_pt_9_30, (const u16*)effB8_mes_pt_9_31 },
-    { (const CONN*)effB8_mes_pt_9_32, (const u16*)effB8_mes_pt_9_33 }, { (const CONN*)effB8_mes_pt_9_34, (const u16*)effB8_mes_pt_9_35 },
-    { (const CONN*)effB8_mes_pt_9_36, (const u16*)effB8_mes_pt_9_37 }, { (const CONN*)effB8_mes_pt_9_38, (const u16*)effB8_mes_pt_9_39 },
-    { (const CONN*)effB8_mes_pt_9_40, (const u16*)effB8_mes_pt_9_41 }, { (const CONN*)effB8_mes_pt_9_42, (const u16*)effB8_mes_pt_9_43 },
-    { (const CONN*)effB8_mes_pt_9_42, (const u16*)effB8_mes_pt_9_45 }, { (const CONN*)effB8_mes_pt_9_42, (const u16*)effB8_mes_pt_9_47 },
-    { (const CONN*)effB8_mes_pt_9_48, (const u16*)effB8_mes_pt_9_49 }, { (const CONN*)effB8_mes_pt_9_50, (const u16*)effB8_mes_pt_9_51 },
-    { (const CONN*)effB8_mes_pt_9_52, (const u16*)effB8_mes_pt_9_53 }, { (const CONN*)effB8_mes_pt_9_54, (const u16*)effB8_mes_pt_9_55 },
-    { (const CONN*)effB8_mes_pt_9_56, (const u16*)effB8_mes_pt_9_57 }, { (const CONN*)effB8_mes_pt_9_58, (const u16*)effB8_mes_pt_9_59 },
+    { (const CONN*)effB8_mes_pt_9_0, effB8_mes_pt_9_1 }, { (const CONN*)effB8_mes_pt_9_2, effB8_mes_pt_9_3 },
+    { (const CONN*)effB8_mes_pt_9_4, effB8_mes_pt_9_5 }, { (const CONN*)effB8_mes_pt_9_6, effB8_mes_pt_9_7 },
+    { (const CONN*)effB8_mes_pt_9_8, effB8_mes_pt_9_9 }, { (const CONN*)effB8_mes_pt_9_10, effB8_mes_pt_9_11 },
+    { (const CONN*)effB8_mes_pt_9_12, effB8_mes_pt_9_13 }, { (const CONN*)effB8_mes_pt_9_14, effB8_mes_pt_9_15 },
+    { (const CONN*)effB8_mes_pt_9_16, effB8_mes_pt_9_17 }, { (const CONN*)effB8_mes_pt_9_18, effB8_mes_pt_9_19 },
+    { (const CONN*)effB8_mes_pt_9_20, effB8_mes_pt_9_21 }, { (const CONN*)effB8_mes_pt_9_22, effB8_mes_pt_9_23 },
+    { (const CONN*)effB8_mes_pt_9_24, effB8_mes_pt_9_25 }, { (const CONN*)effB8_mes_pt_9_26, effB8_mes_pt_9_27 },
+    { (const CONN*)effB8_mes_pt_9_28, effB8_mes_pt_9_29 }, { (const CONN*)effB8_mes_pt_9_30, effB8_mes_pt_9_31 },
+    { (const CONN*)effB8_mes_pt_9_32, effB8_mes_pt_9_33 }, { (const CONN*)effB8_mes_pt_9_34, effB8_mes_pt_9_35 },
+    { (const CONN*)effB8_mes_pt_9_36, effB8_mes_pt_9_37 }, { (const CONN*)effB8_mes_pt_9_38, effB8_mes_pt_9_39 },
+    { (const CONN*)effB8_mes_pt_9_40, effB8_mes_pt_9_41 }, { (const CONN*)effB8_mes_pt_9_42, effB8_mes_pt_9_43 },
+    { (const CONN*)effB8_mes_pt_9_42, effB8_mes_pt_9_45 }, { (const CONN*)effB8_mes_pt_9_42, effB8_mes_pt_9_47 },
+    { (const CONN*)effB8_mes_pt_9_48, effB8_mes_pt_9_49 }, { (const CONN*)effB8_mes_pt_9_50, effB8_mes_pt_9_51 },
+    { (const CONN*)effB8_mes_pt_9_52, effB8_mes_pt_9_53 }, { (const CONN*)effB8_mes_pt_9_54, effB8_mes_pt_9_55 },
+    { (const CONN*)effB8_mes_pt_9_56, effB8_mes_pt_9_57 }, { (const CONN*)effB8_mes_pt_9_58, effB8_mes_pt_9_59 },
 };
 
 const u32 effB8_mes_pt_9_0[138] = {
@@ -49495,21 +49495,21 @@ const u16 effB8_mes_pt_9_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_10[30] = {
-    { (const CONN*)effB8_mes_pt_10_0, (const u16*)effB8_mes_pt_10_1 }, { (const CONN*)effB8_mes_pt_10_2, (const u16*)effB8_mes_pt_10_3 },
-    { (const CONN*)effB8_mes_pt_10_4, (const u16*)effB8_mes_pt_10_5 }, { (const CONN*)effB8_mes_pt_10_6, (const u16*)effB8_mes_pt_10_7 },
-    { (const CONN*)effB8_mes_pt_10_8, (const u16*)effB8_mes_pt_10_9 }, { (const CONN*)effB8_mes_pt_10_10, (const u16*)effB8_mes_pt_10_11 },
-    { (const CONN*)effB8_mes_pt_10_12, (const u16*)effB8_mes_pt_10_13 }, { (const CONN*)effB8_mes_pt_10_14, (const u16*)effB8_mes_pt_10_15 },
-    { (const CONN*)effB8_mes_pt_10_16, (const u16*)effB8_mes_pt_10_17 }, { (const CONN*)effB8_mes_pt_10_18, (const u16*)effB8_mes_pt_10_19 },
-    { (const CONN*)effB8_mes_pt_10_20, (const u16*)effB8_mes_pt_10_21 }, { (const CONN*)effB8_mes_pt_10_22, (const u16*)effB8_mes_pt_10_23 },
-    { (const CONN*)effB8_mes_pt_10_24, (const u16*)effB8_mes_pt_10_25 }, { (const CONN*)effB8_mes_pt_10_26, (const u16*)effB8_mes_pt_10_27 },
-    { (const CONN*)effB8_mes_pt_10_28, (const u16*)effB8_mes_pt_10_29 }, { (const CONN*)effB8_mes_pt_10_30, (const u16*)effB8_mes_pt_10_31 },
-    { (const CONN*)effB8_mes_pt_10_32, (const u16*)effB8_mes_pt_10_33 }, { (const CONN*)effB8_mes_pt_10_34, (const u16*)effB8_mes_pt_10_35 },
-    { (const CONN*)effB8_mes_pt_10_36, (const u16*)effB8_mes_pt_10_37 }, { (const CONN*)effB8_mes_pt_10_38, (const u16*)effB8_mes_pt_10_39 },
-    { (const CONN*)effB8_mes_pt_10_40, (const u16*)effB8_mes_pt_10_41 }, { (const CONN*)effB8_mes_pt_10_42, (const u16*)effB8_mes_pt_10_43 },
-    { (const CONN*)effB8_mes_pt_10_42, (const u16*)effB8_mes_pt_10_45 }, { (const CONN*)effB8_mes_pt_10_42, (const u16*)effB8_mes_pt_10_47 },
-    { (const CONN*)effB8_mes_pt_10_48, (const u16*)effB8_mes_pt_10_49 }, { (const CONN*)effB8_mes_pt_10_50, (const u16*)effB8_mes_pt_10_51 },
-    { (const CONN*)effB8_mes_pt_10_52, (const u16*)effB8_mes_pt_10_53 }, { (const CONN*)effB8_mes_pt_10_54, (const u16*)effB8_mes_pt_10_55 },
-    { (const CONN*)effB8_mes_pt_10_56, (const u16*)effB8_mes_pt_10_57 }, { (const CONN*)effB8_mes_pt_10_58, (const u16*)effB8_mes_pt_10_59 },
+    { (const CONN*)effB8_mes_pt_10_0, effB8_mes_pt_10_1 }, { (const CONN*)effB8_mes_pt_10_2, effB8_mes_pt_10_3 },
+    { (const CONN*)effB8_mes_pt_10_4, effB8_mes_pt_10_5 }, { (const CONN*)effB8_mes_pt_10_6, effB8_mes_pt_10_7 },
+    { (const CONN*)effB8_mes_pt_10_8, effB8_mes_pt_10_9 }, { (const CONN*)effB8_mes_pt_10_10, effB8_mes_pt_10_11 },
+    { (const CONN*)effB8_mes_pt_10_12, effB8_mes_pt_10_13 }, { (const CONN*)effB8_mes_pt_10_14, effB8_mes_pt_10_15 },
+    { (const CONN*)effB8_mes_pt_10_16, effB8_mes_pt_10_17 }, { (const CONN*)effB8_mes_pt_10_18, effB8_mes_pt_10_19 },
+    { (const CONN*)effB8_mes_pt_10_20, effB8_mes_pt_10_21 }, { (const CONN*)effB8_mes_pt_10_22, effB8_mes_pt_10_23 },
+    { (const CONN*)effB8_mes_pt_10_24, effB8_mes_pt_10_25 }, { (const CONN*)effB8_mes_pt_10_26, effB8_mes_pt_10_27 },
+    { (const CONN*)effB8_mes_pt_10_28, effB8_mes_pt_10_29 }, { (const CONN*)effB8_mes_pt_10_30, effB8_mes_pt_10_31 },
+    { (const CONN*)effB8_mes_pt_10_32, effB8_mes_pt_10_33 }, { (const CONN*)effB8_mes_pt_10_34, effB8_mes_pt_10_35 },
+    { (const CONN*)effB8_mes_pt_10_36, effB8_mes_pt_10_37 }, { (const CONN*)effB8_mes_pt_10_38, effB8_mes_pt_10_39 },
+    { (const CONN*)effB8_mes_pt_10_40, effB8_mes_pt_10_41 }, { (const CONN*)effB8_mes_pt_10_42, effB8_mes_pt_10_43 },
+    { (const CONN*)effB8_mes_pt_10_42, effB8_mes_pt_10_45 }, { (const CONN*)effB8_mes_pt_10_42, effB8_mes_pt_10_47 },
+    { (const CONN*)effB8_mes_pt_10_48, effB8_mes_pt_10_49 }, { (const CONN*)effB8_mes_pt_10_50, effB8_mes_pt_10_51 },
+    { effB8_mes_pt_10_52, effB8_mes_pt_10_53 }, { (const CONN*)effB8_mes_pt_10_54, effB8_mes_pt_10_55 },
+    { (const CONN*)effB8_mes_pt_10_56, effB8_mes_pt_10_57 }, { (const CONN*)effB8_mes_pt_10_58, effB8_mes_pt_10_59 },
 };
 
 const u32 effB8_mes_pt_10_0[136] = {
@@ -49958,10 +49958,10 @@ const u32 effB8_mes_pt_10_50[96] = {
     0x48FFF0, 0x9E85, 0x50FFF0, 0x9E84, 0x58FFF0, 0x9E99, 0x60FFF0, 0x9E9C,
 };
 
-const u32 effB8_mes_pt_10_52[20] = {
-    0x900000, 0x9EB5, 0x980000, 0x9E8E, 0xA00000, 0x9E82, 0xA80000, 0x9F3C,
-    0xB80000, 0x9E80, 0xC80000, 0x9E93, 0xD00000, 0x9E84, 0xD80000, 0x9E91,
-    0xE00000, 0x9F32, 0xE80000, 0x9E9A,
+const CONN effB8_mes_pt_10_52[10] = {
+    { 144, 0, 0, 0x9EB5 }, { 152, 0, 0, 0x9E8E }, { 160, 0, 0, 0x9E82 }, { 168, 0, 0, 0x9F3C },
+    { 184, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E93 }, { 208, 0, 0, 0x9E84 }, { 216, 0, 0, 0x9E91 },
+    { 224, 0, 0, 0x9F32 }, { 232, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_pt_10_54[112] = {
@@ -50139,21 +50139,21 @@ const u16 effB8_mes_pt_10_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_11[30] = {
-    { (const CONN*)effB8_mes_pt_11_0, (const u16*)effB8_mes_pt_11_1 }, { (const CONN*)effB8_mes_pt_11_2, (const u16*)effB8_mes_pt_11_3 },
-    { (const CONN*)effB8_mes_pt_11_4, (const u16*)effB8_mes_pt_11_5 }, { (const CONN*)effB8_mes_pt_11_6, (const u16*)effB8_mes_pt_11_7 },
-    { (const CONN*)effB8_mes_pt_11_8, (const u16*)effB8_mes_pt_11_9 }, { (const CONN*)effB8_mes_pt_11_10, (const u16*)effB8_mes_pt_11_11 },
-    { (const CONN*)effB8_mes_pt_11_12, (const u16*)effB8_mes_pt_11_13 }, { (const CONN*)effB8_mes_pt_11_14, (const u16*)effB8_mes_pt_11_15 },
-    { (const CONN*)effB8_mes_pt_11_16, (const u16*)effB8_mes_pt_11_17 }, { (const CONN*)effB8_mes_pt_11_18, (const u16*)effB8_mes_pt_11_19 },
-    { (const CONN*)effB8_mes_pt_11_20, (const u16*)effB8_mes_pt_11_21 }, { (const CONN*)effB8_mes_pt_11_22, (const u16*)effB8_mes_pt_11_23 },
-    { (const CONN*)effB8_mes_pt_11_24, (const u16*)effB8_mes_pt_11_25 }, { (const CONN*)effB8_mes_pt_11_26, (const u16*)effB8_mes_pt_11_27 },
-    { (const CONN*)effB8_mes_pt_11_28, (const u16*)effB8_mes_pt_11_29 }, { (const CONN*)effB8_mes_pt_11_30, (const u16*)effB8_mes_pt_11_31 },
-    { (const CONN*)effB8_mes_pt_11_32, (const u16*)effB8_mes_pt_11_33 }, { (const CONN*)effB8_mes_pt_11_34, (const u16*)effB8_mes_pt_11_35 },
-    { (const CONN*)effB8_mes_pt_11_36, (const u16*)effB8_mes_pt_11_37 }, { (const CONN*)effB8_mes_pt_11_38, (const u16*)effB8_mes_pt_11_39 },
-    { (const CONN*)effB8_mes_pt_11_40, (const u16*)effB8_mes_pt_11_41 }, { (const CONN*)effB8_mes_pt_11_42, (const u16*)effB8_mes_pt_11_43 },
-    { (const CONN*)effB8_mes_pt_11_42, (const u16*)effB8_mes_pt_11_45 }, { (const CONN*)effB8_mes_pt_11_42, (const u16*)effB8_mes_pt_11_47 },
-    { (const CONN*)effB8_mes_pt_11_48, (const u16*)effB8_mes_pt_11_49 }, { (const CONN*)effB8_mes_pt_11_50, (const u16*)effB8_mes_pt_11_51 },
-    { (const CONN*)effB8_mes_pt_11_52, (const u16*)effB8_mes_pt_11_53 }, { (const CONN*)effB8_mes_pt_11_54, (const u16*)effB8_mes_pt_11_55 },
-    { (const CONN*)effB8_mes_pt_11_56, (const u16*)effB8_mes_pt_11_57 }, { (const CONN*)effB8_mes_pt_11_58, (const u16*)effB8_mes_pt_11_59 },
+    { (const CONN*)effB8_mes_pt_11_0, effB8_mes_pt_11_1 }, { (const CONN*)effB8_mes_pt_11_2, effB8_mes_pt_11_3 },
+    { (const CONN*)effB8_mes_pt_11_4, effB8_mes_pt_11_5 }, { (const CONN*)effB8_mes_pt_11_6, effB8_mes_pt_11_7 },
+    { (const CONN*)effB8_mes_pt_11_8, effB8_mes_pt_11_9 }, { (const CONN*)effB8_mes_pt_11_10, effB8_mes_pt_11_11 },
+    { (const CONN*)effB8_mes_pt_11_12, effB8_mes_pt_11_13 }, { (const CONN*)effB8_mes_pt_11_14, effB8_mes_pt_11_15 },
+    { (const CONN*)effB8_mes_pt_11_16, effB8_mes_pt_11_17 }, { (const CONN*)effB8_mes_pt_11_18, effB8_mes_pt_11_19 },
+    { (const CONN*)effB8_mes_pt_11_20, effB8_mes_pt_11_21 }, { (const CONN*)effB8_mes_pt_11_22, effB8_mes_pt_11_23 },
+    { (const CONN*)effB8_mes_pt_11_24, effB8_mes_pt_11_25 }, { (const CONN*)effB8_mes_pt_11_26, effB8_mes_pt_11_27 },
+    { (const CONN*)effB8_mes_pt_11_28, effB8_mes_pt_11_29 }, { (const CONN*)effB8_mes_pt_11_30, effB8_mes_pt_11_31 },
+    { (const CONN*)effB8_mes_pt_11_32, effB8_mes_pt_11_33 }, { (const CONN*)effB8_mes_pt_11_34, effB8_mes_pt_11_35 },
+    { (const CONN*)effB8_mes_pt_11_36, effB8_mes_pt_11_37 }, { (const CONN*)effB8_mes_pt_11_38, effB8_mes_pt_11_39 },
+    { (const CONN*)effB8_mes_pt_11_40, effB8_mes_pt_11_41 }, { effB8_mes_pt_11_42, effB8_mes_pt_11_43 },
+    { effB8_mes_pt_11_42, effB8_mes_pt_11_45 }, { effB8_mes_pt_11_42, effB8_mes_pt_11_47 },
+    { (const CONN*)effB8_mes_pt_11_48, effB8_mes_pt_11_49 }, { (const CONN*)effB8_mes_pt_11_50, effB8_mes_pt_11_51 },
+    { (const CONN*)effB8_mes_pt_11_52, effB8_mes_pt_11_53 }, { (const CONN*)effB8_mes_pt_11_54, effB8_mes_pt_11_55 },
+    { (const CONN*)effB8_mes_pt_11_56, effB8_mes_pt_11_57 }, { (const CONN*)effB8_mes_pt_11_58, effB8_mes_pt_11_59 },
 };
 
 const u32 effB8_mes_pt_11_0[134] = {
@@ -50516,10 +50516,10 @@ const u32 effB8_mes_pt_11_40[108] = {
     0x140FFF0, 0x9E9A, 0x148FFF0, 0x9E9A,
 };
 
-const u32 effB8_mes_pt_11_42[24] = {
-    0x880000, 0x9EA5, 0x900000, 0x9E8E, 0x980000, 0x9E88, 0xA80000, 0x9E93,
-    0xB00000, 0x9F36, 0xB80000, 0x9E8E, 0xC80000, 0x9E85, 0xD00000, 0x9F32,
-    0xD80000, 0x9E82, 0xE00000, 0x9E88, 0xE80000, 0x9E8B, 0xF00000, 0x9E9A,
+const CONN effB8_mes_pt_11_42[12] = {
+    { 136, 0, 0, 0x9EA5 }, { 144, 0, 0, 0x9E8E }, { 152, 0, 0, 0x9E88 }, { 168, 0, 0, 0x9E93 },
+    { 176, 0, 0, 0x9F36 }, { 184, 0, 0, 0x9E8E }, { 200, 0, 0, 0x9E85 }, { 208, 0, 0, 0x9F32 },
+    { 216, 0, 0, 0x9E82 }, { 224, 0, 0, 0x9E88 }, { 232, 0, 0, 0x9E8B }, { 240, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_pt_11_48[48] = {
@@ -50733,21 +50733,21 @@ const u16 effB8_mes_pt_11_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_12[30] = {
-    { (const CONN*)effB8_mes_pt_12_0, (const u16*)effB8_mes_pt_12_1 }, { (const CONN*)effB8_mes_pt_12_2, (const u16*)effB8_mes_pt_12_3 },
-    { (const CONN*)effB8_mes_pt_12_4, (const u16*)effB8_mes_pt_12_5 }, { (const CONN*)effB8_mes_pt_12_6, (const u16*)effB8_mes_pt_12_7 },
-    { (const CONN*)effB8_mes_pt_12_8, (const u16*)effB8_mes_pt_12_9 }, { (const CONN*)effB8_mes_pt_12_10, (const u16*)effB8_mes_pt_12_11 },
-    { (const CONN*)effB8_mes_pt_12_12, (const u16*)effB8_mes_pt_12_13 }, { (const CONN*)effB8_mes_pt_12_14, (const u16*)effB8_mes_pt_12_15 },
-    { (const CONN*)effB8_mes_pt_12_16, (const u16*)effB8_mes_pt_12_17 }, { (const CONN*)effB8_mes_pt_12_18, (const u16*)effB8_mes_pt_12_19 },
-    { (const CONN*)effB8_mes_pt_12_20, (const u16*)effB8_mes_pt_12_21 }, { (const CONN*)effB8_mes_pt_12_22, (const u16*)effB8_mes_pt_12_23 },
-    { (const CONN*)effB8_mes_pt_12_24, (const u16*)effB8_mes_pt_12_25 }, { (const CONN*)effB8_mes_pt_12_26, (const u16*)effB8_mes_pt_12_27 },
-    { (const CONN*)effB8_mes_pt_12_28, (const u16*)effB8_mes_pt_12_29 }, { (const CONN*)effB8_mes_pt_12_30, (const u16*)effB8_mes_pt_12_31 },
-    { (const CONN*)effB8_mes_pt_12_32, (const u16*)effB8_mes_pt_12_33 }, { (const CONN*)effB8_mes_pt_12_34, (const u16*)effB8_mes_pt_12_35 },
-    { (const CONN*)effB8_mes_pt_12_36, (const u16*)effB8_mes_pt_12_37 }, { (const CONN*)effB8_mes_pt_12_38, (const u16*)effB8_mes_pt_12_39 },
-    { (const CONN*)effB8_mes_pt_12_40, (const u16*)effB8_mes_pt_12_41 }, { (const CONN*)effB8_mes_pt_12_42, (const u16*)effB8_mes_pt_12_43 },
-    { (const CONN*)effB8_mes_pt_12_42, (const u16*)effB8_mes_pt_12_45 }, { (const CONN*)effB8_mes_pt_12_42, (const u16*)effB8_mes_pt_12_47 },
-    { (const CONN*)effB8_mes_pt_12_48, (const u16*)effB8_mes_pt_12_49 }, { (const CONN*)effB8_mes_pt_12_50, (const u16*)effB8_mes_pt_12_51 },
-    { (const CONN*)effB8_mes_pt_12_52, (const u16*)effB8_mes_pt_12_53 }, { (const CONN*)effB8_mes_pt_12_54, (const u16*)effB8_mes_pt_12_55 },
-    { (const CONN*)effB8_mes_pt_12_56, (const u16*)effB8_mes_pt_12_57 }, { (const CONN*)effB8_mes_pt_12_58, (const u16*)effB8_mes_pt_12_59 },
+    { (const CONN*)effB8_mes_pt_12_0, effB8_mes_pt_12_1 }, { (const CONN*)effB8_mes_pt_12_2, effB8_mes_pt_12_3 },
+    { (const CONN*)effB8_mes_pt_12_4, effB8_mes_pt_12_5 }, { (const CONN*)effB8_mes_pt_12_6, effB8_mes_pt_12_7 },
+    { (const CONN*)effB8_mes_pt_12_8, effB8_mes_pt_12_9 }, { (const CONN*)effB8_mes_pt_12_10, effB8_mes_pt_12_11 },
+    { (const CONN*)effB8_mes_pt_12_12, effB8_mes_pt_12_13 }, { (const CONN*)effB8_mes_pt_12_14, effB8_mes_pt_12_15 },
+    { (const CONN*)effB8_mes_pt_12_16, effB8_mes_pt_12_17 }, { (const CONN*)effB8_mes_pt_12_18, effB8_mes_pt_12_19 },
+    { (const CONN*)effB8_mes_pt_12_20, effB8_mes_pt_12_21 }, { (const CONN*)effB8_mes_pt_12_22, effB8_mes_pt_12_23 },
+    { effB8_mes_pt_12_24, effB8_mes_pt_12_25 }, { (const CONN*)effB8_mes_pt_12_26, effB8_mes_pt_12_27 },
+    { (const CONN*)effB8_mes_pt_12_28, effB8_mes_pt_12_29 }, { (const CONN*)effB8_mes_pt_12_30, effB8_mes_pt_12_31 },
+    { (const CONN*)effB8_mes_pt_12_32, effB8_mes_pt_12_33 }, { (const CONN*)effB8_mes_pt_12_34, effB8_mes_pt_12_35 },
+    { (const CONN*)effB8_mes_pt_12_36, effB8_mes_pt_12_37 }, { (const CONN*)effB8_mes_pt_12_38, effB8_mes_pt_12_39 },
+    { (const CONN*)effB8_mes_pt_12_40, effB8_mes_pt_12_41 }, { (const CONN*)effB8_mes_pt_12_42, effB8_mes_pt_12_43 },
+    { (const CONN*)effB8_mes_pt_12_42, effB8_mes_pt_12_45 }, { (const CONN*)effB8_mes_pt_12_42, effB8_mes_pt_12_47 },
+    { (const CONN*)effB8_mes_pt_12_48, effB8_mes_pt_12_49 }, { (const CONN*)effB8_mes_pt_12_50, effB8_mes_pt_12_51 },
+    { (const CONN*)effB8_mes_pt_12_52, effB8_mes_pt_12_53 }, { (const CONN*)effB8_mes_pt_12_54, effB8_mes_pt_12_55 },
+    { (const CONN*)effB8_mes_pt_12_56, effB8_mes_pt_12_57 }, { (const CONN*)effB8_mes_pt_12_58, effB8_mes_pt_12_59 },
 };
 
 const u32 effB8_mes_pt_12_0[72] = {
@@ -50925,14 +50925,14 @@ const u32 effB8_mes_pt_12_22[62] = {
     0x1380000, 0x9E84, 0x1400000, 0x9E91, 0x1480000, 0x9E9A,
 };
 
-const u32 effB8_mes_pt_12_24[52] = {
-    0x400000, 0x9EB5, 0x480000, 0x9E8E, 0x500000, 0x9E82, 0x580000, 0x9F3C,
-    0x680000, 0x9E8B, 0x700000, 0x9E94, 0x780000, 0x9E93, 0x800000, 0x9E80,
-    0x900000, 0x9E82, 0x980000, 0x9E8E, 0xA00000, 0x9E8C, 0xA80000, 0x9E8E,
-    0xB80000, 0x9EA3, 0xC00000, 0x9E80, 0xC80000, 0x9E8D, 0xD00000, 0x9E9A,
-    0xE00000, 0x9EB5, 0xE80000, 0x9E8E, 0xF00000, 0x9E82, 0xF80000, 0x9F3C,
-    0x1080000, 0x9F3A, 0x1180000, 0x9E8E, 0x1280000, 0x9EA3, 0x1300000, 0x9E80,
-    0x1380000, 0x9E8D, 0x1400000, 0x9E9A,
+const CONN effB8_mes_pt_12_24[26] = {
+    { 64, 0, 0, 0x9EB5 }, { 72, 0, 0, 0x9E8E }, { 80, 0, 0, 0x9E82 }, { 88, 0, 0, 0x9F3C },
+    { 104, 0, 0, 0x9E8B }, { 112, 0, 0, 0x9E94 }, { 120, 0, 0, 0x9E93 }, { 128, 0, 0, 0x9E80 },
+    { 144, 0, 0, 0x9E82 }, { 152, 0, 0, 0x9E8E }, { 160, 0, 0, 0x9E8C }, { 168, 0, 0, 0x9E8E },
+    { 184, 0, 0, 0x9EA3 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E8D }, { 208, 0, 0, 0x9E9A },
+    { 224, 0, 0, 0x9EB5 }, { 232, 0, 0, 0x9E8E }, { 240, 0, 0, 0x9E82 }, { 248, 0, 0, 0x9F3C },
+    { 264, 0, 0, 0x9F3A }, { 280, 0, 0, 0x9E8E }, { 296, 0, 0, 0x9EA3 }, { 304, 0, 0, 0x9E80 },
+    { 312, 0, 0, 0x9E8D }, { 320, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_pt_12_26[148] = {
@@ -51265,21 +51265,21 @@ const u16 effB8_mes_pt_12_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_13[30] = {
-    { (const CONN*)effB8_mes_pt_13_0, (const u16*)effB8_mes_pt_13_1 }, { (const CONN*)effB8_mes_pt_13_2, (const u16*)effB8_mes_pt_13_3 },
-    { (const CONN*)effB8_mes_pt_13_4, (const u16*)effB8_mes_pt_13_5 }, { (const CONN*)effB8_mes_pt_13_6, (const u16*)effB8_mes_pt_13_7 },
-    { (const CONN*)effB8_mes_pt_13_8, (const u16*)effB8_mes_pt_13_9 }, { (const CONN*)effB8_mes_pt_13_10, (const u16*)effB8_mes_pt_13_11 },
-    { (const CONN*)effB8_mes_pt_13_12, (const u16*)effB8_mes_pt_13_13 }, { (const CONN*)effB8_mes_pt_13_14, (const u16*)effB8_mes_pt_13_15 },
-    { (const CONN*)effB8_mes_pt_13_16, (const u16*)effB8_mes_pt_13_17 }, { (const CONN*)effB8_mes_pt_13_18, (const u16*)effB8_mes_pt_13_19 },
-    { (const CONN*)effB8_mes_pt_13_20, (const u16*)effB8_mes_pt_13_21 }, { (const CONN*)effB8_mes_pt_13_22, (const u16*)effB8_mes_pt_13_23 },
-    { (const CONN*)effB8_mes_pt_13_24, (const u16*)effB8_mes_pt_13_25 }, { (const CONN*)effB8_mes_pt_13_26, (const u16*)effB8_mes_pt_13_27 },
-    { (const CONN*)effB8_mes_pt_13_28, (const u16*)effB8_mes_pt_13_29 }, { (const CONN*)effB8_mes_pt_13_30, (const u16*)effB8_mes_pt_13_31 },
-    { (const CONN*)effB8_mes_pt_13_32, (const u16*)effB8_mes_pt_13_33 }, { (const CONN*)effB8_mes_pt_13_34, (const u16*)effB8_mes_pt_13_35 },
-    { (const CONN*)effB8_mes_pt_13_36, (const u16*)effB8_mes_pt_13_37 }, { (const CONN*)effB8_mes_pt_13_38, (const u16*)effB8_mes_pt_13_39 },
-    { (const CONN*)effB8_mes_pt_13_40, (const u16*)effB8_mes_pt_13_41 }, { (const CONN*)effB8_mes_pt_13_42, (const u16*)effB8_mes_pt_13_43 },
-    { (const CONN*)effB8_mes_pt_13_42, (const u16*)effB8_mes_pt_13_45 }, { (const CONN*)effB8_mes_pt_13_42, (const u16*)effB8_mes_pt_13_47 },
-    { (const CONN*)effB8_mes_pt_13_48, (const u16*)effB8_mes_pt_13_49 }, { (const CONN*)effB8_mes_pt_13_50, (const u16*)effB8_mes_pt_13_51 },
-    { (const CONN*)effB8_mes_pt_13_52, (const u16*)effB8_mes_pt_13_53 }, { (const CONN*)effB8_mes_pt_13_54, (const u16*)effB8_mes_pt_13_55 },
-    { (const CONN*)effB8_mes_pt_13_56, (const u16*)effB8_mes_pt_13_57 }, { (const CONN*)effB8_mes_pt_13_58, (const u16*)effB8_mes_pt_13_59 },
+    { (const CONN*)effB8_mes_pt_13_0, effB8_mes_pt_13_1 }, { (const CONN*)effB8_mes_pt_13_2, effB8_mes_pt_13_3 },
+    { (const CONN*)effB8_mes_pt_13_4, effB8_mes_pt_13_5 }, { (const CONN*)effB8_mes_pt_13_6, effB8_mes_pt_13_7 },
+    { (const CONN*)effB8_mes_pt_13_8, effB8_mes_pt_13_9 }, { (const CONN*)effB8_mes_pt_13_10, effB8_mes_pt_13_11 },
+    { (const CONN*)effB8_mes_pt_13_12, effB8_mes_pt_13_13 }, { (const CONN*)effB8_mes_pt_13_14, effB8_mes_pt_13_15 },
+    { (const CONN*)effB8_mes_pt_13_16, effB8_mes_pt_13_17 }, { (const CONN*)effB8_mes_pt_13_18, effB8_mes_pt_13_19 },
+    { (const CONN*)effB8_mes_pt_13_20, effB8_mes_pt_13_21 }, { (const CONN*)effB8_mes_pt_13_22, effB8_mes_pt_13_23 },
+    { (const CONN*)effB8_mes_pt_13_24, effB8_mes_pt_13_25 }, { (const CONN*)effB8_mes_pt_13_26, effB8_mes_pt_13_27 },
+    { (const CONN*)effB8_mes_pt_13_28, effB8_mes_pt_13_29 }, { (const CONN*)effB8_mes_pt_13_30, effB8_mes_pt_13_31 },
+    { (const CONN*)effB8_mes_pt_13_32, effB8_mes_pt_13_33 }, { (const CONN*)effB8_mes_pt_13_34, effB8_mes_pt_13_35 },
+    { (const CONN*)effB8_mes_pt_13_36, effB8_mes_pt_13_37 }, { (const CONN*)effB8_mes_pt_13_38, effB8_mes_pt_13_39 },
+    { (const CONN*)effB8_mes_pt_13_40, effB8_mes_pt_13_41 }, { (const CONN*)effB8_mes_pt_13_42, effB8_mes_pt_13_43 },
+    { (const CONN*)effB8_mes_pt_13_42, effB8_mes_pt_13_45 }, { (const CONN*)effB8_mes_pt_13_42, effB8_mes_pt_13_47 },
+    { (const CONN*)effB8_mes_pt_13_48, effB8_mes_pt_13_49 }, { (const CONN*)effB8_mes_pt_13_50, effB8_mes_pt_13_51 },
+    { (const CONN*)effB8_mes_pt_13_52, effB8_mes_pt_13_53 }, { (const CONN*)effB8_mes_pt_13_54, effB8_mes_pt_13_55 },
+    { (const CONN*)effB8_mes_pt_13_56, effB8_mes_pt_13_57 }, { (const CONN*)effB8_mes_pt_13_58, effB8_mes_pt_13_59 },
 };
 
 const u32 effB8_mes_pt_13_0[98] = {
@@ -51875,21 +51875,21 @@ const u16 effB8_mes_pt_13_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_pt_14[30] = {
-    { (const CONN*)effB8_mes_pt_14_0, (const u16*)effB8_mes_pt_14_1 }, { (const CONN*)effB8_mes_pt_14_2, (const u16*)effB8_mes_pt_14_3 },
-    { (const CONN*)effB8_mes_pt_14_4, (const u16*)effB8_mes_pt_14_5 }, { (const CONN*)effB8_mes_pt_14_6, (const u16*)effB8_mes_pt_14_7 },
-    { (const CONN*)effB8_mes_pt_14_8, (const u16*)effB8_mes_pt_14_9 }, { (const CONN*)effB8_mes_pt_14_10, (const u16*)effB8_mes_pt_14_11 },
-    { (const CONN*)effB8_mes_pt_14_12, (const u16*)effB8_mes_pt_14_13 }, { (const CONN*)effB8_mes_pt_14_14, (const u16*)effB8_mes_pt_14_15 },
-    { (const CONN*)effB8_mes_pt_14_16, (const u16*)effB8_mes_pt_14_17 }, { (const CONN*)effB8_mes_pt_14_18, (const u16*)effB8_mes_pt_14_19 },
-    { (const CONN*)effB8_mes_pt_14_20, (const u16*)effB8_mes_pt_14_21 }, { (const CONN*)effB8_mes_pt_14_22, (const u16*)effB8_mes_pt_14_23 },
-    { (const CONN*)effB8_mes_pt_14_24, (const u16*)effB8_mes_pt_14_25 }, { (const CONN*)effB8_mes_pt_14_26, (const u16*)effB8_mes_pt_14_27 },
-    { (const CONN*)effB8_mes_pt_14_28, (const u16*)effB8_mes_pt_14_29 }, { (const CONN*)effB8_mes_pt_14_30, (const u16*)effB8_mes_pt_14_31 },
-    { (const CONN*)effB8_mes_pt_14_32, (const u16*)effB8_mes_pt_14_33 }, { (const CONN*)effB8_mes_pt_14_34, (const u16*)effB8_mes_pt_14_35 },
-    { (const CONN*)effB8_mes_pt_14_36, (const u16*)effB8_mes_pt_14_37 }, { (const CONN*)effB8_mes_pt_14_38, (const u16*)effB8_mes_pt_14_39 },
-    { (const CONN*)effB8_mes_pt_14_40, (const u16*)effB8_mes_pt_14_41 }, { (const CONN*)effB8_mes_pt_14_42, (const u16*)effB8_mes_pt_14_43 },
-    { (const CONN*)effB8_mes_pt_14_44, (const u16*)effB8_mes_pt_14_45 }, { (const CONN*)effB8_mes_pt_14_46, (const u16*)effB8_mes_pt_14_47 },
-    { (const CONN*)effB8_mes_pt_14_48, (const u16*)effB8_mes_pt_14_49 }, { (const CONN*)effB8_mes_pt_14_50, (const u16*)effB8_mes_pt_14_51 },
-    { (const CONN*)effB8_mes_pt_14_52, (const u16*)effB8_mes_pt_14_53 }, { (const CONN*)effB8_mes_pt_14_54, (const u16*)effB8_mes_pt_14_55 },
-    { (const CONN*)effB8_mes_pt_14_56, (const u16*)effB8_mes_pt_14_57 }, { (const CONN*)effB8_mes_pt_14_58, (const u16*)effB8_mes_pt_14_59 },
+    { (const CONN*)effB8_mes_pt_14_0, effB8_mes_pt_14_1 }, { (const CONN*)effB8_mes_pt_14_2, effB8_mes_pt_14_3 },
+    { (const CONN*)effB8_mes_pt_14_4, effB8_mes_pt_14_5 }, { (const CONN*)effB8_mes_pt_14_6, effB8_mes_pt_14_7 },
+    { (const CONN*)effB8_mes_pt_14_8, effB8_mes_pt_14_9 }, { (const CONN*)effB8_mes_pt_14_10, effB8_mes_pt_14_11 },
+    { (const CONN*)effB8_mes_pt_14_12, effB8_mes_pt_14_13 }, { (const CONN*)effB8_mes_pt_14_14, effB8_mes_pt_14_15 },
+    { (const CONN*)effB8_mes_pt_14_16, effB8_mes_pt_14_17 }, { (const CONN*)effB8_mes_pt_14_18, effB8_mes_pt_14_19 },
+    { (const CONN*)effB8_mes_pt_14_20, effB8_mes_pt_14_21 }, { (const CONN*)effB8_mes_pt_14_22, effB8_mes_pt_14_23 },
+    { (const CONN*)effB8_mes_pt_14_24, effB8_mes_pt_14_25 }, { (const CONN*)effB8_mes_pt_14_26, effB8_mes_pt_14_27 },
+    { (const CONN*)effB8_mes_pt_14_28, effB8_mes_pt_14_29 }, { (const CONN*)effB8_mes_pt_14_30, effB8_mes_pt_14_31 },
+    { (const CONN*)effB8_mes_pt_14_32, effB8_mes_pt_14_33 }, { (const CONN*)effB8_mes_pt_14_34, effB8_mes_pt_14_35 },
+    { (const CONN*)effB8_mes_pt_14_36, effB8_mes_pt_14_37 }, { (const CONN*)effB8_mes_pt_14_38, effB8_mes_pt_14_39 },
+    { (const CONN*)effB8_mes_pt_14_40, effB8_mes_pt_14_41 }, { (const CONN*)effB8_mes_pt_14_42, effB8_mes_pt_14_43 },
+    { (const CONN*)effB8_mes_pt_14_44, effB8_mes_pt_14_45 }, { (const CONN*)effB8_mes_pt_14_46, effB8_mes_pt_14_47 },
+    { (const CONN*)effB8_mes_pt_14_48, effB8_mes_pt_14_49 }, { (const CONN*)effB8_mes_pt_14_50, effB8_mes_pt_14_51 },
+    { (const CONN*)effB8_mes_pt_14_52, effB8_mes_pt_14_53 }, { (const CONN*)effB8_mes_pt_14_54, effB8_mes_pt_14_55 },
+    { (const CONN*)effB8_mes_pt_14_56, effB8_mes_pt_14_57 }, { (const CONN*)effB8_mes_pt_14_58, effB8_mes_pt_14_59 },
 };
 
 const u32 effB8_mes_pt_14_0[80] = {
@@ -52487,21 +52487,21 @@ const u16 effB8_mes_pt_14_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_0[30] = {
-    { (const CONN*)effB8_mes_es_0_0, (const u16*)effB8_mes_es_0_1 }, { (const CONN*)effB8_mes_es_0_2, (const u16*)effB8_mes_es_0_3 },
-    { (const CONN*)effB8_mes_es_0_4, (const u16*)effB8_mes_es_0_5 }, { (const CONN*)effB8_mes_es_0_6, (const u16*)effB8_mes_es_0_7 },
-    { (const CONN*)effB8_mes_es_0_8, (const u16*)effB8_mes_es_0_9 }, { (const CONN*)effB8_mes_es_0_10, (const u16*)effB8_mes_es_0_11 },
-    { (const CONN*)effB8_mes_es_0_12, (const u16*)effB8_mes_es_0_13 }, { (const CONN*)effB8_mes_es_0_14, (const u16*)effB8_mes_es_0_15 },
-    { (const CONN*)effB8_mes_es_0_16, (const u16*)effB8_mes_es_0_17 }, { (const CONN*)effB8_mes_es_0_18, (const u16*)effB8_mes_es_0_19 },
-    { (const CONN*)effB8_mes_es_0_20, (const u16*)effB8_mes_es_0_21 }, { (const CONN*)effB8_mes_es_0_22, (const u16*)effB8_mes_es_0_23 },
-    { (const CONN*)effB8_mes_es_0_24, (const u16*)effB8_mes_es_0_25 }, { (const CONN*)effB8_mes_es_0_26, (const u16*)effB8_mes_es_0_27 },
-    { (const CONN*)effB8_mes_es_0_28, (const u16*)effB8_mes_es_0_29 }, { (const CONN*)effB8_mes_es_0_30, (const u16*)effB8_mes_es_0_31 },
-    { (const CONN*)effB8_mes_es_0_32, (const u16*)effB8_mes_es_0_33 }, { (const CONN*)effB8_mes_es_0_34, (const u16*)effB8_mes_es_0_35 },
-    { (const CONN*)effB8_mes_es_0_36, (const u16*)effB8_mes_es_0_37 }, { (const CONN*)effB8_mes_es_0_38, (const u16*)effB8_mes_es_0_39 },
-    { (const CONN*)effB8_mes_es_0_40, (const u16*)effB8_mes_es_0_41 }, { (const CONN*)effB8_mes_es_0_42, (const u16*)effB8_mes_es_0_43 },
-    { (const CONN*)effB8_mes_es_0_44, (const u16*)effB8_mes_es_0_45 }, { (const CONN*)effB8_mes_es_0_46, (const u16*)effB8_mes_es_0_47 },
-    { (const CONN*)effB8_mes_es_0_48, (const u16*)effB8_mes_es_0_49 }, { (const CONN*)effB8_mes_es_0_50, (const u16*)effB8_mes_es_0_51 },
-    { (const CONN*)effB8_mes_es_0_52, (const u16*)effB8_mes_es_0_53 }, { (const CONN*)effB8_mes_es_0_54, (const u16*)effB8_mes_es_0_55 },
-    { (const CONN*)effB8_mes_es_0_56, (const u16*)effB8_mes_es_0_57 }, { (const CONN*)effB8_mes_es_0_58, (const u16*)effB8_mes_es_0_59 },
+    { (const CONN*)effB8_mes_es_0_0, effB8_mes_es_0_1 }, { (const CONN*)effB8_mes_es_0_2, effB8_mes_es_0_3 },
+    { (const CONN*)effB8_mes_es_0_4, effB8_mes_es_0_5 }, { (const CONN*)effB8_mes_es_0_6, effB8_mes_es_0_7 },
+    { (const CONN*)effB8_mes_es_0_8, effB8_mes_es_0_9 }, { (const CONN*)effB8_mes_es_0_10, effB8_mes_es_0_11 },
+    { (const CONN*)effB8_mes_es_0_12, effB8_mes_es_0_13 }, { (const CONN*)effB8_mes_es_0_14, effB8_mes_es_0_15 },
+    { (const CONN*)effB8_mes_es_0_16, effB8_mes_es_0_17 }, { (const CONN*)effB8_mes_es_0_18, effB8_mes_es_0_19 },
+    { (const CONN*)effB8_mes_es_0_20, effB8_mes_es_0_21 }, { (const CONN*)effB8_mes_es_0_22, effB8_mes_es_0_23 },
+    { (const CONN*)effB8_mes_es_0_24, effB8_mes_es_0_25 }, { (const CONN*)effB8_mes_es_0_26, effB8_mes_es_0_27 },
+    { (const CONN*)effB8_mes_es_0_28, effB8_mes_es_0_29 }, { (const CONN*)effB8_mes_es_0_30, effB8_mes_es_0_31 },
+    { (const CONN*)effB8_mes_es_0_32, effB8_mes_es_0_33 }, { (const CONN*)effB8_mes_es_0_34, effB8_mes_es_0_35 },
+    { (const CONN*)effB8_mes_es_0_36, effB8_mes_es_0_37 }, { (const CONN*)effB8_mes_es_0_38, effB8_mes_es_0_39 },
+    { (const CONN*)effB8_mes_es_0_40, effB8_mes_es_0_41 }, { (const CONN*)effB8_mes_es_0_42, effB8_mes_es_0_43 },
+    { (const CONN*)effB8_mes_es_0_44, effB8_mes_es_0_45 }, { (const CONN*)effB8_mes_es_0_46, effB8_mes_es_0_47 },
+    { (const CONN*)effB8_mes_es_0_48, effB8_mes_es_0_49 }, { (const CONN*)effB8_mes_es_0_50, effB8_mes_es_0_51 },
+    { (const CONN*)effB8_mes_es_0_52, effB8_mes_es_0_53 }, { (const CONN*)effB8_mes_es_0_54, effB8_mes_es_0_55 },
+    { (const CONN*)effB8_mes_es_0_56, effB8_mes_es_0_57 }, { (const CONN*)effB8_mes_es_0_58, effB8_mes_es_0_59 },
 };
 
 const u32 effB8_mes_es_0_0[92] = {
@@ -53214,21 +53214,21 @@ const u16 effB8_mes_es_0_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_1[30] = {
-    { (const CONN*)effB8_mes_es_1_0, (const u16*)effB8_mes_es_1_1 }, { (const CONN*)effB8_mes_es_1_2, (const u16*)effB8_mes_es_1_3 },
-    { (const CONN*)effB8_mes_es_1_4, (const u16*)effB8_mes_es_1_5 }, { (const CONN*)effB8_mes_es_1_6, (const u16*)effB8_mes_es_1_7 },
-    { (const CONN*)effB8_mes_es_1_8, (const u16*)effB8_mes_es_1_9 }, { (const CONN*)effB8_mes_es_1_10, (const u16*)effB8_mes_es_1_11 },
-    { (const CONN*)effB8_mes_es_1_12, (const u16*)effB8_mes_es_1_13 }, { (const CONN*)effB8_mes_es_1_14, (const u16*)effB8_mes_es_1_15 },
-    { (const CONN*)effB8_mes_es_1_16, (const u16*)effB8_mes_es_1_17 }, { (const CONN*)effB8_mes_es_1_18, (const u16*)effB8_mes_es_1_19 },
-    { (const CONN*)effB8_mes_es_1_20, (const u16*)effB8_mes_es_1_21 }, { (const CONN*)effB8_mes_es_1_22, (const u16*)effB8_mes_es_1_23 },
-    { (const CONN*)effB8_mes_es_1_24, (const u16*)effB8_mes_es_1_25 }, { (const CONN*)effB8_mes_es_1_26, (const u16*)effB8_mes_es_1_27 },
-    { (const CONN*)effB8_mes_es_1_28, (const u16*)effB8_mes_es_1_29 }, { (const CONN*)effB8_mes_es_1_30, (const u16*)effB8_mes_es_1_31 },
-    { (const CONN*)effB8_mes_es_1_32, (const u16*)effB8_mes_es_1_33 }, { (const CONN*)effB8_mes_es_1_34, (const u16*)effB8_mes_es_1_35 },
-    { (const CONN*)effB8_mes_es_1_36, (const u16*)effB8_mes_es_1_37 }, { (const CONN*)effB8_mes_es_1_38, (const u16*)effB8_mes_es_1_39 },
-    { (const CONN*)effB8_mes_es_1_40, (const u16*)effB8_mes_es_1_41 }, { (const CONN*)effB8_mes_es_1_42, (const u16*)effB8_mes_es_1_43 },
-    { (const CONN*)effB8_mes_es_1_42, (const u16*)effB8_mes_es_1_45 }, { (const CONN*)effB8_mes_es_1_42, (const u16*)effB8_mes_es_1_47 },
-    { (const CONN*)effB8_mes_es_1_48, (const u16*)effB8_mes_es_1_49 }, { (const CONN*)effB8_mes_es_1_50, (const u16*)effB8_mes_es_1_51 },
-    { (const CONN*)effB8_mes_es_1_52, (const u16*)effB8_mes_es_1_53 }, { (const CONN*)effB8_mes_es_1_54, (const u16*)effB8_mes_es_1_55 },
-    { (const CONN*)effB8_mes_es_1_56, (const u16*)effB8_mes_es_1_57 }, { (const CONN*)effB8_mes_es_1_58, (const u16*)effB8_mes_es_1_59 },
+    { (const CONN*)effB8_mes_es_1_0, effB8_mes_es_1_1 }, { (const CONN*)effB8_mes_es_1_2, effB8_mes_es_1_3 },
+    { (const CONN*)effB8_mes_es_1_4, effB8_mes_es_1_5 }, { (const CONN*)effB8_mes_es_1_6, effB8_mes_es_1_7 },
+    { (const CONN*)effB8_mes_es_1_8, effB8_mes_es_1_9 }, { (const CONN*)effB8_mes_es_1_10, effB8_mes_es_1_11 },
+    { (const CONN*)effB8_mes_es_1_12, effB8_mes_es_1_13 }, { (const CONN*)effB8_mes_es_1_14, effB8_mes_es_1_15 },
+    { (const CONN*)effB8_mes_es_1_16, effB8_mes_es_1_17 }, { (const CONN*)effB8_mes_es_1_18, effB8_mes_es_1_19 },
+    { (const CONN*)effB8_mes_es_1_20, effB8_mes_es_1_21 }, { (const CONN*)effB8_mes_es_1_22, effB8_mes_es_1_23 },
+    { (const CONN*)effB8_mes_es_1_24, effB8_mes_es_1_25 }, { (const CONN*)effB8_mes_es_1_26, effB8_mes_es_1_27 },
+    { (const CONN*)effB8_mes_es_1_28, effB8_mes_es_1_29 }, { (const CONN*)effB8_mes_es_1_30, effB8_mes_es_1_31 },
+    { (const CONN*)effB8_mes_es_1_32, effB8_mes_es_1_33 }, { (const CONN*)effB8_mes_es_1_34, effB8_mes_es_1_35 },
+    { (const CONN*)effB8_mes_es_1_36, effB8_mes_es_1_37 }, { (const CONN*)effB8_mes_es_1_38, effB8_mes_es_1_39 },
+    { (const CONN*)effB8_mes_es_1_40, effB8_mes_es_1_41 }, { (const CONN*)effB8_mes_es_1_42, effB8_mes_es_1_43 },
+    { (const CONN*)effB8_mes_es_1_42, effB8_mes_es_1_45 }, { (const CONN*)effB8_mes_es_1_42, effB8_mes_es_1_47 },
+    { (const CONN*)effB8_mes_es_1_48, effB8_mes_es_1_49 }, { (const CONN*)effB8_mes_es_1_50, effB8_mes_es_1_51 },
+    { (const CONN*)effB8_mes_es_1_52, effB8_mes_es_1_53 }, { (const CONN*)effB8_mes_es_1_54, effB8_mes_es_1_55 },
+    { (const CONN*)effB8_mes_es_1_56, effB8_mes_es_1_57 }, { (const CONN*)effB8_mes_es_1_58, effB8_mes_es_1_59 },
 };
 
 const u32 effB8_mes_es_1_0[136] = {
@@ -53838,21 +53838,21 @@ const u16 effB8_mes_es_1_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_2[30] = {
-    { (const CONN*)effB8_mes_es_2_0, (const u16*)effB8_mes_es_2_1 }, { (const CONN*)effB8_mes_es_2_2, (const u16*)effB8_mes_es_2_3 },
-    { (const CONN*)effB8_mes_es_2_4, (const u16*)effB8_mes_es_2_5 }, { (const CONN*)effB8_mes_es_2_6, (const u16*)effB8_mes_es_2_7 },
-    { (const CONN*)effB8_mes_es_2_8, (const u16*)effB8_mes_es_2_9 }, { (const CONN*)effB8_mes_es_2_10, (const u16*)effB8_mes_es_2_11 },
-    { (const CONN*)effB8_mes_es_2_12, (const u16*)effB8_mes_es_2_13 }, { (const CONN*)effB8_mes_es_2_14, (const u16*)effB8_mes_es_2_15 },
-    { (const CONN*)effB8_mes_es_2_16, (const u16*)effB8_mes_es_2_17 }, { (const CONN*)effB8_mes_es_2_18, (const u16*)effB8_mes_es_2_19 },
-    { (const CONN*)effB8_mes_es_2_20, (const u16*)effB8_mes_es_2_21 }, { (const CONN*)effB8_mes_es_2_22, (const u16*)effB8_mes_es_2_23 },
-    { (const CONN*)effB8_mes_es_2_24, (const u16*)effB8_mes_es_2_25 }, { (const CONN*)effB8_mes_es_2_26, (const u16*)effB8_mes_es_2_27 },
-    { (const CONN*)effB8_mes_es_2_28, (const u16*)effB8_mes_es_2_29 }, { (const CONN*)effB8_mes_es_2_30, (const u16*)effB8_mes_es_2_31 },
-    { (const CONN*)effB8_mes_es_2_32, (const u16*)effB8_mes_es_2_33 }, { (const CONN*)effB8_mes_es_2_34, (const u16*)effB8_mes_es_2_35 },
-    { (const CONN*)effB8_mes_es_2_36, (const u16*)effB8_mes_es_2_37 }, { (const CONN*)effB8_mes_es_2_38, (const u16*)effB8_mes_es_2_39 },
-    { (const CONN*)effB8_mes_es_2_40, (const u16*)effB8_mes_es_2_41 }, { (const CONN*)effB8_mes_es_2_42, (const u16*)effB8_mes_es_2_43 },
-    { (const CONN*)effB8_mes_es_2_42, (const u16*)effB8_mes_es_2_45 }, { (const CONN*)effB8_mes_es_2_42, (const u16*)effB8_mes_es_2_47 },
-    { (const CONN*)effB8_mes_es_2_48, (const u16*)effB8_mes_es_2_49 }, { (const CONN*)effB8_mes_es_2_50, (const u16*)effB8_mes_es_2_51 },
-    { (const CONN*)effB8_mes_es_2_52, (const u16*)effB8_mes_es_2_53 }, { (const CONN*)effB8_mes_es_2_54, (const u16*)effB8_mes_es_2_55 },
-    { (const CONN*)effB8_mes_es_2_56, (const u16*)effB8_mes_es_2_57 }, { (const CONN*)effB8_mes_es_2_58, (const u16*)effB8_mes_es_2_59 },
+    { (const CONN*)effB8_mes_es_2_0, effB8_mes_es_2_1 }, { (const CONN*)effB8_mes_es_2_2, effB8_mes_es_2_3 },
+    { (const CONN*)effB8_mes_es_2_4, effB8_mes_es_2_5 }, { (const CONN*)effB8_mes_es_2_6, effB8_mes_es_2_7 },
+    { (const CONN*)effB8_mes_es_2_8, effB8_mes_es_2_9 }, { (const CONN*)effB8_mes_es_2_10, effB8_mes_es_2_11 },
+    { (const CONN*)effB8_mes_es_2_12, effB8_mes_es_2_13 }, { (const CONN*)effB8_mes_es_2_14, effB8_mes_es_2_15 },
+    { (const CONN*)effB8_mes_es_2_16, effB8_mes_es_2_17 }, { (const CONN*)effB8_mes_es_2_18, effB8_mes_es_2_19 },
+    { (const CONN*)effB8_mes_es_2_20, effB8_mes_es_2_21 }, { (const CONN*)effB8_mes_es_2_22, effB8_mes_es_2_23 },
+    { (const CONN*)effB8_mes_es_2_24, effB8_mes_es_2_25 }, { (const CONN*)effB8_mes_es_2_26, effB8_mes_es_2_27 },
+    { (const CONN*)effB8_mes_es_2_28, effB8_mes_es_2_29 }, { (const CONN*)effB8_mes_es_2_30, effB8_mes_es_2_31 },
+    { (const CONN*)effB8_mes_es_2_32, effB8_mes_es_2_33 }, { (const CONN*)effB8_mes_es_2_34, effB8_mes_es_2_35 },
+    { (const CONN*)effB8_mes_es_2_36, effB8_mes_es_2_37 }, { (const CONN*)effB8_mes_es_2_38, effB8_mes_es_2_39 },
+    { (const CONN*)effB8_mes_es_2_40, effB8_mes_es_2_41 }, { (const CONN*)effB8_mes_es_2_42, effB8_mes_es_2_43 },
+    { (const CONN*)effB8_mes_es_2_42, effB8_mes_es_2_45 }, { (const CONN*)effB8_mes_es_2_42, effB8_mes_es_2_47 },
+    { (const CONN*)effB8_mes_es_2_48, effB8_mes_es_2_49 }, { (const CONN*)effB8_mes_es_2_50, effB8_mes_es_2_51 },
+    { (const CONN*)effB8_mes_es_2_52, effB8_mes_es_2_53 }, { (const CONN*)effB8_mes_es_2_54, effB8_mes_es_2_55 },
+    { (const CONN*)effB8_mes_es_2_56, effB8_mes_es_2_57 }, { (const CONN*)effB8_mes_es_2_58, effB8_mes_es_2_59 },
 };
 
 const u32 effB8_mes_es_2_0[114] = {
@@ -54503,21 +54503,21 @@ const u16 effB8_mes_es_2_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_3[30] = {
-    { (const CONN*)effB8_mes_es_3_0, (const u16*)effB8_mes_es_3_1 }, { (const CONN*)effB8_mes_es_3_2, (const u16*)effB8_mes_es_3_3 },
-    { (const CONN*)effB8_mes_es_3_4, (const u16*)effB8_mes_es_3_5 }, { (const CONN*)effB8_mes_es_3_6, (const u16*)effB8_mes_es_3_7 },
-    { (const CONN*)effB8_mes_es_3_8, (const u16*)effB8_mes_es_3_9 }, { (const CONN*)effB8_mes_es_3_10, (const u16*)effB8_mes_es_3_11 },
-    { (const CONN*)effB8_mes_es_3_12, (const u16*)effB8_mes_es_3_13 }, { (const CONN*)effB8_mes_es_3_14, (const u16*)effB8_mes_es_3_15 },
-    { (const CONN*)effB8_mes_es_3_16, (const u16*)effB8_mes_es_3_17 }, { (const CONN*)effB8_mes_es_3_18, (const u16*)effB8_mes_es_3_19 },
-    { (const CONN*)effB8_mes_es_3_20, (const u16*)effB8_mes_es_3_21 }, { (const CONN*)effB8_mes_es_3_22, (const u16*)effB8_mes_es_3_23 },
-    { (const CONN*)effB8_mes_es_3_24, (const u16*)effB8_mes_es_3_25 }, { (const CONN*)effB8_mes_es_3_26, (const u16*)effB8_mes_es_3_27 },
-    { (const CONN*)effB8_mes_es_3_28, (const u16*)effB8_mes_es_3_29 }, { (const CONN*)effB8_mes_es_3_30, (const u16*)effB8_mes_es_3_31 },
-    { (const CONN*)effB8_mes_es_3_32, (const u16*)effB8_mes_es_3_33 }, { (const CONN*)effB8_mes_es_3_34, (const u16*)effB8_mes_es_3_35 },
-    { (const CONN*)effB8_mes_es_3_36, (const u16*)effB8_mes_es_3_37 }, { (const CONN*)effB8_mes_es_3_38, (const u16*)effB8_mes_es_3_39 },
-    { (const CONN*)effB8_mes_es_3_40, (const u16*)effB8_mes_es_3_41 }, { (const CONN*)effB8_mes_es_3_42, (const u16*)effB8_mes_es_3_43 },
-    { (const CONN*)effB8_mes_es_3_42, (const u16*)effB8_mes_es_3_45 }, { (const CONN*)effB8_mes_es_3_42, (const u16*)effB8_mes_es_3_47 },
-    { (const CONN*)effB8_mes_es_3_48, (const u16*)effB8_mes_es_3_49 }, { (const CONN*)effB8_mes_es_3_50, (const u16*)effB8_mes_es_3_51 },
-    { (const CONN*)effB8_mes_es_3_52, (const u16*)effB8_mes_es_3_53 }, { (const CONN*)effB8_mes_es_3_54, (const u16*)effB8_mes_es_3_55 },
-    { (const CONN*)effB8_mes_es_3_56, (const u16*)effB8_mes_es_3_57 }, { (const CONN*)effB8_mes_es_3_58, (const u16*)effB8_mes_es_3_59 },
+    { (const CONN*)effB8_mes_es_3_0, effB8_mes_es_3_1 }, { (const CONN*)effB8_mes_es_3_2, effB8_mes_es_3_3 },
+    { (const CONN*)effB8_mes_es_3_4, effB8_mes_es_3_5 }, { (const CONN*)effB8_mes_es_3_6, effB8_mes_es_3_7 },
+    { (const CONN*)effB8_mes_es_3_8, effB8_mes_es_3_9 }, { (const CONN*)effB8_mes_es_3_10, effB8_mes_es_3_11 },
+    { (const CONN*)effB8_mes_es_3_12, effB8_mes_es_3_13 }, { (const CONN*)effB8_mes_es_3_14, effB8_mes_es_3_15 },
+    { (const CONN*)effB8_mes_es_3_16, effB8_mes_es_3_17 }, { (const CONN*)effB8_mes_es_3_18, effB8_mes_es_3_19 },
+    { (const CONN*)effB8_mes_es_3_20, effB8_mes_es_3_21 }, { (const CONN*)effB8_mes_es_3_22, effB8_mes_es_3_23 },
+    { (const CONN*)effB8_mes_es_3_24, effB8_mes_es_3_25 }, { (const CONN*)effB8_mes_es_3_26, effB8_mes_es_3_27 },
+    { (const CONN*)effB8_mes_es_3_28, effB8_mes_es_3_29 }, { (const CONN*)effB8_mes_es_3_30, effB8_mes_es_3_31 },
+    { (const CONN*)effB8_mes_es_3_32, effB8_mes_es_3_33 }, { (const CONN*)effB8_mes_es_3_34, effB8_mes_es_3_35 },
+    { (const CONN*)effB8_mes_es_3_36, effB8_mes_es_3_37 }, { (const CONN*)effB8_mes_es_3_38, effB8_mes_es_3_39 },
+    { (const CONN*)effB8_mes_es_3_40, effB8_mes_es_3_41 }, { (const CONN*)effB8_mes_es_3_42, effB8_mes_es_3_43 },
+    { (const CONN*)effB8_mes_es_3_42, effB8_mes_es_3_45 }, { (const CONN*)effB8_mes_es_3_42, effB8_mes_es_3_47 },
+    { (const CONN*)effB8_mes_es_3_48, effB8_mes_es_3_49 }, { (const CONN*)effB8_mes_es_3_50, effB8_mes_es_3_51 },
+    { (const CONN*)effB8_mes_es_3_52, effB8_mes_es_3_53 }, { (const CONN*)effB8_mes_es_3_54, effB8_mes_es_3_55 },
+    { (const CONN*)effB8_mes_es_3_56, effB8_mes_es_3_57 }, { (const CONN*)effB8_mes_es_3_58, effB8_mes_es_3_59 },
 };
 
 const u32 effB8_mes_es_3_0[90] = {
@@ -55098,21 +55098,21 @@ const u16 effB8_mes_es_3_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_4[30] = {
-    { (const CONN*)effB8_mes_es_4_0, (const u16*)effB8_mes_es_4_1 }, { (const CONN*)effB8_mes_es_4_2, (const u16*)effB8_mes_es_4_3 },
-    { (const CONN*)effB8_mes_es_4_4, (const u16*)effB8_mes_es_4_5 }, { (const CONN*)effB8_mes_es_4_6, (const u16*)effB8_mes_es_4_7 },
-    { (const CONN*)effB8_mes_es_4_8, (const u16*)effB8_mes_es_4_9 }, { (const CONN*)effB8_mes_es_4_10, (const u16*)effB8_mes_es_4_11 },
-    { (const CONN*)effB8_mes_es_4_12, (const u16*)effB8_mes_es_4_13 }, { (const CONN*)effB8_mes_es_4_14, (const u16*)effB8_mes_es_4_15 },
-    { (const CONN*)effB8_mes_es_4_16, (const u16*)effB8_mes_es_4_17 }, { (const CONN*)effB8_mes_es_4_18, (const u16*)effB8_mes_es_4_19 },
-    { (const CONN*)effB8_mes_es_4_20, (const u16*)effB8_mes_es_4_21 }, { (const CONN*)effB8_mes_es_4_22, (const u16*)effB8_mes_es_4_23 },
-    { (const CONN*)effB8_mes_es_4_24, (const u16*)effB8_mes_es_4_25 }, { (const CONN*)effB8_mes_es_4_26, (const u16*)effB8_mes_es_4_27 },
-    { (const CONN*)effB8_mes_es_4_28, (const u16*)effB8_mes_es_4_29 }, { (const CONN*)effB8_mes_es_4_30, (const u16*)effB8_mes_es_4_31 },
-    { (const CONN*)effB8_mes_es_4_32, (const u16*)effB8_mes_es_4_33 }, { (const CONN*)effB8_mes_es_4_34, (const u16*)effB8_mes_es_4_35 },
-    { (const CONN*)effB8_mes_es_4_36, (const u16*)effB8_mes_es_4_37 }, { (const CONN*)effB8_mes_es_4_38, (const u16*)effB8_mes_es_4_39 },
-    { (const CONN*)effB8_mes_es_4_40, (const u16*)effB8_mes_es_4_41 }, { (const CONN*)effB8_mes_es_4_42, (const u16*)effB8_mes_es_4_43 },
-    { (const CONN*)effB8_mes_es_4_42, (const u16*)effB8_mes_es_4_45 }, { (const CONN*)effB8_mes_es_4_42, (const u16*)effB8_mes_es_4_47 },
-    { (const CONN*)effB8_mes_es_4_48, (const u16*)effB8_mes_es_4_49 }, { (const CONN*)effB8_mes_es_4_50, (const u16*)effB8_mes_es_4_51 },
-    { (const CONN*)effB8_mes_es_4_52, (const u16*)effB8_mes_es_4_53 }, { (const CONN*)effB8_mes_es_4_54, (const u16*)effB8_mes_es_4_55 },
-    { (const CONN*)effB8_mes_es_4_56, (const u16*)effB8_mes_es_4_57 }, { (const CONN*)effB8_mes_es_4_58, (const u16*)effB8_mes_es_4_59 },
+    { (const CONN*)effB8_mes_es_4_0, effB8_mes_es_4_1 }, { (const CONN*)effB8_mes_es_4_2, effB8_mes_es_4_3 },
+    { (const CONN*)effB8_mes_es_4_4, effB8_mes_es_4_5 }, { (const CONN*)effB8_mes_es_4_6, effB8_mes_es_4_7 },
+    { (const CONN*)effB8_mes_es_4_8, effB8_mes_es_4_9 }, { (const CONN*)effB8_mes_es_4_10, effB8_mes_es_4_11 },
+    { (const CONN*)effB8_mes_es_4_12, effB8_mes_es_4_13 }, { (const CONN*)effB8_mes_es_4_14, effB8_mes_es_4_15 },
+    { (const CONN*)effB8_mes_es_4_16, effB8_mes_es_4_17 }, { (const CONN*)effB8_mes_es_4_18, effB8_mes_es_4_19 },
+    { (const CONN*)effB8_mes_es_4_20, effB8_mes_es_4_21 }, { (const CONN*)effB8_mes_es_4_22, effB8_mes_es_4_23 },
+    { (const CONN*)effB8_mes_es_4_24, effB8_mes_es_4_25 }, { (const CONN*)effB8_mes_es_4_26, effB8_mes_es_4_27 },
+    { (const CONN*)effB8_mes_es_4_28, effB8_mes_es_4_29 }, { (const CONN*)effB8_mes_es_4_30, effB8_mes_es_4_31 },
+    { (const CONN*)effB8_mes_es_4_32, effB8_mes_es_4_33 }, { (const CONN*)effB8_mes_es_4_34, effB8_mes_es_4_35 },
+    { (const CONN*)effB8_mes_es_4_36, effB8_mes_es_4_37 }, { (const CONN*)effB8_mes_es_4_38, effB8_mes_es_4_39 },
+    { (const CONN*)effB8_mes_es_4_40, effB8_mes_es_4_41 }, { (const CONN*)effB8_mes_es_4_42, effB8_mes_es_4_43 },
+    { (const CONN*)effB8_mes_es_4_42, effB8_mes_es_4_45 }, { (const CONN*)effB8_mes_es_4_42, effB8_mes_es_4_47 },
+    { (const CONN*)effB8_mes_es_4_48, effB8_mes_es_4_49 }, { (const CONN*)effB8_mes_es_4_50, effB8_mes_es_4_51 },
+    { (const CONN*)effB8_mes_es_4_52, effB8_mes_es_4_53 }, { (const CONN*)effB8_mes_es_4_54, effB8_mes_es_4_55 },
+    { (const CONN*)effB8_mes_es_4_56, effB8_mes_es_4_57 }, { (const CONN*)effB8_mes_es_4_58, effB8_mes_es_4_59 },
 };
 
 const u32 effB8_mes_es_4_0[132] = {
@@ -55722,21 +55722,21 @@ const u16 effB8_mes_es_4_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_5[30] = {
-    { (const CONN*)effB8_mes_es_5_0, (const u16*)effB8_mes_es_5_1 }, { (const CONN*)effB8_mes_es_5_2, (const u16*)effB8_mes_es_5_3 },
-    { (const CONN*)effB8_mes_es_5_4, (const u16*)effB8_mes_es_5_5 }, { (const CONN*)effB8_mes_es_5_6, (const u16*)effB8_mes_es_5_7 },
-    { (const CONN*)effB8_mes_es_5_8, (const u16*)effB8_mes_es_5_9 }, { (const CONN*)effB8_mes_es_5_10, (const u16*)effB8_mes_es_5_11 },
-    { (const CONN*)effB8_mes_es_5_12, (const u16*)effB8_mes_es_5_13 }, { (const CONN*)effB8_mes_es_5_14, (const u16*)effB8_mes_es_5_15 },
-    { (const CONN*)effB8_mes_es_5_16, (const u16*)effB8_mes_es_5_17 }, { (const CONN*)effB8_mes_es_5_18, (const u16*)effB8_mes_es_5_19 },
-    { (const CONN*)effB8_mes_es_5_20, (const u16*)effB8_mes_es_5_21 }, { (const CONN*)effB8_mes_es_5_22, (const u16*)effB8_mes_es_5_23 },
-    { (const CONN*)effB8_mes_es_5_24, (const u16*)effB8_mes_es_5_25 }, { (const CONN*)effB8_mes_es_5_26, (const u16*)effB8_mes_es_5_27 },
-    { (const CONN*)effB8_mes_es_5_28, (const u16*)effB8_mes_es_5_29 }, { (const CONN*)effB8_mes_es_5_30, (const u16*)effB8_mes_es_5_31 },
-    { (const CONN*)effB8_mes_es_5_32, (const u16*)effB8_mes_es_5_33 }, { (const CONN*)effB8_mes_es_5_34, (const u16*)effB8_mes_es_5_35 },
-    { (const CONN*)effB8_mes_es_5_36, (const u16*)effB8_mes_es_5_37 }, { (const CONN*)effB8_mes_es_5_38, (const u16*)effB8_mes_es_5_39 },
-    { (const CONN*)effB8_mes_es_5_40, (const u16*)effB8_mes_es_5_41 }, { (const CONN*)effB8_mes_es_5_42, (const u16*)effB8_mes_es_5_43 },
-    { (const CONN*)effB8_mes_es_5_42, (const u16*)effB8_mes_es_5_45 }, { (const CONN*)effB8_mes_es_5_42, (const u16*)effB8_mes_es_5_47 },
-    { (const CONN*)effB8_mes_es_5_48, (const u16*)effB8_mes_es_5_49 }, { (const CONN*)effB8_mes_es_5_50, (const u16*)effB8_mes_es_5_51 },
-    { (const CONN*)effB8_mes_es_5_52, (const u16*)effB8_mes_es_5_53 }, { (const CONN*)effB8_mes_es_5_54, (const u16*)effB8_mes_es_5_55 },
-    { (const CONN*)effB8_mes_es_5_56, (const u16*)effB8_mes_es_5_57 }, { (const CONN*)effB8_mes_es_5_58, (const u16*)effB8_mes_es_5_59 },
+    { (const CONN*)effB8_mes_es_5_0, effB8_mes_es_5_1 }, { (const CONN*)effB8_mes_es_5_2, effB8_mes_es_5_3 },
+    { (const CONN*)effB8_mes_es_5_4, effB8_mes_es_5_5 }, { (const CONN*)effB8_mes_es_5_6, effB8_mes_es_5_7 },
+    { (const CONN*)effB8_mes_es_5_8, effB8_mes_es_5_9 }, { (const CONN*)effB8_mes_es_5_10, effB8_mes_es_5_11 },
+    { effB8_mes_es_5_12, effB8_mes_es_5_13 }, { (const CONN*)effB8_mes_es_5_14, effB8_mes_es_5_15 },
+    { (const CONN*)effB8_mes_es_5_16, effB8_mes_es_5_17 }, { (const CONN*)effB8_mes_es_5_18, effB8_mes_es_5_19 },
+    { (const CONN*)effB8_mes_es_5_20, effB8_mes_es_5_21 }, { (const CONN*)effB8_mes_es_5_22, effB8_mes_es_5_23 },
+    { (const CONN*)effB8_mes_es_5_24, effB8_mes_es_5_25 }, { (const CONN*)effB8_mes_es_5_26, effB8_mes_es_5_27 },
+    { (const CONN*)effB8_mes_es_5_28, effB8_mes_es_5_29 }, { (const CONN*)effB8_mes_es_5_30, effB8_mes_es_5_31 },
+    { (const CONN*)effB8_mes_es_5_32, effB8_mes_es_5_33 }, { (const CONN*)effB8_mes_es_5_34, effB8_mes_es_5_35 },
+    { (const CONN*)effB8_mes_es_5_36, effB8_mes_es_5_37 }, { (const CONN*)effB8_mes_es_5_38, effB8_mes_es_5_39 },
+    { (const CONN*)effB8_mes_es_5_40, effB8_mes_es_5_41 }, { (const CONN*)effB8_mes_es_5_42, effB8_mes_es_5_43 },
+    { (const CONN*)effB8_mes_es_5_42, effB8_mes_es_5_45 }, { (const CONN*)effB8_mes_es_5_42, effB8_mes_es_5_47 },
+    { (const CONN*)effB8_mes_es_5_48, effB8_mes_es_5_49 }, { (const CONN*)effB8_mes_es_5_50, effB8_mes_es_5_51 },
+    { (const CONN*)effB8_mes_es_5_52, effB8_mes_es_5_53 }, { (const CONN*)effB8_mes_es_5_54, effB8_mes_es_5_55 },
+    { (const CONN*)effB8_mes_es_5_56, effB8_mes_es_5_57 }, { (const CONN*)effB8_mes_es_5_58, effB8_mes_es_5_59 },
 };
 
 const u32 effB8_mes_es_5_0[128] = {
@@ -55850,13 +55850,13 @@ const u32 effB8_mes_es_5_10[118] = {
     0x110FFF0, 0x9E80, 0x118FFF0, 0x9E8B, 0x120FFF0, 0x9E9A,
 };
 
-const u32 effB8_mes_es_5_12[42] = {
-    0x600000, 0x9EAE, 0x680000, 0x9E98, 0x700000, 0x9E84, 0x780000, 0x9E9A,
-    0x880000, 0x9EA4, 0x900000, 0x9E91, 0x980000, 0x9E84, 0xA00000, 0x9E92,
-    0xB00000, 0x9E83, 0xB80000, 0x9E84, 0xC80000, 0x9E86, 0xD00000, 0x9E91,
-    0xD80000, 0x9E80, 0xE00000, 0x9E8D, 0xF00000, 0x9E84, 0xF80000, 0x9E92,
-    0x1000000, 0x9E82, 0x1080000, 0x9E80, 0x1100000, 0x9E8B, 0x1180000, 0x9E80,
-    0x1200000, 0x9E9A,
+const CONN effB8_mes_es_5_12[21] = {
+    { 96, 0, 0, 0x9EAE }, { 104, 0, 0, 0x9E98 }, { 112, 0, 0, 0x9E84 }, { 120, 0, 0, 0x9E9A },
+    { 136, 0, 0, 0x9EA4 }, { 144, 0, 0, 0x9E91 }, { 152, 0, 0, 0x9E84 }, { 160, 0, 0, 0x9E92 },
+    { 176, 0, 0, 0x9E83 }, { 184, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E86 }, { 208, 0, 0, 0x9E91 },
+    { 216, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E8D }, { 240, 0, 0, 0x9E84 }, { 248, 0, 0, 0x9E92 },
+    { 256, 0, 0, 0x9E82 }, { 264, 0, 0, 0x9E80 }, { 272, 0, 0, 0x9E8B }, { 280, 0, 0, 0x9E80 },
+    { 288, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_es_5_14[144] = {
@@ -56354,21 +56354,21 @@ const u16 effB8_mes_es_5_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_6[30] = {
-    { (const CONN*)effB8_mes_es_6_0, (const u16*)effB8_mes_es_6_1 }, { (const CONN*)effB8_mes_es_6_2, (const u16*)effB8_mes_es_6_3 },
-    { (const CONN*)effB8_mes_es_6_4, (const u16*)effB8_mes_es_6_5 }, { (const CONN*)effB8_mes_es_6_6, (const u16*)effB8_mes_es_6_7 },
-    { (const CONN*)effB8_mes_es_6_8, (const u16*)effB8_mes_es_6_9 }, { (const CONN*)effB8_mes_es_6_10, (const u16*)effB8_mes_es_6_11 },
-    { (const CONN*)effB8_mes_es_6_12, (const u16*)effB8_mes_es_6_13 }, { (const CONN*)effB8_mes_es_6_14, (const u16*)effB8_mes_es_6_15 },
-    { (const CONN*)effB8_mes_es_6_16, (const u16*)effB8_mes_es_6_17 }, { (const CONN*)effB8_mes_es_6_18, (const u16*)effB8_mes_es_6_19 },
-    { (const CONN*)effB8_mes_es_6_20, (const u16*)effB8_mes_es_6_21 }, { (const CONN*)effB8_mes_es_6_22, (const u16*)effB8_mes_es_6_23 },
-    { (const CONN*)effB8_mes_es_6_24, (const u16*)effB8_mes_es_6_25 }, { (const CONN*)effB8_mes_es_6_26, (const u16*)effB8_mes_es_6_27 },
-    { (const CONN*)effB8_mes_es_6_28, (const u16*)effB8_mes_es_6_29 }, { (const CONN*)effB8_mes_es_6_30, (const u16*)effB8_mes_es_6_31 },
-    { (const CONN*)effB8_mes_es_6_32, (const u16*)effB8_mes_es_6_33 }, { (const CONN*)effB8_mes_es_6_34, (const u16*)effB8_mes_es_6_35 },
-    { (const CONN*)effB8_mes_es_6_36, (const u16*)effB8_mes_es_6_37 }, { (const CONN*)effB8_mes_es_6_38, (const u16*)effB8_mes_es_6_39 },
-    { (const CONN*)effB8_mes_es_6_40, (const u16*)effB8_mes_es_6_41 }, { (const CONN*)effB8_mes_es_6_42, (const u16*)effB8_mes_es_6_43 },
-    { (const CONN*)effB8_mes_es_6_42, (const u16*)effB8_mes_es_6_45 }, { (const CONN*)effB8_mes_es_6_42, (const u16*)effB8_mes_es_6_47 },
-    { (const CONN*)effB8_mes_es_6_48, (const u16*)effB8_mes_es_6_49 }, { (const CONN*)effB8_mes_es_6_50, (const u16*)effB8_mes_es_6_51 },
-    { (const CONN*)effB8_mes_es_6_52, (const u16*)effB8_mes_es_6_53 }, { (const CONN*)effB8_mes_es_6_54, (const u16*)effB8_mes_es_6_55 },
-    { (const CONN*)effB8_mes_es_6_56, (const u16*)effB8_mes_es_6_57 }, { (const CONN*)effB8_mes_es_6_58, (const u16*)effB8_mes_es_6_59 },
+    { (const CONN*)effB8_mes_es_6_0, effB8_mes_es_6_1 }, { (const CONN*)effB8_mes_es_6_2, effB8_mes_es_6_3 },
+    { (const CONN*)effB8_mes_es_6_4, effB8_mes_es_6_5 }, { (const CONN*)effB8_mes_es_6_6, effB8_mes_es_6_7 },
+    { (const CONN*)effB8_mes_es_6_8, effB8_mes_es_6_9 }, { (const CONN*)effB8_mes_es_6_10, effB8_mes_es_6_11 },
+    { (const CONN*)effB8_mes_es_6_12, effB8_mes_es_6_13 }, { (const CONN*)effB8_mes_es_6_14, effB8_mes_es_6_15 },
+    { (const CONN*)effB8_mes_es_6_16, effB8_mes_es_6_17 }, { (const CONN*)effB8_mes_es_6_18, effB8_mes_es_6_19 },
+    { (const CONN*)effB8_mes_es_6_20, effB8_mes_es_6_21 }, { (const CONN*)effB8_mes_es_6_22, effB8_mes_es_6_23 },
+    { (const CONN*)effB8_mes_es_6_24, effB8_mes_es_6_25 }, { (const CONN*)effB8_mes_es_6_26, effB8_mes_es_6_27 },
+    { (const CONN*)effB8_mes_es_6_28, effB8_mes_es_6_29 }, { (const CONN*)effB8_mes_es_6_30, effB8_mes_es_6_31 },
+    { effB8_mes_es_6_32, effB8_mes_es_6_33 }, { (const CONN*)effB8_mes_es_6_34, effB8_mes_es_6_35 },
+    { effB8_mes_es_6_36, effB8_mes_es_6_37 }, { (const CONN*)effB8_mes_es_6_38, effB8_mes_es_6_39 },
+    { effB8_mes_es_6_40, effB8_mes_es_6_41 }, { (const CONN*)effB8_mes_es_6_42, effB8_mes_es_6_43 },
+    { (const CONN*)effB8_mes_es_6_42, effB8_mes_es_6_45 }, { (const CONN*)effB8_mes_es_6_42, effB8_mes_es_6_47 },
+    { (const CONN*)effB8_mes_es_6_48, effB8_mes_es_6_49 }, { (const CONN*)effB8_mes_es_6_50, effB8_mes_es_6_51 },
+    { (const CONN*)effB8_mes_es_6_52, effB8_mes_es_6_53 }, { (const CONN*)effB8_mes_es_6_54, effB8_mes_es_6_55 },
+    { (const CONN*)effB8_mes_es_6_56, effB8_mes_es_6_57 }, { effB8_mes_es_6_58, effB8_mes_es_6_59 },
 };
 
 const u32 effB8_mes_es_6_0[134] = {
@@ -56655,11 +56655,11 @@ const u32 effB8_mes_es_6_30[54] = {
     0x1280000, 0x9E8F, 0x1300000, 0x9F3F, 0x1380000, 0x9E9B,
 };
 
-const u32 effB8_mes_es_6_32[26] = {
-    0x900000, 0x9EA5, 0x980000, 0x9E88, 0xA00000, 0x9E8D, 0xA80000, 0x9E80,
-    0xB00000, 0x9E80, 0xB80000, 0x9E80, 0xC00000, 0x9E80, 0xC80000, 0x9E80,
-    0xD00000, 0x9E80, 0xD80000, 0x9E80, 0xE00000, 0x9E80, 0xE80000, 0x9E8B,
-    0xF00000, 0x9E9A,
+const CONN effB8_mes_es_6_32[13] = {
+    { 144, 0, 0, 0x9EA5 }, { 152, 0, 0, 0x9E88 }, { 160, 0, 0, 0x9E8D }, { 168, 0, 0, 0x9E80 },
+    { 176, 0, 0, 0x9E80 }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E80 }, { 200, 0, 0, 0x9E80 },
+    { 208, 0, 0, 0x9E80 }, { 216, 0, 0, 0x9E80 }, { 224, 0, 0, 0x9E80 }, { 232, 0, 0, 0x9E8B },
+    { 240, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_es_6_34[36] = {
@@ -56670,13 +56670,13 @@ const u32 effB8_mes_es_6_34[36] = {
     0xF80000, 0x9E84, 0x1000000, 0x9E9A,
 };
 
-const u32 effB8_mes_es_6_36[44] = {
-    0x580000, 0x9EB8, 0x600000, 0x9E8E, 0x700000, 0x9E80, 0x780000, 0x9E93,
-    0x800000, 0x9E80, 0x880000, 0x9E82, 0x900000, 0x9E8E, 0xA00000, 0x9E82,
-    0xA80000, 0x9E8E, 0xB00000, 0x9E8D, 0xC00000, 0x9E84, 0xC80000, 0x9E8B,
-    0xD80000, 0x9E8C, 0xE00000, 0x9E84, 0xE80000, 0x9E86, 0xF00000, 0x9E80,
-    0x1000000, 0x9E8F, 0x1080000, 0x9E8E, 0x1100000, 0x9E83, 0x1180000, 0x9E84,
-    0x1200000, 0x9E91, 0x1280000, 0x9E9A,
+const CONN effB8_mes_es_6_36[22] = {
+    { 88, 0, 0, 0x9EB8 }, { 96, 0, 0, 0x9E8E }, { 112, 0, 0, 0x9E80 }, { 120, 0, 0, 0x9E93 },
+    { 128, 0, 0, 0x9E80 }, { 136, 0, 0, 0x9E82 }, { 144, 0, 0, 0x9E8E }, { 160, 0, 0, 0x9E82 },
+    { 168, 0, 0, 0x9E8E }, { 176, 0, 0, 0x9E8D }, { 192, 0, 0, 0x9E84 }, { 200, 0, 0, 0x9E8B },
+    { 216, 0, 0, 0x9E8C }, { 224, 0, 0, 0x9E84 }, { 232, 0, 0, 0x9E86 }, { 240, 0, 0, 0x9E80 },
+    { 256, 0, 0, 0x9E8F }, { 264, 0, 0, 0x9E8E }, { 272, 0, 0, 0x9E83 }, { 280, 0, 0, 0x9E84 },
+    { 288, 0, 0, 0x9E91 }, { 296, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_es_6_38[20] = {
@@ -56685,12 +56685,12 @@ const u32 effB8_mes_es_6_38[20] = {
     0xD80000, 0x9E87, 0xE00000, 0x9E9A,
 };
 
-const u32 effB8_mes_es_6_40[38] = {
-    0x680000, 0x9EAE, 0x700000, 0x9E81, 0x780000, 0x9E92, 0x800000, 0x9E84,
-    0x880000, 0x9E91, 0x900000, 0x9E95, 0x980000, 0x9E80, 0xA80000, 0x9E8C,
-    0xB00000, 0x9E88, 0xC00000, 0x9E8F, 0xC80000, 0x9E8E, 0xD00000, 0x9E83,
-    0xD80000, 0x9E84, 0xE00000, 0x9E91, 0xF00000, 0x9E91, 0xF80000, 0x9E84,
-    0x1000000, 0x9E80, 0x1080000, 0x9E8B, 0x1100000, 0x9E9A,
+const CONN effB8_mes_es_6_40[19] = {
+    { 104, 0, 0, 0x9EAE }, { 112, 0, 0, 0x9E81 }, { 120, 0, 0, 0x9E92 }, { 128, 0, 0, 0x9E84 },
+    { 136, 0, 0, 0x9E91 }, { 144, 0, 0, 0x9E95 }, { 152, 0, 0, 0x9E80 }, { 168, 0, 0, 0x9E8C },
+    { 176, 0, 0, 0x9E88 }, { 192, 0, 0, 0x9E8F }, { 200, 0, 0, 0x9E8E }, { 208, 0, 0, 0x9E83 },
+    { 216, 0, 0, 0x9E84 }, { 224, 0, 0, 0x9E91 }, { 240, 0, 0, 0x9E91 }, { 248, 0, 0, 0x9E84 },
+    { 256, 0, 0, 0x9E80 }, { 264, 0, 0, 0x9E8B }, { 272, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_es_6_42[62] = {
@@ -56770,11 +56770,11 @@ const u32 effB8_mes_es_6_56[82] = {
     0xC0FFF0, 0x9E9B,
 };
 
-const u32 effB8_mes_es_6_58[30] = {
-    0x780000, 0x9EA6, 0x800000, 0x9E80, 0x880000, 0x9E8D, 0x900000, 0x9E80,
-    0x980000, 0x9E91, 0xA80000, 0x9E84, 0xB00000, 0x9E92, 0xC00000, 0x9E8C,
-    0xC80000, 0x9E88, 0xD80000, 0x9E88, 0xE00000, 0x9E83, 0xE80000, 0x9E84,
-    0xF00000, 0x9E80, 0xF80000, 0x9E8B, 0x1000000, 0x9E9A,
+const CONN effB8_mes_es_6_58[15] = {
+    { 120, 0, 0, 0x9EA6 }, { 128, 0, 0, 0x9E80 }, { 136, 0, 0, 0x9E8D }, { 144, 0, 0, 0x9E80 },
+    { 152, 0, 0, 0x9E91 }, { 168, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E92 }, { 192, 0, 0, 0x9E8C },
+    { 200, 0, 0, 0x9E88 }, { 216, 0, 0, 0x9E88 }, { 224, 0, 0, 0x9E83 }, { 232, 0, 0, 0x9E84 },
+    { 240, 0, 0, 0x9E80 }, { 248, 0, 0, 0x9E8B }, { 256, 0, 0, 0x9E9A },
 };
 
 const u16 effB8_mes_es_6_1[4] = {
@@ -56898,21 +56898,21 @@ const u16 effB8_mes_es_6_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_7[30] = {
-    { (const CONN*)effB8_mes_es_7_0, (const u16*)effB8_mes_es_7_1 }, { (const CONN*)effB8_mes_es_7_2, (const u16*)effB8_mes_es_7_3 },
-    { (const CONN*)effB8_mes_es_7_4, (const u16*)effB8_mes_es_7_5 }, { (const CONN*)effB8_mes_es_7_6, (const u16*)effB8_mes_es_7_7 },
-    { (const CONN*)effB8_mes_es_7_8, (const u16*)effB8_mes_es_7_9 }, { (const CONN*)effB8_mes_es_7_10, (const u16*)effB8_mes_es_7_11 },
-    { (const CONN*)effB8_mes_es_7_12, (const u16*)effB8_mes_es_7_13 }, { (const CONN*)effB8_mes_es_7_14, (const u16*)effB8_mes_es_7_15 },
-    { (const CONN*)effB8_mes_es_7_16, (const u16*)effB8_mes_es_7_17 }, { (const CONN*)effB8_mes_es_7_18, (const u16*)effB8_mes_es_7_19 },
-    { (const CONN*)effB8_mes_es_7_20, (const u16*)effB8_mes_es_7_21 }, { (const CONN*)effB8_mes_es_7_22, (const u16*)effB8_mes_es_7_23 },
-    { (const CONN*)effB8_mes_es_7_24, (const u16*)effB8_mes_es_7_25 }, { (const CONN*)effB8_mes_es_7_26, (const u16*)effB8_mes_es_7_27 },
-    { (const CONN*)effB8_mes_es_7_28, (const u16*)effB8_mes_es_7_29 }, { (const CONN*)effB8_mes_es_7_30, (const u16*)effB8_mes_es_7_31 },
-    { (const CONN*)effB8_mes_es_7_32, (const u16*)effB8_mes_es_7_33 }, { (const CONN*)effB8_mes_es_7_34, (const u16*)effB8_mes_es_7_35 },
-    { (const CONN*)effB8_mes_es_7_36, (const u16*)effB8_mes_es_7_37 }, { (const CONN*)effB8_mes_es_7_38, (const u16*)effB8_mes_es_7_39 },
-    { (const CONN*)effB8_mes_es_7_40, (const u16*)effB8_mes_es_7_41 }, { (const CONN*)effB8_mes_es_7_42, (const u16*)effB8_mes_es_7_43 },
-    { (const CONN*)effB8_mes_es_7_42, (const u16*)effB8_mes_es_7_45 }, { (const CONN*)effB8_mes_es_7_42, (const u16*)effB8_mes_es_7_47 },
-    { (const CONN*)effB8_mes_es_7_48, (const u16*)effB8_mes_es_7_49 }, { (const CONN*)effB8_mes_es_7_50, (const u16*)effB8_mes_es_7_51 },
-    { (const CONN*)effB8_mes_es_7_52, (const u16*)effB8_mes_es_7_53 }, { (const CONN*)effB8_mes_es_7_54, (const u16*)effB8_mes_es_7_55 },
-    { (const CONN*)effB8_mes_es_7_56, (const u16*)effB8_mes_es_7_57 }, { (const CONN*)effB8_mes_es_7_58, (const u16*)effB8_mes_es_7_59 },
+    { (const CONN*)effB8_mes_es_7_0, effB8_mes_es_7_1 }, { (const CONN*)effB8_mes_es_7_2, effB8_mes_es_7_3 },
+    { (const CONN*)effB8_mes_es_7_4, effB8_mes_es_7_5 }, { (const CONN*)effB8_mes_es_7_6, effB8_mes_es_7_7 },
+    { (const CONN*)effB8_mes_es_7_8, effB8_mes_es_7_9 }, { (const CONN*)effB8_mes_es_7_10, effB8_mes_es_7_11 },
+    { (const CONN*)effB8_mes_es_7_12, effB8_mes_es_7_13 }, { (const CONN*)effB8_mes_es_7_14, effB8_mes_es_7_15 },
+    { (const CONN*)effB8_mes_es_7_16, effB8_mes_es_7_17 }, { (const CONN*)effB8_mes_es_7_18, effB8_mes_es_7_19 },
+    { (const CONN*)effB8_mes_es_7_20, effB8_mes_es_7_21 }, { (const CONN*)effB8_mes_es_7_22, effB8_mes_es_7_23 },
+    { (const CONN*)effB8_mes_es_7_24, effB8_mes_es_7_25 }, { (const CONN*)effB8_mes_es_7_26, effB8_mes_es_7_27 },
+    { (const CONN*)effB8_mes_es_7_28, effB8_mes_es_7_29 }, { effB8_mes_es_7_30, effB8_mes_es_7_31 },
+    { (const CONN*)effB8_mes_es_7_32, effB8_mes_es_7_33 }, { (const CONN*)effB8_mes_es_7_34, effB8_mes_es_7_35 },
+    { (const CONN*)effB8_mes_es_7_36, effB8_mes_es_7_37 }, { (const CONN*)effB8_mes_es_7_38, effB8_mes_es_7_39 },
+    { (const CONN*)effB8_mes_es_7_40, effB8_mes_es_7_41 }, { (const CONN*)effB8_mes_es_7_42, effB8_mes_es_7_43 },
+    { (const CONN*)effB8_mes_es_7_42, effB8_mes_es_7_45 }, { (const CONN*)effB8_mes_es_7_42, effB8_mes_es_7_47 },
+    { (const CONN*)effB8_mes_es_7_48, effB8_mes_es_7_49 }, { (const CONN*)effB8_mes_es_7_50, effB8_mes_es_7_51 },
+    { (const CONN*)effB8_mes_es_7_52, effB8_mes_es_7_53 }, { (const CONN*)effB8_mes_es_7_54, effB8_mes_es_7_55 },
+    { (const CONN*)effB8_mes_es_7_56, effB8_mes_es_7_57 }, { (const CONN*)effB8_mes_es_7_58, effB8_mes_es_7_59 },
 };
 
 const u32 effB8_mes_es_7_0[94] = {
@@ -57178,13 +57178,13 @@ const u32 effB8_mes_es_7_28[128] = {
     0x128FFF0, 0x9E88, 0x130FFF0, 0x9E8D, 0x138FFF0, 0x9E8E, 0x140FFF0, 0x9E9A,
 };
 
-const u32 effB8_mes_es_7_30[44] = {
-    0x680000, 0x9EAD, 0x700000, 0x9E88, 0x780000, 0x9E8D, 0x800000, 0x9E89,
-    0x880000, 0x9E88, 0x900000, 0x9E93, 0x980000, 0x9E92, 0xA00000, 0x9E94,
-    0xB00000, 0x9EAA, 0xB80000, 0x9E80, 0xC00000, 0x9E92, 0xC80000, 0x9E94,
-    0xD00000, 0x9E8C, 0xD80000, 0x9E88, 0xE00000, 0x9E37, 0xE80000, 0x9E92,
-    0xF00000, 0x9E94, 0xF80000, 0x9E99, 0x1000000, 0x9E80, 0x1080000, 0x9E8A,
-    0x1100000, 0x9E94, 0x1180000, 0x9E9A,
+const CONN effB8_mes_es_7_30[22] = {
+    { 104, 0, 0, 0x9EAD }, { 112, 0, 0, 0x9E88 }, { 120, 0, 0, 0x9E8D }, { 128, 0, 0, 0x9E89 },
+    { 136, 0, 0, 0x9E88 }, { 144, 0, 0, 0x9E93 }, { 152, 0, 0, 0x9E92 }, { 160, 0, 0, 0x9E94 },
+    { 176, 0, 0, 0x9EAA }, { 184, 0, 0, 0x9E80 }, { 192, 0, 0, 0x9E92 }, { 200, 0, 0, 0x9E94 },
+    { 208, 0, 0, 0x9E8C }, { 216, 0, 0, 0x9E88 }, { 224, 0, 0, 0x9E37 }, { 232, 0, 0, 0x9E92 },
+    { 240, 0, 0, 0x9E94 }, { 248, 0, 0, 0x9E99 }, { 256, 0, 0, 0x9E80 }, { 264, 0, 0, 0x9E8A },
+    { 272, 0, 0, 0x9E94 }, { 280, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_es_7_32[94] = {
@@ -57470,21 +57470,21 @@ const u16 effB8_mes_es_7_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_8[30] = {
-    { (const CONN*)effB8_mes_es_8_0, (const u16*)effB8_mes_es_8_1 }, { (const CONN*)effB8_mes_es_8_2, (const u16*)effB8_mes_es_8_3 },
-    { (const CONN*)effB8_mes_es_8_4, (const u16*)effB8_mes_es_8_5 }, { (const CONN*)effB8_mes_es_8_6, (const u16*)effB8_mes_es_8_7 },
-    { (const CONN*)effB8_mes_es_8_8, (const u16*)effB8_mes_es_8_9 }, { (const CONN*)effB8_mes_es_8_10, (const u16*)effB8_mes_es_8_11 },
-    { (const CONN*)effB8_mes_es_8_12, (const u16*)effB8_mes_es_8_13 }, { (const CONN*)effB8_mes_es_8_14, (const u16*)effB8_mes_es_8_15 },
-    { (const CONN*)effB8_mes_es_8_16, (const u16*)effB8_mes_es_8_17 }, { (const CONN*)effB8_mes_es_8_18, (const u16*)effB8_mes_es_8_19 },
-    { (const CONN*)effB8_mes_es_8_20, (const u16*)effB8_mes_es_8_21 }, { (const CONN*)effB8_mes_es_8_22, (const u16*)effB8_mes_es_8_23 },
-    { (const CONN*)effB8_mes_es_8_24, (const u16*)effB8_mes_es_8_25 }, { (const CONN*)effB8_mes_es_8_26, (const u16*)effB8_mes_es_8_27 },
-    { (const CONN*)effB8_mes_es_8_28, (const u16*)effB8_mes_es_8_29 }, { (const CONN*)effB8_mes_es_8_30, (const u16*)effB8_mes_es_8_31 },
-    { (const CONN*)effB8_mes_es_8_32, (const u16*)effB8_mes_es_8_33 }, { (const CONN*)effB8_mes_es_8_34, (const u16*)effB8_mes_es_8_35 },
-    { (const CONN*)effB8_mes_es_8_36, (const u16*)effB8_mes_es_8_37 }, { (const CONN*)effB8_mes_es_8_38, (const u16*)effB8_mes_es_8_39 },
-    { (const CONN*)effB8_mes_es_8_40, (const u16*)effB8_mes_es_8_41 }, { (const CONN*)effB8_mes_es_8_42, (const u16*)effB8_mes_es_8_43 },
-    { (const CONN*)effB8_mes_es_8_42, (const u16*)effB8_mes_es_8_45 }, { (const CONN*)effB8_mes_es_8_42, (const u16*)effB8_mes_es_8_47 },
-    { (const CONN*)effB8_mes_es_8_48, (const u16*)effB8_mes_es_8_49 }, { (const CONN*)effB8_mes_es_8_50, (const u16*)effB8_mes_es_8_51 },
-    { (const CONN*)effB8_mes_es_8_52, (const u16*)effB8_mes_es_8_53 }, { (const CONN*)effB8_mes_es_8_54, (const u16*)effB8_mes_es_8_55 },
-    { (const CONN*)effB8_mes_es_8_56, (const u16*)effB8_mes_es_8_57 }, { (const CONN*)effB8_mes_es_8_58, (const u16*)effB8_mes_es_8_59 },
+    { (const CONN*)effB8_mes_es_8_0, effB8_mes_es_8_1 }, { (const CONN*)effB8_mes_es_8_2, effB8_mes_es_8_3 },
+    { (const CONN*)effB8_mes_es_8_4, effB8_mes_es_8_5 }, { (const CONN*)effB8_mes_es_8_6, effB8_mes_es_8_7 },
+    { (const CONN*)effB8_mes_es_8_8, effB8_mes_es_8_9 }, { (const CONN*)effB8_mes_es_8_10, effB8_mes_es_8_11 },
+    { (const CONN*)effB8_mes_es_8_12, effB8_mes_es_8_13 }, { (const CONN*)effB8_mes_es_8_14, effB8_mes_es_8_15 },
+    { (const CONN*)effB8_mes_es_8_16, effB8_mes_es_8_17 }, { (const CONN*)effB8_mes_es_8_18, effB8_mes_es_8_19 },
+    { (const CONN*)effB8_mes_es_8_20, effB8_mes_es_8_21 }, { (const CONN*)effB8_mes_es_8_22, effB8_mes_es_8_23 },
+    { (const CONN*)effB8_mes_es_8_24, effB8_mes_es_8_25 }, { (const CONN*)effB8_mes_es_8_26, effB8_mes_es_8_27 },
+    { (const CONN*)effB8_mes_es_8_28, effB8_mes_es_8_29 }, { (const CONN*)effB8_mes_es_8_30, effB8_mes_es_8_31 },
+    { (const CONN*)effB8_mes_es_8_32, effB8_mes_es_8_33 }, { (const CONN*)effB8_mes_es_8_34, effB8_mes_es_8_35 },
+    { (const CONN*)effB8_mes_es_8_36, effB8_mes_es_8_37 }, { (const CONN*)effB8_mes_es_8_38, effB8_mes_es_8_39 },
+    { (const CONN*)effB8_mes_es_8_40, effB8_mes_es_8_41 }, { (const CONN*)effB8_mes_es_8_42, effB8_mes_es_8_43 },
+    { (const CONN*)effB8_mes_es_8_42, effB8_mes_es_8_45 }, { (const CONN*)effB8_mes_es_8_42, effB8_mes_es_8_47 },
+    { (const CONN*)effB8_mes_es_8_48, effB8_mes_es_8_49 }, { (const CONN*)effB8_mes_es_8_50, effB8_mes_es_8_51 },
+    { (const CONN*)effB8_mes_es_8_52, effB8_mes_es_8_53 }, { (const CONN*)effB8_mes_es_8_54, effB8_mes_es_8_55 },
+    { (const CONN*)effB8_mes_es_8_56, effB8_mes_es_8_57 }, { (const CONN*)effB8_mes_es_8_58, effB8_mes_es_8_59 },
 };
 
 const u32 effB8_mes_es_8_0[146] = {
@@ -58088,21 +58088,21 @@ const u16 effB8_mes_es_8_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_9[30] = {
-    { (const CONN*)effB8_mes_es_9_0, (const u16*)effB8_mes_es_9_1 }, { (const CONN*)effB8_mes_es_9_2, (const u16*)effB8_mes_es_9_3 },
-    { (const CONN*)effB8_mes_es_9_4, (const u16*)effB8_mes_es_9_5 }, { (const CONN*)effB8_mes_es_9_6, (const u16*)effB8_mes_es_9_7 },
-    { (const CONN*)effB8_mes_es_9_8, (const u16*)effB8_mes_es_9_9 }, { (const CONN*)effB8_mes_es_9_10, (const u16*)effB8_mes_es_9_11 },
-    { (const CONN*)effB8_mes_es_9_12, (const u16*)effB8_mes_es_9_13 }, { (const CONN*)effB8_mes_es_9_14, (const u16*)effB8_mes_es_9_15 },
-    { (const CONN*)effB8_mes_es_9_16, (const u16*)effB8_mes_es_9_17 }, { (const CONN*)effB8_mes_es_9_18, (const u16*)effB8_mes_es_9_19 },
-    { (const CONN*)effB8_mes_es_9_20, (const u16*)effB8_mes_es_9_21 }, { (const CONN*)effB8_mes_es_9_22, (const u16*)effB8_mes_es_9_23 },
-    { (const CONN*)effB8_mes_es_9_24, (const u16*)effB8_mes_es_9_25 }, { (const CONN*)effB8_mes_es_9_26, (const u16*)effB8_mes_es_9_27 },
-    { (const CONN*)effB8_mes_es_9_28, (const u16*)effB8_mes_es_9_29 }, { (const CONN*)effB8_mes_es_9_30, (const u16*)effB8_mes_es_9_31 },
-    { (const CONN*)effB8_mes_es_9_32, (const u16*)effB8_mes_es_9_33 }, { (const CONN*)effB8_mes_es_9_34, (const u16*)effB8_mes_es_9_35 },
-    { (const CONN*)effB8_mes_es_9_36, (const u16*)effB8_mes_es_9_37 }, { (const CONN*)effB8_mes_es_9_38, (const u16*)effB8_mes_es_9_39 },
-    { (const CONN*)effB8_mes_es_9_40, (const u16*)effB8_mes_es_9_41 }, { (const CONN*)effB8_mes_es_9_42, (const u16*)effB8_mes_es_9_43 },
-    { (const CONN*)effB8_mes_es_9_42, (const u16*)effB8_mes_es_9_45 }, { (const CONN*)effB8_mes_es_9_42, (const u16*)effB8_mes_es_9_47 },
-    { (const CONN*)effB8_mes_es_9_48, (const u16*)effB8_mes_es_9_49 }, { (const CONN*)effB8_mes_es_9_50, (const u16*)effB8_mes_es_9_51 },
-    { (const CONN*)effB8_mes_es_9_52, (const u16*)effB8_mes_es_9_53 }, { (const CONN*)effB8_mes_es_9_54, (const u16*)effB8_mes_es_9_55 },
-    { (const CONN*)effB8_mes_es_9_56, (const u16*)effB8_mes_es_9_57 }, { (const CONN*)effB8_mes_es_9_58, (const u16*)effB8_mes_es_9_59 },
+    { (const CONN*)effB8_mes_es_9_0, effB8_mes_es_9_1 }, { (const CONN*)effB8_mes_es_9_2, effB8_mes_es_9_3 },
+    { (const CONN*)effB8_mes_es_9_4, effB8_mes_es_9_5 }, { (const CONN*)effB8_mes_es_9_6, effB8_mes_es_9_7 },
+    { (const CONN*)effB8_mes_es_9_8, effB8_mes_es_9_9 }, { (const CONN*)effB8_mes_es_9_10, effB8_mes_es_9_11 },
+    { (const CONN*)effB8_mes_es_9_12, effB8_mes_es_9_13 }, { (const CONN*)effB8_mes_es_9_14, effB8_mes_es_9_15 },
+    { (const CONN*)effB8_mes_es_9_16, effB8_mes_es_9_17 }, { (const CONN*)effB8_mes_es_9_18, effB8_mes_es_9_19 },
+    { (const CONN*)effB8_mes_es_9_20, effB8_mes_es_9_21 }, { (const CONN*)effB8_mes_es_9_22, effB8_mes_es_9_23 },
+    { (const CONN*)effB8_mes_es_9_24, effB8_mes_es_9_25 }, { (const CONN*)effB8_mes_es_9_26, effB8_mes_es_9_27 },
+    { (const CONN*)effB8_mes_es_9_28, effB8_mes_es_9_29 }, { (const CONN*)effB8_mes_es_9_30, effB8_mes_es_9_31 },
+    { (const CONN*)effB8_mes_es_9_32, effB8_mes_es_9_33 }, { (const CONN*)effB8_mes_es_9_34, effB8_mes_es_9_35 },
+    { (const CONN*)effB8_mes_es_9_36, effB8_mes_es_9_37 }, { (const CONN*)effB8_mes_es_9_38, effB8_mes_es_9_39 },
+    { (const CONN*)effB8_mes_es_9_40, effB8_mes_es_9_41 }, { (const CONN*)effB8_mes_es_9_42, effB8_mes_es_9_43 },
+    { (const CONN*)effB8_mes_es_9_42, effB8_mes_es_9_45 }, { (const CONN*)effB8_mes_es_9_42, effB8_mes_es_9_47 },
+    { (const CONN*)effB8_mes_es_9_48, effB8_mes_es_9_49 }, { (const CONN*)effB8_mes_es_9_50, effB8_mes_es_9_51 },
+    { (const CONN*)effB8_mes_es_9_52, effB8_mes_es_9_53 }, { (const CONN*)effB8_mes_es_9_54, effB8_mes_es_9_55 },
+    { (const CONN*)effB8_mes_es_9_56, effB8_mes_es_9_57 }, { (const CONN*)effB8_mes_es_9_58, effB8_mes_es_9_59 },
 };
 
 const u32 effB8_mes_es_9_0[144] = {
@@ -58739,21 +58739,21 @@ const u16 effB8_mes_es_9_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_10[30] = {
-    { (const CONN*)effB8_mes_es_10_0, (const u16*)effB8_mes_es_10_1 }, { (const CONN*)effB8_mes_es_10_2, (const u16*)effB8_mes_es_10_3 },
-    { (const CONN*)effB8_mes_es_10_4, (const u16*)effB8_mes_es_10_5 }, { (const CONN*)effB8_mes_es_10_6, (const u16*)effB8_mes_es_10_7 },
-    { (const CONN*)effB8_mes_es_10_8, (const u16*)effB8_mes_es_10_9 }, { (const CONN*)effB8_mes_es_10_10, (const u16*)effB8_mes_es_10_11 },
-    { (const CONN*)effB8_mes_es_10_12, (const u16*)effB8_mes_es_10_13 }, { (const CONN*)effB8_mes_es_10_14, (const u16*)effB8_mes_es_10_15 },
-    { (const CONN*)effB8_mes_es_10_16, (const u16*)effB8_mes_es_10_17 }, { (const CONN*)effB8_mes_es_10_18, (const u16*)effB8_mes_es_10_19 },
-    { (const CONN*)effB8_mes_es_10_20, (const u16*)effB8_mes_es_10_21 }, { (const CONN*)effB8_mes_es_10_22, (const u16*)effB8_mes_es_10_23 },
-    { (const CONN*)effB8_mes_es_10_24, (const u16*)effB8_mes_es_10_25 }, { (const CONN*)effB8_mes_es_10_26, (const u16*)effB8_mes_es_10_27 },
-    { (const CONN*)effB8_mes_es_10_28, (const u16*)effB8_mes_es_10_29 }, { (const CONN*)effB8_mes_es_10_30, (const u16*)effB8_mes_es_10_31 },
-    { (const CONN*)effB8_mes_es_10_32, (const u16*)effB8_mes_es_10_33 }, { (const CONN*)effB8_mes_es_10_34, (const u16*)effB8_mes_es_10_35 },
-    { (const CONN*)effB8_mes_es_10_36, (const u16*)effB8_mes_es_10_37 }, { (const CONN*)effB8_mes_es_10_38, (const u16*)effB8_mes_es_10_39 },
-    { (const CONN*)effB8_mes_es_10_40, (const u16*)effB8_mes_es_10_41 }, { (const CONN*)effB8_mes_es_10_42, (const u16*)effB8_mes_es_10_43 },
-    { (const CONN*)effB8_mes_es_10_42, (const u16*)effB8_mes_es_10_45 }, { (const CONN*)effB8_mes_es_10_42, (const u16*)effB8_mes_es_10_47 },
-    { (const CONN*)effB8_mes_es_10_48, (const u16*)effB8_mes_es_10_49 }, { (const CONN*)effB8_mes_es_10_50, (const u16*)effB8_mes_es_10_51 },
-    { (const CONN*)effB8_mes_es_10_52, (const u16*)effB8_mes_es_10_53 }, { (const CONN*)effB8_mes_es_10_54, (const u16*)effB8_mes_es_10_55 },
-    { (const CONN*)effB8_mes_es_10_56, (const u16*)effB8_mes_es_10_57 }, { (const CONN*)effB8_mes_es_10_58, (const u16*)effB8_mes_es_10_59 },
+    { (const CONN*)effB8_mes_es_10_0, effB8_mes_es_10_1 }, { (const CONN*)effB8_mes_es_10_2, effB8_mes_es_10_3 },
+    { (const CONN*)effB8_mes_es_10_4, effB8_mes_es_10_5 }, { (const CONN*)effB8_mes_es_10_6, effB8_mes_es_10_7 },
+    { (const CONN*)effB8_mes_es_10_8, effB8_mes_es_10_9 }, { (const CONN*)effB8_mes_es_10_10, effB8_mes_es_10_11 },
+    { (const CONN*)effB8_mes_es_10_12, effB8_mes_es_10_13 }, { (const CONN*)effB8_mes_es_10_14, effB8_mes_es_10_15 },
+    { (const CONN*)effB8_mes_es_10_16, effB8_mes_es_10_17 }, { (const CONN*)effB8_mes_es_10_18, effB8_mes_es_10_19 },
+    { (const CONN*)effB8_mes_es_10_20, effB8_mes_es_10_21 }, { (const CONN*)effB8_mes_es_10_22, effB8_mes_es_10_23 },
+    { (const CONN*)effB8_mes_es_10_24, effB8_mes_es_10_25 }, { (const CONN*)effB8_mes_es_10_26, effB8_mes_es_10_27 },
+    { (const CONN*)effB8_mes_es_10_28, effB8_mes_es_10_29 }, { (const CONN*)effB8_mes_es_10_30, effB8_mes_es_10_31 },
+    { (const CONN*)effB8_mes_es_10_32, effB8_mes_es_10_33 }, { (const CONN*)effB8_mes_es_10_34, effB8_mes_es_10_35 },
+    { (const CONN*)effB8_mes_es_10_36, effB8_mes_es_10_37 }, { (const CONN*)effB8_mes_es_10_38, effB8_mes_es_10_39 },
+    { (const CONN*)effB8_mes_es_10_40, effB8_mes_es_10_41 }, { (const CONN*)effB8_mes_es_10_42, effB8_mes_es_10_43 },
+    { (const CONN*)effB8_mes_es_10_42, effB8_mes_es_10_45 }, { (const CONN*)effB8_mes_es_10_42, effB8_mes_es_10_47 },
+    { (const CONN*)effB8_mes_es_10_48, effB8_mes_es_10_49 }, { (const CONN*)effB8_mes_es_10_50, effB8_mes_es_10_51 },
+    { (const CONN*)effB8_mes_es_10_52, effB8_mes_es_10_53 }, { (const CONN*)effB8_mes_es_10_54, effB8_mes_es_10_55 },
+    { (const CONN*)effB8_mes_es_10_56, effB8_mes_es_10_57 }, { (const CONN*)effB8_mes_es_10_58, effB8_mes_es_10_59 },
 };
 
 const u32 effB8_mes_es_10_0[132] = {
@@ -59368,21 +59368,21 @@ const u16 effB8_mes_es_10_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_11[30] = {
-    { (const CONN*)effB8_mes_es_11_0, (const u16*)effB8_mes_es_11_1 }, { (const CONN*)effB8_mes_es_11_2, (const u16*)effB8_mes_es_11_3 },
-    { (const CONN*)effB8_mes_es_11_4, (const u16*)effB8_mes_es_11_5 }, { (const CONN*)effB8_mes_es_11_6, (const u16*)effB8_mes_es_11_7 },
-    { (const CONN*)effB8_mes_es_11_8, (const u16*)effB8_mes_es_11_9 }, { (const CONN*)effB8_mes_es_11_10, (const u16*)effB8_mes_es_11_11 },
-    { (const CONN*)effB8_mes_es_11_12, (const u16*)effB8_mes_es_11_13 }, { (const CONN*)effB8_mes_es_11_14, (const u16*)effB8_mes_es_11_15 },
-    { (const CONN*)effB8_mes_es_11_16, (const u16*)effB8_mes_es_11_17 }, { (const CONN*)effB8_mes_es_11_18, (const u16*)effB8_mes_es_11_19 },
-    { (const CONN*)effB8_mes_es_11_20, (const u16*)effB8_mes_es_11_21 }, { (const CONN*)effB8_mes_es_11_22, (const u16*)effB8_mes_es_11_23 },
-    { (const CONN*)effB8_mes_es_11_24, (const u16*)effB8_mes_es_11_25 }, { (const CONN*)effB8_mes_es_11_26, (const u16*)effB8_mes_es_11_27 },
-    { (const CONN*)effB8_mes_es_11_28, (const u16*)effB8_mes_es_11_29 }, { (const CONN*)effB8_mes_es_11_30, (const u16*)effB8_mes_es_11_31 },
-    { (const CONN*)effB8_mes_es_11_32, (const u16*)effB8_mes_es_11_33 }, { (const CONN*)effB8_mes_es_11_34, (const u16*)effB8_mes_es_11_35 },
-    { (const CONN*)effB8_mes_es_11_36, (const u16*)effB8_mes_es_11_37 }, { (const CONN*)effB8_mes_es_11_38, (const u16*)effB8_mes_es_11_39 },
-    { (const CONN*)effB8_mes_es_11_40, (const u16*)effB8_mes_es_11_41 }, { (const CONN*)effB8_mes_es_11_42, (const u16*)effB8_mes_es_11_43 },
-    { (const CONN*)effB8_mes_es_11_42, (const u16*)effB8_mes_es_11_45 }, { (const CONN*)effB8_mes_es_11_42, (const u16*)effB8_mes_es_11_47 },
-    { (const CONN*)effB8_mes_es_11_48, (const u16*)effB8_mes_es_11_49 }, { (const CONN*)effB8_mes_es_11_50, (const u16*)effB8_mes_es_11_51 },
-    { (const CONN*)effB8_mes_es_11_52, (const u16*)effB8_mes_es_11_53 }, { (const CONN*)effB8_mes_es_11_54, (const u16*)effB8_mes_es_11_55 },
-    { (const CONN*)effB8_mes_es_11_56, (const u16*)effB8_mes_es_11_57 }, { (const CONN*)effB8_mes_es_11_58, (const u16*)effB8_mes_es_11_59 },
+    { (const CONN*)effB8_mes_es_11_0, effB8_mes_es_11_1 }, { (const CONN*)effB8_mes_es_11_2, effB8_mes_es_11_3 },
+    { (const CONN*)effB8_mes_es_11_4, effB8_mes_es_11_5 }, { (const CONN*)effB8_mes_es_11_6, effB8_mes_es_11_7 },
+    { (const CONN*)effB8_mes_es_11_8, effB8_mes_es_11_9 }, { (const CONN*)effB8_mes_es_11_10, effB8_mes_es_11_11 },
+    { (const CONN*)effB8_mes_es_11_12, effB8_mes_es_11_13 }, { (const CONN*)effB8_mes_es_11_14, effB8_mes_es_11_15 },
+    { (const CONN*)effB8_mes_es_11_16, effB8_mes_es_11_17 }, { (const CONN*)effB8_mes_es_11_18, effB8_mes_es_11_19 },
+    { (const CONN*)effB8_mes_es_11_20, effB8_mes_es_11_21 }, { (const CONN*)effB8_mes_es_11_22, effB8_mes_es_11_23 },
+    { (const CONN*)effB8_mes_es_11_24, effB8_mes_es_11_25 }, { (const CONN*)effB8_mes_es_11_26, effB8_mes_es_11_27 },
+    { (const CONN*)effB8_mes_es_11_28, effB8_mes_es_11_29 }, { (const CONN*)effB8_mes_es_11_30, effB8_mes_es_11_31 },
+    { (const CONN*)effB8_mes_es_11_32, effB8_mes_es_11_33 }, { (const CONN*)effB8_mes_es_11_34, effB8_mes_es_11_35 },
+    { (const CONN*)effB8_mes_es_11_36, effB8_mes_es_11_37 }, { (const CONN*)effB8_mes_es_11_38, effB8_mes_es_11_39 },
+    { (const CONN*)effB8_mes_es_11_40, effB8_mes_es_11_41 }, { (const CONN*)effB8_mes_es_11_42, effB8_mes_es_11_43 },
+    { (const CONN*)effB8_mes_es_11_42, effB8_mes_es_11_45 }, { (const CONN*)effB8_mes_es_11_42, effB8_mes_es_11_47 },
+    { (const CONN*)effB8_mes_es_11_48, effB8_mes_es_11_49 }, { (const CONN*)effB8_mes_es_11_50, effB8_mes_es_11_51 },
+    { (const CONN*)effB8_mes_es_11_52, effB8_mes_es_11_53 }, { (const CONN*)effB8_mes_es_11_54, effB8_mes_es_11_55 },
+    { (const CONN*)effB8_mes_es_11_56, effB8_mes_es_11_57 }, { (const CONN*)effB8_mes_es_11_58, effB8_mes_es_11_59 },
 };
 
 const u32 effB8_mes_es_11_0[134] = {
@@ -59969,21 +59969,21 @@ const u16 effB8_mes_es_11_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_12[30] = {
-    { (const CONN*)effB8_mes_es_12_0, (const u16*)effB8_mes_es_12_1 }, { (const CONN*)effB8_mes_es_12_2, (const u16*)effB8_mes_es_12_3 },
-    { (const CONN*)effB8_mes_es_12_4, (const u16*)effB8_mes_es_12_5 }, { (const CONN*)effB8_mes_es_12_6, (const u16*)effB8_mes_es_12_7 },
-    { (const CONN*)effB8_mes_es_12_8, (const u16*)effB8_mes_es_12_9 }, { (const CONN*)effB8_mes_es_12_10, (const u16*)effB8_mes_es_12_11 },
-    { (const CONN*)effB8_mes_es_12_12, (const u16*)effB8_mes_es_12_13 }, { (const CONN*)effB8_mes_es_12_14, (const u16*)effB8_mes_es_12_15 },
-    { (const CONN*)effB8_mes_es_12_16, (const u16*)effB8_mes_es_12_17 }, { (const CONN*)effB8_mes_es_12_18, (const u16*)effB8_mes_es_12_19 },
-    { (const CONN*)effB8_mes_es_12_20, (const u16*)effB8_mes_es_12_21 }, { (const CONN*)effB8_mes_es_12_22, (const u16*)effB8_mes_es_12_23 },
-    { (const CONN*)effB8_mes_es_12_24, (const u16*)effB8_mes_es_12_25 }, { (const CONN*)effB8_mes_es_12_26, (const u16*)effB8_mes_es_12_27 },
-    { (const CONN*)effB8_mes_es_12_28, (const u16*)effB8_mes_es_12_29 }, { (const CONN*)effB8_mes_es_12_30, (const u16*)effB8_mes_es_12_31 },
-    { (const CONN*)effB8_mes_es_12_32, (const u16*)effB8_mes_es_12_33 }, { (const CONN*)effB8_mes_es_12_34, (const u16*)effB8_mes_es_12_35 },
-    { (const CONN*)effB8_mes_es_12_36, (const u16*)effB8_mes_es_12_37 }, { (const CONN*)effB8_mes_es_12_38, (const u16*)effB8_mes_es_12_39 },
-    { (const CONN*)effB8_mes_es_12_40, (const u16*)effB8_mes_es_12_41 }, { (const CONN*)effB8_mes_es_12_42, (const u16*)effB8_mes_es_12_43 },
-    { (const CONN*)effB8_mes_es_12_42, (const u16*)effB8_mes_es_12_45 }, { (const CONN*)effB8_mes_es_12_42, (const u16*)effB8_mes_es_12_47 },
-    { (const CONN*)effB8_mes_es_12_48, (const u16*)effB8_mes_es_12_49 }, { (const CONN*)effB8_mes_es_12_50, (const u16*)effB8_mes_es_12_51 },
-    { (const CONN*)effB8_mes_es_12_52, (const u16*)effB8_mes_es_12_53 }, { (const CONN*)effB8_mes_es_12_54, (const u16*)effB8_mes_es_12_55 },
-    { (const CONN*)effB8_mes_es_12_56, (const u16*)effB8_mes_es_12_57 }, { (const CONN*)effB8_mes_es_12_58, (const u16*)effB8_mes_es_12_59 },
+    { (const CONN*)effB8_mes_es_12_0, effB8_mes_es_12_1 }, { (const CONN*)effB8_mes_es_12_2, effB8_mes_es_12_3 },
+    { effB8_mes_es_12_4, effB8_mes_es_12_5 }, { (const CONN*)effB8_mes_es_12_6, effB8_mes_es_12_7 },
+    { (const CONN*)effB8_mes_es_12_8, effB8_mes_es_12_9 }, { (const CONN*)effB8_mes_es_12_10, effB8_mes_es_12_11 },
+    { (const CONN*)effB8_mes_es_12_12, effB8_mes_es_12_13 }, { (const CONN*)effB8_mes_es_12_14, effB8_mes_es_12_15 },
+    { (const CONN*)effB8_mes_es_12_16, effB8_mes_es_12_17 }, { (const CONN*)effB8_mes_es_12_18, effB8_mes_es_12_19 },
+    { (const CONN*)effB8_mes_es_12_20, effB8_mes_es_12_21 }, { (const CONN*)effB8_mes_es_12_22, effB8_mes_es_12_23 },
+    { (const CONN*)effB8_mes_es_12_24, effB8_mes_es_12_25 }, { (const CONN*)effB8_mes_es_12_26, effB8_mes_es_12_27 },
+    { (const CONN*)effB8_mes_es_12_28, effB8_mes_es_12_29 }, { (const CONN*)effB8_mes_es_12_30, effB8_mes_es_12_31 },
+    { (const CONN*)effB8_mes_es_12_32, effB8_mes_es_12_33 }, { (const CONN*)effB8_mes_es_12_34, effB8_mes_es_12_35 },
+    { (const CONN*)effB8_mes_es_12_36, effB8_mes_es_12_37 }, { (const CONN*)effB8_mes_es_12_38, effB8_mes_es_12_39 },
+    { (const CONN*)effB8_mes_es_12_40, effB8_mes_es_12_41 }, { (const CONN*)effB8_mes_es_12_42, effB8_mes_es_12_43 },
+    { (const CONN*)effB8_mes_es_12_42, effB8_mes_es_12_45 }, { (const CONN*)effB8_mes_es_12_42, effB8_mes_es_12_47 },
+    { (const CONN*)effB8_mes_es_12_48, effB8_mes_es_12_49 }, { (const CONN*)effB8_mes_es_12_50, effB8_mes_es_12_51 },
+    { (const CONN*)effB8_mes_es_12_52, effB8_mes_es_12_53 }, { (const CONN*)effB8_mes_es_12_54, effB8_mes_es_12_55 },
+    { (const CONN*)effB8_mes_es_12_56, effB8_mes_es_12_57 }, { (const CONN*)effB8_mes_es_12_58, effB8_mes_es_12_59 },
 };
 
 const u32 effB8_mes_es_12_0[74] = {
@@ -60015,14 +60015,14 @@ const u32 effB8_mes_es_12_2[102] = {
     0x88FFF0, 0x9E92, 0x90FFF0, 0x9E8E, 0x98FFF0, 0x9E9A,
 };
 
-const u32 effB8_mes_es_12_4[50] = {
-    0x500000, 0x9EA6, 0x580000, 0x9E80, 0x600000, 0x9E8D, 0x680000, 0x9F3B,
-    0x700000, 0x9E9A, 0x800000, 0x9EB1, 0x880000, 0x9E84, 0x900000, 0x9E80,
-    0x980000, 0x9E8B, 0xA00000, 0x9E8C, 0xA80000, 0x9E84, 0xB00000, 0x9E8D,
-    0xB80000, 0x9E93, 0xC00000, 0x9E84, 0xD00000, 0x9E86, 0xD80000, 0x9E8E,
-    0xE00000, 0x9E8B, 0xE80000, 0x9E8F, 0xF00000, 0x9E84, 0xF80000, 0x9F3B,
-    0x1080000, 0x9E80, 0x1180000, 0x9EB1, 0x1200000, 0x9E98, 0x1280000, 0x9E94,
-    0x1300000, 0x9E9A,
+const CONN effB8_mes_es_12_4[25] = {
+    { 80, 0, 0, 0x9EA6 }, { 88, 0, 0, 0x9E80 }, { 96, 0, 0, 0x9E8D }, { 104, 0, 0, 0x9F3B },
+    { 112, 0, 0, 0x9E9A }, { 128, 0, 0, 0x9EB1 }, { 136, 0, 0, 0x9E84 }, { 144, 0, 0, 0x9E80 },
+    { 152, 0, 0, 0x9E8B }, { 160, 0, 0, 0x9E8C }, { 168, 0, 0, 0x9E84 }, { 176, 0, 0, 0x9E8D },
+    { 184, 0, 0, 0x9E93 }, { 192, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E86 }, { 216, 0, 0, 0x9E8E },
+    { 224, 0, 0, 0x9E8B }, { 232, 0, 0, 0x9E8F }, { 240, 0, 0, 0x9E84 }, { 248, 0, 0, 0x9F3B },
+    { 264, 0, 0, 0x9E80 }, { 280, 0, 0, 0x9EB1 }, { 288, 0, 0, 0x9E98 }, { 296, 0, 0, 0x9E94 },
+    { 304, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_es_12_6[92] = {
@@ -60476,21 +60476,21 @@ const u16 effB8_mes_es_12_59[5] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_13[30] = {
-    { (const CONN*)effB8_mes_es_13_0, (const u16*)effB8_mes_es_13_1 }, { (const CONN*)effB8_mes_es_13_2, (const u16*)effB8_mes_es_13_3 },
-    { (const CONN*)effB8_mes_es_13_4, (const u16*)effB8_mes_es_13_5 }, { (const CONN*)effB8_mes_es_13_6, (const u16*)effB8_mes_es_13_7 },
-    { (const CONN*)effB8_mes_es_13_8, (const u16*)effB8_mes_es_13_9 }, { (const CONN*)effB8_mes_es_13_10, (const u16*)effB8_mes_es_13_11 },
-    { (const CONN*)effB8_mes_es_13_12, (const u16*)effB8_mes_es_13_13 }, { (const CONN*)effB8_mes_es_13_14, (const u16*)effB8_mes_es_13_15 },
-    { (const CONN*)effB8_mes_es_13_16, (const u16*)effB8_mes_es_13_17 }, { (const CONN*)effB8_mes_es_13_18, (const u16*)effB8_mes_es_13_19 },
-    { (const CONN*)effB8_mes_es_13_20, (const u16*)effB8_mes_es_13_21 }, { (const CONN*)effB8_mes_es_13_22, (const u16*)effB8_mes_es_13_23 },
-    { (const CONN*)effB8_mes_es_13_24, (const u16*)effB8_mes_es_13_25 }, { (const CONN*)effB8_mes_es_13_26, (const u16*)effB8_mes_es_13_27 },
-    { (const CONN*)effB8_mes_es_13_28, (const u16*)effB8_mes_es_13_29 }, { (const CONN*)effB8_mes_es_13_30, (const u16*)effB8_mes_es_13_31 },
-    { (const CONN*)effB8_mes_es_13_32, (const u16*)effB8_mes_es_13_33 }, { (const CONN*)effB8_mes_es_13_34, (const u16*)effB8_mes_es_13_35 },
-    { (const CONN*)effB8_mes_es_13_36, (const u16*)effB8_mes_es_13_37 }, { (const CONN*)effB8_mes_es_13_38, (const u16*)effB8_mes_es_13_39 },
-    { (const CONN*)effB8_mes_es_13_40, (const u16*)effB8_mes_es_13_41 }, { (const CONN*)effB8_mes_es_13_42, (const u16*)effB8_mes_es_13_43 },
-    { (const CONN*)effB8_mes_es_13_42, (const u16*)effB8_mes_es_13_45 }, { (const CONN*)effB8_mes_es_13_42, (const u16*)effB8_mes_es_13_47 },
-    { (const CONN*)effB8_mes_es_13_48, (const u16*)effB8_mes_es_13_49 }, { (const CONN*)effB8_mes_es_13_50, (const u16*)effB8_mes_es_13_51 },
-    { (const CONN*)effB8_mes_es_13_52, (const u16*)effB8_mes_es_13_53 }, { (const CONN*)effB8_mes_es_13_54, (const u16*)effB8_mes_es_13_55 },
-    { (const CONN*)effB8_mes_es_13_56, (const u16*)effB8_mes_es_13_57 }, { (const CONN*)effB8_mes_es_13_58, (const u16*)effB8_mes_es_13_59 },
+    { (const CONN*)effB8_mes_es_13_0, effB8_mes_es_13_1 }, { (const CONN*)effB8_mes_es_13_2, effB8_mes_es_13_3 },
+    { (const CONN*)effB8_mes_es_13_4, effB8_mes_es_13_5 }, { (const CONN*)effB8_mes_es_13_6, effB8_mes_es_13_7 },
+    { (const CONN*)effB8_mes_es_13_8, effB8_mes_es_13_9 }, { (const CONN*)effB8_mes_es_13_10, effB8_mes_es_13_11 },
+    { (const CONN*)effB8_mes_es_13_12, effB8_mes_es_13_13 }, { (const CONN*)effB8_mes_es_13_14, effB8_mes_es_13_15 },
+    { (const CONN*)effB8_mes_es_13_16, effB8_mes_es_13_17 }, { (const CONN*)effB8_mes_es_13_18, effB8_mes_es_13_19 },
+    { (const CONN*)effB8_mes_es_13_20, effB8_mes_es_13_21 }, { (const CONN*)effB8_mes_es_13_22, effB8_mes_es_13_23 },
+    { (const CONN*)effB8_mes_es_13_24, effB8_mes_es_13_25 }, { (const CONN*)effB8_mes_es_13_26, effB8_mes_es_13_27 },
+    { (const CONN*)effB8_mes_es_13_28, effB8_mes_es_13_29 }, { (const CONN*)effB8_mes_es_13_30, effB8_mes_es_13_31 },
+    { (const CONN*)effB8_mes_es_13_32, effB8_mes_es_13_33 }, { effB8_mes_es_13_34, effB8_mes_es_13_35 },
+    { (const CONN*)effB8_mes_es_13_36, effB8_mes_es_13_37 }, { (const CONN*)effB8_mes_es_13_38, effB8_mes_es_13_39 },
+    { (const CONN*)effB8_mes_es_13_40, effB8_mes_es_13_41 }, { (const CONN*)effB8_mes_es_13_42, effB8_mes_es_13_43 },
+    { (const CONN*)effB8_mes_es_13_42, effB8_mes_es_13_45 }, { (const CONN*)effB8_mes_es_13_42, effB8_mes_es_13_47 },
+    { (const CONN*)effB8_mes_es_13_48, effB8_mes_es_13_49 }, { (const CONN*)effB8_mes_es_13_50, effB8_mes_es_13_51 },
+    { (const CONN*)effB8_mes_es_13_52, effB8_mes_es_13_53 }, { (const CONN*)effB8_mes_es_13_54, effB8_mes_es_13_55 },
+    { (const CONN*)effB8_mes_es_13_56, effB8_mes_es_13_57 }, { (const CONN*)effB8_mes_es_13_58, effB8_mes_es_13_59 },
 };
 
 const u32 effB8_mes_es_13_0[98] = {
@@ -60794,14 +60794,14 @@ const u32 effB8_mes_es_13_32[78] = {
     0xA8FFF0, 0x9E83, 0xB0FFF0, 0x9E8E, 0xB8FFF0, 0x9E9A,
 };
 
-const u32 effB8_mes_es_13_34[52] = {
-    0x480000, 0x9EAC, 0x500000, 0x9E88, 0x600000, 0x9E84, 0x680000, 0x9E8D,
-    0x700000, 0x9E8E, 0x780000, 0x9E91, 0x800000, 0x9E8C, 0x880000, 0x9E84,
-    0x980000, 0x9E8F, 0xA00000, 0x9E8E, 0xA80000, 0x9E83, 0xB00000, 0x9E84,
-    0xB80000, 0x9E91, 0xC80000, 0x9E84, 0xD00000, 0x9E92, 0xE00000, 0x9E88,
-    0xE80000, 0x9E8D, 0xF00000, 0x9E84, 0xF80000, 0x9E8B, 0x1000000, 0x9E94,
-    0x1080000, 0x9E83, 0x1100000, 0x9E88, 0x1180000, 0x9E81, 0x1200000, 0x9E8B,
-    0x1280000, 0x9E84, 0x1300000, 0x9E9A,
+const CONN effB8_mes_es_13_34[26] = {
+    { 72, 0, 0, 0x9EAC }, { 80, 0, 0, 0x9E88 }, { 96, 0, 0, 0x9E84 }, { 104, 0, 0, 0x9E8D },
+    { 112, 0, 0, 0x9E8E }, { 120, 0, 0, 0x9E91 }, { 128, 0, 0, 0x9E8C }, { 136, 0, 0, 0x9E84 },
+    { 152, 0, 0, 0x9E8F }, { 160, 0, 0, 0x9E8E }, { 168, 0, 0, 0x9E83 }, { 176, 0, 0, 0x9E84 },
+    { 184, 0, 0, 0x9E91 }, { 200, 0, 0, 0x9E84 }, { 208, 0, 0, 0x9E92 }, { 224, 0, 0, 0x9E88 },
+    { 232, 0, 0, 0x9E8D }, { 240, 0, 0, 0x9E84 }, { 248, 0, 0, 0x9E8B }, { 256, 0, 0, 0x9E94 },
+    { 264, 0, 0, 0x9E83 }, { 272, 0, 0, 0x9E88 }, { 280, 0, 0, 0x9E81 }, { 288, 0, 0, 0x9E8B },
+    { 296, 0, 0, 0x9E84 }, { 304, 0, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_es_13_36[124] = {
@@ -61075,21 +61075,21 @@ const u16 effB8_mes_es_13_59[4] = {
 };
 
 const EFFB8_MESSAGE effB8_mes_es_14[30] = {
-    { (const CONN*)effB8_mes_es_14_0, (const u16*)effB8_mes_es_14_1 }, { (const CONN*)effB8_mes_es_14_2, (const u16*)effB8_mes_es_14_3 },
-    { (const CONN*)effB8_mes_es_14_4, (const u16*)effB8_mes_es_14_5 }, { (const CONN*)effB8_mes_es_14_6, (const u16*)effB8_mes_es_14_7 },
-    { (const CONN*)effB8_mes_es_14_8, (const u16*)effB8_mes_es_14_9 }, { (const CONN*)effB8_mes_es_14_10, (const u16*)effB8_mes_es_14_11 },
-    { (const CONN*)effB8_mes_es_14_12, (const u16*)effB8_mes_es_14_13 }, { (const CONN*)effB8_mes_es_14_14, (const u16*)effB8_mes_es_14_15 },
-    { (const CONN*)effB8_mes_es_14_16, (const u16*)effB8_mes_es_14_17 }, { (const CONN*)effB8_mes_es_14_18, (const u16*)effB8_mes_es_14_19 },
-    { (const CONN*)effB8_mes_es_14_20, (const u16*)effB8_mes_es_14_21 }, { (const CONN*)effB8_mes_es_14_22, (const u16*)effB8_mes_es_14_23 },
-    { (const CONN*)effB8_mes_es_14_24, (const u16*)effB8_mes_es_14_25 }, { (const CONN*)effB8_mes_es_14_26, (const u16*)effB8_mes_es_14_27 },
-    { (const CONN*)effB8_mes_es_14_28, (const u16*)effB8_mes_es_14_29 }, { (const CONN*)effB8_mes_es_14_30, (const u16*)effB8_mes_es_14_31 },
-    { (const CONN*)effB8_mes_es_14_32, (const u16*)effB8_mes_es_14_33 }, { (const CONN*)effB8_mes_es_14_34, (const u16*)effB8_mes_es_14_35 },
-    { (const CONN*)effB8_mes_es_14_36, (const u16*)effB8_mes_es_14_37 }, { (const CONN*)effB8_mes_es_14_38, (const u16*)effB8_mes_es_14_39 },
-    { (const CONN*)effB8_mes_es_14_40, (const u16*)effB8_mes_es_14_41 }, { (const CONN*)effB8_mes_es_14_42, (const u16*)effB8_mes_es_14_43 },
-    { (const CONN*)effB8_mes_es_14_44, (const u16*)effB8_mes_es_14_45 }, { (const CONN*)effB8_mes_es_14_46, (const u16*)effB8_mes_es_14_47 },
-    { (const CONN*)effB8_mes_es_14_48, (const u16*)effB8_mes_es_14_49 }, { (const CONN*)effB8_mes_es_14_50, (const u16*)effB8_mes_es_14_51 },
-    { (const CONN*)effB8_mes_es_14_52, (const u16*)effB8_mes_es_14_53 }, { (const CONN*)effB8_mes_es_14_54, (const u16*)effB8_mes_es_14_55 },
-    { (const CONN*)effB8_mes_es_14_56, (const u16*)effB8_mes_es_14_57 }, { (const CONN*)effB8_mes_es_14_58, (const u16*)effB8_mes_es_14_59 },
+    { (const CONN*)effB8_mes_es_14_0, effB8_mes_es_14_1 }, { (const CONN*)effB8_mes_es_14_2, effB8_mes_es_14_3 },
+    { (const CONN*)effB8_mes_es_14_4, effB8_mes_es_14_5 }, { (const CONN*)effB8_mes_es_14_6, effB8_mes_es_14_7 },
+    { (const CONN*)effB8_mes_es_14_8, effB8_mes_es_14_9 }, { (const CONN*)effB8_mes_es_14_10, effB8_mes_es_14_11 },
+    { (const CONN*)effB8_mes_es_14_12, effB8_mes_es_14_13 }, { (const CONN*)effB8_mes_es_14_14, effB8_mes_es_14_15 },
+    { (const CONN*)effB8_mes_es_14_16, effB8_mes_es_14_17 }, { (const CONN*)effB8_mes_es_14_18, effB8_mes_es_14_19 },
+    { (const CONN*)effB8_mes_es_14_20, effB8_mes_es_14_21 }, { (const CONN*)effB8_mes_es_14_22, effB8_mes_es_14_23 },
+    { (const CONN*)effB8_mes_es_14_24, effB8_mes_es_14_25 }, { (const CONN*)effB8_mes_es_14_26, effB8_mes_es_14_27 },
+    { effB8_mes_es_14_28, effB8_mes_es_14_29 }, { (const CONN*)effB8_mes_es_14_30, effB8_mes_es_14_31 },
+    { (const CONN*)effB8_mes_es_14_32, effB8_mes_es_14_33 }, { (const CONN*)effB8_mes_es_14_34, effB8_mes_es_14_35 },
+    { (const CONN*)effB8_mes_es_14_36, effB8_mes_es_14_37 }, { (const CONN*)effB8_mes_es_14_38, effB8_mes_es_14_39 },
+    { (const CONN*)effB8_mes_es_14_40, effB8_mes_es_14_41 }, { (const CONN*)effB8_mes_es_14_42, effB8_mes_es_14_43 },
+    { (const CONN*)effB8_mes_es_14_44, effB8_mes_es_14_45 }, { (const CONN*)effB8_mes_es_14_46, effB8_mes_es_14_47 },
+    { (const CONN*)effB8_mes_es_14_48, effB8_mes_es_14_49 }, { (const CONN*)effB8_mes_es_14_50, effB8_mes_es_14_51 },
+    { (const CONN*)effB8_mes_es_14_52, effB8_mes_es_14_53 }, { (const CONN*)effB8_mes_es_14_54, effB8_mes_es_14_55 },
+    { (const CONN*)effB8_mes_es_14_56, effB8_mes_es_14_57 }, { (const CONN*)effB8_mes_es_14_58, effB8_mes_es_14_59 },
 };
 
 const u32 effB8_mes_es_14_0[52] = {
@@ -61301,13 +61301,13 @@ const u32 effB8_mes_es_14_26[92] = {
     0x88FFF0, 0x9E8D, 0x90FFF0, 0x9E9C,
 };
 
-const u32 effB8_mes_es_14_28[48] = {
-    0x900000, 0x9EAF, 0x980000, 0x9E94, 0xA00000, 0x9F42, 0xA80000, 0x9E8E,
-    0xB00000, 0x9E92, 0xC00000, 0x9E85, 0xC80000, 0x9E80, 0xD00000, 0x9E8B,
-    0xD80000, 0x9E92, 0xE00000, 0x9E8E, 0xE80000, 0x9E92, 0xF00000, 0x9E9A,
-    0x90FFF0, 0x9EAB, 0x98FFF0, 0x9E8E, 0xA0FFF0, 0x9E92, 0xB0FFF0, 0x9E80,
-    0xB8FFF0, 0x9E82, 0xC0FFF0, 0x9E80, 0xC8FFF0, 0x9E81, 0xD0FFF0, 0x9E80,
-    0xD8FFF0, 0x9E91, 0xE0FFF0, 0x9F3F, 0xE8FFF0, 0x9E80, 0xF0FFF0, 0x9E9A,
+const CONN effB8_mes_es_14_28[24] = {
+    { 144, 0, 0, 0x9EAF }, { 152, 0, 0, 0x9E94 }, { 160, 0, 0, 0x9F42 }, { 168, 0, 0, 0x9E8E },
+    { 176, 0, 0, 0x9E92 }, { 192, 0, 0, 0x9E85 }, { 200, 0, 0, 0x9E80 }, { 208, 0, 0, 0x9E8B },
+    { 216, 0, 0, 0x9E92 }, { 224, 0, 0, 0x9E8E }, { 232, 0, 0, 0x9E92 }, { 240, 0, 0, 0x9E9A },
+    { 144, -16, 0, 0x9EAB }, { 152, -16, 0, 0x9E8E }, { 160, -16, 0, 0x9E92 }, { 176, -16, 0, 0x9E80 },
+    { 184, -16, 0, 0x9E82 }, { 192, -16, 0, 0x9E80 }, { 200, -16, 0, 0x9E81 }, { 208, -16, 0, 0x9E80 },
+    { 216, -16, 0, 0x9E91 }, { 224, -16, 0, 0x9F3F }, { 232, -16, 0, 0x9E80 }, { 240, -16, 0, 0x9E9A },
 };
 
 const u32 effB8_mes_es_14_30[148] = {
@@ -61661,12 +61661,12 @@ const u16 effB8_mes_es_14_59[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_0[12] = {
-    { (const CONN*)effA6_mes_jp_0_0, (const u16*)effA6_mes_jp_0_1 }, { (const CONN*)effA6_mes_jp_0_2, (const u16*)effA6_mes_jp_0_3 },
-    { (const CONN*)effA6_mes_jp_0_4, (const u16*)effA6_mes_jp_0_5 }, { (const CONN*)effA6_mes_jp_0_4, (const u16*)effA6_mes_jp_0_7 },
-    { (const CONN*)effA6_mes_jp_0_4, (const u16*)effA6_mes_jp_0_9 }, { (const CONN*)effA6_mes_jp_0_4, (const u16*)effA6_mes_jp_0_11 },
-    { (const CONN*)effA6_mes_jp_0_4, (const u16*)effA6_mes_jp_0_13 }, { (const CONN*)effA6_mes_jp_0_4, (const u16*)effA6_mes_jp_0_15 },
-    { (const CONN*)effA6_mes_jp_0_4, (const u16*)effA6_mes_jp_0_17 }, { (const CONN*)effA6_mes_jp_0_18, (const u16*)effA6_mes_jp_0_19 },
-    { (const CONN*)effA6_mes_jp_0_20, (const u16*)effA6_mes_jp_0_21 }, { (const CONN*)effA6_mes_jp_0_22, (const u16*)effA6_mes_jp_0_23 },
+    { (const CONN*)effA6_mes_jp_0_0, effA6_mes_jp_0_1 }, { effA6_mes_jp_0_2, effA6_mes_jp_0_3 },
+    { (const CONN*)effA6_mes_jp_0_4, effA6_mes_jp_0_5 }, { (const CONN*)effA6_mes_jp_0_4, effA6_mes_jp_0_7 },
+    { (const CONN*)effA6_mes_jp_0_4, effA6_mes_jp_0_9 }, { (const CONN*)effA6_mes_jp_0_4, effA6_mes_jp_0_11 },
+    { (const CONN*)effA6_mes_jp_0_4, effA6_mes_jp_0_13 }, { (const CONN*)effA6_mes_jp_0_4, effA6_mes_jp_0_15 },
+    { (const CONN*)effA6_mes_jp_0_4, effA6_mes_jp_0_17 }, { (const CONN*)effA6_mes_jp_0_18, effA6_mes_jp_0_19 },
+    { (const CONN*)effA6_mes_jp_0_20, effA6_mes_jp_0_21 }, { effA6_mes_jp_0_22, effA6_mes_jp_0_23 },
 };
 
 const u32 effA6_mes_jp_0_0[60] = {
@@ -61680,13 +61680,13 @@ const u32 effA6_mes_jp_0_0[60] = {
     0xE0FFEA, 0xA046, 0xF0FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_0_2[48] = {
-    0, 0xA123, 0x100000, 0xA015, 0x200000, 0xA013, 0x300000, 0xA033,
-    0x400000, 0xA012, 0x500000, 0xA134, 0x600000, 0xA1D3, 0x700000, 0xA298,
-    0x800000, 0xA2C1, 0x900000, 0xA018, 0xA00000, 0xA1AC, 0xB00000, 0xA1AD,
-    0xC00000, 0xA048, 0xFFEA, 0xA407, 0x10FFEA, 0xA13F, 0x20FFEA, 0xA018,
-    0x30FFEA, 0xA114, 0x40FFEA, 0xA115, 0x50FFEA, 0xA02C, 0x60FFEA, 0xA152,
-    0x70FFEA, 0xA003, 0x80FFEA, 0xA025, 0x90FFEA, 0xA002, 0xA0FFEA, 0xA039,
+const CONN effA6_mes_jp_0_2[24] = {
+    { 0, 0, 0, 0xA123 }, { 16, 0, 0, 0xA015 }, { 32, 0, 0, 0xA013 }, { 48, 0, 0, 0xA033 },
+    { 64, 0, 0, 0xA012 }, { 80, 0, 0, 0xA134 }, { 96, 0, 0, 0xA1D3 }, { 112, 0, 0, 0xA298 },
+    { 128, 0, 0, 0xA2C1 }, { 144, 0, 0, 0xA018 }, { 160, 0, 0, 0xA1AC }, { 176, 0, 0, 0xA1AD },
+    { 192, 0, 0, 0xA048 }, { 0, -22, 0, 0xA407 }, { 16, -22, 0, 0xA13F }, { 32, -22, 0, 0xA018 },
+    { 48, -22, 0, 0xA114 }, { 64, -22, 0, 0xA115 }, { 80, -22, 0, 0xA02C }, { 96, -22, 0, 0xA152 },
+    { 112, -22, 0, 0xA003 }, { 128, -22, 0, 0xA025 }, { 144, -22, 0, 0xA002 }, { 160, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_0_4[46] = {
@@ -61717,13 +61717,13 @@ const u32 effA6_mes_jp_0_20[44] = {
     0x90FFEA, 0xA048, 0xA0FFEA, 0xA03C,
 };
 
-const u32 effA6_mes_jp_0_22[46] = {
-    0, 0xA2A0, 0x100000, 0xA019, 0x200000, 0xA109, 0x300000, 0xA02C,
-    0x400000, 0xA166, 0x500000, 0xA021, 0x600000, 0xA00B, 0x700000, 0xA139,
-    0x800000, 0xA057, 0xFFEA, 0xA002, 0x10FFEA, 0xA016, 0x20FFEA, 0xA018,
-    0x30FFEA, 0xA100, 0x40FFEA, 0xA119, 0x50FFEA, 0xA00A, 0x70FFEA, 0xA00E,
-    0x80FFEA, 0xA018, 0x90FFEA, 0xA202, 0xA0FFEA, 0xA04B, 0xB0FFEA, 0xA176,
-    0xC0FFEA, 0xA029, 0xD0FFEA, 0xA001, 0xE0FFEA, 0xA039,
+const CONN effA6_mes_jp_0_22[23] = {
+    { 0, 0, 0, 0xA2A0 }, { 16, 0, 0, 0xA019 }, { 32, 0, 0, 0xA109 }, { 48, 0, 0, 0xA02C },
+    { 64, 0, 0, 0xA166 }, { 80, 0, 0, 0xA021 }, { 96, 0, 0, 0xA00B }, { 112, 0, 0, 0xA139 },
+    { 128, 0, 0, 0xA057 }, { 0, -22, 0, 0xA002 }, { 16, -22, 0, 0xA016 }, { 32, -22, 0, 0xA018 },
+    { 48, -22, 0, 0xA100 }, { 64, -22, 0, 0xA119 }, { 80, -22, 0, 0xA00A }, { 112, -22, 0, 0xA00E },
+    { 128, -22, 0, 0xA018 }, { 144, -22, 0, 0xA202 }, { 160, -22, 0, 0xA04B }, { 176, -22, 0, 0xA176 },
+    { 192, -22, 0, 0xA029 }, { 208, -22, 0, 0xA001 }, { 224, -22, 0, 0xA039 },
 };
 
 const u16 effA6_mes_jp_0_1[7] = {
@@ -61775,22 +61775,22 @@ const u16 effA6_mes_jp_0_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_2[12] = {
-    { (const CONN*)effA6_mes_jp_2_0, (const u16*)effA6_mes_jp_2_1 }, { (const CONN*)effA6_mes_jp_2_2, (const u16*)effA6_mes_jp_2_3 },
-    { (const CONN*)effA6_mes_jp_2_4, (const u16*)effA6_mes_jp_2_5 }, { (const CONN*)effA6_mes_jp_2_4, (const u16*)effA6_mes_jp_2_7 },
-    { (const CONN*)effA6_mes_jp_2_4, (const u16*)effA6_mes_jp_2_9 }, { (const CONN*)effA6_mes_jp_2_4, (const u16*)effA6_mes_jp_2_11 },
-    { (const CONN*)effA6_mes_jp_2_4, (const u16*)effA6_mes_jp_2_13 }, { (const CONN*)effA6_mes_jp_2_4, (const u16*)effA6_mes_jp_2_15 },
-    { (const CONN*)effA6_mes_jp_2_4, (const u16*)effA6_mes_jp_2_17 }, { (const CONN*)effA6_mes_jp_2_18, (const u16*)effA6_mes_jp_2_19 },
-    { (const CONN*)effA6_mes_jp_2_20, (const u16*)effA6_mes_jp_2_21 }, { (const CONN*)effA6_mes_jp_2_22, (const u16*)effA6_mes_jp_2_23 },
+    { effA6_mes_jp_2_0, effA6_mes_jp_2_1 }, { (const CONN*)effA6_mes_jp_2_2, effA6_mes_jp_2_3 },
+    { (const CONN*)effA6_mes_jp_2_4, effA6_mes_jp_2_5 }, { (const CONN*)effA6_mes_jp_2_4, effA6_mes_jp_2_7 },
+    { (const CONN*)effA6_mes_jp_2_4, effA6_mes_jp_2_9 }, { (const CONN*)effA6_mes_jp_2_4, effA6_mes_jp_2_11 },
+    { (const CONN*)effA6_mes_jp_2_4, effA6_mes_jp_2_13 }, { (const CONN*)effA6_mes_jp_2_4, effA6_mes_jp_2_15 },
+    { (const CONN*)effA6_mes_jp_2_4, effA6_mes_jp_2_17 }, { (const CONN*)effA6_mes_jp_2_18, effA6_mes_jp_2_19 },
+    { effA6_mes_jp_2_20, effA6_mes_jp_2_21 }, { (const CONN*)effA6_mes_jp_2_22, effA6_mes_jp_2_23 },
 };
 
-const u32 effA6_mes_jp_2_0[50] = {
-    0, 0xA088, 0x100000, 0xA0AD, 0x200000, 0xA057, 0x300000, 0xA190,
-    0x400000, 0xA003, 0x500000, 0xA012, 0x600000, 0xA002, 0x700000, 0xA029,
-    0x800000, 0xA00B, 0x900000, 0xA001, 0xA00000, 0xA047, 0xB00000, 0xA039,
-    0xFFEA, 0xA24F, 0x10FFEA, 0xA00B, 0x20FFEA, 0xA04F, 0x30FFEA, 0xA027,
-    0x40FFEA, 0xA015, 0x50FFEA, 0xA177, 0x60FFEA, 0xA013, 0x70FFEA, 0xA143,
-    0x80FFEA, 0xA033, 0x90FFEA, 0xA012, 0xA0FFEA, 0xA007, 0xB0FFEA, 0xA029,
-    0xC0FFEA, 0xA039,
+const CONN effA6_mes_jp_2_0[25] = {
+    { 0, 0, 0, 0xA088 }, { 16, 0, 0, 0xA0AD }, { 32, 0, 0, 0xA057 }, { 48, 0, 0, 0xA190 },
+    { 64, 0, 0, 0xA003 }, { 80, 0, 0, 0xA012 }, { 96, 0, 0, 0xA002 }, { 112, 0, 0, 0xA029 },
+    { 128, 0, 0, 0xA00B }, { 144, 0, 0, 0xA001 }, { 160, 0, 0, 0xA047 }, { 176, 0, 0, 0xA039 },
+    { 0, -22, 0, 0xA24F }, { 16, -22, 0, 0xA00B }, { 32, -22, 0, 0xA04F }, { 48, -22, 0, 0xA027 },
+    { 64, -22, 0, 0xA015 }, { 80, -22, 0, 0xA177 }, { 96, -22, 0, 0xA013 }, { 112, -22, 0, 0xA143 },
+    { 128, -22, 0, 0xA033 }, { 144, -22, 0, 0xA012 }, { 160, -22, 0, 0xA007 }, { 176, -22, 0, 0xA029 },
+    { 192, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_2_2[54] = {
@@ -61820,12 +61820,12 @@ const u32 effA6_mes_jp_2_18[48] = {
     0x60FFEA, 0xA012, 0x70FFEA, 0xA009, 0x80FFEA, 0xA001, 0x90FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_2_20[40] = {
-    0, 0xA0BC, 0x100000, 0xA082, 0x200000, 0xA086, 0x300000, 0xA057,
-    0x500000, 0xA177, 0x600000, 0xA018, 0x700000, 0xA107, 0x800000, 0xA108,
-    0x900000, 0xA04B, 0xFFEA, 0xA004, 0x10FFEA, 0xA01E, 0x20FFEA, 0xA003,
-    0x30FFEA, 0xA02C, 0x40FFEA, 0xA45B, 0x50FFEA, 0xA003, 0x60FFEA, 0xA012,
-    0x70FFEA, 0xA01F, 0x80FFEA, 0xA00D, 0x90FFEA, 0xA028, 0xA0FFEA, 0xA039,
+const CONN effA6_mes_jp_2_20[20] = {
+    { 0, 0, 0, 0xA0BC }, { 16, 0, 0, 0xA082 }, { 32, 0, 0, 0xA086 }, { 48, 0, 0, 0xA057 },
+    { 80, 0, 0, 0xA177 }, { 96, 0, 0, 0xA018 }, { 112, 0, 0, 0xA107 }, { 128, 0, 0, 0xA108 },
+    { 144, 0, 0, 0xA04B }, { 0, -22, 0, 0xA004 }, { 16, -22, 0, 0xA01E }, { 32, -22, 0, 0xA003 },
+    { 48, -22, 0, 0xA02C }, { 64, -22, 0, 0xA45B }, { 80, -22, 0, 0xA003 }, { 96, -22, 0, 0xA012 },
+    { 112, -22, 0, 0xA01F }, { 128, -22, 0, 0xA00D }, { 144, -22, 0, 0xA028 }, { 160, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_2_22[36] = {
@@ -61885,12 +61885,12 @@ const u16 effA6_mes_jp_2_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_3[12] = {
-    { (const CONN*)effA6_mes_jp_3_0, (const u16*)effA6_mes_jp_3_1 }, { (const CONN*)effA6_mes_jp_3_2, (const u16*)effA6_mes_jp_3_3 },
-    { (const CONN*)effA6_mes_jp_3_4, (const u16*)effA6_mes_jp_3_5 }, { (const CONN*)effA6_mes_jp_3_4, (const u16*)effA6_mes_jp_3_7 },
-    { (const CONN*)effA6_mes_jp_3_4, (const u16*)effA6_mes_jp_3_9 }, { (const CONN*)effA6_mes_jp_3_4, (const u16*)effA6_mes_jp_3_11 },
-    { (const CONN*)effA6_mes_jp_3_4, (const u16*)effA6_mes_jp_3_13 }, { (const CONN*)effA6_mes_jp_3_4, (const u16*)effA6_mes_jp_3_15 },
-    { (const CONN*)effA6_mes_jp_3_4, (const u16*)effA6_mes_jp_3_17 }, { (const CONN*)effA6_mes_jp_3_18, (const u16*)effA6_mes_jp_3_19 },
-    { (const CONN*)effA6_mes_jp_3_20, (const u16*)effA6_mes_jp_3_21 }, { (const CONN*)effA6_mes_jp_3_22, (const u16*)effA6_mes_jp_3_23 },
+    { (const CONN*)effA6_mes_jp_3_0, effA6_mes_jp_3_1 }, { effA6_mes_jp_3_2, effA6_mes_jp_3_3 },
+    { (const CONN*)effA6_mes_jp_3_4, effA6_mes_jp_3_5 }, { (const CONN*)effA6_mes_jp_3_4, effA6_mes_jp_3_7 },
+    { (const CONN*)effA6_mes_jp_3_4, effA6_mes_jp_3_9 }, { (const CONN*)effA6_mes_jp_3_4, effA6_mes_jp_3_11 },
+    { (const CONN*)effA6_mes_jp_3_4, effA6_mes_jp_3_13 }, { (const CONN*)effA6_mes_jp_3_4, effA6_mes_jp_3_15 },
+    { (const CONN*)effA6_mes_jp_3_4, effA6_mes_jp_3_17 }, { (const CONN*)effA6_mes_jp_3_18, effA6_mes_jp_3_19 },
+    { effA6_mes_jp_3_20, effA6_mes_jp_3_21 }, { (const CONN*)effA6_mes_jp_3_22, effA6_mes_jp_3_23 },
 };
 
 const u32 effA6_mes_jp_3_0[56] = {
@@ -61903,13 +61903,13 @@ const u32 effA6_mes_jp_3_0[56] = {
     0xC0FFEA, 0xA013, 0xD0FFEA, 0xA014, 0xE0FFEA, 0xA001, 0xF0FFEA, 0xA014,
 };
 
-const u32 effA6_mes_jp_3_2[46] = {
-    0, 0xA1BB, 0x100000, 0xA001, 0x200000, 0xA014, 0x300000, 0xA037,
-    0x400000, 0xA167, 0x500000, 0xA274, 0x600000, 0xA039, 0xFFEA, 0xA1B6,
-    0x10FFEA, 0xA1B7, 0x20FFEA, 0xA124, 0x30FFEA, 0xA019, 0x40FFEA, 0xA177,
-    0x50FFEA, 0xA00F, 0x60FFEA, 0xA010, 0x70FFEA, 0xA018, 0x80FFEA, 0xA1F5,
-    0x90FFEA, 0xA04B, 0xA0FFEA, 0xA1D6, 0xB0FFEA, 0xA021, 0xC0FFEA, 0xA028,
-    0xD0FFEA, 0xA018, 0xE0FFEA, 0xA00A, 0xF0FFEA, 0xA039,
+const CONN effA6_mes_jp_3_2[23] = {
+    { 0, 0, 0, 0xA1BB }, { 16, 0, 0, 0xA001 }, { 32, 0, 0, 0xA014 }, { 48, 0, 0, 0xA037 },
+    { 64, 0, 0, 0xA167 }, { 80, 0, 0, 0xA274 }, { 96, 0, 0, 0xA039 }, { 0, -22, 0, 0xA1B6 },
+    { 16, -22, 0, 0xA1B7 }, { 32, -22, 0, 0xA124 }, { 48, -22, 0, 0xA019 }, { 64, -22, 0, 0xA177 },
+    { 80, -22, 0, 0xA00F }, { 96, -22, 0, 0xA010 }, { 112, -22, 0, 0xA018 }, { 128, -22, 0, 0xA1F5 },
+    { 144, -22, 0, 0xA04B }, { 160, -22, 0, 0xA1D6 }, { 176, -22, 0, 0xA021 }, { 192, -22, 0, 0xA028 },
+    { 208, -22, 0, 0xA018 }, { 224, -22, 0, 0xA00A }, { 240, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_3_4[48] = {
@@ -61930,11 +61930,11 @@ const u32 effA6_mes_jp_3_18[48] = {
     0x50FFEA, 0xA003, 0x60FFEA, 0xA02A, 0x70FFEA, 0xA025, 0x80FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_3_20[26] = {
-    0, 0xA080, 0x100000, 0xA0AD, 0x200000, 0xA08F, 0x300000, 0xA057,
-    0x500000, 0xA004, 0x600000, 0xA029, 0x700000, 0xA02C, 0x800000, 0xA20C,
-    0x900000, 0xA026, 0xA00000, 0xA00D, 0xB00000, 0xA00F, 0xC00000, 0xA014,
-    0xD00000, 0xA039,
+const CONN effA6_mes_jp_3_20[13] = {
+    { 0, 0, 0, 0xA080 }, { 16, 0, 0, 0xA0AD }, { 32, 0, 0, 0xA08F }, { 48, 0, 0, 0xA057 },
+    { 80, 0, 0, 0xA004 }, { 96, 0, 0, 0xA029 }, { 112, 0, 0, 0xA02C }, { 128, 0, 0, 0xA20C },
+    { 144, 0, 0, 0xA026 }, { 160, 0, 0, 0xA00D }, { 176, 0, 0, 0xA00F }, { 192, 0, 0, 0xA014 },
+    { 208, 0, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_3_22[46] = {
@@ -61996,12 +61996,12 @@ const u16 effA6_mes_jp_3_23[6] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_4[12] = {
-    { (const CONN*)effA6_mes_jp_4_0, (const u16*)effA6_mes_jp_4_1 }, { (const CONN*)effA6_mes_jp_4_2, (const u16*)effA6_mes_jp_4_3 },
-    { (const CONN*)effA6_mes_jp_4_4, (const u16*)effA6_mes_jp_4_5 }, { (const CONN*)effA6_mes_jp_4_4, (const u16*)effA6_mes_jp_4_7 },
-    { (const CONN*)effA6_mes_jp_4_4, (const u16*)effA6_mes_jp_4_9 }, { (const CONN*)effA6_mes_jp_4_4, (const u16*)effA6_mes_jp_4_11 },
-    { (const CONN*)effA6_mes_jp_4_4, (const u16*)effA6_mes_jp_4_13 }, { (const CONN*)effA6_mes_jp_4_4, (const u16*)effA6_mes_jp_4_15 },
-    { (const CONN*)effA6_mes_jp_4_4, (const u16*)effA6_mes_jp_4_17 }, { (const CONN*)effA6_mes_jp_4_18, (const u16*)effA6_mes_jp_4_19 },
-    { (const CONN*)effA6_mes_jp_4_20, (const u16*)effA6_mes_jp_4_21 }, { (const CONN*)effA6_mes_jp_4_22, (const u16*)effA6_mes_jp_4_23 },
+    { (const CONN*)effA6_mes_jp_4_0, effA6_mes_jp_4_1 }, { effA6_mes_jp_4_2, effA6_mes_jp_4_3 },
+    { (const CONN*)effA6_mes_jp_4_4, effA6_mes_jp_4_5 }, { (const CONN*)effA6_mes_jp_4_4, effA6_mes_jp_4_7 },
+    { (const CONN*)effA6_mes_jp_4_4, effA6_mes_jp_4_9 }, { (const CONN*)effA6_mes_jp_4_4, effA6_mes_jp_4_11 },
+    { (const CONN*)effA6_mes_jp_4_4, effA6_mes_jp_4_13 }, { (const CONN*)effA6_mes_jp_4_4, effA6_mes_jp_4_15 },
+    { (const CONN*)effA6_mes_jp_4_4, effA6_mes_jp_4_17 }, { (const CONN*)effA6_mes_jp_4_18, effA6_mes_jp_4_19 },
+    { (const CONN*)effA6_mes_jp_4_20, effA6_mes_jp_4_21 }, { (const CONN*)effA6_mes_jp_4_22, effA6_mes_jp_4_23 },
 };
 
 const u32 effA6_mes_jp_4_0[50] = {
@@ -62014,14 +62014,14 @@ const u32 effA6_mes_jp_4_0[50] = {
     0xB0FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_4_2[54] = {
-    0, 0xA000, 0x100000, 0xA029, 0x200000, 0xA005, 0x300000, 0xA057,
-    0x400000, 0xA001, 0x500000, 0xA001, 0x600000, 0xA339, 0x700000, 0xA048,
-    0x900000, 0xA014, 0xA00000, 0xA026, 0xB00000, 0xA04D, 0xFFEA, 0xA00E,
-    0x10FFEA, 0xA018, 0x20FFEA, 0xA422, 0x30FFEA, 0xA316, 0x40FFEA, 0xA03E,
-    0x50FFEA, 0xA000, 0x60FFEA, 0xA028, 0x70FFEA, 0xA005, 0x80FFEA, 0xA1AC,
-    0x90FFEA, 0xA00A, 0xA0FFEA, 0xA00D, 0xB0FFEA, 0xA012, 0xC0FFEA, 0xA022,
-    0xD0FFEA, 0xA026, 0xE0FFEA, 0xA004, 0xF0FFEA, 0xA002,
+const CONN effA6_mes_jp_4_2[27] = {
+    { 0, 0, 0, 0xA000 }, { 16, 0, 0, 0xA029 }, { 32, 0, 0, 0xA005 }, { 48, 0, 0, 0xA057 },
+    { 64, 0, 0, 0xA001 }, { 80, 0, 0, 0xA001 }, { 96, 0, 0, 0xA339 }, { 112, 0, 0, 0xA048 },
+    { 144, 0, 0, 0xA014 }, { 160, 0, 0, 0xA026 }, { 176, 0, 0, 0xA04D }, { 0, -22, 0, 0xA00E },
+    { 16, -22, 0, 0xA018 }, { 32, -22, 0, 0xA422 }, { 48, -22, 0, 0xA316 }, { 64, -22, 0, 0xA03E },
+    { 80, -22, 0, 0xA000 }, { 96, -22, 0, 0xA028 }, { 112, -22, 0, 0xA005 }, { 128, -22, 0, 0xA1AC },
+    { 144, -22, 0, 0xA00A }, { 160, -22, 0, 0xA00D }, { 176, -22, 0, 0xA012 }, { 192, -22, 0, 0xA022 },
+    { 208, -22, 0, 0xA026 }, { 224, -22, 0, 0xA004 }, { 240, -22, 0, 0xA002 },
 };
 
 const u32 effA6_mes_jp_4_4[56] = {
@@ -62110,12 +62110,12 @@ const u16 effA6_mes_jp_4_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_5[12] = {
-    { (const CONN*)effA6_mes_jp_5_0, (const u16*)effA6_mes_jp_5_1 }, { (const CONN*)effA6_mes_jp_5_2, (const u16*)effA6_mes_jp_5_3 },
-    { (const CONN*)effA6_mes_jp_5_4, (const u16*)effA6_mes_jp_5_5 }, { (const CONN*)effA6_mes_jp_5_4, (const u16*)effA6_mes_jp_5_7 },
-    { (const CONN*)effA6_mes_jp_5_4, (const u16*)effA6_mes_jp_5_9 }, { (const CONN*)effA6_mes_jp_5_4, (const u16*)effA6_mes_jp_5_11 },
-    { (const CONN*)effA6_mes_jp_5_4, (const u16*)effA6_mes_jp_5_13 }, { (const CONN*)effA6_mes_jp_5_4, (const u16*)effA6_mes_jp_5_15 },
-    { (const CONN*)effA6_mes_jp_5_4, (const u16*)effA6_mes_jp_5_17 }, { (const CONN*)effA6_mes_jp_5_18, (const u16*)effA6_mes_jp_5_19 },
-    { (const CONN*)effA6_mes_jp_5_20, (const u16*)effA6_mes_jp_5_21 }, { (const CONN*)effA6_mes_jp_5_22, (const u16*)effA6_mes_jp_5_23 },
+    { (const CONN*)effA6_mes_jp_5_0, effA6_mes_jp_5_1 }, { (const CONN*)effA6_mes_jp_5_2, effA6_mes_jp_5_3 },
+    { effA6_mes_jp_5_4, effA6_mes_jp_5_5 }, { effA6_mes_jp_5_4, effA6_mes_jp_5_7 },
+    { effA6_mes_jp_5_4, effA6_mes_jp_5_9 }, { effA6_mes_jp_5_4, effA6_mes_jp_5_11 },
+    { effA6_mes_jp_5_4, effA6_mes_jp_5_13 }, { effA6_mes_jp_5_4, effA6_mes_jp_5_15 },
+    { effA6_mes_jp_5_4, effA6_mes_jp_5_17 }, { (const CONN*)effA6_mes_jp_5_18, effA6_mes_jp_5_19 },
+    { (const CONN*)effA6_mes_jp_5_20, effA6_mes_jp_5_21 }, { (const CONN*)effA6_mes_jp_5_22, effA6_mes_jp_5_23 },
 };
 
 const u32 effA6_mes_jp_5_0[62] = {
@@ -62139,14 +62139,14 @@ const u32 effA6_mes_jp_5_2[50] = {
     0xA0FFEA, 0xA04D,
 };
 
-const u32 effA6_mes_jp_5_4[56] = {
-    0, 0xA017, 0x100000, 0xA037, 0x200000, 0xA44E, 0x300000, 0xA04E,
-    0x400000, 0xA028, 0x500000, 0xA30A, 0x600000, 0xA25C, 0x700000, 0xA134,
-    0x800000, 0xA1F5, 0x900000, 0xA04B, 0xA00000, 0xA00B, 0xB00000, 0xA036,
-    0xC00000, 0xA03C, 0xFFEA, 0xA0CB, 0x10FFEA, 0xA08C, 0x20FFEA, 0xA018,
-    0x30FFEA, 0xA001, 0x40FFEA, 0xA028, 0x50FFEA, 0xA013, 0x60FFEA, 0xA009,
-    0x70FFEA, 0xA02A, 0x80FFEA, 0xA33B, 0x90FFEA, 0xA003, 0xA0FFEA, 0xA012,
-    0xB0FFEA, 0xA007, 0xC0FFEA, 0xA029, 0xD0FFEA, 0xA028, 0xE0FFEA, 0xA03C,
+const CONN effA6_mes_jp_5_4[28] = {
+    { 0, 0, 0, 0xA017 }, { 16, 0, 0, 0xA037 }, { 32, 0, 0, 0xA44E }, { 48, 0, 0, 0xA04E },
+    { 64, 0, 0, 0xA028 }, { 80, 0, 0, 0xA30A }, { 96, 0, 0, 0xA25C }, { 112, 0, 0, 0xA134 },
+    { 128, 0, 0, 0xA1F5 }, { 144, 0, 0, 0xA04B }, { 160, 0, 0, 0xA00B }, { 176, 0, 0, 0xA036 },
+    { 192, 0, 0, 0xA03C }, { 0, -22, 0, 0xA0CB }, { 16, -22, 0, 0xA08C }, { 32, -22, 0, 0xA018 },
+    { 48, -22, 0, 0xA001 }, { 64, -22, 0, 0xA028 }, { 80, -22, 0, 0xA013 }, { 96, -22, 0, 0xA009 },
+    { 112, -22, 0, 0xA02A }, { 128, -22, 0, 0xA33B }, { 144, -22, 0, 0xA003 }, { 160, -22, 0, 0xA012 },
+    { 176, -22, 0, 0xA007 }, { 192, -22, 0, 0xA029 }, { 208, -22, 0, 0xA028 }, { 224, -22, 0, 0xA03C },
 };
 
 const u32 effA6_mes_jp_5_18[54] = {
@@ -62225,12 +62225,12 @@ const u16 effA6_mes_jp_5_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_6[12] = {
-    { (const CONN*)effA6_mes_jp_6_0, (const u16*)effA6_mes_jp_6_1 }, { (const CONN*)effA6_mes_jp_6_2, (const u16*)effA6_mes_jp_6_3 },
-    { (const CONN*)effA6_mes_jp_6_4, (const u16*)effA6_mes_jp_6_5 }, { (const CONN*)effA6_mes_jp_6_6, (const u16*)effA6_mes_jp_6_7 },
-    { (const CONN*)effA6_mes_jp_6_8, (const u16*)effA6_mes_jp_6_9 }, { (const CONN*)effA6_mes_jp_6_10, (const u16*)effA6_mes_jp_6_11 },
-    { (const CONN*)effA6_mes_jp_6_12, (const u16*)effA6_mes_jp_6_13 }, { (const CONN*)effA6_mes_jp_6_14, (const u16*)effA6_mes_jp_6_15 },
-    { (const CONN*)effA6_mes_jp_6_16, (const u16*)effA6_mes_jp_6_17 }, { (const CONN*)effA6_mes_jp_6_18, (const u16*)effA6_mes_jp_6_19 },
-    { (const CONN*)effA6_mes_jp_6_20, (const u16*)effA6_mes_jp_6_21 }, { (const CONN*)effA6_mes_jp_6_22, (const u16*)effA6_mes_jp_6_23 },
+    { (const CONN*)effA6_mes_jp_6_0, effA6_mes_jp_6_1 }, { effA6_mes_jp_6_2, effA6_mes_jp_6_3 },
+    { (const CONN*)effA6_mes_jp_6_4, effA6_mes_jp_6_5 }, { (const CONN*)effA6_mes_jp_6_6, effA6_mes_jp_6_7 },
+    { effA6_mes_jp_6_8, effA6_mes_jp_6_9 }, { (const CONN*)effA6_mes_jp_6_10, effA6_mes_jp_6_11 },
+    { (const CONN*)effA6_mes_jp_6_12, effA6_mes_jp_6_13 }, { effA6_mes_jp_6_14, effA6_mes_jp_6_15 },
+    { (const CONN*)effA6_mes_jp_6_16, effA6_mes_jp_6_17 }, { (const CONN*)effA6_mes_jp_6_18, effA6_mes_jp_6_19 },
+    { effA6_mes_jp_6_20, effA6_mes_jp_6_21 }, { (const CONN*)effA6_mes_jp_6_22, effA6_mes_jp_6_23 },
 };
 
 const u32 effA6_mes_jp_6_0[46] = {
@@ -62242,13 +62242,13 @@ const u32 effA6_mes_jp_6_0[46] = {
     0x70FFEA, 0xA048, 0x80FFEA, 0xA046, 0x90FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_6_2[42] = {
-    0, 0xA008, 0x100000, 0xA0B3, 0x300000, 0xA012, 0x400000, 0xA021,
-    0x500000, 0xA0B1, 0x600000, 0xA02C, 0x700000, 0xA248, 0x800000, 0xA179,
-    0x900000, 0xA00B, 0xA00000, 0xA02A, 0xB00000, 0xA0B3, 0xC00000, 0xA012,
-    0xD00000, 0xA005, 0xE00000, 0xA039, 0xFFEA, 0xA288, 0x10FFEA, 0xA02B,
-    0x20FFEA, 0xA00D, 0x30FFEA, 0xA028, 0x40FFEA, 0xA014, 0x50FFEA, 0xA0AE,
-    0x60FFEA, 0xA039,
+const CONN effA6_mes_jp_6_2[21] = {
+    { 0, 0, 0, 0xA008 }, { 16, 0, 0, 0xA0B3 }, { 48, 0, 0, 0xA012 }, { 64, 0, 0, 0xA021 },
+    { 80, 0, 0, 0xA0B1 }, { 96, 0, 0, 0xA02C }, { 112, 0, 0, 0xA248 }, { 128, 0, 0, 0xA179 },
+    { 144, 0, 0, 0xA00B }, { 160, 0, 0, 0xA02A }, { 176, 0, 0, 0xA0B3 }, { 192, 0, 0, 0xA012 },
+    { 208, 0, 0, 0xA005 }, { 224, 0, 0, 0xA039 }, { 0, -22, 0, 0xA288 }, { 16, -22, 0, 0xA02B },
+    { 32, -22, 0, 0xA00D }, { 48, -22, 0, 0xA028 }, { 64, -22, 0, 0xA014 }, { 80, -22, 0, 0xA0AE },
+    { 96, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_6_4[38] = {
@@ -62268,13 +62268,13 @@ const u32 effA6_mes_jp_6_6[46] = {
     0x70FFEA, 0xA00F, 0x80FFEA, 0xA011, 0x90FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_6_8[44] = {
-    0, 0xA084, 0x100000, 0xA09E, 0x200000, 0xA083, 0x400000, 0xA084,
-    0x500000, 0xA0A9, 0x600000, 0xA018, 0x700000, 0xA000, 0x800000, 0xA001,
-    0x900000, 0xA051, 0xA00000, 0xA002, 0xB00000, 0xA015, 0xC00000, 0xA014,
-    0xD00000, 0xA029, 0xE00000, 0xA028, 0xF00000, 0xA005, 0xFFEA, 0xA00B,
-    0x10FFEA, 0xA02D, 0x20FFEA, 0xA052, 0x30FFEA, 0xA001, 0x40FFEA, 0xA048,
-    0x50FFEA, 0xA014, 0x60FFEA, 0xA057,
+const CONN effA6_mes_jp_6_8[22] = {
+    { 0, 0, 0, 0xA084 }, { 16, 0, 0, 0xA09E }, { 32, 0, 0, 0xA083 }, { 64, 0, 0, 0xA084 },
+    { 80, 0, 0, 0xA0A9 }, { 96, 0, 0, 0xA018 }, { 112, 0, 0, 0xA000 }, { 128, 0, 0, 0xA001 },
+    { 144, 0, 0, 0xA051 }, { 160, 0, 0, 0xA002 }, { 176, 0, 0, 0xA015 }, { 192, 0, 0, 0xA014 },
+    { 208, 0, 0, 0xA029 }, { 224, 0, 0, 0xA028 }, { 240, 0, 0, 0xA005 }, { 0, -22, 0, 0xA00B },
+    { 16, -22, 0, 0xA02D }, { 32, -22, 0, 0xA052 }, { 48, -22, 0, 0xA001 }, { 64, -22, 0, 0xA048 },
+    { 80, -22, 0, 0xA014 }, { 96, -22, 0, 0xA057 },
 };
 
 const u32 effA6_mes_jp_6_10[40] = {
@@ -62293,12 +62293,12 @@ const u32 effA6_mes_jp_6_12[40] = {
     0xA0FFEA, 0xA017, 0xB0FFEA, 0xA003, 0xC0FFEA, 0xA005, 0xD0FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_6_14[40] = {
-    0, 0xA11B, 0x100000, 0xA005, 0x200000, 0xA139, 0x300000, 0xA015,
-    0x400000, 0xA005, 0x500000, 0xA008, 0x600000, 0xA028, 0x700000, 0xA303,
-    0x800000, 0xA304, 0x900000, 0xA019, 0xA00000, 0xA014, 0xB00000, 0xA001,
-    0xFFEA, 0xA310, 0x10FFEA, 0xA003, 0x20FFEA, 0xA122, 0x30FFEA, 0xA028,
-    0x40FFEA, 0xA03E, 0x50FFEA, 0xA001, 0x60FFEA, 0xA001, 0x70FFEA, 0xA039,
+const CONN effA6_mes_jp_6_14[20] = {
+    { 0, 0, 0, 0xA11B }, { 16, 0, 0, 0xA005 }, { 32, 0, 0, 0xA139 }, { 48, 0, 0, 0xA015 },
+    { 64, 0, 0, 0xA005 }, { 80, 0, 0, 0xA008 }, { 96, 0, 0, 0xA028 }, { 112, 0, 0, 0xA303 },
+    { 128, 0, 0, 0xA304 }, { 144, 0, 0, 0xA019 }, { 160, 0, 0, 0xA014 }, { 176, 0, 0, 0xA001 },
+    { 0, -22, 0, 0xA310 }, { 16, -22, 0, 0xA003 }, { 32, -22, 0, 0xA122 }, { 48, -22, 0, 0xA028 },
+    { 64, -22, 0, 0xA03E }, { 80, -22, 0, 0xA001 }, { 96, -22, 0, 0xA001 }, { 112, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_6_16[56] = {
@@ -62318,13 +62318,13 @@ const u32 effA6_mes_jp_6_18[26] = {
     0x70FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_6_20[46] = {
-    0, 0xA014, 0x100000, 0xA02D, 0x200000, 0xA048, 0x300000, 0xA004,
-    0x400000, 0xA01E, 0x500000, 0xA003, 0x600000, 0xA03C, 0xFFEA, 0xA004,
-    0x10FFEA, 0xA029, 0x20FFEA, 0xA018, 0x30FFEA, 0xA0CC, 0x40FFEA, 0xA0B7,
-    0x50FFEA, 0xA093, 0x60FFEA, 0xA094, 0x70FFEA, 0xA0B7, 0x80FFEA, 0xA015,
-    0x90FFEA, 0xA014, 0xA0FFEA, 0xA027, 0xB0FFEA, 0xA012, 0xC0FFEA, 0xA003,
-    0xD0FFEA, 0xA018, 0xE0FFEA, 0xA005, 0xF0FFEA, 0xA03C,
+const CONN effA6_mes_jp_6_20[23] = {
+    { 0, 0, 0, 0xA014 }, { 16, 0, 0, 0xA02D }, { 32, 0, 0, 0xA048 }, { 48, 0, 0, 0xA004 },
+    { 64, 0, 0, 0xA01E }, { 80, 0, 0, 0xA003 }, { 96, 0, 0, 0xA03C }, { 0, -22, 0, 0xA004 },
+    { 16, -22, 0, 0xA029 }, { 32, -22, 0, 0xA018 }, { 48, -22, 0, 0xA0CC }, { 64, -22, 0, 0xA0B7 },
+    { 80, -22, 0, 0xA093 }, { 96, -22, 0, 0xA094 }, { 112, -22, 0, 0xA0B7 }, { 128, -22, 0, 0xA015 },
+    { 144, -22, 0, 0xA014 }, { 160, -22, 0, 0xA027 }, { 176, -22, 0, 0xA012 }, { 192, -22, 0, 0xA003 },
+    { 208, -22, 0, 0xA018 }, { 224, -22, 0, 0xA005 }, { 240, -22, 0, 0xA03C },
 };
 
 const u32 effA6_mes_jp_6_22[46] = {
@@ -62385,19 +62385,19 @@ const u16 effA6_mes_jp_6_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_7[12] = {
-    { (const CONN*)effA6_mes_jp_7_0, (const u16*)effA6_mes_jp_7_1 }, { (const CONN*)effA6_mes_jp_7_2, (const u16*)effA6_mes_jp_7_3 },
-    { (const CONN*)effA6_mes_jp_7_4, (const u16*)effA6_mes_jp_7_5 }, { (const CONN*)effA6_mes_jp_7_4, (const u16*)effA6_mes_jp_7_7 },
-    { (const CONN*)effA6_mes_jp_7_4, (const u16*)effA6_mes_jp_7_9 }, { (const CONN*)effA6_mes_jp_7_4, (const u16*)effA6_mes_jp_7_11 },
-    { (const CONN*)effA6_mes_jp_7_4, (const u16*)effA6_mes_jp_7_13 }, { (const CONN*)effA6_mes_jp_7_4, (const u16*)effA6_mes_jp_7_15 },
-    { (const CONN*)effA6_mes_jp_7_4, (const u16*)effA6_mes_jp_7_17 }, { (const CONN*)effA6_mes_jp_7_18, (const u16*)effA6_mes_jp_7_19 },
-    { (const CONN*)effA6_mes_jp_7_20, (const u16*)effA6_mes_jp_7_21 }, { (const CONN*)effA6_mes_jp_7_22, (const u16*)effA6_mes_jp_7_23 },
+    { effA6_mes_jp_7_0, effA6_mes_jp_7_1 }, { (const CONN*)effA6_mes_jp_7_2, effA6_mes_jp_7_3 },
+    { effA6_mes_jp_7_4, effA6_mes_jp_7_5 }, { effA6_mes_jp_7_4, effA6_mes_jp_7_7 },
+    { effA6_mes_jp_7_4, effA6_mes_jp_7_9 }, { effA6_mes_jp_7_4, effA6_mes_jp_7_11 },
+    { effA6_mes_jp_7_4, effA6_mes_jp_7_13 }, { effA6_mes_jp_7_4, effA6_mes_jp_7_15 },
+    { effA6_mes_jp_7_4, effA6_mes_jp_7_17 }, { (const CONN*)effA6_mes_jp_7_18, effA6_mes_jp_7_19 },
+    { (const CONN*)effA6_mes_jp_7_20, effA6_mes_jp_7_21 }, { (const CONN*)effA6_mes_jp_7_22, effA6_mes_jp_7_23 },
 };
 
-const u32 effA6_mes_jp_7_0[28] = {
-    0, 0xA447, 0x100000, 0xA018, 0x200000, 0xA022, 0x300000, 0xA018,
-    0x400000, 0xA02C, 0x500000, 0xA001, 0x600000, 0xA00F, 0x700000, 0xA048,
-    0x800000, 0xA007, 0x900000, 0xA02B, 0xA00000, 0xA039, 0xC00000, 0xA1F0,
-    0xD00000, 0xA3B8, 0xE00000, 0xA039,
+const CONN effA6_mes_jp_7_0[14] = {
+    { 0, 0, 0, 0xA447 }, { 16, 0, 0, 0xA018 }, { 32, 0, 0, 0xA022 }, { 48, 0, 0, 0xA018 },
+    { 64, 0, 0, 0xA02C }, { 80, 0, 0, 0xA001 }, { 96, 0, 0, 0xA00F }, { 112, 0, 0, 0xA048 },
+    { 128, 0, 0, 0xA007 }, { 144, 0, 0, 0xA02B }, { 160, 0, 0, 0xA039 }, { 192, 0, 0, 0xA1F0 },
+    { 208, 0, 0, 0xA3B8 }, { 224, 0, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_7_2[46] = {
@@ -62409,13 +62409,13 @@ const u32 effA6_mes_jp_7_2[46] = {
     0x70FFEA, 0xA004, 0x80FFEA, 0xA002, 0x90FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_7_4[44] = {
-    0, 0xA1DF, 0x100000, 0xA02B, 0x200000, 0xA033, 0x300000, 0xA00F,
-    0x400000, 0xA31B, 0x500000, 0xA017, 0xFFEA, 0xA000, 0x10FFEA, 0xA014,
-    0x20FFEA, 0xA00F, 0x30FFEA, 0xA018, 0x40FFEA, 0xA1D3, 0x50FFEA, 0xA01E,
-    0x60FFEA, 0xA029, 0x70FFEA, 0xA00F, 0x80FFEA, 0xA14C, 0x90FFEA, 0xA033,
-    0xA0FFEA, 0xA012, 0xB0FFEA, 0xA04C, 0xC0FFEA, 0xA009, 0xD0FFEA, 0xA014,
-    0xE0FFEA, 0xA018, 0xF0FFEA, 0xA03C,
+const CONN effA6_mes_jp_7_4[22] = {
+    { 0, 0, 0, 0xA1DF }, { 16, 0, 0, 0xA02B }, { 32, 0, 0, 0xA033 }, { 48, 0, 0, 0xA00F },
+    { 64, 0, 0, 0xA31B }, { 80, 0, 0, 0xA017 }, { 0, -22, 0, 0xA000 }, { 16, -22, 0, 0xA014 },
+    { 32, -22, 0, 0xA00F }, { 48, -22, 0, 0xA018 }, { 64, -22, 0, 0xA1D3 }, { 80, -22, 0, 0xA01E },
+    { 96, -22, 0, 0xA029 }, { 112, -22, 0, 0xA00F }, { 128, -22, 0, 0xA14C }, { 144, -22, 0, 0xA033 },
+    { 160, -22, 0, 0xA012 }, { 176, -22, 0, 0xA04C }, { 192, -22, 0, 0xA009 }, { 208, -22, 0, 0xA014 },
+    { 224, -22, 0, 0xA018 }, { 240, -22, 0, 0xA03C },
 };
 
 const u32 effA6_mes_jp_7_18[54] = {
@@ -62493,21 +62493,21 @@ const u16 effA6_mes_jp_7_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_8[12] = {
-    { (const CONN*)effA6_mes_jp_8_0, (const u16*)effA6_mes_jp_8_1 }, { (const CONN*)effA6_mes_jp_8_2, (const u16*)effA6_mes_jp_8_3 },
-    { (const CONN*)effA6_mes_jp_8_4, (const u16*)effA6_mes_jp_8_5 }, { (const CONN*)effA6_mes_jp_8_4, (const u16*)effA6_mes_jp_8_7 },
-    { (const CONN*)effA6_mes_jp_8_4, (const u16*)effA6_mes_jp_8_9 }, { (const CONN*)effA6_mes_jp_8_4, (const u16*)effA6_mes_jp_8_11 },
-    { (const CONN*)effA6_mes_jp_8_4, (const u16*)effA6_mes_jp_8_13 }, { (const CONN*)effA6_mes_jp_8_4, (const u16*)effA6_mes_jp_8_15 },
-    { (const CONN*)effA6_mes_jp_8_4, (const u16*)effA6_mes_jp_8_17 }, { (const CONN*)effA6_mes_jp_8_18, (const u16*)effA6_mes_jp_8_19 },
-    { (const CONN*)effA6_mes_jp_8_20, (const u16*)effA6_mes_jp_8_21 }, { (const CONN*)effA6_mes_jp_8_22, (const u16*)effA6_mes_jp_8_23 },
+    { effA6_mes_jp_8_0, effA6_mes_jp_8_1 }, { (const CONN*)effA6_mes_jp_8_2, effA6_mes_jp_8_3 },
+    { (const CONN*)effA6_mes_jp_8_4, effA6_mes_jp_8_5 }, { (const CONN*)effA6_mes_jp_8_4, effA6_mes_jp_8_7 },
+    { (const CONN*)effA6_mes_jp_8_4, effA6_mes_jp_8_9 }, { (const CONN*)effA6_mes_jp_8_4, effA6_mes_jp_8_11 },
+    { (const CONN*)effA6_mes_jp_8_4, effA6_mes_jp_8_13 }, { (const CONN*)effA6_mes_jp_8_4, effA6_mes_jp_8_15 },
+    { (const CONN*)effA6_mes_jp_8_4, effA6_mes_jp_8_17 }, { (const CONN*)effA6_mes_jp_8_18, effA6_mes_jp_8_19 },
+    { effA6_mes_jp_8_20, effA6_mes_jp_8_21 }, { (const CONN*)effA6_mes_jp_8_22, effA6_mes_jp_8_23 },
 };
 
-const u32 effA6_mes_jp_8_0[44] = {
-    0, 0xA316, 0x100000, 0xA143, 0x200000, 0xA10E, 0x300000, 0xA019,
-    0x400000, 0xA134, 0x500000, 0xA02C, 0x600000, 0xA3A8, 0x700000, 0xA224,
-    0x800000, 0xA008, 0x900000, 0xA028, 0xA00000, 0xA00F, 0xB00000, 0xA021,
-    0xC00000, 0xA018, 0xFFEA, 0xA022, 0x10FFEA, 0xA018, 0x20FFEA, 0xA044,
-    0x30FFEA, 0xA034, 0x40FFEA, 0xA014, 0x50FFEA, 0xA001, 0x60FFEA, 0xA018,
-    0x70FFEA, 0xA025, 0x80FFEA, 0xA039,
+const CONN effA6_mes_jp_8_0[22] = {
+    { 0, 0, 0, 0xA316 }, { 16, 0, 0, 0xA143 }, { 32, 0, 0, 0xA10E }, { 48, 0, 0, 0xA019 },
+    { 64, 0, 0, 0xA134 }, { 80, 0, 0, 0xA02C }, { 96, 0, 0, 0xA3A8 }, { 112, 0, 0, 0xA224 },
+    { 128, 0, 0, 0xA008 }, { 144, 0, 0, 0xA028 }, { 160, 0, 0, 0xA00F }, { 176, 0, 0, 0xA021 },
+    { 192, 0, 0, 0xA018 }, { 0, -22, 0, 0xA022 }, { 16, -22, 0, 0xA018 }, { 32, -22, 0, 0xA044 },
+    { 48, -22, 0, 0xA034 }, { 64, -22, 0, 0xA014 }, { 80, -22, 0, 0xA001 }, { 96, -22, 0, 0xA018 },
+    { 112, -22, 0, 0xA025 }, { 128, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_8_2[48] = {
@@ -62537,11 +62537,11 @@ const u32 effA6_mes_jp_8_18[50] = {
     0xE0FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_8_20[30] = {
-    0, 0xA000, 0x100000, 0xA014, 0x200000, 0xA00F, 0x300000, 0xA018,
-    0x400000, 0xA1A8, 0x500000, 0xA057, 0x700000, 0xA12C, 0x800000, 0xA033,
-    0x900000, 0xA00F, 0xA00000, 0xA1A3, 0xB00000, 0xA24C, 0xC00000, 0xA017,
-    0xD00000, 0xA057, 0xFFEA, 0xA185, 0x10FFEA, 0xA03C,
+const CONN effA6_mes_jp_8_20[15] = {
+    { 0, 0, 0, 0xA000 }, { 16, 0, 0, 0xA014 }, { 32, 0, 0, 0xA00F }, { 48, 0, 0, 0xA018 },
+    { 64, 0, 0, 0xA1A8 }, { 80, 0, 0, 0xA057 }, { 112, 0, 0, 0xA12C }, { 128, 0, 0, 0xA033 },
+    { 144, 0, 0, 0xA00F }, { 160, 0, 0, 0xA1A3 }, { 176, 0, 0, 0xA24C }, { 192, 0, 0, 0xA017 },
+    { 208, 0, 0, 0xA057 }, { 0, -22, 0, 0xA185 }, { 16, -22, 0, 0xA03C },
 };
 
 const u32 effA6_mes_jp_8_22[46] = {
@@ -62602,22 +62602,22 @@ const u16 effA6_mes_jp_8_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_9[12] = {
-    { (const CONN*)effA6_mes_jp_9_0, (const u16*)effA6_mes_jp_9_1 }, { (const CONN*)effA6_mes_jp_9_2, (const u16*)effA6_mes_jp_9_3 },
-    { (const CONN*)effA6_mes_jp_9_4, (const u16*)effA6_mes_jp_9_5 }, { (const CONN*)effA6_mes_jp_9_4, (const u16*)effA6_mes_jp_9_7 },
-    { (const CONN*)effA6_mes_jp_9_4, (const u16*)effA6_mes_jp_9_9 }, { (const CONN*)effA6_mes_jp_9_4, (const u16*)effA6_mes_jp_9_11 },
-    { (const CONN*)effA6_mes_jp_9_4, (const u16*)effA6_mes_jp_9_13 }, { (const CONN*)effA6_mes_jp_9_4, (const u16*)effA6_mes_jp_9_15 },
-    { (const CONN*)effA6_mes_jp_9_4, (const u16*)effA6_mes_jp_9_17 }, { (const CONN*)effA6_mes_jp_9_18, (const u16*)effA6_mes_jp_9_19 },
-    { (const CONN*)effA6_mes_jp_9_20, (const u16*)effA6_mes_jp_9_21 }, { (const CONN*)effA6_mes_jp_9_22, (const u16*)effA6_mes_jp_9_23 },
+    { effA6_mes_jp_9_0, effA6_mes_jp_9_1 }, { (const CONN*)effA6_mes_jp_9_2, effA6_mes_jp_9_3 },
+    { (const CONN*)effA6_mes_jp_9_4, effA6_mes_jp_9_5 }, { (const CONN*)effA6_mes_jp_9_4, effA6_mes_jp_9_7 },
+    { (const CONN*)effA6_mes_jp_9_4, effA6_mes_jp_9_9 }, { (const CONN*)effA6_mes_jp_9_4, effA6_mes_jp_9_11 },
+    { (const CONN*)effA6_mes_jp_9_4, effA6_mes_jp_9_13 }, { (const CONN*)effA6_mes_jp_9_4, effA6_mes_jp_9_15 },
+    { (const CONN*)effA6_mes_jp_9_4, effA6_mes_jp_9_17 }, { (const CONN*)effA6_mes_jp_9_18, effA6_mes_jp_9_19 },
+    { (const CONN*)effA6_mes_jp_9_20, effA6_mes_jp_9_21 }, { effA6_mes_jp_9_22, effA6_mes_jp_9_23 },
 };
 
-const u32 effA6_mes_jp_9_0[52] = {
-    0, 0xA099, 0x100000, 0xA090, 0x200000, 0xA09E, 0x300000, 0xA086,
-    0x400000, 0xA249, 0x500000, 0xA420, 0x600000, 0xA022, 0x700000, 0xA003,
-    0x800000, 0xA003, 0x900000, 0xA03E, 0xFFEA, 0xA004, 0x10FFEA, 0xA016,
-    0x20FFEA, 0xA00B, 0x30FFEA, 0xA022, 0x40FFEA, 0xA133, 0x50FFEA, 0xA003,
-    0x60FFEA, 0xA03E, 0x70FFEA, 0xA001, 0x80FFEA, 0xA000, 0x90FFEA, 0xA027,
-    0xA0FFEA, 0xA00E, 0xB0FFEA, 0xA002, 0xC0FFEA, 0xA044, 0xD0FFEA, 0xA034,
-    0xE0FFEA, 0xA018, 0xF0FFEA, 0xA002,
+const CONN effA6_mes_jp_9_0[26] = {
+    { 0, 0, 0, 0xA099 }, { 16, 0, 0, 0xA090 }, { 32, 0, 0, 0xA09E }, { 48, 0, 0, 0xA086 },
+    { 64, 0, 0, 0xA249 }, { 80, 0, 0, 0xA420 }, { 96, 0, 0, 0xA022 }, { 112, 0, 0, 0xA003 },
+    { 128, 0, 0, 0xA003 }, { 144, 0, 0, 0xA03E }, { 0, -22, 0, 0xA004 }, { 16, -22, 0, 0xA016 },
+    { 32, -22, 0, 0xA00B }, { 48, -22, 0, 0xA022 }, { 64, -22, 0, 0xA133 }, { 80, -22, 0, 0xA003 },
+    { 96, -22, 0, 0xA03E }, { 112, -22, 0, 0xA001 }, { 128, -22, 0, 0xA000 }, { 144, -22, 0, 0xA027 },
+    { 160, -22, 0, 0xA00E }, { 176, -22, 0, 0xA002 }, { 192, -22, 0, 0xA044 }, { 208, -22, 0, 0xA034 },
+    { 224, -22, 0, 0xA018 }, { 240, -22, 0, 0xA002 },
 };
 
 const u32 effA6_mes_jp_9_2[46] = {
@@ -62657,13 +62657,13 @@ const u32 effA6_mes_jp_9_20[42] = {
     0x80FFEA, 0xA03C,
 };
 
-const u32 effA6_mes_jp_9_22[46] = {
-    0, 0xA2A0, 0x100000, 0xA019, 0x200000, 0xA109, 0x300000, 0xA02C,
-    0x400000, 0xA166, 0x500000, 0xA021, 0x600000, 0xA00B, 0x700000, 0xA139,
-    0x800000, 0xA057, 0xFFEA, 0xA002, 0x10FFEA, 0xA016, 0x20FFEA, 0xA018,
-    0x30FFEA, 0xA100, 0x40FFEA, 0xA119, 0x50FFEA, 0xA00A, 0x70FFEA, 0xA00E,
-    0x80FFEA, 0xA018, 0x90FFEA, 0xA202, 0xA0FFEA, 0xA04B, 0xB0FFEA, 0xA176,
-    0xC0FFEA, 0xA029, 0xD0FFEA, 0xA001, 0xE0FFEA, 0xA039,
+const CONN effA6_mes_jp_9_22[23] = {
+    { 0, 0, 0, 0xA2A0 }, { 16, 0, 0, 0xA019 }, { 32, 0, 0, 0xA109 }, { 48, 0, 0, 0xA02C },
+    { 64, 0, 0, 0xA166 }, { 80, 0, 0, 0xA021 }, { 96, 0, 0, 0xA00B }, { 112, 0, 0, 0xA139 },
+    { 128, 0, 0, 0xA057 }, { 0, -22, 0, 0xA002 }, { 16, -22, 0, 0xA016 }, { 32, -22, 0, 0xA018 },
+    { 48, -22, 0, 0xA100 }, { 64, -22, 0, 0xA119 }, { 80, -22, 0, 0xA00A }, { 112, -22, 0, 0xA00E },
+    { 128, -22, 0, 0xA018 }, { 144, -22, 0, 0xA202 }, { 160, -22, 0, 0xA04B }, { 176, -22, 0, 0xA176 },
+    { 192, -22, 0, 0xA029 }, { 208, -22, 0, 0xA001 }, { 224, -22, 0, 0xA039 },
 };
 
 const u16 effA6_mes_jp_9_1[7] = {
@@ -62715,20 +62715,20 @@ const u16 effA6_mes_jp_9_23[6] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_10[12] = {
-    { (const CONN*)effA6_mes_jp_10_0, (const u16*)effA6_mes_jp_10_1 }, { (const CONN*)effA6_mes_jp_10_2, (const u16*)effA6_mes_jp_10_3 },
-    { (const CONN*)effA6_mes_jp_10_4, (const u16*)effA6_mes_jp_10_5 }, { (const CONN*)effA6_mes_jp_10_4, (const u16*)effA6_mes_jp_10_7 },
-    { (const CONN*)effA6_mes_jp_10_4, (const u16*)effA6_mes_jp_10_9 }, { (const CONN*)effA6_mes_jp_10_4, (const u16*)effA6_mes_jp_10_11 },
-    { (const CONN*)effA6_mes_jp_10_4, (const u16*)effA6_mes_jp_10_13 }, { (const CONN*)effA6_mes_jp_10_4, (const u16*)effA6_mes_jp_10_15 },
-    { (const CONN*)effA6_mes_jp_10_4, (const u16*)effA6_mes_jp_10_17 }, { (const CONN*)effA6_mes_jp_10_18, (const u16*)effA6_mes_jp_10_19 },
-    { (const CONN*)effA6_mes_jp_10_20, (const u16*)effA6_mes_jp_10_21 }, { (const CONN*)effA6_mes_jp_10_22, (const u16*)effA6_mes_jp_10_23 },
+    { effA6_mes_jp_10_0, effA6_mes_jp_10_1 }, { (const CONN*)effA6_mes_jp_10_2, effA6_mes_jp_10_3 },
+    { (const CONN*)effA6_mes_jp_10_4, effA6_mes_jp_10_5 }, { (const CONN*)effA6_mes_jp_10_4, effA6_mes_jp_10_7 },
+    { (const CONN*)effA6_mes_jp_10_4, effA6_mes_jp_10_9 }, { (const CONN*)effA6_mes_jp_10_4, effA6_mes_jp_10_11 },
+    { (const CONN*)effA6_mes_jp_10_4, effA6_mes_jp_10_13 }, { (const CONN*)effA6_mes_jp_10_4, effA6_mes_jp_10_15 },
+    { (const CONN*)effA6_mes_jp_10_4, effA6_mes_jp_10_17 }, { effA6_mes_jp_10_18, effA6_mes_jp_10_19 },
+    { (const CONN*)effA6_mes_jp_10_20, effA6_mes_jp_10_21 }, { (const CONN*)effA6_mes_jp_10_22, effA6_mes_jp_10_23 },
 };
 
-const u32 effA6_mes_jp_10_0[38] = {
-    0, 0xA167, 0x100000, 0xA274, 0x200000, 0xA037, 0x300000, 0xA177,
-    0x400000, 0xA013, 0x500000, 0xA174, 0x600000, 0xA1A7, 0x700000, 0xA048,
-    0xFFEA, 0xA004, 0x10FFEA, 0xA3DC, 0x20FFEA, 0xA001, 0x30FFEA, 0xA018,
-    0x40FFEA, 0xA17D, 0x50FFEA, 0xA00A, 0x70FFEA, 0xA2AA, 0x80FFEA, 0xA005,
-    0x90FFEA, 0xA021, 0xA0FFEA, 0xA00F, 0xB0FFEA, 0xA001,
+const CONN effA6_mes_jp_10_0[19] = {
+    { 0, 0, 0, 0xA167 }, { 16, 0, 0, 0xA274 }, { 32, 0, 0, 0xA037 }, { 48, 0, 0, 0xA177 },
+    { 64, 0, 0, 0xA013 }, { 80, 0, 0, 0xA174 }, { 96, 0, 0, 0xA1A7 }, { 112, 0, 0, 0xA048 },
+    { 0, -22, 0, 0xA004 }, { 16, -22, 0, 0xA3DC }, { 32, -22, 0, 0xA001 }, { 48, -22, 0, 0xA018 },
+    { 64, -22, 0, 0xA17D }, { 80, -22, 0, 0xA00A }, { 112, -22, 0, 0xA2AA }, { 128, -22, 0, 0xA005 },
+    { 144, -22, 0, 0xA021 }, { 160, -22, 0, 0xA00F }, { 176, -22, 0, 0xA001 },
 };
 
 const u32 effA6_mes_jp_10_2[50] = {
@@ -62750,11 +62750,11 @@ const u32 effA6_mes_jp_10_4[44] = {
     0x70FFEA, 0xA018, 0x80FFEA, 0xA03C,
 };
 
-const u32 effA6_mes_jp_10_18[30] = {
-    0, 0xA273, 0x100000, 0xA028, 0x200000, 0xA057, 0xFFEA, 0xA177,
-    0x10FFEA, 0xA013, 0x20FFEA, 0xA151, 0x30FFEA, 0xA002, 0x40FFEA, 0xA018,
-    0x50FFEA, 0xA014, 0x60FFEA, 0xA026, 0x70FFEA, 0xA312, 0x80FFEA, 0xA119,
-    0x90FFEA, 0xA04B, 0xA0FFEA, 0xA009, 0xB0FFEA, 0xA001,
+const CONN effA6_mes_jp_10_18[15] = {
+    { 0, 0, 0, 0xA273 }, { 16, 0, 0, 0xA028 }, { 32, 0, 0, 0xA057 }, { 0, -22, 0, 0xA177 },
+    { 16, -22, 0, 0xA013 }, { 32, -22, 0, 0xA151 }, { 48, -22, 0, 0xA002 }, { 64, -22, 0, 0xA018 },
+    { 80, -22, 0, 0xA014 }, { 96, -22, 0, 0xA026 }, { 112, -22, 0, 0xA312 }, { 128, -22, 0, 0xA119 },
+    { 144, -22, 0, 0xA04B }, { 160, -22, 0, 0xA009 }, { 176, -22, 0, 0xA001 },
 };
 
 const u32 effA6_mes_jp_10_20[32] = {
@@ -62822,12 +62822,12 @@ const u16 effA6_mes_jp_10_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_11[12] = {
-    { (const CONN*)effA6_mes_jp_11_0, (const u16*)effA6_mes_jp_11_1 }, { (const CONN*)effA6_mes_jp_11_2, (const u16*)effA6_mes_jp_11_3 },
-    { (const CONN*)effA6_mes_jp_11_4, (const u16*)effA6_mes_jp_11_5 }, { (const CONN*)effA6_mes_jp_11_4, (const u16*)effA6_mes_jp_11_7 },
-    { (const CONN*)effA6_mes_jp_11_4, (const u16*)effA6_mes_jp_11_9 }, { (const CONN*)effA6_mes_jp_11_4, (const u16*)effA6_mes_jp_11_11 },
-    { (const CONN*)effA6_mes_jp_11_4, (const u16*)effA6_mes_jp_11_13 }, { (const CONN*)effA6_mes_jp_11_4, (const u16*)effA6_mes_jp_11_15 },
-    { (const CONN*)effA6_mes_jp_11_4, (const u16*)effA6_mes_jp_11_17 }, { (const CONN*)effA6_mes_jp_11_18, (const u16*)effA6_mes_jp_11_19 },
-    { (const CONN*)effA6_mes_jp_11_20, (const u16*)effA6_mes_jp_11_21 }, { (const CONN*)effA6_mes_jp_11_22, (const u16*)effA6_mes_jp_11_23 },
+    { (const CONN*)effA6_mes_jp_11_0, effA6_mes_jp_11_1 }, { effA6_mes_jp_11_2, effA6_mes_jp_11_3 },
+    { (const CONN*)effA6_mes_jp_11_4, effA6_mes_jp_11_5 }, { (const CONN*)effA6_mes_jp_11_4, effA6_mes_jp_11_7 },
+    { (const CONN*)effA6_mes_jp_11_4, effA6_mes_jp_11_9 }, { (const CONN*)effA6_mes_jp_11_4, effA6_mes_jp_11_11 },
+    { (const CONN*)effA6_mes_jp_11_4, effA6_mes_jp_11_13 }, { (const CONN*)effA6_mes_jp_11_4, effA6_mes_jp_11_15 },
+    { (const CONN*)effA6_mes_jp_11_4, effA6_mes_jp_11_17 }, { (const CONN*)effA6_mes_jp_11_18, effA6_mes_jp_11_19 },
+    { (const CONN*)effA6_mes_jp_11_20, effA6_mes_jp_11_21 }, { effA6_mes_jp_11_22, effA6_mes_jp_11_23 },
 };
 
 const u32 effA6_mes_jp_11_0[52] = {
@@ -62840,14 +62840,14 @@ const u32 effA6_mes_jp_11_0[52] = {
     0xD0FFEA, 0xA014, 0xE0FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_11_2[54] = {
-    0, 0xA00E, 0x100000, 0xA018, 0x200000, 0xA10E, 0x400000, 0xA00E,
-    0x500000, 0xA018, 0x600000, 0xA11A, 0x700000, 0xA1AD, 0x900000, 0xA00E,
-    0xA00000, 0xA018, 0xB00000, 0xA143, 0xC00000, 0xA147, 0xD00000, 0xA039,
-    0xFFEA, 0xA004, 0x10FFEA, 0xA029, 0x20FFEA, 0xA03E, 0x30FFEA, 0xA00C,
-    0x40FFEA, 0xA050, 0x50FFEA, 0xA012, 0x70FFEA, 0xA1F1, 0x80FFEA, 0xA008,
-    0x90FFEA, 0xA006, 0xA0FFEA, 0xA033, 0xB0FFEA, 0xA012, 0xC0FFEA, 0xA01F,
-    0xD0FFEA, 0xA00D, 0xE0FFEA, 0xA028, 0xF0FFEA, 0xA039,
+const CONN effA6_mes_jp_11_2[27] = {
+    { 0, 0, 0, 0xA00E }, { 16, 0, 0, 0xA018 }, { 32, 0, 0, 0xA10E }, { 64, 0, 0, 0xA00E },
+    { 80, 0, 0, 0xA018 }, { 96, 0, 0, 0xA11A }, { 112, 0, 0, 0xA1AD }, { 144, 0, 0, 0xA00E },
+    { 160, 0, 0, 0xA018 }, { 176, 0, 0, 0xA143 }, { 192, 0, 0, 0xA147 }, { 208, 0, 0, 0xA039 },
+    { 0, -22, 0, 0xA004 }, { 16, -22, 0, 0xA029 }, { 32, -22, 0, 0xA03E }, { 48, -22, 0, 0xA00C },
+    { 64, -22, 0, 0xA050 }, { 80, -22, 0, 0xA012 }, { 112, -22, 0, 0xA1F1 }, { 128, -22, 0, 0xA008 },
+    { 144, -22, 0, 0xA006 }, { 160, -22, 0, 0xA033 }, { 176, -22, 0, 0xA012 }, { 192, -22, 0, 0xA01F },
+    { 208, -22, 0, 0xA00D }, { 224, -22, 0, 0xA028 }, { 240, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_11_4[36] = {
@@ -62876,11 +62876,11 @@ const u32 effA6_mes_jp_11_20[44] = {
     0x70FFEA, 0xA005, 0x80FFEA, 0xA03C,
 };
 
-const u32 effA6_mes_jp_11_22[32] = {
-    0, 0xA057, 0x100000, 0xA18F, 0x200000, 0xA124, 0x300000, 0xA132,
-    0x500000, 0xA002, 0x600000, 0xA016, 0x700000, 0xA018, 0x800000, 0xA109,
-    0xFFEA, 0xA3A2, 0x10FFEA, 0xA023, 0x20FFEA, 0xA00B, 0x30FFEA, 0xA012,
-    0x40FFEA, 0xA01F, 0x50FFEA, 0xA00D, 0x60FFEA, 0xA001, 0x70FFEA, 0xA039,
+const CONN effA6_mes_jp_11_22[16] = {
+    { 0, 0, 0, 0xA057 }, { 16, 0, 0, 0xA18F }, { 32, 0, 0, 0xA124 }, { 48, 0, 0, 0xA132 },
+    { 80, 0, 0, 0xA002 }, { 96, 0, 0, 0xA016 }, { 112, 0, 0, 0xA018 }, { 128, 0, 0, 0xA109 },
+    { 0, -22, 0, 0xA3A2 }, { 16, -22, 0, 0xA023 }, { 32, -22, 0, 0xA00B }, { 48, -22, 0, 0xA012 },
+    { 64, -22, 0, 0xA01F }, { 80, -22, 0, 0xA00D }, { 96, -22, 0, 0xA001 }, { 112, -22, 0, 0xA039 },
 };
 
 const u16 effA6_mes_jp_11_1[8] = {
@@ -62932,12 +62932,12 @@ const u16 effA6_mes_jp_11_23[6] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_12[12] = {
-    { (const CONN*)effA6_mes_jp_12_0, (const u16*)effA6_mes_jp_12_1 }, { (const CONN*)effA6_mes_jp_12_2, (const u16*)effA6_mes_jp_12_3 },
-    { (const CONN*)effA6_mes_jp_12_4, (const u16*)effA6_mes_jp_12_5 }, { (const CONN*)effA6_mes_jp_12_4, (const u16*)effA6_mes_jp_12_7 },
-    { (const CONN*)effA6_mes_jp_12_4, (const u16*)effA6_mes_jp_12_9 }, { (const CONN*)effA6_mes_jp_12_4, (const u16*)effA6_mes_jp_12_11 },
-    { (const CONN*)effA6_mes_jp_12_4, (const u16*)effA6_mes_jp_12_13 }, { (const CONN*)effA6_mes_jp_12_4, (const u16*)effA6_mes_jp_12_15 },
-    { (const CONN*)effA6_mes_jp_12_4, (const u16*)effA6_mes_jp_12_17 }, { (const CONN*)effA6_mes_jp_12_18, (const u16*)effA6_mes_jp_12_19 },
-    { (const CONN*)effA6_mes_jp_12_20, (const u16*)effA6_mes_jp_12_21 }, { (const CONN*)effA6_mes_jp_12_22, (const u16*)effA6_mes_jp_12_23 },
+    { (const CONN*)effA6_mes_jp_12_0, effA6_mes_jp_12_1 }, { effA6_mes_jp_12_2, effA6_mes_jp_12_3 },
+    { (const CONN*)effA6_mes_jp_12_4, effA6_mes_jp_12_5 }, { (const CONN*)effA6_mes_jp_12_4, effA6_mes_jp_12_7 },
+    { (const CONN*)effA6_mes_jp_12_4, effA6_mes_jp_12_9 }, { (const CONN*)effA6_mes_jp_12_4, effA6_mes_jp_12_11 },
+    { (const CONN*)effA6_mes_jp_12_4, effA6_mes_jp_12_13 }, { (const CONN*)effA6_mes_jp_12_4, effA6_mes_jp_12_15 },
+    { (const CONN*)effA6_mes_jp_12_4, effA6_mes_jp_12_17 }, { effA6_mes_jp_12_18, effA6_mes_jp_12_19 },
+    { (const CONN*)effA6_mes_jp_12_20, effA6_mes_jp_12_21 }, { (const CONN*)effA6_mes_jp_12_22, effA6_mes_jp_12_23 },
 };
 
 const u32 effA6_mes_jp_12_0[44] = {
@@ -62949,13 +62949,13 @@ const u32 effA6_mes_jp_12_0[44] = {
     0xD0FFEA, 0xA033, 0xE0FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_12_2[44] = {
-    0, 0xA288, 0x100000, 0xA02B, 0x200000, 0xA00D, 0x300000, 0xA028,
-    0x400000, 0xA014, 0x500000, 0xA025, 0x700000, 0xA01E, 0x800000, 0xA048,
-    0x900000, 0xA01E, 0xA00000, 0xA048, 0xB00000, 0xA048, 0xC00000, 0xA046,
-    0xD00000, 0xA039, 0xFFEA, 0xA1BF, 0x10FFEA, 0xA151, 0x20FFEA, 0xA04B,
-    0x30FFEA, 0xA30E, 0x40FFEA, 0xA003, 0x50FFEA, 0xA182, 0x60FFEA, 0xA00B,
-    0x70FFEA, 0xA014, 0x80FFEA, 0xA039,
+const CONN effA6_mes_jp_12_2[22] = {
+    { 0, 0, 0, 0xA288 }, { 16, 0, 0, 0xA02B }, { 32, 0, 0, 0xA00D }, { 48, 0, 0, 0xA028 },
+    { 64, 0, 0, 0xA014 }, { 80, 0, 0, 0xA025 }, { 112, 0, 0, 0xA01E }, { 128, 0, 0, 0xA048 },
+    { 144, 0, 0, 0xA01E }, { 160, 0, 0, 0xA048 }, { 176, 0, 0, 0xA048 }, { 192, 0, 0, 0xA046 },
+    { 208, 0, 0, 0xA039 }, { 0, -22, 0, 0xA1BF }, { 16, -22, 0, 0xA151 }, { 32, -22, 0, 0xA04B },
+    { 48, -22, 0, 0xA30E }, { 64, -22, 0, 0xA003 }, { 80, -22, 0, 0xA182 }, { 96, -22, 0, 0xA00B },
+    { 112, -22, 0, 0xA014 }, { 128, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_12_4[30] = {
@@ -62965,13 +62965,13 @@ const u32 effA6_mes_jp_12_4[30] = {
     0xFFEA, 0xA201, 0x10FFEA, 0xA028, 0x20FFEA, 0xA005,
 };
 
-const u32 effA6_mes_jp_12_18[42] = {
-    0, 0xA1AE, 0x100000, 0xA02C, 0x200000, 0xA033, 0x300000, 0xA039,
-    0x500000, 0xA11A, 0x600000, 0xA1AD, 0x700000, 0xA014, 0x800000, 0xA026,
-    0x900000, 0xA1A7, 0xA00000, 0xA008, 0xB00000, 0xA014, 0xC00000, 0xA001,
-    0xD00000, 0xA046, 0xE00000, 0xA033, 0xF00000, 0xA039, 0xFFEA, 0xA012,
-    0x10FFEA, 0xA003, 0x20FFEA, 0xA031, 0x30FFEA, 0xA001, 0x40FFEA, 0xA033,
-    0x50FFEA, 0xA039,
+const CONN effA6_mes_jp_12_18[21] = {
+    { 0, 0, 0, 0xA1AE }, { 16, 0, 0, 0xA02C }, { 32, 0, 0, 0xA033 }, { 48, 0, 0, 0xA039 },
+    { 80, 0, 0, 0xA11A }, { 96, 0, 0, 0xA1AD }, { 112, 0, 0, 0xA014 }, { 128, 0, 0, 0xA026 },
+    { 144, 0, 0, 0xA1A7 }, { 160, 0, 0, 0xA008 }, { 176, 0, 0, 0xA014 }, { 192, 0, 0, 0xA001 },
+    { 208, 0, 0, 0xA046 }, { 224, 0, 0, 0xA033 }, { 240, 0, 0, 0xA039 }, { 0, -22, 0, 0xA012 },
+    { 16, -22, 0, 0xA003 }, { 32, -22, 0, 0xA031 }, { 48, -22, 0, 0xA001 }, { 64, -22, 0, 0xA033 },
+    { 80, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_12_20[42] = {
@@ -63041,12 +63041,12 @@ const u16 effA6_mes_jp_12_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_13[12] = {
-    { (const CONN*)effA6_mes_jp_13_0, (const u16*)effA6_mes_jp_13_1 }, { (const CONN*)effA6_mes_jp_13_2, (const u16*)effA6_mes_jp_13_3 },
-    { (const CONN*)effA6_mes_jp_13_4, (const u16*)effA6_mes_jp_13_5 }, { (const CONN*)effA6_mes_jp_13_4, (const u16*)effA6_mes_jp_13_7 },
-    { (const CONN*)effA6_mes_jp_13_4, (const u16*)effA6_mes_jp_13_9 }, { (const CONN*)effA6_mes_jp_13_4, (const u16*)effA6_mes_jp_13_11 },
-    { (const CONN*)effA6_mes_jp_13_4, (const u16*)effA6_mes_jp_13_13 }, { (const CONN*)effA6_mes_jp_13_4, (const u16*)effA6_mes_jp_13_15 },
-    { (const CONN*)effA6_mes_jp_13_4, (const u16*)effA6_mes_jp_13_17 }, { (const CONN*)effA6_mes_jp_13_18, (const u16*)effA6_mes_jp_13_19 },
-    { (const CONN*)effA6_mes_jp_13_20, (const u16*)effA6_mes_jp_13_21 }, { (const CONN*)effA6_mes_jp_13_22, (const u16*)effA6_mes_jp_13_23 },
+    { (const CONN*)effA6_mes_jp_13_0, effA6_mes_jp_13_1 }, { effA6_mes_jp_13_2, effA6_mes_jp_13_3 },
+    { (const CONN*)effA6_mes_jp_13_4, effA6_mes_jp_13_5 }, { (const CONN*)effA6_mes_jp_13_4, effA6_mes_jp_13_7 },
+    { (const CONN*)effA6_mes_jp_13_4, effA6_mes_jp_13_9 }, { (const CONN*)effA6_mes_jp_13_4, effA6_mes_jp_13_11 },
+    { (const CONN*)effA6_mes_jp_13_4, effA6_mes_jp_13_13 }, { (const CONN*)effA6_mes_jp_13_4, effA6_mes_jp_13_15 },
+    { (const CONN*)effA6_mes_jp_13_4, effA6_mes_jp_13_17 }, { (const CONN*)effA6_mes_jp_13_18, effA6_mes_jp_13_19 },
+    { effA6_mes_jp_13_20, effA6_mes_jp_13_21 }, { (const CONN*)effA6_mes_jp_13_22, effA6_mes_jp_13_23 },
 };
 
 const u32 effA6_mes_jp_13_0[42] = {
@@ -63058,13 +63058,13 @@ const u32 effA6_mes_jp_13_0[42] = {
     0x70FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_13_2[48] = {
-    0, 0xA44B, 0x100000, 0xA44C, 0x200000, 0xA018, 0x300000, 0xA119,
-    0x400000, 0xA04B, 0x500000, 0xA019, 0x600000, 0xA1B6, 0x700000, 0xA1B7,
-    0x800000, 0xA019, 0x900000, 0xA305, 0xA00000, 0xA003, 0xB00000, 0xA016,
-    0xFFEA, 0xA1B6, 0x10FFEA, 0xA1B7, 0x20FFEA, 0xA03E, 0x30FFEA, 0xA12A,
-    0x40FFEA, 0xA02C, 0x50FFEA, 0xA194, 0x60FFEA, 0xA02D, 0x70FFEA, 0xA048,
-    0x80FFEA, 0xA018, 0x90FFEA, 0xA048, 0xB0FFEA, 0xA19F, 0xC0FFEA, 0xA025,
+const CONN effA6_mes_jp_13_2[24] = {
+    { 0, 0, 0, 0xA44B }, { 16, 0, 0, 0xA44C }, { 32, 0, 0, 0xA018 }, { 48, 0, 0, 0xA119 },
+    { 64, 0, 0, 0xA04B }, { 80, 0, 0, 0xA019 }, { 96, 0, 0, 0xA1B6 }, { 112, 0, 0, 0xA1B7 },
+    { 128, 0, 0, 0xA019 }, { 144, 0, 0, 0xA305 }, { 160, 0, 0, 0xA003 }, { 176, 0, 0, 0xA016 },
+    { 0, -22, 0, 0xA1B6 }, { 16, -22, 0, 0xA1B7 }, { 32, -22, 0, 0xA03E }, { 48, -22, 0, 0xA12A },
+    { 64, -22, 0, 0xA02C }, { 80, -22, 0, 0xA194 }, { 96, -22, 0, 0xA02D }, { 112, -22, 0, 0xA048 },
+    { 128, -22, 0, 0xA018 }, { 144, -22, 0, 0xA048 }, { 176, -22, 0, 0xA19F }, { 192, -22, 0, 0xA025 },
 };
 
 const u32 effA6_mes_jp_13_4[28] = {
@@ -63083,12 +63083,12 @@ const u32 effA6_mes_jp_13_18[46] = {
     0x90FFEA, 0xA001, 0xA0FFEA, 0xA001, 0xB0FFEA, 0xA039,
 };
 
-const u32 effA6_mes_jp_13_20[36] = {
-    0, 0xA3F9, 0x100000, 0xA03E, 0x200000, 0xA400, 0x300000, 0xA028,
-    0x400000, 0xA050, 0x500000, 0xA006, 0x600000, 0xA216, 0x700000, 0xA02C,
-    0x800000, 0xA14A, 0x900000, 0xA00C, 0xA00000, 0xA013, 0xB00000, 0xA019,
-    0xC00000, 0xA057, 0xFFEA, 0xA1AE, 0x10FFEA, 0xA139, 0x20FFEA, 0xA048,
-    0x30FFEA, 0xA039, 0x40FFEA, 0xA039,
+const CONN effA6_mes_jp_13_20[18] = {
+    { 0, 0, 0, 0xA3F9 }, { 16, 0, 0, 0xA03E }, { 32, 0, 0, 0xA400 }, { 48, 0, 0, 0xA028 },
+    { 64, 0, 0, 0xA050 }, { 80, 0, 0, 0xA006 }, { 96, 0, 0, 0xA216 }, { 112, 0, 0, 0xA02C },
+    { 128, 0, 0, 0xA14A }, { 144, 0, 0, 0xA00C }, { 160, 0, 0, 0xA013 }, { 176, 0, 0, 0xA019 },
+    { 192, 0, 0, 0xA057 }, { 0, -22, 0, 0xA1AE }, { 16, -22, 0, 0xA139 }, { 32, -22, 0, 0xA048 },
+    { 48, -22, 0, 0xA039 }, { 64, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_13_22[46] = {
@@ -63149,22 +63149,22 @@ const u16 effA6_mes_jp_13_23[7] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_jp_14[12] = {
-    { (const CONN*)effA6_mes_jp_14_0, (const u16*)effA6_mes_jp_14_1 }, { (const CONN*)effA6_mes_jp_14_2, (const u16*)effA6_mes_jp_14_3 },
-    { (const CONN*)effA6_mes_jp_14_4, (const u16*)effA6_mes_jp_14_5 }, { (const CONN*)effA6_mes_jp_14_4, (const u16*)effA6_mes_jp_14_7 },
-    { (const CONN*)effA6_mes_jp_14_4, (const u16*)effA6_mes_jp_14_9 }, { (const CONN*)effA6_mes_jp_14_4, (const u16*)effA6_mes_jp_14_11 },
-    { (const CONN*)effA6_mes_jp_14_4, (const u16*)effA6_mes_jp_14_13 }, { (const CONN*)effA6_mes_jp_14_4, (const u16*)effA6_mes_jp_14_15 },
-    { (const CONN*)effA6_mes_jp_14_4, (const u16*)effA6_mes_jp_14_17 }, { (const CONN*)effA6_mes_jp_14_18, (const u16*)effA6_mes_jp_14_19 },
-    { (const CONN*)effA6_mes_jp_14_20, (const u16*)effA6_mes_jp_14_21 }, { (const CONN*)effA6_mes_jp_14_22, (const u16*)effA6_mes_jp_14_23 },
+    { effA6_mes_jp_14_0, effA6_mes_jp_14_1 }, { (const CONN*)effA6_mes_jp_14_2, effA6_mes_jp_14_3 },
+    { (const CONN*)effA6_mes_jp_14_4, effA6_mes_jp_14_5 }, { (const CONN*)effA6_mes_jp_14_4, effA6_mes_jp_14_7 },
+    { (const CONN*)effA6_mes_jp_14_4, effA6_mes_jp_14_9 }, { (const CONN*)effA6_mes_jp_14_4, effA6_mes_jp_14_11 },
+    { (const CONN*)effA6_mes_jp_14_4, effA6_mes_jp_14_13 }, { (const CONN*)effA6_mes_jp_14_4, effA6_mes_jp_14_15 },
+    { (const CONN*)effA6_mes_jp_14_4, effA6_mes_jp_14_17 }, { effA6_mes_jp_14_18, effA6_mes_jp_14_19 },
+    { effA6_mes_jp_14_20, effA6_mes_jp_14_21 }, { effA6_mes_jp_14_22, effA6_mes_jp_14_23 },
 };
 
-const u32 effA6_mes_jp_14_0[52] = {
-    0, 0xA057, 0x100000, 0xA0A7, 0x200000, 0xA0B5, 0x300000, 0xA082,
-    0x500000, 0xA002, 0x600000, 0xA016, 0x700000, 0xA018, 0x800000, 0xA109,
-    0x900000, 0xA02C, 0xA00000, 0xA434, 0xB00000, 0xA00D, 0xC00000, 0xA001,
-    0xD00000, 0xA039, 0xFFEA, 0xA18F, 0x10FFEA, 0xA009, 0x20FFEA, 0xA00E,
-    0x40FFEA, 0xA17B, 0x50FFEA, 0xA018, 0x60FFEA, 0xA1D6, 0x70FFEA, 0xA239,
-    0x80FFEA, 0xA02C, 0x90FFEA, 0xA011, 0xA0FFEA, 0xA008, 0xB0FFEA, 0xA028,
-    0xC0FFEA, 0xA104, 0xD0FFEA, 0xA039,
+const CONN effA6_mes_jp_14_0[26] = {
+    { 0, 0, 0, 0xA057 }, { 16, 0, 0, 0xA0A7 }, { 32, 0, 0, 0xA0B5 }, { 48, 0, 0, 0xA082 },
+    { 80, 0, 0, 0xA002 }, { 96, 0, 0, 0xA016 }, { 112, 0, 0, 0xA018 }, { 128, 0, 0, 0xA109 },
+    { 144, 0, 0, 0xA02C }, { 160, 0, 0, 0xA434 }, { 176, 0, 0, 0xA00D }, { 192, 0, 0, 0xA001 },
+    { 208, 0, 0, 0xA039 }, { 0, -22, 0, 0xA18F }, { 16, -22, 0, 0xA009 }, { 32, -22, 0, 0xA00E },
+    { 64, -22, 0, 0xA17B }, { 80, -22, 0, 0xA018 }, { 96, -22, 0, 0xA1D6 }, { 112, -22, 0, 0xA239 },
+    { 128, -22, 0, 0xA02C }, { 144, -22, 0, 0xA011 }, { 160, -22, 0, 0xA008 }, { 176, -22, 0, 0xA028 },
+    { 192, -22, 0, 0xA104 }, { 208, -22, 0, 0xA039 },
 };
 
 const u32 effA6_mes_jp_14_2[40] = {
@@ -63182,22 +63182,22 @@ const u32 effA6_mes_jp_14_4[28] = {
     0xE00000, 0xA057, 0xF00000, 0xA03C,
 };
 
-const u32 effA6_mes_jp_14_18[18] = {
-    0, 0xA057, 0x100000, 0xA057, 0x200000, 0xA057, 0x300000, 0xA057,
-    0x400000, 0xA057, 0x500000, 0xA057, 0x600000, 0xA057, 0x700000, 0xA057,
-    0x800000, 0xA057,
+const CONN effA6_mes_jp_14_18[9] = {
+    { 0, 0, 0, 0xA057 }, { 16, 0, 0, 0xA057 }, { 32, 0, 0, 0xA057 }, { 48, 0, 0, 0xA057 },
+    { 64, 0, 0, 0xA057 }, { 80, 0, 0, 0xA057 }, { 96, 0, 0, 0xA057 }, { 112, 0, 0, 0xA057 },
+    { 128, 0, 0, 0xA057 },
 };
 
-const u32 effA6_mes_jp_14_20[20] = {
-    0, 0xA057, 0x100000, 0xA057, 0x200000, 0xA057, 0x300000, 0xA057,
-    0x400000, 0xA185, 0x500000, 0xA048, 0x600000, 0xA057, 0x700000, 0xA057,
-    0x800000, 0xA057, 0x900000, 0xA057,
+const CONN effA6_mes_jp_14_20[10] = {
+    { 0, 0, 0, 0xA057 }, { 16, 0, 0, 0xA057 }, { 32, 0, 0, 0xA057 }, { 48, 0, 0, 0xA057 },
+    { 64, 0, 0, 0xA185 }, { 80, 0, 0, 0xA048 }, { 96, 0, 0, 0xA057 }, { 112, 0, 0, 0xA057 },
+    { 128, 0, 0, 0xA057 }, { 144, 0, 0, 0xA057 },
 };
 
-const u32 effA6_mes_jp_14_22[20] = {
-    0, 0xA057, 0x100000, 0xA057, 0x200000, 0xA057, 0x300000, 0xA057,
-    0x400000, 0xA057, 0x500000, 0xA057, 0x600000, 0xA057, 0x700000, 0xA057,
-    0x800000, 0xA057, 0x900000, 0xA057,
+const CONN effA6_mes_jp_14_22[10] = {
+    { 0, 0, 0, 0xA057 }, { 16, 0, 0, 0xA057 }, { 32, 0, 0, 0xA057 }, { 48, 0, 0, 0xA057 },
+    { 64, 0, 0, 0xA057 }, { 80, 0, 0, 0xA057 }, { 96, 0, 0, 0xA057 }, { 112, 0, 0, 0xA057 },
+    { 128, 0, 0, 0xA057 }, { 144, 0, 0, 0xA057 },
 };
 
 const u16 effA6_mes_jp_14_1[8] = {
@@ -63249,12 +63249,12 @@ const u16 effA6_mes_jp_14_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_0[12] = {
-    { (const CONN*)effA6_mes_en_0_0, (const u16*)effA6_mes_en_0_1 }, { (const CONN*)effA6_mes_en_0_2, (const u16*)effA6_mes_en_0_3 },
-    { (const CONN*)effA6_mes_en_0_4, (const u16*)effA6_mes_en_0_5 }, { (const CONN*)effA6_mes_en_0_4, (const u16*)effA6_mes_en_0_7 },
-    { (const CONN*)effA6_mes_en_0_4, (const u16*)effA6_mes_en_0_9 }, { (const CONN*)effA6_mes_en_0_4, (const u16*)effA6_mes_en_0_11 },
-    { (const CONN*)effA6_mes_en_0_4, (const u16*)effA6_mes_en_0_13 }, { (const CONN*)effA6_mes_en_0_4, (const u16*)effA6_mes_en_0_15 },
-    { (const CONN*)effA6_mes_en_0_4, (const u16*)effA6_mes_en_0_17 }, { (const CONN*)effA6_mes_en_0_18, (const u16*)effA6_mes_en_0_19 },
-    { (const CONN*)effA6_mes_en_0_20, (const u16*)effA6_mes_en_0_21 }, { (const CONN*)effA6_mes_en_0_22, (const u16*)effA6_mes_en_0_23 },
+    { (const CONN*)effA6_mes_en_0_0, effA6_mes_en_0_1 }, { (const CONN*)effA6_mes_en_0_2, effA6_mes_en_0_3 },
+    { (const CONN*)effA6_mes_en_0_4, effA6_mes_en_0_5 }, { (const CONN*)effA6_mes_en_0_4, effA6_mes_en_0_7 },
+    { (const CONN*)effA6_mes_en_0_4, effA6_mes_en_0_9 }, { (const CONN*)effA6_mes_en_0_4, effA6_mes_en_0_11 },
+    { (const CONN*)effA6_mes_en_0_4, effA6_mes_en_0_13 }, { (const CONN*)effA6_mes_en_0_4, effA6_mes_en_0_15 },
+    { (const CONN*)effA6_mes_en_0_4, effA6_mes_en_0_17 }, { (const CONN*)effA6_mes_en_0_18, effA6_mes_en_0_19 },
+    { (const CONN*)effA6_mes_en_0_20, effA6_mes_en_0_21 }, { (const CONN*)effA6_mes_en_0_22, effA6_mes_en_0_23 },
 };
 
 const u32 effA6_mes_en_0_0[106] = {
@@ -63391,12 +63391,12 @@ const u16 effA6_mes_en_0_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_2[12] = {
-    { (const CONN*)effA6_mes_en_2_0, (const u16*)effA6_mes_en_2_1 }, { (const CONN*)effA6_mes_en_2_2, (const u16*)effA6_mes_en_2_3 },
-    { (const CONN*)effA6_mes_en_2_4, (const u16*)effA6_mes_en_2_5 }, { (const CONN*)effA6_mes_en_2_4, (const u16*)effA6_mes_en_2_7 },
-    { (const CONN*)effA6_mes_en_2_4, (const u16*)effA6_mes_en_2_9 }, { (const CONN*)effA6_mes_en_2_4, (const u16*)effA6_mes_en_2_11 },
-    { (const CONN*)effA6_mes_en_2_4, (const u16*)effA6_mes_en_2_13 }, { (const CONN*)effA6_mes_en_2_4, (const u16*)effA6_mes_en_2_15 },
-    { (const CONN*)effA6_mes_en_2_4, (const u16*)effA6_mes_en_2_17 }, { (const CONN*)effA6_mes_en_2_18, (const u16*)effA6_mes_en_2_19 },
-    { (const CONN*)effA6_mes_en_2_20, (const u16*)effA6_mes_en_2_21 }, { (const CONN*)effA6_mes_en_2_22, (const u16*)effA6_mes_en_2_23 },
+    { (const CONN*)effA6_mes_en_2_0, effA6_mes_en_2_1 }, { (const CONN*)effA6_mes_en_2_2, effA6_mes_en_2_3 },
+    { (const CONN*)effA6_mes_en_2_4, effA6_mes_en_2_5 }, { (const CONN*)effA6_mes_en_2_4, effA6_mes_en_2_7 },
+    { (const CONN*)effA6_mes_en_2_4, effA6_mes_en_2_9 }, { (const CONN*)effA6_mes_en_2_4, effA6_mes_en_2_11 },
+    { (const CONN*)effA6_mes_en_2_4, effA6_mes_en_2_13 }, { (const CONN*)effA6_mes_en_2_4, effA6_mes_en_2_15 },
+    { (const CONN*)effA6_mes_en_2_4, effA6_mes_en_2_17 }, { (const CONN*)effA6_mes_en_2_18, effA6_mes_en_2_19 },
+    { effA6_mes_en_2_20, effA6_mes_en_2_21 }, { (const CONN*)effA6_mes_en_2_22, effA6_mes_en_2_23 },
 };
 
 const u32 effA6_mes_en_2_0[92] = {
@@ -63459,10 +63459,10 @@ const u32 effA6_mes_en_2_18[94] = {
     0xE8FFF0, 0x9E88, 0xF0FFF0, 0x9E8D, 0xF8FFF0, 0x9E9C,
 };
 
-const u32 effA6_mes_en_2_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_2_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_2_22[82] = {
@@ -63528,12 +63528,12 @@ const u16 effA6_mes_en_2_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_3[12] = {
-    { (const CONN*)effA6_mes_en_3_0, (const u16*)effA6_mes_en_3_1 }, { (const CONN*)effA6_mes_en_3_2, (const u16*)effA6_mes_en_3_3 },
-    { (const CONN*)effA6_mes_en_3_4, (const u16*)effA6_mes_en_3_5 }, { (const CONN*)effA6_mes_en_3_4, (const u16*)effA6_mes_en_3_7 },
-    { (const CONN*)effA6_mes_en_3_4, (const u16*)effA6_mes_en_3_9 }, { (const CONN*)effA6_mes_en_3_4, (const u16*)effA6_mes_en_3_11 },
-    { (const CONN*)effA6_mes_en_3_4, (const u16*)effA6_mes_en_3_13 }, { (const CONN*)effA6_mes_en_3_4, (const u16*)effA6_mes_en_3_15 },
-    { (const CONN*)effA6_mes_en_3_4, (const u16*)effA6_mes_en_3_17 }, { (const CONN*)effA6_mes_en_3_18, (const u16*)effA6_mes_en_3_19 },
-    { (const CONN*)effA6_mes_en_3_20, (const u16*)effA6_mes_en_3_21 }, { (const CONN*)effA6_mes_en_3_22, (const u16*)effA6_mes_en_3_23 },
+    { (const CONN*)effA6_mes_en_3_0, effA6_mes_en_3_1 }, { (const CONN*)effA6_mes_en_3_2, effA6_mes_en_3_3 },
+    { (const CONN*)effA6_mes_en_3_4, effA6_mes_en_3_5 }, { (const CONN*)effA6_mes_en_3_4, effA6_mes_en_3_7 },
+    { (const CONN*)effA6_mes_en_3_4, effA6_mes_en_3_9 }, { (const CONN*)effA6_mes_en_3_4, effA6_mes_en_3_11 },
+    { (const CONN*)effA6_mes_en_3_4, effA6_mes_en_3_13 }, { (const CONN*)effA6_mes_en_3_4, effA6_mes_en_3_15 },
+    { (const CONN*)effA6_mes_en_3_4, effA6_mes_en_3_17 }, { (const CONN*)effA6_mes_en_3_18, effA6_mes_en_3_19 },
+    { effA6_mes_en_3_20, effA6_mes_en_3_21 }, { (const CONN*)effA6_mes_en_3_22, effA6_mes_en_3_23 },
 };
 
 const u32 effA6_mes_en_3_0[96] = {
@@ -63596,10 +63596,10 @@ const u32 effA6_mes_en_3_18[78] = {
     0x90FFF0, 0x9E92, 0x98FFF0, 0x9E84, 0xA0FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_en_3_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_3_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_3_22[82] = {
@@ -63665,12 +63665,12 @@ const u16 effA6_mes_en_3_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_4[12] = {
-    { (const CONN*)effA6_mes_en_4_0, (const u16*)effA6_mes_en_4_1 }, { (const CONN*)effA6_mes_en_4_2, (const u16*)effA6_mes_en_4_3 },
-    { (const CONN*)effA6_mes_en_4_4, (const u16*)effA6_mes_en_4_5 }, { (const CONN*)effA6_mes_en_4_4, (const u16*)effA6_mes_en_4_7 },
-    { (const CONN*)effA6_mes_en_4_4, (const u16*)effA6_mes_en_4_9 }, { (const CONN*)effA6_mes_en_4_4, (const u16*)effA6_mes_en_4_11 },
-    { (const CONN*)effA6_mes_en_4_4, (const u16*)effA6_mes_en_4_13 }, { (const CONN*)effA6_mes_en_4_4, (const u16*)effA6_mes_en_4_15 },
-    { (const CONN*)effA6_mes_en_4_4, (const u16*)effA6_mes_en_4_17 }, { (const CONN*)effA6_mes_en_4_18, (const u16*)effA6_mes_en_4_19 },
-    { (const CONN*)effA6_mes_en_4_20, (const u16*)effA6_mes_en_4_21 }, { (const CONN*)effA6_mes_en_4_22, (const u16*)effA6_mes_en_4_23 },
+    { (const CONN*)effA6_mes_en_4_0, effA6_mes_en_4_1 }, { (const CONN*)effA6_mes_en_4_2, effA6_mes_en_4_3 },
+    { (const CONN*)effA6_mes_en_4_4, effA6_mes_en_4_5 }, { (const CONN*)effA6_mes_en_4_4, effA6_mes_en_4_7 },
+    { (const CONN*)effA6_mes_en_4_4, effA6_mes_en_4_9 }, { (const CONN*)effA6_mes_en_4_4, effA6_mes_en_4_11 },
+    { (const CONN*)effA6_mes_en_4_4, effA6_mes_en_4_13 }, { (const CONN*)effA6_mes_en_4_4, effA6_mes_en_4_15 },
+    { (const CONN*)effA6_mes_en_4_4, effA6_mes_en_4_17 }, { (const CONN*)effA6_mes_en_4_18, effA6_mes_en_4_19 },
+    { effA6_mes_en_4_20, effA6_mes_en_4_21 }, { (const CONN*)effA6_mes_en_4_22, effA6_mes_en_4_23 },
 };
 
 const u32 effA6_mes_en_4_0[102] = {
@@ -63736,10 +63736,10 @@ const u32 effA6_mes_en_4_18[94] = {
     0xC0FFF0, 0x9E95, 0xC8FFF0, 0x9E84, 0xD0FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_en_4_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_4_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_4_22[82] = {
@@ -63805,12 +63805,12 @@ const u16 effA6_mes_en_4_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_5[12] = {
-    { (const CONN*)effA6_mes_en_5_0, (const u16*)effA6_mes_en_5_1 }, { (const CONN*)effA6_mes_en_5_2, (const u16*)effA6_mes_en_5_3 },
-    { (const CONN*)effA6_mes_en_5_4, (const u16*)effA6_mes_en_5_5 }, { (const CONN*)effA6_mes_en_5_4, (const u16*)effA6_mes_en_5_7 },
-    { (const CONN*)effA6_mes_en_5_4, (const u16*)effA6_mes_en_5_9 }, { (const CONN*)effA6_mes_en_5_4, (const u16*)effA6_mes_en_5_11 },
-    { (const CONN*)effA6_mes_en_5_4, (const u16*)effA6_mes_en_5_13 }, { (const CONN*)effA6_mes_en_5_4, (const u16*)effA6_mes_en_5_15 },
-    { (const CONN*)effA6_mes_en_5_4, (const u16*)effA6_mes_en_5_17 }, { (const CONN*)effA6_mes_en_5_18, (const u16*)effA6_mes_en_5_19 },
-    { (const CONN*)effA6_mes_en_5_20, (const u16*)effA6_mes_en_5_21 }, { (const CONN*)effA6_mes_en_5_22, (const u16*)effA6_mes_en_5_23 },
+    { (const CONN*)effA6_mes_en_5_0, effA6_mes_en_5_1 }, { (const CONN*)effA6_mes_en_5_2, effA6_mes_en_5_3 },
+    { (const CONN*)effA6_mes_en_5_4, effA6_mes_en_5_5 }, { (const CONN*)effA6_mes_en_5_4, effA6_mes_en_5_7 },
+    { (const CONN*)effA6_mes_en_5_4, effA6_mes_en_5_9 }, { (const CONN*)effA6_mes_en_5_4, effA6_mes_en_5_11 },
+    { (const CONN*)effA6_mes_en_5_4, effA6_mes_en_5_13 }, { (const CONN*)effA6_mes_en_5_4, effA6_mes_en_5_15 },
+    { (const CONN*)effA6_mes_en_5_4, effA6_mes_en_5_17 }, { (const CONN*)effA6_mes_en_5_18, effA6_mes_en_5_19 },
+    { effA6_mes_en_5_20, effA6_mes_en_5_21 }, { (const CONN*)effA6_mes_en_5_22, effA6_mes_en_5_23 },
 };
 
 const u32 effA6_mes_en_5_0[76] = {
@@ -63875,10 +63875,10 @@ const u32 effA6_mes_en_5_18[104] = {
     0xD0FFF0, 0x9E84, 0xD8FFF0, 0x9E80, 0xE0FFF0, 0x9E83, 0xE8FFF0, 0x9E9B,
 };
 
-const u32 effA6_mes_en_5_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_5_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_5_22[82] = {
@@ -63944,12 +63944,12 @@ const u16 effA6_mes_en_5_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_6[12] = {
-    { (const CONN*)effA6_mes_en_6_0, (const u16*)effA6_mes_en_6_1 }, { (const CONN*)effA6_mes_en_6_2, (const u16*)effA6_mes_en_6_3 },
-    { (const CONN*)effA6_mes_en_6_4, (const u16*)effA6_mes_en_6_5 }, { (const CONN*)effA6_mes_en_6_6, (const u16*)effA6_mes_en_6_7 },
-    { (const CONN*)effA6_mes_en_6_8, (const u16*)effA6_mes_en_6_9 }, { (const CONN*)effA6_mes_en_6_10, (const u16*)effA6_mes_en_6_11 },
-    { (const CONN*)effA6_mes_en_6_12, (const u16*)effA6_mes_en_6_13 }, { (const CONN*)effA6_mes_en_6_14, (const u16*)effA6_mes_en_6_15 },
-    { (const CONN*)effA6_mes_en_6_16, (const u16*)effA6_mes_en_6_17 }, { (const CONN*)effA6_mes_en_6_18, (const u16*)effA6_mes_en_6_19 },
-    { (const CONN*)effA6_mes_en_6_20, (const u16*)effA6_mes_en_6_21 }, { (const CONN*)effA6_mes_en_6_22, (const u16*)effA6_mes_en_6_23 },
+    { (const CONN*)effA6_mes_en_6_0, effA6_mes_en_6_1 }, { (const CONN*)effA6_mes_en_6_2, effA6_mes_en_6_3 },
+    { (const CONN*)effA6_mes_en_6_4, effA6_mes_en_6_5 }, { (const CONN*)effA6_mes_en_6_6, effA6_mes_en_6_7 },
+    { (const CONN*)effA6_mes_en_6_8, effA6_mes_en_6_9 }, { (const CONN*)effA6_mes_en_6_10, effA6_mes_en_6_11 },
+    { (const CONN*)effA6_mes_en_6_12, effA6_mes_en_6_13 }, { (const CONN*)effA6_mes_en_6_14, effA6_mes_en_6_15 },
+    { (const CONN*)effA6_mes_en_6_16, effA6_mes_en_6_17 }, { (const CONN*)effA6_mes_en_6_18, effA6_mes_en_6_19 },
+    { effA6_mes_en_6_20, effA6_mes_en_6_21 }, { (const CONN*)effA6_mes_en_6_22, effA6_mes_en_6_23 },
 };
 
 const u32 effA6_mes_en_6_0[98] = {
@@ -64093,10 +64093,10 @@ const u32 effA6_mes_en_6_18[48] = {
     0xC00000, 0x9E8E, 0xD00000, 0x9E88, 0xD80000, 0x9E93, 0xE00000, 0x9E9A,
 };
 
-const u32 effA6_mes_en_6_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_6_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_6_22[82] = {
@@ -64162,12 +64162,12 @@ const u16 effA6_mes_en_6_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_7[12] = {
-    { (const CONN*)effA6_mes_en_7_0, (const u16*)effA6_mes_en_7_1 }, { (const CONN*)effA6_mes_en_7_2, (const u16*)effA6_mes_en_7_3 },
-    { (const CONN*)effA6_mes_en_7_4, (const u16*)effA6_mes_en_7_5 }, { (const CONN*)effA6_mes_en_7_4, (const u16*)effA6_mes_en_7_7 },
-    { (const CONN*)effA6_mes_en_7_4, (const u16*)effA6_mes_en_7_9 }, { (const CONN*)effA6_mes_en_7_4, (const u16*)effA6_mes_en_7_11 },
-    { (const CONN*)effA6_mes_en_7_4, (const u16*)effA6_mes_en_7_13 }, { (const CONN*)effA6_mes_en_7_4, (const u16*)effA6_mes_en_7_15 },
-    { (const CONN*)effA6_mes_en_7_4, (const u16*)effA6_mes_en_7_17 }, { (const CONN*)effA6_mes_en_7_18, (const u16*)effA6_mes_en_7_19 },
-    { (const CONN*)effA6_mes_en_7_20, (const u16*)effA6_mes_en_7_21 }, { (const CONN*)effA6_mes_en_7_22, (const u16*)effA6_mes_en_7_23 },
+    { (const CONN*)effA6_mes_en_7_0, effA6_mes_en_7_1 }, { (const CONN*)effA6_mes_en_7_2, effA6_mes_en_7_3 },
+    { (const CONN*)effA6_mes_en_7_4, effA6_mes_en_7_5 }, { (const CONN*)effA6_mes_en_7_4, effA6_mes_en_7_7 },
+    { (const CONN*)effA6_mes_en_7_4, effA6_mes_en_7_9 }, { (const CONN*)effA6_mes_en_7_4, effA6_mes_en_7_11 },
+    { (const CONN*)effA6_mes_en_7_4, effA6_mes_en_7_13 }, { (const CONN*)effA6_mes_en_7_4, effA6_mes_en_7_15 },
+    { (const CONN*)effA6_mes_en_7_4, effA6_mes_en_7_17 }, { (const CONN*)effA6_mes_en_7_18, effA6_mes_en_7_19 },
+    { effA6_mes_en_7_20, effA6_mes_en_7_21 }, { (const CONN*)effA6_mes_en_7_22, effA6_mes_en_7_23 },
 };
 
 const u32 effA6_mes_en_7_0[100] = {
@@ -64231,10 +64231,10 @@ const u32 effA6_mes_en_7_18[100] = {
     0xD0FFF0, 0x9E8D, 0xD8FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_en_7_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_7_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_7_22[82] = {
@@ -64300,12 +64300,12 @@ const u16 effA6_mes_en_7_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_8[12] = {
-    { (const CONN*)effA6_mes_en_8_0, (const u16*)effA6_mes_en_8_1 }, { (const CONN*)effA6_mes_en_8_2, (const u16*)effA6_mes_en_8_3 },
-    { (const CONN*)effA6_mes_en_8_4, (const u16*)effA6_mes_en_8_5 }, { (const CONN*)effA6_mes_en_8_4, (const u16*)effA6_mes_en_8_7 },
-    { (const CONN*)effA6_mes_en_8_4, (const u16*)effA6_mes_en_8_9 }, { (const CONN*)effA6_mes_en_8_4, (const u16*)effA6_mes_en_8_11 },
-    { (const CONN*)effA6_mes_en_8_4, (const u16*)effA6_mes_en_8_13 }, { (const CONN*)effA6_mes_en_8_4, (const u16*)effA6_mes_en_8_15 },
-    { (const CONN*)effA6_mes_en_8_4, (const u16*)effA6_mes_en_8_17 }, { (const CONN*)effA6_mes_en_8_18, (const u16*)effA6_mes_en_8_19 },
-    { (const CONN*)effA6_mes_en_8_20, (const u16*)effA6_mes_en_8_21 }, { (const CONN*)effA6_mes_en_8_22, (const u16*)effA6_mes_en_8_23 },
+    { (const CONN*)effA6_mes_en_8_0, effA6_mes_en_8_1 }, { (const CONN*)effA6_mes_en_8_2, effA6_mes_en_8_3 },
+    { (const CONN*)effA6_mes_en_8_4, effA6_mes_en_8_5 }, { (const CONN*)effA6_mes_en_8_4, effA6_mes_en_8_7 },
+    { (const CONN*)effA6_mes_en_8_4, effA6_mes_en_8_9 }, { (const CONN*)effA6_mes_en_8_4, effA6_mes_en_8_11 },
+    { (const CONN*)effA6_mes_en_8_4, effA6_mes_en_8_13 }, { (const CONN*)effA6_mes_en_8_4, effA6_mes_en_8_15 },
+    { (const CONN*)effA6_mes_en_8_4, effA6_mes_en_8_17 }, { (const CONN*)effA6_mes_en_8_18, effA6_mes_en_8_19 },
+    { (const CONN*)effA6_mes_en_8_20, effA6_mes_en_8_21 }, { (const CONN*)effA6_mes_en_8_22, effA6_mes_en_8_23 },
 };
 
 const u32 effA6_mes_en_8_0[78] = {
@@ -64435,12 +64435,12 @@ const u16 effA6_mes_en_8_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_9[12] = {
-    { (const CONN*)effA6_mes_en_9_0, (const u16*)effA6_mes_en_9_1 }, { (const CONN*)effA6_mes_en_9_2, (const u16*)effA6_mes_en_9_3 },
-    { (const CONN*)effA6_mes_en_9_4, (const u16*)effA6_mes_en_9_5 }, { (const CONN*)effA6_mes_en_9_4, (const u16*)effA6_mes_en_9_7 },
-    { (const CONN*)effA6_mes_en_9_4, (const u16*)effA6_mes_en_9_9 }, { (const CONN*)effA6_mes_en_9_4, (const u16*)effA6_mes_en_9_11 },
-    { (const CONN*)effA6_mes_en_9_4, (const u16*)effA6_mes_en_9_13 }, { (const CONN*)effA6_mes_en_9_4, (const u16*)effA6_mes_en_9_15 },
-    { (const CONN*)effA6_mes_en_9_4, (const u16*)effA6_mes_en_9_17 }, { (const CONN*)effA6_mes_en_9_18, (const u16*)effA6_mes_en_9_19 },
-    { (const CONN*)effA6_mes_en_9_20, (const u16*)effA6_mes_en_9_21 }, { (const CONN*)effA6_mes_en_9_22, (const u16*)effA6_mes_en_9_23 },
+    { (const CONN*)effA6_mes_en_9_0, effA6_mes_en_9_1 }, { (const CONN*)effA6_mes_en_9_2, effA6_mes_en_9_3 },
+    { (const CONN*)effA6_mes_en_9_4, effA6_mes_en_9_5 }, { (const CONN*)effA6_mes_en_9_4, effA6_mes_en_9_7 },
+    { (const CONN*)effA6_mes_en_9_4, effA6_mes_en_9_9 }, { (const CONN*)effA6_mes_en_9_4, effA6_mes_en_9_11 },
+    { (const CONN*)effA6_mes_en_9_4, effA6_mes_en_9_13 }, { (const CONN*)effA6_mes_en_9_4, effA6_mes_en_9_15 },
+    { (const CONN*)effA6_mes_en_9_4, effA6_mes_en_9_17 }, { (const CONN*)effA6_mes_en_9_18, effA6_mes_en_9_19 },
+    { effA6_mes_en_9_20, effA6_mes_en_9_21 }, { (const CONN*)effA6_mes_en_9_22, effA6_mes_en_9_23 },
 };
 
 const u32 effA6_mes_en_9_0[102] = {
@@ -64505,10 +64505,10 @@ const u32 effA6_mes_en_9_18[94] = {
     0xA8FFF0, 0x9E8D, 0xB0FFF0, 0x9E84, 0xB8FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_en_9_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_9_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_9_22[82] = {
@@ -64574,12 +64574,12 @@ const u16 effA6_mes_en_9_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_10[12] = {
-    { (const CONN*)effA6_mes_en_10_0, (const u16*)effA6_mes_en_10_1 }, { (const CONN*)effA6_mes_en_10_2, (const u16*)effA6_mes_en_10_3 },
-    { (const CONN*)effA6_mes_en_10_4, (const u16*)effA6_mes_en_10_5 }, { (const CONN*)effA6_mes_en_10_4, (const u16*)effA6_mes_en_10_7 },
-    { (const CONN*)effA6_mes_en_10_4, (const u16*)effA6_mes_en_10_9 }, { (const CONN*)effA6_mes_en_10_4, (const u16*)effA6_mes_en_10_11 },
-    { (const CONN*)effA6_mes_en_10_4, (const u16*)effA6_mes_en_10_13 }, { (const CONN*)effA6_mes_en_10_4, (const u16*)effA6_mes_en_10_15 },
-    { (const CONN*)effA6_mes_en_10_4, (const u16*)effA6_mes_en_10_17 }, { (const CONN*)effA6_mes_en_10_18, (const u16*)effA6_mes_en_10_19 },
-    { (const CONN*)effA6_mes_en_10_20, (const u16*)effA6_mes_en_10_21 }, { (const CONN*)effA6_mes_en_10_22, (const u16*)effA6_mes_en_10_23 },
+    { (const CONN*)effA6_mes_en_10_0, effA6_mes_en_10_1 }, { (const CONN*)effA6_mes_en_10_2, effA6_mes_en_10_3 },
+    { (const CONN*)effA6_mes_en_10_4, effA6_mes_en_10_5 }, { (const CONN*)effA6_mes_en_10_4, effA6_mes_en_10_7 },
+    { (const CONN*)effA6_mes_en_10_4, effA6_mes_en_10_9 }, { (const CONN*)effA6_mes_en_10_4, effA6_mes_en_10_11 },
+    { (const CONN*)effA6_mes_en_10_4, effA6_mes_en_10_13 }, { (const CONN*)effA6_mes_en_10_4, effA6_mes_en_10_15 },
+    { (const CONN*)effA6_mes_en_10_4, effA6_mes_en_10_17 }, { (const CONN*)effA6_mes_en_10_18, effA6_mes_en_10_19 },
+    { effA6_mes_en_10_20, effA6_mes_en_10_21 }, { (const CONN*)effA6_mes_en_10_22, effA6_mes_en_10_23 },
 };
 
 const u32 effA6_mes_en_10_0[104] = {
@@ -64644,10 +64644,10 @@ const u32 effA6_mes_en_10_18[96] = {
     0xB8FFF0, 0x9E80, 0xC0FFF0, 0x9E82, 0xC8FFF0, 0x9E8A, 0xD0FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_en_10_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_10_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_10_22[82] = {
@@ -64713,12 +64713,12 @@ const u16 effA6_mes_en_10_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_11[12] = {
-    { (const CONN*)effA6_mes_en_11_0, (const u16*)effA6_mes_en_11_1 }, { (const CONN*)effA6_mes_en_11_2, (const u16*)effA6_mes_en_11_3 },
-    { (const CONN*)effA6_mes_en_11_4, (const u16*)effA6_mes_en_11_5 }, { (const CONN*)effA6_mes_en_11_4, (const u16*)effA6_mes_en_11_7 },
-    { (const CONN*)effA6_mes_en_11_4, (const u16*)effA6_mes_en_11_9 }, { (const CONN*)effA6_mes_en_11_4, (const u16*)effA6_mes_en_11_11 },
-    { (const CONN*)effA6_mes_en_11_4, (const u16*)effA6_mes_en_11_13 }, { (const CONN*)effA6_mes_en_11_4, (const u16*)effA6_mes_en_11_15 },
-    { (const CONN*)effA6_mes_en_11_4, (const u16*)effA6_mes_en_11_17 }, { (const CONN*)effA6_mes_en_11_18, (const u16*)effA6_mes_en_11_19 },
-    { (const CONN*)effA6_mes_en_11_20, (const u16*)effA6_mes_en_11_21 }, { (const CONN*)effA6_mes_en_11_22, (const u16*)effA6_mes_en_11_23 },
+    { (const CONN*)effA6_mes_en_11_0, effA6_mes_en_11_1 }, { (const CONN*)effA6_mes_en_11_2, effA6_mes_en_11_3 },
+    { (const CONN*)effA6_mes_en_11_4, effA6_mes_en_11_5 }, { (const CONN*)effA6_mes_en_11_4, effA6_mes_en_11_7 },
+    { (const CONN*)effA6_mes_en_11_4, effA6_mes_en_11_9 }, { (const CONN*)effA6_mes_en_11_4, effA6_mes_en_11_11 },
+    { (const CONN*)effA6_mes_en_11_4, effA6_mes_en_11_13 }, { (const CONN*)effA6_mes_en_11_4, effA6_mes_en_11_15 },
+    { (const CONN*)effA6_mes_en_11_4, effA6_mes_en_11_17 }, { (const CONN*)effA6_mes_en_11_18, effA6_mes_en_11_19 },
+    { (const CONN*)effA6_mes_en_11_20, effA6_mes_en_11_21 }, { (const CONN*)effA6_mes_en_11_22, effA6_mes_en_11_23 },
 };
 
 const u32 effA6_mes_en_11_0[68] = {
@@ -64848,12 +64848,12 @@ const u16 effA6_mes_en_11_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_12[12] = {
-    { (const CONN*)effA6_mes_en_12_0, (const u16*)effA6_mes_en_12_1 }, { (const CONN*)effA6_mes_en_12_2, (const u16*)effA6_mes_en_12_3 },
-    { (const CONN*)effA6_mes_en_12_4, (const u16*)effA6_mes_en_12_5 }, { (const CONN*)effA6_mes_en_12_4, (const u16*)effA6_mes_en_12_7 },
-    { (const CONN*)effA6_mes_en_12_4, (const u16*)effA6_mes_en_12_9 }, { (const CONN*)effA6_mes_en_12_4, (const u16*)effA6_mes_en_12_11 },
-    { (const CONN*)effA6_mes_en_12_4, (const u16*)effA6_mes_en_12_13 }, { (const CONN*)effA6_mes_en_12_4, (const u16*)effA6_mes_en_12_15 },
-    { (const CONN*)effA6_mes_en_12_4, (const u16*)effA6_mes_en_12_17 }, { (const CONN*)effA6_mes_en_12_18, (const u16*)effA6_mes_en_12_19 },
-    { (const CONN*)effA6_mes_en_12_20, (const u16*)effA6_mes_en_12_21 }, { (const CONN*)effA6_mes_en_12_22, (const u16*)effA6_mes_en_12_23 },
+    { (const CONN*)effA6_mes_en_12_0, effA6_mes_en_12_1 }, { (const CONN*)effA6_mes_en_12_2, effA6_mes_en_12_3 },
+    { (const CONN*)effA6_mes_en_12_4, effA6_mes_en_12_5 }, { (const CONN*)effA6_mes_en_12_4, effA6_mes_en_12_7 },
+    { (const CONN*)effA6_mes_en_12_4, effA6_mes_en_12_9 }, { (const CONN*)effA6_mes_en_12_4, effA6_mes_en_12_11 },
+    { (const CONN*)effA6_mes_en_12_4, effA6_mes_en_12_13 }, { (const CONN*)effA6_mes_en_12_4, effA6_mes_en_12_15 },
+    { (const CONN*)effA6_mes_en_12_4, effA6_mes_en_12_17 }, { (const CONN*)effA6_mes_en_12_18, effA6_mes_en_12_19 },
+    { (const CONN*)effA6_mes_en_12_20, effA6_mes_en_12_21 }, { (const CONN*)effA6_mes_en_12_22, effA6_mes_en_12_23 },
 };
 
 const u32 effA6_mes_en_12_0[106] = {
@@ -64991,12 +64991,12 @@ const u16 effA6_mes_en_12_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_13[12] = {
-    { (const CONN*)effA6_mes_en_13_0, (const u16*)effA6_mes_en_13_1 }, { (const CONN*)effA6_mes_en_13_2, (const u16*)effA6_mes_en_13_3 },
-    { (const CONN*)effA6_mes_en_13_4, (const u16*)effA6_mes_en_13_5 }, { (const CONN*)effA6_mes_en_13_4, (const u16*)effA6_mes_en_13_7 },
-    { (const CONN*)effA6_mes_en_13_4, (const u16*)effA6_mes_en_13_9 }, { (const CONN*)effA6_mes_en_13_4, (const u16*)effA6_mes_en_13_11 },
-    { (const CONN*)effA6_mes_en_13_4, (const u16*)effA6_mes_en_13_13 }, { (const CONN*)effA6_mes_en_13_4, (const u16*)effA6_mes_en_13_15 },
-    { (const CONN*)effA6_mes_en_13_4, (const u16*)effA6_mes_en_13_17 }, { (const CONN*)effA6_mes_en_13_18, (const u16*)effA6_mes_en_13_19 },
-    { (const CONN*)effA6_mes_en_13_20, (const u16*)effA6_mes_en_13_21 }, { (const CONN*)effA6_mes_en_13_22, (const u16*)effA6_mes_en_13_23 },
+    { (const CONN*)effA6_mes_en_13_0, effA6_mes_en_13_1 }, { (const CONN*)effA6_mes_en_13_2, effA6_mes_en_13_3 },
+    { (const CONN*)effA6_mes_en_13_4, effA6_mes_en_13_5 }, { (const CONN*)effA6_mes_en_13_4, effA6_mes_en_13_7 },
+    { (const CONN*)effA6_mes_en_13_4, effA6_mes_en_13_9 }, { (const CONN*)effA6_mes_en_13_4, effA6_mes_en_13_11 },
+    { (const CONN*)effA6_mes_en_13_4, effA6_mes_en_13_13 }, { (const CONN*)effA6_mes_en_13_4, effA6_mes_en_13_15 },
+    { (const CONN*)effA6_mes_en_13_4, effA6_mes_en_13_17 }, { (const CONN*)effA6_mes_en_13_18, effA6_mes_en_13_19 },
+    { effA6_mes_en_13_20, effA6_mes_en_13_21 }, { (const CONN*)effA6_mes_en_13_22, effA6_mes_en_13_23 },
 };
 
 const u32 effA6_mes_en_13_0[100] = {
@@ -65055,10 +65055,10 @@ const u32 effA6_mes_en_13_18[84] = {
     0x90FFF0, 0x9E84, 0x98FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_en_13_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_13_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_13_22[82] = {
@@ -65124,12 +65124,12 @@ const u16 effA6_mes_en_13_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_en_14[12] = {
-    { (const CONN*)effA6_mes_en_14_0, (const u16*)effA6_mes_en_14_1 }, { (const CONN*)effA6_mes_en_14_2, (const u16*)effA6_mes_en_14_3 },
-    { (const CONN*)effA6_mes_en_14_4, (const u16*)effA6_mes_en_14_5 }, { (const CONN*)effA6_mes_en_14_4, (const u16*)effA6_mes_en_14_7 },
-    { (const CONN*)effA6_mes_en_14_4, (const u16*)effA6_mes_en_14_9 }, { (const CONN*)effA6_mes_en_14_4, (const u16*)effA6_mes_en_14_11 },
-    { (const CONN*)effA6_mes_en_14_4, (const u16*)effA6_mes_en_14_13 }, { (const CONN*)effA6_mes_en_14_4, (const u16*)effA6_mes_en_14_15 },
-    { (const CONN*)effA6_mes_en_14_4, (const u16*)effA6_mes_en_14_17 }, { (const CONN*)effA6_mes_en_14_18, (const u16*)effA6_mes_en_14_19 },
-    { (const CONN*)effA6_mes_en_14_20, (const u16*)effA6_mes_en_14_21 }, { (const CONN*)effA6_mes_en_14_22, (const u16*)effA6_mes_en_14_23 },
+    { (const CONN*)effA6_mes_en_14_0, effA6_mes_en_14_1 }, { (const CONN*)effA6_mes_en_14_2, effA6_mes_en_14_3 },
+    { (const CONN*)effA6_mes_en_14_4, effA6_mes_en_14_5 }, { (const CONN*)effA6_mes_en_14_4, effA6_mes_en_14_7 },
+    { (const CONN*)effA6_mes_en_14_4, effA6_mes_en_14_9 }, { (const CONN*)effA6_mes_en_14_4, effA6_mes_en_14_11 },
+    { (const CONN*)effA6_mes_en_14_4, effA6_mes_en_14_13 }, { (const CONN*)effA6_mes_en_14_4, effA6_mes_en_14_15 },
+    { (const CONN*)effA6_mes_en_14_4, effA6_mes_en_14_17 }, { (const CONN*)effA6_mes_en_14_18, effA6_mes_en_14_19 },
+    { effA6_mes_en_14_20, effA6_mes_en_14_21 }, { (const CONN*)effA6_mes_en_14_22, effA6_mes_en_14_23 },
 };
 
 const u32 effA6_mes_en_14_0[90] = {
@@ -65186,10 +65186,10 @@ const u32 effA6_mes_en_14_18[44] = {
     0xA00000, 0x9E9C, 0xA80000, 0x9E9C,
 };
 
-const u32 effA6_mes_en_14_20[22] = {
-    0, 0x9EB6, 0x80000, 0x9E87, 0x100000, 0x9E8E, 0x200000, 0x9E80,
-    0x280000, 0x9E91, 0x300000, 0x9E84, 0x400000, 0x9E98, 0x480000, 0x9E8E,
-    0x500000, 0x9E94, 0x580000, 0x9E9B, 0x600000, 0x9E9A,
+const CONN effA6_mes_en_14_20[11] = {
+    { 0, 0, 0, 0x9EB6 }, { 8, 0, 0, 0x9E87 }, { 16, 0, 0, 0x9E8E }, { 32, 0, 0, 0x9E80 },
+    { 40, 0, 0, 0x9E91 }, { 48, 0, 0, 0x9E84 }, { 64, 0, 0, 0x9E98 }, { 72, 0, 0, 0x9E8E },
+    { 80, 0, 0, 0x9E94 }, { 88, 0, 0, 0x9E9B }, { 96, 0, 0, 0x9E9A },
 };
 
 const u32 effA6_mes_en_14_22[82] = {
@@ -65255,12 +65255,12 @@ const u16 effA6_mes_en_14_23[3] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_0[12] = {
-    { (const CONN*)effA6_mes_es_0_0, (const u16*)effA6_mes_es_0_1 }, { (const CONN*)effA6_mes_es_0_2, (const u16*)effA6_mes_es_0_3 },
-    { (const CONN*)effA6_mes_es_0_4, (const u16*)effA6_mes_es_0_5 }, { (const CONN*)effA6_mes_es_0_4, (const u16*)effA6_mes_es_0_7 },
-    { (const CONN*)effA6_mes_es_0_4, (const u16*)effA6_mes_es_0_9 }, { (const CONN*)effA6_mes_es_0_4, (const u16*)effA6_mes_es_0_11 },
-    { (const CONN*)effA6_mes_es_0_4, (const u16*)effA6_mes_es_0_13 }, { (const CONN*)effA6_mes_es_0_4, (const u16*)effA6_mes_es_0_15 },
-    { (const CONN*)effA6_mes_es_0_4, (const u16*)effA6_mes_es_0_17 }, { (const CONN*)effA6_mes_es_0_18, (const u16*)effA6_mes_es_0_19 },
-    { (const CONN*)effA6_mes_es_0_20, (const u16*)effA6_mes_es_0_21 }, { (const CONN*)effA6_mes_es_0_22, (const u16*)effA6_mes_es_0_23 },
+    { (const CONN*)effA6_mes_es_0_0, effA6_mes_es_0_1 }, { (const CONN*)effA6_mes_es_0_2, effA6_mes_es_0_3 },
+    { (const CONN*)effA6_mes_es_0_4, effA6_mes_es_0_5 }, { (const CONN*)effA6_mes_es_0_4, effA6_mes_es_0_7 },
+    { (const CONN*)effA6_mes_es_0_4, effA6_mes_es_0_9 }, { (const CONN*)effA6_mes_es_0_4, effA6_mes_es_0_11 },
+    { (const CONN*)effA6_mes_es_0_4, effA6_mes_es_0_13 }, { (const CONN*)effA6_mes_es_0_4, effA6_mes_es_0_15 },
+    { (const CONN*)effA6_mes_es_0_4, effA6_mes_es_0_17 }, { (const CONN*)effA6_mes_es_0_18, effA6_mes_es_0_19 },
+    { (const CONN*)effA6_mes_es_0_20, effA6_mes_es_0_21 }, { (const CONN*)effA6_mes_es_0_22, effA6_mes_es_0_23 },
 };
 
 const u32 effA6_mes_es_0_0[100] = {
@@ -65398,12 +65398,12 @@ const u16 effA6_mes_es_0_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_2[12] = {
-    { (const CONN*)effA6_mes_es_2_0, (const u16*)effA6_mes_es_2_1 }, { (const CONN*)effA6_mes_es_2_2, (const u16*)effA6_mes_es_2_3 },
-    { (const CONN*)effA6_mes_es_2_4, (const u16*)effA6_mes_es_2_5 }, { (const CONN*)effA6_mes_es_2_4, (const u16*)effA6_mes_es_2_7 },
-    { (const CONN*)effA6_mes_es_2_4, (const u16*)effA6_mes_es_2_9 }, { (const CONN*)effA6_mes_es_2_4, (const u16*)effA6_mes_es_2_11 },
-    { (const CONN*)effA6_mes_es_2_4, (const u16*)effA6_mes_es_2_13 }, { (const CONN*)effA6_mes_es_2_4, (const u16*)effA6_mes_es_2_15 },
-    { (const CONN*)effA6_mes_es_2_4, (const u16*)effA6_mes_es_2_17 }, { (const CONN*)effA6_mes_es_2_18, (const u16*)effA6_mes_es_2_19 },
-    { (const CONN*)effA6_mes_es_2_20, (const u16*)effA6_mes_es_2_21 }, { (const CONN*)effA6_mes_es_2_22, (const u16*)effA6_mes_es_2_23 },
+    { (const CONN*)effA6_mes_es_2_0, effA6_mes_es_2_1 }, { (const CONN*)effA6_mes_es_2_2, effA6_mes_es_2_3 },
+    { (const CONN*)effA6_mes_es_2_4, effA6_mes_es_2_5 }, { (const CONN*)effA6_mes_es_2_4, effA6_mes_es_2_7 },
+    { (const CONN*)effA6_mes_es_2_4, effA6_mes_es_2_9 }, { (const CONN*)effA6_mes_es_2_4, effA6_mes_es_2_11 },
+    { (const CONN*)effA6_mes_es_2_4, effA6_mes_es_2_13 }, { (const CONN*)effA6_mes_es_2_4, effA6_mes_es_2_15 },
+    { (const CONN*)effA6_mes_es_2_4, effA6_mes_es_2_17 }, { (const CONN*)effA6_mes_es_2_18, effA6_mes_es_2_19 },
+    { (const CONN*)effA6_mes_es_2_20, effA6_mes_es_2_21 }, { (const CONN*)effA6_mes_es_2_22, effA6_mes_es_2_23 },
 };
 
 const u32 effA6_mes_es_2_0[92] = {
@@ -65534,12 +65534,12 @@ const u16 effA6_mes_es_2_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_3[12] = {
-    { (const CONN*)effA6_mes_es_3_0, (const u16*)effA6_mes_es_3_1 }, { (const CONN*)effA6_mes_es_3_2, (const u16*)effA6_mes_es_3_3 },
-    { (const CONN*)effA6_mes_es_3_4, (const u16*)effA6_mes_es_3_5 }, { (const CONN*)effA6_mes_es_3_4, (const u16*)effA6_mes_es_3_7 },
-    { (const CONN*)effA6_mes_es_3_4, (const u16*)effA6_mes_es_3_9 }, { (const CONN*)effA6_mes_es_3_4, (const u16*)effA6_mes_es_3_11 },
-    { (const CONN*)effA6_mes_es_3_4, (const u16*)effA6_mes_es_3_13 }, { (const CONN*)effA6_mes_es_3_4, (const u16*)effA6_mes_es_3_15 },
-    { (const CONN*)effA6_mes_es_3_4, (const u16*)effA6_mes_es_3_17 }, { (const CONN*)effA6_mes_es_3_18, (const u16*)effA6_mes_es_3_19 },
-    { (const CONN*)effA6_mes_es_3_20, (const u16*)effA6_mes_es_3_21 }, { (const CONN*)effA6_mes_es_3_22, (const u16*)effA6_mes_es_3_23 },
+    { (const CONN*)effA6_mes_es_3_0, effA6_mes_es_3_1 }, { (const CONN*)effA6_mes_es_3_2, effA6_mes_es_3_3 },
+    { (const CONN*)effA6_mes_es_3_4, effA6_mes_es_3_5 }, { (const CONN*)effA6_mes_es_3_4, effA6_mes_es_3_7 },
+    { (const CONN*)effA6_mes_es_3_4, effA6_mes_es_3_9 }, { (const CONN*)effA6_mes_es_3_4, effA6_mes_es_3_11 },
+    { (const CONN*)effA6_mes_es_3_4, effA6_mes_es_3_13 }, { (const CONN*)effA6_mes_es_3_4, effA6_mes_es_3_15 },
+    { (const CONN*)effA6_mes_es_3_4, effA6_mes_es_3_17 }, { (const CONN*)effA6_mes_es_3_18, effA6_mes_es_3_19 },
+    { effA6_mes_es_3_20, effA6_mes_es_3_21 }, { (const CONN*)effA6_mes_es_3_22, effA6_mes_es_3_23 },
 };
 
 const u32 effA6_mes_es_3_0[100] = {
@@ -65602,10 +65602,10 @@ const u32 effA6_mes_es_3_18[82] = {
     0xB0FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_es_3_20[24] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E88, 0x180000, 0x9F3B,
-    0x200000, 0x9E8D, 0x300000, 0x9E84, 0x380000, 0x9E91, 0x400000, 0x9E84,
-    0x480000, 0x9E92, 0x580000, 0x9E93, 0x600000, 0x9F4C, 0x680000, 0x9E9B,
+const CONN effA6_mes_es_3_20[12] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E88 }, { 24, 0, 0, 0x9F3B },
+    { 32, 0, 0, 0x9E8D }, { 48, 0, 0, 0x9E84 }, { 56, 0, 0, 0x9E91 }, { 64, 0, 0, 0x9E84 },
+    { 72, 0, 0, 0x9E92 }, { 88, 0, 0, 0x9E93 }, { 96, 0, 0, 0x9F4C }, { 104, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_es_3_22[88] = {
@@ -65671,12 +65671,12 @@ const u16 effA6_mes_es_3_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_4[12] = {
-    { (const CONN*)effA6_mes_es_4_0, (const u16*)effA6_mes_es_4_1 }, { (const CONN*)effA6_mes_es_4_2, (const u16*)effA6_mes_es_4_3 },
-    { (const CONN*)effA6_mes_es_4_4, (const u16*)effA6_mes_es_4_5 }, { (const CONN*)effA6_mes_es_4_4, (const u16*)effA6_mes_es_4_7 },
-    { (const CONN*)effA6_mes_es_4_4, (const u16*)effA6_mes_es_4_9 }, { (const CONN*)effA6_mes_es_4_4, (const u16*)effA6_mes_es_4_11 },
-    { (const CONN*)effA6_mes_es_4_4, (const u16*)effA6_mes_es_4_13 }, { (const CONN*)effA6_mes_es_4_4, (const u16*)effA6_mes_es_4_15 },
-    { (const CONN*)effA6_mes_es_4_4, (const u16*)effA6_mes_es_4_17 }, { (const CONN*)effA6_mes_es_4_18, (const u16*)effA6_mes_es_4_19 },
-    { (const CONN*)effA6_mes_es_4_20, (const u16*)effA6_mes_es_4_21 }, { (const CONN*)effA6_mes_es_4_22, (const u16*)effA6_mes_es_4_23 },
+    { (const CONN*)effA6_mes_es_4_0, effA6_mes_es_4_1 }, { (const CONN*)effA6_mes_es_4_2, effA6_mes_es_4_3 },
+    { (const CONN*)effA6_mes_es_4_4, effA6_mes_es_4_5 }, { (const CONN*)effA6_mes_es_4_4, effA6_mes_es_4_7 },
+    { (const CONN*)effA6_mes_es_4_4, effA6_mes_es_4_9 }, { (const CONN*)effA6_mes_es_4_4, effA6_mes_es_4_11 },
+    { (const CONN*)effA6_mes_es_4_4, effA6_mes_es_4_13 }, { (const CONN*)effA6_mes_es_4_4, effA6_mes_es_4_15 },
+    { (const CONN*)effA6_mes_es_4_4, effA6_mes_es_4_17 }, { (const CONN*)effA6_mes_es_4_18, effA6_mes_es_4_19 },
+    { effA6_mes_es_4_20, effA6_mes_es_4_21 }, { (const CONN*)effA6_mes_es_4_22, effA6_mes_es_4_23 },
 };
 
 const u32 effA6_mes_es_4_0[100] = {
@@ -65742,10 +65742,10 @@ const u32 effA6_mes_es_4_18[102] = {
     0xD0FFF0, 0x9F33, 0xD8FFF0, 0x9E92, 0xE0FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_es_4_20[24] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E88, 0x180000, 0x9F3B,
-    0x200000, 0x9E8D, 0x300000, 0x9E84, 0x380000, 0x9E91, 0x400000, 0x9E84,
-    0x480000, 0x9E92, 0x580000, 0x9E93, 0x600000, 0x9F4C, 0x680000, 0x9E9B,
+const CONN effA6_mes_es_4_20[12] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E88 }, { 24, 0, 0, 0x9F3B },
+    { 32, 0, 0, 0x9E8D }, { 48, 0, 0, 0x9E84 }, { 56, 0, 0, 0x9E91 }, { 64, 0, 0, 0x9E84 },
+    { 72, 0, 0, 0x9E92 }, { 88, 0, 0, 0x9E93 }, { 96, 0, 0, 0x9F4C }, { 104, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_es_4_22[88] = {
@@ -65811,12 +65811,12 @@ const u16 effA6_mes_es_4_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_5[12] = {
-    { (const CONN*)effA6_mes_es_5_0, (const u16*)effA6_mes_es_5_1 }, { (const CONN*)effA6_mes_es_5_2, (const u16*)effA6_mes_es_5_3 },
-    { (const CONN*)effA6_mes_es_5_4, (const u16*)effA6_mes_es_5_5 }, { (const CONN*)effA6_mes_es_5_4, (const u16*)effA6_mes_es_5_7 },
-    { (const CONN*)effA6_mes_es_5_4, (const u16*)effA6_mes_es_5_9 }, { (const CONN*)effA6_mes_es_5_4, (const u16*)effA6_mes_es_5_11 },
-    { (const CONN*)effA6_mes_es_5_4, (const u16*)effA6_mes_es_5_13 }, { (const CONN*)effA6_mes_es_5_4, (const u16*)effA6_mes_es_5_15 },
-    { (const CONN*)effA6_mes_es_5_4, (const u16*)effA6_mes_es_5_17 }, { (const CONN*)effA6_mes_es_5_18, (const u16*)effA6_mes_es_5_19 },
-    { (const CONN*)effA6_mes_es_5_20, (const u16*)effA6_mes_es_5_21 }, { (const CONN*)effA6_mes_es_5_22, (const u16*)effA6_mes_es_5_23 },
+    { (const CONN*)effA6_mes_es_5_0, effA6_mes_es_5_1 }, { (const CONN*)effA6_mes_es_5_2, effA6_mes_es_5_3 },
+    { (const CONN*)effA6_mes_es_5_4, effA6_mes_es_5_5 }, { (const CONN*)effA6_mes_es_5_4, effA6_mes_es_5_7 },
+    { (const CONN*)effA6_mes_es_5_4, effA6_mes_es_5_9 }, { (const CONN*)effA6_mes_es_5_4, effA6_mes_es_5_11 },
+    { (const CONN*)effA6_mes_es_5_4, effA6_mes_es_5_13 }, { (const CONN*)effA6_mes_es_5_4, effA6_mes_es_5_15 },
+    { (const CONN*)effA6_mes_es_5_4, effA6_mes_es_5_17 }, { (const CONN*)effA6_mes_es_5_18, effA6_mes_es_5_19 },
+    { effA6_mes_es_5_20, effA6_mes_es_5_21 }, { (const CONN*)effA6_mes_es_5_22, effA6_mes_es_5_23 },
 };
 
 const u32 effA6_mes_es_5_0[76] = {
@@ -65879,10 +65879,10 @@ const u32 effA6_mes_es_5_18[102] = {
     0xC0FFF0, 0x9E82, 0xC8FFF0, 0x9E8E, 0xD0FFF0, 0x9E9B,
 };
 
-const u32 effA6_mes_es_5_20[24] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E88, 0x180000, 0x9F3B,
-    0x200000, 0x9E8D, 0x300000, 0x9E84, 0x380000, 0x9E91, 0x400000, 0x9E84,
-    0x480000, 0x9E92, 0x580000, 0x9E93, 0x600000, 0x9F4C, 0x680000, 0x9E9B,
+const CONN effA6_mes_es_5_20[12] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E88 }, { 24, 0, 0, 0x9F3B },
+    { 32, 0, 0, 0x9E8D }, { 48, 0, 0, 0x9E84 }, { 56, 0, 0, 0x9E91 }, { 64, 0, 0, 0x9E84 },
+    { 72, 0, 0, 0x9E92 }, { 88, 0, 0, 0x9E93 }, { 96, 0, 0, 0x9F4C }, { 104, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_es_5_22[88] = {
@@ -65948,12 +65948,12 @@ const u16 effA6_mes_es_5_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_6[12] = {
-    { (const CONN*)effA6_mes_es_6_0, (const u16*)effA6_mes_es_6_1 }, { (const CONN*)effA6_mes_es_6_2, (const u16*)effA6_mes_es_6_3 },
-    { (const CONN*)effA6_mes_es_6_4, (const u16*)effA6_mes_es_6_5 }, { (const CONN*)effA6_mes_es_6_6, (const u16*)effA6_mes_es_6_7 },
-    { (const CONN*)effA6_mes_es_6_8, (const u16*)effA6_mes_es_6_9 }, { (const CONN*)effA6_mes_es_6_10, (const u16*)effA6_mes_es_6_11 },
-    { (const CONN*)effA6_mes_es_6_12, (const u16*)effA6_mes_es_6_13 }, { (const CONN*)effA6_mes_es_6_14, (const u16*)effA6_mes_es_6_15 },
-    { (const CONN*)effA6_mes_es_6_16, (const u16*)effA6_mes_es_6_17 }, { (const CONN*)effA6_mes_es_6_18, (const u16*)effA6_mes_es_6_19 },
-    { (const CONN*)effA6_mes_es_6_20, (const u16*)effA6_mes_es_6_21 }, { (const CONN*)effA6_mes_es_6_22, (const u16*)effA6_mes_es_6_23 },
+    { (const CONN*)effA6_mes_es_6_0, effA6_mes_es_6_1 }, { (const CONN*)effA6_mes_es_6_2, effA6_mes_es_6_3 },
+    { (const CONN*)effA6_mes_es_6_4, effA6_mes_es_6_5 }, { (const CONN*)effA6_mes_es_6_6, effA6_mes_es_6_7 },
+    { (const CONN*)effA6_mes_es_6_8, effA6_mes_es_6_9 }, { (const CONN*)effA6_mes_es_6_10, effA6_mes_es_6_11 },
+    { (const CONN*)effA6_mes_es_6_12, effA6_mes_es_6_13 }, { (const CONN*)effA6_mes_es_6_14, effA6_mes_es_6_15 },
+    { (const CONN*)effA6_mes_es_6_16, effA6_mes_es_6_17 }, { (const CONN*)effA6_mes_es_6_18, effA6_mes_es_6_19 },
+    { effA6_mes_es_6_20, effA6_mes_es_6_21 }, { (const CONN*)effA6_mes_es_6_22, effA6_mes_es_6_23 },
 };
 
 const u32 effA6_mes_es_6_0[100] = {
@@ -66101,10 +66101,10 @@ const u32 effA6_mes_es_6_18[50] = {
     0xD00000, 0x9E9A,
 };
 
-const u32 effA6_mes_es_6_20[24] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E88, 0x180000, 0x9F3B,
-    0x200000, 0x9E8D, 0x300000, 0x9E84, 0x380000, 0x9E91, 0x400000, 0x9E84,
-    0x480000, 0x9E92, 0x580000, 0x9E93, 0x600000, 0x9F4C, 0x680000, 0x9E9B,
+const CONN effA6_mes_es_6_20[12] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E88 }, { 24, 0, 0, 0x9F3B },
+    { 32, 0, 0, 0x9E8D }, { 48, 0, 0, 0x9E84 }, { 56, 0, 0, 0x9E91 }, { 64, 0, 0, 0x9E84 },
+    { 72, 0, 0, 0x9E92 }, { 88, 0, 0, 0x9E93 }, { 96, 0, 0, 0x9F4C }, { 104, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_es_6_22[88] = {
@@ -66170,12 +66170,12 @@ const u16 effA6_mes_es_6_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_7[12] = {
-    { (const CONN*)effA6_mes_es_7_0, (const u16*)effA6_mes_es_7_1 }, { (const CONN*)effA6_mes_es_7_2, (const u16*)effA6_mes_es_7_3 },
-    { (const CONN*)effA6_mes_es_7_4, (const u16*)effA6_mes_es_7_5 }, { (const CONN*)effA6_mes_es_7_4, (const u16*)effA6_mes_es_7_7 },
-    { (const CONN*)effA6_mes_es_7_4, (const u16*)effA6_mes_es_7_9 }, { (const CONN*)effA6_mes_es_7_4, (const u16*)effA6_mes_es_7_11 },
-    { (const CONN*)effA6_mes_es_7_4, (const u16*)effA6_mes_es_7_13 }, { (const CONN*)effA6_mes_es_7_4, (const u16*)effA6_mes_es_7_15 },
-    { (const CONN*)effA6_mes_es_7_4, (const u16*)effA6_mes_es_7_17 }, { (const CONN*)effA6_mes_es_7_18, (const u16*)effA6_mes_es_7_19 },
-    { (const CONN*)effA6_mes_es_7_20, (const u16*)effA6_mes_es_7_21 }, { (const CONN*)effA6_mes_es_7_22, (const u16*)effA6_mes_es_7_23 },
+    { (const CONN*)effA6_mes_es_7_0, effA6_mes_es_7_1 }, { (const CONN*)effA6_mes_es_7_2, effA6_mes_es_7_3 },
+    { (const CONN*)effA6_mes_es_7_4, effA6_mes_es_7_5 }, { (const CONN*)effA6_mes_es_7_4, effA6_mes_es_7_7 },
+    { (const CONN*)effA6_mes_es_7_4, effA6_mes_es_7_9 }, { (const CONN*)effA6_mes_es_7_4, effA6_mes_es_7_11 },
+    { (const CONN*)effA6_mes_es_7_4, effA6_mes_es_7_13 }, { (const CONN*)effA6_mes_es_7_4, effA6_mes_es_7_15 },
+    { (const CONN*)effA6_mes_es_7_4, effA6_mes_es_7_17 }, { (const CONN*)effA6_mes_es_7_18, effA6_mes_es_7_19 },
+    { (const CONN*)effA6_mes_es_7_20, effA6_mes_es_7_21 }, { (const CONN*)effA6_mes_es_7_22, effA6_mes_es_7_23 },
 };
 
 const u32 effA6_mes_es_7_0[76] = {
@@ -66305,12 +66305,12 @@ const u16 effA6_mes_es_7_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_8[12] = {
-    { (const CONN*)effA6_mes_es_8_0, (const u16*)effA6_mes_es_8_1 }, { (const CONN*)effA6_mes_es_8_2, (const u16*)effA6_mes_es_8_3 },
-    { (const CONN*)effA6_mes_es_8_4, (const u16*)effA6_mes_es_8_5 }, { (const CONN*)effA6_mes_es_8_4, (const u16*)effA6_mes_es_8_7 },
-    { (const CONN*)effA6_mes_es_8_4, (const u16*)effA6_mes_es_8_9 }, { (const CONN*)effA6_mes_es_8_4, (const u16*)effA6_mes_es_8_11 },
-    { (const CONN*)effA6_mes_es_8_4, (const u16*)effA6_mes_es_8_13 }, { (const CONN*)effA6_mes_es_8_4, (const u16*)effA6_mes_es_8_15 },
-    { (const CONN*)effA6_mes_es_8_4, (const u16*)effA6_mes_es_8_17 }, { (const CONN*)effA6_mes_es_8_18, (const u16*)effA6_mes_es_8_19 },
-    { (const CONN*)effA6_mes_es_8_20, (const u16*)effA6_mes_es_8_21 }, { (const CONN*)effA6_mes_es_8_22, (const u16*)effA6_mes_es_8_23 },
+    { (const CONN*)effA6_mes_es_8_0, effA6_mes_es_8_1 }, { (const CONN*)effA6_mes_es_8_2, effA6_mes_es_8_3 },
+    { (const CONN*)effA6_mes_es_8_4, effA6_mes_es_8_5 }, { (const CONN*)effA6_mes_es_8_4, effA6_mes_es_8_7 },
+    { (const CONN*)effA6_mes_es_8_4, effA6_mes_es_8_9 }, { (const CONN*)effA6_mes_es_8_4, effA6_mes_es_8_11 },
+    { (const CONN*)effA6_mes_es_8_4, effA6_mes_es_8_13 }, { (const CONN*)effA6_mes_es_8_4, effA6_mes_es_8_15 },
+    { (const CONN*)effA6_mes_es_8_4, effA6_mes_es_8_17 }, { (const CONN*)effA6_mes_es_8_18, effA6_mes_es_8_19 },
+    { (const CONN*)effA6_mes_es_8_20, effA6_mes_es_8_21 }, { (const CONN*)effA6_mes_es_8_22, effA6_mes_es_8_23 },
 };
 
 const u32 effA6_mes_es_8_0[86] = {
@@ -66438,12 +66438,12 @@ const u16 effA6_mes_es_8_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_9[12] = {
-    { (const CONN*)effA6_mes_es_9_0, (const u16*)effA6_mes_es_9_1 }, { (const CONN*)effA6_mes_es_9_2, (const u16*)effA6_mes_es_9_3 },
-    { (const CONN*)effA6_mes_es_9_4, (const u16*)effA6_mes_es_9_5 }, { (const CONN*)effA6_mes_es_9_4, (const u16*)effA6_mes_es_9_7 },
-    { (const CONN*)effA6_mes_es_9_4, (const u16*)effA6_mes_es_9_9 }, { (const CONN*)effA6_mes_es_9_4, (const u16*)effA6_mes_es_9_11 },
-    { (const CONN*)effA6_mes_es_9_4, (const u16*)effA6_mes_es_9_13 }, { (const CONN*)effA6_mes_es_9_4, (const u16*)effA6_mes_es_9_15 },
-    { (const CONN*)effA6_mes_es_9_4, (const u16*)effA6_mes_es_9_17 }, { (const CONN*)effA6_mes_es_9_18, (const u16*)effA6_mes_es_9_19 },
-    { (const CONN*)effA6_mes_es_9_20, (const u16*)effA6_mes_es_9_21 }, { (const CONN*)effA6_mes_es_9_22, (const u16*)effA6_mes_es_9_23 },
+    { (const CONN*)effA6_mes_es_9_0, effA6_mes_es_9_1 }, { (const CONN*)effA6_mes_es_9_2, effA6_mes_es_9_3 },
+    { (const CONN*)effA6_mes_es_9_4, effA6_mes_es_9_5 }, { (const CONN*)effA6_mes_es_9_4, effA6_mes_es_9_7 },
+    { (const CONN*)effA6_mes_es_9_4, effA6_mes_es_9_9 }, { (const CONN*)effA6_mes_es_9_4, effA6_mes_es_9_11 },
+    { (const CONN*)effA6_mes_es_9_4, effA6_mes_es_9_13 }, { (const CONN*)effA6_mes_es_9_4, effA6_mes_es_9_15 },
+    { (const CONN*)effA6_mes_es_9_4, effA6_mes_es_9_17 }, { (const CONN*)effA6_mes_es_9_18, effA6_mes_es_9_19 },
+    { effA6_mes_es_9_20, effA6_mes_es_9_21 }, { (const CONN*)effA6_mes_es_9_22, effA6_mes_es_9_23 },
 };
 
 const u32 effA6_mes_es_9_0[102] = {
@@ -66509,10 +66509,10 @@ const u32 effA6_mes_es_9_18[90] = {
     0x90FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_es_9_20[24] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E88, 0x180000, 0x9F3B,
-    0x200000, 0x9E8D, 0x300000, 0x9E84, 0x380000, 0x9E91, 0x400000, 0x9E84,
-    0x480000, 0x9E92, 0x580000, 0x9E93, 0x600000, 0x9F4C, 0x680000, 0x9E9B,
+const CONN effA6_mes_es_9_20[12] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E88 }, { 24, 0, 0, 0x9F3B },
+    { 32, 0, 0, 0x9E8D }, { 48, 0, 0, 0x9E84 }, { 56, 0, 0, 0x9E91 }, { 64, 0, 0, 0x9E84 },
+    { 72, 0, 0, 0x9E92 }, { 88, 0, 0, 0x9E93 }, { 96, 0, 0, 0x9F4C }, { 104, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_es_9_22[88] = {
@@ -66578,12 +66578,12 @@ const u16 effA6_mes_es_9_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_10[12] = {
-    { (const CONN*)effA6_mes_es_10_0, (const u16*)effA6_mes_es_10_1 }, { (const CONN*)effA6_mes_es_10_2, (const u16*)effA6_mes_es_10_3 },
-    { (const CONN*)effA6_mes_es_10_4, (const u16*)effA6_mes_es_10_5 }, { (const CONN*)effA6_mes_es_10_4, (const u16*)effA6_mes_es_10_7 },
-    { (const CONN*)effA6_mes_es_10_4, (const u16*)effA6_mes_es_10_9 }, { (const CONN*)effA6_mes_es_10_4, (const u16*)effA6_mes_es_10_11 },
-    { (const CONN*)effA6_mes_es_10_4, (const u16*)effA6_mes_es_10_13 }, { (const CONN*)effA6_mes_es_10_4, (const u16*)effA6_mes_es_10_15 },
-    { (const CONN*)effA6_mes_es_10_4, (const u16*)effA6_mes_es_10_17 }, { (const CONN*)effA6_mes_es_10_18, (const u16*)effA6_mes_es_10_19 },
-    { (const CONN*)effA6_mes_es_10_20, (const u16*)effA6_mes_es_10_21 }, { (const CONN*)effA6_mes_es_10_22, (const u16*)effA6_mes_es_10_23 },
+    { (const CONN*)effA6_mes_es_10_0, effA6_mes_es_10_1 }, { (const CONN*)effA6_mes_es_10_2, effA6_mes_es_10_3 },
+    { (const CONN*)effA6_mes_es_10_4, effA6_mes_es_10_5 }, { (const CONN*)effA6_mes_es_10_4, effA6_mes_es_10_7 },
+    { (const CONN*)effA6_mes_es_10_4, effA6_mes_es_10_9 }, { (const CONN*)effA6_mes_es_10_4, effA6_mes_es_10_11 },
+    { (const CONN*)effA6_mes_es_10_4, effA6_mes_es_10_13 }, { (const CONN*)effA6_mes_es_10_4, effA6_mes_es_10_15 },
+    { (const CONN*)effA6_mes_es_10_4, effA6_mes_es_10_17 }, { (const CONN*)effA6_mes_es_10_18, effA6_mes_es_10_19 },
+    { effA6_mes_es_10_20, effA6_mes_es_10_21 }, { (const CONN*)effA6_mes_es_10_22, effA6_mes_es_10_23 },
 };
 
 const u32 effA6_mes_es_10_0[96] = {
@@ -66648,10 +66648,10 @@ const u32 effA6_mes_es_10_18[92] = {
     0xA0FFF0, 0x9F3B, 0xA8FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_es_10_20[24] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E88, 0x180000, 0x9F3B,
-    0x200000, 0x9E8D, 0x300000, 0x9E84, 0x380000, 0x9E91, 0x400000, 0x9E84,
-    0x480000, 0x9E92, 0x580000, 0x9E93, 0x600000, 0x9F4C, 0x680000, 0x9E9B,
+const CONN effA6_mes_es_10_20[12] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E88 }, { 24, 0, 0, 0x9F3B },
+    { 32, 0, 0, 0x9E8D }, { 48, 0, 0, 0x9E84 }, { 56, 0, 0, 0x9E91 }, { 64, 0, 0, 0x9E84 },
+    { 72, 0, 0, 0x9E92 }, { 88, 0, 0, 0x9E93 }, { 96, 0, 0, 0x9F4C }, { 104, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_es_10_22[88] = {
@@ -66717,12 +66717,12 @@ const u16 effA6_mes_es_10_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_11[12] = {
-    { (const CONN*)effA6_mes_es_11_0, (const u16*)effA6_mes_es_11_1 }, { (const CONN*)effA6_mes_es_11_2, (const u16*)effA6_mes_es_11_3 },
-    { (const CONN*)effA6_mes_es_11_4, (const u16*)effA6_mes_es_11_5 }, { (const CONN*)effA6_mes_es_11_4, (const u16*)effA6_mes_es_11_7 },
-    { (const CONN*)effA6_mes_es_11_4, (const u16*)effA6_mes_es_11_9 }, { (const CONN*)effA6_mes_es_11_4, (const u16*)effA6_mes_es_11_11 },
-    { (const CONN*)effA6_mes_es_11_4, (const u16*)effA6_mes_es_11_13 }, { (const CONN*)effA6_mes_es_11_4, (const u16*)effA6_mes_es_11_15 },
-    { (const CONN*)effA6_mes_es_11_4, (const u16*)effA6_mes_es_11_17 }, { (const CONN*)effA6_mes_es_11_18, (const u16*)effA6_mes_es_11_19 },
-    { (const CONN*)effA6_mes_es_11_20, (const u16*)effA6_mes_es_11_21 }, { (const CONN*)effA6_mes_es_11_22, (const u16*)effA6_mes_es_11_23 },
+    { (const CONN*)effA6_mes_es_11_0, effA6_mes_es_11_1 }, { (const CONN*)effA6_mes_es_11_2, effA6_mes_es_11_3 },
+    { (const CONN*)effA6_mes_es_11_4, effA6_mes_es_11_5 }, { (const CONN*)effA6_mes_es_11_4, effA6_mes_es_11_7 },
+    { (const CONN*)effA6_mes_es_11_4, effA6_mes_es_11_9 }, { (const CONN*)effA6_mes_es_11_4, effA6_mes_es_11_11 },
+    { (const CONN*)effA6_mes_es_11_4, effA6_mes_es_11_13 }, { (const CONN*)effA6_mes_es_11_4, effA6_mes_es_11_15 },
+    { (const CONN*)effA6_mes_es_11_4, effA6_mes_es_11_17 }, { (const CONN*)effA6_mes_es_11_18, effA6_mes_es_11_19 },
+    { (const CONN*)effA6_mes_es_11_20, effA6_mes_es_11_21 }, { (const CONN*)effA6_mes_es_11_22, effA6_mes_es_11_23 },
 };
 
 const u32 effA6_mes_es_11_0[62] = {
@@ -66852,12 +66852,12 @@ const u16 effA6_mes_es_11_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_12[12] = {
-    { (const CONN*)effA6_mes_es_12_0, (const u16*)effA6_mes_es_12_1 }, { (const CONN*)effA6_mes_es_12_2, (const u16*)effA6_mes_es_12_3 },
-    { (const CONN*)effA6_mes_es_12_4, (const u16*)effA6_mes_es_12_5 }, { (const CONN*)effA6_mes_es_12_4, (const u16*)effA6_mes_es_12_7 },
-    { (const CONN*)effA6_mes_es_12_4, (const u16*)effA6_mes_es_12_9 }, { (const CONN*)effA6_mes_es_12_4, (const u16*)effA6_mes_es_12_11 },
-    { (const CONN*)effA6_mes_es_12_4, (const u16*)effA6_mes_es_12_13 }, { (const CONN*)effA6_mes_es_12_4, (const u16*)effA6_mes_es_12_15 },
-    { (const CONN*)effA6_mes_es_12_4, (const u16*)effA6_mes_es_12_17 }, { (const CONN*)effA6_mes_es_12_18, (const u16*)effA6_mes_es_12_19 },
-    { (const CONN*)effA6_mes_es_12_20, (const u16*)effA6_mes_es_12_21 }, { (const CONN*)effA6_mes_es_12_22, (const u16*)effA6_mes_es_12_23 },
+    { (const CONN*)effA6_mes_es_12_0, effA6_mes_es_12_1 }, { (const CONN*)effA6_mes_es_12_2, effA6_mes_es_12_3 },
+    { (const CONN*)effA6_mes_es_12_4, effA6_mes_es_12_5 }, { (const CONN*)effA6_mes_es_12_4, effA6_mes_es_12_7 },
+    { (const CONN*)effA6_mes_es_12_4, effA6_mes_es_12_9 }, { (const CONN*)effA6_mes_es_12_4, effA6_mes_es_12_11 },
+    { (const CONN*)effA6_mes_es_12_4, effA6_mes_es_12_13 }, { (const CONN*)effA6_mes_es_12_4, effA6_mes_es_12_15 },
+    { (const CONN*)effA6_mes_es_12_4, effA6_mes_es_12_17 }, { (const CONN*)effA6_mes_es_12_18, effA6_mes_es_12_19 },
+    { (const CONN*)effA6_mes_es_12_20, effA6_mes_es_12_21 }, { (const CONN*)effA6_mes_es_12_22, effA6_mes_es_12_23 },
 };
 
 const u32 effA6_mes_es_12_0[102] = {
@@ -66994,12 +66994,12 @@ const u16 effA6_mes_es_12_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_13[12] = {
-    { (const CONN*)effA6_mes_es_13_0, (const u16*)effA6_mes_es_13_1 }, { (const CONN*)effA6_mes_es_13_2, (const u16*)effA6_mes_es_13_3 },
-    { (const CONN*)effA6_mes_es_13_4, (const u16*)effA6_mes_es_13_5 }, { (const CONN*)effA6_mes_es_13_4, (const u16*)effA6_mes_es_13_7 },
-    { (const CONN*)effA6_mes_es_13_4, (const u16*)effA6_mes_es_13_9 }, { (const CONN*)effA6_mes_es_13_4, (const u16*)effA6_mes_es_13_11 },
-    { (const CONN*)effA6_mes_es_13_4, (const u16*)effA6_mes_es_13_13 }, { (const CONN*)effA6_mes_es_13_4, (const u16*)effA6_mes_es_13_15 },
-    { (const CONN*)effA6_mes_es_13_4, (const u16*)effA6_mes_es_13_17 }, { (const CONN*)effA6_mes_es_13_18, (const u16*)effA6_mes_es_13_19 },
-    { (const CONN*)effA6_mes_es_13_20, (const u16*)effA6_mes_es_13_21 }, { (const CONN*)effA6_mes_es_13_22, (const u16*)effA6_mes_es_13_23 },
+    { (const CONN*)effA6_mes_es_13_0, effA6_mes_es_13_1 }, { (const CONN*)effA6_mes_es_13_2, effA6_mes_es_13_3 },
+    { (const CONN*)effA6_mes_es_13_4, effA6_mes_es_13_5 }, { (const CONN*)effA6_mes_es_13_4, effA6_mes_es_13_7 },
+    { (const CONN*)effA6_mes_es_13_4, effA6_mes_es_13_9 }, { (const CONN*)effA6_mes_es_13_4, effA6_mes_es_13_11 },
+    { (const CONN*)effA6_mes_es_13_4, effA6_mes_es_13_13 }, { (const CONN*)effA6_mes_es_13_4, effA6_mes_es_13_15 },
+    { (const CONN*)effA6_mes_es_13_4, effA6_mes_es_13_17 }, { (const CONN*)effA6_mes_es_13_18, effA6_mes_es_13_19 },
+    { effA6_mes_es_13_20, effA6_mes_es_13_21 }, { (const CONN*)effA6_mes_es_13_22, effA6_mes_es_13_23 },
 };
 
 const u32 effA6_mes_es_13_0[100] = {
@@ -67056,10 +67056,10 @@ const u32 effA6_mes_es_13_18[78] = {
     0x60FFF0, 0x9E8C, 0x68FFF0, 0x9F3F, 0x70FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_es_13_20[24] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E88, 0x180000, 0x9F3B,
-    0x200000, 0x9E8D, 0x300000, 0x9E84, 0x380000, 0x9E91, 0x400000, 0x9E84,
-    0x480000, 0x9E92, 0x580000, 0x9E93, 0x600000, 0x9F4C, 0x680000, 0x9E9B,
+const CONN effA6_mes_es_13_20[12] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E88 }, { 24, 0, 0, 0x9F3B },
+    { 32, 0, 0, 0x9E8D }, { 48, 0, 0, 0x9E84 }, { 56, 0, 0, 0x9E91 }, { 64, 0, 0, 0x9E84 },
+    { 72, 0, 0, 0x9E92 }, { 88, 0, 0, 0x9E93 }, { 96, 0, 0, 0x9F4C }, { 104, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_es_13_22[88] = {
@@ -67125,12 +67125,12 @@ const u16 effA6_mes_es_13_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_es_14[12] = {
-    { (const CONN*)effA6_mes_es_14_0, (const u16*)effA6_mes_es_14_1 }, { (const CONN*)effA6_mes_es_14_2, (const u16*)effA6_mes_es_14_3 },
-    { (const CONN*)effA6_mes_es_14_4, (const u16*)effA6_mes_es_14_5 }, { (const CONN*)effA6_mes_es_14_4, (const u16*)effA6_mes_es_14_7 },
-    { (const CONN*)effA6_mes_es_14_4, (const u16*)effA6_mes_es_14_9 }, { (const CONN*)effA6_mes_es_14_4, (const u16*)effA6_mes_es_14_11 },
-    { (const CONN*)effA6_mes_es_14_4, (const u16*)effA6_mes_es_14_13 }, { (const CONN*)effA6_mes_es_14_4, (const u16*)effA6_mes_es_14_15 },
-    { (const CONN*)effA6_mes_es_14_4, (const u16*)effA6_mes_es_14_17 }, { (const CONN*)effA6_mes_es_14_18, (const u16*)effA6_mes_es_14_19 },
-    { (const CONN*)effA6_mes_es_14_20, (const u16*)effA6_mes_es_14_21 }, { (const CONN*)effA6_mes_es_14_22, (const u16*)effA6_mes_es_14_23 },
+    { (const CONN*)effA6_mes_es_14_0, effA6_mes_es_14_1 }, { (const CONN*)effA6_mes_es_14_2, effA6_mes_es_14_3 },
+    { (const CONN*)effA6_mes_es_14_4, effA6_mes_es_14_5 }, { (const CONN*)effA6_mes_es_14_4, effA6_mes_es_14_7 },
+    { (const CONN*)effA6_mes_es_14_4, effA6_mes_es_14_9 }, { (const CONN*)effA6_mes_es_14_4, effA6_mes_es_14_11 },
+    { (const CONN*)effA6_mes_es_14_4, effA6_mes_es_14_13 }, { (const CONN*)effA6_mes_es_14_4, effA6_mes_es_14_15 },
+    { (const CONN*)effA6_mes_es_14_4, effA6_mes_es_14_17 }, { (const CONN*)effA6_mes_es_14_18, effA6_mes_es_14_19 },
+    { effA6_mes_es_14_20, effA6_mes_es_14_21 }, { (const CONN*)effA6_mes_es_14_22, effA6_mes_es_14_23 },
 };
 
 const u32 effA6_mes_es_14_0[94] = {
@@ -67187,10 +67187,10 @@ const u32 effA6_mes_es_14_18[36] = {
     0x800000, 0x9E9C, 0x880000, 0x9E9C,
 };
 
-const u32 effA6_mes_es_14_20[24] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E88, 0x180000, 0x9F3B,
-    0x200000, 0x9E8D, 0x300000, 0x9E84, 0x380000, 0x9E91, 0x400000, 0x9E84,
-    0x480000, 0x9E92, 0x580000, 0x9E93, 0x600000, 0x9F4C, 0x680000, 0x9E9B,
+const CONN effA6_mes_es_14_20[12] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E88 }, { 24, 0, 0, 0x9F3B },
+    { 32, 0, 0, 0x9E8D }, { 48, 0, 0, 0x9E84 }, { 56, 0, 0, 0x9E91 }, { 64, 0, 0, 0x9E84 },
+    { 72, 0, 0, 0x9E92 }, { 88, 0, 0, 0x9E93 }, { 96, 0, 0, 0x9F4C }, { 104, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_es_14_22[88] = {
@@ -67256,12 +67256,12 @@ const u16 effA6_mes_es_14_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_0[12] = {
-    { (const CONN*)effA6_mes_pt_0_0, (const u16*)effA6_mes_pt_0_1 }, { (const CONN*)effA6_mes_pt_0_2, (const u16*)effA6_mes_pt_0_3 },
-    { (const CONN*)effA6_mes_pt_0_4, (const u16*)effA6_mes_pt_0_5 }, { (const CONN*)effA6_mes_pt_0_4, (const u16*)effA6_mes_pt_0_7 },
-    { (const CONN*)effA6_mes_pt_0_4, (const u16*)effA6_mes_pt_0_9 }, { (const CONN*)effA6_mes_pt_0_4, (const u16*)effA6_mes_pt_0_11 },
-    { (const CONN*)effA6_mes_pt_0_4, (const u16*)effA6_mes_pt_0_13 }, { (const CONN*)effA6_mes_pt_0_4, (const u16*)effA6_mes_pt_0_15 },
-    { (const CONN*)effA6_mes_pt_0_4, (const u16*)effA6_mes_pt_0_17 }, { (const CONN*)effA6_mes_pt_0_18, (const u16*)effA6_mes_pt_0_19 },
-    { (const CONN*)effA6_mes_pt_0_20, (const u16*)effA6_mes_pt_0_21 }, { (const CONN*)effA6_mes_pt_0_22, (const u16*)effA6_mes_pt_0_23 },
+    { (const CONN*)effA6_mes_pt_0_0, effA6_mes_pt_0_1 }, { (const CONN*)effA6_mes_pt_0_2, effA6_mes_pt_0_3 },
+    { (const CONN*)effA6_mes_pt_0_4, effA6_mes_pt_0_5 }, { (const CONN*)effA6_mes_pt_0_4, effA6_mes_pt_0_7 },
+    { (const CONN*)effA6_mes_pt_0_4, effA6_mes_pt_0_9 }, { (const CONN*)effA6_mes_pt_0_4, effA6_mes_pt_0_11 },
+    { (const CONN*)effA6_mes_pt_0_4, effA6_mes_pt_0_13 }, { (const CONN*)effA6_mes_pt_0_4, effA6_mes_pt_0_15 },
+    { (const CONN*)effA6_mes_pt_0_4, effA6_mes_pt_0_17 }, { (const CONN*)effA6_mes_pt_0_18, effA6_mes_pt_0_19 },
+    { effA6_mes_pt_0_20, effA6_mes_pt_0_21 }, { (const CONN*)effA6_mes_pt_0_22, effA6_mes_pt_0_23 },
 };
 
 const u32 effA6_mes_pt_0_0[94] = {
@@ -67323,10 +67323,10 @@ const u32 effA6_mes_pt_0_18[94] = {
     0xD0FFF0, 0x9F38, 0xD8FFF0, 0x9E8E, 0xE0FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_pt_0_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_0_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_0_22[96] = {
@@ -67393,12 +67393,12 @@ const u16 effA6_mes_pt_0_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_2[12] = {
-    { (const CONN*)effA6_mes_pt_2_0, (const u16*)effA6_mes_pt_2_1 }, { (const CONN*)effA6_mes_pt_2_2, (const u16*)effA6_mes_pt_2_3 },
-    { (const CONN*)effA6_mes_pt_2_4, (const u16*)effA6_mes_pt_2_5 }, { (const CONN*)effA6_mes_pt_2_4, (const u16*)effA6_mes_pt_2_7 },
-    { (const CONN*)effA6_mes_pt_2_4, (const u16*)effA6_mes_pt_2_9 }, { (const CONN*)effA6_mes_pt_2_4, (const u16*)effA6_mes_pt_2_11 },
-    { (const CONN*)effA6_mes_pt_2_4, (const u16*)effA6_mes_pt_2_13 }, { (const CONN*)effA6_mes_pt_2_4, (const u16*)effA6_mes_pt_2_15 },
-    { (const CONN*)effA6_mes_pt_2_4, (const u16*)effA6_mes_pt_2_17 }, { (const CONN*)effA6_mes_pt_2_18, (const u16*)effA6_mes_pt_2_19 },
-    { (const CONN*)effA6_mes_pt_2_20, (const u16*)effA6_mes_pt_2_21 }, { (const CONN*)effA6_mes_pt_2_22, (const u16*)effA6_mes_pt_2_23 },
+    { (const CONN*)effA6_mes_pt_2_0, effA6_mes_pt_2_1 }, { (const CONN*)effA6_mes_pt_2_2, effA6_mes_pt_2_3 },
+    { (const CONN*)effA6_mes_pt_2_4, effA6_mes_pt_2_5 }, { (const CONN*)effA6_mes_pt_2_4, effA6_mes_pt_2_7 },
+    { (const CONN*)effA6_mes_pt_2_4, effA6_mes_pt_2_9 }, { (const CONN*)effA6_mes_pt_2_4, effA6_mes_pt_2_11 },
+    { (const CONN*)effA6_mes_pt_2_4, effA6_mes_pt_2_13 }, { (const CONN*)effA6_mes_pt_2_4, effA6_mes_pt_2_15 },
+    { (const CONN*)effA6_mes_pt_2_4, effA6_mes_pt_2_17 }, { (const CONN*)effA6_mes_pt_2_18, effA6_mes_pt_2_19 },
+    { (const CONN*)effA6_mes_pt_2_20, effA6_mes_pt_2_21 }, { (const CONN*)effA6_mes_pt_2_22, effA6_mes_pt_2_23 },
 };
 
 const u32 effA6_mes_pt_2_0[88] = {
@@ -67529,12 +67529,12 @@ const u16 effA6_mes_pt_2_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_3[12] = {
-    { (const CONN*)effA6_mes_pt_3_0, (const u16*)effA6_mes_pt_3_1 }, { (const CONN*)effA6_mes_pt_3_2, (const u16*)effA6_mes_pt_3_3 },
-    { (const CONN*)effA6_mes_pt_3_4, (const u16*)effA6_mes_pt_3_5 }, { (const CONN*)effA6_mes_pt_3_4, (const u16*)effA6_mes_pt_3_7 },
-    { (const CONN*)effA6_mes_pt_3_4, (const u16*)effA6_mes_pt_3_9 }, { (const CONN*)effA6_mes_pt_3_4, (const u16*)effA6_mes_pt_3_11 },
-    { (const CONN*)effA6_mes_pt_3_4, (const u16*)effA6_mes_pt_3_13 }, { (const CONN*)effA6_mes_pt_3_4, (const u16*)effA6_mes_pt_3_15 },
-    { (const CONN*)effA6_mes_pt_3_4, (const u16*)effA6_mes_pt_3_17 }, { (const CONN*)effA6_mes_pt_3_18, (const u16*)effA6_mes_pt_3_19 },
-    { (const CONN*)effA6_mes_pt_3_20, (const u16*)effA6_mes_pt_3_21 }, { (const CONN*)effA6_mes_pt_3_22, (const u16*)effA6_mes_pt_3_23 },
+    { (const CONN*)effA6_mes_pt_3_0, effA6_mes_pt_3_1 }, { (const CONN*)effA6_mes_pt_3_2, effA6_mes_pt_3_3 },
+    { (const CONN*)effA6_mes_pt_3_4, effA6_mes_pt_3_5 }, { (const CONN*)effA6_mes_pt_3_4, effA6_mes_pt_3_7 },
+    { (const CONN*)effA6_mes_pt_3_4, effA6_mes_pt_3_9 }, { (const CONN*)effA6_mes_pt_3_4, effA6_mes_pt_3_11 },
+    { (const CONN*)effA6_mes_pt_3_4, effA6_mes_pt_3_13 }, { (const CONN*)effA6_mes_pt_3_4, effA6_mes_pt_3_15 },
+    { (const CONN*)effA6_mes_pt_3_4, effA6_mes_pt_3_17 }, { (const CONN*)effA6_mes_pt_3_18, effA6_mes_pt_3_19 },
+    { effA6_mes_pt_3_20, effA6_mes_pt_3_21 }, { (const CONN*)effA6_mes_pt_3_22, effA6_mes_pt_3_23 },
 };
 
 const u32 effA6_mes_pt_3_0[102] = {
@@ -67591,10 +67591,10 @@ const u32 effA6_mes_pt_3_18[80] = {
     0xC8FFF0, 0x9E92, 0xD0FFF0, 0x9E88, 0xD8FFF0, 0x9E8C, 0xE0FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_pt_3_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_3_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_3_22[96] = {
@@ -67661,12 +67661,12 @@ const u16 effA6_mes_pt_3_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_4[12] = {
-    { (const CONN*)effA6_mes_pt_4_0, (const u16*)effA6_mes_pt_4_1 }, { (const CONN*)effA6_mes_pt_4_2, (const u16*)effA6_mes_pt_4_3 },
-    { (const CONN*)effA6_mes_pt_4_4, (const u16*)effA6_mes_pt_4_5 }, { (const CONN*)effA6_mes_pt_4_4, (const u16*)effA6_mes_pt_4_7 },
-    { (const CONN*)effA6_mes_pt_4_4, (const u16*)effA6_mes_pt_4_9 }, { (const CONN*)effA6_mes_pt_4_4, (const u16*)effA6_mes_pt_4_11 },
-    { (const CONN*)effA6_mes_pt_4_4, (const u16*)effA6_mes_pt_4_13 }, { (const CONN*)effA6_mes_pt_4_4, (const u16*)effA6_mes_pt_4_15 },
-    { (const CONN*)effA6_mes_pt_4_4, (const u16*)effA6_mes_pt_4_17 }, { (const CONN*)effA6_mes_pt_4_18, (const u16*)effA6_mes_pt_4_19 },
-    { (const CONN*)effA6_mes_pt_4_20, (const u16*)effA6_mes_pt_4_21 }, { (const CONN*)effA6_mes_pt_4_22, (const u16*)effA6_mes_pt_4_23 },
+    { (const CONN*)effA6_mes_pt_4_0, effA6_mes_pt_4_1 }, { (const CONN*)effA6_mes_pt_4_2, effA6_mes_pt_4_3 },
+    { (const CONN*)effA6_mes_pt_4_4, effA6_mes_pt_4_5 }, { (const CONN*)effA6_mes_pt_4_4, effA6_mes_pt_4_7 },
+    { (const CONN*)effA6_mes_pt_4_4, effA6_mes_pt_4_9 }, { (const CONN*)effA6_mes_pt_4_4, effA6_mes_pt_4_11 },
+    { (const CONN*)effA6_mes_pt_4_4, effA6_mes_pt_4_13 }, { (const CONN*)effA6_mes_pt_4_4, effA6_mes_pt_4_15 },
+    { (const CONN*)effA6_mes_pt_4_4, effA6_mes_pt_4_17 }, { (const CONN*)effA6_mes_pt_4_18, effA6_mes_pt_4_19 },
+    { effA6_mes_pt_4_20, effA6_mes_pt_4_21 }, { (const CONN*)effA6_mes_pt_4_22, effA6_mes_pt_4_23 },
 };
 
 const u32 effA6_mes_pt_4_0[98] = {
@@ -67725,10 +67725,10 @@ const u32 effA6_mes_pt_4_18[66] = {
     0x50FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_pt_4_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_4_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_4_22[96] = {
@@ -67795,12 +67795,12 @@ const u16 effA6_mes_pt_4_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_5[12] = {
-    { (const CONN*)effA6_mes_pt_5_0, (const u16*)effA6_mes_pt_5_1 }, { (const CONN*)effA6_mes_pt_5_2, (const u16*)effA6_mes_pt_5_3 },
-    { (const CONN*)effA6_mes_pt_5_4, (const u16*)effA6_mes_pt_5_5 }, { (const CONN*)effA6_mes_pt_5_4, (const u16*)effA6_mes_pt_5_7 },
-    { (const CONN*)effA6_mes_pt_5_4, (const u16*)effA6_mes_pt_5_9 }, { (const CONN*)effA6_mes_pt_5_4, (const u16*)effA6_mes_pt_5_11 },
-    { (const CONN*)effA6_mes_pt_5_4, (const u16*)effA6_mes_pt_5_13 }, { (const CONN*)effA6_mes_pt_5_4, (const u16*)effA6_mes_pt_5_15 },
-    { (const CONN*)effA6_mes_pt_5_4, (const u16*)effA6_mes_pt_5_17 }, { (const CONN*)effA6_mes_pt_5_18, (const u16*)effA6_mes_pt_5_19 },
-    { (const CONN*)effA6_mes_pt_5_20, (const u16*)effA6_mes_pt_5_21 }, { (const CONN*)effA6_mes_pt_5_22, (const u16*)effA6_mes_pt_5_23 },
+    { (const CONN*)effA6_mes_pt_5_0, effA6_mes_pt_5_1 }, { (const CONN*)effA6_mes_pt_5_2, effA6_mes_pt_5_3 },
+    { (const CONN*)effA6_mes_pt_5_4, effA6_mes_pt_5_5 }, { (const CONN*)effA6_mes_pt_5_4, effA6_mes_pt_5_7 },
+    { (const CONN*)effA6_mes_pt_5_4, effA6_mes_pt_5_9 }, { (const CONN*)effA6_mes_pt_5_4, effA6_mes_pt_5_11 },
+    { (const CONN*)effA6_mes_pt_5_4, effA6_mes_pt_5_13 }, { (const CONN*)effA6_mes_pt_5_4, effA6_mes_pt_5_15 },
+    { (const CONN*)effA6_mes_pt_5_4, effA6_mes_pt_5_17 }, { (const CONN*)effA6_mes_pt_5_18, effA6_mes_pt_5_19 },
+    { effA6_mes_pt_5_20, effA6_mes_pt_5_21 }, { (const CONN*)effA6_mes_pt_5_22, effA6_mes_pt_5_23 },
 };
 
 const u32 effA6_mes_pt_5_0[76] = {
@@ -67863,10 +67863,10 @@ const u32 effA6_mes_pt_5_18[100] = {
     0xE8FFF0, 0x9E80, 0xF0FFF0, 0x9E9B,
 };
 
-const u32 effA6_mes_pt_5_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_5_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_5_22[96] = {
@@ -67933,12 +67933,12 @@ const u16 effA6_mes_pt_5_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_6[12] = {
-    { (const CONN*)effA6_mes_pt_6_0, (const u16*)effA6_mes_pt_6_1 }, { (const CONN*)effA6_mes_pt_6_2, (const u16*)effA6_mes_pt_6_3 },
-    { (const CONN*)effA6_mes_pt_6_4, (const u16*)effA6_mes_pt_6_5 }, { (const CONN*)effA6_mes_pt_6_6, (const u16*)effA6_mes_pt_6_7 },
-    { (const CONN*)effA6_mes_pt_6_8, (const u16*)effA6_mes_pt_6_9 }, { (const CONN*)effA6_mes_pt_6_10, (const u16*)effA6_mes_pt_6_11 },
-    { (const CONN*)effA6_mes_pt_6_12, (const u16*)effA6_mes_pt_6_13 }, { (const CONN*)effA6_mes_pt_6_14, (const u16*)effA6_mes_pt_6_15 },
-    { (const CONN*)effA6_mes_pt_6_16, (const u16*)effA6_mes_pt_6_17 }, { (const CONN*)effA6_mes_pt_6_18, (const u16*)effA6_mes_pt_6_19 },
-    { (const CONN*)effA6_mes_pt_6_20, (const u16*)effA6_mes_pt_6_21 }, { (const CONN*)effA6_mes_pt_6_22, (const u16*)effA6_mes_pt_6_23 },
+    { (const CONN*)effA6_mes_pt_6_0, effA6_mes_pt_6_1 }, { (const CONN*)effA6_mes_pt_6_2, effA6_mes_pt_6_3 },
+    { (const CONN*)effA6_mes_pt_6_4, effA6_mes_pt_6_5 }, { (const CONN*)effA6_mes_pt_6_6, effA6_mes_pt_6_7 },
+    { (const CONN*)effA6_mes_pt_6_8, effA6_mes_pt_6_9 }, { (const CONN*)effA6_mes_pt_6_10, effA6_mes_pt_6_11 },
+    { (const CONN*)effA6_mes_pt_6_12, effA6_mes_pt_6_13 }, { (const CONN*)effA6_mes_pt_6_14, effA6_mes_pt_6_15 },
+    { (const CONN*)effA6_mes_pt_6_16, effA6_mes_pt_6_17 }, { (const CONN*)effA6_mes_pt_6_18, effA6_mes_pt_6_19 },
+    { effA6_mes_pt_6_20, effA6_mes_pt_6_21 }, { (const CONN*)effA6_mes_pt_6_22, effA6_mes_pt_6_23 },
 };
 
 const u32 effA6_mes_pt_6_0[98] = {
@@ -68085,10 +68085,10 @@ const u32 effA6_mes_pt_6_18[62] = {
     0x28FFF0, 0x9E93, 0x30FFF0, 0x9E84, 0x38FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_pt_6_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_6_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_6_22[96] = {
@@ -68155,12 +68155,12 @@ const u16 effA6_mes_pt_6_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_7[12] = {
-    { (const CONN*)effA6_mes_pt_7_0, (const u16*)effA6_mes_pt_7_1 }, { (const CONN*)effA6_mes_pt_7_2, (const u16*)effA6_mes_pt_7_3 },
-    { (const CONN*)effA6_mes_pt_7_4, (const u16*)effA6_mes_pt_7_5 }, { (const CONN*)effA6_mes_pt_7_4, (const u16*)effA6_mes_pt_7_7 },
-    { (const CONN*)effA6_mes_pt_7_4, (const u16*)effA6_mes_pt_7_9 }, { (const CONN*)effA6_mes_pt_7_4, (const u16*)effA6_mes_pt_7_11 },
-    { (const CONN*)effA6_mes_pt_7_4, (const u16*)effA6_mes_pt_7_13 }, { (const CONN*)effA6_mes_pt_7_4, (const u16*)effA6_mes_pt_7_15 },
-    { (const CONN*)effA6_mes_pt_7_4, (const u16*)effA6_mes_pt_7_17 }, { (const CONN*)effA6_mes_pt_7_18, (const u16*)effA6_mes_pt_7_19 },
-    { (const CONN*)effA6_mes_pt_7_20, (const u16*)effA6_mes_pt_7_21 }, { (const CONN*)effA6_mes_pt_7_22, (const u16*)effA6_mes_pt_7_23 },
+    { (const CONN*)effA6_mes_pt_7_0, effA6_mes_pt_7_1 }, { (const CONN*)effA6_mes_pt_7_2, effA6_mes_pt_7_3 },
+    { (const CONN*)effA6_mes_pt_7_4, effA6_mes_pt_7_5 }, { (const CONN*)effA6_mes_pt_7_4, effA6_mes_pt_7_7 },
+    { (const CONN*)effA6_mes_pt_7_4, effA6_mes_pt_7_9 }, { (const CONN*)effA6_mes_pt_7_4, effA6_mes_pt_7_11 },
+    { (const CONN*)effA6_mes_pt_7_4, effA6_mes_pt_7_13 }, { (const CONN*)effA6_mes_pt_7_4, effA6_mes_pt_7_15 },
+    { (const CONN*)effA6_mes_pt_7_4, effA6_mes_pt_7_17 }, { (const CONN*)effA6_mes_pt_7_18, effA6_mes_pt_7_19 },
+    { effA6_mes_pt_7_20, effA6_mes_pt_7_21 }, { (const CONN*)effA6_mes_pt_7_22, effA6_mes_pt_7_23 },
 };
 
 const u32 effA6_mes_pt_7_0[76] = {
@@ -68218,10 +68218,10 @@ const u32 effA6_mes_pt_7_18[100] = {
     0xD8FFF0, 0x9E84, 0xE0FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_pt_7_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_7_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_7_22[96] = {
@@ -68288,12 +68288,12 @@ const u16 effA6_mes_pt_7_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_8[12] = {
-    { (const CONN*)effA6_mes_pt_8_0, (const u16*)effA6_mes_pt_8_1 }, { (const CONN*)effA6_mes_pt_8_2, (const u16*)effA6_mes_pt_8_3 },
-    { (const CONN*)effA6_mes_pt_8_4, (const u16*)effA6_mes_pt_8_5 }, { (const CONN*)effA6_mes_pt_8_4, (const u16*)effA6_mes_pt_8_7 },
-    { (const CONN*)effA6_mes_pt_8_4, (const u16*)effA6_mes_pt_8_9 }, { (const CONN*)effA6_mes_pt_8_4, (const u16*)effA6_mes_pt_8_11 },
-    { (const CONN*)effA6_mes_pt_8_4, (const u16*)effA6_mes_pt_8_13 }, { (const CONN*)effA6_mes_pt_8_4, (const u16*)effA6_mes_pt_8_15 },
-    { (const CONN*)effA6_mes_pt_8_4, (const u16*)effA6_mes_pt_8_17 }, { (const CONN*)effA6_mes_pt_8_18, (const u16*)effA6_mes_pt_8_19 },
-    { (const CONN*)effA6_mes_pt_8_20, (const u16*)effA6_mes_pt_8_21 }, { (const CONN*)effA6_mes_pt_8_22, (const u16*)effA6_mes_pt_8_23 },
+    { (const CONN*)effA6_mes_pt_8_0, effA6_mes_pt_8_1 }, { (const CONN*)effA6_mes_pt_8_2, effA6_mes_pt_8_3 },
+    { (const CONN*)effA6_mes_pt_8_4, effA6_mes_pt_8_5 }, { (const CONN*)effA6_mes_pt_8_4, effA6_mes_pt_8_7 },
+    { (const CONN*)effA6_mes_pt_8_4, effA6_mes_pt_8_9 }, { (const CONN*)effA6_mes_pt_8_4, effA6_mes_pt_8_11 },
+    { (const CONN*)effA6_mes_pt_8_4, effA6_mes_pt_8_13 }, { (const CONN*)effA6_mes_pt_8_4, effA6_mes_pt_8_15 },
+    { (const CONN*)effA6_mes_pt_8_4, effA6_mes_pt_8_17 }, { (const CONN*)effA6_mes_pt_8_18, effA6_mes_pt_8_19 },
+    { effA6_mes_pt_8_20, effA6_mes_pt_8_21 }, { (const CONN*)effA6_mes_pt_8_22, effA6_mes_pt_8_23 },
 };
 
 const u32 effA6_mes_pt_8_0[86] = {
@@ -68352,10 +68352,10 @@ const u32 effA6_mes_pt_8_18[96] = {
     0xD0FFF0, 0x9E8D, 0xD8FFF0, 0x9E83, 0xE0FFF0, 0x9E92, 0xE8FFF0, 0x9E9B,
 };
 
-const u32 effA6_mes_pt_8_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_8_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_8_22[96] = {
@@ -68422,12 +68422,12 @@ const u16 effA6_mes_pt_8_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_9[12] = {
-    { (const CONN*)effA6_mes_pt_9_0, (const u16*)effA6_mes_pt_9_1 }, { (const CONN*)effA6_mes_pt_9_2, (const u16*)effA6_mes_pt_9_3 },
-    { (const CONN*)effA6_mes_pt_9_4, (const u16*)effA6_mes_pt_9_5 }, { (const CONN*)effA6_mes_pt_9_4, (const u16*)effA6_mes_pt_9_7 },
-    { (const CONN*)effA6_mes_pt_9_4, (const u16*)effA6_mes_pt_9_9 }, { (const CONN*)effA6_mes_pt_9_4, (const u16*)effA6_mes_pt_9_11 },
-    { (const CONN*)effA6_mes_pt_9_4, (const u16*)effA6_mes_pt_9_13 }, { (const CONN*)effA6_mes_pt_9_4, (const u16*)effA6_mes_pt_9_15 },
-    { (const CONN*)effA6_mes_pt_9_4, (const u16*)effA6_mes_pt_9_17 }, { (const CONN*)effA6_mes_pt_9_18, (const u16*)effA6_mes_pt_9_19 },
-    { (const CONN*)effA6_mes_pt_9_20, (const u16*)effA6_mes_pt_9_21 }, { (const CONN*)effA6_mes_pt_9_22, (const u16*)effA6_mes_pt_9_23 },
+    { (const CONN*)effA6_mes_pt_9_0, effA6_mes_pt_9_1 }, { (const CONN*)effA6_mes_pt_9_2, effA6_mes_pt_9_3 },
+    { (const CONN*)effA6_mes_pt_9_4, effA6_mes_pt_9_5 }, { (const CONN*)effA6_mes_pt_9_4, effA6_mes_pt_9_7 },
+    { (const CONN*)effA6_mes_pt_9_4, effA6_mes_pt_9_9 }, { (const CONN*)effA6_mes_pt_9_4, effA6_mes_pt_9_11 },
+    { (const CONN*)effA6_mes_pt_9_4, effA6_mes_pt_9_13 }, { (const CONN*)effA6_mes_pt_9_4, effA6_mes_pt_9_15 },
+    { (const CONN*)effA6_mes_pt_9_4, effA6_mes_pt_9_17 }, { (const CONN*)effA6_mes_pt_9_18, effA6_mes_pt_9_19 },
+    { (const CONN*)effA6_mes_pt_9_20, effA6_mes_pt_9_21 }, { (const CONN*)effA6_mes_pt_9_22, effA6_mes_pt_9_23 },
 };
 
 const u32 effA6_mes_pt_9_0[102] = {
@@ -68556,12 +68556,12 @@ const u16 effA6_mes_pt_9_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_10[12] = {
-    { (const CONN*)effA6_mes_pt_10_0, (const u16*)effA6_mes_pt_10_1 }, { (const CONN*)effA6_mes_pt_10_2, (const u16*)effA6_mes_pt_10_3 },
-    { (const CONN*)effA6_mes_pt_10_4, (const u16*)effA6_mes_pt_10_5 }, { (const CONN*)effA6_mes_pt_10_4, (const u16*)effA6_mes_pt_10_7 },
-    { (const CONN*)effA6_mes_pt_10_4, (const u16*)effA6_mes_pt_10_9 }, { (const CONN*)effA6_mes_pt_10_4, (const u16*)effA6_mes_pt_10_11 },
-    { (const CONN*)effA6_mes_pt_10_4, (const u16*)effA6_mes_pt_10_13 }, { (const CONN*)effA6_mes_pt_10_4, (const u16*)effA6_mes_pt_10_15 },
-    { (const CONN*)effA6_mes_pt_10_4, (const u16*)effA6_mes_pt_10_17 }, { (const CONN*)effA6_mes_pt_10_18, (const u16*)effA6_mes_pt_10_19 },
-    { (const CONN*)effA6_mes_pt_10_20, (const u16*)effA6_mes_pt_10_21 }, { (const CONN*)effA6_mes_pt_10_22, (const u16*)effA6_mes_pt_10_23 },
+    { (const CONN*)effA6_mes_pt_10_0, effA6_mes_pt_10_1 }, { (const CONN*)effA6_mes_pt_10_2, effA6_mes_pt_10_3 },
+    { (const CONN*)effA6_mes_pt_10_4, effA6_mes_pt_10_5 }, { (const CONN*)effA6_mes_pt_10_4, effA6_mes_pt_10_7 },
+    { (const CONN*)effA6_mes_pt_10_4, effA6_mes_pt_10_9 }, { (const CONN*)effA6_mes_pt_10_4, effA6_mes_pt_10_11 },
+    { (const CONN*)effA6_mes_pt_10_4, effA6_mes_pt_10_13 }, { (const CONN*)effA6_mes_pt_10_4, effA6_mes_pt_10_15 },
+    { (const CONN*)effA6_mes_pt_10_4, effA6_mes_pt_10_17 }, { (const CONN*)effA6_mes_pt_10_18, effA6_mes_pt_10_19 },
+    { effA6_mes_pt_10_20, effA6_mes_pt_10_21 }, { (const CONN*)effA6_mes_pt_10_22, effA6_mes_pt_10_23 },
 };
 
 const u32 effA6_mes_pt_10_0[92] = {
@@ -68623,10 +68623,10 @@ const u32 effA6_mes_pt_10_18[86] = {
     0x88FFF0, 0x9E84, 0x90FFF0, 0x9E88, 0x98FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_pt_10_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_10_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_10_22[96] = {
@@ -68693,12 +68693,12 @@ const u16 effA6_mes_pt_10_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_11[12] = {
-    { (const CONN*)effA6_mes_pt_11_0, (const u16*)effA6_mes_pt_11_1 }, { (const CONN*)effA6_mes_pt_11_2, (const u16*)effA6_mes_pt_11_3 },
-    { (const CONN*)effA6_mes_pt_11_4, (const u16*)effA6_mes_pt_11_5 }, { (const CONN*)effA6_mes_pt_11_4, (const u16*)effA6_mes_pt_11_7 },
-    { (const CONN*)effA6_mes_pt_11_4, (const u16*)effA6_mes_pt_11_9 }, { (const CONN*)effA6_mes_pt_11_4, (const u16*)effA6_mes_pt_11_11 },
-    { (const CONN*)effA6_mes_pt_11_4, (const u16*)effA6_mes_pt_11_13 }, { (const CONN*)effA6_mes_pt_11_4, (const u16*)effA6_mes_pt_11_15 },
-    { (const CONN*)effA6_mes_pt_11_4, (const u16*)effA6_mes_pt_11_17 }, { (const CONN*)effA6_mes_pt_11_18, (const u16*)effA6_mes_pt_11_19 },
-    { (const CONN*)effA6_mes_pt_11_20, (const u16*)effA6_mes_pt_11_21 }, { (const CONN*)effA6_mes_pt_11_22, (const u16*)effA6_mes_pt_11_23 },
+    { (const CONN*)effA6_mes_pt_11_0, effA6_mes_pt_11_1 }, { (const CONN*)effA6_mes_pt_11_2, effA6_mes_pt_11_3 },
+    { (const CONN*)effA6_mes_pt_11_4, effA6_mes_pt_11_5 }, { (const CONN*)effA6_mes_pt_11_4, effA6_mes_pt_11_7 },
+    { (const CONN*)effA6_mes_pt_11_4, effA6_mes_pt_11_9 }, { (const CONN*)effA6_mes_pt_11_4, effA6_mes_pt_11_11 },
+    { (const CONN*)effA6_mes_pt_11_4, effA6_mes_pt_11_13 }, { (const CONN*)effA6_mes_pt_11_4, effA6_mes_pt_11_15 },
+    { (const CONN*)effA6_mes_pt_11_4, effA6_mes_pt_11_17 }, { (const CONN*)effA6_mes_pt_11_18, effA6_mes_pt_11_19 },
+    { effA6_mes_pt_11_20, effA6_mes_pt_11_21 }, { (const CONN*)effA6_mes_pt_11_22, effA6_mes_pt_11_23 },
 };
 
 const u32 effA6_mes_pt_11_0[70] = {
@@ -68756,10 +68756,10 @@ const u32 effA6_mes_pt_11_18[78] = {
     0x90FFF0, 0x9E8B, 0x98FFF0, 0x9E84, 0xA0FFF0, 0x9E9B,
 };
 
-const u32 effA6_mes_pt_11_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_11_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_11_22[96] = {
@@ -68826,12 +68826,12 @@ const u16 effA6_mes_pt_11_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_12[12] = {
-    { (const CONN*)effA6_mes_pt_12_0, (const u16*)effA6_mes_pt_12_1 }, { (const CONN*)effA6_mes_pt_12_2, (const u16*)effA6_mes_pt_12_3 },
-    { (const CONN*)effA6_mes_pt_12_4, (const u16*)effA6_mes_pt_12_5 }, { (const CONN*)effA6_mes_pt_12_4, (const u16*)effA6_mes_pt_12_7 },
-    { (const CONN*)effA6_mes_pt_12_4, (const u16*)effA6_mes_pt_12_9 }, { (const CONN*)effA6_mes_pt_12_4, (const u16*)effA6_mes_pt_12_11 },
-    { (const CONN*)effA6_mes_pt_12_4, (const u16*)effA6_mes_pt_12_13 }, { (const CONN*)effA6_mes_pt_12_4, (const u16*)effA6_mes_pt_12_15 },
-    { (const CONN*)effA6_mes_pt_12_4, (const u16*)effA6_mes_pt_12_17 }, { (const CONN*)effA6_mes_pt_12_18, (const u16*)effA6_mes_pt_12_19 },
-    { (const CONN*)effA6_mes_pt_12_20, (const u16*)effA6_mes_pt_12_21 }, { (const CONN*)effA6_mes_pt_12_22, (const u16*)effA6_mes_pt_12_23 },
+    { (const CONN*)effA6_mes_pt_12_0, effA6_mes_pt_12_1 }, { (const CONN*)effA6_mes_pt_12_2, effA6_mes_pt_12_3 },
+    { (const CONN*)effA6_mes_pt_12_4, effA6_mes_pt_12_5 }, { (const CONN*)effA6_mes_pt_12_4, effA6_mes_pt_12_7 },
+    { (const CONN*)effA6_mes_pt_12_4, effA6_mes_pt_12_9 }, { (const CONN*)effA6_mes_pt_12_4, effA6_mes_pt_12_11 },
+    { (const CONN*)effA6_mes_pt_12_4, effA6_mes_pt_12_13 }, { (const CONN*)effA6_mes_pt_12_4, effA6_mes_pt_12_15 },
+    { (const CONN*)effA6_mes_pt_12_4, effA6_mes_pt_12_17 }, { (const CONN*)effA6_mes_pt_12_18, effA6_mes_pt_12_19 },
+    { effA6_mes_pt_12_20, effA6_mes_pt_12_21 }, { (const CONN*)effA6_mes_pt_12_22, effA6_mes_pt_12_23 },
 };
 
 const u32 effA6_mes_pt_12_0[96] = {
@@ -68896,10 +68896,10 @@ const u32 effA6_mes_pt_12_18[100] = {
     0xE0FFF0, 0x9E8B, 0xE8FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_pt_12_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_12_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_12_22[96] = {
@@ -68966,12 +68966,12 @@ const u16 effA6_mes_pt_12_23[4] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_13[12] = {
-    { (const CONN*)effA6_mes_pt_13_0, (const u16*)effA6_mes_pt_13_1 }, { (const CONN*)effA6_mes_pt_13_2, (const u16*)effA6_mes_pt_13_3 },
-    { (const CONN*)effA6_mes_pt_13_4, (const u16*)effA6_mes_pt_13_5 }, { (const CONN*)effA6_mes_pt_13_4, (const u16*)effA6_mes_pt_13_7 },
-    { (const CONN*)effA6_mes_pt_13_4, (const u16*)effA6_mes_pt_13_9 }, { (const CONN*)effA6_mes_pt_13_4, (const u16*)effA6_mes_pt_13_11 },
-    { (const CONN*)effA6_mes_pt_13_4, (const u16*)effA6_mes_pt_13_13 }, { (const CONN*)effA6_mes_pt_13_4, (const u16*)effA6_mes_pt_13_15 },
-    { (const CONN*)effA6_mes_pt_13_4, (const u16*)effA6_mes_pt_13_17 }, { (const CONN*)effA6_mes_pt_13_18, (const u16*)effA6_mes_pt_13_19 },
-    { (const CONN*)effA6_mes_pt_13_20, (const u16*)effA6_mes_pt_13_21 }, { (const CONN*)effA6_mes_pt_13_22, (const u16*)effA6_mes_pt_13_23 },
+    { (const CONN*)effA6_mes_pt_13_0, effA6_mes_pt_13_1 }, { (const CONN*)effA6_mes_pt_13_2, effA6_mes_pt_13_3 },
+    { (const CONN*)effA6_mes_pt_13_4, effA6_mes_pt_13_5 }, { (const CONN*)effA6_mes_pt_13_4, effA6_mes_pt_13_7 },
+    { (const CONN*)effA6_mes_pt_13_4, effA6_mes_pt_13_9 }, { (const CONN*)effA6_mes_pt_13_4, effA6_mes_pt_13_11 },
+    { (const CONN*)effA6_mes_pt_13_4, effA6_mes_pt_13_13 }, { (const CONN*)effA6_mes_pt_13_4, effA6_mes_pt_13_15 },
+    { (const CONN*)effA6_mes_pt_13_4, effA6_mes_pt_13_17 }, { (const CONN*)effA6_mes_pt_13_18, effA6_mes_pt_13_19 },
+    { effA6_mes_pt_13_20, effA6_mes_pt_13_21 }, { (const CONN*)effA6_mes_pt_13_22, effA6_mes_pt_13_23 },
 };
 
 const u32 effA6_mes_pt_13_0[96] = {
@@ -69029,10 +69029,10 @@ const u32 effA6_mes_pt_13_18[76] = {
     0x80FFF0, 0x9E8C, 0x88FFF0, 0x9E9A,
 };
 
-const u32 effA6_mes_pt_13_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_13_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_13_22[96] = {
@@ -69099,12 +69099,12 @@ const u16 effA6_mes_pt_13_23[5] = {
 };
 
 const EFFA6_MESSAGE effA6_mes_pt_14[12] = {
-    { (const CONN*)effA6_mes_pt_14_0, (const u16*)effA6_mes_pt_14_1 }, { (const CONN*)effA6_mes_pt_14_2, (const u16*)effA6_mes_pt_14_3 },
-    { (const CONN*)effA6_mes_pt_14_4, (const u16*)effA6_mes_pt_14_5 }, { (const CONN*)effA6_mes_pt_14_4, (const u16*)effA6_mes_pt_14_7 },
-    { (const CONN*)effA6_mes_pt_14_4, (const u16*)effA6_mes_pt_14_9 }, { (const CONN*)effA6_mes_pt_14_4, (const u16*)effA6_mes_pt_14_11 },
-    { (const CONN*)effA6_mes_pt_14_4, (const u16*)effA6_mes_pt_14_13 }, { (const CONN*)effA6_mes_pt_14_4, (const u16*)effA6_mes_pt_14_15 },
-    { (const CONN*)effA6_mes_pt_14_4, (const u16*)effA6_mes_pt_14_17 }, { (const CONN*)effA6_mes_pt_14_18, (const u16*)effA6_mes_pt_14_19 },
-    { (const CONN*)effA6_mes_pt_14_20, (const u16*)effA6_mes_pt_14_21 }, { (const CONN*)effA6_mes_pt_14_22, (const u16*)effA6_mes_pt_14_23 },
+    { (const CONN*)effA6_mes_pt_14_0, effA6_mes_pt_14_1 }, { (const CONN*)effA6_mes_pt_14_2, effA6_mes_pt_14_3 },
+    { (const CONN*)effA6_mes_pt_14_4, effA6_mes_pt_14_5 }, { (const CONN*)effA6_mes_pt_14_4, effA6_mes_pt_14_7 },
+    { (const CONN*)effA6_mes_pt_14_4, effA6_mes_pt_14_9 }, { (const CONN*)effA6_mes_pt_14_4, effA6_mes_pt_14_11 },
+    { (const CONN*)effA6_mes_pt_14_4, effA6_mes_pt_14_13 }, { (const CONN*)effA6_mes_pt_14_4, effA6_mes_pt_14_15 },
+    { (const CONN*)effA6_mes_pt_14_4, effA6_mes_pt_14_17 }, { (const CONN*)effA6_mes_pt_14_18, effA6_mes_pt_14_19 },
+    { effA6_mes_pt_14_20, effA6_mes_pt_14_21 }, { (const CONN*)effA6_mes_pt_14_22, effA6_mes_pt_14_23 },
 };
 
 const u32 effA6_mes_pt_14_0[74] = {
@@ -69159,10 +69159,10 @@ const u32 effA6_mes_pt_14_18[52] = {
     0xC00000, 0x9E9C, 0xC80000, 0x9E9C,
 };
 
-const u32 effA6_mes_pt_14_20[20] = {
-    0, 0x9EB0, 0x80000, 0x9E94, 0x100000, 0x9E84, 0x180000, 0x9E8C,
-    0x280000, 0x9F3A, 0x380000, 0x9E95, 0x400000, 0x9E8E, 0x480000, 0x9E82,
-    0x500000, 0x9F3C, 0x580000, 0x9E9B,
+const CONN effA6_mes_pt_14_20[10] = {
+    { 0, 0, 0, 0x9EB0 }, { 8, 0, 0, 0x9E94 }, { 16, 0, 0, 0x9E84 }, { 24, 0, 0, 0x9E8C },
+    { 40, 0, 0, 0x9F3A }, { 56, 0, 0, 0x9E95 }, { 64, 0, 0, 0x9E8E }, { 72, 0, 0, 0x9E82 },
+    { 80, 0, 0, 0x9F3C }, { 88, 0, 0, 0x9E9B },
 };
 
 const u32 effA6_mes_pt_14_22[96] = {
@@ -69229,9 +69229,9 @@ const u16 effA6_mes_pt_14_23[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_15[5] = {
-    { (const CONN*)effF9_mes_jp_15_0, (const u16*)effF9_mes_jp_15_1 }, { (const CONN*)effF9_mes_jp_15_0, (const u16*)effF9_mes_jp_15_3 },
-    { (const CONN*)effF9_mes_jp_15_4, (const u16*)effF9_mes_jp_15_5 }, { (const CONN*)effF9_mes_jp_15_6, (const u16*)effF9_mes_jp_15_7 },
-    { (const CONN*)effF9_mes_jp_15_8, (const u16*)effF9_mes_jp_15_9 },
+    { (const CONN*)effF9_mes_jp_15_0, effF9_mes_jp_15_1 }, { (const CONN*)effF9_mes_jp_15_0, effF9_mes_jp_15_3 },
+    { effF9_mes_jp_15_4, effF9_mes_jp_15_5 }, { (const CONN*)effF9_mes_jp_15_6, effF9_mes_jp_15_7 },
+    { effF9_mes_jp_15_8, effF9_mes_jp_15_9 },
 };
 
 const u32 effF9_mes_jp_15_0[44] = {
@@ -69243,13 +69243,13 @@ const u32 effF9_mes_jp_15_0[44] = {
     0x70FFEA, 0xA002, 0x80FFEA, 0xA057,
 };
 
-const u32 effF9_mes_jp_15_4[44] = {
-    0, 0xA057, 0x100000, 0xA013, 0x200000, 0xA253, 0x300000, 0xA001,
-    0x400000, 0xA00F, 0x500000, 0xA001, 0x600000, 0xA013, 0x700000, 0xA009,
-    0x800000, 0xA02A, 0x900000, 0xA048, 0xA00000, 0xA03E, 0xFFEA, 0xA0AA,
-    0x10FFEA, 0xA088, 0x20FFEA, 0xA092, 0x30FFEA, 0xA08C, 0x40FFEA, 0xA093,
-    0x50FFEA, 0xA019, 0x60FFEA, 0xA009, 0x70FFEA, 0xA009, 0x80FFEA, 0xA01E,
-    0x90FFEA, 0xA04B, 0xA0FFEA, 0xA048,
+const CONN effF9_mes_jp_15_4[22] = {
+    { 0, 0, 0, 0xA057 }, { 16, 0, 0, 0xA013 }, { 32, 0, 0, 0xA253 }, { 48, 0, 0, 0xA001 },
+    { 64, 0, 0, 0xA00F }, { 80, 0, 0, 0xA001 }, { 96, 0, 0, 0xA013 }, { 112, 0, 0, 0xA009 },
+    { 128, 0, 0, 0xA02A }, { 144, 0, 0, 0xA048 }, { 160, 0, 0, 0xA03E }, { 0, -22, 0, 0xA0AA },
+    { 16, -22, 0, 0xA088 }, { 32, -22, 0, 0xA092 }, { 48, -22, 0, 0xA08C }, { 64, -22, 0, 0xA093 },
+    { 80, -22, 0, 0xA019 }, { 96, -22, 0, 0xA009 }, { 112, -22, 0, 0xA009 }, { 128, -22, 0, 0xA01E },
+    { 144, -22, 0, 0xA04B }, { 160, -22, 0, 0xA048 },
 };
 
 const u32 effF9_mes_jp_15_6[42] = {
@@ -69261,8 +69261,8 @@ const u32 effF9_mes_jp_15_6[42] = {
     0x80FFEA, 0xA001,
 };
 
-const u32 effF9_mes_jp_15_8[8] = {
-    0, 0xA09B, 0x100000, 0xA09B, 0x200000, 0xA09B, 0x300000, 0xA057,
+const CONN effF9_mes_jp_15_8[4] = {
+    { 0, 0, 0, 0xA09B }, { 16, 0, 0, 0xA09B }, { 32, 0, 0, 0xA09B }, { 48, 0, 0, 0xA057 },
 };
 
 const u16 effF9_mes_jp_15_1[2] = {
@@ -69286,9 +69286,9 @@ const u16 effF9_mes_jp_15_9[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_15[5] = {
-    { (const CONN*)effF9_mes_en_15_0, (const u16*)effF9_mes_en_15_1 }, { (const CONN*)effF9_mes_en_15_0, (const u16*)effF9_mes_en_15_3 },
-    { (const CONN*)effF9_mes_en_15_4, (const u16*)effF9_mes_en_15_5 }, { (const CONN*)effF9_mes_en_15_6, (const u16*)effF9_mes_en_15_7 },
-    { (const CONN*)effF9_mes_en_15_8, (const u16*)effF9_mes_en_15_9 },
+    { (const CONN*)effF9_mes_en_15_0, effF9_mes_en_15_1 }, { (const CONN*)effF9_mes_en_15_0, effF9_mes_en_15_3 },
+    { (const CONN*)effF9_mes_en_15_4, effF9_mes_en_15_5 }, { (const CONN*)effF9_mes_en_15_6, effF9_mes_en_15_7 },
+    { (const CONN*)effF9_mes_en_15_8, effF9_mes_en_15_9 },
 };
 
 const u32 effF9_mes_en_15_0[80] = {
@@ -69368,9 +69368,9 @@ const u16 effF9_mes_en_15_9[3] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_jp_16[5] = {
-    { (const CONN*)effF9_mes_jp_16_0, (const u16*)effF9_mes_jp_16_1 }, { (const CONN*)effF9_mes_jp_16_0, (const u16*)effF9_mes_jp_16_3 },
-    { (const CONN*)effF9_mes_jp_16_4, (const u16*)effF9_mes_jp_16_5 }, { (const CONN*)effF9_mes_jp_16_6, (const u16*)effF9_mes_jp_16_7 },
-    { (const CONN*)effF9_mes_jp_16_8, (const u16*)effF9_mes_jp_16_9 },
+    { (const CONN*)effF9_mes_jp_16_0, effF9_mes_jp_16_1 }, { (const CONN*)effF9_mes_jp_16_0, effF9_mes_jp_16_3 },
+    { (const CONN*)effF9_mes_jp_16_4, effF9_mes_jp_16_5 }, { effF9_mes_jp_16_6, effF9_mes_jp_16_7 },
+    { (const CONN*)effF9_mes_jp_16_8, effF9_mes_jp_16_9 },
 };
 
 const u32 effF9_mes_jp_16_0[44] = {
@@ -69390,13 +69390,13 @@ const u32 effF9_mes_jp_16_4[38] = {
     0x50FFEA, 0xA01E, 0x60FFEA, 0xA04B, 0x70FFEA, 0xA048,
 };
 
-const u32 effF9_mes_jp_16_6[42] = {
-    0, 0xA01E, 0x100000, 0xA00F, 0x200000, 0xA018, 0x300000, 0xA175,
-    0x400000, 0xA190, 0x500000, 0xA015, 0x600000, 0xA2A0, 0x700000, 0xA03E,
-    0x800000, 0xA17B, 0x900000, 0xA018, 0xA00000, 0xA119, 0xB00000, 0xA037,
-    0xFFEA, 0xA3FD, 0x10FFEA, 0xA26D, 0x20FFEA, 0xA015, 0x30FFEA, 0xA285,
-    0x40FFEA, 0xA02B, 0x50FFEA, 0xA002, 0x60FFEA, 0xA03E, 0x70FFEA, 0xA001,
-    0x80FFEA, 0xA001,
+const CONN effF9_mes_jp_16_6[21] = {
+    { 0, 0, 0, 0xA01E }, { 16, 0, 0, 0xA00F }, { 32, 0, 0, 0xA018 }, { 48, 0, 0, 0xA175 },
+    { 64, 0, 0, 0xA190 }, { 80, 0, 0, 0xA015 }, { 96, 0, 0, 0xA2A0 }, { 112, 0, 0, 0xA03E },
+    { 128, 0, 0, 0xA17B }, { 144, 0, 0, 0xA018 }, { 160, 0, 0, 0xA119 }, { 176, 0, 0, 0xA037 },
+    { 0, -22, 0, 0xA3FD }, { 16, -22, 0, 0xA26D }, { 32, -22, 0, 0xA015 }, { 48, -22, 0, 0xA285 },
+    { 64, -22, 0, 0xA02B }, { 80, -22, 0, 0xA002 }, { 96, -22, 0, 0xA03E }, { 112, -22, 0, 0xA001 },
+    { 128, -22, 0, 0xA001 },
 };
 
 const u32 effF9_mes_jp_16_8[8] = {
@@ -69424,9 +69424,9 @@ const u16 effF9_mes_jp_16_9[4] = {
 };
 
 const EFFF9_MESSAGE effF9_mes_en_16[5] = {
-    { (const CONN*)effF9_mes_en_16_0, (const u16*)effF9_mes_en_16_1 }, { (const CONN*)effF9_mes_en_16_0, (const u16*)effF9_mes_en_16_3 },
-    { (const CONN*)effF9_mes_en_16_4, (const u16*)effF9_mes_en_16_5 }, { (const CONN*)effF9_mes_en_16_6, (const u16*)effF9_mes_en_16_7 },
-    { (const CONN*)effF9_mes_en_16_8, (const u16*)effF9_mes_en_16_9 },
+    { (const CONN*)effF9_mes_en_16_0, effF9_mes_en_16_1 }, { (const CONN*)effF9_mes_en_16_0, effF9_mes_en_16_3 },
+    { (const CONN*)effF9_mes_en_16_4, effF9_mes_en_16_5 }, { (const CONN*)effF9_mes_en_16_6, effF9_mes_en_16_7 },
+    { (const CONN*)effF9_mes_en_16_8, effF9_mes_en_16_9 },
 };
 
 const u32 effF9_mes_en_16_0[80] = {

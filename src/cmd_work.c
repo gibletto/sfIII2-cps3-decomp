@@ -192,22 +192,22 @@ const s16* pl_cmd_list[16][56] = {
 };
 /* 02007270 */
 void* pl_CMD[16] = {
-    (void *)pl_cmd_list[0],
-    (void *)pl_cmd_list[1],
-    (void *)pl_cmd_list[2],
-    (void *)pl_cmd_list[3],
-    (void *)pl_cmd_list[4],
-    (void *)pl_cmd_list[5],
-    (void *)pl_cmd_list[6],
-    (void *)pl_cmd_list[7],
-    (void *)pl_cmd_list[8],
-    (void *)pl_cmd_list[9],
-    (void *)pl_cmd_list[10],
-    (void *)pl_cmd_list[11],
-    (void *)pl_cmd_list[12],
-    (void *)pl_cmd_list[13],
-    (void *)pl_cmd_list[14],
-    (void *)pl_cmd_list[15],
+    pl_cmd_list[0],
+    pl_cmd_list[1],
+    pl_cmd_list[2],
+    pl_cmd_list[3],
+    pl_cmd_list[4],
+    pl_cmd_list[5],
+    pl_cmd_list[6],
+    pl_cmd_list[7],
+    pl_cmd_list[8],
+    pl_cmd_list[9],
+    pl_cmd_list[10],
+    pl_cmd_list[11],
+    pl_cmd_list[12],
+    pl_cmd_list[13],
+    pl_cmd_list[14],
+    pl_cmd_list[15],
 };
 /* 020072B0 */
 const_s16_arr* player_cmd[16] = {

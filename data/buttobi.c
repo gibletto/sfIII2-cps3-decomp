@@ -15,112 +15,72 @@
 
 #pragma section TBL
 
-extern const s16 buttobi_time_table[][4];
-extern const s16 buttobi_add_y_table[][4];
+extern const s16 buttobi_time_table[];
+extern const s16 buttobi_add_y_table[];
 extern const PARABORA_DATA *const parabora_own_table[];
 extern const s16 parabora_ex_table[][16][4][4][6];
-extern const u8 alex_parabora_data[];
-extern const u8 dudley_parabora_data[];
-extern const u8 elena_parabora_data[];
-extern const u8 gill_parabora_data[];
-extern const u8 gouki1_parabora_data[];
-extern const u8 gouki2_parabora_data[];
-extern const u8 hugo_parabora_data[];
-extern const u8 ibuki_parabora_data[];
-extern const u8 ken_parabora_data[];
-extern const u8 necro_parabora_data[];
-extern const u8 oro_parabora_data[];
-extern const u8 ryu_parabora_data[];
-extern const u8 sean_parabora_data[];
-extern const u8 urien_parabora_data[];
-extern const u8 yang_parabora_data[];
-extern const u8 yun_parabora_data[];
+extern const PARABORA_DATA alex_parabora_data[];
+extern const PARABORA_DATA dudley_parabora_data[];
+extern const PARABORA_DATA elena_parabora_data[];
+extern const PARABORA_DATA gill_parabora_data[];
+extern const PARABORA_DATA gouki1_parabora_data[];
+extern const PARABORA_DATA gouki2_parabora_data[];
+extern const PARABORA_DATA hugo_parabora_data[];
+extern const PARABORA_DATA ibuki_parabora_data[];
+extern const PARABORA_DATA ken_parabora_data[];
+extern const PARABORA_DATA necro_parabora_data[];
+extern const PARABORA_DATA oro_parabora_data[];
+extern const PARABORA_DATA ryu_parabora_data[];
+extern const PARABORA_DATA sean_parabora_data[];
+extern const PARABORA_DATA urien_parabora_data[];
+extern const PARABORA_DATA yang_parabora_data[];
+extern const PARABORA_DATA yun_parabora_data[];
 
-const s16 buttobi_time_table[35][4] = {
-    { 22, 26, 30, 34 },
-    { 8, 10, 12, 14 },
-    { 12, 14, 16, 18 },
-    { 24, 28, 32, 36 },
-    { 12, 16, 20, 24 },
-    { 18, 22, 26, 30 },
-    { 28, 32, 36, 40 },
-    { 28, 32, 36, 40 },
-    { 24, 28, 32, 36 },
-    { 12, 16, 20, 24 },
-    { 8, 12, 16, 20 },
-    { 12, 14, 16, 18 },
-    { 24, 28, 32, 36 },
-    { 10, 12, 14, 16 },
-    { 14, 16, 18, 20 },
-    { 24, 28, 32, 36 },
-    { 24, 28, 32, 36 },
-    { 48, 56, 64, 72 },
-    { 16, 18, 20, 22 },
-    { 24, 28, 32, 36 },
-    { 2, 4, 6, 8 },
-    { 2, 4, 6, 8 },
-    { 18, 20, 22, 24 },
-    { 18, 20, 22, 24 },
-    { 20, 22, 24, 26 },
-    { 30, 32, 34, 36 },
-    { 6, 8, 10, 12 },
-    { 12, 14, 16, 18 },
-    { 14, 16, 18, 20 },
-    { 2, 4, 6, 8 },
-    { 8, 10, 12, 14 },
-    { 8, 10, 12, 14 },
-    { 32, 34, 36, 38 },
-    { 12, 14, 16, 18 },
-    { 28, 30, 32, 34 },
+const s16 buttobi_time_table[140] = {
+    22, 26, 30, 34, 8, 10, 12, 14,
+    12, 14, 16, 18, 24, 28, 32, 36,
+    12, 16, 20, 24, 18, 22, 26, 30,
+    28, 32, 36, 40, 28, 32, 36, 40,
+    24, 28, 32, 36, 12, 16, 20, 24,
+    8, 12, 16, 20, 12, 14, 16, 18,
+    24, 28, 32, 36, 10, 12, 14, 16,
+    14, 16, 18, 20, 24, 28, 32, 36,
+    24, 28, 32, 36, 48, 56, 64, 72,
+    16, 18, 20, 22, 24, 28, 32, 36,
+    2, 4, 6, 8, 2, 4, 6, 8,
+    18, 20, 22, 24, 18, 20, 22, 24,
+    20, 22, 24, 26, 30, 32, 34, 36,
+    6, 8, 10, 12, 12, 14, 16, 18,
+    14, 16, 18, 20, 2, 4, 6, 8,
+    8, 10, 12, 14, 8, 10, 12, 14,
+    32, 34, 36, 38, 12, 14, 16, 18,
+    28, 30, 32, 34,
 };
 
-const s16 buttobi_add_y_table[46][4] = {
-    { 0, 0, 0, 0 },
-    { 4, 4, 4, 4 },
-    { 4, 4, 4, 4 },
-    { 4, 4, 4, 4 },
-    { 2, 2, 2, 2 },
-    { 2, 2, 2, 2 },
-    { 4, 4, 4, 4 },
-    { 2, 2, 2, 2 },
-    { 4, 4, 4, 4 },
-    { 2, 2, 2, 2 },
-    { 2, 2, 2, 2 },
-    { 4, 4, 4, 4 },
-    { 4, 4, 4, 4 },
-    { 4, 4, 4, 4 },
-    { 4, 4, 4, 4 },
-    { 2, 2, 2, 2 },
-    { 2, 2, 2, 2 },
-    { 6, 6, 6, 6 },
-    { 0, 0, 0, 0 },
-    { 4, 6, 8, 8 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 6, 6, 6, 6 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
-    { 0, 0, 0, 0 },
+const s16 buttobi_add_y_table[184] = {
+    0, 0, 0, 0, 4, 4, 4, 4,
+    4, 4, 4, 4, 4, 4, 4, 4,
+    2, 2, 2, 2, 2, 2, 2, 2,
+    4, 4, 4, 4, 2, 2, 2, 2,
+    4, 4, 4, 4, 2, 2, 2, 2,
+    2, 2, 2, 2, 4, 4, 4, 4,
+    4, 4, 4, 4, 4, 4, 4, 4,
+    4, 4, 4, 4, 2, 2, 2, 2,
+    2, 2, 2, 2, 6, 6, 6, 6,
+    0, 0, 0, 0, 4, 6, 8, 8,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    6, 6, 6, 6, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
 };
 
 const PARABORA_DATA *const parabora_own_table[16] = {

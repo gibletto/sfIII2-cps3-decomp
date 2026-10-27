@@ -82,7 +82,6 @@ void sound_init(u8* data, SNDSAMPLE* bank_a, u8** bank_b, u8 stereo, u8 volume, 
     bgm_master_vol_init = bgm_master_vol;
     snd_master_vol = *data;
     sound_sample_submit_work7 = 1;
-    voice_reset:;
     voice_state_init_pair_work = 0;
     sound_sample_submit_work4 = 0;
     snd_fade_level = 0;

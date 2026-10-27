@@ -144,15 +144,15 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
         return;
     }
     if (is_bgm) {
-        voice->event_ticks -= bgm_tick_step;
+        voice->event_ticks = voice->event_ticks - bgm_tick_step;
     } else {
-        voice->event_ticks -= se_tick_step[voice_index];
+        voice->event_ticks = voice->event_ticks - se_tick_step[voice_index];
     }
     if (voice->duration_enabled) {
         if (is_bgm) {
-            voice->note_ticks -= bgm_tick_step;
+            voice->note_ticks = voice->note_ticks - bgm_tick_step;
         } else {
-            voice->note_ticks -= se_tick_step[voice_index];
+            voice->note_ticks = voice->note_ticks - se_tick_step[voice_index];
         }
     }
     if (voice->event_ticks <= 0) {
@@ -276,8 +276,7 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
         u32 rate = voice->release_rate;
         u32 level = voice->envelope_level;
         if (level > rate) {
-            level = level - rate;
-            voice->envelope_level = level;
+            voice->envelope_level = level - rate;
         } else {
             voice->envelope_level = 0;
             voice->envelope_phase = 0;
@@ -300,10 +299,8 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
     }
     if (voice->lfo_rate) {
         if (voice->pitch_lfo_depth) {
-            depth = voice->pitch_lfo_depth;
-            step = (s32)(depth * voice->lfo_rate);
-            (void)&((TEXT_CELL*)step)->code;
-            depth <<= 16;
+            step = voice->pitch_lfo_depth * voice->lfo_rate;
+            depth = voice->pitch_lfo_depth << 16;
             if (voice->lfo_phase_flags & 0x01) {
                 if ((s32)(step - depth) < voice->pitch_lfo) {
                     voice->pitch_lfo -= step;
@@ -314,7 +311,6 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
             } else if ((s32)(depth - step) > voice->pitch_lfo) {
                 voice->pitch_lfo += step;
             } else {
-                (void)&((TEXT_CELL*)step)->code;
                 voice->pitch_lfo = (s32)depth;
                 voice->lfo_phase_flags |= 0x01;
             }

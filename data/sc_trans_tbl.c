@@ -624,7 +624,7 @@ const u16 sc_vram_28_pos[114] = {
 };
 
 const PAL_BYTE_LIST sc_chr_list_tbl[1] = {
-    { (void *)sc_vram_00_code, (void *)sc_cells_0 },
+    { sc_vram_00_code, sc_cells_0 },
 };
 
 const u16 *const sc_chr_slot_tbl[2] = {

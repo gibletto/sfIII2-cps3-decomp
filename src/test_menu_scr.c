@@ -8,20 +8,20 @@
 #include "types.h"
 #include "structs.h"
 
-extern const char test_menu_str_0[];
-extern const char test_menu_str_10[];
-extern const char test_menu_str_11[];
-extern const char test_menu_str_12[];
-extern const char test_menu_str_1[];
-extern const char test_menu_str_2[];
-extern const char test_menu_str_3[];
-extern const char test_menu_str_4[];
-extern const char test_menu_str_5[];
-extern const char test_menu_str_6[];
-extern const char test_menu_str_7[];
-extern const char test_menu_str_8[];
-extern const char test_menu_str_9[];
-extern const char test_menu_str_asia_9[];
+extern const s8 test_menu_str_0[];
+extern const s8 test_menu_str_10[];
+extern const s8 test_menu_str_11[];
+extern const s8 test_menu_str_12[];
+extern const s8 test_menu_str_1[];
+extern const s8 test_menu_str_2[];
+extern const s8 test_menu_str_3[];
+extern const s8 test_menu_str_4[];
+extern const s8 test_menu_str_5[];
+extern const s8 test_menu_str_6[];
+extern const s8 test_menu_str_7[];
+extern const s8 test_menu_str_8[];
+extern const s8 test_menu_str_9[];
+extern const s8 test_menu_str_asia_9[];
 extern const u32 sys_cfg_exit_guide_jp_0[];
 extern const u32 sys_cfg_item_guide_jp_0[];
 extern const u32 sys_cfg_page_scr_jp_10[];
@@ -129,34 +129,34 @@ extern TMSCRIPT* sys_cfg_sound_scr_jp[];
 
 /* 02000660 */
 TM_STRING test_menu_str[13] = {
-    { 0xF, 1, 2, (const s8 *)test_menu_str_0 },
-    { 0x10, 3, 2, (const s8 *)test_menu_str_1 },
-    { 0x10, 5, 2, (const s8 *)test_menu_str_2 },
-    { 0x10, 7, 2, (const s8 *)test_menu_str_3 },
-    { 0x10, 9, 2, (const s8 *)test_menu_str_4 },
-    { 0x10, 0xB, 2, (const s8 *)test_menu_str_5 },
-    { 0x10, 0xD, 2, (const s8 *)test_menu_str_6 },
-    { 0x10, 0xF, 2, (const s8 *)test_menu_str_7 },
-    { 0x10, 0x11, 2, (const s8 *)test_menu_str_8 },
-    { 0x10, 0x13, 2, (const s8 *)test_menu_str_9 },
-    { 0x10, 0x15, 2, (const s8 *)test_menu_str_10 },
-    { 0xD, 0x1A, 2, (const s8 *)test_menu_str_11 },
-    { 0xD, 0x1B, 2, (const s8 *)test_menu_str_12 },
+    { 0xF, 1, 2, test_menu_str_0 },
+    { 0x10, 3, 2, test_menu_str_1 },
+    { 0x10, 5, 2, test_menu_str_2 },
+    { 0x10, 7, 2, test_menu_str_3 },
+    { 0x10, 9, 2, test_menu_str_4 },
+    { 0x10, 0xB, 2, test_menu_str_5 },
+    { 0x10, 0xD, 2, test_menu_str_6 },
+    { 0x10, 0xF, 2, test_menu_str_7 },
+    { 0x10, 0x11, 2, test_menu_str_8 },
+    { 0x10, 0x13, 2, test_menu_str_9 },
+    { 0x10, 0x15, 2, test_menu_str_10 },
+    { 0xD, 0x1A, 2, test_menu_str_11 },
+    { 0xD, 0x1B, 2, test_menu_str_12 },
 };
 /* 020006FC */
 TM_STRING test_menu_str_asia[12] = {
-    { 0xF, 1, 2, (const s8 *)test_menu_str_0 },
-    { 0x10, 3, 2, (const s8 *)test_menu_str_1 },
-    { 0x10, 5, 2, (const s8 *)test_menu_str_2 },
-    { 0x10, 7, 2, (const s8 *)test_menu_str_3 },
-    { 0x10, 9, 2, (const s8 *)test_menu_str_4 },
-    { 0x10, 0xB, 2, (const s8 *)test_menu_str_5 },
-    { 0x10, 0xD, 2, (const s8 *)test_menu_str_6 },
-    { 0x10, 0xF, 2, (const s8 *)test_menu_str_7 },
-    { 0x10, 0x11, 2, (const s8 *)test_menu_str_8 },
-    { 0x10, 0x13, 2, (const s8 *)test_menu_str_asia_9 },
-    { 0xD, 0x1A, 2, (const s8 *)test_menu_str_11 },
-    { 0xD, 0x1B, 2, (const s8 *)test_menu_str_12 },
+    { 0xF, 1, 2, test_menu_str_0 },
+    { 0x10, 3, 2, test_menu_str_1 },
+    { 0x10, 5, 2, test_menu_str_2 },
+    { 0x10, 7, 2, test_menu_str_3 },
+    { 0x10, 9, 2, test_menu_str_4 },
+    { 0x10, 0xB, 2, test_menu_str_5 },
+    { 0x10, 0xD, 2, test_menu_str_6 },
+    { 0x10, 0xF, 2, test_menu_str_7 },
+    { 0x10, 0x11, 2, test_menu_str_8 },
+    { 0x10, 0x13, 2, test_menu_str_asia_9 },
+    { 0xD, 0x1A, 2, test_menu_str_11 },
+    { 0xD, 0x1B, 2, test_menu_str_12 },
 };
 /* 0200078C */
 TMSCRIPT test_menu_scr_jp[1] = {

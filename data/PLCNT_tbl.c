@@ -19,7 +19,7 @@ extern void (*const settle_process[])();
 extern const s8 plid_data[];
 extern const s8 weight_lv_table[];
 extern const s16 quake_table[];
-extern const s16 spmv_ng_table[];
+extern const u32 spmv_ng_table[];
 extern const s16 kage_base[][2];
 extern const u8 super_arts_data[][4][16];
 extern void init_app_10000();
@@ -76,11 +76,11 @@ const s16 quake_table[42] = {
     2, -2,
 };
 
-const s16 spmv_ng_table[32] = {
-    1, 35, 1, 35, 1, 35, 1, 35,
-    1, 35, 1, 35, 1, 35, 1, 35,
-    1, 35, 1, 35, 1, 35, 1, 35,
-    1, 35, 1, 35, 1, 35, 1, 35,
+const u32 spmv_ng_table[16] = {
+    0x10023, 0x10023, 0x10023, 0x10023,
+    0x10023, 0x10023, 0x10023, 0x10023,
+    0x10023, 0x10023, 0x10023, 0x10023,
+    0x10023, 0x10023, 0x10023, 0x10023,
 };
 
 const s16 kage_base[16][2] = {

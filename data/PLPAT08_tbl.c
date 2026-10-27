@@ -17,10 +17,10 @@
 
 extern const u8 pl08_hcs_tbl[];
 extern void (*const pl08_exatt_table[])();
-extern const u8 tenguiwa_stage_data[][2];
+extern const u8 tenguiwa_stage_data[][4];
 extern const u8 tenguiwa_stand_by[][8];
 extern const s16 tenguiwa_pos_hosei[][6];
-extern const u16 tenguiwa_type_flag[];
+extern const u8 tenguiwa_type_flag[];
 extern void Att_DUMMY();
 extern void Att_PL08_HEALING();
 extern void Att_PL08_TOKUSHUKOUDOU();
@@ -51,41 +51,16 @@ void (*const pl08_exatt_table[15])() = {
     Att_PL08_TOKUSHUKOUDOU,
 };
 
-const u8 tenguiwa_stage_data[34][2] = {
-    { 0, 1 },
-    { 0, 0 },
-    { 4, 5 },
-    { 4, 5 },
-    { 0, 1 },
-    { 0, 1 },
-    { 0, 1 },
-    { 0, 1 },
-    { 4, 5 },
-    { 4, 5 },
-    { 0, 1 },
-    { 0, 1 },
-    { 0, 1 },
-    { 0, 1 },
-    { 0, 1 },
-    { 0, 1 },
-    { 2, 3 },
-    { 2, 3 },
-    { 2, 3 },
-    { 2, 3 },
-    { 0, 1 },
-    { 0, 1 },
-    { 4, 4 },
-    { 5, 5 },
-    { 4, 5 },
-    { 4, 5 },
-    { 0, 1 },
-    { 3, 0 },
-    { 3, 1 },
-    { 2, 0 },
-    { 2, 1 },
-    { 3, 0 },
-    { 6, 6 },
-    { 6, 6 },
+const u8 tenguiwa_stage_data[17][4] = {
+    { 0, 1, 0, 0 }, { 4, 5, 4, 5 },
+    { 0, 1, 0, 1 }, { 0, 1, 0, 1 },
+    { 4, 5, 4, 5 }, { 0, 1, 0, 1 },
+    { 0, 1, 0, 1 }, { 0, 1, 0, 1 },
+    { 2, 3, 2, 3 }, { 2, 3, 2, 3 },
+    { 0, 1, 0, 1 }, { 4, 4, 5, 5 },
+    { 4, 5, 4, 5 }, { 0, 1, 3, 0 },
+    { 3, 1, 2, 0 }, { 2, 1, 3, 0 },
+    { 6, 6, 6, 6 },
 };
 
 const u8 tenguiwa_stand_by[7][8] = {
@@ -105,7 +80,7 @@ const s16 tenguiwa_pos_hosei[4][6] = {
     { -8, 96, -2, 0, 24, 192 },
 };
 
-const u16 tenguiwa_type_flag[16] = {
-    0x101, 0x101, 0x101, 0x101, 0x101, 0x101, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
+const u8 tenguiwa_type_flag[32] = {
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 };

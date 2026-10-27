@@ -15,9 +15,9 @@
 
 extern const s16 eff09_data2[][8];
 extern const s32 eff09_2000_data[][4];
-extern const s32 eff09_add_tbl0[][4];
-extern const s32 eff09_add_tbl1[][4];
-extern const s32 eff09_add_tbl2[][4];
+extern const s32 eff09_add_tbl0[][2];
+extern const s32 eff09_add_tbl1[][2];
+extern const s32 eff09_add_tbl2[][2];
 extern const s16 sean_ball_hit[];
 extern const s32 eff09_13_tbl[][4];
 
@@ -58,16 +58,16 @@ const s32 eff09_2000_data[2][4] = {
     { -327680, 393216, -3072, -24576 },
 };
 
-const s32 eff09_add_tbl0[1][4] = {
-    { 2048, -2048, 2048, -4096 },
+const s32 eff09_add_tbl0[2][2] = {
+    { 2048, -2048 }, { 2048, -4096 },
 };
 
-const s32 eff09_add_tbl1[1][4] = {
-    { -2048, 2048, -4608, 4096 },
+const s32 eff09_add_tbl1[2][2] = {
+    { -2048, 2048 }, { -4608, 4096 },
 };
 
-const s32 eff09_add_tbl2[1][4] = {
-    { -2048, 2048, -4096, 4608 },
+const s32 eff09_add_tbl2[2][2] = {
+    { -2048, 2048 }, { -4096, 4608 },
 };
 
 const s16 sean_ball_hit[4] = {

@@ -31,15 +31,15 @@
 
 
 const s16* scr_obj_data44[9] = {
-    (const s16*)&scr_obj_num44[9],
-    (const s16*)&scr_obj_num44[57],
-    (const s16*)&scr_obj_num44[73],
-    (const s16*)&scr_obj_num44[81],
-    (const s16*)&scr_obj_num44[161],
-    (const s16*)&scr_obj_num44[185],
-    (const s16*)&scr_obj_num44[193],
-    (const s16*)&scr_obj_num44[257],
-    (const s16*)&scr_obj_num44[265],
+    &scr_obj_num44[9],
+    &scr_obj_num44[57],
+    &scr_obj_num44[73],
+    &scr_obj_num44[81],
+    &scr_obj_num44[161],
+    &scr_obj_num44[185],
+    &scr_obj_num44[193],
+    &scr_obj_num44[257],
+    &scr_obj_num44[265],
 };
 
 
