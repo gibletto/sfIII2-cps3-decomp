@@ -247,9 +247,9 @@ void Catch_05000(PLW* wk) {
             setup_mvxy_data(&wk->wu, wk->wu.mvxy.index);
             wk->wu.mvxy.index++;
             wk->wu.cg_type = 0;
-            goto next1;
+        default:
+            break;
         }
-    next1:
         catch_cg_type_check(wk);
         break;
     case C05_MOVE2:

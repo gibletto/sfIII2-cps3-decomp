@@ -1117,8 +1117,7 @@ void attack_hit_check(void) {
             dmdat_adrs[lp] = sh;
             sh += 4;
         }
-        next2:
-            lp++;
+        lp++;
         test2:
         if (lp >= 4) {
             goto body_end;
@@ -1134,8 +1133,7 @@ void attack_hit_check(void) {
             dmdat_adrs[lp + 5] = sh;
             sh += 4;
         }
-        next3:
-            lp++;
+        lp++;
         test3:
         if (lp < 2) {
             goto loop3;
@@ -1148,8 +1146,7 @@ void attack_hit_check(void) {
             dmdat_adrs[lp + 7] = sh;
             sh += 4;
         }
-        next4:
-            lp++;
+        lp++;
         test4:
         if (lp >= 2) {
             goto hand_end;
@@ -1259,7 +1256,7 @@ void attack_hit_check(void) {
                     if (lp2 < 9) {
                         goto loop7;
                     } else if (mad->att_hit_ok == 0) {
-                        goto next_si;
+                        goto next1;
                     }
                 }
                 next6:
@@ -1272,7 +1269,7 @@ void attack_hit_check(void) {
                 goto loop6;
             eat_end:
                 if (mad->att_hit_ok == 0) {
-                    goto next_si;
+                    goto next1;
                 }
             }
             if ((ah = (s16*)mad->h_att)[0] == 0) {
@@ -1349,7 +1346,7 @@ void attack_hit_check(void) {
                 if (lp2 < 9) {
                     goto loop9;
                 } else if (mad->att_hit_ok == 0) {
-                    goto next_si;
+                    goto next1;
                 }
             }
             next8:
@@ -1362,7 +1359,7 @@ void attack_hit_check(void) {
             goto loop8;
         att_end:
             if (mad->att_hit_ok == 0) {
-                goto next_si;
+                goto next1;
             }
         }
         next5:
@@ -1371,7 +1368,6 @@ void attack_hit_check(void) {
         if (mi < hpq_in) {
             goto loop5;
         }
-    next_si:;
     }
     next1:
         si++;

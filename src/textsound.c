@@ -187,61 +187,58 @@ void tilemap_print_string_attr(u16 x, u16 y, u16 attr, const s8* str) {
 void tilemap_rect_fill(u16 x, u16 y, u16 w, u16 h, u16 attr, u16 code) {
     u16* p;
     s32 skip;
-    s32 cw;
     s32 row;
     s32 col;
     u16 at;
     if (attr == 0xFFFF && code == 0xFFFF) {
         return;
     }
-    p = (u16*)((u32)((u16*)SS_RAM) + (x << 2) + (y << 8));
-    cw = w;
-    skip = 0x80 - cw * 2;
+    p = (u16*)(SS_RAM + (x << 2) + (y << 8));
+    skip = 0x80 - (w << 1);
     if (attr != 0xFFFF && code == 0xFFFF) {
         for (row = 0; row < h; row++) {
-            for (col = 0; col < cw; col = col + 1) {
+            for (col = 0; col < w; col++) {
                 p[1] = (p[1] & 1) | attr;
                 p += 2;
-                if (p > ((u16*)(SS_RAM + 0x3FFF))) {
-                    p = ((u16*)SS_RAM);
+                if (p > (u16*)(SS_RAM + 0x3FFF)) {
+                    p = (u16*)SS_RAM;
                 }
             }
             p += skip;
-            (void)&((TEXT_CELL*)0)->code;
-            if (p > ((u16*)(SS_RAM + 0x3FFF))) {
-                p = ((u16*)SS_RAM);
+            if (p > (u16*)(SS_RAM + 0x3FFF)) {
+                p = (u16*)SS_RAM;
             }
         }
     } else if (attr == 0xFFFF && code != 0xFFFF) {
         for (row = 0; row < h; row++) {
-            for (col = 0; col < cw; col = col + 1) {
+            for (col = 0; col < w; col++) {
                 p[0] = code;
                 p[1] = (p[1] & 0xFFFE) | ((code & 0x100) >> 8);
                 p += 2;
-                if (p > ((u16*)(SS_RAM + 0x3FFF))) {
-                    p = ((u16*)SS_RAM);
+                if (p > (u16*)(SS_RAM + 0x3FFF)) {
+                    p = (u16*)SS_RAM;
                 }
             }
             p += skip;
-            if (p > ((u16*)(SS_RAM + 0x3FFF))) {
-                p = ((u16*)SS_RAM);
+            if (p > (u16*)(SS_RAM + 0x3FFF)) {
+                p = (u16*)SS_RAM;
             }
         }
     } else {
         row = 0;
         at = attr | ((code & 0x100) >> 8);
         for (; row < h; row++) {
-            for (col = 0; col < cw; col = col + 1) {
+            for (col = 0; col < w; col++) {
                 p[0] = code;
                 p[1] = at;
                 p += 2;
-                if (p > ((u16*)(SS_RAM + 0x3FFF))) {
-                    p = ((u16*)SS_RAM);
+                if (p > (u16*)(SS_RAM + 0x3FFF)) {
+                    p = (u16*)SS_RAM;
                 }
             }
             p += skip;
-            if (p > ((u16*)(SS_RAM + 0x3FFF))) {
-                p = ((u16*)SS_RAM);
+            if (p > (u16*)(SS_RAM + 0x3FFF)) {
+                p = (u16*)SS_RAM;
             }
         }
     }

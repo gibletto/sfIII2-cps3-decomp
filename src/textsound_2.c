@@ -71,8 +71,8 @@ void sound_init(u8* data, SNDSAMPLE* bank_a, u8** bank_b, u8 stereo, u8 volume, 
         *reg = 0;
         n--;
     }
-    ((u16 (*)[2])&snd_ctrl)[0][0] = (volume << 8) | (stereo & 1) | 0x22;
-    *(u32*)(SOUND_REG + 0x210) = ((u32 (*)[1])&snd_ctrl)[0][0];
+    *(u16*)&snd_ctrl = (volume << 8) | (stereo & 1) | 0x22;
+    *(SOUND_CTRL*)(SOUND_REG + 0x210) = snd_ctrl;
     *(u16*)SOUND_KEY_ON = 0;
     snd_seq_data = (u32*)data;
     snd_seq_max = *data++;
@@ -117,8 +117,6 @@ s32 sound_seq_start(u16 code, s16 ramp) {
     u8* bank;
     u8** bank_table;
     SNDVOICE* v;
-    SNDVOICE* mv;
-    SNDVOICE* vp;
     u32 ofs;
     s32 ticks;
     s32 n;
@@ -141,20 +139,13 @@ s32 sound_seq_start(u16 code, s16 ramp) {
     hdr = *p++;
     if (!hdr) {
         bgm_stop();
-        if (0) {
-            return;
-        }
-        i = 0;
-        mv = bgm_voice;
-        vp = &bgm_voice[0];
-        for (; i < 16; ) {
+        for (i = 0; i < 16; i++) {
             off = *p++;
             off <<= 8;
             off += *p++;
             if (off) {
                 track = seq + off;
-                v = vp;
-                v->origin = track;
+                (v = &bgm_voice[i])->origin = track;
                 n = midi_vlq_decode_while(track, &ticks);
                 ticks <<= 8;
                 v->event_ticks = ticks;
@@ -206,191 +197,8 @@ s32 sound_seq_start(u16 code, s16 ramp) {
                 v->pan_override = 0x40;
                 v->control_70 = 0;
             } else {
-                mv->status = 0xC0;
+                bgm_voice[i].status = 0xC0;
             }
-            i++, vp++, mv = mv + 1;
-            off = *p++;
-            off <<= 8;
-            off += *p++;
-            if (off) {
-                track = seq + off;
-                (v = vp)->origin = track;
-                n = midi_vlq_decode_while(track, &ticks);
-                ticks <<= 8;
-                v->event_ticks = ticks;
-                v->cursor = &track[n];
-                v->status = 0x20;
-                bank_table = snd_bank_tbl;
-                v->patch = (SNDPATCH*)(*bank_table + *(u16*)*bank_table);
-                v->sample = &snd_sample_tbl[v->patch->sample_index];
-                v->note_ticks = 0;
-                v->decoded_pitch = 0;
-                v->target_pitch = 0;
-                v->current_pitch = 0;
-                v->pitch_lfo = 0;
-                v->volume_lfo = 0;
-                v->pitch_lfo_depth = 0;
-                v->volume_lfo_depth = 0;
-                v->lfo_rate = 0;
-                v->envelope_level = 0;
-                v->saved_portamento_step = 0;
-                v->portamento_step = 0;
-                v->program_index = 0;
-                v->attack_peak = 0;
-                v->attack_rate = 0;
-                v->sustain_level = 0;
-                v->decay_rate = 0;
-                v->release_rate = 0;
-                v->forced_release_rate = 0;
-                v->loop_count[0] = 0;
-                v->loop_count[1] = 0;
-                v->loop_count[2] = 0;
-                v->loop_count[3] = 0;
-                v->loop_latch = 0;
-                v->envelope_phase = 0;
-                v->lfo_phase_flags = 0;
-                v->priority_flags = hdr;
-                v->volume = 0;
-                v->velocity = 0;
-                v->expression = 0x40;
-                v->volume_offset = 0;
-                v->transpose = 0;
-                v->coarse_pitch_bend = 0;
-                v->fine_pitch_control = 0x40;
-                v->key_on_pending = 0;
-                v->duration_enabled = 0;
-                v->note_event_pending = 0;
-                v->tie = 0;
-                v->release_pending = 0;
-                v->restart_pending = 0;
-                v->pan_override = 0x40;
-                v->control_70 = 0;
-            } else {
-                mv->status = 0xC0;
-            }
-            i++, vp++, mv = mv + 1;
-            off = *p++;
-            off <<= 8;
-            off += *p++;
-            if (off) {
-                track = seq + off;
-                v = vp;
-                vp->origin = track;
-                n = midi_vlq_decode_while(track, &ticks);
-                ticks <<= 8;
-                v->event_ticks = ticks;
-                v->cursor = &track[n];
-                v->status = 0x20;
-                bank_table = snd_bank_tbl;
-                v->patch = (SNDPATCH*)(*bank_table + *(u16*)*bank_table);
-                v->sample = &snd_sample_tbl[v->patch->sample_index];
-                v->note_ticks = 0;
-                v->decoded_pitch = 0;
-                v->target_pitch = 0;
-                v->current_pitch = 0;
-                v->pitch_lfo = 0;
-                v->volume_lfo = 0;
-                v->pitch_lfo_depth = 0;
-                v->volume_lfo_depth = 0;
-                v->lfo_rate = 0;
-                v->envelope_level = 0;
-                v->saved_portamento_step = 0;
-                v->portamento_step = 0;
-                v->program_index = 0;
-                v->attack_peak = 0;
-                v->attack_rate = 0;
-                v->sustain_level = 0;
-                v->decay_rate = 0;
-                v->release_rate = 0;
-                v->forced_release_rate = 0;
-                v->loop_count[0] = 0;
-                v->loop_count[1] = 0;
-                v->loop_count[2] = 0;
-                v->loop_count[3] = 0;
-                v->loop_latch = 0;
-                v->envelope_phase = 0;
-                v->lfo_phase_flags = 0;
-                v->priority_flags = hdr;
-                v->volume = 0;
-                v->velocity = 0;
-                v->expression = 0x40;
-                v->volume_offset = 0;
-                v->transpose = 0;
-                v->coarse_pitch_bend = 0;
-                v->fine_pitch_control = 0x40;
-                v->key_on_pending = 0;
-                v->duration_enabled = 0;
-                v->note_event_pending = 0;
-                v->tie = 0;
-                v->release_pending = 0;
-                v->restart_pending = 0;
-                v->pan_override = 0x40;
-                v->control_70 = 0;
-            } else {
-                mv->status = 0xC0;
-            }
-            i++, vp++, mv = mv + 1;
-            off = *p++;
-            off <<= 8;
-            off += *p++;
-            if (off) {
-                track = seq + off;
-                v = vp;
-                vp->origin = track;
-                n = midi_vlq_decode_while(track, &ticks);
-                ticks <<= 8;
-                v->event_ticks = ticks;
-                v->cursor = &track[n];
-                v->status = 0x20;
-                bank_table = snd_bank_tbl;
-                v->patch = (SNDPATCH*)(*bank_table + *(u16*)*bank_table);
-                v->sample = &snd_sample_tbl[v->patch->sample_index];
-                v->note_ticks = 0;
-                v->decoded_pitch = 0;
-                v->target_pitch = 0;
-                v->current_pitch = 0;
-                v->pitch_lfo = 0;
-                v->volume_lfo = 0;
-                v->pitch_lfo_depth = 0;
-                v->volume_lfo_depth = 0;
-                v->lfo_rate = 0;
-                v->envelope_level = 0;
-                v->saved_portamento_step = 0;
-                v->portamento_step = 0;
-                v->program_index = 0;
-                v->attack_peak = 0;
-                v->attack_rate = 0;
-                v->sustain_level = 0;
-                v->decay_rate = 0;
-                v->release_rate = 0;
-                v->forced_release_rate = 0;
-                v->loop_count[0] = 0;
-                v->loop_count[1] = 0;
-                v->loop_count[2] = 0;
-                v->loop_count[3] = 0;
-                v->loop_latch = 0;
-                v->envelope_phase = 0;
-                v->lfo_phase_flags = 0;
-                v->priority_flags = hdr;
-                v->volume = 0;
-                v->velocity = 0;
-                v->expression = 0x40;
-                v->volume_offset = 0;
-                v->transpose = 0;
-                v->coarse_pitch_bend = 0;
-                v->fine_pitch_control = 0x40;
-                v->key_on_pending = 0;
-                v->duration_enabled = 0;
-                v->note_event_pending = 0;
-                v->tie = 0;
-                v->release_pending = 0;
-                v->restart_pending = 0;
-                v->pan_override = 0x40;
-                v->control_70 = 0;
-            } else {
-                mv->status = 0xC0;
-            }
-            i++, vp++, mv = mv + 1;
         }
         if (!(sound_sample_submit_work7 & 8)) {
             snd_fade_level = 0x8000;
