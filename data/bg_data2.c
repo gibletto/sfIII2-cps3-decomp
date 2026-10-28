@@ -101,7 +101,7 @@ const u16 bg_palette_no_tbl[18] = {
 
 /* provisional name */
 const u16 etc_bg_color_tbl[5] = {
-    6, 6, 6, 0xA, 0xA,
+    6, 6, 6, 10, 10,
 };
 
 /* provisional name */

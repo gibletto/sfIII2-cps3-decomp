@@ -59,7 +59,7 @@ const u16 bg_zoom_rate_tbl[112] = {
 
 /* provisional name */
 const s16 akebono_scrn_pos_tbl[4][2] = {
-    { 0x100, 0x100 }, { 0x300, 0x100 }, { 0x100, 0 }, { 0x300, 0 },
+    { 256, 256 }, { 768, 256 }, { 256, 0 }, { 768, 0 },
 };
 
 /* provisional name */

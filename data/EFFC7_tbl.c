@@ -37,5 +37,5 @@ const s16 paring_mark_data[3][16][2] = {
 
 /* provisional name */
 const u16 effc8_data_tbl[8] = {
-    3, 0, 0, 0x200, 0, 0, 0xFFFF, 0xE800,
+    3, 0, 0, 512, 0, 0, 0xFFFF, 0xE800,
 };

@@ -114,39 +114,39 @@ extern const u32 test_cursor_x_tbl[];
 const TM_STRING boot_title_str[3] = {
     { 8, 8, 2, str_STREET_FIGHTER_III },
     { 8, 9, 2, str_2ND_IMPACT },
-    { 0x11, 0xB, 2, str_970930 },
+    { 17, 11, 2, str_970930 },
 };
 
 const TM_STRING boot_region_str[10] = {
-    { 0xF, 0xD, 0xE, str_blank },
-    { 0x13, 0xD, 2, str_JAPAN },
-    { 0xF, 0xD, 4, str_ASIA },
-    { 0x13, 0xD, 6, str_EURO },
-    { 0x13, 0xD, 8, str_USA },
-    { 0x10, 0xD, 0xA, str_HISPANIC },
-    { 0x12, 0xD, 0xC, str_BRAZIL_3 },
-    { 0x11, 0xD, 0xE, str_OCEANIA },
-    { 0x13, 0xD, 4, str_ASIA_2 },
-    { 0x13, 0xD, 2, str_NO_CD },
+    { 15, 13, 0xE, str_blank },
+    { 19, 13, 2, str_JAPAN },
+    { 15, 13, 4, str_ASIA },
+    { 19, 13, 6, str_EURO },
+    { 19, 13, 8, str_USA },
+    { 16, 13, 0xA, str_HISPANIC },
+    { 18, 13, 0xC, str_BRAZIL_3 },
+    { 17, 13, 0xE, str_OCEANIA },
+    { 19, 13, 4, str_ASIA_2 },
+    { 19, 13, 2, str_NO_CD },
 };
 
 const TM_STRING boot_version_str[9] = {
-    { 0x10, 0xE, 0xE, str_PRODUCT_VERSION },
-    { 0xD, 0xE, 0xE, str_CHARACTER_CHECK_VERSION },
-    { 0x10, 0xE, 0xE, str_PUBLICITY_VERSION },
-    { 0xF, 0xE, 0xE, str_LOCATION_TEST_VERSION },
-    { 0x12, 0xE, 0xE, str_SHOW_VERSION },
-    { 0x10, 0xE, 0xE, str_BUG_CHECK_VERSION },
-    { 0x10, 0xE, 0xE, str_BENT_STAFF_VERSION },
-    { 0xF, 0xE, 0xE, str_DEVELOPMENT_VERSION },
-    { 0x11, 0xE, 0xE, str_CHECK_VERSION },
+    { 16, 14, 0xE, str_PRODUCT_VERSION },
+    { 13, 14, 0xE, str_CHARACTER_CHECK_VERSION },
+    { 16, 14, 0xE, str_PUBLICITY_VERSION },
+    { 15, 14, 0xE, str_LOCATION_TEST_VERSION },
+    { 18, 14, 0xE, str_SHOW_VERSION },
+    { 16, 14, 0xE, str_BUG_CHECK_VERSION },
+    { 16, 14, 0xE, str_BENT_STAFF_VERSION },
+    { 15, 14, 0xE, str_DEVELOPMENT_VERSION },
+    { 17, 14, 0xE, str_CHECK_VERSION },
 };
 
 const TM_STRING parental_advisory_msg[4] = {
-    { 6, 0x16, 0x28, str_Parental_Advisory },
-    { 6, 0x17, 0x28, str_Animated_violence_Mild },
-    { 1, 0x19, 0x28, str_Contains_scenes_of_violence_invo },
-    { 1, 0x1A, 0x28, str_cartoon_like_characters_ina_fant },
+    { 6, 22, 0x28, str_Parental_Advisory },
+    { 6, 23, 0x28, str_Animated_violence_Mild },
+    { 1, 25, 0x28, str_Contains_scenes_of_violence_invo },
+    { 1, 26, 0x28, str_cartoon_like_characters_ina_fant },
 };
 
 const s8 str_STREET_FIGHTER_III[36] = "S T R E E T   F I G H T E R   III\n\0\xFF";

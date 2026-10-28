@@ -57,27 +57,27 @@
 
 
 /* eleven object lists, named by their order in the ROM (provisional names) */
-extern const u16 scr_obj_data18_0[];
-extern const u16 scr_obj_data18_1[];
-extern const u16 scr_obj_data18_2[];
-extern const u16 scr_obj_data18_3[];
-extern const u16 scr_obj_data18_4[];
-extern const u16 scr_obj_data18_5[];
-extern const u16 scr_obj_data18_6[];
-extern const u16 scr_obj_data18_7[];
-extern const u16 scr_obj_data18_8[];
-extern const u16 scr_obj_data18_9[];
-extern const u16 scr_obj_data18_10[];
+extern const s16 scr_obj_data18_0[][12];
+extern const s16 scr_obj_data18_1[][12];
+extern const s16 scr_obj_data18_2[][12];
+extern const s16 scr_obj_data18_3[][12];
+extern const s16 scr_obj_data18_4[][12];
+extern const s16 scr_obj_data18_5[][12];
+extern const s16 scr_obj_data18_6[][12];
+extern const s16 scr_obj_data18_7[][12];
+extern const s16 scr_obj_data18_8[][12];
+extern const s16 scr_obj_data18_9[][12];
+extern const s16 scr_obj_data18_10[][12];
 
 const s16* scr_obj_data18[8][4] = {
-    { scr_obj_data18_0, scr_obj_data18_0, scr_obj_data18_0, scr_obj_data18_0 },
-    { scr_obj_data18_1, scr_obj_data18_1, scr_obj_data18_1, scr_obj_data18_1 },
-    { scr_obj_data18_2, scr_obj_data18_3, scr_obj_data18_2, scr_obj_data18_3 },
-    { scr_obj_data18_4, scr_obj_data18_5, scr_obj_data18_6, scr_obj_data18_5 },
-    { scr_obj_data18_7, scr_obj_data18_7, scr_obj_data18_7, scr_obj_data18_7 },
-    { scr_obj_data18_8, scr_obj_data18_8, scr_obj_data18_8, scr_obj_data18_8 },
-    { scr_obj_data18_9, scr_obj_data18_9, scr_obj_data18_9, scr_obj_data18_9 },
-    { scr_obj_data18_10, scr_obj_data18_10, scr_obj_data18_10, scr_obj_data18_10 },
+    { scr_obj_data18_0[0], scr_obj_data18_0[0], scr_obj_data18_0[0], scr_obj_data18_0[0] },
+    { scr_obj_data18_1[0], scr_obj_data18_1[0], scr_obj_data18_1[0], scr_obj_data18_1[0] },
+    { scr_obj_data18_2[0], scr_obj_data18_3[0], scr_obj_data18_2[0], scr_obj_data18_3[0] },
+    { scr_obj_data18_4[0], scr_obj_data18_5[0], scr_obj_data18_6[0], scr_obj_data18_5[0] },
+    { scr_obj_data18_7[0], scr_obj_data18_7[0], scr_obj_data18_7[0], scr_obj_data18_7[0] },
+    { scr_obj_data18_8[0], scr_obj_data18_8[0], scr_obj_data18_8[0], scr_obj_data18_8[0] },
+    { scr_obj_data18_9[0], scr_obj_data18_9[0], scr_obj_data18_9[0], scr_obj_data18_9[0] },
+    { scr_obj_data18_10[0], scr_obj_data18_10[0], scr_obj_data18_10[0], scr_obj_data18_10[0] },
 };
 void (*eff18_jp_tbl[2])(WORK_Other*) = {
     eff18_00,

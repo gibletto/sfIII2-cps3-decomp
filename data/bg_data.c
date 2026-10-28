@@ -62,27 +62,27 @@ const s16 bg_index_tbl_tail[30] = {
 
 /* provisional name */
 const s32 etc_bg_pos_tbl[5][4][2] = {
-    { { 0x2000000, -0x300000 }, { 0x2000000, 0 }, { 0, 0 }, { 0, 0 } },
-    { { 0x1D80000, 0 }, { 0x2000000, 0 }, { 0, 0 }, { 0, 0 } },
-    { { 0x2000000, 0 }, { 0x2000000, 0 }, { 0, 0 }, { 0, 0 } },
-    { { 0x2000000, 0 }, { 0x2000000, 0 }, { 0, 0 }, { 0, 0 } },
-    { { 0x2000000, 0 }, { 0x2000000, 0 }, { 0, 0 }, { 0, 0 } },
+    { { 33554432, -3145728 }, { 33554432, 0 }, { 0, 0 }, { 0, 0 } },
+    { { 30932992, 0 }, { 33554432, 0 }, { 0, 0 }, { 0, 0 } },
+    { { 33554432, 0 }, { 33554432, 0 }, { 0, 0 }, { 0, 0 } },
+    { { 33554432, 0 }, { 33554432, 0 }, { 0, 0 }, { 0, 0 } },
+    { { 33554432, 0 }, { 33554432, 0 }, { 0, 0 }, { 0, 0 } },
 };
 
 /* the text lines of the background test's position display; nothing in the program refers to them (provisional name) */
 const TM_STRING bg_test_menu_scr[14] = {
-    { 0x1E, 0x14, 0xE, str_BG_1_POS_X },
-    { 0x1E, 0x15, 0xE, str_BG_1_POS_Y },
-    { 0x1E, 0x16, 0xE, str_BG_2_POS_X },
-    { 0x1E, 0x17, 0xE, str_BG_2_POS_Y },
-    { 0x1E, 0x18, 0xE, str_BG_3_POS_X },
-    { 0x1E, 0x19, 0xE, str_BG_3_POS_Y },
-    { 0x1E, 0x1A, 0xE, str_BG_4_POS_X },
-    { 0x1E, 0x1B, 0xE, str_BG_4_POS_Y },
-    { 3, 0x16, 0xE, str_BG_1 },
-    { 3, 0x17, 0xE, str_BG_2 },
-    { 3, 0x18, 0xE, str_BG_3 },
-    { 3, 0x19, 0xE, str_BG_4 },
-    { 3, 0x13, 0xE, str_STAGE },
-    { 3, 0x14, 0xE, str_AREA },
+    { 30, 20, 0xE, str_BG_1_POS_X },
+    { 30, 21, 0xE, str_BG_1_POS_Y },
+    { 30, 22, 0xE, str_BG_2_POS_X },
+    { 30, 23, 0xE, str_BG_2_POS_Y },
+    { 30, 24, 0xE, str_BG_3_POS_X },
+    { 30, 25, 0xE, str_BG_3_POS_Y },
+    { 30, 26, 0xE, str_BG_4_POS_X },
+    { 30, 27, 0xE, str_BG_4_POS_Y },
+    { 3, 22, 0xE, str_BG_1 },
+    { 3, 23, 0xE, str_BG_2 },
+    { 3, 24, 0xE, str_BG_3 },
+    { 3, 25, 0xE, str_BG_4 },
+    { 3, 19, 0xE, str_STAGE },
+    { 3, 20, 0xE, str_AREA },
 };

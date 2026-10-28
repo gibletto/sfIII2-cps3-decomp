@@ -21,7 +21,7 @@ const u8 Arts_Rnd_Demo_Data[8] = {
 };
 
 const s8 Demo_Stage_Play_Data[4] = {
-    1, 0xB, 6, 0xD,
+    1, 11, 6, 13,
 };
 
 const s8 Demo_PL_Data[4] = {

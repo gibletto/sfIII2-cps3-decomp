@@ -49,6 +49,6 @@ const s16 scr_obj_data88_0[36] = {
 };
 
 const u16 eff90_pos_y_tbl[10] = {
-    0, 0x20, 0x40, 0x60, 0x80, 0xA0, 0xC0, 0xE0,
-    0x100, 0xFFFF,
+    0, 32, 64, 96, 128, 160, 192, 224,
+    256, 0xFFFF,
 };

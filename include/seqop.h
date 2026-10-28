@@ -39,7 +39,7 @@
 #define SEQ_E5          0xE5        /* 2 bytes read past */
 #define SEQ_E6          0xE6        /* 1 byte read past */
 #define SEQ_FINE        0xE7        /* fine pitch */
-#define SEQ_STATUS      0xE8        /* gSeqStatus[i] = v (3rd Strike; 2nd Impact has no such event) */
+#define SEQ_STATUS      0xE8        /* gSeqStatus[i] = v (no track of this game uses it) */
 #define SEQ_END         0xFF        /* the end of the track */
 
 #endif

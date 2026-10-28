@@ -13,6 +13,6 @@
 extern const PANEL end_600_bg1_cell_tbl[];
 
 const PANEL end_600_bg1_cell_tbl[2] = {
-    { 8192, 5 },
-    { 8256, 6 },
+    { 0x2000, 5 },
+    { 0x2040, 6 },
 };

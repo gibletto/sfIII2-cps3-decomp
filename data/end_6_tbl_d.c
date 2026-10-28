@@ -15,16 +15,16 @@ extern const s16 timer_6_tbl[];
 extern const s16 end_6_pos[][2];
 
 const PANEL end_200_panel1[2] = {
-    { 8320, 5 },
-    { 8384, 6 },
+    { 0x2080, 5 },
+    { 0x20C0, 6 },
 };
 
 /* provisional name */
 const s16 timer_6_tbl[4] = {
-    0x1A4, 0x30C, 0x294, 0x2D0,
+    420, 780, 660, 720,
 };
 
 /* provisional name */
 const s16 end_6_pos[4][2] = {
-    { 0x100, 0x100 }, { 0x300, 0x100 }, { 0x100, 0 }, { 0x300, 0 },
+    { 256, 256 }, { 768, 256 }, { 256, 0 }, { 768, 0 },
 };

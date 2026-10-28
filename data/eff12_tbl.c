@@ -45,7 +45,7 @@ const s16 scr_obj_num12[164] = {
 
 /* provisional name */
 const u16 kotp_07_dm_vital[4] = {
-    0x60, 0xF0, 0x180, 0x180,
+    96, 240, 384, 384,
 };
 
 /* provisional name */

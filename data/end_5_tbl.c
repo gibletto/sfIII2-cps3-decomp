@@ -14,5 +14,5 @@ extern const PANEL end_500_bg0_cell_tbl[];
 
 /* provisional name */
 const PANEL end_500_bg0_cell_tbl[4] = {
-    { 0, 9 }, { 0x40, 0xA }, { 0x80, 0xD }, { 0xC0, 0xE },
+    { 0, 9 }, { 0x40, 10 }, { 0x80, 13 }, { 0xC0, 14 },
 };

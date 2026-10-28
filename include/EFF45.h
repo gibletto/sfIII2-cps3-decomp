@@ -6,9 +6,9 @@
 void effect_45_move(WORK_Other* ewk);
 s32 effect_45_init(void);
 
-extern const s16 eff45_pos_x_tbl[];       /* provisional names (06179360, 061793A0, 061793C0) */
+extern const s16 eff45_pos_x_tbl[32];       /* provisional names (06179360, 061793A0, 061793C0) */
 extern const s16 eff45_pos_y_tbl[16];
 extern const s16 eff45_pos_y_tbl2[16];
-extern const u32 eff45_char_table[];      /* provisional name */
+extern const u32 eff45_char_table[27];      /* provisional name */
 
 #endif

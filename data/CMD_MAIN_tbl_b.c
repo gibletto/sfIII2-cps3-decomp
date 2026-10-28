@@ -116,5 +116,5 @@ const char str_ON[4] = "ON ";
 
 /* provisional name */
 const u8 debug_charset_tbl[16] = {
-    6, 3, 5, 1, 2, 9, 7, 4, 0xA, 8, 0xC, 0xD, 0xE, 0xF, 0x10, 0x11,
+    6, 3, 5, 1, 2, 9, 7, 4, 10, 8, 12, 13, 14, 15, 16, 17,
 };

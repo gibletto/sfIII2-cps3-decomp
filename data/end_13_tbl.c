@@ -25,7 +25,7 @@ const PANEL end_1300_panel0[8] = {
 /* provisional name */
 const PANEL end_1300_panel1[8] = {
     { 0x2000, 0 }, { 0x2040, 0 }, { 0x2080, 0 }, { 0x20C0, 0 },
-    { 0x3000, 9 }, { 0x3040, 0xA }, { 0x3080, 0 }, { 0x30C0, 0 },
+    { 0x3000, 9 }, { 0x3040, 10 }, { 0x3080, 0 }, { 0x30C0, 0 },
 };
 
 /* provisional name */

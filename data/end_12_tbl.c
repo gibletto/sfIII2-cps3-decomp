@@ -15,5 +15,5 @@ extern const PANEL end_1200_panel0[];
 /* provisional name */
 const PANEL end_1200_panel0[8] = {
     { 0x2000, 1 }, { 0x2040, 2 }, { 0x2080, 5 }, { 0x20C0, 6 },
-    { 0x3000, 9 }, { 0x3040, 0xA }, { 0x3080, 0xB }, { 0x30C0, 0xC },
+    { 0x3000, 9 }, { 0x3040, 10 }, { 0x3080, 11 }, { 0x30C0, 12 },
 };

@@ -82,8 +82,8 @@ s32 check_full_gauge_attack(PLW* wk, s8 always) {
                     if (j == 3 && !(wk->cp->btix[wk->sa->exsa_g_ix] & CMD_BT_STRENGTH4)) {
                         continue;
                     }
-                    exsw = cmdshot_conv_tbl[wk->cp->exdt[wk->sa->exsa_g_ix][j]];
-                    if ((u16)(exsw & cusw) != cmdshot_conv_tbl[wk->cp->exdt[wk->sa->exsa_g_ix][j] & CMD_EX_BUTTON]) {
+                    exsw = cusw & cmdshot_conv_tbl[wk->cp->exdt[wk->sa->exsa_g_ix][j]];
+                    if (exsw != cmdshot_conv_tbl[wk->cp->exdt[wk->sa->exsa_g_ix][j] & CMD_EX_BUTTON]) {
                         continue;
                     }
                     setup_comm_back(&wk->wu);
@@ -118,8 +118,8 @@ s32 check_full_gauge_attack(PLW* wk, s8 always) {
                 if (j == 3 && !(wk->cp->btix[wk->sa->exsa_a_ix] & CMD_BT_STRENGTH4)) {
                     continue;
                 }
-                exsw = cmdshot_conv_tbl[wk->cp->exdt[wk->sa->exsa_a_ix][j]];
-                if ((u16)(exsw & cusw) != cmdshot_conv_tbl[wk->cp->exdt[wk->sa->exsa_a_ix][j] & CMD_EX_BUTTON]) {
+                exsw = cusw & cmdshot_conv_tbl[wk->cp->exdt[wk->sa->exsa_a_ix][j]];
+                if (exsw != cmdshot_conv_tbl[wk->cp->exdt[wk->sa->exsa_a_ix][j] & CMD_EX_BUTTON]) {
                     continue;
                 }
                 setup_comm_back(&wk->wu);
@@ -172,8 +172,8 @@ s32 check_super_arts_attack(PLW* wk) {
                     if (j == 3 && !(wk->cp->btix[wk->sa->nmsa_g_ix] & CMD_BT_STRENGTH4)) {
                         continue;
                     }
-                    exsw = cmdshot_conv_tbl[wk->cp->exdt[wk->sa->nmsa_g_ix][j]];
-                    if ((u16)(exsw & cusw) != cmdshot_conv_tbl[wk->cp->exdt[wk->sa->nmsa_g_ix][j] & CMD_EX_BUTTON]) {
+                    exsw = cusw & cmdshot_conv_tbl[wk->cp->exdt[wk->sa->nmsa_g_ix][j]];
+                    if (exsw != cmdshot_conv_tbl[wk->cp->exdt[wk->sa->nmsa_g_ix][j] & CMD_EX_BUTTON]) {
                         continue;
                     }
                     setup_comm_back(&wk->wu);
@@ -208,8 +208,8 @@ s32 check_super_arts_attack(PLW* wk) {
                 if (j == 3 && !(wk->cp->btix[wk->sa->nmsa_a_ix] & CMD_BT_STRENGTH4)) {
                     continue;
                 }
-                exsw = cmdshot_conv_tbl[wk->cp->exdt[wk->sa->nmsa_a_ix][j]];
-                if ((u16)(exsw & cusw) != cmdshot_conv_tbl[wk->cp->exdt[wk->sa->nmsa_a_ix][j] & CMD_EX_BUTTON]) {
+                exsw = cusw & cmdshot_conv_tbl[wk->cp->exdt[wk->sa->nmsa_a_ix][j]];
+                if (exsw != cmdshot_conv_tbl[wk->cp->exdt[wk->sa->nmsa_a_ix][j] & CMD_EX_BUTTON]) {
                     continue;
                 }
                 setup_comm_back(&wk->wu);

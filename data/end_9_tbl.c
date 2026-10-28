@@ -16,18 +16,18 @@ extern const s16 timer_9_tbl[];
 extern const s16 end_9_pos[][2];
 
 const PANEL end_900_bg0_cell_tbl[7] = {
-    { 8192, 1 },
-    { 8256, 2 },
-    { 8320, 3 },
-    { 12288, 4 },
-    { 12352, 5 },
-    { 12416, 6 },
-    { 12480, 7 },
+    { 0x2000, 1 },
+    { 0x2040, 2 },
+    { 0x2080, 3 },
+    { 0x3000, 4 },
+    { 0x3040, 5 },
+    { 0x3080, 6 },
+    { 0x30C0, 7 },
 };
 
 /* provisional name */
 const s16 timer_9_tbl[7] = {
-    0xF0, 0xF0, 0xF0, 0xB4, 0xB4, 0xB4, 0x294,
+    240, 240, 240, 180, 180, 180, 660,
 };
 
 /* provisional name */

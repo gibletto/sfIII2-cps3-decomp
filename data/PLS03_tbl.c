@@ -52,7 +52,7 @@ const s16 rc_shot_conv[16] = {
 };
 
 const u8 renda_status_table[4] = {
-    0, 0x14, 0x20, 0,
+    0, 20, 32, 0,
 };
 
 const s16 cnmc_conv_data[16] = {
