@@ -77,26 +77,26 @@ extern const u16 sc_vram_28_code[];
 extern const u16 sc_vram_28_pos[];
 extern const PAL_BYTE_LIST sc_chr_list_tbl[];
 extern const u16 *const sc_chr_slot_tbl[];
-extern const u32 sc_celllist_data[];
+extern const CELL_ENTRY sc_celllist_data[650];
 
 const CELL_ENTRY *const sc_celllist_tbl[17] = {
-    (const CELL_ENTRY *)sc_celllist_data,
-    (const CELL_ENTRY *)sc_celllist_data,
-    (const CELL_ENTRY *)&sc_celllist_data[42],
-    (const CELL_ENTRY *)&sc_celllist_data[168],
-    (const CELL_ENTRY *)&sc_celllist_data[194],
-    (const CELL_ENTRY *)&sc_celllist_data[214],
-    (const CELL_ENTRY *)&sc_celllist_data[234],
-    (const CELL_ENTRY *)&sc_celllist_data[1008],
-    (const CELL_ENTRY *)&sc_celllist_data[1058],
-    (const CELL_ENTRY *)&sc_celllist_data[1108],
-    (const CELL_ENTRY *)&sc_celllist_data[1170],
-    (const CELL_ENTRY *)&sc_celllist_data[428],
-    (const CELL_ENTRY *)&sc_celllist_data[686],
-    (const CELL_ENTRY *)&sc_celllist_data[1256],
-    (const CELL_ENTRY *)&sc_celllist_data[1278],
-    (const CELL_ENTRY *)&sc_celllist_data[84],
-    (const CELL_ENTRY *)&sc_celllist_data[126],
+    &sc_celllist_data[0],
+    &sc_celllist_data[0],
+    &sc_celllist_data[21],
+    &sc_celllist_data[84],
+    &sc_celllist_data[97],
+    &sc_celllist_data[107],
+    &sc_celllist_data[117],
+    &sc_celllist_data[504],
+    &sc_celllist_data[529],
+    &sc_celllist_data[554],
+    &sc_celllist_data[585],
+    &sc_celllist_data[214],
+    &sc_celllist_data[343],
+    &sc_celllist_data[628],
+    &sc_celllist_data[639],
+    &sc_celllist_data[42],
+    &sc_celllist_data[63],
 };
 
 const u16 sc_cells_0[22] = {

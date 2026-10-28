@@ -1081,30 +1081,30 @@ void akebono_scrn_move(s16 ix) {
 /* provisional name */
 void akebono_scr_write(void)
 {
-    PANEL *cell;
+    const PANEL *cell;
     s16 i;
 
-    cell = (PANEL *)ake_cell1_data;
+    cell = ake_cell1_data;
     for (i = 0; i < 8; i++) {
         ake_cell_write(1, cell->ofs, cell->cell, (u32)ake_scrn_data);
         cell++;
     }
-    cell = (PANEL *)ake_cell0_data;
+    cell = ake_cell0_data;
     for (i = 0; i < 16; i++) {
         ake_cell_write(0, cell->ofs, cell->cell, (u32)ake_scrn_data);
         cell++;
     }
-    cell = (PANEL *)ake_cell3_data;
+    cell = ake_cell3_data;
     for (i = 0; i < 16; i++) {
         ake_cell_write(3, cell->ofs, cell->cell, (u32)ake_scrn_data);
         cell++;
     }
-    cell = (PANEL *)ake_cell4_data;
+    cell = ake_cell4_data;
     for (i = 0; i < 16; i++) {
         ake_cell_write(4, cell->ofs, cell->cell, (u32)ake_scrn_data);
         cell++;
     }
-    cell = (PANEL *)ake_cell2_data;
+    cell = ake_cell2_data;
     for (i = 0; i < 8; i++) {
         ake_cell_write(2, cell->ofs, cell->cell, (u32)ake_scrn_data);
         cell++;

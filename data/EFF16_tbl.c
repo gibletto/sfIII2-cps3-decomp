@@ -14,7 +14,7 @@
 
 extern const u32 bunkai_table[];
 extern const u16 bunkai_numobj[];
-extern const u32 bbbs_score[];
+extern const CONN bbbs_score[][7];
 extern const u32 eff17_data_tbl[];
 
 const u32 bunkai_table[7] = {
@@ -27,21 +27,11 @@ const u16 bunkai_numobj[10] = {
     0xB2D5, 0xB2D6,
 };
 
-const u32 bbbs_score[56] = {
-    0xFFB000A4, 0xB2CD, 0xFFA000A4, 0xB2CD,
-    0xFF9000A4, 0xB2CD, 0xFF8000A4, 0xB2CD,
-    0xFF7000A4, 0xB2CD, 0xFF6000A4, 0xB2CD,
-    0xFF5000A4, 0xB2CD, 0xB000A4, 0xB2CD,
-    0xA000A4, 0xB2CD, 0x9000A4, 0xB2CD,
-    0x8000A4, 0xB2CD, 0x7000A4, 0xB2CD,
-    0x6000A4, 0xB2CD, 0x5000A4, 0xB2CD,
-    0xFF8800A4, 0xB2CD, 0xFF7800A4, 0xB2CD,
-    0xFF6800A4, 0xB2CD, 0xFF5800A4, 0xB2CD,
-    0xFF4800A4, 0xB2CD, 0xFF3800A4, 0xB2CD,
-    0xFF2800A4, 0xB2CD, 0xD800A4, 0xB2CD,
-    0xC800A4, 0xB2CD, 0xB800A4, 0xB2CD,
-    0xA800A4, 0xB2CD, 0x9800A4, 0xB2CD,
-    0x8800A4, 0xB2CD, 0x7800A4, 0xB2CD,
+const CONN bbbs_score[4][7] = {
+    { { -80, 164, 0, 0xB2CD }, { -96, 164, 0, 0xB2CD }, { -112, 164, 0, 0xB2CD }, { -128, 164, 0, 0xB2CD }, { -144, 164, 0, 0xB2CD }, { -160, 164, 0, 0xB2CD }, { -176, 164, 0, 0xB2CD } },
+    { { 176, 164, 0, 0xB2CD }, { 160, 164, 0, 0xB2CD }, { 144, 164, 0, 0xB2CD }, { 128, 164, 0, 0xB2CD }, { 112, 164, 0, 0xB2CD }, { 96, 164, 0, 0xB2CD }, { 80, 164, 0, 0xB2CD } },
+    { { -120, 164, 0, 0xB2CD }, { -136, 164, 0, 0xB2CD }, { -152, 164, 0, 0xB2CD }, { -168, 164, 0, 0xB2CD }, { -184, 164, 0, 0xB2CD }, { -200, 164, 0, 0xB2CD }, { -216, 164, 0, 0xB2CD } },
+    { { 216, 164, 0, 0xB2CD }, { 200, 164, 0, 0xB2CD }, { 184, 164, 0, 0xB2CD }, { 168, 164, 0, 0xB2CD }, { 152, 164, 0, 0xB2CD }, { 136, 164, 0, 0xB2CD }, { 120, 164, 0, 0xB2CD } },
 };
 
 const u32 eff17_data_tbl[23] = {

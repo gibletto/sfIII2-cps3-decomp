@@ -39,7 +39,7 @@ extern const u32 bg_scrn_data_12[];
 extern const u32 bg_scrn_data_15[];
 extern const u32 etc_bg_scrn_data_0[];
 extern const u32 etc_bg_scrn_data_3[];
-extern const u16 debug_scene_scrn_data[];
+extern const u32 debug_scene_scrn_data[];
 extern const u8 eff08_scrn_data[];
 extern const u32 eff23_scrn_data[];
 extern const u32 eff45_scrn_data[];

@@ -403,8 +403,8 @@ extern const s16 quake_y_tbl[];
 extern const u16 bg_color2_tbl[];
 extern const s16 bg_attr_add_tbl[];
 extern const u16 etc_bg_color_tbl[];
-extern const char ake_cell1_data[];
-extern const char ake_cell2_data[];
+extern const PANEL ake_cell1_data[];
+extern const PANEL ake_cell2_data[];
 extern const s16 pos_area_tbl[];
 extern const s16 pos_area_wide_tbl[];
 extern const char thank_you_str[];
@@ -1317,9 +1317,9 @@ extern const u32 snd_seq_rom_data[];
 extern const SNDSAMPLE snd_sample_rom_tbl[];
 extern u8* snd_bank_rom_tbl[];
 extern const CharGfxEntry cg_data_tbl[];
-extern const char ake_cell0_data[];
-extern const char ake_cell3_data[];
-extern const char ake_cell4_data[];
+extern const PANEL ake_cell0_data[];
+extern const PANEL ake_cell3_data[];
+extern const PANEL ake_cell4_data[];
 extern const u8 bg_fade_level_tbl[];
 extern const u16 gill_face_wide_chr[];  /* provisional name */
 extern const u16 default_face_wide_chr[];  /* provisional name */

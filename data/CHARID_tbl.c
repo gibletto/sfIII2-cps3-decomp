@@ -34,7 +34,7 @@ extern const s16 sky_sp_damage_tbl[];
 extern const s16 kagami_damage_tbl[];
 extern const s16 kagami2_damage_tbl[];
 extern const s16 grd_hand_damage_tbl[];
-extern const u16 hddm_damage_tbl[];
+extern const u8 hddm_damage_tbl[];
 extern const u8 trdm_damage_tbl[];
 extern const u8 ttk_damage_req_tbl[];
 extern const u8 parisucc_pts[][40];
@@ -599,13 +599,13 @@ const s16 grd_hand_damage_tbl[82] = {
     0x29, 0x29,
 };
 
-const u16 hddm_damage_tbl[41] = {
-    0x100, 1, 0x101, 0x100, 1, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0x100, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0,
-    0,
+const u8 hddm_damage_tbl[82] = {
+    1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0,
 };
 
 const u8 trdm_damage_tbl[82] = {
