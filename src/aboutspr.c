@@ -900,15 +900,13 @@ s32 set_conn_sprite(WORK_Other_CONN* wk) {
         wk->wu.spr.disp_colcd = wk->wu.my_col_code & 0x1FF;
     }
     for (i = n = 0; i < wk->num_of_conn; i++) {
-        (void)&((WORK*)n)->be_flag;
         chr = wk->conn[i].chr;
         set = cg_data_list[chr].set;
         base = cg_slot_tbl[set->slot].addr;
         cells = (CHAR_CELL*)set->chunk;
         cells += set->count;
         for (j = 0; j < set->cells; j++) {
-            s = &dst[n];
-            s->code = base + cells[j].code;
+            (s = &dst[n])->code = base + cells[j].code;
             s->pal = cells[j].col + wk->wu.spr.disp_colcd + wk->conn[i].col;
             s->x = (cells[j].x + wk->conn[i].nx + cg_data_list[chr].x) & 0x3FF;
             s->y = (wk->conn[i].ny - cells[j].y - cg_data_list[chr].y) & 0x3FF;

@@ -474,12 +474,11 @@ void tilemap_print_script_seq(u16 pos_x, u16 y, u16 pal, const TMSCRIPT* scr) {
                         dst = ((u16*)SS_RAM);
                     }
                 }
-                dst += w << 1;
-                dst -= h << 7;
+                dst = dst + (w << 1);
+                dst = dst - (h << 7);
                 blk = blk + 1;
                 if (dst > ((u16*)(SS_RAM + 0x3FFF))) {
                     dst = ((u16*)SS_RAM);
-                    (void)&((TEXT_CELL*)0)->code;
                 }
             }
         }
