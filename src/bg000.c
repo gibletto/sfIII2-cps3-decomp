@@ -2067,8 +2067,11 @@ void bg_etc_write(s16 kind) {
     gfx = &etc_bg_gfx_tbl[type];
     polygon2d_submit_line(gfx->prep, 0, 0, 3);
     polygon2d_submit_line(gfx->src, bg_w.scroll_cg_adr, gfx->size, gfx->mode);
-    while (0);
-    bg_w.pos_offset = Game_setting.mode ? 0xF8 : 0xC0;
+    if (Game_setting.mode) {
+        bg_w.pos_offset = 0xF8;
+    } else {
+        bg_w.pos_offset = 0xC0;
+    }
     for (i = 0; i < 7; i++) {
         bg_w.bgw[i].pos_x_work = 0;
         bg_w.bgw[i].pos_y_work = 0;
@@ -2092,6 +2095,9 @@ void bg_etc_write(s16 kind) {
         bg_w.bgw[i].fam_no = i;
     }
     bg_etc_scr_write(type);
+    if (DEBUG_DISP) {
+        scrn_map_set_now(0, (u32)bg_w.bgw[0].bg_address);
+    }
     bg_w.scr_stop = 0;
     bg_w.frame_flag = 0;
     bg_w.dmm0[0] = 0;
