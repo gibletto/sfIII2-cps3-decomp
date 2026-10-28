@@ -210,11 +210,11 @@ s32 home_visitor_check(PLW* wk) {
         num = plw[1].player_number;
     }
     if (pl_num = num, Play_Type) {
-        if (Champion == wk->wu.id && wk->player_number == pl_num && pl_num != 8) {
+        if (Champion == wk->wu.id && wk->player_number == pl_num && pl_num != PL_ELENA) {
             hv_type = 1;
         }
     } else {
-        if (wk->wu.operator && wk->player_number == pl_num && pl_num != 8) {
+        if (wk->wu.operator && wk->player_number == pl_num && pl_num != PL_ELENA) {
             hv_type = 1;
         }
     }

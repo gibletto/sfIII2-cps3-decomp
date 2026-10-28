@@ -34,7 +34,7 @@ void Combo_Demo_Init(void) {
     Game_pause = 0;
     Suicide = 0;
     round_timer.size.full = 1;
-    pcon_rno[0] = 0;
+    pcon_rno[0] = PCON_INIT;
     pcon_rno[1] = 0;
     pcon_rno[2] = 0;
     pcon_rno[3] = 0;

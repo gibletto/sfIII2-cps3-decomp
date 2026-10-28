@@ -105,21 +105,21 @@ s32 bg_debug_stage_change(void) {
     u16 sw2 = ~p2sw_1 & p2sw_0;
     u16 ret = 0;
     if (exsw_1 & 0x80) {
-        if ((sw1 & 0x80) || (sw2 & 0x80)) {
+        if ((sw1 & BUTTON_LK) || (sw2 & BUTTON_LK)) {
             bg_w.stage++;
             ret = 1;
             if (bg_w.stage > 16) {
                 bg_w.stage = 0;
             }
         }
-        if ((sw1 & 0x100) || (sw2 & 0x100)) {
+        if ((sw1 & BUTTON_MK) || (sw2 & BUTTON_MK)) {
             bg_w.stage--;
             ret = 1;
             if (bg_w.stage < 0) {
                 bg_w.stage = 16;
             }
         }
-        if ((sw1 & 0x200) || (sw2 & 0x200)) {
+        if ((sw1 & BUTTON_HK) || (sw2 & BUTTON_HK)) {
             bg_w.area++;
             ret = 1;
             if (bg_w.area > 2) {
@@ -194,7 +194,7 @@ void bg_test_stage_select(void) {
     s8 save_entry;
     changed = 0;
     sw = ~p1sw_1 & p1sw_0;
-    if (sw & 0x80) {
+    if (sw & BUTTON_LK) {
         bg_select_no++;
         if (bg_select_no > 16) {
             bg_select_no = 0;
@@ -203,7 +203,7 @@ void bg_test_stage_select(void) {
         bg_w.area = bg_test_stage_tbl[bg_select_no][1];
         changed = 1;
     }
-    if (sw & 0x100) {
+    if (sw & BUTTON_MK) {
         bg_select_no--;
         if (bg_select_no < 0) {
             bg_select_no = 16;

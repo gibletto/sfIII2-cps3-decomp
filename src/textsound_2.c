@@ -282,7 +282,7 @@ s32 sound_seq_start(u16 code, s16 ramp) {
         (void)&((WORK*)se_tick_step)->id;
         return;
     }
-    if (ch = hdr & 15, (*p & 0x7F) < (se_voice[ch].priority_flags & 0x7F) && !(se_voice[ch].status & 0x80)) {
+    if (ch = hdr & 0xF, (*p & 0x7F) < (se_voice[ch].priority_flags & 0x7F) && !(se_voice[ch].status & 0x80)) {
         return;
     }
     se_voice[ch].cursor = p;
@@ -399,7 +399,7 @@ u16 cmd;
     if (sound_sample_submit_work7 & 2) {
         snd_fade_speed = cmd & 0x7FFF;
         sound_sample_submit_work7 &= 0xF7;
-        sound_sample_submit_work7 |= 16;
+        sound_sample_submit_work7 |= 0x10;
     }
 }
 

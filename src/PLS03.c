@@ -935,7 +935,7 @@ s32 check_renda_cancel(PLW* wk) {
     if (wk->wu.rl_flag != wk->wu.rl_waza) {
         return 0;
     }
-    wk->permited_koa |= 32;
+    wk->permited_koa |= 0x20;
     if (wk->wu.pat_status == renda_status_table[(wk->cp->sw_new & 3)]) {
         if (wk->current_attack == (wk->cp->sw_now & CMD_SW_SHOT)) {
             setup_comm_back((WORK*)wk);
@@ -973,30 +973,30 @@ s32 check_meoshi_cancel(PLW* wk) {
     s16 i;
     s16 tdat;
     s16 wdat;
-    s32 t0;
+    s32 ldat;
     wk->permited_koa |= 0x10;
     if (wk->wu.meoshi_hit_flag == 0) {
         return 0;
     }
-    t0 = (s16)(wk->wu.cg_meoshi & 0x8F) & 0x8F;
-    if ((s16)t0 != 0) {
+    ldat = (s16)(wk->wu.cg_meoshi & 0x8F) & 0x8F;
+    if ((s16)ldat != 0) {
         wdat = cnmc_conv_data[wk->cp->sw_new & CMD_LV_MASK];
-        t0 &= 0xF;
+        ldat &= 0xF;
         if (wk->wu.cg_meoshi & 0x80) {
             for (i = 0; i < 6; i++) {
-                if (cnmc_Z_lever_data[t0][i] == -1) {
+                if (cnmc_Z_lever_data[ldat][i] == -1) {
                     return 0;
                 }
-                if (cnmc_Z_lever_data[t0][i] == wdat) {
+                if (cnmc_Z_lever_data[ldat][i] == wdat) {
                     goto matched;
                 }
             }
         } else {
             for (i = 0; i < 8; i++) {
-                if (cnmc_z_lever_data[(s16)t0][i] == -1) {
+                if (cnmc_z_lever_data[(s16)ldat][i] == -1) {
                     return 0;
                 }
-                if (cnmc_z_lever_data[(s16)t0][i] == wdat) {
+                if (cnmc_z_lever_data[(s16)ldat][i] == wdat) {
                     goto matched;
                 }
             }
@@ -1004,7 +1004,7 @@ s32 check_meoshi_cancel(PLW* wk) {
         return 0;
     }
 matched:
-    if ((tdat = wk->wu.cg_meoshi & 0x770) == 0) {
+    if ((tdat = wk->wu.cg_meoshi & CMD_SW_SHOT) == 0) {
         if (!(wk->wu.cg_meoshi & 0x800)) {
             return 0;
         }

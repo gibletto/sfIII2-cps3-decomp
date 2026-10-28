@@ -53,12 +53,12 @@ u16 sound_voice_volume_compute(u16 level, u32 pan_scale, s8 pan, SNDVOICE* v) {
     s32 comp;
     SOUND_CTRL ctrl;
     a = v->volume * ((vol = v->expression) ? vol + 1 : vol) * 2;
-    a = (a * ((v->volume_offset + 64) & 127)) >> 6;
-    a = (a * ((v->patch->volume_bias + 64) & 127)) >> 6;
-    t = a * ((snd_master_vol + 64) & 127);
+    a = (a * ((v->volume_offset + 64) & 0x7F)) >> 6;
+    a = (a * ((v->patch->volume_bias + 64) & 0x7F)) >> 6;
+    t = a * ((snd_master_vol + 64) & 0x7F);
     t >>= 6;
     if (!v->priority_flags) {
-        t = (t * ((bgm_master_vol + 64) & 127)) >> 6;
+        t = (t * ((bgm_master_vol + 64) & 0x7F)) >> 6;
     }
     out = (level * (t + 1)) >> 15;
     t = (s16)((out * pan_scale) >> 16) + (pan * 256) + out;

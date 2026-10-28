@@ -75,7 +75,7 @@ void effect_D9_move(WORK_Other* ewk) {
                 goto kill;
             }
         }
-        if (ewk->wu.vital_old & 16) {
+        if (ewk->wu.vital_old & 0x10) {
             if (ewk->wu.total_paring != mwk->wu.kind_of_waza) {
                 goto kill;
             }

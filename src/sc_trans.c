@@ -559,7 +559,7 @@ void player_name_trans(void) {
             return;
         }
         for (i = 0; i < 2; i++) {
-            if ((My_char[i] & 0x7F) == 14 || (My_char[i] & 0x7F) == 15) {
+            if ((My_char[i] & 0x7F) == PL_GOUKI1 || (My_char[i] & 0x7F) == PL_GOUKI2) {
                 sc_trans_src = (u8*)((u32)sc_chr_data + (16 * 4 + i * 68 + 0x408) * 32);
             } else {
                 sc_trans_src = (u8*)((u32)sc_chr_data + ((My_char[i] & 0x7F) * 4 + i * 68 + 0x408) * 32);
@@ -578,7 +578,7 @@ void player_name_trans(void) {
         return;
     }
     for (i = 0; i < 2; i++) {
-        if ((My_char[i] & 0x7F) == 14 || (My_char[i] & 0x7F) == 15) {
+        if ((My_char[i] & 0x7F) == PL_GOUKI1 || (My_char[i] & 0x7F) == PL_GOUKI2) {
             sc_trans_src = (u8*)((u32)sc_chr_data + (16 * 5 + i * 85 + 0x500) * 32);
         } else {
             sc_trans_src = (u8*)((u32)sc_chr_data + ((My_char[i] & 0x7F) * 5 + i * 85 + 0x500) * 32);

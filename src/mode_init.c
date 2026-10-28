@@ -291,7 +291,7 @@ void mode_init_task(void) {
 
     /* title and region name, in the region's colour */
     region = bios_region_code;
-    region &= 15;
+    region &= 0xF;
     if (region >= 8) {
         region = 8;
     } else {
@@ -355,7 +355,7 @@ void mode_init_task(void) {
 
 /* provisional name */
 void region_setup(void) {
-    Country = bios_region_code & 15;
+    Country = bios_region_code & 0xF;
     Version_Type = bios_region_code & 0xF0;
     Version_Type >>= 4;
     if (Version_Type >= 9) {

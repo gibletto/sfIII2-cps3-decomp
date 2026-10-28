@@ -152,13 +152,13 @@ void effect_B8_move(WORK_Other_CONN* ewk) {
             if (sw & 0x180) {
                 ewk->wu.routine_no[0]++;
                 test_in = 1;
-                if (sw & 0x80) {
+                if (sw & BUTTON_LK) {
                     test_pl_no++;
                     if (test_pl_no > 14) {
                         test_pl_no = 0;
                     }
                 }
-                if (sw & 0x100) {
+                if (sw & BUTTON_MK) {
                     test_mes_no++;
                     if (test_mes_no > 29) {
                         test_mes_no = 0;

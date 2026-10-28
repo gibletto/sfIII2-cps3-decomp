@@ -30,10 +30,6 @@
 #define R0_MOVE         1       /* animate until the stage ends */
 #define R0_KILL         99      /* (default) put the work back */
 
-extern const u32 eff19_char_table[];   /* provisional name */
-
-
-
 /* compel_dead_check, my_mr 58 x 58, no quake reactions */
 void effect_19_move(WORK_Other* ewk) {
     if (compel_dead_check(ewk)) {

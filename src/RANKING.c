@@ -57,6 +57,7 @@
 #include "textsound_2.h"
 #include "textsound_3.h"
 #include "RANKING.h"
+#include "Eff95.h"
 
 /* D_No2 in Ranking_01_5th */
 #define RK5_WAIT        0       /* wait D_Timer, then wipe */
@@ -64,8 +65,6 @@
 
 
 
-/* provisional name: the second effect 95 initializer */
-s32 effect_95_rank_init();
 void load_side_color();
 s32 effect_51_init();
 s32 effect_57_init();

@@ -19,12 +19,12 @@
 #include "ta_sub.h"
 #include "aboutspr.h"
 #include "eff05.h"
+#include "eff66.h"
 
 /* bgw r_no_0 of a layer that follows the camera */
 #define SYNC_INIT       0       /* set up the layer */
 #define SYNC_MOVE       1       /* follow the camera (bg_x_move_check, bg_y_move_check) */
 
-s32 effect_66_init();
 void bg0101(void);
 void bg0102(void);
 void bg0103(void);

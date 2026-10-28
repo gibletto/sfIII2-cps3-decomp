@@ -180,7 +180,7 @@ void syungoku_finish(WORK_Other* ewk) {
         }
         Bg_Off_W(8);
         Conclusion_Flag = 1;
-        Conclusion_Type = 0;
+        Conclusion_Type = CONCLUSION_KO;
         request_center_message(0);
         scrn_map_set(3, ake_scrl_w[2].adrs);
         bg_w.bgw[3].position_x = 256 - bg_w.pos_offset;

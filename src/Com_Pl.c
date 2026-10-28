@@ -593,7 +593,7 @@ void Damage_1st(PLW* wk) {
     u8 Rnd;
     u8 xx;
     WORK* em;
-    Lever_Buff[wk->wu.id] = 2;
+    Lever_Buff[wk->wu.id] = LEVER_DOWN;
     switch (CP_No[wk->wu.id][2]) {
     case D1_DECIDE:
         if (wk->py->flag) {
@@ -673,7 +673,7 @@ void Damage_2nd(PLW* wk) {
         return;
     }
     if (Receive_Flag[wk->wu.id] != 0 && plw[wk->wu.id].uot_cd_ok_flag != 0) {
-        Lever_Buff[wk->wu.id] = 2;
+        Lever_Buff[wk->wu.id] = LEVER_DOWN;
     }
     if (wk->wu.routine_no[1] != PLAYER_DAMAGE) {
         Exit_Damage_Sub(wk);
@@ -735,7 +735,7 @@ void Damage_6th(PLW* wk) {
         CP_No[wk->wu.id][2] = 0;
         return;
     }
-    Lever_Buff[wk->wu.id] = 2;
+    Lever_Buff[wk->wu.id] = LEVER_DOWN;
     switch (CP_No[wk->wu.id][2]) {
     case DG_DOWN:
         if (wk->wu.routine_no[1] != PLAYER_DAMAGE) {
@@ -743,7 +743,7 @@ void Damage_6th(PLW* wk) {
             break;
         }
         if (wk->wu.cg_type == 12) {
-            if (Get_Up_Area_Data[wk->player_number][CP_No[wk->wu.id][1] - 1][Area_Number[wk->wu.id]] == 0x1) {
+            if (Get_Up_Area_Data[wk->player_number][CP_No[wk->wu.id][1] - 1][Area_Number[wk->wu.id]] == 1) {
                 CP_No[wk->wu.id][1] = *(((u8*)Get_Up_Area_Data[wk->player_number][CP_No[wk->wu.id][1]]) + 5);
             }
             CP_No[wk->wu.id][2]++;
@@ -871,7 +871,7 @@ s32 Check_Damage(PLW* wk) {
         CP_No[wk->wu.id][2] = 0;
         CP_No[wk->wu.id][3] = 0;
         Receive_Flag[wk->wu.id] = 0;
-        Lever_Buff[wk->wu.id] = 2;
+        Lever_Buff[wk->wu.id] = LEVER_DOWN;
         Clear_Com_Flag(wk);
         return 1;
     }
@@ -897,7 +897,7 @@ void Float_2nd(PLW* wk) {
     switch (CP_No[wk->wu.id][2]) {
     case FLOAT_INIT:
         CP_No[wk->wu.id][2]++;
-        Lever_Buff[wk->wu.id] = 16;
+        Lever_Buff[wk->wu.id] = BUTTON_LP;
         break;
     default:
         if (wk->wu.routine_no[1] == PLAYER_NORMAL) {
@@ -1001,7 +1001,7 @@ s32 Check_Flip_GO(PLW* wk, s16 xx) {
     WORK* em = (WORK*)wk->wu.target_adrs;
     if (em->att_hit_ok || xx) {
         if (em->pat_status == 0x21 || em->pat_status == 0x20) {
-            Lever_Buff[wk->wu.id] = 2;
+            Lever_Buff[wk->wu.id] = LEVER_DOWN;
         } else {
             Lever_Buff[wk->wu.id] = Setup_Guard_Lever(wk, 0);
         }
@@ -1510,18 +1510,18 @@ void Shift_Resume_Lv(PLW* wk) {
 
 
 void Check_Store_Lv(PLW* wk) {
-    s16 xx = Lever_Buff[wk->wu.id] & 0xF;
+    s16 xx = Lever_Buff[wk->wu.id] & LEVER_ALL;
     switch (xx) {
-    case 2:
+    case LEVER_DOWN:
         Lever_Store[wk->wu.id][0]++;
         break;
-    case 6:
-    case 10:
+    case LEVER_DOWN | LEVER_LEFT:
+    case LEVER_DOWN | LEVER_RIGHT:
         Store_LR_Sub(wk);
         Lever_Store[wk->wu.id][0]++;
         break;
-    case 4:
-    case 8:
+    case LEVER_LEFT:
+    case LEVER_RIGHT:
         Store_LR_Sub(wk);
         break;
     default:
@@ -1536,20 +1536,20 @@ void Check_Store_Lv(PLW* wk) {
 
 void Store_LR_Sub(PLW* wk) {
     if (wk->wu.rl_waza) {
-        if (Lever_Buff[wk->wu.id] & 8) {
+        if (Lever_Buff[wk->wu.id] & LEVER_RIGHT) {
             Lever_Store[wk->wu.id][1]++;
             Lever_Store[wk->wu.id][2] = 0;
         }
-        if (Lever_Buff[wk->wu.id] & 4) {
+        if (Lever_Buff[wk->wu.id] & LEVER_LEFT) {
             Lever_Store[wk->wu.id][1] = 0;
             Lever_Store[wk->wu.id][2]++;
         }
     } else {
-        if (Lever_Buff[wk->wu.id] & 4) {
+        if (Lever_Buff[wk->wu.id] & LEVER_LEFT) {
             Lever_Store[wk->wu.id][1]++;
             Lever_Store[wk->wu.id][2] = 0;
         }
-        if (Lever_Buff[wk->wu.id] & 8) {
+        if (Lever_Buff[wk->wu.id] & LEVER_RIGHT) {
             Lever_Store[wk->wu.id][1] = 0;
             Lever_Store[wk->wu.id][2]++;
         }

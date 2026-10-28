@@ -291,13 +291,13 @@ void effect_67_move(WORK_Other_CONN* ewk) {
             if (sw & 0x180) {
                 ewk->wu.routine_no[0]++;
                 eff67_flag = 1;
-                if (sw & 0x80) {
+                if (sw & BUTTON_LK) {
                     eff67_cnt0++;
                     if (eff67_cnt0 > 14) {
                         eff67_cnt0 = 0;
                     }
                 }
-                if (sw & 0x100) {
+                if (sw & BUTTON_MK) {
                     eff67_cnt1++;
                     if (eff67_cnt1 > 9) {
                         eff67_cnt1 = 0;

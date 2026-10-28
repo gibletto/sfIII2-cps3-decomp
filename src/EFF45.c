@@ -24,13 +24,6 @@
 #define R0_INIT         0       /* show and start the animation */
 #define R0_MOVE         1       /* animate */
 
-extern const s16 eff45_pos_x_tbl[];       /* provisional names (06179360, 061793A0, 061793C0) */
-extern const s16 eff45_pos_y_tbl[16];
-extern const s16 eff45_pos_y_tbl2[16];
-extern const u32 eff45_char_table[];      /* provisional name */
-
-
-
 void effect_45_move(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;
@@ -76,7 +69,7 @@ s32 effect_45_init(void) {
         ewk->wu.my_family = 1;
         ewk->wu.my_col_code = 0x2040;
         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos = eff45_pos_x_tbl[r];
-        ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = eff45_pos_y_tbl[r & 15];
+        ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = eff45_pos_y_tbl[r & 0xF];
         ewk->wu.position_z = ewk->wu.my_priority = 80;
         ewk->wu.char_index = (r & 3) + 15;
         ewk->wu.sync_suzi = 0;
@@ -98,7 +91,7 @@ s32 effect_45_init(void) {
         ewk->wu.my_family = 1;
         ewk->wu.my_col_code = 0x2040;
         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos = eff45_pos_x_tbl[r];
-        ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = eff45_pos_y_tbl2[r & 15];
+        ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = eff45_pos_y_tbl2[r & 0xF];
         ewk->wu.position_z = ewk->wu.my_priority = 80;
         ewk->wu.char_index = (r & 3) + 19;
         ewk->wu.sync_suzi = 0;
@@ -120,7 +113,7 @@ s32 effect_45_init(void) {
         ewk->wu.my_family = 1;
         ewk->wu.my_col_code = 0x2040;
         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos = eff45_pos_x_tbl[r];
-        ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = eff45_pos_y_tbl2[r & 15];
+        ewk->wu.position_y = ewk->wu.xyz[1].disp.pos = eff45_pos_y_tbl2[r & 0xF];
         ewk->wu.position_z = ewk->wu.my_priority = 80;
         ewk->wu.char_index = (r & 3) + 23;
         ewk->wu.sync_suzi = 0;

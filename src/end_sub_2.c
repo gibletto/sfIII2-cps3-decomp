@@ -97,7 +97,7 @@ void cd_keep_spinning_tick(void) {
     if (cd_ready_flag) {
         if (!cd_spin_timer) {
             scsi_start_stop_unit(1, 1);
-            cd_spin_timer = 0x258;
+            cd_spin_timer = 600;
         }
         cd_spin_timer--;
     }
@@ -210,7 +210,7 @@ s32 staff_roll_main(void) {
         staff_name_ptr = roll_stop = 0;
         end_w.timer = 0;
         name_timer = 0;
-        staff_roll_timer = 0x1E96;
+        staff_roll_timer = 7830;
         break;
     case STAFF_ROLL:
         if (staff_roll_skip_check()) {

@@ -70,7 +70,7 @@ s32 comm_wceq2(WORK* wk, CHAR_CMD* ctc);
 s32 comm_wcgt2(WORK* wk, CHAR_CMD* ctc);
 s32 comm_imgs(PLW* wk, CHAR_CMD* ctc);
 s32 comm_ccfl(PLW* wk, CHAR_CMD* _p1);
-u32 comm_exbgs(u32 wk_adrs, CHAR_CMD* ctc, u32 arg2, u32 arg3);
+u32 comm_exbgs(u32 wk_adrs, CHAR_CMD* ctc, u32 _p2, u32 _p3);
 u32 comm_exbgc(WORK* wk);
 s32 comm_ngda(WORK* wk, CHAR_CMD* ctc);
 s32 comm_kage(WORK* wk, CHAR_CMD* ctc);

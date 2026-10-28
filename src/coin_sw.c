@@ -134,11 +134,11 @@ s8 coin_chute_check(s8 n, s32 keep) {
     unused0 = coin_sw_tbl[n][0];
     unused1 = coin_sw_tbl[n][1];
     if (cc->state == 0) {
-        if ((coin_sw_hist[n] & 15) == 3) {
+        if ((coin_sw_hist[n] & 0xF) == 0x3) {
             cc->state = 1;
             cc->timer = 50;
         }
-    } else if ((coin_sw_hist[n] & 15) == 12) {
+    } else if ((coin_sw_hist[n] & 0xF) == 0xC) {
         cc->state = 0;
         cc->dropped = 1;
         rc = 1;
@@ -223,7 +223,7 @@ void coin_lock_release(s8 chute) {
         coin_out_latch |= 8;
         break;
     default:
-        coin_out_latch |= 15;
+        coin_out_latch |= 0xF;
         break;
     }
 }

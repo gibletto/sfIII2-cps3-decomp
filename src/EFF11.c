@@ -24,14 +24,13 @@
 #include "bg_sub_4.h"
 #include "bg_sub_5.h"
 #include "EFF11.h"
+#include "eff05.h"
 
 /* routine_no[0] */
 #define R0_WAIT         0       /* wait out the delay, then appear */
 #define R0_MOVE         1       /* fly until below height 64 */
 #define R0_END          2       /* hidden for a frame */
 #define R0_KILL         3       /* (default) put the work back */
-
-extern const u32 stg00_char_table[];    /* provisional name */
 
 
 

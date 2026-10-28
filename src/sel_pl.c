@@ -500,7 +500,7 @@ s32 Deley_Shot_Sub(s16 PL_id) {
     } else {
         sw = ~p2sw_1 & p2sw_0;
     }
-    lever = sw & 0xF;
+    lever = sw & LEVER_ALL;
     sw = sw & 0x7F0;
     switch (Deley_Shot_No[PL_id]) {
     case DELAY_NONE:
@@ -604,12 +604,12 @@ u16 sw;
         return;
     }
     if (Time_Over != 0) {
-        sw = 16;
+        sw = BUTTON_LP;
     }
     if (sw == 0) {
         Auto_Repeat_Sub(PL_id);
     }
-    if (sw & 8) {
+    if (sw & LEVER_RIGHT) {
         if (Cursor_X[PL_id] != 6 || Cursor_Y[PL_id] != 1) {
             Cursor_Move[PL_id] = 1;
             if (++Cursor_X[PL_id] >= 13) {
@@ -617,7 +617,7 @@ u16 sw;
             }
         }
     }
-    if (sw & 4) {
+    if (sw & LEVER_LEFT) {
         if (Cursor_X[PL_id] != 6 || Cursor_Y[PL_id] != 1) {
             Cursor_Move[PL_id] = 1;
             if (--Cursor_X[PL_id] < 0) {
@@ -625,7 +625,7 @@ u16 sw;
             }
         }
     }
-    if (sw & 1) {
+    if (sw & LEVER_UP) {
         if (Cursor_X[PL_id] == 6 && Gouki_Select_Open != 0) {
             Cursor_Move[PL_id] = 1;
             if (++Cursor_Y[PL_id] > 1) {
@@ -633,7 +633,7 @@ u16 sw;
             }
         }
     }
-    if (sw & 2) {
+    if (sw & LEVER_DOWN) {
         if (Cursor_X[PL_id] == 6 && Gouki_Select_Open != 0) {
             Cursor_Move[PL_id] = 1;
             if (--Cursor_Y[PL_id] < 0) {
@@ -692,13 +692,13 @@ s16 PL_id;
     }
     switch (Auto_No[PL_id]) {
     case AUTO_IDLE:
-        if (sw & 8) {
+        if (sw & LEVER_RIGHT) {
             Auto_No[PL_id] = AUTO_REPEAT;
             Auto_Cursor[PL_id] = 8;
             Auto_Timer[PL_id] = Repeat_Time_Data[0];
             Auto_Index[PL_id] = 1;
             break;
-        } else if (sw & 4) {
+        } else if (sw & LEVER_LEFT) {
             Auto_No[PL_id] = AUTO_REPEAT;
             Auto_Cursor[PL_id] = 4;
             Auto_Timer[PL_id] = Repeat_Time_Data[0];
@@ -707,7 +707,7 @@ s16 PL_id;
         }
         break;
     case AUTO_REPEAT:
-        if ((sw &= 0xC) != Auto_Cursor[PL_id]) {
+        if ((sw &= LEVER_LR) != Auto_Cursor[PL_id]) {
             Auto_No[PL_id] = AUTO_IDLE;
         } else {
             if (--Auto_Timer[PL_id] != 0) {
@@ -717,13 +717,13 @@ s16 PL_id;
             if (Auto_Index[PL_id] > 2) {
                 Auto_Index[PL_id] = 2;
             }
-            if (sw & 8) {
+            if (sw & LEVER_RIGHT) {
                 Cursor_Move[PL_id] = 1;
                 if (++Cursor_X[PL_id] >= 13) {
                     Cursor_X[PL_id] = 0;
                 }
             }
-            if (sw & 4) {
+            if (sw & LEVER_LEFT) {
                 Cursor_Move[PL_id] = 1;
                 if (--Cursor_X[PL_id] < 0) {
                     Cursor_X[PL_id] = 12;
@@ -748,14 +748,14 @@ s32 Auto_Repeat_Sub_Wife(s16 pl) {
     }
     switch (Auto_No[pl]) {
     case AUTO_IDLE:
-        if (sw & 1) {
+        if (sw & LEVER_UP) {
             Auto_No[pl] = AUTO_REPEAT;
             Auto_Cursor[pl] = 1;
             Auto_Timer[pl] = Auto_Repeat_Wife_Data[0];
             Auto_Index[pl] = 1;
             break;
         }
-        if (sw & 2) {
+        if (sw & LEVER_DOWN) {
             Auto_No[pl] = AUTO_REPEAT;
             Auto_Cursor[pl] = 2;
             Auto_Timer[pl] = Auto_Repeat_Wife_Data[0];
@@ -770,10 +770,10 @@ s32 Auto_Repeat_Sub_Wife(s16 pl) {
                 if (Auto_Index[pl] > 2) {
                     Auto_Index[pl] = 2;
                 }
-                if (sw & 1) {
+                if (sw & LEVER_UP) {
                     return 1;
                 }
-                if (sw & 2) {
+                if (sw & LEVER_DOWN) {
                     return 2;
                 }
             }
@@ -873,13 +873,13 @@ u16 sw;
         return;
     }
     if (Time_Over) {
-        sw = 16;
+        sw = BUTTON_LP;
     }
-    lever_sw = sw & 0xF;
+    lever_sw = sw & LEVER_ALL;
     if (lever_sw == 0) {
         sw |= Auto_Repeat_Sub_Wife(PL_id);
     }
-    if (sw & 2) {
+    if (sw & LEVER_DOWN) {
         Sound_SE(ID + 96);
         Moving_Plate[PL_id] = 2;
         Moving_Plate_Counter[PL_id] = 3;
@@ -888,7 +888,7 @@ u16 sw;
             Arts_Y[PL_id] = 2;
         }
     }
-    if (sw & 1) {
+    if (sw & LEVER_UP) {
         Sound_SE(ID + 96);
         Moving_Plate[PL_id] = 1;
         Moving_Plate_Counter[PL_id] = 3;
@@ -1758,7 +1758,7 @@ void Boss_Exit_1st(void) {
     if (My_char[COM_id] != PL_GOUKI1) {
         Setup_PL_Color(COM_id, Com_Color_Shot);
     }
-    pcon_rno[0] = 0;
+    pcon_rno[0] = PCON_INIT;
     pcon_rno[1] = 0;
     pcon_rno[2] = 0;
     pcon_rno[3] = 0;
@@ -1894,7 +1894,7 @@ void Last_Exit_1st(void) {
     Setup_BG_Layer2();
     Setup_BG_Layer3();
     My_char[COM_id] = PL_GOUKI1;
-    pcon_rno[0] = 0;
+    pcon_rno[0] = PCON_INIT;
     pcon_rno[1] = 0;
     pcon_rno[2] = 0;
     pcon_rno[3] = 0;

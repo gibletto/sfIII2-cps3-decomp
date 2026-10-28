@@ -139,11 +139,11 @@ s32 pl_shot_trg_check(void) {
     u16 sw;
     if (plw[0].wu.operator) {
         sw = ~p1sw_1 & p1sw_0;
-        if (sw & 0x3F0) return 1;
+        if (sw & BUTTON_SHOTS) return 1;
     }
     if (plw[1].wu.operator) {
         sw = ~p2sw_1 & p2sw_0;
-        if (sw & 0x3F0) return 1;
+        if (sw & BUTTON_SHOTS) return 1;
     }
     return 0;
 }

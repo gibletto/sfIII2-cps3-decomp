@@ -1794,7 +1794,7 @@ void waza_compel_all_init2(PLW* pl) {
 s32 sw_to_lvbt(s32 value) {
     s32 lvbt;
     s32 btn;
-    lvbt = value & 127;
+    lvbt = value & 0x7F;
     goto next;
 next:
     btn = ((u16)value << 1) & 0x700;

@@ -19,6 +19,7 @@
 #include "aboutspr.h"
 #include "EFFI4MV.h"
 #include "fighter.h"
+#include "eff05.h"
 
 /* routine_no[0], effi4_move_0 */
 #define R0_INIT         0       /* start the pattern */
@@ -26,7 +27,6 @@
 #define R0_CHEER        2       /* cheer for the winner */
 #define R0_STOP         3       /* stand still */
 
-extern const u32 stg00_char_table[];    /* provisional name */
 extern const s16 effi4_turn_tbl[16];
 extern const s16 effi4_data_tbl[4][4];
 
@@ -135,7 +135,7 @@ void effi4_move_1(WORK_Other* ewk) {
 void effi4_turn(WORK_Other* ewk) {
     s16 ix;
     ix = plw[ewk->wu.old_rno[1]].wu.xyz[0].disp.pos >> 6;
-    ix &= 15;
+    ix &= 0xF;
     ewk->wu.old_rno[2] = effi4_turn_tbl[ix];
     if (ewk->wu.old_rno[2] != ewk->wu.old_rno[3]) {
         set_char_move_init2(&ewk->wu, 0, 12, ewk->wu.old_rno[2] + 1, 0);

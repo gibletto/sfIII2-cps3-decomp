@@ -22,6 +22,7 @@
 #include "EFF22.h"
 #include "EFF24.h"
 #include "EFF23.h"
+#include "eff05.h"
 
 /* routine_no[0] */
 #define R0_INIT         0       /* whole or already broken pattern */
@@ -30,9 +31,6 @@
 #define R0_BROKEN       3       /* stay broken */
 #define R0_END          4       /* one more frame */
 #define R0_KILL         5       /* (default) put the work back */
-
-extern const s16 eff23_data_tbl[];      /* provisional name */
-extern const u32 stg03_char_table[];    /* provisional name (0634EBDC, eff05.c) */
 
 
 

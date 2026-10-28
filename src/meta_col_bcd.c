@@ -50,10 +50,10 @@ u8 abcd(u8 a, u8 b) {
     u16 d;
     if ((d = (bcdext & 1) + (a & 0xF) + (b & 0xF)) > 9) {
         d -= 10;
-        d |= 16;
+        d |= 0x10;
     }
     if ((d += (a & 0xF0) + (b & 0xF0)) > 0x99) {
-        d -= 160;
+        d -= 0xA0;
         d &= 0xFF;
         bcdext = 1;
     } else {
@@ -67,7 +67,7 @@ u8 sbcd(u8 a, u8 b) {
     s16 c, d;
     if ((d = (b & 0xF) - (a & 0xF) - (bcdext & 1)) < 0) {
         d += 10;
-        d |= 16;
+        d |= 0x10;
     }
     c = (b & 0xF0) - (a & 0xF0) - (d & 0xF0);
     d &= 0xF;
@@ -85,7 +85,7 @@ u8 nbcd(u8 a) {
     s8 c, d;
     if ((d = 0 - (bcdext & 1) - (a & 0xF)) < 0) {
         d += 2;
-        d |= 16;
+        d |= 0x10;
     }
     c = 0 - (a & 0xF0) - (d & 0xF0);
     d |= c;
