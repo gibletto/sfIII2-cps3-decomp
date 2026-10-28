@@ -507,7 +507,7 @@ s32 trans_char_cells(WORK* work) {
         base = simmram_slot_to_offset(blk10);
         wk->spr.slot_addr = addr = ((u16)simmram_slot_to_cg_no(blk10));
         chunk = set->chunk;
-        for (i = 0; i < set->count; i = i + 1) {
+        for (i = 0; i < set->count; i++) {
             adr = base + chunk[i].dst * 16;
             err = polygon2d_submit_line(chunk[i].src, adr, chunk[i].size, wk->cgromtype);
             if (err != 0) {
