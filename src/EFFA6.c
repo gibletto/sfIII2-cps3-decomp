@@ -43,27 +43,32 @@ void effect_A6_move(WORK_Other_CONN* wk) {
         ewk->wu.routine_no[0]++;
         switch (Country) {
         case 1:
-            mes = &effA6_mes_jp[ewk->master_player][mmes_already];
+            mes = effA6_mes_jp[ewk->master_player];
+            mes += mmes_already;
+            conn_data = mes->conn;
+            chr_data = mes->chr;
             break;
         case 4:
-            mes = &effA6_mes_en[ewk->master_player][mmes_already];
+            mes = effA6_mes_en[ewk->master_player];
+            mes += mmes_already;
+            conn_data = mes->conn;
+            chr_data = mes->chr;
             break;
         default:
-            mes = &effA6_mes_jp[ewk->master_player][mmes_already];
+            mes = effA6_mes_jp[ewk->master_player];
+            mes += mmes_already;
+            conn_data = mes->conn;
+            chr_data = mes->chr;
             break;
         }
-        conn_data = mes->conn;
-        chr_data = mes->chr;
         switch (Country) {
         case 1:
-            
             conn_data = effA6_mes_jp[ewk->master_player][mmes_already].conn;
             chr_data = effA6_mes_jp[ewk->master_player][mmes_already].chr;
             break;
         case 3:
             switch (Language) {
             case 0:
-                (void)&((WORK*)effA6_mes_es)->id;
                 conn_data = effA6_mes_en[ewk->master_player][mmes_already].conn;
                 chr_data = effA6_mes_en[ewk->master_player][mmes_already].chr;
                 break;

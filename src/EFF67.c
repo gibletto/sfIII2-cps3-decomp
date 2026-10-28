@@ -185,17 +185,22 @@ void effect_67_move(WORK_Other_CONN* ewk) {
         switch (Country) {
         case 1:
             msg = eff67_msg_a[ewk->master_player];
+            msg = msg + mes_already;
+            conn = msg->conn;
+            gfx = msg->gfx;
             break;
         case 4:
             msg = eff67_msg_b[ewk->master_player];
+            msg += mes_already;
+            conn = msg->conn;
+            gfx = msg->gfx;
             break;
         default:
             msg = eff67_msg_a[ewk->master_player];
-        }
-        msg += mes_already;
-        conn = msg->conn;
-        gfx = msg->gfx;
-        if (0) {
+            msg = msg + mes_already;
+            conn = msg->conn;
+            gfx = msg->gfx;
+            break;
         }
         switch (Country) {
         case 1:

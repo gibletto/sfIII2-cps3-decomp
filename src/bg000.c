@@ -1926,16 +1926,13 @@ void bg_end_initialize(void) {
         bg_w.bgw[i].hos_xy[1].cal = 0;
         bg_w.bgw[i].rewrite_flag = 0;
     }
-    if (DEBUG_DISP) {
-        scrn_map_set(0, 0);
-        simmram_big_page_alloc_40(1);
-    }
-    for (i = 0; i < bg_w.scno; i = i + 1) {
+    for (i = 0; i < bg_w.scno; i++) {
         bg_w.bgw[i].bg_adrs_c_no = simmram_big_page_alloc_40(1);
         bg_w.bgw[i].bg_address = (u16 *)simmram_slot_addr(bg_w.bgw[i].bg_adrs_c_no);
         scrn_map_set_now(i, (u32)bg_w.bgw[i].bg_address);
         scrn_map_set(i, (u32)bg_w.bgw[i].bg_address);
-        sprite_list_setup(i, 1, (const s16*)bg_map_tbl[bg_w.bg_index][i]);
+        ptr = (const s16*)bg_map_tbl[bg_w.bg_index][i];
+        sprite_list_setup(i, 1, ptr);
         bg_w.bgw[i].r_no_1 = bg_w.bgw[i].r_no_2 = 0;
         bg_w.bgw[i].fam_no = i;
     }
@@ -1983,7 +1980,6 @@ void bg_end_initialize(void) {
         bg_w.bgw[i].frame_deff = 0;
         bg_w.bgw[i].max_x_limit = bg_w.bgw[i].speed_x * bg_w.max_x;
     }
-    (void)&((WORK*)16)->id;
     base_y_pos = 40;
     bg_w.bgw[3].xy[0].cal = bg_w.bgw[3].wxy[0].cal = 0x100000;
     bg_w.bgw[3].xy[1].cal = bg_w.bgw[3].wxy[1].cal = 0;

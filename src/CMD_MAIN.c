@@ -521,7 +521,6 @@ void debug_object_edit_move(void) {
     s16 base;
     Debug_Command = 0;
     dbg_snap_req = 0;
-    (void)&((WORK*)0)->id;
     debug_object_edit_input();
     switch (Debug_Command) {
     case 1:
@@ -595,8 +594,7 @@ void debug_object_edit_move(void) {
             tilemap_print_string_attr(30, 1, 6, no_edit_msg);
             break;
         }
-        dbg_snap_req = 1;
-        Debug_Play_Flag = 1;
+        Debug_Play_Flag = dbg_snap_req = 1;
         dbg_rec_exist = 1;
         dbg_snap_ptr->used++;
         if (dbg_snap_ptr->used > dbg_snap_ptr->cg_ctr) {
@@ -614,8 +612,7 @@ void debug_object_edit_move(void) {
             tilemap_print_string_attr(30, 1, 6, (char *)&no_edit_msg);
             break;
         }
-        dbg_snap_req = 1;
-        Debug_Play_Flag = 1;
+        Debug_Play_Flag = dbg_snap_req = 1;
         dbg_rec_exist = 1;
         dbg_snap_ptr->used = 1;
         Debug_Rec_Frame++;
@@ -827,7 +824,6 @@ void debug_object_edit_all_char_move(void) {
     s16 base;
     Debug_Command = 0;
     dbg_snap_req = 0;
-    (void)&((WORK*)0)->id;
     debug_edit_all_char_input();
     switch (Debug_Command) {
     case 1:
@@ -901,8 +897,7 @@ void debug_object_edit_all_char_move(void) {
             tilemap_print_string_attr(30, 1, 6, no_edit_msg);
             break;
         }
-        dbg_snap_req = 1;
-        Debug_Play_Flag = 1;
+        Debug_Play_Flag = dbg_snap_req = 1;
         dbg_rec_exist = 1;
         dbg_snap_ptr->used++;
         if (dbg_snap_ptr->used > dbg_snap_ptr->cg_ctr) {
@@ -920,8 +915,7 @@ void debug_object_edit_all_char_move(void) {
             tilemap_print_string_attr(30, 1, 6, (char *)&no_edit_msg);
             break;
         }
-        dbg_snap_req = 1;
-        Debug_Play_Flag = 1;
+        Debug_Play_Flag = dbg_snap_req = 1;
         dbg_rec_exist = 1;
         dbg_snap_ptr->used = 1;
         Debug_Rec_Frame++;
