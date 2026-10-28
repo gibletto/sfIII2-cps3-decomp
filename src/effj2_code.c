@@ -35,18 +35,19 @@ void effect_J2_move(WORK_Other_CONN* ewk) {
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 0;
             ewk->wu.old_cgnum = 0;
-        }
-        if (--ewk->wu.dir_timer > 0) {
+            /* fall through */
+        default:
+            if (--ewk->wu.dir_timer > 0) {
+                break;
+            }
+            ewk->wu.routine_no[0]++;
+            ewk->wu.routine_no[1] = R1_INIT;
+            ewk->wu.disp_flag = 1;
+            ewk->wu.old_cgnum = 0;
+            ewk->wu.dir_timer = 60;
+            ewk->wu.position_z = ewk->wu.my_priority = 27;
+            ewk->conn[0].chr = Bonus_Stage_Level % 10 + 0xB2EB;
             break;
-        }
-        ewk->wu.routine_no[0]++;
-        ewk->wu.routine_no[1] = R1_INIT;
-        ewk->wu.disp_flag = 1;
-        ewk->wu.old_cgnum = 0;
-        ewk->wu.dir_timer = 60;
-        ewk->wu.position_z = ewk->wu.my_priority = 27;
-        ewk->conn[0].chr = Bonus_Stage_Level % 10 + 0xB2EB;
-        if (0) {
         }
         break;
     case R0_SHOW:

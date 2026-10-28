@@ -2557,28 +2557,23 @@ void debug_hit_box_cursor(void) {
     u16 sw;
     u16 *input = &now;
     if (Debug_PL_id) {
-        if (DEBUG_EDIT) {
-            sw = ~dbg_p2sw_1 & now;
-        }
         return;
-    } else {
-    poll:
-        now = dbg_p2sw_0;
-    held:;
-        sw = ~dbg_p2sw_1 & now;
-        if (now & 0x240) {
-            tilemap_rect_fill(dbg_hud_x + 36, (s8)((WORK_Other*)dbg_judge_ewk)->refrected + 13, 8, 1, 2, 0xFFFF);
-            if (sw & BUTTON_HP) {
-                ((WORK_Other*)dbg_judge_ewk)->refrected--;
-                if ((s8)((WORK_Other*)dbg_judge_ewk)->refrected < 0) {
-                    ((WORK_Other*)dbg_judge_ewk)->refrected = 12;
-                }
+    }
+    now = dbg_p2sw_0;
+held:;
+    sw = ~dbg_p2sw_1 & now;
+    if (now & 0x240) {
+        tilemap_rect_fill(dbg_hud_x + 36, (s8)((WORK_Other*)dbg_judge_ewk)->refrected + 13, 8, 1, 2, 0xFFFF);
+        if (sw & BUTTON_HP) {
+            ((WORK_Other*)dbg_judge_ewk)->refrected--;
+            if ((s8)((WORK_Other*)dbg_judge_ewk)->refrected < 0) {
+                ((WORK_Other*)dbg_judge_ewk)->refrected = 12;
             }
-            if (sw & BUTTON_HK) {
-                ((WORK_Other*)dbg_judge_ewk)->refrected++;
-                if ((s8)((WORK_Other*)dbg_judge_ewk)->refrected > 12) {
-                    ((WORK_Other*)dbg_judge_ewk)->refrected = 0;
-                }
+        }
+        if (sw & BUTTON_HK) {
+            ((WORK_Other*)dbg_judge_ewk)->refrected++;
+            if ((s8)((WORK_Other*)dbg_judge_ewk)->refrected > 12) {
+                ((WORK_Other*)dbg_judge_ewk)->refrected = 0;
             }
         }
     }
