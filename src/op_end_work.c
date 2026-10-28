@@ -9,7 +9,6 @@
 #include "types.h"
 #include "structs.h"
 
-typedef struct { PANEL panel[16]; } OP_PANEL;
 
 extern const PANEL end_400_panel0[];
 extern const PANEL end_400_panel1[];

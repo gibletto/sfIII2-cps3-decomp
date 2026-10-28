@@ -2330,6 +2330,10 @@ typedef struct {
     OPBW bgw[3];        /* per-BG-layer tasks, BG0..BG2 */
 } OP_W;
 
+typedef struct { PANEL panel[16]; } OP_PANEL;                       /* a BG layer's cell list */
+typedef struct { s8 dat[6]; s8 ctr; s8 pad; } OP_CTR_SET;           /* ctr: counter start of the scene */
+typedef struct { s16 bg; s16 x; s16 y; u8 time; u8 pad; } OP_SCRN_POS;
+
 typedef struct {
     s8 msg_state;
     s8 card_state;

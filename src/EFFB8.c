@@ -40,8 +40,6 @@ s16 old_mes_no_pl;
 /* the message tables are initialised work RAM, defined in effb8_mes.c */
 extern const EFFB8_MESSAGE* effB8_conn_tbl[];
 
-extern s16 Max_vitality;
-extern u16 Round_Result;
 
 
 

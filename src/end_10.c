@@ -32,7 +32,6 @@
 
 
 
-extern const s16 timer_10_tbl[];
 extern const u16 end_10_anm_tbl[];
 extern const u32 end_scrn_data[];
 extern void (*end_10_jp[7])();

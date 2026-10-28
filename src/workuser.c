@@ -408,8 +408,7 @@ u8 Stage_Continue[2];  /* 020155CC */
 u8 Pause_Hit_Marks;  /* 020155CE */
 u8 Special_Settle;  /* 020155CF */
 u8 Extra_Break;  /* 020155D0 */
-/* the code declares it u8 EM_Candidate[2][8] */
-u8 EM_Candidate[16];  /* 020155D1 */
+u8 EM_Candidate[2][8];  /* 020155D1 */
 u8 Shin_Gouki_BGM;  /* 020155E1 */
 s8 Stage_Lost_Round[2];  /* 020155E2 */
 s8 Stage_Perfect_Finish[2];  /* 020155E4 */
@@ -425,5 +424,5 @@ u8 Sel_Command_Step[2];  /* 020155F3, provisional name */
 u8 Sel_Command_Key[2];  /* 020155F5, provisional name */
 u8 Flip_Counter[2];  /* 020155F7 */
 u8 Stage_Time_Finish[2];  /* 020155F9 */
-s8 Stock_Battle_Country[2];  /* 020155FB, provisional name */
+u8 Stock_Battle_Country[2];  /* 020155FB, provisional name */
 u8 Stock_Battle_Country_tail[807];  /* after Stock_Battle_Country; nothing refers to it by name or address */

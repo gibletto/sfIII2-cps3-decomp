@@ -40,7 +40,6 @@ typedef struct {
     const u16* gfx;
 } EFF67_MSG;
 
-extern s16 mes_already;
 extern const EFFA6_MESSAGE effA6_mes_en_0[];
 extern const EFFA6_MESSAGE effA6_mes_en_10[];
 extern const EFFA6_MESSAGE effA6_mes_en_11[];

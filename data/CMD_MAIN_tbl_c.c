@@ -42,7 +42,7 @@ extern const char dbg_parts3_str[];
 extern const char dbg_parts4_str[];
 extern const char dbg_no_extdat_str[];
 extern const char dbg_eftype_str[];
-extern const char debug_blank6_msg[];
+extern const s8 debug_blank6_msg[];
 extern const char dbg_waza_k_str[];
 extern const char dbg_waza_p_str[];
 extern const char dbg_digit0_str[];
@@ -1122,7 +1122,7 @@ const char dbg_no_extdat_str[8] = "pbao\0\xFF\xFF\xFF";
 
 const char dbg_eftype_str[4] = "Rpd";
 
-const char debug_blank6_msg[8] = "      \0\xFF";
+const s8 debug_blank6_msg[8] = "      \0\xFF";
 
 const char dbg_waza_k_str[4] = "K\0\xFF\xFF";
 

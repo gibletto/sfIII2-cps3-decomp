@@ -17,7 +17,7 @@
 extern const TM_STRING config_title_str_tbl[];
 extern const TM_STRING config_help_modify_str_tbl[];
 extern const TM_STRING config_help_return_str_tbl[];
-extern const s16 gcfg_gauge_clr_chr_en[];
+extern const s16 gcfg_gauge_clr_chr_en;
 extern const s16 gcfg_gauge_chr_en[];
 extern const s8 gcfg_help_modify_en[];
 extern const s8 gcfg_help_return_en[];
@@ -73,9 +73,7 @@ const TM_STRING config_help_return_str_tbl[3] = {
     { 9, 0x1B, 2, gcfg_help_shot1_en },
 };
 
-const s16 gcfg_gauge_clr_chr_en[1] = {
-    42,
-};
+const s16 gcfg_gauge_clr_chr_en = 42;
 
 const s16 gcfg_gauge_chr_en[9] = {
     49, 50, 51, 52, 53, 54, 55, 56,

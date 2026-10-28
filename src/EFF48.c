@@ -38,7 +38,6 @@
 
 
 extern const s16 eff48_data_tbl[6][5][6];
-extern s16 op_obj_disp;
 
 void eff48_2000(WORK_Other* ewk);
 void eff48_3000(WORK_Other* ewk);

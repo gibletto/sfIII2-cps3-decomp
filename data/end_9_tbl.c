@@ -13,7 +13,7 @@
 
 extern const PANEL end_900_bg0_cell_tbl[];
 extern const s16 timer_9_tbl[];
-extern const u16 end_9_pos[];
+extern const s16 end_9_pos[][2];
 
 const PANEL end_900_bg0_cell_tbl[7] = {
     { 8192, 1 },
@@ -31,7 +31,15 @@ const s16 timer_9_tbl[7] = {
 };
 
 /* provisional name */
-const u16 end_9_pos[15] = {
-    0x300, 0x100, 0x300, 0x100, 0x300, 0x100, 0x300, 0x100,
-    0x300, 0x100, 0x300, 0x100, 0x300, 0x30, 0xFFFF,
+const s16 end_9_pos[7][2] = {
+    { 768, 256 },
+    { 768, 256 },
+    { 768, 256 },
+    { 768, 256 },
+    { 768, 256 },
+    { 768, 256 },
+    { 768, 48 },
 };
+
+/* end mark of end_9_pos (nothing reads it) */
+static const s16 end_9_pos_end = -1;

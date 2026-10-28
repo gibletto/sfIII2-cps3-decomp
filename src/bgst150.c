@@ -26,7 +26,6 @@ void bg_x_move_check(void);
 void bg_y_move_check(void);
 void bg_base_x_move_check(void);
 void bg_base_y_move_check(void);
-extern s16 bg1403_wait;
 
 void bg150_layer1(void);
 void bg150_layer1_init00(void);

@@ -21,7 +21,7 @@ extern const s16 hcct[];
 extern const s16 gqdt[][2];
 extern const s16 eff02_speed_tbl[];
 extern const EXPLEM explem[];
-extern const EXPLEM explem2[];
+extern const EXPLEM explem2[][16];
 extern const s16 hit_mark_hosei_table[][2];
 extern const PLEF plef_data[];
 
@@ -210,23 +210,13 @@ const EXPLEM explem[4] = {
     { 0x12, -18, 0 },
 };
 
-const EXPLEM explem2[16] = {
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 0xA, -84, 0 },
-    { 8, 0, 0 },
-    { 8, 0, 0 },
-    { 8, 0, 0 },
+const EXPLEM explem2[1][16] = {
+    {
+        { 0xA, -84, 0 }, { 0xA, -84, 0 }, { 0xA, -84, 0 }, { 0xA, -84, 0 },
+        { 0xA, -84, 0 }, { 0xA, -84, 0 }, { 0xA, -84, 0 }, { 0xA, -84, 0 },
+        { 0xA, -84, 0 }, { 0xA, -84, 0 }, { 0xA, -84, 0 }, { 0xA, -84, 0 },
+        { 0xA, -84, 0 }, { 8, 0, 0 }, { 8, 0, 0 }, { 8, 0, 0 },
+    },
 };
 
 const s16 hit_mark_hosei_table[74][2] = {

@@ -34,7 +34,6 @@
 #define R0_OVER         3       /* time over until the timer is reset */
 #define R0_KILL         4       /* (default) put the work back */
 
-extern s16 Exit_No;
 
 
 

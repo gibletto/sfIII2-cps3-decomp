@@ -180,9 +180,9 @@ void Game_Manage_14_2(void);
 void Disp_Win_Record_Sub();
 void Erase_Win_Record();
 s16 Next_VS_Index(void);
-extern s16 End_Course;  /* provisional name */
+extern u16 End_Course;  /* provisional name */
 extern s8 End_Gouki_Flag;  /* provisional name */
-extern s8 Stock_Battle_Country[2];  /* provisional name */
+extern u8 Stock_Battle_Country[2];  /* provisional name */
 extern const s8 rival_char_tbl[];
 
 

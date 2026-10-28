@@ -30,7 +30,7 @@ extern const s16 Lv10_Time_Data[][1][9];
 extern const s16 Lv18_Time_Data[][9][17];
 extern const u8 Wait_Time_Data[][8];
 extern const u8 LOOK_POSITION_Data[][32];
-extern const u8 rival_char_tbl[];
+extern const s8 rival_char_tbl[];
 extern const u8 Exit_Throw_Data[][18];
 extern const u8 Flip_Data[][8];
 extern const u8 Flip_Chance_Data[][8];
@@ -46,7 +46,7 @@ extern const s8 Rapid_SA_Data[][8];
 extern const u8 Standing_Time_Data[][4][8];
 extern const u8 Squat_Time_Data[][8];
 extern const u8 Denjin_Data[][16];
-extern const u16 Correct_Cont_Time_Data[];
+extern const s16 Correct_Cont_Time_Data[][16];
 extern const s16 Dash_Distance_Data[][2];
 extern const s16 Get_Up_SA_Tech_Data[][3];
 extern const s8 Float_Attack_Data[][16];
@@ -911,7 +911,7 @@ const u8 LOOK_POSITION_Data[8][32] = {
 };
 
 /* provisional name: the character who breaks in against each character (Break_Into_CPU 2) */
-const u8 rival_char_tbl[16] = {
+const s8 rival_char_tbl[16] = {
     PL_GILL,    /* Gill */
     PL_KEN,     /* Alex */
     PL_SEAN,    /* Ryu */
@@ -1596,12 +1596,14 @@ const u8 Denjin_Data[4][16] = {
     { 0x38, 0x38, 0x39, 0x39, 0x39, 0x39, 0x39, 0x3A, 0x3A, 0x3A, 0x3A, 0x3B, 0x3B, 0x3B, 0x3C, 0x3C },
 };
 
-const u16 Correct_Cont_Time_Data[39] = {
-    0, 0x55, 0x3C, 0x50, 0x3C, 0x41, 0x41, 0x41,
-    0x46, 0x46, 0x46, 0x50, 0x50, 0x50, 0x50, 0x50,
-    0, 0x50, 0x32, 0x4B, 0x32, 0x37, 0x37, 0x37,
-    0x3C, 0x3C, 0x3C, 0x41, 0x41, 0x41, 0x41, 0x41,
-    1, 0x203, 0x405, 0x607, 0x809, 0x909, 0x9FF,
+const s16 Correct_Cont_Time_Data[2][16] = {
+    { 0, 85, 60, 80, 60, 65, 65, 65, 70, 70, 70, 80, 80, 80, 80, 80 },
+    { 0, 80, 50, 75, 50, 55, 55, 55, 60, 60, 60, 65, 65, 65, 65, 65 },
+};
+
+/* the bytes after Correct_Cont_Time_Data; nothing reads them */
+static const u8 Correct_Cont_Time_Data_tail[14] = {
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 255,
 };
 
 const s16 Dash_Distance_Data[16][2] = {

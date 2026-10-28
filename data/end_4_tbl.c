@@ -14,7 +14,7 @@
 extern const PANEL end_400_panel0[];
 extern const PANEL end_400_panel1[];
 extern const s16 timer_4_tbl[];
-extern const u16 end_4_pos[];
+extern const s16 end_4_pos[][2];
 
 /* provisional name */
 const PANEL end_400_panel0[10] = {
@@ -50,7 +50,13 @@ const s16 timer_4_tbl[5] = {
 };
 
 /* provisional name */
-const u16 end_4_pos[11] = {
-    0x100, 0x300, 0x100, 0x200, 0x300, 0x300, 0x100, 0x100,
-    0x100, 0x100, 0xFFFF,
+const s16 end_4_pos[5][2] = {
+    { 256, 768 },
+    { 256, 512 },
+    { 768, 768 },
+    { 256, 256 },
+    { 256, 256 },
 };
+
+/* end mark of end_4_pos (nothing reads it) */
+static const s16 end_4_pos_end = -1;

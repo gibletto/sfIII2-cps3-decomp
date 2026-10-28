@@ -65,7 +65,6 @@
 #include "bg000.h"
 #include "fighter.h"
 
-extern const s16 bg_scr_record_data[92];
 extern const u16 bg_zoom_rate_tbl[];
 
 

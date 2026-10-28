@@ -46,7 +46,6 @@
 
 s32 effect_81_init(WORK_Other* oya, s16 PL_id, s16 Master_Player, s16 Priority, s16 Kind);
 
-extern s16 Flash_Complete[2];
 
 /* x, y of each plate slot by player; provisional name */
 extern const s16 eff79_plate_pos[2][6];

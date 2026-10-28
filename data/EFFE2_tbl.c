@@ -21,7 +21,7 @@ extern const s16 freeze_stand[][4][4];
 extern const s16 freeze_crunch[][4][4];
 extern const s16 freeze_set_pos_B[][4][4];
 extern const s16 thunder_set_pos_SKB[][4];
-extern const s16 effE3_data[][4];
+extern const s16 effE3_data[][3];
 extern const u16 after_image_data[][9];
 extern const u16 after_image_color[][2];
 
@@ -144,12 +144,16 @@ const s16 thunder_set_pos_SKB[16][4] = {
  * Read as three entries per Flash_MT value: BG3 x and y of the picture and the frames it
  * is held.
  */
-const s16 effE3_data[4][4] = {
-    { 0, 0, 1, 256 },
-    { 256, 1, 768, 256 },
-    { 1, 768, 0, 1 },
-    { 768, 256, 1, -1 },
+const s16 effE3_data[5][3] = {
+    { 0, 0, 1 },
+    { 256, 256, 1 },
+    { 768, 256, 1 },
+    { 768, 0, 1 },
+    { 768, 256, 1 },
 };
+
+/* end mark of effE3_data (nothing reads it) */
+static const s16 effE3_data_end = -1;
 
 const u16 after_image_data[20][9] = {
     { 28, 14, 5, 3, 0, 80, 4, 0, 1 },

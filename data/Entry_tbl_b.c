@@ -53,7 +53,7 @@ extern const s8 str_INSERT_COINS_7[];
 extern const s8 str_INSERT_COINS_8[];
 extern const s8 region_type_tbl[];
 extern const s8 region_cc_type_tbl[];
-extern const s8 region_param_tbl[];
+extern const s8 region_param_tbl[][2];
 
 const s8 msg_free_play[20] = "     FREE PLAY     ";
 
@@ -197,6 +197,11 @@ const s8 region_cc_type_tbl[8] = {
     0, 2, 1, 1, 1, 1, 1, 2,
 };
 
-const s8 region_param_tbl[7] = {
-    0, 0, 1, 2, 2, 4, -1,
+const s8 region_param_tbl[3][2] = {
+    { 0, 0 },
+    { 1, 2 },
+    { 2, 4 },
 };
+
+/* the byte after region_param_tbl; nothing reads it */
+static const s8 region_param_tbl_tail = -1;

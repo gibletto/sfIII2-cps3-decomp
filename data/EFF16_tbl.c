@@ -15,7 +15,7 @@
 extern const u32 bunkai_table[];
 extern const u16 bunkai_numobj[];
 extern const CONN bbbs_score[][7];
-extern const u32 eff17_data_tbl[];
+extern const s16 eff17_data_tbl[][5];
 
 const u32 bunkai_table[7] = {
     1, 0xA, 0x64, 0x3E8,
@@ -34,11 +34,17 @@ const CONN bbbs_score[4][7] = {
     { { 216, 164, 0, 0xB2CD }, { 200, 164, 0, 0xB2CD }, { 184, 164, 0, 0xB2CD }, { 168, 164, 0, 0xB2CD }, { 152, 164, 0, 0xB2CD }, { 136, 164, 0, 0xB2CD }, { 120, 164, 0, 0xB2CD } },
 };
 
-const u32 eff17_data_tbl[23] = {
-    0x18C0090, 0x1C0001, 0x1A6, 0x90001B,
-    0x20003, 0x1C30090, 0x1A0003, 0x601DE,
-    0x900019, 0x40009, 0x1F90090, 0x180005,
-    0xC021F, 0x900017, 0x6000F, 0x2390090,
-    0x160007, 0x120257, 0x900015, 0x80015,
-    0x2750090, 0x140009, 0x18FFFF,
+const s16 eff17_data_tbl[9][5] = {
+    { 396, 144, 28, 1, 0 },
+    { 422, 144, 27, 2, 3 },
+    { 451, 144, 26, 3, 6 },
+    { 478, 144, 25, 4, 9 },
+    { 505, 144, 24, 5, 12 },
+    { 543, 144, 23, 6, 15 },
+    { 569, 144, 22, 7, 18 },
+    { 599, 144, 21, 8, 21 },
+    { 629, 144, 20, 9, 24 },
 };
+
+/* end mark of eff17_data_tbl (nothing reads it) */
+static const s16 eff17_data_tbl_end = -1;

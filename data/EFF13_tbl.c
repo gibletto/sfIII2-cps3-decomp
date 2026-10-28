@@ -13,7 +13,7 @@
 
 extern void (*const kind_of_tama_process[])();
 extern const s16 kage_tbl[][4];
-extern const s16 homing_empos_hos[][4];
+extern const s16 homing_empos_hos[][16][2];
 extern void kotp_00000();
 extern void kotp_01000();
 extern void kotp_02000();
@@ -47,13 +47,6 @@ const s16 kage_tbl[6][4] = {
     { 0, 0, 71, 0 },
 };
 
-const s16 homing_empos_hos[8][4] = {
-    { 12, 76, 0, 72 },
-    { 6, 66, 2, 52 },
-    { 2, 74, 2, 66 },
-    { 4, 82, 6, 60 },
-    { 6, 58, 6, 48 },
-    { 2, 52, 6, 66 },
-    { 6, 66, 12, 76 },
-    { 6, 66, 6, 66 },
+const s16 homing_empos_hos[1][16][2] = {
+    { { 12, 76 }, { 0, 72 }, { 6, 66 }, { 2, 52 }, { 2, 74 }, { 2, 66 }, { 4, 82 }, { 6, 60 }, { 6, 58 }, { 6, 48 }, { 2, 52 }, { 6, 66 }, { 6, 66 }, { 12, 76 }, { 6, 66 }, { 6, 66 } },
 };

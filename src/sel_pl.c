@@ -122,7 +122,6 @@
 /* declarations the headers do not give */
 extern s16 Sel_Arts_Pos[2];
 extern s8 Sel_Char_Shot[2];
-extern s16 Exit_No;
 extern s16 sel_plate_state[2][3];
 void Exit_8th(void);
 void Exit_9th(void);
@@ -168,18 +167,11 @@ s32 effect_I1_init(s16 PL_id, s16 x, s16 y, s16 a3, s16 a4);
 s32 effect_59_init();
 s32 effect_E0_init();
 s32 effect_D8_entry();
-extern u16 EM_Course[2];
 extern u8 Straight_Lose_Count;
-extern s8 Introduce_Boss[2];
-extern s8 Introduce_Break_Into[2];
 extern u8 Stock_Battle_Country[2];
 extern s16 Exit_Wait;
-extern s16 appear_type;
 extern const s8 EM_Candidate_Data[][4][8];
-extern const u8 rival_char_tbl[];
-extern u8 Special_Enemy[2];
-extern u8 paring_counter[2];
-extern u8 paring_bonus_r[2];
+extern const s8 rival_char_tbl[];
 void Setup_EM_Course();
 void Init_EM_Course();
 

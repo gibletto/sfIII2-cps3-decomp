@@ -20,8 +20,8 @@ extern const u8 op_scr_record_data_3[];
 extern const PANEL op_panel0[];
 extern const PANEL op_panel1[];
 extern const PANEL op_panel2[];
-extern const s16 op_scrn_pos_tbl[];
-extern const u8 op_ctr_set[];
+extern const OP_SCRN_POS op_scrn_pos_tbl[];
+extern const OP_CTR_SET op_ctr_set[];
 
 const u8 op_scr_record_data_0[56] = {
     0, 1, 0, 0x4B, 0, 0x7F, 0x7F, 0, 0, 0xC, 0, 0xFF, 0x7F, 0, 0, 0xC,
@@ -158,12 +158,15 @@ const PANEL op_panel2[62] = {
 };
 
 /* provisional name */
-const s16 op_scrn_pos_tbl[16] = {
-    0, 256, 512, 21760, 1, 768, 512, 8704,
-    3, 256, 0, 8960, 4, 768, 0, 32000,
+const OP_SCRN_POS op_scrn_pos_tbl[4] = {
+    { 0, 256, 512, 85, 0 },
+    { 1, 768, 512, 34, 0 },
+    { 3, 256, 0, 35, 0 },
+    { 4, 768, 0, 125, 0 },
 };
 
 /* provisional name */
-const u8 op_ctr_set[16] = {
-    0, 4, 3, 0, 3, 0, 0xA, 0, 0, 4, 2, 0, 0, 0, 0x1E, 0,
+const OP_CTR_SET op_ctr_set[2] = {
+    { { 0, 4, 3, 0, 3, 0 }, 10, 0 },
+    { { 0, 4, 2, 0, 0, 0 }, 30, 0 },
 };

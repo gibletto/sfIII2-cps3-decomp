@@ -162,9 +162,7 @@
 
 s16 Next_VS_Index(void);
 extern const u16 bg_color3_tbl[];  /* provisional name */
-extern s16 Exit_No;
 extern u8 Straight_Lose_Count;  /* provisional name (manage_2.c) */
-extern u8 Special_Enemy[2];   /* the special opponent met (14 or 15), which sets the ranking name mark */
 
 
 

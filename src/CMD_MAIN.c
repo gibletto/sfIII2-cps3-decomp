@@ -71,7 +71,7 @@
 #define DBG_RUN         4       /* the debug scene, until exit */
 
 extern const u16 rca_char_table_023[318];
-extern const u16 ef13_char_table_225[180];
+extern const u16 ef13_char_table_225[108];
 extern const s8 str_1DATA_SH5[];
 extern const s8 str_A[];
 extern const s8 str_ADD_ARTS[];
@@ -1117,11 +1117,6 @@ extern const u32 yun_exca[];
 extern const u32 yun_nmca[];
 extern const u32 yun_saca[];
 extern const u32 yun_yuca[];
-extern PLW * dbg_pl;
-extern DBG_SLOT * dbg_slot;
-extern PATTERN_BUF dbg_look_buf;
-extern PATTERN_BUF dbg_edit_buf;
-extern WORK_Other_JUDGE * dbg_judge_ewk;
 
 
 /* provisional name */

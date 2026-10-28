@@ -76,11 +76,8 @@ u32 simmram_slot_to_offset(s16 handle);
 
 
 extern const s32 combo_demo_pos_tbl[3][2];
-extern s16 op_plmove_timer;
-extern s16 op_demo_index;
 extern const s16 combo_demo_timer_tbl[];
 extern const s16 op_timer_tbl[14];
-typedef struct { PANEL panel[16]; } OP_PANEL;
 extern const OP_PANEL* op_panel_p[4];
 void scrn_attr_set(u16 n, u16 attr, u16 bits);
 void scrn_map_set(u16 n, u32 p);
@@ -116,9 +113,7 @@ void op_13_move(void);
 void op_14_move(void);
 void op_bg_off(void);
 extern s8 effE1_end_flag;
-typedef struct { s8 dat[6]; s8 ctr; s8 pad; } OP_CTR_SET;
 extern const OP_CTR_SET op_ctr_set[2];
-typedef struct { s16 bg; s16 x; s16 y; s16 time; } OP_SCRN_POS;
 extern const OP_SCRN_POS op_scrn_pos_tbl[4];
 void opening_pl_disp(void);
 void opening_scrn_map_set(void);

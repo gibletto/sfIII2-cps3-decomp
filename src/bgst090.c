@@ -40,7 +40,6 @@ void bg_base_y_move_check(void);
 void Bg_Family_Set_2(void);
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
-extern const u8 bg_fade_level_tbl[];
 s32 effect_12_init();
 s32 effect_C3_init();
 

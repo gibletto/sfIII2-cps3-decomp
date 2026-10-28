@@ -33,8 +33,6 @@
 
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
-extern const u8 bg_fade_level_tbl[];
-extern s16 Appear_end;
 s32 effect_12_init();
 s32 effect_25_init();
 s32 effect_29_init();

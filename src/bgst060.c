@@ -40,8 +40,6 @@ void bg_y_move_check(void);
 void bg_base_y_move_check(void);
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
-extern const u8 bg_fade_level_tbl[];
-extern const u32 eff23_scrn_data[];
 extern s8 bg060_cnt;
 extern s8 bg060_timer;
 extern s8 bg060_end;

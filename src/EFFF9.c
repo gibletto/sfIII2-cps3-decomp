@@ -60,11 +60,6 @@ s16 efff9_mes_show;  /* provisional name: cells shown so far */
 s16 efff9_mes_wait;  /* provisional name: frames to the next cell */
 
 /* the message tables are initialised work RAM, defined in efff9_mes.c */
-extern const EFFF9_MESSAGE* effF9_mes_jp[];
-extern const EFFF9_MESSAGE* effF9_mes_en[];
-extern const EFFF9_MESSAGE* effF9_mes_es[];
-extern const EFFF9_MESSAGE* effF9_mes_pt[];
-extern s32* txt_no_tbl[];
 
 
 void effect_F9_move(WORK_Other_CONN* ewk) {

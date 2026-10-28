@@ -34,11 +34,9 @@
 
 
 
-extern const u32 brz_char_table[];
 extern const u32 eff19_char_table[];   /* provisional name */
 extern const u32 eff45_char_table[];   /* provisional name */
 extern const u32 eff86_char_table[];   /* provisional name */
-extern const u32 etc2_char_table[];
 extern const u32 stg00_char_table[];   /* provisional name */
 extern const u32 stg01_char_table[];   /* provisional name */
 extern const u32 stg02_char_table[];   /* provisional name */
