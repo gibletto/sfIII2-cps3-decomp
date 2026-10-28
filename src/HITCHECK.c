@@ -556,7 +556,7 @@ void set_paring_status(PLW* as, PLW* defender) {
             if (paring_ctr_vs[Play_Type][ds->wu.id] > 39) {
                 row = &paring_ctr_vs[Play_Type];
                 row_copy = row;
-                *(ds->wu.id + *row_copy) = 39;
+                (*row_copy)[ds->wu.id] = 39;
                 player = 0;
                 player_copy = player;
                 (void)plw[(row ? player : 1) | (player_copy != 0)].wu.id;
