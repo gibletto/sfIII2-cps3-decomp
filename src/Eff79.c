@@ -367,7 +367,6 @@ s32 effect_79_init(s16 pl_id, s16 plate_id, s16 pos_id, s16 time, s16 type) {
     ewk->wu.my_col_mode = 0x4200;
     ewk->wu.my_col_code = 0x2040;
     ewk->wu.my_family = 3;
-    (void)&((WORK*)3)->id;
     ewk->wu.dir_timer = time;
     *ewk->wu.char_table = sel_pl_char_table;
     ewk->master_id = pl_id;

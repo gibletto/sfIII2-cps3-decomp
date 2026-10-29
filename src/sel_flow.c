@@ -152,15 +152,16 @@ void Select_Flow_6th(void) {
 
 /* provisional name */
 void Select_Flow_7th(void) {
+    s32 pos;
     if (--Cover_Timer == 0) {
         M_No0++;
         System_all_clear_Wait();
         base_y_pos = 0;
-        bg_w.bgw[0].wxy[0].cal = bg_w.bgw[0].xy[0].cal = 0x2000000;
+        pos = 0x2000000;
+        bg_w.bgw[0].wxy[0].cal = bg_w.bgw[0].xy[0].cal = pos;
         bg_w.bgw[0].xy[1].cal = 0;
-        bg_w.bgw[1].wxy[0].cal = bg_w.bgw[1].xy[0].cal = 0x2000000;
+        bg_w.bgw[1].wxy[0].cal = bg_w.bgw[1].xy[0].cal = pos;
         bg_w.bgw[1].xy[1].cal = 0;
-        (void)&((WORK*)0x2000000)->id;
         Bg_Off_R(191);
         effect_G0_init(0, 7);
         load_any_color(4);

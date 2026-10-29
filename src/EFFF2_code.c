@@ -108,15 +108,14 @@ void effect_F2_move(WORK_Other* ewk) {
 
 
 
-static void end_rno_disp(s16 r_no_2) {}
-
 s32 effect_F2_init(s16 no) {
     WORK_Other* ewk;
     s16 ix;
     s16 i;
     const s16* data_ptr = &efff2_data_tbl[no][0];
     for (i = 0; i < 4; i++) {
-        if ((ix = pull_effect_work(4)) == -1) {
+        ix = pull_effect_work(4);
+        if (ix == -1) {
             return -1;
         }
         ewk = (WORK_Other*)frw[ix];
@@ -141,5 +140,4 @@ s32 effect_F2_init(s16 no) {
         }
         ewk->wu.old_rno[3] = *data_ptr++;
     }
-    end_rno_disp(end_w.r_no_2);
 }

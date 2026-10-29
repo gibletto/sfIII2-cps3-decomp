@@ -899,17 +899,18 @@ void op_06_move(void) {
                 bg_w.bgw[i].wxy[0].cal = 0x2000000;
                 wk = 0x4000000 - bg_w.bgw[0].xy[1].cal;
                 wk /= bg_w.bgw[0].speed_y;
-                bg_w.bgw[i].xy[1].cal = -(wk * bg_w.bgw[i].speed_y);
+                wk *= bg_w.bgw[i].speed_y;
+                bg_w.bgw[i].xy[1].cal = -wk;
                 opening_bgw_commit_pos(i);
             }
             bg_w.bgw[5].wxy[0].cal = 0x2000000;
             wk = 0x4000000 - bg_w.bgw[0].xy[1].cal;
             wk /= bg_w.bgw[0].speed_y;
-            bg_w.bgw[5].xy[1].cal = -(wk * bg_w.bgw[5].speed_y);
+            wk *= bg_w.bgw[5].speed_y;
+            bg_w.bgw[5].xy[1].cal = -wk;
             opening_bgw_commit_pos(5);
             Bg_On_W(1);
             Bg_Off_W(2);
-            (void)&((WORK*)0x38000)->id;
         }
         opening_bgw_commit_pos(0);
         break;

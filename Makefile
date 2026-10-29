@@ -6,7 +6,7 @@ export SHC_LIB ?= bin
 export SHC_TMP ?= C:\TEMP
 
 # the compiler revision that built 2nd Impact (see README.md, Compiler)
-export MDL_MUL_CONST = 15
+export MDL_MUL_CONST = 31
 export XJUMP_2I = 18
 export MDL_IV_AUTOINC = 1
 export MDL_MOD_CONST = 3

@@ -7,7 +7,7 @@ if "%SHC_LIB%"=="" set SHC_LIB=bin
 if "%SHC_TMP%"=="" set SHC_TMP=C:\TEMP
 set PATH=%SHC_LIB%;%PATH%
 rem the compiler revision that built 2nd Impact (see README.md, Compiler)
-set MDL_MUL_CONST=15
+set MDL_MUL_CONST=31
 set XJUMP_2I=18
 set MDL_IV_AUTOINC=1
 set MDL_MOD_CONST=3

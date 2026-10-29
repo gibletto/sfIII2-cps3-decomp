@@ -1318,21 +1318,15 @@ s16 PL_id;
 }
 
 
-
-#pragma inline(flash_disp_check)
-static void flash_disp_check(s16 y, s16 timer, s16 x) {}
-
 s32 Flash_Insert_Coin(PL_id)
 s16 PL_id;
 {
-    s16 *timer;
     if (E_No0 == E0_LOSER || E_No0 == E0_GAME_OVER || E_No0 == E0_CONTINUE) {
-        flash_disp_check(Text_Page_Y, F_Timer[PL_id], Entry_Mes_X[PL_id]);
         tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
                                   msg_blank);
         return 0;
     }
-    switch (timer = &F_Timer[PL_id], F_No0[PL_id]) {
+    switch (F_No0[PL_id]) {
     case 0:
         F_No0[PL_id] += 1;
         F_No1[PL_id] = F_No2[PL_id] = 0;
@@ -1341,7 +1335,7 @@ s16 PL_id;
                                   msg_blank);
         break;
     case 1:
-        if (--*timer != 0) {
+        if (--F_Timer[PL_id] != 0) {
             break;
         }
         F_No0[PL_id] += 1;
@@ -1362,7 +1356,7 @@ s16 PL_id;
         }
         break;
     case 2:
-        if (--*timer != 0) {
+        if (--F_Timer[PL_id] != 0) {
             break;
         }
         F_No0[PL_id] -= 1;
@@ -1374,17 +1368,11 @@ s16 PL_id;
 }
 
 
-
-#pragma inline(flash_no_disp)
-static void flash_no_disp(s16 no) {}
-
 s32 Flash_Start(PL_id, x)
 s16 PL_id;
 u16 x;
 {
-    s16 *timer;
-    flash_no_disp(F_No1[PL_id]);
-    switch (timer = &F_Timer[PL_id], F_No1[PL_id]) {
+    switch (F_No1[PL_id]) {
     case 0:
         F_No1[PL_id] += 1;
         F_No0[PL_id] = 0;
@@ -1399,7 +1387,7 @@ u16 x;
         }
         break;
     case 1:
-        if (--*timer) {
+        if (--F_Timer[PL_id]) {
             break;
         }
         F_No1[PL_id] += 1;
@@ -1412,7 +1400,7 @@ u16 x;
         }
         break;
     case 2:
-        if (--*timer) {
+        if (--F_Timer[PL_id]) {
             break;
         }
         F_No1[PL_id] -= 1;
@@ -1432,27 +1420,25 @@ u16 x;
 s32 Flash_Please(PL_id)
 s16 PL_id;
 {
-    s16 *timer;
-    s16 *step;
     if (E_No0 == E0_LOSER || E_No0 == E0_GAME_OVER) {
         return 0;
     }
-    switch (step = F_No3, timer = &F_Timer[PL_id], step[PL_id]) {
+    switch (F_No3[PL_id]) {
     case 0:
-        step[PL_id] += 1;
+        F_No3[PL_id] += 1;
         F_No1[PL_id] = 0;
         F_Timer[PL_id] = 1;
         tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40, msg_blank);
         break;
     case 1:
-        if (--*timer == 0) {
+        if (--F_Timer[PL_id] == 0) {
             F_No3[PL_id] += 1;
             F_Timer[PL_id] = 50;
             tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40, msg_please_wait);
         }
         break;
     default:
-        if (--*timer == 0) {
+        if (--F_Timer[PL_id] == 0) {
             F_No3[PL_id] -= 1;
             F_Timer[PL_id] = 30;
             tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40, msg_blank);
@@ -1488,23 +1474,22 @@ s8 coins;
         break;
     case 1:
         if (Disp_More_Coins(PL_id, unused, count) == 0) {
-            if (--F_Timer[PL_id] != 0) {
-                break;
+            if (--F_Timer[PL_id] == 0) {
+                F_No2[PL_id] += 1;
+                F_Timer[PL_id] = 50;
+                if (count == 1) {
+                    tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
+                                              (s8*)msg_insert_more_coin);
+                } else {
+                    tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
+                                              (s8*)msg_insert_more_coins);
+                }
+                tilemap_print_hex_block(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]] + 7, Text_Page_Y, 40,
+                                        count, 1, 1);
             }
+        } else {
             F_No2[PL_id] += 1;
-            F_Timer[PL_id] = 50;
-            if (count == 1) {
-                tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
-                                          (s8*)msg_insert_more_coin);
-            } else {
-                tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
-                                          (s8*)msg_insert_more_coins);
-            }
-            tilemap_print_hex_block(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]] + 7, Text_Page_Y, 40, count, 1,
-                                         1);
-            break;
         }
-        F_No2[PL_id] += 1;
         break;
     case 2:
         Disp_More_Coins(PL_id, unused, count);

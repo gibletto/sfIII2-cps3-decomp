@@ -190,7 +190,9 @@ s8* b;
 
 
 /* provisional name */
-s32 staff_roll_main(void) {
+s32 staff_roll_main(flag)
+s8 flag;
+{
     s32 fx;
     s32 fy;
     switch (staff_r_no) {

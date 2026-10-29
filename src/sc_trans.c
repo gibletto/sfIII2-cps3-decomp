@@ -355,19 +355,16 @@ s32 ToneDown(s8 tone) {
 
 
 
-#pragma inline(sc_slot_disp)
-static void sc_slot_disp(const u16* slot) {}
-
 void sc_chr_list_trans(s8 ix) {
-    const PAL_BYTE_LIST* entry;
+    const u16** tbl;
     const u16* slot;
     const u16* src;
     u16 n;
     u16 i;
-    entry = &sc_chr_list_tbl[ix];
-    sc_slot_disp(entry->slot);
-    slot = entry->slot;
-    src = entry->src;
+    tbl = (const u16**)&sc_chr_list_tbl[ix];
+    slot = *tbl;
+    tbl++;
+    src = *tbl;
     n = *slot++;
     for (i = 0; i < n; i++) {
         sc_trans_dst = (u16*)((SS_RAM + 0x8000) + *slot++ * 64);

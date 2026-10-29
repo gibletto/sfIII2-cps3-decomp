@@ -3435,8 +3435,6 @@ void debug_char_disp_once(WORK* wk) {
 
 
 
-#pragma inline(parts_disp)
-static void parts_disp(s16 id) {}
 
 /* provisional name */
 void debug_parts_disp(void) {
@@ -3452,9 +3450,9 @@ void debug_parts_disp(void) {
         } else {
             dbg_parts_plw[i].wu.position_x += dbg_parts_plw[i].wu.dir_step;
         }
-        dbg_parts_plw[i].wu.cg_flip &= 2;
-        parts_disp(dbg_parts_plw[i].wu.id);
-        switch (((plw[0].wu.cg_flip & 2) != 0) + ((dbg_parts_plw[i].wu.dir_old & 2) != 0) * 2) {
+        wk = &dbg_parts_plw[i].wu;
+        wk->cg_flip &= 2;
+        switch (((plw[0].wu.cg_flip & 2) != 0) + ((wk->dir_old & 2) != 0) * 2) {
         case 0:
         case 2:
             dbg_parts_plw[i].wu.position_y += dbg_parts_plw[i].wu.dir_timer;
