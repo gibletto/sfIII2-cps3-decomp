@@ -113,7 +113,6 @@ s32 sound_seq_start(u16 code, s16 ramp) {
     u8* seq;
     u8* p;
     u8* track;
-    u8* bank;
     u8** bank_table;
     SNDVOICE* v;
     u32 ofs;
@@ -219,9 +218,7 @@ s32 sound_seq_start(u16 code, s16 ramp) {
                     se_voice[i].cursor = &track[n];
                     se_voice[i].status = 0;
                     bank_table = snd_bank_tbl;
-                    bank = *bank_table;
-                    (void)&((TEXT_CELL*)bank_table)->code;
-                    se_voice[i].patch = (SNDPATCH*)(bank + *(u16*)bank);
+                    se_voice[i].patch = (SNDPATCH*)(*bank_table + *(u16*)*bank_table);
                     se_voice[i].sample = &snd_sample_tbl[se_voice[i].patch->sample_index];
                     se_voice[i].decoded_pitch = 0;
                     se_voice[i].target_pitch = 0;
@@ -299,8 +296,7 @@ s32 sound_seq_start(u16 code, s16 ramp) {
     se_voice[ch].release_rate = 0;
     se_voice[ch].forced_release_rate = 0;
     se_voice[ch].volume = 0;
-    se_voice[ch].velocity = 0x7F;
-    se_voice[ch].expression = 0x7F;
+    se_voice[ch].expression = se_voice[ch].velocity = 0x7F;
     se_voice[ch].volume_offset = 0;
     se_voice[ch].transpose = 0;
     se_voice[ch].coarse_pitch_bend = 0;

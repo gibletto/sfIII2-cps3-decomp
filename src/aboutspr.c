@@ -385,7 +385,7 @@ s32 load_char_gfx(id, mode)
             return 0;
         }
         base = simmram_slot_to_offset(handle);
-        cg_slot_tbl[set->slot].addr = ((u16)simmram_slot_to_cg_no(handle));
+        cg_slot_tbl[set->slot].addr = simmram_slot_to_cg_no(handle);
         cg_slot_tbl[set->slot].handle = handle;
         chunk = set->chunk;
         for (i = 0; i < set->count; i++) {
@@ -505,20 +505,20 @@ s32 trans_char_cells(WORK* work) {
             return 0;
         }
         base = simmram_slot_to_offset(blk10);
-        wk->spr.slot_addr = addr = ((u16)simmram_slot_to_cg_no(blk10));
+        wk->spr.slot_addr = addr = simmram_slot_to_cg_no(blk10);
         chunk = set->chunk;
         for (i = 0; i < set->count; i++) {
             adr = base + chunk[i].dst * 16;
             err = polygon2d_submit_line(chunk[i].src, adr, chunk[i].size, wk->cgromtype);
             if (err != 0) {
-                ((void(*)(s16 handle))simmram_block_free_10)(blk10);
+                simmram_block_free_10(blk10);
                 return 0;
             }
         }
         cells = (CHAR_CELL*)&chunk[i];
         wk->spr.cells = cells;
         if ((blk40 = simmram_block_alloc_40((set->cells >> 4) + 1, 1)) == 0) {
-            ((void(*)(s16 handle))simmram_block_free_10)(blk10);
+            simmram_block_free_10(blk10);
             return 0;
         }
         dst = (CHAR_SPRITE*)simmram_slot_addr(blk40);
@@ -535,7 +535,7 @@ s32 trans_char_cells(WORK* work) {
     wk->spr.gfx_blk40[2] = wk->spr.gfx_blk40[1];
     wk->spr.gfx_blk40[1] = wk->spr.gfx_blk40[0];
     wk->spr.gfx_blk40[0] = blk40;
-    wk->spr.gfx_ofs = ((u16)simmram_slot_to_code(blk40));
+    wk->spr.gfx_ofs = simmram_slot_to_code(blk40);
     wk->spr.gfx_cells = set->cells;
     wk->spr.spr_free0 = cg_data_list[no].cge_free0;
     wk->spr.cg_ofs_x = cg_data_list[no].x;
@@ -574,7 +574,7 @@ void make_char_cells_n(WORK* wk, CHAR_CELL* cell, CHAR_SPRITE* spr, u16 count, s
         s->y = c->col + y;
         s->sx = (c->x + wk->spr.cg_ofs_x) & 0x3FF;
         s->sy = (-c->y + wk->spr.cg_ofs_y) & 0x3FF;
-        size = *((u8*)c + 6) >> 4;
+        size = *(u8*)&c->y >> 4;
         s->attr = size | 0x300;
         s->size = cell_size_tbl[size];
     }
@@ -594,7 +594,7 @@ void make_char_cells_x(WORK* wk, CHAR_CELL* cell, CHAR_SPRITE* spr, u16 count, s
         s->y = c->col + y;
         s->sx = (-c->x - wk->spr.cg_ofs_x) & 0x3FF;
         s->sy = (-c->y + wk->spr.cg_ofs_y) & 0x3FF;
-        size = *((u8*)c + 6) >> 4;
+        size = *(u8*)&c->y >> 4;
         s->attr = size | 0x300;
         s->size = cell_size_tbl[size];
     }
@@ -614,7 +614,7 @@ void make_char_cells_y(WORK* wk, CHAR_CELL* cell, CHAR_SPRITE* spr, u16 count, s
         s->y = c->col + y;
         s->sx = (c->x + wk->spr.cg_ofs_x) & 0x3FF;
         s->sy = (c->y - wk->spr.cg_ofs_y + wk->spr.spr_free0) & 0x3FF;
-        size = *((u8*)c + 6) >> 4;
+        size = *(u8*)&c->y >> 4;
         s->attr = size | 0x300;
         s->size = cell_size_tbl[size];
     }
@@ -634,7 +634,7 @@ void make_char_cells_xy(WORK* wk, CHAR_CELL* cell, CHAR_SPRITE* spr, u16 count, 
         s->y = c->col + y;
         s->sx = (-c->x - wk->spr.cg_ofs_x) & 0x3FF;
         s->sy = (c->y - wk->spr.cg_ofs_y + wk->spr.spr_free0) & 0x3FF;
-        size = *((u8*)c + 6) >> 4;
+        size = *(u8*)&c->y >> 4;
         s->attr = size | 0x300;
         s->size = cell_size_tbl[size];
     }
@@ -910,7 +910,7 @@ s32 set_conn_sprite(WORK_Other_CONN* wk) {
             s->pal = cells[j].col + wk->wu.spr.disp_colcd + wk->conn[i].col;
             s->x = (cells[j].x + wk->conn[i].nx + cg_data_list[chr].x) & 0x3FF;
             s->y = (wk->conn[i].ny - cells[j].y - cg_data_list[chr].y) & 0x3FF;
-            size = *((u8*)&cells[j] + 6) >> 4;
+            size = *(u8*)&cells[j].y >> 4;
             s->attr = size | 0x300;
             s->zoom = cell_size_tbl[size];
             n++;
@@ -965,7 +965,7 @@ s32 make_conn_cells(WORK_Other_CONN* ewk) {
     ewk->wu.spr.gfx_blk40[2] = ewk->wu.spr.gfx_blk40[1];
     ewk->wu.spr.gfx_blk40[1] = ewk->wu.spr.gfx_blk40[0];
     ewk->wu.spr.gfx_blk40[0] = handle;
-    ewk->wu.spr.gfx_ofs = ((s16)simmram_slot_to_code(handle));
+    ewk->wu.spr.gfx_ofs = simmram_slot_to_code(handle);
     ewk->wu.done_rl = 0;
     if (ewk->wu.my_col_code & 0x2000) {
         ewk->wu.spr.disp_colcd = ewk->wu.my_col_code;
@@ -985,7 +985,7 @@ s32 make_conn_cells(WORK_Other_CONN* ewk) {
             s->x = (cells[j].x + ewk->conn[i].nx + cg_data_list[chr].x) & 0x3FF;
             n++;
             s->y = (ewk->conn[i].ny - cells[j].y - cg_data_list[chr].y) & 0x3FF;
-            size = *((u8*)&cells[j] + 6) >> 4;
+            size = *(u8*)&cells[j].y >> 4;
             s->attr = size | 0x300;
             s->zoom = 0x3F3F;
         }

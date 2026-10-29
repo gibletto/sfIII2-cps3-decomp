@@ -51,11 +51,11 @@ extern void end_12000();
 extern void end_13000();
 
 /* 02007724 */
-const OP_PANEL* op_panel_p[4] = {
-    (const OP_PANEL *)op_panel0,
-    (const OP_PANEL *)op_panel0,
-    (const OP_PANEL *)op_panel1,
-    (const OP_PANEL *)op_panel2,
+const PANEL* op_panel_p[4] = {
+    op_panel0,
+    op_panel0,
+    op_panel1,
+    op_panel2,
 };
 /* the code declares end_main_jp[24]; end_map_tbl starts after its first 16 entries */
 /* 02007734 */

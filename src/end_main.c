@@ -78,7 +78,7 @@ u32 simmram_slot_to_offset(s16 handle);
 extern const s32 combo_demo_pos_tbl[3][2];
 extern const s16 combo_demo_timer_tbl[];
 extern const s16 op_timer_tbl[14];
-extern const OP_PANEL* op_panel_p[4];
+extern const PANEL* op_panel_p[4];
 void scrn_attr_set(u16 n, u16 attr, u16 bits);
 void scrn_map_set(u16 n, u32 p);
 void scrn_map_set_now(u16 n, u32 p);
@@ -178,7 +178,7 @@ void opning_init_00000(void) {
     clear_scroll_layer_state_and_mask();
     scrn_pos_clear();
     Zoomf_Init();
-    scr_cg_c_no = ((s16)simmram_block_alloc_10(0x195, 1));
+    scr_cg_c_no = simmram_block_alloc_10(0x195, 1);
     bg_w.scroll_cg_adr = simmram_slot_to_offset(scr_cg_c_no);
     bg_w.scno = 1;
     polygon2d_submit_line(0x01705800, 0, 0, 3);
@@ -231,21 +231,18 @@ void opning_init_00000(void) {
 
 
 
-#pragma inline(end_ofs_disp)
-static void end_ofs_disp(s32 ofs) {}
-
 void opning_init_01000(void) {
     s16 i;
     s16 j;
-    const OP_PANEL* p;
+    const PANEL* p;
     const PANEL* q;
     op_w.r_no_1++;
     for (i = 0; i < 4; i++) {
         p = op_panel_p[i];
         for (j = 0; j < 16; j++) {
-            q = &p->panel[j];
+            q = p;
+            q += j;
             bg_cell_write(i, q->ofs, q->cell, (u32)op_bg0_scrn_data, 0, 0x2C0);
-            end_ofs_disp(q->ofs);
         }
         Bg_On_R(1 << i);
         Bg_On_W(1 << i);
@@ -1219,7 +1216,7 @@ void opening_title_00(void) {
     s32 pos;
     Zoomf_Init();
     bg_vbl_trans_flag = 0;
-    scr_cg_c_no = ((s16)simmram_block_alloc_10(0x195, 1));
+    scr_cg_c_no = simmram_block_alloc_10(0x195, 1);
     bg_w.scroll_cg_adr = simmram_slot_to_offset(scr_cg_c_no);
     bg_w.scno = 1;
     polygon2d_submit_line(0x01705800, 0, 0, 3);

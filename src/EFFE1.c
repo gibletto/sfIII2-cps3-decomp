@@ -16,7 +16,9 @@
 #include "EFFECT.h"
 #include "effect_2.h"
 #include "aboutspr.h"
-#include "CHARMOVE.h"
+void char_move(WORK* wk);
+void set_char_move_init2();
+void set_char_move_init();
 #include "charmove_2.h"
 #include "se_3.h"
 #include "EFFE1.h"
@@ -127,7 +129,6 @@ static void effE1_1000(WORK_Other* ewk) {
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.my_mr_flag = 1;
-    e1_open1:;
         ewk->wu.my_mr.size.x = 127;
         ewk->wu.my_mr.size.y = 127;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[0] + 1, 0);
@@ -208,7 +209,6 @@ static void effE1_2000(WORK_Other* ewk) {
         ewk->wu.routine_no[0]++;
         ewk->wu.disp_flag = 1;
         ewk->wu.my_mr_flag = 1;
-    e1_open2:;
         ewk->wu.my_mr.size.x = 127;
         ewk->wu.my_mr.size.y = 127;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.old_rno[0] + 1, 0);

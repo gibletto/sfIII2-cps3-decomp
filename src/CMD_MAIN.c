@@ -3566,58 +3566,58 @@ void debug_pattern_entry_copy_dual(s16 n, s16 box) {
     s16 i;
     HIT_IX* ix;
     src = (u16*)&dbg_pl->wu.hit_ix_table[box];
-    a = (u16*)((u8*)dbg_look_buf.hit_ix + n * 16);
-    b = (u16*)((u8*)dbg_edit_buf.hit_ix + n * 16);
+    a = (u16*)&dbg_look_buf.hit_ix[n];
+    b = (u16*)&dbg_edit_buf.hit_ix[n];
     for (i = 0; i < 8; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     ix = &dbg_pl->wu.hit_ix_table[box];
     src = (u16*)&dbg_pl->wu.body_adrs[ix->boix];
-    a = (u16*)((u8*)dbg_look_buf.body_adrs + n * 32);
-    b = (u16*)((u8*)dbg_edit_buf.body_adrs + n * 32);
+    a = (u16*)&dbg_look_buf.body_adrs[n];
+    b = (u16*)&dbg_edit_buf.body_adrs[n];
     for (i = 0; i < 16; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.hand_adrs[ix->haix];
-    a = (u16*)((u8*)dbg_look_buf.hand_adrs + n * 16);
-    b = (u16*)((u8*)dbg_edit_buf.hand_adrs + n * 16);
+    a = (u16*)&dbg_look_buf.hand_adrs[n];
+    b = (u16*)&dbg_edit_buf.hand_adrs[n];
     for (i = 0; i < 8; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.attack_adrs[ix->atix];
-    a = (u16*)((u8*)dbg_look_buf.attack_adrs + n * 16);
-    b = (u16*)((u8*)dbg_edit_buf.attack_adrs + n * 16);
+    a = (u16*)&dbg_look_buf.attack_adrs[n];
+    b = (u16*)&dbg_edit_buf.attack_adrs[n];
     for (i = 0; i < 8; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.attack_adrs[ix->eaix];
-    a = (u16*)((u8*)dbg_look_buf.eat_adrs + n * 16);
-    b = (u16*)((u8*)dbg_edit_buf.eat_adrs + n * 16);
+    a = (u16*)&dbg_look_buf.eat_adrs[n];
+    b = (u16*)&dbg_edit_buf.eat_adrs[n];
     for (i = 0; i < 8; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.catch_adrs[ix->caix];
-    a = (u16*)((u8*)dbg_look_buf.catch_adrs + n * 8);
-    b = (u16*)((u8*)dbg_edit_buf.catch_adrs + n * 8);
+    a = (u16*)&dbg_look_buf.catch_adrs[n];
+    b = (u16*)&dbg_edit_buf.catch_adrs[n];
     for (i = 0; i < 4; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.caught_adrs[ix->cuix];
-    a = (u16*)((u8*)dbg_look_buf.caught_adrs + n * 8);
-    b = (u16*)((u8*)dbg_edit_buf.caught_adrs + n * 8);
+    a = (u16*)&dbg_look_buf.caught_adrs[n];
+    b = (u16*)&dbg_edit_buf.caught_adrs[n];
     for (i = 0; i < 4; i++) {
         *a++ = *src;
         *b++ = *src++;
     }
     src = (u16*)&dbg_pl->wu.hosei_adrs[ix->hoix];
-    a = (u16*)((u8*)dbg_look_buf.hosei_adrs + n * 8);
-    b = (u16*)((u8*)dbg_edit_buf.hosei_adrs + n * 8);
+    a = (u16*)&dbg_look_buf.hosei_adrs[n];
+    b = (u16*)&dbg_edit_buf.hosei_adrs[n];
     for (i = 0; i < 4; i++) {
         *a++ = *src;
         *b++ = *src++;
@@ -4236,13 +4236,13 @@ void debug_draw_record_info(void) {
     s16 bcd;
     debug_draw_position_delta();
     debug_draw_edit_side();
-    bcd = ((s16)debug_hex4_to_bcd(Debug_Rec_Count));
+    bcd = debug_hex4_to_bcd(Debug_Rec_Count);
     tilemap_print_hex(11, 19, 2, bcd, 4, 0);
-    bcd = ((s16)debug_hex4_to_bcd(Debug_Rec_Frame));
+    bcd = debug_hex4_to_bcd(Debug_Rec_Frame);
     tilemap_print_hex(11, 18, 2, bcd, 4, 0);
-    bcd = ((s16)debug_hex4_to_bcd(dbg_snap_ptr->used));
+    bcd = debug_hex4_to_bcd(dbg_snap_ptr->used);
     tilemap_print_hex(11, 20, 2, bcd, 4, 0);
-    bcd = ((s16)debug_hex4_to_bcd(dbg_snap_ptr->cg_ctr));
+    bcd = debug_hex4_to_bcd(dbg_snap_ptr->cg_ctr);
     tilemap_print_hex(11, 21, 2, bcd, 4, 0);
     switch (dbg_save_mode) {
     case 0:
@@ -5003,7 +5003,7 @@ void debug_bg_tile_put(s16 bg, s32 ofs, s32 page, s32 src) {
 
 /* provisional name */
 void debug_bg_alloc_init(void) {
-    scr_cg_c_no = ((s16)simmram_block_alloc_10(104, 1));
+    scr_cg_c_no = simmram_block_alloc_10(104, 1);
     bg_w.ake_cg_adr = simmram_slot_to_offset(scr_cg_c_no);
     load_any_color(0x8C);
     load_any_color(0x8F);
@@ -5031,7 +5031,7 @@ void debug_bg_alloc_init(void) {
 void debug_bg_alloc_scene_init(void) {
     s32 n = (bg_gfx_tbl[0].size * 16 + 0xFFF) / 0x1000;
     u32 blocks = n;
-    scr_cg_c_no = ((s16)simmram_block_alloc_10(blocks, 1));
+    scr_cg_c_no = simmram_block_alloc_10(blocks, 1);
     bg_w.scroll_cg_adr = simmram_slot_to_offset(scr_cg_c_no);
     load_any_color(bg_palette_no_tbl[0]);
     load_any_color(bg_color2_tbl[0]);

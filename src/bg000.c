@@ -69,7 +69,7 @@ extern const u16 bg_zoom_rate_tbl[];
 
 
 
-s32 polygon2d_submit_line();
+s32 polygon2d_submit_line(u32 addr, u32 y, u32 x, u8 kind);
 s32 Check_Shin_Gouki_Next(void);
 s32 simmram_block_alloc_10(s32 blocks, s32 kind);
 u32 simmram_big_page_alloc_40(s32 kind);
@@ -1751,7 +1751,7 @@ void bg_initialize(void) {
     bg_w.scno = bg_scno_tbl[bg_w.bg_index];
     n = ((bg_gfx_tbl[bg_w.bg_index].size << 4) + 0xFFF) / 0x1000;
     blocks = n;
-    scr_cg_c_no = ((s16)simmram_block_alloc_10(blocks, 1));
+    scr_cg_c_no = simmram_block_alloc_10(blocks, 1);
     bg_w.scroll_cg_adr = simmram_slot_to_offset(scr_cg_c_no);
     gfx = &bg_gfx_tbl[bg_w.bg_index];
     if (Check_Shin_Gouki_Next()) {
@@ -1844,13 +1844,12 @@ void bg_initialize(void) {
     }
     bg_pos_hosei2();
     Bg_Family_Set();
-    ake_cg_c_no = ((s16)simmram_block_alloc_10(159, 1));
+    ake_cg_c_no = simmram_block_alloc_10(159, 1);
     bg_w.ake_cg_adr = simmram_slot_to_offset(ake_cg_c_no);
     load_any_color(140);
     load_any_color(143);
     polygon2d_submit_line(0x0163EC00, 0, 0, 3);
     polygon2d_submit_line(0x0163EC80, bg_w.ake_cg_adr, 0xF4F, 1);
-ake_scrl_set:;
     ake_scrl_w[1].handle = simmram_big_page_alloc_40(1);
     ake_scrl_w[1].adrs = simmram_slot_addr(ake_scrl_w[1].handle);
     ake_scrl_w[0].handle = simmram_big_page_alloc_40(1);
@@ -1903,7 +1902,7 @@ void bg_end_initialize(void) {
     bg_w.scno = bg_scno_tbl[bg_w.bg_index];
     n = ((bg_gfx_tbl[bg_w.bg_index].size << 4) + 0xFFF) / 0x1000;
     blocks = n;
-    scr_cg_c_no = ((s16)simmram_block_alloc_10(blocks, 1));
+    scr_cg_c_no = simmram_block_alloc_10(blocks, 1);
     bg_w.scroll_cg_adr = simmram_slot_to_offset(scr_cg_c_no);
     gfx = &bg_gfx_tbl[bg_w.bg_index];
     load_any_color_fade(bg_palette_no_tbl[bg_w.bg_index], 15, 15, 15);
@@ -2046,8 +2045,7 @@ void reset_all_char_display_with_backup(void) {
 
 
 
-void bg_etc_write(s16 kind) {
-    s16 type = kind;
+void bg_etc_write(s16 type) {
     const BG_GFX* gfx;
     s32 n;
     u32 blocks;
@@ -2060,7 +2058,7 @@ void bg_etc_write(s16 kind) {
     Zoomf_Init();
     n = ((etc_bg_gfx_tbl[type].size << 4) + 0xFFF) / 0x1000;
     blocks = n;
-    scr_cg_c_no = ((s16)simmram_block_alloc_10(blocks, 1));
+    scr_cg_c_no = simmram_block_alloc_10(blocks, 1);
     bg_w.scroll_cg_adr = simmram_slot_to_offset(scr_cg_c_no);
     bg_w.scno = etc_bg_scno_tbl[type];
     load_any_color(etc_bg_color_tbl[type]);

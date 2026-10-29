@@ -25,8 +25,7 @@
 #define R0_END          2       /* hidden for a frame */
 #define R0_KILL         3       /* (default) put the work back */
 
-void effect_00_move(WORK_Other_JUDGE* judge) {
-    WORK_Other_JUDGE* ewk = judge;
+void effect_00_move(WORK_Other_JUDGE* ewk) {
     u16 dip;
     ewk->fade_cja.l += 0x2000;
     ewk->fade_cja.w = ewk->fade_cja.w & 3;

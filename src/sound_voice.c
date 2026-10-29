@@ -292,7 +292,7 @@ control_event:;
                     voice->decay_rate = sound_envelope_rate(voice->attack_peak, voice->patch->decay_curve, snd_decay_ptr);
                     voice->release_rate = sound_envelope_rate(voice->sustain_level, voice->patch->release_curve, snd_decay_ptr);
                     voice->note_event_pending = 1;
-            } else {
+                } else {
                     note_resolved = 0;
                 }
             } else {
@@ -308,20 +308,20 @@ control_event:;
                 voice->key_on_pending = 1;
             }
             for (;;) {
-            for (;;) {
-            for (;;) {
-            if (*argument++ & event_mask) {
-                voice->duration_enabled = 0;
-                voice->tie = 1;
-            } else {
-                voice->duration_enabled = 1;
-                voice->tie = 0;
-            }
-            break;
-            }
-            break;
-            }
-            break;
+                for (;;) {
+                    for (;;) {
+                        if (*argument++ & event_mask) {
+                            voice->duration_enabled = 0;
+                            voice->tie = 1;
+                        } else {
+                            voice->duration_enabled = 1;
+                            voice->tie = 0;
+                        }
+                        break;
+                    }
+                    break;
+                }
+                break;
             }
         } else {
             voice->note_event_pending = 0;
