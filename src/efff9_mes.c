@@ -1,8 +1,8 @@
 /*
  * EFFF9_MES.C  effect F9's message tables
  *
- * The message of each character in the four languages (effF9_mes_pt continues with each character's scene
- * lists, pl<NN>txt<M> in EFFF8.C) and the text number table that picks each character's first scene entry
+ * The message of each character in the four languages (effF9_mes_pt), each character's scene lists
+ * (txt_no_00 ..: pl<NN>txt<M> in EFFF8.C) and the text number table that picks each character's first scene entry
  * (initialised work RAM, section D).
  */
 
@@ -89,7 +89,22 @@ extern const EFFF9_MESSAGE* effF9_mes_jp[];
 extern const EFFF9_MESSAGE* effF9_mes_en[];
 extern const EFFF9_MESSAGE* effF9_mes_es[];
 extern const EFFF9_MESSAGE* effF9_mes_pt[];
-extern s32* txt_no_tbl[];
+extern const u16* txt_no_00[];
+extern const u16* txt_no_02[];
+extern const u16* txt_no_03[];
+extern const u16* txt_no_10[];
+extern const u16* txt_no_04[];
+extern const u16* txt_no_05[];
+extern const u16* txt_no_06[];
+extern const u16* txt_no_07[];
+extern const u16* txt_no_08[];
+extern const u16* txt_no_09[];
+extern const u16* txt_no_11[];
+extern const u16* txt_no_12[];
+extern const u16* txt_no_13[];
+extern const u16* txt_no_14[];
+extern const u16* txt_no_15[];
+extern const u16** txt_no_tbl[];
 
 /* 02008138 */
 const EFFF9_MESSAGE* effF9_mes_jp[17] = {
@@ -152,7 +167,7 @@ const EFFF9_MESSAGE* effF9_mes_es[17] = {
     effF9_mes_en_16,
 };
 /* 02008204 */
-const EFFF9_MESSAGE* effF9_mes_pt[121] = {
+const EFFF9_MESSAGE* effF9_mes_pt[17] = {
     effF9_mes_pt_0,
     effF9_mes_pt_0,
     effF9_mes_pt_2,
@@ -170,129 +185,114 @@ const EFFF9_MESSAGE* effF9_mes_pt[121] = {
     effF9_mes_pt_14,
     effF9_mes_en_15,
     effF9_mes_en_16,
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl01txt1,
-    (const EFFF9_MESSAGE*)&pl01txt1[14],
-    (const EFFF9_MESSAGE*)&pl01txt1[18],
-    (const EFFF9_MESSAGE*)&pl01txt1[24],
-    (const EFFF9_MESSAGE*)&pl01txt1[28],
-    (const EFFF9_MESSAGE*)&pl01txt1[36],
-    (const EFFF9_MESSAGE*)&pl01txt1[42],
-    (const EFFF9_MESSAGE*)&pl01txt1[44],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl02txt1,
-    (const EFFF9_MESSAGE*)&pl02txt1[6],
-    (const EFFF9_MESSAGE*)&pl02txt1[12],
-    (const EFFF9_MESSAGE*)&pl02txt1[16],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl03txt1,
-    (const EFFF9_MESSAGE*)&pl03txt1[4],
-    (const EFFF9_MESSAGE*)&pl03txt1[8],
-    (const EFFF9_MESSAGE*)&pl03txt1[16],
-    (const EFFF9_MESSAGE*)&pl03txt1[24],
-    (const EFFF9_MESSAGE*)&pl03txt1[30],
-    (const EFFF9_MESSAGE*)&pl03txt1[34],
-    (const EFFF9_MESSAGE*)&pl03txt1[38],
-    (const EFFF9_MESSAGE*)&pl03txt1[42],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)&pl03txt1[4],
-    (const EFFF9_MESSAGE*)pl03txt1,
-    (const EFFF9_MESSAGE*)&pl03txt1[8],
-    (const EFFF9_MESSAGE*)&pl03txt1[16],
-    (const EFFF9_MESSAGE*)&pl03txt1[24],
-    (const EFFF9_MESSAGE*)&pl03txt1[34],
-    (const EFFF9_MESSAGE*)&pl03txt1[30],
-    (const EFFF9_MESSAGE*)&pl03txt1[38],
-    (const EFFF9_MESSAGE*)&pl03txt1[42],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl04txt1,
-    (const EFFF9_MESSAGE*)&pl04txt1[8],
-    (const EFFF9_MESSAGE*)&pl04txt1[12],
-    (const EFFF9_MESSAGE*)&pl04txt1[16],
-    (const EFFF9_MESSAGE*)&pl04txt1[24],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl05txt1,
-    (const EFFF9_MESSAGE*)&pl05txt1[4],
-    (const EFFF9_MESSAGE*)&pl05txt1[10],
-    (const EFFF9_MESSAGE*)&pl05txt1[14],
-    (const EFFF9_MESSAGE*)&pl05txt1[28],
-    (const EFFF9_MESSAGE*)&pl05txt1[30],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl06txt1,
-    (const EFFF9_MESSAGE*)&pl06txt1[6],
-    (const EFFF9_MESSAGE*)&pl06txt1[18],
-    (const EFFF9_MESSAGE*)&pl06txt1[26],
-    (const EFFF9_MESSAGE*)&pl06txt1[34],
-    (const EFFF9_MESSAGE*)&pl06txt1[42],
-    (const EFFF9_MESSAGE*)&pl06txt1[50],
-    (const EFFF9_MESSAGE*)&pl06txt1[58],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl07txt1,
-    (const EFFF9_MESSAGE*)&pl07txt1[2],
-    (const EFFF9_MESSAGE*)&pl07txt1[18],
-    (const EFFF9_MESSAGE*)&pl07txt1[20],
-    (const EFFF9_MESSAGE*)&pl07txt1[22],
-    (const EFFF9_MESSAGE*)&pl07txt1[24],
-    (const EFFF9_MESSAGE*)&pl07txt1[28],
-    (const EFFF9_MESSAGE*)&pl07txt1[32],
-    (const EFFF9_MESSAGE*)&pl07txt1[34],
-    (const EFFF9_MESSAGE*)&pl07txt1[38],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl08txt1,
-    (const EFFF9_MESSAGE*)&pl08txt1[8],
-    (const EFFF9_MESSAGE*)&pl08txt1[12],
-    (const EFFF9_MESSAGE*)&pl08txt1[18],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl09txt1,
-    (const EFFF9_MESSAGE*)&pl09txt1[4],
-    (const EFFF9_MESSAGE*)&pl09txt1[8],
-    (const EFFF9_MESSAGE*)&pl09txt1[10],
-    (const EFFF9_MESSAGE*)&pl09txt1[14],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl11txt1,
-    (const EFFF9_MESSAGE*)&pl11txt1[6],
-    (const EFFF9_MESSAGE*)&pl11txt1[10],
-    (const EFFF9_MESSAGE*)&pl11txt1[14],
-    (const EFFF9_MESSAGE*)&pl11txt1[16],
-    (const EFFF9_MESSAGE*)&pl11txt1[20],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl12txt1,
-    (const EFFF9_MESSAGE*)&pl12txt1[4],
-    (const EFFF9_MESSAGE*)&pl12txt1[14],
-    (const EFFF9_MESSAGE*)&pl12txt1[18],
-    (const EFFF9_MESSAGE*)&pl12txt1[22],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl13txt1,
-    (const EFFF9_MESSAGE*)&pl13txt1[6],
-    (const EFFF9_MESSAGE*)&pl13txt1[12],
-    (const EFFF9_MESSAGE*)&pl13txt1[22],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl14txt1,
-    (const EFFF9_MESSAGE*)&pl14txt1[4],
-    (const EFFF9_MESSAGE*)&pl14txt1[10],
-    (const EFFF9_MESSAGE*)&pl14txt1[14],
-    (const EFFF9_MESSAGE*)&pl14txt1[20],
-    (const EFFF9_MESSAGE*)efff9_no_scene,
-    (const EFFF9_MESSAGE*)pl16txt1,
+};
+/* provisional name */
+const u16* txt_no_00[9] = {
+    efff9_no_scene, pl01txt1,
+    &pl01txt1[14], &pl01txt1[18],
+    &pl01txt1[24], &pl01txt1[28],
+    &pl01txt1[36], &pl01txt1[42],
+    &pl01txt1[44],
+};
+/* provisional name */
+const u16* txt_no_02[5] = {
+    efff9_no_scene, pl02txt1,
+    &pl02txt1[6], &pl02txt1[12],
+    &pl02txt1[16],
+};
+/* provisional name */
+const u16* txt_no_03[10] = {
+    efff9_no_scene, pl03txt1,
+    &pl03txt1[4], &pl03txt1[8],
+    &pl03txt1[16], &pl03txt1[24],
+    &pl03txt1[30], &pl03txt1[34],
+    &pl03txt1[38], &pl03txt1[42],
+};
+/* provisional name */
+const u16* txt_no_10[10] = {
+    efff9_no_scene, &pl03txt1[4],
+    pl03txt1, &pl03txt1[8],
+    &pl03txt1[16], &pl03txt1[24],
+    &pl03txt1[34], &pl03txt1[30],
+    &pl03txt1[38], &pl03txt1[42],
+};
+/* provisional name */
+const u16* txt_no_04[6] = {
+    efff9_no_scene, pl04txt1,
+    &pl04txt1[8], &pl04txt1[12],
+    &pl04txt1[16], &pl04txt1[24],
+};
+/* provisional name */
+const u16* txt_no_05[7] = {
+    efff9_no_scene, pl05txt1,
+    &pl05txt1[4], &pl05txt1[10],
+    &pl05txt1[14], &pl05txt1[28],
+    &pl05txt1[30],
+};
+/* provisional name */
+const u16* txt_no_06[9] = {
+    efff9_no_scene, pl06txt1,
+    &pl06txt1[6], &pl06txt1[18],
+    &pl06txt1[26], &pl06txt1[34],
+    &pl06txt1[42], &pl06txt1[50],
+    &pl06txt1[58],
+};
+/* provisional name */
+const u16* txt_no_07[11] = {
+    efff9_no_scene, pl07txt1,
+    &pl07txt1[2], &pl07txt1[18],
+    &pl07txt1[20], &pl07txt1[22],
+    &pl07txt1[24], &pl07txt1[28],
+    &pl07txt1[32], &pl07txt1[34],
+    &pl07txt1[38],
+};
+/* provisional name */
+const u16* txt_no_08[5] = {
+    efff9_no_scene, pl08txt1,
+    &pl08txt1[8], &pl08txt1[12],
+    &pl08txt1[18],
+};
+/* provisional name */
+const u16* txt_no_09[6] = {
+    efff9_no_scene, pl09txt1,
+    &pl09txt1[4], &pl09txt1[8],
+    &pl09txt1[10], &pl09txt1[14],
+};
+/* provisional name */
+const u16* txt_no_11[7] = {
+    efff9_no_scene, pl11txt1,
+    &pl11txt1[6], &pl11txt1[10],
+    &pl11txt1[14], &pl11txt1[16],
+    &pl11txt1[20],
+};
+/* provisional name */
+const u16* txt_no_12[6] = {
+    efff9_no_scene, pl12txt1,
+    &pl12txt1[4], &pl12txt1[14],
+    &pl12txt1[18], &pl12txt1[22],
+};
+/* provisional name */
+const u16* txt_no_13[5] = {
+    efff9_no_scene, pl13txt1,
+    &pl13txt1[6], &pl13txt1[12],
+    &pl13txt1[22],
+};
+/* provisional name */
+const u16* txt_no_14[6] = {
+    efff9_no_scene, pl14txt1,
+    &pl14txt1[4], &pl14txt1[10],
+    &pl14txt1[14], &pl14txt1[20],
+};
+/* provisional name */
+const u16* txt_no_15[2] = {
+    efff9_no_scene, pl16txt1,
 };
 /* the code declares txt_no_tbl[28]; effg0_judge_count starts after its first 17 entries */
 /* 020083E8 */
-s32* txt_no_tbl[17] = {
-    (s32*)&effF9_mes_pt[17],
-    (s32*)&effF9_mes_pt[17],
-    (s32*)&effF9_mes_pt[26],
-    (s32*)&effF9_mes_pt[31],
-    (s32*)&effF9_mes_pt[51],
-    (s32*)&effF9_mes_pt[57],
-    (s32*)&effF9_mes_pt[64],
-    (s32*)&effF9_mes_pt[73],
-    (s32*)&effF9_mes_pt[84],
-    (s32*)&effF9_mes_pt[89],
-    (s32*)&effF9_mes_pt[41],
-    (s32*)&effF9_mes_pt[95],
-    (s32*)&effF9_mes_pt[102],
-    (s32*)&effF9_mes_pt[108],
-    (s32*)&effF9_mes_pt[113],
-    (s32*)&effF9_mes_pt[119],
-    (s32*)&effF9_mes_pt[119],
+const u16** txt_no_tbl[17] = {
+    txt_no_00, txt_no_00, txt_no_02, txt_no_03,
+    txt_no_04, txt_no_05, txt_no_06, txt_no_07,
+    txt_no_08, txt_no_09, txt_no_10, txt_no_11,
+    txt_no_12, txt_no_13, txt_no_14, txt_no_15,
+    txt_no_15,
 };

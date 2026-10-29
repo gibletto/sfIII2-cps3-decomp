@@ -17,7 +17,10 @@ extern const PANEL end_800_panel1[];
 extern const PANEL op_panel0[];
 extern const PANEL op_panel1[];
 extern const PANEL op_panel2[];
-extern const u32 end_cg_src_tbl[];
+extern const s16 end_map_data_0[];
+extern const s16 end_map_data_1[];
+extern const s16 end_map_data_2[];
+extern const s16 end_map_data_3[];
 extern const s32 end_1100_cell0[];
 extern const s32 end_1100_cell1[];
 extern const s32 end_1100_cell2[];
@@ -67,7 +70,7 @@ void (*end_main_jp[16])(s16) = {
 };
 /* 02007774 */
 u32 end_map_tbl[4] = {
-    (u32)&end_cg_src_tbl[11], (u32)&end_cg_src_tbl[25], (u32)&end_cg_src_tbl[39], (u32)&end_cg_src_tbl[53],
+    (u32)end_map_data_0, (u32)end_map_data_1, (u32)end_map_data_2, (u32)end_map_data_3,
 };
 /* 02007784 */
 const PANEL* end_4_panel_p[2] = {

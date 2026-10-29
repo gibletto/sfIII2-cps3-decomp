@@ -4,7 +4,7 @@
  * paring_b_mark_data is indexed by parry type and character and gives the { x, y } offset of
  * the parry mark from the player; read by EFFF8_CODE.C. efff9_no_scene (an empty list) and
  * pl01txt1 .. pl16txt1 are each character's ending scene lists of { message number, time }
- * pairs, each scene ended by 0, -1, reached through the effF9_mes_pt list of EFFF9_MES.C.
+ * pairs, each scene ended by 0, -1, reached through the txt_no_ tables of EFFF9_MES.C.
  * effg0_col_tbl, effg0_pos_tbl and effg0_flash_tbl give the colour, position and flashing sign
  * of each judge character of an ending scene, and effg0_name_tbl the name signs { pattern, x,
  * y } ended by -1; read by EFFG0.C. effg0_name_tbl2 .. effg0_name_tbl4 are further sign lists

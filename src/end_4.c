@@ -32,7 +32,7 @@
 
 
 
-extern const u32 end_scrn_data[];
+extern const u16 end_scrn_data[95][16][32];
 extern const PANEL* end_4_panel_p[2];
 
 

@@ -35,7 +35,7 @@
 extern const u16 end_7_anm_tbl[];
 extern const PANEL end_700_panel0[16];
 extern const PANEL end_700_panel1[14];
-extern const u32 end_scrn_data[];
+extern const u16 end_scrn_data[95][16][32];
 
 
 

@@ -37,7 +37,7 @@ extern const s16 end_12_pos[4][2];
 extern const PANEL end_1200_panel0[8];
 extern const PANEL end_1200_panel1[8];
 extern s16 end_cnt;
-extern const u32 end_1200_scrn_data[];
+extern const u16 end_1200_scrn_data[3][16][32];
 
 
 

@@ -36,7 +36,7 @@ extern const u16 timer_13_tbl[];
 extern const s16 end_13_pos[9][2];
 extern const PANEL end_1300_panel0[8];
 extern const PANEL end_1300_panel1[8];
-extern const u32 end_1300_scrn_data[];
+extern const u16 end_1300_scrn_data[9][16][32];
 
 
 

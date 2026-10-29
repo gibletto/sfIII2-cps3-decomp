@@ -7,6 +7,9 @@
  * gauges with their eraser. They are reached through the TMSCRIPT tables of GAME_CONFIG_JP.C.
  * gcfg_title_old_scr_jp_0, a shorter title script, is only pointed at by
  * gcfg_gauge_clr_scr_jp_tail, which nothing reads.
+ *
+ * A script is a list of blocks, each the glyph count, column, row and attribute followed by the
+ * glyphs (tilemap_print_script_seq); a count of 0 ends it.
  */
 
 #include "types.h"
@@ -14,152 +17,163 @@
 
 #pragma section TBL
 
-extern const u32 gcfg_guide_scr_jp_0[];
-extern const u32 gcfg_exit_guide_scr_jp_0[];
-extern const u8 gcfg_screen_scr_jp_1[];
-extern const u8 gcfg_screen_scr_jp_0[];
-extern const u8 gcfg_round_scr_jp_0[];
-extern const u8 gcfg_round_scr_jp_1[];
-extern const u8 gcfg_round_scr_jp_2[];
-extern const u8 gcfg_round_scr_jp_3[];
-extern const u8 gcfg_event_scr_jp_0[];
-extern const u8 gcfg_event_scr_jp_1[];
-extern const u8 gcfg_bonus_scr_jp_0[];
-extern const u8 gcfg_bonus_scr_jp_1[];
-extern const u32 gcfg_cursor_scr_jp_0[];
-extern const u32 gcfg_cursor_clr_scr_jp_0[];
-extern const u32 gcfg_gauge_scr_jp_0[];
-extern const u32 gcfg_gauge_scr_jp_1[];
-extern const u32 gcfg_gauge_scr_jp_2[];
-extern const u32 gcfg_gauge_scr_jp_3[];
-extern const u32 gcfg_gauge_scr_jp_4[];
-extern const u32 gcfg_gauge_scr_jp_5[];
-extern const u32 gcfg_gauge_scr_jp_6[];
-extern const u32 gcfg_gauge_scr_jp_7[];
-extern const u32 gcfg_gauge_clr_scr_jp_0[];
-extern const u32 gcfg_title_old_scr_jp_0[];
+extern const u16 gcfg_guide_scr_jp_0[];
+extern const u16 gcfg_exit_guide_scr_jp_0[];
+extern const u16 gcfg_screen_scr_jp_1[];
+extern const u16 gcfg_screen_scr_jp_0[];
+extern const u16 gcfg_round_scr_jp_0[];
+extern const u16 gcfg_round_scr_jp_1[];
+extern const u16 gcfg_round_scr_jp_2[];
+extern const u16 gcfg_round_scr_jp_3[];
+extern const u16 gcfg_event_scr_jp_0[];
+extern const u16 gcfg_event_scr_jp_1[];
+extern const u16 gcfg_bonus_scr_jp_0[];
+extern const u16 gcfg_bonus_scr_jp_1[];
+extern const u16 gcfg_cursor_scr_jp_0[];
+extern const u16 gcfg_cursor_clr_scr_jp_0[];
+extern const u16 gcfg_gauge_scr_jp_0[];
+extern const u16 gcfg_gauge_scr_jp_1[];
+extern const u16 gcfg_gauge_scr_jp_2[];
+extern const u16 gcfg_gauge_scr_jp_3[];
+extern const u16 gcfg_gauge_scr_jp_4[];
+extern const u16 gcfg_gauge_scr_jp_5[];
+extern const u16 gcfg_gauge_scr_jp_6[];
+extern const u16 gcfg_gauge_scr_jp_7[];
+extern const u16 gcfg_gauge_clr_scr_jp_0[];
+extern const u16 gcfg_title_old_scr_jp_0[];
 
-const u32 gcfg_guide_scr_jp_0[12] = {
-    0x130005, 0x180002, 0x13541350, 0x12741278,
-    0x127C12A8, 0x132412C0, 0x12CC1218, 0x128412A8,
-    0x132412C0, 0x12CC121C, 0x12541378, 0x137C0000,
+const u16 gcfg_guide_scr_jp_0[24] = {
+    19, 5, 24, 2,   0x1354, 0x1350, 0x1274, 0x1278, 0x127C, 0x12A8, 0x1324, 0x12C0, 0x12CC, 0x1218,
+                    0x1284, 0x12A8, 0x1324, 0x12C0, 0x12CC, 0x121C, 0x1254, 0x1378, 0x137C,
+    0,
 };
 
-const u32 gcfg_exit_guide_scr_jp_0[13] = {
-    0x150005, 0x180002, 0x12001218, 0x13C412A8,
-    0x132412C0, 0x12CC1218, 0x1254133C, 0x13401300,
-    0x12D41308, 0x13C8125C, 0x13441264, 0x12001200,
-    0x12000000,
+const u16 gcfg_exit_guide_scr_jp_0[26] = {
+    21, 5, 24, 2,   0x1200, 0x1218, 0x13C4, 0x12A8, 0x1324, 0x12C0, 0x12CC, 0x1218, 0x1254, 0x133C,
+                    0x1340, 0x1300, 0x12D4, 0x1308, 0x13C8, 0x125C, 0x1344, 0x1264, 0x1200, 0x1200,
+                    0x1200,
+    0,
 };
 
-const u8 gcfg_screen_scr_jp_1[18] = {
-    0, 4, 0, 0, 0, 0, 0, 2, 0x13, 0xD0, 0x12, 0x88, 0x12, 0xD0, 0x12, 0,
-    0, 0,
+const u16 gcfg_screen_scr_jp_1[9] = {
+    4, 0, 0, 2,     0x13D0, 0x1288, 0x12D0, 0x1200,
+    0,
 };
 
-const u8 gcfg_screen_scr_jp_0[18] = {
-    0, 4, 0, 0, 0, 0, 0, 2, 0x12, 0xD8, 0x13, 0xC8, 0x12, 0xF8, 0x13, 0x14,
-    0, 0,
+const u16 gcfg_screen_scr_jp_0[9] = {
+    4, 0, 0, 2,     0x12D8, 0x13C8, 0x12F8, 0x1314,
+    0,
 };
 
-const u8 gcfg_round_scr_jp_0[18] = {
-    0, 4, 0, 0, 0, 0, 0, 2, 0x12, 0x18, 0x13, 0xB4, 0x13, 0x88, 0x13, 0x8C,
-    0, 0,
+const u16 gcfg_round_scr_jp_0[9] = {
+    4, 0, 0, 2,     0x1218, 0x13B4, 0x1388, 0x138C,
+    0,
 };
 
-const u8 gcfg_round_scr_jp_1[18] = {
-    0, 4, 0, 0, 0, 0, 0, 2, 0x12, 0x20, 0x13, 0xB4, 0x13, 0x88, 0x13, 0x8C,
-    0, 0,
+const u16 gcfg_round_scr_jp_1[9] = {
+    4, 0, 0, 2,     0x1220, 0x13B4, 0x1388, 0x138C,
+    0,
 };
 
-const u8 gcfg_round_scr_jp_2[18] = {
-    0, 4, 0, 0, 0, 0, 0, 2, 0x12, 0x28, 0x13, 0xB4, 0x13, 0x88, 0x13, 0x8C,
-    0, 0,
+const u16 gcfg_round_scr_jp_2[9] = {
+    4, 0, 0, 2,     0x1228, 0x13B4, 0x1388, 0x138C,
+    0,
 };
 
-const u8 gcfg_round_scr_jp_3[18] = {
-    0, 4, 0, 0, 0, 0, 0, 2, 0x12, 0x30, 0x13, 0xB4, 0x13, 0x88, 0x13, 0x8C,
-    0, 0,
+const u16 gcfg_round_scr_jp_3[9] = {
+    4, 0, 0, 2,     0x1230, 0x13B4, 0x1388, 0x138C,
+    0,
 };
 
-const u8 gcfg_event_scr_jp_0[18] = {
-    0, 4, 0, 0, 0, 0, 0, 2, 0x12, 0xD8, 0x13, 0xC8, 0x12, 0xF8, 0x13, 0x14,
-    0, 0,
+const u16 gcfg_event_scr_jp_0[9] = {
+    4, 0, 0, 2,     0x12D8, 0x13C8, 0x12F8, 0x1314,
+    0,
 };
 
-const u8 gcfg_event_scr_jp_1[18] = {
-    0, 4, 0, 0, 0, 0, 0, 2, 0x12, 0x18, 0x12, 0xF8, 0x12, 0xC0, 0x12, 0xBC,
-    0, 0,
+const u16 gcfg_event_scr_jp_1[9] = {
+    4, 0, 0, 2,     0x1218, 0x12F8, 0x12C0, 0x12BC,
+    0,
 };
 
-const u8 gcfg_bonus_scr_jp_0[14] = {
-    0, 2, 0, 0, 0, 0, 0, 2, 0x12, 0x58, 0x12, 0x48, 0, 0,
+const u16 gcfg_bonus_scr_jp_0[7] = {
+    2, 0, 0, 2,     0x1258, 0x1248,
+    0,
 };
 
-const u8 gcfg_bonus_scr_jp_1[14] = {
-    0, 2, 0, 0, 0, 0, 0, 2, 0x12, 0x3C, 0x12, 0x68, 0, 0,
+const u16 gcfg_bonus_scr_jp_1[7] = {
+    2, 0, 0, 2,     0x123C, 0x1268,
+    0,
 };
 
-const u32 gcfg_cursor_scr_jp_0[3] = {
-    0x10001, 2, 0x12040000,
+const u16 gcfg_cursor_scr_jp_0[6] = {
+    1, 1, 0, 2,     0x1204,
+    0,
 };
 
-const u32 gcfg_cursor_clr_scr_jp_0[3] = {
-    0x10001, 2, 0x12000000,
+const u16 gcfg_cursor_clr_scr_jp_0[6] = {
+    1, 1, 0, 2,     0x1200,
+    0,
 };
 
-const u32 gcfg_gauge_scr_jp_0[3] = {
-    0x10001, 2, 0x12180000,
+const u16 gcfg_gauge_scr_jp_0[6] = {
+    1, 1, 0, 2,     0x1218,
+    0,
 };
 
-const u32 gcfg_gauge_scr_jp_1[3] = {
-    0x10001, 2, 0x121C0000,
+const u16 gcfg_gauge_scr_jp_1[6] = {
+    1, 1, 0, 2,     0x121C,
+    0,
 };
 
-const u32 gcfg_gauge_scr_jp_2[3] = {
-    0x10001, 2, 0x12200000,
+const u16 gcfg_gauge_scr_jp_2[6] = {
+    1, 1, 0, 2,     0x1220,
+    0,
 };
 
-const u32 gcfg_gauge_scr_jp_3[3] = {
-    0x10001, 2, 0x12240000,
+const u16 gcfg_gauge_scr_jp_3[6] = {
+    1, 1, 0, 2,     0x1224,
+    0,
 };
 
-const u32 gcfg_gauge_scr_jp_4[3] = {
-    0x10001, 2, 0x12280000,
+const u16 gcfg_gauge_scr_jp_4[6] = {
+    1, 1, 0, 2,     0x1228,
+    0,
 };
 
-const u32 gcfg_gauge_scr_jp_5[3] = {
-    0x10001, 2, 0x122C0000,
+const u16 gcfg_gauge_scr_jp_5[6] = {
+    1, 1, 0, 2,     0x122C,
+    0,
 };
 
-const u32 gcfg_gauge_scr_jp_6[3] = {
-    0x10001, 2, 0x12300000,
+const u16 gcfg_gauge_scr_jp_6[6] = {
+    1, 1, 0, 2,     0x1230,
+    0,
 };
 
-const u32 gcfg_gauge_scr_jp_7[3] = {
-    0x10001, 2, 0x12340000,
+const u16 gcfg_gauge_scr_jp_7[6] = {
+    1, 1, 0, 2,     0x1234,
+    0,
 };
 
-const u32 gcfg_gauge_clr_scr_jp_0[3] = {
-    0x10001, 2, 0x13CC0000,
+const u16 gcfg_gauge_clr_scr_jp_0[6] = {
+    1, 1, 0, 2,     0x13CC,
+    0,
 };
 
 /* provisional name */
 /* A shorter title screen script; only gcfg_gauge_clr_scr_jp_tail (game_config_jp.c), which nothing reads, points at
    it. */
-const u32 gcfg_title_old_scr_jp_0[55] = {
-    0x50013, 2, 0x129C13C8, 0x12FC133C,
-    0x13400002, 0x40002, 0x21398, 0x13A0000A,
-    0x180002, 0x2139C, 0x13CC13CC, 0x13CC13CC,
-    0x13CC13CC, 0x13CC13CC, 0x13980003, 0x40004,
-    0x21390, 0x13941330, 0x60018, 0x40002,
-    0x13A413CC, 0x13CC13CC, 0x13CC13A8, 0x40004,
-    0x60002, 0x12B81288, 0x12F813C8, 0x60018,
-    0x60002, 0x13AC13CC, 0x13CC13CC, 0x13CC13B0,
-    0x50004, 0x80002, 0x1388138C, 0x130413C8,
-    0x12D00004, 0x4000A, 0x21288, 0x12F0131C,
-    0x12CC0009, 0x4000C, 0x2133C, 0x13401300,
-    0x12D41308, 0x13C8125C, 0x13441264, 0xA000E,
-    0x160002, 0x121813C4, 0x131812DC, 0x13C81348,
-    0x134C1254, 0x1358135C, 0xFFFF,
+const u16 gcfg_title_old_scr_jp_0[110] = {
+    5, 19, 0, 2,    0x129C, 0x13C8, 0x12FC, 0x133C, 0x1340,
+    2, 4, 2, 2,     0x1398, 0x13A0,
+    10, 24, 2, 2,   0x139C, 0x13CC, 0x13CC, 0x13CC, 0x13CC, 0x13CC, 0x13CC, 0x13CC, 0x13CC, 0x1398,
+    3, 4, 4, 2,     0x1390, 0x1394, 0x1330,
+    6, 24, 4, 2,    0x13A4, 0x13CC, 0x13CC, 0x13CC, 0x13CC, 0x13A8,
+    4, 4, 6, 2,     0x12B8, 0x1288, 0x12F8, 0x13C8,
+    6, 24, 6, 2,    0x13AC, 0x13CC, 0x13CC, 0x13CC, 0x13CC, 0x13B0,
+    5, 4, 8, 2,     0x1388, 0x138C, 0x1304, 0x13C8, 0x12D0,
+    4, 4, 10, 2,    0x1288, 0x12F0, 0x131C, 0x12CC,
+    9, 4, 12, 2,    0x133C, 0x1340, 0x1300, 0x12D4, 0x1308, 0x13C8, 0x125C, 0x1344, 0x1264,
+    10, 14, 22, 2,  0x1218, 0x13C4, 0x1318, 0x12DC, 0x13C8, 0x1348, 0x134C, 0x1254, 0x1358, 0x135C,
+    0, 0xFFFF,
 };

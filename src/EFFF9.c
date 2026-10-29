@@ -48,7 +48,7 @@
 
 
 s16 efff9_suicide;  
-s32 * efff9_txt_no_adrs;  
+const u16** efff9_txt_no_adrs;  
 u16 * efff9_txt_scene_adrs;  
 s16 efff9_PL_NO;  
 s16 efff9_txt_point;  

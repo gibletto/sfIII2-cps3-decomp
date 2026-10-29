@@ -62,31 +62,31 @@ void tilemap_chunk_copy_16b(s16 *dst, char *src, s32 chunks);
 #include "CMD_MAIN.h"
 #include "cps3.h"
 
-extern const u8 gcfg_bonus_scr_jp_0[];
-extern const u8 gcfg_bonus_scr_jp_1[];
-extern const u32 gcfg_cursor_clr_scr_jp_0[];
-extern const u32 gcfg_cursor_scr_jp_0[];
-extern const u8 gcfg_event_scr_jp_0[];
-extern const u8 gcfg_event_scr_jp_1[];
-extern const u32 gcfg_exit_guide_scr_jp_0[];
-extern const u32 gcfg_gauge_clr_scr_jp_0[];
-extern const u32 gcfg_gauge_scr_jp_0[];
-extern const u32 gcfg_gauge_scr_jp_1[];
-extern const u32 gcfg_gauge_scr_jp_2[];
-extern const u32 gcfg_gauge_scr_jp_3[];
-extern const u32 gcfg_gauge_scr_jp_4[];
-extern const u32 gcfg_gauge_scr_jp_5[];
-extern const u32 gcfg_gauge_scr_jp_6[];
-extern const u32 gcfg_gauge_scr_jp_7[];
-extern const u32 gcfg_guide_scr_jp_0[];
-extern const u8 gcfg_round_scr_jp_0[];
-extern const u8 gcfg_round_scr_jp_1[];
-extern const u8 gcfg_round_scr_jp_2[];
-extern const u8 gcfg_round_scr_jp_3[];
-extern const u8 gcfg_screen_scr_jp_0[];
-extern const u8 gcfg_screen_scr_jp_1[];
-extern const u32 gcfg_title_scr_jp_0[];
-extern const u32 gcfg_title_old_scr_jp_0[];   /* provisional name */
+extern const u16 gcfg_bonus_scr_jp_0[];
+extern const u16 gcfg_bonus_scr_jp_1[];
+extern const u16 gcfg_cursor_clr_scr_jp_0[];
+extern const u16 gcfg_cursor_scr_jp_0[];
+extern const u16 gcfg_event_scr_jp_0[];
+extern const u16 gcfg_event_scr_jp_1[];
+extern const u16 gcfg_exit_guide_scr_jp_0[];
+extern const u16 gcfg_gauge_clr_scr_jp_0[];
+extern const u16 gcfg_gauge_scr_jp_0[];
+extern const u16 gcfg_gauge_scr_jp_1[];
+extern const u16 gcfg_gauge_scr_jp_2[];
+extern const u16 gcfg_gauge_scr_jp_3[];
+extern const u16 gcfg_gauge_scr_jp_4[];
+extern const u16 gcfg_gauge_scr_jp_5[];
+extern const u16 gcfg_gauge_scr_jp_6[];
+extern const u16 gcfg_gauge_scr_jp_7[];
+extern const u16 gcfg_guide_scr_jp_0[];
+extern const u16 gcfg_round_scr_jp_0[];
+extern const u16 gcfg_round_scr_jp_1[];
+extern const u16 gcfg_round_scr_jp_2[];
+extern const u16 gcfg_round_scr_jp_3[];
+extern const u16 gcfg_screen_scr_jp_0[];
+extern const u16 gcfg_screen_scr_jp_1[];
+extern const u16 gcfg_title_scr_jp_0[];
+extern const u16 gcfg_title_old_scr_jp_0[];   /* provisional name */
 extern const u32 config_jp_chr_f400[];      /* provisional name: data copied to SS_RAM + 0xF400 */
 
 s8 Config_Item_jp;  
@@ -109,64 +109,64 @@ s16 gcfg_code_list_jp[13][2] = {
     { 0, 0x0200 }, { 6, 0x1000 }, { 2, 0x0080 }, { 2, 0x0080 }, { 2, 0x0080 }, { 2, 0x0080 },
 };
 TMSCRIPT gcfg_title_scr_jp[1] = {
-    { 1, 0, (void*)gcfg_title_scr_jp_0 },
+    { 1, 0, gcfg_title_scr_jp_0 },
 };
 TMSCRIPT gcfg_guide_scr_jp[1] = {
-    { 1, 0, (void*)gcfg_guide_scr_jp_0 },
+    { 1, 0, gcfg_guide_scr_jp_0 },
 };
 /* 020007F4 */
 TMSCRIPT gcfg_exit_guide_scr_jp[1] = {
-    { 1, 0, (void*)gcfg_exit_guide_scr_jp_0 },
+    { 1, 0, gcfg_exit_guide_scr_jp_0 },
 };
 /* 020007FC */
 TMSCRIPT gcfg_screen_scr_jp[2] = {
-    { 1, 0, (void*)gcfg_screen_scr_jp_0 },
-    { 1, 0, (void*)gcfg_screen_scr_jp_1 },
+    { 1, 0, gcfg_screen_scr_jp_0 },
+    { 1, 0, gcfg_screen_scr_jp_1 },
 };
 /* 0200080C */
 TMSCRIPT gcfg_round_scr_jp[4] = {
-    { 1, 0, (void*)gcfg_round_scr_jp_0 },
-    { 1, 0, (void*)gcfg_round_scr_jp_1 },
-    { 1, 0, (void*)gcfg_round_scr_jp_2 },
-    { 1, 0, (void*)gcfg_round_scr_jp_3 },
+    { 1, 0, gcfg_round_scr_jp_0 },
+    { 1, 0, gcfg_round_scr_jp_1 },
+    { 1, 0, gcfg_round_scr_jp_2 },
+    { 1, 0, gcfg_round_scr_jp_3 },
 };
 /* 0200082C */
 TMSCRIPT gcfg_event_scr_jp[2] = {
-    { 1, 0, (void*)gcfg_event_scr_jp_0 },
-    { 1, 0, (void*)gcfg_event_scr_jp_1 },
+    { 1, 0, gcfg_event_scr_jp_0 },
+    { 1, 0, gcfg_event_scr_jp_1 },
 };
 /* 0200083C */
 TMSCRIPT gcfg_bonus_scr_jp[2] = {
-    { 1, 0, (void*)gcfg_bonus_scr_jp_0 },
-    { 1, 0, (void*)gcfg_bonus_scr_jp_1 },
+    { 1, 0, gcfg_bonus_scr_jp_0 },
+    { 1, 0, gcfg_bonus_scr_jp_1 },
 };
 /* 0200084C */
 TMSCRIPT gcfg_cursor_scr_jp[1] = {
-    { 1, 0, (void*)gcfg_cursor_scr_jp_0 },
+    { 1, 0, gcfg_cursor_scr_jp_0 },
 };
 /* 02000854 */
 TMSCRIPT gcfg_cursor_clr_scr_jp[1] = {
-    { 1, 0, (void*)gcfg_cursor_clr_scr_jp_0 },
+    { 1, 0, gcfg_cursor_clr_scr_jp_0 },
 };
 /* 0200085C */
 TMSCRIPT gcfg_gauge_scr_jp[8] = {
-    { 1, 0, (void*)gcfg_gauge_scr_jp_0 },
-    { 1, 0, (void*)gcfg_gauge_scr_jp_1 },
-    { 1, 0, (void*)gcfg_gauge_scr_jp_2 },
-    { 1, 0, (void*)gcfg_gauge_scr_jp_3 },
-    { 1, 0, (void*)gcfg_gauge_scr_jp_4 },
-    { 1, 0, (void*)gcfg_gauge_scr_jp_5 },
-    { 1, 0, (void*)gcfg_gauge_scr_jp_6 },
-    { 1, 0, (void*)gcfg_gauge_scr_jp_7 },
+    { 1, 0, gcfg_gauge_scr_jp_0 },
+    { 1, 0, gcfg_gauge_scr_jp_1 },
+    { 1, 0, gcfg_gauge_scr_jp_2 },
+    { 1, 0, gcfg_gauge_scr_jp_3 },
+    { 1, 0, gcfg_gauge_scr_jp_4 },
+    { 1, 0, gcfg_gauge_scr_jp_5 },
+    { 1, 0, gcfg_gauge_scr_jp_6 },
+    { 1, 0, gcfg_gauge_scr_jp_7 },
 };
 /* 0200089C */
 TMSCRIPT gcfg_gauge_clr_scr_jp[1] = {
-    { 1, 0, (void*)gcfg_gauge_clr_scr_jp_0 },
+    { 1, 0, gcfg_gauge_clr_scr_jp_0 },
 };
 /* Stored after gcfg_gauge_clr_scr_jp. Nothing in the program refers to it by name or address; if it is
    read, it is through an index past the end of gcfg_gauge_clr_scr_jp. */
 TMSCRIPT gcfg_gauge_clr_scr_jp_tail[1] = {
-    { 1, 0, (void*)gcfg_title_old_scr_jp_0 },
+    { 1, 0, gcfg_title_old_scr_jp_0 },
 };
 /* 020008A4 */
 

@@ -21,10 +21,10 @@ extern const BBBSTable bbbs_level_03[];
 extern const s16 bbbs_level_04[];
 
 const s32 bbbs_jump_level[4][2] = {
-    { 196608, -12288 },
-    { 229376, -12288 },
-    { 262144, -12288 },
-    { 294912, -12288 },
+    { 0x30000, -0x3000 },
+    { 0x38000, -0x3000 },
+    { 0x40000, -0x3000 },
+    { 0x48000, -0x3000 },
 };
 
 const BBBSTable bbbs_level_00[18] = {

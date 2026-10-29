@@ -18,6 +18,7 @@
 #include "CHARMOVE.h"
 #include "charmove_2.h"
 #include "EFF38.h"
+#include "fighter.h"
 
 /* routine_no[0] */
 #define R0_WAIT         0       /* count the start wait down, then show */
@@ -154,7 +155,7 @@ s32 effect_38_init(s16 PL_id, s16 Wait, s16 Kind, s16 Face_Set, s16 Your_Char, s
         ewk->wu.dir_step = ID_of_Face[Cursor_Y[ewk->master_id]][Cursor_X[ewk->master_id]];
     } else {
         ewk->wu.dir_step = Your_Char;
-        if (plw[PL_id].wu.operator == 0 && EM_id == 0) {
+        if (plw[PL_id].wu.operator == 0 && EM_id == PL_GILL) {
             ewk->wu.dir_step = 0;
             ewk->wu.rl_flag = PL_id ^ 1;
             if (PL_id == 1) {

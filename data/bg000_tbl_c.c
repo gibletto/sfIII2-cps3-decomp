@@ -52,8 +52,8 @@ const s16 bg_ramp_tbl[248] = {
 /* provisional name */
 /* 16.16 steps from 1.25 to 2.0. Nothing in the program refers to it by name or address. */
 const s32 bg_step_speed_tbl[16] = {
-    81920, 98304, 98304, 98304,
-    114688, 114688, 114688, 131072,
-    131072, 131072, 131072, 131072,
-    131072, 131072, 131072, 131072,
+    0x14000, 0x18000, 0x18000, 0x18000,
+    0x1C000, 0x1C000, 0x1C000, 0x20000,
+    0x20000, 0x20000, 0x20000, 0x20000,
+    0x20000, 0x20000, 0x20000, 0x20000,
 };

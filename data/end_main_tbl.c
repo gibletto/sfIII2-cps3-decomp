@@ -13,42 +13,42 @@
 
 #pragma section TBL
 
-extern const u8 op_scr_record_data_0[];
-extern const u8 op_scr_record_data_1[];
-extern const u8 op_scr_record_data_2[];
-extern const u8 op_scr_record_data_3[];
+extern const s16 op_scr_record_data_0[];
+extern const s16 op_scr_record_data_1[];
+extern const s16 op_scr_record_data_2[];
+extern const s16 op_scr_record_data_3[];
 extern const PANEL op_panel0[];
 extern const PANEL op_panel1[];
 extern const PANEL op_panel2[];
 extern const OP_SCRN_POS op_scrn_pos_tbl[];
 extern const OP_CTR_SET op_ctr_set[];
 
-const u8 op_scr_record_data_0[56] = {
-    0, 1, 0, 75, 0, 127, 127, 0, 0, 12, 0, 255, 127, 0, 0, 12,
-    1, 127, 127, 0, 0, 12, 1, 255, 127, 0, 0, 12, 2, 127, 127, 0,
-    0, 12, 2, 255, 127, 0, 0, 12, 3, 127, 127, 0, 0, 12, 3, 255,
-    127, 0, 0, 12, 255, 255, 255, 255,
+const s16 op_scr_record_data_0[28] = {
+    /* [0] */
+    1, 75,  0x7F, 0x7F00, 12,  0xFF, 0x7F00, 12,  0x17F, 0x7F00, 12,  0x1FF, 0x7F00, 12,  0x27F, 0x7F00, 12,
+           0x2FF, 0x7F00, 12,  0x37F, 0x7F00, 12,  0x3FF, 0x7F00, 12,  -1,
+    -1,
 };
 
-const u8 op_scr_record_data_1[56] = {
-    0, 2, 0, 80, 0, 127, 127, 0, 0, 28, 0, 255, 127, 0, 0, 28,
-    1, 127, 127, 0, 0, 28, 1, 255, 127, 0, 0, 28, 2, 127, 127, 0,
-    0, 28, 2, 255, 127, 0, 0, 28, 3, 127, 127, 0, 0, 28, 3, 255,
-    127, 0, 0, 28, 255, 255, 255, 255,
+const s16 op_scr_record_data_1[28] = {
+    /* [0] */
+    2, 80,  0x7F, 0x7F00, 28,  0xFF, 0x7F00, 28,  0x17F, 0x7F00, 28,  0x1FF, 0x7F00, 28,  0x27F, 0x7F00, 28,
+           0x2FF, 0x7F00, 28,  0x37F, 0x7F00, 28,  0x3FF, 0x7F00, 28,  -1,
+    -1,
 };
 
-const u8 op_scr_record_data_2[56] = {
-    0, 3, 0, 85, 0, 127, 127, 0, 0, 44, 0, 255, 127, 0, 0, 44,
-    1, 127, 127, 0, 0, 44, 1, 255, 127, 0, 0, 44, 2, 127, 127, 0,
-    0, 44, 2, 255, 127, 0, 0, 44, 3, 127, 127, 0, 0, 44, 3, 255,
-    127, 0, 0, 44, 255, 255, 255, 255,
+const s16 op_scr_record_data_2[28] = {
+    /* [0] */
+    3, 85,  0x7F, 0x7F00, 44,  0xFF, 0x7F00, 44,  0x17F, 0x7F00, 44,  0x1FF, 0x7F00, 44,  0x27F, 0x7F00, 44,
+           0x2FF, 0x7F00, 44,  0x37F, 0x7F00, 44,  0x3FF, 0x7F00, 44,  -1,
+    -1,
 };
 
-const u8 op_scr_record_data_3[56] = {
-    0, 4, 0, 88, 0, 127, 127, 0, 0, 60, 0, 255, 127, 0, 0, 60,
-    1, 127, 127, 0, 0, 60, 1, 255, 127, 0, 0, 60, 2, 127, 127, 0,
-    0, 60, 2, 255, 127, 0, 0, 60, 3, 127, 127, 0, 0, 60, 3, 255,
-    127, 0, 0, 60, 255, 255, 255, 255,
+const s16 op_scr_record_data_3[28] = {
+    /* [0] */
+    4, 88,  0x7F, 0x7F00, 60,  0xFF, 0x7F00, 60,  0x17F, 0x7F00, 60,  0x1FF, 0x7F00, 60,  0x27F, 0x7F00, 60,
+           0x2FF, 0x7F00, 60,  0x37F, 0x7F00, 60,  0x3FF, 0x7F00, 60,  -1,
+    -1,
 };
 
 /* provisional name */
