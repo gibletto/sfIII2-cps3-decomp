@@ -86,7 +86,7 @@ void EFF69_RISE_IN(WORK_Other* ewk) {
     default:
         ewk->wu.xyz[1].cal += ewk->wu.mvxy.a[1].sp;
         if (ewk->wu.hit_quake >= ewk->wu.xyz[1].disp.pos) {
-            Order[ewk->wu.dir_step] = 0;
+            Order[ewk->wu.dir_step] = R0_WAIT;
             ewk->wu.routine_no[0] = R0_WAIT;
             ewk->wu.xyz[1].disp.pos = ewk->wu.hit_quake;
         }
@@ -153,7 +153,7 @@ void EFF69_SLIDE_IN(WORK_Other* ewk) {
         if (0 < ewk->wu.mvxy.a[0].sp) {
             if (ewk->wu.hit_quake <= ewk->wu.xyz[0].disp.pos) {
                 if (Order[ewk->wu.dir_step] == ewk->wu.routine_no[0]) {
-                    Order[ewk->wu.dir_step] = 0;
+                    Order[ewk->wu.dir_step] = R0_WAIT;
                 }
                 ewk->wu.routine_no[0] = R0_WAIT;
                 ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;
@@ -161,7 +161,7 @@ void EFF69_SLIDE_IN(WORK_Other* ewk) {
             }
         } else if (ewk->wu.hit_quake >= ewk->wu.xyz[0].disp.pos) {
             if (Order[ewk->wu.dir_step] == ewk->wu.routine_no[0]) {
-                Order[ewk->wu.dir_step] = 0;
+                Order[ewk->wu.dir_step] = R0_WAIT;
             }
             ewk->wu.routine_no[0] = R0_WAIT;
             ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;

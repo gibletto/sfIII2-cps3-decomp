@@ -139,11 +139,11 @@ void player_mv_0000(PLW* wk) {
     wk->uot_cd_ok_flag = 0;
     wk->ukemi_success = 0;
     clear_my_shell_ix(&wk->wu);
-    wk->sa->mp_rno = 0;
+    wk->sa->mp_rno = MP_NONE;
     wk->sa->mp = 0;
-    wk->sa->sa_rno = 0;
+    wk->sa->sa_rno = SA_NONE;
     wk->sa->ok = 0;
-    wk->sa->ex_rno = 0;
+    wk->sa->ex_rno = EX_NONE;
     wk->sa->ex = 0;
     wk->sa_healing = 0;
     wk->dm_hos_flag = 0;

@@ -1479,7 +1479,7 @@ s16 Next_Menu;
     switch (CP_Index[wk->wu.id][1]) {
     case 0:
         CP_Index[wk->wu.id][1]++;
-        Term_No[wk->wu.id] = 0;
+        Term_No[wk->wu.id] = TERM_INIT;
     case 1:
         if (Check_Passive(wk) != 0) {
             break;
@@ -1537,7 +1537,7 @@ s16 unused;
     switch (CP_Index[wk->wu.id][1]) {
     case 0:
         CP_Index[wk->wu.id][1]++;
-        Term_No[wk->wu.id] = 0;
+        Term_No[wk->wu.id] = TERM_INIT;
     case 1:
         if (Check_Passive(wk) != 0) {
             break;
@@ -2579,14 +2579,14 @@ s16 Ex_Shot;
 
 void Check_Rapid(PLW* wk, u16 Tech_Number) {
     if (!(Tech_Number & 0xF00)) {
-        Rapid_No[wk->wu.id][0] = 0;
+        Rapid_No[wk->wu.id][0] = RAPID_OFF;
     } else {
         Lv = Setup_Lv08(0);
         if (Break_Into_CPU == 2) {
             Lv = 7;
         }
         Rapid_No[wk->wu.id][0] = Rapid_SA_Data[Lv][random_32_com() & 7];
-        Rapid_No[wk->wu.id][1] = 0;
+        Rapid_No[wk->wu.id][1] = RAPID1_INIT;
         Setup_Rapid_End_Term(wk, Tech_Number);
         Rapid_Index[wk->wu.id] = 0x7F0;
     }
@@ -2678,7 +2678,7 @@ s32 Check_Rapid_End(PLW* wk) {
     switch (Rapid_No[wk->wu.id][2]) {
     case RAPID_END_FALL:
         if (wk->wu.mvxy.a[1].real.h < 0) {
-            Rapid_No[wk->wu.id][0] = 0;
+            Rapid_No[wk->wu.id][0] = RAPID_OFF;
             return 1;
         }
         break;
@@ -2691,7 +2691,7 @@ s32 Check_Rapid_End(PLW* wk) {
             break;
         case RAPID3_END:
             if (plw[wk->wu.id].caution_flag == 0) {
-                Rapid_No[wk->wu.id][0] = 0;
+                Rapid_No[wk->wu.id][0] = RAPID_OFF;
                 return 1;
             }
             break;
@@ -2699,7 +2699,7 @@ s32 Check_Rapid_End(PLW* wk) {
         break;
     case RAPID_END_ATTACK:
         if (--Rapid_No[wk->wu.id][3] == 0) {
-            Rapid_No[wk->wu.id][0] = 0;
+            Rapid_No[wk->wu.id][0] = RAPID_OFF;
             return 1;
         }
         break;
@@ -3328,7 +3328,7 @@ s16 xx;
 {
     s16 i;
     const s16* zz;
-    zz = (const s16*)(Level_04_Data[CC_Type] + xx);
+    zz = (const s16*)&Level_04_Data[CC_Type][xx];
     for (i = 0; i < 3; i++) {
         if (Control_Time <= zz[i]) {
             return i;
@@ -3360,7 +3360,7 @@ s16 xx;
 {
     s16 i;
     const s16* zz;
-    zz = (const s16*)(Level_10_Data[CC_Type] + xx);
+    zz = (const s16*)&Level_10_Data[CC_Type][xx];
     for (i = 0; i < 9; i++) {
         if (Control_Time <= zz[i]) {
             break;
@@ -3376,7 +3376,7 @@ s16 xx;
 {
     s16 i;
     const s16* zz;
-    zz = (const s16*)(Level_18_Data[CC_Type] + xx);
+    zz = (const s16*)&Level_18_Data[CC_Type][xx];
     for (i = 0; i < 17; i++) {
         if (Control_Time <= zz[i]) {
             break;

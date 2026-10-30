@@ -213,7 +213,7 @@ void Game_Manage_1st(void) {
     }
     appear_work_clear();
     win_sp_flag = 0;
-    BGM_No = 0;
+    BGM_No = BGMF_NONE;
     Shin_Gouki_BGM = 0;
     Special_Settle = 0;
     Clear_1Stage_Work();
@@ -1456,7 +1456,7 @@ void Game_Manage_11th(void) {
     case CM11_WIPE_WAIT2:
         if (Switch_Screen()) {
             G_No1 = G1_NEXT_CPU;
-            G_No2 = 0;
+            G_No2 = G2_NEXT_INIT;
             G_No3 = 0;
             E_No0 = E0_NEXT_CPU;
             E_No1 = 0;
@@ -1497,7 +1497,7 @@ void Game_Manage_12th(void) {
     case CM12_WIPE_WAIT:
         if (Switch_Screen()) {
             G_No1 = G1_NEXT_CPU;
-            G_No2 = 0;
+            G_No2 = G2_NEXT_INIT;
             G_No3 = 0;
             E_No0 = E0_NEXT_CPU;
             E_No1 = 0;
@@ -2190,7 +2190,7 @@ s32 Check_Ending(void) {
     Last_VS_Index[WINNER] = Next_VS_Index();
     if (Last_VS_Index[WINNER] > 7) {
         G_No1 = G1_ENDING;
-        G_No2 = 0;
+        G_No2 = G2_END_INIT;
         E_No0 = E0_ENDING;
         End_PL = plw[WINNER].player_number;
         plw[WINNER].wu.operator = 0;
@@ -2219,7 +2219,7 @@ s32 Check_Ending_Special(void) {
     }
     if (My_char[COM_id] == PL_GOUKI1 || My_char[COM_id] == PL_GOUKI2) {
         G_No1 = G1_ENDING;
-        G_No2 = 0;
+        G_No2 = G2_END_INIT;
         E_No0 = E0_ENDING;
         End_Course = EM_Course[WINNER];
         End_Gouki_Flag = Break_Com[WINNER][14];
