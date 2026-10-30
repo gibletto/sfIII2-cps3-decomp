@@ -91,11 +91,11 @@ s32 effect_90_init(void) {
     WORK_Other* ewk;
     s16 ix;
     s16 i;
-    const s16* data_ptr;
+    const u16* data_ptr;
     if ((ix = pull_effect_work(3)) == -1) {
         return -1;
     }
-    mwk = (WORK_Other*)((u32)frw + (ix << 11));
+    mwk = (WORK_Other*)frw[ix];
     mwk->wu.be_flag = 1;
     mwk->wu.id = 90;
     mwk->wu.work_id = 16;
@@ -106,7 +106,7 @@ s32 effect_90_init(void) {
         if ((ix = pull_effect_work(3)) == -1) {
             return -1;
         }
-        ewk = (WORK_Other*)((u32)frw + (ix << 11));
+        ewk = (WORK_Other*)frw[ix];
         ewk->wu.be_flag = 1;
         ewk->wu.id = 90;
         ewk->wu.work_id = 16;

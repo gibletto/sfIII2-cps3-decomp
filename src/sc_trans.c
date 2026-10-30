@@ -890,7 +890,7 @@ void winner_name_put(s8 ch) {
     if (Country == 1) {
         sc_chr_block_trans(p->cell, 0x180, p->w, p->h);
     } else {
-        if (ch == 14 || ch == 15) {
+        if (ch == PL_GOUKI1 || ch == PL_GOUKI2) {
             p = &nwdata_tbl[16];
         }
         sc_chr_block_trans(p->cell, 0x180, p->w, p->h);

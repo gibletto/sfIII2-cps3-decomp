@@ -15,7 +15,7 @@
 /* provisional name */
 s32 midi_vlq_decode_while(p, out)
 u8* p;
-u32* out;
+s32* out;
 {
     u8* start = p;
     u32 val = 0;
@@ -31,7 +31,7 @@ u32* out;
 /* provisional name */
 s32 midi_vlq_decode_leading(p, out)
 u8* p;
-u32* out;
+s32* out;
 {
     u8* start = p;
     u32 val;

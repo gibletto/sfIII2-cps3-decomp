@@ -602,7 +602,7 @@ extern const B6_SRC effB6_pos_tbl_1[24];
 extern const s16 hok_table_ef[8];
 extern const s16 plhos_data[16][3];   /* 16 characters */
 extern const s32 effC4_sp_tbl[6][4];
-extern const u16 effc8_data_tbl[8];
+extern const s32 effc8_data_tbl[4];
 extern const s32 efy_data[6];
 extern const u8 sel_ejg_ix_table[2][2][4];
 extern const u16 ag_cc_table[8];
@@ -1046,7 +1046,7 @@ extern const s16 illusion_setup_table[13][2];
 extern const s16 paring_b_mark_data[3][16][2];   /* 16 characters */
 extern const s16 EFF89_Step_Data[154];
 extern const s32 Score_Data[18];
-extern const u8 super_arts_data[16][4][16];   /* 16 characters */
+extern const SA_DATA super_arts_data[16][4];   /* 16 characters */
 extern const s16 random_tbl_32_ex[32];
 extern const s16 random_tbl_16_ex_com[16];
 extern const s16 dir16_hddm[16];

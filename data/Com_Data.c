@@ -16,6 +16,7 @@
 #include "types.h"
 #include "structs.h"
 #include "fighter.h"
+#include "work.h"
 
 #pragma section TBL
 
@@ -1780,7 +1781,7 @@ const s16 KA_Jump_Data[26] = {
 };
 
 const u16 Free_Lever_Data[4] = {
-    0x10, 0x20, 0x40, 0x70,
+    BUTTON_LP, BUTTON_MP, BUTTON_HP, BUTTON_PUNCHES,
 };
 
 const u8 YAGYOU_Data[16] = {

@@ -57,7 +57,7 @@ void effect_73_move(WORK_Other* ewk) {
             break;
         }
     }
-    if (range_x_check(ewk)) {
+    if (range_x_check(&ewk->wu)) {
         suzi_sync_pos_set(ewk);
         sort_push_request4(&ewk->wu);
     }

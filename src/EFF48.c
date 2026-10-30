@@ -256,7 +256,7 @@ s32 effect_48_init(s16 type) {
         if ((ix = pull_effect_work(4)) == -1) {
             return -1;
         }
-        ewk = (WORK_Other*)frw[ix];
+        ewk = (WORK_Other*)((u32)frw + (ix << 11));
         ewk->wu.be_flag = 1;
         ewk->wu.id = 48;
         ewk->wu.work_id = 16;
@@ -283,6 +283,5 @@ s32 effect_48_init(s16 type) {
         ewk->wu.old_rno[4] = *data_ptr++;
         ewk->wu.old_rno[3] = *data_ptr;
     }
-    (void)&((WORK*)etc_char_table)->id;
     return 0;
 }

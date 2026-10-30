@@ -12,7 +12,7 @@
 #pragma section TBL
 
 extern const s16 paring_mark_data[][16][2];
-extern const u16 effc8_data_tbl[];
+extern const s32 effc8_data_tbl[];
 
 const s16 paring_mark_data[3][16][2] = {
     {
@@ -36,6 +36,6 @@ const s16 paring_mark_data[3][16][2] = {
 };
 
 /* provisional name */
-const u16 effc8_data_tbl[8] = {
-    3, 0, 0, 512, 0, 0, 0xFFFF, 0xE800,
+const s32 effc8_data_tbl[4] = {
+    196608, 512, 0, -6144,
 };

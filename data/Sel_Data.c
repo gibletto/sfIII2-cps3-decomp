@@ -8,6 +8,7 @@
 
 #include "types.h"
 #include "structs.h"
+#include "fighter.h"
 
 #pragma section TBL
 
@@ -21,6 +22,6 @@ const s8 Face_Cursor_Data_unref[13] = {
 };
 
 const s8 Face_Cursor_Data[2][13] = {
-    { 2, 1, 3, 5, 7, 6, 12, 13, 8, 9, 10, 4, 11 },
-    { 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14 },
+    { PL_RYU, PL_ALEX, PL_YUN, PL_NECRO, PL_IBUKI, PL_HUGO, PL_SEAN, PL_URIEN, PL_ELENA, PL_ORO, PL_YANG, PL_DUDLEY, PL_KEN },
+    { PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1, PL_GOUKI1 },
 };

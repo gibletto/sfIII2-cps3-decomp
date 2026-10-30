@@ -1479,10 +1479,10 @@ s8 coins;
                 F_Timer[PL_id] = 50;
                 if (count == 1) {
                     tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
-                                              (s8*)msg_insert_more_coin);
+                                              msg_insert_more_coin);
                 } else {
                     tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
-                                              (s8*)msg_insert_more_coins);
+                                              msg_insert_more_coins);
                 }
                 tilemap_print_hex_block(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]] + 7, Text_Page_Y, 40,
                                         count, 1, 1);
@@ -1514,10 +1514,10 @@ s16 coins;
     if (Check_Coin_In(PL_id) != 0) {
         if (coins == 1) {
             tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
-                                      (s8*)msg_insert_more_coin);
+                                      msg_insert_more_coin);
         } else {
             tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40,
-                                      (s8*)msg_insert_more_coins);
+                                      msg_insert_more_coins);
         }
         tilemap_print_hex_block(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]] + 7, Text_Page_Y, 40, (s8)coins,
                                      1, 1);

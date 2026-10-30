@@ -210,7 +210,7 @@ s32 bg050_check(void) {
 
 
 void bg050_demo(void) {
-    s32 (*fp)();
+    s32 (*fp)(void);
     if (EXE_flag || Game_pause) {
         return;
     }

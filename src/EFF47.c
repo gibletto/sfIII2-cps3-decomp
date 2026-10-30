@@ -86,8 +86,8 @@ s32 effect_47_init(WORK* wk, s32 _p1) {
         ewk->wu.position_z = ewk->wu.my_priority = wk->my_priority - 2;
         ewk->wu.xyz[0].disp.pos = wk->xyz[0].disp.pos;
         ewk->wu.xyz[1].disp.pos = wk->xyz[1].disp.pos;
-        ewk->wu.xyz[0].disp.pos += *(s16*)data_ptr++;
-        ewk->wu.xyz[1].disp.pos += *(s16*)data_ptr++;
+        ewk->wu.xyz[0].disp.pos += *data_ptr++;
+        ewk->wu.xyz[1].disp.pos += *data_ptr++;
         ewk->wu.old_rno[0] = *data_ptr++;
         ewk->wu.mvxy.a[0].sp = eff47_sp_tbl[i][0];
         ewk->wu.mvxy.d[0].sp = eff47_sp_tbl[i][1];

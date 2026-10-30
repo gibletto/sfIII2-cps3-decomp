@@ -139,8 +139,7 @@ s32 sound_seq_start(u16 code, s16 ramp) {
     if (!hdr) {
         bgm_stop();
         for (i = 0; i < 16; i++) {
-            off = *p++;
-            off <<= 8;
+            off = *p++ << 8;
             off += *p++;
             if (off) {
                 track = seq + off;
@@ -207,15 +206,15 @@ s32 sound_seq_start(u16 code, s16 ramp) {
         return;
     } else if (!(hdr & 0x80)) {
         for (i = 0; i < 16; i++) {
-            off = *p++;
-            off <<= 8;
+            off = *p++ << 8;
             off = off + *p++;
             if (off) {
                 if (((hdr >= se_voice[i].priority_flags) & 0x7F) || (se_voice[i].status & 0x80)) {
                     track = seq + off;
                     n = midi_vlq_decode_while(track, &ticks);
                     ticks <<= 8;
-                    (v = &se_voice[i])->event_ticks = ticks;
+                    v = &se_voice[i];
+                    v->event_ticks = ticks;
                     v->cursor = &track[n];
                     v->status = 0;
                     bank_table = snd_bank_tbl;

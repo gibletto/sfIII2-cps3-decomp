@@ -44,7 +44,7 @@ void bbbs_com_execute(PLW* wk) {
         if (Allow_a_battle_f == 0) {
             break;
         }
-        if (katteni_bonus_nando(wk->wu.target_adrs)) {
+        if (katteni_bonus_nando((PLW*)wk->wu.target_adrs)) {
             Bonus_Stage_Level = set_bonus_game_nando(((PLW*)wk->wu.target_adrs)->cp->sw_new & CMD_SW_KICK);
         } else {
             Bonus_Stage_Level = set_bonus_game_difficulty((wk->wu.id + 1) & 1);

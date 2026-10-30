@@ -104,7 +104,7 @@ void end_600_0000(void) {
             Rewrite_End_Message(2);
             break;
         case 2:
-            if (EM_Candidate_Data[PL_HUGO][End_Course][7] != 8) {
+            if (EM_Candidate_Data[PL_HUGO][End_Course][7] != PL_ELENA) {
                 Rewrite_End_Message(3);
             } else {
                 Rewrite_End_Message(8);
@@ -133,20 +133,20 @@ void end_600_0003(void) {
         effect_E6_init(88);
         effect_E6_init(89);
         switch (EM_Candidate_Data[PL_HUGO][End_Course][7]) {
-        case 0:
+        case PL_GILL:
             effect_E6_init(94);
             Rewrite_End_Message(7);
             break;
-        case 2:
+        case PL_RYU:
             effect_E6_init(91);
             Rewrite_End_Message(5);
             break;
-        case 5:
+        case PL_NECRO:
             effect_E6_init(92);
             effect_E6_init(93);
             Rewrite_End_Message(4);
             break;
-        case 8:
+        case PL_ELENA:
         default:
             effect_E6_init(90);
             Rewrite_End_Message(6);

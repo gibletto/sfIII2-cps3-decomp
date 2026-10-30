@@ -270,18 +270,18 @@ void clear_kizetsu_point(PLW* wk) {
 
 void set_super_arts_status(s16 pl)
 {
-    const u8 *data;
+    const SA_DATA *data;
 
-    data = super_arts_data[My_char[pl]][Super_Arts[pl]];
+    data = &super_arts_data[My_char[pl]][Super_Arts[pl]];
     super_arts[pl].kind_of_arts = Super_Arts[pl];
-    super_arts[pl].nmsa_g_ix = data[0];
-    super_arts[pl].exsa_g_ix = data[1];
-    super_arts[pl].nmsa_a_ix = data[2];
-    super_arts[pl].exsa_a_ix = data[3];
-    super_arts[pl].gauge_type = data[5];
-    super_arts[pl].gauge_len = *(s16 *)&data[6];
-    super_arts[pl].store_max = *(s16 *)&data[8];
-    super_arts[pl].dtm = *(s32 *)&data[12];
+    super_arts[pl].nmsa_g_ix = data->nmsa_g_ix;
+    super_arts[pl].exsa_g_ix = data->exsa_g_ix;
+    super_arts[pl].nmsa_a_ix = data->nmsa_a_ix;
+    super_arts[pl].exsa_a_ix = data->exsa_a_ix;
+    super_arts[pl].gauge_type = data->gauge_type;
+    super_arts[pl].gauge_len = data->gauge_len;
+    super_arts[pl].store_max = data->store_max;
+    super_arts[pl].dtm = data->dtm;
     super_arts[pl].store = 0;
     super_arts[pl].gauge.s.h = 0;
     super_arts[pl].gauge.s.l = -1;

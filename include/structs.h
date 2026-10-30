@@ -435,6 +435,20 @@ typedef struct {
     s16 bacckup_g_h;
 } SA_WORK;
 
+/* super_arts_data: one super art, copied into SA_WORK by set_super_arts_status */
+typedef struct {
+    u8 nmsa_g_ix;
+    u8 exsa_g_ix;
+    u8 nmsa_a_ix;
+    u8 exsa_a_ix;
+    u8 unused;
+    u8 gauge_type;
+    s16 gauge_len;
+    s16 store_max;
+    s16 unused2;
+    s32 dtm;            /* 0x10000 = 1.0 */
+} SA_DATA;
+
 /* SA_WORK gauge_type: how the art's gauge works (sag_jmp_tbl) */
 #define SA_GAUGE_STOCK  0       /* sag_normal: the art takes a stock */
 #define SA_GAUGE_TIMER  1       /* sag_timer: the art lasts while the gauge drains */
@@ -2123,8 +2137,8 @@ typedef struct {
 } NAME_PLATE;
 
 typedef struct {
-    u32 adrs;
-    u32 cur;
+    const u32* adrs;
+    const u32* cur;
     s16 count;
     s16 r;
     s16 g;
@@ -2195,10 +2209,6 @@ typedef struct {
     s16 dotlen;
     s8 proccess_dead;
 } STN_DAT;
-
-typedef struct {
-    u32 fifo[5];
-} TASK_QUEUE;
 
 typedef struct {
     void (*func)();     /* 00 routine to start as a task */

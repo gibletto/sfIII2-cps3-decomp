@@ -357,7 +357,7 @@ s32 effect_67_init(WORK* master) {
     eff67_setup(ewk);
     ewk->master_player = My_char[Player_id];
     eff67_cnt0 = My_char[Player_id];
-    ewk->my_master = master;
+    ewk->my_master = (u32*)master;
     switch (Break_Into_CPU) {
     case 1:
         if (Player_id == 0) {

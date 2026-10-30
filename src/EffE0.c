@@ -178,11 +178,14 @@ s32 effect_E0_init(s16 Type) {
             work[i] = 32;
         }
     }
-    for (i = 0, delay = effE0_delay_tbl; i <= 7; i++) {
-        if ((ix = pull_effect_work(4)) == -1) {
+    i = 0;
+    delay = effE0_delay_tbl;
+    while (i <= 7) {
+        ix = pull_effect_work(4);
+        if (ix == -1) {
             return -1;
         }
-        ewk = (WORK_Other*)frw[ix];
+        ewk = (WORK_Other*)((u32)frw + (ix << 11));
         ewk->wu.be_flag = 1;
         ewk->wu.id = 140;
         ewk->wu.work_id = 16;
@@ -212,12 +215,7 @@ s32 effect_E0_init(s16 Type) {
             ewk->wu.mvxy.a[0].sp = -0x140000;
             ewk->wu.mvxy.d[0].sp = -0x8000;
         }
-    }
-    if (DEBUG_DISP) {
-        ewk->wu.id = 140;
-        ewk->wu.dir_step = 140;
-        ewk->wu.xyz[1].disp.pos = 35;
-        ewk->wu.dir_timer = *delay;
+        i++;
     }
     return 0;
 }
