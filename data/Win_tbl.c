@@ -1,7 +1,7 @@
 /*
  * WIN_TBL.C  damage power tables
  *
- * Damage_Power_Data is the base damage for each attack power number; after it, pow_byte_tbl and
+ * Power_Data is the base damage for each attack power number; after it, pow_byte_tbl and
  * Pow_Rate_Data, which nothing in the program reads. Pow_Control_Data_1 is the
  * damage rate in percent per round level, one row for Shin Gouki and one for everyone else.
  * Read by POW_POW.C (cal_damage_vitality and cal_damage_vitality_eff).
@@ -12,10 +12,10 @@
 
 #pragma section TBL
 
-extern const s16 Damage_Power_Data[];
+extern const s16 Power_Data[];
 extern const s8 Pow_Control_Data_1[][8];
 
-const s16 Damage_Power_Data[256] = {
+const s16 Power_Data[256] = {
     0, 5, 10, 15, 20, 25, 30, 35,
     40, 45, 50, 55, 60, 65, 70, 75,
     80, 85, 90, 95, 100, 105, 110, 115,

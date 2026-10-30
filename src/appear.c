@@ -2,7 +2,7 @@
  * APPEAR.C  Fighter entrance (appearance) sequences
  *
  * Runs each fighter's entrance at the start of a match. appear_data_set loads an APPEAR_DATA entry chosen
- * from appear_type_tbl (or appear_type_hv_tbl for a home/visitor rematch, home_visitor_check) by fighter,
+ * from app_type_tbl (or app_type_tbl2 for a home/visitor rematch, home_visitor_check) by fighter,
  * stage and area, and appear_player dispatches on routine_no[4] through the 25-slot appear_jmp_tbl to
  * Appear_00000-Appear_24000: walk-ins, jumps and drops, poses, vehicles and props. The Yun/Yang and Sean
  * match-ups have their own checks. Appear_flag, Appear_free and Appear_end signal the stage and the game
@@ -350,9 +350,9 @@ void Appear_03000(PLW* wk) {
         break;
     case AP03_WAIT:
         if (Appear_hv[wk->wu.id]) {
-            appear_data_set(wk, &appear_data[appear_type_hv_tbl[wk->player_number][bg_w.stage][bg_w.area]]);
+            appear_data_set(wk, &appear_data[app_type_tbl2[wk->player_number][bg_w.stage][bg_w.area]]);
         } else {
-            appear_data_set(wk, &appear_data[appear_type_tbl[wk->player_number][bg_w.stage][bg_w.area]]);
+            appear_data_set(wk, &appear_data[app_type_tbl[wk->player_number][bg_w.stage][bg_w.area]]);
         }
         if (Appear_flag[wk->wu.id]) {
             wk->wu.routine_no[3]++;
@@ -366,9 +366,9 @@ void Appear_03000(PLW* wk) {
         if (wk->wu.cg_type == 9) {
             wk->wu.routine_no[3]++;
             if (Appear_hv[wk->wu.id]) {
-                appear_data_set(wk, &appear_data[appear_type_hv_tbl[wk->player_number][bg_w.stage][bg_w.area]]);
+                appear_data_set(wk, &appear_data[app_type_tbl2[wk->player_number][bg_w.stage][bg_w.area]]);
             } else {
-                appear_data_set(wk, &appear_data[appear_type_tbl[wk->player_number][bg_w.stage][bg_w.area]]);
+                appear_data_set(wk, &appear_data[app_type_tbl[wk->player_number][bg_w.stage][bg_w.area]]);
             }
             set_char_move_init(&wk->wu, 9, wk->wu.char_index);
         }

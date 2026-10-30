@@ -369,7 +369,7 @@ void sc_chr_list_trans(s8 ix) {
     for (i = 0; i < n; i++) {
         sc_trans_dst = (u16*)((SS_RAM + 0x8000) + *slot++ * 64);
         sc_trans_src = (u8*)((u32)sc_chr_data + *src++ * 32);
-        sc_trans_src = (u8*)((u32)sc_chr_data + (*src++ * 32 / 2) * 2);
+        sc_trans_src = (u8*)sc_chr_data + (*src++ * 32 / 2) * 2;
         *sc_trans_dst = *sc_trans_src;
     }
 }
@@ -559,7 +559,7 @@ void player_name_trans(void) {
             if ((My_char[i] & 0x7F) == PL_GOUKI1 || (My_char[i] & 0x7F) == PL_GOUKI2) {
                 sc_trans_src = (u8*)((u32)sc_chr_data + (16 * 4 + i * 68 + 0x408) * 32);
             } else {
-                sc_trans_src = (u8*)((u32)sc_chr_data + ((My_char[i] & 0x7F) * 4 + i * 68 + 0x408) * 32);
+                sc_trans_src = (u8*)&sc_chr_data[((My_char[i] & 0x7F) * 4 + i * 68 + 0x408) * 16];
             }
             sc_chr_trans(4);
             sc_trans_dst = (u16*)(SS_RAM + 0x8E80);

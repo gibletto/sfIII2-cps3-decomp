@@ -3,7 +3,7 @@
  *
  * scr_obj_num18 gives the number of effect 18 objects for each stage setting and compel flag,
  * and scr_obj_data18_0 .. scr_obj_data18_10 their settings, reached through scr_obj_data18;
- * read by EFF18.C, which holds effects 17 and 18. eff21_data_adrs_0 gives the pattern,
+ * read by EFF18.C, which holds effects 17 and 18. eff21_data_tbl_00 gives the pattern,
  * position, priority and flip of the three breakable parts of effect 21, and eff21_sp_tbl
  * their speeds and accelerations (EFF21.C). eff23_data_tbl holds the three broken pieces of
  * the effect 23 object (EFF23.C), used only by effect_23_parts_init, which nothing calls.
@@ -26,7 +26,7 @@ extern const s16 scr_obj_data18_7[][12];
 extern const s16 scr_obj_data18_8[][12];
 extern const s16 scr_obj_data18_9[][12];
 extern const s16 scr_obj_data18_10[][12];
-extern const s16 eff21_data_adrs_0[];
+extern const s16 eff21_data_tbl_00[];
 extern const s32 eff21_sp_tbl[][4];
 extern const s16 eff23_data_tbl[];
 
@@ -97,7 +97,7 @@ const s16 scr_obj_data18_10[1][12] = {
     { 0, 2, 0x2040, 735, 48, 72, 8, 9, 1, 0, 0, 0 },
 };
 
-const s16 eff21_data_adrs_0[16] = {
+const s16 eff21_data_tbl_00[16] = {
     0, 696, 64, 74, 0, 2, 752, 84,
     74, 0, 4, 752, 63, 74, 1, -1,
 };

@@ -96,7 +96,7 @@ void Select_Flow_2nd(void) {
             M_Timer = 30;
             Forbid_Break = -1;
             Ignore_Entry[LOSER] = 0;
-            bgm_request(1);
+            BGM_Request(1);
         }
         break;
     }

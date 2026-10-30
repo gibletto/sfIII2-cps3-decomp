@@ -357,7 +357,7 @@ s16 pl_num;
         break;
     case END_STAFF:
         Forbid_Break = 0;
-        if (staff_roll_main(end_staff_flag)) {
+        if (staff_credits(end_staff_flag)) {
             end_w.r_no_0 += 1;
         }
         break;
@@ -504,7 +504,7 @@ s16 pl_num;
         }
         break;
     case GOU_STAFF:
-        if (staff_roll_main(end_staff_flag)) {
+        if (staff_credits(end_staff_flag)) {
             end_w.r_no_0 += 1;
         }
         break;
@@ -592,7 +592,7 @@ void common_end_init00(s16 pl_num) {
     end_cont_coin = Continue_Coin[WINNER];
     end_w.type = pl_num;
     bg_w.bg_index = end_bg_index_tbl[end_w.type];
-    bg_w.scno = end_scno_tbl[end_w.type];
+    bg_w.scno = end_use_scr[end_w.type];
     n = ((end_bg_gfx_tbl[bg_w.bg_index].size << 4) + 0xFFF) / 0x1000;
     blocks = n;
     scr_cg_c_no = simmram_block_alloc_10(blocks, 1);
@@ -747,10 +747,9 @@ void end_scn_pos_set2(void) {
 
 
 void end_bg_block_attr_add(s16 bg, s32 ofs, s16 w, s32 cell, s16 h) {
-    BGW* bgw;
     u16* adrs;
-    adrs = (bgw = &bg_w.bgw[bg])->bg_address;
-    oh_opening_demo(adrs, ofs, w, cell, h, 0x220, bgw->r_limit);
+    adrs = bg_w.bgw[bg].bg_address;
+    oh_opening_demo(adrs, ofs, w, cell, h, 0x220, bg_w.bgw[bg].r_limit);
 }
 
 

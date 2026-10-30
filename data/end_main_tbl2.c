@@ -2,7 +2,7 @@
  * END_MAIN_TBL2.C  ending background tables
  *
  * Indexed by the ending's character number: end_bg_index_tbl picks the ending's background,
- * whose scroll graphics source and size are in end_bg_gfx_tbl, and end_scno_tbl gives its
+ * whose scroll graphics source and size are in end_bg_gfx_tbl, and end_use_scr gives its
  * number of BG layers; read by END_MAIN_C.C. end_cg_src_tbl holds the screen data of the
  * ending backgrounds, and end_map_data_0 .. 3 are the layout records of the four ending BG
  * layers, which end_map_tbl in OP_END_WORK.C points at for sprite_list_setup.
@@ -13,7 +13,7 @@
 
 #pragma section TBL
 
-extern const s16 end_scno_tbl[];
+extern const s16 end_use_scr[];
 extern const s16 end_bg_index_tbl[];
 extern const END_BG_GFX end_bg_gfx_tbl[];
 extern const u32 end_cg_src_tbl[];
@@ -32,7 +32,7 @@ extern const u16 end_600_scrn_data[11][16][32];
 extern const u16 end_900_scrn_data[8][16][32];
 extern const u16 end_scrn_data[95][16][32];
 
-const s16 end_scno_tbl[16] = {
+const s16 end_use_scr[16] = {
     0, 2, 2, 2, 2, 2, 2, 2,
     3, 1, 2, 2, 3, 2, 2, 2,
 };

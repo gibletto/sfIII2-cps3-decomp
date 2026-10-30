@@ -89,7 +89,7 @@ s16 D_No3;  /* 02014240 */
 u8 Present_Rank[2];  /* 02014242 */
 s8 Rank_In[2][2];  /* 02014244 */
 s8 Request_Disp_Rank[2][2];  /* 02014248 */
-s8 Rank_Demo_Loop;  /* 0201424C */
+s8 Demo_Type;  /* 0201424C */
 s8 Rank_Type;  /* 0201424D */
 s8 Flash_Sign[2];  /* 0201424E */
 s8 Flash_Rank_Time;  /* 02014250 */
@@ -232,7 +232,7 @@ u8 Continue_Coin[2];  /* 0201446D */
 s8 Ignore_Entry[2];  /* 0201446F */
 s16 Cursor_Y[2];  /* 02014472 */
 s16 eff98_plate_z[2][3];  /* 02014476, provisional name */
-s8 Last_Arts_PL;  /* 02014482 */
+s8 Slide_Type;  /* 02014482 */
 /* the code declares Order_Dir[100]; Order_Timer starts after its first 6 entries */
 s8 Order_Dir[6];  /* 02014483 */
 /* the code declares Order_Timer[100]; Moving_Plate starts after its first 6 entries */
@@ -251,7 +251,7 @@ s16 Insert_Y;  /* 020144C2 */
 u8 Insert_Y_tail[2];  /* after Insert_Y; nothing refers to it by name or address */
 u8 Version_Type;  /* 020144C6 */
 u8 Version_Type_tail[1];  /* after Version_Type; nothing refers to it by name or address */
-s8 BGM_Fade_Out_Flag;  /* 020144C8 */
+s8 Music_Fade;  /* 020144C8 */
 s16 zoom_request_flag;  /* 020144CA */
 s16 zoom_req_flag_old;  /* 020144CC */
 s16 zoom_request_level;  /* 020144CE */
@@ -305,10 +305,10 @@ u16 BGM_Timer;  /* 020145DE */
 s8 sa_gauge_flash[2];  /* 020145E0 */
 s8 Receive_Flag[2];  /* 020145E2 */
 s8 Disposal_Again[2];  /* 020145E4 */
-u16 pcon_timer;  /* 020145E6 */
+u16 players_timer;  /* 020145E6 */
 s8 unused_flag_a;  /* 020145E8 */
-volatile s8 BGM_Fade_Level;  /* 020145E9 */
-u8 Decided_My_char[2];  /* 020145EA */
+volatile s8 BGM_Vol;  /* 020145E9 */
+u8 Used_char[2];  /* 020145EA */
 s8 Break_Com[2][16];  /* 020145EC */
 s8 Sel_Exit_Flag;  /* 0201460C */
 u16 EM_Course[2];  /* 0201460E: the CPU course each player picks on the select screen (0-3, FFFF none yet); provisional name */

@@ -206,7 +206,6 @@ void effect_B8_move(WORK_Other_CONN* ewk) {
     }
 }
 
-/* provisional name */
 
 
 

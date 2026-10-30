@@ -3,7 +3,7 @@
  *
  * wipe_clear_pattern_tbl gives, per wipe kind, the clearing bitmap (wipe_clear_bitmap_0 - 4 in
  * SLOWF_TBL.C, one 32-byte row per step), and wipe_column_tbl the column order of each step
- * (wipe_column_map_0 - 3); these are read by SE.C and SE_2.C. stage_bgm_tbl is the BGM code of
+ * (wipe_column_map_0 - 3); these are read by SE.C and SE_2.C. BGM_Stage_Data is the BGM code of
  * each stage, init_fade_voice_tbl the sound channels stopped at sound start-up, SE_Shock_Data
  * the hit sound codes Se_Shock checks for on a knockout, and Finish_SE_Data the finishing
  * sound replacements; these are read by SE_3.C.
@@ -20,7 +20,7 @@ extern const u8 wipe_column_map_1[];
 extern const u8 wipe_column_map_2[];
 extern const u8 wipe_column_map_3[];
 extern const ByteMapSrc wipe_column_tbl[];
-extern const s16 stage_bgm_tbl[];
+extern const s16 BGM_Stage_Data[];
 extern const s8 init_fade_voice_tbl[];
 extern const s16 SE_Shock_Data[];
 extern const s16 Finish_SE_Data[][7];
@@ -74,7 +74,7 @@ const ByteMapSrc wipe_column_tbl[6] = {
     { wipe_column_map_3, 16, 0 },
 };
 
-const s16 stage_bgm_tbl[17] = {
+const s16 BGM_Stage_Data[17] = {
     19, 11, 12, 13, 14, 15, 32, 16,
     17, 18, 34, 33, 29, 35, 36, 37,
     41,

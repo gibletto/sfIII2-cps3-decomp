@@ -37,7 +37,7 @@
 
 
 void effect_53_move(WORK_Other* ewk) {
-    if (pcon_rno[0] == PCON_DIE && pcon_rno[1] == 3) {
+    if (pcon_rno[0] == PCON_DIE && pcon_rno[1] == SETTLE_JUDGE) {
         ewk->wu.routine_no[0] = R0_KILL;
         ewk->wu.disp_flag = 0;
     }

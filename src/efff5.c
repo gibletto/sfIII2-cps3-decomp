@@ -26,14 +26,14 @@
 #define R1_MOVE         1       /* the type's main state */
 #define R1_KILL         2       /* (default) put the work back */
 
-/* routine_no[1], efff5_0009 */
+/* routine_no[1], efff5_9000 */
 #define R1_WAIT         1       /* wait four frames */
 #define R1_GLIDE        2       /* glide to its place over ten frames */
 #define R1_STAY         3       /* stay at its place */
 
 
 void effect_F5_move(WORK_Other* ewk) {
-    void (*efff5_jp[12])(WORK_Other*) = { efff5_0000, efff5_0001, efff5_0002, efff5_0003, efff5_0004, efff5_0005, efff5_0006, efff5_0007, efff5_0008, efff5_0009, efff5_0010, efff5_0011 };
+    void (*efff5_jp[12])(WORK_Other*) = { efff5_0000, efff5_1000, efff5_2000, efff5_3000, efff5_4000, efff5_5000, efff5_6000, efff5_7000, efff5_8000, efff5_9000, efff5_A000, efff5_B000 };
     efff5_jp[ewk->wu.routine_no[0]](ewk);
 }
 
@@ -67,7 +67,7 @@ void efff5_0000(WORK_Other* ewk) {
 
 
 
-void efff5_0001(WORK_Other* ewk) {
+void efff5_1000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -86,7 +86,7 @@ void efff5_0001(WORK_Other* ewk) {
 
 
 
-void efff5_0002(WORK_Other* ewk) {
+void efff5_2000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -107,7 +107,7 @@ void efff5_0002(WORK_Other* ewk) {
 
 
 
-void efff5_0003(WORK_Other* ewk) {
+void efff5_3000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -129,7 +129,7 @@ void efff5_0003(WORK_Other* ewk) {
 
 
 
-void efff5_0004(WORK_Other* ewk) {
+void efff5_4000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -150,7 +150,7 @@ void efff5_0004(WORK_Other* ewk) {
 
 
 
-void efff5_0005(WORK_Other* ewk) {
+void efff5_5000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -180,7 +180,7 @@ void efff5_0005(WORK_Other* ewk) {
 
 
 
-void efff5_0006(WORK_Other* ewk) {
+void efff5_6000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -207,7 +207,7 @@ void efff5_0006(WORK_Other* ewk) {
 
 
 
-void efff5_0007(WORK_Other* ewk) {
+void efff5_7000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -233,8 +233,7 @@ void efff5_0007(WORK_Other* ewk) {
 
 
 
-/* provisional name */
-void efff5_0008(WORK_Other* ewk) {
+void efff5_8000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -255,7 +254,7 @@ void efff5_0008(WORK_Other* ewk) {
 
 
 
-void efff5_0009(WORK_Other* ewk) {
+void efff5_9000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -300,7 +299,7 @@ void efff5_0009(WORK_Other* ewk) {
 
 
 
-void efff5_0010(WORK_Other* ewk) {
+void efff5_A000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;
@@ -345,7 +344,7 @@ void efff5_0010(WORK_Other* ewk) {
 
 
 
-void efff5_0011(WORK_Other* ewk) {
+void efff5_B000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         ewk->wu.routine_no[1]++;

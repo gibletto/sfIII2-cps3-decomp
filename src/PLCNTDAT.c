@@ -146,7 +146,6 @@ void reset_round_and_screen(void) {
 
 
 
-/* provisional name */
 void erase_extra_plef_work(void) {
     effect_work_list_release(0, 0);
     effect_work_list_release(1, 1);
@@ -245,7 +244,6 @@ void setup_other_data(PLW* wk) {
 
 
 
-/* provisional name */
 void set_kizetsu_status(ix)
 s16 ix;
 {
@@ -314,7 +312,7 @@ s16 ix;
     if (plw[ix].tsukamare_f) {
         return 1;
     }
-    if (pcon_rno[0] == PCON_DIE && pcon_rno[1] == SETTLE_KO && pcon_rno[2] == 2) {
+    if (pcon_rno[0] == PCON_DIE && pcon_rno[1] == SETTLE_KO && pcon_rno[2] == KO_FOOTWORK) {
         return 0;
     }
     if (plw[ix].wu.cg_ja.boix == 0 && plw[ix].wu.cg_ja.cuix == 0 && plw[ix].wu.pat_status == 38) {

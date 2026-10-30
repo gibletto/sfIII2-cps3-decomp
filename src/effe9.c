@@ -54,7 +54,7 @@ s32 effect_E9_init(void) {
         if ((ix = pull_effect_work(4)) == -1) {
             return -1;
         }
-        ewk = (WORK_Other*)((u32)frw + (ix << 11));
+        ewk = (WORK_Other*)frw[ix];
         ewk->wu.id = 149;
         ewk->wu.be_flag = 1;
         ewk->wu.type = i;
@@ -75,7 +75,7 @@ s32 effect_E9_init(void) {
             if ((ix = pull_effect_work(4)) == -1) {
                 return -1;
             }
-            ewk = (WORK_Other*)((u32)frw + (ix << 11));
+            ewk = (WORK_Other*)frw[ix];
             ewk->wu.id = 149;
             ewk->wu.be_flag = 1;
             ewk->wu.type = i;

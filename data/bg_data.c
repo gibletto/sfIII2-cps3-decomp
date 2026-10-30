@@ -2,7 +2,7 @@
  * BG_DATA.C  stage background index table
  *
  * bg_index_tbl gives the background number (bg_index) for each stage and area, and every other
- * stage background table is indexed by it; etc_bg_pos_tbl is the starting x and y of each
+ * stage background table is indexed by it; bg_pos_tbl2 is the starting x and y of each
  * layer of the special screens. Read by BG000.C (bg_initialize, bg_end_initialize,
  * bg_etc_write). bg_index_tbl_tail, which follows bg_index_tbl, and bg_test_menu_scr, the
  * position lines of the background test (strings in BG_DATA2.C), are not referred to.
@@ -15,7 +15,7 @@
 
 extern const s16 bg_index_tbl[][3];
 extern const s16 bg_index_tbl_tail[];
-extern const s32 etc_bg_pos_tbl[][4][2];
+extern const s32 bg_pos_tbl2[][4][2];
 extern const TM_STRING bg_test_menu_scr[];
 extern const s8 str_BG_1_POS_X[];
 extern const s8 str_BG_1_POS_Y[];
@@ -62,8 +62,7 @@ const s16 bg_index_tbl_tail[30] = {
     256, 256, 312, 0, 0, 0,
 };
 
-/* provisional name */
-const s32 etc_bg_pos_tbl[5][4][2] = {
+const s32 bg_pos_tbl2[5][4][2] = {
     { { 33554432, -3145728 }, { 33554432, 0 }, { 0, 0 }, { 0, 0 } },
     { { 30932992, 0 }, { 33554432, 0 }, { 0, 0 }, { 0, 0 } },
     { { 33554432, 0 }, { 33554432, 0 }, { 0, 0 }, { 0, 0 } },

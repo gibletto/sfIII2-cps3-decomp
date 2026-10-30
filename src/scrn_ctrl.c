@@ -243,7 +243,6 @@ end:;
 
 
 
-/* provisional name */
 void Zoomf_Init(void) {
     zoom_frame[0].pos = 0;
     zoom_frame[0].size = 0;

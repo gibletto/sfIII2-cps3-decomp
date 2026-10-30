@@ -9,7 +9,7 @@
 #include "types.h"
 #include "structs.h"
 
-extern const u16 efff9_no_scene[];
+extern const u16 plXXtxt0[];
 extern const u16 txt_no_00_1[];
 extern const u16 txt_no_00_2[];
 extern const u16 txt_no_00_3[];
@@ -254,7 +254,7 @@ const EFFF9_MESSAGE* effF9_mes_pt[17] = {
 };
 /* provisional name */
 const u16* txt_no_00[9] = {
-    efff9_no_scene, txt_no_00_1,
+    plXXtxt0, txt_no_00_1,
     txt_no_00_2, txt_no_00_3,
     txt_no_00_4, txt_no_00_5,
     txt_no_00_6, txt_no_00_7,
@@ -262,13 +262,13 @@ const u16* txt_no_00[9] = {
 };
 /* provisional name */
 const u16* txt_no_02[5] = {
-    efff9_no_scene, txt_no_02_1,
+    plXXtxt0, txt_no_02_1,
     txt_no_02_2, txt_no_02_3,
     txt_no_02_4,
 };
 /* provisional name */
 const u16* txt_no_03[10] = {
-    efff9_no_scene, txt_no_03_1,
+    plXXtxt0, txt_no_03_1,
     txt_no_03_2, txt_no_03_3,
     txt_no_03_4, txt_no_03_5,
     txt_no_03_6, txt_no_03_7,
@@ -276,7 +276,7 @@ const u16* txt_no_03[10] = {
 };
 /* provisional name */
 const u16* txt_no_10[10] = {
-    efff9_no_scene, txt_no_03_2,
+    plXXtxt0, txt_no_03_2,
     txt_no_03_1, txt_no_03_3,
     txt_no_03_4, txt_no_03_5,
     txt_no_03_7, txt_no_03_6,
@@ -284,20 +284,20 @@ const u16* txt_no_10[10] = {
 };
 /* provisional name */
 const u16* txt_no_04[6] = {
-    efff9_no_scene, txt_no_04_1,
+    plXXtxt0, txt_no_04_1,
     txt_no_04_2, txt_no_04_3,
     txt_no_04_4, txt_no_04_5,
 };
 /* provisional name */
 const u16* txt_no_05[7] = {
-    efff9_no_scene, txt_no_05_1,
+    plXXtxt0, txt_no_05_1,
     txt_no_05_2, txt_no_05_3,
     txt_no_05_4, txt_no_05_5,
     txt_no_05_6,
 };
 /* provisional name */
 const u16* txt_no_06[9] = {
-    efff9_no_scene, txt_no_06_1,
+    plXXtxt0, txt_no_06_1,
     txt_no_06_2, txt_no_06_3,
     txt_no_06_4, txt_no_06_5,
     txt_no_06_6, txt_no_06_7,
@@ -305,7 +305,7 @@ const u16* txt_no_06[9] = {
 };
 /* provisional name */
 const u16* txt_no_07[11] = {
-    efff9_no_scene, txt_no_07_1,
+    plXXtxt0, txt_no_07_1,
     txt_no_07_2, txt_no_07_3,
     txt_no_07_4, txt_no_07_5,
     txt_no_07_6, txt_no_07_7,
@@ -314,44 +314,44 @@ const u16* txt_no_07[11] = {
 };
 /* provisional name */
 const u16* txt_no_08[5] = {
-    efff9_no_scene, txt_no_08_1,
+    plXXtxt0, txt_no_08_1,
     txt_no_08_2, txt_no_08_3,
     txt_no_08_4,
 };
 /* provisional name */
 const u16* txt_no_09[6] = {
-    efff9_no_scene, txt_no_09_1,
+    plXXtxt0, txt_no_09_1,
     txt_no_09_2, txt_no_09_3,
     txt_no_09_4, txt_no_09_5,
 };
 /* provisional name */
 const u16* txt_no_11[7] = {
-    efff9_no_scene, txt_no_11_1,
+    plXXtxt0, txt_no_11_1,
     txt_no_11_2, txt_no_11_3,
     txt_no_11_4, txt_no_11_5,
     txt_no_11_6,
 };
 /* provisional name */
 const u16* txt_no_12[6] = {
-    efff9_no_scene, txt_no_12_1,
+    plXXtxt0, txt_no_12_1,
     txt_no_12_2, txt_no_12_3,
     txt_no_12_4, txt_no_12_5,
 };
 /* provisional name */
 const u16* txt_no_13[5] = {
-    efff9_no_scene, txt_no_13_1,
+    plXXtxt0, txt_no_13_1,
     txt_no_13_2, txt_no_13_3,
     txt_no_13_4,
 };
 /* provisional name */
 const u16* txt_no_14[6] = {
-    efff9_no_scene, txt_no_14_1,
+    plXXtxt0, txt_no_14_1,
     txt_no_14_2, txt_no_14_3,
     txt_no_14_4, txt_no_14_5,
 };
 /* provisional name */
 const u16* txt_no_15[2] = {
-    efff9_no_scene, txt_no_15_1,
+    plXXtxt0, txt_no_15_1,
 };
 /* the code declares txt_no_tbl[28]; effg0_judge_count starts after its first 17 entries */
 /* 020083E8 */

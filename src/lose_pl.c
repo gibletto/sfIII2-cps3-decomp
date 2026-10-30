@@ -68,7 +68,7 @@ void lose_player(PLW* wk) {
     if (pcon_rno[0] == PCON_DIE && (pcon_rno[1] == SETTLE_SPECIAL || pcon_rno[1] == SETTLE_SPECIAL2)) {
         lose_time_over(wk);
     } else {
-        lose_jp_tbl[lose_type_tbl[wk->player_number]](wk);
+        lose_jp_tbl[loser_type_tbl[wk->player_number]](wk);
     }
 }
 
@@ -253,7 +253,7 @@ void lose_stage8_action(PLW* wk) {
     switch (lose_rno[2]) {
     case LS8_INIT:
         lose_rno[2]++;
-        lose_rno[1] = 0;
+        lose_rno[1] = LS8_WAIT_BG;
         if (wk->wu.pat_status != 38) {
             lose_rno[0] = 0;
             set_char_move_init(&wk->wu, 9, 60);

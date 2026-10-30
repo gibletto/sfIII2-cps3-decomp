@@ -40,7 +40,6 @@ void bg160_layer1_init00(void);
 #pragma inline(bg160_layer1, bg160_layer0)
 
 
-/* provisional name */
 void BG160(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg160_layer1();

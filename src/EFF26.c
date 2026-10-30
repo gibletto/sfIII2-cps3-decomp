@@ -306,7 +306,6 @@ void eff26_04(WORK_Other* ewk) {
 
 void eff26_05(WORK_Other* ewk) {
     WORK_Other* oya = (WORK_Other*)ewk->my_master;
-    s8* obroll = &EXE_obroll;
 
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
@@ -327,7 +326,7 @@ void eff26_05(WORK_Other* ewk) {
         }
         break;
     case R1_BREAK:
-        if (!*obroll) {
+        if (!EXE_obroll) {
             char_move(&ewk->wu);
         }
         if (ewk->wu.cg_type == 1) {
@@ -355,7 +354,7 @@ void eff26_05(WORK_Other* ewk) {
         }
         break;
     case R1_SMASH:
-        if (!*obroll) {
+        if (!EXE_obroll) {
             char_move(&ewk->wu);
         }
         if (ewk->wu.cg_type == 1) {
@@ -365,7 +364,7 @@ void eff26_05(WORK_Other* ewk) {
     case R1_DONE:
         break;
     case R1_WRECK:
-        if (!*obroll) {
+        if (!EXE_obroll) {
             char_move(&ewk->wu);
         }
         break;

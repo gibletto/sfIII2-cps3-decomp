@@ -336,14 +336,14 @@ s16 Option;
 void Setup_KA_Jump(PLW* wk) {
     s16 xx;
     CP_Index[wk->wu.id][3] = 2;
-    xx = KA_Jump_Data[wk->player_number];
+    xx = Back_Jump_Data[wk->player_number];
     if (wk->wu.rl_waza) {
-        xx = wk->wu.xyz[0].disp.pos - KA_Jump_Data[wk->player_number];
+        xx = wk->wu.xyz[0].disp.pos - Back_Jump_Data[wk->player_number];
         if ((bg_w.bgw[1].l_limit2 - bg_w.pos_offset) > xx) {
             CP_Index[wk->wu.id][3] = 1;
         }
     } else {
-        xx = wk->wu.xyz[0].disp.pos + KA_Jump_Data[wk->player_number];
+        xx = wk->wu.xyz[0].disp.pos + Back_Jump_Data[wk->player_number];
         if ((bg_w.bgw[1].r_limit2 + bg_w.pos_offset) < xx) {
             CP_Index[wk->wu.id][3] = 1;
         }
@@ -1601,7 +1601,6 @@ s32 Check_Term_Sub(PLW* wk, s16 Distance, s16 Range) {
 
 
 
-/* provisional name */
 s32 Correct_Unit_PL(PLW* wk) {
     return Correct_VS_Air_Data[My_char[Player_id]];
 }
@@ -1936,8 +1935,7 @@ s16 Range_JX;
 s16 Range_JY;
 s16 J_Lever_Data;
 {
-    s32 Reaction2;
-    switch (Reaction2 = Reaction & 0x7F, CP_Index[wk->wu.id][1]) {
+    switch (CP_Index[wk->wu.id][1]) {
     case 0:
         Setup_Lever_LR(wk, wk->wu.id, Reaction & 0xF000);
         if ((wk->wu.routine_no[1] == PLAYER_ATTACK) && (wk->wu.cg_type != 0x40)) {
@@ -1994,12 +1992,12 @@ s16 J_Lever_Data;
         if (wk->wu.hf.hit.player) {
             Stock_Hit_Flag[wk->wu.id] = wk->wu.hf.hit.player;
         }
-        if (Check_Landed(wk, Reaction2) != 0) {
+        if (Check_Landed(wk, Reaction & 0x7F) != 0) {
             break;
         }
         break;
     case 5:
-        if (Check_Landed(wk, Reaction2) == 0) {
+        if (Check_Landed(wk, Reaction & 0x7F) == 0) {
             switch (Tech_Address[wk->wu.id][Tech_Index[wk->wu.id]]) {
             default:
             case 1:
@@ -2184,8 +2182,7 @@ s16 Range_JX;
 s16 Range_JY;
 u16 J_Lever_Data;
 {
-    s32 Reaction2;
-    switch (Reaction2 = Reaction & 0xFFF, CP_Index[wk->wu.id][1]) {
+    switch (CP_Index[wk->wu.id][1]) {
     case 0:
         Setup_Lever_LR(wk, wk->wu.id, Reaction & 0xF000);
         if (Check_Passive(wk) != 0) {
@@ -2264,7 +2261,7 @@ u16 J_Lever_Data;
         if (wk->wu.hf.hit.player) {
             Stock_Hit_Flag[wk->wu.id] = wk->wu.hf.hit.player;
         }
-        Check_Landed(wk, Reaction2);
+        Check_Landed(wk, Reaction & 0xFFF);
         break;
     case 6:
         if (Check_Landed(wk, Reaction) != 0) {
@@ -2287,7 +2284,7 @@ u16 J_Lever_Data;
         break;
     case 8:
         Stock_Hit_Flag[wk->wu.id] = wk->wu.hf.hit.player;
-        Check_Landed(wk, Reaction2);
+        Check_Landed(wk, Reaction & 0xFFF);
         break;
     default:
         if (Attack_Flag[wk->wu.id]) {
@@ -2351,7 +2348,7 @@ s32 Check_Com_Add_Y(PLW* wk, s16 Pos_Y, s16 Range) {
 
 /* provisional name */
 s32 Check_Com_Add_Y_Sub(PLW* wk) {
-    if (wk->wu.routine_no[1] != PLAYER_ATTACK || (u8)wk->wu.cg_type == 64) {
+    if (wk->wu.routine_no[1] != PLAYER_ATTACK || wk->wu.cg_type == 64) {
         return 1;
     }
     return 0;
@@ -2382,7 +2379,7 @@ s16 Ex_Shot;
         CP_Index[wk->wu.id][1]++;
         Check_First_Menu(wk);
         if (Power_Level & 0x4000) {
-            Free_Lever[wk->wu.id] = Free_Lever_Data[(Power_Level & 0xF) - 8];
+            Free_Lever[wk->wu.id] = Power_Lv_Data[(Power_Level & 0xF) - 8];
         } else {
             Free_Lever[wk->wu.id] = 0;
         }
@@ -2411,7 +2408,7 @@ s16 Ex_Shot;
                 if ((Tech_Number & 0xF) == 0 || (Tech_Number & 0xF) == 1) {
                     if (Reaction == 0xC) {
                         CP_Index[wk->wu.id][1] = 0x63;
-                        Timer_00[wk->wu.id] = Command_Wait_Data[wk->player_number][Tech_Number];
+                        Timer_00[wk->wu.id] = Dash_Time_Data[wk->player_number][Tech_Number];
                     } else {
                         CP_Index[wk->wu.id][1] = 4;
                     }
@@ -2609,7 +2606,6 @@ s16 Tech_Number;
 
 
 
-/* provisional name */
 s32 Setup_Rapid_Time(wk, Tech_Number)
 PLW* wk;
 u16 Tech_Number;
@@ -3320,9 +3316,9 @@ s32 Select_Reflection_Time(PLW* wk) {
         Lv = 2;
     }
     if ((Break_Into_CPU == 1) || (Break_Into_CPU == 2)) {
-        return zz = Reflection_Time_Data[16][Lv][xx];
+        return zz = Reflection_Speed_Unit_Data[16][Lv][xx];
     }
-    return zz = Reflection_Time_Data[wk->player_number][Lv][xx];
+    return zz = Reflection_Speed_Unit_Data[wk->player_number][Lv][xx];
 }
 
 
@@ -3332,7 +3328,7 @@ s16 xx;
 {
     s16 i;
     const s16* zz;
-    zz = (const s16*)(Lv04_Time_Data[CC_Type] + xx);
+    zz = (const s16*)(Level_04_Data[CC_Type] + xx);
     for (i = 0; i < 3; i++) {
         if (Control_Time <= zz[i]) {
             return i;
@@ -3348,7 +3344,7 @@ s16 xx;
 {
     s16 i;
     const s16* zz;
-    zz = (const s16*)(Lv08_Time_Data[CC_Type] + xx);
+    zz = Level_08_Data[CC_Type][xx];
     for (i = 0; i < 7; i++) {
         if (Control_Time <= zz[i]) {
             break;
@@ -3364,7 +3360,7 @@ s16 xx;
 {
     s16 i;
     const s16* zz;
-    zz = (const s16*)(Lv10_Time_Data[CC_Type] + xx);
+    zz = (const s16*)(Level_10_Data[CC_Type] + xx);
     for (i = 0; i < 9; i++) {
         if (Control_Time <= zz[i]) {
             break;
@@ -3380,7 +3376,7 @@ s16 xx;
 {
     s16 i;
     const s16* zz;
-    zz = (const s16*)(Lv18_Time_Data[CC_Type] + xx);
+    zz = (const s16*)(Level_18_Data[CC_Type] + xx);
     for (i = 0; i < 17; i++) {
         if (Control_Time <= zz[i]) {
             break;
@@ -3633,7 +3629,7 @@ s16 Power_Level;
     if (wk->permited_koa & 0x10) {
         Last_Eftype[wk->wu.id] = wk->wu.cg_meoshi;
         M_Lv[wk->wu.id] = Get_Meoshi_Data(wk);
-        if ((s16)Pattern_Index[wk->wu.id] != 0) {
+        if (Pattern_Index[wk->wu.id] != 0) {
             Return_CP_No[wk->wu.id] = CP_No[wk->wu.id][0];
             Return_CP_Index[wk->wu.id] = CP_Index[wk->wu.id][0] + 1;
             CP_Index[wk->wu.id][1] = 0;
@@ -3768,19 +3764,19 @@ void Select_Active(PLW* wk) {
     } else {
         switch (Area_Number[wk->wu.id]) {
         case 0:
-            Pattern_Index[wk->wu.id] = Active_Area0_Data[wk->player_number][Lv][Rnd];
+            Pattern_Index[wk->wu.id] = Active_A_Unit_Data[wk->player_number][Lv][Rnd];
             Check_Bullet_Counter(wk);
             break;
         case 1:
-            Pattern_Index[wk->wu.id] = Active_Area1_Data[wk->player_number][Lv][Rnd];
+            Pattern_Index[wk->wu.id] = Active_B_Unit_Data[wk->player_number][Lv][Rnd];
             Check_Bullet_Counter(wk);
             break;
         case 2:
-            Pattern_Index[wk->wu.id] = Active_Area2_Data[wk->player_number][Lv][Rnd];
+            Pattern_Index[wk->wu.id] = Active_C_Unit_Data[wk->player_number][Lv][Rnd];
             Check_Bullet_Counter(wk);
             break;
         default:
-            Pattern_Index[wk->wu.id] = Active_Area3_Data[wk->player_number][Lv][Rnd];
+            Pattern_Index[wk->wu.id] = Active_D_Unit_Data[wk->player_number][Lv][Rnd];
             Check_Bullet_Counter(wk);
             break;
         }
@@ -3987,15 +3983,13 @@ s32 Check_Dramatic(wk, PL_id)
 PLW* wk;
 s16 PL_id;
 {
-    s32 rnd;
-    s32 rnd8;
-    if (rnd = Rnd, rnd8 = rnd | 8, plw[wk->wu.id].sa->ok) {
-        return rnd8;
+    if (plw[wk->wu.id].sa->ok) {
+        return Rnd | 8;
     }
     if ((plw[PL_id].wu.vital_new <= 0x30) || (plw[PL_id ^ 1].wu.vital_new <= 0x30)) {
-        return rnd8;
+        return Rnd | 8;
     }
-    return rnd;
+    return Rnd;
 }
 
 
@@ -4344,7 +4338,7 @@ s16 xx;
             Pattern_Index[wk->wu.id] = 0;
         }
     } else {
-        Pattern_Index[wk->wu.id] = Decide_Shell_Reaction(wk, tmw, Shell_Reaction_Type_Data[tmw->wu.type]);
+        Pattern_Index[wk->wu.id] = Decide_Shell_Reaction(wk, tmw, Shell_Change_Data_For_Reaction[tmw->wu.type]);
     }
     Setup_Shell_Disposal(wk, tmw);
 }
@@ -4909,40 +4903,40 @@ void Setup_Com_Max_Range(void) {
     const s16* row;
     u8 type = CC_Type;
     if (type == 2) {
-        limit = Lv18_Time_Data[type][Game_setting.Difficulty][14] + 20;
+        limit = Level_18_Data[type][Game_setting.Difficulty][14] + 20;
     } else {
-        limit = ((const s16*)&Lv18_Time_Data[type][Game_setting.Difficulty][0])[16] + 20;
+        limit = ((const s16*)&Level_18_Data[type][Game_setting.Difficulty][0])[16] + 20;
     }
     if (type == 2) {
-        xx = Lv18_Time_Data[type][8][14] + 20;
+        xx = Level_18_Data[type][8][14] + 20;
     } else {
-        xx = Lv18_Time_Data[type][8][16] + 20;
+        xx = Level_18_Data[type][8][16] + 20;
     }
     if (limit < xx) {
         limit = xx;
     }
     if (type == 2) {
-        xx = Lv10_Time_Data[type][0][7] + 20;
+        xx = Level_10_Data[type][0][7] + 20;
     } else {
-        xx = Lv10_Time_Data[type][0][8] + 20;
+        xx = Level_10_Data[type][0][8] + 20;
     }
     if (limit < xx) {
         limit = xx;
     }
-    xx = Lv08_Time_Data[type][0][6] + 20;
+    xx = Level_08_Data[type][0][6] + 20;
     if (limit < xx) {
         limit = xx;
     }
-    xx = Lv08_Time_Data[type][1][6] + 20;
+    xx = Level_08_Data[type][1][6] + 20;
     if (limit < xx) {
         limit = xx;
     }
-    row = Lv08_Time_Data[type][2];
+    row = Level_08_Data[type][2];
     xx = row[6] + 20;
     if (limit < xx) {
         limit = xx;
     }
-    xx = Lv04_Time_Data[type][0][2] + 20;
+    xx = Level_04_Data[type][0][2] + 20;
     if (limit < xx) {
         limit = xx;
     }

@@ -16,6 +16,6 @@ s32 effect_K6_init(s16 PL_id, s16 dir_old, s16 dm_vital, s16 Target_BG);
 void effect_K6_move(WORK_Other* ewk);
 void EFFK6_WAIT(WORK_Other* ewk);
 
-s32 chkNameExport(s16 name_no);
+s32 chkNameSuv(s16 name_no);
 
 #endif

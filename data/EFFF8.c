@@ -2,7 +2,7 @@
  * EFFF8.C  second parry mark offsets, ending scene lists and judge scene tables
  *
  * paring_b_mark_data is indexed by parry type and character and gives the { x, y } offset of
- * the parry mark from the player; read by EFFF8_CODE.C. efff9_no_scene (an empty list) and
+ * the parry mark from the player; read by EFFF8_CODE.C. plXXtxt0 (an empty list) and
  * the txt_no_NN_K lists are the characters' ending scenes of { message number, time } pairs,
  * each ended by 0, -1, reached through the txt_no_ tables of EFFF9_MES.C; a list is named
  * after the first entry that points at it (player table NN, entry K).
@@ -18,7 +18,7 @@
 #pragma section TBL
 
 extern const s16 paring_b_mark_data[][16][2];
-extern const u16 efff9_no_scene[];
+extern const u16 plXXtxt0[];
 extern const u16 txt_no_00_1[];
 extern const u16 txt_no_00_2[];
 extern const u16 txt_no_00_3[];
@@ -128,8 +128,7 @@ const s16 paring_b_mark_data[3][16][2] = {
     },
 };
 
-/* provisional name */
-const u16 efff9_no_scene[2] = {
+const u16 plXXtxt0[2] = {
     0, 0xFFFF,
 };
 

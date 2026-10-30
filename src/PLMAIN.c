@@ -79,12 +79,12 @@ void Player_move(PLW* wk, u16 lv_data) {
         if (wk->wu.operator) {
             wk->cp->sw_lvbt = lv_data;
         } else if (wk->sa_stop_flag != 1) {
-            wk->cp->sw_lvbt = sw_to_lvbt(CPU_Sub(wk));
+            wk->cp->sw_lvbt = processed_lvbt(CPU_Sub(wk));
         } else {
             wk->cp->sw_lvbt = 0;
         }
     } else {
-        wk->cp->sw_lvbt = sw_to_lvbt(cpu_algorithm(wk->wu.id));
+        wk->cp->sw_lvbt = processed_lvbt(cpu_algorithm(wk->wu.id));
     }
     if (wk->dead_flag) {
         wk->cp->sw_lvbt = 0;
@@ -192,9 +192,9 @@ void player_mv_1000(PLW* wk) {
         }
         Appear_hv[wk->wu.id] = home_visitor_check(wk);
         if (Appear_hv[wk->wu.id]) {
-            ap_work = appear_type_hv_tbl[wk->player_number][bg_w.stage][bg_w.area];
+            ap_work = app_type_tbl2[wk->player_number][bg_w.stage][bg_w.area];
         } else {
-            ap_work = appear_type_tbl[wk->player_number][bg_w.stage][bg_w.area];
+            ap_work = app_type_tbl[wk->player_number][bg_w.stage][bg_w.area];
         }
         dtbl = &appear_data[ap_work];
         appear_data_set(wk, dtbl);
@@ -442,7 +442,6 @@ PLW* wk;
 
 
 
-/* provisional name */
 void eag_union(wk)
 PLW* wk;
 {

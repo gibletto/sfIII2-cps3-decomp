@@ -183,10 +183,12 @@ s32 effect_A6_init(WORK_Other* mwk) {
             } else {
                 ewk->wu.position_x = 0x240;
             }
-        } else if (Game_setting.Screen_Mode == 0) {
-            ewk->wu.position_x = 0x278;
         } else {
-            ewk->wu.position_x = 0x2C0;
+            if (Game_setting.Screen_Mode == 0) {
+                ewk->wu.position_x = 0x278;
+            } else {
+                ewk->wu.position_x = 0x2C0;
+            }
         }
         if (My_char[Player_id] == PL_HUGO) {
             switch (My_char[COM_id]) {
@@ -214,10 +216,12 @@ s32 effect_A6_init(WORK_Other* mwk) {
             } else {
                 ewk->wu.position_x = 0x240;
             }
-        } else if (Game_setting.Screen_Mode == 0) {
-            ewk->wu.position_x = 0x278;
         } else {
-            ewk->wu.position_x = 0x2C0;
+            if (Game_setting.Screen_Mode == 0) {
+                ewk->wu.position_x = 0x278;
+            } else {
+                ewk->wu.position_x = 0x2C0;
+            }
         }
         mes_no = 8;
         break;

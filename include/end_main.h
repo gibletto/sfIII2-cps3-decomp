@@ -61,13 +61,13 @@ void op_bg0_move();
 void op_bg_move();
 void op_bg1_move();
 void op_bg2_move();
-void opening_bgw_commit_pos();
+void op_scrn_pos_set2();
 void opening_title_01();
 void opening_title(void);
 void op_108_move(void);
 void op_bg0_0014(s16 r_index);
 void end_00000(void);
-void update_all_disp_pos_ending(void);
+void Bg_Family_Set_op(void);
 
 void scrn_map_set(u16 n, u32 p);
 void scrn_map_set_now(u16 n, u32 p);

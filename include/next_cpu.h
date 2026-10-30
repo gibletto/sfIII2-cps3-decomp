@@ -34,7 +34,7 @@ void Next_CPU_5th(void);
 void Next_CPU_6th(void);
 void Next_Bonus_3rd(void);
 void Next_Bonus_End(void);
-void After_Bonus_4th(void);
+void NC_Cut_Sub(void);
 void After_Bonus_6th(void);
 void After_Bonus_End(void);
 void Select_CPU_1st(void);

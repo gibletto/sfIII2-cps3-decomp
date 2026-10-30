@@ -30,12 +30,12 @@
 
 
 const s16* scr_obj_data12[11] = {
-    scr_obj_data12_0,
-    scr_obj_data12_1,
-    scr_obj_data12_2,
-    scr_obj_data12_3,
-    scr_obj_data12_4,
-    scr_obj_data12_5,
+    eff12_data_tbl0,
+    eff12_data_tbl1,
+    eff12_data_tbl2,
+    eff12_data_tbl3,
+    eff12_data_tbl4,
+    eff12_data_tbl5,
     scr_obj_data12_6,
     scr_obj_data12_7,
     scr_obj_data12_8,

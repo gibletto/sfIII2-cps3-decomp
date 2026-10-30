@@ -39,8 +39,8 @@ void Combo_Demo_Init(void) {
     pcon_rno[2] = 0;
     pcon_rno[3] = 0;
     appear_type = APPEAR_STAND;
-    Demo_Ptr[0] = Combo_Demo_Lever_Data[(u8)Get_Demo_Index][0];
-    Demo_Ptr[1] = Combo_Demo_Lever_Data[(u8)Get_Demo_Index][1];
+    Demo_Ptr[0] = Combo_Demo_Lever_Data[Get_Demo_Index][0];
+    Demo_Ptr[1] = Combo_Demo_Lever_Data[Get_Demo_Index][1];
     clear_hit_queue();
     vital_cont_init();
     set_kizetsu_status(0);

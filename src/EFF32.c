@@ -66,7 +66,7 @@ void effect_32_move(WORK_Other* ewk) {
     case R0_ARRIVE:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
-            if ((u8)ewk->wu.cg_type == 0xFF) {
+            if (ewk->wu.cg_type == 0xFF) {
                 ewk->wu.routine_no[0]++;
                 set_char_move_init(&ewk->wu, 0, 5);
             }
@@ -77,7 +77,7 @@ void effect_32_move(WORK_Other* ewk) {
     case R0_POSE:
         if (!EXE_flag && !Game_pause) {
             char_move(&ewk->wu);
-            if ((u8)ewk->wu.cg_type == 10) {
+            if (ewk->wu.cg_type == 10) {
                 ewk->wu.cg_type = 0;
                 ewk->wu.kage_hx -= 8;
             }

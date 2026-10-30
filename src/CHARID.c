@@ -28,7 +28,7 @@ void set_char_base_data(WORK* wk) {
     wk->char_table[7] = cdat->exca;
     wk->char_table[8] = cdat->cbca;
     wk->char_table[9] = cdat->yuca;
-    wk->step_xy_table = (s16*)cdat->stxy;
+    wk->step_xy_table = cdat->stxy;
     wk->move_xy_table = (s16*)cdat->mvxy;
     wk->se_random_table = cdat->sernd;
     wk->overlap_char_tbl = cdat->ovct;
@@ -65,7 +65,7 @@ void set_char_base_data_ix(WORK* wk, s16 ix) {
     wk->char_table[7] = cdat->exca;
     wk->char_table[8] = cdat->cbca;
     wk->char_table[9] = cdat->yuca;
-    wk->step_xy_table = (s16*)cdat->stxy;
+    wk->step_xy_table = cdat->stxy;
     wk->move_xy_table = (s16*)cdat->mvxy;
     wk->se_random_table = cdat->sernd;
     wk->overlap_char_tbl = cdat->ovct;
@@ -103,7 +103,7 @@ void set_char_base_data_init(WORK* wk) {
     wk->char_table[7] = cdat->exca;
     wk->char_table[8] = cdat->cbca;
     wk->char_table[9] = cdat->yuca;
-    wk->step_xy_table = (s16*)cdat->stxy;
+    wk->step_xy_table = cdat->stxy;
     wk->move_xy_table = (s16*)cdat->mvxy;
     wk->se_random_table = cdat->sernd;
     wk->overlap_char_tbl = cdat->ovct;

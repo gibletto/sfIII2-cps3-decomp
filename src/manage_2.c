@@ -305,7 +305,7 @@ void Game_Manage_2_2(void) {
     }
     Complete_Judgement = 0;
     judge_flag = 0;
-    BGM_Fade_Out_Flag = 0;
+    Music_Fade = 0;
     Pause_Hit_Marks = 0;
     Round_Operator[0] = plw[0].wu.operator;
     Round_Operator[1] = plw[1].wu.operator;
@@ -345,7 +345,7 @@ void Game_Manage_2_4(void) {
             C_No1 = 0;
             Forbid_Break = -1;
             Next_Step = 0;
-            voice_all_off();
+            BGM_Stop();
             effect_A0_init(Player_id);
         } else {
             C_No0++;
@@ -530,7 +530,7 @@ void Control_Music_Fade(s16 time)
     if (PB_Music_Off) {
         goto set;
     }
-    BGM_No = 1;
+    BGM_No = BGMF_WAIT;
     BGM_Timer = time;
 set:
     sound_reg_level_set(0, -128);
@@ -616,7 +616,7 @@ void Game_Manage_5_5(void) {
     if (--Cover_Timer == 0) {
         C_No1++;
         pcon_rno[1] = SETTLE_JUDGE;
-        pcon_rno[2] = 1;
+        pcon_rno[2] = JG_WAIT;
         Clear_Flash_No();
         Switch_Screen_Init(3, 3);
     }
@@ -662,7 +662,7 @@ void Game_Manage_6th(void) {
             C_No1++;
             C_Timer = 60;
             pcon_rno[1] = SETTLE_JUDGE;
-            pcon_rno[2] = 0;
+            pcon_rno[2] = JG_IDLE;
             effect_58_init(6, 1, Winner_id + 100);
             effect_92_init(0, win_type[0][PL_Wins[0] - 1]);
             effect_92_init(1, win_type[1][PL_Wins[1] - 1]);
@@ -840,9 +840,9 @@ void Stock_Loser_Char(void) {
 
 
 void Check_Fade_Out_BGM(s16 Time) {
-    if (!BGM_Fade_Out_Flag) {
+    if (!Music_Fade) {
         if (PL_Wins[Winner_id] >= Game_setting.Battle_Number + 1) {
-            BGM_Fade_Out_Flag = 1;
+            Music_Fade = 1;
             bgm_fade_out(Time);
         }
     }
@@ -1117,12 +1117,9 @@ void Game_Manage_8_4(void) {
         break;
     case CM8_4_WAIT2:
         if (Perfect_Flag) {
-            goto timer;
-        }
-        if (Cut_Cut_Cut()) {
+        } else if (Cut_Cut_Cut()) {
             C_Timer = 1;
         }
-    timer:
         if (--C_Timer != 0) {
             break;
         }
@@ -1374,7 +1371,7 @@ void Game_Manage_10th(void) {
     case CM10_WIPE_WAIT:
         if (Switch_Screen()) {
             effect_work_quick_init();
-            sound_system_init();
+            SE_All_Off();
             Check_Naming(0);
             Check_Naming(1);
             pcon_rno[0] = PCON_INIT;
@@ -1440,7 +1437,7 @@ void Game_Manage_11th(void) {
         EM_Rank = 2;
         effect_56_init(1);
         effect_A2_init(1);
-        bgm_request(6);
+        BGM_Request(6);
         break;
     case CM11_WAIT:
         if (--C_Timer == 0) {
@@ -1546,7 +1543,7 @@ void Game_Manage_12_0(void) {
     }
     Complete_Judgement = 0;
     judge_flag = 0;
-    BGM_Fade_Out_Flag = 0;
+    Music_Fade = 0;
     win_sp_flag = 0;
     Round_Operator[0] = plw[0].wu.operator;
     Round_Operator[1] = plw[1].wu.operator;
@@ -1684,10 +1681,10 @@ void Game_Manage_12_4(void) {
             if (--Bonus_Game_result == 0) {
                 C_No2++;
                 if (PB_Status) {
-                    C_No3 = 1;
+                    C_No3 = CM12_4_T_BONUS2;
                     C_Timer = 10;
                 } else {
-                    C_No3 = 0;
+                    C_No3 = CM12_4_T_BONUS;
                     C_Timer = 20;
                 }
                 break;
@@ -2142,11 +2139,10 @@ void request_center_message(s16 Kind_of_Message) {
 
 
 s32 Judge_Next_Disposal(void) {
-    s16* p;
-    if (*(p = &PL_Wins[0]) != PL_Wins[1]) {
+    if (PL_Wins[0] != PL_Wins[1]) {
         return 0;
     }
-    if (*p >= Game_setting.Battle_Number) {
+    if (PL_Wins[0] >= Game_setting.Battle_Number) {
         return 1;
     }
     return 0;
@@ -2155,9 +2151,8 @@ s32 Judge_Next_Disposal(void) {
 
 
 void Check_Perfect(s16 PL_id) {
-    PLW* f = &plw[PL_id];
 
-    if (f->wu.vitality == f->wu.vital_new) {
+    if (plw[PL_id].wu.vitality == plw[PL_id].wu.vital_new) {
         Perfect_Flag = 1;
         Perfect_Counter[Winner_id]++;
         Round_Result |= RESULT_PERFECT;
@@ -2372,7 +2367,7 @@ void Update_VS_Data(void) {
 
 
 void BGM_Fade_Sub(void) {
-    s8* v = &BGM_Fade_Level;
+    s8* v = &BGM_Vol;
     switch (BGM_No) {
     case BGMF_WAIT:
         if (--BGM_Timer == 0) {
@@ -2385,7 +2380,7 @@ void BGM_Fade_Sub(void) {
         if (--BGM_Timer == 0) {
             BGM_Timer = 2;
             if (++*v == 0) {
-                BGM_No = 0;
+                BGM_No = BGMF_NONE;
             }
         }
         sound_reg_level_set(0, *v);
@@ -2401,7 +2396,7 @@ void Setup_BGM_Fade_In(s16 time) {
     if (PB_Music_Off) {
         return;
     }
-    BGM_No = 1;
+    BGM_No = BGMF_WAIT;
     BGM_Timer = time;
 }
 

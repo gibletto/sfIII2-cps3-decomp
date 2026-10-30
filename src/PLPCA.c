@@ -104,12 +104,9 @@ void check_nagenuke(PLW* wk, PLW* tk) {
         return;
     }
     if (tk->cat_break_reserve) {
-        goto ok;
-    }
-    if (tk->hazusenai_flag) {
+    } else if (tk->hazusenai_flag) {
         return;
     }
-ok:
     if (wk->cat_break_ok_timer && wk->wu.routine_no[1] == PLAYER_CATCH && check_nagenuke_cmd(tk)) {
         if (wk->wu.xyz[1].disp.pos > 8) {
             wk->wu.routine_no[2] = 50;
@@ -195,7 +192,7 @@ void Catch_04000(PLW* wk) {
         break;
     case C04_THROW:
         char_move(&wk->wu);
-        if ((u8)wk->wu.cg_type == 20) {
+        if (wk->wu.cg_type == 20) {
             setup_mvxy_data(&wk->wu, wk->wu.mvxy.index);
             wk->wu.mvxy.index++;
             wk->wu.routine_no[3] = C04_THROW2;
@@ -205,7 +202,7 @@ void Catch_04000(PLW* wk) {
         break;
     case C04_THROW2:
         jumping_union_process(&wk->wu, 1);
-        if ((u8)wk->wu.cg_type == 30) {
+        if (wk->wu.cg_type == 30) {
             setup_mvxy_data(&wk->wu, wk->wu.mvxy.index);
             wk->wu.routine_no[3] = C04_THROW3;
             wk->wu.cg_type = 0;
@@ -233,7 +230,7 @@ void Catch_05000(PLW* wk) {
         break;
     case C05_MOVE:
         char_move(&wk->wu);
-        switch ((u8)wk->wu.cg_type) {
+        switch (wk->wu.cg_type) {
         case 1:
             wk->wu.routine_no[3] = C05_MOVE2;
             wk->wu.cg_type = 0;
@@ -254,7 +251,7 @@ void Catch_05000(PLW* wk) {
         break;
     case C05_MOVE2:
         jumping_union_process(&wk->wu, 1);
-        switch ((u8)wk->wu.cg_type) {
+        switch (wk->wu.cg_type) {
         case 1:
             wk->wu.routine_no[3] = C05_MOVE;
             wk->wu.cg_type = 0;

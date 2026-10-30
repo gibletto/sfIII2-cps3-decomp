@@ -81,7 +81,6 @@ void effect_16_move(WORK_Other* ewk) {
 
 
 
-/* provisional name */
 void eff16_trans(WORK* ewk) {
     ewk->cg_number = (ewk->cg_number + 1) & 0x7FFF;
     if (ewk->cg_number == 0) {
@@ -99,7 +98,6 @@ void eff16_trans(WORK* ewk) {
 
 
 
-/* provisional name */
 s32 score_bunkai_eff16(WORK_Other_CONN* ewk, u32 tsc) {
     s16 noobjans = 0;
     s16 i;

@@ -31,13 +31,12 @@ s32 effect_B5_init(s16 PL_id) {
     s16 ix;
     s16 i;
     s16 x = bg_w.bgw[0].xy[0].disp.pos - 20;
-    NAME_WK* np = &name_wk[PL_id];
     for (i = 0; i < 3; i++) {
         if ((ix = pull_effect_work(3)) == -1) {
             return -1;
         }
         ewk = (WORK_Other*)frw[ix];
-        ewk->my_master = (u32*)np;
+        ewk->my_master = (u32*)&name_wk[PL_id];
         ewk->wu.be_flag = 1;
         ewk->wu.id = 115;
         ewk->wu.work_id = 16;

@@ -1,7 +1,7 @@
 /*
  * END_STAFF.C  Staff roll scene
  *
- * end_staff_main runs the staff roll (staff_roll_main) while BG layer 1 scrolls toward Gill's position, then
+ * end_staff_main runs the staff roll (staff_credits) while BG layer 1 scrolls toward Gill's position, then
  * starts the end object (end_obj_sync), zooms in on the centre that end_staff_scrn_set computes and ends the
  * ending after effect A8.
  */
@@ -40,7 +40,7 @@ extern s8 end_staff_done;
 extern s8 end_scroll_dir;
 extern s16 end_cnt;
 extern s16 end_cnt2;
-extern s32 staff_roll_main();
+extern s32 staff_credits();
 s32 Frame_Up();
 
 
@@ -58,13 +58,13 @@ void end_staff_main(void) {
     case 2:
         Forbid_Break = 0;
         end_w.r_no_1++;
-        bgm_request(27);
+        BGM_Request(27);
         end_staff_done = 0;
         break;
     case 3:
         Forbid_Break = 0;
         if (!end_staff_done) {
-            end_staff_done = staff_roll_main(0);
+            end_staff_done = staff_credits(0);
         }
         if (end_scroll_dir) {
             if (bg_w.bgw[1].wxy[0].disp.pos > Gill_Pos_X && bg_w.bgw[1].wxy[0].disp.pos > bg_w.bgw[1].l_limit2) {
@@ -85,7 +85,7 @@ void end_staff_main(void) {
     case 4:
         Forbid_Break = 0;
         if (!end_staff_done) {
-            end_staff_done = staff_roll_main(0);
+            end_staff_done = staff_credits(0);
             break;
         }
         end_w.r_no_1++;

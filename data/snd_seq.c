@@ -63868,7 +63868,7 @@ const u8 snd_seq_0114[47] = {
     END,
 };
 
-/* sound effect; sound code 115: coin_in_sound_request; match_state_0_fight */
+/* sound effect; sound code 115: coin_in_sound_request; Loop_Demo */
 const u8 snd_seq_0115[127] = {
     0x20,  /* sound effect, priority 32 */
     TRK(0x21), TRK(0x2F), TRK(0x41), TRK(0x4F),

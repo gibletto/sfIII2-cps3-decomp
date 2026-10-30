@@ -71,12 +71,6 @@
 #include "sc_sub_2.h"
 #include "EFFM7.h"
 
-/* pcon_rno[2] in settle_type_00000 */
-#define KO_INIT         0       /* start the winner's timer */
-#define KO_DOWN         1       /* until the loser is down */
-#define KO_FOOTWORK     2       /* until the winner is steady: the win and lose poses (or a special settle) */
-#define KO_POSE         3       /* until the win pose is done */
-
 /* pcon_rno[2] in settle_type_10000 */
 #define DK_DOWN         0       /* until both are down */
 #define DK_PAUSE        1       /* the pause */
@@ -87,11 +81,6 @@
 #define TO_DECIDE       2       /* the pause: a draw stops here, else the win and lose poses */
 #define TO_POSE         3       /* until a win pose is done */
 #define TO_DRAW         4       /* a draw: nothing more */
-
-/* pcon_rno[2] in settle_type_30000 */
-#define JG_IDLE         0       /* nothing yet */
-#define JG_WAIT         1       /* until the judges are done, then the poses */
-#define JG_POSE         2       /* until both poses are done */
 
 /* pcon_rno[2] in settle_type_40000 */
 #define GK_INIT         0       /* stop the winner */
@@ -124,8 +113,8 @@ void Player_control(void) {
     }
     if (!Game_pause && !EXE_flag) {
 run:
-        pcon_timer++;
-        pcon_timer &= 0x7FFF;
+        players_timer++;
+        players_timer &= 0x7FFF;
         player_main_process[pcon_rno[0]]();
         check_body_touch();
         check_damage_hosei();
@@ -263,7 +252,7 @@ void init_app_30000(void) {
         }
         pcon_rno[0] = PCON_DIE;
         pcon_rno[1] = SETTLE_JUDGE;
-        pcon_rno[2] = 1;
+        pcon_rno[2] = JG_WAIT;
         setup_EJG_index();
         effect_C9_init(&plw[0], 0);
         effect_C9_init(&plw[0], 1);
@@ -689,7 +678,7 @@ s16 scr_r;
 s16 scr_l;
 {
     if (plw[0].do_not_move == 0) {
-        Player_move(&plw[0], sw_to_lvbt(p1sw_0));
+        Player_move(&plw[0], processed_lvbt(p1sw_0));
     }
     if (bg_stop == 0 && bg_app == 0) {
         if (set_field_hosei_flag(&plw[0], scr_r, 1)) {
@@ -697,7 +686,7 @@ s16 scr_l;
         }
     }
     if (plw[1].do_not_move == 0) {
-        Player_move(&plw[1], sw_to_lvbt(p2sw_0));
+        Player_move(&plw[1], processed_lvbt(p2sw_0));
     }
     if (bg_stop == 0 && bg_app == 0) {
         if (set_field_hosei_flag(&plw[1], scr_r, 1)) {
@@ -713,7 +702,7 @@ s16 scr_r;
 s16 scr_l;
 {
     if (plw[1].do_not_move == 0) {
-        Player_move(&plw[1], sw_to_lvbt(p2sw_0));
+        Player_move(&plw[1], processed_lvbt(p2sw_0));
     }
     if (bg_stop == 0 && bg_app == 0) {
         if (set_field_hosei_flag(&plw[1], scr_r, 1)) {
@@ -721,7 +710,7 @@ s16 scr_l;
         }
     }
     if (plw[0].do_not_move == 0) {
-        Player_move(&plw[0], sw_to_lvbt(p1sw_0));
+        Player_move(&plw[0], processed_lvbt(p1sw_0));
     }
     if (bg_stop == 0 && bg_app == 0) {
         if (set_field_hosei_flag(&plw[0], scr_r, 1)) {
@@ -809,7 +798,6 @@ s32 will_die(void) {
 
 
 
-/* provisional name */
 void setup_settle_rno(kos)
 s16 kos;
 {
@@ -869,7 +857,6 @@ retry:
 
 
 
-/* provisional name */
 s32 check_sa_resurrection(PLW* wk) {
     if (check_sa_type_rebirth(wk) == 0) {
         return 0;
@@ -913,7 +900,7 @@ s32 footwork_check(char pl)
     s16 result;
     result = 0;
     if (plw[pl].wu.routine_no[1] == PLAYER_NORMAL) {
-        if (plw[pl].wu.routine_no[2] == 1) {
+        if (plw[pl].wu.routine_no[2] == NORMAL_STAND) {
             result = 1;
         }
     }
@@ -958,7 +945,6 @@ void add_next_position(PLW* wk) {
 
 
 
-/* provisional name */
 void setup_gouki_wins(void)
 {
     gouki_wins = 0;

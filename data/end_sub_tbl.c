@@ -1,9 +1,9 @@
 /*
  * END_SUB_TBL.C  tables read by EM_Cand.c, color3rd.c and 3 other modules
  *
- * The staff roll (staff_roll_tbl, end_sub_2.c): a heading line is staff_<HEADING>, and the lines under it are
+ * The staff roll (sf3_staff, end_sub_2.c): a heading line is staff_<HEADING>, and the lines under it are
  * staff_<HEADING>_NN in the order the roll first shows them (provisional names). A name is drawn as two lines on
- * one row that hold every other letter (attribute 0 and 2): "        D K R T" and "         - U I A" make D-KURITA.
+ * every other letter (attribute 0 and 2): "        D K R T" and "         - U I A" make D-KURITA.
  */
 
 #include "types.h"
@@ -20,7 +20,7 @@ extern const char no_cd_rom_mes[];
 extern const s32 combo_demo_pos_tbl[][2];
 extern const s16 combo_demo_timer_tbl[];
 extern const s8 combo_demo_pl_tbl[][6];
-extern const STAFF_LINE staff_roll_tbl[];
+extern const STAFF_LINE sf3_staff[];
 extern const u8 staff_STREET_FIGHTER_2ND_IMPACT[];
 extern const u8 staff_GIANT_ATTACK[];
 extern const u8 staff_STAFF[];
@@ -254,7 +254,7 @@ const s8 combo_demo_pl_tbl[3][6] = {
     { 3, 0, 0, 10, 0, 0 },
 };
 
-const STAFF_LINE staff_roll_tbl[205] = {
+const STAFF_LINE sf3_staff[205] = {
     { 270, 48, 128, 3, staff_STREET_FIGHTER_2ND_IMPACT },
     { 270, 48, 96, 3, staff_GIANT_ATTACK },
     { 270, 48, 64, 3, staff_STAFF },

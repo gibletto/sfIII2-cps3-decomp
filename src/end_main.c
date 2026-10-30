@@ -4,9 +4,9 @@
  * opening_demo_tick runs the opening each frame through opening_init2 (scroll graphics, BG work and planes),
  * opening_move (fifteen scenes, the first ones also moving the combo demo players) and opening_title_00 (the
  * title in one routine). The scenes keep their BG plane positions on screen through
- * opening_bgw_commit_pos (called with bsr from the scenes in range).
+ * op_scrn_pos_set2 (called with bsr from the scenes in range).
  *
- * update_all_disp_pos_ending copies the scroll positions of BG planes 0-3 and 5 to their display positions and
+ * Bg_Family_Set_op copies the scroll positions of BG planes 0-3 and 5 to their display positions and
  * families. combo_demo_move counts op_plmove_timer down, loads the next of the three demo setups
  * (combo_demo_load) when it reaches zero and moves the players while it is below zero; combo_demo_set_position
  * puts a player at the demo's start position. ending_effects_cleanup kills the effects the endings leave behind.
@@ -55,7 +55,7 @@
 s32 Check_Fade_Complete(void);
 s32 Request_Fade();
 void scfont_page0_fill(u16 attr, u16 code);
-void Disp_Capcom_Rights(void);
+void Disp_Copyright(void);
 void scrn_pos_clear(void);
 void bg_cell_write(s16 bg, s32 ofs, s32 cell, u32 src, u16 u5, s16 attr);
 u32 simmram_small_page_alloc_40(s32 kind);
@@ -85,8 +85,8 @@ void scrn_map_set_now(u16 n, u32 p);
 
 void opening_init2(void);
 void opening_title_00();
-void opening_bgw_commit_pos();
-void update_all_disp_pos_ending(void);
+void op_scrn_pos_set2();
+void Bg_Family_Set_op(void);
 void combo_demo_move(void);
 void combo_demo_load(s16 n);
 void combo_demo_set_position(s16 id);
@@ -146,7 +146,7 @@ s16 opening_demo_tick(void) {
     void (*opening_demo_jp[3])() = { opening_init2, opening_move, opening_title_00 };
     Game_timer += 1;
     opening_demo_jp[op_w.r_no_0]();
-    update_all_disp_pos_ending();
+    Bg_Family_Set_op();
     return op_end_flag;
 }
 
@@ -212,10 +212,10 @@ void opning_init_00000(void) {
         op_w.bgw[i].r_no_1 = 0;
         op_w.bgw[i].bg_no = i;
     }
-    sprite_list_setup(0, 1, (s16*)op_scr_record_data_0);
-    sprite_list_setup(1, 1, (s16*)op_scr_record_data_1);
-    sprite_list_setup(2, 1, (s16*)op_scr_record_data_2);
-    sprite_list_setup(3, 1, (s16*)op_scr_record_data_3);
+    sprite_list_setup(0, 1, op_scr_record_data_0);
+    sprite_list_setup(1, 1, op_scr_record_data_1);
+    sprite_list_setup(2, 1, op_scr_record_data_2);
+    sprite_list_setup(3, 1, op_scr_record_data_3);
     op_w.r_no_2 = 0;
     op_end_flag = 0;
     bg_stop = 0;
@@ -252,7 +252,7 @@ void opning_init_01000(void) {
     Bg_Off_R(0xFF);
     Bg_Off_W(0xFF);
     op_w.free_work = 8;
-    bgm_request(1);
+    BGM_Request(1);
     Scrn_Move_Set(0, 512 - bg_w.pos_offset, 512);
     bg_w.bgw[0].suzi_c_no = simmram_small_page_alloc_40(1);
     bg_w.bgw[0].suzi_adrs = (u16*)simmram_slot_addr(bg_w.bgw[0].suzi_c_no);
@@ -455,10 +455,10 @@ void op_00_move(void) {
         break;
     case 9:;
     }
-    opening_bgw_commit_pos(0);
-    opening_bgw_commit_pos(1);
-    opening_bgw_commit_pos(2);
-    opening_bgw_commit_pos(5);
+    op_scrn_pos_set2(0);
+    op_scrn_pos_set2(1);
+    op_scrn_pos_set2(2);
+    op_scrn_pos_set2(5);
 }
 
 
@@ -479,7 +479,7 @@ void op_01_move(void) {
         bg_cell_write(0, 0x3080, 37, (u32)op_bg0_scrn_data, 0, 0x2C0);
         bg_cell_write(0, 0x30C0, 38, (u32)op_bg0_scrn_data, 0, 0x2C0);
         op_w.free_work = op_timer_tbl[1];
-        opening_bgw_commit_pos(1);
+        op_scrn_pos_set2(1);
         bg_w.bgw[0].old_pos_x = 0;
         bg_w.bgw[0].suzi_base_flag = 0;
         Bg_On_R(17);
@@ -533,7 +533,7 @@ void op_01_move(void) {
     }
     bg_w.quake_x_index = 0;
     bg_w.quake_y_index = 0;
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -598,8 +598,8 @@ void op_02_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
-    opening_bgw_commit_pos(5);
+    op_scrn_pos_set2(0);
+    op_scrn_pos_set2(5);
 }
 
 
@@ -624,7 +624,7 @@ void op_03_move(void) {
         bg_cell_write(0, 0x3080, 41, (u32)op_bg0_scrn_data, 0, 0x2C0);
         bg_cell_write(0, 0x30C0, 42, (u32)op_bg0_scrn_data, 0, 0x2C0);
         op_w.free_work = op_timer_tbl[3];
-        opening_bgw_commit_pos(1);
+        op_scrn_pos_set2(1);
         bg_w.bgw[0].old_pos_x = 0;
         bg_w.bgw[0].suzi_base_flag = 0;
         scrn_linescroll_set(0, bg_w.bgw[0].suzi_adrs);
@@ -676,7 +676,7 @@ void op_03_move(void) {
     }
     bg_w.quake_x_index = 0;
     bg_w.quake_y_index = 0;
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -740,8 +740,8 @@ void op_04_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
-    opening_bgw_commit_pos(5);
+    op_scrn_pos_set2(0);
+    op_scrn_pos_set2(5);
 }
 
 
@@ -766,7 +766,7 @@ void op_05_move(void) {
         bg_cell_write(0, 0x3080, 45, (u32)op_bg0_scrn_data, 0, 0x2C0);
         bg_cell_write(0, 0x30C0, 46, (u32)op_bg0_scrn_data, 0, 0x2C0);
         op_w.free_work = op_timer_tbl[5];
-        opening_bgw_commit_pos(1);
+        op_scrn_pos_set2(1);
         bg_w.bgw[0].old_pos_x = 0;
         bg_w.bgw[0].suzi_base_flag = 0;
         scrn_linescroll_set(0, bg_w.bgw[0].suzi_adrs);
@@ -816,7 +816,7 @@ void op_05_move(void) {
     }
     bg_w.quake_x_index = 0;
     bg_w.quake_y_index = 0;
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -844,9 +844,9 @@ void op_06_move(void) {
         bg_w.bgw[5].wxy[0].disp.pos = 0x200;
         bg_w.bgw[5].xy[1].disp.pos = 0;
         op_w.free_work = op_timer_tbl[12];
-        opening_bgw_commit_pos(0);
-        opening_bgw_commit_pos(1);
-        opening_bgw_commit_pos(5);
+        op_scrn_pos_set2(0);
+        op_scrn_pos_set2(1);
+        op_scrn_pos_set2(5);
         break;
     case 1:
     case 2:
@@ -901,18 +901,18 @@ void op_06_move(void) {
                 wk /= bg_w.bgw[0].speed_y;
                 wk *= bg_w.bgw[i].speed_y;
                 bg_w.bgw[i].xy[1].cal = -wk;
-                opening_bgw_commit_pos(i);
+                op_scrn_pos_set2(i);
             }
             bg_w.bgw[5].wxy[0].cal = 0x2000000;
             wk = 0x4000000 - bg_w.bgw[0].xy[1].cal;
             wk /= bg_w.bgw[0].speed_y;
             wk *= bg_w.bgw[5].speed_y;
             bg_w.bgw[5].xy[1].cal = -wk;
-            opening_bgw_commit_pos(5);
+            op_scrn_pos_set2(5);
             Bg_On_W(1);
             Bg_Off_W(2);
         }
-        opening_bgw_commit_pos(0);
+        op_scrn_pos_set2(0);
         break;
     case 8:
         op_w.r_no_2++;
@@ -932,10 +932,10 @@ void op_06_move(void) {
     case 9:
         for (i = 0; i < 4; i++) {
             bg_w.bgw[i].xy[1].cal += bg_w.bgw[i].speed_y;
-            opening_bgw_commit_pos(i);
+            op_scrn_pos_set2(i);
         }
         bg_w.bgw[5].xy[1].cal += bg_w.bgw[5].speed_y;
-        opening_bgw_commit_pos(5);
+        op_scrn_pos_set2(5);
         if (bg_w.bgw[0].xy[1].disp.pos > 0x380) {
             op_w.r_no_2++;
             bg_cell_write(0, 0x1040, 0, (u32)op_bg0_scrn_data, 0, 0x2C0);
@@ -947,10 +947,10 @@ void op_06_move(void) {
     case 10:
         for (i = 0; i < 4; i++) {
             bg_w.bgw[i].xy[1].cal += bg_w.bgw[i].speed_y;
-            opening_bgw_commit_pos(i);
+            op_scrn_pos_set2(i);
         }
         bg_w.bgw[5].xy[1].cal += bg_w.bgw[5].speed_y;
-        opening_bgw_commit_pos(5);
+        op_scrn_pos_set2(5);
         if (bg_w.bgw[2].xy[1].disp.pos > 28) {
             op_w.r_no_2++;
             op_w.mv_ctr = 64;
@@ -968,18 +968,18 @@ void op_06_move(void) {
         }
         for (i = 0; i < 4; i++) {
             bg_w.bgw[i].xy[1].cal += bg_w.bgw[i].speed_y;
-            opening_bgw_commit_pos(i);
+            op_scrn_pos_set2(i);
         }
         bg_w.bgw[5].xy[1].cal += bg_w.bgw[5].speed_y;
-        opening_bgw_commit_pos(5);
+        op_scrn_pos_set2(5);
         break;
     case 12:
         for (i = 0; i < 4; i++) {
             bg_w.bgw[i].xy[1].cal += bg_w.bgw[i].speed_y;
-            opening_bgw_commit_pos(i);
+            op_scrn_pos_set2(i);
         }
         bg_w.bgw[5].xy[1].cal += bg_w.bgw[5].speed_y;
-        opening_bgw_commit_pos(5);
+        op_scrn_pos_set2(5);
         op_w.free_work--;
         if (op_w.free_work < 0) {
             op_w.r_no_2++;
@@ -1042,7 +1042,7 @@ void op_07_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -1061,7 +1061,7 @@ void op_08_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -1082,7 +1082,7 @@ void op_09_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -1106,7 +1106,7 @@ void op_10_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -1130,7 +1130,7 @@ void op_11_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -1153,7 +1153,7 @@ void op_12_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -1172,7 +1172,7 @@ void op_13_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -1181,7 +1181,7 @@ void op_14_move(void) {
     switch (opw_ptr->r_no_0) {
     case 0:
         opw_ptr->r_no_0++;
-        Disp_Capcom_Rights();
+        Disp_Copyright();
         op_w.free_work = op_timer_tbl[11];
         opw_ptr->ctr = op_ctr_set[0].ctr;
         op_w.index = 4;
@@ -1195,7 +1195,7 @@ void op_14_move(void) {
         }
         break;
     }
-    opening_bgw_commit_pos(0);
+    op_scrn_pos_set2(0);
 }
 
 
@@ -1243,7 +1243,7 @@ void opening_title_00(void) {
     bg_w.bgw[0].bg_address = (u16*)simmram_slot_addr(bg_w.bgw[0].bg_adrs_c_no);
     scrn_map_set_now(0, (u32)bg_w.bgw[0].bg_address);
     scrn_map_set(0, (u32)bg_w.bgw[0].bg_address);
-    sprite_list_setup(0, 1, (s16*)op_scr_record_data_0);
+    sprite_list_setup(0, 1, op_scr_record_data_0);
     load_char_gfx(0xA500, 1);
     load_char_gfx(0xAB48, 1);
     effect_E1_init(1, 24, 1);
@@ -1254,7 +1254,7 @@ void opening_title_00(void) {
     if (Country != 1) {
         effect_F5_init(9);
     }
-    Disp_Capcom_Rights();
+    Disp_Copyright();
     bg_cell_write(0, 0x3040, 1, (u32)op_bg0_scrn_data, 0, 0x2C0);
     bg_cell_write(0, 0x3080, 1, (u32)op_bg0_scrn_data, 0, 0x2C0);
     Bg_On_R(1);
@@ -1307,7 +1307,7 @@ s16 ix;
 
 
 
-void opening_bgw_commit_pos(bg_no)
+void op_scrn_pos_set2(bg_no)
 s16 bg_no;
 {
     s16 pos_x = bg_w.bgw[bg_no].wxy[0].disp.pos & 0x3FF;
@@ -1317,7 +1317,7 @@ s16 bg_no;
 
 
 
-void update_all_disp_pos_ending(void) {
+void Bg_Family_Set_op(void) {
     s32 pos_work_x;
     s32 pos_work_y;
     s16 i;

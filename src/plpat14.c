@@ -117,7 +117,7 @@ void Att_PL14_AT2(PLW* wk) {
         break;
     case AT2_MOVE:
         char_move(&wk->wu);
-        switch ((u8)wk->wu.cg_type) {
+        switch (wk->wu.cg_type) {
         case 10:
             wk->wu.routine_no[3]++;
             wk->wu.cg_type = 0;
@@ -136,7 +136,7 @@ void Att_PL14_AT2(PLW* wk) {
         return;
     case AT2_AIR:
         jumping_union_process(&wk->wu, 3);
-        if ((u8)wk->wu.cg_type == 40) {
+        if (wk->wu.cg_type == 40) {
             wk->wu.routine_no[3] = AT2_MOVE;
             wk->wu.cg_type = 0;
         }

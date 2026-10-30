@@ -425,10 +425,10 @@ void sa_time_moji_send(void) {
         time_timer--;
         if (time_timer == 0) {
             if (time_flag[0]) {
-                sc_chr_block_trans((u16)sa_time_data_tbl[time_num][0], 0x100, 4, 2);
+                sc_chr_block_trans(sa_time_data_tbl[time_num][0], 0x100, 4, 2);
             }
             if (time_flag[1]) {
-                sc_chr_block_trans((u16)sa_time_data_tbl[time_num][1], 0x120, 4, 2);
+                sc_chr_block_trans(sa_time_data_tbl[time_num][1], 0x120, 4, 2);
             }
             time_timer = 3;
             if (time_num == 5) {
@@ -680,24 +680,17 @@ void sa_color_chenge(pl, step)
 s8 pl;
 s8 step;
 {
-    SPG_DAT* p0;
-    SPG_DAT* p1;
-    s16 twice;
-    p0 = &spg_dat[0],
-        p0 = &spg_dat[0],
-        twice = step * 2,
-        p1 = &spg_dat[1];
     if (spg_dat[pl].kind) {
         if (pl == 0) {
-            p0->spgcol_number = twice + 18;
+            spg_dat[0].spgcol_number = step * 2 + 18;
         } else {
-            p1->spgcol_number = twice + 146;
+            spg_dat[1].spgcol_number = step * 2 + 146;
         }
     } else {
         if (pl == 0) {
-            p0->spgcol_number = 20 - twice;
+            spg_dat[0].spgcol_number = 20 - step * 2;
         } else {
-            p1->spgcol_number = 148 - twice;
+            spg_dat[1].spgcol_number = 148 - step * 2;
         }
     }
 }

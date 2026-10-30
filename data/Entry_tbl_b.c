@@ -5,7 +5,7 @@
  * its count, GAME OVER, JOIN IN, PRESS START, PLEASE WAIT, the INSERT MORE COIN(S) prompts and
  * the CREDIT and COINS displays; a control character in a string stands for a player number or
  * coin count. Read by ENTRY_2.C. region_type_tbl gives the area type of each country,
- * region_cc_type_tbl its level correction type, and region_param_tbl the two corrections of
+ * region_cc_type_tbl its level correction type, and Difficult_V_Data the two corrections of
  * each type (CPU level and vitality); read by MODE_INIT.C.
  */
 
@@ -19,11 +19,11 @@ extern const s8 msg_blank[];
 extern const s8 msg_blank18[];
 extern const s8 msg_continue[];
 extern const s8 msg_continue_cnt[];
-extern const u8 msg_game_over[];
-extern const u8 msg_insert_2coins[];
-extern const u8 msg_insert_coin[];
-extern const u8 msg_insert_coins[];
-extern const u8 msg_join_in[];
+extern const s8 msg_game_over[];
+extern const s8 msg_insert_2coins[];
+extern const s8 msg_insert_coin[];
+extern const s8 msg_insert_coins[];
+extern const s8 msg_join_in[];
 extern const s8 msg_press_2p_start[];
 extern const s8 msg_press_1p_start[];
 extern const s8 msg_please_wait[];
@@ -53,7 +53,7 @@ extern const s8 str_INSERT_COINS_7[];
 extern const s8 str_INSERT_COINS_8[];
 extern const s8 region_type_tbl[];
 extern const s8 region_cc_type_tbl[];
-extern const s8 region_param_tbl[][2];
+extern const s8 Difficult_V_Data[][2];
 
 const s8 msg_free_play[20] = "     FREE PLAY     ";
 
@@ -76,18 +76,18 @@ const s8 msg_continue_cnt[20] = {  /* "     CONTINUE_9    " */
     32, 32, 32, 0,
 };
 
-const u8 msg_game_over[20] = "     GAME OVER     ";
+const s8 msg_game_over[20] = "     GAME OVER     ";
 
-const u8 msg_insert_2coins[24] = {  /* "   INSERT 2 COINS   ", then other data */
+const s8 msg_insert_2coins[24] = {  /* "   INSERT 2 COINS   ", then other data */
     0x20, 0x20, 0x20, 0x49, 0x4E, 0x53, 0x45, 0x52, 0x54, 0x20, 2, 0x20, 0x43, 0x4F, 0x49, 0x4E,
     0x53, 0x20, 0x20, 0x20, 0, 0xFF, 0xFF, 0xFF,
 };
 
-const u8 msg_insert_coin[20] = "    INSERT COIN    ";
+const s8 msg_insert_coin[20] = "    INSERT COIN    ";
 
-const u8 msg_insert_coins[20] = "   INSERT   COINS  ";
+const s8 msg_insert_coins[20] = "   INSERT   COINS  ";
 
-const u8 msg_join_in[20] = "      JOIN IN      ";
+const s8 msg_join_in[20] = "      JOIN IN      ";
 
 const s8 msg_press_2p_start[20] = {  /* "   PRESS 2P START  " */
     32, 32, 32, 80, 82, 69, 83, 83, 32, 2, 80, 32, 83, 84, 65, 82,
@@ -197,11 +197,11 @@ const s8 region_cc_type_tbl[8] = {
     0, 2, 1, 1, 1, 1, 1, 2,
 };
 
-const s8 region_param_tbl[3][2] = {
+const s8 Difficult_V_Data[3][2] = {
     { 0, 0 },
     { 1, 2 },
     { 2, 4 },
 };
 
-/* the byte after region_param_tbl; nothing reads it */
+/* the byte after Difficult_V_Data; nothing reads it */
 static const s8 region_param_tbl_tail = -1;

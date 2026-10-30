@@ -77,7 +77,7 @@ void test_mode_task();
 void boot_task();
 void mode_init_task();
 void region_setup(void);
-void region_group_params_set(void);
+void Setup_Difficult_V(void);
 void display_mode_setup(void);
 void Zoomf_Init(void);
 void set_screen_mode();

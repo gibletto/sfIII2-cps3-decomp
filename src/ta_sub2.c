@@ -61,7 +61,6 @@ s16 tm;
 
 
 
-/* provisional name */
 
 
 void cal_bg_speed_data_x(bg_num, tm, dummy)
@@ -90,7 +89,6 @@ s16 dummy;
 }
 
 
-/* provisional name */
 void cal_bg_speed_data_y(bg_num, tm, dummy)
 s16 bg_num;
 s16 tm;

@@ -134,7 +134,9 @@ u16* tilemap_put_block_next(u16* p, u16 attr, u16 code) {
     s32 w2;
     u32 i;
     u32 j;
-    for (i = 0, w2 = w * 2; i < h; i++) {
+    i = 0;
+    w2 = w * 2;
+    for (; i < h; i++) {
         for (j = 0; j < w; j++) {
             p[0] = code;
             p[1] = attr | ((code & 0x100) >> 8);
@@ -251,7 +253,6 @@ void tilemap_print_hex_block(u16 x, u16 y, u16 attr, u32 value, u16 digits, u16 
     TEXT_CELL* p;
     u32 mask;
     s32 started;
-    s32 sign;
     s32 i;
     u16 d;
     s32 cells;
@@ -260,9 +261,9 @@ void tilemap_print_hex_block(u16 x, u16 y, u16 attr, u32 value, u16 digits, u16 
     p = (TEXT_CELL*)((u32)((u16*)SS_RAM) + (x << 2) + (y << 8));
     started = 0;
     mask = 15 << ((digits - 1) * 4);
-    for (i = digits, sign = (mode & 4) != 0; i > 0; i--) {
+    for (i = digits; i > 0; i--) {
         d = (value & mask) >> ((i - 1) * 4);
-        if (i == digits && sign) {
+        if (i == digits && (mode & 4) != 0) {
             if (d < 0) {
                 p->code = '-';
                 d &= 0x7FFF;
@@ -436,7 +437,7 @@ void tilemap_print_script_seq(u16 pos_x, u16 y, u16 pal, const TMSCRIPT* scr) {
             } else {
                 dst[1] = pal;
             }
-            dst = dst + 2;
+            dst += 2;
             if (dst > ((u16*)(SS_RAM + 0x3FFF))) {
                 dst = ((u16*)SS_RAM);
             }

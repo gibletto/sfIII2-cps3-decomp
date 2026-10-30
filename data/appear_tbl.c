@@ -3,7 +3,7 @@
  *
  * appear_data is the list of entrance types: each row holds the start position (with a
  * separate x for the wide mode), facing, the Appear_ routine number and the character index.
- * appear_type_tbl picks the row by fighter, stage and area, and appear_type_hv_tbl does the
+ * app_type_tbl picks the row by fighter, stage and area, and app_type_tbl2 does the
  * same for a home/visitor rematch. Read by APPEAR.C, PLMAIN.C and PLMAIN2.C, which set up each
  * fighter's entrance from them.
  */
@@ -14,8 +14,8 @@
 #pragma section TBL
 
 extern const APPEAR_DATA appear_data[];
-extern const s16 appear_type_tbl[][17][3];
-extern const s16 appear_type_hv_tbl[][17][3];
+extern const s16 app_type_tbl[][17][3];
+extern const s16 app_type_tbl2[][17][3];
 
 const APPEAR_DATA appear_data[28] = {
     { -88, 0, -88, 0, 1, 0, 0 },
@@ -48,7 +48,7 @@ const APPEAR_DATA appear_data[28] = {
     { -96, 0, -96, 0, 1, 24, 0 },
 };
 
-const s16 appear_type_tbl[16][17][3] = {
+const s16 app_type_tbl[16][17][3] = {
     {  /* Gill */
         { 19, 0, 0 }, { 2, 0, 0 },
         { 2, 0, 0 }, { 2, 0, 0 },
@@ -227,7 +227,7 @@ const s16 appear_type_tbl[16][17][3] = {
     },
 };
 
-const s16 appear_type_hv_tbl[16][17][3] = {
+const s16 app_type_tbl2[16][17][3] = {
     {  /* Gill */
         { 19, 0, 0 }, { 2, 0, 0 },
         { 2, 0, 0 }, { 2, 0, 0 },

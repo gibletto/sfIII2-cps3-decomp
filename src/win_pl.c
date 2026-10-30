@@ -3,7 +3,7 @@
  *
  * Player routines for the winner at the end of a round. win_player sends a bonus stage winner to
  * bonus_game_win_pause and otherwise picks the character's win routine (Win_00000..Win_09000) by
- * win_type_tbl. Each win routine chooses a victory animation, often at random (win_select), with
+ * winner_type_tbl. Each win routine chooses a victory animation, often at random (win_select), with
  * a different set for the final round and some stage-specific poses; the jijii_* routines fly up
  * or jump for the old man's poses. Normal_normal_Winner is the default pose and
  * Judge_normal_winner is used for a judged round. win_special_check sends a judged
@@ -105,13 +105,12 @@ void set_char_move_init();
 void set_char_move_init2();
 
 
-/* provisional name */
 void win_player(PLW* wk) {
     void (*win_jp_tbl[10])(PLW*) = { Win_00000, Win_01000, Win_02000, Win_03000, Win_04000, Win_05000, Win_06000, Win_07000, Win_08000, Win_09000 };
     if (Bonus_Game_Flag) {
         bonus_game_win_pause(wk);
     } else {
-        win_jp_tbl[win_type_tbl[wk->player_number]](wk);
+        win_jp_tbl[winner_type_tbl[wk->player_number]](wk);
     }
 }
 

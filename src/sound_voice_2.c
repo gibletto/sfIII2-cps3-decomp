@@ -72,7 +72,7 @@ u16 sound_voice_volume_compute(u16 level, u32 pan_scale, s8 vol_offset, SNDVOICE
     ctrl = snd_ctrl;
     if (ctrl.bit.stereo) {
         if (!v->priority_flags) {
-            out = (out * (u16)((u32)snd_fade_level >> 8)) >> 7;
+            out = (out * (u16)(snd_fade_level >> 8)) >> 7;
         }
         return out;
     } else {
@@ -373,23 +373,23 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
         inverse = (0x7f - pan) & 0xffff;
         if (is_bgm) {
             if (pan < 0x40) {
-                *(u16*)&regs->volume_right = (u16)sound_voice_volume_compute(
+                regs->volume_right = (u16)sound_voice_volume_compute(
                     (pan * voice->envelope_level) >> 6,
                     voice->volume_lfo, vol_offset, voice);
                 *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
                     voice->envelope_level, voice->volume_lfo,
                     ((u8)bgm_volume_offset), voice);
             } else {
-                *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
+                regs->volume_left = (u16)sound_voice_volume_compute(
                     (inverse * voice->envelope_level) >> 6,
                     voice->volume_lfo, vol_offset, voice);
-                *(u16*)&regs->volume_right = (u16)sound_voice_volume_compute(
+                regs->volume_right = (u16)sound_voice_volume_compute(
                     voice->envelope_level, voice->volume_lfo,
                     ((u8)bgm_volume_offset), voice);
             }
         } else {
             if (pan < 0x40) {
-                *(u16*)&regs->volume_right = (u16)sound_voice_volume_compute(
+                regs->volume_right = (u16)sound_voice_volume_compute(
                     (pan * voice->envelope_level) >> 6,
                     voice->volume_lfo, 0, voice);
                 *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
@@ -398,21 +398,21 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
                 *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
                     (inverse * voice->envelope_level) >> 6,
                     voice->volume_lfo, 0, voice);
-                *(u16*)&regs->volume_right = (u16)sound_voice_volume_compute(
+                regs->volume_right = (u16)sound_voice_volume_compute(
                     voice->envelope_level, voice->volume_lfo, 0, voice);
             }
         }
     } else {
         if (is_bgm) {
-            *(u16*)&regs->volume_right = (u16)sound_voice_volume_compute(
+            regs->volume_right = (u16)sound_voice_volume_compute(
                 voice->envelope_level, voice->volume_lfo, vol_offset, voice);
             *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
                 voice->envelope_level, voice->volume_lfo,
                 ((u8)bgm_volume_offset), voice);
         } else {
-            *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
+            regs->volume_left = (u16)sound_voice_volume_compute(
                 voice->envelope_level, voice->volume_lfo, 0, voice);
-            *(u16*)&regs->volume_right = (u16)sound_voice_volume_compute(
+            regs->volume_right = (u16)sound_voice_volume_compute(
                 voice->envelope_level, voice->volume_lfo, 0, voice);
         }
     }

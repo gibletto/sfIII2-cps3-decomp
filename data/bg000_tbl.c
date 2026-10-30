@@ -4,7 +4,7 @@
  * bg_rewrite_cells0 - 9 are the cell lists (map offset, cell number) bg_scr_write puts into
  * each background layer, and bg_etc_cells0 - 4 those bg_etc_scr_write puts on the special
  * screens; both are reached through bg_rewrite_cell_tbl and bg_etc_cell_tbl in BG_WORK.C.
- * bg_limit_tbl gives, per background and layer, the left, right and y scroll limits; read by
+ * limit_tbl3 gives, per background and layer, the left, right and y scroll limits; read by
  * BG000.C. bg_limit_unref_tbl is not referred to.
  */
 
@@ -29,7 +29,7 @@ extern const TILEREQ bg_etc_cells2[];
 extern const TILEREQ bg_etc_cells3[];
 extern const TILEREQ bg_etc_cells4[];
 extern const s16 bg_limit_unref_tbl[][6];
-extern const s16 bg_limit_tbl[][4][6];
+extern const s16 limit_tbl3[][4][6];
 
 /* provisional name */
 const HUD_CELL bg_rewrite_cells0[8] = {
@@ -199,7 +199,7 @@ const TILEREQ bg_etc_cells4[2] = {
     { 64, 12416, 4 },
 };
 
-/* rows of bg_limit_tbl's form; nothing in the program refers to it (provisional name) */
+/* rows of limit_tbl3's form; nothing in the program refers to it (provisional name) */
 const s16 bg_limit_unref_tbl[17][6] = {
     { 328, 700, 384, 644, 160, 176 },
     { 274, 752, 330, 696, 160, 176 },
@@ -220,7 +220,7 @@ const s16 bg_limit_unref_tbl[17][6] = {
     { -336, 352, -281, 297, 80, 128 },
 };
 
-const s16 bg_limit_tbl[19][4][6] = {
+const s16 limit_tbl3[19][4][6] = {
     {
         { 304, 692, 360, 636, 208, 208 }, { 322, 700, 376, 646, 224, 224 },
         { 209, 756, 265, 700, 208, 208 }, { 269, 707, 325, 651, 208, 208 },
@@ -299,7 +299,7 @@ const s16 bg_limit_tbl[19][4][6] = {
     },
 };
 
-/* after bg_limit_tbl, a row of its form cut short; nothing in the program refers to it (provisional name) */
+/* after limit_tbl3, a row of its form cut short; nothing in the program refers to it (provisional name) */
 static const s16 bg_limit_tbl_tail[8] = {
     160, 176, 160, 176, 160, 176, 160, 176,
 };

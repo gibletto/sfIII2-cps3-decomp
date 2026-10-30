@@ -63,7 +63,6 @@ void effect_E5_move(WORK_Other* ewk) {
     u8 dp;
     s32 rno;
     s16* er;
-    s16* mr;
     switch (ewk->wu.routine_no[0]) {
     case R0_WAIT:
         if (ewk->wu.dead_f == 1) {
@@ -102,7 +101,7 @@ void effect_E5_move(WORK_Other* ewk) {
         }
         if (ewk->wu.dir_old & 2) {
             er = ewk->wu.routine_no;
-            if (er[5] != (mr = mwk->wu.routine_no)[1] || er[6] != mr[2]) {
+            if (er[5] != mwk->wu.routine_no[1] || er[6] != mwk->wu.routine_no[2]) {
                 if (mwk->image_data_index != 11) {
                     goto off;
                 }
@@ -237,7 +236,6 @@ void setup_illusion_data(WORK_Other* ewk, PLW* mwk) {
 
 
 
-/* provisional name */
 s32 check_new_after_image(WORK_Other* ewk, PLW* mwk) {
     if (ewk->wu.waku_work_index == mwk->image_data_index) {
         return 0;

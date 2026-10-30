@@ -74,7 +74,6 @@ void effect_J2_move(WORK_Other_CONN* ewk) {
 
 
 
-/* provisional name */
 void effJ2_trans(WORK* ewk) {
     ewk->cg_number = (ewk->cg_number + 1) & 0x7FFF;
     if (ewk->cg_number == 0) {

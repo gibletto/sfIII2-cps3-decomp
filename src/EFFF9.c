@@ -3,9 +3,9 @@
  *
  * Effect F9 is the ending message window. effect_F9_move picks the message by Country and
  * Language (effF9_mes_jp / _en / _es / _pt), loads its graphics, types it out a few characters
- * every three frames and calls Next_Talk_Message when its display time runs out. The ending
+ * every three frames and calls Rewrite when its display time runs out. The ending
  * scripts (end_*.c) drive it through Rewrite_End_Message, Rewrite_Talk_Message,
- * Set_Direct_Message and Next_Talk_Message, which read the per-character scene lists in
+ * Set_Direct_Message and Rewrite, which read the per-character scene lists in
  * txt_no_tbl (message + time pairs); effF9_talk_init opens the window on BG3.
  */
 
@@ -176,7 +176,7 @@ void effect_F9_move(WORK_Other_CONN* ewk) {
             }
         }
         if (keep_mes_no == 0) {
-            Next_Talk_Message();
+            Rewrite();
             ewk->wu.cg_number++;
             ewk->wu.cg_number &= 0x7FFF;
             sort_push_request3(&ewk->wu);
@@ -301,7 +301,7 @@ s32 Rewrite_End_Message(u16 mes_no) {
     efff9_wk_set((WORK_Other_CONN*)ewk);
     efff9_txt_point = 2;
     efff9_txt_no_adrs = txt_no_tbl[efff9_PL_NO];
-    efff9_txt_scene_adrs = (u16*)efff9_txt_no_adrs[mes_no];
+    efff9_txt_scene_adrs = efff9_txt_no_adrs[mes_no];
     efff9_message = efff9_txt_scene_adrs[0];
     keep_mes_no = *(s16*)(efff9_txt_scene_adrs + 1);
     mes_already = efff9_message;
@@ -325,7 +325,7 @@ s32 Rewrite_Talk_Message(u16 mes_no) {
     effF9_talk_wk_set(ewk);
     efff9_txt_point = 2;
     efff9_txt_no_adrs = txt_no_tbl[efff9_PL_NO];
-    efff9_txt_scene_adrs = (u16*)efff9_txt_no_adrs[mes_no];
+    efff9_txt_scene_adrs = efff9_txt_no_adrs[mes_no];
     efff9_message = efff9_txt_scene_adrs[0];
     keep_mes_no = *(s16*)(efff9_txt_scene_adrs + 1);
     mes_already = efff9_message;
@@ -352,8 +352,7 @@ s32 Set_Direct_Message(s16 mes) {
 
 
 
-/* provisional name */
-s32 Next_Talk_Message(void) {
+s32 Rewrite(void) {
     WORK_Other* ewk;
     s16 ix;
     if ((ix = pull_effect_work(4)) == -1) {
@@ -369,7 +368,7 @@ s32 Next_Talk_Message(void) {
         efff9_wk_set((WORK_Other_CONN*)ewk);
     }
     efff9_txt_no_adrs = txt_no_tbl[efff9_PL_NO];
-    efff9_txt_scene_adrs = (u16*)efff9_txt_no_adrs[efff9_mes_no];
+    efff9_txt_scene_adrs = efff9_txt_no_adrs[efff9_mes_no];
     efff9_message = efff9_txt_scene_adrs[efff9_txt_point];
     keep_mes_no = efff9_txt_scene_adrs[efff9_txt_point + 1];
     efff9_txt_point += 2;

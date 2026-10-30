@@ -48,7 +48,7 @@ void end_06000(u16 pl_num) {
         end_w.timer = timer_6_tbl[end_w.r_no_2];
         common_end_init01();
         end_600_cell_set();
-        bgm_request(21);
+        BGM_Request(21);
         break;
     case END1_SCENES:
         end_w.timer--;
@@ -109,7 +109,7 @@ void end_600_0000(void) {
             } else {
                 Rewrite_End_Message(8);
             }
-            bgm_request(23);
+            BGM_Request(23);
             break;
         }
         break;

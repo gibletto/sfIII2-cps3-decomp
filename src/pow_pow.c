@@ -73,7 +73,7 @@
 void cal_damage_vitality(PLW* as, PLW* ds) {
     u16 xx = as->wu.att.pow;
     s16 yy;
-    s16 power = Damage_Power_Data[xx];
+    s16 power = Power_Data[xx];
     if (as->player_number == PL_GOUKI2) {
         yy = Pow_Control_Data_1[1][Round_Level];
     } else {
@@ -87,7 +87,7 @@ void cal_damage_vitality(PLW* as, PLW* ds) {
 void cal_damage_vitality_eff(WORK_Other* as, PLW* ds) {
     u16 xx = as->wu.att.pow;
     s16 yy;
-    s16 power = Damage_Power_Data[xx];
+    s16 power = Power_Data[xx];
     if (((PLW*)as)->player_number == PL_GOUKI2) {
         yy = Pow_Control_Data_1[1][Round_Level];
     } else {
@@ -198,7 +198,6 @@ s16 id;
 
 
 
-/* provisional name */
 void Score_Sub(void) {
     u16 num;
     u16 tens;

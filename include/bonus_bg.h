@@ -3,7 +3,7 @@
 
 #include "structs.h"
 
-void Bonus_bg1(void);
+void Bonus_bg(void);
 void bns01(void);
 void bns02(void);
 void bns01_init00(void);

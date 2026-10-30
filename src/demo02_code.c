@@ -147,7 +147,7 @@ void Demo00(void) {
             D_No1++;
             Demo_Flag = 0;
             Cover_Timer = 23;
-            voice_all_off();
+            BGM_Stop();
             if (++Select_Demo_Index > 3) {
                 Select_Demo_Index = 0;
             }
@@ -226,7 +226,7 @@ void Demo01(void) {
         if (Switch_Screen()) {
             D_No1++;
             Cover_Timer = 23;
-            voice_all_off();
+            BGM_Stop();
         }
         break;
     default:

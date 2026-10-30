@@ -195,7 +195,7 @@ void Sel_PL_Control(void) {
     void (*cont_tbl[4])() = { Sel_PL_Cont_1st, Sel_PL_Cont_2nd, Sel_PL_Cont_3rd, Sel_PL_Cont_4th };
     Setup_Select_Status();
     cont_tbl[S_No]();
-    sel_pl_face_control();
+    Face_Control();
     ID2 = 0;
     Player_Select_Control();
     ID2 = 1;
@@ -295,7 +295,7 @@ void Sel_PL_Cont_3rd(void) {
         S_No++;
         Forbid_Break = 0;
         if (G_No1 == G1_SELECT || !Demo_Flag) {
-            bgm_request(2);
+            BGM_Request(2);
             if (E_Number[0][0] != ENTRY_NAME && E_Number[1][0] != ENTRY_NAME) {
                 Ranking_00_6th(0);
             }
@@ -667,7 +667,7 @@ const s8 Repeat_Time_Data[3] = {
 };
 
 
-const s8 Auto_Repeat_Wife_Data[3] = {
+const s8 Repeat_Time_Data_Wife[3] = {
     1, 1, 1,
 };
 
@@ -751,14 +751,14 @@ s32 Auto_Repeat_Sub_Wife(s16 pl) {
         if (sw & LEVER_UP) {
             Auto_No[pl] = AUTO_REPEAT;
             Auto_Cursor[pl] = 1;
-            Auto_Timer[pl] = Auto_Repeat_Wife_Data[0];
+            Auto_Timer[pl] = Repeat_Time_Data_Wife[0];
             Auto_Index[pl] = 1;
             break;
         }
         if (sw & LEVER_DOWN) {
             Auto_No[pl] = AUTO_REPEAT;
             Auto_Cursor[pl] = 2;
-            Auto_Timer[pl] = Auto_Repeat_Wife_Data[0];
+            Auto_Timer[pl] = Repeat_Time_Data_Wife[0];
             Auto_Index[pl] = 1;
             break;
         }
@@ -766,7 +766,7 @@ s32 Auto_Repeat_Sub_Wife(s16 pl) {
     case AUTO_REPEAT:
         if (sw &= Auto_Cursor[pl]) {
             if (--Auto_Timer[pl] == 0) {
-                Auto_Timer[pl] = Auto_Repeat_Wife_Data[Auto_Index[pl]++];
+                Auto_Timer[pl] = Repeat_Time_Data_Wife[Auto_Index[pl]++];
                 if (Auto_Index[pl] > 2) {
                     Auto_Index[pl] = 2;
                 }
@@ -899,7 +899,7 @@ u16 sw;
     }
     if (sw & 0x7F0) {
         Stop_Cursor[ID] = 1;
-        Last_Arts_PL = PL_id;
+        Slide_Type = PL_id;
         Sel_Arts_Complete[PL_id] = 1;
         *(s8*)&Last_Super_Arts[PL_id] = *(s8*)&Super_Arts[PL_id] = Arts_Y[PL_id];
         Sound_SE(ID + 98);
@@ -909,7 +909,7 @@ u16 sw;
             sw |= p2sw_0 & LEVER_ALL;
         }
         Setup_EM_Course(PL_id, sw);
-        Decided_My_char[PL_id] = My_char[PL_id];
+        Used_char[PL_id] = My_char[PL_id];
     }
 }
 
@@ -926,7 +926,7 @@ u16 sw;
     }
 set_id:
     Setup_ID();
-    if (Decided_My_char[PL_id] == My_char[PL_id]) {
+    if (Used_char[PL_id] == My_char[PL_id]) {
         return;
     }
     if (Continue_Coin[PL_id] && EM_Candidate[PL_id][VS_Index[PL_id]] == 15) {
@@ -983,7 +983,7 @@ s16 PL_id;
 
 
 
-void sel_pl_face_control(void) {
+void Face_Control(void) {
     void (*Face_Tbl[4])() = { Face_1st, Face_2nd, Face_3rd, Face_4th };
     Face_Tbl[Face_No[0]]();
     Move_Face_BG();
@@ -1058,7 +1058,6 @@ void Move_Face_BG(void) {
 
 
 
-/* provisional name */
 void Player_Select_Control(void) {
     void (*Obj_Tbl[5])() = { PL_Sel_Begin, PL_Sel_2nd, PL_Sel_3rd, PL_Sel_4th, PL_Sel_5th };
 
@@ -1078,7 +1077,7 @@ void PL_Sel_Begin(void) {
         Order[ID2 + 3] = 3;
         Order_Timer[ID2 + 3] = 1;
         Order_Dir[ID2 + 3] = PL_Sel_Mode_1();
-        sel_pl_disp_char_effect_trio(ID2, 32);
+        Setup_Plates(ID2, 32);
         effect_50_init(ID2, 1);
         effect_50_init(ID2, 2);
     } else {
@@ -1120,7 +1119,7 @@ void PL_Sel_2nd(void) {
         Order[ID2 + 3] = 3;
         Order_Timer[ID2 + 3] = 25;
         Order_Dir[ID2 + 3] = PL_Sel_Mode_1();
-        sel_pl_disp_char_effect_trio(ID2, 0);
+        Setup_Plates(ID2, 0);
         effect_50_init(ID2, 1);
         effect_50_init(ID2, 2);
     }
@@ -1143,7 +1142,7 @@ void PL_Sel_4th(void) {}
 
 
 
-const s16 Setup_Aborigine_table[3][3] = {
+const s16 Arts_Y_Data[3][3] = {
     { 1, 0, 2 }, { 2, 1, 0 }, { 0, 2, 1 },
 };
 
@@ -1154,12 +1153,12 @@ const s16 Setup_Aborigine_time[3][3] = {
 };
 
 
-void sel_pl_disp_char_effect_trio(s8 PL_id, s16 Time) {
+void Setup_Plates(s8 PL_id, s16 Time) {
     Move_Super_Arts[PL_id] = 3;
     Select_Arts[PL_id] = 3;
-    effect_79_init(PL_id, 0, Setup_Aborigine_table[Super_Arts[PL_id]][0], Setup_Aborigine_time[Super_Arts[PL_id]][0] + Time, 0);
-    effect_79_init(PL_id, 1, Setup_Aborigine_table[Super_Arts[PL_id]][1], Setup_Aborigine_time[Super_Arts[PL_id]][1] + Time, 0);
-    effect_79_init(PL_id, 2, Setup_Aborigine_table[Super_Arts[PL_id]][2], Setup_Aborigine_time[Super_Arts[PL_id]][2] + Time, 0);
+    effect_79_init(PL_id, 0, Arts_Y_Data[Super_Arts[PL_id]][0], Setup_Aborigine_time[Super_Arts[PL_id]][0] + Time, 0);
+    effect_79_init(PL_id, 1, Arts_Y_Data[Super_Arts[PL_id]][1], Setup_Aborigine_time[Super_Arts[PL_id]][1] + Time, 0);
+    effect_79_init(PL_id, 2, Arts_Y_Data[Super_Arts[PL_id]][2], Setup_Aborigine_time[Super_Arts[PL_id]][2] + Time, 0);
 }
 
 
@@ -1535,19 +1534,17 @@ void Exit_2nd(void) {
 
 void Exit_3rd(void) {
     if (Cut_Cut_Cut()) {
-        goto exit;
+    } else if (--Exit_Timer != 0) {
+        return;
     }
-    if (--Exit_Timer == 0) {
-exit:
-        Exit_No = 4;
-        if (VS_Index[Player_id] >= 7) {
-            EM_Rank = 1;
-        } else {
-            EM_Rank = 0;
-        }
-        if (Break_Into_CPU == 1) {
-            Exit_No = 3;
-        }
+    Exit_No = 4;
+    if (VS_Index[Player_id] >= 7) {
+        EM_Rank = 1;
+    } else {
+        EM_Rank = 0;
+    }
+    if (Break_Into_CPU == 1) {
+        Exit_No = 3;
     }
 }
 
@@ -1570,7 +1567,7 @@ void Exit_4th(void) {
             Suicide = 1;
             Forbid_Break = 0;
             Next_Step = 2;
-            bgm_request(3);
+            BGM_Request(3);
             effect_38_init(0, 1, 1, 1, My_char[0], 0);
             effect_38_init(1, 1, 1, 1, My_char[1], 0);
             Stop_Cursor[0] = 1;
@@ -1585,7 +1582,7 @@ void Exit_4th(void) {
             Suicide = 1;
             Forbid_Break = 0;
             Next_Step = 2;
-            bgm_request(3);
+            BGM_Request(3);
             Setup_COM_Plate(1);
             Stop_Cursor[0] = 1;
             Stop_Cursor[1] = 1;
@@ -1636,7 +1633,7 @@ void Exit_5th(void) {
         Suicide = 1;
         Next_Step = 0;
         Forbid_Break = 0;
-        bgm_request(3);
+        BGM_Request(3);
         Setup_Exit_Plates();
         Stop_Cursor[0] = 1;
         Stop_Cursor[1] = 1;
@@ -1831,7 +1828,7 @@ void Boss_Exit_6th(void) {
         Exit_Wait = 120;
         Next_Step = 0;
         Introduce_Break_Into[Player_id] = 1;
-        bgm_request(3);
+        BGM_Request(3);
         effect_43_init(0, 10);
         effect_43_init(1, 10);
     }

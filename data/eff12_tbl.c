@@ -15,13 +15,13 @@
 #pragma section TBL
 
 extern const s16 scr_obj_num12[];
-extern const s16 scr_obj_data12_0[];
-extern const s16 scr_obj_data12_1[];
+extern const s16 eff12_data_tbl0[];
+extern const s16 eff12_data_tbl1[];
 extern const s16 scr_obj_data12_8[];
-extern const s16 scr_obj_data12_2[];
-extern const s16 scr_obj_data12_3[];
-extern const s16 scr_obj_data12_4[];
-extern const s16 scr_obj_data12_5[];
+extern const s16 eff12_data_tbl2[];
+extern const s16 eff12_data_tbl3[];
+extern const s16 eff12_data_tbl4[];
+extern const s16 eff12_data_tbl5[];
 extern const s16 scr_obj_data12_6[];
 extern const s16 scr_obj_data12_7[];
 extern const s16 scr_obj_data12_9[];
@@ -35,14 +35,14 @@ const s16 scr_obj_num12[11] = {
     1, 0, 1,
 };
 
-/* prop type 0; provisional name */
-const s16 scr_obj_data12_0[16] = {
+/* prop type 0 */
+const s16 eff12_data_tbl0[16] = {
     0, 2, 64, 16, 80, 80, 2, 1,
     0, 2, 64, -288, 80, 83, 4, 1,
 };
 
-/* prop type 1; provisional name */
-const s16 scr_obj_data12_1[16] = {
+/* prop type 1 */
+const s16 eff12_data_tbl1[16] = {
     1, 2, 8256, 463, 304, 93, 6, 0,
     0, 2, 8277, 523, 126, 86, 17, 0,
 };
@@ -52,8 +52,8 @@ const s16 scr_obj_data12_8[8] = {
     0, 2, 8272, 552, 88, 86, 68, 0,
 };
 
-/* prop type 2; provisional name */
-const s16 scr_obj_data12_2[40] = {
+/* prop type 2 */
+const s16 eff12_data_tbl2[40] = {
     0, 2, 8256, 581, 123, 75, 15, 0,
     0, 2, 8256, 386, 104, 75, 21, 0,
     0, 2, 8256, 872, 112, 75, 14, 0,
@@ -61,20 +61,20 @@ const s16 scr_obj_data12_2[40] = {
     0, 2, 64, 528, 168, 76, 23, 0,
 };
 
-/* prop type 3; provisional name */
-const s16 scr_obj_data12_3[16] = {
+/* prop type 3 */
+const s16 eff12_data_tbl3[16] = {
     0, 2, 8292, 456, 66, 75, 3, 0,
     0, 2, 8256, 606, 105, 83, 28, 0,
 };
 
-/* prop type 4; provisional name */
-const s16 scr_obj_data12_4[16] = {
+/* prop type 4 */
+const s16 eff12_data_tbl4[16] = {
     1, 2, 8256, 512, 224, 83, 29, 0,
     1, 2, 8256, 606, 105, 83, 28, 0,
 };
 
-/* prop type 5; provisional name */
-const s16 scr_obj_data12_5[16] = {
+/* prop type 5 */
+const s16 eff12_data_tbl5[16] = {
     1, 2, 8256, 512, 224, 83, 29, 0,
     1, 2, 8256, 606, 105, 83, 28, 0,
 };

@@ -50,7 +50,7 @@ void end_13000(u16 pl_num) {
         end_w.timer = timer_13_tbl[end_w.r_no_2];
         common_end_init01();
         end_1300_cell_set();
-        bgm_request(21);
+        BGM_Request(21);
         break;
     case END1_SCENES:
         end_w.timer--;
@@ -194,7 +194,7 @@ void end_1300_8000(void) {
         bgw_ptr->xy[1].disp.pos += 48;
         effect_E6_init(77);
         Rewrite_End_Message(5);
-        bgm_request(23);
+        BGM_Request(23);
         break;
     case 1:
         if (bgw_ptr->xy[1].disp.pos > 0xC0) {

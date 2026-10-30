@@ -37,7 +37,6 @@ static void bg_move_common(void);
 #pragma inline(bg150_layer1, bg150_layer0)
 
 
-/* provisional name */
 void BG150(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg150_layer1();

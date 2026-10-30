@@ -2548,13 +2548,11 @@ s16 n;
 void debug_hit_box_cursor(void) {
     u16 now;
     u16 sw;
-    u16 *input = &now;
     if (Debug_PL_id) {
         return;
     }
     now = dbg_p2sw_0;
-held:;
-    sw = ~dbg_p2sw_1 & now;
+    sw = ~dbg_p2sw_1 & dbg_p2sw_0;
     if (now & 0x240) {
         tilemap_rect_fill(dbg_hud_x + 36, (s8)((WORK_Other*)dbg_judge_ewk)->refrected + 13, 8, 1, 2, 0xFFFF);
         if (sw & BUTTON_HP) {
@@ -3358,14 +3356,14 @@ void debug_slot_char_load(void) {
             dbg_pl->wu.my_col_code = 0x4007;
         }
         if (dbg_slot->sel[0] == 0x92) {
-            dbg_pl->wu.hit_ix_table = (HIT_IX*)&ef13_hit_ix_table;
-            dbg_pl->wu.body_adrs = (BODY_BOX*)&ef13_body_box;
-            dbg_pl->wu.hand_adrs = (HAND_BOX*)&ef13_hand_box;
-            dbg_pl->wu.attack_adrs = (ATTACK_BOX*)&ef13_att_box;
-            dbg_pl->wu.catch_adrs = (CATCH_BOX*)&ef13_cat_box;
-            dbg_pl->wu.caught_adrs = (CAUGHT_BOX*)&ef13_cau_box;
-            dbg_pl->wu.hosei_adrs = (HOSEI_BOX*)&ef13_hos_box;
-            dbg_pl->wu.att_ix_table = (ATTACK_ATTR*)&ef13_catt_table;
+            dbg_pl->wu.hit_ix_table = (HIT_IX*)ef13_hit_ix_table;
+            dbg_pl->wu.body_adrs = (BODY_BOX*)ef13_body_box;
+            dbg_pl->wu.hand_adrs = (HAND_BOX*)ef13_hand_box;
+            dbg_pl->wu.attack_adrs = (ATTACK_BOX*)ef13_att_box;
+            dbg_pl->wu.catch_adrs = (CATCH_BOX*)ef13_cat_box;
+            dbg_pl->wu.caught_adrs = (CAUGHT_BOX*)ef13_cau_box;
+            dbg_pl->wu.hosei_adrs = (HOSEI_BOX*)ef13_hos_box;
+            dbg_pl->wu.att_ix_table = (ATTACK_ATTR*)ef13_catt_table;
             load_any_color(dbg_obj_color_tbl[dbg_slot->sel[0] - 0x92]);
             dbg_pl->wu.my_col_code = 0x4020;
         }
@@ -3703,7 +3701,7 @@ void debug_pattern_preview_step(WORK* wk)
         dbg_slot->sel[2] = 1;
     }
     wk->cg_olc = wk->olc_ix_table[wk->cg_olc_ix];
-    if (((WORK_Other_JUDGE *)dbg_judge_ewk)->look_up_flag) {
+    if (dbg_judge_ewk->look_up_flag) {
         wk->cgd_type = dbg_look_buf.rec[dbg_slot->sel[2]].type;
         wk->cg_ctr = dbg_look_buf.rec[dbg_slot->sel[2]].u.frames;
         wk->cg_number = dbg_look_buf.rec[dbg_slot->sel[2]].param;
@@ -3923,7 +3921,9 @@ void debug_draw_object_info(void) {
     tilemap_print_hex(11, 14, 2, dbg_pl->wu.position_y, 4, 0);
     if (dbg_slot->sel[0] <= 144) {
         tilemap_print_string(0, 0, 0xFFFF, &dbg_act_kind_str[dbg_slot->row]);
-        tilemap_print_string(0, 0, 0xFFFF, &(*(dbg_slot->row + dbg_act_name_tbl))[dbg_slot->sel[1] - 1]);
+        p = dbg_act_name_tbl[dbg_slot->row];
+        p = &p[dbg_slot->sel[1] - 1];
+        tilemap_print_string(0, 0, 0xFFFF, p);
         tilemap_print_string(0, 0, 0xFFFF, &dbg_char_name_str[dbg_pl->player_number]);
     } else {
         tilemap_print_string(0, 0, 0xFFFF, &dbg_act_kind_str[10]);

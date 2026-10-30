@@ -307,18 +307,11 @@ void Com_Before_Passive(PLW* wk) {
         return;
     }
     if (Limited_Flag[wk->wu.id]) {
-        goto dec;
-    }
-    if (Counter_Attack[wk->wu.id]) {
-        goto dec;
-    }
-    if (Passive_Guard_Off_Data[wk->player_number][Pattern_Index[wk->wu.id]]) {
-        goto dec;
-    }
-    if (Check_Guard(wk)) {
+    } else if (Counter_Attack[wk->wu.id]) {
+    } else if (Passive_Guard_Off_Data[wk->player_number][Pattern_Index[wk->wu.id]]) {
+    } else if (Check_Guard(wk)) {
         return;
     }
-dec:
     if (--Timer_00[wk->wu.id] != 0) {
         return;
     }
@@ -622,7 +615,7 @@ void Damage_1st(PLW* wk) {
         }
     case D1_DOWN:
         if (wk->wu.routine_no[3] == RN3_START) {
-            CP_No[wk->wu.id][2] = 0;
+            CP_No[wk->wu.id][2] = D1_DECIDE;
             break;
         }
         Lv = Setup_Lv04(0);
@@ -635,8 +628,8 @@ void Damage_1st(PLW* wk) {
         Rnd = random_32_com();
         CP_No[wk->wu.id][1] = Get_Up_Data[wk->player_number][Lv][Rnd] + 1;
         CP_No[wk->wu.id][2] = 0;
-        if (Get_Up_Area_Data[wk->player_number][CP_No[wk->wu.id][1] - 1][Area_Number[wk->wu.id]] == 1) {
-            CP_No[wk->wu.id][1] = Get_Up_Area_Data[wk->player_number][CP_No[wk->wu.id][1] + 1][0];
+        if (Get_Up_Action_Check_Data[wk->player_number][CP_No[wk->wu.id][1] - 1][Area_Number[wk->wu.id]] == 1) {
+            CP_No[wk->wu.id][1] = Get_Up_Action_Check_Data[wk->player_number][CP_No[wk->wu.id][1] + 1][0];
         }
         if (CP_No[wk->wu.id][1] != DMG_DECIDE) {
             break;
@@ -743,8 +736,8 @@ void Damage_6th(PLW* wk) {
             break;
         }
         if (wk->wu.cg_type == 12) {
-            if (Get_Up_Area_Data[wk->player_number][CP_No[wk->wu.id][1] - 1][Area_Number[wk->wu.id]] == 1) {
-                CP_No[wk->wu.id][1] = Get_Up_Area_Data[wk->player_number][CP_No[wk->wu.id][1] + 1][0];
+            if (Get_Up_Action_Check_Data[wk->player_number][CP_No[wk->wu.id][1] - 1][Area_Number[wk->wu.id]] == 1) {
+                CP_No[wk->wu.id][1] = Get_Up_Action_Check_Data[wk->player_number][CP_No[wk->wu.id][1] + 1][0];
             }
             CP_No[wk->wu.id][2]++;
             CP_Index[wk->wu.id][1] = 0;
@@ -763,8 +756,8 @@ void Damage_6th(PLW* wk) {
                 CP_Index[wk->wu.id][0] = Get_Up_Action_Tech_Data[wk->player_number][Lv][0];
                 CP_Index[wk->wu.id][7] = 8;
                 if (plw[wk->wu.id].sa->ok) {
-                    if (Get_Up_SA_Tech_Data[wk->player_number][plw[wk->wu.id].sa->kind_of_arts] != -1) {
-                        CP_Index[wk->wu.id][0] = Get_Up_SA_Tech_Data[wk->player_number][plw[wk->wu.id].sa->kind_of_arts];
+                    if (Arts_Super_Name_Data[wk->player_number][plw[wk->wu.id].sa->kind_of_arts] != -1) {
+                        CP_Index[wk->wu.id][0] = Arts_Super_Name_Data[wk->player_number][plw[wk->wu.id].sa->kind_of_arts];
                     }
                 }
             }
@@ -1139,7 +1132,7 @@ s32 Check_Shell_Flip(PLW* wk) {
     Rnd = random_32_com();
     Rnd -= Flip_Term_Correct(wk);
     Lv = Setup_Lv08(0);
-    if (Rnd >= Shell_Flip_Data[wk->player_number][Lv]) {
+    if (Rnd >= Shell_Renzoku_Flip_Data[wk->player_number][Lv]) {
         return -1;
     }
     return 1;
@@ -1586,7 +1579,7 @@ const u8 Pattern_Insurance_Data[16][4] = {
 
 
 void Pattern_Insurance(PLW* wk, s16 Kind_Of_Insurance, s16 Forced_Number) {
-    if (Pattern_Insurance_Data[My_char[wk->wu.id]][Kind_Of_Insurance] < (s16)Pattern_Index[wk->wu.id]) {
+    if (Pattern_Insurance_Data[My_char[wk->wu.id]][Kind_Of_Insurance] < Pattern_Index[wk->wu.id]) {
         Pattern_Index[wk->wu.id] = Forced_Number;
     }
 }

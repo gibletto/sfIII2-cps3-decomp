@@ -137,7 +137,7 @@ void effect_58_move(WORK_Other* ewk) {
         case R1_BGM:
             if (Demo_Sound != 0 || Demo_Flag) {
                 if (PB_Music_Off == 0) {
-                    bgm_request(ewk->wu.direction);
+                    BGM_Request(ewk->wu.direction);
                 }
             }
             push_effect_work(&ewk->wu);

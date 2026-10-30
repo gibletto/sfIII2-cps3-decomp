@@ -170,14 +170,11 @@ PLW* twk;
 u16 oto;
 {
     if (twk->player_number != PL_URIEN) {
-        goto normal_sound;
-    }
-    if (oto == 266 || oto == 267) {
+    } else if (oto == 266 || oto == 267) {
         sound_effect_request[0x2F9](ewk, 0x2F9);
         Last_Called_SE = 0x2F9;
         return;
     }
-normal_sound:
     sound_effect_request[oto](ewk, oto);
     Last_Called_SE = oto;
 }
