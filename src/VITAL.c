@@ -32,39 +32,39 @@ VITAL_BAR vit_bar[2];
 
 
 const u16* vital_npos_tbl[4] = {
-    &vital_cell_1p_tbl[81],
-    &vital_cell_1p_tbl[101],
-    &vital_cell_1p_tbl[121],
-    &vital_cell_1p_tbl[145],
+    vital_npos_0,
+    vital_npos_1,
+    vital_npos_2,
+    vital_npos_3,
 };
 
 
 
 const u16* vital_attr_tbl[3] = {
-    &vital_cell_1p_tbl[169],
-    &vital_cell_1p_tbl[172],
-    &vital_cell_1p_tbl[175],
+    vital_attr_0,
+    vital_attr_1,
+    vital_attr_2,
 };
 
 
 
 void vital_cont_init(void) {
     const u16* cell;
-    vit_bar[0].cyerw = Game_setting.mode * 32 + 160;
-    vit_bar[0].cred = Game_setting.mode * 32 + 160;
-    vit_bar[0].ored = Game_setting.mode * 32 + 160;
+    vit_bar[0].cyerw = Game_setting.Screen_Mode * 32 + 160;
+    vit_bar[0].cred = Game_setting.Screen_Mode * 32 + 160;
+    vit_bar[0].ored = Game_setting.Screen_Mode * 32 + 160;
     vit_bar[0].unused = 0;
     vit_bar[0].colnum = 0;
     vit_bar[0].cell = cell = vital_cell_tbl;
     vit_bar[0].attr = vital_attr_tbl[0];
-    vit_bar[1].cyerw = Game_setting.mode * 32 + 160;
-    vit_bar[1].cred = Game_setting.mode * 32 + 160;
-    vit_bar[1].ored = Game_setting.mode * 32 + 160;
+    vit_bar[1].cyerw = Game_setting.Screen_Mode * 32 + 160;
+    vit_bar[1].cred = Game_setting.Screen_Mode * 32 + 160;
+    vit_bar[1].ored = Game_setting.Screen_Mode * 32 + 160;
     vit_bar[1].unused = 0;
     vit_bar[1].colnum = 0;
     vit_bar[1].cell = cell;
     vit_bar[1].attr = vital_attr_tbl[1];
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         vit_bar[0].xpos = vital_npos_tbl[0];
         vit_bar[1].xpos = vital_npos_tbl[1];
         sc_ram_to_vram(4, 0, 0);
@@ -97,7 +97,7 @@ void vital_cont_main(void) {
 
 s32 vital_control(s8 pl) {
     s8 i;
-    if (plw[pl].wu.vital_new > Game_setting.mode * 32 + 0xA0) {
+    if (plw[pl].wu.vital_new > Game_setting.Screen_Mode * 32 + 0xA0) {
         return 0;
     }
     if (vit_bar[pl].cyerw == plw[pl].wu.vital_new) {
@@ -114,17 +114,17 @@ s32 vital_control(s8 pl) {
     if (plw[pl].wu.vital_new < 0) {
         vit_bar[pl].cyerw = 0;
     }
-    vital_dot_pos = Game_setting.mode * 32 + 0xA0;
+    vital_dot_pos = Game_setting.Screen_Mode * 32 + 0xA0;
     vital_col_ix = 0;
-    if (plw[pl].wu.vital_new <= Game_setting.mode * 32 + 0x9F) {
+    if (plw[pl].wu.vital_new <= Game_setting.Screen_Mode * 32 + 0x9F) {
         vit_bar[pl].colnum = 1;
-        if (plw[pl].wu.vital_new <= Game_setting.mode * 10 + 48) {
+        if (plw[pl].wu.vital_new <= Game_setting.Screen_Mode * 10 + 48) {
             vit_bar[pl].colnum = 2;
         }
     } else {
         vit_bar[pl].colnum = 0;
     }
-    for (i = 0; i < Game_setting.mode * 4 + 20; i++) {
+    for (i = 0; i < Game_setting.Screen_Mode * 4 + 20; i++) {
         vital_dot_pos -= VITAL_CELL_DOTS;
         if (vital_dot_pos < vit_bar[pl].cred) {
             if (vit_bar[pl].cyerw > vital_dot_pos) {
@@ -180,15 +180,15 @@ s32 vital_parts_allwrite(s8 pl) {
     } else {
         tbl = vital_cell_tbl;
     }
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         cols = (const s16*)vital_npos_tbl[1];
     } else {
         cols = (const s16*)vital_npos_tbl[3];
     }
     attrs = (const s16*)vital_attr_tbl[2 - pl];
-    vital_dot_pos = Game_setting.mode * 32 + 160;
+    vital_dot_pos = Game_setting.Screen_Mode * 32 + 160;
     vital_col_ix = 0;
-    for (i = 0; i < Game_setting.mode * 4 + 20; i++) {
+    for (i = 0; i < Game_setting.Screen_Mode * 4 + 20; i++) {
         vital_dot_pos -= VITAL_CELL_DOTS;
         if (vital_dot_pos < vit_bar[1].cred) {
             if (vit_bar[1].cyerw > vital_dot_pos) {

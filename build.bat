@@ -418,9 +418,6 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\aboutspr_tbl_c.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\aboutspr_tbl_c.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\Eff95_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\Eff95_tbl.obj >obj\shc.log 2>&1
-if errorlevel 1 goto fail
-findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\CHARSET_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\CHARSET_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log

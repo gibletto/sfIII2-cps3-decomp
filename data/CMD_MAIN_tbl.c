@@ -24,14 +24,14 @@ extern const s8 gcfg_help_return_en[];
 extern const s8 gcfg_help_select2_en[];
 extern const s8 gcfg_help_shot1_en[];
 extern const s8 gcfg_help_shots_en[];
-extern const s8 gcfg_line_1p_round_en[];
-extern const s8 gcfg_line_2p_round_en[];
+extern const s8 gcfg_line_timer_en[];
+extern const s8 gcfg_line_round_en[];
 extern const s8 gcfg_line_bonus_en[];
-extern const s8 gcfg_line_damage_en[];
+extern const s8 gcfg_line_level_en[];
 extern const s8 gcfg_line_event_en[];
 extern const s8 gcfg_line_exit_en[];
-extern const s8 gcfg_line_level_en[];
-extern const s8 gcfg_line_timer_en[];
+extern const s8 gcfg_line_screen_en[];
+extern const s8 gcfg_line_damage_en[];
 extern const s8 gcfg_line_title_en[];
 extern const s8 gcfg_help_select_en[];
 extern const s8 gcfg_line_damage2_en[];
@@ -43,11 +43,11 @@ extern const s8 gcfg_line_timer2_en[];
 
 const TM_STRING config_title_str_tbl[18] = {
     { 3, 1, 2, gcfg_line_title_en },
-    { 5, 4, 2, gcfg_line_level_en },
-    { 5, 6, 2, gcfg_line_damage_en },
-    { 5, 8, 2, gcfg_line_timer_en },
-    { 5, 10, 2, gcfg_line_1p_round_en },
-    { 5, 12, 2, gcfg_line_2p_round_en },
+    { 5, 4, 2, gcfg_line_screen_en },
+    { 5, 6, 2, gcfg_line_level_en },
+    { 5, 8, 2, gcfg_line_damage_en },
+    { 5, 10, 2, gcfg_line_timer_en },
+    { 5, 12, 2, gcfg_line_round_en },
     { 5, 14, 2, gcfg_line_event_en },
     { 5, 16, 2, gcfg_line_bonus_en },
     { 5, 18, 2, gcfg_line_exit_en },

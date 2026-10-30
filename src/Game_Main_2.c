@@ -107,7 +107,7 @@ TM_STRING* str;
 /* provisional name */
 void Set_Mode_Pos_copy(s16* value, s16 add, s16 init) {
     *value = init;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         *value += add;
     }
 }
@@ -117,7 +117,7 @@ void Set_Mode_Pos_copy(s16* value, s16 add, s16 init) {
 /* provisional name */
 void Set_Mode_Pos(s16* value, s16 add, s16 init) {
     *value = init;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         *value += add;
     }
 }

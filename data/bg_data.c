@@ -53,6 +53,8 @@ const s16 bg_index_tbl[18][3] = {
     { 17, 17, 17 },
 };
 
+/* Stored after bg_index_tbl: five records of (256, 256, 312, 0, 0, 0), as many as there are special
+   screen types. Nothing in the program refers to it by name or address. */
 const s16 bg_index_tbl_tail[30] = {
     256, 256, 312, 0, 0, 0, 256, 256,
     312, 0, 0, 0, 256, 256, 312, 0,

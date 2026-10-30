@@ -1,9 +1,10 @@
 /*
  * END_SUB_TBL_C.C  text layer cell lists
  *
- * sc_celllist_data holds the cell lists (x, y, attribute, character code, ended by x = 100)
- * that sc_celllist_tbl in SC_TRANS_TBL.C points into; nothing else refers to it. SC_TRANS.C
- * puts the lists on the text layer (sc_celllist_put and its variants).
+ * sc_celllist_0 - 16 are the cell lists (x, y, attribute, character code, ended by x = 100)
+ * that sc_celllist_tbl in SC_TRANS_TBL.C names, each after the first entry that uses it
+ * (sc_celllist_0 serves entries 0 and 1); nothing else refers to them. SC_TRANS.C puts the
+ * lists on the text layer (sc_celllist_put and its variants).
  */
 
 #include "types.h"
@@ -11,43 +12,79 @@
 
 #pragma section TBL
 
-extern const CELL_ENTRY sc_celllist_data[];
+extern const CELL_ENTRY sc_celllist_0[];
+extern const CELL_ENTRY sc_celllist_2[];
+extern const CELL_ENTRY sc_celllist_15[];
+extern const CELL_ENTRY sc_celllist_16[];
+extern const CELL_ENTRY sc_celllist_3[];
+extern const CELL_ENTRY sc_celllist_4[];
+extern const CELL_ENTRY sc_celllist_5[];
+extern const CELL_ENTRY sc_celllist_6[];
+extern const CELL_ENTRY sc_celllist_11[];
+extern const CELL_ENTRY sc_celllist_12[];
+extern const CELL_ENTRY sc_celllist_7[];
+extern const CELL_ENTRY sc_celllist_8[];
+extern const CELL_ENTRY sc_celllist_9[];
+extern const CELL_ENTRY sc_celllist_10[];
+extern const CELL_ENTRY sc_celllist_13[];
+extern const CELL_ENTRY sc_celllist_14[];
 
-const CELL_ENTRY sc_celllist_data[650] = {
+const CELL_ENTRY sc_celllist_0[21] = {
     { 1, 2, 2, 0x8F }, { 2, 2, 2, 0x8F }, { 3, 2, 2, 0x8F }, { 4, 2, 2, 0x8F },
     { 5, 2, 2, 0x8F }, { 6, 2, 2, 0x8F }, { 7, 2, 2, 0x8F }, { 8, 2, 2, 0x8F },
     { 9, 2, 2, 0x8F }, { 10, 2, 2, 0x8F }, { 11, 2, 2, 0x8F }, { 12, 2, 2, 0x8F },
     { 13, 2, 2, 0x8F }, { 14, 2, 2, 0x8F }, { 15, 2, 2, 0x8F }, { 16, 2, 2, 0x8F },
     { 17, 2, 2, 0x8F }, { 18, 2, 2, 0x8F }, { 19, 2, 2, 0x8F }, { 20, 2, 2, 0x8F },
     { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_2[21] = {
     { 27, 2, 2, 0x8F }, { 28, 2, 2, 0x8F }, { 29, 2, 2, 0x8F }, { 30, 2, 2, 0x8F },
     { 31, 2, 2, 0x8F }, { 32, 2, 2, 0x8F }, { 33, 2, 2, 0x8F }, { 34, 2, 2, 0x8F },
     { 35, 2, 2, 0x8F }, { 36, 2, 2, 0x8F }, { 37, 2, 2, 0x8F }, { 38, 2, 2, 0x8F },
     { 39, 2, 2, 0x8F }, { 40, 2, 2, 0x8F }, { 41, 2, 2, 0x8F }, { 42, 2, 2, 0x8F },
     { 43, 2, 2, 0x8F }, { 44, 2, 2, 0x8F }, { 45, 2, 2, 0x8F }, { 46, 2, 2, 0x8F },
     { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_15[21] = {
     { 9, 2, 2, 0x8F }, { 10, 2, 2, 0x8F }, { 11, 2, 2, 0x8F }, { 12, 2, 2, 0x8F },
     { 13, 2, 2, 0x8F }, { 14, 2, 2, 0x8F }, { 15, 2, 2, 0x8F }, { 16, 2, 2, 0x8F },
     { 17, 2, 2, 0x8F }, { 18, 2, 2, 0x8F }, { 19, 2, 2, 0x8F }, { 20, 2, 2, 0x8F },
     { 21, 2, 2, 0x8F }, { 22, 2, 2, 0x8F }, { 23, 2, 2, 0x8F }, { 24, 2, 2, 0x8F },
     { 25, 2, 2, 0x8F }, { 26, 2, 2, 0x8F }, { 27, 2, 2, 0x8F }, { 28, 2, 2, 0x8F },
     { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_16[21] = {
     { 35, 2, 2, 0x8F }, { 36, 2, 2, 0x8F }, { 37, 2, 2, 0x8F }, { 38, 2, 2, 0x8F },
     { 39, 2, 2, 0x8F }, { 40, 2, 2, 0x8F }, { 41, 2, 2, 0x8F }, { 42, 2, 2, 0x8F },
     { 43, 2, 2, 0x8F }, { 44, 2, 2, 0x8F }, { 45, 2, 2, 0x8F }, { 46, 2, 2, 0x8F },
     { 47, 2, 2, 0x8F }, { 48, 2, 2, 0x8F }, { 49, 2, 2, 0x8F }, { 50, 2, 2, 0x8F },
     { 51, 2, 2, 0x8F }, { 52, 2, 2, 0x8F }, { 53, 2, 2, 0x8F }, { 54, 2, 2, 0x8F },
     { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_3[13] = {
     { 22, 1, 26, 0xF0 }, { 23, 1, 26, 0xF1 }, { 22, 2, 26, 0xF2 }, { 23, 2, 26, 0xF3 },
     { 22, 3, 26, 0xF4 }, { 23, 3, 26, 0xF5 }, { 24, 1, 26, 0xF6 }, { 25, 1, 26, 0xF7 },
     { 24, 2, 26, 0xF8 }, { 25, 2, 26, 0xF9 }, { 24, 3, 26, 0xFA }, { 25, 3, 26, 0xFB },
     { 100, 0, 26, 0 },
+};
+
+const CELL_ENTRY sc_celllist_4[10] = {
     { 2, 27, 28, 0x124 }, { 3, 27, 28, 0x125 }, { 4, 27, 28, 0x125 }, { 4, 26, 28, 0x12C },
     { 5, 27, 28, 0x126 }, { 6, 27, 28, 0x127 }, { 7, 27, 28, 0x128 }, { 8, 27, 28, 0x129 },
     { 9, 27, 28, 0x12A }, { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_5[10] = {
     { 45, 27, 156, 0x124 }, { 44, 27, 156, 0x125 }, { 43, 27, 156, 0x125 }, { 43, 26, 156, 0x12C },
     { 42, 27, 156, 0x126 }, { 41, 27, 156, 0x127 }, { 40, 27, 156, 0x128 }, { 39, 27, 156, 0x129 },
     { 38, 27, 156, 0x12A }, { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_6[97] = {
     { 12, 9, 40, 0x180 }, { 13, 9, 40, 0x181 }, { 14, 9, 40, 0x182 }, { 15, 9, 40, 0x183 },
     { 16, 9, 40, 0x184 }, { 17, 9, 40, 0x185 }, { 18, 9, 40, 0x186 }, { 19, 9, 40, 0x187 },
     { 20, 9, 40, 0x188 }, { 21, 9, 40, 0x189 }, { 22, 9, 40, 0x18A }, { 23, 9, 40, 0x18B },
@@ -73,6 +110,9 @@ const CELL_ENTRY sc_celllist_data[650] = {
     { 28, 12, 40, 0x1F0 }, { 29, 12, 40, 0x1F1 }, { 30, 12, 40, 0x1F2 }, { 31, 12, 40, 0x1F3 },
     { 32, 12, 40, 0x1F4 }, { 33, 12, 40, 0x1F5 }, { 34, 12, 40, 0x1F6 }, { 35, 12, 40, 0x1F7 },
     { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_11[129] = {
     { 16, 9, 40, 0x180 }, { 17, 9, 40, 0x181 }, { 18, 9, 40, 0x182 }, { 19, 9, 40, 0x183 },
     { 20, 9, 40, 0x184 }, { 21, 9, 40, 0x185 }, { 22, 9, 40, 0x186 }, { 23, 9, 40, 0x187 },
     { 24, 9, 40, 0x188 }, { 25, 9, 40, 0x189 }, { 26, 9, 40, 0x18A }, { 27, 9, 40, 0x18B },
@@ -106,6 +146,9 @@ const CELL_ENTRY sc_celllist_data[650] = {
     { 24, 16, 40, 0x1F8 }, { 25, 16, 40, 0x1F9 }, { 26, 16, 40, 0x1FA }, { 27, 16, 40, 0x1FB },
     { 28, 16, 40, 0x1FC }, { 29, 16, 40, 0x1FD }, { 30, 16, 40, 0x1FE }, { 31, 16, 40, 0x1FF },
     { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_12[161] = {
     { 4, 11, 58, 0x140 }, { 5, 11, 58, 0x144 }, { 6, 11, 58, 0x148 }, { 7, 11, 58, 0x14C },
     { 8, 11, 58, 0x150 }, { 9, 11, 58, 0x154 }, { 10, 11, 58, 0x158 }, { 11, 11, 58, 0x15C },
     { 12, 11, 58, 0x160 }, { 13, 11, 58, 0x164 }, { 14, 11, 58, 0x168 }, { 15, 11, 58, 0x16C },
@@ -147,6 +190,9 @@ const CELL_ENTRY sc_celllist_data[650] = {
     { 36, 14, 58, 0x1C3 }, { 37, 14, 58, 0x1C7 }, { 38, 14, 58, 0x1CB }, { 39, 14, 58, 0x1CF },
     { 40, 14, 58, 0x1D3 }, { 41, 14, 58, 0x1D7 }, { 42, 14, 58, 0x1DB }, { 43, 14, 58, 0x1DF },
     { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_7[25] = {
     { 12, 10, 44, 0x1A0 }, { 13, 10, 44, 0x1A1 }, { 14, 10, 44, 0x1A2 }, { 15, 10, 44, 0x1A3 },
     { 16, 10, 44, 0x1A4 }, { 17, 10, 44, 0x1A5 }, { 18, 10, 44, 0x1A6 }, { 19, 10, 44, 0x1A7 },
     { 12, 11, 44, 0x1B0 }, { 13, 11, 44, 0x1B1 }, { 14, 11, 44, 0x1B2 }, { 15, 11, 44, 0x1B3 },
@@ -154,6 +200,9 @@ const CELL_ENTRY sc_celllist_data[650] = {
     { 12, 12, 44, 0x1C0 }, { 13, 12, 44, 0x1C1 }, { 14, 12, 44, 0x1C2 }, { 15, 12, 44, 0x1C3 },
     { 16, 12, 44, 0x1C4 }, { 17, 12, 44, 0x1C5 }, { 18, 12, 44, 0x1C6 }, { 19, 12, 44, 0x1C7 },
     { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_8[25] = {
     { 12, 14, 44, 0x1A8 }, { 13, 14, 44, 0x1A9 }, { 14, 14, 44, 0x1AA }, { 15, 14, 44, 0x1AB },
     { 16, 14, 44, 0x1AC }, { 17, 14, 44, 0x1AD }, { 18, 14, 44, 0x1AE }, { 19, 14, 44, 0x1AF },
     { 12, 15, 44, 0x1B8 }, { 13, 15, 44, 0x1B9 }, { 14, 15, 44, 0x1BA }, { 15, 15, 44, 0x1BB },
@@ -161,6 +210,9 @@ const CELL_ENTRY sc_celllist_data[650] = {
     { 12, 16, 44, 0x1C8 }, { 13, 16, 44, 0x1C9 }, { 14, 16, 44, 0x1CA }, { 15, 16, 44, 0x1CB },
     { 16, 16, 44, 0x1CC }, { 17, 16, 44, 0x1CD }, { 18, 16, 44, 0x1CE }, { 19, 16, 44, 0x1CF },
     { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_9[31] = {
     { 12, 18, 44, 0x1D0 }, { 13, 18, 44, 0x1D1 }, { 14, 18, 44, 0x1D2 }, { 15, 18, 44, 0x1D3 },
     { 16, 18, 44, 0x1D4 }, { 17, 18, 44, 0x1D5 }, { 18, 18, 44, 0x1D6 }, { 19, 18, 44, 0x1D7 },
     { 20, 18, 44, 0x1D8 }, { 21, 18, 44, 0x1D9 }, { 12, 19, 44, 0x1E0 }, { 13, 19, 44, 0x1E1 },
@@ -169,6 +221,9 @@ const CELL_ENTRY sc_celllist_data[650] = {
     { 12, 20, 44, 0x1F0 }, { 13, 20, 44, 0x1F1 }, { 14, 20, 44, 0x1F2 }, { 15, 20, 44, 0x1F3 },
     { 16, 20, 44, 0x1F4 }, { 17, 20, 44, 0x1F5 }, { 18, 20, 44, 0x1F6 }, { 19, 20, 44, 0x1F7 },
     { 20, 20, 44, 0x1F8 }, { 21, 20, 44, 0x1F9 }, { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_10[43] = {
     { 10, 10, 44, 0x1DA }, { 11, 10, 44, 0x1DB }, { 12, 10, 44, 0x1DC }, { 13, 10, 44, 0x1DD },
     { 14, 10, 44, 0x1DE }, { 15, 10, 44, 0x1DF }, { 16, 10, 44, 0x180 }, { 17, 10, 44, 0x181 },
     { 18, 10, 44, 0x182 }, { 19, 10, 44, 0x183 }, { 20, 10, 44, 0x184 }, { 21, 10, 44, 0x185 },
@@ -180,9 +235,15 @@ const CELL_ENTRY sc_celllist_data[650] = {
     { 14, 12, 44, 0x1FE }, { 15, 12, 44, 0x1FF }, { 16, 12, 44, 0x188 }, { 17, 12, 44, 0x189 },
     { 18, 12, 44, 0x18A }, { 19, 12, 44, 0x18B }, { 20, 12, 44, 0x18C }, { 21, 12, 44, 0x18D },
     { 22, 12, 44, 0x18E }, { 23, 12, 44, 0x18F }, { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_13[11] = {
     { 13, 0, 22, 0xD6 }, { 14, 0, 22, 0xD7 }, { 15, 0, 22, 0xD8 }, { 16, 0, 22, 0xD9 },
     { 17, 0, 22, 0xDA }, { 18, 0, 22, 0xDB }, { 19, 0, 22, 0xDC }, { 20, 0, 22, 0xDD },
     { 8, 0, 22, 0xDE }, { 9, 0, 22, 0xDF }, { 100, 0, 0, 0 },
+};
+
+const CELL_ENTRY sc_celllist_14[11] = {
     { 36, 0, 22, 0xE6 }, { 37, 0, 22, 0xE7 }, { 38, 0, 22, 0xE8 }, { 39, 0, 22, 0xE9 },
     { 40, 0, 22, 0xEA }, { 41, 0, 22, 0xEB }, { 42, 0, 22, 0xEC }, { 43, 0, 22, 0xED },
     { 31, 0, 22, 0xEE }, { 32, 0, 22, 0xEF }, { 100, 0, 0, 0 },

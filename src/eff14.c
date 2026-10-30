@@ -54,8 +54,8 @@ s32 effect_14_init(id, x, y, atr)
 
 void effect_14_move(WORK_Other* ewk) {
     E14_SCR* scrn = (E14_SCR*)scrn_map_ptr;
-    u32* data;
-    u16* ofs;
+    const u32* data;
+    const u16* ofs;
     u32 scr;
     s8 put;
     switch (ewk->wu.routine_no[0]) {

@@ -140,7 +140,7 @@ void Lose_20000(PLW* wk) {
     case RN3_START:
         wk->wu.routine_no[3]++;
         id_w = wk->wu.id ^ 1;
-        if ((Round_num >= (work = Game_setting.set4) * 2) || (PL_Wins[id_w] >= work + 1)) {
+        if ((Round_num >= (work = Game_setting.Battle_Number) * 2) || (PL_Wins[id_w] >= work + 1)) {
             effect_C1_init(&wk->wu);
         }
         break;

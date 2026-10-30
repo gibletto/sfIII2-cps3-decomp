@@ -58,6 +58,7 @@
 #include "end_sub.h"
 #include "end_sub_2.h"
 #include "cps3.h"
+#include "effh6_code.h"
 
 /* staff_r_no: the staff roll (staff_roll_main) */
 #define STAFF_INIT      0       /* set up the staff roll */
@@ -77,14 +78,11 @@ s16 name_timer;  /* 0202828E */
 static s16 staff_name_ptr = 0;  /* 020069A4 */
 static s32 staffroll_end = 0;  /* 020069A8 */
 /* 020069AC */
-/* Stored after staffroll_end. Nothing in the program refers to it by name or address; if it is read,
-   it is through an index past the end of staffroll_end. */
+/* Stored after staffroll_end. Nothing in the program refers to it by name or address. */
 u32 staffroll_end_tail[1] = {
     0,
 };
 
-
-s32 effect_H6_init(s16 timer, s8* str, s16 X, s16 Y, s16 Original_Color, s32 unused);
 
 extern s32 staff_r_no;
 
@@ -173,9 +171,9 @@ s32 id;
 s32 x;
 s32 y;
 s32 a;
-s8* b;
+const s8* b;
 {
-    s8* su;
+    const s8* su;
     s16 xu;
     s16 yu;
     su = b;

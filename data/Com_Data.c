@@ -1601,8 +1601,8 @@ const s16 Correct_Cont_Time_Data[2][16] = {
     { 0, 80, 50, 75, 50, 55, 55, 55, 60, 60, 60, 65, 65, 65, 65, 65 },
 };
 
-/* the bytes after Correct_Cont_Time_Data; nothing reads them */
-static const u8 Correct_Cont_Time_Data_tail[14] = {
+/* 0 to 9, then 9s; nothing in the program refers to it by name or address */
+static const u8 Com_Data_unref_0[14] = {
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 255,
 };
 

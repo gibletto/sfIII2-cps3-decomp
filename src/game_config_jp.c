@@ -163,9 +163,9 @@ TMSCRIPT gcfg_gauge_scr_jp[8] = {
 TMSCRIPT gcfg_gauge_clr_scr_jp[1] = {
     { 1, 0, gcfg_gauge_clr_scr_jp_0 },
 };
-/* Stored after gcfg_gauge_clr_scr_jp. Nothing in the program refers to it by name or address; if it is
-   read, it is through an index past the end of gcfg_gauge_clr_scr_jp. */
-TMSCRIPT gcfg_gauge_clr_scr_jp_tail[1] = {
+/* The script of the shorter title (gcfg_title_old_scr_jp_0). Nothing in the program refers to it by
+   name or address. */
+TMSCRIPT gcfg_title_old_scr_jp[1] = {
     { 1, 0, gcfg_title_old_scr_jp_0 },
 };
 /* 020008A4 */
@@ -187,33 +187,33 @@ void game_config_init_jp(void) {
     tilemap_print_script_seq(0, 0, 0xFFFF, gcfg_title_scr_jp);
     Config_Attr_jp = 2;
     Config_Item_jp = 6;
-    Config_New_jp = game_config_work.bonus & 1;
-    Config_Old_jp = Game_setting.bonus & 1;
+    Config_New_jp = game_config_work.Bonus_Game & 1;
+    Config_Old_jp = Game_setting.Bonus_Game & 1;
     Config_Attr_jp = (Config_New_jp != Config_Old_jp) ? 8 : 2;
     game_config_print_value_jp(Config_Attr_jp, &gcfg_bonus_scr_jp[Config_New_jp]);
     Config_Item_jp = 5;
-    Config_New_jp = game_config_work.set5;
-    Config_Attr_jp = (Config_New_jp != Game_setting.set5) ? 8 : 2;
+    Config_New_jp = game_config_work.Event;
+    Config_Attr_jp = (Config_New_jp != Game_setting.Event) ? 8 : 2;
     game_config_print_value_jp(Config_Attr_jp, &gcfg_event_scr_jp[Config_New_jp]);
     Config_Item_jp = 4;
-    Config_New_jp = game_config_work.set4;
-    Config_Attr_jp = (Config_New_jp != Game_setting.set4) ? 8 : 2;
+    Config_New_jp = game_config_work.Battle_Number;
+    Config_Attr_jp = (Config_New_jp != Game_setting.Battle_Number) ? 8 : 2;
     game_config_print_value_jp(Config_Attr_jp, &gcfg_round_scr_jp[Config_New_jp]);
     Config_Item_jp = 3;
-    Config_New_jp = game_config_work.set3;
-    Config_Attr_jp = (Config_New_jp != Game_setting.set3) ? 8 : 2;
+    Config_New_jp = game_config_work.Timer_Speed;
+    Config_Attr_jp = (Config_New_jp != Game_setting.Timer_Speed) ? 8 : 2;
     game_config_print_gauge_jp(Config_New_jp, 0xFFFF, Config_Attr_jp);
     Config_Item_jp = 2;
-    Config_New_jp = game_config_work.set2;
-    Config_Attr_jp = (Config_New_jp != Game_setting.set2) ? 8 : 2;
+    Config_New_jp = game_config_work.Damage_Level;
+    Config_Attr_jp = (Config_New_jp != Game_setting.Damage_Level) ? 8 : 2;
     game_config_print_gauge_jp(Config_New_jp, 0xFFFF, Config_Attr_jp);
     Config_Item_jp = 1;
-    Config_New_jp = game_config_work.level;
-    Config_Attr_jp = (Config_New_jp != Game_setting.level) ? 8 : 2;
+    Config_New_jp = game_config_work.Difficulty;
+    Config_Attr_jp = (Config_New_jp != Game_setting.Difficulty) ? 8 : 2;
     game_config_print_gauge_jp(Config_New_jp, 0xFFFF, Config_Attr_jp);
     Config_Item_jp = 0;
-    Config_New_jp = game_config_work.mode;
-    Config_Attr_jp = (Config_New_jp != Game_setting.mode) ? 8 : 2;
+    Config_New_jp = game_config_work.Screen_Mode;
+    Config_Attr_jp = (Config_New_jp != Game_setting.Screen_Mode) ? 8 : 2;
     game_config_print_value_jp(Config_Attr_jp, &gcfg_screen_scr_jp[Config_New_jp]);
     game_config_print_cursor_jp(gcfg_cursor_scr_jp);
 }
@@ -243,7 +243,7 @@ void game_config_force_wide(void) {
     u16 sw2 = p2sw_0 & BUTTON_SHOTS;
     if (sw1 == 0x3F0 && sw2 == 0x3F0) {
         set_screen_mode(7);
-        game_config_work.mode = 1;
+        game_config_work.Screen_Mode = 1;
         screen_flip_offsets_set();
     }
 }
@@ -266,22 +266,22 @@ void game_config_screen_item_jp(void) {
         }
     }
     if (Config_Move_jp) {
-        game_config_work.mode += Config_Move_jp;
-        game_config_work.mode &= 1;
-        if (game_config_work.mode) {
+        game_config_work.Screen_Mode += Config_Move_jp;
+        game_config_work.Screen_Mode &= 1;
+        if (game_config_work.Screen_Mode) {
             set_screen_mode(7);
         } else {
             set_screen_mode(3);
         }
         screen_flip_offsets_set();
-        tilemap_print_script_seq(24, 2, 0xFFFF, &gcfg_screen_scr_jp[game_config_work.mode]);
-        if (game_config_work.mode != Game_setting.mode) {
+        tilemap_print_script_seq(24, 2, 0xFFFF, &gcfg_screen_scr_jp[game_config_work.Screen_Mode]);
+        if (game_config_work.Screen_Mode != Game_setting.Screen_Mode) {
             tilemap_rect_fill(24, 2, 8, 2, 8, 0xFFFF);
         } else {
             tilemap_rect_fill(24, 2, 8, 2, 2, 0xFFFF);
         }
     } else {
-        game_config_work.mode &= 1;
+        game_config_work.Screen_Mode &= 1;
     }
 }
 
@@ -302,13 +302,13 @@ void game_config_level_item_jp(void) {
             Config_Move_jp = 1;
         }
     }
-    game_config_work.level &= 7;
+    game_config_work.Difficulty &= 7;
     if (Config_Move_jp) {
-        Config_Old_jp = game_config_work.level;
-        game_config_work.level += Config_Move_jp;
-        game_config_work.level &= 7;
-        Config_New_jp = game_config_work.level;
-        Config_Attr_jp = Config_New_jp != Game_setting.level ? 8 : 2;
+        Config_Old_jp = game_config_work.Difficulty;
+        game_config_work.Difficulty += Config_Move_jp;
+        game_config_work.Difficulty &= 7;
+        Config_New_jp = game_config_work.Difficulty;
+        Config_Attr_jp = Config_New_jp != Game_setting.Difficulty ? 8 : 2;
         game_config_print_gauge_jp(Config_New_jp, Config_Old_jp, Config_Attr_jp);
     }
 }
@@ -332,11 +332,11 @@ void game_config_damage_item_jp(void) {
         }
     }
     if (Config_Move_jp) {
-        Config_Old_jp = game_config_work.set2;
-        game_config_work.set2 += Config_Move_jp;
-        game_config_work.set2 &= 3;
-        Config_New_jp = game_config_work.set2;
-        Config_Attr_jp = Config_New_jp != Game_setting.set2 ? 8 : 2;
+        Config_Old_jp = game_config_work.Damage_Level;
+        game_config_work.Damage_Level += Config_Move_jp;
+        game_config_work.Damage_Level &= 3;
+        Config_New_jp = game_config_work.Damage_Level;
+        Config_Attr_jp = Config_New_jp != Game_setting.Damage_Level ? 8 : 2;
         game_config_print_gauge_jp(Config_New_jp, Config_Old_jp, Config_Attr_jp);
     }
 }
@@ -359,11 +359,11 @@ void game_config_timer_item_jp(void) {
         }
     }
     if (Config_Move_jp) {
-        Config_Old_jp = game_config_work.set3;
-        game_config_work.set3 += Config_Move_jp;
-        game_config_work.set3 &= 3;
-        Config_New_jp = game_config_work.set3;
-        Config_Attr_jp = Config_New_jp != Game_setting.set3 ? 8 : 2;
+        Config_Old_jp = game_config_work.Timer_Speed;
+        game_config_work.Timer_Speed += Config_Move_jp;
+        game_config_work.Timer_Speed &= 3;
+        Config_New_jp = game_config_work.Timer_Speed;
+        Config_Attr_jp = Config_New_jp != Game_setting.Timer_Speed ? 8 : 2;
         game_config_print_gauge_jp(Config_New_jp, Config_Old_jp, Config_Attr_jp);
     }
 }
@@ -386,10 +386,10 @@ void game_config_1p_round_item_jp(void) {
         }
     }
     if (Config_Move_jp) {
-        game_config_work.set4 += Config_Move_jp;
-        game_config_work.set4 &= 3;
-        Config_New_jp = game_config_work.set4;
-        Config_Attr_jp = (Config_New_jp != Game_setting.set4) ? 8 : 2;
+        game_config_work.Battle_Number += Config_Move_jp;
+        game_config_work.Battle_Number &= 3;
+        Config_New_jp = game_config_work.Battle_Number;
+        Config_Attr_jp = (Config_New_jp != Game_setting.Battle_Number) ? 8 : 2;
         game_config_print_value_jp(Config_Attr_jp, &gcfg_round_scr_jp[Config_New_jp]);
     }
 }
@@ -413,10 +413,10 @@ void game_config_event_item_jp(void) {
         }
     }
     if (Config_Move_jp) {
-        game_config_work.set5 += Config_Move_jp;
-        game_config_work.set5 &= 1;
-        Config_New_jp = game_config_work.set5;
-        Config_Attr_jp = (Config_New_jp != Game_setting.set5) ? 8 : 2;
+        game_config_work.Event += Config_Move_jp;
+        game_config_work.Event &= 1;
+        Config_New_jp = game_config_work.Event;
+        Config_Attr_jp = (Config_New_jp != Game_setting.Event) ? 8 : 2;
         game_config_print_value_jp(Config_Attr_jp, &gcfg_event_scr_jp[Config_New_jp]);
     }
 }
@@ -439,10 +439,10 @@ void game_config_bonus_item_jp(void) {
         }
     }
     if (Config_Move_jp) {
-        game_config_work.bonus ^= 1;
-        game_config_work.bonus &= 3;
-        Config_New_jp = game_config_work.bonus & 1;
-        Config_Old_jp = Game_setting.bonus & 1;
+        game_config_work.Bonus_Game ^= 1;
+        game_config_work.Bonus_Game &= 3;
+        Config_New_jp = game_config_work.Bonus_Game & 1;
+        Config_Old_jp = Game_setting.Bonus_Game & 1;
         Config_Attr_jp = (Config_New_jp != Config_Old_jp) ? 8 : 2;
         game_config_print_value_jp(Config_Attr_jp, &gcfg_bonus_scr_jp[Config_New_jp]);
     }
@@ -461,14 +461,14 @@ void game_config_exit_item_jp(void) {
 
 /* provisional name */
 void game_config_settings_commit(void) {
-    Game_setting.mode = game_config_work.mode;
-    Game_setting.level = game_config_work.level;
-    Game_setting.set2 = game_config_work.set2;
-    Game_setting.set3 = game_config_work.set3;
-    Game_setting.set4 = game_config_work.set4;
-    Game_setting.set5 = game_config_work.set5;
-    Game_setting.set6 = game_config_work.set6;
-    Game_setting.bonus = game_config_work.bonus;
+    Game_setting.Screen_Mode = game_config_work.Screen_Mode;
+    Game_setting.Difficulty = game_config_work.Difficulty;
+    Game_setting.Damage_Level = game_config_work.Damage_Level;
+    Game_setting.Timer_Speed = game_config_work.Timer_Speed;
+    Game_setting.Battle_Number = game_config_work.Battle_Number;
+    Game_setting.Event = game_config_work.Event;
+    Game_setting.Spare = game_config_work.Spare;
+    Game_setting.Bonus_Game = game_config_work.Bonus_Game;
 }
 
 
@@ -517,12 +517,12 @@ void game_config_cursor_move_jp(void) {
 
 /* provisional name */
 void game_config_apply(void) {
-    if (game_config_work.set5) {
+    if (game_config_work.Event) {
         event_off_flag = 0;
     } else {
         event_off_flag = 1;
     }
-    if (game_config_work.mode) {
+    if (game_config_work.Screen_Mode) {
         set_screen_mode(7);
     } else {
         set_screen_mode(3);
@@ -577,7 +577,7 @@ void game_config_print_cursor_jp(const TMSCRIPT* script) {
    gcfg_code_list_jp, and the 13th step sets bit 1 of the bonus setting */
 void game_config_code_check_jp(void) {
     register s16 sw;
-    if (game_config_work.bonus & 2) {
+    if (game_config_work.Bonus_Game & 2) {
         return;
     }
     sw = ~p1sw_1 & p1sw_0 & 0x13C0;
@@ -589,7 +589,7 @@ void game_config_code_check_jp(void) {
             Config_Code_No_jp++;
             Config_Code_Ptr_jp += 2;
             if (Config_Code_No_jp >= 13) {
-                game_config_work.bonus |= 2;
+                game_config_work.Bonus_Game |= 2;
                 sound_request(0x274);
             }
             return;

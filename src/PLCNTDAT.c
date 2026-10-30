@@ -270,7 +270,7 @@ void clear_kizetsu_point(PLW* wk) {
 
 void set_super_arts_status(s16 pl)
 {
-    u8 *data;
+    const u8 *data;
 
     data = super_arts_data[My_char[pl]][Super_Arts[pl]];
     super_arts[pl].kind_of_arts = Super_Arts[pl];

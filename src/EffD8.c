@@ -207,7 +207,7 @@ void effD8_colour_step(WORK_Other* ewk, s16 num, s16 time) {
 /* a player standing on face 14 gets no cursor and is moved to the corner */
 /* provisional name */
 s32 effD8_face_check(s16 PL_id) {
-    if (Game_setting.bonus & 2) {
+    if (Game_setting.Bonus_Game & 2) {
         return 0;
     }
     if (ID_of_Face[Cursor_Y[PL_id]][Cursor_X[PL_id]] != 14) {

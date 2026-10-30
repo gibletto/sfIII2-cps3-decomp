@@ -2,7 +2,7 @@
  * EFFI0.C  Effect H9 (balls-left counter) and effect I0: small stone debris
  *
  * Effect H9 is the bonus stage's remaining-ball counter: effect_H9_init (BBBSCOM.c) builds three
- * connected sprites from bbbs_ball, by facing and by Game_setting.mode (bbbs_ball has four
+ * connected sprites from bbbs_ball, by facing and by Game_setting.Screen_Mode (bbbs_ball has four
  * rows), and effect_H9_move counts the two-digit number up to Bonus_Game_Work, then keeps it
  * equal to Bonus_Game_Work (nokori_ball_effH9).
  * Each I0 work is one piece of stone kicked up from the floor. effect_I0_init spawns the pieces
@@ -138,7 +138,7 @@ s32 effect_H9_init(PLW* wk) {
     ewk->wu.my_col_mode = 0x4200;
     ewk->wu.my_col_code = 0x80;
     ewk->num_of_conn = 3;
-    ix = (Game_setting.mode != 0);
+    ix = (Game_setting.Screen_Mode != 0);
     ix *= 2;
     if (wk->wu.rl_flag != 0) {
         ix = ix + 1;
@@ -244,7 +244,7 @@ s16 nxy;
 
 
 void effect_I0_init(WORK* wk, u8 num) {
-    s16* dix;
+    const s16* dix;
     s16 i;
     s16 hsx;
     s16 hsy;

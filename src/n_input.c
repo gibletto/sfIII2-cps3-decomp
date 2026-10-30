@@ -529,7 +529,7 @@ s16 pl_id;
 /* provisional name */
 void name_entry_commit_row(s16 pl_id, s16 pos_y) {
     s16 pos_x;
-    if (!Game_setting.mode) {
+    if (!Game_setting.Screen_Mode) {
     }
     if (pl_id) {
         pos_x = DE_X[0] + 37;
@@ -554,9 +554,9 @@ void name_entry_commit_row(s16 pl_id, s16 pos_y) {
     tilemap_put_cell(pos_x, pos_y, 42, pl_id * 2 + 106);
     tilemap_put_cell(pos_x + 1, pos_y, 42, pl_id * 2 + 107);
     if (pl_id) {
-        sc_ram_to_vram_opc(25, Game_setting.mode * 8, pos_y, 42);
+        sc_ram_to_vram_opc(25, Game_setting.Screen_Mode * 8, pos_y, 42);
     } else {
-        sc_ram_to_vram_opc(24, Game_setting.mode * 4, pos_y, 42);
+        sc_ram_to_vram_opc(24, Game_setting.Screen_Mode * 4, pos_y, 42);
     }
 }
 

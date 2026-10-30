@@ -10,9 +10,9 @@
 
 #pragma section TBL
 
-extern const PANEL end_1100_bg0_cell_tbl[];
+extern const HUD_CELL end_1100_bg0_cell_tbl[];
 
-const PANEL end_1100_bg0_cell_tbl[8] = {
+const HUD_CELL end_1100_bg0_cell_tbl[8] = {
     { 0x2000, 1 },
     { 0x2040, 2 },
     { 0x2080, 3 },

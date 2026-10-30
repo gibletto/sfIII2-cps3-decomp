@@ -2,7 +2,7 @@
  * EFFB2.C  Round-start FIGHT call sequence (effect B2)
  *
  * Controls the start-of-round call. effect_B2_init is called by the round manager (manage_2.c) at the
- * start of each round: it loads colour 3 and char gfx 0x9130, decides from Game_setting.set4 and
+ * start of each round: it loads colour 3 and char gfx 0x9130, decides from Game_setting.Battle_Number and
  * Round_num whether this is the final round (type 1) or a normal round (type 0) and spawns effect B3,
  * the display child that shows the round number and FIGHT (EFFB3.C). effect_B2_move waits on
  * rf_b2_flag counts (more than 9 in the final round, else 4) and timers, checks Break_Into after each
@@ -161,7 +161,7 @@ s32 b3_Break_Into_check(WORK_Other* ewk) {
 
 
 
-/* family 2, colour 3 and char gfx 0x9130, no BG3 setup, rounds from Game_setting.set4 */
+/* family 2, colour 3 and char gfx 0x9130, no BG3 setup, rounds from Game_setting.Battle_Number */
 s32 effect_B2_init(void) {
     WORK_Other* ewk;
     s16 ix;
@@ -175,7 +175,7 @@ s32 effect_B2_init(void) {
     ewk->wu.my_family = 2;
     load_any_color(3);
     load_char_gfx(0x9130, 1);
-    switch (Game_setting.set4) {
+    switch (Game_setting.Battle_Number) {
     case 0:
         ewk->wu.type = 0;
         break;

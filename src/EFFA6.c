@@ -3,7 +3,7 @@
  *
  * Effect A6 is one speech line beside a portrait: effect_A6_init (called with the parent
  * plate) records the speaking character (My_char of Player_id), places the line by side and
- * Game_setting.mode and picks the message (mmes_already) from Break_Into_CPU and, for character
+ * Game_setting.Screen_Mode and picks the message (mmes_already) from Break_Into_CPU and, for character
  * 6, from the opponent. effect_A6_move loads the line once, choosing the message table by
  * Country and Language (effA6_mes_jp / _en / _es / _pt, pointer tables in RAM), builds its
  * connected sprites and then follows the parent until it hides or goes behind.
@@ -178,12 +178,12 @@ s32 effect_A6_init(WORK_Other* mwk) {
     switch (Break_Into_CPU) {
     case 1:
         if (Player_id == 0) {
-            if (Game_setting.mode == 0) {
+            if (Game_setting.Screen_Mode == 0) {
                 ewk->wu.position_x = 0x1F8;
             } else {
                 ewk->wu.position_x = 0x240;
             }
-        } else if (Game_setting.mode == 0) {
+        } else if (Game_setting.Screen_Mode == 0) {
             ewk->wu.position_x = 0x278;
         } else {
             ewk->wu.position_x = 0x2C0;
@@ -209,12 +209,12 @@ s32 effect_A6_init(WORK_Other* mwk) {
         break;
     case 2:
         if (Player_id == 0) {
-            if (Game_setting.mode == 0) {
+            if (Game_setting.Screen_Mode == 0) {
                 ewk->wu.position_x = 0x1F8;
             } else {
                 ewk->wu.position_x = 0x240;
             }
-        } else if (Game_setting.mode == 0) {
+        } else if (Game_setting.Screen_Mode == 0) {
             ewk->wu.position_x = 0x278;
         } else {
             ewk->wu.position_x = 0x2C0;
@@ -244,7 +244,7 @@ void wwwk_set(WORK* wk) {
     wk->my_col_code = 88;
     wk->my_family = 3;
     wk->my_priority = 35;
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         wk->position_x = 0x238;
     } else {
         wk->position_x = 0x280;

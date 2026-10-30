@@ -107,8 +107,8 @@ extern TCB task_tbl[8];
 extern s32 errno;
 extern TM_STRING warning_mes[9][11];
 extern const u8* sys_cfg_default_list[3][9];
-extern u32 sys_cfg_default_tbl[3];
-extern u8 * game_cfg_default_tbl[9];
+extern const u8** sys_cfg_default_tbl[3];
+extern const u8 * game_cfg_default_tbl[9];
 extern s8 Monitor_Flip_Old;
 extern const FOLLOW_MENU_1ST* Follow_Menu_1st_Unit_Data[13];
 extern const FOLLOW_MENU_2ND* Follow_Menu_2nd_Unit_Data[13];
@@ -173,20 +173,20 @@ extern TM_STRING dbg_bg_name_str[];
 extern TM_STRING dbg_char_name_str[];
 extern TM_STRING dbg_act_kind_str[];
 extern const TM_STRING * dbg_act_name_tbl[11];
-extern u32 * dbg_pl_char_tbl[][9];
+extern const u32 * dbg_pl_char_tbl[][9];
 extern void (*chk_move_jp[28])();
 extern void * pl_CMD[16];
 extern const_s16_arr * player_cmd[16];
 extern s16 lvr_chk_tbl[2][4];
 extern void (*ta_move_tbl[23])();
 extern void (*scr_x_mv_jp[])();
-extern u32 bg_map_tbl[18][4];
-extern u32 bg_map_tbl2[5][4];
-extern HUD_CELL * bg_rewrite_cell_tbl[5][4];
-extern TILEREQ * bg_etc_cell_tbl[5][4];
+extern const s16* bg_map_tbl[18][4];
+extern const s16* bg_map_tbl2[5][4];
+extern const HUD_CELL * bg_rewrite_cell_tbl[5][4];
+extern const TILEREQ * bg_etc_cell_tbl[5][4];
 extern void (*opening_move_jp[19])();
-extern void (*end_main_jp[24])(s16);
-extern u32 end_map_tbl[4];
+extern void (*end_main_jp[16])(s16);
+extern const s16* end_map_tbl[4];
 extern void (*end_400_jp[5])();
 extern void (*end_401_jp[5])();
 extern void (*end_402_jp[5])();
@@ -201,7 +201,7 @@ extern const s16 * scr_obj_data[17][3];   /* per stage and area */
 extern const s16 * scr_obj_data6[17][3];   /* by stage and area */
 extern void (*eff09_tbl[19])(WORK_Other*);   /* eff09_0000-18000 */
 extern const s16 * scr_obj_data10[4];
-extern const s16 * scr_obj_data12[6];
+extern const s16 * scr_obj_data12[11];
 extern const s16 * scr_obj_data18[8][4];
 extern void (*eff18_jp_tbl[])(WORK_Other*);
 extern const s16 * scr_obj_data25[9];
@@ -213,8 +213,8 @@ extern void (*eff27_jp_tbl[11])(WORK_Other*);
 extern const s16 * scr_obj_data44[9];
 extern void (*eff64_jp_tbl[])(WORK_Other*);
 extern void (*eff66_jp_tbl[])(WORK_Other*);
-extern const s16 * scr_obj_data87[1][4];
-extern const s16 * scr_obj_data88[1][4];
+extern const s16 * scr_obj_data87[5][4];
+extern const s16 * scr_obj_data88[2][4];
 extern const EFFA6_MESSAGE * effA6_mes_jp[15];
 extern const EFFA6_MESSAGE * effA6_mes_en[15];
 extern const EFFA6_MESSAGE * effA6_mes_es[15];
@@ -223,18 +223,18 @@ extern const EFFB8_MESSAGE * effB8_mes_jp[16];
 extern const EFFB8_MESSAGE * effB8_mes_en[16];
 extern const EFFB8_MESSAGE * effB8_mes_es[16];
 extern const EFFB8_MESSAGE * effB8_mes_pt[16];
-extern u32 * ag_char_table[8];
+extern const u32 * ag_char_table[8];
 extern const EFFF9_MESSAGE * effF9_mes_jp[17];
 extern const EFFF9_MESSAGE * effF9_mes_en[17];
 extern const EFFF9_MESSAGE * effF9_mes_es[17];
 extern const EFFF9_MESSAGE * effF9_mes_pt[17];
 extern const u16 ** txt_no_tbl[17];
-extern s16 * effH7_move_tbl[16];
+extern const s16 * effH7_move_tbl[16];
 extern const s16 (*effM4_dir_tbl[])[2];
 extern TM_STRING test_menu_str[13];
 extern TM_STRING test_menu_str_asia[12];
 extern TMSCRIPT test_menu_scr_jp[1];
-extern TMSCRIPT sys_cfg_page_scr_jp[81];
+extern TMSCRIPT sys_cfg_page_scr_jp[2];
 extern TMSCRIPT sys_cfg_exit_guide_jp[1];
 extern TMSCRIPT sys_cfg_item_guide_jp[1];
 extern TMSCRIPT cfg_top_guide_jp[1];
@@ -248,7 +248,7 @@ extern s16 colortest_no;
 extern s16 screentest_no;
 extern s16 backup_test_no;
 extern s16 config_menu_no;
-extern s8 * simm_name_tbl[8];
+extern const s8 * simm_name_tbl[8];
 extern u8 no_cd_flag;
 extern s16 memtest_error;
 extern s16 memtest_wait;
@@ -329,7 +329,7 @@ extern s8 PASSIVE_X;
 extern WORK * q_hit_push[32];
 extern HS hs[32];
 extern s8 ca_check_flag;
-extern s16 * dmdat_adrs[9];
+extern const s16 * dmdat_adrs[9];
 extern s16 mkm_wk[32];
 extern s16 hpq_in;
 extern s16 EXE_flag;
@@ -337,8 +337,8 @@ extern s16 SLOW_flag;
 extern s16 SLOW_timer;
 extern u16 * wipe_dst_ptr;
 extern u8 * wipe_back_ptr;
-extern u8 * wipe_pat_top;
-extern u8 * wipe_pat_ptr;
+extern const u8 * wipe_pat_top;
+extern const u8 * wipe_pat_ptr;
 extern GradeData judge_item[2][2];
 extern GradeFinalData judge_final[2][2];
 extern s16 Game_pause;
@@ -798,7 +798,7 @@ extern s16 Cont_Sub2_No;
 extern s16 Cont_Sub3_No;
 extern s16 Cont_Timer;
 extern s16 SEL_PL_X;
-extern u16 * Demo_Ptr[2];
+extern const u16 * Demo_Ptr[2];
 extern u8 Demo_Ptr_tail[8];
 extern s8 Config_Item_jp;
 extern s8 Config_Exit_jp;
@@ -1003,7 +1003,7 @@ extern s16 col_trans_req_cnt2;
 extern s32 col_trans_result;
 extern u16 * sc_trans_dst;
 extern u8 * sc_bak_ptr;
-extern u8 * sc_trans_src;
+extern const u8 * sc_trans_src;
 extern u8 sc_trans_src_tail[6];
 extern u16 sc_trans_word;
 extern u8 sc_chr_bak_1p[320];
@@ -1194,11 +1194,30 @@ extern u16 eep_strobe_0;
 extern u16 eep_strobe_1;
 extern u16 eep_strobe_2;
 extern u16 eeprom_test_save[64];
-extern u8 eeprom_w[6];
-extern u8 eeprom_saved_flip;
-extern u8 eeprom_saved_flip_tail[25];
-extern u8 eeprom_game_cfg[16];
-extern u8 eeprom_backup_cfg[80];
+/* the 128-byte EEPROM image: two 48-byte copies of the operator settings (the system settings of test menu 7-1,
+   then the game settings, a SETTINGS), followed by the bookkeeping counters */
+#define EEP_VERSION         0   /* checked against the defaults on load */
+#define EEP_COIN_MODE       1
+#define EEP_CONTINUE        2
+#define EEP_CHUTE_MODE      3
+#define EEP_SOUND_MODE      4
+#define EEP_DEMO_SOUND      5
+#define EEP_MONITOR_FLIP    6
+#define EEP_FREE_PLAY       8
+#define EEP_LANGUAGE        9
+#define EEP_CARD_DISPENSER  10
+#define EEP_WIN_POINT_COM   11
+#define EEP_WIN_POINT_HUMAN 12
+#define EEP_VOICE_TYPE      13
+#define EEP_SYSTEM_SIZE     32
+#define EEP_GAME            32  /* the SETTINGS of a copy */
+#define EEP_COPY_SIZE       48
+#define EEP_BACKUP          48  /* the second copy */
+#define EEP_BOOK_COIN       0x60
+#define EEP_BOOK_SERVICE    0x64
+#define EEP_BOOK_FREE       0x68
+#define EEP_BOOK_CARD       0x6C
+extern u8 eeprom_w[128];
 extern s16 eeprom_retry;
 extern SETTINGS Game_setting;
 extern s8 cfg_top_cursor;
@@ -1313,12 +1332,12 @@ extern u32 snd_fade_speed;
 extern SNDVOICE bgm_voice[16];
 extern SNDVOICE se_voice[16];
 extern SNDRAMP se_pan_ramp[16];
-extern s16 voice_state_init_pair_work;
+extern s16 bgm_pitch_offset;
 extern u16 snd_wave_bias;
 extern SOUND_CTRL snd_ctrl;
 extern u16 bgm_tick_step;
 extern u16 se_tick_step[16];
-extern s8 sound_sample_submit_work4;
+extern s8 bgm_volume_offset;
 extern u8 bgm_master_vol;
 extern u8 snd_master_vol;
 extern u8 snd_stereo;
@@ -1328,8 +1347,8 @@ extern SNDRAMP se_ramp_req;
 extern u16 snd_reg_save;
 extern u16 snd_seq_max;
 extern u8 bgm_status_save[16];
-extern u8 sound_sample_submit_work7;
-extern u8 sound_sample_submit_work7_tail[1];
+extern u8 bgm_state;
+extern u8 bgm_state_tail[1];
 extern u8 bgm_master_vol_init;
 extern s16 cram_bank_old;
 extern s16 cram_bank_now;
@@ -1401,7 +1420,7 @@ extern s8 Order_Timer[6];
 extern u8 Round_num;
 extern s8 Suicide;
 extern s16 VS_Index[2];
-extern u32 * char_add[17][3];   /* per stage and area */
+extern const u32 * char_add[17][3];   /* per stage and area */
 
 extern void (*Name_Jmp_Tbl[8])();
 extern void (*Name_Jmp_scs[8])();

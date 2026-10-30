@@ -27,14 +27,14 @@ COUNT_WORK count_work;  /* 02028684 */
 void count_cont_init(pl)
 u8 pl;
 {
-    (*&count_work).hoji_counter = hoji_counter_tbl[Game_setting.set3];
+    (*&count_work).hoji_counter = hoji_counter_tbl[Game_setting.Timer_Speed];
     Counter_hi = 99;
-    Counter_low = hoji_counter_tbl[Game_setting.set3];
+    Counter_low = hoji_counter_tbl[Game_setting.Timer_Speed];
     *(s16*)&round_timer = Counter_hi;
     bcount_digit_trans(pl, 9, 9);
     if (pl == 0) {
-        sc_ram_to_vram(2, Game_setting.mode * 7, 0);
-        sc_ram_to_vram(3, Game_setting.mode * 7, 0);
+        sc_ram_to_vram(2, Game_setting.Screen_Mode * 7, 0);
+        sc_ram_to_vram(3, Game_setting.Screen_Mode * 7, 0);
     }
     round_timer.size.full = 0x630000;
     Timer_Freeze = 0;
@@ -45,15 +45,15 @@ u8 pl;
 
 
 void count_cont_reset(void) {
-    (*&count_work).hoji_counter = hoji_counter_tbl[Game_setting.set3];
+    (*&count_work).hoji_counter = hoji_counter_tbl[Game_setting.Timer_Speed];
     Counter_hi = 99;
-    Counter_low = hoji_counter_tbl[Game_setting.set3];
+    Counter_low = hoji_counter_tbl[Game_setting.Timer_Speed];
     *(s16*)&round_timer = Counter_hi;
     flash_r_num = 0;
     flash_col = 0;
     bcount_digit_trans(0, 9, 9);
-    sc_ram_to_vram(2, Game_setting.mode * 7, 0);
-    sc_ram_to_vram(3, Game_setting.mode * 7, 0);
+    sc_ram_to_vram(2, Game_setting.Screen_Mode * 7, 0);
+    sc_ram_to_vram(3, Game_setting.Screen_Mode * 7, 0);
 }
 
 
@@ -93,11 +93,11 @@ void counter_control(void) {
     Counter_low = (*&count_work).hoji_counter;
     Counter_hi -= 1;
     if (Counter_hi == 0) {
-        sq_paint_chenge(Game_setting.mode * 7 + 22, 2, 4, 2, 34);
-        sq_paint_chenge(Game_setting.mode * 7 + 22, 1, 2, 1, 34);
-        sq_paint_chenge(Game_setting.mode * 7 + 24, 1, 2, 1, 0xA2);
-        sq_paint_chenge(Game_setting.mode * 7 + 22, 4, 2, 1, 34);
-        sq_paint_chenge(Game_setting.mode * 7 + 24, 4, 2, 1, 0xA2);
+        sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 2, 4, 2, 34);
+        sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 1, 2, 1, 34);
+        sq_paint_chenge(Game_setting.Screen_Mode * 7 + 24, 1, 2, 1, 0xA2);
+        sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 4, 2, 1, 34);
+        sq_paint_chenge(Game_setting.Screen_Mode * 7 + 24, 4, 2, 1, 0xA2);
     }
     *(s16*)&round_timer = Counter_hi;
     hi = Counter_hi;
@@ -114,11 +114,11 @@ void counter_flash(s8 ix) {
         return;
     }
     flash_timer = flash_timer_tbl[ix];
-    sq_paint_chenge(Game_setting.mode * 7 + 22, 2, 4, 2, flash_color_tbl[0][flash_col]);
-    sq_paint_chenge(Game_setting.mode * 7 + 22, 1, 2, 1, flash_color_tbl[0][flash_col]);
-    sq_paint_chenge(Game_setting.mode * 7 + 24, 1, 2, 1, flash_color_tbl[1][flash_col]);
-    sq_paint_chenge(Game_setting.mode * 7 + 22, 4, 2, 1, flash_color_tbl[2][flash_col]);
-    sq_paint_chenge(Game_setting.mode * 7 + 24, 4, 2, 1, flash_color_tbl[3][flash_col]);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 2, 4, 2, flash_color_tbl[0][flash_col]);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 1, 2, 1, flash_color_tbl[0][flash_col]);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 24, 1, 2, 1, flash_color_tbl[1][flash_col]);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 4, 2, 1, flash_color_tbl[2][flash_col]);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 24, 4, 2, 1, flash_color_tbl[3][flash_col]);
     flash_col++;
     if (flash_col == 3) {
         flash_col = 0;
@@ -128,9 +128,9 @@ void counter_flash(s8 ix) {
 
 
 void counter_color_clear(void) {
-    sq_paint_chenge(Game_setting.mode * 7 + 22, 2, 4, 2, 34);
-    sq_paint_chenge(Game_setting.mode * 7 + 22, 1, 2, 1, 34);
-    sq_paint_chenge(Game_setting.mode * 7 + 24, 1, 2, 1, 0xA2);
-    sq_paint_chenge(Game_setting.mode * 7 + 22, 4, 2, 1, 34);
-    sq_paint_chenge(Game_setting.mode * 7 + 24, 4, 2, 1, 0xA2);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 2, 4, 2, 34);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 1, 2, 1, 34);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 24, 1, 2, 1, 0xA2);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 4, 2, 1, 34);
+    sq_paint_chenge(Game_setting.Screen_Mode * 7 + 24, 4, 2, 1, 0xA2);
 }

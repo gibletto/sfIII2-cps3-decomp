@@ -50,7 +50,7 @@ void Combo_Demo_Init(void) {
 
 /* provisional name */
 void Setup_Combo_Demo_PL(void) {
-    s8* p = combo_demo_pl_tbl[Get_Demo_Index];
+    const s8* p = combo_demo_pl_tbl[Get_Demo_Index];
     My_char[0] = *p++;
     Super_Arts[0] = *p++;
     Player_Color[0] = *p++;

@@ -1266,7 +1266,7 @@ void Com_Caught(PLW* wk) {
 s16 Decide_Exit_Catch(PLW* wk) {
     s16 Rnd;
     s16 xx;
-    s16 Lv = Setup_Lv18(Game_setting.level);
+    s16 Lv = Setup_Lv18(Game_setting.Difficulty);
     Lv += CC_Value[0];
     if (Break_Into_CPU == 2) {
         Lv = 19;

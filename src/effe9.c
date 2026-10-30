@@ -2,7 +2,7 @@
  * EFFE9.C  Opening frame bars (effect E9)
  *
  * effect_E9_init creates two sprites (top and bottom) from effE9_data on family 4 using the
- * end character table, and two more from the third row when Game_setting.mode is set.
+ * end character table, and two more from the third row when Game_setting.Screen_Mode is set.
  * effect_E9_move starts their animation and then just draws them where they were placed.
  * Created from the ending routines in end_main_c.c.
  */
@@ -69,7 +69,7 @@ s32 effect_E9_init(void) {
         ewk->wu.xyz[1].disp.pos = *data++;
         ewk->wu.char_index = *data++;
     }
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         data = effE9_data[2];
         for (i = 0; i < 2; i++) {
             if ((ix = pull_effect_work(4)) == -1) {

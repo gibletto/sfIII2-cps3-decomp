@@ -23,54 +23,91 @@ extern const TILEREQ bg_etc_cells1[];
 extern const TILEREQ bg_etc_cells2[];
 extern const TILEREQ bg_etc_cells3[];
 extern const TILEREQ bg_etc_cells4[];
-extern const s16 bg_scr_record_data[];
-extern const s16 ake_scr_record_data[];
-extern const PANEL end_1100_bg0_cell_tbl[];
+extern const s16 bg_scr_record_data[16];
+extern const s16 bg_scr_record_00_1[16];
+extern const s16 bg_scr_record_00_2[16];
+extern const s16 etc_bg_scr_record_0_3[16];
+extern const s16 bg_scr_record_unref_0[28];
+extern const s16 ake_scr_record_data[28];
+extern const s16 bg_scr_record_unref_1[13];
+extern const s16 bg_scr_record_unref_2[7];
+extern const s16 bg_scr_record_01_0[16];
+extern const s16 bg_scr_record_01_1[16];
+extern const s16 bg_scr_record_02_0[13];
+extern const s16 bg_scr_record_02_1[16];
+extern const s16 bg_scr_record_03_0[16];
+extern const s16 bg_scr_record_03_1[16];
+extern const s16 bg_scr_record_03_2[13];
+extern const s16 bg_scr_record_11_0[13];
+extern const s16 bg_scr_record_11_1[13];
+extern const s16 bg_scr_record_04_0[16];
+extern const s16 bg_scr_record_04_1[16];
+extern const s16 bg_scr_record_05_2[7];
+extern const s16 bg_scr_record_06_0[13];
+extern const s16 bg_scr_record_07_0[16];
+extern const s16 bg_scr_record_07_2[16];
+extern const s16 bg_scr_record_08_0[22];
+extern const s16 bg_scr_record_08_1[7];
+extern const s16 bg_scr_record_09_1[28];
+extern const s16 bg_scr_record_10_0[10];
+extern const s16 bg_scr_record_10_2[10];
+extern const s16 bg_scr_record_12_0[16];
+extern const s16 bg_scr_record_12_1[16];
+extern const s16 bg_scr_record_13_0[16];
+extern const s16 bg_scr_record_14_0[16];
+extern const s16 bg_scr_record_14_1[13];
+extern const s16 bg_scr_record_15_0[19];
+extern const s16 bg_scr_record_17_0[13];
+extern const s16 bg_scr_record_unref_3[16];
+extern const s16 bg_scr_record_unref_4[16];
+extern const s16 bg_scr_record_unref_5[16];
+extern const s16 bg_scr_record_unref_6[1];
+extern const HUD_CELL end_1100_bg0_cell_tbl[];
 
 /* 020074D4 */
-u32 bg_map_tbl[18][4] = {
-    { (u32)bg_scr_record_data, (u32)&bg_scr_record_data[16], (u32)&bg_scr_record_data[32], 0 },
-    { (u32)&ake_scr_record_data[48], (u32)&ake_scr_record_data[64], 0, 0 },
-    { (u32)&ake_scr_record_data[80], (u32)&ake_scr_record_data[93], 0, 0 },
-    { (u32)&ake_scr_record_data[109], (u32)&ake_scr_record_data[125], (u32)&ake_scr_record_data[141], 0 },
-    { (u32)&ake_scr_record_data[180], (u32)&ake_scr_record_data[196], 0, 0 },
-    { (u32)bg_scr_record_data, (u32)&bg_scr_record_data[16], (u32)&ake_scr_record_data[212], 0 },
-    { (u32)&ake_scr_record_data[219], (u32)&bg_scr_record_data[16], 0, 0 },
-    { (u32)&ake_scr_record_data[232], (u32)&bg_scr_record_data[16], (u32)&ake_scr_record_data[248], 0 },
-    { (u32)&ake_scr_record_data[264], (u32)&ake_scr_record_data[286], 0, 0 },
-    { (u32)bg_scr_record_data, (u32)&ake_scr_record_data[293], 0, 0 },
-    { (u32)&ake_scr_record_data[321], (u32)&bg_scr_record_data[16], (u32)&ake_scr_record_data[331], 0 },
-    { (u32)&ake_scr_record_data[154], (u32)&ake_scr_record_data[167], 0, 0 },
-    { (u32)&ake_scr_record_data[341], (u32)&ake_scr_record_data[357], (u32)&bg_scr_record_data[32], 0 },
-    { (u32)&ake_scr_record_data[373], (u32)&bg_scr_record_data[16], (u32)&bg_scr_record_data[32], 0 },
-    { (u32)&ake_scr_record_data[389], (u32)&ake_scr_record_data[405], 0, 0 },
-    { (u32)&ake_scr_record_data[418], (u32)&bg_scr_record_data[16], 0, 0 },
-    { (u32)&ake_scr_record_data[219], (u32)&bg_scr_record_data[16], 0, 0 },
-    { (u32)&ake_scr_record_data[437], 0, 0, 0 },
+const s16* bg_map_tbl[18][4] = {
+    { bg_scr_record_data, bg_scr_record_00_1, bg_scr_record_00_2, 0 },
+    { bg_scr_record_01_0, bg_scr_record_01_1, 0, 0 },
+    { bg_scr_record_02_0, bg_scr_record_02_1, 0, 0 },
+    { bg_scr_record_03_0, bg_scr_record_03_1, bg_scr_record_03_2, 0 },
+    { bg_scr_record_04_0, bg_scr_record_04_1, 0, 0 },
+    { bg_scr_record_data, bg_scr_record_00_1, bg_scr_record_05_2, 0 },
+    { bg_scr_record_06_0, bg_scr_record_00_1, 0, 0 },
+    { bg_scr_record_07_0, bg_scr_record_00_1, bg_scr_record_07_2, 0 },
+    { bg_scr_record_08_0, bg_scr_record_08_1, 0, 0 },
+    { bg_scr_record_data, bg_scr_record_09_1, 0, 0 },
+    { bg_scr_record_10_0, bg_scr_record_00_1, bg_scr_record_10_2, 0 },
+    { bg_scr_record_11_0, bg_scr_record_11_1, 0, 0 },
+    { bg_scr_record_12_0, bg_scr_record_12_1, bg_scr_record_00_2, 0 },
+    { bg_scr_record_13_0, bg_scr_record_00_1, bg_scr_record_00_2, 0 },
+    { bg_scr_record_14_0, bg_scr_record_14_1, 0, 0 },
+    { bg_scr_record_15_0, bg_scr_record_00_1, 0, 0 },
+    { bg_scr_record_06_0, bg_scr_record_00_1, 0, 0 },
+    { bg_scr_record_17_0, 0, 0, 0 },
 };
 /* 020075F4 */
-u32 bg_map_tbl2[5][4] = {
-    { (u32)bg_scr_record_data, (u32)&bg_scr_record_data[16], (u32)&bg_scr_record_data[32], (u32)&bg_scr_record_data[48] },
-    { (u32)bg_scr_record_data, 0, 0, 0 },
-    { (u32)bg_scr_record_data, 0, 0, 0 },
-    { (u32)bg_scr_record_data, 0, 0, 0 },
-    { (u32)bg_scr_record_data, 0, 0, 0 },
+const s16* bg_map_tbl2[5][4] = {
+    { bg_scr_record_data, bg_scr_record_00_1, bg_scr_record_00_2, etc_bg_scr_record_0_3 },
+    { bg_scr_record_data, 0, 0, 0 },
+    { bg_scr_record_data, 0, 0, 0 },
+    { bg_scr_record_data, 0, 0, 0 },
+    { bg_scr_record_data, 0, 0, 0 },
 };
 /* 02007644 */
-HUD_CELL* bg_rewrite_cell_tbl[5][4] = {
-    { (HUD_CELL *)end_1100_bg0_cell_tbl, (HUD_CELL *)bg_rewrite_cells0, (HUD_CELL *)bg_rewrite_cells2, (HUD_CELL *)bg_rewrite_cells3 },
-    { (HUD_CELL *)bg_rewrite_cells4, (HUD_CELL *)bg_rewrite_cells5, (HUD_CELL *)bg_rewrite_cells6, (HUD_CELL *)bg_rewrite_cells7 },
-    { (HUD_CELL *)bg_rewrite_cells9, (HUD_CELL *)bg_rewrite_cells5, (HUD_CELL *)bg_rewrite_cells6, (HUD_CELL *)bg_rewrite_cells7 },
-    { (HUD_CELL *)bg_rewrite_cells8, 0, 0, 0 },
-    { (HUD_CELL *)end_1100_bg0_cell_tbl, (HUD_CELL *)bg_rewrite_cells1, (HUD_CELL *)bg_rewrite_cells2, (HUD_CELL *)bg_rewrite_cells3 },
+const HUD_CELL* bg_rewrite_cell_tbl[5][4] = {
+    { end_1100_bg0_cell_tbl, bg_rewrite_cells0, bg_rewrite_cells2, bg_rewrite_cells3 },
+    { bg_rewrite_cells4, bg_rewrite_cells5, bg_rewrite_cells6, bg_rewrite_cells7 },
+    { bg_rewrite_cells9, bg_rewrite_cells5, bg_rewrite_cells6, bg_rewrite_cells7 },
+    { bg_rewrite_cells8, 0, 0, 0 },
+    { end_1100_bg0_cell_tbl, bg_rewrite_cells1, bg_rewrite_cells2, bg_rewrite_cells3 },
 };
 /* 02007694 */
-TILEREQ* bg_etc_cell_tbl[5][4] = {
-    { (TILEREQ *)bg_etc_cells0, 0, 0, 0 },
-    { (TILEREQ *)bg_etc_cells1, 0, 0, 0 },
-    { (TILEREQ *)bg_etc_cells2, 0, 0, 0 },
-    { (TILEREQ *)bg_etc_cells3, 0, 0, 0 },
-    { (TILEREQ *)bg_etc_cells4, 0, 0, 0 },
+const TILEREQ* bg_etc_cell_tbl[5][4] = {
+    { bg_etc_cells0, 0, 0, 0 },
+    { bg_etc_cells1, 0, 0, 0 },
+    { bg_etc_cells2, 0, 0, 0 },
+    { bg_etc_cells3, 0, 0, 0 },
+    { bg_etc_cells4, 0, 0, 0 },
 };
 
 s16 stage8_base_y;  /* 020225A8, provisional name */

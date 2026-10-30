@@ -884,7 +884,7 @@ u16 sw;
         Moving_Plate[PL_id] = 2;
         Moving_Plate_Counter[PL_id] = 3;
         OK_Priority[PL_id] = 0;
-        if ((Arts_Y[PL_id] -= 1) < 0) {
+        if (--Arts_Y[PL_id] < 0) {
             Arts_Y[PL_id] = 2;
         }
     }
@@ -893,7 +893,7 @@ u16 sw;
         Moving_Plate[PL_id] = 1;
         Moving_Plate_Counter[PL_id] = 3;
         OK_Priority[PL_id] = 0;
-        if ((Arts_Y[PL_id] += 1) > 2) {
+        if (++Arts_Y[PL_id] > 2) {
             Arts_Y[PL_id] = 0;
         }
     }

@@ -91,7 +91,7 @@ s16 gcfg_code_list_en[13][2] = {
     { 0, 0x0200 }, { 6, 0x1000 }, { 2, 0x0080 }, { 2, 0x0080 }, { 2, 0x0080 }, { 2, 0x0080 },
 };
 TM_STRING gcfg_screen_str_en[2] = {
-    { 2, 0, 2, (void*)str_NORMAL_2 },
+    { 2, 0, 2, str_NORMAL_2 },
     { 2, 0, 2, str_WIDE },
 };
 /* 020008C4 */
@@ -109,7 +109,7 @@ TM_STRING gcfg_event_str_en[2] = {
 /* 0200090C */
 TM_STRING gcfg_bonus_str_en[2] = {
     { 2, 0, 2, str_OFF_2 },
-    { 2, 0, 2, (void*)str_ON },
+    { 2, 0, 2, str_ON },
 };
 
 
@@ -138,33 +138,33 @@ void game_config_init_en(void) {
     tilemap_fill_all(0, 32);
     tilemap_print_string(0, 0, 0xFFFF, config_title_str_tbl);
     Config_Item_en = 6;
-    Config_New_en = game_config_work.bonus & 1;
-    Config_Old_en = Game_setting.bonus & 1;
+    Config_New_en = game_config_work.Bonus_Game & 1;
+    Config_Old_en = Game_setting.Bonus_Game & 1;
     Config_Attr_en = (Config_New_en != Config_Old_en) ? 8 : 2;
     game_config_print_value_en(Config_Attr_en, &gcfg_bonus_str_en[Config_New_en]);
     Config_Item_en = 5;
-    Config_New_en = game_config_work.set5;
-    Config_Attr_en = (Config_New_en != Game_setting.set5) ? 8 : 2;
+    Config_New_en = game_config_work.Event;
+    Config_Attr_en = (Config_New_en != Game_setting.Event) ? 8 : 2;
     game_config_print_value_en(Config_Attr_en, &gcfg_event_str_en[Config_New_en]);
     Config_Item_en = 4;
-    Config_New_en = game_config_work.set4;
-    Config_Attr_en = (Config_New_en != Game_setting.set4) ? 8 : 2;
+    Config_New_en = game_config_work.Battle_Number;
+    Config_Attr_en = (Config_New_en != Game_setting.Battle_Number) ? 8 : 2;
     game_config_print_value_en(Config_Attr_en, &gcfg_round_str_en[Config_New_en]);
     Config_Item_en = 3;
-    Config_New_en = game_config_work.set3;
-    Config_Attr_en = (Config_New_en != Game_setting.set3) ? 8 : 2;
+    Config_New_en = game_config_work.Timer_Speed;
+    Config_Attr_en = (Config_New_en != Game_setting.Timer_Speed) ? 8 : 2;
     game_config_print_gauge_en(Config_New_en, 0xFFFF, Config_Attr_en);
     Config_Item_en = 2;
-    Config_New_en = game_config_work.set2;
-    Config_Attr_en = (Config_New_en != Game_setting.set2) ? 8 : 2;
+    Config_New_en = game_config_work.Damage_Level;
+    Config_Attr_en = (Config_New_en != Game_setting.Damage_Level) ? 8 : 2;
     game_config_print_gauge_en(Config_New_en, 0xFFFF, Config_Attr_en);
     Config_Item_en = 1;
-    Config_New_en = game_config_work.level;
-    Config_Attr_en = (Config_New_en != Game_setting.level) ? 8 : 2;
+    Config_New_en = game_config_work.Difficulty;
+    Config_Attr_en = (Config_New_en != Game_setting.Difficulty) ? 8 : 2;
     game_config_print_gauge_en(Config_New_en, 0xFFFF, Config_Attr_en);
     Config_Item_en = 0;
-    Config_New_en = game_config_work.mode;
-    Config_Attr_en = (Config_New_en != Game_setting.mode) ? 8 : 2;
+    Config_New_en = game_config_work.Screen_Mode;
+    Config_Attr_en = (Config_New_en != Game_setting.Screen_Mode) ? 8 : 2;
     game_config_print_value_en(Config_Attr_en, &gcfg_screen_str_en[Config_New_en]);
     game_config_draw_cursor_en(62);
 }
@@ -202,16 +202,16 @@ void game_config_screen_item_en(void) {
         }
     }
     if (Config_Move_en) {
-        game_config_work.mode += Config_Move_en;
-        game_config_work.mode &= 1;
-        Config_New_en = game_config_work.mode;
-        if (game_config_work.mode) {
+        game_config_work.Screen_Mode += Config_Move_en;
+        game_config_work.Screen_Mode &= 1;
+        Config_New_en = game_config_work.Screen_Mode;
+        if (game_config_work.Screen_Mode) {
             set_screen_mode(7);
         } else {
             set_screen_mode(3);
         }
         screen_flip_offsets_set();
-        Config_Attr_en = (Config_New_en != Game_setting.mode) ? 8 : 2;
+        Config_Attr_en = (Config_New_en != Game_setting.Screen_Mode) ? 8 : 2;
         game_config_print_value_en(Config_Attr_en, &gcfg_screen_str_en[Config_New_en]);
     }
 }
@@ -233,16 +233,16 @@ void game_config_level_item_en(void) {
         }
     }
     if (Config_Move_en) {
-        Config_Old_en = game_config_work.level;
-        game_config_work.level += Config_Move_en;
-        if (game_config_work.level < 0) {
-            game_config_work.level = 7;
+        Config_Old_en = game_config_work.Difficulty;
+        game_config_work.Difficulty += Config_Move_en;
+        if (game_config_work.Difficulty < 0) {
+            game_config_work.Difficulty = 7;
         }
-        if (game_config_work.level > 7) {
-            game_config_work.level = 0;
+        if (game_config_work.Difficulty > 7) {
+            game_config_work.Difficulty = 0;
         }
-        Config_New_en = game_config_work.level;
-        Config_Attr_en = Config_New_en != Game_setting.level ? 8 : 2;
+        Config_New_en = game_config_work.Difficulty;
+        Config_Attr_en = Config_New_en != Game_setting.Difficulty ? 8 : 2;
         game_config_print_gauge_en(Config_New_en, Config_Old_en, Config_Attr_en);
     }
 }
@@ -264,11 +264,11 @@ void game_config_damage_item_en(void) {
         }
     }
     if (Config_Move_en) {
-        Config_Old_en = game_config_work.set2;
-        game_config_work.set2 += Config_Move_en;
-        game_config_work.set2 &= 3;
-        Config_New_en = game_config_work.set2;
-        Config_Attr_en = Config_New_en != Game_setting.set2 ? 8 : 2;
+        Config_Old_en = game_config_work.Damage_Level;
+        game_config_work.Damage_Level += Config_Move_en;
+        game_config_work.Damage_Level &= 3;
+        Config_New_en = game_config_work.Damage_Level;
+        Config_Attr_en = Config_New_en != Game_setting.Damage_Level ? 8 : 2;
         game_config_print_gauge_en(Config_New_en, Config_Old_en, Config_Attr_en);
     }
 }
@@ -290,11 +290,11 @@ void game_config_timer_item_en(void) {
         }
     }
     if (Config_Move_en) {
-        Config_Old_en = game_config_work.set3;
-        game_config_work.set3 += Config_Move_en;
-        game_config_work.set3 &= 3;
-        Config_New_en = game_config_work.set3;
-        Config_Attr_en = Config_New_en != Game_setting.set3 ? 8 : 2;
+        Config_Old_en = game_config_work.Timer_Speed;
+        game_config_work.Timer_Speed += Config_Move_en;
+        game_config_work.Timer_Speed &= 3;
+        Config_New_en = game_config_work.Timer_Speed;
+        Config_Attr_en = Config_New_en != Game_setting.Timer_Speed ? 8 : 2;
         game_config_print_gauge_en(Config_New_en, Config_Old_en, Config_Attr_en);
     }
 }
@@ -317,10 +317,10 @@ void game_config_1p_round_item_en(void) {
         }
     }
     if (Config_Move_en) {
-        game_config_work.set4 += Config_Move_en;
-        game_config_work.set4 &= 3;
-        Config_New_en = game_config_work.set4;
-        Config_Attr_en = (Config_New_en != Game_setting.set4) ? 8 : 2;
+        game_config_work.Battle_Number += Config_Move_en;
+        game_config_work.Battle_Number &= 3;
+        Config_New_en = game_config_work.Battle_Number;
+        Config_Attr_en = (Config_New_en != Game_setting.Battle_Number) ? 8 : 2;
         game_config_print_value_en(Config_Attr_en, &gcfg_round_str_en[Config_New_en]);
     }
 }
@@ -341,10 +341,10 @@ void game_config_event_item_en(void) {
         }
     }
     if (Config_Move_en) {
-        game_config_work.set5 += Config_Move_en;
-        game_config_work.set5 &= 1;
-        Config_New_en = game_config_work.set5;
-        Config_Attr_en = (Config_New_en != Game_setting.set5) ? 8 : 2;
+        game_config_work.Event += Config_Move_en;
+        game_config_work.Event &= 1;
+        Config_New_en = game_config_work.Event;
+        Config_Attr_en = (Config_New_en != Game_setting.Event) ? 8 : 2;
         game_config_print_value_en(Config_Attr_en, &gcfg_event_str_en[Config_New_en]);
     }
 }
@@ -368,10 +368,10 @@ void game_config_bonus_item_en(void) {
         }
     }
     if (Config_Move_en) {
-        game_config_work.bonus ^= 1;
-        game_config_work.bonus &= 3;
-        Config_New_en = game_config_work.bonus & 1;
-        Config_Old_en = Game_setting.bonus & 1;
+        game_config_work.Bonus_Game ^= 1;
+        game_config_work.Bonus_Game &= 3;
+        Config_New_en = game_config_work.Bonus_Game & 1;
+        Config_Old_en = Game_setting.Bonus_Game & 1;
         Config_Attr_en = (Config_New_en != Config_Old_en) ? 8 : 2;
         game_config_print_value_en(Config_Attr_en, &gcfg_bonus_str_en[Config_New_en]);
     }
@@ -467,7 +467,7 @@ void game_config_print_value_en(s16 attr, const TM_STRING* str) {
 /* provisional name: the menu button code, as game_config_code_check_jp */
 void game_config_code_check_en(void) {
     register s16 sw;
-    if (game_config_work.bonus & 2) {
+    if (game_config_work.Bonus_Game & 2) {
         return;
     }
     sw = ~p1sw_1 & p1sw_0 & 0x13C0;
@@ -479,7 +479,7 @@ void game_config_code_check_en(void) {
             Config_Code_No_en++;
             Config_Code_Ptr_en += 2;
             if (Config_Code_No_en >= 13) {
-                game_config_work.bonus |= 2;
+                game_config_work.Bonus_Game |= 2;
                 sound_request(0x274);
             }
             return;

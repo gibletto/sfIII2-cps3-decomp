@@ -37,8 +37,7 @@ s8 Chute_Mode = 0;  /* 02000007 */
 s8 Sound_Mode = 0;  /* 02000008 */
 s8 Demo_Sound = 0;  /* 02000009 */
 /* 0200000A */
-/* Stored after Demo_Sound. Nothing in the program refers to it by name or address; if it is read,
-   it is through an index past the end of Demo_Sound. */
+/* Stored after Demo_Sound. Nothing in the program refers to it by name or address. */
 u8 Demo_Sound_tail[1] = {
     0,
 };
@@ -60,8 +59,7 @@ s8 Area_Alt_Flag = 0;  /* 02000018 */
 s8 Two_Coin_Start = 0;  /* 02000019 */
 s8 Free_Play_Enable = 0;  /* 0200001A */
 /* 0200001B */
-/* Stored after Free_Play_Enable. Nothing in the program refers to it by name or address; if it is read,
-   it is through an index past the end of Free_Play_Enable. */
+/* Stored after Free_Play_Enable. Nothing in the program refers to it by name or address. */
 u8 Free_Play_Enable_tail[2] = {
     0, 0,
 };

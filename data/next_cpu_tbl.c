@@ -6,7 +6,7 @@
  * round, event and bonus items, the cursor and its eraser, and the eight steps of the star
  * gauges with their eraser. They are reached through the TMSCRIPT tables of GAME_CONFIG_JP.C.
  * gcfg_title_old_scr_jp_0, a shorter title script, is only pointed at by
- * gcfg_gauge_clr_scr_jp_tail, which nothing reads.
+ * gcfg_title_old_scr_jp, which nothing reads.
  *
  * A script is a list of blocks, each the glyph count, column, row and attribute followed by the
  * glyphs (tilemap_print_script_seq); a count of 0 ends it.
@@ -161,7 +161,7 @@ const u16 gcfg_gauge_clr_scr_jp_0[6] = {
 };
 
 /* provisional name */
-/* A shorter title screen script; only gcfg_gauge_clr_scr_jp_tail (game_config_jp.c), which nothing reads, points at
+/* A shorter title screen script; only gcfg_title_old_scr_jp (game_config_jp.c), which nothing reads, points at
    it. */
 const u16 gcfg_title_old_scr_jp_0[110] = {
     5, 19, 0, 2,    0x129C, 0x13C8, 0x12FC, 0x133C, 0x1340,

@@ -19,7 +19,7 @@ extern const u8 sel_ejg_ix_table[][2][4];
 extern const u16 ag_cc_table[];
 extern const s16 app_pos_hosei[][3];
 extern const s16 judge_gals_kage_tbl[][4];
-extern const s16 judge_gals_kage_tbl_tail[];
+extern const u8 judge_gals_kage_tbl_tail[];
 extern const u8 ag_sel_table[][4][4];
 
 const s32 efy_data[6] = {
@@ -54,8 +54,9 @@ const s16 judge_gals_kage_tbl[8][4] = {
     { 0, -6, 32, 16 },
 };
 
-const s16 judge_gals_kage_tbl_tail[2] = {
-    1543, 1027,
+/* Stored after judge_gals_kage_tbl. Nothing in the program refers to it by name or address. */
+const u8 judge_gals_kage_tbl_tail[4] = {
+    6, 7, 4, 3,
 };
 
 const u8 ag_sel_table[16][4][4] = {

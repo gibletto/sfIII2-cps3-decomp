@@ -279,7 +279,7 @@ const TM_STRING sound_mode_str_tbl_5[1] = {
 };
 
 const TM_STRING monitor_str_tbl_1[1] = {
-    { 18, 11, 0xE, (void *)str_cfg_flip },
+    { 18, 11, 0xE, str_cfg_flip },
 };
 
 const s8 cursor_blank_str[4] = {

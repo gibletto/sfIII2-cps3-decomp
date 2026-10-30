@@ -37,7 +37,7 @@ void Appear_11000(PLW* wk);
 void Appear_38000(PLW* wk);
 void animal_decide(PLW* wk);
 void appear_data_init_set(PLW* wk);
-void appear_data_set(PLW* wk, APPEAR_DATA* dtbl);
+void appear_data_set(PLW* wk, const APPEAR_DATA* dtbl);
 void appear_player(PLW* wk);
 void appear_work_clear(void);
 void Appear_03000(PLW* wk);

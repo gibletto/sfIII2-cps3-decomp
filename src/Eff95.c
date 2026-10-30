@@ -5,7 +5,7 @@
  * character on BG1 through
  * eff95_set_obj, adding the extra parts some characters have (types 1, -1, 16, 0x80, 32, 48: by My_char
  * and, for one pair, Country); eff95_set_position and eff95_set_speed place it by WINNER and
- * Game_setting.mode and give it its slide speed, eff95_rl_check its facing. effect_95_rank_init
+ * Game_setting.Screen_Mode and give it its slide speed, eff95_rl_check its facing. effect_95_rank_init
  * (Ranking_Sub) makes the ranking screen's character on BG0.
  * effect_95_move shows the object and moves it in x by mvxy.a[0], which is zeroed unless
  * win_slide_flag (set while the win screen slides) is set.
@@ -246,7 +246,7 @@ s32 effect_95_rank_init(s16 kind, s16 pl, s16 flag, s16 color) {
 /* provisional name */
 void eff95_set_position(WORK_Other* ewk, s16 pl) {
     ewk->wu.xyz[1].disp.pos = bg_w.bgw[1].xy[1].disp.pos;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         if (pl == 0) {
             ewk->wu.xyz[0].disp.pos = bg_w.bgw[1].xy[0].disp.pos + DE_X[10] + 0xA0;
         } else {

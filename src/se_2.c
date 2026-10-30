@@ -76,10 +76,10 @@ void wipe_mask_set_cols(s16 kind, s16 row) {
     s16 x;
     s16 y;
     s16 i;
-    u8* src;
-    u8* map;
+    const u8* src;
+    const u8* map;
     u32 dst;
-    u8* mask;
+    const u8* mask;
     src = wipe_column_tbl[kind].adr;
     src += wipe_column_tbl[kind].w * row;
     map = wipe_set_pattern_tbl[kind].adr;
@@ -104,8 +104,8 @@ void wipe_mask_and_cols(s16 kind, s16 row) {
     s16 x;
     s16 y;
     s16 i;
-    u8* src;
-    u8* map;
+    const u8* src;
+    const u8* map;
     u16* dst;
     src = wipe_column_tbl[kind].adr;
     src += wipe_column_tbl[kind].w * row;

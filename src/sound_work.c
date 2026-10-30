@@ -20,12 +20,14 @@ u32 snd_fade_speed;  /* 020731D8 */
 SNDVOICE bgm_voice[16];  /* 020731DC */
 SNDVOICE se_voice[16];  /* 0207391C */
 SNDRAMP se_pan_ramp[16];  /* 0207405C */
-s16 voice_state_init_pair_work;  /* 020740DC */
+/* added to every music voice's pitch (sound_reg_level_set) */
+s16 bgm_pitch_offset;  /* 020740DC */
 u16 snd_wave_bias;  /* 020740DE */
 SOUND_CTRL snd_ctrl;  /* 020740E0 */
 u16 bgm_tick_step;  /* 020740E4 */
 u16 se_tick_step[16];  /* 020740E6 */
-s8 sound_sample_submit_work4;  /* 02074106 */
+/* the music's volume offset; -128 silences it (sound_reg_level_set) */
+s8 bgm_volume_offset;  /* 02074106 */
 u8 bgm_master_vol;  /* 02074107 */
 u8 snd_master_vol;  /* 02074108 */
 u8 snd_stereo;  /* 02074109 */

@@ -159,7 +159,7 @@ s16 emid;
     if (Continue_Coin[emid]) {
         return 0;
     }
-    rate = bonus_level_rate_tbl[Game_setting.set4 & 3];
+    rate = bonus_level_rate_tbl[Game_setting.Battle_Number & 3];
     s = (Straight_Counter[emid] > 2) * 20;
     perfect = Perfect_Finish[emid] * rate * 4;
     super = Super_Arts_Finish[emid] * rate * 2;

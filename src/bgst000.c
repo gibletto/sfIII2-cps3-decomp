@@ -79,7 +79,7 @@ void bg0001_init00(void) {
         bg_app = 1;
         bg_demo_cnt = 80;
         bgw_ptr->xy[1].cal = bgw_ptr->speed_y * 0xC0;
-        if (Game_setting.mode) {
+        if (Game_setting.Screen_Mode) {
             bgw_ptr->xy[0].cal += bgw_ptr->speed_x * 0x88;
         } else {
             bgw_ptr->xy[0].cal += bgw_ptr->speed_x * 0xC0;
@@ -117,7 +117,7 @@ void bg0000_init00(void) {
     bgw_ptr->zuubun = 0;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
     if (bg_w.area == 0) {
-        if (Game_setting.mode) {
+        if (Game_setting.Screen_Mode) {
             bgw_ptr->xy[0].cal += bgw_ptr->speed_x * 0x88;
         } else {
             bgw_ptr->xy[0].cal += bgw_ptr->speed_x * 0xC0;
@@ -229,7 +229,7 @@ void bg000_layer(s16 n) {
         bgw_ptr->speed_x = bg_sync_speed_tbl[n];
         bgw_ptr->speed_y = 0xE000;
         if (bg_w.area == 0) {
-            if (Game_setting.mode) {
+            if (Game_setting.Screen_Mode) {
                 bgw_ptr->xy[0].cal += bgw_ptr->speed_x * 0x88;
             } else {
                 bgw_ptr->xy[0].cal += bgw_ptr->speed_x * 0xC0;

@@ -106,7 +106,7 @@ s32 effect_H0_init(WORK* wk) {
     ewk->wu.my_col_mode = 0x4200;
     ewk->wu.my_col_code = 0x2080;
     ewk->num_of_conn = 6;
-    ix = Game_setting.mode != 0;
+    ix = Game_setting.Screen_Mode != 0;
     ix *= 2;
     if (wk->rl_flag) {
         ix = ix + 1;

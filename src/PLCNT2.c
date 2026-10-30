@@ -7,7 +7,7 @@
  * plcnt_b_init clears and sets up both player works (and loads the stage colours some characters
  * need) and waits until both are ready and the battle is allowed. The static move_player_work_bonus
  * and move_Px_move_Py_bonus run Player_move_bonus for both players in the right order;
- * setup_bs_scrrrl_bs sets their scroll limits from bsmr_range_table by Game_setting.mode.
+ * setup_bs_scrrrl_bs sets their scroll limits from bsmr_range_table by Game_setting.Screen_Mode.
  */
 
 #include "structs.h"
@@ -239,7 +239,7 @@ void plcnt_b_die(void) {
 
 static void setup_bs_scrrrl_bs(void) {
     s16 scrc = 512;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         switch (plw[0].wu.operator + (plw[1].wu.operator * 2)) {
         case 1:
             bs_scrrrl[0][0] = scrc + bsmr_range_table[1][1][0][0];

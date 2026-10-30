@@ -1,11 +1,11 @@
 /*
  * SC_TRANS_TBL.C  text layer cell and transfer lists
  *
- * sc_celllist_tbl points at the 17 cell lists in END_SUB_TBL_C.C. The sc_vram_NN_pos, _code
- * and _attr lists are the screen parts that sc_ram_vram_tbl (SC_DATA.C) puts on the text
- * layer, and sc_cells_0 and sc_cells_5 are character slot lists (a count, then the slots),
- * used through sc_chr_list_tbl and sc_chr_slot_tbl to copy character graphics into the text
- * layer. Read by SC_TRANS.C.
+ * sc_celllist_tbl names the cell lists sc_celllist_0 - 16 in END_SUB_TBL_C.C. The
+ * sc_vram_NN_pos, _code and _attr lists are the screen parts that sc_ram_vram_tbl (SC_DATA.C)
+ * puts on the text layer, and sc_cells_0 and sc_cells_5 are character slot lists (a count, then
+ * the slots), used through sc_chr_list_tbl and sc_chr_slot_tbl to copy character graphics into
+ * the text layer. Read by SC_TRANS.C.
  */
 
 #include "types.h"
@@ -77,26 +77,41 @@ extern const u16 sc_vram_28_code[];
 extern const u16 sc_vram_28_pos[];
 extern const PAL_BYTE_LIST sc_chr_list_tbl[];
 extern const u16 *const sc_chr_slot_tbl[];
-extern const CELL_ENTRY sc_celllist_data[650];
+extern const CELL_ENTRY sc_celllist_0[21];
+extern const CELL_ENTRY sc_celllist_2[21];
+extern const CELL_ENTRY sc_celllist_15[21];
+extern const CELL_ENTRY sc_celllist_16[21];
+extern const CELL_ENTRY sc_celllist_3[13];
+extern const CELL_ENTRY sc_celllist_4[10];
+extern const CELL_ENTRY sc_celllist_5[10];
+extern const CELL_ENTRY sc_celllist_6[97];
+extern const CELL_ENTRY sc_celllist_11[129];
+extern const CELL_ENTRY sc_celllist_12[161];
+extern const CELL_ENTRY sc_celllist_7[25];
+extern const CELL_ENTRY sc_celllist_8[25];
+extern const CELL_ENTRY sc_celllist_9[31];
+extern const CELL_ENTRY sc_celllist_10[43];
+extern const CELL_ENTRY sc_celllist_13[11];
+extern const CELL_ENTRY sc_celllist_14[11];
 
 const CELL_ENTRY *const sc_celllist_tbl[17] = {
-    &sc_celllist_data[0],
-    &sc_celllist_data[0],
-    &sc_celllist_data[21],
-    &sc_celllist_data[84],
-    &sc_celllist_data[97],
-    &sc_celllist_data[107],
-    &sc_celllist_data[117],
-    &sc_celllist_data[504],
-    &sc_celllist_data[529],
-    &sc_celllist_data[554],
-    &sc_celllist_data[585],
-    &sc_celllist_data[214],
-    &sc_celllist_data[343],
-    &sc_celllist_data[628],
-    &sc_celllist_data[639],
-    &sc_celllist_data[42],
-    &sc_celllist_data[63],
+    sc_celllist_0,
+    sc_celllist_0,
+    sc_celllist_2,
+    sc_celllist_3,
+    sc_celllist_4,
+    sc_celllist_5,
+    sc_celllist_6,
+    sc_celllist_7,
+    sc_celllist_8,
+    sc_celllist_9,
+    sc_celllist_10,
+    sc_celllist_11,
+    sc_celllist_12,
+    sc_celllist_13,
+    sc_celllist_14,
+    sc_celllist_15,
+    sc_celllist_16,
 };
 
 const u16 sc_cells_0[22] = {

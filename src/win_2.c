@@ -117,7 +117,7 @@ void Win_2nd(void) {
     } else {
         ofs = -22;
     }
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         ofs = 0;
     }
     bg_w.bgw[0].position_x += ofs;
@@ -135,7 +135,7 @@ void Win_2nd(void) {
     effect_95_init(16, WINNER);
     effect_95_init(0, LOSER);
     effect_B8_init(WINNER);
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         effect_58_init(4, 1, -1);
     }
     effect_H3_init();

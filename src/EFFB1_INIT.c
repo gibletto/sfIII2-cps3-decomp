@@ -35,7 +35,7 @@ s32 effect_B1_init(PLW* wk) {
     ewk->wu.my_col_mode = 0x4200;
     ewk->wu.my_col_code = 0x2081;
     ewk->num_of_conn = 20;
-    type = (Game_setting.mode != 0);
+    type = (Game_setting.Screen_Mode != 0);
     for (i = 0; i < 20; i++) {
         ewk->conn[i] = bbbs_blocking[type][i];
     }

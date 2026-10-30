@@ -60,12 +60,12 @@ void eff35_0000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         ewk->wu.disp_flag = 1;
         if (plw[0].wu.operator) {
-            if (Game_setting.mode) {
+            if (Game_setting.Screen_Mode) {
                 ewk->wu.xyz[0].disp.pos = 0x260;
             } else {
                 ewk->wu.xyz[0].disp.pos = 0x238;
             }
-        } else if (Game_setting.mode) {
+        } else if (Game_setting.Screen_Mode) {
             ewk->wu.xyz[0].disp.pos = 0x1A0;
         } else {
             ewk->wu.xyz[0].disp.pos = 0x1C8;

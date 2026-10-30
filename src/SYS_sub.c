@@ -557,7 +557,7 @@ void Disp_Digit16x24(u32 value, s16 x, s16 y, u16 attr) {
 /* provisional name */
 void Disp_Win_Type(void) {
     s16 i;
-    for (i = 0; i <= Game_setting.set4; i++) {
+    for (i = 0; i <= Game_setting.Battle_Number; i++) {
         win_mark_put(i, win_type[0][i], 14);
         win_mark_put(i + 4, win_type[1][i], 14);
     }

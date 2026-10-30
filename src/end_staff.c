@@ -150,12 +150,12 @@ void end_staff_scrn_set(void) {
     s16 x;
     if (Gill_Pos_X != bg_w.bgw[1].wxy[0].disp.pos) {
         x = Gill_Pos_X - bg_w.bgw[1].wxy[0].disp.pos;
-        if (Game_setting.mode) {
+        if (Game_setting.Screen_Mode) {
             x += 0xF8;
         } else {
             x += 0xC0;
         }
-    } else if (Game_setting.mode) {
+    } else if (Game_setting.Screen_Mode) {
         x = 0xF8;
     } else {
         x = 0xC0;

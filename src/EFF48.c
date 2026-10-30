@@ -266,7 +266,7 @@ s32 effect_48_init(s16 type) {
         ewk->wu.my_col_code = 0xC0;
         ewk->wu.char_table[0] = etc_char_table;
         if (type >= 3) {
-            if (Game_setting.mode) {
+            if (Game_setting.Screen_Mode) {
                 ewk->wu.xyz[0].disp.pos = 0x2C0;
             } else {
                 ewk->wu.xyz[0].disp.pos = 0x2B0;

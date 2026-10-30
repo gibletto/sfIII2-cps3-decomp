@@ -131,7 +131,7 @@ void player_mvbs_0000(PLW* wk) {
 
 
 void player_mvbs_1000(PLW* wk) {
-    APPEAR_DATA* dtbl;
+    const APPEAR_DATA* dtbl;
     s16 ap_work;
     switch (appear_type) {
     case APPEAR_STAND:

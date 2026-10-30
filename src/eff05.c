@@ -38,7 +38,7 @@
 
 
 /* by stage and area */
-u32* char_add[17][3] = {
+const u32* char_add[17][3] = {
     { stg00_char_table, stg00_char_table, stg00_char_table },
     { stg01_char_table, stg01_char_table, stg01_char_table },
     { stg02_char_table, stg02_char_table, stg02_char_table },
@@ -60,23 +60,23 @@ u32* char_add[17][3] = {
 
 
 const s16* scr_obj_data[17][3] = {
-    { (const s16*)scr_obj_num + 51, (const s16*)scr_obj_num + 51, (const s16*)scr_obj_num + 51 },
-    { (const s16*)scr_obj_num + 75, (const s16*)scr_obj_num + 75, (const s16*)scr_obj_num + 75 },
-    { (const s16*)scr_obj_num + 91, (const s16*)scr_obj_num + 91, (const s16*)scr_obj_num + 91 },
-    { (const s16*)scr_obj_num + 107, (const s16*)scr_obj_num + 107, (const s16*)scr_obj_num + 107 },
-    { (const s16*)scr_obj_num + 155, (const s16*)scr_obj_num + 155, (const s16*)scr_obj_num + 155 },
-    { (const s16*)scr_obj_num + 171, (const s16*)scr_obj_num + 171, (const s16*)scr_obj_num + 171 },
-    { (const s16*)scr_obj_num + 195, (const s16*)scr_obj_num + 211, (const s16*)scr_obj_num + 235 },
-    { (const s16*)scr_obj_num + 259, (const s16*)scr_obj_num + 259, (const s16*)scr_obj_num + 259 },
-    { (const s16*)scr_obj_num + 268, (const s16*)scr_obj_num + 260, (const s16*)scr_obj_num + 260 },
-    { (const s16*)scr_obj_num + 269, (const s16*)scr_obj_num + 269, (const s16*)scr_obj_num + 269 },
-    { (const s16*)scr_obj_num + 139, (const s16*)scr_obj_num + 139, (const s16*)scr_obj_num + 139 },
-    { (const s16*)scr_obj_num + 277, (const s16*)scr_obj_num + 277, (const s16*)scr_obj_num + 277 },
-    { (const s16*)scr_obj_num + 317, (const s16*)scr_obj_num + 317, (const s16*)scr_obj_num + 317 },
-    { (const s16*)scr_obj_num + 333, (const s16*)scr_obj_num + 333, (const s16*)scr_obj_num + 333 },
-    { (const s16*)scr_obj_num + 75, (const s16*)scr_obj_num + 75, (const s16*)scr_obj_num + 75 },
-    { (const s16*)scr_obj_num + 75, (const s16*)scr_obj_num + 75, (const s16*)scr_obj_num + 75 },
-    { (const s16*)scr_obj_num + 195, (const s16*)scr_obj_num + 211, (const s16*)scr_obj_num + 235 },
+    { scr_obj_data_0_0, scr_obj_data_0_0, scr_obj_data_0_0 },
+    { scr_obj_data_1_0, scr_obj_data_1_0, scr_obj_data_1_0 },
+    { scr_obj_data_2_0, scr_obj_data_2_0, scr_obj_data_2_0 },
+    { scr_obj_data_3_0, scr_obj_data_3_0, scr_obj_data_3_0 },
+    { scr_obj_data_4_0, scr_obj_data_4_0, scr_obj_data_4_0 },
+    { scr_obj_data_5_0, scr_obj_data_5_0, scr_obj_data_5_0 },
+    { scr_obj_data_6_0, scr_obj_data_6_1, scr_obj_data_6_2 },
+    { scr_obj_data_7_0, scr_obj_data_7_0, scr_obj_data_7_0 },
+    { scr_obj_data_8_0, scr_obj_data_8_1, scr_obj_data_8_1 },
+    { scr_obj_data_9_0, scr_obj_data_9_0, scr_obj_data_9_0 },
+    { scr_obj_data_10_0, scr_obj_data_10_0, scr_obj_data_10_0 },
+    { scr_obj_data_11_0, scr_obj_data_11_0, scr_obj_data_11_0 },
+    { scr_obj_data_12_0, scr_obj_data_12_0, scr_obj_data_12_0 },
+    { scr_obj_data_13_0, scr_obj_data_13_0, scr_obj_data_13_0 },
+    { scr_obj_data_1_0, scr_obj_data_1_0, scr_obj_data_1_0 },
+    { scr_obj_data_1_0, scr_obj_data_1_0, scr_obj_data_1_0 },
+    { scr_obj_data_6_0, scr_obj_data_6_1, scr_obj_data_6_2 },
 };
 
 

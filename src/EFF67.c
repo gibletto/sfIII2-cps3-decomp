@@ -35,11 +35,6 @@
 #define R0_END          2       /* hidden for a frame */
 #define R0_KILL         3       /* (default) free the graphics and the work */
 
-typedef struct {
-    const CONN* conn;
-    const u16* gfx;
-} EFF67_MSG;
-
 extern const EFFA6_MESSAGE effA6_mes_en_0[];
 extern const EFFA6_MESSAGE effA6_mes_en_10[];
 extern const EFFA6_MESSAGE effA6_mes_en_11[];
@@ -101,77 +96,77 @@ s16 eff67_cnt0;
 s16 eff67_cnt1;  
 s16 eff67_flag;  
 
-EFF67_MSG* eff67_msg_a[15] = {
-    (EFF67_MSG*)effA6_mes_jp_0,
-    (EFF67_MSG*)effA6_mes_jp_0,
-    (EFF67_MSG*)effA6_mes_jp_2,
-    (EFF67_MSG*)effA6_mes_jp_3,
-    (EFF67_MSG*)effA6_mes_jp_4,
-    (EFF67_MSG*)effA6_mes_jp_5,
-    (EFF67_MSG*)effA6_mes_jp_6,
-    (EFF67_MSG*)effA6_mes_jp_7,
-    (EFF67_MSG*)effA6_mes_jp_8,
-    (EFF67_MSG*)effA6_mes_jp_9,
-    (EFF67_MSG*)effA6_mes_jp_10,
-    (EFF67_MSG*)effA6_mes_jp_11,
-    (EFF67_MSG*)effA6_mes_jp_12,
-    (EFF67_MSG*)effA6_mes_jp_13,
-    (EFF67_MSG*)effA6_mes_jp_14,
+const EFFA6_MESSAGE* eff67_msg_a[15] = {
+    effA6_mes_jp_0,
+    effA6_mes_jp_0,
+    effA6_mes_jp_2,
+    effA6_mes_jp_3,
+    effA6_mes_jp_4,
+    effA6_mes_jp_5,
+    effA6_mes_jp_6,
+    effA6_mes_jp_7,
+    effA6_mes_jp_8,
+    effA6_mes_jp_9,
+    effA6_mes_jp_10,
+    effA6_mes_jp_11,
+    effA6_mes_jp_12,
+    effA6_mes_jp_13,
+    effA6_mes_jp_14,
 };
-EFF67_MSG* eff67_msg_b[15] = {
-    (EFF67_MSG*)effA6_mes_en_0,
-    (EFF67_MSG*)effA6_mes_en_0,
-    (EFF67_MSG*)effA6_mes_en_2,
-    (EFF67_MSG*)effA6_mes_en_3,
-    (EFF67_MSG*)effA6_mes_en_4,
-    (EFF67_MSG*)effA6_mes_en_5,
-    (EFF67_MSG*)effA6_mes_en_6,
-    (EFF67_MSG*)effA6_mes_en_7,
-    (EFF67_MSG*)effA6_mes_en_8,
-    (EFF67_MSG*)effA6_mes_en_9,
-    (EFF67_MSG*)effA6_mes_en_10,
-    (EFF67_MSG*)effA6_mes_en_11,
-    (EFF67_MSG*)effA6_mes_en_12,
-    (EFF67_MSG*)effA6_mes_en_13,
-    (EFF67_MSG*)effA6_mes_en_14,
+const EFFA6_MESSAGE* eff67_msg_b[15] = {
+    effA6_mes_en_0,
+    effA6_mes_en_0,
+    effA6_mes_en_2,
+    effA6_mes_en_3,
+    effA6_mes_en_4,
+    effA6_mes_en_5,
+    effA6_mes_en_6,
+    effA6_mes_en_7,
+    effA6_mes_en_8,
+    effA6_mes_en_9,
+    effA6_mes_en_10,
+    effA6_mes_en_11,
+    effA6_mes_en_12,
+    effA6_mes_en_13,
+    effA6_mes_en_14,
 };
-EFF67_MSG* eff67_msg_c[15] = {
-    (EFF67_MSG*)effA6_mes_es_0,
-    (EFF67_MSG*)effA6_mes_es_0,
-    (EFF67_MSG*)effA6_mes_es_2,
-    (EFF67_MSG*)effA6_mes_es_3,
-    (EFF67_MSG*)effA6_mes_es_4,
-    (EFF67_MSG*)effA6_mes_es_5,
-    (EFF67_MSG*)effA6_mes_es_6,
-    (EFF67_MSG*)effA6_mes_es_7,
-    (EFF67_MSG*)effA6_mes_es_8,
-    (EFF67_MSG*)effA6_mes_es_9,
-    (EFF67_MSG*)effA6_mes_es_10,
-    (EFF67_MSG*)effA6_mes_es_11,
-    (EFF67_MSG*)effA6_mes_es_12,
-    (EFF67_MSG*)effA6_mes_es_13,
-    (EFF67_MSG*)effA6_mes_es_14,
+const EFFA6_MESSAGE* eff67_msg_c[15] = {
+    effA6_mes_es_0,
+    effA6_mes_es_0,
+    effA6_mes_es_2,
+    effA6_mes_es_3,
+    effA6_mes_es_4,
+    effA6_mes_es_5,
+    effA6_mes_es_6,
+    effA6_mes_es_7,
+    effA6_mes_es_8,
+    effA6_mes_es_9,
+    effA6_mes_es_10,
+    effA6_mes_es_11,
+    effA6_mes_es_12,
+    effA6_mes_es_13,
+    effA6_mes_es_14,
 };
-EFF67_MSG* eff67_msg_d[15] = {
-    (EFF67_MSG*)effA6_mes_pt_0,
-    (EFF67_MSG*)effA6_mes_pt_0,
-    (EFF67_MSG*)effA6_mes_pt_2,
-    (EFF67_MSG*)effA6_mes_pt_3,
-    (EFF67_MSG*)effA6_mes_pt_4,
-    (EFF67_MSG*)effA6_mes_pt_5,
-    (EFF67_MSG*)effA6_mes_pt_6,
-    (EFF67_MSG*)effA6_mes_pt_7,
-    (EFF67_MSG*)effA6_mes_pt_8,
-    (EFF67_MSG*)effA6_mes_pt_9,
-    (EFF67_MSG*)effA6_mes_pt_10,
-    (EFF67_MSG*)effA6_mes_pt_11,
-    (EFF67_MSG*)effA6_mes_pt_12,
-    (EFF67_MSG*)effA6_mes_pt_13,
-    (EFF67_MSG*)effA6_mes_pt_14,
+const EFFA6_MESSAGE* eff67_msg_d[15] = {
+    effA6_mes_pt_0,
+    effA6_mes_pt_0,
+    effA6_mes_pt_2,
+    effA6_mes_pt_3,
+    effA6_mes_pt_4,
+    effA6_mes_pt_5,
+    effA6_mes_pt_6,
+    effA6_mes_pt_7,
+    effA6_mes_pt_8,
+    effA6_mes_pt_9,
+    effA6_mes_pt_10,
+    effA6_mes_pt_11,
+    effA6_mes_pt_12,
+    effA6_mes_pt_13,
+    effA6_mes_pt_14,
 };
 
 void effect_67_move(WORK_Other_CONN* ewk) {
-    EFF67_MSG* msg;
+    const EFFA6_MESSAGE* msg;
     const CONN* conn;
     const u16* gfx;
     s16 i;
@@ -187,77 +182,77 @@ void effect_67_move(WORK_Other_CONN* ewk) {
             msg = eff67_msg_a[ewk->master_player];
             msg = msg + mes_already;
             conn = msg->conn;
-            gfx = msg->gfx;
+            gfx = msg->chr;
             break;
         case 4:
             msg = eff67_msg_b[ewk->master_player];
             msg += mes_already;
             conn = msg->conn;
-            gfx = msg->gfx;
+            gfx = msg->chr;
             break;
         default:
             msg = eff67_msg_a[ewk->master_player];
             msg = msg + mes_already;
             conn = msg->conn;
-            gfx = msg->gfx;
+            gfx = msg->chr;
             break;
         }
         switch (Country) {
         case 1:
             conn = eff67_msg_a[ewk->master_player][mes_already].conn;
-            gfx = eff67_msg_a[ewk->master_player][mes_already].gfx;
+            gfx = eff67_msg_a[ewk->master_player][mes_already].chr;
             break;
         case 3:
             switch (Language) {
             case 0:
                 conn = eff67_msg_b[ewk->master_player][mes_already].conn;
-                gfx = eff67_msg_b[ewk->master_player][mes_already].gfx;
+                gfx = eff67_msg_b[ewk->master_player][mes_already].chr;
                 break;
             case 1:
                 conn = eff67_msg_c[ewk->master_player][mes_already].conn;
-                gfx = eff67_msg_c[ewk->master_player][mes_already].gfx;
+                gfx = eff67_msg_c[ewk->master_player][mes_already].chr;
                 break;
             case 2:
                 conn = eff67_msg_d[ewk->master_player][mes_already].conn;
-                gfx = eff67_msg_d[ewk->master_player][mes_already].gfx;
+                gfx = eff67_msg_d[ewk->master_player][mes_already].chr;
                 break;
             }
             break;
         case 5:
             conn = eff67_msg_c[ewk->master_player][mes_already].conn;
-            gfx = eff67_msg_c[ewk->master_player][mes_already].gfx;
+            gfx = eff67_msg_c[ewk->master_player][mes_already].chr;
             break;
         case 6:
             conn = eff67_msg_d[ewk->master_player][mes_already].conn;
-            gfx = eff67_msg_d[ewk->master_player][mes_already].gfx;
+            gfx = eff67_msg_d[ewk->master_player][mes_already].chr;
             break;
         case 7:
             switch (Language) {
             case 0:
                 conn = eff67_msg_b[ewk->master_player][mes_already].conn;
-                gfx = eff67_msg_b[ewk->master_player][mes_already].gfx;
+                gfx = eff67_msg_b[ewk->master_player][mes_already].chr;
                 break;
             case 1:
                 conn = eff67_msg_c[ewk->master_player][mes_already].conn;
-                gfx = eff67_msg_c[ewk->master_player][mes_already].gfx;
+                gfx = eff67_msg_c[ewk->master_player][mes_already].chr;
                 break;
             case 2:
                 conn = eff67_msg_d[ewk->master_player][mes_already].conn;
-                gfx = eff67_msg_d[ewk->master_player][mes_already].gfx;
+                gfx = eff67_msg_d[ewk->master_player][mes_already].chr;
                 break;
             }
             break;
         case 2:
             conn = eff67_msg_b[ewk->master_player][mes_already].conn;
-            gfx = eff67_msg_b[ewk->master_player][mes_already].gfx;
+            gfx = eff67_msg_b[ewk->master_player][mes_already].chr;
             break;
         case 4:
             conn = eff67_msg_b[ewk->master_player][mes_already].conn;
-            gfx = eff67_msg_b[ewk->master_player][mes_already].gfx;
+            gfx = eff67_msg_b[ewk->master_player][mes_already].chr;
             break;
         default:
             conn = eff67_msg_b[ewk->master_player][mes_already].conn;
-            gfx = eff67_msg_b[ewk->master_player][mes_already].gfx;
+            gfx = eff67_msg_b[ewk->master_player][mes_already].chr;
         }
         for (i = 0; i < gfx[0]; i++) {
             load_char_gfx(gfx[i + 1], 1);
@@ -322,13 +317,13 @@ void effect_67_move(WORK_Other_CONN* ewk) {
         if (eff67_flag == 0) {
             switch (Country) {
             case 1:
-                gfx = eff67_msg_a[ewk->master_player][mes_already].gfx;
+                gfx = eff67_msg_a[ewk->master_player][mes_already].chr;
                 break;
             case 4:
-                gfx = eff67_msg_b[ewk->master_player][mes_already].gfx;
+                gfx = eff67_msg_b[ewk->master_player][mes_already].chr;
                 break;
             default:
-                gfx = eff67_msg_a[ewk->master_player][mes_already].gfx;
+                gfx = eff67_msg_a[ewk->master_player][mes_already].chr;
                 break;
             }
             n = gfx[0];
@@ -366,12 +361,12 @@ s32 effect_67_init(WORK* master) {
     switch (Break_Into_CPU) {
     case 1:
         if (Player_id == 0) {
-            if (Game_setting.mode == 0) {
+            if (Game_setting.Screen_Mode == 0) {
                 ewk->wu.position_x = 0x1F8;
             } else {
                 ewk->wu.position_x = 0x240;
             }
-        } else if (Game_setting.mode == 0) {
+        } else if (Game_setting.Screen_Mode == 0) {
             ewk->wu.position_x = 0x278;
         } else {
             ewk->wu.position_x = 0x2C0;
@@ -398,12 +393,12 @@ s32 effect_67_init(WORK* master) {
         break;
     case 2:
         if (Player_id == 0) {
-            if (Game_setting.mode == 0) {
+            if (Game_setting.Screen_Mode == 0) {
                 ewk->wu.position_x = 0x1F8;
             } else {
                 ewk->wu.position_x = 0x240;
             }
-        } else if (Game_setting.mode == 0) {
+        } else if (Game_setting.Screen_Mode == 0) {
             ewk->wu.position_x = 0x278;
         } else {
             ewk->wu.position_x = 0x2C0;
@@ -431,7 +426,7 @@ void eff67_setup(WORK_Other_CONN* ewk) {
     ewk->wu.my_col_code = 88;
     ewk->wu.my_family = 3;
     ewk->wu.my_priority = 35;
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         ewk->wu.position_x = 0x238;
     } else {
         ewk->wu.position_x = 0x280;

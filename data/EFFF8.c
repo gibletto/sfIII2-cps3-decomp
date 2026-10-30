@@ -3,8 +3,9 @@
  *
  * paring_b_mark_data is indexed by parry type and character and gives the { x, y } offset of
  * the parry mark from the player; read by EFFF8_CODE.C. efff9_no_scene (an empty list) and
- * pl01txt1 .. pl16txt1 are each character's ending scene lists of { message number, time }
- * pairs, each scene ended by 0, -1, reached through the txt_no_ tables of EFFF9_MES.C.
+ * the txt_no_NN_K lists are the characters' ending scenes of { message number, time } pairs,
+ * each ended by 0, -1, reached through the txt_no_ tables of EFFF9_MES.C; a list is named
+ * after the first entry that points at it (player table NN, entry K).
  * effg0_col_tbl, effg0_pos_tbl and effg0_flash_tbl give the colour, position and flashing sign
  * of each judge character of an ending scene, and effg0_name_tbl the name signs { pattern, x,
  * y } ended by -1; read by EFFG0.C. effg0_name_tbl2 .. effg0_name_tbl4 are further sign lists
@@ -18,20 +19,86 @@
 
 extern const s16 paring_b_mark_data[][16][2];
 extern const u16 efff9_no_scene[];
-extern const u16 pl01txt1[];
-extern const u16 pl02txt1[];
-extern const u16 pl03txt1[];
-extern const u16 pl04txt1[];
-extern const u16 pl05txt1[];
-extern const u16 pl06txt1[];
-extern const u16 pl07txt1[];
-extern const u16 pl08txt1[];
-extern const u16 pl09txt1[];
-extern const u16 pl11txt1[];
-extern const u16 pl12txt1[];
-extern const u16 pl13txt1[];
-extern const u16 pl14txt1[];
-extern const u16 pl16txt1[];
+extern const u16 txt_no_00_1[];
+extern const u16 txt_no_00_2[];
+extern const u16 txt_no_00_3[];
+extern const u16 txt_no_00_4[];
+extern const u16 txt_no_00_5[];
+extern const u16 txt_no_00_6[];
+extern const u16 txt_no_00_7[];
+extern const u16 txt_no_00_8[];
+extern const u16 txt_no_02_1[];
+extern const u16 txt_no_02_2[];
+extern const u16 txt_no_02_3[];
+extern const u16 txt_no_02_4[];
+extern const u16 txt_no_03_1[];
+extern const u16 txt_no_03_2[];
+extern const u16 txt_no_03_3[];
+extern const u16 txt_no_03_4[];
+extern const u16 txt_no_03_5[];
+extern const u16 txt_no_03_6[];
+extern const u16 txt_no_03_7[];
+extern const u16 txt_no_03_8[];
+extern const u16 txt_no_03_9[];
+extern const u16 txt_no_04_1[];
+extern const u16 txt_no_04_2[];
+extern const u16 txt_no_04_3[];
+extern const u16 txt_no_04_4[];
+extern const u16 txt_no_04_5[];
+extern const u16 txt_no_05_1[];
+extern const u16 txt_no_05_2[];
+extern const u16 txt_no_05_3[];
+extern const u16 txt_no_05_4[];
+extern const u16 txt_no_05_5[];
+extern const u16 txt_no_05_6[];
+extern const u16 txt_no_06_1[];
+extern const u16 txt_no_06_2[];
+extern const u16 txt_no_06_3[];
+extern const u16 txt_no_06_4[];
+extern const u16 txt_no_06_5[];
+extern const u16 txt_no_06_6[];
+extern const u16 txt_no_06_7[];
+extern const u16 txt_no_06_8[];
+extern const u16 txt_no_07_1[];
+extern const u16 txt_no_07_2[];
+extern const u16 txt_no_07_3[];
+extern const u16 txt_no_07_4[];
+extern const u16 txt_no_07_5[];
+extern const u16 txt_no_07_6[];
+extern const u16 txt_no_07_7[];
+extern const u16 txt_no_07_8[];
+extern const u16 txt_no_07_9[];
+extern const u16 txt_no_07_10[];
+extern const u16 txt_no_08_1[];
+extern const u16 txt_no_08_2[];
+extern const u16 txt_no_08_3[];
+extern const u16 txt_no_08_4[];
+extern const u16 txt_no_09_1[];
+extern const u16 txt_no_09_2[];
+extern const u16 txt_no_09_3[];
+extern const u16 txt_no_09_4[];
+extern const u16 txt_no_09_5[];
+extern const u16 txt_no_11_1[];
+extern const u16 txt_no_11_2[];
+extern const u16 txt_no_11_3[];
+extern const u16 txt_no_11_4[];
+extern const u16 txt_no_11_5[];
+extern const u16 txt_no_11_6[];
+extern const u16 txt_no_12_1[];
+extern const u16 txt_no_12_2[];
+extern const u16 txt_no_12_3[];
+extern const u16 txt_no_12_4[];
+extern const u16 txt_no_12_5[];
+extern const u16 txt_no_13_1[];
+extern const u16 txt_no_13_2[];
+extern const u16 txt_no_13_3[];
+extern const u16 txt_no_13_4[];
+extern const u16 txt_no_14_1[];
+extern const u16 txt_no_14_2[];
+extern const u16 txt_no_14_3[];
+extern const u16 txt_no_14_4[];
+extern const u16 txt_no_14_5[];
+extern const u16 txt_no_15_1[];
 extern const s16 effg0_col_tbl[];
 extern const s16 effg0_pos_tbl[][3];
 extern const s16 effg0_flash_tbl[][4];
@@ -67,121 +134,344 @@ const u16 efff9_no_scene[2] = {
 };
 
 /* provisional name */
-const u16 pl01txt1[50] = {
+const u16 txt_no_00_1[14] = {
     1, 160, 2, 200, 3, 180, 4, 220,
-    5, 220, 6, 280, 0, -1, 7, 512,
-    0, -1, 8, 240, 9, 90, 0, -1,
-    10, 180, 0, -1, 11, 140, 12, 180,
-    13, 380, 0, -1, 14, 280, 15, 300,
-    0, -1, 0, -1, 16, 240, 17, 360,
+    5, 220, 6, 280, 0, -1,
+};
+
+const u16 txt_no_00_2[4] = {
+    7, 512, 0, -1,
+};
+
+const u16 txt_no_00_3[6] = {
+    8, 240, 9, 90, 0, -1,
+};
+
+const u16 txt_no_00_4[4] = {
+    10, 180, 0, -1,
+};
+
+const u16 txt_no_00_5[8] = {
+    11, 140, 12, 180, 13, 380, 0, -1,
+};
+
+const u16 txt_no_00_6[6] = {
+    14, 280, 15, 300, 0, -1,
+};
+
+const u16 txt_no_00_7[2] = {
     0, -1,
 };
 
+const u16 txt_no_00_8[6] = {
+    16, 240, 17, 360, 0, -1,
+};
+
 /* provisional name */
-const u16 pl02txt1[20] = {
-    1, 260, 2, 220, 0, -1, 3, 130,
-    4, 230, 0, -1, 5, 180, 0, -1,
+const u16 txt_no_02_1[6] = {
+    1, 260, 2, 220, 0, -1,
+};
+
+const u16 txt_no_02_2[6] = {
+    3, 130, 4, 230, 0, -1,
+};
+
+const u16 txt_no_02_3[4] = {
+    5, 180, 0, -1,
+};
+
+const u16 txt_no_02_4[4] = {
     6, 400, 0, -1,
 };
 
 /* provisional name */
-const u16 pl03txt1[48] = {
-    1, 256, 0, -1, 2, 256, 0, -1,
+const u16 txt_no_03_1[4] = {
+    1, 256, 0, -1,
+};
+
+const u16 txt_no_03_2[4] = {
+    2, 256, 0, -1,
+};
+
+const u16 txt_no_03_3[8] = {
     3, 90, 4, 120, 5, 288, 0, -1,
+};
+
+const u16 txt_no_03_4[8] = {
     6, 90, 7, 180, 8, 288, 0, -1,
-    9, 120, 10, 240, 0, -1, 11, 256,
-    0, -1, 12, 288, 0, -1, 13, 288,
-    0, -1, 14, 240, 15, 288, 0, -1,
+};
+
+const u16 txt_no_03_5[6] = {
+    9, 120, 10, 240, 0, -1,
+};
+
+const u16 txt_no_03_6[4] = {
+    11, 256, 0, -1,
+};
+
+const u16 txt_no_03_7[4] = {
+    12, 288, 0, -1,
+};
+
+const u16 txt_no_03_8[4] = {
+    13, 288, 0, -1,
+};
+
+const u16 txt_no_03_9[6] = {
+    14, 240, 15, 288, 0, -1,
 };
 
 /* provisional name */
-const u16 pl04txt1[30] = {
+const u16 txt_no_04_1[8] = {
     1, 170, 2, 200, 3, 256, 0, -1,
-    4, 180, 0, -1, 5, 256, 0, -1,
+};
+
+const u16 txt_no_04_2[4] = {
+    4, 180, 0, -1,
+};
+
+const u16 txt_no_04_3[4] = {
+    5, 256, 0, -1,
+};
+
+const u16 txt_no_04_4[8] = {
     6, 154, 7, 180, 8, 256, 0, -1,
+};
+
+const u16 txt_no_04_5[6] = {
     9, 64, 10, 512, 0, -1,
 };
 
 /* provisional name */
-const u16 pl05txt1[36] = {
-    1, 342, 0, -1, 2, 256, 3, 276,
-    0, -1, 4, 512, 0, -1, 5, 292,
-    9, 60, 10, 60, 11, 60, 12, 60,
-    6, 60, 0, -1, 0, -1, 7, 212,
-    8, 330, 0, -1,
+const u16 txt_no_05_1[4] = {
+    1, 342, 0, -1,
+};
+
+const u16 txt_no_05_2[6] = {
+    2, 256, 3, 276, 0, -1,
+};
+
+const u16 txt_no_05_3[4] = {
+    4, 512, 0, -1,
+};
+
+const u16 txt_no_05_4[14] = {
+    5, 292, 9, 60, 10, 60, 11, 60,
+    12, 60, 6, 60, 0, -1,
+};
+
+const u16 txt_no_05_5[2] = {
+    0, -1,
+};
+
+const u16 txt_no_05_6[6] = {
+    7, 212, 8, 330, 0, -1,
 };
 
 /* provisional name */
-const u16 pl06txt1[66] = {
-    1, 0xB4, 2, 0x900, 0, 0xFFFF, 3, 0xB4,
-    4, 0x96, 5, 0x96, 6, 0x96, 7, 0x900,
-    0, 0xFFFF, 8, 0xB4, 9, 0xF0, 0xA, 0x900,
-    0, 0xFFFF, 0xB, 0xF0, 0xC, 0x96, 0xD, 0x900,
-    0, 0xFFFF, 0xE, 0xF0, 0xF, 0x96, 0x10, 0x900,
-    0, 0xFFFF, 0x11, 0xF0, 0x12, 0x96, 0x13, 0x900,
-    0, 0xFFFF, 0x14, 0xF0, 0x15, 0x96, 0x16, 0x900,
-    0, 0xFFFF, 0x17, 0xB4, 0x18, 0xF0, 0xA, 0x900,
-    0, 0xFFFF,
+const u16 txt_no_06_1[6] = {
+    1, 0xB4, 2, 0x900, 0, 0xFFFF,
+};
+
+const u16 txt_no_06_2[12] = {
+    3, 0xB4, 4, 0x96, 5, 0x96, 6, 0x96,
+    7, 0x900, 0, 0xFFFF,
+};
+
+const u16 txt_no_06_3[8] = {
+    8, 0xB4, 9, 0xF0, 0xA, 0x900, 0, 0xFFFF,
+};
+
+const u16 txt_no_06_4[8] = {
+    0xB, 0xF0, 0xC, 0x96, 0xD, 0x900, 0, 0xFFFF,
+};
+
+const u16 txt_no_06_5[8] = {
+    0xE, 0xF0, 0xF, 0x96, 0x10, 0x900, 0, 0xFFFF,
+};
+
+const u16 txt_no_06_6[8] = {
+    0x11, 0xF0, 0x12, 0x96, 0x13, 0x900, 0, 0xFFFF,
+};
+
+const u16 txt_no_06_7[8] = {
+    0x14, 0xF0, 0x15, 0x96, 0x16, 0x900, 0, 0xFFFF,
+};
+
+const u16 txt_no_06_8[8] = {
+    0x17, 0xB4, 0x18, 0xF0, 0xA, 0x900, 0, 0xFFFF,
 };
 
 /* provisional name */
-const u16 pl07txt1[48] = {
-    0, -1, 1, 120, 2, 90, 3, 160,
-    4, 196, 5, 100, 6, 196, 7, 256,
-    0, -1, 0, -1, 0, -1, 0, -1,
-    8, 512, 0, -1, 9, 512, 0, -1,
-    0, -1, 10, 512, 0, -1, 11, 176,
-    12, 230, 13, 134, 14, 512, 0, -1,
+const u16 txt_no_07_1[2] = {
+    0, -1,
+};
+
+const u16 txt_no_07_2[16] = {
+    1, 120, 2, 90, 3, 160, 4, 196,
+    5, 100, 6, 196, 7, 256, 0, -1,
+};
+
+const u16 txt_no_07_3[2] = {
+    0, -1,
+};
+
+const u16 txt_no_07_4[2] = {
+    0, -1,
+};
+
+const u16 txt_no_07_5[2] = {
+    0, -1,
+};
+
+const u16 txt_no_07_6[4] = {
+    8, 512, 0, -1,
+};
+
+const u16 txt_no_07_7[4] = {
+    9, 512, 0, -1,
+};
+
+const u16 txt_no_07_8[2] = {
+    0, -1,
+};
+
+const u16 txt_no_07_9[4] = {
+    10, 512, 0, -1,
+};
+
+const u16 txt_no_07_10[10] = {
+    11, 176, 12, 230, 13, 134, 14, 512,
+    0, -1,
 };
 
 /* provisional name */
-const u16 pl08txt1[20] = {
+const u16 txt_no_08_1[8] = {
     1, 160, 2, 280, 3, 768, 0, -1,
-    4, 768, 0, -1, 5, 180, 6, 768,
-    0, -1, 0, -1,
+};
+
+const u16 txt_no_08_2[4] = {
+    4, 768, 0, -1,
+};
+
+const u16 txt_no_08_3[6] = {
+    5, 180, 6, 768, 0, -1,
+};
+
+const u16 txt_no_08_4[2] = {
+    0, -1,
 };
 
 /* provisional name */
-const u16 pl09txt1[20] = {
-    1, 0x200, 0, 0xFFFF, 2, 0x340, 0, 0xFFFF,
-    0, 0xFFFF, 3, 0x300, 0, 0xFFFF, 4, 0xF0,
-    5, 0x300, 0, 0xFFFF,
+const u16 txt_no_09_1[4] = {
+    1, 0x200, 0, 0xFFFF,
 };
 
-/* provisional name */
-const u16 pl11txt1[24] = {
-    1, 0xF0, 2, 0x200, 0, 0xFFFF, 3, 0x200,
-    0, 0xFFFF, 4, 0x200, 0, 0xFFFF, 0, 0xFFFF,
-    5, 0x200, 0, 0xFFFF, 6, 0x200, 0, 0xFFFF,
+const u16 txt_no_09_2[4] = {
+    2, 0x340, 0, 0xFFFF,
 };
 
-/* provisional name */
-const u16 pl12txt1[26] = {
-    1, 0x300, 0, 0xFFFF, 2, 0x5A, 3, 0xB4,
-    4, 0x78, 5, 0x300, 0, 0xFFFF, 6, 0x300,
-    0, 0xFFFF, 7, 0x300, 0, 0xFFFF, 8, 0x300,
+const u16 txt_no_09_3[2] = {
     0, 0xFFFF,
 };
 
-/* provisional name */
-const u16 pl13txt1[34] = {
-    1, 360, 2, 2304, 0, -1, 3, 180,
-    4, 2304, 0, -1, 5, 240, 6, 150,
-    7, 300, 8, 2304, 0, -1, 9, 144,
-    10, 180, 11, 240, 12, 300, 13, 2304,
-    0, -1,
+const u16 txt_no_09_4[4] = {
+    3, 0x300, 0, 0xFFFF,
+};
+
+const u16 txt_no_09_5[6] = {
+    4, 0xF0, 5, 0x300, 0, 0xFFFF,
 };
 
 /* provisional name */
-const u16 pl14txt1[26] = {
-    1, 2304, 0, -1, 2, 180, 3, 2304,
-    0, -1, 4, 2304, 0, -1, 0, 240,
-    5, 2304, 0, -1, 6, 240, 7, 2304,
-    0, -1,
+const u16 txt_no_11_1[6] = {
+    1, 0xF0, 2, 0x200, 0, 0xFFFF,
+};
+
+const u16 txt_no_11_2[4] = {
+    3, 0x200, 0, 0xFFFF,
+};
+
+const u16 txt_no_11_3[4] = {
+    4, 0x200, 0, 0xFFFF,
+};
+
+const u16 txt_no_11_4[2] = {
+    0, 0xFFFF,
+};
+
+const u16 txt_no_11_5[4] = {
+    5, 0x200, 0, 0xFFFF,
+};
+
+const u16 txt_no_11_6[4] = {
+    6, 0x200, 0, 0xFFFF,
 };
 
 /* provisional name */
-const u16 pl16txt1[12] = {
+const u16 txt_no_12_1[4] = {
+    1, 0x300, 0, 0xFFFF,
+};
+
+const u16 txt_no_12_2[10] = {
+    2, 0x5A, 3, 0xB4, 4, 0x78, 5, 0x300,
+    0, 0xFFFF,
+};
+
+const u16 txt_no_12_3[4] = {
+    6, 0x300, 0, 0xFFFF,
+};
+
+const u16 txt_no_12_4[4] = {
+    7, 0x300, 0, 0xFFFF,
+};
+
+const u16 txt_no_12_5[4] = {
+    8, 0x300, 0, 0xFFFF,
+};
+
+/* provisional name */
+const u16 txt_no_13_1[6] = {
+    1, 360, 2, 2304, 0, -1,
+};
+
+const u16 txt_no_13_2[6] = {
+    3, 180, 4, 2304, 0, -1,
+};
+
+const u16 txt_no_13_3[10] = {
+    5, 240, 6, 150, 7, 300, 8, 2304,
+    0, -1,
+};
+
+const u16 txt_no_13_4[12] = {
+    9, 144, 10, 180, 11, 240, 12, 300,
+    13, 2304, 0, -1,
+};
+
+/* provisional name */
+const u16 txt_no_14_1[4] = {
+    1, 2304, 0, -1,
+};
+
+const u16 txt_no_14_2[6] = {
+    2, 180, 3, 2304, 0, -1,
+};
+
+const u16 txt_no_14_3[4] = {
+    4, 2304, 0, -1,
+};
+
+const u16 txt_no_14_4[6] = {
+    0, 240, 5, 2304, 0, -1,
+};
+
+const u16 txt_no_14_5[6] = {
+    6, 240, 7, 2304, 0, -1,
+};
+
+/* provisional name */
+const u16 txt_no_15_1[12] = {
     0, 128, 1, 192, 2, 144, 3, 128,
     4, 384, 0, -1,
 };

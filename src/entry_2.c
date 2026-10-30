@@ -222,7 +222,7 @@ void Entry_01(void) {
 void Entry_01_Sub(s16 PL_id) {
     E_No1++;
     Request_G_No = 1;
-    if (Game_setting.set5) {
+    if (Game_setting.Event) {
         plw[0].wu.operator = 1;
         plw[1].wu.operator = 1;
         Operator_Status[0] = 1;
@@ -571,9 +571,9 @@ void Entry_08_1st(void) {
     switch (E_No2) {
     case 0:
         E_No2 += 1;
-        tilemap_print_string_attr(ENTRY_MSG_X_PAIR(4)[0][Game_setting.mode], Text_Page_Y, 40, msg_blank);
-        tilemap_print_string_attr(ENTRY_MSG_X_PAIR(4)[1][Game_setting.mode], Text_Page_Y, 40, msg_blank);
-        if (Game_setting.set5) {
+        tilemap_print_string_attr(ENTRY_MSG_X_PAIR(4)[0][Game_setting.Screen_Mode], Text_Page_Y, 40, msg_blank);
+        tilemap_print_string_attr(ENTRY_MSG_X_PAIR(4)[1][Game_setting.Screen_Mode], Text_Page_Y, 40, msg_blank);
+        if (Game_setting.Event) {
             E_No2 = 99;
         }
     case 1:
@@ -726,7 +726,7 @@ s16 Jump_Index;
     ENTRY_X = 0;
     switch (E_Number[PL_id][0]) {
     case ENTRY_NONE:
-        if (Game_setting.set5) {
+        if (Game_setting.Event) {
             break;
         }
         if (Ignore_Entry[LOSER]) {
@@ -1004,7 +1004,7 @@ s32 Loser_Sub_1P(void) {
             } else if (LOSER == 0) {
                 tilemap_print_string_attr(DE_X[Entry_Mes_Wide[0]] + Entry_Mes_X[0], Text_Page_Y, 40, msg_continue);
             } else {
-                Flash_Start(0, Entry_Msg_X_Data[2][Game_setting.mode]);
+                Flash_Start(0, Entry_Msg_X_Data[2][Game_setting.Screen_Mode]);
             }
         }
         break;
@@ -1035,7 +1035,7 @@ s32 Loser_Sub_2P(void) {
             } else if (LOSER == 1) {
                 tilemap_print_string_attr(DE_X[Entry_Mes_Wide[1]] + Entry_Mes_X[1], Text_Page_Y, 40, msg_continue);
             } else {
-                Flash_Start(1, Entry_Msg_X_Data[3][Game_setting.mode]);
+                Flash_Start(1, Entry_Msg_X_Data[3][Game_setting.Screen_Mode]);
             }
         }
         break;
@@ -1055,16 +1055,16 @@ s32 Credit_Sub_1P(void) {
     switch (status) {
     case 0:
         if (coin_chute1_w.count) {
-            Flash_More_Coins(0, Entry_Msg_X_Data[4][Game_setting.mode], (s8)(coin_chute1_w.per_credit - coin_chute1_w.count));
+            Flash_More_Coins(0, Entry_Msg_X_Data[4][Game_setting.Screen_Mode], (s8)(coin_chute1_w.per_credit - coin_chute1_w.count));
         } else {
-            Flash_Insert_Coin(0, Entry_Msg_X_Data[0][Game_setting.mode]);
+            Flash_Insert_Coin(0, Entry_Msg_X_Data[0][Game_setting.Screen_Mode]);
         }
         break;
     case 99:
         if (credit_1p) {
-            Flash_More_Coins(0, Entry_Msg_X_Data[4][Game_setting.mode], 1);
+            Flash_More_Coins(0, Entry_Msg_X_Data[4][Game_setting.Screen_Mode], 1);
         } else {
-            Flash_Insert_Coin(0, Entry_Msg_X_Data[0][Game_setting.mode]);
+            Flash_Insert_Coin(0, Entry_Msg_X_Data[0][Game_setting.Screen_Mode]);
         }
         break;
     default:
@@ -1072,7 +1072,7 @@ s32 Credit_Sub_1P(void) {
             if (Request_Break[0]) {
                 Flash_Please(0);
             } else {
-                Flash_Start(0, Entry_Msg_X_Data[2][Game_setting.mode]);
+                Flash_Start(0, Entry_Msg_X_Data[2][Game_setting.Screen_Mode]);
             }
         }
         break;
@@ -1099,19 +1099,19 @@ s32 Credit_Sub_2P(void) {
     case 0:
         if (Get_2P_Coin_Count()) {
             if (Chute_Mode < 2) {
-                Flash_More_Coins(1, Entry_Msg_X_Data[5][Game_setting.mode], (s8)(coin_chute1_w.per_credit - coin_chute1_w.count));
+                Flash_More_Coins(1, Entry_Msg_X_Data[5][Game_setting.Screen_Mode], (s8)(coin_chute1_w.per_credit - coin_chute1_w.count));
             } else {
-                Flash_More_Coins(1, Entry_Msg_X_Data[5][Game_setting.mode], (s8)(coin_chute2_w.per_credit - coin_chute2_w.count));
+                Flash_More_Coins(1, Entry_Msg_X_Data[5][Game_setting.Screen_Mode], (s8)(coin_chute2_w.per_credit - coin_chute2_w.count));
             }
         } else {
-            Flash_Insert_Coin(1, Entry_Msg_X_Data[1][Game_setting.mode]);
+            Flash_Insert_Coin(1, Entry_Msg_X_Data[1][Game_setting.Screen_Mode]);
         }
         break;
     case 99:
         if (credits != 0) {
-            Flash_More_Coins(1, Entry_Msg_X_Data[5][Game_setting.mode], 1);
+            Flash_More_Coins(1, Entry_Msg_X_Data[5][Game_setting.Screen_Mode], 1);
         } else {
-            Flash_Insert_Coin(1, Entry_Msg_X_Data[1][Game_setting.mode]);
+            Flash_Insert_Coin(1, Entry_Msg_X_Data[1][Game_setting.Screen_Mode]);
         }
         break;
     default:
@@ -1119,7 +1119,7 @@ s32 Credit_Sub_2P(void) {
             if (Request_Break[1]) {
                 Flash_Please(1);
             } else {
-                Flash_Start(1, Entry_Msg_X_Data[3][Game_setting.mode]);
+                Flash_Start(1, Entry_Msg_X_Data[3][Game_setting.Screen_Mode]);
             }
         }
         break;
@@ -1260,7 +1260,7 @@ s16 PL_id;
     case 0:
         E_Number[PL_id][2]++;
         Personal_Timer[PL_id] = 30;
-        if (Game_setting.set5 == 0) {
+        if (Game_setting.Event == 0) {
             tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40, msg_blank);
         }
         break;
@@ -1268,7 +1268,7 @@ s16 PL_id;
         if (--Personal_Timer[PL_id] == 0) {
             E_Number[PL_id][2]++;
             Personal_Timer[PL_id] = 60;
-            if (Game_setting.set5 == 0) {
+            if (Game_setting.Event == 0) {
                 tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40, msg_blank);
             }
         }
@@ -1279,7 +1279,7 @@ s16 PL_id;
             if (Personal_Timer[PL_id] < 20) {
                 Personal_Timer[PL_id] = 20;
             }
-            if (Game_setting.set5 == 0) {
+            if (Game_setting.Event == 0) {
                 tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40, (s8*)msg_game_over);
             }
         }
@@ -1288,7 +1288,7 @@ s16 PL_id;
         }
         E_Number[PL_id][2]++;
         Personal_Timer[PL_id] = 30;
-        if (Game_setting.set5 == 0) {
+        if (Game_setting.Event == 0) {
             tilemap_print_string_attr(Entry_Mes_X[PL_id] + DE_X[Entry_Mes_Wide[PL_id]], Text_Page_Y, 40, (s8*)msg_game_over);
         }
         break;

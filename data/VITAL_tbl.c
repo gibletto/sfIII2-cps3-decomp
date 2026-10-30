@@ -1,9 +1,11 @@
 /*
  * VITAL_TBL.C  vitality bar, round timer and super art gauge tables
  *
- * vital_cell_tbl and vital_cell_1p_tbl are the text-layer cells of the vitality bars (later
- * parts of vital_cell_1p_tbl are reached through vital_npos_tbl and vital_attr_tbl); read by
- * VITAL.C. hoji_counter_tbl is the frames per round timer count for each timer speed setting,
+ * vital_cell_tbl and vital_cell_1p_tbl are the text-layer cells of the vitality bars,
+ * vital_npos_0 .. vital_npos_3 the cell columns of the 1P and 2P bars in the normal and wide
+ * screen modes and vital_attr_0 .. vital_attr_2 the cell attributes for each bar colour,
+ * reached through vital_npos_tbl and vital_attr_tbl; read by VITAL.C. vital_unref_0 is not
+ * referred to. hoji_counter_tbl is the frames per round timer count for each timer speed setting,
  * and flash_timer_tbl and flash_color_tbl the rate and colours of the flashing round timer;
  * read by COUNT.C. spgauge_puttbl_0/1 are the cell codes of each fill step of the super art
  * gauge and spgauge_postbl_0/1 and spgauge_postbl_0_2/1_2 its cell columns for each side in
@@ -19,6 +21,14 @@
 
 extern const u16 vital_cell_tbl[];
 extern const u16 vital_cell_1p_tbl[];
+extern const u16 vital_npos_0[];
+extern const u16 vital_npos_1[];
+extern const u16 vital_npos_2[];
+extern const u16 vital_npos_3[];
+extern const u16 vital_attr_0[];
+extern const u16 vital_attr_1[];
+extern const u16 vital_attr_2[];
+extern const u16 vital_unref_0[];
 extern const s16 hoji_counter_tbl[];
 extern const s16 flash_timer_tbl[];
 extern const s16 flash_color_tbl[][3];
@@ -46,7 +56,7 @@ const u16 vital_cell_tbl[81] = {
     0,
 };
 
-const u16 vital_cell_1p_tbl[179] = {
+const u16 vital_cell_1p_tbl[81] = {
     0x137, 0x136, 0x135, 0x134, 0x133, 0x132, 0x131, 0x130,
     0x15C, 0x15B, 0x15A, 0x159, 0x158, 0x157, 0x156, 0x155,
     0x138, 0, 0x154, 0x153, 0x152, 0x151, 0x150, 0x15F,
@@ -57,19 +67,55 @@ const u16 vital_cell_1p_tbl[179] = {
     0x13D, 0, 0, 0, 0, 0, 0, 0x140,
     0x13E, 0, 0, 0, 0, 0, 0, 0,
     0x13F, 0, 0, 0, 0, 0, 0, 0,
-    0, 1, 2, 3, 4, 5, 6, 7,
-    8, 9, 0xA, 0xB, 0xC, 0xD, 0xE, 0xF,
-    0x10, 0x11, 0x12, 0x13, 0x14, 0x2E, 0x2D, 0x2C,
-    0x2B, 0x2A, 0x29, 0x28, 0x27, 0x26, 0x25, 0x24,
-    0x23, 0x22, 0x21, 0x20, 0x1F, 0x1E, 0x1D, 0x1C,
-    0x1B, 4, 5, 6, 7, 8, 9, 0xA,
-    0xB, 0xC, 0xD, 0xE, 0xF, 0x10, 0x11, 0x12,
-    0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1A,
-    0x1B, 0x39, 0x38, 0x37, 0x36, 0x35, 0x34, 0x33,
-    0x32, 0x31, 0x30, 0x2F, 0x2E, 0x2D, 0x2C, 0x2B,
-    0x2A, 0x29, 0x28, 0x27, 0x26, 0x25, 0x24, 0x23,
-    0x22, 2, 4, 6, 0x82, 0x84, 0x86, 2,
-    4, 6, 0xFFFF,
+    0,
+};
+
+/* cell columns of the 1P bar in the normal screen mode, reached through vital_npos_tbl[0]; provisional name */
+const u16 vital_npos_0[20] = {
+    1, 2, 3, 4, 5, 6, 7, 8,
+    9, 0xA, 0xB, 0xC, 0xD, 0xE, 0xF, 0x10,
+    0x11, 0x12, 0x13, 0x14,
+};
+
+/* cell columns of the 2P bar in the normal screen mode, reached through vital_npos_tbl[1]; provisional name */
+const u16 vital_npos_1[20] = {
+    0x2E, 0x2D, 0x2C, 0x2B, 0x2A, 0x29, 0x28, 0x27,
+    0x26, 0x25, 0x24, 0x23, 0x22, 0x21, 0x20, 0x1F,
+    0x1E, 0x1D, 0x1C, 0x1B,
+};
+
+/* cell columns of the 1P bar in the wide screen mode, reached through vital_npos_tbl[2]; provisional name */
+const u16 vital_npos_2[24] = {
+    4, 5, 6, 7, 8, 9, 0xA, 0xB,
+    0xC, 0xD, 0xE, 0xF, 0x10, 0x11, 0x12, 0x13,
+    0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1A, 0x1B,
+};
+
+/* cell columns of the 2P bar in the wide screen mode, reached through vital_npos_tbl[3]; provisional name */
+const u16 vital_npos_3[24] = {
+    0x39, 0x38, 0x37, 0x36, 0x35, 0x34, 0x33, 0x32,
+    0x31, 0x30, 0x2F, 0x2E, 0x2D, 0x2C, 0x2B, 0x2A,
+    0x29, 0x28, 0x27, 0x26, 0x25, 0x24, 0x23, 0x22,
+};
+
+/* cell attributes for each bar colour, reached through vital_attr_tbl[0]; provisional name */
+const u16 vital_attr_0[3] = {
+    2, 4, 6,
+};
+
+/* cell attributes for each bar colour, reached through vital_attr_tbl[1]; provisional name */
+const u16 vital_attr_1[3] = {
+    0x82, 0x84, 0x86,
+};
+
+/* cell attributes for each bar colour, reached through vital_attr_tbl[2]; provisional name */
+const u16 vital_attr_2[3] = {
+    2, 4, 6,
+};
+
+/* not referred to; provisional name */
+const u16 vital_unref_0[1] = {
+    0xFFFF,
 };
 
 const s16 hoji_counter_tbl[4] = {

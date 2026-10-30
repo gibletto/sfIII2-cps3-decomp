@@ -48,7 +48,7 @@
 
 extern s8 Select_Flow_Akebono;   /* provisional name (sel_flow.c) */
 extern s16 effg0_judge_count;   /* provisional name: initialised work RAM (effg0_work.c) */
-extern u32* effg0_char_tbl[];   /* provisional name: initialised work RAM (effg0_work.c) */
+extern const u32* effg0_char_tbl[];   /* provisional name: initialised work RAM (effg0_work.c) */
 extern const s16 effg0_col_tbl[7];
 extern const s16 effg0_pos_tbl[7][3];
 extern const s16 effg0_flash_tbl[7][4];

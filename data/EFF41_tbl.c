@@ -4,8 +4,8 @@
  * sa_sign_data has one row of four per super art sign: offset from the player, animation
  * number and gauge used (super art or EX); read by EFF41.C, the super art sign.
  * eff40_pos_x_tbl gives the x position of the select-screen zoom object for each direction
- * (EFF40.C). scr_obj_num44 holds the counts and object rows of the animated stage objects,
- * reached through scr_obj_data44 (EFF44.C). eff45_pos_x_tbl, eff45_pos_y_tbl and
+ * (EFF40.C). scr_obj_num44 holds the counts of the animated stage objects by type, and
+ * scr_obj_data44_N the object rows of type N, named by scr_obj_data44 (EFF44.C). eff45_pos_x_tbl, eff45_pos_y_tbl and
  * eff45_pos_y_tbl2 are the random x and y positions of the stage objects of effect 45
  * (EFF45.C); eff45_pos_y_tbl3 is not referred to by name. eff46_char_tbl is the eight patterns
  * the object beside the winner picks from (EFF46.C).
@@ -19,6 +19,15 @@
 extern const s16 eff40_pos_x_tbl[];
 extern const s16 sa_sign_data[][4];
 extern const s16 scr_obj_num44[];
+extern const s16 scr_obj_data44_0[];
+extern const s16 scr_obj_data44_1[];
+extern const s16 scr_obj_data44_2[];
+extern const s16 scr_obj_data44_3[];
+extern const s16 scr_obj_data44_4[];
+extern const s16 scr_obj_data44_5[];
+extern const s16 scr_obj_data44_6[];
+extern const s16 scr_obj_data44_7[];
+extern const s16 scr_obj_data44_8[];
 extern const s16 eff45_pos_x_tbl[];
 extern const s16 eff45_pos_y_tbl[];
 extern const s16 eff45_pos_y_tbl2[];
@@ -61,43 +70,80 @@ const s16 sa_sign_data[49][4] = {
     { -32, 64, 156, 1 },
 };
 
-const s16 scr_obj_num44[282] = {
+const s16 scr_obj_num44[9] = {
     6, 2, 1, 10, 3, 1, 8, 1,
-    2, 1, 2, 8256, -368, 64, 82, 1,
-    1, 0, 2, 64, 208, 96, 80, 3,
-    1, 1, 2, 64, -128, 80, 83, 5,
-    1, 0, 2, 8283, -145, 64, 77, 10,
-    1, 1, 2, 8283, -233, 81, 79, 14,
-    1, 1, 2, 8283, 273, 65, 74, 18,
-    1, 1, 2, 8277, 272, 95, 76, 26,
-    0, 1, 2, 8277, 336, 47, 77, 16,
-    0, 1, 2, 8256, 239, 160, 78, 0,
-    0, 0, 2, 8256, 663, 136, 75, 8,
-    0, 0, 2, 8256, 683, 123, 75, 9,
-    0, 1, 2, 8256, 775, 144, 75, 10,
-    0, 1, 2, 8256, 640, 48, 75, 11,
-    0, 1, 2, 8256, 360, 104, 75, 13,
-    0, 1, 2, 8256, 372, 104, 75, 20,
-    0, 1, 2, 8256, 908, 101, 75, 6,
-    0, 1, 2, 8256, 53, 145, 75, 7,
-    0, 1, 2, 8281, 352, 225, 75, 26,
-    0, 0, 2, 8281, 368, 147, 75, 27,
-    0, 1, 2, 8292, 295, 66, 75, 1,
-    0, 1, 2, 8292, 175, 61, 76, 2,
-    0, 1, 2, 64, 688, 73, 83, 18,
-    0, 1, 2, 64, 688, 73, 83, 18,
-    0, 1, 2, 8256, 816, 112, 79, 0,
-    0, 1, 2, 8256, 800, 112, 81, 2,
-    0, 1, 2, 8256, 792, 176, 80, 3,
-    0, 1, 1, 8256, 224, 192, 95, 4,
-    0, 1, 1, 8256, 320, 176, 95, 5,
-    0, 1, 1, 8256, 352, 176, 95, 6,
-    0, 0, 2, 8256, 840, 160, 83, 8,
-    0, 1, 2, 8256, 720, 96, 90, 9,
-    0, 1, 2, 8256, 272, 96, 87, 61,
-    0, 0, 2, 8256, 224, 64, 72, 6,
-    0, 0, 2, 64, 736, 208, 72, 7,
-    0, -1,
+    2,
+};
+
+/* type 0; provisional name */
+const s16 scr_obj_data44_0[48] = {
+    1, 2, 8256, -368, 64, 82, 1, 1,
+    0, 2, 64, 208, 96, 80, 3, 1,
+    1, 2, 64, -128, 80, 83, 5, 1,
+    0, 2, 8283, -145, 64, 77, 10, 1,
+    1, 2, 8283, -233, 81, 79, 14, 1,
+    1, 2, 8283, 273, 65, 74, 18, 1,
+};
+
+/* type 1; provisional name */
+const s16 scr_obj_data44_1[16] = {
+    1, 2, 8277, 272, 95, 76, 26, 0,
+    1, 2, 8277, 336, 47, 77, 16, 0,
+};
+
+/* type 2; provisional name */
+const s16 scr_obj_data44_2[8] = {
+    1, 2, 8256, 239, 160, 78, 0, 0,
+};
+
+/* type 3; provisional name */
+const s16 scr_obj_data44_3[80] = {
+    0, 2, 8256, 663, 136, 75, 8, 0,
+    0, 2, 8256, 683, 123, 75, 9, 0,
+    1, 2, 8256, 775, 144, 75, 10, 0,
+    1, 2, 8256, 640, 48, 75, 11, 0,
+    1, 2, 8256, 360, 104, 75, 13, 0,
+    1, 2, 8256, 372, 104, 75, 20, 0,
+    1, 2, 8256, 908, 101, 75, 6, 0,
+    1, 2, 8256, 53, 145, 75, 7, 0,
+    1, 2, 8281, 352, 225, 75, 26, 0,
+    0, 2, 8281, 368, 147, 75, 27, 0,
+};
+
+/* type 4; provisional name */
+const s16 scr_obj_data44_4[24] = {
+    1, 2, 8292, 295, 66, 75, 1, 0,
+    1, 2, 8292, 175, 61, 76, 2, 0,
+    1, 2, 64, 688, 73, 83, 18, 0,
+};
+
+/* type 5; provisional name */
+const s16 scr_obj_data44_5[8] = {
+    1, 2, 64, 688, 73, 83, 18, 0,
+};
+
+/* type 6; provisional name */
+const s16 scr_obj_data44_6[64] = {
+    1, 2, 8256, 816, 112, 79, 0, 0,
+    1, 2, 8256, 800, 112, 81, 2, 0,
+    1, 2, 8256, 792, 176, 80, 3, 0,
+    1, 1, 8256, 224, 192, 95, 4, 0,
+    1, 1, 8256, 320, 176, 95, 5, 0,
+    1, 1, 8256, 352, 176, 95, 6, 0,
+    0, 2, 8256, 840, 160, 83, 8, 0,
+    1, 2, 8256, 720, 96, 90, 9, 0,
+};
+
+/* type 7; provisional name */
+const s16 scr_obj_data44_7[8] = {
+    1, 2, 8256, 272, 96, 87, 61, 0,
+};
+
+/* type 8; provisional name */
+const s16 scr_obj_data44_8[17] = {
+    0, 2, 8256, 224, 64, 72, 6, 0,
+    0, 2, 64, 736, 208, 72, 7, 0,
+    -1,
 };
 
 const s16 eff45_pos_x_tbl[32] = {

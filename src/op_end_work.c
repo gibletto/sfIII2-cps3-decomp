@@ -60,17 +60,16 @@ const PANEL* op_panel_p[4] = {
     op_panel1,
     op_panel2,
 };
-/* the code declares end_main_jp[24]; end_map_tbl starts after its first 16 entries */
 /* 02007734 */
 void (*end_main_jp[16])(s16) = {
-    (void (*)(s16))end_00000, (void (*)(s16))end_01000, (void (*)(s16))end_02000, (void (*)(s16))end_03000,
-    (void (*)(s16))end_04000, (void (*)(s16))end_05000, (void (*)(s16))end_06000, (void (*)(s16))end_07000,
-    (void (*)(s16))end_08000, (void (*)(s16))end_09000, (void (*)(s16))end_03000, (void (*)(s16))end_10000,
-    (void (*)(s16))end_11000, (void (*)(s16))end_12000, (void (*)(s16))end_13000, (void (*)(s16))end_13000,
+    end_00000, end_01000, end_02000, end_03000,
+    end_04000, end_05000, end_06000, end_07000,
+    end_08000, end_09000, end_03000, end_10000,
+    end_11000, end_12000, end_13000, end_13000,
 };
 /* 02007774 */
-u32 end_map_tbl[4] = {
-    (u32)end_map_data_0, (u32)end_map_data_1, (u32)end_map_data_2, (u32)end_map_data_3,
+const s16* end_map_tbl[4] = {
+    end_map_data_0, end_map_data_1, end_map_data_2, end_map_data_3,
 };
 /* 02007784 */
 const PANEL* end_4_panel_p[2] = {
@@ -115,11 +114,15 @@ const s32* end_11_cell_ptr1[9] = {
     end_1100_cell6,
 };
 /* 02007800 */
-/* Stored after end_11_cell_ptr1. Nothing in the program refers to it by name or address; if it is read,
-   it is through an index past the end of end_11_cell_ptr1. */
-u32 end_11_cell_ptr1_tail[11] = {
-    (u32)end_1100_cell6, 0, 0x10000, 0x20000, 0x30000, 0x40000, 0x50000, 0x60000,
-    0x70000, 0x80000, 0x90000,
+/* Stored after end_11_cell_ptr1: one more cell list pointer, then the steps 0 to 9 in 16.16 fixed
+   point. Nothing in the program refers to them by name or address. */
+const s32* end_11_cell_ptr1_tail[1] = {
+    end_1100_cell6,
+};
+/* 02007804 */
+u32 end_11_unref_0[10] = {
+    0, 0x10000, 0x20000, 0x30000, 0x40000, 0x50000, 0x60000, 0x70000,
+    0x80000, 0x90000,
 };
 
 

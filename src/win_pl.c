@@ -139,7 +139,7 @@ void Win_01000(PLW* wk) {
         a_rno = win_rno[0] = win_rno[1] = 0;
         wk->wu.routine_no[3]++;
         work = win_select(wk, 7);
-        if ((Round_num >= Game_setting.set4 * 2) || (PL_Wins[wk->wu.id] >= Game_setting.set4 + 1)) {
+        if ((Round_num >= Game_setting.Battle_Number * 2) || (PL_Wins[wk->wu.id] >= Game_setting.Battle_Number + 1)) {
             if (bg_w.stage == 9) {
                 set_char_move_init(&wk->wu, 9, 41);
                 win_rno[0] = OW_FLY_UP;
@@ -294,7 +294,7 @@ void Win_02000(PLW* wk) {
         wk->wu.routine_no[3]++;
         a_rno = win_rno[0] = win_rno[1] = 0;
         work = win_select(wk, 3);
-        if ((Round_num >= Game_setting.set4 * 2) || (PL_Wins[wk->wu.id] >= Game_setting.set4 + 1)) {
+        if ((Round_num >= Game_setting.Battle_Number * 2) || (PL_Wins[wk->wu.id] >= Game_setting.Battle_Number + 1)) {
             if (win_2000_tbl[bg_w.bg_index]) {
                 set_char_move_init(&wk->wu, 9, work + 36);
             } else if (work & 1) {
@@ -331,7 +331,7 @@ void Win_03000(PLW* wk) {
         wk->wu.routine_no[3]++;
         a_rno = win_rno[0] = win_rno[1] = 0;
         work = win_select(wk, 7);
-        if ((Round_num >= Game_setting.set4 * 2) || (PL_Wins[wk->wu.id] >= Game_setting.set4 + 1)) {
+        if ((Round_num >= Game_setting.Battle_Number * 2) || (PL_Wins[wk->wu.id] >= Game_setting.Battle_Number + 1)) {
             set_char_move_init(&wk->wu, 9, Win_3001_tbl[work]);
         } else {
             set_char_move_init(&wk->wu, 9, Win_3000_tbl[work]);
@@ -362,7 +362,7 @@ void Win_04000(PLW* wk) {
         wk->wu.routine_no[3]++;
         a_rno = win_rno[0] = win_rno[1] = 0;
         work = win_select(wk, 3);
-        if ((Round_num >= Game_setting.set4 * 2) || (PL_Wins[wk->wu.id] >= Game_setting.set4 + 1)) {
+        if ((Round_num >= Game_setting.Battle_Number * 2) || (PL_Wins[wk->wu.id] >= Game_setting.Battle_Number + 1)) {
             set_char_move_init(&wk->wu, 9, work + 36);
         } else {
             set_char_move_init(&wk->wu, 9, work + 32);
@@ -386,7 +386,7 @@ void Normal_normal_Winner(PLW* wk) {
     if (set_field_hosei_flag(&plw[0], bg_w.bgw[1].wxy[0].disp.pos + bg_w.pos_offset, 1)) {
         set_field_hosei_flag(&plw[0], bg_w.bgw[1].wxy[0].disp.pos - bg_w.pos_offset, 0);
     }
-    if (bg_w.stage == 8 && bg_w.area == 0 && Game_setting.set4 > 0) {
+    if (bg_w.stage == 8 && bg_w.area == 0 && Game_setting.Battle_Number > 0) {
         win_stage8_action(wk);
         return;
     }
@@ -414,7 +414,7 @@ void Judge_normal_winner(PLW* wk) {
     if (set_field_hosei_flag(&plw[0], bg_w.bgw[1].wxy[0].disp.pos + bg_w.pos_offset, 1)) {
         set_field_hosei_flag(&plw[0], bg_w.bgw[1].wxy[0].disp.pos - bg_w.pos_offset, 0);
     }
-    if (bg_w.stage == 8 && bg_w.area == 0 && Game_setting.set4 > 0) {
+    if (bg_w.stage == 8 && bg_w.area == 0 && Game_setting.Battle_Number > 0) {
         win_stage8_action(wk);
         return;
     }
@@ -440,7 +440,7 @@ s32 win_special_check(PLW* wk) {
         Judge_normal_winner(wk);
         return 1;
     }
-    if (bg_w.stage == 8 && bg_w.area == 0 && Game_setting.set4 > 0) {
+    if (bg_w.stage == 8 && bg_w.area == 0 && Game_setting.Battle_Number > 0) {
         win_stage8_action(wk);
         return 1;
     }
@@ -465,7 +465,7 @@ void Win_05000(PLW* wk) {
     case RN3_START:
         a_rno = win_rno[0] = win_rno[1] = 0;
         wk->wu.routine_no[3]++;
-        if ((Round_num >= Game_setting.set4 * 2) || (PL_Wins[wk->wu.id] >= Game_setting.set4 + 1)) {
+        if ((Round_num >= Game_setting.Battle_Number * 2) || (PL_Wins[wk->wu.id] >= Game_setting.Battle_Number + 1)) {
             set_char_move_init(&wk->wu, 9, 36);
             if (wk->wu.rl_flag) {
                 wk->wu.mvxy.a[0].sp = 0x20000;
@@ -523,7 +523,7 @@ void Win_06000(PLW* wk) {
     case RN3_START:
         a_rno = win_rno[0] = win_rno[1] = 0;
         wk->wu.routine_no[3]++;
-        if ((Round_num >= Game_setting.set4 * 2) || (PL_Wins[wk->wu.id] >= Game_setting.set4 + 1)) {
+        if ((Round_num >= Game_setting.Battle_Number * 2) || (PL_Wins[wk->wu.id] >= Game_setting.Battle_Number + 1)) {
             work = win_select(wk, 3);
             set_char_move_init(&wk->wu, 9, work + 36);
         } else {
@@ -555,7 +555,7 @@ void Win_07000(PLW* wk) {
     case RN3_START:
         a_rno = win_rno[0] = win_rno[1] = 0;
         wk->wu.routine_no[3]++;
-        if ((Round_num >= Game_setting.set4 * 2) || (PL_Wins[wk->wu.id] >= Game_setting.set4 + 1)) {
+        if ((Round_num >= Game_setting.Battle_Number * 2) || (PL_Wins[wk->wu.id] >= Game_setting.Battle_Number + 1)) {
             work = win_select(wk, 7);
             if (work <= 3) {
                 if (plw[0].player_number == PL_NECRO && plw[1].player_number == PL_NECRO) {
@@ -630,7 +630,7 @@ void Win_08000(PLW* wk) {
         wk->wu.routine_no[3]++;
         if (Round_Result & 0x800) {
             set_char_move_init(&wk->wu, 9, 40);
-        } else if ((Round_num >= Game_setting.set4 * 2) || (PL_Wins[wk->wu.id] >= Game_setting.set4 + 1)) {
+        } else if ((Round_num >= Game_setting.Battle_Number * 2) || (PL_Wins[wk->wu.id] >= Game_setting.Battle_Number + 1)) {
             work = win_select(wk, 3);
             set_char_move_init(&wk->wu, 9, work + 36);
         } else {
@@ -664,7 +664,7 @@ void Win_09000(PLW* wk) {
         wk->wu.routine_no[3]++;
         work = win_select(wk, 7);
         set_char_move_init(&wk->wu, 9, work + 32);
-        if ((Round_num < Game_setting.set4 * 2) && (PL_Wins[wk->wu.id] < Game_setting.set4 + 1)) {
+        if ((Round_num < Game_setting.Battle_Number * 2) && (PL_Wins[wk->wu.id] < Game_setting.Battle_Number + 1)) {
             break;
         }
         switch (work) {

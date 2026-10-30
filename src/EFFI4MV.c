@@ -3,7 +3,7 @@
  *
  * effect_I4_init makes four objects from effi4_data_tbl (x, y, priority,
  * pattern); old_rno[0] is the object's type. Each one plays its pattern until the match is
- * decided (Round_num or the winner's PL_Wins against Game_setting.set4), then cheers when the winner
+ * decided (Round_num or the winner's PL_Wins against Game_setting.Battle_Number), then cheers when the winner
  * is player number 0 or stops. Type 1 also turns towards a player (effi4_turn).
  */
 
@@ -61,7 +61,7 @@ void effi4_move_0(WORK_Other* ewk) {
         break;
     case R0_WATCH:
         char_move(&ewk->wu);
-        if (Round_num >= Game_setting.set4 << 1 || PL_Wins[Winner_id] >= Game_setting.set4 + 1) {
+        if (Round_num >= Game_setting.Battle_Number << 1 || PL_Wins[Winner_id] >= Game_setting.Battle_Number + 1) {
             if (plw[Winner_id].player_number == PL_GILL) {
                 ewk->wu.routine_no[0]++;
                 set_char_move_init(&ewk->wu, 0, 3);
@@ -102,7 +102,7 @@ void effi4_move_1(WORK_Other* ewk) {
         }
         break;
     case R0_WATCH:
-        if (Round_num >= Game_setting.set4 << 1 || PL_Wins[Winner_id] >= Game_setting.set4 + 1) {
+        if (Round_num >= Game_setting.Battle_Number << 1 || PL_Wins[Winner_id] >= Game_setting.Battle_Number + 1) {
             if (plw[Winner_id].player_number == PL_GILL) {
                 ewk->wu.routine_no[0]++;
                 set_char_move_init(&ewk->wu, 0, 4);
@@ -154,7 +154,7 @@ void effi4_move_2(WORK_Other* ewk) {
         set_char_move_init(&ewk->wu, 0, ewk->wu.char_index);
         break;
     case R0_WATCH:
-        if (Round_num >= Game_setting.set4 << 1 || PL_Wins[Winner_id] >= Game_setting.set4 + 1) {
+        if (Round_num >= Game_setting.Battle_Number << 1 || PL_Wins[Winner_id] >= Game_setting.Battle_Number + 1) {
             if (plw[Winner_id].player_number == PL_GILL) {
                 ewk->wu.routine_no[0]++;
             } else {

@@ -400,8 +400,8 @@ void tilemap_print_binary(u16 x, u16 y, u16 attr, const s8* data, u16 n) {
 void tilemap_print_script_seq(u16 pos_x, u16 y, u16 pal, const TMSCRIPT* scr) {
     u16 x = pos_x;
     u16* dst;
-    u16* blk;
-    TMLINE* line;
+    const u16* blk;
+    const TMLINE* line;
     u8* s;
     u16 d;
     u16 attr;

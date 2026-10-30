@@ -33,27 +33,42 @@
 
 
 extern const s16 scr_obj_numI6[];   /* provisional name */
+extern const s16 scr_obj_dataI6_0[];
+extern const s16 scr_obj_dataI6_1[];
+extern const s16 scr_obj_dataI6_2[];
+extern const s16 scr_obj_dataI6_3[];
+extern const s16 scr_obj_dataI6_11[];
+extern const s16 scr_obj_dataI6_4[];
+extern const s16 scr_obj_dataI6_5[];
+extern const s16 scr_obj_dataI6_6[];
+extern const s16 scr_obj_dataI6_7[];
+extern const s16 scr_obj_dataI6_8[];
+extern const s16 scr_obj_dataI6_9[];
+extern const s16 scr_obj_dataI6_10[];
+extern const s16 scr_obj_dataI6_12[];
+extern const s16 scr_obj_dataI6_13[];
+extern const s16 scr_obj_dataI6_14[];
 
-/* provisional name: pointers into scr_obj_numI6, by bg_index */
+/* provisional name: the object list of each bg_index */
 const s16* scr_obj_dataI6[18] = {
-    &scr_obj_numI6[18],
-    &scr_obj_numI6[19],
-    &scr_obj_numI6[37],
-    &scr_obj_numI6[67],
-    &scr_obj_numI6[109],
-    &scr_obj_numI6[115],
-    &scr_obj_numI6[121],
-    &scr_obj_numI6[151],
-    &scr_obj_numI6[152],
-    &scr_obj_numI6[158],
-    &scr_obj_numI6[170],
-    &scr_obj_numI6[91],
-    &scr_obj_numI6[176],
-    &scr_obj_numI6[200],
-    &scr_obj_numI6[218],
-    &scr_obj_numI6[19],
-    &scr_obj_numI6[19],
-    &scr_obj_numI6[121],
+    scr_obj_dataI6_0,
+    scr_obj_dataI6_1,
+    scr_obj_dataI6_2,
+    scr_obj_dataI6_3,
+    scr_obj_dataI6_4,
+    scr_obj_dataI6_5,
+    scr_obj_dataI6_6,
+    scr_obj_dataI6_7,
+    scr_obj_dataI6_8,
+    scr_obj_dataI6_9,
+    scr_obj_dataI6_10,
+    scr_obj_dataI6_11,
+    scr_obj_dataI6_12,
+    scr_obj_dataI6_13,
+    scr_obj_dataI6_14,
+    scr_obj_dataI6_1,
+    scr_obj_dataI6_1,
+    scr_obj_dataI6_6,
 };
 
 

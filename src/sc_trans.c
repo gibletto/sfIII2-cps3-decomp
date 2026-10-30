@@ -38,7 +38,7 @@
 
 u16 * sc_trans_dst;  /* 020283A0 */
 u8 * sc_bak_ptr;  /* 020283A4 */
-u8 * sc_trans_src;  /* 020283A8 */
+const u8 * sc_trans_src;  /* 020283A8 */
 u8 sc_trans_src_tail[6];  /* after sc_trans_src; nothing refers to it by name or address */
 u16 sc_trans_word;  /* 020283B2 */
 u8 sc_chr_bak_1p[320];  /* 020283B4 */
@@ -50,7 +50,7 @@ s32 sc_chr_trans(rows)
 u16 rows;
 {
     u16* dst = sc_trans_dst;
-    u8* src = sc_trans_src;
+    const u8* src = sc_trans_src;
     s32 i;
     for (i = 0; i < rows * 32; i++) {
         *dst = *src;
@@ -128,7 +128,7 @@ u16 w;
 u16 h;
 {
     s32 i, j, k;
-    u8* src;
+    const u8* src;
     u16* dst;
     sc_trans_src = (u8*)&sc_chr_data[chr * 32 / 2];
     sc_trans_dst = (u16*)(pos * 64 + (SS_RAM + 0x8000));
@@ -252,7 +252,7 @@ u16 n;
 {
     u16 i;
     u16 k;
-    u8* blank;
+    const u8* blank;
     sc_trans_src = sc_blank_chr;
     blank = sc_trans_src;
     sc_trans_dst = (u16*)((SS_RAM + 0x8000) + pos * 64);
@@ -285,7 +285,7 @@ void sc_chr_to_ram(u16 n) {
 void sc_chr_sheet_to_ram(u16 chr, u16 pos, u16 w, u16 h) {
     u16 i, j, k;
     u16 d;
-    u8* src;
+    const u8* src;
     sc_trans_src = (u8*)&sc_chr_data[chr * 32 / 2];
     sc_bak_ptr = &sc_chr_ram[pos * 32];
     src = sc_trans_src;
@@ -546,7 +546,7 @@ void sc_attr_put(u16 x, u16 y, u16 attr) {
 void player_name_trans(void) {
     u16 i;
     sc_trans_dst = (u16*)(SS_RAM + 0x8D40);
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         if (Country == 1) {
             for (i = 0; i < 2; i++) {
                 sc_trans_src = (u8*)((u32)sc_chr_data + ((My_char[i] & 0x7F) * 4 + i * 68 + 0x408) * 32);
@@ -594,7 +594,7 @@ void player_name(void) {
     u16 x2;
     s16 y2;
     player_name_trans();
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         x1 = 8;
         y1 = 3;
         x2 = 36;
@@ -605,10 +605,10 @@ void player_name(void) {
         x2 = 47;
         y2 = 3;
     }
-    for (i = 0; i < Game_setting.mode + 4; i++) {
+    for (i = 0; i < Game_setting.Screen_Mode + 4; i++) {
         tilemap_put_cell(x1 + i, y1, 2, i + 53);
     }
-    for (i = 0; i < Game_setting.mode + 4; i++) {
+    for (i = 0; i < Game_setting.Screen_Mode + 4; i++) {
         tilemap_put_cell(x2 + i, y2, 2, i + 58);
     }
 }
@@ -628,7 +628,7 @@ void sa_number_trans(void) {
 
 void stun_mark_put(s8 pl) {
     u16 i;
-    const s16* pos = &smark_pos_tbl[My_char[pl] & 0x7F][pl][Game_setting.mode];
+    const s16* pos = &smark_pos_tbl[My_char[pl] & 0x7F][pl][Game_setting.Screen_Mode];
     s16 code = smark_kind_tbl[My_char[pl] & 0x7F] * 4;
     for (i = 0; i < smark_kind_tbl[My_char[pl] & 0x7F] + 4; i++) {
         tilemap_put_cell(*pos + i, 3, 18, code + i + 33);
@@ -698,7 +698,7 @@ void sc_picture_put(u8 ix, s8 dx, s8 dy) {
     sc_trans_dst = (u16*)(SS_RAM + 0xE000);
     sc_trans_src = (u8*)sc_chr_data + picture_chr_tbl[ix] * 32;
     sc_chr_trans(128);
-    sc_ram_to_vram_opc(picture_set_tbl[ix], dx + Game_setting.mode * 7, dy, picture_attr_tbl[ix]);
+    sc_ram_to_vram_opc(picture_set_tbl[ix], dx + Game_setting.Screen_Mode * 7, dy, picture_attr_tbl[ix]);
 }
 
 
@@ -753,7 +753,7 @@ void sa_stock_trans(s16 n, s16 ix, s8 pl) {
     s16 x;
     if (pl == 0) {
         sa_stock_chr_trans(0, n);
-        if (Game_setting.mode == 0) {
+        if (Game_setting.Screen_Mode == 0) {
             x = 1;
         } else {
             x = 1;
@@ -764,7 +764,7 @@ void sa_stock_trans(s16 n, s16 ix, s8 pl) {
         tilemap_put_cell(x + 1, 26, sa_color_data_tbl[ix], 0xD7);
     } else {
         sa_stock_chr_trans(1, n);
-        if (Game_setting.mode == 0) {
+        if (Game_setting.Screen_Mode == 0) {
             x = 43;
         } else {
             x = 57;
@@ -781,7 +781,7 @@ void sa_stock_trans(s16 n, s16 ix, s8 pl) {
 void sa_fullstock_trans(s8 side, s16 ix) {
     s16 x;
     if (side == 0) {
-        if (Game_setting.mode == 0) {
+        if (Game_setting.Screen_Mode == 0) {
             x = 3;
         } else {
             x = 3;
@@ -791,7 +791,7 @@ void sa_fullstock_trans(s8 side, s16 ix) {
         tilemap_put_cell(x, 26, sa_color_data_tbl[ix], 0xD2);
         tilemap_put_cell(x + 1, 26, sa_color_data_tbl[ix], 0xD3);
     } else {
-        if (Game_setting.mode == 0) {
+        if (Game_setting.Screen_Mode == 0) {
             x = 45;
         } else {
             x = 59;
@@ -846,7 +846,7 @@ void win_mark_find_put(s16 x, s16 y, s16 pl) {
 
 s32 win_mark_find(s16 pl) {
     s16 i;
-    for (i = 0; i < Game_setting.set4 + 1; i++) {
+    for (i = 0; i < Game_setting.Battle_Number + 1; i++) {
         if (win_type[pl][i] == WIN_MARK_PERFECT) {
             return i;
         }
@@ -910,7 +910,7 @@ s8 pl;
     } else {
         sc_chr_slot_trans(pl, (My_char[pl] & 0x7F) * 21 + 0x200, 0);
     }
-    if (Game_setting.mode != 0) {
+    if (Game_setting.Screen_Mode != 0) {
         sc_trans_dst = (u16*)((SS_RAM + 0xC900) + pl * 0x400);
         if ((My_char[1] & 0x7F) == PL_GILL && pl == 1) {
             sc_trans_src = (u8*)gill_face_wide_chr;
@@ -926,7 +926,7 @@ s8 pl;
 void player_face_default_set(s8 pl) {
     polygon2d_submit_quad(0x027D0AA0 + Player_Color[pl] * 32, 0x3FC00 + pl * 0x200, 32, 0, 0, 0);
     sc_chr_slot_trans(pl, 0x33B, 1);
-    if (Game_setting.mode != 0) {
+    if (Game_setting.Screen_Mode != 0) {
         sc_trans_dst = (u16*)((SS_RAM + 0xC900) + pl * 0x400);
         sc_trans_src = (u8*)default_face_wide_chr;
         sc_chr_trans(6);
@@ -940,7 +940,7 @@ void player_face(void) {
     player_face_char_set(1);
     polygon2d_submit_quad(0x027CFD80 + (My_char[0] & 0x7F) * 0xE0 + Player_Color[0] * 32, 0x3FC00, 32, 0, 0, 0);
     polygon2d_submit_quad(0x027CFD80 + (My_char[1] & 0x7F) * 0xE0 + Player_Color[1] * 32, 0x3FE00, 32, 0, 0, 0);
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         sc_ram_to_vram(0, 0, 0);
         sc_ram_to_vram(1, 0, 0);
     } else {
@@ -967,7 +967,7 @@ s16 kind;
         switch (kind) {
         case 0:
             sc_chr_clear(320, 192);
-            sc_ram_to_vram_opc(17, Game_setting.mode * 7, Text_Page_Y, 56);
+            sc_ram_to_vram_opc(17, Game_setting.Screen_Mode * 7, Text_Page_Y, 56);
             break;
         default:
             sc_trans_src = (u8*)&sc_chr_data + (kind - 1) * 3 * 32 + 0x2A400;
@@ -979,7 +979,7 @@ s16 kind;
         switch (kind) {
         case 0:
             sc_chr_clear(320, 192);
-            sc_ram_to_vram_opc(16, Game_setting.mode * 7, Text_Page_Y, 58);
+            sc_ram_to_vram_opc(16, Game_setting.Screen_Mode * 7, Text_Page_Y, 58);
             break;
         default:
             sc_trans_src = (u8*)&sc_chr_data + (kind - 1) * 3 * 32 + 0x29200;
@@ -1085,7 +1085,7 @@ void combo_window_slide(s8 pl, s16 x, s16 y, s16 n) {
 
 
 void combo_window_erase(s8 col, s8 kind, s16 row) {
-    u32* cell = (u32*)((SS_RAM + 0x700) + combo_erase_pos_tbl[Game_setting.mode][kind][col] * 4 + row * 0x300);
+    u32* cell = (u32*)((SS_RAM + 0x700) + combo_erase_pos_tbl[Game_setting.Screen_Mode][kind][col] * 4 + row * 0x300);
     u16 i;
     for (i = 0; i < combo_erase_len_tbl[kind]; i++) {
         cell[0] = 0x200000;
@@ -1097,7 +1097,7 @@ void combo_window_erase(s8 col, s8 kind, s16 row) {
 
 
 void combo_window_all_clear(void) {
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         tilemap_clear_rect(0, 7, 20, 9);
         tilemap_clear_rect(0, 10, 18, 11);
         tilemap_clear_rect(27, 7, 47, 9);

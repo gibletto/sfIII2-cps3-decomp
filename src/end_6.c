@@ -6,6 +6,7 @@
 #include "work.h"
 #include "romdata.h"
 #include "extern.h"
+#include "fighter.h"
 #include "sys_test.h"
 #include "sys_test_2.h"
 #include "sys_test_2b.h"
@@ -32,7 +33,7 @@
 
 
 
-extern const s8 end_6_msg_tbl[][8];
+extern const s8 EM_Candidate_Data[][4][8];
 extern u16 End_Course;
 
 
@@ -103,7 +104,7 @@ void end_600_0000(void) {
             Rewrite_End_Message(2);
             break;
         case 2:
-            if (end_6_msg_tbl[End_Course][0] != 8) {
+            if (EM_Candidate_Data[PL_HUGO][End_Course][7] != 8) {
                 Rewrite_End_Message(3);
             } else {
                 Rewrite_End_Message(8);
@@ -131,7 +132,7 @@ void end_600_0003(void) {
         effect_E6_init(84);
         effect_E6_init(88);
         effect_E6_init(89);
-        switch (end_6_msg_tbl[End_Course][0]) {
+        switch (EM_Candidate_Data[PL_HUGO][End_Course][7]) {
         case 0:
             effect_E6_init(94);
             Rewrite_End_Message(7);

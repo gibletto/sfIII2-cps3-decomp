@@ -109,12 +109,12 @@ const u8 wipe_set_bitmap_4[128] = {
 };
 
 const BitmapSrc wipe_set_pattern_tbl[6] = {
-    { (void *)wipe_set_bitmap_0, 0, 8, 0 },
-    { (void *)wipe_set_bitmap_1, 0, 3, 0 },
-    { (void *)wipe_set_bitmap_1, 0, 3, 0 },
-    { (void *)wipe_set_bitmap_2, 0, 8, 0 },
-    { (void *)wipe_set_bitmap_3, 0, 4, 0 },
-    { (void *)wipe_set_bitmap_4, 0, 4, 0 },
+    { wipe_set_bitmap_0, 0, 8, 0 },
+    { wipe_set_bitmap_1, 0, 3, 0 },
+    { wipe_set_bitmap_1, 0, 3, 0 },
+    { wipe_set_bitmap_2, 0, 8, 0 },
+    { wipe_set_bitmap_3, 0, 4, 0 },
+    { wipe_set_bitmap_4, 0, 4, 0 },
 };
 
 const u8 wipe_clear_bitmap_0[256] = {

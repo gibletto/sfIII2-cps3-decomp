@@ -10,7 +10,7 @@
 
 s16 SEL_PL_X;  /* 020159E4 */
 s16 Sel_Arts_Pos[2];  /* 020159E6 */
-u16* Demo_Ptr[2];  /* 020159EC */
+const u16* Demo_Ptr[2];  /* 020159EC */
 u8 Demo_Ptr_tail[8];  /* after Demo_Ptr; nothing refers to it by name or address */
 s8 Sel_Char_Shot[2];  /* 020159FC */
 u16 Sel_Command_Sw;  /* 020159FE */

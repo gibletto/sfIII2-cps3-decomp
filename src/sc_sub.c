@@ -97,9 +97,9 @@ void win_mark_control(s16 pl) {
 void win_mark_pos_set(s16 pl) {
     win_mark_num[pl] = PL_Wins[pl] * 2;
     if (pl != 0) {
-        win_mark_pos[1] = win_mark_pos_tbl[Game_setting.mode][4];
+        win_mark_pos[1] = win_mark_pos_tbl[Game_setting.Screen_Mode][4];
     } else {
-        win_mark_pos[0] = win_mark_pos_tbl[Game_setting.mode][0];
+        win_mark_pos[0] = win_mark_pos_tbl[Game_setting.Screen_Mode][0];
     }
 }
 
@@ -156,7 +156,7 @@ u32 win_mark_all_write(s16 pl)
     cell = (WIN_CELL*)((SS_RAM + 0x400) + win_mark_pos[pl] * 4);
     if (pl == 0) {
         i = 0;
-        for (n = (Game_setting.set4 + 1) * 2; n > 0; n -= 2) {
+        for (n = (Game_setting.Battle_Number + 1) * 2; n > 0; n -= 2) {
             cell->w[1] = win_mark_blink_tbl[win_type[pl][i]][win_mark_phase[pl]] | (cell->w[1] & 1);
             cell->w[3] = win_mark_blink_tbl[win_type[pl][i]][win_mark_phase[pl]] | (((u16*)cell)[-1] & 1);
             i++;
@@ -164,7 +164,7 @@ u32 win_mark_all_write(s16 pl)
         }
     } else {
         i = 0;
-        for (n = (Game_setting.set4 + 1) * 2; n > 0; n -= 2) {
+        for (n = (Game_setting.Battle_Number + 1) * 2; n > 0; n -= 2) {
             cell->w[1] = win_mark_blink_tbl[win_type[pl][i]][win_mark_phase[pl]] | (cell->w[1] & 1);
             cell->w[3] = win_mark_blink_tbl[win_type[pl][i]][win_mark_phase[pl]] | (cell->w[3] & 1);
             i++;

@@ -131,7 +131,6 @@ INPUT obj\aboutspr_tbl_b.obj
 INPUT obj\effb2_tbl.obj
 INPUT obj\aboutspr_tbl.obj
 INPUT obj\aboutspr_tbl_c.obj
-INPUT obj\Eff95_tbl.obj
 INPUT obj\CHARSET_tbl.obj
 INPUT obj\CHARID_tbl.obj
 INPUT obj\SLOWF_tbl.obj

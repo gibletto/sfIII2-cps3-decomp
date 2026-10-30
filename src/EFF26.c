@@ -70,8 +70,8 @@ void (*eff26_jp_tbl[6])(WORK_Other*) = {
     eff26_05,
 };
 const s16* scr_obj_data26[2] = {
-    &eff26_num[2],
-    &eff26_num[19],
+    scr_obj_data26_0,
+    scr_obj_data26_1,
 };
 
 

@@ -2,10 +2,10 @@
  * PLCNT_TBL_C.C  stun recovery, stun times and bonus-stage scroll limits
  *
  * pl_nr_piyo_tbl gives each character's stun recovery rate, read by PLCNTDAT.C. The
- * tsuujyou_*, hissatsu_* and super_arts_nage_* tables are the stun times, 16 random draws
- * each, after normal strikes, special moves, throws and super art throws by attack strength
- * (the later rows of tsuujyou_nage_02 serve two further attack kinds), reached through the
- * kizetsu_timer_table lists of PLPDM.C, the player damage process. bsmr_range_table gives the
+ * tsuujyou_*, hissatsu_* and super_arts_* tables are the stun times, 16 random draws each,
+ * after normal strikes and throws, special-move strikes and throws and super art strikes and
+ * throws by attack strength, reached through the kizetsu_timer_table lists of PLPDM.C, the
+ * player damage process. bsmr_range_table gives the
  * players' scroll limits in the bonus stage by screen mode and by which players are human;
  * read by PLCNT2.C.
  */
@@ -25,6 +25,12 @@ extern const s16 hissatsu_dageki_02[];
 extern const s16 tsuujyou_nage_00[];
 extern const s16 tsuujyou_nage_01[];
 extern const s16 tsuujyou_nage_02[];
+extern const s16 hissatsu_nage_00[];
+extern const s16 hissatsu_nage_01[];
+extern const s16 hissatsu_nage_02[];
+extern const s16 super_arts_dageki_00[];
+extern const s16 super_arts_dageki_01[];
+extern const s16 super_arts_dageki_02[];
 extern const s16 super_arts_nage_00[];
 extern const s16 super_arts_nage_01[];
 extern const s16 super_arts_nage_02[];
@@ -77,19 +83,37 @@ const s16 tsuujyou_nage_01[16] = {
     140, 140, 140, 140, 120, 120, 120, 120,
 };
 
-const s16 tsuujyou_nage_02[112] = {
+const s16 tsuujyou_nage_02[16] = {
     180, 180, 180, 180, 180, 180, 160, 160,
     160, 160, 160, 140, 140, 140, 120, 120,
+};
+
+const s16 hissatsu_nage_00[16] = {
     240, 240, 200, 200, 200, 160, 160, 160,
     160, 160, 120, 120, 120, 120, 120, 120,
+};
+
+const s16 hissatsu_nage_01[16] = {
     240, 240, 240, 240, 200, 200, 200, 200,
     160, 160, 160, 160, 120, 120, 120, 120,
+};
+
+const s16 hissatsu_nage_02[16] = {
     240, 240, 240, 240, 240, 240, 200, 200,
     200, 200, 200, 160, 160, 160, 120, 120,
+};
+
+const s16 super_arts_dageki_00[16] = {
     240, 240, 200, 200, 200, 160, 160, 160,
     160, 160, 120, 120, 120, 120, 120, 120,
+};
+
+const s16 super_arts_dageki_01[16] = {
     240, 240, 240, 240, 200, 200, 200, 200,
     160, 160, 160, 160, 120, 120, 120, 120,
+};
+
+const s16 super_arts_dageki_02[16] = {
     240, 240, 240, 240, 240, 240, 200, 200,
     200, 200, 200, 160, 160, 160, 120, 120,
 };

@@ -209,7 +209,7 @@ void Ranking_00_2nd(void) {
     D_Timer = 300;
     Rank_X = 0;
     Flash_Rank_Time = 0;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         Rank_Pos_X = bg_w.bgw[0].xy[0].disp.pos - 56;
     } else {
         Rank_Pos_X = bg_w.bgw[0].xy[0].disp.pos - 88;
@@ -229,7 +229,7 @@ void Ranking_00_2nd(void) {
         } else {
             Setup_Wins();
         }
-        if (Game_setting.mode) {
+        if (Game_setting.Screen_Mode) {
             Rank_Pos_X = bg_w.bgw[0].xy[0].disp.pos - 56;
         } else {
             Rank_Pos_X = bg_w.bgw[0].xy[0].disp.pos - 88;

@@ -1,12 +1,12 @@
 /*
  * EFF12_TBL.C  animated stage prop list and projectile data
  *
- * scr_obj_num12 holds the prop count of each prop type and the prop rows (family, colour,
- * position, priority, animation) that scr_obj_data12 points into; read by EFF12.C. tama_data
- * is the parameter record of each projectile (shell kind, animations, 1P and 2P colours,
- * defence power, life time, offset), and tcct the colour codes its colour numbers pick;
- * kotp_07_dm_vital is the damage of the kotp_07000 shell by attack strength. These are read by
- * EFF13.C.
+ * scr_obj_num12 holds the prop count of each prop type, and scr_obj_data12_N the prop rows
+ * (family, colour, position, priority, animation) of type N, named by scr_obj_data12; read by
+ * EFF12.C. tama_data is the parameter record of each projectile (shell kind, animations, 1P and
+ * 2P colours, defence power, life time, offset), and tcct the colour codes its colour numbers
+ * pick; kotp_07_dm_vital is the damage of the kotp_07000 shell by attack strength. These are
+ * read by EFF13.C.
  */
 
 #include "types.h"
@@ -15,32 +15,88 @@
 #pragma section TBL
 
 extern const s16 scr_obj_num12[];
+extern const s16 scr_obj_data12_0[];
+extern const s16 scr_obj_data12_1[];
+extern const s16 scr_obj_data12_8[];
+extern const s16 scr_obj_data12_2[];
+extern const s16 scr_obj_data12_3[];
+extern const s16 scr_obj_data12_4[];
+extern const s16 scr_obj_data12_5[];
+extern const s16 scr_obj_data12_6[];
+extern const s16 scr_obj_data12_7[];
+extern const s16 scr_obj_data12_9[];
+extern const s16 scr_obj_data12_10[];
 extern const u16 kotp_07_dm_vital[];
 extern const TAMA tama_data[];
 extern const s16 tcct[];
 
-const s16 scr_obj_num12[164] = {
+const s16 scr_obj_num12[11] = {
     2, 2, 5, 2, 2, 2, 1, 1,
-    1, 0, 1, 0, 2, 64, 16, 80,
-    80, 2, 1, 0, 2, 64, -288, 80,
-    83, 4, 1, 1, 2, 8256, 463, 304,
-    93, 6, 0, 0, 2, 8277, 523, 126,
-    86, 17, 0, 0, 2, 8272, 552, 88,
-    86, 68, 0, 0, 2, 8256, 581, 123,
-    75, 15, 0, 0, 2, 8256, 386, 104,
-    75, 21, 0, 0, 2, 8256, 872, 112,
-    75, 14, 0, 0, 2, 64, 472, 168,
-    76, 2, 0, 0, 2, 64, 528, 168,
-    76, 23, 0, 0, 2, 8292, 456, 66,
-    75, 3, 0, 0, 2, 8256, 606, 105,
-    83, 28, 0, 1, 2, 8256, 512, 224,
-    83, 29, 0, 1, 2, 8256, 606, 105,
-    83, 28, 0, 1, 2, 8256, 512, 224,
-    83, 29, 0, 1, 2, 8256, 606, 105,
-    83, 28, 0, 0, 2, 64, 511, 0,
-    82, 1, 0, 1, 2, 8280, 472, 88,
-    76, 19, 0, 0, 0, 2, 8256, 480,
-    48, 83, 2, 0,
+    1, 0, 1,
+};
+
+/* prop type 0; provisional name */
+const s16 scr_obj_data12_0[16] = {
+    0, 2, 64, 16, 80, 80, 2, 1,
+    0, 2, 64, -288, 80, 83, 4, 1,
+};
+
+/* prop type 1; provisional name */
+const s16 scr_obj_data12_1[16] = {
+    1, 2, 8256, 463, 304, 93, 6, 0,
+    0, 2, 8277, 523, 126, 86, 17, 0,
+};
+
+/* prop type 8; provisional name */
+const s16 scr_obj_data12_8[8] = {
+    0, 2, 8272, 552, 88, 86, 68, 0,
+};
+
+/* prop type 2; provisional name */
+const s16 scr_obj_data12_2[40] = {
+    0, 2, 8256, 581, 123, 75, 15, 0,
+    0, 2, 8256, 386, 104, 75, 21, 0,
+    0, 2, 8256, 872, 112, 75, 14, 0,
+    0, 2, 64, 472, 168, 76, 2, 0,
+    0, 2, 64, 528, 168, 76, 23, 0,
+};
+
+/* prop type 3; provisional name */
+const s16 scr_obj_data12_3[16] = {
+    0, 2, 8292, 456, 66, 75, 3, 0,
+    0, 2, 8256, 606, 105, 83, 28, 0,
+};
+
+/* prop type 4; provisional name */
+const s16 scr_obj_data12_4[16] = {
+    1, 2, 8256, 512, 224, 83, 29, 0,
+    1, 2, 8256, 606, 105, 83, 28, 0,
+};
+
+/* prop type 5; provisional name */
+const s16 scr_obj_data12_5[16] = {
+    1, 2, 8256, 512, 224, 83, 29, 0,
+    1, 2, 8256, 606, 105, 83, 28, 0,
+};
+
+/* prop type 6; provisional name */
+const s16 scr_obj_data12_6[8] = {
+    0, 2, 64, 511, 0, 82, 1, 0,
+};
+
+/* prop type 7; provisional name */
+const s16 scr_obj_data12_7[8] = {
+    1, 2, 8280, 472, 88, 76, 19, 0,
+};
+
+/* prop type 9 with no objects; provisional name */
+const s16 scr_obj_data12_9[1] = {
+    0,
+};
+
+/* prop type 10; provisional name */
+const s16 scr_obj_data12_10[8] = {
+    0, 2, 8256, 480, 48, 83, 2, 0,
 };
 
 /* provisional name */

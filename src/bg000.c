@@ -75,7 +75,7 @@ s32 simmram_block_alloc_10(s32 blocks, s32 kind);
 u32 simmram_big_page_alloc_40(s32 kind);
 u32 simmram_slot_addr(s16 no);
 u32 simmram_slot_to_offset(s16 handle);
-s32 sprite_list_setup(s16 slot, s16 owner, s16* data);
+s32 sprite_list_setup(s16 slot, s16 owner, const s16* data);
 void scrn_attr_set(s16 n, u16 attr, u16 bits);
 void scrn_map_set_now(u16 n, u32 p);
 void scrn_map_set(u16 n, u32 p);
@@ -477,7 +477,7 @@ s32 zoom_frame_judge_dist(void) {
 /* provisional name */
 void zoom_x_width_check(void) {
     s32 f;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         return;
     }
     if (bg_stop) {
@@ -515,7 +515,7 @@ void zoom_x_width_check(void) {
 /* provisional name */
 void zoom_y_width_check(void) {
     s32 f;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         return;
     }
     /* previous bg_f_y, kept in the unnamed word at bg_w+0x34 */
@@ -969,7 +969,7 @@ void bg_cell_write_xyflip(s16 bg, s32 ofs, s32 cell, u32 src, s16 u5, s16 attr) 
 /* provisional name */
 void bg_scr_write(void) {
     s32 attr;
-    HUD_CELL* c;
+    const HUD_CELL* c;
     s16 i;
     s16 j;
     attr = bg_attr_tbl[bg_w.bg_index];
@@ -1109,7 +1109,7 @@ void akebono_scr_write(void)
 void bg_etc_scr_write(s16 n) {
     s16 i;
     s16 j;
-    TILEREQ* t;
+    const TILEREQ* t;
     s32 attr;
 
     attr = etc_bg_attr_tbl[n];
@@ -1413,7 +1413,7 @@ void bg_base_x_move_sub(void) {
         work1 = plw[1].wu.scr_mv_x + satse[plw[1].player_number];
     }
     work1 -= bg_pos;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         if (work0 < 0) {
             work0 = 0;
         } else if (work0 > 0x1EF) {
@@ -1768,7 +1768,7 @@ void bg_initialize(void) {
     }
     polygon2d_submit_line(gfx->prep, 0, 0, 3);
     polygon2d_submit_line(gfx->src, bg_w.scroll_cg_adr, gfx->size, 1);
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {
         bg_w.pos_offset = 0xC0;
@@ -1789,7 +1789,7 @@ void bg_initialize(void) {
         bg_w.bgw[i].bg_address = (u16 *)simmram_slot_addr(bg_w.bgw[i].bg_adrs_c_no);
         scrn_map_set_now(i, (u32)bg_w.bgw[i].bg_address);
         scrn_map_set(i, (u32)bg_w.bgw[i].bg_address);
-        sprite_list_setup(i, 1, (const s16*)bg_map_tbl[bg_w.bg_index][i]);
+        sprite_list_setup(i, 1, bg_map_tbl[bg_w.bg_index][i]);
         bg_w.bgw[i].r_no_1 = bg_w.bgw[i].r_no_2 = 0;
         bg_w.bgw[i].fam_no = i;
     }
@@ -1830,7 +1830,7 @@ void bg_initialize(void) {
         bg_w.bgw[i].r_limit2 = *ptr++;
         bg_w.bgw[i].y_limit = *ptr++;
         bg_w.bgw[i].y_limit2 = *ptr;
-        if (!Game_setting.mode) {
+        if (!Game_setting.Screen_Mode) {
             bg_w.bgw[i].r_limit2 = bg_w.bgw[i].r_limit;
             bg_w.bgw[i].l_limit2 = bg_w.bgw[i].l_limit;
         }
@@ -1909,7 +1909,7 @@ void bg_end_initialize(void) {
     load_any_color_fade(bg_color2_tbl[bg_w.bg_index], 15, 15, 15);
     polygon2d_submit_line(gfx->prep, 0, 0, 3);
     polygon2d_submit_line(gfx->src, bg_w.scroll_cg_adr, gfx->size, 1);
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {
         bg_w.pos_offset = 0xC0;
@@ -1930,7 +1930,7 @@ void bg_end_initialize(void) {
         bg_w.bgw[i].bg_address = (u16 *)simmram_slot_addr(bg_w.bgw[i].bg_adrs_c_no);
         scrn_map_set_now(i, (u32)bg_w.bgw[i].bg_address);
         scrn_map_set(i, (u32)bg_w.bgw[i].bg_address);
-        ptr = (const s16*)bg_map_tbl[bg_w.bg_index][i];
+        ptr = bg_map_tbl[bg_w.bg_index][i];
         sprite_list_setup(i, 1, ptr);
         bg_w.bgw[i].r_no_1 = bg_w.bgw[i].r_no_2 = 0;
         bg_w.bgw[i].fam_no = i;
@@ -1972,7 +1972,7 @@ void bg_end_initialize(void) {
         bg_w.bgw[i].r_limit2 = *ptr++;
         bg_w.bgw[i].y_limit = *ptr++;
         bg_w.bgw[i].y_limit2 = *ptr;
-        if (!Game_setting.mode) {
+        if (!Game_setting.Screen_Mode) {
             bg_w.bgw[i].r_limit2 = bg_w.bgw[i].r_limit;
             bg_w.bgw[i].l_limit2 = bg_w.bgw[i].l_limit;
         }
@@ -2065,7 +2065,7 @@ void bg_etc_write(s16 type) {
     gfx = &etc_bg_gfx_tbl[type];
     polygon2d_submit_line(gfx->prep, 0, 0, 3);
     polygon2d_submit_line(gfx->src, bg_w.scroll_cg_adr, gfx->size, gfx->mode);
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {
         bg_w.pos_offset = 0xC0;
@@ -2087,7 +2087,7 @@ void bg_etc_write(s16 type) {
         bg_w.bgw[i].bg_address = (u16 *)simmram_slot_addr(bg_w.bgw[i].bg_adrs_c_no);
         scrn_map_set_now(i, (u32)bg_w.bgw[i].bg_address);
         scrn_map_set(i, (u32)bg_w.bgw[i].bg_address);
-        ptr = (const s16*)bg_map_tbl2[type][i];
+        ptr = bg_map_tbl2[type][i];
         sprite_list_setup(i, 1, ptr);
         bg_w.bgw[i].r_no_1 = bg_w.bgw[i].r_no_2 = 0;
         bg_w.bgw[i].fam_no = i;
@@ -2129,7 +2129,7 @@ void bg_etc_write(s16 type) {
         bg_w.bgw[j].frame_deff = 64;
         bg_w.bgw[j].max_x_limit = bg_w.bgw[j].speed_x * bg_w.max_x;
     }
-    if (type == 1 && Game_setting.mode) {
+    if (type == 1 && Game_setting.Screen_Mode) {
         bg_w.bgw[0].wxy[0].cal = bg_w.bgw[0].xy[0].cal = 0x2000000;
         bg_w.bgw[0].pos_x_work = 0x200;
     }

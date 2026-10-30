@@ -55,18 +55,19 @@
 
 
 
-extern const u16 ef13_char_table_225[108];
+extern const u32 effg0_char_table_0[], effg0_char_table_1[], effg0_char_table_2[], effg0_char_table_3[],
+                 effg0_char_table_4[], effg0_char_table_5[], effg0_char_table_6[], effg0_char_table_7[];
 
-/* 0200704C */
-u32* ag_char_table[8] = {
-    (u32*)&ef13_char_table_225[108],
-    (u32*)&ef13_char_table_225[116],
-    (u32*)&ef13_char_table_225[124],
-    (u32*)&ef13_char_table_225[132],
-    (u32*)&ef13_char_table_225[140],
-    (u32*)&ef13_char_table_225[148],
-    (u32*)&ef13_char_table_225[156],
-    (u32*)&ef13_char_table_225[164],
+/* 02008118 */
+const u32* ag_char_table[8] = {
+    effg0_char_table_0,
+    effg0_char_table_1,
+    effg0_char_table_2,
+    effg0_char_table_3,
+    effg0_char_table_4,
+    effg0_char_table_5,
+    effg0_char_table_6,
+    effg0_char_table_7,
 };
 
 

@@ -56,7 +56,7 @@ extern const u16 sys_cfg_page_scr_jp_7[];
 extern const u16 sys_cfg_page_scr_jp_80[];
 extern const u16 sys_cfg_page_scr_jp_8[];
 extern const u16 sys_cfg_page_scr_jp_9[];
-extern const u16 sys_cfg_sound_scr_jp_0[];
+extern const u16 sys_cfg_sound_page_scr_jp_0[];
 extern const u16 cfg_top_guide_jp_0[];
 extern const u16 cfg_top_reset_guide_jp_0[];
 extern const u16 config_top_scr_jp_0[];
@@ -167,9 +167,13 @@ TMSCRIPT config_top_scr_jp[1] = {
     { 1, 0, config_top_scr_jp_0 },
 };
 /* 0200079C */
-TMSCRIPT sys_cfg_page_scr_jp[81] = {
+TMSCRIPT sys_cfg_page_scr_jp[2] = {
     { 1, 0, sys_cfg_page_scr_jp_0 },
     { 1, 0, sys_cfg_page_scr_jp_1 },
+};
+/* 020007AC */
+/* one script for each coin setting, picked through sys_cfg_coin_scr_jp; provisional name */
+TMSCRIPT sys_cfg_coin_text_jp[19] = {
     { 1, 0, sys_cfg_page_scr_jp_2 },
     { 1, 0, sys_cfg_page_scr_jp_3 },
     { 1, 0, sys_cfg_page_scr_jp_4 },
@@ -189,6 +193,10 @@ TMSCRIPT sys_cfg_page_scr_jp[81] = {
     { 1, 0, sys_cfg_page_scr_jp_18 },
     { 1, 0, sys_cfg_page_scr_jp_19 },
     { 1, 0, sys_cfg_page_scr_jp_20 },
+};
+/* 02000844 */
+/* one script for each coin chute setting, picked through sys_cfg_chute_scr_jp; provisional name */
+TMSCRIPT sys_cfg_chute_text_jp[12] = {
     { 1, 0, sys_cfg_page_scr_jp_21 },
     { 1, 0, sys_cfg_page_scr_jp_22 },
     { 1, 0, sys_cfg_page_scr_jp_23 },
@@ -201,12 +209,28 @@ TMSCRIPT sys_cfg_page_scr_jp[81] = {
     { 1, 0, sys_cfg_page_scr_jp_30 },
     { 1, 0, sys_cfg_page_scr_jp_31 },
     { 1, 0, sys_cfg_page_scr_jp_32 },
+};
+/* 020008A4 */
+/* one script for each continue setting, picked through sys_cfg_continue_scr_jp; provisional name */
+TMSCRIPT sys_cfg_continue_text_jp[2] = {
     { 1, 0, sys_cfg_page_scr_jp_33 },
     { 1, 0, sys_cfg_page_scr_jp_34 },
+};
+/* 020008B4 */
+/* one script for each monitor flip setting, picked through sys_cfg_monitor_scr_jp; provisional name */
+TMSCRIPT sys_cfg_monitor_text_jp[2] = {
     { 1, 0, sys_cfg_page_scr_jp_35 },
     { 1, 0, sys_cfg_page_scr_jp_36 },
+};
+/* 020008C4 */
+/* one script for each demo sound setting, picked through sys_cfg_demo_scr_jp; provisional name */
+TMSCRIPT sys_cfg_demo_text_jp[2] = {
     { 1, 0, sys_cfg_page_scr_jp_37 },
     { 1, 0, sys_cfg_page_scr_jp_38 },
+};
+/* 020008D4 */
+/* one script for each sound mode setting, picked through sys_cfg_sound_scr_jp; provisional name */
+TMSCRIPT sys_cfg_sound_text_jp[42] = {
     { 1, 0, sys_cfg_page_scr_jp_39 },
     { 1, 0, sys_cfg_page_scr_jp_40 },
     { 1, 0, sys_cfg_page_scr_jp_41 },
@@ -268,103 +292,104 @@ TMSCRIPT cfg_top_reset_guide_jp[1] = {
 };
 /* 02000A44 */
 TMSCRIPT* sys_cfg_coin_scr_jp[19] = {
-    &sys_cfg_page_scr_jp[2],
-    &sys_cfg_page_scr_jp[3],
-    &sys_cfg_page_scr_jp[4],
-    &sys_cfg_page_scr_jp[5],
-    &sys_cfg_page_scr_jp[6],
-    &sys_cfg_page_scr_jp[7],
-    &sys_cfg_page_scr_jp[8],
-    &sys_cfg_page_scr_jp[9],
-    &sys_cfg_page_scr_jp[10],
-    &sys_cfg_page_scr_jp[11],
-    &sys_cfg_page_scr_jp[12],
-    &sys_cfg_page_scr_jp[13],
-    &sys_cfg_page_scr_jp[14],
-    &sys_cfg_page_scr_jp[15],
-    &sys_cfg_page_scr_jp[16],
-    &sys_cfg_page_scr_jp[17],
-    &sys_cfg_page_scr_jp[18],
-    &sys_cfg_page_scr_jp[19],
-    &sys_cfg_page_scr_jp[20],
+    &sys_cfg_coin_text_jp[0],
+    &sys_cfg_coin_text_jp[1],
+    &sys_cfg_coin_text_jp[2],
+    &sys_cfg_coin_text_jp[3],
+    &sys_cfg_coin_text_jp[4],
+    &sys_cfg_coin_text_jp[5],
+    &sys_cfg_coin_text_jp[6],
+    &sys_cfg_coin_text_jp[7],
+    &sys_cfg_coin_text_jp[8],
+    &sys_cfg_coin_text_jp[9],
+    &sys_cfg_coin_text_jp[10],
+    &sys_cfg_coin_text_jp[11],
+    &sys_cfg_coin_text_jp[12],
+    &sys_cfg_coin_text_jp[13],
+    &sys_cfg_coin_text_jp[14],
+    &sys_cfg_coin_text_jp[15],
+    &sys_cfg_coin_text_jp[16],
+    &sys_cfg_coin_text_jp[17],
+    &sys_cfg_coin_text_jp[18],
 };
 /* 02000A90 */
 TMSCRIPT* sys_cfg_chute_scr_jp[12] = {
-    &sys_cfg_page_scr_jp[21],
-    &sys_cfg_page_scr_jp[22],
-    &sys_cfg_page_scr_jp[23],
-    &sys_cfg_page_scr_jp[24],
-    &sys_cfg_page_scr_jp[25],
-    &sys_cfg_page_scr_jp[26],
-    &sys_cfg_page_scr_jp[27],
-    &sys_cfg_page_scr_jp[28],
-    &sys_cfg_page_scr_jp[29],
-    &sys_cfg_page_scr_jp[30],
-    &sys_cfg_page_scr_jp[31],
-    &sys_cfg_page_scr_jp[32],
+    &sys_cfg_chute_text_jp[0],
+    &sys_cfg_chute_text_jp[1],
+    &sys_cfg_chute_text_jp[2],
+    &sys_cfg_chute_text_jp[3],
+    &sys_cfg_chute_text_jp[4],
+    &sys_cfg_chute_text_jp[5],
+    &sys_cfg_chute_text_jp[6],
+    &sys_cfg_chute_text_jp[7],
+    &sys_cfg_chute_text_jp[8],
+    &sys_cfg_chute_text_jp[9],
+    &sys_cfg_chute_text_jp[10],
+    &sys_cfg_chute_text_jp[11],
 };
 /* 02000AC0 */
 TMSCRIPT* sys_cfg_continue_scr_jp[2] = {
-    &sys_cfg_page_scr_jp[33],
-    &sys_cfg_page_scr_jp[34],
+    &sys_cfg_continue_text_jp[0],
+    &sys_cfg_continue_text_jp[1],
 };
 /* 02000AC8 */
 TMSCRIPT* sys_cfg_monitor_scr_jp[2] = {
-    &sys_cfg_page_scr_jp[35],
-    &sys_cfg_page_scr_jp[36],
+    &sys_cfg_monitor_text_jp[0],
+    &sys_cfg_monitor_text_jp[1],
 };
 /* 02000AD0 */
 TMSCRIPT* sys_cfg_demo_scr_jp[2] = {
-    &sys_cfg_page_scr_jp[37],
-    &sys_cfg_page_scr_jp[38],
+    &sys_cfg_demo_text_jp[0],
+    &sys_cfg_demo_text_jp[1],
 };
 /* 02000AD8 */
 TMSCRIPT* sys_cfg_sound_scr_jp[42] = {
-    &sys_cfg_page_scr_jp[39],
-    &sys_cfg_page_scr_jp[40],
-    &sys_cfg_page_scr_jp[41],
-    &sys_cfg_page_scr_jp[42],
-    &sys_cfg_page_scr_jp[43],
-    &sys_cfg_page_scr_jp[44],
-    &sys_cfg_page_scr_jp[45],
-    &sys_cfg_page_scr_jp[46],
-    &sys_cfg_page_scr_jp[47],
-    &sys_cfg_page_scr_jp[48],
-    &sys_cfg_page_scr_jp[49],
-    &sys_cfg_page_scr_jp[50],
-    &sys_cfg_page_scr_jp[51],
-    &sys_cfg_page_scr_jp[52],
-    &sys_cfg_page_scr_jp[53],
-    &sys_cfg_page_scr_jp[54],
-    &sys_cfg_page_scr_jp[55],
-    &sys_cfg_page_scr_jp[56],
-    &sys_cfg_page_scr_jp[57],
-    &sys_cfg_page_scr_jp[58],
-    &sys_cfg_page_scr_jp[59],
-    &sys_cfg_page_scr_jp[60],
-    &sys_cfg_page_scr_jp[61],
-    &sys_cfg_page_scr_jp[62],
-    &sys_cfg_page_scr_jp[63],
-    &sys_cfg_page_scr_jp[64],
-    &sys_cfg_page_scr_jp[65],
-    &sys_cfg_page_scr_jp[66],
-    &sys_cfg_page_scr_jp[67],
-    &sys_cfg_page_scr_jp[68],
-    &sys_cfg_page_scr_jp[69],
-    &sys_cfg_page_scr_jp[70],
-    &sys_cfg_page_scr_jp[71],
-    &sys_cfg_page_scr_jp[72],
-    &sys_cfg_page_scr_jp[73],
-    &sys_cfg_page_scr_jp[74],
-    &sys_cfg_page_scr_jp[75],
-    &sys_cfg_page_scr_jp[76],
-    &sys_cfg_page_scr_jp[77],
-    &sys_cfg_page_scr_jp[78],
-    &sys_cfg_page_scr_jp[79],
-    &sys_cfg_page_scr_jp[80],
+    &sys_cfg_sound_text_jp[0],
+    &sys_cfg_sound_text_jp[1],
+    &sys_cfg_sound_text_jp[2],
+    &sys_cfg_sound_text_jp[3],
+    &sys_cfg_sound_text_jp[4],
+    &sys_cfg_sound_text_jp[5],
+    &sys_cfg_sound_text_jp[6],
+    &sys_cfg_sound_text_jp[7],
+    &sys_cfg_sound_text_jp[8],
+    &sys_cfg_sound_text_jp[9],
+    &sys_cfg_sound_text_jp[10],
+    &sys_cfg_sound_text_jp[11],
+    &sys_cfg_sound_text_jp[12],
+    &sys_cfg_sound_text_jp[13],
+    &sys_cfg_sound_text_jp[14],
+    &sys_cfg_sound_text_jp[15],
+    &sys_cfg_sound_text_jp[16],
+    &sys_cfg_sound_text_jp[17],
+    &sys_cfg_sound_text_jp[18],
+    &sys_cfg_sound_text_jp[19],
+    &sys_cfg_sound_text_jp[20],
+    &sys_cfg_sound_text_jp[21],
+    &sys_cfg_sound_text_jp[22],
+    &sys_cfg_sound_text_jp[23],
+    &sys_cfg_sound_text_jp[24],
+    &sys_cfg_sound_text_jp[25],
+    &sys_cfg_sound_text_jp[26],
+    &sys_cfg_sound_text_jp[27],
+    &sys_cfg_sound_text_jp[28],
+    &sys_cfg_sound_text_jp[29],
+    &sys_cfg_sound_text_jp[30],
+    &sys_cfg_sound_text_jp[31],
+    &sys_cfg_sound_text_jp[32],
+    &sys_cfg_sound_text_jp[33],
+    &sys_cfg_sound_text_jp[34],
+    &sys_cfg_sound_text_jp[35],
+    &sys_cfg_sound_text_jp[36],
+    &sys_cfg_sound_text_jp[37],
+    &sys_cfg_sound_text_jp[38],
+    &sys_cfg_sound_text_jp[39],
+    &sys_cfg_sound_text_jp[40],
+    &sys_cfg_sound_text_jp[41],
 };
-/* Stored after sys_cfg_sound_scr_jp. Nothing in the program refers to it by name or address; if it is read,
-   it is through an index past the end of sys_cfg_sound_scr_jp. */
-TMSCRIPT sys_cfg_sound_scr_jp_tail[1] = {
-    { 1, 0, sys_cfg_sound_scr_jp_0 },
+/* A one-line script for a sound settings page: a heading and four values in column 18. It is a
+   record, not an entry of sys_cfg_sound_scr_jp, and nothing in the program refers to it by name or
+   address. */
+TMSCRIPT sys_cfg_sound_page_scr_jp[1] = {
+    { 1, 0, sys_cfg_sound_page_scr_jp_0 },
 };

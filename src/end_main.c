@@ -183,7 +183,7 @@ void opning_init_00000(void) {
     bg_w.scno = 1;
     polygon2d_submit_line(0x01705800, 0, 0, 3);
     polygon2d_submit_line(0x01705880, bg_w.scroll_cg_adr, 0x1948F, 1);
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {
         bg_w.pos_offset = 0xC0;
@@ -1222,7 +1222,7 @@ void opening_title_00(void) {
     bg_w.scno = 1;
     polygon2d_submit_line(0x01705800, 0, 0, 3);
     polygon2d_submit_line(0x01705880, bg_w.scroll_cg_adr, 0x1948F, 1);
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {
         bg_w.pos_offset = 0xC0;

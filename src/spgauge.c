@@ -140,7 +140,7 @@ void spgauge_cont_init(void) {
         spg_dat[1].time = 0;
         time_flag[1] = 0;
     }
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         spg_dat[0].spgptbl_ptr = spgauge_postbl[0];
         spg_dat[1].spgptbl_ptr = spgauge_postbl[1];
     } else {
@@ -250,7 +250,7 @@ void spgauge_cont_demo_init(void) {
         spg_dat[1].time = 0;
         time_flag[1] = 0;
     }
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
         spg_dat[0].spgptbl_ptr = spgauge_postbl[0];
         spg_dat[1].spgptbl_ptr = spgauge_postbl[1];
     } else {
@@ -389,7 +389,7 @@ void wipe_check(void) {
         if (spg_dat[1].time == 1 && time_clear[1] == 1) {
             if (spg_dat[1].time_no_clear == 0) {
                 spgauge_work_clear(1);
-                tilemap_clear_rect(Game_setting.mode * 14 + 43, 25, Game_setting.mode * 14 + 46, 26);
+                tilemap_clear_rect(Game_setting.Screen_Mode * 14 + 43, 25, Game_setting.Screen_Mode * 14 + 46, 26);
                 spgauge_wipe_write(1);
             } else {
                 satime_ko_after_clear(1);
@@ -758,7 +758,7 @@ void sa_moji_trans(Stpl_Num, Kind, OnOff)
     case 1:
     default:
         if ((s8)Stpl_Num == 0) {
-            if (Game_setting.mode == 0) {
+            if (Game_setting.Screen_Mode == 0) {
                 x = 1;
             } else {
                 x = 1;
@@ -769,7 +769,7 @@ void sa_moji_trans(Stpl_Num, Kind, OnOff)
                 tilemap_clear_rect(x, 25, x + 3, 26);
             }
         } else {
-            if (Game_setting.mode == 0) {
+            if (Game_setting.Screen_Mode == 0) {
                 x = 43;
             } else {
                 x = 57;
@@ -794,7 +794,7 @@ void sa_waku_trans(s8 pl_kind, s8 pl) {
     spg_work = 0;
     spg_number = 0;
     sa_char_ptr = spgauge_puttbl[0];
-    if (Game_setting.mode == 0) {
+    if (Game_setting.Screen_Mode == 0) {
     }
     len = super_arts[pl_kind].gauge_len / 8;
     i = 0;
@@ -876,7 +876,7 @@ void satime_stock_clear(void) {
 void spgauge_wipe_write(s32 Stpl_Num) {
     s16 x;
     if ((s8)Stpl_Num == 0) {
-        if (Game_setting.mode == 0) {
+        if (Game_setting.Screen_Mode == 0) {
             x = 1;
         } else {
             x = 1;
@@ -886,7 +886,7 @@ void spgauge_wipe_write(s32 Stpl_Num) {
         tilemap_put_cell(x, 26, 10, 0xD6);
         tilemap_put_cell(x + 1, 26, 10, 0xD7);
     } else {
-        if (Game_setting.mode == 0) {
+        if (Game_setting.Screen_Mode == 0) {
             x = 43;
         } else {
             x = 57;
@@ -908,7 +908,7 @@ s8 Stpl_Num;
 s16 Spg_Col;
 {
     s8 lpy;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         sc_ram_to_vram(Stpl_Num + (Spg_Col * 2) + 6, Stpl_Num * 14, 0);
     } else {
         sc_ram_to_vram(Stpl_Num + (Spg_Col * 2) + 6, 0, 0);

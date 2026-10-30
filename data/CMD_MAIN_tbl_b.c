@@ -14,11 +14,11 @@
 #pragma section TBL
 
 extern const s8 gcfg_line_title_en[];
+extern const s8 gcfg_line_screen_en[];
 extern const s8 gcfg_line_level_en[];
 extern const s8 gcfg_line_damage_en[];
 extern const s8 gcfg_line_timer_en[];
-extern const s8 gcfg_line_1p_round_en[];
-extern const s8 gcfg_line_2p_round_en[];
+extern const s8 gcfg_line_round_en[];
 extern const s8 gcfg_line_event_en[];
 extern const s8 gcfg_line_bonus_en[];
 extern const s8 gcfg_line_exit_en[];
@@ -48,15 +48,15 @@ extern const u8 debug_charset_tbl[];
 
 const s8 gcfg_line_title_en[44] = "7-2. G A M E   C O N F I G U R A T I O N\n\0\xFF\xFF";
 
-const s8 gcfg_line_level_en[44] = "1. SCREEN MODE       NORMAL            \n\0\xFF\xFF\xFF";
+const s8 gcfg_line_screen_en[44] = "1. SCREEN MODE       NORMAL            \n\0\xFF\xFF\xFF";
 
-const s8 gcfg_line_damage_en[44] = "2. GAME DIFFICULTY   EASY[********]HARD\n\0\xFF\xFF\xFF";
+const s8 gcfg_line_level_en[44] = "2. GAME DIFFICULTY   EASY[********]HARD\n\0\xFF\xFF\xFF";
 
-const s8 gcfg_line_timer_en[40] = "3. DAMAGE LEVEL      LOW [****] HIGH\n\0\xFF\xFF";
+const s8 gcfg_line_damage_en[40] = "3. DAMAGE LEVEL      LOW [****] HIGH\n\0\xFF\xFF";
 
-const s8 gcfg_line_1p_round_en[40] = "4. TIME COUNT SPEED  SLOW[****]FAST\n\0\xFF\xFF\xFF";
+const s8 gcfg_line_timer_en[40] = "4. TIME COUNT SPEED  SLOW[****]FAST\n\0\xFF\xFF\xFF";
 
-const s8 gcfg_line_2p_round_en[32] = "5. MAX ROUND         3 ROUND\n\0\xFF\xFF";
+const s8 gcfg_line_round_en[32] = "5. MAX ROUND         3 ROUND\n\0\xFF\xFF";
 
 const s8 gcfg_line_event_en[28] = "6. EVENT             OFF\n\0\xFF\xFF";
 

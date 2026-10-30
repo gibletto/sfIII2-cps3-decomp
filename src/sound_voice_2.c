@@ -45,7 +45,7 @@ s32 sound_note_to_pitch(s32 note) {
 
 
 /* provisional name */
-u16 sound_voice_volume_compute(u16 level, u32 pan_scale, s8 pan, SNDVOICE* v) {
+u16 sound_voice_volume_compute(u16 level, u32 pan_scale, s8 vol_offset, SNDVOICE* v) {
     s32 a;
     s32 t;
     u32 vol;
@@ -61,7 +61,7 @@ u16 sound_voice_volume_compute(u16 level, u32 pan_scale, s8 pan, SNDVOICE* v) {
         t = (t * ((bgm_master_vol + 64) & 0x7F)) >> 6;
     }
     out = (level * (t + 1)) >> 15;
-    t = (s16)((out * pan_scale) >> 16) + (pan * 256) + out;
+    t = (s16)((out * pan_scale) >> 16) + (vol_offset * 256) + out;
     if (t > 0x7FFF) {
         out = 0x7FFF;
     } else if (t < 0) {
@@ -128,7 +128,7 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
     u8 pan;
     u32 patch_pan;
     s32 inverse;
-    s8 output_pan;
+    s8 vol_offset;
     u16 key_clear_mask;
     s8 key_state_changed = 0;
     SNDRAMP* ramp;
@@ -362,7 +362,7 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
     if (!owns_hardware_voice) {
         return;
     }
-    output_pan = ((u8)sound_sample_submit_work4);
+    vol_offset = ((u8)bgm_volume_offset);
     if (snd_stereo) {
         if (!is_bgm && se_pan_ramp[voice_index].mode != -1) {
             pan = se_pan_ramp[voice_index].current >> 8;
@@ -375,17 +375,17 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
             if (pan < 0x40) {
                 *(u16*)&regs->volume_right = (u16)sound_voice_volume_compute(
                     (pan * voice->envelope_level) >> 6,
-                    voice->volume_lfo, output_pan, voice);
+                    voice->volume_lfo, vol_offset, voice);
                 *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
                     voice->envelope_level, voice->volume_lfo,
-                    ((u8)sound_sample_submit_work4), voice);
+                    ((u8)bgm_volume_offset), voice);
             } else {
                 *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
                     (inverse * voice->envelope_level) >> 6,
-                    voice->volume_lfo, output_pan, voice);
+                    voice->volume_lfo, vol_offset, voice);
                 *(u16*)&regs->volume_right = (u16)sound_voice_volume_compute(
                     voice->envelope_level, voice->volume_lfo,
-                    ((u8)sound_sample_submit_work4), voice);
+                    ((u8)bgm_volume_offset), voice);
             }
         } else {
             if (pan < 0x40) {
@@ -405,10 +405,10 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
     } else {
         if (is_bgm) {
             *(u16*)&regs->volume_right = (u16)sound_voice_volume_compute(
-                voice->envelope_level, voice->volume_lfo, output_pan, voice);
+                voice->envelope_level, voice->volume_lfo, vol_offset, voice);
             *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
                 voice->envelope_level, voice->volume_lfo,
-                ((u8)sound_sample_submit_work4), voice);
+                ((u8)bgm_volume_offset), voice);
         } else {
             *(u16*)&regs->volume_left = (u16)sound_voice_volume_compute(
                 voice->envelope_level, voice->volume_lfo, 0, voice);
@@ -421,7 +421,7 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
             (s16)((u32)voice->pitch_lfo >> 16) + voice->current_pitch +
             ((voice->coarse_pitch_bend * 0xc00) >> 7) +
             (((voice->fine_pitch_control - 0x40) * 0x100) >> 6) +
-            voice_state_init_pair_work);
+            bgm_pitch_offset);
     } else {
         *(u16*)&regs->pitch = (u16)sound_note_to_pitch(
             (s16)((u32)voice->pitch_lfo >> 16) + voice->current_pitch +

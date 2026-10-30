@@ -226,7 +226,7 @@ void debug_menu_player_setup(void) {
     dbg_cmd_panel = 0;
     dbg_hud_mode = 0;
     Game_pause = 0;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         dbg_hud_x = 8;
     } else {
         dbg_hud_x = 0;
@@ -1797,7 +1797,7 @@ void debug_parts_run(void) {
 /* provisional name */
 void debug_parts_copy_overlap(void) {
     s16 i;
-    OVERLAP_PARTS* oct;
+    const OVERLAP_PARTS* oct;
     for (i = 0; i < 4; i++) {
         oct = &plw[0].wu.overlap_char_tbl[plw[0].wu.cg_olc.olc_ix[i]];
         dbg_parts_plw[i].wu.cg_olc.olc_ix[i] = plw[0].wu.cg_olc.olc_ix[i];
@@ -3474,7 +3474,7 @@ void debug_parts_disp(void) {
 
 /* provisional name */
 void debug_pattern_edit_init_counts(void) {
-    u32** pat;
+    const u32** pat;
     ((DBG_SLOT*)&dbg_slot_w[0])->sel[0] = 1;
     ((DBG_SLOT*)&dbg_slot_w[1])->sel[0] = 1;
     ((DBG_SLOT*)&dbg_slot_w[0])->sel0_max = 0;
@@ -3489,7 +3489,7 @@ void debug_pattern_edit_init_counts(void) {
 
 /* provisional name */
 void debug_motion_list_count(void) {
-    u32* p;
+    const u32* p;
     dbg_slot->sel[1] = 1;
     if (dbg_slot->sel[0] > 0x90) {
         p = dbg_pl->wu.char_table[0];
@@ -3562,7 +3562,7 @@ void debug_pattern_entry_copy_dual(s16 n, s16 box) {
     u16* a;
     u16* b;
     s16 i;
-    HIT_IX* ix;
+    const HIT_IX* ix;
     src = (u16*)&dbg_pl->wu.hit_ix_table[box];
     a = (u16*)&dbg_look_buf.hit_ix[n];
     b = (u16*)&dbg_edit_buf.hit_ix[n];
@@ -4014,7 +4014,7 @@ void debug_draw_hit_edit_info(void)
 {
     s16 i;
     s16 num;
-    HIT_IX *hit;
+    const HIT_IX *hit;
     u16 x;
 
     tilemap_rect_fill(dbg_hud_x + 36, dbg_judge_ewk->curr_ja + 13, 8, 1, 6, 0xFFFF);
@@ -4425,7 +4425,7 @@ void debug_draw_parts_info(void)
 /* provisional name */
 void debug_char_init(void) {
     s16 x;
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         x = 32;
     } else {
         x = 0;
@@ -4541,7 +4541,7 @@ void debug_bg_stage_load(void)
         break;
     }
 
-    if (Game_setting.mode) {
+    if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 248;
     } else {
         bg_w.pos_offset = 192;
@@ -5011,7 +5011,7 @@ void debug_bg_alloc_init(void) {
     bg_w.bgw[0].bg_address = (u16*)simmram_slot_addr(bg_w.bgw[0].bg_adrs_c_no);
     scrn_map_set_now(0, (u32)bg_w.bgw[0].bg_address);
     scrn_map_set(0, (u32)bg_w.bgw[0].bg_address);
-    sprite_list_setup(0, 1, (s16*)bg_map_tbl[0][0]);
+    sprite_list_setup(0, 1, bg_map_tbl[0][0]);
     bg_w.bgw[0].r_no_1 = bg_w.bgw[0].r_no_2 = 0;
     bg_w.bgw[0].fam_no = 0;
     debug_bg_tile_put(0, 0x3000, 17, (s32)ake_scrn_data);
@@ -5039,7 +5039,7 @@ void debug_bg_alloc_scene_init(void) {
     bg_w.bgw[0].bg_address = (u16*)simmram_slot_addr(bg_w.bgw[0].bg_adrs_c_no);
     scrn_map_set_now(0, (u32)bg_w.bgw[0].bg_address);
     scrn_map_set(0, (u32)bg_w.bgw[0].bg_address);
-    sprite_list_setup(0, 1, (s16*)bg_map_tbl[0][0]);
+    sprite_list_setup(0, 1, bg_map_tbl[0][0]);
     bg_w.bgw[0].r_no_1 = bg_w.bgw[0].r_no_2 = 0;
     bg_w.bgw[0].fam_no = 0;
     bg_cell_write(0, 0x3000, 0, (u32)debug_scene_scrn_data, 0, 0x40);

@@ -151,7 +151,7 @@ void effe2_erase_or_die(WORK* wk) {
 
 s32 effect_E2_init(PLW* wk, const s16* data, s16 color_code, u8 ff) {
     WORK_Other* ewk;
-    s16* bxt;
+    const s16* bxt;
     s16 ix;
     if (data[3] == 0) {
         return -1;

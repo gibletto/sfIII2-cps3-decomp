@@ -29,22 +29,18 @@
 
 
 
-const s16* scr_obj_data12[6] = {
-    &scr_obj_num12[11],
-    &scr_obj_num12[27],
-    &scr_obj_num12[51],
-    &scr_obj_num12[91],
-    &scr_obj_num12[107],
-    &scr_obj_num12[123],
-};
-/* Stored after scr_obj_data12. Nothing in the program refers to it by name or address; if it is read,
-   it is through an index past the end of scr_obj_data12. */
-const s16* scr_obj_data12_tail[5] = {
-    &scr_obj_num12[139],
-    &scr_obj_num12[147],
-    &scr_obj_num12[43],
-    &scr_obj_num12[155],
-    &scr_obj_num12[156],
+const s16* scr_obj_data12[11] = {
+    scr_obj_data12_0,
+    scr_obj_data12_1,
+    scr_obj_data12_2,
+    scr_obj_data12_3,
+    scr_obj_data12_4,
+    scr_obj_data12_5,
+    scr_obj_data12_6,
+    scr_obj_data12_7,
+    scr_obj_data12_8,
+    scr_obj_data12_9,
+    scr_obj_data12_10,
 };
 
 

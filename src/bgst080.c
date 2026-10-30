@@ -5,7 +5,7 @@
  * effects and palette, faded when Shin Gouki is next) and layer 2 (a synced layer), then the zoom check,
  * position correction and Bg_Family_Set_2. In the first area all three start raised (speed_y * 176) and
  * come down together (bg080_demo). Once C_No0 reaches 8 (not 11), with Round_num below twice
- * Game_setting.set4 or the winner's PL_Wins below set4 + 1, layer 1 drops away: bg_land_flag is set,
+ * Game_setting.Battle_Number or the winner's PL_Wins below set4 + 1, layer 1 drops away: bg_land_flag is set,
  * Sound_SE(118), the screen quakes and zooms out while bg_etc_flag counts down, then the layer falls
  * out of sight (bg080_fall0..4).
  */
@@ -184,7 +184,7 @@ void bg080_layer1_wait(void) {
 /* provisional name */
 void bg080_layer1_move(void) {
     if (C_No0 >= C0_NEXT && C_No0 != C0_BREAK_IN_CPU) {
-        if (Round_num < Game_setting.set4 * 2 || PL_Wins[Winner_id] < Game_setting.set4 + 1) {
+        if (Round_num < Game_setting.Battle_Number * 2 || PL_Wins[Winner_id] < Game_setting.Battle_Number + 1) {
             bg_land_flag = 1;
             bgw_ptr->r_no_0++;
             bg_etc_flag = 0x7000;
@@ -231,7 +231,7 @@ void bg080_fall0(void) {
     } else {
         bg080_quake();
         if (bgw_ptr->xy[0].disp.pos > bgw_ptr->pos_x_work - 56 && bgw_ptr->xy[0].disp.pos < bgw_ptr->pos_x_work + 56) {
-            if (Game_setting.mode == 0) {
+            if (Game_setting.Screen_Mode == 0) {
                 bg_w.bg_f_x++;
                 bg_w.bg_f_y++;
                 if (bg_w.bg_f_x < 84) {

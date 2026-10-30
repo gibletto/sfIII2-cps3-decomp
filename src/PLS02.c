@@ -65,7 +65,7 @@ void setup_mvxy_data(wk, ix)
 
 
 void setup_butt_own_data_ex(WORK* wk, s16 ix) {
-    s16* adrs;
+    const s16* adrs;
     s16 pn;
     wk->mvxy.index = ix;
     pn = ((PLW*)wk->target_adrs)->player_number;
@@ -76,7 +76,7 @@ void setup_butt_own_data_ex(WORK* wk, s16 ix) {
 
 
 void setup_butt_own_data_ex2(WORK* wk, s16 ix) {
-    s16* adrs;
+    const s16* adrs;
     u8 wl;
     wk->mvxy.index = ix;
     wl = ((WORK*)wk->target_adrs)->weight_level;
@@ -93,7 +93,7 @@ void setup_butt_own_data(WORK* wk) {
 
 
 
-void read_adrs_store_mvxy(WORK* wk, s16* adrs) {
+void read_adrs_store_mvxy(WORK* wk, const s16* adrs) {
     wk->mvxy.a[0].sp = adrs[0];
     wk->mvxy.a[0].sp <<= 8;
     wk->mvxy.d[0].sp = adrs[1];
@@ -533,11 +533,11 @@ s32 get_kind_of_trunk_dm(s16 dir, char rl)
 void setup_vitality(WORK* wk, s16 pno) {
     s16 ix;
     if (wk->operator == 0) {
-        ix = Game_setting.level + CC_Value[1];
+        ix = Game_setting.Difficulty + CC_Value[1];
     } else {
         ix = 2;
     }
-    wk->original_vitality = Com_Vital_Unit_Data[pno][Game_setting.set2][ix];
+    wk->original_vitality = Com_Vital_Unit_Data[pno][Game_setting.Damage_Level][ix];
     wk->dmcal_m = 32;
     wk->dmcal_d = wk->original_vitality * 32 / Max_vitality;
     wk->vitality = wk->vital_new = wk->vital_old = Max_vitality;
@@ -635,9 +635,9 @@ void add_sp_arts_gauge_hit_dm(PLW* wk) {
         add_super_arts_gauge(wk->sa, wk->wu.id, asag / 3);
         if (emwk->wu.operator == 0) {
             if (Country & 2) {
-                asag += asagh_zuru2[Game_setting.level];
+                asag += asagh_zuru2[Game_setting.Difficulty];
             } else {
-                asag += asagh_zuru[Game_setting.level];
+                asag += asagh_zuru[Game_setting.Difficulty];
             }
         }
         if (asag <= 0) {
@@ -690,9 +690,9 @@ void add_sp_arts_gauge_paring(PLW* wk) {
         if ((s16)asag != 0) {
             if (wk->wu.operator == 0) {
                 if (Country & 2) {
-                    asag += asagh_zuru2[Game_setting.level];
+                    asag += asagh_zuru2[Game_setting.Difficulty];
                 } else {
-                    asag += asagh_zuru[Game_setting.level];
+                    asag += asagh_zuru[Game_setting.Difficulty];
                 }
             }
             if ((s16)asag <= 0) {
@@ -717,9 +717,9 @@ void add_sp_arts_gauge_tokushu(PLW* wk) {
     }
     if (wk->wu.operator == 0) {
         if (Country & 2) {
-            asag += asagh_zuru2[Game_setting.level];
+            asag += asagh_zuru2[Game_setting.Difficulty];
         } else {
-            asag += asagh_zuru[Game_setting.level];
+            asag += asagh_zuru[Game_setting.Difficulty];
         }
     }
     if (asag <= 0) {
@@ -741,9 +741,9 @@ void add_sp_arts_gauge_ukemi(PLW* wk) {
     }
     if (wk->wu.operator == 0) {
         if (Country & 2) {
-            asag += asagh_zuru2[Game_setting.level];
+            asag += asagh_zuru2[Game_setting.Difficulty];
         } else {
-            asag += asagh_zuru[Game_setting.level];
+            asag += asagh_zuru[Game_setting.Difficulty];
         }
     }
     if (asag <= 0) {
@@ -765,9 +765,9 @@ void add_sp_arts_gauge_nagenuke(PLW* wk) {
     }
     if (wk->wu.operator == 0) {
         if (Country & 2) {
-            asag += asagh_zuru2[Game_setting.level];
+            asag += asagh_zuru2[Game_setting.Difficulty];
         } else {
-            asag += asagh_zuru[Game_setting.level];
+            asag += asagh_zuru[Game_setting.Difficulty];
         }
     }
     if (asag <= 0) {
@@ -797,7 +797,7 @@ s32 add_super_arts_gauge(wk, ix, asag)
             return 0;
         }
         asag = asag * 120 / 100;
-        if (Game_setting.set4 == 0) {
+        if (Game_setting.Battle_Number == 0) {
             asag = asag * 150 / 100;
         }
         wk->gauge.s.h += asag;
