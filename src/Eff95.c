@@ -44,8 +44,6 @@ extern const s16 eff95_ofs_tbl[16][2];
 
 
 
-
-
 /* An object drifting in x; its speed is kept only while win_slide_flag is set. */
 void effect_95_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {

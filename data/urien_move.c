@@ -222,6 +222,7 @@ const s16 urien_movexy_table[68][6] = {
     {   4096,    -64,     1,       0,      0,     0 },  /* 67 */
 };
 
+/* provisional name */
 const PARABORA_DATA urien_parabora_data[18] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

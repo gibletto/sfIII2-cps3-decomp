@@ -33,7 +33,6 @@
 
 
 
-/* provisional name */
 /* Slide in to the stop point. */
 void effect_43_move(WORK_Other* ewk) {
     Cut_Cut_Sub(3);

@@ -26,9 +26,7 @@
 #define R0_KILL         3       /* (default) put the work back */
 
 
-
 #pragma inline(effc7_sort_push)
-
 
 
 void effect_C7_move(WORK_Other* ewk) {
@@ -83,7 +81,6 @@ void effect_C7_move(WORK_Other* ewk) {
 void effc7_sort_push(WORK* ewk, WORK* _p1) {
     sort_push_request8(ewk);
 }
-
 
 
 s32 effect_C7_init(PLW* wk, u8 data) {

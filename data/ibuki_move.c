@@ -294,6 +294,7 @@ const s16 ibuki_movexy_table[128][6] = {
     {    896,     -2,     1,    1152,    -96,     0 },  /* 127 */
 };
 
+/* provisional name */
 const PARABORA_DATA ibuki_parabora_data[29] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

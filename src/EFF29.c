@@ -166,6 +166,7 @@ static void eff29_type1(WORK_Other* ewk) {
         set_char_move_init(&ewk->wu, 0, 0);
         ewk->wu.mvxy.a[0].sp = 0x4000;
         ewk->wu.mvxy.d[0].sp = 0;
+        /* fall through */
     case R2_RIGHT:
         if (!EXE_obroll) {
             add_x_sub(ewk);

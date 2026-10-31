@@ -119,6 +119,7 @@ void effect_E0_move(WORK_Other* ewk) {
         }
         ewk->wu.routine_no[0]++;
         effE0_go = 1;
+        /* fall through */
     case R0_OUT:
         if (effE0_go != 0) {
             ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;

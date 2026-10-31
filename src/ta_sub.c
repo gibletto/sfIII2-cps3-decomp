@@ -201,7 +201,6 @@ s32 obr_no_disp_check(void) {
 
 
 
-
 void disp_pos_trans_entry(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;
@@ -226,7 +225,7 @@ void disp_pos_trans_entry5(WORK_Other* ewk) {
 
 void disp_pos_trans_entry_r(WORK_Other* ewk) {
     if (obr_no_disp_check() == 0) {
-        if (range_x_check((WORK*)ewk) != 0) {
+        if (range_x_check(&ewk->wu) != 0) {
             ewk->wu.position_x = ewk->wu.xyz[0].disp.pos & 0x3FF;
             ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
             sort_push_request4(&ewk->wu);
@@ -247,7 +246,7 @@ void disp_pos_trans_entry_s(WORK_Other* ewk) {
 
 void disp_pos_trans_entry_rs(WORK_Other* ewk) {
     if (obr_no_disp_check() == 0) {
-        if (range_x_check((WORK*)ewk) != 0) {
+        if (range_x_check(&ewk->wu) != 0) {
             suzi_sync_pos_set(ewk);
             sort_push_request4(&ewk->wu);
         }
@@ -255,8 +254,7 @@ void disp_pos_trans_entry_rs(WORK_Other* ewk) {
 }
 
 /* provisional name */
-void disp_pos_trans_entry_seraph(WORK_Other* ewk)
-{
+void disp_pos_trans_entry_seraph(WORK_Other* ewk) {
     if (seraph_flag) {
         suzi_sync_pos_set(ewk);
         sort_push_request4(&ewk->wu);
@@ -278,7 +276,7 @@ void pl_eff_trans_entry(WORK_Other* ewk) {
 /* provisional name */
 void pl_eff_trans_entry_r(WORK_Other* ewk) {
     if (obr_no_disp_check() == 0) {
-        if (range_x_check((WORK*)ewk) != 0) {
+        if (range_x_check(&ewk->wu) != 0) {
             ewk->wu.position_x = ewk->wu.xyz[0].disp.pos & 0x3FF;
             ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
             sort_push_request(&ewk->wu);
@@ -355,8 +353,7 @@ s8 get_winner_id(void) {
 }
 
 /* provisional name */
-u32 range_abs_check(s16 a, s16 b, s16 range)
-{
+u32 range_abs_check(s16 a, s16 b, s16 range) {
     s16 dist;
     dist = a - b;
     if (dist < 0) {

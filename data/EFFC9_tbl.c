@@ -32,7 +32,6 @@ const u8 sel_ejg_ix_table[2][2][4] = {
     { { 1, 1, 0, 255 }, { 0, 1, 1, 255 } },
 };
 
-/* provisional name */
 const u16 ag_cc_table[8] = {
     0x2080, 0x2081, 0x2082, 0x2083, 0x2084, 0x2085, 0x2086, 0x2087,
 };

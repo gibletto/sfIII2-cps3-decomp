@@ -381,6 +381,7 @@ void Att_KUUCHUUNICHIRINSHOU(PLW* wk) {
     case RN3_START:
         wk->wu.routine_no[3]++;
         set_char_move_init(&wk->wu, 5, wk->as->char_ix);
+        /* fall through */
     case KUUCHUUNICHIRI_MOVE:
         jumping_union_process(&wk->wu, 2);
         if (wk->wu.routine_no[3] != KUUCHUUNICHIRI_RUN) {
@@ -597,6 +598,7 @@ void Att_CHOUCHUURENGEKI(PLW* wk) {
         case 21:
             reset_mvxy_data(&wk->wu);
             wk->wu.cg_type = 0;
+            /* fall through */
         default:
             break;
         }
@@ -723,6 +725,7 @@ void Att_HOMING_JUMP(PLW* wk) {
         break;
     case HOMING_JUMP_AGAIN:
         wk->wu.routine_no[3] = HOMING_JUMP_AIR;
+        /* fall through */
     case HOMING_JUMP_AIR:
         jumping_union_process(&wk->wu, 1);
         if (wk->wu.routine_no[3] != HOMING_JUMP_MOVE) {
@@ -752,6 +755,7 @@ static void att_ahj_table_reader(PLW* wk) {
             ey = ahj_empos_hos[wk->as->r_no][twk->player_number][1];
             wk->wu.mvxy.a[0].sp = 0;
             cal_delta_speed(&wk->wu, curr_kop[1], ex, ey, (s8)curr_kop[2], (s8)curr_kop[3]);
+            /* fall through */
         default:
             if (wk->wu.rl_flag == 0) {
                 wk->wu.mvxy.a[0].sp = -wk->wu.mvxy.a[0].sp;

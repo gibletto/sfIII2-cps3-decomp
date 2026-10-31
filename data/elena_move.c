@@ -206,6 +206,7 @@ const s16 elena_movexy_table[77][6] = {
     {   1792,    -80,     1,       0,      0,     0 },  /* 76 */
 };
 
+/* provisional name */
 const PARABORA_DATA elena_parabora_data[21] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

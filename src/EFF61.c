@@ -40,11 +40,13 @@ void effect_61_move(WORK_Other_CONN* ewk) {
             ewk->wu.disp_flag = 0;
             ewk->wu.xyz[0].disp.pos += bg_w.bgw[1].pos_x_work;
             set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_old + 1, 0);
+            /* fall through */
         case R0_WAIT:
             if (!another_bg[0] && !another_bg[1]) {
                 break;
             }
             ewk->wu.routine_no[0]++;
+            /* fall through */
         case R0_SLIDE:
             if (another_bg[0] || another_bg[1]) {
                 switch (another_bg[mwk->type]) {
@@ -64,7 +66,7 @@ void effect_61_move(WORK_Other_CONN* ewk) {
                         ewk->wu.cg_number += 32;
                         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos & 0x3FF;
                         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
-                        sort_push_request4((WORK*)ewk);
+                        sort_push_request4(&ewk->wu);
                     }
                     break;
                 case 3:
@@ -76,7 +78,7 @@ void effect_61_move(WORK_Other_CONN* ewk) {
                     ewk->wu.cg_number = eff61_data_tbl[ewk->wu.old_rno[0]][3];
                     ewk->wu.position_x = ewk->wu.xyz[0].disp.pos & 0x3FF;
                     ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
-                    sort_push_request4((WORK*)ewk);
+                    sort_push_request4(&ewk->wu);
                     break;
                 case 4:
                     if (ewk->wu.dir_old > 8) {
@@ -100,7 +102,7 @@ void effect_61_move(WORK_Other_CONN* ewk) {
             ewk->wu.routine_no[0] = R0_WAIT;
             break;
         default:
-            all_cgps_put_back((WORK_Other*)ewk);
+            all_cgps_put_back(&ewk->wu);
             push_effect_work(&ewk->wu);
             break;
         }
@@ -108,7 +110,6 @@ void effect_61_move(WORK_Other_CONN* ewk) {
 }
 
 
-/* provisional name */
 /* Create 44 works for the master. */
 s32 effect_61_init(WORK_Other* oya) {
     WORK_Other* ewk;

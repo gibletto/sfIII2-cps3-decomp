@@ -75,6 +75,7 @@ void effi4_move_0(WORK_Other* ewk) {
         if (!EXE_flag && !Game_pause && !EXE_obroll) {
             char_move(&ewk->wu);
         }
+        /* fall through */
     case R0_STOP:
         disp_pos_trans_entry_r(ewk);
         break;
@@ -118,6 +119,7 @@ void effi4_move_1(WORK_Other* ewk) {
         if (!EXE_flag && !Game_pause && !EXE_obroll) {
             char_move(&ewk->wu);
         }
+        /* fall through */
     case R0_STOP:
         disp_pos_trans_entry_r(ewk);
         break;
@@ -167,6 +169,7 @@ void effi4_move_2(WORK_Other* ewk) {
         if (!EXE_flag && !Game_pause && !EXE_obroll) {
             char_move(&ewk->wu);
         }
+        /* fall through */
     case R0_STOP:
         disp_pos_trans_entry_r(ewk);
         break;

@@ -46,6 +46,7 @@ u8 sc_chr_bak_2p[324];  /* 02023D74 */
 
 
 
+/* provisional name */
 s32 sc_chr_trans(rows)
 u16 rows;
 {
@@ -61,6 +62,7 @@ u16 rows;
 
 
 
+/* provisional name */
 void sc_chr_save(u16 rows) {
     s32 i;
     for (i = 0; i < rows * 32; i++) {
@@ -72,6 +74,7 @@ void sc_chr_save(u16 rows) {
 
 
 
+/* provisional name */
 void sc_chr_load(u16 rows) {
     s32 i;
     for (i = 0; i < rows * 32; i++) {
@@ -85,6 +88,7 @@ void sc_chr_load(u16 rows) {
 
 /* Copies w * h font characters, stored one after another from character chr, into a w x h block of the text
    character RAM at pos. */
+/* provisional name */
 void sc_chr_block_trans(chr, pos, w, h)
 u16 chr;
 u16 pos;
@@ -125,6 +129,7 @@ u16 h;
 
 /* Copies a w x h block of font characters from character chr into a w x h block of the text character RAM at
    pos; the font and the character RAM are both 16 characters to the row. */
+/* provisional name */
 void sc_chr_sheet_trans(chr, pos, w, h)
 u16 chr;
 u16 pos;
@@ -167,8 +172,7 @@ u16 h;
 
 
 /* Puts a w x h block of cells from the 16-wide font sheet, starting at code, on the text layer at x, y. */
-void scfont_sqput(s16 x, s16 y, u16 w, u16 h, u16 attr, s16 code)
-{
+void scfont_sqput(s16 x, s16 y, u16 w, u16 h, u16 attr, s16 code) {
     u16 row;
     u16 col;
 
@@ -182,6 +186,7 @@ void scfont_sqput(s16 x, s16 y, u16 w, u16 h, u16 attr, s16 code)
 
 
 /* As scfont_sqput, mirrored: the columns run right to left and the attribute gets 0x80. */
+/* provisional name */
 void scfont_sqput_rev(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code) {
     u16 i;
     u16 j;
@@ -195,8 +200,8 @@ void scfont_sqput_rev(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code) {
 
 
 /* Puts w x h cells on the text layer at x, y, numbered on one after another from code. */
-void scfont_lnput(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code)
-{
+/* provisional name */
+void scfont_lnput(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code) {
     u16 row;
     u16 col;
     s16 n;
@@ -213,8 +218,8 @@ void scfont_lnput(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code)
 
 
 /* As scfont_lnput, mirrored: the columns run right to left and the attribute gets 0x80. */
-void scfont_lnput_rev(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code)
-{
+/* provisional name */
+void scfont_lnput_rev(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code) {
     u16 row;
     u16 col;
     s16 n;
@@ -230,6 +235,7 @@ void scfont_lnput_rev(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code)
 
 
 
+/* provisional name */
 void scfont_fill(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code) {
     u16 i;
     u16 j;
@@ -255,6 +261,7 @@ void sq_paint_chenge(s16 x, s16 y, u16 w, u16 h, s16 attr) {
 
 
 /* Fills n characters of the text character RAM, from character pos, with the blank character. */
+/* provisional name */
 void sc_chr_clear(pos, n)
 u16 pos;
 u16 n;
@@ -280,6 +287,7 @@ u16 n;
 
 
 
+/* provisional name */
 void sc_chr_to_ram(u16 n) {
     s32 i;
     for (i = 0; i < n; i++) {
@@ -291,6 +299,7 @@ void sc_chr_to_ram(u16 n) {
 
 
 
+/* provisional name */
 void sc_chr_sheet_to_ram(u16 chr, u16 pos, u16 w, u16 h) {
     u16 i, j, k;
     u16 d;
@@ -315,6 +324,7 @@ void sc_chr_sheet_to_ram(u16 chr, u16 pos, u16 w, u16 h) {
 
 
 
+/* provisional name */
 void sc_chr_backup(s8 restore) {
     sc_trans_dst = (u16*)(SS_RAM + 0x9E80);
     sc_bak_ptr = sc_chr_bak_1p;
@@ -364,6 +374,7 @@ s32 ToneDown(s8 tone) {
 
 
 
+/* provisional name */
 void sc_chr_list_trans(s8 ix) {
     const u16** tbl;
     const u16* slot;
@@ -385,6 +396,7 @@ void sc_chr_list_trans(s8 ix) {
 
 
 
+/* provisional name */
 void sc_chr_slot_trans(s8 ix, u16 code, s8 to_ram) {
     const u16* const* list = &sc_chr_slot_tbl[ix];
     const u16* p = *list;
@@ -479,6 +491,7 @@ void sc_ram_to_vram_opc(s8 ix, s8 dx, s8 dy, u16 attr) {
 
 
 
+/* provisional name */
 s32 tilemap_put_cell(u16 x, u16 y, u16 attr, u16 code) {
     u16* cell = (u16*)(SS_RAM + x * 4 + y * 0x100);
     cell[0] = code;
@@ -507,6 +520,7 @@ void score16x24_put(u16 x, u16 y, u16 attr, s32 n) {
 
 
 
+/* provisional name */
 void sc_celllist_put(u8 ix) {
     const CELL_ENTRY* const* tbl = sc_celllist_tbl + ix;
     const CELL_ENTRY* p = *tbl;
@@ -519,6 +533,7 @@ void sc_celllist_put(u8 ix) {
 
 
 
+/* provisional name */
 void sc_celllist_put_scr(u8 ix) {
     const CELL_ENTRY* const* tbl = sc_celllist_tbl + ix;
     s8 k = sc_celllist_scr_tbl[ix];
@@ -532,6 +547,7 @@ void sc_celllist_put_scr(u8 ix) {
 
 
 
+/* provisional name */
 void sc_celllist_put_pos(u8 kind, u8 dx, u8 dy) {
     const CELL_ENTRY* const* tbl = sc_celllist_tbl + kind;
     s8 k = sc_celllist_scr_tbl[kind];
@@ -545,6 +561,7 @@ void sc_celllist_put_pos(u8 kind, u8 dx, u8 dy) {
 
 
 
+/* provisional name */
 void sc_attr_put(u16 x, u16 y, u16 attr) {
     u16* cell = (u16*)(SS_RAM + x * 4 + y * 0x100);
     cell[1] = (cell[1] & 1) | attr;
@@ -552,6 +569,7 @@ void sc_attr_put(u16 x, u16 y, u16 attr) {
 
 
 
+/* provisional name */
 void player_name_trans(void) {
     u16 i;
     sc_trans_dst = (u16*)(SS_RAM + 0x8D40);
@@ -624,6 +642,7 @@ void player_name(void) {
 
 
 
+/* provisional name */
 void sa_number_trans(void) {
     sc_trans_dst = (u16*)(SS_RAM + 0xCB80);
     sc_trans_src = (u8*)&sc_chr_data[(Super_Arts[0] * 2 + 0x900) * 16];
@@ -635,6 +654,7 @@ void sa_number_trans(void) {
 
 
 
+/* provisional name */
 void stun_mark_put(s8 pl) {
     u16 i;
     const s16* pos = &smark_pos_tbl[My_char[pl] & 0x7F][pl][Game_setting.Screen_Mode];
@@ -665,6 +685,7 @@ void max_mark_write(char side, s16 left, u16 count, s32 x, char mark) {
 
 
 /* Copies the six font characters of max mark n into player pl's area of the text character RAM. */
+/* provisional name */
 void max_mark_chr_trans(pl, n)
 s8 pl;
 s16 n;
@@ -677,6 +698,7 @@ s16 n;
 
 
 /* Clears the text-layer cells from x0, y0 to x1, y1 inclusive to blanks with attribute 0. */
+/* provisional name */
 void tilemap_clear_rect(x0, y0, x1, y1)
 u32 x0;
 u32 y0;
@@ -700,13 +722,13 @@ u32 y1;
 
 
 /* Clears text rows 25 to 27, the super art frame rows. */
-void Sa_frame_Clear(void)
-{
+void Sa_frame_Clear(void) {
     tilemap_clear_rect(0, 0x19, 0x37, 0x1B);
 }
 
 
 
+/* provisional name */
 void sc_picture_put(u8 ix, s8 dx, s8 dy) {
     sc_trans_dst = (u16*)(SS_RAM + 0xE000);
     sc_trans_src = (u8*)sc_chr_data + picture_chr_tbl[ix] * 32;
@@ -716,6 +738,7 @@ void sc_picture_put(u8 ix, s8 dx, s8 dy) {
 
 
 
+/* provisional name */
 void bcount_digit_trans(u8 mode, u16 top, u16 bottom) {
     sc_trans_src = (u8*)(sc_chr_data + top * 64 + 0xA000);
     switch (mode) {
@@ -743,6 +766,7 @@ void bcount_digit_trans(u8 mode, u16 top, u16 bottom) {
 
 
 
+/* provisional name */
 void sa_stock_chr_trans(s8 pl, s16 n) {
     sc_trans_dst = (u16*)((SS_RAM + 0xB500) + pl * 0x400);
     sc_trans_src = (u8*)(sc_chr_data + n * 64 + pl * 768 + 0x9100);
@@ -751,6 +775,7 @@ void sa_stock_chr_trans(s8 pl, s16 n) {
 
 
 
+/* provisional name */
 void sa_max_level_trans(row, col)
 s8 row;
 s16 col;
@@ -818,6 +843,7 @@ void sa_fullstock_trans(s8 side, s16 ix) {
 
 
 
+/* provisional name */
 void win_mark_put(s16 pl, u16 n, s16 attr) {
     const s16* e;
     sc_trans_src = (u8*)&sc_chr_data[n * 32] + 0xBDC0;
@@ -830,6 +856,7 @@ void win_mark_put(s16 pl, u16 n, s16 attr) {
 
 
 
+/* provisional name */
 void win_mark_ram_clear(void) {
     u16 i;
     u8* dst;
@@ -844,6 +871,7 @@ void win_mark_ram_clear(void) {
 
 
 
+/* provisional name */
 void win_mark_find_put(s16 x, s16 y, s16 pl) {
     s16 round = win_mark_find(pl);
     const s16* mark;
@@ -857,6 +885,7 @@ void win_mark_find_put(s16 x, s16 y, s16 pl) {
 
 
 
+/* provisional name */
 s32 win_mark_find(s16 pl) {
     s16 i;
     for (i = 0; i < Game_setting.Battle_Number + 1; i++) {
@@ -881,6 +910,7 @@ void naming_set(s8 pl, s16 place, u16 chr) {
 
 
 
+/* provisional name */
 void rank_mark_set(s8 row, s8 n) {
     sc_trans_src = (u8*)&sc_chr_data[n * 32] + 0x7600;
     if (row == 0) {
@@ -898,6 +928,7 @@ void rank_mark_set(s8 row, s8 n) {
 
 
 
+/* provisional name */
 void winner_name_put(s8 ch) {
     const NAME_PLATE* p = &nwdata_tbl[ch];
     if (Country == 1) {
@@ -915,6 +946,7 @@ void winner_name_put(s8 ch) {
 
 
 
+/* provisional name */
 void player_face_char_set(pl)
 s8 pl;
 {
@@ -936,6 +968,7 @@ s8 pl;
 
 
 
+/* provisional name */
 void player_face_default_set(s8 pl) {
     polygon2d_submit_quad(0x027D0AA0 + Player_Color[pl] * 32, 0x3FC00 + pl * 0x200, 32, 0, 0, 0);
     sc_chr_slot_trans(pl, 0x33B, 1);
@@ -965,14 +998,14 @@ void player_face(void) {
 
 
 /* Puts the SF3 logo, a block of font cells, on the text layer below row y. */
-u32 SF3_logo(s16 y)
-{
+u32 SF3_logo(s16 y) {
     sc_chr_clear(384, 128);
     scfont_sqput(DE_X[3] + 16, y + 10, 16, 6, 12, 384);
 }
 
 
 
+/* provisional name */
 void break_into_banner_trans(sel, kind)
 s8 sel;
 s16 kind;
@@ -1017,6 +1050,7 @@ void combo_message_set(s8 pl, s8 kind) {
 
 
 
+/* provisional name */
 void combo_hitnum_set(s8 pl, s8 kind, u16 hits) {
     s16 x = combo_hitpos_tbl[kind][pl];
     s16 y = pl * 2 + 30;
@@ -1081,6 +1115,7 @@ s16 combo_pts_set(s8 PL, u32 pts) {
 
 
 
+/* provisional name */
 void combo_window_slide(s8 pl, s16 x, s16 y, s16 n) {
     u32* src = (u32*)(SS_RAM + ((y * 4 + pl * 2 + 30) << 8) + ((pl * 19) << 2));
     u32* dst = (u32*)(x * 4 + y * 0x300 + (SS_RAM + 0x700));
@@ -1097,6 +1132,7 @@ void combo_window_slide(s8 pl, s16 x, s16 y, s16 n) {
 
 
 
+/* provisional name */
 void combo_window_erase(s8 col, s8 kind, s16 row) {
     u32* cell = (u32*)((SS_RAM + 0x700) + combo_erase_pos_tbl[Game_setting.Screen_Mode][kind][col] * 4 + row * 0x300);
     u16 i;
@@ -1109,6 +1145,7 @@ void combo_window_erase(s8 col, s8 kind, s16 row) {
 
 
 
+/* provisional name */
 void combo_window_all_clear(void) {
     if (Game_setting.Screen_Mode == 0) {
         tilemap_clear_rect(0, 7, 20, 9);
@@ -1123,6 +1160,7 @@ void combo_window_all_clear(void) {
 
 
 
+/* provisional name */
 void sc_vram_to_ram(void) {
     sc_trans_dst = (u16*)(SS_RAM + 0x8000);
     sc_bak_ptr = sc_chr_ram;

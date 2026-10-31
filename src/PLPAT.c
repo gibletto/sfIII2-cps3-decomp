@@ -172,6 +172,7 @@ void Attack_02000(PLW* wk) {
     case A02_MOVE2:
         cal_mvxy_speed(&wk->wu);
         add_mvxy_speed(&wk->wu);
+        /* fall through */
     case A02_CUE:
         char_move(&wk->wu);
         if (wk->wu.cg_type == 1) {
@@ -218,7 +219,6 @@ void Attack_03000(PLW* wk) {
         break;
     }
 }
-
 
 
 
@@ -404,7 +404,6 @@ void Attack_10000(PLW* wk) {
         break;
     }
 }
-
 
 
 

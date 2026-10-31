@@ -296,7 +296,6 @@ const s16 hit_mark_hosei_table[74][2] = {
     { 0, -4 },
 };
 
-/* provisional name */
 const PLEF plef_data[132] = {
     { 0, 0, -1, 0, 1, 0, 0, 1, 0, 0, 0 },
     { 13, 0, -2, 0, 1, 0, 0, 1, 0, 0, 1 },

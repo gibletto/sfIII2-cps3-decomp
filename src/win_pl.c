@@ -266,6 +266,7 @@ void jijii_jump(PLW* wk) {
         }
         wk->wu.mvxy.d[0].sp = 0;
         wk->wu.xyz[1].cal = 0;
+        /* fall through */
     case JJ_RETURN:
         add_x_sub((WORK_Other*)wk);
         char_move(&wk->wu);

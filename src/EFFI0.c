@@ -158,6 +158,7 @@ void effect_I0_move(WORK_Other* ewk) {
         ewk->wu.my_col_mode = 0x4200;
         ewk->wu.my_col_code = 0x2020;
         set_char_move_init(&ewk->wu, 0, char_of_koishi[random_16_com() & 7]);
+        /* fall through */
     case R0_MOVE:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.disp_flag = 0;
@@ -182,6 +183,7 @@ void effect_I0_move(WORK_Other* ewk) {
                     char_move_wca(&ewk->wu);
                     break;
                 }
+                /* fall through */
             default:
                 char_move(&ewk->wu);
                 if (ewk->wu.cg_type == 0xFF) {

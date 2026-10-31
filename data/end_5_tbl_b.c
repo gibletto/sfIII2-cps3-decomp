@@ -38,12 +38,10 @@ const PANEL end_500_bg1_cell_tbl[8] = {
     { 0x2000, 1 }, { 0x2040, 2 }, { 0x3000, 7 }, { 0x3040, 8 },
 };
 
-/* provisional name */
 const s16 timer_5_tbl[6] = {
     300, 600, 360, 780, 150, 1020,
 };
 
-/* provisional name */
 const s16 end_5_pos[6][2] = {
     { 256, 768 }, { 768, 768 }, { 256, 512 }, { 768, 512 },
     { 256, 256 }, { 256, 0 },

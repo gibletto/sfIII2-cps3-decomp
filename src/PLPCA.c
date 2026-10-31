@@ -244,6 +244,7 @@ void Catch_05000(PLW* wk) {
             setup_mvxy_data(&wk->wu, wk->wu.mvxy.index);
             wk->wu.mvxy.index++;
             wk->wu.cg_type = 0;
+            /* fall through */
         default:
             break;
         }

@@ -98,6 +98,7 @@ void Normal_01000(PLW* wk) {
             set_char_move_init((WORK*)wk, 0, 0);
             wk->scr_pos_set_flag = 0;
         }
+        /* fall through */
     case N01_STAND:
         if (pcon_dp_flag) {
             if (wk->wu.now_koc != 9 || wk->wu.char_index != 60) {

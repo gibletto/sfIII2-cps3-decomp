@@ -26,7 +26,6 @@
 #define R0_KILL         3       /* (default) put the work back */
 
 
-
 void effect_03_move(WORK_Other* ewk) {
     const PLEF* plef;
     s16* pos;
@@ -75,6 +74,7 @@ void effect_03_move(WORK_Other* ewk) {
             ewk->wu.xyz[1].disp.pos = ewk->wu.position_y;
             ewk->wu.xyz[2].disp.pos = ewk->wu.position_z;
         }
+        /* fall through */
     case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
@@ -118,7 +118,6 @@ void eff03_disp_pos(WORK* ewk, WORK* mwk) {
         ewk->position_y = ewk->xyz[1].disp.pos;
     }
 }
-
 
 
 s32 effect_03_init(WORK* wk, u8 data) {

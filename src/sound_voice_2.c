@@ -434,8 +434,7 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
 }
 
 /* provisional name */
-void sound_reg_write_verify(s16 *reg, u16 value)
-{
+void sound_reg_write_verify(s16 *reg, u16 value) {
     *reg = value;
     while (1) {
         if (value == (u16)*reg) {

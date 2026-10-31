@@ -255,6 +255,7 @@ void Damage_00000(PLW* wk) {
         if (wk->wu.cg_type == 0xFF) {
             wk->wu.routine_no[3]++;
         }
+        /* fall through */
     case D00_HOLD:
         break;
     }
@@ -330,6 +331,7 @@ void Damage_04000(PLW* wk) {
             char_move_wca(&wk->wu);
             break;
         }
+        /* fall through */
     default:
         char_move(&wk->wu);
         break;
@@ -389,6 +391,7 @@ void Damage_07000(PLW* wk) {
         wk->wu.mvxy.d[0].sp = -wk->wu.mvxy.d[0].sp;
         wk->wu.mvxy.a[1].sp = wk->wu.mvxy.d[1].sp = wk->wu.mvxy.kop[1] = 0;
         wk->wu.dead_f = 0;
+        /* fall through */
     case D07_SLIDE:
         cal_mvxy_speed(&wk->wu);
         add_mvxy_speed(&wk->wu);
@@ -399,6 +402,7 @@ void Damage_07000(PLW* wk) {
             char_move_wca(&wk->wu);
             break;
         }
+        /* fall through */
     case D07_END:
         char_move(&wk->wu);
         break;
@@ -427,6 +431,7 @@ void Damage_08000(PLW* wk) {
             break;
         }
         wk->wu.routine_no[3]++;
+        /* fall through */
     case D08_AIR:
         jumping_union_process(&wk->wu, 3);
         set_dm_hos_flag_sky(wk);
@@ -481,6 +486,7 @@ void Damage_12000(PLW* wk) {
             char_move_wca((WORK*)wk);
             break;
         }
+        /* fall through */
     default:
         char_move((WORK*)wk);
         break;
@@ -508,6 +514,7 @@ void Damage_14000(PLW* wk) {
     case D14_NEXT:
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     case D14_FLIGHT:
         wk->dm_hos_flag = 1;
         first_TtktV_union(wk, 3, 4);
@@ -536,6 +543,7 @@ void Damage_16000(PLW* wk) {
     case D16_NEXT:
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     case D16_FLIGHT:
         wk->dm_hos_flag = 1;
         first_flight_union(wk, 3, 3);
@@ -571,6 +579,7 @@ void Damage_17000(PLW* wk) {
     case D17_NEXT:
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     case D17_AIR:
         jumping_union_process(&wk->wu, 3);
         set_dm_hos_flag_sky(wk);
@@ -619,6 +628,7 @@ void Damage_18000(PLW* wk) {
         }
         wk->wu.routine_no[3]++;
         char_move_wca_init((WORK*)wk);
+        /* fall through */
     case D18_AIR:
         set_dm_hos_flag_sky(wk);
         first_flight_union(wk, 3, 3);
@@ -655,6 +665,7 @@ void Damage_19000(PLW* wk) {
         }
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     case D19_AIR:
         set_dm_hos_flag_sky(wk);
         first_flight_union(wk, 3, 3);
@@ -683,6 +694,7 @@ void Damage_20000(PLW* wk) {
     case D20_NEXT:
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     case D20_AIR:
         set_dm_hos_flag_sky(wk);
         first_flight_union(wk, 3, 4);
@@ -712,6 +724,7 @@ void Damage_21000(PLW* wk) {
     case D21_NEXT:
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     case D21_FLIGHT:
         wk->dm_hos_flag = 1;
         first_TtktV_union(wk, 3, 2);
@@ -740,6 +753,7 @@ void Damage_23000(PLW* wk) {
     case D23_NEXT:
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     case D23_AIR:
         set_dm_hos_flag_sky(wk);
         first_flight_union(wk, 3, 2);
@@ -786,6 +800,7 @@ void Damage_24000(PLW* wk) {
             char_move_wca(&wk->wu);
             break;
         }
+        /* fall through: animate while the pause counts down */
     default:
         char_move(&wk->wu);
         if (wk->wu.cg_type == 1) {
@@ -861,6 +876,7 @@ void Damage_26000(PLW* wk) {
     case D26_NEXT:
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     case D26_AIR:
         set_dm_hos_flag_sky(wk);
         first_flight_union(wk, 3, 3);
@@ -891,6 +907,7 @@ void Damage_27000(PLW* wk) {
     case D27_NEXT:
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     default:
         char_move(&wk->wu);
         buttobi_chakuchi_cg_type_check(wk);
@@ -1002,6 +1019,7 @@ void Damage_30000(PLW* wk) {
         }
         wk->wu.routine_no[3]++;
         char_move_wca_init(&wk->wu);
+        /* fall through */
     case D30_AIR:
         set_dm_hos_flag_sky(wk);
         first_flight_union(wk, 3, 3);
@@ -1126,7 +1144,6 @@ void buttobi_chakuchi_cg_type_check(PLW* wk) {
 
 
 
-
 void setup_smoke_type(PLW* wk) {
     const s8* step_tbl;
     u8 ix;
@@ -1239,8 +1256,7 @@ void get_sky_dm_timer(PLW* wk) {
 void subtract_dm_vital(PLW* wk) {
     if (wk->dead_flag == 0) {
         if (wk->wu.dm_vital != 0) {
-            s16* p = wk->wu.routine_no;
-            if (p[1] != 1 || p[2] > 11 || p[3] != 0) {
+            if (wk->wu.routine_no[1] != PLAYER_DAMAGE || wk->wu.routine_no[2] > 11 || wk->wu.routine_no[3] != 0) {
                 Additinal_Score_DM((WORK_Other*)wk->wu.dmg_adrs, wk->wu.dm_ten_ix);
             }
         }
@@ -1286,8 +1302,7 @@ void subtract_dm_vital(PLW* wk) {
 void subtract_dm_vital_aiuchi(PLW* wk) {
     if (wk->dead_flag == 0) {
         if (wk->wu.dm_vital != 0) {
-            s16* p = wk->wu.routine_no;
-            if (p[1] != 1 || p[2] > 11 || p[3] != 0) {
+            if (wk->wu.routine_no[1] != PLAYER_DAMAGE || wk->wu.routine_no[2] > 11 || wk->wu.routine_no[3] != 0) {
                 Additinal_Score_DM((WORK_Other*)wk->wu.dmg_adrs, wk->wu.dm_ten_ix);
             }
         }
@@ -1380,7 +1395,6 @@ static void damage_atemi_setup(PLW* wk, PLW* ek) {
     ek->wu.hit_stop = wk->wu.att.hs_you;
     ek->wu.hit_quake = wk->wu.att.hs_you / 2;
 }
-
 
 
 

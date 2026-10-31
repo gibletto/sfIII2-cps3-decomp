@@ -94,6 +94,7 @@ void effect_17_move(WORK_Other* ewk) {
         break;
     case 2:
         ewk->wu.extra_col = oya->extra_col;
+        /* fall through */
     case 3:
         disp_pos_trans_entry5(ewk);
         break;
@@ -140,6 +141,7 @@ void eff17_zoom_in(WORK_Other* ewk) {
                 oya->old_rno[2] = 1;
             }
         }
+        /* fall through */
     case R1_SHOW:
         disp_pos_trans_entry5(ewk);
         break;
@@ -213,6 +215,7 @@ void effect_18_move(WORK_Other* ewk) {
         switch (ewk->wu.routine_no[0]) {
         case R0_INIT:
             ewk->wu.routine_no[0]++;
+            /* fall through */
         case R0_MOVE:
             if (!EXE_flag && !Game_pause) {
                 eff18_jp_tbl[ewk->wu.routine_no[1]](ewk);
@@ -239,6 +242,7 @@ void eff18_00(WORK* wk) {
         wk->routine_no[2]++;
         wk->disp_flag = 1;
         set_char_move_init(wk, 0, wk->dir_old);
+        /* fall through */
     case R2_IDLE:
         if (either_pl_hissatsu_check()) {
             wk->routine_no[2]++;
@@ -296,6 +300,7 @@ void eff18_01(WORK* wk) {
         wk->routine_no[2]++;
         wk->disp_flag = 1;
         set_char_move_init(wk, 0, wk->dir_old);
+        /* fall through */
     case R2_WAIT_WIN:
         if (complete_victory_check()) {
             wk->routine_no[2]++;

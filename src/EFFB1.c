@@ -141,6 +141,7 @@ void effB1_mark_change(WORK_Other_CONN* ewk) {
             if (--ewk->conn[i + 20].col > 0) {
                 break;
             }
+            /* fall through */
         case 0:
             ewk->conn[i + 20].col = effB1_wait_table[ewk->conn[i + 20].ny];
             ewk->conn[i + 20].ny++;
@@ -170,6 +171,7 @@ void effB1_mark_exchange(WORK_Other_CONN* ewk) {
             ewk->conn[i + 20].col = effB1_wait_tbl_2[ewk->conn[i + 20].ny];
             ewk->conn[i + 20].ny++;
             ewk->conn[i].chr--;
+            /* fall through */
         case 4:
             break;
         }

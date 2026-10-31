@@ -330,6 +330,7 @@ const s16 yang_movexy_table[101][6] = {
     {   5120,   -272,     1,       0,      0,     0 },  /* 100 */
 };
 
+/* provisional name */
 const PARABORA_DATA yang_parabora_data[26] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

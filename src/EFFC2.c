@@ -30,7 +30,6 @@
 
 
 
-
 void effect_C2_move(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;

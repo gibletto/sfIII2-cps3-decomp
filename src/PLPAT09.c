@@ -46,7 +46,6 @@ void pl09_extra_attack(PLW* wk) {
 
 
 
-
 void set_tenguiwa(PLW* wk, u8 data) {
     s16 i;
     s16 j;
@@ -194,6 +193,7 @@ static void mvxy_table_reader(PLW* wk) {
             wk->wu.mvxy.a[0].sp = 0;
             cal_initial_speed(&wk->wu, curr_kop[1], ex, ey);
             wk->wu.kow++;
+            /* fall through */
         default:
             break;
         }

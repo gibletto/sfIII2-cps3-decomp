@@ -25,7 +25,6 @@
 
 
 
-
 s32 effect_I2_init(void) {
     WORK_Other* ewk;
     s16 ix;
@@ -46,6 +45,7 @@ void effect_I2_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case R0_INIT:
         ewk->wu.routine_no[0]++;
+        /* fall through */
     case R0_MOVE:
         if (Suicide) {
             all_cgps_put_back(&ewk->wu);

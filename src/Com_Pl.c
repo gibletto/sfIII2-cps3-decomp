@@ -420,7 +420,6 @@ s32 Check_Hamari(PLW* wk) {
 
 
 
-
 void Check_No12_Shell_Guard(PLW* wk) {
     WORK_Other* tmw;
     if (Check_Caught(wk)) {
@@ -445,7 +444,6 @@ void Check_No12_Shell_Guard(PLW* wk) {
     }
     Timer_00[wk->wu.id]--;
 }
-
 
 
 
@@ -502,7 +500,6 @@ s32 Ck_Exit_Guard(PLW* wk, WORK* em) {
     }
     return 0;
 }
-
 
 
 
@@ -592,7 +589,7 @@ void Com_Damage(PLW* wk) {
 void Damage_1st(PLW* wk) {
     u8 Lv;
     u8 Rnd;
-    u8 xx;
+    u8 rank;
     WORK* em;
     Lever_Buff[wk->wu.id] = LEVER_DOWN;
     switch (CP_No[wk->wu.id][2]) {
@@ -614,8 +611,8 @@ void Damage_1st(PLW* wk) {
             Lv = 0;
         }
         Rnd = random_32_com();
-        xx = Setup_EM_Rank_Index(wk);
-        if (Receive_Data[xx][Lv] > Rnd) {
+        rank = Setup_EM_Rank_Index(wk);
+        if (Receive_Data[rank][Lv] > Rnd) {
             Receive_Flag[wk->wu.id] = 1;
             break;
         } else {
@@ -834,7 +831,7 @@ void Damage_8th(PLW* wk) {
     switch (CP_No[wk->wu.id][2]) {
     case D8_WAIT:
         if (wk->wu.routine_no[2] == DAMAGE_STUN) {
-            CP_No[wk->wu.id][2] += 1;
+            CP_No[wk->wu.id][2]++;
             Timer_00[wk->wu.id] = 1;
             Lv = Setup_Lv08(0);
             if (Break_Into_CPU == 2) {
@@ -1266,15 +1263,15 @@ void Com_Caught(PLW* wk) {
 
 s16 Decide_Exit_Catch(PLW* wk) {
     s16 Rnd;
-    s16 xx;
+    s16 rank;
     s16 Lv = Setup_Lv18(Game_setting.Difficulty);
     Lv += CC_Value[0];
     if (Break_Into_CPU == 2) {
         Lv = 19;
     }
     Rnd = (u8)random_32_com();
-    xx = Setup_EM_Rank_Index(wk);
-    if (Rnd >= Exit_Throw_Data[xx][Lv]) {
+    rank = Setup_EM_Rank_Index(wk);
+    if (Rnd >= Exit_Throw_Data[rank][Lv]) {
         return 0;
     }
     return 1;
@@ -1411,6 +1408,7 @@ s32 Command_Attack_SP(PLW* wk, s8 Pl_Number, s16 Tech_Number, s16 Power_Level) {
             Lever_Buff[wk->wu.id] = Lever_Pool[wk->wu.id];
             CP_Index[wk->wu.id][1]++;
         }
+        /* fall through */
     default:
         Rapid_Sub(wk);
         if (wk->wu.routine_no[1] == PLAYER_NORMAL && plw[wk->wu.id].caution_flag == 0) {
@@ -1497,7 +1495,6 @@ void Check_At_Count(PLW* wk) {
         Attack_Count_No0[wk->wu.id] = 0;
     }
 }
-
 
 
 

@@ -54,6 +54,7 @@ void effect_77_move(WORK_Other* ewk) {
         if (ewk->wu.type == 0) {
             Extra_Break = 1;
         }
+        /* fall through */
     case R0_BG_ON:
         if (Game_pause || EXE_flag) {
             break;

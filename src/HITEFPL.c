@@ -21,7 +21,6 @@
 #include "HITCHECK.h"
 
 
-
 void effect_at_vs_player_dm(ix2, ix)
 s16 ix2;
 s16 ix;

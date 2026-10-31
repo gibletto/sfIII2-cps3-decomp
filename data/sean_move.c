@@ -295,6 +295,7 @@ const s16 sean_movexy_table[114][6] = {
     {   -128,      0,     0,       0,    -96,     0 },  /* 113 */
 };
 
+/* provisional name */
 const PARABORA_DATA sean_parabora_data[25] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

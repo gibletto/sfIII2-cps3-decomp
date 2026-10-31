@@ -216,6 +216,7 @@ const s16 gouki1_movexy_table[88][6] = {
     {   1024,      0,     0,       0,      0,     0 },  /* 87 */
 };
 
+/* provisional name */
 const PARABORA_DATA gouki1_parabora_data[29] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

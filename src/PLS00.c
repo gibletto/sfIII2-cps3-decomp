@@ -536,7 +536,6 @@ void nm_11000(PLW* wk) {
 
 
 
-
 void nm_13000(WORK* wk) {
     if (wk->cg_type == 0xFF) {
         TO_nm_01000(wk);
@@ -634,7 +633,6 @@ void check_jump_rl_dir(PLW* wk) {
         wk->jpdir = lvdir_conv[wk->jpdir];
     }
 }
-
 
 
 
@@ -984,7 +982,6 @@ void nm_27000(PLW* wk) {
 
 
 
-
 void nm_27_cg_type_check(PLW* wk) {
     s16 kind;
     if (wk->wu.routine_no[3] == RN3_START) {
@@ -1299,7 +1296,6 @@ void nm_49000(PLW* wk) {
 
 
 
-
 void process_damage(PLW* wk) {
     if (wk->wu.routine_no[3] != RN3_START) {
         plpdm_xxxxx[wk->wu.routine_no[2]](wk);
@@ -1420,7 +1416,6 @@ void dm_18000(PLW* wk) {
         break;
     }
 }
-
 
 
 

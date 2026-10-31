@@ -95,6 +95,7 @@ void Scrn_Move_Set(s32 n, s16 x, s16 y);
 
 
 
+/* provisional name */
 void op_w_clear(void) {
     op_w.r_no_0 = 0;
     op_w.r_no_1 = 0;
@@ -115,9 +116,10 @@ void op_work_clear(void) {
 
 
 
+/* provisional name */
 s16 opening_demo_tick(void) {
     void (*opening_demo_jp[3])() = { opening_init2, opening_move, opening_title_00 };
-    Game_timer += 1;
+    Game_timer++;
     opening_demo_jp[op_w.r_no_0]();
     Bg_Family_Set_op();
     return op_end_flag;
@@ -394,6 +396,7 @@ void op_00_move(void) {
     case 4:
         op_w.r_no_2++;
         ToneDown(0);
+        /* fall through */
     case 5:
         if (op_w.free_work < 0x140) {
             op_w.r_no_2++;
@@ -478,6 +481,7 @@ void op_01_move(void) {
     case 4:
         op_w.r_no_2++;
         ToneDown(0);
+        /* fall through */
     case 5:
         suzi_line_fix_set2();
         op_w.free_work--;
@@ -545,6 +549,7 @@ void op_02_move(void) {
     case 4:
         opw_ptr->r_no_0++;
         ToneDown(0);
+        /* fall through */
     case 5:
         op_w.free_work--;
         time = op_timer_tbl[2] - 60;
@@ -621,6 +626,7 @@ void op_03_move(void) {
     case 4:
         op_w.r_no_2++;
         ToneDown(0);
+        /* fall through */
     case 5:
         suzi_line_fix_set2();
         op_w.free_work--;
@@ -687,6 +693,7 @@ void op_04_move(void) {
     case 4:
         opw_ptr->r_no_0++;
         ToneDown(0);
+        /* fall through */
     case 5:
         op_w.free_work--;
         time = op_timer_tbl[4] - 44;
@@ -762,6 +769,7 @@ void op_05_move(void) {
     case 4:
         op_w.r_no_2++;
         ToneDown(0);
+        /* fall through */
     case 5:
         suzi_line_fix_set2();
         op_w.free_work--;
@@ -828,6 +836,7 @@ void op_06_move(void) {
     case 3:
         op_w.r_no_2++;
         ToneDown(0);
+        /* fall through */
     case 4:
         bg_w.bgw[0].xy[1].cal += 0xA0000;
         op_w.free_work--;
@@ -902,6 +911,7 @@ void op_06_move(void) {
         bg_cell_write(2, 0x3040, 12, (u32)op_bg0_scrn_data, 0, 0x2C0);
         bg_cell_write(2, 0x3080, 13, (u32)op_bg0_scrn_data, 0, 0x2C0);
         Bg_On_W(15);
+        /* fall through */
     case 9:
         for (i = 0; i < 4; i++) {
             bg_w.bgw[i].xy[1].cal += bg_w.bgw[i].speed_y;
@@ -1173,6 +1183,7 @@ void op_14_move(void) {
 
 
 
+/* provisional name */
 void op_bg_off(void) {
     switch (opw_ptr->r_no_0) {
     case 0:
@@ -1364,6 +1375,7 @@ void combo_demo_set_position(s16 id) {
 
 
 
+/* provisional name */
 void ending_effects_cleanup(void) {
     effect_work_kill(2, -1);
     effect_work_kill(0, 0);

@@ -73,7 +73,7 @@ void effect_00_move(WORK_Other_JUDGE* ewk) {
         ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
-        all_cgps_put_back((WORK_Other*)ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }

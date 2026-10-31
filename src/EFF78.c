@@ -26,6 +26,7 @@ void effect_78_move(WORK_Other* ewk) {
 
 
 /* A work with id 78 and nothing else. */
+/* provisional name */
 s32 effect_78_entry(void) {
     WORK_Other* ewk;
     s16 ix;

@@ -78,7 +78,6 @@
 #define R3_HOMING       2       /* turn toward the opponent */
 
 
-
 void effect_13_move(WORK_Other* ewk) {
     TAMA* tama = (TAMA*)ewk->wu.my_effadrs;
     switch (ewk->wu.routine_no[0]) {
@@ -212,7 +211,6 @@ s32 screen_range_check(WORK* wk) {
 }
 
 
-
 void set_tengu_init_pos(WORK_Other* ewk, WORK* twk) {
     s16 scpx;
     scpx = get_center_position();
@@ -245,7 +243,7 @@ void kotp_00000(WORK_Other* ewk, TAMA* twk) {
             ewk->wu.routine_no[2] = R2_DRIFT;
             break;
         }
-        if ((ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos) <= 0) {
+        if (ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos <= 0) {
             ewk->wu.mvxy.a[0].sp = 0;
             ewk->wu.mvxy.a[1].sp = 0;
             ewk->wu.mvxy.d[0].sp = 0;
@@ -306,6 +304,7 @@ void kotp_00000(WORK_Other* ewk, TAMA* twk) {
         case R2_DRIFT:
             add_mvxy_speed(&ewk->wu);
             cal_mvxy_speed(&ewk->wu);
+            /* fall through */
         case R2_STAY:
             char_move(&ewk->wu);
             if (ewk->wu.cg_type == 0xFF) {
@@ -536,7 +535,7 @@ void kotp_03000(WORK_Other* ewk, TAMA* twk) {
         add_mvxy_speed(&ewk->wu);
         cal_mvxy_speed(&ewk->wu);
         char_move(&ewk->wu);
-        if ((ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos) <= 0) {
+        if (ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos <= 0) {
             ewk->wu.mvxy.a[0].sp = 0;
             ewk->wu.mvxy.a[1].sp = 0;
             ewk->wu.mvxy.d[0].sp = 0;
@@ -595,6 +594,7 @@ void kotp_03000(WORK_Other* ewk, TAMA* twk) {
         case R2_DRIFT:
             add_mvxy_speed(&ewk->wu);
             cal_mvxy_speed(&ewk->wu);
+            /* fall through */
         case R2_STAY:
             char_move(&ewk->wu);
             if (ewk->wu.cg_type == 0xFF) {
@@ -607,8 +607,7 @@ void kotp_03000(WORK_Other* ewk, TAMA* twk) {
     }
 }
 
-void kotp_04000(WORK_Other* ewk)
-{
+void kotp_04000(WORK_Other* ewk) {
     ewk->wu.disp_flag = 0;
     ewk->wu.routine_no[0] = R0_END;
 }
@@ -631,7 +630,7 @@ void kotp_05000(WORK_Other* ewk, TAMA* twk) {
         add_mvxy_speed(&ewk->wu);
         cal_mvxy_speed(&ewk->wu);
         char_move(&ewk->wu);
-        if ((ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos) <= 0) {
+        if (ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos <= 0) {
             ewk->wu.mvxy.a[0].sp = 0;
             ewk->wu.mvxy.a[1].sp = 0;
             ewk->wu.mvxy.d[0].sp = 0;
@@ -688,6 +687,7 @@ void kotp_05000(WORK_Other* ewk, TAMA* twk) {
         case R2_DRIFT:
             add_mvxy_speed(&ewk->wu);
             cal_mvxy_speed(&ewk->wu);
+            /* fall through */
         case R2_STAY:
             char_move(&ewk->wu);
             if (ewk->wu.cg_type == 0xFF) {
@@ -741,7 +741,7 @@ void kotp_06000(WORK_Other* ewk, TAMA* twk) {
 
             ewk->wu.routine_no[3]++;
             ewk->wu.kow = 0x70;
-            /* fallthrough */
+            /* fall through */
 
         case R3_HOMING:
             *target_x = homing_empos_hos[0][ewk->master_player][0];
@@ -769,7 +769,7 @@ void kotp_06000(WORK_Other* ewk, TAMA* twk) {
         cal_mvxy_speed(&ewk->wu);
         char_move(&ewk->wu);
 
-        if ((ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos) <= 0) {
+        if (ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos <= 0) {
             ewk->wu.mvxy.a[0].sp = 0;
             ewk->wu.mvxy.a[1].sp = 0;
             ewk->wu.mvxy.d[0].sp = 0;
@@ -831,7 +831,7 @@ void kotp_06000(WORK_Other* ewk, TAMA* twk) {
         case R2_DRIFT:
             add_mvxy_speed(&ewk->wu);
             cal_mvxy_speed(&ewk->wu);
-            /* fallthrough */
+            /* fall through */
 
         case R2_STAY:
             char_move(&ewk->wu);
@@ -942,6 +942,7 @@ void kotp_07000(WORK_Other* ewk, TAMA* twk) {
         case R2_DRIFT:
             add_mvxy_speed(&ewk->wu);
             cal_mvxy_speed(&ewk->wu);
+            /* fall through */
         case R2_STAY:
             char_move(&ewk->wu);
             if (ewk->wu.cg_type == 0xFF) {
@@ -968,7 +969,7 @@ void kotp_08000(WORK_Other* ewk, TAMA* twk) {
         add_mvxy_speed(&ewk->wu);
         cal_mvxy_speed(&ewk->wu);
         char_move(&ewk->wu);
-        if ((ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos) <= 0) {
+        if (ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos <= 0) {
             ewk->wu.mvxy.a[0].sp = 0;
             ewk->wu.mvxy.a[1].sp = 0;
             ewk->wu.mvxy.d[0].sp = 0;
@@ -1036,6 +1037,7 @@ void kotp_08000(WORK_Other* ewk, TAMA* twk) {
         case R2_DRIFT:
             add_mvxy_speed(&ewk->wu);
             cal_mvxy_speed(&ewk->wu);
+            /* fall through */
         case R2_STAY:
             char_move(&ewk->wu);
             if (ewk->wu.cg_type == 0xFF) {
@@ -1068,7 +1070,7 @@ void kotp_09000(WORK_Other* ewk, TAMA* twk) {
             ewk->wu.routine_no[2] = R2_DRIFT;
             break;
         }
-        if ((ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos) <= 0) {
+        if (ewk->wu.xyz[1].disp.pos + ewk->wu.cg_jphos <= 0) {
             ewk->wu.mvxy.a[0].sp = 0;
             ewk->wu.mvxy.a[1].sp = 0;
             ewk->wu.mvxy.d[0].sp = 0;
@@ -1133,6 +1135,7 @@ void kotp_09000(WORK_Other* ewk, TAMA* twk) {
         case R2_DRIFT:
             add_mvxy_speed(&ewk->wu);
             cal_mvxy_speed(&ewk->wu);
+            /* fall through */
         case R2_STAY:
             char_move(&ewk->wu);
             if (ewk->wu.cg_type == 0xFF) {
@@ -1144,7 +1147,6 @@ void kotp_09000(WORK_Other* ewk, TAMA* twk) {
         break;
     }
 }
-
 
 
 s32 effect_13_init(wk, data)

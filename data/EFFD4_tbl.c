@@ -23,7 +23,6 @@ const s32 swallow_speeds[16] = {
     0x60000, 0x68000, 0x70000, 0x78000,
 };
 
-/* provisional name */
 /*
  * Read as two s16 entries per attack strength (dm_kind_of_waza): petal set (num_of_hana) and
  * petal acceleration.

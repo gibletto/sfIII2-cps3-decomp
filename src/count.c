@@ -46,6 +46,7 @@ u8 pl;
 
 
 
+/* provisional name */
 void count_cont_reset(void) {
     (*&count_work).hoji_counter = hoji_counter_tbl[Game_setting.Timer_Speed];
     Counter_hi = 99;
@@ -89,11 +90,11 @@ void counter_control(void) {
         counter_flash(0);
     }
     if (Counter_low != 0) {
-        Counter_low -= 1;
+        Counter_low--;
         return;
     }
     Counter_low = (*&count_work).hoji_counter;
-    Counter_hi -= 1;
+    Counter_hi--;
     if (Counter_hi == 0) {
         sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 2, 4, 2, 34);
         sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 1, 2, 1, 34);
@@ -129,6 +130,7 @@ void counter_flash(s8 ix) {
 
 
 
+/* provisional name */
 void counter_color_clear(void) {
     sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 2, 4, 2, 34);
     sq_paint_chenge(Game_setting.Screen_Mode * 7 + 22, 1, 2, 1, 34);

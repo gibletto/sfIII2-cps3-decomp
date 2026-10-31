@@ -53,7 +53,6 @@
 
 
 
-
 /* provisional name */
 s32 debug_player_change(void) {
     s16 chg = 0;
@@ -210,7 +209,6 @@ void set_base_data(PLW* wk, s16 ix) {
     wk->wu.weight_level = weight_lv_table[wk->player_number];
     set_player_shadow(wk);
 }
-
 
 
 

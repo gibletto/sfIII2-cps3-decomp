@@ -729,6 +729,7 @@ void eff09_11000(WORK_Other* ewk) {
         } else if (oya_ptr->xyz[0].disp.pos < ewk->wu.xyz[0].disp.pos) {
             ewk->wu.routine_no[1]++;
         }
+        /* fall through */
     case R1_STOP:
         suzi_sync_pos_set(ewk);
         sort_push_request(&ewk->wu);

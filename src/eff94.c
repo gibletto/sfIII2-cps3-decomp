@@ -157,6 +157,7 @@ void eff94_01(WORK_Other* ewk) {
     case R2_INIT:
         ewk->wu.routine_no[2]++;
         set_char_move_init(&ewk->wu, 0, 17);
+        /* fall through */
     case R2_READY:
         ewk->wu.old_rno[0]--;
         if (ewk->wu.old_rno[0] < 0) {

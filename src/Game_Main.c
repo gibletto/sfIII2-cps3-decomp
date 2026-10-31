@@ -442,8 +442,7 @@ void Scrn_Move_Set(s32 n, s16 x, s16 y);
 
 
 /* Title hand-off: step the game routine, save the screen and start wipe 0. */
-void Game0_2(void)
-{
+void Game0_2(void) {
     G_No2++;
     sc_vram_to_ram();
     Switch_Screen_Init(0, 1);
@@ -660,7 +659,7 @@ void Game2_0(void) {
 
 
 void Game2_1(void) {
-    Game_timer += 1;
+    Game_timer++;
     set_EXE_flag();
     Time_Control();
     Player_control();
@@ -683,8 +682,7 @@ void Game2_1(void) {
 
 
 /* Step 2 of the fight routine (Game02_Jmp_Tbl) has no work. */
-void Game2_2(void)
-{
+void Game2_2(void) {
 }
 
 
@@ -793,8 +791,7 @@ void Game2_5(void) {
 
 /* The winner scene: runs Winner_Scene, then wipes out to the winner's next stage, or to game over in event
    mode. */
-void Game03(void)
-{
+void Game03(void) {
     move_effect_work(4);
     switch (G_No2) {
     case 0:
@@ -926,7 +923,7 @@ void Game09(void) {
         C_No1 = 0;
         C_No2 = 0;
         C_No3 = 0;
-        G_No2 += 1;
+        G_No2++;
         Round_num = 0;
         Allow_a_battle_f = 0;
         Time_in_Time = 60;
@@ -950,7 +947,7 @@ void Game09(void) {
         TATE00();
         break;
     case G2_BONUS_START:
-        G_No2 += 1;
+        G_No2++;
         G_Timer = 14;
         effect_04_init(1);
         effect_35_init(120, 0);
@@ -960,7 +957,7 @@ void Game09(void) {
     case G2_BONUS_INTRO:
         Bonus_Sub();
         if (--G_Timer == 0) {
-            G_No2 += 1;
+            G_No2++;
             Clear_Flash_No();
             Scrn_Move_Set(4, 0, 0);
             Switch_Screen_Init(0, 1);
@@ -969,13 +966,13 @@ void Game09(void) {
     case G2_BONUS_REVIVAL:
         Bonus_Sub();
         if (Switch_Screen_Revival()) {
-            G_No2 += 1;
+            G_No2++;
             Forbid_Break = 0;
         }
         break;
     case G2_BONUS_PLAY:
         if (Bonus_Sub()) {
-            G_No2 += 1;
+            G_No2++;
             Cover_Timer = 24;
             sc_vram_to_ram();
             Stop_Combo = 1;
@@ -1064,7 +1061,7 @@ void Game06(void) {
     }
     switch (G_No2) {
     case G2_OVER_INIT:
-        G_No2 += 1;
+        G_No2++;
         Stock_Com_Color[Player_id] = -1;
         Stock_Com_Arts[Player_id] = -1;
         Last_Player_id = -1;
@@ -1074,7 +1071,7 @@ void Game06(void) {
         break;
     case G2_OVER_SETUP:
         if (Switch_Screen()) {
-            G_No2 += 1;
+            G_No2++;
             Cover_Timer = 24;
             System_all_clear_Wait();
             bg_etc_write(1);
@@ -1095,14 +1092,14 @@ void Game06(void) {
             E_No1 = 0;
             E_No2 = 0;
             E_No3 = 0;
-            G_No2 += 1;
+            G_No2++;
             Clear_Flash_No();
             Switch_Screen_Init(0, 1);
         }
         break;
     case G2_OVER_REVIVAL:
         if (Switch_Screen_Revival()) {
-            G_No2 += 1;
+            G_No2++;
             G_Timer = 29;
             Ignore_Entry[LOSER] = 0;
             BGM_Request(10);
@@ -1110,7 +1107,7 @@ void Game06(void) {
         break;
     case G2_OVER_WAIT:
         if (--G_Timer == 0) {
-            G_No2 += 1;
+            G_No2++;
             G_Timer = 150;
             Forbid_Break = 0;
         }
@@ -1129,7 +1126,7 @@ void Game06(void) {
         break;
     case G2_OVER_NAME:
         if (E_Number[0][0] != ENTRY_NAME && E_Number[1][0] != ENTRY_NAME) {
-            G_No2 += 1;
+            G_No2++;
             G_No3 = 0;
             G_Timer = 20;
         }
@@ -1139,7 +1136,7 @@ void Game06(void) {
             break;
         }
         if (Request_Disp_Rank[0][RANK_SCORE] >= 0 || Request_Disp_Rank[1][RANK_SCORE] >= 0) {
-            G_No2 += 1;
+            G_No2++;
             Rank_Type = 0;
             Present_Rank[0] = Rank_In[0][RANK_SCORE];
             Present_Rank[1] = Rank_In[1][RANK_SCORE];
@@ -1153,7 +1150,7 @@ void Game06(void) {
     case G2_OVER_RANKING:
         if (Disp_Ranking()) {
             if (Request_Disp_Rank[0][RANK_WINS] >= 0 || Request_Disp_Rank[1][RANK_WINS] >= 0) {
-                G_No2 += 1;
+                G_No2++;
                 G_No3 = 0;
                 Rank_Type = 6;
                 Present_Rank[0] = Rank_In[0][RANK_WINS];
@@ -1166,7 +1163,7 @@ void Game06(void) {
         break;
     case G2_OVER_RANKING2:
         if (Disp_Ranking()) {
-            G_No2 += 1;
+            G_No2++;
             G_Timer = 1;
         }
         break;
@@ -1174,7 +1171,7 @@ void Game06(void) {
         if (--G_Timer) {
             break;
         }
-        G_No2 += 1;
+        G_No2++;
         Request_Disp_Rank[0][RANK_SCORE] = -1;
         Request_Disp_Rank[0][RANK_WINS] = -1;
         Request_Disp_Rank[1][RANK_SCORE] = -1;

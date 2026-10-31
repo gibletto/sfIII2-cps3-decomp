@@ -45,6 +45,8 @@
 #define MARK_HOSEI_X    0       /* x offset, mirrored by facing */
 #define MARK_HOSEI_Y    1       /* y offset */
 
+void tilemap_print_hex();
+
 WORK * q_hit_push[32];  /* 0200FE58 */
 HS hs[32];  /* 0200FED8 */
 s8 ca_check_flag;  /* 020100D8 */
@@ -398,6 +400,7 @@ char gddir;
                     if (ds->player_number == PL_NECRO) {
                         ds->wu.routine_no[2] = get_grd_hand_damage(ds->wu.routine_no[2]);
                     }
+                    /* fall through */
                 default:
                     if (check_trunk_damage(ds->wu.routine_no[2])) {
                         ds->wu.routine_no[2] = get_kind_of_trunk_dm(as->wu.dir_atthit, ds->wu.dm_rl);
@@ -410,7 +413,7 @@ char gddir;
     ds->wu.routine_no[1] = PLAYER_DAMAGE;
     ds->wu.routine_no[3] = RN3_START;
     if (DEBUG_DISP) {
-        defense_ground(as, ds, gddir);
+        tilemap_print_hex(2, 2, 2, gddir, 4, 0);
     }
     effect_02_init(&as->wu, ds->dm_point, 1, ds->wu.dm_rl);
     dm_status_copy(&as->wu, &ds->wu);
@@ -584,6 +587,7 @@ void hit_pattern_extdat_check(WORK* as) {
         break;
     case 0x41:
         as->cg_ctr = 1;
+        /* fall through */
     case 0x1:
         setup_comm_abbak(as);
         as->cg_ix = ((as->cg_extdat & 0x3F) - 1) * as->cgd_type - as->cgd_type;
@@ -681,6 +685,7 @@ void same_dm_stop(WORK* as, WORK* ds) {
         switch ((ds->dm_stop < 0) + ((as->att.hs_me < 0) * 2)) {
         case 1:
             ds->dm_stop = -as->att.hs_me;
+            /* fall through */
         case 2:
             ds->dm_stop = -as->att.hs_me;
             break;
@@ -849,6 +854,7 @@ void setup_dm_rl(WORK* as, WORK* ds) {
             ds->dm_rl = as->rl_flag;
             break;
         }
+        /* fall through */
     default:
         if (dx) {
             if (dx > 0) {

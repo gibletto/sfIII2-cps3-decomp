@@ -116,7 +116,6 @@ const u8 EM_Candidate_Data[16][4][8] = {
     },
 };
 
-/* provisional name */
 const s16 Com_Vital_Unit_Data[16][4][12] = {
     {  /* Gill */
         { 1402, 1485, 1567, 1650, 1732, 1815, 1897, 1980, 2062, 2145, 2227, 2310 },

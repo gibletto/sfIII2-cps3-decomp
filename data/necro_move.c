@@ -209,6 +209,7 @@ const s16 necro_movexy_table[51][6] = {
     {   3328,   -256,     1,       0,      0,     0 },  /* 50 */
 };
 
+/* provisional name */
 const PARABORA_DATA necro_parabora_data[16] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

@@ -42,7 +42,6 @@ extern const EFFB8_MESSAGE* effB8_conn_tbl[];
 
 
 
-
 void effect_B8_move(WORK_Other_CONN* ewk) {
     const CONN* conn_data;
     const u16* chr_data;
@@ -205,7 +204,6 @@ void effect_B8_move(WORK_Other_CONN* ewk) {
         break;
     }
 }
-
 
 
 

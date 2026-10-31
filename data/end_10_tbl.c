@@ -68,14 +68,12 @@ const PANEL end_10_panel_tbl_1[16] = {
     { 0x30C0, 49 },
 };
 
-/* provisional name */
 /* The length in frames of each of the seven scenes. The last scene, end_1000_6000, starts its fade from
    timer_10_tbl[7], one past the end: the 256 there is end_10_pos[0][0]. */
 const s16 timer_10_tbl[7] = {
     300, 180, 240, 240, 540, 300, 360,
 };
 
-/* provisional name */
 const s16 end_10_pos[7][2] = {
     { 256, 768 }, { 768, 768 }, { 256, 512 }, { 720, 512 },
     { 256, 256 }, { 720, 256 }, { 768, 0 },

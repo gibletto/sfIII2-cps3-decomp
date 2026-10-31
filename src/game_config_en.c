@@ -325,6 +325,7 @@ void game_config_1p_round_item_en(void) {
 }
 
 
+/* provisional name */
 void game_config_event_item_en(void) {
     Config_Move_en = 0;
     if (game_config_lever_repeat_en(4, 2)) {
@@ -350,8 +351,6 @@ void game_config_event_item_en(void) {
 
 
 /* provisional name */
-
-
 void game_config_bonus_item_en(void) {
     Config_Move_en = 0;
     if (game_config_lever_repeat_en(4, 2)) {

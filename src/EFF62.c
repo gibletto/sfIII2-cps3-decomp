@@ -40,6 +40,7 @@ void effect_62_move(WORK_Other* ewk) {
         ewk->wu.be_flag = 1;
         ewk->wu.disp_flag = 1;
         set_char_move_init2(&ewk->wu, 0, ewk->wu.char_index, ewk->wu.dir_old + 1, 0);
+        /* fall through */
     case R0_SCROLL:
         switch (another_bg[mwk->wu.type]) {
         case 4:

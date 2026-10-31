@@ -178,7 +178,6 @@ extern const APPEAR_DATA appear_data[28];
 
 
 
-
 s16 Appear_end;  /* 02023A60 */
 s16 appear_work[2];  /* 02023A62 */
 s8 Appear_flag[2];  /* 02023A66 */
@@ -681,6 +680,7 @@ void Appear_06000(PLW* wk) {
         effect_C5_init(wk);
         bg_stop = 1;
         wk->wu.disp_flag = 0;
+        /* fall through */
     case AP06_WAIT:
         if (demo_car_flag[wk->wu.id]) {
             wk->wu.routine_no[3]++;
@@ -1412,7 +1412,7 @@ void Appear_23000(PLW* wk) {
     s16 work;
     switch (wk->wu.routine_no[3]) {
     case RN3_START:
-        wk->wu.routine_no[3] += 1;
+        wk->wu.routine_no[3]++;
         wk->wu.disp_flag = 1;
         work = random_16_com();
         work &= 3;
@@ -1423,7 +1423,7 @@ void Appear_23000(PLW* wk) {
     case AP23_NEXT:
         char_move(&wk->wu);
         if (wk->wu.cmwk[1] && wk->wu.cg_type == 9) {
-            wk->wu.routine_no[3] += 1;
+            wk->wu.routine_no[3]++;
             set_char_move_init(&wk->wu, 9, wk->wu.char_index + 8);
             return;
         } else {
@@ -1434,7 +1434,7 @@ void Appear_23000(PLW* wk) {
         if (wk->wu.cg_type == 0xFF) {
             wk->wu.routine_no[2] = NORMAL_STAND;
             wk->wu.routine_no[3] = RN3_START;
-            Appear_end += 1;
+            Appear_end++;
         }
         break;
     }
@@ -1481,6 +1481,7 @@ PLW* wk;
         if (wk->wu.cg_type == 0xFF) {
             wk->wu.routine_no[6]++;
         }
+        /* fall through */
     case 2:
         if (wk->player_number == PL_GILL) {
             Gill_Pos_X = wk->wu.xyz[0].disp.pos;

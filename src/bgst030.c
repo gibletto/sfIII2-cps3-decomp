@@ -30,6 +30,11 @@
 #define R0_DEMO         1       /* the entrance demo */
 #define R0_MOVE         2       /* follow the fight */
 
+/* bgw r_no_1 in bg030_demo */
+#define DEMO_WAIT       0       /* until free runs out */
+#define DEMO_SCROLL     1       /* scroll the Y down to 0 */
+#define DEMO_APPEAR     2       /* until Appear_end is 2, then the next r_no_0 */
+
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
 #include "eff12.h"
@@ -201,13 +206,13 @@ void bg030_demo(void) {
         return;
     }
     switch (bgw_ptr->r_no_1) {
-    case 0:
+    case DEMO_WAIT:
         bgw_ptr->free--;
         if (bgw_ptr->free < 0) {
             bgw_ptr->r_no_1++;
         }
         break;
-    case 1:
+    case DEMO_SCROLL:
         bgw_ptr->xy[1].cal -= 0xA8000;
         bgw_ptr->wxy[1].cal -= 0xA8000;
         if (bgw_ptr->xy[1].disp.pos <= 0) {
@@ -216,7 +221,7 @@ void bg030_demo(void) {
             bgw_ptr->wxy[1].cal = 0;
         }
         break;
-    case 2:
+    case DEMO_APPEAR:
         if (Appear_end != 2) {
             break;
         }

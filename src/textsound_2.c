@@ -31,14 +31,12 @@ u8 bgm_master_vol_init;  /* 020731AE */
 
 
 /* provisional name */
-s32 sound_driver_version(void)
-{
+s32 sound_driver_version(void) {
     return 328;
 }
 
 /* provisional name */
-void sound_sample_bank_set(u16 bank)
-{
+void sound_sample_bank_set(u16 bank) {
     snd_wave_bias = bank;
 }
 
@@ -96,9 +94,6 @@ void sound_init(u8* data, SNDSAMPLE* bank_a, u8** bank_b, u8 stereo, u8 volume, 
         (v++)->status = 0xC0;
     }
 }
-
-
-
 
 
 
@@ -378,8 +373,7 @@ void bgm_resume(void) {
 }
 
 /* provisional name */
-u32 sound_fade_in_submit(u16 code_no, u16 speed)
-{
+u32 sound_fade_in_submit(u16 code_no, u16 speed) {
     snd_fade_level = 0;
     snd_fade_speed = speed & 0x7FFF;
     bgm_state |= 8;

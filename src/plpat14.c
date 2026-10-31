@@ -35,8 +35,6 @@
 
 
 
-
-
 void pl14_extra_attack(PLW* wk) {
     pl14_exatt_table[wk->wu.routine_no[2] - ATTACK_SPECIAL](wk);
 }
@@ -66,6 +64,7 @@ void Att_PL14_AT1(PLW* wk) {
         switch (wk->wu.cg_type) {
         case 10:
             wk->wu.routine_no[3]++;
+            /* fall through */
         case 20:
             setup_mvxy_data(&wk->wu, wk->wu.mvxy.index);
             wk->wu.mvxy.index++;
@@ -100,6 +99,7 @@ void Att_PL14_AT1(PLW* wk) {
         case 21:
             reset_mvxy_data(&wk->wu);
             wk->wu.cg_type = 0;
+            /* fall through */
         default:
             break;
         }
@@ -146,7 +146,6 @@ void Att_PL14_AT2(PLW* wk) {
         break;
     }
 }
-
 
 
 

@@ -422,6 +422,7 @@ PLW* wk;
             if (wk->wu.routine_no[1] == PLAYER_ATTACK) {
                 break;
             }
+            /* fall through */
         default:
             wk->sa->saeff_mp = 0;
             wk->sa->mp_rno = MP_NONE;
@@ -503,8 +504,6 @@ PLW* wk;
 
 
 
-
-
 /* provisional name */
 void sag_normal(PLW* wk) {
     switch (wk->sa->sa_rno) {
@@ -541,6 +540,7 @@ void sag_normal(PLW* wk) {
             if (wk->wu.routine_no[1] == PLAYER_ATTACK) {
                 break;
             }
+            /* fall through */
         default:
             wk->sa->saeff_ok = 0;
             wk->sa->sa_rno = SA_NONE;
@@ -596,6 +596,7 @@ void sag_timer(PLW* wk) {
             if (wk->wu.routine_no[1] == PLAYER_ATTACK) {
                 break;
             }
+            /* fall through */
         default:
             wk->sa->saeff_ok = 0;
             wk->sa->sa_rno = SA_NONE;
@@ -608,6 +609,7 @@ void sag_timer(PLW* wk) {
             break;
         }
         wk->sa->sa_rno = SA_TIMER_RUN;
+        /* fall through */
     case SA_TIMER_RUN:
         wk->sa->gauge.i -= wk->sa->dtm;
         if (wk->sa->gauge.s.h < 1) {
@@ -691,7 +693,6 @@ void sag_rebirth(PLW* wk) {
 
 
 
-
 void demo_set_sa_full(SA_WORK* sa) {
     sa->sa_rno = SA_READY;
     sa->ok = 1;
@@ -714,7 +715,6 @@ void get_saikinnno_idouryou(PLW* wk) {
     wk->move_power = cal_move_quantity2(wk->old_pos_data[0], 0, wk->old_pos_data[7], 0);
     wk->move_power >>= 3;
 }
-
 
 
 

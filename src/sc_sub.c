@@ -140,8 +140,7 @@ typedef struct {
 } WIN_CELL;
 
 /* provisional name */
-u32 win_mark_all_write(s16 pl)
-{
+u32 win_mark_all_write(s16 pl) {
     WIN_CELL* cell;
     s16 n;
     s32 i;

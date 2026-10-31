@@ -182,6 +182,7 @@ void coin_credit_add(s8 n, s8 m) {
         if (cc->count < cc->per_credit) {
             break;
         }
+        /* fall through */
     default:
         bcdext = 0;
         *credits = abcd(*credits, cc->credits);
@@ -401,9 +402,11 @@ void switch_work_clear(char level) {
     case 2:
         p4sw_0 = 0;
         p4sw_1 = 0;
+        /* fall through */
     case 1:
         p3sw_0 = 0;
         p3sw_1 = 0;
+        /* fall through */
     case 0:
         p2sw_0 = 0;
         p2sw_1 = 0;
@@ -435,12 +438,14 @@ void switch_read(s8 mode) {
         lo = ~(s16)SW_SYSTEM & 0x800;
         hi = (~SW_SYSTEM & 0x8000) >> 3;
         p4sw_0 |= lo | hi;
+        /* fall through */
     case 1:
         p3sw_1 = p3sw_0;
         p3sw_0 = ~(s16)SW_PLAYER34 % 256U;
         lo = (~SW_SYSTEM & 0x400) << 1;
         hi = (~SW_SYSTEM & 0x4000) >> 2;
         p3sw_0 |= lo | hi;
+        /* fall through */
     case 0:
         p2sw_1 = p2sw_0;
         p2sw_0 = (~SW_PLAYER12 >> 8) % 256U;

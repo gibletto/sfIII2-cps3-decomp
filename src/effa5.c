@@ -37,7 +37,6 @@
 
 
 
-
 /* Retire the timer when Exit_No is set. */
 void effect_A5_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
@@ -101,8 +100,8 @@ void effect_A5_move(WORK_Other* ewk) {
 
 
 
-u32 effect_A5_entry(void)
-{
+/* provisional name */
+u32 effect_A5_entry(void) {
     WORK_Other* ewk;
     s16 ix;
 

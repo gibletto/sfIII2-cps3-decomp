@@ -147,7 +147,7 @@ void bg0000_demo(void) {
             if (pl_shot_trg_check()) {
                 bg_demo_cnt -= 10;
             } else {
-                bg_demo_cnt -= 1;
+                bg_demo_cnt--;
             }
         }
         if (bg_demo_cnt >= 50) {
@@ -161,7 +161,7 @@ void bg0000_demo(void) {
             if (pl_shot_trg_check()) {
                 bg_demo_cnt -= 10;
             } else {
-                bg_demo_cnt -= 1;
+                bg_demo_cnt--;
             }
         }
         if (bg_demo_cnt > 0) {

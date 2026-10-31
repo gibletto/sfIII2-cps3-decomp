@@ -304,8 +304,7 @@ void Sel_PL_Cont_4th(void) {}
 
 
 /* Sets up the BG layers of the select screen. */
-void Initialize_BG(void)
-{
+void Initialize_BG(void) {
     Setup_BG_General();
     Setup_BG_Layer2();
     Setup_BG_Layer3();
@@ -1250,7 +1249,6 @@ s32 Y;
 
 
 
-/* provisional name */
 void Setup_BG_General(void) {
     s16 i;
     Zoomf_Init();
@@ -1366,7 +1364,6 @@ void Setup_ID(void) {
 
 
 
-/* provisional name */
 /* The select screen's second entry, for the next fight: the player's choice stands, the opponent is
    set up and the exit runs on to the VS screen (or the break-in boss's). */
 s32 Next_CPU(void) {
@@ -1384,7 +1381,6 @@ const s16 Sel_Shot_Data[6] = {
 };
 
 
-/* provisional name */
 void Next_CPU_1st(void) {
     s16 pl;
     S_No++;
@@ -1419,21 +1415,18 @@ void Next_CPU_1st(void) {
 
 
 
-/* provisional name */
 void Next_CPU_2nd(void) {
     Sel_PL_Cont_2nd();
 }
 
 
 
-/* provisional name */
 void Next_CPU_3rd(void) {
     Sel_PL_Cont_3rd();
 }
 
 
 
-/* provisional name */
 void Next_CPU_4th(void) {
     if (Break_Into) {
         return;
@@ -1443,7 +1436,6 @@ void Next_CPU_4th(void) {
 
 
 
-/* provisional name */
 void Next_CPU_5th(void) {
     if (Break_Into) {
         return;
@@ -1453,7 +1445,6 @@ void Next_CPU_5th(void) {
 
 
 
-/* provisional name */
 void Next_CPU_6th(void) {
     if (Break_Into) {
         return;

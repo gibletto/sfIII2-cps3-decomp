@@ -138,30 +138,37 @@ const u16 txt_no_00_1[14] = {
     5, 220, 6, 280, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_00_2[4] = {
     7, 512, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_00_3[6] = {
     8, 240, 9, 90, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_00_4[4] = {
     10, 180, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_00_5[8] = {
     11, 140, 12, 180, 13, 380, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_00_6[6] = {
     14, 280, 15, 300, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_00_7[2] = {
     0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_00_8[6] = {
     16, 240, 17, 360, 0, -1,
 };
@@ -171,14 +178,17 @@ const u16 txt_no_02_1[6] = {
     1, 260, 2, 220, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_02_2[6] = {
     3, 130, 4, 230, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_02_3[4] = {
     5, 180, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_02_4[4] = {
     6, 400, 0, -1,
 };
@@ -188,34 +198,42 @@ const u16 txt_no_03_1[4] = {
     1, 256, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_03_2[4] = {
     2, 256, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_03_3[8] = {
     3, 90, 4, 120, 5, 288, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_03_4[8] = {
     6, 90, 7, 180, 8, 288, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_03_5[6] = {
     9, 120, 10, 240, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_03_6[4] = {
     11, 256, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_03_7[4] = {
     12, 288, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_03_8[4] = {
     13, 288, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_03_9[6] = {
     14, 240, 15, 288, 0, -1,
 };
@@ -225,18 +243,22 @@ const u16 txt_no_04_1[8] = {
     1, 170, 2, 200, 3, 256, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_04_2[4] = {
     4, 180, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_04_3[4] = {
     5, 256, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_04_4[8] = {
     6, 154, 7, 180, 8, 256, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_04_5[6] = {
     9, 64, 10, 512, 0, -1,
 };
@@ -246,23 +268,28 @@ const u16 txt_no_05_1[4] = {
     1, 342, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_05_2[6] = {
     2, 256, 3, 276, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_05_3[4] = {
     4, 512, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_05_4[14] = {
     5, 292, 9, 60, 10, 60, 11, 60,
     12, 60, 6, 60, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_05_5[2] = {
     0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_05_6[6] = {
     7, 212, 8, 330, 0, -1,
 };
@@ -306,39 +333,48 @@ const u16 txt_no_07_1[2] = {
     0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_07_2[16] = {
     1, 120, 2, 90, 3, 160, 4, 196,
     5, 100, 6, 196, 7, 256, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_07_3[2] = {
     0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_07_4[2] = {
     0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_07_5[2] = {
     0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_07_6[4] = {
     8, 512, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_07_7[4] = {
     9, 512, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_07_8[2] = {
     0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_07_9[4] = {
     10, 512, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_07_10[10] = {
     11, 176, 12, 230, 13, 134, 14, 512,
     0, -1,
@@ -349,14 +385,17 @@ const u16 txt_no_08_1[8] = {
     1, 160, 2, 280, 3, 768, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_08_2[4] = {
     4, 768, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_08_3[6] = {
     5, 180, 6, 768, 0, -1,
 };
 
+/* provisional name */
 const u16 txt_no_08_4[2] = {
     0, -1,
 };
@@ -366,18 +405,22 @@ const u16 txt_no_09_1[4] = {
     1, 0x200, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_09_2[4] = {
     2, 0x340, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_09_3[2] = {
     0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_09_4[4] = {
     3, 0x300, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_09_5[6] = {
     4, 0xF0, 5, 0x300, 0, 0xFFFF,
 };
@@ -387,22 +430,27 @@ const u16 txt_no_11_1[6] = {
     1, 0xF0, 2, 0x200, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_11_2[4] = {
     3, 0x200, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_11_3[4] = {
     4, 0x200, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_11_4[2] = {
     0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_11_5[4] = {
     5, 0x200, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_11_6[4] = {
     6, 0x200, 0, 0xFFFF,
 };
@@ -412,19 +460,23 @@ const u16 txt_no_12_1[4] = {
     1, 0x300, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_12_2[10] = {
     2, 0x5A, 3, 0xB4, 4, 0x78, 5, 0x300,
     0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_12_3[4] = {
     6, 0x300, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_12_4[4] = {
     7, 0x300, 0, 0xFFFF,
 };
 
+/* provisional name */
 const u16 txt_no_12_5[4] = {
     8, 0x300, 0, 0xFFFF,
 };

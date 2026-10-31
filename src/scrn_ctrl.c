@@ -146,7 +146,7 @@ void screen_flip_offsets_set(void) {
 void set_screen_mode(mode)
 s32 mode;
 {
-    s16 i;
+    s16 unused;
 
     window_req_flag = 1;
     screen_mode = mode;

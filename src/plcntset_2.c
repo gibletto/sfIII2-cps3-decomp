@@ -361,6 +361,7 @@ void settle_type_00000(void) {
     case KO_INIT:
         plw[Winner_id].wu.dir_timer = 60;
         pcon_rno[2]++;
+        /* fall through */
     case KO_DOWN:
         if (nekorobi_check(Loser_id)) {
             pcon_rno[2]++;
@@ -441,6 +442,7 @@ void settle_type_20000(void) {
         plw[0].wkey_flag = plw[1].wkey_flag = 1;
         plw[0].image_setup_flag = plw[1].image_setup_flag = 0;
         pcon_rno[2]++;
+        /* fall through */
     case TO_FOOTWORK:
         if (footwork_check(0)) {
             if (footwork_check(1)) {
@@ -514,9 +516,11 @@ void settle_type_40000(void) {
     case GK_INIT:
         plw[Winner_id].wkey_flag = 1;
         pcon_rno[2]++;
+        /* fall through */
     case GK_DOWN:
         if (nekorobi_check(Loser_id) != 0) {
             pcon_rno[2]++;
+            /* fall through */
         case GK_FOOTWORK:
             if (footwork_check(Winner_id)) {
                 pcon_rno[2]++;

@@ -24,12 +24,10 @@
 
 
 
-void effect_65_move(void)
-{
+void effect_65_move(void) {
 }
 
-u32 effect_65_init(void)
-{
+u32 effect_65_init(void) {
     WORK_Other* ewk;
     s16 ix;
 

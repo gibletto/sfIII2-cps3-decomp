@@ -39,8 +39,7 @@
 
 
 
-void effect_F8_move(WORK_Other* ewk)
-{
+void effect_F8_move(WORK_Other* ewk) {
     WORK* mwk = (WORK*)ewk->my_master;
 
     switch (ewk->wu.routine_no[0]) {

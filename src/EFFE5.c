@@ -46,8 +46,7 @@
 
 
 
-void effect_E4_move(void)
-{
+void effect_E4_move(void) {
 }
 
 
@@ -84,6 +83,7 @@ void effect_E5_move(WORK_Other* ewk) {
         }
         ewk->wu.routine_no[0] = R0_RUN;
         ewk->wu.routine_no[2] = 0;
+        /* fall through */
     case R0_RUN:
         if (ewk->wu.dead_f == 1) {
             ewk->wu.routine_no[0] = R0_KILL;
@@ -161,9 +161,11 @@ void effect_E5_move(WORK_Other* ewk) {
             case R2_FIRST:
                 ewk->wu.routine_no[2]++;
                 effect_E7_init(ewk, mwk);
+                /* fall through */
             case R2_INTERVAL:
                 ewk->wu.routine_no[2]++;
                 ewk->wu.dir_step = ewk->wu.dmcal_m;
+                /* fall through */
             case R2_COUNT:
                 if (EXE_flag == 0 && Game_pause == 0 && --ewk->wu.dir_step <= 0) {
                     effect_E7_init(ewk, mwk);
@@ -346,8 +348,7 @@ void setup_after_images(PLW* wk, u8 ix) {
 }
 
 /* Turn off after-images.  who 0 = this player, 1 = the opponent, anything else = both. */
-void erase_after_images(PLW* wk, u8 who)
-{
+void erase_after_images(PLW* wk, u8 who) {
     PLW* tk = (PLW*)wk->wu.target_adrs;
 
     switch (who) {

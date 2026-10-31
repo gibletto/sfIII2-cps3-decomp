@@ -1981,7 +1981,7 @@ TM_STRING dbg_koc_cmoa_str[9] = {
     { 32, 27, 0xA, str_EX },
     { 32, 27, 0xA, str_CB },
 };
-/* 02002CD8 */
+/* 02002CD8: provisional name */
 TM_STRING dbg_koc_str[9] = {
     { 32, 2, 2, str_NM },
     { 32, 2, 2, str_DM },

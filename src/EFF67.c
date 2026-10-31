@@ -346,8 +346,6 @@ void effect_67_move(WORK_Other_CONN* ewk) {
 
 
 
-
-
 s32 effect_67_init(WORK* master) {
     WORK_Other_CONN* ewk;
     s16 ix;

@@ -256,7 +256,7 @@ void Setup_Demo_Arts(void) {
 void Setup_Demo_Stage(void) {
     bg_w.area = 0;
     bg_w.stage = Demo_Stage_Play_Data[Demo_Stage_Index];
-    Demo_Stage_Index += 1;
+    Demo_Stage_Index++;
     if (++Demo_PL_Index > 3) {
         Demo_PL_Index = 0;
         Demo_Stage_Index = 0;

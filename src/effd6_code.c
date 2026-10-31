@@ -49,6 +49,7 @@ void effect_D6_move(WORK_Other* ewk) {
         ewk->wu.disp_flag = 1;
         add_pos_dir_064(&ewk->wu, ewk->wu.dir_old << 1);
         set_char_move_init(&ewk->wu, 0, 0x7D);
+        /* fall through */
     case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
@@ -145,7 +146,7 @@ void setup_hana_extra(WORK* wk, s16 num, s16 acc) {
     for (i = 0; i < num_of_hana[num]; i++) {
         rnd_01 = random_16_com() & 3;
         effect_D6_init((WORK_Other*)wk,
-                       way + hana_dir_hosei[rnd_00][i] & 0x3F,
+                       (way + hana_dir_hosei[rnd_00][i]) & 0x3F,
                        hana_speed_hosei[rnd_01][i],
                        hana_delta_hosei[rnd_01][i],
                        acc);

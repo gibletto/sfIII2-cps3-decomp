@@ -52,6 +52,7 @@ void Att_PL03_TOKUSHUKOUDOU(PLW* wk) {
             wk->wu.cg_type = 0;
             wk->tk_dageki += 2;
             wk->tk_nage++;
+            /* fall through */
         default:
             break;
         }

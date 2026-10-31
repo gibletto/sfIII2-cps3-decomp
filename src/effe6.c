@@ -246,6 +246,7 @@ void effe6_0001(WORK_Other* ewk) {
         if (ewk->wu.old_rno[3] > ewk->wu.xyz[0].disp.pos) {
             ewk->wu.routine_no[1]++;
         }
+        /* fall through */
     case R1_REST:
         if (ewk->wu.old_rno[6] < end_w.r_no_2) {
             ewk->wu.routine_no[1] = R1_KILL;
@@ -264,6 +265,7 @@ void effe6_0002(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:
         effe6_init_common(ewk);
+        /* fall through */
     case R1_START:
         ewk->wu.routine_no[1]++;
         ewk->wu.xyz[0].disp.pos = effe6_data_tbl[ewk->wu.type][3];
@@ -469,6 +471,7 @@ void effe6_0007(WORK_Other* ewk) {
     case R1_INIT:
         effe6_init_common(ewk);
         ewk->wu.old_rno[3] = effe6_data_tbl[ewk->wu.type][3];
+        /* fall through */
     case R1_START:
         ewk->wu.routine_no[1]++;
         ewk->wu.my_mr_flag = 1;
@@ -508,7 +511,6 @@ void effe6_0007(WORK_Other* ewk) {
         break;
     }
 }
-
 
 
 
@@ -566,6 +568,7 @@ void effe6_0009(WORK_Other* ewk) {
             ewk->wu.xyz[1].cal = 0;
             ewk->wu.routine_no[1]++;
         }
+        /* fall through */
     case R1_REST:
         disp_pos_trans_entry(ewk);
         break;
@@ -619,12 +622,14 @@ void effe6_0011(WORK_Other* ewk) {
             ewk->wu.disp_flag = 2;
             ewk->wu.blink_timing = 1;
             ewk->wu.old_rno[5] = 30;
+            /* fall through */
         case R1_BLINK:
             ewk->wu.old_rno[5]--;
             if (ewk->wu.old_rno[5] < 0) {
                 ewk->wu.routine_no[1]++;
                 ewk->wu.disp_flag = 1;
             }
+            /* fall through */
         case R1_REST:
             disp_pos_trans_entry(ewk);
             break;
@@ -693,6 +698,7 @@ void effe6_0012(WORK_Other* ewk) {
                 ewk->wu.my_mr.size.y--;
             }
         }
+        /* fall through */
     case R1_IDLE:
         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos & 0x3FF;
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
@@ -759,6 +765,7 @@ void effe6_0013(WORK_Other* ewk) {
                 ewk->wu.my_mr.size.y--;
             }
         }
+        /* fall through */
     case R1_IDLE:
         ewk->wu.position_x = ewk->wu.xyz[0].disp.pos & 0x3FF;
         ewk->wu.position_y = ewk->wu.xyz[1].disp.pos & 0x3FF;
@@ -890,6 +897,7 @@ void effe6_0017(WORK_Other* ewk) {
             set_char_move_init2(&ewk->wu, 0, 19, 8, 0);
             effect_H4_init();
         }
+        /* fall through */
     case R1_REST:
         sort_push_request4(&ewk->wu);
         break;
@@ -915,6 +923,7 @@ void effe6_0018(WORK_Other* ewk) {
         } else {
             ewk->wu.routine_no[1]++;
         }
+        /* fall through */
     case R1_REST:
         if (ewk->wu.old_rno[6] < end_w.r_no_2) {
             ewk->wu.routine_no[1] = R1_KILL;
@@ -990,6 +999,7 @@ void effe6_0020(WORK_Other* ewk) {
         if (ewk->wu.xyz[0].disp.pos > 0x230) {
             ewk->wu.routine_no[1]++;
         }
+        /* fall through */
     case R1_REST:
         disp_pos_trans_entry(ewk);
         break;

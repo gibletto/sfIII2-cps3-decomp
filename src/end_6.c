@@ -67,6 +67,7 @@ void end_06000(u16 pl_num) {
             end_600_move();
             end_601_move();
         }
+        /* fall through */
     case END1_DONE:
         end_scn_pos_set2();
         end_bg_pos_hosei2();

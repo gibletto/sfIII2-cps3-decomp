@@ -19,12 +19,10 @@ const PANEL end_200_panel1[2] = {
     { 0x20C0, 6 },
 };
 
-/* provisional name */
 const s16 timer_6_tbl[4] = {
     420, 780, 660, 720,
 };
 
-/* provisional name */
 const s16 end_6_pos[4][2] = {
     { 256, 256 }, { 768, 256 }, { 256, 0 }, { 768, 0 },
 };

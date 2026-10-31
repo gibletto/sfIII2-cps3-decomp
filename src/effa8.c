@@ -56,8 +56,7 @@ void effect_A8_move(WORK_Other* ewk) {
     }
 }
 
-u32 effect_A8_init(void)
-{
+u32 effect_A8_init(void) {
     WORK_Other* ewk;
     s16 ix;
 

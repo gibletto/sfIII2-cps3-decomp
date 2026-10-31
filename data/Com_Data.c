@@ -104,6 +104,7 @@ const s16 Shell_Area_Unit_Data[16][3] = {
     { 0, 0, 0 },  /* Shin Gouki */
 };
 
+/* provisional name */
 const s8 Shell_Area_Step_Data[8][8] = {
     { 9, 9, 9, 9, 9, 9, 9, 9 },
     { 8, 8, 8, 8, 8, 8, 8, 8 },

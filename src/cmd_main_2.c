@@ -105,7 +105,6 @@ void waza_check(PLW* pl) {
 
 
 
-
 void cmd_data_set(PLW* pl, s16 i) {
     u8* ptr3;
     u16* ptr4;
@@ -1488,7 +1487,6 @@ dead:
     wk->w_type = 0;
     return 1;
 }
-
 
 
 

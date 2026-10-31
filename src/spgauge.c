@@ -499,6 +499,7 @@ s8 Stpl_Num;
                 spg_dat[Stpl_Num].time_rno = SPG_TIME_FLASH;
                 goto case_3;
             }
+            /* fall through */
         case SPG_TIME_RUN:
             if (spg_dat[Stpl_Num].spg_level == plw[Stpl_Num].sa->store) {
                 spg_dat[Stpl_Num].timer2--;
@@ -569,6 +570,7 @@ s8 Stpl_Num;
             } else {
                 spg_dat[Stpl_Num].time_rno = SPG_TIME_END;
             }
+            /* fall through */
         case SPG_TIME_END:
             sa_moji_trans(Stpl_Num, 1, 0);
             sast_color_chenge(Stpl_Num);
@@ -600,6 +602,7 @@ s8 Stpl_Num;
                 sa_stock_trans(spg_dat[Stpl_Num].spg_level, col, Stpl_Num);
             }
             spg_dat[Stpl_Num].max_rno = SPG_MAX_FLASH;
+            /* fall through */
         case SPG_MAX_FLASH:
             spg_dat[Stpl_Num].timer--;
             if (spg_dat[Stpl_Num].timer != 0) {
@@ -641,7 +644,6 @@ s8 Stpl_Num;
         }
     }
 }
-
 
 
 

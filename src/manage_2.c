@@ -144,7 +144,6 @@ void sound_reg_level_set(s16 pitch, s8 volume);
 
 
 
-
 void Game_Manage_13th(void);
 void Game_Manage_14th(void);
 s32 Check_Special_Settle(void);
@@ -436,7 +435,7 @@ void Game_Manage_4th(void) {
         if (plw[0].wu.vital_new != plw[1].wu.vital_new) {
             C_No0 = C0_ROUND_WIN;
             Round_Result |= RESULT_TIME;
-            ROW_ELEM(win_type[Winner_id], PL_Wins[Winner_id]) = WIN_MARK_NORMAL;
+            (&win_type[Winner_id][0])[PL_Wins[Winner_id]] = WIN_MARK_NORMAL;
             Check_Perfect(Winner_id);
             PL_Wins[Winner_id]++;
             Update_VS_Data();
@@ -462,7 +461,7 @@ void Setup_Win_Mark(void) {
     if (Round_Result & 0x180) {
         Setup_BGM_Fade_In(150);
         sound_reg_level_set(0, -128);
-        ROW_ELEM(win_type[Winner_id], PL_Wins[Winner_id]) = WIN_MARK_SA;
+        (&win_type[Winner_id][0])[PL_Wins[Winner_id]] = WIN_MARK_SA;
         sound_request(142);
         Finish_SE();
         return;
@@ -474,7 +473,7 @@ void Setup_Win_Mark(void) {
         } else {
             Shin_Gouki_BGM = 0;
         }
-        ROW_ELEM(win_type[Winner_id], PL_Wins[Winner_id]) = WIN_MARK_SA;
+        (&win_type[Winner_id][0])[PL_Wins[Winner_id]] = WIN_MARK_SA;
         sound_request(142);
         Finish_SE();
         return;
@@ -489,8 +488,7 @@ void Setup_Win_Mark(void) {
 
 /* Counts how the winner finished a round against the CPU (super art, perfect or chip finish), for the game and
    for the stage. */
-void Update_BI_Term(void)
-{
+void Update_BI_Term(void) {
     if (Play_Type == PLAY_VS_PLAYER) {
         return;
     }
@@ -522,8 +520,7 @@ void Update_BI_Term(void)
 
 
 /* Silences the music; unless the music is off, it fades back in after time frames. */
-void Control_Music_Fade(s16 time)
-{
+void Control_Music_Fade(s16 time) {
     if (PB_Music_Off) {
         goto set;
     }
@@ -1332,6 +1329,7 @@ void Game_Manage_9th(void) {
         C_No1++;
         Game_pause = 1;
         Switch_Screen_Init(3, 3);
+        /* fall through */
     default:
         if (Switch_Screen()) {
             if (bg_w.stage == 8 && bg_w.area == 0) {
@@ -1966,22 +1964,22 @@ void Game_Manage_14_2(void) {
 
 
 void Ck_Win_Record(void) {
-    s16 w;
-    s16 l;
+    s16 win_id;
+    s16 lose_id;
     if (Play_Type == PLAY_VS_PLAYER) {
         if (PL_Wins[0] >= Game_setting.Battle_Number + 1 || PL_Wins[1] >= Game_setting.Battle_Number + 1) {
             if (PL_Wins[0] >= Game_setting.Battle_Number + 1) {
-                w = 0;
-                l = 1;
+                win_id = 0;
+                lose_id = 1;
             } else {
-                w = 1;
-                l = 0;
+                win_id = 1;
+                lose_id = 0;
             }
-            if (++Win_Record[w] <= 99) {
-                Disp_Win_Record_Sub(w);
-                Erase_Win_Record(l);
+            if (++Win_Record[win_id] <= 99) {
+                Disp_Win_Record_Sub(win_id);
+                Erase_Win_Record(lose_id);
             } else {
-                Win_Record[w] = 99;
+                Win_Record[win_id] = 99;
             }
         }
     }
@@ -2054,6 +2052,7 @@ void Disp_Win_Record(void) {
 
 
 
+/* provisional name */
 void Erase_Win_Record(PL_id)
 s16 PL_id;
 {
@@ -2120,8 +2119,7 @@ void Update_Level_Control(void) {
 
 
 /* Sets Complete_Victory, which ends the round-end waits of Game_Management at once. */
-void complete_victory_pause(void)
-{
+void complete_victory_pause(void) {
     Complete_Victory = 1;
 }
 
@@ -2198,7 +2196,7 @@ s32 Check_Ending(void) {
         Stock_My_char[WINNER] = My_char[WINNER];
         Stock_Player_Color[WINNER] = Player_Color[WINNER];
         for (i = 0; i < 16; i++) {
-            ROW_ELEM(Break_Com[WINNER], i) = 0;
+            (&Break_Com[WINNER][0])[i] = 0;
         }
         return 1;
     }
@@ -2231,7 +2229,7 @@ s32 Check_Ending_Special(void) {
         Stock_My_char[WINNER] = My_char[WINNER];
         Stock_Player_Color[WINNER] = Player_Color[WINNER];
         for (i = 0; i < 16; i++) {
-            ROW_ELEM(Break_Com[WINNER], i) = 0;
+            (&Break_Com[WINNER][0])[i] = 0;
         }
         return 1;
     }
@@ -2245,7 +2243,7 @@ s16 Next_VS_Index(void) {
     if (VS_Index[WINNER] >= 8) {
         return 8;
     }
-    ROW_ELEM(Last_VS_Index, WINNER) = VS_Index[WINNER];
+    (&Last_VS_Index[0])[WINNER] = VS_Index[WINNER];
     for (; Last_VS_Index[WINNER] <= 7; Last_VS_Index[WINNER]++) {
         em = EM_Candidate[WINNER][Last_VS_Index[WINNER]];
         if (Break_Com[WINNER][em] == 0) {
@@ -2342,17 +2340,17 @@ void Update_VS_Data(void) {
     Stock_Com_Arts[Player_id] = -1;
     if (My_char[COM_id] == PL_GOUKI1) {
         Special_Enemy[Player_id] = 14;
-        ROW_ELEM(Break_Com[Winner_id], EM_id) = 1;
+        (&Break_Com[Winner_id][0])[EM_id] = 1;
         return;
     }
     if (My_char[COM_id] == PL_GOUKI2) {
         Special_Enemy[Player_id] = 15;
-        ROW_ELEM(Break_Com[Winner_id], EM_id) = 1;
+        (&Break_Com[Winner_id][0])[EM_id] = 1;
         return;
     }
     if (My_char[COM_id] != rival_char_tbl[My_char[Player_id]] && My_char[COM_id] != PL_GOUKI1 && My_char[COM_id] != PL_GOUKI2) {
         VS_Index[Player_id]++;
-        ROW_ELEM(Break_Com[Winner_id], EM_id) = 1;
+        (&Break_Com[Winner_id][0])[EM_id] = 1;
     }
     if (++Round_Level > 7) {
         Round_Level = 7;
@@ -2397,6 +2395,7 @@ void Setup_BGM_Fade_In(s16 time) {
 
 
 
+/* provisional name */
 void Update_Personal_Time(s16 id) {
     if (Continue_Coin2[id] == 0) {
         SC_Personal_Time[id] = Control_Time;

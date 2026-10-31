@@ -65,6 +65,7 @@ void effG0_akebono_move(WORK_Other* ewk) {
         ewk->wu.dir_timer = 8;
         ewk->wu.dir_step = 0;
         ewk->wu.routine_no[0]++;
+        /* fall through */
     case R0_SCROLL:
         if (!ewk->wu.dir_timer) {
             akebono_scrn_move(ewk->wu.dir_step);

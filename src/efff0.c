@@ -50,6 +50,7 @@ void effect_F0_move(WORK_Other* ewk) {
         case R0_INIT:
             ewk->wu.routine_no[0]++;
             scrn_map_set_now(3, ake_scrl_w[0].adrs);
+            /* fall through */
         case R0_NORMAL:
             seraph_flag = 0;
             if (!akebono_flag && !sa_pa_flag) {
@@ -60,6 +61,7 @@ void effect_F0_move(WORK_Other* ewk) {
             }
             ewk->wu.routine_no[0]++;
             ewk->wu.dir_old = 0;
+            /* fall through */
         case R0_WAIT:
             if (!another_bg[0] && !another_bg[1]) {
                 break;
@@ -92,6 +94,7 @@ void effect_F0_move(WORK_Other* ewk) {
                 break;
             }
             sound_reg_level_set(0, 0xF0);
+            /* fall through */
         case R0_MOVE:
             if (ewk->wu.type) {
                 if (another_bg[0] && another_bg_old[0] == 0) {

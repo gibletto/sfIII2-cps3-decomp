@@ -155,7 +155,7 @@ void effect_A6_move(WORK_Other_CONN* wk) {
         ewk->wu.routine_no[0]++;
         break;
     default:
-        all_cgps_put_back((WORK_Other*)ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }

@@ -99,12 +99,10 @@ const s16 scr_obj_data12_10[8] = {
     0, 2, 8256, 480, 48, 83, 2, 0,
 };
 
-/* provisional name */
 const u16 kotp_07_dm_vital[4] = {
     96, 240, 384, 384,
 };
 
-/* provisional name */
 const TAMA tama_data[155] = {
     { 4, 0x1D, 0, 0x10, 0, 1, 0, 1, 2, 3, 4, 0xB, 0xC, 0, 0, 1, 384, 999, -56, 66 },
     { 4, 0x1D, 0, 0x10, 0, 1, 0, 1, 2, 3, 4, 0xB, 0xC, 1, 0, 1, 384, 999, -56, 66 },

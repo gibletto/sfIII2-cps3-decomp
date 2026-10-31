@@ -113,6 +113,7 @@ static void bg_move_common(void) {
 
 
 
+/* provisional name */
 void bg1403(void) {
     if (EXE_flag || Game_pause) {
         return;

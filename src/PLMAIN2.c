@@ -128,7 +128,6 @@ void player_mvbs_0000(PLW* wk) {
 
 
 
-
 void player_mvbs_1000(PLW* wk) {
     const APPEAR_DATA* dtbl;
     s16 ap_work;
@@ -188,7 +187,6 @@ void plmv_b_1020(PLW* wk, s16 step) {
         wk->wu.xyz[1].disp.pos = 0;
     }
 }
-
 
 
 

@@ -121,66 +121,98 @@ const TM_STRING config_saving_scr[2] = {
     { 5, 14, 0xE, str_saving_in_eeprom },
 };
 
+/* provisional name */
 const s8 str_config_menu_title[40] = "7. C O N F I G U R A T I O N   M E N U\n";
 
+/* provisional name */
 const s8 str_config_1_system[12] = "1. SYSTEM\n\0\xFF";
 
+/* provisional name */
 const s8 str_config_2_game[12] = "2. GAME\n\0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_config_3_default[12] = "3. DEFAULT\n";
 
+/* provisional name */
 const s8 str_config_4_save_exit[16] = "4. SAVE & EXIT\0\xFF";
 
+/* provisional name */
 const s8 str_guide_select_up_down[28] = "SELECT = 1P UP or DOWN   \n\0\xFF";
 
+/* provisional name */
 const s8 str_guide_start_shot1[28] = "START  = 1P SHOT1        \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_guide_reset_shot1_shot2[28] = "RESET  = 1P SHOT1 & SHOT2\0\xFF\xFF";
 
+/* provisional name */
 const s8 str_sysconfig_title[48] = "7-1. S Y S T E M   C O N F I G U R A T I O N\n\0\xFF\xFF";
 
+/* provisional name */
 const s8 str_sys_1_coin[12] = "1. COIN\n\0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_sys_2_chute_mode[16] = "2. CHUTE MODE\n\0\xFF";
 
+/* provisional name */
 const s8 str_sys_3_continue[16] = "3. CONTINUE\n\0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_sys_4_monitor[12] = "4. MONITOR\n";
 
+/* provisional name */
 const s8 str_sys_5_demo_sound[16] = "5. DEMO SOUND\n\0\xFF";
 
+/* provisional name */
 const s8 str_sys_6_sound_mode[16] = "6. SOUND MODE\0\xFF\xFF";
 
+/* provisional name */
 const s8 str_sys_7_exit[8] = "7. EXIT";
 
+/* provisional name */
 const s8 str_sys_7_language[16] = "7. LANGUAGE\n\0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_sys_8_exit[8] = "8. EXIT";
 
+/* provisional name */
 const s8 str_sys_7_c_dispenser[16] = "7. C.DISPENSER\n";
 
+/* provisional name */
 const s8 str_sys_8_win_point[16] = "8. WIN POINT\n\0\xFF\xFF";
 
+/* provisional name */
 const s8 str_sys_9_exit[8] = "9. EXIT";
 
+/* provisional name */
 const s8 str_sys_7_voice_type[16] = "7. VOICE TYPE\n\0\xFF";
 
+/* provisional name */
 const s8 str_sys_8_win_point_com[20] = "8. WIN POINT COM\n\0\xFF\xFF";
 
+/* provisional name */
 const s8 str_sys_9_win_point_human[20] = "9. WIN POINT HUMAN\n";
 
+/* provisional name */
 const s8 str_sys_10_exit[12] = "10. EXIT\0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_guide_select_option[36] = "SELECT OPTION  = 1P UP or DOWN    \n";
 
+/* provisional name */
 const s8 str_guide_modify_setting[36] = "MODIFY SETTING = 1P LEFT or RIGHT \n";
 
+/* provisional name */
 const s8 str_guide_modify_shot1_shot2[36] = "               = 1P SHOT1 or SHOT2\0\xFF";
 
+/* provisional name */
 const s8 str_guide_return_config_menu[36] = "RETURN TO CONFIGURATION MENU      \n";
 
+/* provisional name */
 const s8 str_guide_return_shot1[36] = "               = 1P SHOT1         \0\xFF";
 
+/* provisional name */
 const s8 str_saving_configuration[36] = "NOW  SAVING  NEW  CONFIGURATION\n\0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_saving_in_eeprom[40] = "                         IN  EEPROM...\0\xFF";

@@ -617,7 +617,6 @@ const s16 p3_cmd_29[25] = {  /* Yun: Tetsuzan Kou, 623+P */
     CMD_END,
 };
 
-/* provisional name */
 const s16 p3_cmd_30[25] = {  /* Yun: Kobokushi (two punches: the feint), 214+P */
     CMD_RESET, CMD_LV_UP, 0, CMD_WAZA(YUN_KOBOKUSHI), CMD_BT_CHG | CMD_BT_FOURTH, CMD_EX_PUNCHES,
     CMD_LEVER(0, CMD_LV_DOWN),
@@ -626,7 +625,6 @@ const s16 p3_cmd_30[25] = {  /* Yun: Kobokushi (two punches: the feint), 214+P *
     CMD_END,
 };
 
-/* provisional name */
 const s16 p3_cmd_31[25] = {  /* Yun: Senkyuutai, 236+K */
     CMD_RESET, CMD_LV_UP, 0, CMD_WAZA(YUN_SENKYUUTAI), CMD_BT_CHG | CMD_BT_EX, CMD_EX_KICKS,
     CMD_LEVER(0, CMD_LV_DOWN),
@@ -863,7 +861,6 @@ const s16 p6_cmd_28[17] = {  /* Hugo: Moonsault Press, 360+P */
     CMD_END,
 };
 
-/* provisional name */
 const s16 p6_cmd_29[25] = {  /* Hugo: Shootdown Backbreaker, 623+K */
     CMD_RESET, CMD_LV_UP, 0, CMD_WAZA(HUGO_SHOOTDOWN_BACKBREAKER), CMD_BT_CHG, CMD_EX_KICKS,
     CMD_STEP(CK_LEVER_OFF, 1, 0, CMD_EXACT(CMD_LV_FORWARD)),
@@ -872,7 +869,6 @@ const s16 p6_cmd_29[25] = {  /* Hugo: Shootdown Backbreaker, 623+K */
     CMD_END,
 };
 
-/* provisional name */
 const s16 p6_cmd_30[25] = {  /* Hugo: Giant Palm Bomber, 214+P */
     CMD_RESET, CMD_LV_UP, 0, CMD_WAZA(HUGO_GIANT_PALM_BOMBER), CMD_BT_CHG | CMD_BT_EX, CMD_EX_PUNCHES,
     CMD_LEVER(0, CMD_LV_DOWN),
@@ -963,7 +959,6 @@ const s16 p7_cmd_30[25] = {  /* Ibuki: Hien, 421+K */
     CMD_END,
 };
 
-/* provisional name */
 const s16 p7_cmd_31[25] = {  /* Ibuki: Kubi Ori, 236+K */
     CMD_RESET, CMD_LV_UP, 0, CMD_WAZA(IBUKI_KUBI_ORI), CMD_BT_CHG | CMD_BT_EX, CMD_EX_KICKS,
     CMD_LEVER(0, CMD_LV_DOWN),
@@ -972,7 +967,6 @@ const s16 p7_cmd_31[25] = {  /* Ibuki: Kubi Ori, 236+K */
     CMD_END,
 };
 
-/* provisional name */
 const s16 p7_cmd_32[25] = {  /* Ibuki: Tsumuji, 214+K */
     CMD_RESET, CMD_LV_UP, 0, CMD_WAZA(IBUKI_TSUMUJI), CMD_BT_CHG | CMD_BT_EX, CMD_EX_KICKS,
     CMD_LEVER(0, CMD_LV_DOWN),

@@ -49,12 +49,12 @@ extern const s16 zoom_up_tbl[64];       /* provisional name */
 
 
 
-
 /* provisional name */
 void Shell14_0013(void) {}
 
 
 
+/* provisional name */
 void init_char_gfx_tables(void) {
     s16 i;
     cg_data_list = (CharGfxEntry*)cg_data_tbl;

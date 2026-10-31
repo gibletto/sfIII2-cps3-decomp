@@ -188,6 +188,7 @@ const s16 oro_movexy_table[70][6] = {
     {      0,      0,     0,       0,   -128,     0 },  /* 69 */
 };
 
+/* provisional name */
 const PARABORA_DATA oro_parabora_data[20] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

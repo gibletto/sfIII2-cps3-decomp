@@ -171,7 +171,6 @@ void Se_Myself_Die(WORK_Other* ewk, u16 se) {
 
 
 
-
 void Se_Let(WORK_Other* ewk, u16 Code) {
     s32 se;
     s32 uid;

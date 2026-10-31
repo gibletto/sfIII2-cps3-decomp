@@ -12,7 +12,6 @@
 
 extern const s16 Face_Pos_Data[][2];
 
-/* provisional name */
 /* Two entries per face on the character select screen: x, y. */
 const s16 Face_Pos_Data[64][2] = {
     { 0, 93 }, { -120, 95 }, { -144, 101 }, { -96, 99 },

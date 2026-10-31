@@ -275,6 +275,7 @@ const s16 yun_movexy_table[81][6] = {
     {   2048,    -32,     1,    1664,    -96,     0 },  /* 80 */
 };
 
+/* provisional name */
 const PARABORA_DATA yun_parabora_data[33] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

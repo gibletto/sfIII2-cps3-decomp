@@ -120,7 +120,6 @@ extern void end_BG150();
 
 
 
-
 void Ending_init(void) {
     end_w.r_no_0 = END_INIT;
     end_w.r_no_1 = END1_INIT;
@@ -218,7 +217,7 @@ s16 pl_num;
         break;
     case GILL_STAFF:
         if (DEBUG_DISP) {
-            end_w.r_no_0++;
+            tilemap_clear_rect(Game_setting.Screen_Mode * 7 + 5, 9, Game_setting.Screen_Mode * 7 + 42, 11);
         }
         end_staff_main();
         end_bg_move();
@@ -546,6 +545,7 @@ void end_00000(void) {
 
 
 
+/* provisional name */
 void end_color_load(void) {
     switch (end_type_tbl[end_w.type]) {
     case 0:
@@ -727,6 +727,7 @@ void end_bg_pos_hosei2(void) {
 
 
 
+/* provisional name */
 void end_scn_pos_set(u16 bg_no) {
     Scrn_Move_Set_R(bg_w.bgw[bg_no].fam_no, (bg_w.bgw[bg_no].xy[0].disp.pos & 0x3FF) - bg_w.pos_offset,
                     bg_w.bgw[bg_no].xy[1].disp.pos);
@@ -746,6 +747,7 @@ void end_scn_pos_set2(void) {
 }
 
 
+/* provisional name */
 void end_bg_block_attr_add(s16 bg, s32 ofs, s16 w, s32 cell, s16 h) {
     u16* adrs;
     adrs = bg_w.bgw[bg].bg_address;
@@ -780,7 +782,7 @@ void end_X_com01(void) {
 
 void end_fade_bgm(void) {
     if (end_fade_flag != 0) {
-        end_fade_timer -= 1;
+        end_fade_timer--;
         if (end_fade_timer < 0) {
             end_fade_flag = 0;
             bgm_fade_out(0x111);
@@ -818,6 +820,7 @@ s32 Cut_Cut_Cut_t(void) {
 }
 
 
+/* provisional name */
 void Cut_Cut_Cut_dummy(void) {}
 
 

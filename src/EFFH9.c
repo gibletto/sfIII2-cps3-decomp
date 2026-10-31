@@ -88,6 +88,7 @@ void effect_H7_move(WORK_Other* ewk) {
         ewk->wu.rl_flag = 0;
         ewk->wu.dir_timer = effH7_wait_tbl[ewk->wu.type];
         set_char_move_init(&ewk->wu, 0, effH7_char_tbl[ewk->wu.rl_waza][ewk->wu.type]);
+        /* fall through */
     case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
@@ -126,10 +127,12 @@ void effect_H7_move(WORK_Other* ewk) {
                     break;
                 }
                 ewk->wu.routine_no[1]++;
+                /* fall through */
             case R1_PICK:
                 ewk->wu.dir_timer = 0;
                 ewk->wu.move_xy_table = effH7_move_tbl[random_16_com()];
                 ewk->wu.routine_no[1]++;
+                /* fall through */
             default:
                 char_move(&ewk->wu);
                 ewk->wu.dir_step = ewk->wu.move_xy_table[ewk->wu.dir_timer++];
@@ -200,6 +203,7 @@ void effect_H8_move(WORK_Other* ewk) {
         ewk->wu.rl_flag = 0;
         ewk->wu.dir_timer = effH8_wait_tbl[ewk->wu.type];
         set_char_move_init(&ewk->wu, 0, effH8_char_tbl[ewk->wu.rl_waza][ewk->wu.type]);
+        /* fall through */
     case R0_MOVE:
         if (ewk->wu.dead_f == 1 || Suicide != 0) {
             ewk->wu.disp_flag = 0;
@@ -255,6 +259,7 @@ void effect_H8_move(WORK_Other* ewk) {
                 }
                 ewk->wu.position_x = ewk->wu.xyz[0].disp.pos;
                 ewk->wu.position_y = ewk->wu.xyz[1].disp.pos;
+                /* fall through */
             default:
                 break;
             }

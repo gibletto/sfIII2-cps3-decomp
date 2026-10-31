@@ -24,7 +24,6 @@
 
 
 
-
 void effect_J0_move(WORK_Other* ewk) {
     WORK_Other* mwk = (WORK_Other*)ewk->my_master;
     WORK_Other* cwk = (WORK_Other*)ewk->wu.target_adrs;

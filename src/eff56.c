@@ -61,8 +61,7 @@ void load_any_color();
 
 
 
-s32 effect_56_init(s8 side)
-{
+s32 effect_56_init(s8 side) {
     WORK_Other* ewk;
     s16 ix;
 
@@ -84,6 +83,7 @@ void effect_56_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case R0_INIT:
         ewk->wu.routine_no[0]++;
+        /* fall through */
     case R0_MOVE:
         ewk->wu.type--;
         if (ewk->wu.type == 0) {

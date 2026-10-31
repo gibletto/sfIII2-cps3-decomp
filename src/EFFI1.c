@@ -32,6 +32,7 @@ s32 effect_67_init();                   /* in EFF67.c */
 
 
 
+/* provisional name */
 void effect_I1_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case R0_WAIT:

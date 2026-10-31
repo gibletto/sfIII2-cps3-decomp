@@ -286,14 +286,15 @@ void (*sysconfig_item_card_tbl2[10])(void) = {
 
 
 
-s8 config_menu_run(void)
-{
+/* provisional name */
+s8 config_menu_run(void) {
     config_menu_tbl[Config_No_0]();
     return cfg_reserve;
 }
 
 
 
+/* provisional name */
 void config_menu_init(void) {
     s32 i;
     const u8** table;
@@ -345,6 +346,7 @@ void config_menu_init(void) {
 
 
 
+/* provisional name */
 void config_menu_dispatch(void) {
     /* per-page handler table in work RAM (02007E04), indexed by Config_No_1 */
     config_page_tbl[Config_No_1]();
@@ -352,15 +354,15 @@ void config_menu_dispatch(void) {
 
 
 
-void config_top_page(void)
-{
+/* provisional name */
+void config_top_page(void) {
     config_top_step_tbl[Config_No_2]();
 }
 
 
 
-void config_top_draw(void)
-{
+/* provisional name */
+void config_top_draw(void) {
     s32 x;
     if (screen_mode == 7) {
         x = 4;
@@ -384,6 +386,7 @@ void config_top_draw(void)
 
 
 
+/* provisional name */
 void config_top_select(void) {
     s32 x;
     if (screen_mode == 7) {
@@ -414,6 +417,7 @@ void config_top_select(void) {
 
 
 
+/* provisional name */
 void config_top_system(void) {
     u16 trig;
     s32 x;
@@ -435,6 +439,7 @@ void config_top_system(void) {
 
 
 
+/* provisional name */
 void config_top_game(void) {
     u16 trig;
     s32 x;
@@ -456,6 +461,7 @@ void config_top_game(void) {
 
 
 
+/* provisional name */
 void config_top_default(void) {
     register s8 ix;
     const u8** table;
@@ -518,6 +524,7 @@ void config_top_default(void) {
 
 
 
+/* provisional name */
 void config_top_save_exit(void) {
     u16 trig;
     s32 i;
@@ -589,12 +596,14 @@ void config_top_save_exit(void) {
 
 
 
+/* provisional name */
 void sysconfig_page(void) {
     sysconfig_step_tbl[Config_No_2]();
 }
 
 
 
+/* provisional name */
 void sysconfig_draw(void) {
     s32 x;
     if (screen_mode == 7) {
@@ -649,6 +658,7 @@ void sysconfig_draw(void) {
 
 
 
+/* provisional name */
 void sysconfig_select(void) {
     s32 x;
     if (screen_mode == 7) {
@@ -742,6 +752,7 @@ void sysconfig_select(void) {
 
 
 
+/* provisional name */
 void sysconfig_coin(void) {
     register s8 step;
     s32 x;
@@ -761,6 +772,7 @@ void sysconfig_coin(void) {
                 cfg_coin_sel = 3;
             }
         }
+        /* fall through */
     case 1:
     default:
         cfg_coin_special = 0;
@@ -870,6 +882,7 @@ void sysconfig_coin(void) {
 
 
 
+/* provisional name */
 void sysconfig_chute_mode(void) {
     register s8 step;
     s32 x;
@@ -912,6 +925,7 @@ void sysconfig_chute_mode(void) {
 
 
 
+/* provisional name */
 void sysconfig_continue(void) {
     s32 x;
     if (screen_mode == 7) {
@@ -931,6 +945,7 @@ void sysconfig_continue(void) {
 
 
 
+/* provisional name */
 void sysconfig_monitor(void) {
     s32 x;
     if (screen_mode == 7) {
@@ -950,6 +965,7 @@ void sysconfig_monitor(void) {
 
 
 
+/* provisional name */
 void sysconfig_demo_sound(void) {
     s32 x;
     if (screen_mode == 7) {
@@ -969,6 +985,7 @@ void sysconfig_demo_sound(void) {
 
 
 
+/* provisional name */
 void sysconfig_sound_mode(void) {
     s32 x;
     if (screen_mode == 7) {
@@ -988,6 +1005,7 @@ void sysconfig_sound_mode(void) {
 
 
 
+/* provisional name */
 void sysconfig_language(void) {
     register s8 step;
     s32 x;
@@ -1013,6 +1031,7 @@ void sysconfig_language(void) {
 
 
 
+/* provisional name */
 void sysconfig_dispenser(void) {
     s32 x;
     if (screen_mode == 7) {
@@ -1032,6 +1051,7 @@ void sysconfig_dispenser(void) {
 
 
 
+/* provisional name */
 void sysconfig_win_point(void) {
     register s8 step;
     s32 x;
@@ -1061,6 +1081,7 @@ void sysconfig_win_point(void) {
 
 
 
+/* provisional name */
 void sysconfig_win_point_human(void) {
     register s8 step;
     s32 x;
@@ -1086,6 +1107,7 @@ void sysconfig_win_point_human(void) {
 
 
 
+/* provisional name */
 void sysconfig_voice_type_toggle(void) {
     s32 x;
     if (screen_mode == 7) {
@@ -1110,6 +1132,7 @@ void sysconfig_voice_type_toggle(void) {
 
 
 
+/* provisional name */
 void sysconfig_exit(void) {
     u16 trig;
     s32 x;
@@ -1131,6 +1154,7 @@ void sysconfig_exit(void) {
 
 
 
+/* provisional name */
 void gameconfig_page(void) {
     u32 p;
     const u8** table;
@@ -1155,6 +1179,7 @@ void gameconfig_page(void) {
             }
             cfg_continue = 0;
         }
+        /* fall through */
     case 0:
         break;
     }
@@ -1162,6 +1187,7 @@ void gameconfig_page(void) {
 
 
 
+/* provisional name */
 void sysconfig_draw_values(void) {
     s16 attr;
     s32 x;
@@ -1267,6 +1293,7 @@ void sysconfig_draw_values(void) {
 
 
 
+/* provisional name */
 void config_print_setting(const TM_STRING* src, s32 y, s16 attr) {
     TM_STRING e;
     s32 x;
@@ -1284,6 +1311,7 @@ void config_print_setting(const TM_STRING* src, s32 y, s16 attr) {
 
 
 
+/* provisional name */
 void test_menu_print_script_at(const void* script, s16 px, s16 y) {
     s32 x;
     if (screen_mode == 7) {
@@ -1296,6 +1324,7 @@ void test_menu_print_script_at(const void* script, s16 px, s16 y) {
 
 
 
+/* provisional name */
 void config_check_changed(void) {
     register s8 i;
     s8* saved;
@@ -1338,6 +1367,7 @@ void config_check_changed(void) {
 
 
 
+/* provisional name */
 s32 config_differs_from_default(void) {
     register s8 ix;
     const u8** table;
@@ -1391,6 +1421,7 @@ s32 config_differs_from_default(void) {
 
 
 
+/* provisional name */
 s8 config_modify_step(void) {
     u16 trig;
     s8 step;
@@ -1414,6 +1445,7 @@ s8 config_modify_step(void) {
 
 
 
+/* provisional name */
 s8 menu_cursor_vtick(s32 x, s32 y, s8 last, s8 row, s8 wrap) {
     u16 trig;
     s32 off;
@@ -1493,6 +1525,7 @@ s8 menu_cursor_vtick(s32 x, s32 y, s8 last, s8 row, s8 wrap) {
 
 
 
+/* provisional name */
 void menu_cursor_redraw(s32 x, s32 y, s32 cur, s32 old) {
     s32 off;
     off = old * 2;
@@ -1511,6 +1544,7 @@ void menu_cursor_redraw(s32 x, s32 y, s32 cur, s32 old) {
 
 
 
+/* provisional name */
 void config_menu_load_settings(void) {
     s32 i;
     const u8** table;

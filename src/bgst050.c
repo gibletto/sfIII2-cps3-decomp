@@ -209,6 +209,7 @@ s32 bg050_check(void) {
 
 
 
+/* provisional name */
 void bg050_demo(void) {
     s32 (*fp)(void);
     if (EXE_flag || Game_pause) {

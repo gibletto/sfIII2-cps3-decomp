@@ -51,6 +51,7 @@
 s16 roll_rate;
 s16 roll_rate_t;
 
+/* provisional name */
 s32 end_cut_check(void) {
     u16 sw;
     if (!end_no_cut) {

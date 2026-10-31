@@ -283,7 +283,7 @@ void bg080_fall4(void) {
 /* provisional name */
 void bg080_layer2(void) {
     switch (bgw_ptr->r_no_0) {
-    case 0:
+    case R0_INIT:
         bgw_ptr->r_no_0++;
         bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
         bgw_ptr->hos_xy[0].cal = bgw_ptr->wxy[0].cal = bgw_ptr->xy[0].cal;
@@ -301,14 +301,14 @@ void bg080_layer2(void) {
         }
         sync_fam_set3(2);
         break;
-    case 1:
+    case R0_WAIT:
         bgw_ptr->r_no_0++;
         break;
-    case 2:
+    case R0_DEMO:
         bg080_demo();
         sync_fam_set3(2);
         break;
-    case 3:
+    case R0_MOVE:
         bg_x_move_check();
         bg_y_move_check();
         sync_fam_set3(2);

@@ -77,6 +77,7 @@ void effect_I5_move(WORK_Other* ewk) {
     case R0_COLOUR:
         ewk->wu.routine_no[0]++;
         load_any_color(144);
+        /* fall through */
     case R0_ANIM:
         char_move(&ewk->wu);
         if (ewk->wu.cg_type == 9) {

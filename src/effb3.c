@@ -206,6 +206,7 @@ void final_letter_move(WORK_Other* ewk) {
                 b2_curr_no++;
             }
         }
+        /* fall through */
     case R1_STAY:
     default:
         disp_pos_trans_entry5(ewk);
@@ -273,6 +274,7 @@ void fight_move(WORK_Other* ewk) {
                 rf_b2_flag = 1;
             }
         }
+        /* fall through */
     case R2_DRAW:
         disp_pos_trans_entry5(ewk);
         break;
@@ -318,6 +320,7 @@ void fight_vanish(WORK_Other* ewk) {
                 rf_b2_flag = 1;
             }
         }
+        /* fall through */
     case R4_GONE:
         disp_pos_trans_entry5(ewk);
         break;

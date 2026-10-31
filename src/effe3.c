@@ -38,8 +38,6 @@
 #define E3_TIME         2       /* frames the picture is held */
 
 
-
-
 void effect_E3_move(WORK_Other* ewk) {
     s16 i;
     if (akebono_flag) {

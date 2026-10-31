@@ -396,7 +396,6 @@ void game_config_1p_round_item_jp(void) {
 
 
 
-
 /* provisional name */
 void game_config_event_item_jp(void) {
     Config_Move_jp = 0;

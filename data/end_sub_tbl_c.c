@@ -29,6 +29,7 @@ extern const CELL_ENTRY sc_celllist_10[];
 extern const CELL_ENTRY sc_celllist_13[];
 extern const CELL_ENTRY sc_celllist_14[];
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_0[21] = {
     { 1, 2, 2, 0x8F }, { 2, 2, 2, 0x8F }, { 3, 2, 2, 0x8F }, { 4, 2, 2, 0x8F },
     { 5, 2, 2, 0x8F }, { 6, 2, 2, 0x8F }, { 7, 2, 2, 0x8F }, { 8, 2, 2, 0x8F },
@@ -38,6 +39,7 @@ const CELL_ENTRY sc_celllist_0[21] = {
     { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_2[21] = {
     { 27, 2, 2, 0x8F }, { 28, 2, 2, 0x8F }, { 29, 2, 2, 0x8F }, { 30, 2, 2, 0x8F },
     { 31, 2, 2, 0x8F }, { 32, 2, 2, 0x8F }, { 33, 2, 2, 0x8F }, { 34, 2, 2, 0x8F },
@@ -47,6 +49,7 @@ const CELL_ENTRY sc_celllist_2[21] = {
     { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_15[21] = {
     { 9, 2, 2, 0x8F }, { 10, 2, 2, 0x8F }, { 11, 2, 2, 0x8F }, { 12, 2, 2, 0x8F },
     { 13, 2, 2, 0x8F }, { 14, 2, 2, 0x8F }, { 15, 2, 2, 0x8F }, { 16, 2, 2, 0x8F },
@@ -56,6 +59,7 @@ const CELL_ENTRY sc_celllist_15[21] = {
     { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_16[21] = {
     { 35, 2, 2, 0x8F }, { 36, 2, 2, 0x8F }, { 37, 2, 2, 0x8F }, { 38, 2, 2, 0x8F },
     { 39, 2, 2, 0x8F }, { 40, 2, 2, 0x8F }, { 41, 2, 2, 0x8F }, { 42, 2, 2, 0x8F },
@@ -65,6 +69,7 @@ const CELL_ENTRY sc_celllist_16[21] = {
     { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_3[13] = {
     { 22, 1, 26, 0xF0 }, { 23, 1, 26, 0xF1 }, { 22, 2, 26, 0xF2 }, { 23, 2, 26, 0xF3 },
     { 22, 3, 26, 0xF4 }, { 23, 3, 26, 0xF5 }, { 24, 1, 26, 0xF6 }, { 25, 1, 26, 0xF7 },
@@ -72,18 +77,21 @@ const CELL_ENTRY sc_celllist_3[13] = {
     { 100, 0, 26, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_4[10] = {
     { 2, 27, 28, 0x124 }, { 3, 27, 28, 0x125 }, { 4, 27, 28, 0x125 }, { 4, 26, 28, 0x12C },
     { 5, 27, 28, 0x126 }, { 6, 27, 28, 0x127 }, { 7, 27, 28, 0x128 }, { 8, 27, 28, 0x129 },
     { 9, 27, 28, 0x12A }, { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_5[10] = {
     { 45, 27, 156, 0x124 }, { 44, 27, 156, 0x125 }, { 43, 27, 156, 0x125 }, { 43, 26, 156, 0x12C },
     { 42, 27, 156, 0x126 }, { 41, 27, 156, 0x127 }, { 40, 27, 156, 0x128 }, { 39, 27, 156, 0x129 },
     { 38, 27, 156, 0x12A }, { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_6[97] = {
     { 12, 9, 40, 0x180 }, { 13, 9, 40, 0x181 }, { 14, 9, 40, 0x182 }, { 15, 9, 40, 0x183 },
     { 16, 9, 40, 0x184 }, { 17, 9, 40, 0x185 }, { 18, 9, 40, 0x186 }, { 19, 9, 40, 0x187 },
@@ -112,6 +120,7 @@ const CELL_ENTRY sc_celllist_6[97] = {
     { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_11[129] = {
     { 16, 9, 40, 0x180 }, { 17, 9, 40, 0x181 }, { 18, 9, 40, 0x182 }, { 19, 9, 40, 0x183 },
     { 20, 9, 40, 0x184 }, { 21, 9, 40, 0x185 }, { 22, 9, 40, 0x186 }, { 23, 9, 40, 0x187 },
@@ -148,6 +157,7 @@ const CELL_ENTRY sc_celllist_11[129] = {
     { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_12[161] = {
     { 4, 11, 58, 0x140 }, { 5, 11, 58, 0x144 }, { 6, 11, 58, 0x148 }, { 7, 11, 58, 0x14C },
     { 8, 11, 58, 0x150 }, { 9, 11, 58, 0x154 }, { 10, 11, 58, 0x158 }, { 11, 11, 58, 0x15C },
@@ -192,6 +202,7 @@ const CELL_ENTRY sc_celllist_12[161] = {
     { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_7[25] = {
     { 12, 10, 44, 0x1A0 }, { 13, 10, 44, 0x1A1 }, { 14, 10, 44, 0x1A2 }, { 15, 10, 44, 0x1A3 },
     { 16, 10, 44, 0x1A4 }, { 17, 10, 44, 0x1A5 }, { 18, 10, 44, 0x1A6 }, { 19, 10, 44, 0x1A7 },
@@ -202,6 +213,7 @@ const CELL_ENTRY sc_celllist_7[25] = {
     { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_8[25] = {
     { 12, 14, 44, 0x1A8 }, { 13, 14, 44, 0x1A9 }, { 14, 14, 44, 0x1AA }, { 15, 14, 44, 0x1AB },
     { 16, 14, 44, 0x1AC }, { 17, 14, 44, 0x1AD }, { 18, 14, 44, 0x1AE }, { 19, 14, 44, 0x1AF },
@@ -212,6 +224,7 @@ const CELL_ENTRY sc_celllist_8[25] = {
     { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_9[31] = {
     { 12, 18, 44, 0x1D0 }, { 13, 18, 44, 0x1D1 }, { 14, 18, 44, 0x1D2 }, { 15, 18, 44, 0x1D3 },
     { 16, 18, 44, 0x1D4 }, { 17, 18, 44, 0x1D5 }, { 18, 18, 44, 0x1D6 }, { 19, 18, 44, 0x1D7 },
@@ -223,6 +236,7 @@ const CELL_ENTRY sc_celllist_9[31] = {
     { 20, 20, 44, 0x1F8 }, { 21, 20, 44, 0x1F9 }, { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_10[43] = {
     { 10, 10, 44, 0x1DA }, { 11, 10, 44, 0x1DB }, { 12, 10, 44, 0x1DC }, { 13, 10, 44, 0x1DD },
     { 14, 10, 44, 0x1DE }, { 15, 10, 44, 0x1DF }, { 16, 10, 44, 0x180 }, { 17, 10, 44, 0x181 },
@@ -237,12 +251,14 @@ const CELL_ENTRY sc_celllist_10[43] = {
     { 22, 12, 44, 0x18E }, { 23, 12, 44, 0x18F }, { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_13[11] = {
     { 13, 0, 22, 0xD6 }, { 14, 0, 22, 0xD7 }, { 15, 0, 22, 0xD8 }, { 16, 0, 22, 0xD9 },
     { 17, 0, 22, 0xDA }, { 18, 0, 22, 0xDB }, { 19, 0, 22, 0xDC }, { 20, 0, 22, 0xDD },
     { 8, 0, 22, 0xDE }, { 9, 0, 22, 0xDF }, { 100, 0, 0, 0 },
 };
 
+/* provisional name */
 const CELL_ENTRY sc_celllist_14[11] = {
     { 36, 0, 22, 0xE6 }, { 37, 0, 22, 0xE7 }, { 38, 0, 22, 0xE8 }, { 39, 0, 22, 0xE9 },
     { 40, 0, 22, 0xEA }, { 41, 0, 22, 0xEB }, { 42, 0, 22, 0xEC }, { 43, 0, 22, 0xED },

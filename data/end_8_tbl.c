@@ -47,12 +47,10 @@ const PANEL end_800_panel1[8] = {
     { 0x30C0, 99 },
 };
 
-/* provisional name */
 const s16 timer_8_tbl[4] = {
     780, 300, 480, 480,
 };
 
-/* provisional name */
 const s16 end_8_pos[4][2] = {
     { 256, 256 }, { 768, 256 }, { 256, 512 }, { 768, 0 },
 };

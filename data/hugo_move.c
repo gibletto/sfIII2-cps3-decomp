@@ -162,6 +162,7 @@ const s16 hugo_movexy_table[87][6] = {
     {  -1024,     32,     0,    1536,   -128,     0 },  /* 86 */
 };
 
+/* provisional name */
 const PARABORA_DATA hugo_parabora_data[25] = {
     /*      x spd  x acc  x mode   y spd  y acc  y mode */
     { { {      0,      0,     1,       0,      0,     0 },  /* buttobi 0: weight 0 */

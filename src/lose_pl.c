@@ -228,7 +228,7 @@ void Judge_normal_loser(PLW* wk) {
     }
     switch (wk->wu.routine_no[3]) {
     case RN3_START:
-        wk->wu.routine_no[3] += 1;
+        wk->wu.routine_no[3]++;
         pat = random_16_com();
         pat &= 3;
         set_char_move_init(&wk->wu, 9, pat + 0x38);

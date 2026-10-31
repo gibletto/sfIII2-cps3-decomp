@@ -44,12 +44,10 @@ const PANEL end_400_panel1[10] = {
     { 0x2040, 0 },
 };
 
-/* provisional name */
 const s16 timer_4_tbl[5] = {
     540, 360, 180, 600, 480,
 };
 
-/* provisional name */
 const s16 end_4_pos[5][2] = {
     { 256, 768 },
     { 256, 512 },

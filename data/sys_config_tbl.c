@@ -290,84 +290,122 @@ const s8 cursor_mark_str[4] = {
     62, 0, -1, -1,
 };
 
+/* provisional name */
 const s8 str_1coin_1credit[32] = "1 COIN  1 CREDIT             \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_1coin_2credits[32] = "1 COIN  2 CREDITS            \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_1coin_3credits[32] = "1 COIN  3 CREDITS            \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_1coin_4credits[32] = "1 COIN  4 CREDITS            \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_1coin_5credits[32] = "1 COIN  5 CREDITS            \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_1coin_6credits[32] = "1 COIN  6 CREDITS            \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_1coin_7credits[32] = "1 COIN  7 CREDITS            \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_1coin_8credits[32] = "1 COIN  8 CREDITS            \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_1coin_9credits[32] = "1 COIN  9 CREDITS            \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_2coins_1credit[32] = "2 COINS 1 CREDIT             \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_3coins_1credit[32] = "3 COINS 1 CREDIT             \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_4coins_1credit[32] = "4 COINS 1 CREDIT             \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_5coins_1credit[32] = "5 COINS 1 CREDIT             \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_6coins_1credit[32] = "6 COINS 1 CREDIT             \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_7coins_1credit[32] = "7 COINS 1 CREDIT             \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_8coins_1credit[32] = "8 COINS 1 CREDIT             \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_9coins_1credit[32] = "9 COINS 1 CREDIT             \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_2coins_start_1coin_cont[32] = "2 COINS START 1 COIN CONTINUE\0\xFF\xFF";
 
+/* provisional name */
 const s8 str_coin_free_play[32] = "FREE PLAY                    \0\xFF\xFF";
 
+/* provisional name */
 const s8 str_2pl_1chute_single[28] = "2 PLAYERS 1 CHUTER  SINGLE ";
 
+/* provisional name */
 const s8 str_2pl_2chutes_single[28] = "2 PLAYERS 2 CHUTERS SINGLE ";
 
+/* provisional name */
 const s8 str_2pl_2chutes_multi[28] = "2 PLAYERS 2 CHUTERS MULTI  ";
 
+/* provisional name */
 const s8 str_3pl_1chute_single[28] = "3 PLAYERS 1 CHUTER  SINGLE ";
 
+/* provisional name */
 const s8 str_3pl_2chutes_single[28] = "3 PLAYERS 2 CHUTERS SINGLE ";
 
+/* provisional name */
 const s8 str_3pl_3chutes_single[28] = "3 PLAYERS 3 CHUTERS SINGLE ";
 
+/* provisional name */
 const s8 str_3pl_3chutes_multi[28] = "3 PLAYERS 3 CHUTERS MULTI  ";
 
+/* provisional name */
 const s8 str_4pl_1chute_single[28] = "4 PLAYERS 1 CHUTER  SINGLE ";
 
+/* provisional name */
 const s8 str_4pl_2chutes_single[28] = "4 PLAYERS 2 CHUTERS SINGLE ";
 
+/* provisional name */
 const s8 str_4pl_2chutes_multi[28] = "4 PLAYERS 2 CHUTERS MULTI  ";
 
+/* provisional name */
 const s8 str_4pl_4chutes_single[28] = "4 PLAYERS 4 CHUTERS SINGLE ";
 
+/* provisional name */
 const s8 str_4pl_4chutes_multi[28] = "4 PLAYERS 4 CHUTERS MULTI  ";
 
+/* provisional name */
 const s8 str_cfg_on[8] = "ON    \0\xFF";
 
+/* provisional name */
 const s8 str_cfg_off[8] = "OFF   \0\xFF";
 
 const s8 str_cfg_stereo[12] = "STEREO  \0\xFF\xFF\xFF";
 
 const s8 str_cfg_monaural[12] = "MONAURAL\0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_cfg_english[16] = "ENGLISH     \0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_cfg_spanish[16] = "SPANISH     \0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_cfg_portuguese[16] = "PORTUGUESE  \0\xFF\xFF\xFF";
 
+/* provisional name */
 const s8 str_cfg_normal[8] = "NORMAL\0\xFF";
 
+/* provisional name */
 const char str_cfg_flip[8] = "FLIP  \0\xFF";
 
 /* Stored after str_cfg_flip. Nothing in the program refers to it by name or address. */

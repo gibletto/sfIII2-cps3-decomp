@@ -25,12 +25,10 @@ const PANEL end_900_bg0_cell_tbl[7] = {
     { 0x30C0, 7 },
 };
 
-/* provisional name */
 const s16 timer_9_tbl[7] = {
     240, 240, 240, 180, 180, 180, 660,
 };
 
-/* provisional name */
 const s16 end_9_pos[7][2] = {
     { 768, 256 },
     { 768, 256 },

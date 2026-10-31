@@ -991,9 +991,6 @@ s32 comm_hclr(WORK* wk, CHAR_CMD* ctc) {
 
 
 
-
-
-
 s32 comm_ixfw(WORK* wk, CHAR_CMD* ctc) {
     wk->cg_ix += (ctc->pat - 1) * wk->cgd_type;
     return 1;
@@ -1222,6 +1219,7 @@ s32 comm_schx(WORK* wk, CHAR_CMD* ctc) {
         /* falls through: 2 scales the acceleration as well */
     case 1:
         wk->mvxy.d[0].sp = (wk->mvxy.d[0].sp * ctc->ix) / ctc->pat;
+        /* fall through */
     default:
         break;
     }
@@ -1240,6 +1238,7 @@ s32 comm_schy(WORK* wk, CHAR_CMD* ctc) {
         /* falls through: 2 scales the acceleration as well */
     case 1:
         wk->mvxy.d[1].sp = (wk->mvxy.d[1].sp * ctc->ix) / ctc->pat;
+        /* fall through */
     default:
         break;
     }
@@ -1841,6 +1840,7 @@ s32 comm_sstx(WORK* wk, CHAR_CMD* ctc) {
             wk->mvxy.a[0].sp /= x;
             break;
         }
+        /* fall through */
     case 1:
         switch (ctc->ix) {
         case 0:
@@ -2326,6 +2326,7 @@ void check_cgd_patdat2(WORK* wk) {
         if (wk->cg_status & 0x80) {
             wk->pat_status = wk->cg_status & 0x7F;
         }
+        /* fall through */
     case 4:
         wk->cg_meoshi = wk->cg_hit_ix & 0x1FFF;
         st.w.h = wk->cg_att_ix;
@@ -2378,7 +2379,7 @@ void set_new_attnum(WORK* wk) {
         aag_sw = 1;
         if (wk->work_id == 1) {
             ((PLW*)wk)->caution_flag = 1;
-            ((PLW*)wk)->total_att_hit_ok += 1;
+            ((PLW*)wk)->total_att_hit_ok++;
         }
     }
     wk->att = wk->att_ix_table[wk->cg_att_ix];

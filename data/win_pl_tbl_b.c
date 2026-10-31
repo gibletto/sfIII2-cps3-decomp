@@ -39,6 +39,7 @@ const s8 Win_3001_tbl[8] = {
     36, 37, 36, 39, 36, 38, 39, 37,
 };
 
+/* provisional name */
 const s16 win_pl_unref_words[4] = {
     532, 373, 530, 531,
 };
