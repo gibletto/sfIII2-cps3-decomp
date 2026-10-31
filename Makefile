@@ -26,7 +26,7 @@ OPT = -optimize=1 -speed
 
 # modules compiled with other settings
 NOINLINE = CMD_MAIN entry_2 manage_2 sel_pl win_2
-OPT0 = coin_sw coin_sw_2 colortest cram_bank eeprom family iotest_out poly_que scrn_ctrl simmram_slot soundtest spr_list \
+OPT0 = coin_sw coin_sw_2 colortest cram_bank dma_que eeprom family iotest_out scrn_ctrl simmram_slot soundtest spr_list \
 	spr_pool spr_pool_2 sys_config sys_config_2 sys_config_3 sys_test sys_test_2 sys_test_2a sys_test_2b sys_test_2c sys_test_3 sys_test_4 \
 	sys_test_5
 CONSTTBL = CMD_MAIN Com_Pl EFF48 EFF55 EFF69 EFF71 EFF72 EFF74 EFF85 EFF86 EFFI4MV Eff93 \

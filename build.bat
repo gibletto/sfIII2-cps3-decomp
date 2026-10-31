@@ -2335,7 +2335,7 @@ set GEN_NARROW_CONST=
 asmsh src\simmram_10.src -object=obj\simmram_10.obj
 if errorlevel 1 goto fail
 set GEN_NARROW_CONST=0
-shc src\poly_que.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=0 -nospeed -object=obj\poly_que.obj >obj\shc.log 2>&1
+shc src\dma_que.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=0 -nospeed -object=obj\dma_que.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 set GEN_NARROW_CONST=

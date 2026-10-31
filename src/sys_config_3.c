@@ -2,7 +2,7 @@
  * SYS_CONFIG_3.C  Settings storage, configuration menu and render list setup (part 3)
  *
  * Display management: init_render_lists sets up the sprite pools (SPR_POOL.C), the SIMM RAM free
- * lists (SIMMRAM.C), the character and colour DMA queue (POLY_QUE.C), the fixed sprite lists (SPR_LIST.C) and the
+ * lists (SIMMRAM.C), the character and colour DMA queue (DMA_QUE.C), the fixed sprite lists (SPR_LIST.C) and the
  * sprite templates; sprite_dma_start starts the sprite list DMA and sprite_dma_end_wait waits for it to finish.
  */
 
