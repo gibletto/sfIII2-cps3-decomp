@@ -68,7 +68,7 @@ void effect_36_move(WORK_Other* ewk) {
             ewk->wu.routine_no[0]++;
             break;
         default:
-            all_cgps_put_back(ewk);
+            all_cgps_put_back(&ewk->wu);
             push_effect_work(&ewk->wu);
             break;
         }
@@ -107,7 +107,7 @@ void effect_36_move(WORK_Other* ewk) {
             ewk->wu.routine_no[0]++;
             break;
         default:
-            all_cgps_put_back(ewk);
+            all_cgps_put_back(&ewk->wu);
             push_effect_work(&ewk->wu);
             break;
         }
@@ -146,7 +146,7 @@ void effect_36_move(WORK_Other* ewk) {
             ewk->wu.routine_no[0]++;
             break;
         default:
-            all_cgps_put_back(ewk);
+            all_cgps_put_back(&ewk->wu);
             push_effect_work(&ewk->wu);
             break;
         }
@@ -170,7 +170,7 @@ s32 eff36_op_check(WORK_Other* ewk) {
 
 
 
-/* (no caller) */
+/* Create the zooming pictures of set typenum; nothing calls it. */
 s32 effect_36_init(s16 typenum) {
     WORK_Other* ewk;
     s16 ix;

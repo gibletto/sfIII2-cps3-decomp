@@ -58,7 +58,7 @@ s16 b2_curr_no;
 
 
 
-/* its own states */
+/* Step through the round-start call until the round can begin (Next_Step). */
 void effect_B2_move(WORK_Other* ewk) {
     s16 work = rf_b2_flag;
     switch (ewk->wu.routine_no[0]) {
@@ -161,7 +161,7 @@ s32 b3_Break_Into_check(WORK_Other* ewk) {
 
 
 
-/* family 2, colour 3 and char gfx 0x9130, rounds from Game_setting.Battle_Number */
+/* Create the round-start call at the start of each round: the final-round call or the normal one. */
 s32 effect_B2_init(void) {
     WORK_Other* ewk;
     s16 ix;
@@ -170,7 +170,7 @@ s32 effect_B2_init(void) {
     }
     ewk = (WORK_Other*)frw[ix];
     ewk->wu.be_flag = 1;
-    ewk->wu.id = 0x70;
+    ewk->wu.id = 112;
     ewk->wu.work_id = 0x10;
     ewk->wu.my_family = 2;
     load_any_color(3);

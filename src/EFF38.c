@@ -146,7 +146,7 @@ s32 effect_38_init(s16 PL_id, s16 Wait, s16 Kind, s16 Face_Set, s16 Your_Char, s
     ewk->wu.my_family = 3;
     ewk->wu.xyz[1].disp.pos = 16;
     ewk->wu.char_index = 2;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     ewk->master_id = PL_id;
     ewk->wu.dm_vital = Kind;
     ewk->wu.dir_timer = Wait;

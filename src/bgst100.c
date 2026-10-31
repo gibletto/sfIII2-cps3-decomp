@@ -83,7 +83,7 @@ void bg0901(void) {
 
 
 
-/* the demo check first */
+/* The demo check comes first. */
 void bg0901_init00(void) {
     bg090_demo_check();
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -100,7 +100,7 @@ void bg0901_wait(void) {
 
 
 
-/* each stage file has its own copy */
+/* Each stage file has its own copy. */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -119,7 +119,7 @@ void bg0902(void) {
 
 
 
-/* the palette, and the effects by compel_flag */
+/* The palette, and the effects by compel_flag. */
 void bg0902_init00(void) {
     u8 lv;
     bg090_demo_check();
@@ -174,7 +174,7 @@ void bg0902_color(void) {
 
 
 
-/* each stage file has its own copy */
+/* Move the base layer and chase the players; each stage file has its own copy. */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -220,7 +220,7 @@ void bg0903_move(void) {
 
 
 
-/* the entrance demo (step 1, raised by speed_y * 200) only with Oro playing in the first area, else step 3 */
+/* The entrance demo (step 1, raised by speed_y * 200) runs only with Oro playing in the first area; otherwise step 3. */
 void bg090_demo_check(void) {
     if ((plw->player_number != PL_ORO) && (plw[1].player_number != PL_ORO)) {
         bgw_ptr->r_no_0 = R0_MOVE;
@@ -276,7 +276,7 @@ void demo90_base(void) {
 
 
 
-/* up to 0xC0 */
+/* Raise the base layer until its height passes 0xC0. */
 void jijii_win_bg(void) {
     if (EXE_flag || Game_pause) {
         return;

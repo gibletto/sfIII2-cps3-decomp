@@ -155,7 +155,7 @@ void effect_13_move(WORK_Other* ewk) {
         ewk->wu.routine_no[0] = R0_KILL;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -609,7 +609,6 @@ void kotp_03000(WORK_Other* ewk, TAMA* twk) {
 
 void kotp_04000(WORK_Other* ewk)
 {
-
     ewk->wu.disp_flag = 0;
     ewk->wu.routine_no[0] = R0_END;
 }
@@ -702,7 +701,6 @@ void kotp_05000(WORK_Other* ewk, TAMA* twk) {
 }
 
 void kotp_06000(WORK_Other* ewk, TAMA* twk) {
-
     PLW* mwk;
     PLW* emwk;
     s16 dir;
@@ -1123,7 +1121,7 @@ void kotp_09000(WORK_Other* ewk, TAMA* twk) {
             }
             if (ewk->dm_refrect) {
                 ewk->master_id = (ewk->master_id + 1) & 1;
-                ewk->wu.rl_flag = (ewk->wu.rl_flag) + 1 & 1;
+                ewk->wu.rl_flag = (ewk->wu.rl_flag + 1) & 1;
                 ewk->dm_refrect = 0;
             }
         }

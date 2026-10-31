@@ -78,6 +78,7 @@ void effect_77_move(WORK_Other* ewk) {
         }
         Bg_On_W(8);
         sa_pa_flag = 1;
+        /* falls through: the hold starts this frame */
     case R0_HOLD:
         if (Game_pause || EXE_flag) {
         } else {
@@ -109,11 +110,11 @@ void effect_77_move(WORK_Other* ewk) {
         break;
     default:
         if (Game_pause || EXE_flag) {
-        } else {
-            sa_pa_flag = 0;
-            all_cgps_put_back(ewk);
-            push_effect_work(&ewk->wu);
+            break;
         }
+        sa_pa_flag = 0;
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }

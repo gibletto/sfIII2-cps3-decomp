@@ -25,7 +25,7 @@
 
 
 
-/* shown after Select_Arts clears, held 5 frames after Sel_Arts_Complete */
+/* Shown after Select_Arts clears, and held 5 frames after Sel_Arts_Complete. */
 void effect_50_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case R0_WAIT:
@@ -64,7 +64,7 @@ void effect_50_move(WORK_Other* ewk) {
 
 
 
-/* two arguments, fixed positions */
+/* Two arguments; the positions are fixed. */
 s32 effect_50_init(s16 PL_id, s16 Direction) {
     WORK_Other* ewk;
     s16 ix;
@@ -81,7 +81,7 @@ s32 effect_50_init(s16 PL_id, s16 Direction) {
     ewk->wu.my_family = 3;
     ewk->master_id = PL_id;
     ewk->wu.char_index = Direction + 74;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     if (Direction == 1) {
         ewk->wu.xyz[1].disp.pos = 178;
     } else {

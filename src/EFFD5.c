@@ -49,7 +49,7 @@ void effect_D5_move(WORK_Other* ewk) {
         ewk->wu.charset_id = 11;
         set_char_base_data(&ewk->wu);
         ewk->wu.my_col_code = ewk->wu.dm_vital;
-        *ewk->wu.char_table = plef_char_table;
+        ewk->wu.char_table[0] = plef_char_table;
         ewk->wu.type = 1;
         ewk->wu.disp_flag = 1;
         ewk->wu.blink_timing = ewk->master_id;

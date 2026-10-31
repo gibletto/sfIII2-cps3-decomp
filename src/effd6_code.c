@@ -55,7 +55,7 @@ void effect_D6_move(WORK_Other* ewk) {
             ewk->wu.routine_no[0]++;
             break;
         }
-        if (!(sa_stop_check() == 0)) {
+        if (sa_stop_check()) {
         } else {
             if (EXE_flag == 0 && Game_pause == 0) {
                 switch (ewk->wu.routine_no[1]) {
@@ -131,7 +131,7 @@ s16 acc;
     ewk->wu.xyz[0].disp.pos = wk->wu.position_x;
     ewk->wu.xyz[1].disp.pos = wk->wu.position_y;
     ewk->wu.position_z = wk->wu.position_z + 1;
-    *ewk->wu.char_table = plef_char_table;
+    ewk->wu.char_table[0] = plef_char_table;
     return 0;
 }
 

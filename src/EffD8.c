@@ -105,7 +105,7 @@ s32 effect_D8_entry(s16 PL_id) {
     }
     ewk = (WORK_Other*)frw[ix];
     ewk->wu.be_flag = 1;
-    ewk->wu.id = 0x8A;
+    ewk->wu.id = 138;
     ewk->wu.work_id = 0x10;
     ewk->wu.cgromtype = 1;
     ewk->wu.my_col_mode = 0x4200;
@@ -178,7 +178,7 @@ void effD8_same_face(WORK_Other* ewk) {
 
 
 
-/* one argument, X from DE_X[10] */
+/* One argument; X comes from DE_X[10]. */
 void effect_D8_init(WORK_Other* ewk) {
     s16 xx = ID_of_Face[Cursor_Y[ewk->master_id]][Cursor_X[ewk->master_id]];
     ewk->wu.xyz[0].disp.pos = Face_Pos_Data[xx][SEL_POS_X] + DE_X[10] + 0x1C1;

@@ -58,10 +58,10 @@ void effect_B1_move(WORK_Other_CONN* ewk) {
             ewk->wu.dir_timer = 3;
             ewk->num_of_conn++;
             if (ewk->num_of_conn < ewk->wu.direction) {
-            } else {
-                ewk->wu.routine_no[0] = R0_MOVE;
-                ewk->wu.routine_no[1] = R1_COUNT;
+                break;
             }
+            ewk->wu.routine_no[0] = R0_MOVE;
+            ewk->wu.routine_no[1] = R1_COUNT;
             break;
         }
         effB1_trans(&ewk->wu);
@@ -81,9 +81,9 @@ void effect_B1_move(WORK_Other_CONN* ewk) {
             if (Bonus_Game_result) {
                 for (i = 0; i < Bonus_Game_result; i++) {
                     if (ewk->conn[i + 20].nx) {
-                    } else {
-                        ewk->conn[i + 20].nx = 1;
+                        continue;
                     }
+                    ewk->conn[i + 20].nx = 1;
                 }
                 effB1_mark_change(ewk);
             }
@@ -92,10 +92,10 @@ void effect_B1_move(WORK_Other_CONN* ewk) {
             if (ewk->wu.dir_step != Bonus_Game_result) {
                 for (i = Bonus_Game_result; i < ewk->wu.dir_step; i++) {
                     if (ewk->conn[i + 20].nx == 2) {
-                    } else {
-                        ewk->conn[i + 20].nx = 2;
-                        ewk->conn[i + 20].ny = 0;
+                        continue;
                     }
+                    ewk->conn[i + 20].nx = 2;
+                    ewk->conn[i + 20].ny = 0;
                 }
             }
             effB1_mark_exchange(ewk);
@@ -165,6 +165,7 @@ void effB1_mark_exchange(WORK_Other_CONN* ewk) {
             if (--ewk->conn[i + 20].col > 0) {
                 break;
             }
+            /* falls through: the wait is over, step to the next mark */
         case 0:
             ewk->conn[i + 20].col = effB1_wait_tbl_2[ewk->conn[i + 20].ny];
             ewk->conn[i + 20].ny++;

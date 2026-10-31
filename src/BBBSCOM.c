@@ -37,7 +37,7 @@ extern const BBBSTable bbbs_level_04[];
 
 
 
-/* picks the level itself, one table set */
+/* Pick the bonus level itself, from one table set. */
 void bbbs_com_execute(PLW* wk) {
     switch (Bonus_Stage_RNO[0]) {
     case 0:
@@ -144,11 +144,11 @@ void bbbs_com_initialize(void) {
 
 
 
-/* from the straight wins and the perfect and super-art finishes (weighted by the round setting), not the VS-CPU grade */
+/* The bonus level from the straight wins and the perfect and super-art finishes (weighted by the round setting), not the VS-CPU grade. */
 s32 set_bonus_game_difficulty(emid)
 s16 emid;
 {
-    s16 s;
+    s16 points;
     s16 rate;
     s16 perfect;
     s16 super;
@@ -160,20 +160,20 @@ s16 emid;
         return 0;
     }
     rate = bonus_level_rate_tbl[Game_setting.Battle_Number & 3];
-    s = (Straight_Counter[emid] > 2) * 20;
+    points = (Straight_Counter[emid] > 2) * 20;
     perfect = Perfect_Finish[emid] * rate * 4;
     super = Super_Arts_Finish[emid] * rate * 2;
-    s = s + perfect + super;
-    if (s < 60) {
+    points = points + perfect + super;
+    if (points < 60) {
         return 0;
     }
-    if (s < 80) {
+    if (points < 80) {
         return 1;
     }
-    if (s < 100) {
+    if (points < 100) {
         return 2;
     }
-    if (s < 120) {
+    if (points < 120) {
         return 3;
     }
     return 4;
@@ -181,20 +181,20 @@ s16 emid;
 
 
 
-/* buttons 0x100/0x200/0x400 pick levels 0-2, all three level 3 */
+/* LK/MK/HK pick levels 0-2; all three kicks pick level 3. */
 s32 set_bonus_game_nando(swdat)
 u16 swdat;
 {
-    if (swdat == 0x700) {
+    if (swdat == CMD_SW_KICK) {
         return 3;
     }
-    if (swdat & 0x100) {
+    if (swdat & CMD_SW_LK) {
         return 0;
     }
-    if (swdat & 0x200) {
+    if (swdat & CMD_SW_MK) {
         return 1;
     }
-    if (swdat & 0x400) {
+    if (swdat & CMD_SW_HK) {
         return 2;
     }
     return 0;
@@ -202,11 +202,11 @@ u16 swdat;
 
 
 
-/* one of 0x100-0x400 held and nothing of 0x7F, read from the player's work */
+/* 1 when the player's command word holds a kick with the lever neutral and no punch. */
 s32 katteni_bonus_nando(pl)
 PLW* pl;
 {
-    if (pl->cp->sw_new & 0x7F) {
+    if (pl->cp->sw_new & (CMD_LV_MASK | CMD_SW_PUNCH)) {
         return 0;
     }
     if (!(pl->cp->sw_new & CMD_SW_KICK)) {

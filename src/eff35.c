@@ -221,7 +221,7 @@ s32 effect_35_init(s16 wait_timer, s16 c_type) {
     ewk->wu.work_id = 16;
     ewk->wu.cgromtype = 1;
     ewk->wu.my_col_mode = 0x4200;
-    *ewk->wu.char_table = etc2_char_table;
+    ewk->wu.char_table[0] = etc2_char_table;
     ewk->wu.my_col_code = 0x80;
     ewk->wu.my_family = 2;
     ewk->wu.xyz[0].disp.pos = *data_ptr++;

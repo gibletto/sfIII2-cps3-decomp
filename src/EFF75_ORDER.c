@@ -80,7 +80,7 @@ void effect_75_move(WORK_Other* ewk) {
         return;
     default:
         ewk->wu.disp_flag = 0;
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         return;
     }
@@ -108,7 +108,7 @@ s32 effect_75_init(s16 Vital, s16 ID, s16 Wait) {
     ewk->wu.my_col_code = 0x2040;
     ewk->wu.my_family = 3;
     ewk->wu.dir_timer = Wait;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     ewk->wu.char_index = ID + 27;
     ewk->wu.dm_vital = Vital;
     ewk->wu.xyz[0].disp.pos = DE_X[10] + 0x2C0;

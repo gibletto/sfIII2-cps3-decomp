@@ -62,7 +62,7 @@ void effect_I8_move(WORK_Other* ewk) {
         ewk->wu.charset_id = 11;
         set_char_base_data(&ewk->wu);
         ewk->wu.my_col_code = ewk->wu.dm_vital;
-        *ewk->wu.char_table = plef_char_table;
+        ewk->wu.char_table[0] = plef_char_table;
         ball_init_position_effD7(ewk, (PLW*)ewk->my_master);
         ewk->wu.type = 1;
         ewk->wu.disp_flag = 1;
@@ -291,7 +291,7 @@ const s16* sptr;
     }
     ewk = (WORK_Other*)frw[ix];
     ewk->wu.be_flag = 1;
-    ewk->wu.id = 0xBC;
+    ewk->wu.id = 188;
     ewk->wu.work_id = 2;
     ewk->wu.rl_flag = wk->wu.rl_flag;
     ewk->wu.dm_vital = wk->wu.my_col_code;

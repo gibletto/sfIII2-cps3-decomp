@@ -96,7 +96,6 @@ void combo_cont_init(void) {
 
 
 void combo_cont_main(void) {
-
     if (Stop_Combo) {
         if (Demo_Flag) {
             combo_window_all_clear();

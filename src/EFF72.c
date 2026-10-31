@@ -40,7 +40,7 @@ void eff72_01(WORK_Other* ewk);
 
 
 
-/* two phases through a table (eff72_00, eff72_01) */
+/* Run the two phases through a table (eff72_00, eff72_01). */
 void effect_72_move(WORK_Other* ewk) {
     void (*jmp_tbl[2])() = { eff72_00, eff72_01 };
     if (!EXE_flag && !Game_pause && !EXE_obroll) {
@@ -51,7 +51,7 @@ void effect_72_move(WORK_Other* ewk) {
 
 
 
-/* effect 72 phase 0 */
+/* Phase 0: show animation 13 until either player starts a super art. */
 /* provisional name */
 void eff72_00(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
@@ -76,7 +76,7 @@ void eff72_00(WORK_Other* ewk) {
 
 
 
-/* effect 72 phase 1 */
+/* Phase 1: play animation 51 once, then go back to phase 0. */
 /* provisional name */
 void eff72_01(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
@@ -96,7 +96,8 @@ void eff72_01(WORK_Other* ewk) {
 
 
 
-/* no arguments: a brz_char_table object that sets up its effect 73 partner */
+/* Create the stage object at (0x19B, 80) that reacts to super arts, and its effect 73 partner,
+ * when the stage background is set up. */
 s32 effect_72_init(void) {
     WORK_Other* ewk;
     s16 ix;

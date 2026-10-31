@@ -224,7 +224,7 @@ void effF0_scroll_set(WORK_Other* ewk) {
 
 
 
-/* none in the combo demo, loads char gfx 0x9A40 */
+/* Creates nothing in the combo demo; loads char gfx 0x9A40. */
 s32 effect_F0_init(WORK* wk) {
     s16 ix;
     WORK_Other* ewk;

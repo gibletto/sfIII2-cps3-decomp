@@ -101,7 +101,7 @@ void effect_31_move(WORK_Other* ewk) {
 
 
 
-/* none when Version_Type is 3 */
+/* Creates nothing when Version_Type is 3. */
 s32 effect_31_init(WORK* wk) {
     s16 ix;
     WORK_Other* ewk;

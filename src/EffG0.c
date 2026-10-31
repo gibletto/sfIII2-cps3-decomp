@@ -76,7 +76,7 @@ void effG0_akebono_move(WORK_Other* ewk) {
         }
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -97,7 +97,7 @@ void effG0_obj_move(WORK_Other* ewk) {
         disp_pos_trans_entry(ewk);
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -264,7 +264,7 @@ void effG0_judge_move(WORK_Other* ewk) {
         break;
     case R0_KILL:
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -305,7 +305,7 @@ s32 effG0_flash_init(s16 step, s16 x, s16 y, s16 timer, s16 dir_old, s16 col_ofs
     ewk->wu.position_z = 10;
     ewk->wu.dir_timer = timer;
     ewk->wu.dir_step = dir_old;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     ewk->wu.char_index = 26;
     ewk->wu.my_mr_flag = 1;
     ewk->wu.my_mr.size.x = 127;

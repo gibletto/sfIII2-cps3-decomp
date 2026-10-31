@@ -721,7 +721,7 @@ s16 scr_l;
 
 
 
-/* passes the push-back left over by one player on to the other */
+/* Pass the push-back left over by one player on to the other. */
 void check_damage_hosei(void) {
     plw[0].muriyari_ugoku = plw[0].hosei_amari;
     plw[1].muriyari_ugoku = plw[1].hosei_amari;
@@ -812,7 +812,7 @@ s16 kos;
 
 void settle_check(void) {
 retry:
-    switch ((plw[0].dead_flag) + (plw[1].dead_flag * 2)) {
+    switch (plw[0].dead_flag + (plw[1].dead_flag * 2)) {
     case 1:
         Winner_id = 1;
         Loser_id = 0;

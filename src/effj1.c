@@ -68,7 +68,7 @@ void effect_J1_move(WORK_Other* ewk) {
         disp_pos_trans_entry(ewk);
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -92,7 +92,7 @@ s32 effect_J1_init(void) {
     ewk->wu.dead_f = 0;
     ewk->wu.my_family = 2;
     ewk->wu.my_col_code = 0x2120;
-    *ewk->wu.char_table = etc2_char_table;
+    ewk->wu.char_table[0] = etc2_char_table;
     ewk->wu.xyz[0].disp.pos = 0x200;
     ewk->wu.xyz[1].disp.pos = 36;
     ewk->wu.my_priority = ewk->wu.position_z = 70;

@@ -59,7 +59,7 @@ void efff5_0000(WORK_Other* ewk) {
         }
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -78,8 +78,8 @@ void efff5_1000(WORK_Other* ewk) {
         char_move(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -121,7 +121,7 @@ void efff5_3000(WORK_Other* ewk) {
         sort_push_request4(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -142,8 +142,8 @@ void efff5_4000(WORK_Other* ewk) {
         sort_push_request4(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -172,8 +172,8 @@ void efff5_5000(WORK_Other* ewk) {
         }
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -199,8 +199,8 @@ void efff5_6000(WORK_Other* ewk) {
         ewk->wu.disp_flag = 0;
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -225,8 +225,8 @@ void efff5_7000(WORK_Other* ewk) {
         ewk->wu.disp_flag = 0;
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -246,8 +246,8 @@ void efff5_8000(WORK_Other* ewk) {
         sort_push_request4(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -291,8 +291,8 @@ void efff5_9000(WORK_Other* ewk) {
         sort_push_request4(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -336,8 +336,8 @@ void efff5_A000(WORK_Other* ewk) {
         sort_push_request4(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -381,8 +381,8 @@ void efff5_B000(WORK_Other* ewk) {
         sort_push_request4(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }

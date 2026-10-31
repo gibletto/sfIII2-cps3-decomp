@@ -117,7 +117,7 @@ s32 effect_15_init(WORK* wk, u8 data) {
     }
     ewk = (WORK_Other*)frw[ix];
     ewk->wu.be_flag = 1;
-    ewk->wu.id = 0xF;
+    ewk->wu.id = 15;
     ewk->master_id = wk->id;
     ewk->wu.cgromtype = 1;
     ewk->wu.type = data;

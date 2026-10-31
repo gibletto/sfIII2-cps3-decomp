@@ -37,6 +37,7 @@ void load_any_color();
 #include "EFF25.h"
 #include "EFF29.h"
 #include "EFF44.h"
+#include "fighter.h"
 void bg1101(void);
 void bg1102(void);
 void bg1101_init00(void);
@@ -52,7 +53,7 @@ static void bg_base_move_common(void);
 #pragma inline(bg1101, bg1102)
 
 
-/* layers 1 and 0, with the drop-in step */
+/* Run layers 1 and 0, with the drop-in step. */
 void BG110(void) {
     bgw_ptr = &bg_w.bgw[1];
     bg1102();
@@ -106,7 +107,7 @@ void bg1101_next3(void) {
 
 
 
-/* each stage file has its own copy */
+/* Each stage file has its own copy. */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -123,7 +124,7 @@ void bg1102(void) {
 
 
 /* provisional name */
-/* also the stage graphics and effects */
+/* Also loads the stage graphics and effects. */
 void bg1102_init00(void) {
     bgw_ptr->r_no_1 = 0;
     bgw_ptr->zuubun = 0;
@@ -183,7 +184,7 @@ void bg1102_color3(void) {
 
 
 
-/* each stage file has its own copy */
+/* Move the base layer and chase the players; each stage file has its own copy. */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -193,7 +194,7 @@ static void bg_base_move_common(void) {
 
 
 /* provisional name */
-/* as bgst030 bg030_demo */
+/* As bg030_demo in bgst030. */
 void bg110_demo(void) {
     if (EXE_flag || Game_pause) {
         return;
@@ -227,7 +228,7 @@ void bg110_demo(void) {
 
 
 /* provisional name */
-/* as bgst030 bg030_appear_check, keyed on character 10 */
+/* Returns 1 to start in place (a later area, or neither player is Yang), 2 for Yun against Yang, else 0. */
 s32 bg110_appear_check(void) {
     s16 p1;
     s16 p2;
@@ -236,13 +237,13 @@ s32 bg110_appear_check(void) {
     }
     p1 = plw[0].player_number;
     p2 = plw[1].player_number;
-    if (p1 != 10 && p2 != 10) {
+    if (p1 != PL_YANG && p2 != PL_YANG) {
         return 1;
     }
-    if (p1 == 3 && p2 == 10) {
+    if (p1 == PL_YUN && p2 == PL_YANG) {
         return 2;
     }
-    if (p1 == 10 && p2 == 3) {
+    if (p1 == PL_YANG && p2 == PL_YUN) {
         return 2;
     }
     return 0;

@@ -188,8 +188,8 @@ void attack_hit_dummy(PLW* wk) {}
 
 
 
-/* scale the y speed (x1.1 when positive, else x0.2) and the x speed (x1.2 when
-   negative; otherwise x0.6, at least 2, then reversed with d[0] cleared) */
+/* Scale the y speed (x1.1 when positive, else x0.2) and the x speed (x1.2 when
+   negative; otherwise x0.6, at least 2, then reversed with d[0] cleared). */
 void remake_mvxy_PoSB(WORK* wk) {
     switch (((wk->mvxy.a[0].sp < 0) * 2) + (wk->mvxy.a[0].sp > 0)) {
     case 2:
@@ -226,8 +226,8 @@ void remake_mvxy_PoSB(WORK* wk) {
 
 
 
-/* for an air parry, scale the y speed (x1.2 when positive, otherwise x0.4 and
-   reversed, at most 12) and the x speed (x1.25) */
+/* For an air parry, scale the y speed (x1.2 when positive, otherwise x0.4 and
+   reversed, at most 12) and the x speed (x1.25). */
 void setup_air_paring_mvxy(WORK* wk) {
     switch (((wk->mvxy.a[1].sp < 0) * 2) + (wk->mvxy.a[1].sp > 0)) {
     case 1:
@@ -675,7 +675,7 @@ s16 asag;
 
 
 
-/* empty */
+/* Empty. */
 void cal_sa_gauge_dummy(void) {}
 
 
@@ -889,7 +889,7 @@ void dead_voice_request2(PLW* wk) {
     s16 secd2;
     secd1 = dead_voice_table[wk->player_number][0];
     secd2 = dead_voice_table[wk->player_number][1];
-    if (wk->wu.routine_no[1] == PLAYER_DAMAGE && atsagct[wk->wu.routine_no[2]] & 0x10) {
+    if (wk->wu.routine_no[1] == PLAYER_DAMAGE && (atsagct[wk->wu.routine_no[2]] & 0x10)) {
         sound_effect_request[secd2](wk, secd2);
     } else {
         sound_effect_request[secd1](wk, secd1);
@@ -918,7 +918,7 @@ PLW* ds;
 s8 gddir;
 {
     s32 gc;
-    if ((ds->sa_stop_flag) == 1) {
+    if (ds->sa_stop_flag == 1) {
         if (ds->wu.rl_flag) {
             ds->saishin_lvdir = convert_saishin_lvdir[1][ds->sa_stop_lvdir & 0xC];
         } else {

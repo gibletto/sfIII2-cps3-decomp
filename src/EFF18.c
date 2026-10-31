@@ -69,6 +69,7 @@ extern const s16 scr_obj_data18_8[][12];
 extern const s16 scr_obj_data18_9[][12];
 extern const s16 scr_obj_data18_10[][12];
 
+/* Effect 18 object settings by stage setting (disp_index) and layout variant (bg_w.compel_flag). */
 const s16* scr_obj_data18[8][4] = {
     { scr_obj_data18_0[0], scr_obj_data18_0[0], scr_obj_data18_0[0], scr_obj_data18_0[0] },
     { scr_obj_data18_1[0], scr_obj_data18_1[0], scr_obj_data18_1[0], scr_obj_data18_1[0] },
@@ -102,7 +103,7 @@ void effect_17_move(WORK_Other* ewk) {
     case 5:
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -223,8 +224,8 @@ void effect_18_move(WORK_Other* ewk) {
             }
             break;
         default:
-            all_cgps_put_back(ewk);
-            push_effect_work((WORK*)ewk);
+            all_cgps_put_back(&ewk->wu);
+            push_effect_work(&ewk->wu);
         }
     }
 }

@@ -43,7 +43,9 @@ void hissatsu_setup_union(PLW* wk, s16 rno) {
 
 
 
-/* the 0x100 test comes before the ground/air split */
+/* Start the full-gauge super art (exsa_g_ix on the ground, exsa_a_ix in the air) when every stock is
+ * full and its command has been entered; with always set, only a CMD_BT_ALWAYS command counts.
+ * 1 when it starts. */
 s32 check_full_gauge_attack(PLW* wk, s8 always) {
     u16* conpane;
     s16 j;
@@ -272,7 +274,8 @@ s32 execute_super_arts(PLW* wk) {
 
 
 
-/* the EX test before the command match */
+/* Start the special move whose command has been entered, on the ground or in the air (its EX version
+ * when allowed); 1 when one starts. */
 s32 check_special_attack(PLW* wk) {
     s16 i;
     s16 j;
@@ -387,7 +390,7 @@ s32 check_special_attack(PLW* wk) {
 
 
 
-/* waza 14/15 by command (one button test) */
+/* Start the leap attack (waza 14 or 15) whose command has been entered; 1 when one starts. */
 s32 check_leap_attack(PLW* wk) {
     s16 i;
     s16 j;
@@ -629,7 +632,7 @@ s32 check_lever_up_attack(PLW* wk) {
 
 
 
-/* always returns 0 */
+/* Always returns 0. */
 s32 check_catch_attack(PLW* wk) {
     return 0;
 }
@@ -802,7 +805,7 @@ s16 cmd_ex;
 
 
 
-/* the nearest of two body boxes and the push box */
+/* Returns the nearest of the opponent's two body boxes and push box. */
 s32 get_em_body_range(WORK* wk) {
     WORK* em = (WORK*)wk->target_adrs;
     s16 r1;
@@ -885,7 +888,7 @@ u16 sw;
 
 
 
-/* the attack for button strength sw (shot_refresh) */
+/* Returns the attack for button strength sw (shot_refresh). */
 s16 shot_data_refresh(s16 sw) {
     return shot_refresh[sw];
 }
@@ -931,7 +934,7 @@ s32 check_renda_cancel(PLW* wk) {
         return 0;
     }
     wk->permited_koa |= 0x20;
-    if (wk->wu.pat_status == renda_status_table[(wk->cp->sw_new & 3)]) {
+    if (wk->wu.pat_status == renda_status_table[wk->cp->sw_new & 3]) {
         if (wk->current_attack == (wk->cp->sw_now & CMD_SW_SHOT)) {
             setup_comm_back((WORK*)wk);
             wk->wu.cg_ix = wk->wu.cg_eftype * wk->wu.cgd_type - (wk->wu.cgd_type * 2);

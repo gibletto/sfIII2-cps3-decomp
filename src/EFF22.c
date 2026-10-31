@@ -29,7 +29,7 @@
 
 
 
-/* animate the part and move it to its resting position */
+/* Animate the part and move it to its resting position once the object is hit. */
 void effect_22_move(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;
@@ -97,7 +97,8 @@ void effect_22_move(WORK_Other* ewk) {
 
 
 
-/* one work, for its master */
+/* Create the part of the breakable stage object (effect 23) that moves to a resting position
+ * when the object is hit; made with that object. */
 s32 effect_22_init(WORK_Other* oya) {
     WORK_Other* ewk;
     s16 ix;

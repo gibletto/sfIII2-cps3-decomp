@@ -16,7 +16,7 @@
 #include "PLS02.h"
 #include "ta_sub2.h"
 
-/* a loop over the players */
+/* Clear a_rno and the win and lose works, looping over the players. */
 void win_lose_work_clear(void) {
     s16 i;
     a_rno = 0;

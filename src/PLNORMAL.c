@@ -568,7 +568,7 @@ void Normal_31000(PLW* wk) {
         wk->wu.rl_flag = (wk->wu.dm_rl + 1) & 1;
         set_char_move_init((WORK*)wk, 0, wk->wu.routine_no[2] - 7);
         set_hit_stop_hit_quake((WORK*)wk);
-        Flash_MT[(wk->wu.id)] = 2;
+        Flash_MT[wk->wu.id] = 2;
         add_sp_arts_gauge_paring(wk);
         break;
     case N31_RUN:
@@ -595,7 +595,7 @@ void Normal_35000(PLW* wk) {
         }
         remake_mvxy_PoSB((WORK*)wk);
         set_char_move_init((WORK*)wk, 0, 27);
-        Flash_MT[(wk->wu.id)] = 2;
+        Flash_MT[wk->wu.id] = 2;
         break;
     case N35_AIR:
         if (((WORK*)wk->wu.target_adrs)->cg_prio != 2) {
@@ -628,7 +628,7 @@ void Normal_air_paring(PLW* wk) {
         }
         setup_air_paring_mvxy((WORK*)wk);
         set_char_move_init((WORK*)wk, 0, 27);
-        Flash_MT[(wk->wu.id)] = 2;
+        Flash_MT[wk->wu.id] = 2;
         break;
     case N_AIR_PARI_AIR:
         if (((WORK*)wk->wu.target_adrs)->cg_prio != 2) {
@@ -725,7 +725,7 @@ void Normal_42000(PLW* wk) {
         }
         set_char_move_init((WORK*)wk, 0, dadr[0]);
         setup_mvxy_data((WORK*)wk, dadr[1]);
-        Flash_MT[(wk->wu.id)] = 2;
+        Flash_MT[wk->wu.id] = 2;
         add_sp_arts_gauge_paring(wk);
         set_hit_stop_hit_quake((WORK*)wk);
         if (wk->wu.hit_stop > 0) {

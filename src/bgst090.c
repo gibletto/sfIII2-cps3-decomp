@@ -71,7 +71,7 @@ void bg090_layer0(void) {
 
 
 
-/* layer 0: clears r_no_1, starts effects 14, 05 and 12 */
+/* Layer 0: clears r_no_1 and starts effects 14, 05 and 12. */
 void bg1502_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->r_no_1 = 0;
@@ -100,7 +100,7 @@ void bg090_layer0_color(void) {
 
 
 
-/* each stage file has its own copy */
+/* Each stage file has its own copy. */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -161,7 +161,7 @@ void bg090_layer1_init(void) {
 
 
 
-/* each stage file has its own copy */
+/* Move the base layer and chase the players; each stage file has its own copy. */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();

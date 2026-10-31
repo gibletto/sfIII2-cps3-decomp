@@ -50,15 +50,15 @@ void effect_J3_move(WORK_Other* ewk) {
         disp_pos_trans_entry(ewk);
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
 
 
 
-/* palette source 0x0279B800 */
+/* The palette source is 0x0279B800. */
 s32 effect_J3_init(WORK* wk, u8 type) {
     WORK_Other* ewk;
     s16 ix;

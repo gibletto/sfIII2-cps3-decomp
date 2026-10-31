@@ -84,7 +84,7 @@ void wipe_mask_set_cols(s16 kind, s16 row) {
     src += wipe_column_tbl[kind].w * row;
     map = wipe_set_pattern_tbl[kind].adr;
     map += row * 32;
-    dst = (SS_RAM + 0xE000);
+    dst = SS_RAM + 0xE000;
     mask = wipe_mask_chr;
     for (i = 0; i < 6; i++) {
         for (y = 0; y < 16; y++) {

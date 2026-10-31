@@ -95,7 +95,7 @@ void bg0401_color(void) {
 
 
 
-/* each stage file has its own copy */
+/* Each stage file has its own copy. */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -126,7 +126,7 @@ void bg0402_wait(void) {
 
 
 
-/* each stage file has its own copy */
+/* Move the base layer and chase the players; each stage file has its own copy. */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();

@@ -60,7 +60,6 @@ static void bg_base_move_common(void);
 
 
 /* provisional name */
-/* provisional name */
 /* the four cells of each animation frame */
 const s32 bg060_cell_tbl[16][4] = {
     { 0x0A, 0x0B, 0x0E, 0x0F },
@@ -151,7 +150,7 @@ void bg060_layer0_color(void) {
 
 
 
-/* each stage file has its own copy */
+/* Each stage file has its own copy. */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -159,7 +158,6 @@ static void bg_move_common(void) {
 
 
 
-/* provisional name */
 /* provisional name */
 /* nothing reads it */
 const u8 bg060_unused[4] = {
@@ -199,7 +197,7 @@ void bg060_layer1_wait(void) {
 
 
 
-/* each stage file has its own copy */
+/* Move the base layer and chase the players; each stage file has its own copy. */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();

@@ -32,7 +32,7 @@ extern const CONN effh0_nando_tbl[4][6];
 
 
 
-/* priority 27, number cells from 0xB2E0 */
+/* Priority 27; the number cells start at 0xB2E0. */
 void effect_H0_move(WORK_Other_CONN* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case R0_INIT:
@@ -69,7 +69,7 @@ void effect_H0_move(WORK_Other_CONN* ewk) {
         break;
     default:
         all_cgps_put_back((WORK_Other*)ewk);
-        push_effect_work((WORK*)ewk);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -88,7 +88,7 @@ void effH0_trans(WORK* ewk) {
 
 
 
-/* id 170, six cells, row = mode * 2 + facing */
+/* Id 170, six cells; the row is mode * 2 + facing. */
 s32 effect_H0_init(WORK* wk) {
     WORK_Other_CONN* ewk;
     s16 ix;

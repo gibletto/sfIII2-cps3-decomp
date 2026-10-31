@@ -62,7 +62,7 @@
 
 
 /* 02006400 */
-/* the check routines, indexed by a step's CK_* code (cmd_data.h) */
+/* The check routines, indexed by a step's CK_* code (cmd_data.h). */
 void (*chk_move_jp[CMD_END])() = {
     check_init, /* CK_INIT */
     check_0,    /* CK_LEVER */
@@ -128,7 +128,7 @@ void cmd_data_set(PLW* pl, s16 i) {
 
 
 void cmd_init(PLW* pl) {
-    s16 i2;
+    s16 slot;
     s16 i;
     s16 j;
     s32* ptr;
@@ -141,18 +141,18 @@ void cmd_init(PLW* pl) {
             *ptr++ = 0;
         }
     }
-    i2 = 0;
+    slot = 0;
     do {
-        (&wcp[cmd_id].waza_flag[0])[i2] = 0;
+        (&wcp[cmd_id].waza_flag[0])[slot] = 0;
         j = 0;
         while (j < 4) {
-            (&wcp[cmd_id].waza_r[i2][0])[j] = 0;
+            (&wcp[cmd_id].waza_r[slot][0])[j] = 0;
             j++;
-            (&wcp[cmd_id].waza_r[i2][0])[j] = 0;
+            (&wcp[cmd_id].waza_r[slot][0])[j] = 0;
             j++;
         }
-        i2 = i2 + 1;
-    } while (i2 < CMD_SLOTS);
+        slot = slot + 1;
+    } while (slot < CMD_SLOTS);
     waza_compel_all_init(pl);
 }
 

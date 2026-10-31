@@ -290,6 +290,7 @@ s32 Check_Win_BGM(void) {
 
 
 
+/* Text x of the entry messages by Screen_Mode, a line per message: 1P, then 2P. */
 const u16 Entry_Msg_X_Data[12][2] = {
     { 6, 10 }, { 31, 40 },
     { 5, 10 }, { 30, 39 },
@@ -301,20 +302,19 @@ const u16 Entry_Msg_X_Data[12][2] = {
 
 
 
+/* Text x of the score rows by Screen_Mode, a line per row: 1P, then 2P. */
 const u16 Score_X_Pos_Data[4][2] = {
     { 17, 23 }, { 37, 46 },
-    { 6, 14 },
-    { 31, 40 },
+    { 6, 14 }, { 31, 40 },
 };
 
 
 
+/* Text x of the win record and loser rows by Screen_Mode, a line per row: 1P, then 2P. */
 const s16 Loser_X_Pos_Data[6][2] = {
     { 5, 5 }, { 42, 55 },
-    { 8, 15 },
-    { 31, 40 },
-    { 7, 15 },
-    { 32, 41 },
+    { 8, 15 }, { 31, 40 },
+    { 7, 15 }, { 32, 41 },
 };
 
 

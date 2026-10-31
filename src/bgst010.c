@@ -50,13 +50,13 @@ void BG010(void) {
 
 
 void bg0101(void) {
-    void (*bg1601_jmp[2])() = { bg0101_init00, bg_move_common };
-    bg1601_jmp[bgw_ptr->r_no_0]();
+    void (*bg0101_jmp[2])() = { bg0101_init00, bg_move_common };
+    bg0101_jmp[bgw_ptr->r_no_0]();
 }
 
 
 
-/* starts effects 05 and 66 */
+/* Starts effects 05 and 66. */
 void bg0101_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -68,7 +68,7 @@ void bg0101_init00(void) {
 
 
 
-/* each stage file has its own copy */
+/* Each stage file has its own copy. */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -77,13 +77,13 @@ static void bg_move_common(void) {
 
 
 void bg0102(void) {
-    void (*bg0602_jmp[2])() = { bg0102_init00, bg_base_move_common };
-    bg0602_jmp[bgw_ptr->r_no_0]();
+    void (*bg0102_jmp[2])() = { bg0102_init00, bg_base_move_common };
+    bg0102_jmp[bgw_ptr->r_no_0]();
 }
 
 
 
-/* loads the stage graphics */
+/* Loads the stage graphics. */
 void bg0102_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -94,7 +94,7 @@ void bg0102_init00(void) {
 
 
 
-/* each stage file has its own copy: the base layer moves and chases */
+/* Move the base layer and chase the players; each stage file has its own copy. */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();

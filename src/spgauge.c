@@ -523,16 +523,16 @@ s8 Stpl_Num;
                 spg_dat[Stpl_Num].no_chgcol = 1;
                 goto case_2;
             } else {
-            sast_color_chenge(Stpl_Num);
-            spg_dat[Stpl_Num].spg_level = plw[Stpl_Num].sa->store;
-            sa_stock_trans(spg_dat[Stpl_Num].spg_level, col, Stpl_Num);
-            sa_gauge_trans(Stpl_Num, col);
-            sa_waku_trans(Stpl_Num, Stpl_Num);
-            spg_dat[Stpl_Num].flag = 0;
-            spg_dat[Stpl_Num].time_rno = SPG_TIME_IDLE;
-            spg_dat[Stpl_Num].sa_flag = 0;
-            spg_dat[Stpl_Num].ex_flag = 0;
-            break;
+                sast_color_chenge(Stpl_Num);
+                spg_dat[Stpl_Num].spg_level = plw[Stpl_Num].sa->store;
+                sa_stock_trans(spg_dat[Stpl_Num].spg_level, col, Stpl_Num);
+                sa_gauge_trans(Stpl_Num, col);
+                sa_waku_trans(Stpl_Num, Stpl_Num);
+                spg_dat[Stpl_Num].flag = 0;
+                spg_dat[Stpl_Num].time_rno = SPG_TIME_IDLE;
+                spg_dat[Stpl_Num].sa_flag = 0;
+                spg_dat[Stpl_Num].ex_flag = 0;
+                break;
             }
             return;
         case SPG_TIME_DRAIN:

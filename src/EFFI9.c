@@ -119,7 +119,7 @@ s32 effect_I9_init(WORK_Other* wk, s16 total, s16 interval, s16 life) {
     ewk->wu.dir_timer = life;
     ewk->wu.blink_timing = ewk->master_id;
     if ((ix2 = pull_effect_work(7)) == -1) {
-        push_effect_work((WORK*)ewk);
+        push_effect_work(&ewk->wu);
         return;
     }
     sub_w = (WORK*)frw[ix2];

@@ -70,32 +70,32 @@
 
 
 void cal_damage_vitality(PLW* as, PLW* ds) {
-    u16 xx = as->wu.att.pow;
-    s16 yy;
-    s16 power = Power_Data[xx];
+    u16 att_pow = as->wu.att.pow;
+    s16 rate;
+    s16 power = Power_Data[att_pow];
     if (as->player_number == PL_GOUKI2) {
-        yy = Pow_Control_Data_1[1][Round_Level];
+        rate = Pow_Control_Data_1[1][Round_Level];
     } else {
-        yy = Pow_Control_Data_1[0][Round_Level];
+        rate = Pow_Control_Data_1[0][Round_Level];
     }
-    ds->wu.dm_vital = power * yy / 100;
+    ds->wu.dm_vital = power * rate / 100;
 }
 
 
 
 void cal_damage_vitality_eff(WORK_Other* as, PLW* ds) {
-    u16 xx = as->wu.att.pow;
-    s16 yy;
-    s16 power = Power_Data[xx];
+    u16 att_pow = as->wu.att.pow;
+    s16 rate;
+    s16 power = Power_Data[att_pow];
     if (((PLW*)as)->player_number == PL_GOUKI2) {
-        yy = Pow_Control_Data_1[1][Round_Level];
+        rate = Pow_Control_Data_1[1][Round_Level];
     } else {
-        yy = Pow_Control_Data_1[0][Round_Level];
+        rate = Pow_Control_Data_1[0][Round_Level];
     }
-    ds->wu.dm_vital = power * yy / 100;
+    ds->wu.dm_vital = power * rate / 100;
 }
 
-/* capped at 9999900; the stage 16 test */
+/* Add score entry ix to the player's round score and, for a human player, to the CPU or VS score (the CPU score is capped at 9999900); the score is not shown on stage 16. */
 void Additinal_Score_DM(wk, ix)
 WORK_Other* wk;
 u16 ix;
@@ -128,7 +128,7 @@ u16 ix;
 
 
 /* provisional name */
-/* six digits */
+/* Show the player's score in six digits. */
 void Disp_Player_Score(id)
 s16 id;
 {

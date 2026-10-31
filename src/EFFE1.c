@@ -1,8 +1,8 @@
 /*
  * EFFE1.C  Effect E1: opening scene windows
  *
- * effect_E1_init makes a window of kind id (0-2) that either flies to its place or, with the third argument
- * set, starts there.
+ * effect_E1_init makes a window of kind id (0-2) that either flies to its place or, with ready set,
+ * starts there.
  * effE1_0000 waits for scene 12 and opens; effE1_1000 and effE1_2000 shrink in from a large
  * window, fly to their point and open (effE1_1000 also sounds 124 and sets effE1_end_flag).
  */
@@ -273,7 +273,7 @@ static void effE1_2000(WORK_Other* ewk) {
 
 
 
-s32 effect_E1_init(s16 id, s16 Time, s16 _p2) {
+s32 effect_E1_init(s16 id, s16 Time, s16 ready) {
     WORK_Other* ewk;
     s16 ix;
     if ((ix = pull_effect_work(4)) == -1) {
@@ -281,7 +281,7 @@ s32 effect_E1_init(s16 id, s16 Time, s16 _p2) {
     }
     ewk = (WORK_Other*)frw[ix];
     ewk->wu.be_flag = 1;
-    ewk->wu.id = 0x8D;
+    ewk->wu.id = 141;
     ewk->wu.work_id = 16;
     ewk->wu.cgromtype = 1;
     ewk->wu.my_col_mode = 0x4200;
@@ -299,7 +299,7 @@ s32 effect_E1_init(s16 id, s16 Time, s16 _p2) {
         ewk->wu.old_rno[3] = 48;
         ewk->wu.my_priority = ewk->wu.position_z = 51;
         ewk->wu.old_rno[4] = 61;
-        if (_p2) {
+        if (ready) {
             ewk->wu.routine_no[0] = R0_SET;
             ewk->wu.old_rno[4] = 89;
             ewk->wu.xyz[0].disp.pos = 0x1B8;
@@ -315,7 +315,7 @@ s32 effect_E1_init(s16 id, s16 Time, s16 _p2) {
     case 1:
         ewk->wu.my_priority = ewk->wu.position_z = 50;
         ewk->wu.old_rno[4] = 59;
-        if (_p2) {
+        if (ready) {
             ewk->wu.xyz[0].disp.pos = 0x1B8;
             ewk->wu.xyz[1].disp.pos = 0x94;
             ewk->wu.routine_no[0] = R0_SET;
@@ -332,7 +332,7 @@ s32 effect_E1_init(s16 id, s16 Time, s16 _p2) {
     case 2:
         ewk->wu.my_priority = ewk->wu.position_z = 50;
         ewk->wu.old_rno[4] = 60;
-        if (_p2) {
+        if (ready) {
             ewk->wu.xyz[0].disp.pos = 0x200;
             ewk->wu.xyz[1].disp.pos = 0xA0;
             ewk->wu.routine_no[0] = R0_SET;

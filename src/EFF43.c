@@ -34,7 +34,7 @@
 
 
 /* provisional name */
-/* slides in to its stop point */
+/* Slide in to the stop point. */
 void effect_43_move(WORK_Other* ewk) {
     Cut_Cut_Sub(3);
     switch (ewk->wu.routine_no[0]) {
@@ -72,8 +72,8 @@ void effect_43_move(WORK_Other* ewk) {
     case R0_STAY:
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         return;
     }
     ewk->wu.position_x = ewk->wu.xyz[0].disp.pos & 0x3FF;
@@ -84,7 +84,7 @@ void effect_43_move(WORK_Other* ewk) {
 
 
 
-/* from the left or right side */
+/* Create the object, coming in from the left or right side. */
 s32 effect_43_init(s16 Side, s16 Time) {
     WORK_Other* ewk;
     s16 ix;

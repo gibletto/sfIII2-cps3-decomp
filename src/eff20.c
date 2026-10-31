@@ -31,7 +31,8 @@
 
 
 
-/* growing hit box and a flight first */
+/* Drop 32 dots while growing from size 47 to 90, then play the animation once, held to BG1's X
+ * position. */
 void effect_20_move(WORK_Other* ewk) {
     WORK_Other* oya = (WORK_Other*)ewk->my_master;
     switch (ewk->wu.routine_no[1]) {
@@ -88,7 +89,7 @@ void effect_20_move(WORK_Other* ewk) {
 
 
 
-/* rl_flag 0, colour 0x20, at BG1 + 8 and Y 72 */
+/* Create the sprite over the Shun Goku Satsu finish screen; syungoku_finish starts it. */
 s32 effect_20_init(WORK_Other* oya) {
     WORK_Other* ewk;
     s16 ix;

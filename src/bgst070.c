@@ -51,8 +51,8 @@ void BG070(void) {
 
 
 void bg1801(void) {
-    void (*bg0801_jmp[2])() = { bg1801_init00, bg1801_move };
-    bg0801_jmp[bgw_ptr->r_no_0]();
+    void (*bg1801_jmp[2])() = { bg1801_init00, bg1801_move };
+    bg1801_jmp[bgw_ptr->r_no_0]();
 }
 
 
@@ -74,13 +74,13 @@ void bg1801_move(void) {
 
 
 void bg1802(void) {
-    void (*bg1601_jmp[2])() = { bg1802_init00, bg1802_move };
-    bg1601_jmp[bgw_ptr->r_no_0]();
+    void (*bg1802_jmp[2])() = { bg1802_init00, bg1802_move };
+    bg1802_jmp[bgw_ptr->r_no_0]();
 }
 
 
 
-/* starts effect 14 three times */
+/* Starts effect 14 three times. */
 void bg1802_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0x200;
@@ -94,7 +94,7 @@ void bg1802_init00(void) {
 
 
 /* provisional name */
-/* nothing calls it (an unused bg1802 step: zooms the frame in to bg_f_x 64, then Zoomf_Init) */
+/* Unreferenced: an unused bg1802 step that zooms the frame in to bg_f_x 64, then calls Zoomf_Init. */
 void bg1802_zoom_in(void) {
     if (C_No1 > 3 || Allow_a_battle_f) {
         if (Game_setting.Screen_Mode == 0) {
@@ -149,10 +149,10 @@ void bg1803_move(void) {
 
 
 
-/* runs layer 4 */
+/* Runs layer 4. */
 void bg180_sync_common(void) {
-    void (*bg080_sync_jmp[2])() = { bg180_sync_init, bg180_sync_move };
-    bg080_sync_jmp[bgw_ptr->r_no_0]();
+    void (*bg180_sync_jmp[2])() = { bg180_sync_init, bg180_sync_move };
+    bg180_sync_jmp[bgw_ptr->r_no_0]();
 }
 
 

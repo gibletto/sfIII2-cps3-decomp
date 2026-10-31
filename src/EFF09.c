@@ -201,7 +201,7 @@ void eff09_1000(WORK_Other* ewk) {
         sort_push_request(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -210,7 +210,7 @@ void eff09_1000(WORK_Other* ewk) {
 
 
 void eff09_2000(WORK_Other* ewk) {
-    s16 work;
+    s16 rnd;
     const s32* ptr;
     u16 sw_work;
     const s16* pl_hit_ptr;
@@ -227,12 +227,12 @@ void eff09_2000(WORK_Other* ewk) {
             sw_work = p1sw_0;
         }
         if (sw_work & BUTTON_START) {
-            work = 0;
+            rnd = 0;
         } else {
-            work = random_16_com();
-            work &= 1;
+            rnd = random_16_com();
+            rnd &= 1;
         }
-        ewk->wu.dir_step = work;
+        ewk->wu.dir_step = rnd;
         ptr = eff09_2000_data[ewk->wu.dir_step];
         ewk->wu.mvxy.a[0].sp = *ptr++;
         ewk->wu.mvxy.a[1].sp = *ptr++;
@@ -272,8 +272,8 @@ void eff09_2000(WORK_Other* ewk) {
                 set_char_move_init2(&hit_pl->wu, 9, 63, 1, 0);
                 Appear_free[ewk->master_id] = 2;
                 effect_B4_init(ewk);
-                work = random_16_com();
-                work &= 7;
+                rnd = random_16_com();
+                rnd &= 7;
                 add_super_arts_gauge(plw[ewk->master_id].sa, plw[ewk->master_id].wu.id, 1);
                 break;
             }
@@ -304,7 +304,7 @@ void eff09_2000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -407,7 +407,7 @@ void eff09_3000(WORK_Other* ewk) {
         sort_push_request(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -465,7 +465,7 @@ void eff09_4000(WORK_Other* ewk) {
         sort_push_request(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -491,7 +491,7 @@ void eff09_5000(WORK_Other* ewk) {
         sort_push_request(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -572,7 +572,7 @@ void eff09_7000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -602,7 +602,7 @@ void eff09_8000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -634,7 +634,7 @@ void eff09_9000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -734,7 +734,7 @@ void eff09_11000(WORK_Other* ewk) {
         sort_push_request(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -789,7 +789,7 @@ void eff09_12000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -839,7 +839,7 @@ void eff09_13000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -877,7 +877,7 @@ void eff09_14000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -914,7 +914,7 @@ void eff09_15000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -948,7 +948,7 @@ void eff09_16000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -994,7 +994,7 @@ void eff09_17000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -1108,7 +1108,7 @@ s32 effect_09_init2(WORK* wk, u8 data) {
     ewk->wu.work_id = 16;
     ewk->master_id = wk->id;
     ewk->wu.cgromtype = 1;
-    *ewk->wu.char_table = etc_char_table;
+    ewk->wu.char_table[0] = etc_char_table;
     ewk->wu.my_col_mode = wk->my_col_mode;
     data_ptr = eff09_data2[ewk->wu.type];
     ewk->wu.routine_no[0] = *data_ptr++;

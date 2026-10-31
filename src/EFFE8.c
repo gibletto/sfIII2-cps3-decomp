@@ -78,9 +78,9 @@ void effect_E8_move(WORK_Other* ewk) {
         break;
     default:
         if (ewk->wu.old_rno[3]) {
-            all_cgps_put_back(ewk);
+            all_cgps_put_back(&ewk->wu);
         }
-        push_effect_work((WORK*)ewk);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -131,7 +131,7 @@ void effe8_zanzou_process(WORK_Other* ewk, PLW* mwk) {
 
 
 
-/* drawn during a super-art freeze too */
+/* Drawn during a super-art freeze too. */
 void effE8_trans(ewk, mwk)
 WORK_Other* ewk;
 PLW* mwk;

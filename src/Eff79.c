@@ -287,7 +287,7 @@ s32 Y_Value;
 
 void EFF79_Move_X(WORK_Other* ewk) {
     ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
-    if (0 > ewk->wu.mvxy.a[0].sp) {
+    if (ewk->wu.mvxy.a[0].sp < 0) {
         if (ewk->wu.dir_step >= ewk->wu.xyz[0].disp.pos) {
             ewk->wu.xyz[0].disp.pos = ewk->wu.dir_step;
         }
@@ -301,7 +301,7 @@ void EFF79_Move_X(WORK_Other* ewk) {
 s32 EFF79_Move_Y(WORK_Other* ewk) {
     ewk->wu.xyz[1].cal += ewk->wu.mvxy.a[1].sp;
     ewk->wu.mvxy.a[1].sp += ewk->wu.mvxy.d[1].sp;
-    if (0 > ewk->wu.mvxy.a[1].sp) {
+    if (ewk->wu.mvxy.a[1].sp < 0) {
         if (ewk->wu.direction >= ewk->wu.xyz[1].disp.pos) {
             ewk->wu.xyz[1].disp.pos = ewk->wu.direction;
             return 1;
@@ -368,7 +368,7 @@ s32 effect_79_init(s16 pl_id, s16 plate_id, s16 pos_id, s16 time, s16 type) {
     ewk->wu.my_col_code = 0x2040;
     ewk->wu.my_family = 3;
     ewk->wu.dir_timer = time;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     ewk->master_id = pl_id;
     ewk->wu.char_index = plate_id + pl_id * 3 + 16;
     ewk->wu.vitality = type;

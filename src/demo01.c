@@ -68,7 +68,7 @@
 
 
 
-/* palettes 130, 2 and 1 */
+/* Uses palettes 130, 2 and 1. */
 s32 Title(void) {
     switch (D_No1) {
     case TT_INIT:
@@ -123,7 +123,7 @@ s32 Title(void) {
 
 
 
-/* palettes 130 and 2 */
+/* Uses palettes 130 and 2. */
 s32 Title_At_a_Dash(void) {
     switch (D_No1) {
     case TD_INIT:

@@ -141,7 +141,7 @@ void EFF69_SLIDE_IN(WORK_Other* ewk) {
     default:
         ewk->wu.xyz[0].cal += ewk->wu.mvxy.a[0].sp;
         ewk->wu.mvxy.a[0].sp += ewk->wu.mvxy.d[0].sp;
-        if (0 < ewk->wu.mvxy.a[0].sp) {
+        if (ewk->wu.mvxy.a[0].sp > 0) {
             if (ewk->wu.hit_quake <= ewk->wu.xyz[0].disp.pos) {
                 if (Order[ewk->wu.dir_step] == ewk->wu.routine_no[0]) {
                     Order[ewk->wu.dir_step] = R0_WAIT;
@@ -217,7 +217,7 @@ s32 effect_69_init(s16 dir_old) {
     ewk->wu.my_col_mode = 0x4200;
     ewk->wu.my_col_code = 0x2040;
     ewk->wu.my_family = 3;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     ewk->wu.char_index = 12;
     ewk->wu.dir_old = dir_old;
     ewk->wu.xyz[1].disp.pos = Pos_Data_69[dir_old];

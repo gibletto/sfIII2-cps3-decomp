@@ -53,7 +53,7 @@ void effect_I1_move(WORK_Other* ewk) {
             if (ewk->wu.hit_quake <= ewk->wu.xyz[0].disp.pos) {
                 ewk->wu.routine_no[0]++;
                 ewk->wu.xyz[0].disp.pos = ewk->wu.hit_quake;
-                ewk->wu.mvxy.a[0].sp = 0xFFE80009;
+                ewk->wu.mvxy.a[0].sp = -0x17FFF7;
             }
         } else if (ewk->wu.hit_quake >= ewk->wu.xyz[0].disp.pos) {
             ewk->wu.routine_no[0]++;
@@ -107,7 +107,7 @@ s32 effect_I1_init(s16 PL_id, s16 Wait, s16 Pos_Y, s16 Prio, s16 Dir) {
     ewk->wu.my_col_mode = 0x4200;
     ewk->wu.my_col_code = 0x2040;
     ewk->wu.my_family = 3;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     ewk->wu.dir_timer = Wait;
     ewk->wu.direction = Dir;
     if ((ewk->master_id = PL_id) != 0) {

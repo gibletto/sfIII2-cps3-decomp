@@ -73,7 +73,7 @@ void effect_A1_move(WORK_Other* ewk) {
         ewk->wu.routine_no[0]++;
         break;
     default:
-        push_effect_work((WORK*)ewk);
+        push_effect_work(&ewk->wu);
         break;
     }
 }

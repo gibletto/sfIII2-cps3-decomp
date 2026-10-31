@@ -199,7 +199,7 @@ s32 effect_I4_init(void) {
         ewk->wu.dead_f = 0;
         ewk->wu.my_family = 2;
         ewk->wu.my_col_code = 0x2040;
-        *ewk->wu.char_table = stg00_char_table;
+        ewk->wu.char_table[0] = stg00_char_table;
         ewk->wu.xyz[0].disp.pos = *data_ptr++;
         ewk->wu.xyz[1].disp.pos = *data_ptr++;
         ewk->wu.my_priority = ewk->wu.position_z = *data_ptr++;

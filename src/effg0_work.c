@@ -18,7 +18,6 @@ u16 effg0_judge_count_tail[1] = {
 };
 
 /* provisional name */
-/* provisional name */
 /* 02008430 */
 const u32* effg0_char_tbl[7] = {
     effg0_char_table_0,

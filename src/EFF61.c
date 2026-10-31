@@ -109,7 +109,7 @@ void effect_61_move(WORK_Other_CONN* ewk) {
 
 
 /* provisional name */
-/* 44 works for its master */
+/* Create 44 works for the master. */
 s32 effect_61_init(WORK_Other* oya) {
     WORK_Other* ewk;
     s16 ix;

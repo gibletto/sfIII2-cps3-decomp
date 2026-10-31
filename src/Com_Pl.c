@@ -231,9 +231,8 @@ void Com_Initialize(PLW* wk) {
     for (i = 0; i < 20; i++) {
         (&Resume_Lever[wk->wu.id][0])[i] = 0;
     }
-    j = 0;
-    while (j < 3) {
-        Attack_Count_Buff[wk->wu.id][j++] = -1;
+    for (j = 0; j < 3; j++) {
+        Attack_Count_Buff[wk->wu.id][j] = -1;
     }
 }
 
@@ -370,11 +369,9 @@ void Com_Guard(PLW* wk) {
 
 s32 Check_Counter_Attack(PLW* wk) {
     s16 xx;
-    WORK* em;
     if (Area_Number[wk->wu.id] >= 3) {
         return 0;
     }
-    em = (WORK*)wk->wu.target_adrs;
     xx = Type_of_Attack[wk->wu.id] & 0xF8;
     if (xx == 8) {
         VS_Tech[wk->wu.id] = 28;
@@ -1285,8 +1282,9 @@ s16 Decide_Exit_Catch(PLW* wk) {
 
 
 
+/* The lever Com_Rapid_Sub adds to the shot, right and left in turn (dir_step). */
 const u16 Rapid_Lever_Data[2] = {
-    8, 4,
+    LEVER_RIGHT, LEVER_LEFT,
 };
 
 /* Stored after Rapid_Lever_Data; nothing in the program refers to it. */
@@ -1569,6 +1567,10 @@ void Setup_Bullet_Counter(PLW* wk) {
 
 
 
+/*
+ * By character, the highest pattern number of the active, passive, projectile (VS shell) and
+ * follow patterns: Pattern_Insurance replaces a Pattern_Index past it with the forced number.
+ */
 const u8 Pattern_Insurance_Data[16][4] = {
     { 64, 148, 10, 3 },  /* Gill */
     { 61, 156, 9, 3 },  /* Alex */

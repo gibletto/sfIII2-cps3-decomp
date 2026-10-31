@@ -59,7 +59,7 @@ void effect_D7_move(WORK_Other* ewk) {
         ewk->wu.charset_id = 11;
         set_char_base_data(&ewk->wu);
         ewk->wu.my_col_code = ewk->wu.dm_vital;
-        *ewk->wu.char_table = plef_char_table;
+        ewk->wu.char_table[0] = plef_char_table;
         ball_init_position_effD7(ewk, (PLW*)ewk->my_master);
         ewk->wu.type = 1;
         ewk->wu.disp_flag = 1;
@@ -149,10 +149,10 @@ void effD7_main_process(WORK_Other* ewk) {
                 if (mwk->wu.routine_no[1] == PLAYER_ATTACK && mwk->wu.routine_no[2] == ATTACK_PERSONAL &&
                     mwk->wu.cg_type == 0x28 && mwk->tk_success == ewk->wu.shell_ix[0]) {
                     if (hit_check_subroutine(&ewk->wu, (WORK*)ewk->my_master, effD7_hit_box[0], effD7_hit_box[1])) {
-                    mwk->wu.cmwk[7] = 1;
-                    ewk->wu.type = 0;
-                    ewk->wu.routine_no[2] = R2_HELD;
-                }
+                        mwk->wu.cmwk[7] = 1;
+                        ewk->wu.type = 0;
+                        ewk->wu.routine_no[2] = R2_HELD;
+                    }
                 }
             }
             break;
@@ -253,7 +253,6 @@ void cal_speeds_to_me(WORK_Other* ewk, PLW* mwk) {
 
 void cal_speeds_to_em(WORK_Other* ewk, PLW* twk) {
     s16 tx = twk->wu.position_x;
-    s16 ty;
     if (ewk->wu.rl_flag) {
         if (ewk->wu.xyz[0].disp.pos > tx - 32) {
             tx = twk->wu.position_x + 32;
@@ -261,8 +260,7 @@ void cal_speeds_to_em(WORK_Other* ewk, PLW* twk) {
     } else if (ewk->wu.xyz[0].disp.pos < tx - 32) {
         tx = twk->wu.position_x - 32;
     }
-    ty = 48;
-    cal_speeds_effD7(ewk, 40, tx, ty, 4);
+    cal_speeds_effD7(ewk, 40, tx, 48, 4);
 }
 
 

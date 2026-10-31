@@ -42,7 +42,7 @@
 
 
 void effect_I5_move(WORK_Other* ewk) {
-    s16 work;
+    s16 level;
     switch (ewk->wu.routine_no[0]) {
     case R0_INIT:
         ewk->wu.routine_no[0]++;
@@ -66,8 +66,8 @@ void effect_I5_move(WORK_Other* ewk) {
         disp_pos_trans_entry(ewk);
         break;
     case R0_FADE:
-        work = effI5_fade_tbl[ewk->wu.old_rno[0]];
-        load_any_color_fade(144, work, work, work);
+        level = effI5_fade_tbl[ewk->wu.old_rno[0]];
+        load_any_color_fade(144, level, level, level);
         ewk->wu.old_rno[0]++;
         if (ewk->wu.old_rno[0] > 14) {
             ewk->wu.routine_no[0]++;
@@ -97,8 +97,8 @@ void effect_I5_move(WORK_Other* ewk) {
         disp_pos_trans_entry(ewk);
         break;
     default:
-        all_cgps_put_back(ewk);
-        push_effect_work((WORK*)ewk);
+        all_cgps_put_back(&ewk->wu);
+        push_effect_work(&ewk->wu);
         return;
     }
 }

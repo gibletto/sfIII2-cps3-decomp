@@ -33,7 +33,7 @@
 
 
 
-/* update the breakable stage object */
+/* Animate the breakable stage object through its hits until it stays broken. */
 void effect_63_move(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;
@@ -119,7 +119,7 @@ void effect_63_move(WORK_Other* ewk) {
 
 
 
-/* one object */
+/* Create the breakable stage object (type 7) when the stage background is set up. */
 s32 effect_63_init(void) {
     WORK_Other* ewk;
     s16 ix;

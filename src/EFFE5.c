@@ -319,7 +319,7 @@ void get_attdata_of_illusion(WORK_Other* ewk) {
     ewk->wu.att.hs_you = 0;
     ewk->wu.add_arts_point = 0;
     ewk->wu.kind_of_waza = zanzou_table[ewk->master_id][ewk->wu.type].kowaza;
-    ewk->wu.at_koa = ((s16)acatkoa_table[ewk->wu.kind_of_waza]);
+    ewk->wu.at_koa = (s16)acatkoa_table[ewk->wu.kind_of_waza];
     if (ewk->wu.cg_hit_ix) {
         hit_push_request(&ewk->wu);
     }

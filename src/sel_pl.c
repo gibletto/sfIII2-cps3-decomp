@@ -303,6 +303,7 @@ void Sel_PL_Cont_4th(void) {}
 
 
 
+/* Sets up the BG layers of the select screen. */
 void Initialize_BG(void)
 {
     Setup_BG_General();
@@ -322,8 +323,9 @@ void Setup_EFF69(void) {
 
 
 
+/* The characters Setup_Face_Sub makes an effect 70 face for, in order. */
 const s8 Face_Order_Data[7] = {
-    1, 5, 6, 13, 9, 4, 14,
+    PL_ALEX, PL_NECRO, PL_HUGO, PL_URIEN, PL_ORO, PL_DUDLEY, PL_GOUKI1,
 };
 
 
@@ -394,7 +396,7 @@ void Sel_PL_2nd(void) {
 
 
 void Sel_PL_3rd(void) {
-    if (Stop_Cursor[ID] != 0 || ((u8)Face_Move) != 0) {
+    if (Stop_Cursor[ID] != 0 || (u8)Face_Move != 0) {
         return;
     }
     if (Demo_Flag == 0) {
@@ -442,8 +444,8 @@ const u16 Sel_Command_Data[6][8] = {
 
 
 /* provisional name */
-/* the Gouki code on the select screen: each step wants the cursor on one face (Ryu, Ken, Ryu, Ken,
-   Sean) and a fixed run of lever moves; the last opens Gouki's face */
+/* The Gouki code on the select screen: each step wants the cursor on one face (Ryu, Ken, Ryu, Ken,
+   Sean) and a fixed run of lever moves; the last opens Gouki's face. */
 void Sel_Command_Check(void) {
     u16 sw;
     if (Gouki_Select_Open) {
@@ -557,7 +559,7 @@ void Sel_PL_4th(void) {
 
 
 void Sel_PL_5th(void) {
-    if (Stop_Cursor[ID] != 0 || ((u8)Face_Move) != 0) {
+    if (Stop_Cursor[ID] != 0 || (u8)Face_Move != 0) {
         return;
     }
     if (Demo_Flag == 0) {
@@ -587,8 +589,8 @@ void Sel_PL_6th(void) {}
 
 
 
-/* the face grid is two rows of 13 (row 1 has only the middle column, the Shin Gouki face, open once
-   his command is in); left/right step along the row, up/down only in the middle column */
+/* The face grid is two rows of 13 (row 1 has only the middle column, the Shin Gouki face, open once
+   his command is in); left/right step along the row, up/down only in the middle column. */
 void Sel_PL_Sub(PL_id, sw)
 s16 PL_id;
 u16 sw;
@@ -656,6 +658,7 @@ u16 sw;
 
 
 
+/* Lever auto-repeat waits: before the first repeat, the second, then every later one. */
 const s8 Repeat_Time_Data[3] = {
     26, 9, 7,
 };
@@ -666,6 +669,7 @@ const s8 Repeat_Time_Data_Wife[3] = {
 };
 
 
+/* Repeats a held lever on the select screen as further cursor moves, at the Repeat_Time_Data intervals. */
 void Auto_Repeat_Sub(PL_id)
 s16 PL_id;
 {
@@ -852,6 +856,8 @@ u16 sw;
 
 
 
+/* One player's super art select for the frame: up and down move between the three arts, and a button picks
+   one. */
 void Sel_Arts_Sub(PL_id, sw)
 s16 PL_id;
 u16 sw;
@@ -910,7 +916,7 @@ u16 sw;
 
 
 /* provisional name */
-/* the lever held with the super art button picks the CPU course (0-3); none held, a random one */
+/* The lever held with the super art button picks the CPU course (0-3); with none held, a random one. */
 void Setup_EM_Course(PL_id, sw)
 s16 PL_id;
 u16 sw;
@@ -1136,6 +1142,7 @@ void PL_Sel_4th(void) {}
 
 
 
+/* By the super art chosen: the row (0 to 2) each of the three plates takes. */
 const s16 Arts_Y_Data[3][3] = {
     { 1, 0, 2 }, { 2, 1, 0 }, { 0, 2, 1 },
 };
@@ -1210,7 +1217,7 @@ void Basic_Sub_Ex(void) {
 
 
 /* provisional name */
-/* Basic_Sub with layer 0's work and correction positions kept on its scroll and its line scroll redone */
+/* Basic_Sub with layer 0's work and correction positions kept on its scroll and its line scroll redone. */
 void Basic_Sub_Suzi(void) {
     bg_w.bgw[0].old_pos_x = bg_w.bgw[0].xy[0].disp.pos;
     move_effect_work(0);
@@ -1287,6 +1294,7 @@ void Setup_BG_Layer3(void) {
 
 
 
+/* Cursor y of the three rows, for each player; Setup_Cursor_Y copies them into Cursor_Y_Pos. */
 const s16 Cursor_Y_Data[6] = {
     80, 104, 128, 80, 104, 128,
 };
@@ -1310,7 +1318,7 @@ void Setup_Cursor_Y(void) {
 
 
 /* provisional name */
-/* the next opponent from the player's list, skipping those already beaten */
+/* The next opponent from the player's list, skipping those already beaten. */
 void Setup_Next_EM(void) {
     Setup_ID();
     paring_counter[COM_id] = 0;
@@ -1328,6 +1336,7 @@ void Setup_Next_EM(void) {
 
 
 
+/* The super art a computer player takes at random (random_16_com() & 7). */
 const u8 Arts_Rnd_Data[8] = {
     0, 0, 0, 1, 1, 1, 2, 2,
 };
@@ -1358,8 +1367,8 @@ void Setup_ID(void) {
 
 
 /* provisional name */
-/* the select screen's second entry, for the next fight: the player's choice stands, the opponent is
-   set up and the exit runs on to the VS screen (or the break-in boss's) */
+/* The select screen's second entry, for the next fight: the player's choice stands, the opponent is
+   set up and the exit runs on to the VS screen (or the break-in boss's). */
 s32 Next_CPU(void) {
     void (*Next_CPU_Tbl[6])() = { Next_CPU_1st, Next_CPU_2nd, Next_CPU_3rd, Next_CPU_4th, Next_CPU_5th, Next_CPU_6th };
     SEL_PL_X = 0;
@@ -1719,7 +1728,7 @@ void Exit_9th(void) {
 
 
 /* provisional name */
-/* the exit when the break-in boss comes on */
+/* The exit when the break-in boss comes on. */
 void Check_Exit_Boss(void) {
     void (*Exit_Tbl[8])(void) = { Boss_Exit_1st, Boss_Exit_2nd, Boss_Exit_3rd, Boss_Exit_4th, Boss_Exit_5th, Boss_Exit_6th, Boss_Exit_7th, Boss_Exit_8th };
 
@@ -1865,7 +1874,7 @@ void Boss_Exit_8th(void) {
 
 
 /* provisional name */
-/* the exit to the last boss */
+/* The exit to the last boss. */
 void Check_Exit_Last(void) {
     void (*Exit_Tbl[6])(void) = { Last_Exit_1st, Boss_Exit_2nd, Last_Exit_3rd, Last_Exit_4th, Last_Exit_5th, Boss_Exit_8th };
 
@@ -2048,29 +2057,31 @@ void Setup_Com_Color(void) {
 
 
 
+/* Takes time off the player's select time (SC_Personal_Time, into Control_Time) for the player's continues,
+   more late in the game. */
 void Correct_Control_Time(PL_id)
 s16 PL_id;
 {
-    u8 xx;
-    u8 zz;
+    u8 cont;
+    u8 late;
     if (Play_Type == PLAY_VS_PLAYER) {
         return;
     }
     if (Stage_Continue[PL_id] == 0) {
         return;
     }
-    xx = Stage_Continue[PL_id];
+    cont = Stage_Continue[PL_id];
     if (VS_Index[PL_id] >= 7) {
-        zz = 1;
+        late = 1;
     } else {
-        zz = 0;
+        late = 0;
     }
     if (Stage_Continue[PL_id] >= 16) {
-        xx = 16;
+        cont = 16;
     } else {
-        xx = Stage_Continue[PL_id];
+        cont = Stage_Continue[PL_id];
     }
-    Control_Time = SC_Personal_Time[PL_id] - Correct_Cont_Time_Data[zz][xx];
+    Control_Time = SC_Personal_Time[PL_id] - Correct_Cont_Time_Data[late][cont];
     if (Control_Time < 0) {
         Control_Time = 0;
     }

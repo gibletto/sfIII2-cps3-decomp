@@ -46,28 +46,28 @@ s32 sound_note_to_pitch(s32 note) {
 
 /* provisional name */
 u16 sound_voice_volume_compute(u16 level, u32 pan_scale, s8 vol_offset, SNDVOICE* v) {
-    s32 a;
-    s32 t;
+    s32 gain;
+    s32 total;
     u32 vol;
     u16 out;
     s32 comp;
     SOUND_CTRL ctrl;
-    a = v->volume * ((vol = v->expression) ? vol + 1 : vol) * 2;
-    a = (a * ((v->volume_offset + 64) & 0x7F)) >> 6;
-    a = (a * ((v->patch->volume_bias + 64) & 0x7F)) >> 6;
-    t = a * ((snd_master_vol + 64) & 0x7F);
-    t >>= 6;
+    gain = v->volume * ((vol = v->expression) ? vol + 1 : vol) * 2;
+    gain = (gain * ((v->volume_offset + 64) & 0x7F)) >> 6;
+    gain = (gain * ((v->patch->volume_bias + 64) & 0x7F)) >> 6;
+    total = gain * ((snd_master_vol + 64) & 0x7F);
+    total >>= 6;
     if (!v->priority_flags) {
-        t = (t * ((bgm_master_vol + 64) & 0x7F)) >> 6;
+        total = (total * ((bgm_master_vol + 64) & 0x7F)) >> 6;
     }
-    out = (level * (t + 1)) >> 15;
-    t = (s16)((out * pan_scale) >> 16) + (vol_offset * 256) + out;
-    if (t > 0x7FFF) {
+    out = (level * (total + 1)) >> 15;
+    total = (s16)((out * pan_scale) >> 16) + (vol_offset * 256) + out;
+    if (total > 0x7FFF) {
         out = 0x7FFF;
-    } else if (t < 0) {
+    } else if (total < 0) {
         out = 0;
     } else {
-        out = t;
+        out = total;
     }
     ctrl = snd_ctrl;
     if (ctrl.bit.stereo) {
@@ -362,7 +362,7 @@ void voice_process_secondary(SNDVOICE* voice, u8 voice_index, u8 is_bgm) {
     if (!owns_hardware_voice) {
         return;
     }
-    vol_offset = ((u8)bgm_volume_offset);
+    vol_offset = (u8)bgm_volume_offset;
     if (snd_stereo) {
         if (!is_bgm && se_pan_ramp[voice_index].mode != -1) {
             pan = se_pan_ramp[voice_index].current >> 8;

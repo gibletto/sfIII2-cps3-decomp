@@ -102,6 +102,7 @@ void clear_scroll_layer_state_and_mask(void) {
 
 
 
+/* Turns on the screen layers in mask in Screen_Switch and Screen_Switch_Buffer, then Scrn_Renew. */
 void Bg_On_R(u16 mask) {
     Screen_Switch |= mask;
     Screen_Switch_Buffer = Screen_Switch &= 0xFFF;
@@ -110,6 +111,8 @@ void Bg_On_R(u16 mask) {
 
 
 
+/* Turns on the screen layers in mask in Screen_Switch and sets Screen_Switch_Req, so the scroll register write
+   renews them too. */
 void Bg_On_W(u16 mask) {
     Screen_Switch |= mask;
     Screen_Switch &= 0xFFF;
@@ -119,6 +122,7 @@ void Bg_On_W(u16 mask) {
 
 
 
+/* Turns off the screen layers in mask in Screen_Switch and Screen_Switch_Buffer, then Scrn_Renew. */
 void Bg_Off_R(mask)
 u16 mask;
 {
@@ -130,6 +134,8 @@ u16 mask;
 
 
 
+/* Turns off the screen layers in mask in Screen_Switch and sets Screen_Switch_Req, so the scroll register
+   write renews them too. */
 void Bg_Off_W(mask)
 u16 mask;
 {

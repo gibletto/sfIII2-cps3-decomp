@@ -103,7 +103,7 @@ void effect_B3_move(register WORK_Other* ewk) {
         ewk->wu.disp_flag = 0;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -280,7 +280,7 @@ void fight_move(WORK_Other* ewk) {
         ewk->wu.routine_no[2]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }

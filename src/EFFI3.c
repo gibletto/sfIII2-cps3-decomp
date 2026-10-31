@@ -48,8 +48,8 @@ void effect_I2_move(WORK_Other* ewk) {
         ewk->wu.routine_no[0]++;
     case R0_MOVE:
         if (Suicide) {
-            all_cgps_put_back(ewk);
-            push_effect_work((WORK*)ewk);
+            all_cgps_put_back(&ewk->wu);
+            push_effect_work(&ewk->wu);
             return;
         }
         ewk->wu.type--;
@@ -65,7 +65,7 @@ void effect_I2_move(WORK_Other* ewk) {
         break;
     case R0_KILL:
     default:
-        push_effect_work((WORK*)ewk);
+        push_effect_work(&ewk->wu);
         return;
     }
 }

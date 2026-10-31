@@ -87,7 +87,7 @@ s32 effect_76_init(s16 Side, s16 Time, s16 Rl, s16 Char_Ix) {
     ewk->wu.my_col_code = 0x2040;
     ewk->wu.my_family = 3;
     ewk->wu.dir_timer = Time;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     ewk->wu.char_index = Char_Ix + 79;
     ewk->wu.rl_flag = Rl;
     if ((ewk->wu.vital_new = Side)) {

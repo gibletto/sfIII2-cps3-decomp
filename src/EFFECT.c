@@ -69,7 +69,6 @@ void effect_work_init(void) {
 
 
 void effect_work_quick_init(void) {
-
     s16 i;
     for (i = 0; i < 8; i += 1) {
         effect_work_list_release(i, -1);
@@ -159,7 +158,7 @@ s16 index;
     if (frwctr < 1) {
         return -1;
     }
-    qix = frwque[(frwctr -= 1)];
+    qix = frwque[--frwctr];
     tadr = (WORK*)frw[qix];
     if (head_ix[index] == -1) {
         ixp = &head_ix[index];
@@ -327,7 +326,7 @@ void write_my_shell_ix(WORK* wk, s16 ix) {
         do {
             *(i + wk->shell_ix) = wk->shell_ix[i - 1];
             i--;
-        } while (0 < i);
+        } while (i > 0);
     }
     wk->shell_ix[0] = ix;
 }
@@ -397,13 +396,11 @@ void setup_shell_hit_stop(WORK* wk, s16 tm, s16 fl) {
     WORK* tmw;
     s32 i;
     for (i = 0; i < 8; i++) {
-        if (get_my_shell_ix(wk, i, &tmw) != 0) {
-            if (fl == 0 || tmw->id != 0x29) {
-                if (tmw->hit_stop < 0) {
-                    tmw->hit_stop = -tmw->hit_stop;
-                }
-                tmw->hit_stop += tm;
+        if (get_my_shell_ix(wk, i, &tmw) != 0 && (fl == 0 || tmw->id != 0x29)) {
+            if (tmw->hit_stop < 0) {
+                tmw->hit_stop = -tmw->hit_stop;
             }
+            tmw->hit_stop += tm;
         }
     }
 }
@@ -454,7 +451,6 @@ void reset_extra_bg_flag(WORK* wk) {
 
 void flip_my_rl_flag(WORK* wk)
 {
-
     wk->rl_flag = ((u8)wk->rl_flag + 1U) & 1;
 }
 

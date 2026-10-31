@@ -123,7 +123,7 @@ void effect_59_move(WORK_Other* ewk) {
         ewk->wu.routine_no[0]++;
         return;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         return;
     }
@@ -145,7 +145,7 @@ static void effect_59_open_end(WORK_Other* ewk) {
 
 
 
-/* one letter per name character */
+/* Create one effect 59 letter for each character of the Battle_Country name. */
 s32 effect_59_init(s16 timer) {
     WORK_Other* ewk;
     s16 ix;
@@ -204,7 +204,7 @@ s32 effect_59_init(s16 timer) {
 
 
 
-/* disp_flag 2 blinks, no old_rno timer */
+/* Blinks with disp_flag 2; there is no old_rno timer. */
 void effect_60_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case R0_INIT:
@@ -228,7 +228,7 @@ void effect_60_move(WORK_Other* ewk) {
         ewk->wu.routine_no[0]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }

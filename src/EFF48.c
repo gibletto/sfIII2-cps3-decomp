@@ -75,7 +75,7 @@ void eff48_0000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -121,7 +121,7 @@ void eff48_1000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -166,7 +166,7 @@ void eff48_2000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -198,7 +198,7 @@ void eff48_3000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -238,7 +238,7 @@ void eff48_4000(WORK_Other* ewk) {
         ewk->wu.routine_no[1]++;
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }

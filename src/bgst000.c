@@ -92,7 +92,7 @@ void bg0001_init00(void) {
 
 
 
-/* each stage file has its own copy */
+/* Move the base layer and chase the players; each stage file has its own copy. */
 static void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -128,7 +128,7 @@ void bg0000_init00(void) {
 
 
 
-/* each stage file has its own copy */
+/* Each stage file has its own copy. */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -136,7 +136,7 @@ static void bg_move_common(void) {
 
 
 
-/* the stage rises into view at the start (faster while a shot button is held), then settles */
+/* The stage rises into view at the start (faster while a shot button is held), then settles. */
 void bg0000_demo(void) {
     if (EXE_flag || Game_pause) {
         return;

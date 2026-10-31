@@ -221,7 +221,7 @@ s16 nxy;
     }
     ewk = (WORK_Other*)frw[ix];
     ewk->wu.be_flag = 1;
-    ewk->wu.id = 0xB4;
+    ewk->wu.id = 180;
     ewk->wu.work_id = 0x10;
     ewk->wu.rl_flag = wk->rl_flag;
     ewk->wu.my_family = wk->my_family;

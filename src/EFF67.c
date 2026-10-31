@@ -96,6 +96,7 @@ s16 eff67_cnt0;
 s16 eff67_cnt1;
 s16 eff67_flag;
 
+/* Japanese balloon pages, by character (master_player). */
 const EFFA6_MESSAGE* eff67_msg_a[15] = {
     effA6_mes_jp_0,
     effA6_mes_jp_0,
@@ -113,6 +114,7 @@ const EFFA6_MESSAGE* eff67_msg_a[15] = {
     effA6_mes_jp_13,
     effA6_mes_jp_14,
 };
+/* English balloon pages, by character (master_player). */
 const EFFA6_MESSAGE* eff67_msg_b[15] = {
     effA6_mes_en_0,
     effA6_mes_en_0,
@@ -130,6 +132,7 @@ const EFFA6_MESSAGE* eff67_msg_b[15] = {
     effA6_mes_en_13,
     effA6_mes_en_14,
 };
+/* Spanish balloon pages, by character (master_player). */
 const EFFA6_MESSAGE* eff67_msg_c[15] = {
     effA6_mes_es_0,
     effA6_mes_es_0,
@@ -147,6 +150,7 @@ const EFFA6_MESSAGE* eff67_msg_c[15] = {
     effA6_mes_es_13,
     effA6_mes_es_14,
 };
+/* Portuguese balloon pages, by character (master_player). */
 const EFFA6_MESSAGE* eff67_msg_d[15] = {
     effA6_mes_pt_0,
     effA6_mes_pt_0,

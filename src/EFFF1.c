@@ -91,7 +91,7 @@ void effect_F1_move(WORK_Other* ewk) {
         break;
     case R0_KILL:
     default:
-        push_effect_work((WORK*)ewk);
+        push_effect_work(&ewk->wu);
         break;
     }
 }
@@ -115,7 +115,7 @@ void effF1_data_set(WORK_Other* ewk, PLW* mwk) {
     }
 }
 
-/* creates the effect */
+/* Create the another-BG switch of this type for player wk when its character move data starts it. */
 u32 effect_F1_init(wk, type)
 WORK* wk;
 u8 type;

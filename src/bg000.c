@@ -218,32 +218,32 @@ void ake_Family_Set(void) {
 
 void Bg_Family_Set_2(void) {
     s32 i;
-    s32 a, b, x, y;
+    s32 fam_x, fam_y, x, y;
     for (i = 0; i < bg_w.scno; i++) {
         x = bg_w.bgw[i].position_x;
         y = bg_w.bgw[i].position_y;
         y += 12;
         Scrn_Move_Set(i, x, y);
-        a = -x & 0x3FF;
-        b = (0x300 - (y & 0x3FF)) & 0x3FF;
-        Family_Set_W(i + 1, a, b);
+        fam_x = -x & 0x3FF;
+        fam_y = (0x300 - (y & 0x3FF)) & 0x3FF;
+        Family_Set_W(i + 1, fam_x, fam_y);
     }
 }
 
 
 
 /* provisional name */
-/* Bg_Family_Set_2 without the 12-dot drop */
+/* Bg_Family_Set_2 without the 12-dot drop. */
 void Bg_Family_Set_3(void) {
     s32 i;
-    s32 a, b, x, y;
+    s32 fam_x, fam_y, x, y;
     for (i = 0; i < bg_w.scno; i++) {
         x = bg_w.bgw[i].position_x;
         y = bg_w.bgw[i].position_y;
         Scrn_Move_Set(i, x, y);
-        a = -x & 0x3FF;
-        b = (0x300 - (y & 0x3FF)) & 0x3FF;
-        Family_Set_W(i + 1, a, b);
+        fam_x = -x & 0x3FF;
+        fam_y = (0x300 - (y & 0x3FF)) & 0x3FF;
+        Family_Set_W(i + 1, fam_x, fam_y);
     }
 }
 
@@ -335,7 +335,7 @@ s32 zoom_frame_judge(void) {
     PLW* p2;
     s16 left;
     s16 right;
-    s16 work;
+    s16 gap;
     bg_w.frame_flag = 0;
     if (bg_w.bgw[1].wxy[0].disp.pos <= bg_w.bgw[1].l_limit2 ||
         bg_w.bgw[1].wxy[0].disp.pos >= bg_w.bgw[1].r_limit2) {
@@ -351,8 +351,8 @@ s32 zoom_frame_judge(void) {
         left = p2->wu.scr_mv_x;
         right = p1->wu.scr_mv_x;
     }
-    work = right - left;
-    if (work > 368) {
+    gap = right - left;
+    if (gap > 368) {
         return 2;
     }
     return 1;
@@ -562,7 +562,7 @@ s32 get_height_position(void) {
 
 
 /* provisional name */
-/* an empty routine (unreferenced) */
+/* An empty routine (unreferenced). */
 void bg_position_dummy(void) {}
 
 
@@ -770,7 +770,7 @@ fill_top:
 
 
 /* provisional name */
-/* fixed line scroll for layer 0 (unreferenced) */
+/* Fixed line scroll for layer 0 (unreferenced). */
 void suzi_line_fix_set(void) {
     s32* line;
     u16* dst;
@@ -813,7 +813,7 @@ void suzi_line_fix_set(void) {
 
 
 /* provisional name */
-/* fixed line scroll for layer 0, second page when suzi_base_flag is set (the endings call it) */
+/* Fixed line scroll for layer 0, on the second page when suzi_base_flag is set (the endings call it). */
 void suzi_line_fix_set2(void) {
     s32* line;
     u16* dst;
@@ -1113,12 +1113,10 @@ void bg_etc_scr_write(s16 n) {
     t = bg_etc_cell_tbl[n][0];
     attr += t->attr;
     for (i = 0; i < bg_w.scno; i++) {
-        j = 0;
-        while (j < etc_bg_cell_cnt_tbl[n][i]) {
+        for (j = 0; j < etc_bg_cell_cnt_tbl[n][i]; j++) {
             t = bg_etc_cell_tbl[n][i];
             t += j;
             bg_cell_write(i, t->ofs, t->cell, etc_bg_cg_src_tbl[n], 0, attr);
-            j++;
         }
     }
 }
@@ -1286,7 +1284,7 @@ void scr_11_21(void) {
 void scr_11_22(void) {
     s16 meri;
     s16 meri2;
-    meri = (satse[plw[1].player_number] - satse[plw[0].player_number]);
+    meri = satse[plw[1].player_number] - satse[plw[0].player_number];
     meri >>= 1;
     meri2 = plw[0].wu.scr_mv_x + plw[1].wu.scr_mv_x;
     meri2 >>= 1;
@@ -1315,7 +1313,7 @@ void scr_12_20(void) {
 void scr_12_21(void) {
     s16 meri;
     s16 meri2;
-    meri = (satse[plw[0].player_number] - satse[plw[1].player_number]);
+    meri = satse[plw[0].player_number] - satse[plw[1].player_number];
     meri >>= 1;
     meri2 = plw[0].wu.scr_mv_x + plw[1].wu.scr_mv_x;
     meri2 >>= 1;
@@ -1352,7 +1350,7 @@ void scr_12_22() {
 void scr_11_22_2(void) {
     s16 meri;
     s16 meri2;
-    meri = (satse[plw[1].player_number] - satse[plw[0].player_number]);
+    meri = satse[plw[1].player_number] - satse[plw[0].player_number];
     meri >>= 1;
     meri2 = plw[0].wu.scr_mv_x + plw[1].wu.scr_mv_x;
     meri2 >>= 1;
@@ -1373,7 +1371,7 @@ void scr_11_22_2(void) {
 void scr_12_21_2(void) {
     s16 meri;
     s16 meri2;
-    meri = (satse[plw[0].player_number] - satse[plw[1].player_number]);
+    meri = satse[plw[0].player_number] - satse[plw[1].player_number];
     meri >>= 1;
     meri2 = plw[0].wu.scr_mv_x + plw[1].wu.scr_mv_x;
     meri2 >>= 1;
@@ -1531,8 +1529,8 @@ void bg_chase_move(void)
 
 
 void chase_start_check(void) {
-    s16 work;
-    s16 work2;
+    s16 ended;
+    s16 now_clear;
     if (zoom_request_flag & 0xF00) {
         if (chase_x != scr_req_x) {
             chase_x = scr_req_x;
@@ -1548,10 +1546,10 @@ void chase_start_check(void) {
             bg_w.old_chase_flag = 1;
         }
     } else {
-        work = zoom_req_flag_old & 0xF00;
-        work2 = ~(zoom_request_flag & 0xF00);
-        work &= work2;
-        if (work) {
+        ended = zoom_req_flag_old & 0xF00;
+        now_clear = ~(zoom_request_flag & 0xF00);
+        ended &= now_clear;
+        if (ended) {
             bg_w.chase_flag |= 2;
             bg_w.chase_flag &= 0xFFFE;
             chase_x = bgw_ptr->wxy[0].disp.pos;
@@ -1575,10 +1573,10 @@ void chase_start_check(void) {
             cal_bg_speed_data_y(bgw_ptr->fam_no, chase_time_y, chase_y);
         }
     } else {
-        work = zoom_req_flag_old & 0xF000;
-        work2 = ~(zoom_request_flag & 0xF000);
-        work &= work2;
-        if (work) {
+        ended = zoom_req_flag_old & 0xF000;
+        now_clear = ~(zoom_request_flag & 0xF000);
+        ended &= now_clear;
+        if (ended) {
             bg_w.chase_flag |= 0x20;
             bg_w.chase_flag &= 0xFFEF;
             chase_y = bgw_ptr->xy[1].disp.pos;
@@ -1880,7 +1878,8 @@ void bg_initialize(void) {
 
 
 /* provisional name */
-/* bg_initialize for the endings (palettes faded to 15, layers start 48 dots up, no CAPCOM-logo layer of its own) */
+/* Set up a stage background for the endings as bg_initialize does, but with the palettes faded to 15, the
+   layers starting 48 dots up and no CAPCOM-logo layer of its own. */
 void bg_end_initialize(void) {
     const s16* ptr;
     const BG_GFX* gfx;
@@ -2171,7 +2170,7 @@ s16 prio;
 
 
 /* provisional name */
-/* the CAPCOM logo colour steps (one routine, on layer 0) */
+/* Step the CAPCOM logo colours on layer 0. */
 s16 capcom_logo_anim(void) {
     s16 ret = 0;
     switch (bg_w.bgw[0].r_no_1) {

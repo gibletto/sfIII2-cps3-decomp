@@ -73,7 +73,7 @@ const s16* scr_obj_dataI6[18] = {
 
 
 
-/* a stage object */
+/* A stage object: animate it, then draw it. */
 void effect_I6_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case R0_INIT:
@@ -93,7 +93,7 @@ void effect_I6_move(WORK_Other* ewk) {
 
 
 
-/* the stage's object list */
+/* Create the stage's object list. */
 s32 effect_I6_init(void) {
     WORK_Other* ewk;
     s16 ix;
@@ -110,7 +110,7 @@ s32 effect_I6_init(void) {
         }
         ewk = (WORK_Other*)frw[ix];
         ewk->wu.be_flag = 1;
-        ewk->wu.id = 0xBA;
+        ewk->wu.id = 186;
         ewk->wu.work_id = 16;
         ewk->wu.cgromtype = 1;
         ewk->wu.rl_flag = 0;

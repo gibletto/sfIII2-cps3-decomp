@@ -110,7 +110,7 @@ extern const APPEAR_DATA appear_data[28];
 #define AP06_HOLD       4       /* nothing more: the move holds here */
 
 /* routine_no[3], Appear_07000 */
-#define AP07_WAIT       1       /* until Appear_flag != 0 */
+#define AP07_WAIT       1       /* until Appear_flag clears */
 #define AP07_CUE        2       /* run the animation to cue 9 */
 #define AP07_AIR        3       /* in the air until it lands (falls through) */
 #define AP07_AIR2       4       /* in the air until it lands */
@@ -752,6 +752,7 @@ void Appear_07000(PLW* wk) {
             break;
         }
         wk->wu.routine_no[3]++;
+        /* falls through: the animation starts this frame */
     case AP07_CUE:
         char_move(&wk->wu);
         if (wk->wu.cg_type == 9) {
@@ -1011,6 +1012,7 @@ void Appear_13000(PLW* wk) {
             wk->wu.kage_flag = 1;
             wk->wu.routine_no[3]++;
         }
+        /* falls through: the fall goes on while it waits */
     case AP13_NEXT:
         char_move(&wk->wu);
         add_y_sub((WORK_Other*)&wk->wu);
@@ -1039,7 +1041,7 @@ void Appear_14000(PLW* wk) {
     s16 id_w = wk->wu.id ^ 1;
     switch (wk->wu.routine_no[3]) {
     case RN3_START:
-        wk->wu.routine_no[3] ++;
+        wk->wu.routine_no[3]++;
         wk->wu.disp_flag = 1;
         if (sean_appear_check(wk, id_w)) {
             set_char_move_init(&wk->wu, 9, 0x3C);
@@ -1047,7 +1049,7 @@ void Appear_14000(PLW* wk) {
         }
         wk->wu.routine_no[2] = NORMAL_STAND;
         wk->wu.routine_no[3] = RN3_START;
-        Appear_end ++;
+        Appear_end++;
         break;
     case AP14_END:
         switch (Appear_free[id_w]) {
@@ -1059,14 +1061,14 @@ void Appear_14000(PLW* wk) {
             set_char_move_init2(&wk->wu, 0, 0, work + 1, 0);
             wk->wu.routine_no[2] = NORMAL_STAND;
             wk->wu.routine_no[3] = AP14_END;
-            Appear_end ++;
+            Appear_end++;
             break;
         case 2:
             char_move(&wk->wu);
             if (wk->wu.cg_type == 0xFF) {
                 wk->wu.routine_no[2] = NORMAL_STAND;
                 wk->wu.routine_no[3] = RN3_START;
-                Appear_end ++;
+                Appear_end++;
             }
         }
     }
@@ -1420,7 +1422,7 @@ void Appear_23000(PLW* wk) {
         break;
     case AP23_NEXT:
         char_move(&wk->wu);
-        if ((wk->wu.cmwk[1]) && wk->wu.cg_type == 9) {
+        if (wk->wu.cmwk[1] && wk->wu.cg_type == 9) {
             wk->wu.routine_no[3] += 1;
             set_char_move_init(&wk->wu, 9, wk->wu.char_index + 8);
             return;

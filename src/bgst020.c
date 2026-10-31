@@ -77,14 +77,14 @@ void bg0201_init00(void) {
 
 
 /* provisional name */
-/* one frame before layer 0 scrolls */
+/* One frame before layer 0 scrolls. */
 void bg0201_wait(void) {
     bgw_ptr->r_no_0++;
 }
 
 
 
-/* each stage file has its own copy */
+/* Each stage file has its own copy. */
 static void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
@@ -99,7 +99,7 @@ void bg0202(void) {
 
 
 
-/* a line-scroll layer, then the stage effects */
+/* Set up a line-scroll layer, then the stage effects. */
 void bg0202_init00(void) {
     bgw_ptr->r_no_0++;
     bgw_ptr->old_pos_x = bgw_ptr->xy[0].disp.pos = bgw_ptr->pos_x_work = 0;
@@ -129,7 +129,7 @@ void bg0202_init00(void) {
 
 
 /* provisional name */
-/* the stage palette, faded to the level of the stage when Shin Gouki is next */
+/* The stage palette, faded to the level of the stage when Shin Gouki is next. */
 void bg0202_color(void) {
     u8 lv;
     bgw_ptr->r_no_0++;
@@ -144,7 +144,7 @@ void bg0202_color(void) {
 
 
 /* provisional name */
-/* base layer move and its line scroll */
+/* Move the base layer and its line scroll. */
 void bg0202_move(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
@@ -155,7 +155,7 @@ void bg0202_move(void) {
 
 
 /* provisional name */
-/* layer 2 */
+/* Layer 2's routine, one step per r_no_0. */
 void bg0203(void) {
     void (*bg0203_jmp[3])() = { bg0203_init00, bg0203_wait, bg0203_move };
     bg0203_jmp[bgw_ptr->r_no_0]();

@@ -132,7 +132,7 @@ s32 effect_C1_init(WORK* wk) {
     ewk->wu.kage_hy = -8;
     ewk->wu.my_priority = wk->my_priority - 12;
     ewk->wu.position_z = ewk->wu.my_priority - 12;
-    *ewk->wu.char_table = etc2_char_table;
+    ewk->wu.char_table[0] = etc2_char_table;
     ewk->wu.char_index = 36;
     ewk->wu.sync_suzi = 0;
     suzi_offset_set(&ewk->wu);

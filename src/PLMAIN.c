@@ -124,7 +124,7 @@ void player_mv_0000(PLW* wk) {
     for (i = 0; i < 8; i++) {
         wk->old_pos_data[i] = 0;
     }
-    setup_vitality(&wk->wu, (wk->player_number));
+    setup_vitality(&wk->wu, wk->player_number);
     set_player_shadow(wk);
     wk->bullet_hcnt = wk->bhcnt_timer = 0;
     wk->auto_guard = 0;

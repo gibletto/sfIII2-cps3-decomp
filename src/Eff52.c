@@ -62,7 +62,7 @@ s32 effect_52_init(void) {
     ewk->wu.my_col_code = 0x2040;
     ewk->wu.my_family = 3;
     ewk->wu.char_index = 15;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     ewk->wu.xyz[0].disp.pos = DE_X[10] + 0x2BF;
     ewk->wu.xyz[1].disp.pos = 200;
     ewk->wu.position_z = 80;

@@ -30,7 +30,7 @@
 #define R0_MOVE         1       /* animate until the stage ends */
 #define R0_KILL         99      /* (default) put the work back */
 
-/* compel_dead_check, my_mr 58 x 58, no quake reactions */
+/* Play the object's animation, scaled to 58 x 58, until the stage retires it. */
 void effect_19_move(WORK_Other* ewk) {
     if (compel_dead_check(ewk)) {
         ewk->wu.routine_no[0] = R0_KILL;
@@ -60,7 +60,7 @@ void effect_19_move(WORK_Other* ewk) {
 
 
 
-/* one object, load_any_color(156), shadow */
+/* Create the scaled stage object, with its shadow, at (288, 24); nothing calls it. */
 s32 effect_19_init(void) {
     WORK_Other* ewk;
     s16 ix;

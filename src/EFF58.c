@@ -271,7 +271,7 @@ void EFF58_Type_02(WORK_Other* ewk) {
         ewk->wu.routine_no[2]++;
         return;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }
@@ -333,7 +333,7 @@ void EFF58_Type_05(WORK_Other* ewk) {
         sort_push_request4(&ewk->wu);
         break;
     default:
-        all_cgps_put_back(ewk);
+        all_cgps_put_back(&ewk->wu);
         push_effect_work(&ewk->wu);
         break;
     }

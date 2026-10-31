@@ -162,7 +162,7 @@ s32 effect_39_init(s16 PL_id, s16 Wait, s16 Kind, s16 Face_Set, s16 Your_Char) {
     ewk->wu.xyz[1].disp.pos = 88;
     ewk->wu.position_z = 10;
     ewk->wu.char_index = 1;
-    *ewk->wu.char_table = sel_pl_char_table;
+    ewk->wu.char_table[0] = sel_pl_char_table;
     ewk->master_id = PL_id;
     ewk->wu.dir_timer = Wait;
     ewk->wu.dm_vital = Kind;

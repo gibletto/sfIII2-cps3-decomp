@@ -266,7 +266,7 @@ s32 effF9_talk_init(s16 pl) {
 /* provisional name */
 void effF9_talk_wk_set(WORK_Other* ewk) {
     ewk->wu.be_flag = 1;
-    ewk->wu.id = 0x9F;
+    ewk->wu.id = 159;
     ewk->wu.work_id = 0x10;
     ewk->wu.rl_flag = 0;
     ewk->wu.cgromtype = 1;
