@@ -27,7 +27,6 @@
 #include "aboutspr.h"
 #include "EFFECT.h"
 #include "effect_2.h"
-#include "end_main.h"
 #include "effh6_code.h"
 
 /* routine_no[0] */

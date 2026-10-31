@@ -33,7 +33,7 @@
 
 
 
-s16 chk77_flag;  /* 02068C08 */
+s16 chk77_flag;  /* 02064490 */
 
 
 void effect_77_move(WORK_Other* ewk) {

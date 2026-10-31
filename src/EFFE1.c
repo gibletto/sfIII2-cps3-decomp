@@ -140,7 +140,7 @@ static void effE1_1000(WORK_Other* ewk) {
                 ewk->wu.my_mr.size.x -= 4;
                 ewk->wu.my_mr.size.y -= 4;
             }
-            ewk->wu.old_rno[1] -= 1;
+            ewk->wu.old_rno[1]--;
             if (ewk->wu.old_rno[1] <= 0) {
                 ewk->wu.routine_no[1]++;
                 ewk->wu.xyz[0].disp.pos = ewk->wu.old_rno[2];
@@ -155,7 +155,7 @@ static void effE1_1000(WORK_Other* ewk) {
             }
             break;
         case R1_HOLD:
-            ewk->wu.old_rno[1] -= 1;
+            ewk->wu.old_rno[1]--;
             if (ewk->wu.old_rno[1] <= 0) {
                 ewk->wu.routine_no[1]++;
                 effE1_end_flag = 1;
@@ -220,7 +220,7 @@ static void effE1_2000(WORK_Other* ewk) {
                 ewk->wu.my_mr.size.x -= 4;
                 ewk->wu.my_mr.size.y -= 4;
             }
-            ewk->wu.old_rno[1] -= 1;
+            ewk->wu.old_rno[1]--;
             if (ewk->wu.old_rno[1] <= 0) {
                 ewk->wu.routine_no[1]++;
                 ewk->wu.xyz[0].disp.pos = ewk->wu.old_rno[2];
@@ -234,7 +234,7 @@ static void effE1_2000(WORK_Other* ewk) {
             }
             break;
         case R1_HOLD:
-            ewk->wu.old_rno[1] -= 1;
+            ewk->wu.old_rno[1]--;
             if (ewk->wu.old_rno[1] <= 0) {
                 ewk->wu.routine_no[1]++;
             }

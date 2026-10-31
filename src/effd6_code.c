@@ -104,11 +104,11 @@ void effect_D6_move(WORK_Other* ewk) {
 
 
 s32 effect_D6_init(wk, dr, sp, dl, acc)
-    WORK_Other* wk;
-    s16 dr;
-    s16 sp;
-    s16 dl;
-    s16 acc;
+WORK_Other* wk;
+s16 dr;
+s16 sp;
+s16 dl;
+s16 acc;
 {
     WORK_Other* ewk;
     s16 ix;

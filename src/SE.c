@@ -22,10 +22,10 @@
 #include "SE.h"
 #include "cps3.h"
 
-u16 * wipe_dst_ptr;  /* 0200EED4 */
-u8 * wipe_back_ptr;  /* 0200EED8 */
-const u8 * wipe_pat_top;  /* 0200EEDC */
-const u8 * wipe_pat_ptr;  /* 0200EEE0 */
+u16 * wipe_dst_ptr;  /* 0201014C */
+u8 * wipe_back_ptr;  /* 02010150 */
+const u8 * wipe_pat_top;  /* 02010154 */
+const u8 * wipe_pat_ptr;  /* 02010158 */
 /* workuser.c's Game_timer follows wipe_pat_ptr */
 
 void mix_or_128(void);

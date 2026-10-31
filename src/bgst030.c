@@ -32,10 +32,10 @@
 
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
-s32 effect_12_init();
+#include "eff12.h"
 s32 effect_18_init();
-s32 effect_44_init();
-s32 effect_87_init();
+#include "EFF44.h"
+#include "eff87.h"
 void bg030_layer0(void);
 void bg030_layer1(void);
 void bg030_layer2(void);

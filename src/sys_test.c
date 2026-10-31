@@ -1,16 +1,14 @@
 /*
- * SYS_TEST.C  System library: scroll registers, test mode pages, CD/SCSI, coin chutes
+ * SYS_TEST.C  Scroll layer registers
  *
- * Scroll control: Bg_On_W / Bg_Off_W and the layer masks, Scrn_Move_Set and Scrn_Pos_Init set plane
- * positions, Irl_Family and scroll_layers_finalize_frame write the scroll and family registers each
- * frame, and the sprite slot setters point planes at their tilemaps. Operator test menu pages: input
- * and output tests, sound test, colour bars, screen cross hatch, backup RAM (game data) display and
- * clear, and the memory test with its RAM, SIMM and SRAM checks. The boot self-test routines test
- * cell, work, video, palette and sprite RAM and check the CD drive and disc ID; the rewrite menu
- * handles the CD-ROM setup screen. SCSI commands (test unit ready, mode sense, read capacity,
- * request sense, start/stop unit, medium lock, read(10)) drive the CD drive. The last part runs the
- * coin chutes, the service coin and the lockout coils each frame (the chute, credit and switch
- * routines they call are in coin_sw.c).
+ * Bg_On_R / Bg_On_W / Bg_Off_R / Bg_Off_W and clear_scroll_layer_state_and_mask switch the layers;
+ * Scrn_Pos_Init, Scrn_Move_Set*, Scrn_X_Set_* / Scrn_Y_Set_* and Scrn_Move_Add set the plane
+ * positions; scrn_map_set*, scrn_line_set*, scrn_linescroll_set* and scrn_attr_set point a plane at its
+ * tilemap, line table and line scroll and set its attributes, with simmram_large_page_addr /
+ * simmram_small_page_addr giving the page addresses; scrn_flip_set / scrn_flip_toggle flip the
+ * screen, Scrn_Renew rewrites the registers, and scroll_layers_finalize_frame writes the scroll
+ * registers each frame. The test mode pages follow in sys_test_2.c to sys_test_5.c and the other
+ * test files.
  */
 
 #include "structs.h"
@@ -40,14 +38,14 @@
 extern volatile s16 flip_crt_ofs_x;
 extern volatile s16 flip_crt_ofs_y;
 
-SCRLPOS scrn_pos[5];  /* 0206A104 */
-SCROLL_CTRL scrn_reg_w[4];  /* 0206A154 */
-SPRPTR scrn_map_ptr[4];  /* 0206A17C */
-u16 scrn_line_prm[4][2];  /* 0206A1BC */
-SCRN_MODE scrn_mode_prm[4];  /* 0206A1CC */
-u16 Screen_Switch;  /* 0206A1DC */
-u16 Screen_Switch_Buffer;  /* 0206A1DE */
-u8 Screen_Switch_Req;  /* 0206A1E0 */
+SCRLPOS scrn_pos[5];  /* 020645A8 */
+SCROLL_CTRL scrn_reg_w[4];  /* 020645F8 */
+SPRPTR scrn_map_ptr[4];  /* 02064620 */
+u16 scrn_line_prm[4][2];  /* 02064660 */
+SCRN_MODE scrn_mode_prm[4];  /* 02064670 */
+u16 Screen_Switch;  /* 02064680 */
+u16 Screen_Switch_Buffer;  /* 02064682 */
+u8 Screen_Switch_Req;  /* 02064684 */
 
 
 /* provisional name: unreferenced; toggles a scroll layer's flip bits and applies them */
@@ -276,8 +274,8 @@ void Scrn_Move_Set_R(s32 n, s16 x, s16 y) {
 
 /* provisional name: unreferenced */
 void Scrn_X_Set_R(ix, x)
-    s32 ix;
-    s16 x;
+s32 ix;
+s16 x;
 {
     scrn_pos[ix].set_x.disp.pos = x;
     scrn_pos[ix].cur_x.disp.pos = x;
@@ -285,8 +283,8 @@ void Scrn_X_Set_R(ix, x)
 
 /* provisional name */
 void Scrn_Y_Set_R(ix, y)
-    s32 ix;
-    s16 y;
+s32 ix;
+s16 y;
 {
     scrn_pos[ix].set_y.disp.pos = y;
     scrn_pos[ix].cur_y.disp.pos = y;

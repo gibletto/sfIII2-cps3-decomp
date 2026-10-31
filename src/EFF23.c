@@ -1,11 +1,10 @@
 /*
  * EFF23.C  Effect 23: breakable stage object
  *
- * effect_23_init makes the object at (0x2A0, 48) and its parts (effects 21, 22 and 24) as its children.
- * effect_23_move waits on
- * pattern 7 until eff_hit_check says it was hit, plays pattern 12, and stays broken (pattern 34
- * if eff_hit_flag[type] was already set). effect_23_parts_init (no caller) makes three
- * broken pieces from eff23_data_tbl that fly off with add_x_sub/add_y_sub.
+ * effect_23_init makes the object at (0x2A0, 48) and its parts (effects 21, 22 and 24) as its
+ * children. effect_23_move waits on pattern 7 until eff_hit_check says it was hit, plays pattern
+ * 12, and stays broken (pattern 34 if eff_hit_flag[type] was already set). effect_23_parts_init (no
+ * caller) makes three broken pieces from eff23_data_tbl that fly off with add_x_sub/add_y_sub.
  */
 
 #include "structs.h"
@@ -34,6 +33,7 @@
 
 
 
+/* animate the breakable stage object */
 void effect_23_move(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;

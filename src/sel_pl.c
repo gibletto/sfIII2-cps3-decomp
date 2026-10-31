@@ -129,12 +129,6 @@ void Exit_9th(void);
 #pragma inline(Check_Exit)
 #pragma inline(PL_Sel_Mode_1, PL_Sel_Mode_2)
 #pragma inline(Check_Exit_Boss, Check_Exit_Last)
-void Next_CPU_1st(void);
-void Next_CPU_2nd(void);
-void Next_CPU_3rd(void);
-void Next_CPU_4th(void);
-void Next_CPU_5th(void);
-void Next_CPU_6th(void);
 void Check_Exit_Boss(void);
 void Check_Exit_Last(void);
 void Boss_Exit_1st(void);
@@ -162,11 +156,11 @@ s32 Sel_Lever_Get(s16 PL_id);
 extern u16 Sel_Command_Sw;
 extern const u8 Sel_Command_Face[];
 extern const u16 Sel_Command_Data[][8];
-s32 effect_52_init();
+#include "Eff52.h"
 s32 effect_I1_init(s16 PL_id, s16 x, s16 y, s16 a3, s16 a4);
-s32 effect_59_init();
-s32 effect_E0_init();
-s32 effect_D8_entry();
+#include "Eff59.h"
+#include "EffE0.h"
+#include "EffD8.h"
 extern u8 Straight_Lose_Count;
 extern u8 Stock_Battle_Country[2];
 extern s16 Exit_Wait;
@@ -1469,7 +1463,7 @@ void Check_Exit(void) {
 
 
 void Exit_1st(void) {
-    if (plw[0].wu.operator && Sel_Arts_Complete[0] >= 0) {
+    if (plw[0].wu.operator != 0 && Sel_Arts_Complete[0] >= 0) {
         return;
     }
     if (plw[1].wu.operator != 0 && Sel_Arts_Complete[1] >= 0) {
@@ -1494,7 +1488,7 @@ void Exit_2nd(void) {
     s16 em;
     Sel_Exit_Flag = 0;
     S_Sub_No = 0;
-    if (plw[0].wu.operator && plw[1].wu.operator != 0) {
+    if (plw[0].wu.operator != 0 && plw[1].wu.operator != 0) {
         Exit_No = 4;
         Battle_Country = My_char[New_Challenger];
         Next_Step = 0;
@@ -1756,7 +1750,7 @@ void Boss_Exit_1st(void) {
         Setup_PL_Color(COM_id, Com_Color_Shot);
     }
     pcon_rno[0] = PCON_INIT;
-    pcon_rno[1] = 0;
+    pcon_rno[1] = APP_SETUP;
     pcon_rno[2] = 0;
     pcon_rno[3] = 0;
     appear_type = APPEAR_ENTRY;
@@ -1892,7 +1886,7 @@ void Last_Exit_1st(void) {
     Setup_BG_Layer3();
     My_char[COM_id] = PL_GOUKI1;
     pcon_rno[0] = PCON_INIT;
-    pcon_rno[1] = 0;
+    pcon_rno[1] = APP_SETUP;
     pcon_rno[2] = 0;
     pcon_rno[3] = 0;
     appear_type = APPEAR_STAND;

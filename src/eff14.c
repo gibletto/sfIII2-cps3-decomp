@@ -24,7 +24,7 @@
 #define R0_MOVE         1       /* step the script, follow the page */
 #define R0_KILL         2       /* put the work back */
 
-E14_WORK eff14_work[8];  /* 02068AC8 */
+E14_WORK eff14_work[8];  /* 02064348 */
 
 
 void effect_14_write(WORK_Other* ewk);
@@ -32,10 +32,10 @@ void effect_14_write(WORK_Other* ewk);
 
 
 s32 effect_14_init(id, x, y, atr)
-    s16 id;
-    s16 x;
-    s16 y;
-    s16 atr;
+s16 id;
+s16 x;
+s16 y;
+s16 atr;
 {
     WORK_Other* ewk;
     s16 ix;

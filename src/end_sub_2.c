@@ -67,17 +67,17 @@
 #define STAFF_LAST      3       /* after the last name: wait end_w.timer */
 #define STAFF_END       4       /* (default) finished */
 
-s16 cd_ready_flag;  /* 02028284 */
-s16 cd_spin_timer;  /* 02028286 */
-s16 roll_rate2;  /* 02028288 */
-s16 roll_rate_t2;  /* 0202828A */
-s16 roll_stop;  /* 0202828C */
-s16 name_timer;  /* 0202828E */
+s16 cd_ready_flag;  /* 02023B08 */
+s16 cd_spin_timer;  /* 02023B0A */
+s16 roll_rate2;  /* 02023B0C */
+s16 roll_rate_t2;  /* 02023B0E */
+s16 roll_stop;  /* 02023B10 */
+s16 name_timer;  /* 02023B12 */
 
 
 static s16 staff_name_ptr = 0;  /* 020069A4 */
 static s32 staffroll_end = 0;  /* 020069A8 */
-/* 020069AC */
+/* 02007834 */
 /* Stored after staffroll_end. Nothing in the program refers to it by name or address. */
 u32 staffroll_end_tail[1] = {
     0,

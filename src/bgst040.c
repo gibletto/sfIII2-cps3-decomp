@@ -27,16 +27,14 @@
 #include "eff06.h"
 
 /* declarations the headers do not give */
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
-void bg_base_y_move_check(void);
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
 s32 effect_18_init();
-s32 effect_44_init();
-s32 effect_66_init();
-s32 effect_68_init();
+
+#include "EFF44.h"
+#include "eff66.h"
+#include "EFF68.h"
+
 void bg0401(void);
 void bg0402(void);
 void bg0401_init00(void);

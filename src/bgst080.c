@@ -39,12 +39,6 @@
 #define R0_MOVE         3       /* follow the fight */
 
 /* declarations the headers do not give */
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
-void bg_base_x_move_check(void);
-void bg_base_y_move_check(void);
-void Bg_Family_Set_2(void);
 s32 effect_C3_init();
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();

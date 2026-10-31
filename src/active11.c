@@ -192,7 +192,7 @@ void Pattern11_0011(PLW* wk) {
 void Pattern11_0012(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 8, (0x20));
+        Normal_Attack(wk, 8, 0x20);
         break;
     default:
         End_Pattern(wk);
@@ -205,7 +205,7 @@ void Pattern11_0012(PLW* wk) {
 void Pattern11_0013(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 8, (0x40));
+        Normal_Attack(wk, 8, 0x40);
         break;
     default:
         End_Pattern(wk);
@@ -218,7 +218,7 @@ void Pattern11_0013(PLW* wk) {
 void Pattern11_0014(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 8, (0x80));
+        Normal_Attack(wk, 8, 0x80);
         break;
     default:
         End_Pattern(wk);
@@ -231,7 +231,7 @@ void Pattern11_0014(PLW* wk) {
 void Pattern11_0015(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 8, (0x100));
+        Normal_Attack(wk, 8, 0x100);
         break;
     default:
         End_Pattern(wk);
@@ -244,7 +244,7 @@ void Pattern11_0015(PLW* wk) {
 void Pattern11_0016(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 8, (0x200));
+        Normal_Attack(wk, 8, 0x200);
         break;
     default:
         End_Pattern(wk);
@@ -296,7 +296,7 @@ void Pattern11_0019(PLW* wk) {
 void Pattern11_0020(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack_SP(wk, 8, (0x100), 0x12);
+        Normal_Attack_SP(wk, 8, 0x100, 0x12);
         break;
     default:
         End_Pattern(wk);
@@ -309,7 +309,7 @@ void Pattern11_0020(PLW* wk) {
 void Pattern11_0021(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 8, (0x102));
+        Normal_Attack(wk, 8, 0x102);
         break;
     default:
         End_Pattern(wk);
@@ -322,7 +322,7 @@ void Pattern11_0021(PLW* wk) {
 void Pattern11_0022(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 8, (0x202));
+        Normal_Attack(wk, 8, 0x202);
         break;
     default:
         End_Pattern(wk);
@@ -335,7 +335,7 @@ void Pattern11_0022(PLW* wk) {
 void Pattern11_0023(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Lever_Attack(wk, 8, 0, (0x100));
+        Lever_Attack(wk, 8, 0, 0x100);
         break;
     default:
         End_Pattern(wk);
@@ -530,7 +530,7 @@ void Pattern11_0034(PLW* wk) {
 void Pattern11_0035(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 0xB, (0x102));
+        Normal_Attack(wk, 0xB, 0x102);
         break;
     case 1:
         Command_Attack(wk, 8, 0x1D, 9, -1);
@@ -546,7 +546,7 @@ void Pattern11_0035(PLW* wk) {
 void Pattern11_0036(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 8, (0x200));
+        Normal_Attack(wk, 8, 0x200);
         break;
     case 1:
         Command_Attack(wk, 8, 0x1D, 0xA, -1);
@@ -622,7 +622,7 @@ void Pattern11_0039(PLW* wk) {
 void Pattern11_0040(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Jump_Attack_Term(wk, 0x8058, 0x8040, 9, 0x20, 0, 0x8050, -1, (0x100));
+        Jump_Attack_Term(wk, 0x8058, 0x8040, 9, 0x20, 0, 0x8050, -1, 0x100);
         break;
     case 1:
         J_Command_Attack(wk, 8, 0x1C, 9, -1);
@@ -638,7 +638,7 @@ void Pattern11_0040(PLW* wk) {
 void Pattern11_0041(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Jump_Attack_Term(wk, 0x8058, 0x8040, 9, (0x100), 0, 0x8050, -1, 0x20);
+        Jump_Attack_Term(wk, 0x8058, 0x8040, 9, 0x100, 0, 0x8050, -1, 0x20);
         break;
     case 1:
         Normal_Attack(wk, 0xB, 0x20);
@@ -676,10 +676,10 @@ void Pattern11_0042(PLW* wk) {
 void Pattern11_0043(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Jump_Attack_Term(wk, 0x8058, 0x8040, 0xB, (0x100), 0, 0x8050, -1, 0x40);
+        Jump_Attack_Term(wk, 0x8058, 0x8040, 0xB, 0x100, 0, 0x8050, -1, 0x40);
         break;
     case 1:
-        Normal_Attack(wk, 0xB, (0x200));
+        Normal_Attack(wk, 0xB, 0x200);
         break;
     case 2:
         J_Command_Attack(wk, 8, 0x1C, 0xA, -1);
@@ -695,10 +695,10 @@ void Pattern11_0043(PLW* wk) {
 void Pattern11_0044(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Jump_Attack_Term(wk, 0x8060, 0x8040, 9, (0x200), 0, 0x8050, -1, (0x100));
+        Jump_Attack_Term(wk, 0x8060, 0x8040, 9, 0x200, 0, 0x8050, -1, 0x100);
         break;
     case 1:
-        Normal_Attack(wk, 8, (0x202));
+        Normal_Attack(wk, 8, 0x202);
         break;
     default:
         End_Pattern(wk);
@@ -730,7 +730,7 @@ void Pattern11_0045(PLW* wk) {
 void Pattern11_0046(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Jump_Attack_Term(wk, 0x8060, 0x8040, 9, 0x40, 0, 0x8050, -1, (0x100));
+        Jump_Attack_Term(wk, 0x8060, 0x8040, 9, 0x40, 0, 0x8050, -1, 0x100);
         break;
     case 1:
         Normal_Attack(wk, 9, 0x40);
@@ -832,7 +832,7 @@ void Pattern11_0052(PLW* wk) {
         J_Command_Attack(wk, 8, 0x1E, 0xA, -1);
         break;
     case 2:
-        Normal_Attack(wk, 8, (0x202));
+        Normal_Attack(wk, 8, 0x202);
         break;
     default:
         End_Pattern(wk);
@@ -955,7 +955,7 @@ void Pattern11_0059(PLW* wk) {
 void Pattern11_0060(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Normal_Attack(wk, 8, (0x82));
+        Normal_Attack(wk, 8, 0x82);
         break;
     default:
         End_Pattern(wk);
@@ -1035,7 +1035,7 @@ void Pattern11_0065(PLW* wk) {
         J_Command_Attack(wk, 8, 0x1E, 0xA, -1);
         break;
     case 2:
-        Normal_Attack(wk, 0xC, (0x102));
+        Normal_Attack(wk, 0xC, 0x102);
         break;
     case 3:
         Command_Attack(wk, 8, 0x1D, 9, -1);
@@ -1165,7 +1165,7 @@ void Pattern11_0071(PLW* wk) {
 void Pattern11_0072(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Jump_Command_Attack_Term(wk, 8, 0x1E, 0xA, (0x380), -1, 0x30, 0, -1, -1, -1);
+        Jump_Command_Attack_Term(wk, 8, 0x1E, 0xA, 0x380, -1, 0x30, 0, -1, -1, -1);
         break;
     default:
         End_Pattern(wk);

@@ -73,7 +73,7 @@ const s16* scr_obj_data27[7] = {
     scr_obj_data27_5[0],
     scr_obj_data27_6[0],
 };
-/* 02006C98 */
+/* 02007CF4 */
 void (*eff27_jp_tbl[11])(WORK_Other*) = {
     eff27_00,
     eff27_00,

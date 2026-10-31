@@ -89,7 +89,7 @@ extern const u16 gcfg_title_scr_jp_0[];
 extern const u16 gcfg_title_old_scr_jp_0[];   /* provisional name */
 extern const u32 config_jp_chr_f400[];      /* provisional name: data copied to SS_RAM + 0xF400 */
 
-s8 Config_Item_jp;  
+s8 Config_Item_jp;
 s8 Config_Exit_jp;  /* 02015A01 */
 s8 Config_Move_jp;  /* 02015A02 */
 s8 Config_Old_jp;  /* 02015A03 */
@@ -102,7 +102,7 @@ s16* Config_Code_Ptr_jp;  /* 02015A14, provisional name */
 s16 Config_Code_No_jp;  /* 02015A18, provisional name */
 
 
-/* 020007EC */
+/* 02000DA8 */
 /* the menu button code (item, button): 13 steps unlock bit 1 of the bonus setting */
 s16 gcfg_code_list_jp[13][2] = {
     { 3, 0x1000 }, { 3, 0x1000 }, { 3, 0x1000 }, { 5, 0x0100 }, { 5, 0x0100 }, { 0, 0x0200 }, { 0, 0x0200 },
@@ -114,41 +114,41 @@ TMSCRIPT gcfg_title_scr_jp[1] = {
 TMSCRIPT gcfg_guide_scr_jp[1] = {
     { 1, 0, gcfg_guide_scr_jp_0 },
 };
-/* 020007F4 */
+/* 02000DEC */
 TMSCRIPT gcfg_exit_guide_scr_jp[1] = {
     { 1, 0, gcfg_exit_guide_scr_jp_0 },
 };
-/* 020007FC */
+/* 02000DF4 */
 TMSCRIPT gcfg_screen_scr_jp[2] = {
     { 1, 0, gcfg_screen_scr_jp_0 },
     { 1, 0, gcfg_screen_scr_jp_1 },
 };
-/* 0200080C */
+/* 02000E04 */
 TMSCRIPT gcfg_round_scr_jp[4] = {
     { 1, 0, gcfg_round_scr_jp_0 },
     { 1, 0, gcfg_round_scr_jp_1 },
     { 1, 0, gcfg_round_scr_jp_2 },
     { 1, 0, gcfg_round_scr_jp_3 },
 };
-/* 0200082C */
+/* 02000E24 */
 TMSCRIPT gcfg_event_scr_jp[2] = {
     { 1, 0, gcfg_event_scr_jp_0 },
     { 1, 0, gcfg_event_scr_jp_1 },
 };
-/* 0200083C */
+/* 02000E34 */
 TMSCRIPT gcfg_bonus_scr_jp[2] = {
     { 1, 0, gcfg_bonus_scr_jp_0 },
     { 1, 0, gcfg_bonus_scr_jp_1 },
 };
-/* 0200084C */
+/* 02000E44 */
 TMSCRIPT gcfg_cursor_scr_jp[1] = {
     { 1, 0, gcfg_cursor_scr_jp_0 },
 };
-/* 02000854 */
+/* 02000E4C */
 TMSCRIPT gcfg_cursor_clr_scr_jp[1] = {
     { 1, 0, gcfg_cursor_clr_scr_jp_0 },
 };
-/* 0200085C */
+/* 02000E54 */
 TMSCRIPT gcfg_gauge_scr_jp[8] = {
     { 1, 0, gcfg_gauge_scr_jp_0 },
     { 1, 0, gcfg_gauge_scr_jp_1 },
@@ -159,7 +159,7 @@ TMSCRIPT gcfg_gauge_scr_jp[8] = {
     { 1, 0, gcfg_gauge_scr_jp_6 },
     { 1, 0, gcfg_gauge_scr_jp_7 },
 };
-/* 0200089C */
+/* 02000E94 */
 TMSCRIPT gcfg_gauge_clr_scr_jp[1] = {
     { 1, 0, gcfg_gauge_clr_scr_jp_0 },
 };

@@ -18,12 +18,6 @@
 #include "aboutspr.h"
 #include "color3rd.h"
 
-/* declarations the headers do not give */
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
-void Bg_Family_Set_2(void);
-
 void end_bg090_layer0(void);
 void end_bg090_layer0_init00(void);
 void end_bg090_layer0_move(void);

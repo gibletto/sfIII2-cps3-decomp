@@ -55,7 +55,7 @@ void effect_48_move(WORK_Other* ewk) {
 void eff48_0000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_WAIT:
-        ewk->wu.old_rno[2] -= 1;
+        ewk->wu.old_rno[2]--;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
@@ -86,7 +86,7 @@ void eff48_0000(WORK_Other* ewk) {
 void eff48_1000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_WAIT:
-        ewk->wu.old_rno[2] -= 1;
+        ewk->wu.old_rno[2]--;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
@@ -107,7 +107,7 @@ void eff48_1000(WORK_Other* ewk) {
         sort_push_request4(&ewk->wu);
         break;
     case R1_HOLD:
-        ewk->wu.old_rno[4] -= 1;
+        ewk->wu.old_rno[4]--;
         if (ewk->wu.old_rno[4] <= 0) {
             ewk->wu.routine_no[1]++;
             op_obj_disp = 0;
@@ -132,7 +132,7 @@ void eff48_1000(WORK_Other* ewk) {
 void eff48_2000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_WAIT:
-        ewk->wu.old_rno[2] -= 1;
+        ewk->wu.old_rno[2]--;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
@@ -140,7 +140,7 @@ void eff48_2000(WORK_Other* ewk) {
         }
         break;
     case R1_TIMER:
-        ewk->wu.old_rno[4] -= 1;
+        ewk->wu.old_rno[4]--;
         if (ewk->wu.old_rno[4] <= 0) {
             ewk->wu.routine_no[1]++;
             ewk->wu.my_mr_flag = 1;
@@ -153,7 +153,7 @@ void eff48_2000(WORK_Other* ewk) {
         break;
     case R1_SHRINK:
         ewk->wu.my_mr.size.x--;
-        ewk->wu.my_mr.size.y -= 1;
+        ewk->wu.my_mr.size.y--;
         if (ewk->wu.my_mr.size.y <= 0) {
             ewk->wu.routine_no[1]++;
         } else {
@@ -177,7 +177,7 @@ void eff48_2000(WORK_Other* ewk) {
 void eff48_3000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_WAIT:
-        ewk->wu.old_rno[2] -= 1;
+        ewk->wu.old_rno[2]--;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;
@@ -185,7 +185,7 @@ void eff48_3000(WORK_Other* ewk) {
         }
         break;
     case R1_TIMER:
-        ewk->wu.old_rno[4] -= 1;
+        ewk->wu.old_rno[4]--;
         if (ewk->wu.old_rno[4] <= 0) {
             ewk->wu.routine_no[1]++;
             break;
@@ -209,7 +209,7 @@ void eff48_3000(WORK_Other* ewk) {
 void eff48_4000(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_WAIT:
-        ewk->wu.old_rno[2] -= 1;
+        ewk->wu.old_rno[2]--;
         if (ewk->wu.old_rno[2] < 0) {
             ewk->wu.routine_no[1]++;
             ewk->wu.disp_flag = 1;

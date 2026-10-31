@@ -34,10 +34,6 @@
 #define R0_MOVE         3       /* follow the fight */
 
 /* declarations the headers do not give */
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
-void bg_base_y_move_check(void);
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
 extern s8 bg060_cnt;
@@ -46,8 +42,10 @@ extern s8 bg060_end;
 extern s8 bg060_mode;
 s32 effect_12_init();
 s32 effect_18_init();
-s32 effect_44_init();
-s32 effect_87_init();
+
+#include "EFF44.h"
+#include "eff87.h"
+
 void bg060_layer0(void);
 void bg060_layer1(void);
 void bg060_layer0_init(void);

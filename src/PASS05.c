@@ -207,7 +207,7 @@ void Passive05_0012(PLW* wk) {
         EM_Term(wk, 0x8070, 0, 0, 2, 0);
         break;
     case 1:
-        Lever_Attack(wk, 8, 1, (0x200));
+        Lever_Attack(wk, 8, 1, 0x200);
         break;
     default:
         End_Pattern(wk);
@@ -1315,10 +1315,10 @@ void Passive05_0082(PLW* wk) {
         EM_Term(wk, -1, 0x8010, 6, 1, -1);
         break;
     case 2:
-        Normal_Attack(wk, 9, (0x100));
+        Normal_Attack(wk, 9, 0x100);
         break;
     case 3:
-        Command_Attack(wk, 9, 0x1c, 0xa, -1);
+        Command_Attack(wk, 9, 0x1C, 0xA, -1);
         break;
     case 4:
         SA_Term(wk, 0x35, 0x36, 0x37, 0x60);
@@ -1363,7 +1363,7 @@ void Passive05_0085(PLW* wk) {
         EM_Term(wk, 0x8060, 0x8008, 5, 1, -1);
         break;
     case 1:
-        Normal_Attack(wk, 0xD, (0x80));
+        Normal_Attack(wk, 0xD, 0x80);
         break;
     default:
         End_Pattern(wk);

@@ -30,12 +30,12 @@
 
 
 
-s16 test_pl_no;  
-s16 test_mes_no;  
-s16 test_in;  
-s16 old_mes_no2;  
-s16 old_mes_no3;  
-s16 old_mes_no_pl;  
+s16 test_pl_no;
+s16 test_mes_no;
+s16 test_in;
+s16 old_mes_no2;
+s16 old_mes_no3;
+s16 old_mes_no_pl;
 
 /* the message tables are initialised work RAM, defined in effb8_mes.c */
 extern const EFFB8_MESSAGE* effB8_conn_tbl[];
@@ -308,7 +308,7 @@ s32 effect_B8_init(s8 WIN_PL_NO) {
             }
             old_mes_no3 = old_mes_no2;
             old_mes_no2 = message;
-            message = message + 23;
+            message += 23;
         }
     } else {
         message = (random_16_com() >> 1) & 7;
@@ -347,7 +347,7 @@ s32 effect_B8_init(s8 WIN_PL_NO) {
         }
         old_mes_no3 = old_mes_no2;
         old_mes_no2 = message;
-        message = message + 23;
+        message += 23;
     }
     mes_already = message;
     test_mes_no = message;
@@ -410,9 +410,9 @@ s32 effB8_mes_change_init(s16 pl, s16 mes_no) {
 
 /* provisional name */
 void effB8_conn_set(ewk, pl, mes_no)
-    WORK_Other_CONN* ewk;
-    s8 pl;
-    u16 mes_no;
+WORK_Other_CONN* ewk;
+s8 pl;
+u16 mes_no;
 {
     const CONN* conn_data;
     const u16* chr_data;
@@ -443,9 +443,9 @@ void effB8_conn_set(ewk, pl, mes_no)
 
 /* provisional name; nothing calls it */
 void effB8_conn_purge(ewk, pl, mes_no)
-    WORK_Other_CONN* ewk;
-    s8 pl;
-    u16 mes_no;
+WORK_Other_CONN* ewk;
+s8 pl;
+u16 mes_no;
 {
     const u16* chr_data;
     u16 chr;

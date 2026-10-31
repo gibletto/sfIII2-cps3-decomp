@@ -19,11 +19,11 @@
 #include "textsound.h"
 #include "cps3.h"
 
-u16 num_font_code;  /* 02078CE0 */
-u32 palette_base;  /* 02078CE4 */
+u16 num_font_code;  /* 02073184 */
+u32 palette_base;  /* 02073188 */
 
 
-struct PLW_tag;void tilemap_chunk_copy_16b(s16 *dst, char *src, s32 chunks)
+void tilemap_chunk_copy_16b(s16 *dst, char *src, s32 chunks)
 {
     s32 i;
     s32 n;

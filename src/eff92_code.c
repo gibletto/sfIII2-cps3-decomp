@@ -1,7 +1,7 @@
 /*
  * EFF92_CODE.C  Effect 92: win marks
  *
- * effect_92_init (from Manage): draws a side's win marks from the win-mark request table and
+ * effect_92_init (from manage_2.c): draws a side's win marks from the win-mark request table and
  * raises the side's done flag.
  */
 

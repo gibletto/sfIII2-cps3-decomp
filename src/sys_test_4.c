@@ -34,8 +34,8 @@
 
 
 
-s16 rewrite_no = 0;  /* 02007CDC */
-s16 rewrite_cursor = 0;  /* 02007CDE */
+s16 rewrite_no = 0;  /* 02008524 */
+s16 rewrite_cursor = 0;  /* 02008526 */
 
 
 /* provisional name */

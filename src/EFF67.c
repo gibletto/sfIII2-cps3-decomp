@@ -92,9 +92,9 @@ extern const EFFA6_MESSAGE effA6_mes_pt_7[];
 extern const EFFA6_MESSAGE effA6_mes_pt_8[];
 extern const EFFA6_MESSAGE effA6_mes_pt_9[];
 
-s16 eff67_cnt0;  
-s16 eff67_cnt1;  
-s16 eff67_flag;  
+s16 eff67_cnt0;
+s16 eff67_cnt1;
+s16 eff67_flag;
 
 const EFFA6_MESSAGE* eff67_msg_a[15] = {
     effA6_mes_jp_0,

@@ -1,13 +1,12 @@
 /*
  * EFF95.C  Effect 95: the win and ranking screen characters
  *
- * effect_95_init (called from Win_2nd with kind 16 for the winner and 0 for the loser) puts the player's
- * character on BG1 through
- * eff95_set_obj, adding the extra parts some characters have (types 1, -1, 16, 0x80, 32, 48: by My_char
- * and, for one pair, Country); eff95_set_position and eff95_set_speed place it by WINNER and
- * Game_setting.Screen_Mode and give it its slide speed, eff95_rl_check its facing. effect_95_rank_init
- * (Ranking_Sub) makes the ranking screen's character on BG0.
- * effect_95_move shows the object and moves it in x by mvxy.a[0], which is zeroed unless
+ * effect_95_init (called from Win_2nd with kind 16 for the winner and 0 for the loser) puts the
+ * player's character on BG1 through eff95_set_obj, adding the extra parts some characters have
+ * (types 1, -1, 16, 0x80, 32, 48: by My_char and, for one pair, Country); eff95_set_position and
+ * eff95_set_speed place it by WINNER and Game_setting.Screen_Mode and give it its slide speed,
+ * eff95_rl_check its facing. effect_95_rank_init (Ranking_Sub) makes the ranking screen's character
+ * on BG0. effect_95_move shows the object and moves it in x by mvxy.a[0], which is zeroed unless
  * win_slide_flag (set while the win screen slides) is set.
  */
 

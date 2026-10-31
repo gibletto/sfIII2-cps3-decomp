@@ -39,6 +39,6 @@ void bg_initialize(void);
 void oh_opening_demo();
 void reset_all_char_display_with_backup(void);
 void akebono_initialize(void);
-void bg_etc_write(s16 x);
+void bg_etc_write(s16 type);
 
 #endif

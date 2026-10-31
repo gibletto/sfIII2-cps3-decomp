@@ -130,8 +130,8 @@ void Att_RESURRECTION2(PLW* wk) {
 
 /* provisional name */
 s32 get_life_add_point2(cg_type, rate)
-    u8 cg_type;
-    s16 rate;
+u8 cg_type;
+s16 rate;
 {
     u16 ix = cg_type - 20;
     if (ix < 9) {

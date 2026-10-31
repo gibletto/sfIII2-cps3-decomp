@@ -1,11 +1,9 @@
 /*
- * VITAL.C  Vitality bars and round timers
+ * VITAL.C  Vitality bars
  *
- * Draws and runs the vitality bars and the timers. vital_cont_init resets both bars to full,
- * vital_cont_main and vital_control update them each frame and vital_parts_allwrite redraws all 20
- * cells from the yellow and red levels. count_cont_init/reset/main, counter_control and
- * counter_flash run the 99-count round timer, with a tick rate from the game-speed setting and
- * flashing below 30 and 10.
+ * Draws and runs the vitality bars. vital_cont_init resets both bars to full, vital_cont_main and
+ * vital_control update them each frame and vital_parts_allwrite redraws all 20 cells from the yellow
+ * and red levels. The round timer is in count.c.
  */
 
 #include "structs.h"

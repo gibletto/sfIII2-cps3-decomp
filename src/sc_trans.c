@@ -36,13 +36,13 @@
 
 
 
-u16 * sc_trans_dst;  /* 020283A0 */
-u8 * sc_bak_ptr;  /* 020283A4 */
-const u8 * sc_trans_src;  /* 020283A8 */
+u16 * sc_trans_dst;  /* 02023C20 */
+u8 * sc_bak_ptr;  /* 02023C24 */
+const u8 * sc_trans_src;  /* 02023C28 */
 u8 sc_trans_src_tail[6];  /* after sc_trans_src; nothing refers to it by name or address */
-u16 sc_trans_word;  /* 020283B2 */
-u8 sc_chr_bak_1p[320];  /* 020283B4 */
-u8 sc_chr_bak_2p[324];  /* 020284F4 */
+u16 sc_trans_word;  /* 02023C32 */
+u8 sc_chr_bak_1p[320];  /* 02023C34 */
+u8 sc_chr_bak_2p[324];  /* 02023D74 */
 
 
 
@@ -330,8 +330,8 @@ void Ranking_00_6th(s8 flag) {
     if (flag) {
         sc_chr_backup(0);
     }
-    sc_trans_src = (u8 *)sc_chr_data;
-    sc_trans_dst = (volatile u16*)(SS_RAM + 0x8000);
+    sc_trans_src = (u8*)sc_chr_data;
+    sc_trans_dst = (u16*)(SS_RAM + 0x8000);
     for (n = 0; n < 0x2800; n++) {
         sc_trans_word = 0;
         sc_trans_word = *sc_trans_src;
@@ -665,10 +665,10 @@ s16 n;
 
 
 void tilemap_clear_rect(x0, y0, x1, y1)
-    u32 x0;
-    u32 y0;
-    u32 x1;
-    u32 y1;
+u32 x0;
+u32 y0;
+u32 x1;
+u32 y1;
 {
     u16 *line;
     u16 row;
@@ -688,8 +688,7 @@ void tilemap_clear_rect(x0, y0, x1, y1)
 
 void Sa_frame_Clear(void)
 {
-  tilemap_clear_rect(0,0x19,0x37,0x1b);
-  return;
+    tilemap_clear_rect(0, 0x19, 0x37, 0x1B);
 }
 
 
@@ -988,7 +987,6 @@ s16 kind;
             break;
         }
     }
-    return;
 }
 
 

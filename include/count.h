@@ -6,7 +6,7 @@
 void count_cont_init();
 void count_cont_reset(void);
 void counter_control(void);
-void counter_flash(s8 type);
+void counter_flash(s8 ix);
 void bcount_cont_init(u8 pl);
 void bcount_cont_reset(void);
 void bcounter_control(void);

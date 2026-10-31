@@ -61,7 +61,7 @@
 
 
 
-/* 02004FB4 */
+/* 02006400 */
 /* the check routines, indexed by a step's CK_* code (cmd_data.h) */
 void (*chk_move_jp[CMD_END])() = {
     check_init, /* CK_INIT */
@@ -106,7 +106,7 @@ void waza_check(PLW* pl) {
 
 
 
-void cmd_data_set(PLW* _p0, s16 i) {
+void cmd_data_set(PLW* pl, s16 i) {
     u8* ptr3;
     u16* ptr4;
     (&wcp[cmd_id].reset[0])[i] = *cmd_tbl_ptr++;
@@ -135,7 +135,7 @@ void cmd_init(PLW* pl) {
     cmd_id = pl->wu.id;
     pl->cp = &wcp[cmd_id];
     pl->wu.routine_no[7]++;
-    ptr = (s32*)&waza_work[cmd_id][0];
+    ptr = (s32*)waza_work[cmd_id];
     for (i = 0; i < CMD_SLOTS; i++) {
         for (j = 0; j < 6; j = j + 1) {
             *ptr++ = 0;
@@ -482,42 +482,41 @@ void check_5(void) {
 void check_6(void) {
     s16 i;
     s32 lvr_work;
-    WAZA_WORK** wp = &waza_ptr;
-    (*wp)->w_int--;
-    if ((*wp)->w_int < 0) {
+    waza_ptr->w_int--;
+    if (waza_ptr->w_int < 0) {
         cmd_tbl_ptr += CMD_HEAD_WORDS;
-        (*wp)->w_type = *cmd_tbl_ptr++;
-        (*wp)->w_int = *cmd_tbl_ptr++;
-        (*wp)->free2 = *cmd_tbl_ptr++;
-        (*wp)->w_lvr = *cmd_tbl_ptr++;
-        (*wp)->w_ptr = cmd_tbl_ptr;
-        (*wp)->uni0.tame.flag = 0;
-        (*wp)->uni0.tame.shot_flag = 0;
-        (*wp)->uni0.tame.shot_flag2 = 0;
-        (*wp)->free1 = 14;
-        (*wp)->shot_ok = 0;
+        waza_ptr->w_type = *cmd_tbl_ptr++;
+        waza_ptr->w_int = *cmd_tbl_ptr++;
+        waza_ptr->free2 = *cmd_tbl_ptr++;
+        waza_ptr->w_lvr = *cmd_tbl_ptr++;
+        waza_ptr->w_ptr = cmd_tbl_ptr;
+        waza_ptr->uni0.tame.flag = 0;
+        waza_ptr->uni0.tame.shot_flag = 0;
+        waza_ptr->uni0.tame.shot_flag2 = 0;
+        waza_ptr->free1 = 14;
+        waza_ptr->shot_ok = 0;
     } else {
-        (*wp)->free1--;
-        if ((*wp)->free1 <= 0) {
-            (*wp)->free1 = 14;
-            (*wp)->shot_ok = 0;
+        waza_ptr->free1--;
+        if (waza_ptr->free1 <= 0) {
+            waza_ptr->free1 = 14;
+            waza_ptr->shot_ok = 0;
         }
     }
     lvr_work = 1;
     for (i = 0; i < 4; i++) {
         if (chk_pl->sw_lever == (u16)lvr_work) {
-            (*wp)->shot_ok |= lvr_work;
-            (*wp)->free1 = 14;
+            waza_ptr->shot_ok |= lvr_work;
+            waza_ptr->free1 = 14;
         }
         lvr_work <<= 1;
     }
-    if ((*wp)->shot_ok != CMD_LV_MASK) {
+    if (waza_ptr->shot_ok != CMD_LV_MASK) {
         return;
     }
-    if (*(*wp)->w_ptr == CMD_END) {
+    if (*waza_ptr->w_ptr == CMD_END) {
         command_ok();
     } else {
-        (*wp)->shot_ok = 0;
+        waza_ptr->shot_ok = 0;
         check_next();
     }
 }

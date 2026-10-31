@@ -23,13 +23,13 @@
 #include "effect_2.h"
 #include "EFFECT.h"
 
-u32 frw[128][512];  /* 02028990 */
+u32 frw[128][512];  /* 02024210 */
 u8 frw_tail[4];  /* after frw; nothing refers to it by name or address */
-s16 frwque[128];  /* 02068994 */
-s16 frwctr;  /* 02068A94 */
-s16 head_ix[8];  /* 02068A96 */
-s16 tail_ix[8];  /* 02068AA6 */
-s16 exec_tm[8];  /* 02068AB6 */
+s16 frwque[128];  /* 02064214 */
+s16 frwctr;  /* 02064314 */
+s16 head_ix[8];  /* 02064316 */
+s16 tail_ix[8];  /* 02064326 */
+s16 exec_tm[8];  /* 02064336 */
 
 
 void move_effect_work(s16 index) {
@@ -88,8 +88,8 @@ void effect_work_quick_clear(void) {
 
 /* provisional name */
 void effect_work_list_release(lix, iid)
-    s16 lix;
-    s16 iid;
+s16 lix;
+s16 iid;
 {
     WORK* c_addr;
     s16 curr_ix;
@@ -482,7 +482,10 @@ s32 exec_char_asxy(WORK* wk, u8 data) {
 }
 
 
-void setup_free_program(WORK* wk, u8 arg) {}/* Start a horizontal background quake using quake pattern ix. */
+void setup_free_program(WORK* wk, u8 arg) {}
+
+
+/* Start a horizontal background quake using quake pattern ix. */
 void setup_bg_quake_x(WORK* wk, u8 ix)
 {
     bg_w.quake_x_index = ix;

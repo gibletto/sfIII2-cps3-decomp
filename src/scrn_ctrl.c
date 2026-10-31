@@ -113,7 +113,7 @@ extern s16 flip_crt_ofs_y;
 
 
 
-s8 Monitor_Flip_Old = 0;  /* 02000660 */
+s8 Monitor_Flip_Old = 0;  /* 020084D4 */
 
 
 /* provisional name */

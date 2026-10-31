@@ -189,7 +189,7 @@ TM_STRING warning_mes[9][11] = {
     { { 19, 2, 4, str_WARNING }, { 2, 4, 4, str_This_game_is_for_use_in_the_sout }, { 2, 6, 4, str_Asian_countries_only }, { 2, 8, 4, str_Sales_export_or_operation_outsid_2 }, { 2, 10, 4, str_countries_may_be_construed_as_co }, { 2, 12, 4, str_trademark_infringement_and_is_st }, { 2, 14, 4, str_prohibited }, { 2, 16, 4, str_Violators_are_subject_to_severe_ }, { 2, 18, 4, str_and_will_be_prosecuted_to_the_fu }, { 2, 20, 4, str_of_the_law }, { 2, 22, 4, str_blank_2 } },
     { { 19, 2, 2, str_WARNING }, { 2, 4, 2, str_This_game_is_for_use_in_japan_on }, { 2, 6, 2, str_Sales_export_or_operation_outsid }, { 2, 8, 2, str_country_may_be_construed_as_copy }, { 2, 10, 2, str_and_trademark_infringement_and_i }, { 2, 12, 2, str_prohibited }, { 2, 14, 2, str_Violators_are_subject_to_severe_ }, { 2, 16, 2, str_and_will_be_prosecuted_to_the_fu }, { 2, 18, 2, str_of_the_law }, { 2, 20, 2, str_blank_2 }, { 2, 22, 2, str_blank_2 } },
 };
-/* 0200053C */
+/* 020005C0 */
 /* The default settings rows of each cabinet type (sys_cfg_default_tbl), nine per type. */
 const u8* sys_cfg_default_list[3][9] = {
     { sys_cfg_default_0_0, sys_cfg_default_0_1, sys_cfg_default_0_2, sys_cfg_default_0_3, sys_cfg_default_0_4, sys_cfg_default_0_5, sys_cfg_default_0_6, sys_cfg_default_0_7, sys_cfg_default_0_8 },

@@ -15,7 +15,7 @@ void sq_paint_chenge(s16 x, s16 y, u16 w, u16 h, s16 attr);
 void sc_chr_clear();
 void sc_chr_to_ram(u16 n);
 void sc_chr_sheet_to_ram(u16 chr, u16 pos, u16 w, u16 h);
-void sc_chr_backup(s8 flag);
+void sc_chr_backup(s8 restore);
 void sc_chr_list_trans(s8 ix);
 void sc_chr_slot_trans(s8 ix, u16 code, s8 to_ram);
 void sc_ram_to_vram(char ix, char dx, char dy);
@@ -50,12 +50,12 @@ void scfont_lnput(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code);
 void scfont_lnput_rev(s16 x, s16 y, u16 w, u16 h, s16 attr, s16 code);
 void max_mark_write(char side, s16 left, u16 count, s32 x, char mark);
 s32 tilemap_put_cell(u16 x, u16 y, u16 attr, u16 code);
-void winner_name_put(s8 chr);
+void winner_name_put(s8 ch);
 void player_face_char_set();
 void player_grade_char_set();
 void player_face_default_set(s8 pl);
 void player_face(void);
-void rank_mark_set(s8 pl, s8 rank);
+void rank_mark_set(s8 row, s8 n);
 void naming_set(s8 pl, s16 place, u16 chr);
 
 #endif

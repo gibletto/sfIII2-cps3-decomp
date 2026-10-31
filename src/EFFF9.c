@@ -47,12 +47,12 @@
 
 
 
-s16 efff9_suicide;  
-const u16** efff9_txt_no_adrs;  
-u16 * efff9_txt_scene_adrs;  
-s16 efff9_PL_NO;  
-s16 efff9_txt_point;  
-s16 efff9_message;  
+s16 efff9_suicide;
+const u16** efff9_txt_no_adrs;
+u16 * efff9_txt_scene_adrs;
+s16 efff9_PL_NO;
+s16 efff9_txt_point;
+s16 efff9_message;
 s16 keep_mes_no;  /* the frames left on the current line */
 s16 efff9_mes_no;  /* provisional name: the ending message number */
 s16 efff9_mes_len;  /* provisional name: the line's cell count */

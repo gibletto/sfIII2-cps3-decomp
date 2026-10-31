@@ -26,7 +26,6 @@
 
 void effect_65_move(void)
 {
-  return;
 }
 
 u32 effect_65_init(void)

@@ -1,11 +1,10 @@
 /*
  * EFF16.C  Effect 16: bonus-stage score display
  *
- * Effect 16 shows a player's score in the bonus stage as a row of digit characters. The
- * total is split into digits with bunkai_table / bunkai_numobj
- * (score_bunkai_eff16), the digits appear one at a time every 3 frames and are
- * then redrawn every frame in front of the background (eff16_trans).
- * effect_16_init is called from BBBSCOM.
+ * Effect 16 shows a player's score in the bonus stage as a row of digit characters. The total is
+ * split into digits with bunkai_table / bunkai_numobj (score_bunkai_eff16), the digits appear one
+ * at a time every 3 frames and are then redrawn every frame in front of the background
+ * (eff16_trans). effect_16_init is called from BBBSCOM.
  */
 
 #include "structs.h"
@@ -119,8 +118,8 @@ s32 score_bunkai_eff16(WORK_Other_CONN* ewk, u32 tsc) {
 
 
 s32 effect_16_init(wk, flag)
-    PLW* wk;
-    s16 flag;
+PLW* wk;
+s16 flag;
 {
     WORK_Other_CONN* ewk;
     s16 ix;

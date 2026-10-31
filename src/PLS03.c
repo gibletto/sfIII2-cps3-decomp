@@ -629,7 +629,7 @@ s32 check_lever_up_attack(PLW* wk) {
 
 
 
-/* an empty check */
+/* always returns 0 */
 s32 check_catch_attack(PLW* wk) {
     return 0;
 }

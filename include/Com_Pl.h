@@ -81,8 +81,8 @@ void Setup_Difficult_V(void);
 void display_mode_setup(void);
 void Zoomf_Init(void);
 void set_screen_mode();
-void Damage_3rd(PLW* );
-void Damage_4th(PLW* );
+void Damage_3rd(PLW* wk);
+void Damage_4th(PLW* wk);
 void screen_window_regs_update(void);
 
 #endif

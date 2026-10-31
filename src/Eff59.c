@@ -1,11 +1,10 @@
 /*
  * EFF59.C  Effect 59: country name letters; effect 60: flashing stage object
  *
- * effect_59_init lays out the letters of the Battle_Country name from eff59_name_tbl, one effect 59 per letter,
- * each
- * starting after its own delay; effect_59_move waits that delay (or a cut), opens the letter
- * with a shrinking window, waits, and on the last letter starts effect 58 type 7 and then
- * Next_Step. Effect 60 is a flashing stage object that blinks through disp_flag 2.
+ * effect_59_init lays out the letters of the Battle_Country name from eff59_name_tbl, one effect 59
+ * per letter, each starting after its own delay; effect_59_move waits that delay (or a cut), opens
+ * the letter with a shrinking window, waits, and on the last letter starts effect 58 type 7 and
+ * then Next_Step. Effect 60 is a flashing stage object that blinks through disp_flag 2.
  */
 
 #include "structs.h"
@@ -237,7 +236,6 @@ void effect_60_move(WORK_Other* ewk) {
 
 
 
-/* char_add by stage and area */
 s32 effect_60_init(s16 type) {
     WORK_Other* ewk;
     s16 ix;

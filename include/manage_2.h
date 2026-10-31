@@ -87,7 +87,7 @@ s32 Check_Entry_Again(void);
 void Loser_Sub(void);
 void Be_Continue(void);
 void Update_VS_Data(void);
-void Check_Fade_Out_BGM(s16 code);
+void Check_Fade_Out_BGM(s16 Time);
 void Control_Music_Fade(s16 time);
 void complete_victory_pause(void);
 s32 Check_Break_Into_CPU(s16 PL_id);

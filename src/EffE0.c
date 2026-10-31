@@ -1,11 +1,11 @@
 /*
  * EFFE0.C  Effect E0 (140): the stage plates on the opponent select screen
  *
- * effect_E0_init makes eight plates, one per entry of the player's
- * EM_Candidate list (pattern 16 + stage, or 32 where Break_Com marks none). They slide in from
- * both sides with a stagger (effE0_delay_tbl), and Cut_Cut_Cut skips the slide (effE0_arrive).
- * The plate the player's VS_Index points at closes and reopens with the stage picture; when
- * effE0_go is set all plates slide out.
+ * effect_E0_init makes eight plates, one per entry of the player's EM_Candidate list (pattern 16 +
+ * stage, or 32 where Break_Com marks none). They slide in from both sides with a stagger
+ * (effE0_delay_tbl), and Cut_Cut_Cut skips the slide (effE0_arrive). The plate the player's
+ * VS_Index points at closes and reopens with the stage picture; when effE0_go is set all plates
+ * slide out.
  */
 
 #include "structs.h"

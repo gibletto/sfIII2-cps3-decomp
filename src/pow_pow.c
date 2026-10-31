@@ -24,7 +24,6 @@
 #include "bg_sub_4.h"
 #include "bg_sub_5.h"
 #include "SYS_sub.h"
-#include "end_main.h"
 #include "EM_Cand.h"
 #include "end_sub.h"
 #include "end_sub_2.h"

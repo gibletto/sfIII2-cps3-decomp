@@ -47,25 +47,25 @@ extern const u16 spgauge_postbl_1_2[];
 extern const u16 spgauge_puttbl_0[];
 extern const u16 spgauge_puttbl_1[];
 
-s8 Old_Stop_SG;  /* 0202868C */
-s8 Exec_Wipe_F;  /* 0202868D */
-s8 time_clear[2];  /* 0202868E */
-s16 spg_number;  /* 02028690 */
-s16 spg_work;  /* 02028692 */
-s16 spg_offset;  /* 02028694 */
-s8 time_num;  /* 02028696 */
-s8 time_timer;  /* 02028697 */
-s8 time_flag[2];  /* 02028698 */
-s16 col;  /* 0202869A */
-SPG_DAT spg_dat[2];  /* 0202869C */
+s8 Old_Stop_SG;  /* 02023F08 */
+s8 Exec_Wipe_F;  /* 02023F09 */
+s8 time_clear[2];  /* 02023F0A */
+s16 spg_number;  /* 02023F0C */
+s16 spg_work;  /* 02023F0E */
+s16 spg_offset;  /* 02023F10 */
+s8 time_num;  /* 02023F12 */
+s8 time_timer;  /* 02023F13 */
+s8 time_flag[2];  /* 02023F14 */
+s16 col;  /* 02023F16 */
+SPG_DAT spg_dat[2];  /* 02023F18 */
 
 
-/* 020069C8 */
+/* 02007854 */
 const u16* spgauge_puttbl[2] = {
     spgauge_puttbl_0,
     spgauge_puttbl_1,
 };
-/* 020069D0 */
+/* 0200785C */
 const u16* spgauge_postbl[4] = {
     spgauge_postbl_0,
     spgauge_postbl_1,
@@ -731,9 +731,9 @@ s8 Stpl_Num;
 
 
 void sa_moji_trans(Stpl_Num, Kind, OnOff)
-    s32 Stpl_Num;
-    s8 Kind;
-    s8 OnOff;
+s32 Stpl_Num;
+s8 Kind;
+s8 OnOff;
 {
     SPG_DAT* spg;
     s16 x;
@@ -891,7 +891,6 @@ void spgauge_wipe_write(s32 Stpl_Num) {
     }
     sa_waku_trans(Stpl_Num, Stpl_Num);
     sa_gauge_trans((s8)Stpl_Num, 0);
-    return;
 }
 
 

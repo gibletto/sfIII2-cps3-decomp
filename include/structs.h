@@ -656,7 +656,7 @@ typedef struct {
     s16 bg2_sp_x;
     s16 bg2_sp_y;
     s16 scrno;
-    u8 pad0[0xa];
+    u8 pad0[0xA];
     s16 scr_stop;
     s8 frame_flag;
     s8 chase_flag;
@@ -669,7 +669,7 @@ typedef struct {
     s16 bg_f_y;
     s16 old_bg_f_x;     /* bg_f_x of the previous frame */
     s16 old_bg_f_y;     /* bg_f_y of the previous frame */
-    u8 pad1[0xa];
+    u8 pad1[0xA];
     s16 bg2_sp_x2;
     s16 bg2_sp_y2;
     s16 frame_deff;

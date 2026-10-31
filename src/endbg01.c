@@ -17,11 +17,6 @@
 #include "ta_sub.h"
 #include "aboutspr.h"
 
-/* declarations the headers do not give */
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
-
 void end_bg010_layer0(void);
 void end_bg010_layer0_init00(void);
 void end_bg010_layer0_move(void);

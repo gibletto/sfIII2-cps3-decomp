@@ -3,7 +3,8 @@
  *
  * Effect A5 (effect_A5_entry, started by sel_pl.c and next_cpu.c) is the select-screen timer:
  * it counts Select_Timer down in BCD every 50 frames, holds while Time_Stop is set,
- * and sets Time_Over 30 frames after the timer reaches zero. The timer ends while Exit_No is set.
+ * and sets Time_Over 30 frames after the timer reaches zero. Exit_No retires the timer and sets
+ * Time_Stop to -1.
  */
 
 #include "structs.h"
@@ -37,7 +38,7 @@
 
 
 
-/* the timer ends while Exit_No is set */
+/* retire the timer when Exit_No is set */
 void effect_A5_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[0]) {
     case R0_WAIT:

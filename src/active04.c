@@ -705,7 +705,7 @@ void Pattern04_0042(PLW* wk) {
 void Pattern04_0043(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Jump_Attack_Term(wk, 0x8060, 0x8030, 8, 0x40, 0, -1, 0x30, (0x4020));
+        Jump_Attack_Term(wk, 0x8060, 0x8030, 8, 0x40, 0, -1, 0x30, 0x4020);
         break;
     default:
         End_Pattern(wk);
@@ -955,7 +955,7 @@ void Pattern04_0060(PLW* wk) {
         Approach_Walk(wk, 71, 2);
         break;
     case 3:
-        Normal_Attack(wk, 13, (0x80));
+        Normal_Attack(wk, 13, 0x80);
         break;
     default:
         End_Pattern(wk);
@@ -994,7 +994,7 @@ void Pattern04_0062(PLW* wk) {
 void Pattern04_0063(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Jump_Attack_Term(wk, 0x8070, 0x8040, 8, (0x100), 0, 0x8098, -1, (0x200));
+        Jump_Attack_Term(wk, 0x8070, 0x8040, 8, 0x100, 0, 0x8098, -1, 0x200);
         break;
     default:
         End_Pattern(wk);

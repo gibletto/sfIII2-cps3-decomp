@@ -75,7 +75,7 @@ s32 effect_58_init();
 #include "gameover.h"
 #include "continue.h"
 #include "pow_pow.h"
-#include "end_main.h"
+#include "end_main_c.h"
 #include "Entry.h"
 #include "entry_2.h"
 #include "fighter.h"
@@ -151,10 +151,6 @@ s32 Check_Special_Settle(void);
 void Stock_Loser_Char(void);
 extern const u16 bg_color3_tbl[];  /* provisional name */
 #pragma inline(request_center_message)
-void Game_Manage_8_0(void);
-void Game_Manage_8_1(void);
-void Game_Manage_8_2(void);
-void Game_Manage_8_3(void);
 void Game_Manage_8_4(void);
 void Game_Manage_8_5(void);
 void Game_Manage_82_0(void);
@@ -177,8 +173,6 @@ s32 Check_Ending_Special(void);
 void Game_Manage_14_0(void);
 void Game_Manage_14_1(void);
 void Game_Manage_14_2(void);
-void Disp_Win_Record_Sub();
-void Erase_Win_Record();
 s16 Next_VS_Index(void);
 extern u16 End_Course;  /* provisional name */
 extern s8 End_Gouki_Flag;  /* provisional name */
@@ -603,7 +597,7 @@ void Game_Manage_5_4(void) {
             load_any_color_fade(bg_color3_tbl[bg_w.bg_index - 1], 15, 15, 15);
         }
         pcon_rno[0] = PCON_INIT;
-        pcon_rno[1] = 0;
+        pcon_rno[1] = APP_SETUP;
         pcon_rno[2] = 0;
         pcon_rno[3] = 0;
         appear_type = APPEAR_JUDGE;
@@ -1056,10 +1050,8 @@ void Game_Manage_82_7(void) {
 
 
 void Game_Manage_82_8(void) {
-    if (Button_Cut_EX(&C_Timer, 0x7FFF)) {
-        if (Cut_Cut_Cut()) {
-            Bonus_Cut_All();
-        }
+    if (Button_Cut_EX(&C_Timer, 0x7FFF) && Cut_Cut_Cut()) {
+        Bonus_Cut_All();
     }
     if (--C_Timer == 0) {
         C_No2++;
@@ -1256,6 +1248,9 @@ void Additional_Bonus(s16 PL_id) {
 
 
 
+/* The bonus for a match won without losing a round: 30000 in versus play; against the CPU it grows
+   by 10000 with each such win in a row (Straight_Counter), from 30000 to 130000, and a lost round
+   starts it again. */
 u32 Setup_Comp_Bonus(void) {
     u32 xx;
     u16 zz;
@@ -1324,10 +1319,8 @@ void Game_Manage_9th(void) {
         }
         break;
     case CM9_WAIT:
-        if (!(bg_w.stage == 8 && bg_w.area == 0)) {
-            if (Cut_Cut_Cut()) {
-                C_Timer = 1;
-            }
+        if (!(bg_w.stage == 8 && bg_w.area == 0) && Cut_Cut_Cut()) {
+            C_Timer = 1;
         }
         if (--C_Timer > 0) {
             return;
@@ -1375,7 +1368,7 @@ void Game_Manage_10th(void) {
             Check_Naming(0);
             Check_Naming(1);
             pcon_rno[0] = PCON_INIT;
-            pcon_rno[1] = 0;
+            pcon_rno[1] = APP_SETUP;
             pcon_rno[2] = 0;
             pcon_rno[3] = 0;
             appear_type = APPEAR_ENTRY;
@@ -1816,18 +1809,16 @@ void Disp_Bonus_Perfect(void) {
 
 
 void Flash_Bonus_Perfect(void) {
-    s32 (*fp)() = effect_89_init;
-    register s16* py = &DE_X[1];
     switch (PB_Status) {
     case 1:
-        fp(4, 1, 15, *py + 36, 3);
+        effect_89_init(4, 1, 15, DE_X[1] + 36, 3);
         break;
     case 2:
-        fp(9, 1, 15, *py + 36, 3);
+        effect_89_init(9, 1, 15, DE_X[1] + 36, 3);
         break;
     case 3:
-        fp(4, 1, 15, *py + 36, 3);
-        fp(9, 1, 19, *py + 36, 3);
+        effect_89_init(4, 1, 15, DE_X[1] + 36, 3);
+        effect_89_init(9, 1, 19, DE_X[1] + 36, 3);
         break;
     }
 }

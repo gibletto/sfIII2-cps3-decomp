@@ -32,7 +32,6 @@
 
 void effect_G1_move(void)
 {
-  return;
 }
 
 u32 effect_G1_init(void)
@@ -44,7 +43,6 @@ u32 effect_G1_init(void)
 
 void effect_G2_move(void)
 {
-  return;
 }
 
 

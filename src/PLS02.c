@@ -29,8 +29,8 @@ s32 cal_move_quantity_dummy();   /* CALDIR's empty routine; get_buttobi_attlv2 u
 
 
 void add_to_mvxy_data(wk, ix)
-    WORK *wk;
-    u16 ix;
+WORK *wk;
+u16 ix;
 {
     s16* adrs;
     s32 sp;
@@ -55,8 +55,8 @@ void add_to_mvxy_data(wk, ix)
 
 
 void setup_mvxy_data(wk, ix)
-    WORK *wk;
-    u16 ix;
+WORK *wk;
+u16 ix;
 {
     wk->mvxy.index = ix;
     read_adrs_store_mvxy(wk, &wk->move_xy_table[ix * 6]);
@@ -64,6 +64,7 @@ void setup_mvxy_data(wk, ix)
 
 
 
+/* Blow-away movement from parabora_ex_table, by the attacker's character and our weight. */
 void setup_butt_own_data_ex(WORK* wk, s16 ix) {
     const s16* adrs;
     s16 pn;
@@ -75,6 +76,7 @@ void setup_butt_own_data_ex(WORK* wk, s16 ix) {
 
 
 
+/* As above, by our character and the attacker's weight. */
 void setup_butt_own_data_ex2(WORK* wk, s16 ix) {
     const s16* adrs;
     u8 wl;
@@ -108,8 +110,7 @@ void read_adrs_store_mvxy(WORK* wk, const s16* adrs) {
 
 
 
-s32 get_weight_point(WORK* wk)
-{
+s32 get_weight_point(WORK* wk) {
     return wk->dm_weight - wk->weight_level + 3;
 }
 
@@ -314,13 +315,12 @@ two:
     p2w->wu.xyz[0].disp.pos += meri * (p2w->micchaku_flag != 1);
     p1w->hos_em_flag = 1;
     p2w->hos_em_flag = 2;
-    return;
 }
 
 
 
 s32 meri_case_switch(meri)
-    s16 meri;
+s16 meri;
 {
     switch (meri & 0xFFF8) {
     case 0:
@@ -446,8 +446,8 @@ s32 random_16_com(void) {
 
 
 
-s32 random_32_ex_com(void)
-{
+/* Next value from the CPU's 32-entry extra random table. */
+s32 random_32_ex_com(void) {
     Random_ix32_ex_com++;
     Random_ix32_ex_com &= 0x1F;
     return random_tbl_32_ex[Random_ix32_ex_com];
@@ -455,8 +455,8 @@ s32 random_32_ex_com(void)
 
 
 
-s32 random_16_ex_com(void)
-{
+/* Next value from the CPU's 16-entry extra random table. */
+s32 random_16_ex_com(void) {
     Random_ix16_ex_com++;
     Random_ix16_ex_com &= 0xF;
     return random_tbl_16_ex_com[Random_ix16_ex_com];
@@ -510,8 +510,7 @@ s16 cal_attdir_flip(s16 index) {
 
 
 
-s32 get_kind_of_head_dm(s16 dir, char rl)
-{
+s32 get_kind_of_head_dm(s16 dir, char rl) {
     if (rl == 0) {
         dir = dir16_rl_conv[dir];
     }
@@ -520,8 +519,7 @@ s32 get_kind_of_head_dm(s16 dir, char rl)
 
 
 
-s32 get_kind_of_trunk_dm(s16 dir, char rl)
-{
+s32 get_kind_of_trunk_dm(s16 dir, char rl) {
     if (rl == 0) {
         dir = dir16_rl_conv[dir];
     }
@@ -779,9 +777,9 @@ void add_sp_arts_gauge_nagenuke(PLW* wk) {
 
 
 s32 add_super_arts_gauge(wk, ix, asag)
-    SA_WORK *wk;
-    s16 ix;
-    s16 asag;
+SA_WORK *wk;
+s16 ix;
+s16 asag;
 {
     if (!test_flag) {
         if (wk->ok == -1) {
@@ -863,8 +861,7 @@ s16 check_buttobi_type(PLW* wk) {
 
 
 
-s32 check_buttobi_type2(WORK* wk)
-{
+s32 check_buttobi_type2(WORK* wk) {
     s16 rn;
     setup_butt_own_data(wk);
     rn = dir32_grddm[cal_move_dir_forecast(wk, 5)];
@@ -892,7 +889,7 @@ void dead_voice_request2(PLW* wk) {
     s16 secd2;
     secd1 = dead_voice_table[wk->player_number][0];
     secd2 = dead_voice_table[wk->player_number][1];
-    if ((wk->wu.routine_no[1] == PLAYER_DAMAGE) && atsagct[wk->wu.routine_no[2]] & 0x10) {
+    if (wk->wu.routine_no[1] == PLAYER_DAMAGE && atsagct[wk->wu.routine_no[2]] & 0x10) {
         sound_effect_request[secd2](wk, secd2);
     } else {
         sound_effect_request[secd1](wk, secd1);
@@ -917,8 +914,8 @@ void pl_voice_request(s8 pl, u8 kind) {
 
 
 void setup_saishin_lvdir(ds, gddir)
-    PLW* ds;
-    s8 gddir;
+PLW* ds;
+s8 gddir;
 {
     s32 gc;
     if ((ds->sa_stop_flag) == 1) {

@@ -123,7 +123,7 @@ void check_nagenuke(PLW* wk, PLW* tk) {
             tk->wu.routine_no[2] = 47;
         }
         tk->wu.routine_no[1] = PLAYER_NORMAL;
-        tk->wu.routine_no[3] = 0;
+        tk->wu.routine_no[3] = RN3_START;
         tk->wu.hit_stop = 1;
         tk->wu.dm_stop = 0;
     }

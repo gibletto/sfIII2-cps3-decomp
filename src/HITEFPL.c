@@ -20,10 +20,6 @@
 #include "HITEFPL.h"
 #include "HITCHECK.h"
 
-void cal_hit_mark_pos();
-void plef_at_vs_player_damage_union();
-s16 remake_score_index(s16 dmv);
-
 
 
 void effect_at_vs_player_dm(ix2, ix)

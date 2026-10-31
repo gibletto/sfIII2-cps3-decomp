@@ -43,7 +43,7 @@ void nise_combo_work(PLW* as, PLW* ds, s16 num);
 void plef_at_vs_player_damage_union();
 s16 remake_score_index(s16 dmv);
 void same_dm_stop(WORK* as, WORK* ds);
-void set_paring_status(PLW* as, PLW* ds);
+void set_paring_status(PLW* as, PLW* defender);
 void set_catch_hit_mark_pos(WORK* as, WORK* ds);
 void set_caught_status();
 void set_char_base_data_init(WORK* wk);

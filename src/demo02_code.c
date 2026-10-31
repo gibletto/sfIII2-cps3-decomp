@@ -88,7 +88,7 @@ void Demo00(void) {
     switch (D_No1) {
     case DM_INIT:
         D_No1++;
-        G_No2 = 0;
+        G_No2 = G2_FIGHT_INIT;
         Game_pause = 0;
         Conclusion_Flag = 0;
         appear_type = APPEAR_ENTRY;
@@ -178,7 +178,7 @@ void Demo01(void) {
         Game01();
         if (Demo_Time_Stop) {
             D_No1++;
-            G_No2 = 0;
+            G_No2 = G2_FIGHT_INIT;
             Text_Page_Y = 0;
         }
         break;

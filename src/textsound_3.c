@@ -15,7 +15,7 @@
 
 
 
-s32 errno;  /* 02079C90 */
+s32 errno;  /* 020731B0 */
 
 
 s32 memcmp(const u8* a, const u8* b, u32 n) {

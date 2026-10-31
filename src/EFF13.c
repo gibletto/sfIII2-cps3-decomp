@@ -751,8 +751,8 @@ void kotp_06000(WORK_Other* ewk, TAMA* twk) {
             *target_y = emwk->wu.xyz[1].disp.pos + homing_empos_hos[0][ewk->master_player][1];
             dir = ewk->wu.direction;
             emdir = caldir_pos_256(ewk->wu.xyz[0].disp.pos, ewk->wu.xyz[1].disp.pos, *target_x, *target_y);
-            dir += (emdir - (dir - 0x80) & 0xFF) > 0x80 ? 4 : -4;
-            dir = dir & 0xFF;
+            dir += ((emdir - (dir - 0x80)) & 0xFF) > 0x80 ? 4 : -4;
+            dir &= 0xFF;
             ewk->wu.mvxy.a[0].sp = (rate_256_table[dir][0] * 480) / 256;
             ewk->wu.mvxy.a[0].sp *= ewk->wu.rl_flag ? 1 : -1;
             ewk->wu.mvxy.a[1].sp = (rate_256_table[dir][1] * 512) / 256;

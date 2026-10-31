@@ -1,10 +1,10 @@
 /*
  * EFFI4MV.C  Effect I4 (184): the stage 00 crowd
  *
- * effect_I4_init makes four objects from effi4_data_tbl (x, y, priority,
- * pattern); old_rno[0] is the object's type. Each one plays its pattern until the match is
- * decided (Round_num or the winner's PL_Wins against Game_setting.Battle_Number), then cheers when the winner
- * is player number 0 or stops. Type 1 also turns towards a player (effi4_turn).
+ * effect_I4_init makes four objects from effi4_data_tbl (x, y, priority, pattern); old_rno[0] is
+ * the object's type. Each one plays its pattern until the match is decided (Round_num or the
+ * winner's PL_Wins against Game_setting.Battle_Number), then cheers when the winner is player
+ * number 0 or stops. Type 1 also turns towards a player (effi4_turn).
  */
 
 #include "structs.h"

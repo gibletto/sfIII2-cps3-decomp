@@ -116,23 +116,23 @@ void effect_C9_move(WORK_Other* ewk) {
                     if (ewk->wu.charset_id == 7) {
                         switch (ewk->wu.routine_no[2]) {
                         case R2_DELAY:
-                            ewk->wu.next_x -= 1;
+                            ewk->wu.next_x--;
                             if (ewk->wu.next_x > 0) {
                                 break;
                             }
-                            ewk->wu.routine_no[2] += 1;
+                            ewk->wu.routine_no[2]++;
                         case R2_JUMP:
                             ewk->wu.mvxy.a[0].sp = efy_data[2];
                             ewk->wu.mvxy.d[0].sp = efy_data[3];
                             ewk->wu.mvxy.a[1].sp = efy_data[4];
                             ewk->wu.mvxy.d[1].sp = efy_data[5];
                             ewk->wu.mvxy.kop[0] = 2;
-                            ewk->wu.routine_no[2] += 1;
+                            ewk->wu.routine_no[2]++;
                         case R2_DROP:
                             add_mvxy_speed(&ewk->wu);
                             cal_mvxy_speed(&ewk->wu);
                             if (ewk->wu.xyz[1].disp.pos <= ewk->wu.next_y) {
-                                ewk->wu.routine_no[2] += 1;
+                                ewk->wu.routine_no[2]++;
                                 ewk->wu.xyz[1].disp.pos = ewk->wu.next_y;
                                 ewk->wu.mvxy.a[1].sp = ewk->wu.mvxy.d[1].sp = 0;
                                 ewk->wu.mvxy.kop[0] = 1;
@@ -148,30 +148,30 @@ void effect_C9_move(WORK_Other* ewk) {
                         }
                     }
                     if (Event_Judge_Gals) {
-                        ewk->wu.routine_no[1] += 1;
+                        ewk->wu.routine_no[1]++;
                         set_char_move_init(&ewk->wu, 0, 1);
                     }
                     break;
                 case R1_JUDGE:
                     if (ewk->wu.cg_type == 0xFF) {
-                        ewk->wu.routine_no[1] += 1;
+                        ewk->wu.routine_no[1]++;
                         set_char_move_init(&ewk->wu, 0, 2);
                         effect_37_init(&ewk->wu, ewk->wu.charset_id, EJG_index[ewk->wu.type]);
                     }
                     break;
                 case R1_VOTE:
                     if (ewk->wu.cg_type == 0xFF) {
-                        ewk->wu.routine_no[1] += 1;
-                        Event_Judge_Gals -= 1;
+                        ewk->wu.routine_no[1]++;
+                        Event_Judge_Gals--;
                     }
                     break;
                 case R1_DONE:
                     if (Event_Judge_Gals < 0) {
-                        ewk->wu.routine_no[1] += 1;
+                        ewk->wu.routine_no[1]++;
                     }
                 case R1_NEXT:
                     if (bg_w.stage == 8 && Round_num == 0) {
-                        ewk->wu.routine_no[1] += 1;
+                        ewk->wu.routine_no[1]++;
                         ewk->wu.routine_no[2] = R2_HOLD;
                     } else {
                         ewk->wu.routine_no[1] += 9;
@@ -240,7 +240,7 @@ s32 effect_C9_init(PLW* wk, u8 data) {
 
 
 
-/* compares the round scores (Score[x][2], gap above 10000) */
+/* compares the round scores (Score[x][2]); a gap above 10000 gives all votes to the winner */
 void setup_EJG_index(void) {
     s16 i;
     u32 gra;
@@ -263,7 +263,7 @@ void setup_EJG_index(void) {
         }
     } else {
         for (i = 0; i < 4; i++) {
-            (&EJG_index[0])[i] = sel_ejg_ix_table[Winner_id][Game_timer & 1][i];
+            EJG_index[i] = sel_ejg_ix_table[Winner_id][Game_timer & 1][i];
         }
     }
 }

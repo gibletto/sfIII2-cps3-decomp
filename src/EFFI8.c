@@ -313,7 +313,7 @@ void setup_effI8(PLW* wk, const BBBSTable* dadr) {
     s16 i;
     s16 ttime = 0;
     for (i = 0; i < dadr->kosuu; i++) {
-        ttime = ttime + dadr->bbdat[i][0];
+        ttime += dadr->bbdat[i][0];
         effect_I8_init(wk, ttime, &dadr->bbdat[i][0]);
     }
 }

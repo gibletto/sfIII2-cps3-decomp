@@ -33,7 +33,7 @@ u8 bgm_master_vol_init;  /* 020731AE */
 /* provisional name */
 s32 sound_driver_version(void)
 {
-  return (s32)((s16)(328));
+    return 328;
 }
 
 /* provisional name */

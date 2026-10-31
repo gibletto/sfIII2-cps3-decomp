@@ -41,7 +41,7 @@
 
 
 
-/* 02006C04 */
+/* 02007BB0 */
 const s16* scr_obj_data10[4] = {
     scr_obj_data10_0,
     scr_obj_data10_1,

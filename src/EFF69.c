@@ -1,10 +1,10 @@
 /*
  * EFF69.C  Effect 69: select-screen object driven by the scene orders
  *
- * effect_69_init (from sel_pl) places the object at its height from
- * Pos_Data_69. Order[] then picks a state: EFF69_WAIT waits for an order, EFF69_RISE_IN and
- * EFF69_RISE_OUT move it vertically, EFF69_SLIDE_IN brings it in from the side given by
- * Order_Dir, EFF69_SLIDE_OUT takes it out again and EFF69_KILL releases it.
+ * effect_69_init (from sel_pl) places the object at its height from Pos_Data_69. Order[] then picks
+ * a state: EFF69_WAIT waits for an order, EFF69_RISE_IN and EFF69_RISE_OUT move it vertically,
+ * EFF69_SLIDE_IN brings it in from the side given by Order_Dir, EFF69_SLIDE_OUT takes it out again
+ * and EFF69_KILL releases it.
  */
 
 #include "structs.h"
@@ -30,17 +30,8 @@
 
 s32 Ck_Range_Out_Y(WORK_Other* ewk, s16 BG_No, s16 R);    /* provisional name */
 
-void EFF69_WAIT(WORK_Other* ewk);
-void EFF69_RISE_IN(WORK_Other* ewk);
-void EFF69_RISE_OUT(WORK_Other* ewk);
-void EFF69_SLIDE_IN(WORK_Other* ewk);
-void EFF69_SLIDE_OUT(WORK_Other* ewk);
-void EFF69_KILL(WORK_Other* ewk);
-
-/* 06179CB8 */
 const s16 Pos_Data_69[6] = { 288, 221, 221, 221, 221, -1 };
 
-/* 06179CC4 */
 void (*const EFF69_Jmp_Tbl[6])() = {
     EFF69_WAIT,
     EFF69_RISE_IN,

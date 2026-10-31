@@ -445,16 +445,16 @@ void Pattern03_0028(PLW* wk) {
 void Pattern03_0029(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Adjust_Attack(wk, 9, (0x80));
+        Adjust_Attack(wk, 9, 0x80);
         break;
     case 1:
-        Adjust_Attack(wk, 0xC, (0x80));
+        Adjust_Attack(wk, 0xC, 0x80);
         break;
     case 2:
-        Adjust_Attack(wk, 0xC, (0x102));
+        Adjust_Attack(wk, 0xC, 0x102);
         break;
     case 3:
-        Lever_Attack(wk, 8, 0, (0x100));
+        Lever_Attack(wk, 8, 0, 0x100);
         break;
     default:
         End_Pattern(wk);
@@ -839,7 +839,7 @@ void Pattern03_0054(PLW* wk) {
         SA_Term(wk, -1, -1, 48, 0);
         break;
     case 1:
-        Hi_Jump_Attack_Term(wk, 0x8050, 8, 8, (0x8200), 0, 0x8060, 8, 0x20);
+        Hi_Jump_Attack_Term(wk, 0x8050, 8, 8, 0x8200, 0, 0x8060, 8, 0x20);
         break;
     default:
         End_Pattern(wk);
@@ -950,7 +950,7 @@ void Pattern03_0060(PLW* wk) {
         Search_Back_Term(wk, 0x70, 2, 0);
         break;
     case 1:
-        Jump_Attack_Term(wk, 0x8060, 0x8040, 8, (0x100), 0, -1, -1, -1);
+        Jump_Attack_Term(wk, 0x8060, 0x8040, 8, 0x100, 0, -1, -1, -1);
         break;
     case 2:
         Pierce_On(wk);
@@ -981,7 +981,7 @@ void Pattern03_0061(PLW* wk) {
         Command_Attack(wk, 8, 1, 11, -1);
         break;
     case 3:
-        Hi_Jump_Attack_Term(wk, 0x8060, -1, 8, (0x8200), 0, 0x8060, -1, (0x8200));
+        Hi_Jump_Attack_Term(wk, 0x8060, -1, 8, 0x8200, 0, 0x8060, -1, 0x8200);
         break;
     default:
         End_Pattern(wk);

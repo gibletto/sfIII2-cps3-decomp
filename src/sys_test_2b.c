@@ -26,7 +26,7 @@
 
 
 
-s16 backup_test_no = 0;  /* 02007CA8 */
+s16 backup_test_no = 0;  /* 020084F0 */
 
 
 /* provisional name */

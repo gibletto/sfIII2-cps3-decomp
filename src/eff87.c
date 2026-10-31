@@ -47,7 +47,7 @@ extern const s16 scr_obj_data87_2_0[];
 extern const s16 scr_obj_data87_3_0[];
 extern const s16 scr_obj_data87_4_0[];
 
-/* 02006D8C */
+/* 02007E84 */
 const s16* scr_obj_data87[5][4] = {
     { scr_obj_data87_0, scr_obj_data87_0, scr_obj_data87_0, scr_obj_data87_0 },
     { scr_obj_data87_1_0, scr_obj_data87_1_0, scr_obj_data87_1_0, scr_obj_data87_1_0 },
@@ -90,7 +90,6 @@ void effect_87_move(WORK_Other* ewk) {
 
 
 
-/* char_add by stage and area */
 s32 effect_87_init(s16 type) {
     WORK_Other* ewk;
     s16 ix;

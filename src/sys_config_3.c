@@ -29,7 +29,7 @@
 
 
 
-u16 sprite_dummy_code = 0;  /* 02007ED0 */
+u16 sprite_dummy_code = 0;  /* 02008724 */
 
 
 /* provisional name */

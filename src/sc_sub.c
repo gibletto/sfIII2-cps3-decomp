@@ -1,15 +1,10 @@
 /*
- * SC_SUB.C  HUD win marks, palette fade control and stun gauge
+ * SC_SUB.C  HUD win marks
  *
  * Per-player HUD pieces drawn on the text layer during a fight. The win mark routines
- * (win_mark_control, win_mark_pos_set, win_mark_write, win_mark_all_write) place one mark per round
- * won and blink a newly won mark using win_mark_blink_tbl. fade_cont_init / fade_cont_main run a
- * multi-layer palette fade: the fade number selects a list of palette groups and step parameters,
- * and each frame the groups due for an update are re-sent through the colour request queue with the
- * next brightness until every layer has reached its target, after which the fade flags are cleared.
- * stngauge_cont_init / stngauge_cont_main / stngauge_control keep each player's stun gauge in step
- * with the stun value, with stun_put, stun_mark_write and stun_gauge_waku_write drawing the gauge,
- * its "stun" mark and its frame.
+ * (win_mark_control, win_mark_pos_set, win_mark_new_check, win_mark_write, win_mark_all_write) place
+ * one mark per round won and blink a newly won mark using win_mark_blink_tbl. The palette fade control
+ * is in sc_sub_2.c and the stun gauge in sc_sub_3.c.
  */
 
 #include "structs.h"
@@ -37,11 +32,11 @@
 
 
 
-s16 win_mark_rno[2];  /* 02028704 */
-s16 win_mark_timer[2];  /* 02028708 */
-s16 win_mark_phase[2];  /* 0202870C */
-s16 win_mark_num[2];  /* 02028710 */
-s16 win_mark_pos[2];  /* 02028714 */
+s16 win_mark_rno[2];  /* 02023F80 */
+s16 win_mark_timer[2];  /* 02023F84 */
+s16 win_mark_phase[2];  /* 02023F88 */
+s16 win_mark_num[2];  /* 02023F8C */
+s16 win_mark_pos[2];  /* 02023F90 */
 
 
 /* provisional name */

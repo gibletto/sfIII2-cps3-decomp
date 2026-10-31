@@ -1,5 +1,5 @@
 /*
- * ENTRY_2.C  Task control, debug dumps and the player entry / credit task (part 2)
+ * ENTRY_2.C  Player entry, credit, continue and break-in
  *
  * Entry task: entry_task calls Entry_Task every frame, which dispatches on E_No to Entry_00
  * (flashing INSERT COIN / FREE PLAY), card entry, name entry, winner, loser, continue
@@ -302,7 +302,7 @@ void Entry_03_1st(void) {
 void Entry_03_2nd(void) {
     switch (E_No2) {
     case 0:
-        if (--E_Timer != 0) {
+        if (--E_Timer) {
             break;
         }
         E_No2 += 1;
@@ -442,13 +442,13 @@ void Entry_06_2nd(void) {
     }
     switch (E_No2) {
     case 0:
-        E_No2 += 1;
+        E_No2++;
         sc_vram_to_ram();
         Switch_Screen_Init(0, 1);
         break;
     case 1:
         if (Switch_Screen() != 0) {
-            E_No2 = E_No2 + 1;
+            E_No2++;
             Cover_Timer = 23;
             Switch_Screen_Init(0, 1);
         }
@@ -473,10 +473,8 @@ void Entry_06_2nd(void) {
             }
             E_07_Flag[0] = 0;
             E_07_Flag[1] = 0;
-            if (E_Number[LOSER][0] == ENTRY_LOSER) {
-                if (Continue_Flag != 0) {
-                    E_Number[LOSER][0] = ENTRY_CONTINUE;
-                }
+            if (E_Number[LOSER][0] == ENTRY_LOSER && Continue_Flag != 0) {
+                E_Number[LOSER][0] = ENTRY_CONTINUE;
             }
         }
         break;
@@ -523,7 +521,7 @@ void Entry_07_2nd(void) {
         if (--E_Timer) {
             break;
         }
-        E_No2 = E_No2 + 1;
+        E_No2++;
         sc_vram_to_ram();
         Switch_Screen_Init(0, 1);
         break;
@@ -1917,7 +1915,7 @@ s16 PL_id;
     Continue_Score_Sub(PL_id);
     Break_Into = 1;
     Stop_Combo = 1;
-    E_No1 = E_No1 + 1;
+    E_No1++;
     E_No2 = 0;
     E_Number[New_Challenger][0] = ENTRY_NONE;
     E_Number[New_Challenger][1] = 0;
@@ -1957,7 +1955,7 @@ s16 PL_id;
     if (E_07_Flag[0] != 0 && E_07_Flag[1] != 0) {
         return;
     }
-    E_No1 = E_No1 + 1;
+    E_No1++;
     E_No2 = 0;
     Break_Into = 1;
 }
@@ -2054,10 +2052,8 @@ void Correct_BI_Data(void) {
 
 
 void coin_in_sound_request(void) {
-    if (coin_chute1_w.dropped | coin_chute2_w.dropped) {
-        if (Demo_Flag == 1) {
-            sound_request(E_No0 == E0_TITLE ? 115 : 106);
-        }
+    if ((coin_chute1_w.dropped | coin_chute2_w.dropped) && Demo_Flag == 1) {
+        sound_request(E_No0 == E0_TITLE ? 115 : 106);
     }
 }
 

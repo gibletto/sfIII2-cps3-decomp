@@ -5,12 +5,11 @@
  * each of the 16 BGM voices and 16 sound-effect voices. voice_process_primary reads the voice's
  * event stream: note events look up the instrument patch for the note in the current bank, set the
  * sample and pitch and compute the attack, decay and release rates (sound_envelope_rate); control
- * events change program, volume, pan, tempo, loops and ties. voice_process_secondary counts down the
- * event and note times, runs the envelope and pan automation, works out pitch (sound_note_to_pitch)
- * and volume (sound_voice_volume_compute) and writes the result to that voice's sound chip
- * registers, handling key-on/key-off. A BGM voice only reaches the hardware while no sound effect
- * holds the same channel. midi_vlq_decode_* decode variable-length delta times from the sequence
- * data.
+ * events change program, volume, pan, tempo, loops and ties. voice_process_null is the handler of a
+ * voice with nothing to play. voice_process_secondary (sound_voice_2.c) counts down the event and
+ * note times, runs the envelope and pan automation, works out pitch and volume and writes the result
+ * to that voice's sound chip registers; the variable-length delta time decoders are in
+ * sound_voice_3.c.
  */
 
 #include "structs.h"
@@ -38,7 +37,6 @@ u32 sound_envelope_rate(u16 level, u8 index, const u16* table) {
 /* provisional name */
 void voice_process_null(SNDVOICE* voice, u8 voice_index)
 {
-  return;
 }
 
 
@@ -89,7 +87,7 @@ control_event:;
             }
             break;
         case SEQ_BANK:
-            voice->instrument_bank = *argument++ & 0x0f;
+            voice->instrument_bank = *argument++ & 0x0F;
             break;
         case SEQ_BEND:
             voice->coarse_pitch_bend = *argument++;
@@ -98,7 +96,7 @@ control_event:;
             voice->fine_pitch_control = *argument++;
             break;
         case SEQ_PROG:
-            voice->program_index = *argument++ & 0x7f;
+            voice->program_index = *argument++ & 0x7F;
             break;
         case SEQ_PLFO:
             event = *argument++;
@@ -258,8 +256,8 @@ control_event:;
         u8** bank;
         u16* entry;
         note_resolved = 1;
-        voice->velocity = (event & 0x3f) << 1;
-        note = *argument & 0x7f;
+        voice->velocity = (event & 0x3F) << 1;
+        note = *argument & 0x7F;
         voice->control_70 = note;
         bank = snd_bank_tbl;
         bank = bank + voice->instrument_bank;
@@ -344,7 +342,6 @@ control_event:;
         goto next_event;
     }
     voice->status |= 0x20;
-    return;
 }
 
 

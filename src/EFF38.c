@@ -1,10 +1,10 @@
 /*
  * EFF38.C  Effect 38: the player's face on the character select screen
  *
- * effect_38_init places the face off screen on the player's side with its
- * pattern from the face under the cursor (or the given character); effect_38_move waits for
- * the timer, slides the face in at the cut speed, then follows the cursor until Order[0] is 2,
- * and finally slides it out. A face made with Dir 2 is dropped as soon as Suicide is set.
+ * effect_38_init places the face off screen on the player's side with its pattern from the face
+ * under the cursor (or the given character); effect_38_move waits for the timer, slides the face in
+ * at the cut speed, then follows the cursor until Order[0] is 2, and finally slides it out. A face
+ * made with Dir 2 is dropped as soon as Suicide is set.
  */
 
 #include "structs.h"

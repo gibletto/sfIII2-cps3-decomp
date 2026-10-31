@@ -1,13 +1,13 @@
 /*
  * EFFF7.C  Effect F7: the six sprites of the opening
  *
- * effect_F6_init makes the counter of effect F6 and effect_F7_init makes six sprites with it as the master,
- * old_rno[0] = 0-5. effect_F7_move runs
- * each sprite's routine from the local effF7_jp table: sprites 0 and 1 have their own scenes,
- * 2-3 and 4-5 share one. Each step of the master's routine_no[0] restarts the sprite
- * (routine_no[1] = 0) and moves it from its effF7_pos_tbl position for that step to the next one
- * over old_rno[1] frames (cal_all_speed_data); some steps show other patterns or free the sprite.
- * Sprites 0 and 1 stop (routine_no[1] 2) once the master sets old_rno[3].
+ * effect_F6_init makes the counter of effect F6 and effect_F7_init makes six sprites with it as the
+ * master, old_rno[0] = 0-5. effect_F7_move runs each sprite's routine from the local effF7_jp
+ * table: sprites 0 and 1 have their own scenes, 2-3 and 4-5 share one. Each step of the master's
+ * routine_no[0] restarts the sprite (routine_no[1] = 0) and moves it from its effF7_pos_tbl
+ * position for that step to the next one over old_rno[1] frames (cal_all_speed_data); some steps
+ * show other patterns or free the sprite. Sprites 0 and 1 stop (routine_no[1] 2) once the master
+ * sets old_rno[3].
  */
 
 #include "structs.h"

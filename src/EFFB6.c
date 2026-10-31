@@ -140,7 +140,6 @@ s16 num;
 
 
 
-/* my_col_code 0x20C5 */
 s32 effect_B6_init(WORK_Other* oya, u8 type) {
     WORK_Other* ewk;
     s16 ix;

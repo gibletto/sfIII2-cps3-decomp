@@ -21,6 +21,6 @@ void spgauge_sound_request();
 void spgauge_wipe_write(s32 Stpl_Num);
 void spgauge_work_clear(s8 Stpl_Num);
 void wipe_check(void);
-void satime_ko_after_clear(s8 Stpl_Num);
+void satime_ko_after_clear(s8 pl);
 
 #endif

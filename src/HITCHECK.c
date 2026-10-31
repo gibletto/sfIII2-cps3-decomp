@@ -45,14 +45,12 @@
 #define MARK_HOSEI_X    0       /* x offset, mirrored by facing */
 #define MARK_HOSEI_Y    1       /* y offset */
 
-WORK * q_hit_push[32];  /* 0200EBC4 */
-HS hs[32];  /* 0200EC44 */
-s8 ca_check_flag;  /* 0200EE44 */
-const s16 * dmdat_adrs[9];  /* 0200EE48 */
-s16 mkm_wk[32];  /* 0200EE88 */
-s16 hpq_in;  /* 0200EEC8 */
-
-struct PLW_tag;
+WORK * q_hit_push[32];  /* 0200FE58 */
+HS hs[32];  /* 0200FED8 */
+s8 ca_check_flag;  /* 020100D8 */
+const s16 * dmdat_adrs[9];  /* 020100DC */
+s16 mkm_wk[32];  /* 02010100 */
+s16 hpq_in;  /* 02010140 */
 
 #pragma inline(get_sky_nm_damage, get_sky_nm2_damage, get_sky_sp_damage, get_kagami_damage, get_kagami2_damage, get_grd_hand_damage, check_head_damage, check_trunk_damage)
 
@@ -212,7 +210,7 @@ react:
         as->wu.char_index = as->wu.cmcf.pat;
         break;
     }
-    as->wu.routine_no[3] = 0;
+    as->wu.routine_no[3] = RN3_START;
     if (ds->guard_flag == 3) {
         ds->hazusenai_flag = 1;
     }
@@ -221,7 +219,7 @@ react:
     ds->tsukamare_f = 1;
     ds->wu.routine_no[1] = PLAYER_CAUGHT;
     ds->wu.routine_no[2] = as->wu.att.ng_type;
-    ds->wu.routine_no[3] = 0;
+    ds->wu.routine_no[3] = RN3_START;
     if (as->wu.att.ng_type == 2) {
         ds->wu.xyz[1].disp.pos = as->wu.xyz[1].disp.pos;
     }
@@ -410,7 +408,7 @@ char gddir;
         }
     }
     ds->wu.routine_no[1] = PLAYER_DAMAGE;
-    ds->wu.routine_no[3] = 0;
+    ds->wu.routine_no[3] = RN3_START;
     if (DEBUG_DISP) {
         defense_ground(as, ds, gddir);
     }
@@ -464,7 +462,7 @@ void set_guard_status(PLW* as, PLW* ds) {
         ds->wu.routine_no[2] = ds->wu.old_rno[2];
     } else {
         ds->wu.routine_no[1] = PLAYER_DAMAGE;
-        ds->wu.routine_no[3] = 0;
+        ds->wu.routine_no[3] = RN3_START;
         effect_02_init(&as->wu, ds->dm_point, 2, ds->wu.dm_rl);
         dm_status_copy(&as->wu, &ds->wu);
         same_dm_stop(&as->wu, &ds->wu);
@@ -494,7 +492,7 @@ void set_paring_status(PLW* as, PLW* defender) {
         ds->wu.routine_no[2] = ds->wu.old_rno[2];
     } else {
         ds->wu.routine_no[1] = PLAYER_NORMAL;
-        ds->wu.routine_no[3] = 0;
+        ds->wu.routine_no[3] = RN3_START;
         waza_compel_all_init2(ds);
         dm_status_copy(&as->wu, &ds->wu);
         ds->wu.dm_vital = 0;
@@ -708,14 +706,14 @@ char gddir;
         if (!(ds->spmv_ng_flag & 0x400)) {
             if (ds->cp->waza_flag[5] != 0) {
                 as->wu.hf.hit.player = 0x80;
-                ds->wu.routine_no[2] = 0x22;
+                ds->wu.routine_no[2] = 34;
                 return 0;
             }
         }
         if (!(ds->spmv_ng_flag & 0x800)) {
             if (ds->cp->waza_flag[6] != 0) {
                 as->wu.hf.hit.player = 0x80;
-                ds->wu.routine_no[2] = 0x23;
+                ds->wu.routine_no[2] = 35;
                 return 0;
             }
         }
@@ -1229,7 +1227,7 @@ void attack_hit_check(void) {
                             if (pcon_dp_flag) {
                                 goto next7;
                             }
-                            if (sad->pat_status == 0x26) {
+                            if (sad->pat_status == 38) {
                                 goto next7;
                             }
                         }
@@ -1319,7 +1317,7 @@ void attack_hit_check(void) {
                         if (pcon_dp_flag) {
                             goto next9;
                         }
-                        if (sad->pat_status == 0x26) {
+                        if (sad->pat_status == 38) {
                             goto next9;
                         }
                     }
@@ -1544,7 +1542,7 @@ s16 get_sky_nm_damage(u16 ix) {
 }
 
 
-/* provisional name: unreferenced */
+/* provisional name */
 s16 get_sky_nm2_damage(u16 ix) {
     ix -= 32;
     return sky_nm2_damage_tbl[ix];
@@ -1563,7 +1561,7 @@ s16 get_kagami_damage(u16 ix) {
 }
 
 
-/* provisional name: unreferenced */
+/* provisional name */
 s16 get_kagami2_damage(u16 ix) {
     ix -= 32;
     return kagami2_damage_tbl[ix];

@@ -31,16 +31,14 @@
 #include "fighter.h"
 
 /* declarations the headers do not give */
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
-void bg_base_y_move_check(void);
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
 void Bg_Family_Set_3(void);
 s32 effect_12_init();
 s32 effect_18_init();
-s32 effect_44_init();
+
+#include "EFF44.h"
+
 void bg0501(void);
 void bg0502(void);
 void bg0503(void);

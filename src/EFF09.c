@@ -70,7 +70,7 @@
 #define EFF09_OFS_Y     3       /* y offset from the owner */
 
 
-/* 02006B94 */
+/* 02007B64 */
 void (*eff09_tbl[19])(WORK_Other*) = {
     eff09_0000,
     eff09_1000,

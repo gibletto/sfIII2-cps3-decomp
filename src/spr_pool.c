@@ -16,30 +16,30 @@
 #include "sys_config_3.h"
 #include "cps3.h"
 
-s32 frame_ready;  /* 0206AC90 */
-SPRITE_ENTRY spr_entry_a[512];  /* 0206AC94 */
-SPRITE_ENTRY spr_entry_b[512];  /* 0206D494 */
-SPRITE_ENTRY * spr_prio_a[0x80];  /* 0206FC94 */
-SPRITE_ENTRY * spr_prio_b[0x80];  /* 0206FE94 */
-u16 spr_cnt0_a;  /* 02070094 */
-u16 spr_cnt0_b;  /* 02070096 */
-u16 spr_cnt1_a;  /* 02070098 */
-u16 spr_cnt1_b;  /* 0207009A */
-u16 spr_cnt2_a;  /* 0207009C */
-u16 spr_cnt2_b;  /* 0207009E */
-u16 spr_cnt3_a;  /* 020700A0 */
-u16 spr_cnt3_b;  /* 020700A2 */
-u16 spr_cnt4_a;  /* 020700A4 */
-u16 spr_cnt4_b;  /* 020700A6 */
-u8 spr_bank;  /* 020700A8 */
-s8 spr_list_ready;  /* 020700A9 */
+s32 frame_ready;  /* 02065134 */
+SPRITE_ENTRY spr_entry_a[512];  /* 02065138 */
+SPRITE_ENTRY spr_entry_b[512];  /* 02067938 */
+SPRITE_ENTRY * spr_prio_a[0x80];  /* 0206A138 */
+SPRITE_ENTRY * spr_prio_b[0x80];  /* 0206A338 */
+u16 spr_cnt0_a;  /* 0206A538 */
+u16 spr_cnt0_b;  /* 0206A53A */
+u16 spr_cnt1_a;  /* 0206A53C */
+u16 spr_cnt1_b;  /* 0206A53E */
+u16 spr_cnt2_a;  /* 0206A540 */
+u16 spr_cnt2_b;  /* 0206A542 */
+u16 spr_cnt3_a;  /* 0206A544 */
+u16 spr_cnt3_b;  /* 0206A546 */
+u16 spr_cnt4_a;  /* 0206A548 */
+u16 spr_cnt4_b;  /* 0206A54A */
+u8 spr_bank;  /* 0206A54C */
+s8 spr_list_ready;  /* 0206A54D */
 
 
-u16 sprite_head_x = 0;  /* 02007ED4 */
-u16 sprite_head_y = 0;  /* 02007ED6 */
-u16 sprite_pad_x = 0;  /* 02007ED8 */
-u16 sprite_pad_y = 0;  /* 02007EDA */
-u32 spr_pool_busy = 0;  /* 02007EDC */
+u16 sprite_head_x = 0;  /* 02008728 */
+u16 sprite_head_y = 0;  /* 0200872A */
+u16 sprite_pad_x = 0;  /* 0200872C */
+u16 sprite_pad_y = 0;  /* 0200872E */
+u32 spr_pool_busy = 0;  /* 02008730 */
 
 
 /* provisional name */

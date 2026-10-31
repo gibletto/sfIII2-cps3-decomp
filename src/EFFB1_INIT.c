@@ -17,7 +17,6 @@
 
 
 
-/* my_col_code 0x2081 */
 s32 effect_B1_init(PLW* wk) {
     WORK_Other_CONN* ewk;
     s16 ix;

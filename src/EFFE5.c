@@ -48,7 +48,6 @@
 
 void effect_E4_move(void)
 {
-  return;
 }
 
 

@@ -49,7 +49,7 @@ void check_my_tk_power_off(PLW* wk) {
             wk->tk_kizetsu = 0;
         }
     } else if (wk->wu.old_rno[1] == 3) {
-        if (wk->wu.routine_no[1] == PLAYER_NORMAL && wk->wu.routine_no[2] < 0x33 && wk->wu.routine_no[2] > 0x2E) {
+        if (wk->wu.routine_no[1] == PLAYER_NORMAL && wk->wu.routine_no[2] < 51 && wk->wu.routine_no[2] > 46) {
         }
     }
 }
@@ -324,7 +324,7 @@ s32 check_walking_lv_dir(PLW* wk) {
 
 
 
-/* provisional name: check_walking_lv_dir for the other walk states (11/12), unreferenced */
+/* provisional name: check_walking_lv_dir for the other walk states (11/12) */
 s32 check_walking_lv_dir2(PLW* wk) {
     s16 rnum = 0;
     switch (wk->cp->lever_dir) {

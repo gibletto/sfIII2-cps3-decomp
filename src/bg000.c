@@ -84,13 +84,13 @@ void scrn_map_set(u16 n, u32 p);
 
 
 
-AKE_SCRL ake_scrl_w[5];  /* 02026B48 */
-BG bg_w;  /* 02026BAC */
-s16 scr_cg_c_no;  /* 02026FF0 */
-s16 ake_cg_c_no;  /* 02026FF2 */
+AKE_SCRL ake_scrl_w[5];  /* 020220FC */
+BG bg_w;  /* 02022160 */
+s16 scr_cg_c_no;  /* 020225A4 */
+s16 ake_cg_c_no;  /* 020225A6 */
 
 
-/* 020064F8 */
+/* 02007448 */
 void (*scr_x_mv_jp[35])() = {
     scr_10_20,
     scr_10_21,
@@ -516,7 +516,6 @@ void zoom_y_width_check(void) {
     if (Game_setting.Screen_Mode) {
         return;
     }
-    /* previous bg_f_y, kept in the unnamed word at bg_w+0x34 */
     bg_w.old_bg_f_y = bg_w.bg_f_y;
     bg_w.frame_flag = zoom_frame_judge();
     f = bg_w.bg_f_y;

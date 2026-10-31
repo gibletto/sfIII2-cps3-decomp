@@ -35,7 +35,7 @@ void Combo_Demo_Init(void) {
     Suicide = 0;
     round_timer.size.full = 1;
     pcon_rno[0] = PCON_INIT;
-    pcon_rno[1] = 0;
+    pcon_rno[1] = APP_SETUP;
     pcon_rno[2] = 0;
     pcon_rno[3] = 0;
     appear_type = APPEAR_STAND;

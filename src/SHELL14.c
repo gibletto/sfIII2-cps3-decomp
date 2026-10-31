@@ -88,13 +88,13 @@ void Shell14_0003(PLW* wk) {
         SHELL_Term(wk, 0, 2, 1, -1, -1);
         break;
     case 1:
-        Jump_Attack_Term(wk, 0x8058, 0x8030, 9, (0x100), 0, 0x8050, -1, (0x100));
+        Jump_Attack_Term(wk, 0x8058, 0x8030, 9, 0x100, 0, 0x8050, -1, 0x100);
         break;
     case 2:
         Normal_Attack(wk, 0xB, 0x20);
         break;
     case 3:
-        Normal_Attack(wk, 8, (0x102));
+        Normal_Attack(wk, 8, 0x102);
         break;
     default:
         End_Pattern(wk);
@@ -129,10 +129,10 @@ void Shell14_0005(PLW* wk) {
         SHELL_Term(wk, 0, 2, 1, -1, -1);
         break;
     case 1:
-        Jump_Attack_Term(wk, 0x8058, 0x8040, 0xB, (0x100), 0, 0x8050, -1, (0x200));
+        Jump_Attack_Term(wk, 0x8058, 0x8040, 0xB, 0x100, 0, 0x8050, -1, 0x200);
         break;
     case 2:
-        Normal_Attack(wk, 8, (0x102));
+        Normal_Attack(wk, 8, 0x102);
         break;
     default:
         End_Pattern(wk);
@@ -232,7 +232,7 @@ void Shell14_0011(PLW* wk) {
 void Shell14_0012(PLW* wk) {
     switch (CP_Index[wk->wu.id][0]) {
     case 0:
-        Jump_Command_Attack_Term(wk, 8, 0x20, 0xA, (0x380), -1, 0x30, 0, -1, -1, -1);
+        Jump_Command_Attack_Term(wk, 8, 0x20, 0xA, 0x380, -1, 0x30, 0, -1, -1, -1);
         break;
     default:
         End_Pattern(wk);

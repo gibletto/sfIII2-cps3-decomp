@@ -19,9 +19,6 @@
 #include "aboutspr.h"
 
 /* declarations the headers do not give */
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
 /* provisional name */
 extern const s32 bg_sync_speed_tbl[];     /* the synced layers' speed_x by family (bgst000's table) */
 

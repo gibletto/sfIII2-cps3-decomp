@@ -1,7 +1,7 @@
 /*
  * EFF89.C  Effect 89: blinking text rectangle
  *
- * effect_89 (from Manage, Entry, EFF84, EFFA3, n_input): blinks the palette of a tilemap text
+ * effect_89_init (from manage_2.c, EFF84, EFFA4 and n_input.c): blinks the palette of a tilemap text
  * rectangle (eff89_cell_attr_set).
  */
 

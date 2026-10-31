@@ -28,7 +28,7 @@
 
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
-s32 effect_12_init();
+#include "eff12.h"
 s32 effect_18_init();
 s32 effect_44_init();
 void bg0201(void);

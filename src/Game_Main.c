@@ -36,7 +36,7 @@
 #include "Entry.h"
 #include "entry_2.h"
 #include "SYS_sub2.h"
-#include "end_main.h"
+#include "end_main_c.h"
 #include "aboutspr.h"
 #include "se_2.h"
 #include "se_3.h"
@@ -126,12 +126,6 @@ extern u8 Straight_Lose_Count;  /* provisional name (manage_2.c) */
 
 
 
-/*
- * Game task jump
- *
- * bg0001 copies the main game jump table Main_Jmp_Data and calls the routine selected by the
- * current top-level game number G_No0.
- */
 void Scrn_Move_Set(s32 n, s16 x, s16 y);
 
 void sound_reg_level_set(s16 pitch, s8 volume);
@@ -159,6 +153,8 @@ loop:
 
 
 
+/* Game task jump: run Loop_Demo (G0_DEMO), Game (G0_GAME) or Game_Dummy by the top-level game
+   number G_No0. */
 void bg0001(void) {
     void (*Main_Jmp_Tbl[3])() = { Loop_Demo, Game, Game_Dummy };
     Main_Jmp_Tbl[G_No0]();
@@ -349,7 +345,7 @@ void Loop_Demo_Sub(void) {
 
 /* provisional name */
 void Erase_Insert_Coin(void) {
-    tilemap_print_string_attr(DE_X[0] + 14, (s32)Insert_Y, 40, "              ");
+    tilemap_print_string_attr(DE_X[0] + 14, Insert_Y, 40, "              ");
     tilemap_print_string_attr(DE_X[0] + 14, Insert_Y + 32, 40, "              ");
 }
 
@@ -462,7 +458,7 @@ void Game0_2(void)
 void Game0_3(void) {
     if (Switch_Screen()) {
         G_No1++;
-        G_No2 = 0;
+        G_No2 = G2_SEL_INIT;
         G_No3 = 0;
         Cover_Timer = 23;
     }
@@ -645,7 +641,7 @@ void Game2_0(void) {
     Game_timer = 0;
     Game_pause = 0;
     Demo_Time_Stop = 0;
-    C_No0 = 0;
+    C_No0 = C0_INIT;
     C_No1 = 0;
     C_No2 = 0;
     C_No3 = 0;
@@ -691,7 +687,6 @@ void Game2_1(void) {
 
 void Game2_2(void)
 {
-  return;
 }
 
 
@@ -727,7 +722,7 @@ void Game2_4(void) {
         win_mark_control(1);
         Game_pause = 0;
         pcon_rno[0] = PCON_INIT;
-        pcon_rno[1] = 0;
+        pcon_rno[1] = APP_SETUP;
         pcon_rno[2] = 0;
         pcon_rno[3] = 0;
         appear_type = APPEAR_ROUND;
@@ -769,7 +764,7 @@ void Game2_5(void) {
         Suicide = 1;
         Game_pause = 0;
         pcon_rno[0] = PCON_INIT;
-        pcon_rno[1] = 0;
+        pcon_rno[1] = APP_SETUP;
         pcon_rno[2] = 0;
         pcon_rno[3] = 0;
         appear_type = APPEAR_STAND;
@@ -927,7 +922,7 @@ void Game09(void) {
         Game_timer = 0;
         Game_pause = 0;
         Demo_Time_Stop = 0;
-        C_No0 = 0;
+        C_No0 = C0_INIT;
         C_No1 = 0;
         C_No2 = 0;
         C_No3 = 0;
@@ -1269,7 +1264,7 @@ s32 Disp_Ranking(void) {
         Switch_Screen_Init(0, 0);
         break;
     case G3_RANK_SETUP:
-        if (Switch_Screen() != 0) {
+        if (Switch_Screen()) {
             Cover_Timer = 24;
             G_No3++;
             D_No0 = 1;

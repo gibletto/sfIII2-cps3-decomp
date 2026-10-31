@@ -29,7 +29,6 @@
 #include "bg_sub_3.h"
 #include "bg_sub_4.h"
 #include "bg_sub_5.h"
-#include "end_main.h"
 #include "effe6.h"
 #include "aboutspr.h"
 #include "end_staff.h"
@@ -40,7 +39,7 @@ extern s8 end_staff_done;
 extern s8 end_scroll_dir;
 extern s16 end_cnt;
 extern s16 end_cnt2;
-extern s32 staff_credits();
+#include "end_sub_2.h"
 s32 Frame_Up();
 
 

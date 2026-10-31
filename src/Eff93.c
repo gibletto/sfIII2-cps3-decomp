@@ -40,9 +40,6 @@
 /* routine_no[1], Eff93_SLIDE_DOWN */
 #define R1_LOWER        0       /* lower BG1 12 dots a frame */
 
-
-
-/* 0617A08C */
 const Eff93_Jmp_Tbl_t Eff93_Jmp_Tbl[2] = {
     Eff93_SLIDE_UP,
     Eff93_SLIDE_DOWN,

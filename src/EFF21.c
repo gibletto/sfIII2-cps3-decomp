@@ -1,10 +1,9 @@
 /*
  * EFF21.C  Effect 21: breakable stage parts
  *
- * effect_21_init makes three works for its master (effect 23) from eff21_data_tbl_00 (pattern, X, Y, priority,
- * flip) and
- * eff21_sp_tbl (speed and acceleration). effect_21_move waits on its pattern until
- * eff_hit_flag[8] is set, plays the next pattern, then flies off with add_x_sub/add_y_sub
+ * effect_21_init makes three works for its master (effect 23) from eff21_data_tbl_00 (pattern, X,
+ * Y, priority, flip) and eff21_sp_tbl (speed and acceleration). effect_21_move waits on its pattern
+ * until eff_hit_flag[8] is set, plays the next pattern, then flies off with add_x_sub/add_y_sub
  * until it leaves the screen.
  */
 
@@ -36,6 +35,7 @@ extern const u32 eff21_char_table[];   /* provisional name */
 
 
 
+/* animate the breakable parts */
 void effect_21_move(WORK_Other* ewk) {
     if (obr_no_disp_check()) {
         return;

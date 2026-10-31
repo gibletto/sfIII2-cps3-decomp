@@ -1,9 +1,9 @@
 /*
  * EFF11.C  Effect 11: stage objects that fly off at the start (bg000)
  *
- * effect_11_init (from bg000, not during the opening roll) creates four
- * objects from eff11_data_tbl (position, priority, pattern, delay) and eff11_speed_tbl. Each waits
- * out its delay, shows itself and moves with its speeds until it drops below height 64.
+ * effect_11_init (from bg000, not during the opening roll) creates four objects from eff11_data_tbl
+ * (position, priority, pattern, delay) and eff11_speed_tbl. Each waits out its delay, shows itself
+ * and moves with its speeds until it drops below height 64.
  */
 
 #include "structs.h"

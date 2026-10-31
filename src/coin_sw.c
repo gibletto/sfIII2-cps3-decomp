@@ -40,66 +40,66 @@
 
 
 
-COINCHUTE coin_chute1_w;  /* 0206AA6C */
-COINCHUTE coin_chute2_w;  /* 0206AA74 */
-COINCHUTE coin_chute3_w;  /* 0206AA7C */
-COINCHUTE coin_chute4_w;  /* 0206AA84 */
-u16 p1sw_0;  /* 0206AA8C */
-u16 p1sw_1;  /* 0206AA8E */
-u16 p2sw_0;  /* 0206AA90 */
-u16 p2sw_1;  /* 0206AA92 */
-u16 p3sw_0;  /* 0206AA94 */
-u16 p3sw_1;  /* 0206AA96 */
-u16 p4sw_0;  /* 0206AA98 */
-u16 p4sw_1;  /* 0206AA9A */
-u8 syssw_0;  /* 0206AA9C */
-u8 syssw_1;  /* 0206AA9D */
-u16 exsw_0;  /* 0206AA9E */
-u16 exsw_1;  /* 0206AAA0 */
-u16 exsw_2;  /* 0206AAA2 */
-u16 exsw_3;  /* 0206AAA4 */
-u16 exsw_4;  /* 0206AAA6 */
-u16 exsw_5;  /* 0206AAA8 */
-u16 exsw_6;  /* 0206AAAA */
-u16 exsw_7;  /* 0206AAAC */
-u16 card_sw_0;  /* 0206AAAE */
-u16 card_sw_1;  /* 0206AAB0 */
-u16 coin_sw_hist[4];  /* 0206AAB2 */
-u16 coin_sw_now[4];  /* 0206AABA */
+COINCHUTE coin_chute1_w;  /* 02064F10 */
+COINCHUTE coin_chute2_w;  /* 02064F18 */
+COINCHUTE coin_chute3_w;  /* 02064F20 */
+COINCHUTE coin_chute4_w;  /* 02064F28 */
+u16 p1sw_0;  /* 02064F30 */
+u16 p1sw_1;  /* 02064F32 */
+u16 p2sw_0;  /* 02064F34 */
+u16 p2sw_1;  /* 02064F36 */
+u16 p3sw_0;  /* 02064F38 */
+u16 p3sw_1;  /* 02064F3A */
+u16 p4sw_0;  /* 02064F3C */
+u16 p4sw_1;  /* 02064F3E */
+u8 syssw_0;  /* 02064F40 */
+u8 syssw_1;  /* 02064F41 */
+u16 exsw_0;  /* 02064F42 */
+u16 exsw_1;  /* 02064F44 */
+u16 exsw_2;  /* 02064F46 */
+u16 exsw_3;  /* 02064F48 */
+u16 exsw_4;  /* 02064F4A */
+u16 exsw_5;  /* 02064F4C */
+u16 exsw_6;  /* 02064F4E */
+u16 exsw_7;  /* 02064F50 */
+u16 card_sw_0;  /* 02064F52 */
+u16 card_sw_1;  /* 02064F54 */
+u16 coin_sw_hist[4];  /* 02064F56 */
+u16 coin_sw_now[4];  /* 02064F5E */
 
 
-s8 credit_1p = 0;  /* 02007CE0 */
-s8 credit_2p = 0;  /* 02007CE1 */
-s8 credit_3p = 0;  /* 02007CE2 */
-s8 credit_4p = 0;  /* 02007CE3 */
-s8 coin_count_1p = 0;  /* 02007CE4 */
-s8 coin_count_2p = 0;  /* 02007CE5 */
-s8 coin_count_3p = 0;  /* 02007CE6 */
-s8 coin_count_4p = 0;  /* 02007CE7 */
-u8 coin_in_flag = 0;  /* 02007CE8 */
-u8 coin_out_latch = 0;  /* 02007CE9 */
-/* 02007CEC */
+s8 credit_1p = 0;  /* 02008528 */
+s8 credit_2p = 0;  /* 02008529 */
+s8 credit_3p = 0;  /* 0200852A */
+s8 credit_4p = 0;  /* 0200852B */
+s8 coin_count_1p = 0;  /* 0200852C */
+s8 coin_count_2p = 0;  /* 0200852D */
+s8 coin_count_3p = 0;  /* 0200852E */
+s8 coin_count_4p = 0;  /* 0200852F */
+u8 coin_in_flag = 0;  /* 02008530 */
+u8 coin_out_latch = 0;  /* 02008531 */
+/* 02008534 */
 COINCHUTE* coin_chute_tbl[4] = {
     &coin_chute1_w,
     &coin_chute2_w,
     &coin_chute3_w,
     &coin_chute4_w,
 };
-/* 02007CFC */
+/* 02008544 */
 void* coin_sw_tbl[4][2] = {
     { &p1sw_0, &p1sw_1 },
     { &p2sw_0, &p2sw_1 },
     { &p3sw_0, &p3sw_1 },
     { &p4sw_0, &p4sw_1 },
 };
-/* 02007D1C */
+/* 02008564 */
 s8* credit_ptr_tbl[4] = {
     &credit_1p,
     &credit_2p,
     &credit_3p,
     &credit_4p,
 };
-/* 02007D2C */
+/* 02008574 */
 s8* coin_count_ptr_tbl[4] = {
     &coin_count_1p,
     &coin_count_2p,

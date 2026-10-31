@@ -59,8 +59,8 @@ void effect_I3_move(WORK_Other* ewk) {
 
 
 s32 effect_I3_init(wk, tm)
-    WORK* wk;
-    u8 tm;
+WORK* wk;
+u8 tm;
 {
     WORK_Other* ewk;
     s16 ix;

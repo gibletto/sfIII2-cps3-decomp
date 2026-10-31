@@ -94,7 +94,7 @@
 
 extern s32 staff_r_no;
 void Redisp_Continue_Count();
-void bg_end_initialize(void);     /* 060A3984: bg_initialize's twin in bg000 that only the endings call */
+void bg_end_initialize(void);     /* bg_initialize's twin in bg000 that only the endings call */
 void scrn_attr_set(u16 n, u16 attr, u16 bits);
 void scrn_map_set(u16 n, u32 p);
 void scrn_map_set_now(u16 n, u32 p);
@@ -270,7 +270,7 @@ s16 pl_num;
 {
     switch (end_w.r_no_0) {
     case END_INIT:
-        end_w.r_no_0 += 1;
+        end_w.r_no_0++;
         System_all_clear_Wait();
         load_any_color(0x8D);
         load_any_color(0x94);
@@ -282,7 +282,7 @@ s16 pl_num;
         if (--Cover_Timer) {
             break;
         }
-        end_w.r_no_0 += 1;
+        end_w.r_no_0++;
         end_color_load();
         tilemap_fill_all(0, 32);
         Redisp_Continue_Count(0);
@@ -296,7 +296,7 @@ s16 pl_num;
         break;
     case END_REVIVAL:
         if (Switch_Screen_Revival()) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
             Ignore_Entry[LOSER] = 0;
             Forbid_Break = -1;
         }
@@ -305,7 +305,7 @@ s16 pl_num;
         end_main_move(pl_num);
         card_msg_disp();
         if (end_w.end_flag) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
             end_no_cut = 1;
             Rewrite_End_Message(0);
         } else if (Cut_Cut_Cut_t()) {
@@ -318,15 +318,15 @@ s16 pl_num;
     case END_TO_STAFF:
         if (end_no_cut == 0) {
             fadeout_to_staff_roll();
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
         } else {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
         }
         break;
     case END_STAFF_SETUP:
         if (end_fade_complete()) {
-            end_w.r_no_0 += 1;
-            end_w.r_no_2 += 1;
+            end_w.r_no_0++;
+            end_w.r_no_2++;
             if (end_w.type == 12) {
                 Bg_Off_W(1);
             }
@@ -334,7 +334,7 @@ s16 pl_num;
         }
         break;
     case END_FADE_IN:
-        end_w.r_no_0 += 1;
+        end_w.r_no_0++;
         switch (end_type_tbl[end_w.type]) {
         case 0:
             Request_Fade(55, 0);
@@ -351,14 +351,14 @@ s16 pl_num;
         break;
     case END_FADE_WAIT:
         if (end_fade_complete()) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
             end_no_cut = 0;
         }
         break;
     case END_STAFF:
         Forbid_Break = 0;
         if (staff_credits(end_staff_flag)) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
         }
         break;
     case END_FADE_OUT:
@@ -373,12 +373,12 @@ s16 pl_num;
             Request_Fade(67, 0);
             break;
         }
-        end_w.r_no_0 += 1;
+        end_w.r_no_0++;
         end_no_cut = 1;
         break;
     case END_MUSIC:
         if (end_fade_complete()) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
             end_no_cut = 0;
             if (name_wk[WINNER].timer > 0) {
                 name_wk[WINNER].timer = 0;
@@ -408,7 +408,7 @@ s16 pl_num;
 {
     switch (end_w.r_no_0) {
     case GOU_INIT:
-        end_w.r_no_0 += 1;
+        end_w.r_no_0++;
         System_all_clear_Wait();
         load_any_color(0x8D);
         load_any_color(0x94);
@@ -420,7 +420,7 @@ s16 pl_num;
         if (--Cover_Timer) {
             break;
         }
-        end_w.r_no_0 += 1;
+        end_w.r_no_0++;
         end_color_load();
         tilemap_fill_all(0, 32);
         Redisp_Continue_Count(0);
@@ -434,7 +434,7 @@ s16 pl_num;
         break;
     case GOU_REVIVAL:
         if (Switch_Screen_Revival()) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
             Ignore_Entry[LOSER] = 0;
             Forbid_Break = -1;
         }
@@ -443,7 +443,7 @@ s16 pl_num;
         end_main_move(pl_num);
         card_msg_disp();
         if (end_w.end_flag) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
             end_no_cut = 1;
             Rewrite_End_Message(0);
         } else if (Cut_Cut_Cut_t()) {
@@ -454,14 +454,14 @@ s16 pl_num;
         }
         break;
     case GOU_WIPE:
-        end_w.r_no_0 += 1;
+        end_w.r_no_0++;
         end_no_cut = 1;
         sc_vram_to_ram();
         Switch_Screen_Init(3, 3);
         break;
     case GOU_SETUP:
         if (Switch_Screen()) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
             Cover_Timer = 24;
             if (end_w.type == 12) {
                 Bg_Off_W(1);
@@ -492,24 +492,24 @@ s16 pl_num;
     case GOU_COVER2:
         Cover_Timer--;
         if (Cover_Timer < 0) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
             Switch_Screen_Init(3, 3);
         }
         break;
     case GOU_REVIVAL2:
         if (Switch_Screen_Revival()) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
             Forbid_Break = 0;
             end_no_cut = 0;
         }
         break;
     case GOU_STAFF:
         if (staff_credits(end_staff_flag)) {
-            end_w.r_no_0 += 1;
+            end_w.r_no_0++;
         }
         break;
     case GOU_MUSIC:
-        end_w.r_no_0 += 1;
+        end_w.r_no_0++;
         end_obj_sync = 1;
         Forbid_Break = 0;
         end_no_cut = 0;

@@ -15,7 +15,7 @@
 
 
 
-s16 bcdext;  /* 0206A080 */
+s16 bcdext;  /* 020644E0 */
 
 
 /* provisional name */

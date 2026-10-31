@@ -1,8 +1,8 @@
 /*
  * EFFF6.C  Effect F6: opening step counter
  *
- * Effect F6 is a counter: effect_F6_init starts effect F7 with it as the master, and
- * effect_F6_move counts routine_no[0] up every old_rno[1] frames, setting op_w.free_work at 23.
+ * effect_F6_init creates the counter and starts effect F7 with it as master. effect_F6_move
+ * advances routine_no[0] every old_rno[1] frames and sets op_w.free_work at step 23.
  */
 
 #include "structs.h"
@@ -26,7 +26,7 @@
 
 
 
-/* a step counter */
+/* advance the opening step counter */
 void effect_F6_move(WORK_Other* ewk) {
     switch (ewk->wu.routine_no[1]) {
     case R1_INIT:

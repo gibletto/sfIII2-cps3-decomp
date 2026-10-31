@@ -31,7 +31,6 @@ extern const u8 effD8_char_tbl[3][2];   /* provisional name */
 
 void effD8_char_set(WORK_Other* ewk);
 void effD8_same_face(WORK_Other* ewk);
-void effect_D8_init(WORK_Other* ewk);
 s32 effD8_face_check(s16 PL_id);
 
 

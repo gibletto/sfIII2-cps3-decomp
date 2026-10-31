@@ -33,16 +33,12 @@
 #define R0_MOVE         3       /* follow the fight */
 
 /* declarations the headers do not give */
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
-void bg_base_x_move_check(void);
-void bg_base_y_move_check(void);
 s32 Check_Shin_Gouki_Next(void);
 void load_any_color();
 s32 effect_12_init();
 s32 effect_18_init();
-s32 effect_44_init();
+
+#include "EFF44.h"
 
 void bg0901(void);
 void bg0901_init00(void);
@@ -282,7 +278,7 @@ void demo90_base(void) {
 
 /* up to 0xC0 */
 void jijii_win_bg(void) {
-    if ((EXE_flag || Game_pause)) {
+    if (EXE_flag || Game_pause) {
         return;
     }
     switch (bgw_ptr->r_no_1) {
@@ -305,7 +301,7 @@ void jijii_win_bg(void) {
 void jijii_win_bg2(void) {
     s16 zuu_work;
     s32 sp_work;
-    if ((EXE_flag || Game_pause)) {
+    if (EXE_flag || Game_pause) {
         return;
     }
     switch (bg_w.bgw[1].r_no_1) {

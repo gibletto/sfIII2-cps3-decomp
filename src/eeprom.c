@@ -27,18 +27,18 @@
 
 
 
-u32 book_coin_count;  /* 0206AB48 */
-u32 book_service_count;  /* 0206AB4C */
-u32 book_free_count;  /* 0206AB50 */
-u32 book_card_count;  /* 0206AB54 */
-u16 eep_dummy;  /* 0206AB58 */
-u16 eep_strobe_0;  /* 0206AB5A */
-u16 eep_strobe_1;  /* 0206AB5C */
-u16 eep_strobe_2;  /* 0206AB5E */
-u16 eeprom_test_save[64];  /* 0206AB60 */
+u32 book_coin_count;  /* 02064FEC */
+u32 book_service_count;  /* 02064FF0 */
+u32 book_free_count;  /* 02064FF4 */
+u32 book_card_count;  /* 02064FF8 */
+u16 eep_dummy;  /* 02064FFC */
+u16 eep_strobe_0;  /* 02064FFE */
+u16 eep_strobe_1;  /* 02065000 */
+u16 eep_strobe_2;  /* 02065002 */
+u16 eeprom_test_save[64];  /* 02065004 */
 
 
-/* 02007D40 */
+/* 02008588 */
 u32 bookkeep_add0 = 0;
 u32 bookkeep_add1 = 0;
 u32 bookkeep_add2 = 0;

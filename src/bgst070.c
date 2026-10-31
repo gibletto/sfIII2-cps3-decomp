@@ -19,13 +19,6 @@
 #include "Com_Pl.h"
 #include "eff14.h"
 
-/* declarations the headers do not give */
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
-void bg_base_x_move_check(void);
-void bg_base_y_move_check(void);
-
 void bg1801(void);
 void bg1801_init00(void);
 void bg1801_move(void);

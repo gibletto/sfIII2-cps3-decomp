@@ -18,8 +18,8 @@
 #include "work.h"
 #include "romdata.h"
 #include "extern.h"
+#include "CHARMOVE.h"
 void char_move(WORK* wk);
-void set_char_move_init2();
 #include "charmove_2.h"
 #include "ta_sub.h"
 #include "aboutspr.h"
@@ -65,7 +65,7 @@ void set_char_move_init2();
 
 
 
-WORK_Other * oya_adrs;  
+WORK_Other * oya_adrs;
 
 extern const s16 effb3_round_tbl[5][4];
 extern const s16 effb3_final_tbl[10][3];

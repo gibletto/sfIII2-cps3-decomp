@@ -181,7 +181,7 @@ static void mvxy_table_reader(PLW* wk) {
             ey = homing_hos[wk->wu.kow][twk->player_number][1];
             wk->wu.mvxy.a[0].sp = 0;
             cal_initial_speed(&wk->wu, curr_kop[1], ex, ey);
-            wk->wu.kow = wk->wu.kow + 1;
+            wk->wu.kow++;
             break;
         case 1:
             ex = wk->wu.xyz[0].disp.pos;

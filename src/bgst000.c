@@ -32,10 +32,6 @@
 /* declarations the headers do not give */
 /* provisional name */
 extern s8 bg_demo_cnt;
-void zoom_ud_check(void);
-void bg_x_move_check(void);
-void bg_y_move_check(void);
-void bg_base_y_move_check(void);
 s32 effect_I4_init(void);
 void bg0001_ctrl(void);
 void bg0000(void);

@@ -1,12 +1,11 @@
 /*
  * EFFG0.C  Effect G0
  *
- * effect_G0_init (from the effect table) sets a work up by type: 0-6 are the judge characters of an ending
- * scene (effG0_judge_set /
- * effG0_judge_move, each opening a flashing sign with effG0_flash_init), 7 lays out the name
- * signs from effg0_name_tbl and sets BG 5 up (effG0_bg5_setup), 8 is a plain sprite
- * (effG0_obj_set / effG0_obj_move) and 9 sets the akebono scroll layer up (effG0_akebono_setup)
- * and steps it (effG0_akebono_move).
+ * effect_G0_init (from the effect table) sets a work up by type: 0-6 are the judge characters of an
+ * ending scene (effG0_judge_set / effG0_judge_move, each opening a flashing sign with
+ * effG0_flash_init), 7 lays out the name signs from effg0_name_tbl and sets BG 5 up
+ * (effG0_bg5_setup), 8 is a plain sprite (effG0_obj_set / effG0_obj_move) and 9 sets the akebono
+ * scroll layer up (effG0_akebono_setup) and steps it (effG0_akebono_move).
  */
 
 #include "structs.h"

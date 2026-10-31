@@ -71,7 +71,7 @@ extern const s8 str_1_MATCH[];
 extern const s8 str_OFF_2[];
 extern const char str_ON[];
 
-s8 Config_Item_en;  
+s8 Config_Item_en;
 s8 Config_Exit_en;  /* 02015A1D */
 s8 Config_Move_en;  /* 02015A1E */
 s8 Config_Old_en;  /* 02015A1F */
@@ -84,7 +84,7 @@ s16* Config_Code_Ptr_en;  /* 02015A30, provisional name */
 s16 Config_Code_No_en;  /* 02015A34, provisional name */
 
 
-/* 020008AC */
+/* 02000EA4 */
 /* the menu button code (item, button), as in game_config_jp.c */
 s16 gcfg_code_list_en[13][2] = {
     { 3, 0x1000 }, { 3, 0x1000 }, { 3, 0x1000 }, { 5, 0x0100 }, { 5, 0x0100 }, { 0, 0x0200 }, { 0, 0x0200 },
@@ -94,19 +94,19 @@ TM_STRING gcfg_screen_str_en[2] = {
     { 2, 0, 2, str_NORMAL_2 },
     { 2, 0, 2, str_WIDE },
 };
-/* 020008C4 */
+/* 02000EF0 */
 TM_STRING gcfg_round_str_en[4] = {
     { 2, 0, 2, str_1_ROUND },
     { 2, 0, 2, str_3_ROUNDS },
     { 2, 0, 2, str_5_ROUNDS },
     { 2, 0, 2, str_7_ROUNDS },
 };
-/* 020008F4 */
+/* 02000F20 */
 TM_STRING gcfg_event_str_en[2] = {
     { 2, 0, 2, str_OFF },
     { 2, 0, 2, str_1_MATCH },
 };
-/* 0200090C */
+/* 02000F38 */
 TM_STRING gcfg_bonus_str_en[2] = {
     { 2, 0, 2, str_OFF_2 },
     { 2, 0, 2, str_ON },

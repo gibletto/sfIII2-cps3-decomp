@@ -1,9 +1,13 @@
 /*
- * ENTRY.C  Task control and the player entry / credit task
+ * ENTRY.C  Task control
  *
- * task_sleep_tick is called once per frame from the Game_Task scheduler loop. It counts down the sleep
- * timer of every waiting task control block (status 1) and marks the task ready to run (status 2)
- * when the timer reaches zero.
+ * The game's cooperative tasks. Game_Task is the scheduler: each frame it walks the eight task control
+ * blocks (task_tbl) and runs every task that is due. task_sleep_tick counts down the sleep timer of
+ * every waiting task (status 1) and marks the task ready (status 2) when it reaches zero.
+ * init_task_stacks gives each block its stack in task_stack; create_task, destroy_current_task,
+ * kill_task, suspend_task, post_task, kill_tasks_by_func and kill_tasks_by_priority start, end,
+ * suspend and wake tasks. The exception record, the task stacks and the interrupt stack pointers are
+ * defined here; vblank_user_hook is empty.
  */
 
 #include "structs.h"
@@ -19,25 +23,25 @@
 #include "Game.h"
 #include "vbl_hook.h"
 
-TCB * current_task;  /* 02007EEC */
-s32 task_sys_w1;  /* 02007EF0 */
-s32 task_sys_w2;  /* 02007EF4 */
-s32 task_sys_w3;  /* 02007EF8 */
-s32 task_free_count;  /* 02007EFC */
-u32 system_timer;  /* 02007F00 */
-u32 task_tick_mask;  /* 02007F04 */
-s8 system_ctrl_flag;  /* 02007F08 */
-s8 task_tick_mode;  /* 02007F09 */
-s8 vsync_flag;  /* 02007F0A */
-u32 frame_pass_count;  /* 02007F0C */
-s8 task_ran_flag;  /* 02007F10 */
-u32 task_sched_context[3];  /* 02007F14 */
-SETTINGS game_config_work;  /* 02007F20 */
-EXC_REGS exception_regs;  /* 02007F30 */
-u32 exception_code;  /* 02007F8C */
+TCB * current_task;  /* 0200873C */
+s32 task_sys_w1;  /* 02008740 */
+s32 task_sys_w2;  /* 02008744 */
+s32 task_sys_w3;  /* 02008748 */
+s32 task_free_count;  /* 0200874C */
+u32 system_timer;  /* 02008750 */
+u32 task_tick_mask;  /* 02008754 */
+s8 system_ctrl_flag;  /* 02008758 */
+s8 task_tick_mode;  /* 02008759 */
+s8 vsync_flag;  /* 0200875A */
+u32 frame_pass_count;  /* 0200875C */
+s8 task_ran_flag;  /* 02008760 */
+u32 task_sched_context[3];  /* 02008764 */
+SETTINGS game_config_work;  /* 02008770 */
+EXC_REGS exception_regs;  /* 02008780 */
+u32 exception_code;  /* 020087DC */
 u8 boot_stack[4100];  /* the stack r15 starts on: vector 1 points at its end (task_stack); provisional name */
-u8 task_stack[18][1024];  /* 02008F94 */
-TCB task_tbl[8];  /* 0200D794 */
+u8 task_stack[18][1024];  /* 020097E4 */
+TCB task_tbl[8];  /* 0200DFE4 */
 static u8 task_spare[32];  /* nothing in the program refers to it */
 
 /* The vertical blank interrupt calls this once per frame when bit 1 of the
