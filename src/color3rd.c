@@ -82,7 +82,7 @@ void load_any_color(ix)
 u8 ix;
 {
     const XFER* p = &any_color_tbl[ix];
-    polygon2d_submit_quad(p->src, p->dst, p->size, 0, 0, 0);
+    col_dma_request(p->src, p->dst, p->size, 0, 0, 0);
 }
 
 
@@ -96,14 +96,14 @@ u8 b;
 {
     const XFER *xfer = &any_color_tbl[(u8)col_no];
 
-    polygon2d_submit_quad(xfer->src, xfer->dst, xfer->size, r + 0x40, g + 0x40, b + 0x40);
+    col_dma_request(xfer->src, xfer->dst, xfer->size, r + 0x40, g + 0x40, b + 0x40);
 }
 
 /* provisional name */
 void load_any_color_attr(u16 col_no, u8 r, u8 g, u8 b) {
     const XFER *xfer = &any_color_tbl[(u8)col_no];
 
-    polygon2d_submit_quad(xfer->src, xfer->dst, xfer->size, r, g, b);
+    col_dma_request(xfer->src, xfer->dst, xfer->size, r, g, b);
 }
 
 /* provisional name */
@@ -115,7 +115,7 @@ u8 b;
 {
     const XFER *xfer = &any_color_tbl[(u8)col_no];
 
-    polygon2d_queue_quad(xfer->src, xfer->dst, xfer->size, r, g, b);
+    col_dma_queue(xfer->src, xfer->dst, xfer->size, r, g, b);
 }
 
 
@@ -143,7 +143,7 @@ s16 c;
     const XFER* p = player_color_tbl[a][b][c];
     s8 i;
     for (i = 0; i < 14; p++, i++) {
-        col_trans_result = polygon2d_submit_quad(p->src, p->dst, p->size, 0, 0, 0);
+        col_trans_result = col_dma_request(p->src, p->dst, p->size, 0, 0, 0);
     }
 }
 
@@ -158,7 +158,7 @@ void load_player_color_fade(u16 a, s16 b, s16 c, u8 d, u8 e, u8 f) {
     const XFER* p = player_color_tbl[a][b][c];
     s8 i;
     for (i = 0; i < 13; i++, p++) {
-        col_trans_result = polygon2d_submit_quad(p->src, p->dst, p->size, d + 64, e + 64, f + 64);
+        col_trans_result = col_dma_request(p->src, p->dst, p->size, d + 64, e + 64, f + 64);
     }
 }
 
@@ -169,7 +169,7 @@ void load_char_eff_color(ix, slot)
 u16 ix;
 u16 slot;
 {
-    col_trans_result = polygon2d_submit_quad(char_eff_color_tbl[ix], slot * 0x400 + 0x5800, 0x400, 0, 0, 0);
+    col_trans_result = col_dma_request(char_eff_color_tbl[ix], slot * 0x400 + 0x5800, 0x400, 0, 0, 0);
 }
 
 
@@ -177,8 +177,8 @@ u16 slot;
 /* provisional name */
 void load_side_color(u8 side, u16 ix) {
     if (side) {
-        polygon2d_submit_quad(side_color_2p_tbl[ix].src, 0x4800, side_color_2p_tbl[ix].size, 0, 0, 0);
+        col_dma_request(side_color_2p_tbl[ix].src, 0x4800, side_color_2p_tbl[ix].size, 0, 0, 0);
     } else {
-        polygon2d_submit_quad(side_color_1p_tbl[ix].src, 0x3800, side_color_1p_tbl[ix].size, 0, 0, 0);
+        col_dma_request(side_color_1p_tbl[ix].src, 0x3800, side_color_1p_tbl[ix].size, 0, 0, 0);
     }
 }

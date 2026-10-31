@@ -69,7 +69,7 @@ extern const u16 bg_zoom_rate_tbl[];
 
 
 
-s32 polygon2d_submit_line(u32 addr, u32 y, u32 x, u8 kind);
+s32 chr_dma_request(u32 addr, u32 y, u32 x, u8 kind);
 s32 Check_Shin_Gouki_Next(void);
 s32 simmram_block_alloc_10(s32 blocks, s32 kind);
 u32 simmram_big_page_alloc_40(s32 kind);
@@ -1751,8 +1751,8 @@ void bg_initialize(void) {
             load_any_color(bg_color2_tbl[bg_w.bg_index]);
         }
     }
-    polygon2d_submit_line(gfx->prep, 0, 0, 3);
-    polygon2d_submit_line(gfx->src, bg_w.scroll_cg_adr, gfx->size, 1);
+    chr_dma_request(gfx->prep, 0, 0, 3);
+    chr_dma_request(gfx->src, bg_w.scroll_cg_adr, gfx->size, 1);
     if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {
@@ -1833,8 +1833,8 @@ void bg_initialize(void) {
     bg_w.ake_cg_adr = simmram_slot_to_offset(ake_cg_c_no);
     load_any_color(140);
     load_any_color(143);
-    polygon2d_submit_line(0x0163EC00, 0, 0, 3);
-    polygon2d_submit_line(0x0163EC80, bg_w.ake_cg_adr, 0xF4F, 1);
+    chr_dma_request(0x0163EC00, 0, 0, 3);
+    chr_dma_request(0x0163EC80, bg_w.ake_cg_adr, 0xF4F, 1);
     ake_scrl_w[1].handle = simmram_big_page_alloc_40(1);
     ake_scrl_w[1].adrs = simmram_slot_addr(ake_scrl_w[1].handle);
     ake_scrl_w[0].handle = simmram_big_page_alloc_40(1);
@@ -1891,8 +1891,8 @@ void bg_end_initialize(void) {
     gfx = &bg_gfx_tbl[bg_w.bg_index];
     load_any_color_fade(bg_palette_no_tbl[bg_w.bg_index], 15, 15, 15);
     load_any_color_fade(bg_color2_tbl[bg_w.bg_index], 15, 15, 15);
-    polygon2d_submit_line(gfx->prep, 0, 0, 3);
-    polygon2d_submit_line(gfx->src, bg_w.scroll_cg_adr, gfx->size, 1);
+    chr_dma_request(gfx->prep, 0, 0, 3);
+    chr_dma_request(gfx->src, bg_w.scroll_cg_adr, gfx->size, 1);
     if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {
@@ -2046,8 +2046,8 @@ void bg_etc_write(s16 type) {
     bg_w.scno = use_scr2[type];
     load_any_color(etc_bg_color_tbl[type]);
     gfx = &etc_bg_gfx_tbl[type];
-    polygon2d_submit_line(gfx->prep, 0, 0, 3);
-    polygon2d_submit_line(gfx->src, bg_w.scroll_cg_adr, gfx->size, gfx->mode);
+    chr_dma_request(gfx->prep, 0, 0, 3);
+    chr_dma_request(gfx->src, bg_w.scroll_cg_adr, gfx->size, gfx->mode);
     if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {

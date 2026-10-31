@@ -970,7 +970,7 @@ s8 pl;
 
 /* provisional name */
 void player_face_default_set(s8 pl) {
-    polygon2d_submit_quad(0x027D0AA0 + Player_Color[pl] * 32, 0x3FC00 + pl * 0x200, 32, 0, 0, 0);
+    col_dma_request(0x027D0AA0 + Player_Color[pl] * 32, 0x3FC00 + pl * 0x200, 32, 0, 0, 0);
     sc_chr_slot_trans(pl, 0x33B, 1);
     if (Game_setting.Screen_Mode != 0) {
         sc_trans_dst = (u16*)((SS_RAM + 0xC900) + pl * 0x400);
@@ -984,8 +984,8 @@ void player_face_default_set(s8 pl) {
 void player_face(void) {
     player_face_char_set(0);
     player_face_char_set(1);
-    polygon2d_submit_quad(0x027CFD80 + (My_char[0] & 0x7F) * 0xE0 + Player_Color[0] * 32, 0x3FC00, 32, 0, 0, 0);
-    polygon2d_submit_quad(0x027CFD80 + (My_char[1] & 0x7F) * 0xE0 + Player_Color[1] * 32, 0x3FE00, 32, 0, 0, 0);
+    col_dma_request(0x027CFD80 + (My_char[0] & 0x7F) * 0xE0 + Player_Color[0] * 32, 0x3FC00, 32, 0, 0, 0);
+    col_dma_request(0x027CFD80 + (My_char[1] & 0x7F) * 0xE0 + Player_Color[1] * 32, 0x3FE00, 32, 0, 0, 0);
     if (Game_setting.Screen_Mode == 0) {
         sc_ram_to_vram(0, 0, 0);
         sc_ram_to_vram(1, 0, 0);

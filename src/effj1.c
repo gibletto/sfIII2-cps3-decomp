@@ -1,7 +1,7 @@
 /*
  * EFFJ1.C  Effect J1: an ending object
  *
- * effect_J1_init places pattern 55 of etc2_char_table and draws three polygon quads; effect_J1_move waits for
+ * effect_J1_init places pattern 55 of etc2_char_table and loads three blocks of colours at a fixed fade; effect_J1_move waits for
  * end_obj_sync, then moves BG layer 5 to 768 and sets its family, waits 180 frames and cycles
  * its extra colour through effj1_col_tbl (timer, colour) for ever.
  */
@@ -98,8 +98,8 @@ s32 effect_J1_init(void) {
     ewk->wu.my_priority = ewk->wu.position_z = 70;
     ewk->wu.char_index = 55;
     end_obj_sync = 0;
-    polygon2d_submit_quad(0x0279B480, 0x9000, 0x80, 79, 79, 79);
-    polygon2d_submit_quad(0x027D4D00, 0x9080, 0x80, 79, 79, 79);
-    polygon2d_submit_quad(0x027D4E80, 0x9100, 0x80, 79, 79, 79);
+    col_dma_request(0x0279B480, 0x9000, 0x80, 79, 79, 79);
+    col_dma_request(0x027D4D00, 0x9080, 0x80, 79, 79, 79);
+    col_dma_request(0x027D4E80, 0x9100, 0x80, 79, 79, 79);
     return 0;
 }

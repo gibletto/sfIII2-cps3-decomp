@@ -59,7 +59,7 @@ void Disp_Copyright(void);
 void scrn_pos_clear(void);
 void bg_cell_write(s16 bg, s32 ofs, s32 cell, u32 src, u16 u5, s16 attr);
 u32 simmram_small_page_alloc_40(s32 kind);
-s32 polygon2d_submit_line();
+s32 chr_dma_request();
 s32 simmram_block_alloc_10(s32 blocks, s32 kind);
 s32 sprite_list_setup();
 u32 simmram_big_page_alloc_40(s32 kind);
@@ -156,8 +156,8 @@ void opning_init_00000(void) {
     scr_cg_c_no = simmram_block_alloc_10(0x195, 1);
     bg_w.scroll_cg_adr = simmram_slot_to_offset(scr_cg_c_no);
     bg_w.scno = 1;
-    polygon2d_submit_line(0x01705800, 0, 0, 3);
-    polygon2d_submit_line(0x01705880, bg_w.scroll_cg_adr, 0x1948F, 1);
+    chr_dma_request(0x01705800, 0, 0, 3);
+    chr_dma_request(0x01705880, bg_w.scroll_cg_adr, 0x1948F, 1);
     if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {
@@ -1204,8 +1204,8 @@ void opening_title_00(void) {
     scr_cg_c_no = simmram_block_alloc_10(0x195, 1);
     bg_w.scroll_cg_adr = simmram_slot_to_offset(scr_cg_c_no);
     bg_w.scno = 1;
-    polygon2d_submit_line(0x01705800, 0, 0, 3);
-    polygon2d_submit_line(0x01705880, bg_w.scroll_cg_adr, 0x1948F, 1);
+    chr_dma_request(0x01705800, 0, 0, 3);
+    chr_dma_request(0x01705880, bg_w.scroll_cg_adr, 0x1948F, 1);
     if (Game_setting.Screen_Mode) {
         bg_w.pos_offset = 0xF8;
     } else {

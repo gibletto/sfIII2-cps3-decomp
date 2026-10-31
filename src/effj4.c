@@ -1,7 +1,7 @@
 /*
- * EFFJ4.C  Effect J3: one-shot animation with a polygon quad
+ * EFFJ4.C  Effect J3: one-shot animation and a colour load
  *
- * effect_J3 plays a one-shot animation at its owner's position and submits a 2D polygon quad.
+ * effect_J3 plays a one-shot animation at its owner's position and loads a block of colours with the colour DMA.
  */
 
 #include "structs.h"
@@ -87,7 +87,7 @@ s32 effect_J3_init(WORK* wk, u8 type) {
     }
     ewk->wu.xyz[0].disp.pos = wk->xyz[0].disp.pos;
     ewk->wu.xyz[1].disp.pos = wk->xyz[1].disp.pos;
-    polygon2d_submit_quad(0x0279B800, 0x9280, 0x100, 0, 0, 0);
+    col_dma_request(0x0279B800, 0x9280, 0x100, 0, 0, 0);
     return 0;
 }
 
