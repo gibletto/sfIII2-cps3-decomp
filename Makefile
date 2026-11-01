@@ -36,9 +36,11 @@ CONSTTBL = CMD_MAIN Com_Pl EFF48 EFF55 EFF69 EFF71 EFF72 EFF74 EFF85 EFF86 EFFI4
 	end_11 end_12 end_13 end_2 end_3 end_4 end_5 end_6 end_7 end_8 end_9 end_main \
 	end_main_c end_staff endbg00 endbg01 endbg02 endbg03 endbg04 endbg05 endbg06 endbg07 endbg08 endbg09 \
 	endbg10 endbg11 endbg12 endbg13 endbg14 endbg15 entry_2 game_config_en game_config_jp game_config_main lose_pl manage_2 \
-	sel_flow sel_pl tate00 win_2 win_pl
+	sel_flow sel_pl tate00 textsound_2 win_2 win_pl
+AGGRESSIVE = Entry textsound_2
 
 $(NOINLINE:%=obj/%.obj): OPT += -noinline
+$(AGGRESSIVE:%=obj/%.obj): OPT += -aggressive=1
 $(OPT0:%=obj/%.obj): OPT = -optimize=0 -nospeed
 $(OPT0:%=obj/%.obj): export GEN_NARROW_CONST = 0
 $(CONSTTBL:%=obj/%.obj): CFLAGS += -section=const=CTBL
