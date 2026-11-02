@@ -133,9 +133,6 @@ findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\PLS00_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\PLS00_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\sc_data2.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\sc_data2.obj >obj\shc.log 2>&1
-if errorlevel 1 goto fail
-findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\PLS02_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\PLS02_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
@@ -407,9 +404,6 @@ shc data\SHELL14_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\aboutspr_tbl_b.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\aboutspr_tbl_b.obj >obj\shc.log 2>&1
-if errorlevel 1 goto fail
-findstr /c:") : " obj\shc.log >>obj\warnings.log
-shc data\effb2_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\effb2_tbl.obj >obj\shc.log 2>&1
 if errorlevel 1 goto fail
 findstr /c:") : " obj\shc.log >>obj\warnings.log
 shc data\aboutspr_tbl.c -cpu=sh2 -division=cpu -endian=big -pic=0 -extra=m=8,a=8 -nortnext -include=include -optimize=1 -speed -object=obj\aboutspr_tbl.obj >obj\shc.log 2>&1

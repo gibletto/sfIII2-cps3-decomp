@@ -6,7 +6,8 @@
  * routines and plpdm_xxxxx those of the damage routines; these are read by PLS00.C. about_rno
  * groups the routine classes (1 for damage and caught) for check_em_tk_power_off,
  * sel_hd_fg_hos gives each character the offsets and direction window of check_attbox_dir, and
- * dir32_rl_conv mirrors a 32-way direction; these are read by PLS01.C.
+ * dir32_rl_conv mirrors a 32-way direction; these are read by PLS01.C. dir32_rl_conv_tail
+ * follows the mirror table and is not referred to by name.
  */
 
 #include "types.h"
@@ -20,6 +21,7 @@ extern void (*const plpdm_xxxxx[])();
 extern const u8 about_rno[];
 extern const s16 sel_hd_fg_hos[][4];
 extern const s16 dir32_rl_conv[];
+extern const s16 dir32_rl_conv_tail[];
 extern void dm_00000();
 extern void dm_04000();
 extern void dm_08000();
@@ -188,7 +190,15 @@ const s16 sel_hd_fg_hos[16][4] = {
     { 0, 0, 8, 0 },  /* Shin Gouki */
 };
 
-const s16 dir32_rl_conv[11] = {
+const s16 dir32_rl_conv[32] = {
     0, 31, 30, 29, 28, 27, 26, 25,
-    24, 23, 22,
+    24, 23, 22, 21, 20, 19, 18, 17,
+    16, 15, 14, 13, 12, 11, 10, 9,
+    8, 7, 6, 5, 4, 3, 2, 1,
+};
+
+/* provisional name */
+/* A -1 stored after dir32_rl_conv. Nothing in the program refers to it by name or address. */
+const s16 dir32_rl_conv_tail[1] = {
+    -1,
 };

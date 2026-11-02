@@ -36,7 +36,6 @@ INPUT obj\PLCNT_tbl_c.obj
 INPUT obj\PLCNT3_tbl.obj
 INPUT obj\PLMAIN_tbl.obj
 INPUT obj\PLS00_tbl.obj
-INPUT obj\sc_data2.obj
 INPUT obj\PLS02_tbl.obj
 INPUT obj\PLS03_tbl.obj
 INPUT obj\PLPNM_tbl.obj
@@ -128,7 +127,6 @@ INPUT obj\SHELL12_tbl.obj
 INPUT obj\SHELL13_tbl.obj
 INPUT obj\SHELL14_tbl.obj
 INPUT obj\aboutspr_tbl_b.obj
-INPUT obj\effb2_tbl.obj
 INPUT obj\aboutspr_tbl.obj
 INPUT obj\aboutspr_tbl_c.obj
 INPUT obj\CHARSET_tbl.obj
