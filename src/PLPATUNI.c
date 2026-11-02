@@ -100,7 +100,7 @@
 
 void cal_initial_speed_y();
 void cal_delta_speed();
-static void att_ahj_table_reader(PLW* wk);
+void att_ahj_table_reader(PLW* wk);
 
 void Att_DUMMY(PLW* wk) {}
 
@@ -737,7 +737,7 @@ void Att_HOMING_JUMP(PLW* wk) {
 
 
 
-static void att_ahj_table_reader(PLW* wk) {
+void att_ahj_table_reader(PLW* wk) {
     PLW* twk = (PLW*)wk->wu.target_adrs;
     const s16* curr_kop = ahj_kop[wk->as->r_no];
     s16 ex;

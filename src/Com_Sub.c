@@ -99,11 +99,11 @@ s8 Rnd;  /* 0200F649 */
 
 
 
-void End_Pattern(void) { Next_Be_Free(); }
+void End_Pattern(PLW* wk) { Next_Be_Free(wk); }
 
 
 
-void Next_Be_Passive(void) { Next_Be_Free(); }
+void Next_Be_Passive(PLW* wk) { Next_Be_Free(wk); }
 
 
 

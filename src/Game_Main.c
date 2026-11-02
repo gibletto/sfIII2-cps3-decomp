@@ -45,6 +45,7 @@
 #include "demo01.h"
 #include "demo02_code.h"
 #include "RANKING.h"
+#include "sel_pl.h"
 #include "Manage.h"
 #include "manage_2.h"
 #include "Win.h"

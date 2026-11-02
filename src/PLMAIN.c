@@ -244,11 +244,11 @@ void player_mv_2000(PLW* wk) {
     Player_normal(wk);
 }
 
-void player_mv_3000(void) {
+void player_mv_3000(PLW* wk) {
     if (gouki_app) {
-        jijii_nebukuro();
+        jijii_nebukuro(wk);
     } else {
-        Player_normal();
+        Player_normal(wk);
     }
 }
 

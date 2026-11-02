@@ -966,7 +966,7 @@ extern s16 scr_cg_c_no;
 extern s16 ake_cg_c_no;
 extern BGW * bgw_ptr;
 extern Ideal_W ideal_w;
-extern u16 suzi_line_buf[2048];
+extern SUZI_LINE_BUF suzi_line_buf;
 extern MVXY bg_mvxy;
 extern s16 bg_stop;
 extern s16 base_y_pos;

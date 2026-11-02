@@ -11,7 +11,7 @@ s32 check_hit_stop(PLW* wk);
 void clear_attack_num(WORK* wk);
 void clear_tk_flags(PLW* wk);
 void player_mv_2000(PLW* wk);
-void player_mv_3000(void);
+void player_mv_3000(PLW* wk);
 void sag_normal(PLW* wk);
 void sag_timer(PLW* wk);
 void sag_rebirth(PLW* wk);

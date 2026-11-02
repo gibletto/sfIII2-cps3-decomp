@@ -106,7 +106,7 @@ void debug_draw_cm_data(void);
 void debug_draw_position_delta(void);
 void debug_hit_a_print_pattern_rows(WORK* wk, GRID_REC* recs);
 void debug_hit_a_print_hit_ix_rows(WORK* wk, GRID9_REC* recs);
-s32 debug_hex4_to_bcd();
+s32 debug_hex4_to_bcd(s16 x);
 u32 debug_hit_a_judgement_alloc_slot(WORK_Other **slot);
 void debug_hit_a_judgement_build_table(void);
 void debug_hit_a_judgement_cleanup(void);

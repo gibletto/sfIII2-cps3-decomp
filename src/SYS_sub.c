@@ -493,7 +493,7 @@ s32 Button_Cut_EX(s16* Timer, s16 Limit_Time) {
 
 /* Which side's buttons may cut a scene short: the winner in a two-player match,
    otherwise the side that is being played (1P unless only 2P is in). */
-int Setup_Target_PL(void) {
+s32 Setup_Target_PL(void) {
     if (Play_Type == PLAY_VS_PLAYER) {
         return Winner_id;
     }

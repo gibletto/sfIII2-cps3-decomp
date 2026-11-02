@@ -128,6 +128,7 @@ void Exit_9th(void);
 #pragma inline(Setup_BG)
 #pragma inline(Check_Exit)
 #pragma inline(PL_Sel_Mode_1, PL_Sel_Mode_2)
+s32 PL_Sel_Mode_1(void);
 #pragma inline(Check_Exit_Boss, Check_Exit_Last)
 void Check_Exit_Boss(void);
 void Check_Exit_Last(void);
@@ -169,7 +170,7 @@ extern const s8 rival_char_tbl[];
 void Setup_EM_Course();
 void Init_EM_Course();
 
-s16 Select_Player(void) {
+s32 Select_Player(void) {
     SEL_PL_X = 0;
     if (Break_Into) {
         return 0;

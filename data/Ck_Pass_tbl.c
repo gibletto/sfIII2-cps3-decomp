@@ -9,135 +9,13 @@
 
 #include "types.h"
 #include "structs.h"
+#include "work.h"
+#include "romdata.h"
+#include "Com_Sub.h"
 
 #pragma section TBL
 
-extern void (*const Passive_jmp_tbl[])();
-extern void (*const Passive_AS_tbl[])();
-extern void (*const Passive_A_tbl[])();
-extern void (*const Passive_BS_tbl[])();
-extern void (*const Passive_B_tbl[])();
-extern void (*const Passive_CS_tbl[])();
-extern void (*const Passive_C_tbl[])();
-extern void (*const Passive_DS_tbl[])();
-extern void (*const Passive_D_tbl[])();
-extern void GILL_vs();
-extern void HUGO_vs();
-extern void KEN_vs();
-extern void VS_ALEX_A();
-extern void VS_ALEX_AS();
-extern void VS_ALEX_B();
-extern void VS_ALEX_BS();
-extern void VS_ALEX_C();
-extern void VS_ALEX_CS();
-extern void VS_ALEX_D();
-extern void VS_ALEX_DS();
-extern void VS_DUDLEY_A();
-extern void VS_DUDLEY_AS();
-extern void VS_DUDLEY_B();
-extern void VS_DUDLEY_BS();
-extern void VS_DUDLEY_C();
-extern void VS_DUDLEY_CS();
-extern void VS_DUDLEY_D();
-extern void VS_DUDLEY_DS();
-extern void VS_ELENA_A();
-extern void VS_ELENA_AS();
-extern void VS_ELENA_B();
-extern void VS_ELENA_BS();
-extern void VS_ELENA_C();
-extern void VS_ELENA_CS();
-extern void VS_ELENA_D();
-extern void VS_ELENA_DS();
-extern void VS_GILL_A();
-extern void VS_GILL_AS();
-extern void VS_GILL_B();
-extern void VS_GILL_BS();
-extern void VS_GILL_C();
-extern void VS_GILL_CS();
-extern void VS_GILL_D();
-extern void VS_GILL_DS();
-extern void VS_GOUKI_A();
-extern void VS_GOUKI_AS();
-extern void VS_GOUKI_B();
-extern void VS_GOUKI_BS();
-extern void VS_GOUKI_C();
-extern void VS_GOUKI_CS();
-extern void VS_GOUKI_D();
-extern void VS_GOUKI_DS();
-extern void VS_HUGO_A();
-extern void VS_HUGO_AS();
-extern void VS_HUGO_B();
-extern void VS_HUGO_BS();
-extern void VS_HUGO_C();
-extern void VS_HUGO_CS();
-extern void VS_HUGO_D();
-extern void VS_HUGO_DS();
-extern void VS_IBUKI_A();
-extern void VS_IBUKI_AS();
-extern void VS_IBUKI_B();
-extern void VS_IBUKI_BS();
-extern void VS_IBUKI_C();
-extern void VS_IBUKI_CS();
-extern void VS_IBUKI_D();
-extern void VS_IBUKI_DS();
-extern void VS_KEN_A();
-extern void VS_KEN_AS();
-extern void VS_KEN_B();
-extern void VS_KEN_BS();
-extern void VS_KEN_C();
-extern void VS_KEN_CS();
-extern void VS_KEN_D();
-extern void VS_KEN_DS();
-extern void VS_NECRO_A();
-extern void VS_NECRO_AS();
-extern void VS_NECRO_B();
-extern void VS_NECRO_BS();
-extern void VS_NECRO_C();
-extern void VS_NECRO_CS();
-extern void VS_NECRO_D();
-extern void VS_NECRO_DS();
-extern void VS_ORO_A();
-extern void VS_ORO_AS();
-extern void VS_ORO_B();
-extern void VS_ORO_BS();
-extern void VS_ORO_C();
-extern void VS_ORO_CS();
-extern void VS_ORO_D();
-extern void VS_ORO_DS();
-extern void VS_RYU_A();
-extern void VS_RYU_AS();
-extern void VS_RYU_B();
-extern void VS_RYU_BS();
-extern void VS_RYU_C();
-extern void VS_RYU_CS();
-extern void VS_RYU_D();
-extern void VS_RYU_DS();
-extern void VS_SEAN_A();
-extern void VS_SEAN_AS();
-extern void VS_SEAN_B();
-extern void VS_SEAN_BS();
-extern void VS_SEAN_C();
-extern void VS_SEAN_CS();
-extern void VS_SEAN_D();
-extern void VS_SEAN_DS();
-extern void VS_URIEN_A();
-extern void VS_URIEN_AS();
-extern void VS_URIEN_B();
-extern void VS_URIEN_BS();
-extern void VS_URIEN_C();
-extern void VS_URIEN_CS();
-extern void VS_URIEN_D();
-extern void VS_URIEN_DS();
-extern void VS_YUN_A();
-extern void VS_YUN_AS();
-extern void VS_YUN_B();
-extern void VS_YUN_BS();
-extern void VS_YUN_C();
-extern void VS_YUN_CS();
-extern void VS_YUN_D();
-extern void VS_YUN_DS();
-
-void (*const Passive_jmp_tbl[16])() = {
+s32 (*const Passive_jmp_tbl[16])(PLW* wk) = {
     GILL_vs,
     KEN_vs,
     KEN_vs,
@@ -156,7 +34,7 @@ void (*const Passive_jmp_tbl[16])() = {
     KEN_vs,
 };
 
-void (*const Passive_AS_tbl[16])() = {
+s32 (*const Passive_AS_tbl[16])(PLW* wk) = {
     VS_GILL_AS,
     VS_ALEX_AS,
     VS_RYU_AS,
@@ -175,7 +53,7 @@ void (*const Passive_AS_tbl[16])() = {
     VS_GOUKI_AS,
 };
 
-void (*const Passive_A_tbl[16])() = {
+s32 (*const Passive_A_tbl[16])(PLW* wk) = {
     VS_GILL_A,
     VS_ALEX_A,
     VS_RYU_A,
@@ -194,7 +72,7 @@ void (*const Passive_A_tbl[16])() = {
     VS_GOUKI_A,
 };
 
-void (*const Passive_BS_tbl[16])() = {
+s32 (*const Passive_BS_tbl[16])(PLW* wk) = {
     VS_GILL_BS,
     VS_ALEX_BS,
     VS_RYU_BS,
@@ -213,7 +91,7 @@ void (*const Passive_BS_tbl[16])() = {
     VS_GOUKI_BS,
 };
 
-void (*const Passive_B_tbl[16])() = {
+s32 (*const Passive_B_tbl[16])(PLW* wk) = {
     VS_GILL_B,
     VS_ALEX_B,
     VS_RYU_B,
@@ -232,7 +110,7 @@ void (*const Passive_B_tbl[16])() = {
     VS_GOUKI_B,
 };
 
-void (*const Passive_CS_tbl[16])() = {
+s32 (*const Passive_CS_tbl[16])(PLW* wk) = {
     VS_GILL_CS,
     VS_ALEX_CS,
     VS_RYU_CS,
@@ -251,7 +129,7 @@ void (*const Passive_CS_tbl[16])() = {
     VS_GOUKI_CS,
 };
 
-void (*const Passive_C_tbl[16])() = {
+s32 (*const Passive_C_tbl[16])(PLW* wk) = {
     VS_GILL_C,
     VS_ALEX_C,
     VS_RYU_C,
@@ -270,7 +148,7 @@ void (*const Passive_C_tbl[16])() = {
     VS_GOUKI_C,
 };
 
-void (*const Passive_DS_tbl[16])() = {
+s32 (*const Passive_DS_tbl[16])(PLW* wk) = {
     VS_GILL_DS,
     VS_ALEX_DS,
     VS_RYU_DS,
@@ -289,14 +167,14 @@ void (*const Passive_DS_tbl[16])() = {
     VS_GOUKI_DS,
 };
 
-void (*const Passive_D_tbl[16])() = {
+s32 (*const Passive_D_tbl[16])(PLW* wk) = {
     VS_GILL_D,
     VS_ALEX_D,
     VS_RYU_D,
     VS_YUN_D,
     VS_DUDLEY_D,
     VS_NECRO_D,
-    VS_HUGO_D,
+    (s32 (*)(PLW*))VS_HUGO_D, /* defined void: Check_PL_Unit_D returns whatever is in r0 */
     VS_IBUKI_D,
     VS_ELENA_D,
     VS_ORO_D,

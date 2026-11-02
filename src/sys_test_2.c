@@ -47,16 +47,16 @@ void iotest_draw_sw_grid(void) {
     }
     for (; i < 4; i++, j += 2) {
         if ((iotest_diag_bit_tbl[i] & p1sw_0) == iotest_diag_bit_tbl[i]) {
-            tilemap_print_string_attr(iotest_1p_diag_x[j] + x, iotest_1p_diag_y[j], 8, iotest_on_str);
+            tilemap_print_string_attr(iotest_1p_diag_xy[j] + x, iotest_1p_diag_xy[j + 1], 8, iotest_on_str);
             diag1 = 1;
         } else {
-            tilemap_print_string_attr(iotest_1p_diag_x[j] + x, iotest_1p_diag_y[j], 2, iotest_off_str);
+            tilemap_print_string_attr(iotest_1p_diag_xy[j] + x, iotest_1p_diag_xy[j + 1], 2, iotest_off_str);
         }
         if ((iotest_diag_bit_tbl[i] & p2sw_0) == iotest_diag_bit_tbl[i]) {
-            tilemap_print_string_attr(iotest_2p_diag_x[j] + x, iotest_2p_diag_y[j], 8, iotest_on_str);
+            tilemap_print_string_attr(iotest_2p_diag_xy[j] + x, iotest_2p_diag_xy[j + 1], 8, iotest_on_str);
             diag2 = 1;
         } else {
-            tilemap_print_string_attr(iotest_2p_diag_x[j] + x, iotest_2p_diag_y[j], 2, iotest_off_str);
+            tilemap_print_string_attr(iotest_2p_diag_xy[j] + x, iotest_2p_diag_xy[j + 1], 2, iotest_off_str);
         }
     }
     i = j = 0;
@@ -64,36 +64,36 @@ void iotest_draw_sw_grid(void) {
         if (iotest_sw_bit_tbl[j] & p1sw_0) {
             if (j < 4) {
                 if (diag1) {
-                    tilemap_print_string_attr(iotest_1p_sw_x[i] + x, iotest_1p_sw_y[i], 2, iotest_off_str);
+                    tilemap_print_string_attr(iotest_1p_sw_xy[i] + x, iotest_1p_sw_xy[i + 1], 2, iotest_off_str);
                 } else {
-                    tilemap_print_string_attr(iotest_1p_sw_x[i] + x, iotest_1p_sw_y[i], 8, iotest_on_str);
+                    tilemap_print_string_attr(iotest_1p_sw_xy[i] + x, iotest_1p_sw_xy[i + 1], 8, iotest_on_str);
                 }
             } else {
-                tilemap_print_string_attr(iotest_1p_sw_x[i] + x, iotest_1p_sw_y[i], 8, iotest_on_str);
+                tilemap_print_string_attr(iotest_1p_sw_xy[i] + x, iotest_1p_sw_xy[i + 1], 8, iotest_on_str);
             }
         } else {
-            tilemap_print_string_attr(iotest_1p_sw_x[i] + x, iotest_1p_sw_y[i], 2, iotest_off_str);
+            tilemap_print_string_attr(iotest_1p_sw_xy[i] + x, iotest_1p_sw_xy[i + 1], 2, iotest_off_str);
         }
         if (iotest_sw_bit_tbl[j] & p2sw_0) {
             if (j < 4) {
                 if (diag2) {
-                    tilemap_print_string_attr(iotest_2p_sw_x[i] + x, iotest_2p_sw_y[i], 2, iotest_off_str);
+                    tilemap_print_string_attr(iotest_2p_sw_xy[i] + x, iotest_2p_sw_xy[i + 1], 2, iotest_off_str);
                 } else {
-                    tilemap_print_string_attr(iotest_2p_sw_x[i] + x, iotest_2p_sw_y[i], 8, iotest_on_str);
+                    tilemap_print_string_attr(iotest_2p_sw_xy[i] + x, iotest_2p_sw_xy[i + 1], 8, iotest_on_str);
                 }
             } else {
-                tilemap_print_string_attr(iotest_2p_sw_x[i] + x, iotest_2p_sw_y[i], 8, iotest_on_str);
+                tilemap_print_string_attr(iotest_2p_sw_xy[i] + x, iotest_2p_sw_xy[i + 1], 8, iotest_on_str);
             }
         } else {
-            tilemap_print_string_attr(iotest_2p_sw_x[i] + x, iotest_2p_sw_y[i], 2, iotest_off_str);
+            tilemap_print_string_attr(iotest_2p_sw_xy[i] + x, iotest_2p_sw_xy[i + 1], 2, iotest_off_str);
         }
     }
     for (i = 0; i < 3; i++) {
         if (i != 1) {
             if (iotest_sys_bit_tbl[i] & syssw_0) {
-                tilemap_print_string_attr(iotest_sys_sw_x[i * 2] + x, iotest_sys_sw_y[i * 2], 8, iotest_on_str);
+                tilemap_print_string_attr(iotest_sys_sw_xy[i * 2] + x, iotest_sys_sw_xy[i * 2 + 1], 8, iotest_on_str);
             } else {
-                tilemap_print_string_attr(iotest_sys_sw_x[i * 2] + x, iotest_sys_sw_y[i * 2], 2, iotest_off_str);
+                tilemap_print_string_attr(iotest_sys_sw_xy[i * 2] + x, iotest_sys_sw_xy[i * 2 + 1], 2, iotest_off_str);
             }
         }
     }

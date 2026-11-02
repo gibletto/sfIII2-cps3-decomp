@@ -49,8 +49,8 @@ void bg090_layer0_color(void);
 void bg090_layer1(void);
 void bg090_layer1_init(void);
 void bg0603(void);
-static void bg_move_common(void);
-static void bg_base_move_common(void);
+void bg_move_common(void);
+void bg_base_move_common(void);
 #pragma inline(bg090_layer0, bg090_layer1)
 
 
@@ -106,7 +106,7 @@ void bg090_layer0_color(void) {
 
 
 /* Each stage file has its own copy. */
-static void bg_move_common(void) {
+void bg_move_common(void) {
     bg_x_move_check();
     bg_y_move_check();
 }
@@ -167,7 +167,7 @@ void bg090_layer1_init(void) {
 
 
 /* Move the base layer and chase the players; each stage file has its own copy. */
-static void bg_base_move_common(void) {
+void bg_base_move_common(void) {
     bg_base_x_move_check();
     bg_base_y_move_check();
     bg_chase_move();
